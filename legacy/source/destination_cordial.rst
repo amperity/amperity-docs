@@ -16,7 +16,7 @@
 
 
 ==================================================
-Configure campaigns for Cordial
+Send data to Cordial
 ==================================================
 
 .. vale off

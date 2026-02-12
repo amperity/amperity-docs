@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Snapchat
+Send data to Snapchat
 ==================================================
 
 .. vale off

@@ -22,7 +22,7 @@
 
 
 ==================================================
-Configure campaigns for Meta Ads Manager
+Send data to Meta Ads Manager
 ==================================================
 
 .. vale off

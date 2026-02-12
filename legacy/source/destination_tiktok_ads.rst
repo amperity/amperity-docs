@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for TikTok Ads Manager
+Send data to TikTok Ads Manager
 ==================================================
 
 .. vale off

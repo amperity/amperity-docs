@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for any SFTP site
+Send data to any SFTP site
 ==================================================
 
 .. vale off

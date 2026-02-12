@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Neustar
+Send data to Neustar
 ==================================================
 
 .. vale off

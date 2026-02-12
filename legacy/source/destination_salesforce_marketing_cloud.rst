@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Salesforce Marketing Cloud
+Send data to Salesforce Marketing Cloud
 ==================================================
 
 .. vale off

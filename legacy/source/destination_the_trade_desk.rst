@@ -20,7 +20,7 @@
 
 
 ==================================================
-Configure campaigns for The Trade Desk
+Send data to The Trade Desk
 ==================================================
 
 .. vale off

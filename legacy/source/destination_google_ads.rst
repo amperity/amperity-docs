@@ -23,7 +23,7 @@
 
 
 ==================================================
-Configure campaigns for Google Ads
+Send data to Google Ads
 ==================================================
 
 .. vale off

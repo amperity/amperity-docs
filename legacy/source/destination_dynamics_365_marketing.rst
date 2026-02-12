@@ -14,7 +14,7 @@
 
 
 ==================================================
-Send segments to Dynamics 365 Marketing
+Send data to Dynamics 365 Marketing
 ==================================================
 
 .. vale off

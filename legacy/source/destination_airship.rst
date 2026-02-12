@@ -18,7 +18,7 @@
 
 
 ==================================================
-Configure campaigns for Airship
+Send data to Airship
 ==================================================
 
 .. vale off

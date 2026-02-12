@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Mailchimp
+Send data to Mailchimp
 ==================================================
 
 .. vale off

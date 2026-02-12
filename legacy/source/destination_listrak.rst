@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Listrak
+Send data to Listrak
 ==================================================
 
 .. vale off

@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Bluecore
+Send data to Bluecore
 ==================================================
 
 .. vale off

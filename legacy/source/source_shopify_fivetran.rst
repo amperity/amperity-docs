@@ -23,7 +23,7 @@
         Pull from Shopify
 
 ==================================================
-Pull from Shopify
+Pull from Shopify using Fivetran
 ==================================================
 
 .. include:: ../../shared/terms.rst

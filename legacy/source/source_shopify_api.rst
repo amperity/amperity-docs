@@ -23,7 +23,7 @@
         Pull from Shopify
 
 ==================================================
-Pull from Shopify
+Pull from Shopify API
 ==================================================
 
 .. include:: ../../shared/terms.rst
