@@ -14,7 +14,7 @@
 
 
 ==================================================
-Configure campaigns for Oracle Eloqua
+Send data to Oracle Eloqua
 ==================================================
 
 .. vale off

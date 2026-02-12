@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for PebblePost
+Send data to PebblePost
 ==================================================
 
 .. vale off

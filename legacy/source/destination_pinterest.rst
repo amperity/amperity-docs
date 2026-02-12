@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Pinterest Ads
+Send data to Pinterest Ads
 ==================================================
 
 .. vale off

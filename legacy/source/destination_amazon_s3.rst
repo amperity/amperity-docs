@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Amazon S3
+Send data to Amazon S3
 ==================================================
 
 .. vale off

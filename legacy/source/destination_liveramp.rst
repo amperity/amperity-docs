@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for LiveRamp
+Send data to LiveRamp
 ==================================================
 
 .. vale off

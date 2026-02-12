@@ -20,7 +20,7 @@
 
 
 ==================================================
-Configure campaigns for Microsoft Advertising
+Send data to Microsoft Advertising
 ==================================================
 
 .. vale off

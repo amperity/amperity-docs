@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Oracle Responsys
+Send data to Oracle Responsys
 ==================================================
 
 .. vale off

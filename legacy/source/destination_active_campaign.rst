@@ -18,7 +18,7 @@
 
 
 ==================================================
-Configure campaigns for ActiveCampaign
+Send data to ActiveCampaign
 ==================================================
 
 .. vale off

@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Azure Blob Storage
+Send data to Azure Blob Storage
 ==================================================
 
 .. vale off

@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Adobe Marketo
+Send data to Adobe Marketo
 ==================================================
 
 .. vale off

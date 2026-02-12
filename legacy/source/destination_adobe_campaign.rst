@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Adobe Campaign
+Send data to Adobe Campaign
 ==================================================
 
 .. vale off

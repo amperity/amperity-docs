@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Klaviyo
+Send data to Klaviyo
 ==================================================
 
 .. vale off

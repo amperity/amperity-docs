@@ -20,7 +20,7 @@
 
 
 ==================================================
-Configure campaigns for Criteo Audience API
+Send data to Criteo Audience API
 ==================================================
 
 .. vale off

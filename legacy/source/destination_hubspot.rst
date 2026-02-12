@@ -16,7 +16,7 @@
 
 
 ==================================================
-Configure campaigns for HubSpot
+Send data to HubSpot
 ==================================================
 
 .. vale off

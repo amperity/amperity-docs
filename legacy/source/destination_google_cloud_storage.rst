@@ -17,7 +17,7 @@
 
 
 ==================================================
-Configure campaigns for Google Cloud Storage
+Send data to Google Cloud Storage
 ==================================================
 
 .. vale off

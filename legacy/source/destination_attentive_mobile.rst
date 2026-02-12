@@ -24,7 +24,7 @@
 
 
 ==================================================
-Configure campaigns for Attentive
+Send data to Attentive
 ==================================================
 
 .. vale off

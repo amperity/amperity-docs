@@ -1,0 +1,801 @@
+{%- if pathto('search') != '#' -%}
+<style>
+  .compact-search-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .compact-searchbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+
+  .compact-search-input {
+    padding: 6px 35px 6px 10px;
+    font-size: 1rem;
+    border: 1px solid var(--gray-a3);
+    background: var(--sy-c-background);
+    color: var(--sy-c-text);
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  .compact-search-input:focus {
+    outline: none;
+    border-color: var(--accent-9);
+  }
+
+  .compact-searchbox kbd {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px 6px;
+    border: 1px solid var(--gray-a3);
+    border-radius: 3px;
+    font-size: 0.85rem;
+    background: var(--sy-c-surface);
+    pointer-events: none;
+  }
+
+  .compact-results-overlay {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 8px;
+    width: 500px;
+    background: var(--sy-c-background);
+    border: 1px solid var(--sy-c-border);
+    border-radius: 4px;
+    display: none;
+    z-index: 1000;
+    box-shadow: var(--sy-dropdown-shadow);
+  }
+
+  .compact-results-overlay.active {
+    display: block;
+  }
+
+  .compact-search-buttons {
+    display: flex;
+    gap: 4px;
+    padding: 8px;
+    border-bottom: 1px solid var(--gray-a3);
+  }
+
+  .compact-filter-btn,
+  .compact-advanced-btn {
+    flex: 1;
+    padding: 4px 8px;
+    background: var(--sy-c-surface);
+    border: 0px solid var(--gray-a3);
+    color: var(--sy-c-text);
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+
+  .compact-filter-btn:hover,
+  .compact-advanced-btn:hover {
+    background-color: var(--accent-a3);
+  }
+
+  .compact-filter-panel {
+    display: none;
+    background: var(--sy-c-surface);
+    border-bottom: 1px solid var(--gray-a3);
+    padding: 8px 12px;
+  }
+
+  .compact-filter-panel.active {
+    display: block;
+  }
+
+  .compact-filter-section h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    color: var(--sy-c-text);
+  }
+
+  .compact-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .compact-filter-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .compact-filter-option input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--accent-9);
+  }
+
+  .compact-filter-option label {
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  .compact-results-container {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .compact-search-result {
+    padding: 10px;
+    border-bottom: 1px solid var(--gray-a3);
+    transition: background-color 0.2s;
+  }
+
+  .compact-search-result:last-child {
+    border-bottom: none;
+  }
+
+  .compact-search-result:hover {
+    background: var(--accent-a3);
+  }
+
+  .compact-search-result a {
+    color: var(--accent-9);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+  }
+
+  .compact-search-result a:hover {
+    text-decoration: underline;
+  }
+
+  .compact-result-context {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    color: var(--sy-c-text);
+    opacity: 0.7;
+  }
+
+  .compact-result-snippet {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: var(--sy-c-text);
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  .compact-highlighted {
+    background-color: var(--accent-a4);
+    font-weight: 600;
+  }
+
+  .compact-no-results {
+    padding: 20px;
+    text-align: center;
+    color: var(--sy-c-text);
+    opacity: 0.6;
+    font-size: 0.85rem;
+  }
+</style>
+
+<div class="compact-search-wrapper">
+  <form class="compact-searchbox flex items-center" autocomplete="off">
+    <input type="text" id="compact-search-input" name="q" placeholder="{{ _('Search everything') }}" class="compact-search-input" autocomplete="off" />
+    <kbd>/</kbd>
+  </form>
+
+  <div id="compact-results-overlay" class="compact-results-overlay">
+    <div class="compact-search-buttons">
+      <button type="button" id="compact-filter-button" class="compact-filter-btn">Filters</button>
+      <a href="../advanced_search.html" class="compact-advanced-btn">Open advanced search</a>
+    </div>
+
+    <div id="compact-filter-panel" class="compact-filter-panel">
+      <div class="compact-filter-section">
+        <h3>Choose topic collections</h3>
+        <div class="compact-filter-options">
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-guides" checked />
+            <label for="compact-coll-guides">Guided setup</label>
+          </div>
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-user" checked />
+            <label for="compact-coll-user">User guides</label>
+          </div>
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-operator" checked />
+            <label for="compact-coll-operator">Operators guide</label>
+          </div>
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-api" checked />
+            <label for="compact-coll-api">Amperity API</label>
+          </div>
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-reference" checked />
+            <label for="compact-coll-reference">Reference</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compact-results-container">
+      <div id="compact-results-list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Keyword to path mapping
+    const KEYWORD_MAPPING = {
+      "itemized transaction semantics": "/reference/semantics.html#transactions",
+      "punnch": "/reference/connected_systems.html",
+      "yotpo": "/reference/connected_systems.html"
+    };
+
+    // Search indexes cache
+    const searchIndexes = {
+      api: null,
+      guides: null,
+      operator: null,
+      reference: null,
+      user: null
+    };
+
+    // Load a search index for a specific collection
+    async function loadSearchIndex(collection) {
+      if (searchIndexes[collection]) {
+        return searchIndexes[collection];
+      }
+
+      try {
+        const url = `/${collection}/searchindex.js`;
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const text = await response.text();
+        
+        // Parse the Sphinx search index
+        // The file contains: Search.setIndex({...})
+        const match = text.match(/Search\.setIndex\s*\(\s*(\{[\s\S]*\})\s*\)/);
+        
+        if (!match || !match[1]) {
+          throw new Error('Failed to find Search.setIndex in search index file');
+        }
+        
+        // Parse the extracted JSON
+        let indexData;
+        try {
+          indexData = JSON.parse(match[1]);
+        } catch (parseError) {
+          console.error('JSON parse error:', parseError);
+          throw new Error('Failed to parse search index JSON');
+        }
+        
+        if (!indexData) {
+          throw new Error('Failed to parse search index');
+        }
+        
+        searchIndexes[collection] = indexData;
+        return indexData;
+      } catch (error) {
+        console.error(`Failed to load search index for ${collection}:`, error);
+        return null;
+      }
+    }
+
+    // Check if query matches a glossary term and fetch its definition
+    async function checkGlossaryMatch(query) {
+      try {
+        // Normalize the query to create a glossary ID
+        const normalizedQuery = query.toLowerCase().trim();
+        const firstLetter = normalizedQuery.charAt(0);
+        const glossaryId = firstLetter + '-' + normalizedQuery.replace(/\s+/g, '-');
+        
+        // Fetch the glossary page
+        const response = await fetch('/reference/glossary.html');
+        if (!response.ok) return null;
+        
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Look for the glossary entry with the matching ID
+        const glossaryEntry = doc.querySelector(`#${glossaryId}`);
+        if (!glossaryEntry) return null;
+        
+        // Extract the term and definition
+        const dtElement = glossaryEntry.querySelector('dt strong');
+        const ddElement = glossaryEntry.querySelector('dd p');
+        
+        if (!dtElement || !ddElement) return null;
+        
+        const term = dtElement.textContent.trim();
+        const definition = ddElement.textContent.trim();
+        
+        return {
+          term: term,
+          definition: definition,
+          url: `/reference/glossary.html#${glossaryId}`,
+          glossaryId: glossaryId
+        };
+      } catch (error) {
+        console.error('Error checking glossary:', error);
+        return null;
+      }
+    }
+
+    // Perform search
+    async function performSearch() {
+      const query = document.getElementById('compact-search-input').value.trim();
+      const resultsOverlay = document.getElementById('compact-results-overlay');
+      const resultsDiv = document.getElementById('compact-results-list');
+
+      if (!query) {
+        resultsOverlay.classList.remove('active');
+        return;
+      }
+
+      // Check for keyword mapping first
+      const queryLowerForMapping = query.toLowerCase();
+      if (KEYWORD_MAPPING[queryLowerForMapping]) {
+        const mappedPath = KEYWORD_MAPPING[queryLowerForMapping];
+        
+        // Extract collection, docname, and optional anchor from the path
+        // Path format: /collection/docname.html or /collection/docname.html#anchor
+        const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+?)\.html(#.+)?$/);
+        
+        if (pathMatch) {
+          const collection = pathMatch[1];
+          const docname = pathMatch[2];
+          const anchor = pathMatch[3] || ''; // Optional anchor (e.g., #transactions)
+          
+          // Load the search index to get the actual page title
+          const index = await loadSearchIndex(collection);
+          
+          if (index) {
+            const docnames = index.docnames || [];
+            const titles = index.titles || [];
+            const docIndex = docnames.indexOf(docname);
+            
+            let pageTitle = query; // Fallback to keyword if not found
+            if (docIndex >= 0 && titles[docIndex]) {
+              pageTitle = titles[docIndex];
+            }
+            
+            // Build the URL with the anchor if present
+            const finalUrl = `/${collection}/${docname}.html${anchor}`;
+            
+            const keywordResult = [{
+              title: pageTitle,
+              url: finalUrl,
+              collection: collection,
+              score: 100,
+              isHeader: false,
+              isContent: false,
+              isKeywordMatch: true
+            }];
+            
+            await displayResults(keywordResult, query);
+            resultsOverlay.classList.add('active');
+            return;
+          }
+        }
+        
+        // Fallback if parsing fails - try to extract collection and get title
+        // Try to extract at least the collection from the path
+        const fallbackMatch = mappedPath.match(/^\/([^\/]+)\//);
+        let fallbackTitle = query; // Ultimate fallback to keyword
+        
+        if (fallbackMatch) {
+          const collection = fallbackMatch[1];
+          const index = await loadSearchIndex(collection);
+          
+          if (index) {
+            // Try to find the docname in the path
+            const docnameMatch = mappedPath.match(/\/([^\/]+)\.html/);
+            if (docnameMatch) {
+              const docname = docnameMatch[1];
+              const docnames = index.docnames || [];
+              const titles = index.titles || [];
+              const docIndex = docnames.indexOf(docname);
+              
+              if (docIndex >= 0 && titles[docIndex]) {
+                fallbackTitle = titles[docIndex];
+              }
+            }
+          }
+        }
+        
+        const keywordResult = [{
+          title: fallbackTitle,
+          url: mappedPath,
+          collection: 'reference',
+          score: 100,
+          isHeader: false,
+          isContent: false,
+          isKeywordMatch: true
+        }];
+        
+        await displayResults(keywordResult, query);
+        resultsOverlay.classList.add('active');
+        return;
+      }
+
+      const queryLower = query.toLowerCase();
+
+      // Get active collections
+      const selectedCollections = getActiveCollections();
+      
+      if (selectedCollections.length === 0) {
+        resultsDiv.innerHTML = '<div class="compact-no-results">No collections selected</div>';
+        resultsOverlay.classList.add('active');
+        return;
+      }
+
+      // Load and search each selected collection
+      const allResults = [];
+      
+      for (const collection of selectedCollections) {
+        const index = await loadSearchIndex(collection);
+        if (!index) {
+          console.error(`Failed to load index for ${collection}`);
+          continue;
+        }
+        
+        const results = searchInIndex(index, queryLower, collection);
+        allResults.push(...results);
+      }
+
+      // Sort by score (title matches first)
+      allResults.sort((a, b) => b.score - a.score);
+      
+      // Limit to 10 results
+      let limitedResults = allResults.slice(0, 10);
+      
+      // Check if query matches a glossary term
+      const glossaryMatch = await checkGlossaryMatch(queryLower);
+      if (glossaryMatch) {
+        // Create a special glossary result
+        const glossaryResult = {
+          title: glossaryMatch.term,
+          url: glossaryMatch.url,
+          collection: 'reference',
+          score: 150, // Higher than normal to appear first
+          isHeader: false,
+          isContent: false,
+          isGlossary: true,
+          definition: glossaryMatch.definition
+        };
+        
+        // Prepend glossary result and limit to 10
+        limitedResults = [glossaryResult, ...limitedResults].slice(0, 10);
+      }
+      
+      await displayResults(limitedResults, query);
+      resultsOverlay.classList.add('active');
+    }
+
+    // Get active collections from checkboxes
+    function getActiveCollections() {
+      const collections = [];
+      if (document.getElementById('compact-coll-guides').checked) collections.push('guides');
+      if (document.getElementById('compact-coll-operator').checked) collections.push('operator');
+      if (document.getElementById('compact-coll-user').checked) collections.push('user');
+      if (document.getElementById('compact-coll-reference').checked) collections.push('reference');
+      if (document.getElementById('compact-coll-api').checked) collections.push('api');
+      return collections;
+    }
+
+    // Extract text snippet from page content for content matches
+    async function getContentSnippet(url, query) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) return null;
+        
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Remove unwanted elements
+        doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink, .sd-card').forEach(el => el.remove());
+        
+        // Get main content text
+        const mainContent = doc.querySelector('main, article, .document, body');
+        if (!mainContent) return null;
+        
+        const fullText = mainContent.textContent.replace(/\s+/g, ' ').trim();
+        const words = fullText.split(' ');
+        
+        const queryWords = query.toLowerCase().split(/\s+/);
+        let matchIndex = -1;
+        
+        // Find first matching term
+        for (let i = 0; i < words.length; i++) {
+          const wordLower = words[i].toLowerCase().replace(/[^\w]/g, '');
+          for (const term of queryWords) {
+            if (wordLower === term || wordLower.includes(term)) {
+              matchIndex = i;
+              break;
+            }
+          }
+          if (matchIndex >= 0) break;
+        }
+        
+        if (matchIndex < 0) return null;
+        
+        // Extract context: 10 words before and 10 after
+        const start = Math.max(0, matchIndex - 10);
+        const end = Math.min(words.length, matchIndex + 11);
+        
+        let snippet = words.slice(start, end).join(' ');
+        if (start > 0) snippet = '...' + snippet;
+        if (end < words.length) snippet = snippet + '...';
+        
+        return snippet;
+      } catch (error) {
+        console.error('Error fetching snippet:', error);
+        return null;
+      }
+    }
+
+    // Search in a single index
+    function searchInIndex(index, query, collection) {
+      const results = [];
+      const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+      
+      if (!index.docnames || !index.titles) return results;
+
+      // Search through documents for page title matches
+      index.docnames.forEach((docname, docIndex) => {
+        const title = index.titles[docIndex] || docname;
+        const titleLower = title.toLowerCase();
+        
+        // Check if query matches title
+        const titleMatches = queryWords.every(word => titleLower.includes(word));
+        
+        if (titleMatches) {
+          results.push({
+            title: title,
+            url: `/${collection}/${docname}.html`,
+            collection: collection,
+            score: 100, // Highest score for page title matches
+            isHeader: false,
+            isContent: false
+          });
+        }
+      });
+
+      // Search through section headers if available (H2, H3, H4 only - excluding H1 page titles)
+      const alltitles = index.alltitles || {};
+      Object.entries(alltitles).forEach(([headerTitle, locations]) => {
+        const headerLower = headerTitle.toLowerCase();
+        const headerMatches = queryWords.every(word => headerLower.includes(word));
+        
+        if (headerMatches && Array.isArray(locations)) {
+          locations.forEach(location => {
+            if (Array.isArray(location) && location.length >= 2) {
+              const docIndex = location[0];
+              const anchor = location[1];
+              const docname = index.docnames[docIndex];
+              const pageTitle = index.titles[docIndex] || docname;
+              
+              // Skip H1 headers (page titles):
+              // 1. They don't have anchors or have empty anchors
+              // 2. The header text matches the page title
+              if (!anchor || anchor === '' || headerTitle === pageTitle) {
+                return;
+              }
+              
+              // Construct URL with anchor
+              let url = `/${collection}/${docname}.html`;
+              if (anchor) {
+                url += `#${anchor}`;
+              }
+              
+              results.push({
+                title: headerTitle,
+                pageTitle: pageTitle,
+                url: url,
+                collection: collection,
+                score: 50, // Medium score for header matches
+                isHeader: true,
+                isContent: false
+              });
+            }
+          });
+        }
+      });
+
+      // Search through content using terms index
+      const terms = index.terms || {};
+      queryWords.forEach(word => {
+        if (terms[word]) {
+          const termData = terms[word];
+          let docIndices = [];
+          
+          // Handle different term data formats
+          if (Array.isArray(termData)) {
+            docIndices = termData;
+          } else if (typeof termData === 'object') {
+            docIndices = Object.keys(termData).map(k => parseInt(k));
+          }
+          
+          docIndices.forEach(docIndex => {
+            if (typeof docIndex === 'number' && index.docnames[docIndex]) {
+              const docname = index.docnames[docIndex];
+              const title = index.titles[docIndex] || docname;
+              
+              results.push({
+                title: title,
+                url: `/${collection}/${docname}.html`,
+                collection: collection,
+                score: 10, // Lower score for content matches
+                isHeader: false,
+                isContent: true
+              });
+            }
+          });
+        }
+      });
+
+      return results;
+    }
+
+    // Display search results
+    async function displayResults(results, query) {
+      const resultsDiv = document.getElementById('compact-results-list');
+
+      if (results.length === 0) {
+        resultsDiv.innerHTML = '<div class="compact-no-results">No results found</div>';
+        return;
+      }
+
+      const collectionNames = {
+        'api': 'Amperity API',
+        'guides': 'Guided setup',
+        'operator': 'Operators guide',
+        'reference': 'Reference',
+        'user': 'User guides'
+      };
+
+      // Fetch snippets for content matches in parallel
+      const snippetPromises = results.map(async (result) => {
+        if (result.isContent) {
+          const snippet = await getContentSnippet(result.url, query);
+          return { ...result, snippet };
+        }
+        return result;
+      });
+      
+      const resultsWithSnippets = await Promise.all(snippetPromises);
+
+      resultsDiv.innerHTML = resultsWithSnippets.map(result => {
+        const collectionName = collectionNames[result.collection] || result.collection;
+        let matchType = '';
+        let contextText = '';
+        
+        if (result.isGlossary) {
+          // For glossary matches: show the definition
+          contextText = result.definition;
+          matchType = '';
+        } else if (result.isKeywordMatch) {
+          // For keyword matches: show Docs > Collection > Page Title (page title)
+          contextText = `Docs > ${collectionName} > ${result.title}`;
+          matchType = ' (page title)';
+        } else {
+          contextText = collectionName;
+          if (result.isHeader) {
+            matchType = ' (section header)';
+          } else if (result.isContent) {
+            matchType = ' (content match)';
+          } else {
+            matchType = ' (page title)';
+          }
+        }
+        
+        // Add snippet for content matches (but not for glossary or keyword matches)
+        const snippetHtml = result.snippet && !result.isGlossary && !result.isKeywordMatch ? 
+          `<div class="compact-result-snippet">${highlightText(result.snippet, query)}</div>` : '';
+        
+        return `
+          <div class="compact-search-result">
+            <a href="${result.url}">${highlightText(result.title, query)}</a>
+            <div class="compact-result-context">${contextText}${matchType}</div>
+            ${snippetHtml}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Highlight matching text
+    function highlightText(text, query) {
+      if (!query) return text;
+      
+      const queryWords = query.split(/\s+/);
+      let highlighted = text;
+      
+      queryWords.forEach(word => {
+        const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+        highlighted = highlighted.replace(regex, '<span class="compact-highlighted">$1</span>');
+      });
+      
+      return highlighted;
+    }
+
+    // Escape special regex characters
+    function escapeRegex(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // Event listeners
+    document.getElementById('compact-filter-button').addEventListener('click', () => {
+      const panel = document.getElementById('compact-filter-panel');
+      panel.classList.toggle('active');
+    });
+
+    document.getElementById('compact-search-input').addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+
+    document.getElementById('compact-search-input').addEventListener('input', () => {
+      performSearch();
+    });
+
+    // Re-run search when filters change
+    document.querySelectorAll('#compact-filter-panel input').forEach(input => {
+      input.addEventListener('change', () => {
+        const query = document.getElementById('compact-search-input').value.trim();
+        if (query) {
+          performSearch();
+        }
+      });
+    });
+
+    // Close overlay when clicking outside
+    document.addEventListener('click', (e) => {
+      const wrapper = document.querySelector('.compact-search-wrapper');
+      if (wrapper && !wrapper.contains(e.target)) {
+        document.getElementById('compact-results-overlay').classList.remove('active');
+        document.getElementById('compact-filter-panel').classList.remove('active');
+      }
+    });
+
+    // Add keyboard shortcut to focus search box when "/" is pressed
+    document.addEventListener('keydown', (e) => {
+      // Check if the pressed key is "/"
+      if (e.key === '/' || e.key === '/') {
+        // Don't trigger if already typing in an input field (except our search input)
+        const searchInput = document.getElementById('compact-search-input');
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+          if (e.target !== searchInput) {
+            return;
+          }
+        }
+        
+        // Prevent typing "/" in the search box
+        e.preventDefault();
+        
+        // Focus the search input
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    });
+  })();
+</script>
+{%- endif -%}

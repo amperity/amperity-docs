@@ -18,7 +18,7 @@
 
 
 ==================================================
-Configure campaigns for Amazon Ads
+Send data to Amazon Ads
 ==================================================
 
 .. vale off

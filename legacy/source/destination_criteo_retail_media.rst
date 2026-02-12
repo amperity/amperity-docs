@@ -14,7 +14,7 @@
 
 
 ====================================================
-Configure campaigns for Criteo Retail Media
+Send data to Criteo Retail Media
 ====================================================
 
 .. vale off

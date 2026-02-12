@@ -19,7 +19,7 @@
 
 
 ==================================================
-Configure campaigns for Yahoo DSP
+Send data to Yahoo DSP
 ==================================================
 
 .. vale off
