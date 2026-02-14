@@ -4996,7 +4996,7 @@ A PII semantic assigns consistency to customer data to ensure that PII data is m
 
 .. term-pii-table-start
 
-A PII table collects fields from the **Unified Coalesced** table that contain PII data and standardizes PII values. Build queries against any combination of PII data to build audiences using the visual **Segment Editor**.
+A PII table collects customer profile data from the **Unified Coalesced** table and standardizes PII values. Build queries against any combination of PII data to create audiences using the visual **Segment Editor**.
 
 .. term-pii-table-end
 
