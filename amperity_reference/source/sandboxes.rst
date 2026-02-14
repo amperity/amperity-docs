@@ -56,7 +56,7 @@ Allow sandbox administration
    #. View details for all sandboxes
    #. Access any sandbox
    #. Promote changes from a sandbox to production.
-   #. Delete a sandbox from the **Users and Activity** page *or* by selecting the **Promote and delete sandbox** option while promoting changes from a sandbox.
+   #. Delete a sandbox from the **Sandboxes** tab on the **Settings** page *or* by selecting the **Promote and delete sandbox** option while promoting changes from a sandbox.
 
 .. sandboxes-policy-allow-sandbox-administration-important-end
 
@@ -437,6 +437,8 @@ Sandboxes are created from the **Sandboxes** tab on the **Settings** page.
       :align: left
       :class: no-scaled-link
 
+   .. note:: The name of a sandbox may have up to 64 characters. The description for a sandbox may have up to 512 characters.
+
 #. Click **Create** to generate the sandbox for your tenant.
 
 .. sandboxes-howto-add-sandbox-steps-end
@@ -499,7 +501,7 @@ Open a sandbox
 
 .. sandboxes-howto-open-sandbox-start
 
-A sandbox is accessible from the **Users and Activity** page *or* from the dropdown menu in the top-right of your tenant.
+A sandbox is accessible from the **Sandboxes** tab on the **Settings** page *or* from the dropdown menu in the top-right of your tenant.
 
 .. sandboxes-howto-open-sandbox-end
 
