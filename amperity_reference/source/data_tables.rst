@@ -2134,6 +2134,12 @@ Stitch Blocking Keys
 
 .. data-tables-stitch-blocking-keys-table-about-start
 
+.. note:: The combination of **BK**, **datasource**, **PK**, and **strategy** forms the primary key. No values should be **NULL**.
+
+.. data-tables-stitch-blocking-keys-table-about-end
+
+.. data-tables-stitch-blocking-keys-table-about-start
+
 The **Stitch Blocking Keys** table has the following columns:
 
 .. data-tables-stitch-blocking-keys-table-about-end
