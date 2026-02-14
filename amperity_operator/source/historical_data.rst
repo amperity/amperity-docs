@@ -105,12 +105,12 @@ Static schemas
 
 .. _historical-data-access-datetime:
 
-Return versions by datetime
+Return versions by date
 ==================================================
 
 .. historical-data-access-datetime-start
 
-Use **datetime** to return a version that is on a specific date. For example:
+Use **created_at** to return a version that is on a specific date. For example:
 
 .. code-block:: sql
    :linenos:
@@ -119,7 +119,7 @@ Use **datetime** to return a version that is on a specific date. For example:
    FROM table_a_versioned AS a
    JOIN amperity_table_versions AS v 
    ON v.version = a.amperity_version 
-   WHERE v.datetime = 20250402
+   WHERE v.created_at = DATE '2025-04-02'
 
 .. historical-data-access-datetime-end
 
