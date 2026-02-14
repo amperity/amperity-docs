@@ -1904,7 +1904,7 @@ The **Data Explorer** offers a detailed way to navigate through data tables in A
 
 .. term-data-lineage-start
 
-Data lineage is a graph visualization that shows the connections between data in your tenant. The graph visualization is refreshed each time a user loads the **Data lineage** page.
+Data lineage is a graph visualization that shows how all of the data within your tenant connects. The graph visualization is refreshed each time a user loads the **Data lineage** page.
 
 .. term-data-lineage-end
 
