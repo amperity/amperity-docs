@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: SoundCommerce
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "client.sftp.soundcommerce.io"
+.. |sftp-hostname| replace:: "client-sftp.soundcommerce.io"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|

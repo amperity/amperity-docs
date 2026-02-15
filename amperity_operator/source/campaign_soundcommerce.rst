@@ -7,7 +7,7 @@
 .. |required-credentials| replace:: "username", "hostname", and "private key"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
-.. |sftp-hostname| replace:: "client.sftp.soundcommerce.io"
+.. |sftp-hostname| replace:: "client-sftp.soundcommerce.io"
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "sound"
