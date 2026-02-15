@@ -97,9 +97,9 @@ File settings
 
 .. format-ndjson-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the NDJSON file and to define formattting within the file.
+Use the **File settings** section of the courier configuration page to specify the path to the NDJSON file and to define  formatting within the file.
 
-.. format-ndjson-pull-couriers-file-settings-start
+.. format-ndjson-pull-couriers-file-settings-end
 
 
 .. _format-ndjson-pull-couriers-feed-selection:

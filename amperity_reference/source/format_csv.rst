@@ -185,7 +185,7 @@ File settings
 
 .. format-csv-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the CSV file and to define formattting within the file, such as escape character, quote charcter, compression type or header row.
+Use the **File settings** section of the courier configuration page to specify the path to the CSV file and to define  formatting within the file, such as escape character, quote charcter, compression type or header row.
 
 .. format-csv-pull-couriers-file-settings-start
 
