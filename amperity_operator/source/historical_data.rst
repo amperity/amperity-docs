@@ -56,7 +56,8 @@ For example:
 * **Unified_Coalesced_versioned**
 * **Unified_Customer_versioned**
 * **Merged_Customers_versioned**
-* **Unified_Scores_versioned**
+* **Unified Itemized Transactions**
+* **Unified Transactions**
 * **Domain_Table_A_versioned**
 * **Domain_Table_B_versioned**
 * **Domain_Table_C_versioned**
@@ -311,17 +312,17 @@ The list of available versioned tables is similar to:
     Table_B             qdv-20250402-1234-abcd   0        2025-04-02T12:58:54.000Z
     Table_C             qdv-20250402-1234-abcd   0        2025-04-02T12:58:54.000Z
     ...
-    Customer360         qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Coalesced   qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Customer    qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Merged_Customers    qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Scores      qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_A             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_B             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_C             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
+    Customer360         qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Coalesced   qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Customer    qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Merged_Customers    qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Scores      qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_A             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_B             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_C             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
     ...
-    Customer360         qdv-20200402-1234-abcd   2        2025-03-31T10:34:33.000Z
-    Unified_Coalesced   qdv-20200402-1234-abcd   2        2025-03-31T10:34:33.000Z
+    Customer360         qdv-20200402-1234-ijkl   2        2025-03-31T10:34:33.000Z
+    Unified_Coalesced   qdv-20200402-1234-ijkl   2        2025-03-31T10:34:33.000Z
     ...
    ------------------- ------------------------ -------- --------------------------
 
