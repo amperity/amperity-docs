@@ -925,7 +925,7 @@ You can use the Databricks CLI to create a provider in Databricks. Attach the cr
 
           $ databricks providers create socktown \ 
             TOKEN \
-            -recipient-profile-str "$(< path/to/config.share)"
+            --recipient-profile-str "$(< path/to/config.share)"
 
        where **TOKEN** is your Databricks personal access token, **socktown** is the name of the provider, and "path/to/config.share" represents the path to the location into which the Amperity credentials file was downloaded.
 
