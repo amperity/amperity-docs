@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Upload CSV files directly to the Customer 360, Queries, Segments, and Campaigns pages.
+        Upload CSV files directly to the Customer 360, Queries, and Segments pages.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Upload CSV files directly to the Customer 360, Queries, Segments, and Campaigns pages.
+        Upload CSV files directly to the Customer 360, Queries, and Segments pages.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ About file uploads
 
 .. file-uploads-overview-start
 
-Use the file upload feature on the **Customer 360** and **Queries** pages to upload CSV files to a database to use on the **Queries**, **Segments**, and **Campaigns** pages.
+Use file uploads from the **Customer 360** and **Queries** pages to upload CSV files to a database. Uploaded files are accessible as tables from the **Queries** page and, when uploaded files have a column with a valid email address, are accessible as audiences from the **Segments** page.
 
 .. image:: ../../images/modal-file-uploads.png
    :width: 400 px
@@ -27,27 +27,34 @@ Use the file upload feature on the **Customer 360** and **Queries** pages to upl
    :align: left
    :class: no-scaled-link
 
+Uploaded files belong to the database to which they are uploaded, but are not refreshed by scheduled workflows or included within customer profiles. Uploaded files cannot be referenced by database tables.
+
+If the data in an uploaded file *should* be part of a scheduled workflow *or* included within customer profiles, upload the CSV file using a feed, apply semantic tags or foreign keys, and then make the uploaded file available to Stitch workflows.
+
 .. file-uploads-overview-end
 
 .. file-uploads-overview-from-a-sandbox-start
 
-.. important:: Files that are uploaded to a sandbox are copied to your production tenant when that sandbox is promoted.
+.. important:: Files uploaded to a sandbox are copied to your production tenant when the sandbox is promoted. Files uploaded to production are copied to a sandbox and are available after the database is refreshed in the sandbox.
 
 .. file-uploads-overview-from-a-sandbox-end
 
 
  .. _file-uploads-use-cases:
  
-File upload use cases
+File uploads use cases
 ==================================================
 
 .. file-uploads-use-cases-start
 
-You can use the CSV file upload feature to upload a CSV file to a database. The following examples shows several ways you can use this feature:
+Upload CSV files to a database to support ad hoc use cases. For example:
 
-* Upload an anonymous list of customers which the system then connects with known customers with Amperity IDs
-* Upload a reference file to render on the **Queries** page
-* Upload a list of customers who filled out a survey in order to include in a campaign that addresses their concerns
+* Upload a recently acquired anonymous list of customers
+* Upload a list of customers who have signed up using a form
+* Upload a reference file, and then access it from the **Queries** page
+* Upload a list of customers who completed a survey, and then include those customers in a segment
+
+.. important:: CSV files uploaded for use with segments must identify a column in which a valid email address exists. The email address associates customers in the uploaded file with their Amperity customer profile.
 
 .. file-uploads-use-cases-end
 
@@ -59,11 +66,11 @@ SQL use case example
 
 .. file-uploads-example-sql-start
 
-Upload a list of customers to include or exclude from a campaign by building a query against file uploads that return the Amperity ID via the file upload feature.
+Upload a list of customers to include or exclude from an audience by building a query against file uploads that returns the Amperity ID.
 
 The following example shows SQL in the **Query Editor** that returns a series of values from an uploaded file, joins those values to the **Merged Customers** table using the **email** column in both tables, and then returns a list of Amperity IDs.
 
-.. note:: This is not required for uploaded files that contain an **email** column. For more complex use cases, a query that is made available to segments and campaigns must return a list of Amperity IDs.
+.. note:: This is not required for uploaded files that contain an **email** column. For more complex use cases, a query that is made available to segments must return a list unique by Amperity ID.
 
 .. image:: ../../images/mockup-queries-tab-query-in-segments.png
    :width: 600 px
@@ -114,7 +121,7 @@ The following example shows a inbound request for a customer list in the form of
    Jane Doe,jane.doe@abc.com
    John Smith,john.smith@abc.com
    Jane Smith,jane.smith@abc.com
-   Jim Johns,jim.jones@abc.com
+   Jim Johns,jim.johns@abc.com
 
 .. file-uploads-example-request-end
 
@@ -126,12 +133,12 @@ Query output
 
 .. file-uploads-query-output-start
 
-The following are some ways that you can use this feature on the **Segment Editor** and on the **Campaigns** page: 
+The following examples show how to use file uploads from the **Segment Editor** and from the **Campaigns** page: 
 
-* Create a complex view of customers on the **Segments** page by adding a query output to a segment, which can also be included or excluded in a campaign on the **Campaigns** page.
-* Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page.
+* Create a complex view of customers on the **Segments** page by adding a query output to a segment
+* Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page
 
-   .. note:: Queries that are made available for segments and campaigns can reference any uploaded files within the database that they are associated with.
+   .. note:: Queries made available for segments can reference any uploaded files within the database to which they are associated.
 
 .. file-uploads-query-output-end
 
@@ -143,7 +150,7 @@ How-tos
 
 .. file-uploads-overview-start
 
-Tasks related to uploading CSV files and adding query outputs to segments and campaigns in Amperity.
+Tasks related to uploading CSV files and adding query outputs to segments in Amperity.
 
 .. file-uploads-overview-end
 
@@ -225,7 +232,7 @@ You can select a query source from the **Campaigns** page.
 #. In the **Queries (Custom Tables)**, select a query source.
 #. Click **Save**.
 
-   .. note:: To delete a campaign associated with a query output, you must first delete the uploaded file before being able to delete the segment.
+   .. note:: To delete an audience associated with a query output, you must first delete the uploaded file before deleting the segment.
 
 .. file-uploads-select-query-source-steps-end
 
@@ -321,7 +328,7 @@ You can upload a CSV file in Amperity to use on the **Queries**, **Segments**, a
 
 .. admonition:: Multi-brand databases
 
-   A file is uploaded to a single database. When your tenant is configured for multi-brand databases a file must be uploaded to each database.
+   A file is uploaded to a single database. When your tenant is configured for multi-brand databases, and an uploaded file must be available to more than one database, upload the CSV file to each database.
 
 
 .. _file-uploads-via-c360:

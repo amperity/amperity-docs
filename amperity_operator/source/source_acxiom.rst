@@ -6,8 +6,8 @@
 .. |feed-name| replace:: CustomerRecords
 .. |example-filename| replace:: filename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
-.. |credential-type| replace:: **axciom**
-.. |sftp-hostname| replace:: **sfgext.axciom.com**
+.. |credential-type| replace:: **acxiom**
+.. |sftp-hostname| replace:: **sfgext.acxiom.com**
 .. |what-pull| replace:: customer records
 .. |filter-the-list| replace:: "acx"
 

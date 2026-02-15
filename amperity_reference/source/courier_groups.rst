@@ -407,8 +407,8 @@ The time zones that are available for selection in Amperity are modeled after th
 
    (GMT-08:00) Pacific Time
    (GMT-07:00) Mountain Time
-   (GMT-08:00) Central Time
-   (GMT-09:00) Eastern Time
+   (GMT-06:00) Central Time
+   (GMT-05:00) Eastern Time
 
 .. courier-groups-timezones-about-end
 

@@ -123,7 +123,7 @@ More scenarios
 The following sections do not walk through how to configure attributes in the **Segment Editor**, but they do describe situations in which using RFM scores can help you build useful audiences for your campaigns.
 
 * :ref:`Direct mail campaigns <rfm-example-direct-mail>`
-* :ref:`High F, low R scores <rfm-example-high-m-low-r>`
+* :ref:`High F, low R scores <rfm-example-high-f-low-r>`
 * :ref:`High M, low F scores <rfm-example-high-m-low-f>`
 * :ref:`High R, low F and M scores <rfm-example-high-r-low-f-m>`
 * :ref:`High R and F, low M scores <rfm-example-high-r-and-f-low-m>`
@@ -149,16 +149,16 @@ Use RFM scores to identify households that are more likely to be receptive to th
 .. rfm-example-direct-mail-end
 
 
-.. _rfm-example-high-m-low-r:
+.. _rfm-example-high-f-low-r:
 
 High F, low R scores
 --------------------------------------------------
 
-.. rfm-example-high-m-low-r-start
+.. rfm-example-high-f-low-r-start
 
 A high frequency score and low recency score represents a customer who has recently stopped buying from your brand. Use this combination of scores as an indicator for customers who may require special offers to entice them back to spending money with your brand.
 
-.. rfm-example-high-m-low-r-end
+.. rfm-example-high-f-low-r-end
 
 
 .. _rfm-example-high-m-low-f:

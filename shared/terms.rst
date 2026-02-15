@@ -1904,7 +1904,7 @@ The **Data Explorer** offers a detailed way to navigate through data tables in A
 
 .. term-data-lineage-start
 
-Data lineage is a graph visualization that shows the connections between data in your tenant. The graph visualization is refreshed each time a user loads the **Data lineage** page.
+Data lineage is a graph visualization that shows how all of the data within your tenant connects. The graph visualization is refreshed each time a user loads the **Data lineage** page.
 
 .. term-data-lineage-end
 
@@ -4996,7 +4996,7 @@ A PII semantic assigns consistency to customer data to ensure that PII data is m
 
 .. term-pii-table-start
 
-A PII table collects fields from the **Unified Coalesced** table that contain PII data and standardizes PII values. Build queries against any combination of PII data to build audiences using the visual **Segment Editor**.
+A PII table collects customer profile data from the **Unified Coalesced** table and standardizes PII values. Build queries against any combination of PII data to create audiences using the visual **Segment Editor**.
 
 .. term-pii-table-end
 

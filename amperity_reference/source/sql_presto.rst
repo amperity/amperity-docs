@@ -47,8 +47,8 @@ Amazon AWS vs. Azure
 
 Amperity uses different versions of Presto SQL, depending on if the tenant runs in Amazon AWS or Microsoft Azure.
 
-* Tenants that run in Amazon AWS run `Athena engine version 2 <https://docs.aws.amazon.com/athena/latest/ug/engine-versions-reference.html#engine-versions-reference-0002>`__ |ext_link|.
-* Tenants in Azure run Trino, version 346: `release notes <https://trino.io/docs/current/release/release-346.html>`__ |ext_link|, `SELECT statement reference <https://trino.io/docs/current/sql/select.html>`__ |ext_link| (for current version), `functions reference <https://trino.io/docs/current/functions.html>`__ |ext_link| (for current version).
+* Tenants that run in Amazon AWS run `Athena engine version 3 <https://docs.aws.amazon.com/athena/latest/ug/engine-versions-reference-0003.html>`__ |ext_link|.
+* Tenants in Azure run Trino, version 451: `release notes <https://trino.io/docs/current/release/release-451.html>`__ |ext_link|, `SELECT statement reference <https://trino.io/docs/current/sql/select.html>`__ |ext_link| (for current version), `functions reference <https://trino.io/docs/current/functions.html>`__ |ext_link| (for current version).
 
 Amperity behaves the same on either platform when using Presto SQL to build segments from within the **Segments** tab, with the following exceptions:
 

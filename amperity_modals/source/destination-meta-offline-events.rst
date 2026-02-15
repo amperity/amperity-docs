@@ -15,7 +15,9 @@ Send events to |destination-name| to help your brand track offline conversions t
 
 Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
-The first time transaction events are sent to |destination-name|, seven days of data is sent, after which Amperity should be configured to send daily updates, which will maintain a 7-day rolling window of transaction events.
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-overview-window-start
+   :end-before: .. events-meta-ads-manager-overview-window-end
 
 
 Credentials

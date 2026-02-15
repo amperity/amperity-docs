@@ -106,9 +106,7 @@ The **All Opted-In Emails** table requires the **Email Opt Status** table, after
 #. Click **Validate** to verify the SQL runs without error.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. Select **Make available in Visual Segment Editor**. This ensures the table is available from the **Edit Attributes** dialog in the campaign editor.
-
-   .. important:: You should not use attributes in this table to build segments.
+#. Leave **Make available in Visual Segment Editor** unselected.
 #. Leave the **Table Semantics** dropdown empty.
 #. Click **Save**.
 
@@ -130,7 +128,7 @@ You can extend the **All Opted-In Emails** table to contain specific sets of att
 * The frequency at which your customers allow emails to be sent
 * Language preference
 
-For example, to extend the **All Opted-In Emails** table to support a single brand in Europe, update the SQL for the **All Opted In Emails** table:
+For example, to extend the **All Opted-In Emails** table to support a single brand in Europe, update the SQL for the **All Opted-In Emails** table:
 
 .. code-block:: sql
    :linenos:

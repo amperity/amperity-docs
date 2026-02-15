@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Meta Ads Events
+.. |destination-name| replace:: Meta Ads Manager
 .. |plugin-name| replace:: "Facebook"
 .. |credential-type| replace:: "facebook"
 .. |required-credentials| replace:: "refresh token"
@@ -36,9 +36,13 @@ Send events to |destination-name| to help your brand track offline conversions t
 
 Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
 
+.. events-meta-ads-manager-overview-end
+
+.. events-meta-ads-manager-overview-window-start
+
 .. important:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
 
-.. events-meta-ads-manager-overview-end
+.. events-meta-ads-manager-overview-window-end
 
 .. events-meta-ads-manager-allowfor-start
 
@@ -331,7 +335,6 @@ A query that returns a collection events for use in |destination-name| is simila
      ,uit.item_quantity AS quantity
      ,uit.product_id AS product_id
      ,uit.order_datetime AS timestamp
-     ,CAST(uit.order_datetime AS datetime) AS timestamp
      ,CAST(uit.item_revenue / uit.item_quantity AS DOUBLE) AS price
      ,'USD' AS currency
      ,'physical_store' AS action_source 

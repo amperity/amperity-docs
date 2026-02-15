@@ -74,6 +74,10 @@ Your brand can send custom audiences and events to |destination-name|:
           :end-before: .. events-meta-ads-manager-overview-end
 
        .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+          :start-after: .. events-meta-ads-manager-overview-window-start
+          :end-before: .. events-meta-ads-manager-overview-window-end
+
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-allowfor-start
           :end-before: .. events-meta-ads-manager-allowfor-end
 

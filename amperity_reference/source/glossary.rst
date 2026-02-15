@@ -216,7 +216,7 @@ A
 
 .. _a-all-opted-in-emails:
 
-**All Opted In Emails**
+**All Opted-In Emails**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-all-opted-in-emails-table-start
       :end-before: .. term-all-opted-in-emails-table-end
@@ -3946,7 +3946,7 @@ R
       :end-before: .. term-reddit-ads-end
 
 
-.. _r-request_datasource:
+.. _r-request-datasource:
 
 **request datasource**
    .. include:: ../../shared/terms.rst
@@ -3954,7 +3954,7 @@ R
       :end-before: .. term-request-datasource-end
 
 
-.. _r-request_strategy:
+.. _r-request-strategy:
 
 **request strategy**
    .. include:: ../../shared/terms.rst
@@ -3962,7 +3962,7 @@ R
       :end-before: .. term-request-strategy-end
 
 
-.. _r-request_type:
+.. _r-request-type:
 
 **request type**
    .. include:: ../../shared/terms.rst
@@ -4530,7 +4530,7 @@ S
 
 .. _s-stitch-blocking-keys:
 
-**Stitch_Blocking_Keys**
+**Stitch Blocking Keys**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-blocking-keys-table-start
       :end-before: .. term-stitch-blocking-keys-table-end
@@ -4538,7 +4538,7 @@ S
 
 .. _s-stitch-blocklistvalues:
 
-**Stitch_BlocklistValues**
+**Stitch BlocklistValues**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-blocklistvalues-table-start
       :end-before: .. term-stitch-blocklistvalues-table-end
@@ -4546,7 +4546,7 @@ S
 
 .. _s-stitch-scores:
 
-**Stitch_Scores**
+**Stitch Scores**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-scores-table-start
       :end-before: .. term-stitch-scores-table-end

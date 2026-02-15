@@ -5,7 +5,7 @@
 .. |plugin-name| replace:: "LiveRamp"
 .. |credential-type| replace:: "liveramp"
 .. |required-credentials| replace:: "username", "hostname", and "passphrase"
-.. |what-send| replace:: CSV files
+.. |what-send| replace:: CSV, PSV, or TSV files
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: **files.liveramp.com**, **sftp-au.liverampapac.com**, or **sftp.liveramp.com**
 .. |remote-folder| replace:: "/folder"

@@ -456,11 +456,11 @@ Paid media indicators can help measure audience quality and attribution. These i
 Did your customers click on a link and make a purchase after clicking on that link? You can measure attribution using metrics like:
 
 * Cost per acquisition (CPA)
-* Cost acquisition cost (CAC)
 * Cost per click (CPC)
 * Cost per thousand (CPM)
 * Click-through rate
 * Conversion rate
+* Customer acquisition cost (CAC)
 * Revenue
 * Return on ad spend (ROAS)
 

@@ -4,7 +4,7 @@
 .. |destination-name| replace:: LiveRamp
 .. |what-send| replace:: CSV, TSV, or PSV files
 .. |sftp-type| replace:: **liveramp**
-.. |sftp-hostname| replace:: **files.liveramp.com**,**sftp-au.liverampapac.com**, or **sftp.liveramp.com**
+.. |sftp-hostname| replace:: **files.liveramp.com**, **sftp-au.liverampapac.com**, or **sftp.liveramp.com**
 .. |file-format| replace:: CSV, TSV, or PSV
 .. |encoding-method| replace:: "GZip".
 
