@@ -335,7 +335,7 @@ All Opted-In Emails
 
 .. data-tables-all-opted-in-emails-context-start
 
-The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used to the **Segment Editor**, though it should be made available to the **Segment Editor**. Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu. This ensures that the **email** attribute in this table is available to campaigns. 
+The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used in the **Segment Editor**.
 
 .. data-tables-all-opted-in-emails-context-end
 

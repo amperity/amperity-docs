@@ -216,7 +216,7 @@ A
 
 .. _a-all-opted-in-emails:
 
-**All Opted In Emails**
+**All Opted-In Emails**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-all-opted-in-emails-table-start
       :end-before: .. term-all-opted-in-emails-table-end
