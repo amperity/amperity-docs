@@ -32,9 +32,9 @@ Approximate RFM
 
    An RFM score is an approximation that measures three data points:
 
-   #. A :ref:`recency score (R) <attribute-rfm-recency>` that sorts customers by how recently they purchased during the previous 12 months.
-   #. A :ref:`frequency score (F) <attribute-rfm-frequency>` that sorts customers by purchase frequency during the previous 12 months.
-   #. A :ref:`monetary score (M) <attribute-rfm-monetary>` that score that sorts customers by spend amount during the previous 12 months.
+   #. A :ref:`recency score (R) <attribute-rfm-recency>` sorts customers by how recently they purchased during the previous 12 months.
+   #. A :ref:`frequency score (F) <attribute-rfm-frequency>` sorts customers by purchase frequency during the previous 12 months.
+   #. A :ref:`monetary score (M) <attribute-rfm-monetary>` sorts customers by how much they have spent during the previous 12 months.
 
    These individual scores can be combined into a single score (RFM).
 
@@ -125,7 +125,7 @@ L12M Monetary
 
 .. attribute-rfm-monetary-find-start
 
-To find customers who spent the most money during the previous 12 months, start with the **L12M Monetary** attribute, set its condition to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for spend amount.
+To find customers who spent the most money during the previous 12 months, start with the **L12M Monetary** attribute, set its operator to **is**, and then specify a percentile. For example, use "10" to find customers who are in the top 10% for spend amount.
 
 .. attribute-rfm-monetary-find-end
 
@@ -165,7 +165,7 @@ For example, you can build an audience that contains your top 20% customers for 
 
 .. attribute-rfm-score-context-start
 
-You can access combined approximate RFM scores directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **L12M RFM Score** attribute, and then apply an condition.
+You can access combined approximate RFM scores directly from the **Segment Editor**. To add this attribute to your segment, click **Add operator** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select the **L12M RFM Score** attribute, and then apply an operator.
 
 .. attribute-rfm-score-context-end
 
@@ -196,12 +196,12 @@ The combined score returns customers who met each requirement. This is often a m
 .. attribute-rfm-score-howitworks-end
 
 
-.. _attribute-rfm-conditions:
+.. _attribute-rfm-operators:
 
 Available operators
 ==================================================
 
-.. attribute-rfm-individual-conditions-start
+.. attribute-rfm-individual-operators-start
 
 The following table lists the operators that are available to these attributes.
 
@@ -255,4 +255,4 @@ The following table lists the operators that are available to these attributes.
    * - **is NULL**
      - Returns customer records that do not have a value.
 
-.. attribute-rfm-individual-conditions-end
+.. attribute-rfm-individual-operators-end
