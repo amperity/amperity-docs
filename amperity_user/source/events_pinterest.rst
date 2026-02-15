@@ -56,8 +56,8 @@ For example:
    :linenos:
 
    SELECT
-     mc.TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(email))))) AS EMAIL
-     TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS email
+     mc.TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(email))))) AS email
+     ,TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS email_1
      ,ut.order_datetime AS event_time
      ,'checkout' AS event_type
      ,'offline' AS event_source
@@ -69,7 +69,7 @@ For example:
    ON mc.amperity_id = ut.amperity_id
    WHERE mc.email IS NOT NULL
 
-You can download the results of this query directly from the **Query Editor** in Amperity or you can use an orchestration to send the CSV file to cloud storage or an SFTP bucket.
+You can download the results of this query directly from the **Query Editor** in Amperity or you can use an orchestration to send the CSV file to cloud storage or any SFTP site.
 
 .. events-pinterest-build-query-end
 

@@ -52,7 +52,7 @@ Amperity creates the customer list (if it does not already exist), and then add 
 
 When a customer list is not associated with an audience in |destination-name|, Amperity creates an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
 
-.. note:: A customer list must contain at least 100 email addresses that are associated with a |destination-name| account before it can be associated with an audience.
+.. note:: A customer list must have at least 100 email addresses associated with a |destination-name| account before a list is associated with an audience.
 
 .. destination-pinterest-shared-end
 
@@ -68,7 +68,7 @@ When a customer list is not associated with an audience in |destination-name|, A
 
    * The `update customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/update>`__ |ext_link| endpoint to manage the list of email addresses in a customer list.
 
-   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|. Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
+   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link| at up to 100 requests per second.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
