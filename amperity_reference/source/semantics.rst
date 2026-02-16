@@ -255,6 +255,7 @@ The following table describes the semantic tags that are used for CCPA and GDPR 
 
         .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
+
    * - **custom-key**
      - **Optional**
 
@@ -263,6 +264,18 @@ The following table describes the semantic tags that are used for CCPA and GDPR 
        Find all records that match a custom value. This action is case-insensitive.
 
        The values in this field will be checked against any domain table that has the **compliance/custom-key** semantic tag.
+
+
+   * - **system-updated**
+     - **Optional**
+
+       Semantic tag: **system-updated**
+
+       Processed compliance requests are automatically removed from the inbound requests table after each privacy rights workflow.
+
+       To retain request records that arrived after the domain transaction closes apply the **system-updated** semantic tag to a field in the inbound requests table by choosing the **Generate an "updated" field** from the **Feed Editor**.
+
+       When the **system-updated** semantic tag is not applied to the inbound requests table **all records** are deleted from the inbound requests table.
 
 .. semantics-compliance-request-table-end
 
