@@ -630,11 +630,6 @@
    <a href="https://docs.amperity.com/operator/data_first_party.html#raw-clickstream-data">require filtered sets of raw clickstream data</a>
 
 
-.. |first_party_data_sources| raw:: html
-
-   <a href="https://docs.amperity.com/operator/data_first_party.html">First-party Data Sources</a>
-
-
 .. |format_actual_json| raw:: html
 
    <a href="https://docs.amperity.com/reference/format_json_actual.html">actual JSON</a>
@@ -647,7 +642,7 @@
 
 .. |format_cbor| raw:: html
 
-   <a href="https://docs.amperity.com/reference/format_cbor.html">CBOR</a>
+   <a href="https://docs.amperity.com/reference/format_cbor.html">Concise Binary Object Representation (CBOR)</a>
 
 
 .. |format_cbor_couriers| raw:: html
