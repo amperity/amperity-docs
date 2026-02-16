@@ -28,7 +28,7 @@ The following tables are standard output of Amperity when using guided setup. Th
 * :ref:`Unified Coalesced <standard-output-unified-coalesced>`
 * :ref:`Unified Scores <standard-output-unified-scores>`
 
-All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
+All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attributes it is organized alphabetically by attribute name.
 
 .. standard-output-overview-end
 
