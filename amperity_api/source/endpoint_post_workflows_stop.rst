@@ -195,7 +195,8 @@ The **200** response returns details for the workflow that was stopped.
       "tenant":"socktown",
       "created_at":"2024-08-01T18:07:58.099Z",
       "ended_at":"2024-08-01T18:10:47.712Z",
-      "state":"succeeded"
+      "state":"canceled"
+      "task_instances": []
    }
 
 .. endpoint-post-workflows-stop-response-200ok-end
@@ -216,6 +217,9 @@ A **200 OK** response contains the following parameters.
 
    * - Parameter
      - Description
+
+   * - **created_at**
+     - The date and time at which the workflow started.
 
    * - **current_version**
      - A unique identifier that describes the configuration state of Amperity at the end of the workflow or at the time an error occurred. The value for this property is similar to: "etv-20240210-12345-6AbCDE".
@@ -262,7 +266,7 @@ A **200 OK** response contains the following parameters.
           The error message.
 
        **type**
-          A period-delimited string that indicates where an error occurred
+          A period-delimited string that indicates where an error occurred.
 
    * - **id**
      - The Amperity internal identifier for the workflow. For example **wf-20240619-14418-6UhqSe**.
@@ -289,15 +293,14 @@ A **200 OK** response contains the following parameters.
    * - **state**
      - The current state of the workflow. For example:
 
-       * Scheduled
-       * Started
-       * In progress
-       * Stopping
-       * Stopped
-       * Succeeded
-       * Running with failures
-       * Failed
        * Canceled
+       * Canceling
+       * Failed
+       * Paused
+       * Running
+       * Running with failures
+       * Scheduled
+       * Succeeded
 
        .. note:: This is the same value that is visible from the **Status** box on each individual workflow page and from the **Status** column on the **Workflows** page.
 
@@ -348,17 +351,15 @@ A **200 OK** response contains the following parameters.
        **state**
           The current state of the task. For example:
 
-          * Scheduled
-          * Started
-          * In progress
-          * Running
-          * Finalizing
-          * Succeeded
-          * Stopping
-          * Stopped
-          * Failed
-          * Skipped
           * Canceled
+          * Failed
+          * Finalizing
+          * Paused
+          * Running
+          * Scheduled
+          * Skipped
+          * Succeeded
+          * Up for retry
 
           .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
 
