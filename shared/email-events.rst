@@ -37,7 +37,7 @@ The number of times a link in an email was clicked from within the email events 
 
 .. email-events-clicks-x-days-start
 
-The number of email clicks in the last 1, 3, 5, 7, or 14 days.
+The number of email clicks in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-clicks-x-days-end
 
@@ -171,7 +171,7 @@ The number of all email opens from within the email events data that is provided
 
 .. email-events-opens-x-days-start
 
-The number of email opens in the last 1, 3, 5, 7, or 14 days.
+The number of email opens in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-opens-x-days-end
 
