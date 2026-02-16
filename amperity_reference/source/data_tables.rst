@@ -2031,6 +2031,14 @@ The **Predicted CLV Attributes** table has the following columns:
           :start-after: .. term-amperity-id-format-start
           :end-before: .. term-amperity-id-format-end
 
+   * - **Days Since Last Order**
+     - Integer
+     - The number of days elapsed since the customer's last order.
+
+   * - **Historical Order Frequency Lifetime**
+     - Integer
+     - The total number of historical orders a customer has made.
+
    * - **Predicted Average Order Revenue Next 365D**
      - Decimal
      - The predicted average order revenue over the next 365 days.
@@ -2041,7 +2049,7 @@ The **Predicted CLV Attributes** table has the following columns:
 
    * - **Predicted Customer Lifecycle Status**
      - String
-     - A probabilistic grouping of a customer's likelihood to purchase again.
+     - A probabilistic grouping of a customer's likelihood for future transactions.
 
        .. include:: ../../shared/models.rst
           :start-after: .. models-churn-propensitity-tiers-repeat-start
