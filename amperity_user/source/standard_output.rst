@@ -31,7 +31,7 @@ The following tables are standard output of Amperity. These tables and the attri
 * :ref:`Unified Itemized Transactions <standard-output-unified-itemized-transactions>`
 * :ref:`Unified Transactions <standard-output-unified-transactions>`
 
-All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
+All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attributes it is organized alphabetically by attribute name.
 
 .. standard-output-overview-end
 
