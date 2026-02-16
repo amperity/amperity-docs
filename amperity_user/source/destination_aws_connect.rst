@@ -64,11 +64,8 @@ Build a query that returns customer profiles and custom values. For example:
    :linenos:
 
    SELECT
-     given_name AS "First Name"
-     surname AS "Last Name"
-     postal AS "Zip Code"
      email AS "Email Address"
-     phone AS "Phone Number"
+     ,phone AS "Phone Number"
    FROM Merged_Customers
 
 .. sendto-aws-connect-build-query-end

@@ -71,11 +71,8 @@ An |destination-name| destination works like this:
    .. code-block:: sql
 
       SELECT
-        given_name AS "First Name"
-        surname AS "Last Name"
-        postal AS "Zip Code"
         email AS "Email Address"
-        phone AS "Phone Number"
+        ,phone AS "Phone Number"
       FROM Merged_Customers
 
 #. Configure a webhook destination to send data to a Lambda function that is running in AWS Lambda.
@@ -236,8 +233,8 @@ Amperity provides a pre-built collection of Lambda functions that is available f
 
 **To get the Lambda function template**
 
-#. Clone the open source **amperity-lambda-runner** repository or download it as a ZIP file.
-#. In the repo, navigate to "/src/lambdas/lambda_handlers/", and then open "amazon_pinpoint.py".
+#. Clone the open source `amperity-lambda-runner <https://github.com/amperity/amperity-lambda-runner>`__ |ext_link| repository or download it as a ZIP file.
+#. In the repo, navigate to "/src/lambdas/lambda_handlers/", and then open "amazon_aws_connect.py".
 #. You may use this file directly, requiring only configuration updates, or you may customize it to support your desired workflow.
 
 .. destination-aws-connect-manual-get-template-end
@@ -336,7 +333,7 @@ Set AWS Lambda environment variables
 
 .. destination-aws-connect-manual-set-variables-start
 
-Use AWS Lambda environment variables provide to the Lambda function the name of the project, the origination number, and the region.
+Use AWS Lambda `environment variables <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`__ |ext_link| to provide the Lambda function with the name of the project, the origination number, and the region.
 
 **To set environment variables**
 
@@ -344,6 +341,9 @@ Use AWS Lambda environment variables provide to the Lambda function the name of 
 #. Open the Lambda function for AWS Connect.
 #. Click **Configuration**.
 #. On the **Configuration** page, click **Environment variables**, and then click **Edit**.
+
+   .. note:: AWS Lambda environment variables will vary, depending on how a Lambda function is implemented.
+
 #. Click **Save**.
 
 .. destination-aws-connect-manual-set-variables-end
