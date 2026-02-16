@@ -21,7 +21,7 @@ About activation IDs
 
 An activation ID is any unique identifier that your brand wants to use for precise segmentation and campaign targeting. Use activation IDs to associate a unique ID that is applied to certain types of marketing activity with the audiences you send downstream from Amperity.
 
-The default activation ID within Amperity is the **Amperity ID**. Your brand can configure additional identifiers as activation IDs, such as email addresses, loyalty account IDs, mobile advertising IDs, customer account IDs, or any other unique identifier, to support using segments to build audiences for those activation IDs, and then make those audiences availble for use in campaigns.
+The default activation ID within Amperity is the **Amperity ID**. Your brand can configure additional identifiers as activation IDs, such as email addresses, loyalty account IDs, mobile advertising IDs, customer account IDs, or any other unique identifier, to support using segments to build audiences for those activation IDs, and then make those audiences available for use in campaigns.
 
 .. activation-ids-intro-end
 
