@@ -229,10 +229,8 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
-              --data '{"config_id":"cg-123ABc4DE"}' \
-              --data '{"range_from":"YYYY-MM-DD"}' \
-              --data '{"range_to":"YYYY-MM-DD"}' \
-              --data '{"run_mode":"full"}'
+              --data '{"config_id":"cg-123ABc4DE", "range_from":"YYYY-MM-DD", \
+                       "range_to":"YYYY-MM-DD", "run_mode":"full"}'
 
       This example is formatted for readability in a narrow page layout.
 
