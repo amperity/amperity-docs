@@ -139,6 +139,21 @@ The following attributes are available from the **Customer Attributes** table.
    * - Attributes
      - Description
 
+   * - **Churn trigger**
+     - The churn status for a customer. Possible values:
+
+       * Active
+       * Cooling down
+       * At risk
+       * Highly at risk
+       * Lost
+       * Blank
+
+       .. tip:: Use these values as part of your churn prevention campaigns.
+
+   * - **Churn trigger start datetime**
+     - The date and time at which the **Churn trigger** status begins.
+
    * - **Contactable address**
      - A flag that indicates if a customer can be contacted by a physical mailing address.
 
@@ -148,6 +163,9 @@ The following attributes are available from the **Customer Attributes** table.
    * - **Contactable global**
      - A flag that indicates if a customer can be contacted by phone number, email address, or physical mailing address.
 
+   * - **Contactable paid social**
+     - A flag that indicates if a customer has personally identifiable information (PII) that could be used to contact them using paid social media channels.
+
    * - **Contactable phone**
      - A flag that indicates if a customer can be contacted by phone.
 
@@ -155,7 +173,7 @@ The following attributes are available from the **Customer Attributes** table.
      - A string that contains all of the classifications for a customer. For example: ``"is reseller, is outlier"`` or ``"is test account"``. A value of ``" "`` indicates that all classifications are false.
 
    * - **Customer type**
-     - The type of user: "customer" or "prospect". A customer has a historical revenue relationship with a brand. A prospect does not have a revenue relationship with a brand.
+     - The type of user: "purchaser" or "prospect". A purchaser has a historical revenue relationship with a brand. A prospect does not have a revenue relationship with a brand.
 
    * - **Historical purchaser lifecycle status**
      - The status for a customer, based on their history and recency of interactions a brand. Possible values: "active", "lapsed", and "dormant".
@@ -179,8 +197,26 @@ The following attributes are available from the **Customer Attributes** table.
    * - **Is gift giver**
      - A flag that indicates if a customer has purchased items as gifts.
 
+   * - **Is no PII Amperity ID**
+     - A flag that indicates if the customer does not have personally identifiable information (PII) for name (given name, surname, full name), address (street address, city, state, postal code), email address, or phone number.
+
+   * - **Is opted into email**
+     - A flag that indicates if the customer has given consent to receive email communications from your brand.
+
+   * - **Is opted into SMS**
+     - A flag that indicates if the customer has given consent to receive SMS messages from your brand.
+
    * - **Is outlier**
      - A flag that indicates if the customer has abnormally high purchase behaviors in comparison to other purchasers.
+
+   * - **Is primary buyer household**
+     - A flag that indicates if a customer is the individual within a household who represents the highest lifetime revenue for that household.
+
+   * - **Is prospect**
+     - A flag that indicates if a customer does not have a purchase history with a brand.
+
+   * - **Is purchaser**
+     - A flag that indicates if the customer has a purchase history with a brand.
 
    * - **Is reseller**
      - A flag that indicates if the customer is a known or likely reseller of a product.
@@ -437,7 +473,7 @@ The following types of email engagement attributes are made available by standar
 * :ref:`attributes-email-engagement-attributes`
 * :ref:`attributes-email-engagement-summary`
 
-.. note:: Email engagement attributes are available from the **Email Engagement Attributes** and **Email Engagement Summary** tables. If at least 15 months of raw events were made available to Amperity and **email-events** semantic tags were applied to the incoming data, attribues are also available from the **Unified Email Events** table.
+.. note:: Email engagement attributes are available from the **Email Engagement Attributes** and **Email Engagement Summary** tables. If at least 15 months of raw events were made available to Amperity and **email-events** semantic tags were applied to the incoming data, attributes are also available from the **Unified Email Events** table.
 
 .. attributes-email-engagement-end
 
@@ -508,6 +544,7 @@ Email engagement attributes are identical to email summary attributes, but are u
 
    * - Attributes
      - Description
+
    * - **Brand**
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-brand-start
@@ -516,22 +553,74 @@ Email engagement attributes are identical to email summary attributes, but are u
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-email-start
           :end-before: .. email-events-email-end
-   * - **Event datetime**
+   * - **Email Clicks Last X Day**
      - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-datetime-start
-          :end-before: .. email-events-datetime-end
-   * - **Event type**
+          :start-after: .. email-events-clicks-x-days-start
+          :end-before: .. email-events-clicks-x-days-end
+   * - **Email Clicks Last X Months**
      - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-type-start
-          :end-before: .. email-events-type-end
-   * - **Region**
+          :start-after: .. email-events-clicks-x-months-start
+          :end-before: .. email-events-clicks-x-months-end
+   * - **Email Opens Last X Day**
      - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-region-start
-          :end-before: .. email-events-region-end
-   * - **Send ID**
+          :start-after: .. email-events-opens-x-days-start
+          :end-before: .. email-events-opens-x-days-end
+   * - **Email Opens Last X Months**
      - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-send-id-start
-          :end-before: .. email-events-send-id-end
+          :start-after: .. email-events-opens-x-months-start
+          :end-before: .. email-events-opens-x-months-end
+   * - **Engagement Frequency Last 15 Months**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-engagement-frequency-15-months-start
+          :end-before: .. email-events-engagement-frequency-15-months-end
+   * - **Engagement Status Last 15 Months**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-engagement-status-15-months-start
+          :end-before: .. email-events-engagement-status-15-months-end
+   * - **First Email Click Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-first-click-start
+          :end-before: .. email-events-first-click-end
+   * - **First Email Open Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-first-open-start
+          :end-before: .. email-events-first-open-end
+   * - **First Email Send Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-first-send-start
+          :end-before: .. email-events-first-send-end
+   * - **Most Recent Email Bounce Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-bounce-start
+          :end-before: .. email-events-most-recent-bounce-end
+   * - **Most Recent Email Click Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-click-start
+          :end-before: .. email-events-most-recent-click-end
+   * - **Most Recent Email Open Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-open-start
+          :end-before: .. email-events-most-recent-open-end
+   * - **Most Recent Email Optin Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-optin-start
+          :end-before: .. email-events-most-recent-optin-end
+   * - **Most Recent Email Optout Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-optout-start
+          :end-before: .. email-events-most-recent-optout-end
+   * - **Most Recent Email Send Datetime**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-most-recent-send-start
+          :end-before: .. email-events-most-recent-send-end
+   * - **Purchase Before Signup**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-purchase-before-signup-start
+          :end-before: .. email-events-purchase-before-signup-end
+   * - **Signup To Purchase Days**
+     - .. include:: ../../shared/email-events.rst
+          :start-after: .. email-events-signup-to-purchase-days-start
+          :end-before: .. email-events-signup-to-purchase-days-end
 
 .. attributes-email-engagement-attributes-table-end
 
@@ -1108,7 +1197,7 @@ Customer flags
      - Description
 
    * - **Early repeat purchaser**
-     - Indicates if a customer made a repeat purchase within the previous 30 days.
+     - Indicates if a customer made a repeat purchase within the previous 12 weeks, or 84 days.
 
    * - **Multi Purchase Brand**
      - Indicates if a customer has interacted with more than one brand.
@@ -1391,7 +1480,7 @@ Predicted attributes
 
 .. attributes-predicted-start
 
-The following types of predicted attributes are made availble by standard output:
+The following types of predicted attributes are made available by standard output:
 
 * :ref:`Customer lifetime value <attributes-predicted-clv>`
 * :ref:`Product affinity <attributes-predicted-affinity>`
@@ -1420,6 +1509,13 @@ The following attributes are available from the **Predicted CLV Attributes** tab
 
    * - Attributes
      - Description
+
+   * - **Days Since Last Order**
+     - The number of days elapsed since the customer's last order.
+
+   * - **Historical Order Frequency Lifetime**
+     - The total number of historical orders a customer has made.
+
    * - **Predicted Average Order Revenue Next 365 Days**
      - The predicted average order revenue over the next 365 days.
 
@@ -1427,7 +1523,7 @@ The following attributes are available from the **Predicted CLV Attributes** tab
      - The total predicted customer spend over the next 365 days.
 
    * - **Predicted Customer Lifecycle Status**
-     - A probabilistic grouping of a customer's likelihood to purchase again. Groupings include the following tiers:
+     - A probabilistic grouping of a customer's likelihood for future transactions. Groupings include the following tiers:
 
        #. Active
        #. Cooling down
