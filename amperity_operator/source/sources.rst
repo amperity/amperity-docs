@@ -150,6 +150,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_koupon_media
 
+   .. grid-item-card:: Kustomer
+      :link-type: doc
+      :link: source_kustomer
+
    .. grid-item-card:: Listrak
       :link-type: doc
       :link: source_listrak
