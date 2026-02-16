@@ -1037,12 +1037,12 @@ The **Email Engagement Attributes** table has the following columns:
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1142,6 +1142,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-email-start
           :end-before: .. email-events-email-end
+
+   * - **Email Click Rate Lifetime**
+     - Integer
+     - The click rate for all email messages.
+
    * - **Email Clicks Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1152,6 +1157,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-clicks-x-months-start
           :end-before: .. email-events-clicks-x-months-end
+
+   * - **Email Clicks Lifetime**
+     - Integer
+     - The number of all email clicks for all email messages.
+
    * - **Email Opens Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1162,13 +1172,22 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
+
+   * - **Email Open Rate Lifetime**
+     - Integer
+     - The open rate for all email messages.
+
+   * - **Email Opens Lifetime**
+     - Integer
+     - The number of all email opens for all email messages.
+
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1217,16 +1236,10 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-most-recent-send-start
           :end-before: .. email-events-most-recent-send-end
-   * - **Purchase Before Signup**
-     - Boolean
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-purchase-before-signup-start
-          :end-before: .. email-events-purchase-before-signup-end
-   * - **Signup To Purchase Days**
+
+   * - **Most Recent Email Open Or Click Datetime**
      - Integer
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-signup-to-purchase-days-start
-          :end-before: .. email-events-signup-to-purchase-days-end
+     - The date and time of the most recent email open or click.
 
 .. data-tables-email-engagement-summary-table-end
 
