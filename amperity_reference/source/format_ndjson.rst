@@ -47,11 +47,11 @@ Data sources
 
 Pull NDJSON files to Amperity using one of the following data sources:
 
-* |source_sftp_any|
-* |source_amazon_s3|
-* |source_azure_blob_storage|
-* |source_google_cloud_storage|
-* |source_sftp_amperity|
+* `Amazon S3 <../operator/source_amazon_s3.html>`__
+* `Azure Blob Storage <../operator/source_azure_blob_storage.html>`__
+* `Google Cloud Storage <../operator/source_google_cloud_storage.html>`__
+* `SFTP <../operator/source_sftp.html>`__
+* `Streaming API <../operator/api_streaming.html>`__. JSON messages received from the Streaming API are normalized and written as NDJSON.
 
 .. format-ndjson-pull-data-sources-end
 
@@ -97,7 +97,7 @@ File settings
 
 .. format-ndjson-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the NDJSON file and to define  formatting within the file.
+Use the **File settings** section of the courier configuration page to specify the path to the NDJSON file and to define formatting within the file.
 
 .. format-ndjson-pull-couriers-file-settings-end
 
@@ -144,9 +144,10 @@ Send NDJSON files
 
 Amperity can send NDJSON files to downstream workflows using any of the following destinations:
 
-* |destination_sftp_any|
-* |destination_amazon_s3|
-* |destination_azure_blob_storage|
-* |destination_google_cloud_storage|
+* `Amazon S3 <../operator/destination_amazon_s3.html>`__
+* `Azure Blob Storage <../operator/destination_azure_blob_storage.html>`__
+* `Google Cloud Storage <../operator/destination_google_cloud_storage.html>`__
+* `SFTP <../operator/destination_sftp.html>`__
+* `Webhook <../operator/destination_webhook.html>`__
 
 .. format-ndjson-destination-links-end
