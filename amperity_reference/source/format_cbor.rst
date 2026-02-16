@@ -103,9 +103,9 @@ File settings
 
 .. format-cbor-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the CBOR file and to define  formatting within the file.
+Use the **File settings** section of the courier configuration page to specify the path to the CBOR file and to define formatting within the file.
 
-.. format-cbor-pull-couriers-file-settings-start
+.. format-cbor-pull-couriers-file-settings-end
 
 
 .. _format-cbor-pull-couriers-feed-selection:
@@ -133,6 +133,8 @@ From the **Load type** dropdown select one of:
 .. format-cbor-pull-couriers-load-operations-rowtag-start
 
 .. tip:: Set ``rowTag`` to the element in the CBOR file that should be treated as a row in a table. The default value is ``row``.
+
+   This requirement applies only to XML data loaded by the Streaming API, which automatically converts XML data to CBOR format.
 
 .. format-cbor-pull-couriers-load-operations-rowtag-start
 
