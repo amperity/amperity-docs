@@ -153,7 +153,7 @@ The following examples show how to send requests to the **POST workflow/runs/{id
 
       .. code-block:: rest
 
-         curl --request GET \
+         curl --request POST \
                 'https://app.amperity.com/api/workflow/runs/{id}/stop' \
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
