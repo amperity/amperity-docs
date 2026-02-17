@@ -30,7 +30,7 @@ Build audiences around purchase activities, such as first orders, repeat orders,
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: First purchase?
+   .. grid-item-card:: First purchase
       :link-type: doc
       :link: attribute_purchase_behavior_first_purchase
 
@@ -79,9 +79,9 @@ Build audiences around purchase activities, such as first orders, repeat orders,
    :maxdepth: 2
    :hidden:
 
-   attribute_purchase_behavior_first_purchase
-   attribute_purchase_behavior_has_not_purchased
-   attribute_purchase_behavior_has_purchased
-   attribute_purchase_behavior_most_frequent_order
-   attribute_purchase_behavior_repeat_purchase
-   attribute_purchase_behavior_total_value_of_orders
+   First purchase <attribute_purchase_behavior_first_purchase>
+   Has not purchased <attribute_purchase_behavior_has_not_purchased>
+   Has purchased <attribute_purchase_behavior_has_purchased>
+   Most frequently ordered <attribute_purchase_behavior_most_frequent_order>
+   Repeat purchase <attribute_purchase_behavior_repeat_purchase>
+   Total value of orders <attribute_purchase_behavior_total_value_of_orders>

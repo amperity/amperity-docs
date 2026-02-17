@@ -29,6 +29,8 @@ A rate limit is the number of requests that may be made to the Amperity API in a
 Amperity API
 ==================================================
 
+.. TODO: Keep this sync'd with the 429 response in amperity_api/responses.rst.
+
 .. rate-limits-amperity-start
 
 The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.

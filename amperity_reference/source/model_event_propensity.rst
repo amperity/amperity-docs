@@ -84,7 +84,7 @@ Attributes for recommended audience sizes are available from the **Event Propens
    * - Attribute Name
      - Description
    * - **Audience Size Small**
-     - A small audience is predicted to incude ~50% of customers who are likely to perform a revenue-generating event.
+     - A small audience is predicted to include ~50% of customers who are likely to perform a revenue-generating event.
    * - **Audience Size Medium**
      - A medium audience is predicted to include ~70% of customers who are likely to perform a revenue-generating event
    * - **Audience Size Large**

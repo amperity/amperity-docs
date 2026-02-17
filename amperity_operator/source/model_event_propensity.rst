@@ -124,7 +124,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
           :class: no-scaled-link
      - Next to **Event propensity**, click **Add model**.
 
-       Assign a name to the event for which event propensity modeling will be built, and then click **Continue**. This opens the **Predictive enablement** page for predicted CLV models.
+       Assign a name to the event for which event propensity modeling will be built, and then click **Continue**. This opens the **Predictive enablement** page for event propensity models.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -151,7 +151,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
 
        #. Excluding customers who do not have a contactable email address or contactable physical address from direct mail campaigns.
 
-       .. note:: The list of fields in the **Customer Attributes** table that may be used for pCLV modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with pCLV modeling.
+       .. note:: The list of fields in the **Customer Attributes** table that may be used for event propensity modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with event propensity modeling.
 
 
    * - .. image:: ../../images/steps-05.png

@@ -698,7 +698,7 @@ Amperity does not keep smart lists and does not remove users from the |destinati
 
 .. setting-adobe-marketo-list-name-limitations-start
 
-|destination-name| API has the following limitations:
+|destination-name| API `has the following limitations <https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/marketo-integration-best-practices#>`__ |ext_link|:
 
 * Subscriptions can make up to 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
 * API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
@@ -707,7 +707,7 @@ You may experience these rate limits when sending large audience lists.
 
 It is possible for |destination-name| to have many audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity updates the first audience list in that list.
 
-.. setting-adobe-marketo-list-name-limitations-start
+.. setting-adobe-marketo-list-name-limitations-end
 
 **Program name**
 

@@ -61,7 +61,7 @@ To add a **Event Propensity** table you must extend the customer 360 database to
       :linenos:
 
       SELECT 
-        r.product_attribute AS `product_sub_category`
+        r.product_attribute AS `target_event_name`
         ,r.amperity_id
         ,r.score
         ,r.ranking

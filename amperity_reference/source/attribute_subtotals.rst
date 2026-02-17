@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        Amounts before discounts are applied.
+        Amounts after discounts are applied.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amounts before discounts are applied.
+        Amounts after discounts are applied.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Subtotals
 
 .. attribute-subtotals-start
 
-Subtotals represents amounts before discounts are applied.
+Subtotals represents item, order, and unit amounts after discounts are applied.
 
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-item-subtotal-start

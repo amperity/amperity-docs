@@ -70,9 +70,9 @@ In the following example uses **Most Frequent Order** to return a list of custom
 .. purchase-behavior-most-frequent-order-example-shoes-end
 
 
-.. _purchase-behavior-most-frequent-order-conditions:
+.. _purchase-behavior-most-frequent-order-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_most_frequent_order.rst

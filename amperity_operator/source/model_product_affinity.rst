@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Product affinity represents product taxonomies that contain between 20 and 2000 unique values for brands, categories, and sub-categories.
+        Product affinity represents product taxonomies that contain between 20 and 695 unique values for brands, categories, and sub-categories.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Product affinity represents product taxonomies that contain between 20 and 2000 unique values for brands, categories, and sub-categories.
+        Product affinity represents product taxonomies that contain between 20 and 695 unique values for brands, categories, and sub-categories.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -23,7 +23,7 @@ Product affinity model
 
 .. model-product-affinity-about-start
 
-Amperity models product affinity for any product taxonomy that contains between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+Amperity models product affinity for any product taxonomy that contains between 20 and 695 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
 
 * Historical data to identify customers who have purchased a product in the past and are likely to do so again.
 * Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.
@@ -95,7 +95,7 @@ Attributes for recommended audience sizes are available from the **Predicted Aff
    * - Attribute Name
      - Description
    * - **Audience Size Small**
-     - A small audience is predicted to incude ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+     - A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
    * - **Audience Size Medium**
      - A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
    * - **Audience Size Large**
@@ -190,7 +190,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
 
        #. Excluding customers who do not have a contactable email address or contactable physical address from direct mail campaigns.
 
-       .. note:: The list of fields in the **Customer Attributes** table that may be used for pCLV modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with pCLV modeling.
+       .. note:: The list of fields in the **Customer Attributes** table that may be used for product affinity modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with product affinity modeling.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -198,9 +198,9 @@ You can build a product affinity model from the **Customer 360** page. Each data
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
+     - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the product affinity model.
 
-       For each additional feature, the model results will include features for "first", "last", and "most common". For example, if **Product Category** is added, the pCLV model results will include features for **First Purchase Product Category**, **Last Purchase Product Category**, and **Most Common Product Category**.
+       For each additional feature, the model results will include features for "first", "last", and "most common". For example, if **Product Category** is added, the product affinity model results will include features for **First Purchase Product Category**, **Last Purchase Product Category**, and **Most Common Product Category**.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -209,7 +209,7 @@ You can build a product affinity model from the **Customer 360** page. Each data
           :class: no-scaled-link
      - Configure values.
 
-       Use the **Top N** field to define the number of distinct values the product affinity model will be trained on, based on popularity in the last year. For example, a value of "50" means the product affinity model will be trainined on the 50 most popular values for the specified product category by number of purchases in the past year. Default value: "50".
+       Use the **Top N** field to define the number of distinct values the product affinity model will be trained on, based on popularity in the last year. For example, a value of "50" means the product affinity model will be trained on the 50 most popular values for the specified product category by number of purchases in the past year. Default value: "50".
 
        Use the **Exclude these values** and **Include these values** fields to exclude or include specific values from the 50 most popular values. These entries are case-sensitive. For example: "purchase", "Purchase", and "PURCHASE" are three different values.
 
