@@ -91,8 +91,7 @@ A request to the **GET /indexes/{id}** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://app.amperity.com/api/indexes \
-          ?index-id={id} \
+          'https://app.amperity.com/api/indexes/{id} \
         --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
@@ -149,8 +148,7 @@ The following examples show how to send requests to the **GET /indexes/{id}** en
       .. code-block:: rest
 
          curl --request GET \
-                'https://app.amperity.com/api/indexes/ \
-                ?index-id={id} \
+                'https://app.amperity.com/api/indexes/{id} \
                 --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'

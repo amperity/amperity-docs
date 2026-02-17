@@ -75,11 +75,11 @@ The following table describes how Snowflake data types map to Amperity data type
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **ARRAY** into fully structured data before sharing it with Amperity Bridge.
 
-     - **Array**
+     - **String**
 
        An ordered list of zero or more elements of non-array values by field name and value.
 
-       Fields within an **Array** must contain values for data types supported by Amperity.
+       Fields within a **String** must contain values for data types supported by Amperity.
 
        .. note:: Only fully structured **ARRAY** data types are supported.
 
@@ -215,7 +215,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **OBJECT** into fully structured data before sharing it with Amperity Bridge.
 
-     - **Struct**
+     - **String**
 
        A container of ordered fields by name and type.
 

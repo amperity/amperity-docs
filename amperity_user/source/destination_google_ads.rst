@@ -204,5 +204,5 @@ User ID Matching
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-api-matching-mobile-list-start
-   :end-before: .. destination-google-ads-api-matching-mobile-list-end
+   :start-after: .. destination-google-ads-api-matching-user-start
+   :end-before: .. destination-google-ads-api-matching-user-end

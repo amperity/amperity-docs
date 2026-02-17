@@ -162,6 +162,8 @@ Delete records
 
 An inbound request may require deleting customer records.
 
+.. note:: A record that matches the delete records **and** :ref:`delete PII <privacy-rights-workflows-delete-pii>` workflows will delete records.
+
 The following diagram shows the workflow that occurs when a delete records request is present in the inbound requests table.
 
 .. image:: ../../images/privacy-rights-delete-records.png
@@ -247,6 +249,8 @@ Delete PII
 .. privacy-rights-workflows-delete-pii-start
 
 An inbound request may require deleting specific PII fields within customer records.
+
+.. note:: A record that matches the :ref:`delete records <privacy-rights-workflows-delete-records>` **and** delete PII workflows will delete records.
 
 .. important:: The delete PII workflow requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
 
@@ -402,6 +406,8 @@ A privacy rights workflow requires the following steps:
 #. :ref:`Configure inbound requests table <privacy-rights-inbound-requests-table>`.
 #. :ref:`Apply semantic tags to tables with desired deletes <privacy-rights-apply-semantic-tags>`.
 #. :ref:`Configure source keys <privacy-rights-configure-source-keys>`.
+
+.. note:: A privacy rights workflow runs after Stitch and in parallel with database generation. A failure in a privacy rights workflow will block database publication.
 
 .. privacy-rights-enable-end
 
@@ -575,7 +581,7 @@ Report tables
 
 .. privacy-rights-reports-tables-start
 
-Amperity generates the following tables for reporting compliance results as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables will be empty when no requests were made.
+Amperity generates the following tables for reporting compliance results as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables are empty when no requests were made.
 
 .. privacy-rights-reports-tables-end
 

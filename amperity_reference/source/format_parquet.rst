@@ -109,7 +109,7 @@ File settings
 
 .. format-parquet-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the Apache Parquet file and to define formattting within the file.
+Use the **File settings** section of the courier configuration page to specify the path to the Apache Parquet file and to define formatting within the file.
 
 .. format-parquet-pull-couriers-file-settings-start
 

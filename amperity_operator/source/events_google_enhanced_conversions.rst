@@ -404,7 +404,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **order_id**
      - An order ID is the unique identifier for the order. It links together all items in the same transaction. For returns and cancellations, the order ID is the unique identifier for the original order, including returned or canceled items.
 
-       |destination-name| refers to this as the transaction ID for the conversion. This field is optional, but strongly recommended.
+       |destination-name| refers to this as the transaction ID for the conversion. This field is required.
 
        .. tip:: Use the **Order ID** field in the **Unified Itemized Transactions** table.
 

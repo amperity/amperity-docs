@@ -58,7 +58,7 @@ Build query
 .. admonition:: Notes about sending data to Snapchat
 
    #. |destination-name| allows the following fields: **email**, **mobile_id**, and **phone**.
-   #. You may send only one of only one **email**, **mobile_id**, or **phone**. 
+   #. You may send any combination of **email**, **mobile_id**, or **phone**. 
    #. Amperity ensure that fields are mapped correctly to the schema types required by Snapchat.
    #. Amperity applies SHA-256 hashing automatically.
    #. Audience targeting in |destination-name| requires at least 1000 unique customers. Be sure your audience includes at least 1000 unique customers.

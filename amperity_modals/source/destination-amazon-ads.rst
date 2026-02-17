@@ -76,12 +76,8 @@ Settings
 **Membership duration**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-amazon-ads-membership-duration-start
+   :end-before: .. setting-amazon-ads-membership-duration-end
 
 **Campaign file settings**
 

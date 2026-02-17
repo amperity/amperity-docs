@@ -251,7 +251,7 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-A data stream is generated for you by Amperity on request. Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ or send email to support@amperity.com to request a new data stream.
+A data stream is generated for you by Amperity on request. Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ or send email to ``support@amperity.com`` to request a new data stream.
 
 Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint.
 
@@ -473,7 +473,7 @@ Simple JSON data is batched together into NDJSON files that can be loaded direct
   {'field1': 'value1',
    'field2': 'value2'}
 
-NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-simple-end
 
@@ -493,7 +493,7 @@ Nested JSON data requires a saved query to parse the nested values, after which 
    'field2': {'nested-field1': 'nested-value1',
               'nested-field2': 'nested-value2'}}
 
-Nested NDJSON data is loaded to Amperity using the NDJSON file format. Define an |format_ndjson_ingest_query| to flatten the data into a tabular format, configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+Nested JSON data is loaded to Amperity using the NDJSON file format. Define an ingest query to flatten the data into a tabular format, configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-nested-end
 
@@ -518,7 +518,7 @@ To load streamed XML data that has been converted to CBOR format into Amperity, 
    #. Define a SQL query that shapes the data.
    #. Create a sample file, and then use it to add a feed, below.
 
-XML data sent to the Streaming API is loaded to Amperity using the CBOR file format. Define an |format_cbor_ingest_query|, configure courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+XML data sent to the Streaming API is loaded to Amperity using the CBOR file format. Define an ingest query, configure courier `load settings and operations <../reference/format_cbor.html#couriers>`__, and then `define a feed <../reference/format_cbor.html#feeds>`__.
 
 .. streaming-ingest-rest-api-stream-load-cbor-end
 
@@ -568,7 +568,7 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 
 #. Under **Streaming Ingest Settings**, add the Streaming Ingest endpoint ID which is available from the **Stream ID** column in the **Sources** page.
 
-   Specify the **File format**, which can be |format_xml|, |format_ndjson|, or |format_json|. If you are sending JSON data, Amperity will batch your data into |format_ndjson| so select that if you are sending JSON data.
+   Specify the **File format**, which can be `XML <../reference/format_xml.html>`__, `NDJSON <reference/format_ndjson.html>`__, or `JSON <reference/format_json.html>`__.
 
    Set the **File tag** to **streaming**. Set this within the file tag in load operations and the file tag text box.
 

@@ -70,7 +70,7 @@ All opted-in email addresses
 
 .. data-asset-customer-consent-all-opted-email-start
 
-The **All Opted In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
+The **All Opted-In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
 
 .. data-asset-customer-consent-all-opted-email-end
 

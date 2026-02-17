@@ -61,7 +61,7 @@ Profile API
 
 The |api_profile| is unique to your tenant. The endpoints that are enabled for your use cases do not exist until the results of queries that have been defined by your brand have been published to the Profile API as an index. A :ref:`set of actions are available <api-profile-actions>` for each endpoint that your brand enables when using the Profile API.
 
-.. api-profile-about-start
+.. api-profile-about-end
 
 .. api-keys-important-profile-api-start
 
@@ -632,7 +632,7 @@ Using API issuer tokens
 
 Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow.
 
-Find the token ID for the access token to be refreshed under **Settings**, **Users**, **API keys** in the ID column. API issuer tokens can refresh their own tokens. A fully automated token refresh workflow uses the refresh token's ID along with the access token's ID.
+Find the token ID for the access token to be refreshed under **Settings**, **Security**, **API keys** in the ID column. API issuer tokens can refresh their own tokens. A fully automated token refresh workflow uses the refresh token's ID along with the access token's ID.
 
 .. api-keys-access-tokens-refresh-api-issuer-end
 
@@ -653,7 +653,7 @@ To refresh an access token using cURL, submit a request similar to:
    -H "X-Amperity-Tenant: <tenant-name>" \
    -H "Authorization: Bearer <token-refresher token>" \
    https://<tenant-name>.amperity.com/api/v0/admin/api-keys/<api-key-id>/tokens \
-   -d '{"expires-at": "2020-06-16T00:24:16Z"}'
+   -d '{"expires-at": "2026-06-14T00:24:16Z"}'
 
 .. api-keys-access-tokens-refresh-curl-end
 
@@ -670,12 +670,12 @@ To refresh an access token using HTTP, submit a request similar to:
 .. code-block:: none
 
    POST /api/v0/admin/api-keys/<api-key-id>/tokens HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
+   Host: <tenant-name>.amperity.com
    Content-Type: application/json
    X-Amperity-Tenant: <tenant-name>
    Authorization: Bearer <token-refresher token>
 
-   {"expires-at": "2020-06-16T00:24:16Z"}
+   {"expires-at": "2026-06-14T00:24:16Z"}
 
 .. api-keys-access-tokens-refresh-http-end
 

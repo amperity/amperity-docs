@@ -206,6 +206,7 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * REFUSED
        * TBD
        * TDB
+       * TEST
        * TRAVEL
        * UNKNOWN
 
@@ -226,6 +227,7 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * 1899-12-31
        * 1900-01-01
        * 1920-01-01
+       * 0000-02-29
 
    * - **city**
      - The following values associated with the **city** semantic are ignored by Stitch when performing identity resolution:
@@ -260,12 +262,16 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
      - The following values associated with the **given-name** semantic are ignored by Stitch when performing identity resolution:
 
        * BLOCK
+       * CARDHOLDER
        * CONTACT
+       * GIFT
        * GUEST
        * GUESTS
        * NO NAME
+       * PREPAID
        * RESERVED
        * USE
+       * VISA
 
    * - **phone**
      - The following values associated with the **phone** semantic are ignored by Stitch when performing identity resolution:
@@ -308,6 +314,7 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
    * - **surname**
      - The following values associated with the **surname** semantic are ignored by Stitch when performing identity resolution:
 
+       * CARDHOLDER
        * CONTACT
        * GUESTS
        * NO NAME
@@ -456,7 +463,7 @@ Run query
 
 Run the query from the SQL **Query Editor** to validate the syntax and to verify the output. Fix any errors that may be returned. If the values in the returned output do not seem correct, update the threshold for values counts to see if that improves the results.
 
-.. tip:: The goal of the bad-values blocklist is not to catch every single bad value, but rather to remove from the Stitch process the most comon bad values.
+.. tip:: The goal of the bad-values blocklist is not to catch every single bad value, but rather to remove from the Stitch process the most common bad values.
 
 .. bad-values-blocklist-run-query-end
 
@@ -550,7 +557,7 @@ Run Stitch
 
 .. bad-values-blocklist-run-stitch-start
 
-Run the Stitch process to update the results for the bad-values blackist.
+Run the Stitch process to update the results for the bad-values blocklist.
 
 #. On the **Stitch** page, click **Run**.
 #. Re-run each data table in the customer 360 database that contains data that could be affected by the bad-values blocklist. This adds the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.

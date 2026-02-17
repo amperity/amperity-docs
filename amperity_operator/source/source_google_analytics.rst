@@ -12,18 +12,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to pull GA4 property reports from Google Analytics.
+        Configure Amperity to pull GA4 property reports from Google Analytics 4.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to pull GA4 property reports from Google Analytics.
+        Configure Amperity to pull GA4 property reports from Google Analytics 4.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pull GA4 property reports from Google Analytics
+        Pull GA4 property reports from Google Analytics 4
 
 ==================================================
-Pull from Google Analytics
+Pull from Google Analytics 4
 ==================================================
 
 .. include:: ../../shared/terms.rst

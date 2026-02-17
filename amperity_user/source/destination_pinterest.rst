@@ -78,7 +78,7 @@ The following query returns a list of hashed email addresses for customers who a
      TO_HEX(
        SHA256(
          TO_UTF8(
-           UPPER(
+           LOWER(
              TRIM(email)
            )
          )
@@ -91,10 +91,12 @@ The following query returns a list of hashed email addresses for customers who a
    ON mc.amperity_id = tae.amperity_id
    WHERE (
      LOWER(mc.email) IS NOT NULL
-     AND pin.contactable_pinterest = TRUE
+     AND ca.contactable_pinterest = TRUE
      AND tae.L12M_order_frequency >= 4
      AND tae.L12M_order_revenue >= 400
    )
+
+.. note:: The **contactable_pinterest** field represents an extension to the **Customer Attributes** table that captures if customers have given consent to receiving email communication related to your brand's presence on |destination-name|.
 
 .. sendto-pinterest-build-query-example-end
 

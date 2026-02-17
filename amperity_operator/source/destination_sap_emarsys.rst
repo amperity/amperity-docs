@@ -5,7 +5,7 @@
 .. |destination-api| replace:: Emarsys API
 .. |plugin-name| replace:: "emarsys"
 .. |credential-type| replace:: "emarsys"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "client ID" and "client secret"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: contact lists
 .. |where-send| replace:: |destination-name|

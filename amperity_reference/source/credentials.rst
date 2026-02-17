@@ -147,7 +147,7 @@ Amazon S3 supports the following credential types:
 
 .. _credential-acxiom:
 
-Axciom
+Acxiom
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst

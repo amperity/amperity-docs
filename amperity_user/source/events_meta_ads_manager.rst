@@ -25,15 +25,13 @@
 Send events to Meta Ads Manager
 ==================================================
 
-.. events-meta-ads-manager-overview-start
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-overview-start
+   :end-before: .. events-meta-ads-manager-overview-end
 
-Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
-
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
-
-.. important:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
-
-.. events-meta-ads-manager-overview-end
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-overview-window-start
+   :end-before: .. events-meta-ads-manager-overview-window-end
 
 .. events-meta-ads-manager-allowfor-start
 

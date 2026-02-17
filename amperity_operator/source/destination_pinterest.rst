@@ -46,13 +46,13 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
+Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity. If more than one customer list exists with the same name Amperity uses the most recent customer list.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
 When a customer list is not associated with an audience in |destination-name|, Amperity creates an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
 
-.. note:: A customer list must contain at least 100 email addresses that are associated with a |destination-name| account before it can be associated with an audience.
+.. note:: A customer list must have at least 100 email addresses associated with a |destination-name| account before a list is associated with an audience.
 
 .. destination-pinterest-shared-end
 
@@ -68,7 +68,7 @@ When a customer list is not associated with an audience in |destination-name|, A
 
    * The `update customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/update>`__ |ext_link| endpoint to manage the list of email addresses in a customer list.
 
-   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|. Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
+   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link| at up to 100 requests per second.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start

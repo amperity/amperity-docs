@@ -3080,10 +3080,10 @@ A cross-site link is a link to a page in Amperity docs that is not in the same d
 
 .. code-block:: none
 
-   `string <URL>`__
+   `string <../relative/path/to/page.html#anchor-references-are-ok>`__
 
 * Replace "string" with text.
-* Replace "URL" with the full URL. For example: ``https://docs.amperity.com/`` or ``https://docs.amperity.com/reference/sso.html#use-cases``.
+* Replace "../relative/path/to/page.html" with the relative URL. For example: ``../reference/sso.html`` or ``../reference/sso.html#use-cases``.
 * Be sure to append the double underscores.
 * Do not add ``|ext_link|`` to the end because the reader will not leave the Amperity docs site.
 
@@ -3091,11 +3091,18 @@ A cross-site link is a link to a page in Amperity docs that is not in the same d
 
 .. code-block:: none
 
-   `Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+   `Use cases for single sign-on (SSO) <../reference/sso.html#use-cases>`__
 
 **For this**
 
-`Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+`Use cases for single sign-on (SSO) <../reference/sso.html#use-cases>`__
+
+.. important:: Internal links defined by relative paths omit the ``target="_blank"`` property from the link.
+
+   * Internal links with relative paths will open in the same browser tab.
+   * Internal links with full HTTPS path will open in a new browser tab like :ref:`external links <rst-links-external>`.
+
+   This behavior is managed by the "remove target from internal links" Javascript in ``/_templates/partials/extra-head.html``.
 
 .. rst-links-cross-site-end
 
@@ -3232,7 +3239,34 @@ Definition lists
 
 A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase.
 
+.. tip:: Add a row in-between the list item and the description to generate a vertical bar styled to the left of the description in the HTML output.
+
 **Do this**
+
+.. code-block:: none
+
+   .. code-block:: rst
+
+      **list_item_one**
+
+         The description must be indented three spaces.
+
+      **list_item_two**
+
+         The description must be indented three spaces.
+
+**For this**
+
+**list_item_one**
+
+   The description must be indented three spaces.
+
+**list_item_two**
+
+   The description must be indented three spaces.
+
+
+**Or this**
 
 .. code-block:: none
 

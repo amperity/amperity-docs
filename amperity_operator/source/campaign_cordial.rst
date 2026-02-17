@@ -127,8 +127,8 @@ Get details
 
        ::
 
-           GET /accountcontractattributes
-           POST /accountcontractattributes
+           GET /accountcontactattributes
+           POST /accountcontactattributes
 
            GET /accountlists
            POST /accountlists

@@ -335,7 +335,7 @@ All Opted-In Emails
 
 .. data-tables-all-opted-in-emails-context-start
 
-The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used to the **Segment Editor**, though it should be made available to the **Segment Editor**. Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu. This ensures that the **email** attribute in this table is available to campaigns. 
+The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used in the **Segment Editor**.
 
 .. data-tables-all-opted-in-emails-context-end
 
@@ -1037,12 +1037,12 @@ The **Email Engagement Attributes** table has the following columns:
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1142,6 +1142,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-email-start
           :end-before: .. email-events-email-end
+
+   * - **Email Click Rate Lifetime**
+     - Integer
+     - The click rate for all email messages.
+
    * - **Email Clicks Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1152,6 +1157,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-clicks-x-months-start
           :end-before: .. email-events-clicks-x-months-end
+
+   * - **Email Clicks Lifetime**
+     - Integer
+     - The number of all email clicks for all email messages.
+
    * - **Email Opens Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1162,13 +1172,22 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
+
+   * - **Email Open Rate Lifetime**
+     - Integer
+     - The open rate for all email messages.
+
+   * - **Email Opens Lifetime**
+     - Integer
+     - The number of all email opens for all email messages.
+
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1217,16 +1236,10 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-most-recent-send-start
           :end-before: .. email-events-most-recent-send-end
-   * - **Purchase Before Signup**
-     - Boolean
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-purchase-before-signup-start
-          :end-before: .. email-events-purchase-before-signup-end
-   * - **Signup To Purchase Days**
+
+   * - **Most Recent Email Open Or Click Datetime**
      - Integer
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-signup-to-purchase-days-start
-          :end-before: .. email-events-signup-to-purchase-days-end
+     - The date and time of the most recent email open or click.
 
 .. data-tables-email-engagement-summary-table-end
 
@@ -2018,6 +2031,14 @@ The **Predicted CLV Attributes** table has the following columns:
           :start-after: .. term-amperity-id-format-start
           :end-before: .. term-amperity-id-format-end
 
+   * - **Days Since Last Order**
+     - Integer
+     - The number of days elapsed since the customer's last order.
+
+   * - **Historical Order Frequency Lifetime**
+     - Integer
+     - The total number of historical orders a customer has made.
+
    * - **Predicted Average Order Revenue Next 365D**
      - Decimal
      - The predicted average order revenue over the next 365 days.
@@ -2028,7 +2049,7 @@ The **Predicted CLV Attributes** table has the following columns:
 
    * - **Predicted Customer Lifecycle Status**
      - String
-     - A probabilistic grouping of a customer's likelihood to purchase again.
+     - A probabilistic grouping of a customer's likelihood for future transactions.
 
        .. include:: ../../shared/models.rst
           :start-after: .. models-churn-propensitity-tiers-repeat-start
@@ -2131,6 +2152,12 @@ Stitch Blocking Keys
 .. include:: ../../shared/terms.rst
    :start-after: .. term-stitch-blocking-keys-table-start
    :end-before: .. term-stitch-blocking-keys-table-end
+
+.. data-tables-stitch-blocking-keys-table-about-start
+
+.. note:: The combination of **BK**, **datasource**, **PK**, and **strategy** forms the primary key. No values should be **NULL**.
+
+.. data-tables-stitch-blocking-keys-table-about-end
 
 .. data-tables-stitch-blocking-keys-table-about-start
 
@@ -5420,7 +5447,7 @@ The **Unified Product Catalog** table has the following columns:
      - String
      - The ID for the material used for a product or item.
    * - **Product MSRP**
-     - String
+     - Decimal
      - The manufacturer's suggested retail price (MSRP) for a product or item.
 
        .. include:: ../../shared/terms.rst

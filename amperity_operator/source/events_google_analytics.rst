@@ -562,11 +562,13 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
 
    * - **value**
-     - **Required**
+     - **DO NOT INCLUDE IN QUERY**
 
        The monetary value of the event.
 
-       .. important:: Amperity calculates the total **value** for a transaction using the **price** and **quantity** purchase events paramaters. **value** is the sum of the price and quantity for all items purchased in a single transaction, not including shipping costs or taxes.
+       .. important:: Amperity calculates the total **value** for a transaction using the **price** and **quantity** purchase events paramaters.
+
+          **value** is the sum of the price and quantity for all items purchased in a single transaction, not including shipping costs or taxes.
 
 
    * - Custom parameters
@@ -585,7 +587,7 @@ Map Amperity attributes to GA4 events parameters
 
 .. events-google-analytics-event-map-parameters-start
 
-The following table describes how to map `purchase events parameters <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events#purchase>`__ |ext_link| that are supported by |destination-name| to attribues in Amperity standard output.
+The following table describes how to map `purchase events parameters <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events#purchase>`__ |ext_link| that are supported by |destination-name| to attributes in Amperity standard output.
 
 All fields, including optional fields, are listed alphabetically, but may be returned by a query in any order.
 

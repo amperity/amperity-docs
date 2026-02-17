@@ -57,7 +57,7 @@ Available operators
 
 The following operators are available to purchase brand intervals.
 
-.. note:: These attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".|attribute-recommended| **More useful**
+.. note:: These attributes have an **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".|attribute-recommended| **More useful**
 
 .. list-table::
    :widths: 35 65
@@ -65,40 +65,32 @@ The following operators are available to purchase brand intervals.
 
    * - Operator
      - Description
-   * - **is**
-     - Returns customer records with values that match the number of distinct brands a customer purchased.
 
-   * - **is between**
-     - Returns customer records with values that are between each of the specified numbers of distinct brands a customer purchased.
+   * - Operator
+     - Description
 
-   * - **is greater than**
-     - Returns customer records with values that are greater than the number of distinct brands a customer purchased, not including the specified number of purchases.
+   * - **contains**
+     - Returns purchase brand intervals with values that match a string of characters.
 
-   * - **is greater than or equal to**
-     - Returns customer records with values that are greater than or equal to the number of distinct brands a customer purchased, including the specified number of purchases.
+   * - **does not contain**
+     - Returns purchase brand intervals with values that do not match a string of characters.
 
-   * - **is in list**
-     - Returns customer records with values that match the specified number of distinct brands a customer purchased.
+   * - **ends with**
+     - Returns purchase brand intervals with values that end with the specified characters.
 
-   * - **is less than**
-     - Returns customer records with values that are less than the number of distinct brands a customer purchased, not including the specified number of purchases.
+   * - **is empty**
+     - Returns purchase brand intervals that do not have a value in this field.
 
-   * - **is less than or equal to**
-     - Returns customer records with values that are less than or equal to the number of distinct brands a customer purchased, including the specified number of purchases.
+   * - **is exactly**
+     - Returns all purchase brand intervals with values that match the specified characters.
 
-   * - **is not**
-     - Returns customer records with values that do not match the number of distinct brands a customer purchased.
+   * - **is not empty**
+     - Returns purchase brand intervals that have a value in this field.
 
-   * - **is not between**
-     - Returns customer records with values that are not between each of the specified numbers of distinct brands a customer purchased.
+   * - **is not exactly**
+     - Returns purchase brand intervals that do not match the specified characters.
 
-   * - **is not in list**
-     - Returns records with values that do not match the specified number of distinct brands a customer purchased.
-
-   * - **is not NULL**
-     - Returns customer records that have a value.
-
-   * - **is NULL**
-     - Returns customer records that do not have a value.
+   * - **starts with**
+     - Returns purchase brand intervals that start with the specified characters.
 
 .. attribute-brands-preferred-intervals-conditions-end

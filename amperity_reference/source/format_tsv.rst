@@ -89,8 +89,8 @@ When using TSV files, it is recommend to:
 * Use column headers (with no special characters except underscores)
 * Ensure duplicate header names are not present
 * Ensure one or more fields are present that can act as a unique identifier
-* Use a comma as the delimiter for fields. Use a newline character as the delimiter for rows
-* Escape commas or quotes that appear in the data
+* Use a tab as the delimiter for fields. Use a newline character as the delimiter for rows
+* Escape tabs or quotes that appear in the data
 * Quote string values
 * Encode files in UTF-8 or UTF-16. Amperity automatically detects the 2-byte header present with the UTF-16 encoding format. If the 2-byte header is missing, the file is treated as UTF-8.
 * Compress files prior to encryption using ZIP, GZIP, or TAR. Amperity automatically decompresses GZIP files. ZIP and TAR decompression must be specified in courier file load settings.
@@ -140,7 +140,7 @@ File settings
 
 .. format-tsv-pull-couriers-file-settings-start
 
-Use the **File settings** section of the courier configuration page to specify the path to the TSV file and to define formattting within the file, such as escape character, quote charcter, compression type or header row.
+Use the **File settings** section of the courier configuration page to specify the path to the TSV file and to define formatting within the file, such as escape character, quote charcter, compression type or header row.
 
 .. format-tsv-pull-couriers-file-settings-start
 

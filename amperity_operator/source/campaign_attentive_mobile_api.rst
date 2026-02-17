@@ -260,8 +260,8 @@ Add destination
        **Primary identifier**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-active-campaign-verbose-logging-start
-             :end-before: .. setting-active-campaign-verbose-logging-end
+             :start-after: .. setting-attentive-primary-identifier-start
+             :end-before: .. setting-attentive-primary-identifier-end
 
           .. important:: 
 

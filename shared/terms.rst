@@ -1393,7 +1393,7 @@ An identifier that represents a set of records that are transitively connected w
 
 .. term-cbor-start
 
-|format_cbor| is a binary data serialization format based on JSON. Like JSON it allows the transmission of data objects that contain name-value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human-readability.
+|format_cbor| is a binary data serialization format based on the JSON data model. Like JSON it allows the transmission of data objects that contain name-value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human-readability.
 
 .. term-cbor-end
 
@@ -1904,7 +1904,7 @@ The **Data Explorer** offers a detailed way to navigate through data tables in A
 
 .. term-data-lineage-start
 
-Data lineage is a graph visualization that shows the connections between data in your tenant. The graph visualization is refreshed each time a user loads the **Data lineage** page.
+Data lineage is a graph visualization that shows how all of the data within your tenant connects. The graph visualization is refreshed each time a user loads the **Data lineage** page.
 
 .. term-data-lineage-end
 
@@ -2398,7 +2398,7 @@ Dynamics 365 Marketing helps you build personalized journeys for real-time and o
 
 .. term-early-repeat-purchasers-start
 
-Early repeat purchasers represent the percentage of first-time buyers who returned to make a second purchase within 90 days.
+Early repeat purchasers represent the percentage of first-time buyers who returned to make a second purchase within 12 weeks, or 84 days.
 
 .. term-early-repeat-purchasers-end
 
@@ -2408,7 +2408,7 @@ Early repeat purchasers represent the percentage of first-time buyers who return
 
 .. term-early-repeat-purchaser-start
 
-Early repeat purchaser is a flag that indicates if a customer made a repeat purchase within the previous 90 days.
+Early repeat purchaser is a Boolean flag that indicates if a customer made a repeat purchase within 12 weeks, or 84 days.
 
 .. term-early-repeat-purchaser-end
 
@@ -2417,7 +2417,7 @@ Early repeat purchaser is a flag that indicates if a customer made a repeat purc
 
 .. term-early-repeat-rate-start
 
-Early repeat rate is a measure of one-time to two-time buyer conversion based on second purchases made within the previous 90 days.
+Early repeat rate is a measure of one-time to two-time buyer conversion based on second purchases made within 12 weeks, or 84 days.
 
 .. term-early-repeat-rate-end
 
@@ -4996,7 +4996,7 @@ A PII semantic assigns consistency to customer data to ensure that PII data is m
 
 .. term-pii-table-start
 
-A PII table collects fields from the **Unified Coalesced** table that contain PII data and standardizes PII values. Build queries against any combination of PII data to build audiences using the visual **Segment Editor**.
+A PII table collects customer profile data from the **Unified Coalesced** table and standardizes PII values. Build queries against any combination of PII data to create audiences using the visual **Segment Editor**.
 
 .. term-pii-table-end
 

@@ -3,6 +3,38 @@
 <script defer src="../_static/fontawesome/solid.js"></script>
 <script defer src="../_static/fontawesome/regular.js"></script>
 <script defer src="../_static/fontawesome/js/fontawesome.js"></script>
+
+<!--  remove target from internal links start -->
+<script type="text/javascript">
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Try multiple selectors since Shibuya theme might use different classes
+    const selectors = [
+        'a.reference.external[target="_blank"]',
+        'a.external[target="_blank"]',
+        'a[target="_blank"]'
+    ];
+    
+    selectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(link => {
+            const href = link.getAttribute('href');
+            
+            if (href) {
+                console.log('Found link:', href); // Debug output
+                
+                // Remove target="_blank" if URL starts with '../' or doesn't contain http/https
+                if (href.startsWith('../') || (!href.includes('http://') && !href.includes('https://'))) {
+                    console.log('Removing target from:', href); // Debug output
+                    link.removeAttribute('target');
+                    link.removeAttribute('rel'); // Also remove rel="noreferrer" if present
+                }
+            }
+        });
+    });
+});
+</script>
+<!--  remove target from internal links start -->
+
 <!--  start Swiftype script -->
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){

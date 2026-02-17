@@ -229,10 +229,8 @@ The following examples show how to send requests to the **POST /workflow/runs/**
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}' \
-              --data '{"config_id":"cg-123ABc4DE"}' \
-              --data '{"range_from":"YYYY-MM-DD"}' \
-              --data '{"range_to":"YYYY-MM-DD"}' \
-              --data '{"run_mode":"full"}'
+              --data '{"config_id":"cg-123ABc4DE", "range_from":"YYYY-MM-DD", \
+                       "range_to":"YYYY-MM-DD", "run_mode":"full"}'
 
       This example is formatted for readability in a narrow page layout.
 
@@ -252,7 +250,7 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
          # Headers including authorization and custom headers
          headers = {
-           "Authorization": f"Bearer {token}",
+           "Authorization": f"Bearer bearer_token",
            "amperity-tenant": "{tenant-id}",
            "api-version": "2024-04-01"
          }
@@ -284,19 +282,19 @@ Responses
 
 .. endpoint-post-workflows-start-responses-start
 
-A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 201 created response contains workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-start-responses-end
 
 
-.. _endpoint-post-workflows-start-response-200ok:
+.. _endpoint-post-workflows-start-response-201created:
 
-200 OK
+201 Created
 --------------------------------------------------
 
-.. endpoint-post-workflows-start-response-200ok-start
+.. endpoint-post-workflows-start-response-201created-start
 
-The **200** response returns details for the workflow that was started, similar to:
+The **201** response returns details for the workflow that was created, similar to:
 
 .. code-block:: json
    :linenos:
@@ -315,7 +313,7 @@ The **200** response returns details for the workflow that was started, similar 
      "current_version":"abc-123456A-78901-2bcd3"
    }
 
-.. endpoint-post-workflows-start-response-200ok-end
+.. endpoint-post-workflows-start-response-201created-end
 
 
 .. _endpoint-post-workflows-start-response-parameters:
@@ -325,7 +323,7 @@ Response parameters
 
 .. endpoint-post-workflows-start-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **201** response contains the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -340,6 +338,47 @@ A **200 OK** response contains the following parameters.
    * - **current_version**
      - A unique identifier that describes the configuration state of Amperity at the start of the workflow. The value for this property is similar to: "etv-20240210-12345-6AbCDE".
 
+   * - **ended_at**
+     - The date and time at which a workflow ended.
+
+       .. note:: The amount of time that elapsed between **created_at** and **ended_at** is the runtime for the workflow.
+
+   * - **error**
+     - A JSON array of values for a workflow error.
+
+       .. note:: An error message is shown for any workflow with a state of **Failed**. You can view the error message the from the **Workflows** page.
+
+       The JSON array for an error is similar to:
+
+       .. code-block:: django
+
+          "error": {
+            "attribution": "customer",
+            "type": "amperity.workflow.task.stitch/table",
+            "message": "Found table in an invalid state:\n
+                        loyalty_members. This error can be\n
+                        resolved by removing this table\n
+                        or by loading data to the table.",
+            "data": NULL,
+          },
+
+       where:
+
+       **attribution**
+          The source of the error. May be attributed to **customer** or **platform**.
+
+          * **customer** indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
+          * **platform** indicates there is an issue with components or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
+
+       **data**
+          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a **NULL** value.
+
+       **message**
+          The error message.
+
+       **type**
+          A period-delimited string that indicates where an error occurred.
+
    * - **id**
      - The Amperity internal identifier for the workflow. For example **wf-20240619-14418-6UhqSe**.
 
@@ -350,6 +389,9 @@ A **200 OK** response contains the following parameters.
      - The name of the workflow.
 
        .. note:: This is the same value that is visible from the title of each individual workflow page and from the **Name** column on the **Workflows** page.
+
+   * - **principal_email**
+     - The email address of the Amperity user who started the workflow. For example: "danielkuhlman@socktown.com".
 
    * - **principal_id**
      - A unique identifier for the Amperity user who started the workflow. For example: "google-apps|socktown@socktown.com".
@@ -363,8 +405,8 @@ A **200 OK** response contains the following parameters.
    * - **task_instances**
      - A JSON array that contains zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
 
-       **started_at**
-          The date and time at which a workflow task started.
+       **ended_at**
+          The date and time at which a workflow task ended.
 
           .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
@@ -421,6 +463,9 @@ A **200 OK** response contains the following parameters.
 
           .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
 
+       **state_changed_at**
+          The timestamp at which the state of the workflow changed.
+
        **task_definition_id**
           A unique identifier for a task definition.
 
@@ -471,5 +516,11 @@ A **200 OK** response contains the following parameters.
        * Update campaign recipients table
 
        .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
+
+   * - **warn_after_ms**
+     - The length of time in milliseconds after which a warning is sent that notifies users that a workflow is running longer than expected.
+
+       .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
+
 
 .. endpoint-post-workflows-start-response-parameters-end

@@ -279,20 +279,18 @@ The **200** response returns a set of customer profile indexes.
    :linenos:
 
    {
-     "total": 0,
+     "total": 2,
      "next_token": "ABCa1bcdDEe2f3G",
      "data": [
        {
          "id": "cl-abc123",
-         "name": "Loyalty Members",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+         "index_id": "index-ID",
+         "attributes": "attributes"
        },
        {
-         "id": "cl-def456",
-         "name": "Online Shoppers",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+         "id": "cl-abc123",
+         "index_id": "index-ID",
+         "attributes": "attributes"
        },
      ]
    }
@@ -319,26 +317,21 @@ A **200 OK** response contains the following parameters.
    * - **data**
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
-       **created_at**
-          The date and time on which the profile index was created. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
-
        **id**
           The Amperity internal identifier for the campaign.
 
-         "id": "cl-def456",
-         "name": "Online Shoppers",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+       **index_id**
+          The ID for the profile index.
 
-       **name**
-          The name of the campaign.
+       **attributes**
+          A list of attributes for the profile index.
 
    * - **next_token**
      - The cursor value to use in a subsequent request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 
-   * - **updated_at**
-     -    The date and time on which the profile index was updated. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
+   * - **total**
+     - The total count of all results.
 
 .. endpoint-get-profiles-list-response-parameters-end
