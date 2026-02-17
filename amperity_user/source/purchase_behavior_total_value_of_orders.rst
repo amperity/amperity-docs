@@ -70,9 +70,9 @@ In the following example uses **Total Value of Orders** to return a list of cust
 .. purchase-behavior-total-value-of-orders-example-shoes-end
 
 
-.. _purchase-behavior-total-value-of-orders-conditions:
+.. _purchase-behavior-total-value-of-orders-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_total_value_of_orders.rst

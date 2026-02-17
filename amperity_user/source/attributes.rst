@@ -1582,7 +1582,7 @@ The following attributes are available from the **Predicted Affinity** table.
    * - **Audience size small**
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       A small audience is predicted to incude ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
    * - **Product attribute**
      - The field against which product affinity is measured. For example: a category, a class, or a brand.
 

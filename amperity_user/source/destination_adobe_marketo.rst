@@ -139,6 +139,12 @@ Run orchestration
    :start-after: .. sendtos-run-orchestration-start
    :end-before: .. sendtos-run-orchestration-end
 
+.. note::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-adobe-marketo-list-name-limitations-start
+      :end-before: .. setting-adobe-marketo-list-name-limitations-end
+
 **To run the orchestration**
 
 .. include:: ../../shared/sendtos.rst

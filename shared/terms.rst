@@ -3485,7 +3485,7 @@ The total revenue for all units of an item, after applying discounts. For return
 
 .. term-item-subtotal-start
 
-An item subtotal is the amount for an item, before applying discounts.
+An item subtotal is the amount for an item, after applying discounts.
 
 .. term-item-subtotal-end
 
@@ -4768,7 +4768,7 @@ The order shipping amount is the total cost of shipping all items in the same tr
 
 .. term-order-subtotal-start
 
-An order subtotal is the amount for an order, before applying discounts.
+An order subtotal is the amount for an order, after applying discounts.
 
 .. term-order-subtotal-end
 
@@ -7213,7 +7213,7 @@ The total revenue for a single unit of an item **or** the total revenue for a si
 
 .. term-unit-subtotal-start
 
-A unit subtotal is the amount for a single unit of one item, before applying discounts.
+A unit subtotal is the amount for a single unit of one item, after applying discounts.
 
 .. term-unit-subtotal-end
 

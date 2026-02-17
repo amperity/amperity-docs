@@ -88,9 +88,9 @@ The following example uses **Has Not Purchased** to return a list of customers w
 .. purchase-behavior-has-not-purchased-example-shirts-end
 
 
-.. _purchase-behavior-has-not-purchased-conditions:
+.. _purchase-behavior-has-not-purchased-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_not_purchased.rst

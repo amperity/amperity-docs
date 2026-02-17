@@ -113,7 +113,9 @@ For example:
    * - **429 Too Many Requests**
      - A rate limit has been exceeded.
 
-       .. note:: Amperity does not currenctly enforce a rate limit.
+       The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.
+
+       Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
 
        .. tip:: Watch for 429 error codes and build a retry mechanism into the integrations or applications that interact with the Amperity API. Use an exponential backoff schedule with some randomness built in to reduce request volume.
 

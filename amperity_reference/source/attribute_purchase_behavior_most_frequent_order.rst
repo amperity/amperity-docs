@@ -27,7 +27,7 @@ Most frequent order
    :align: left
    :class: no-scaled-link
 
-.. important:: You must choose *at least one* product attribute--category, subcategory, description, or gender--and a store ID.
+.. important:: You must choose the order datetime value, and then any of category, subcategory, description, gender, and store ID.
 
 After you choose at least one product and specify a date range you may apply filters to associate your customers orders with specific products, brands, channels, and stores. For example, return a list of customers who most frequently ordered deluxe tacos in Goleta, CA.
 

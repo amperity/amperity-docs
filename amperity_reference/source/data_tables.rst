@@ -1378,13 +1378,9 @@ The **Event Propensity** table has the following columns:
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
 
-   * - **Target Value**
-     - Integer
-     - 
-
-   * - **Revenue Event Days Since Last Event**
-     - Integer
-     - 
+   * - **Target Event Name**
+     - String
+     - The name of the target event used with a event propensity model.
 
 .. data-tables-event-propensity-table-end
 

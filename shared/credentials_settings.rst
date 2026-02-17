@@ -334,18 +334,6 @@ Custom services within |destination-name| give the `client ID and secret <https:
 
 .. credential-adobe-marketo-access-token-end
 
-**API limits**
-
-.. credential-adobe-marketo-api-limits-start
-
-You may experience rate limits when sending large audience lists to the Adobe Marketo API.
-
-* Subscriptions can make up to 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
-
-* API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
-
-.. credential-adobe-market-api-limits-end
-
 **Client ID**
 
 .. credential-adobe-marketo-client-id-start
