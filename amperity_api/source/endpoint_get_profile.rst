@@ -169,12 +169,10 @@ The **200** response returns a specific customer profile.
    {
      "id": "{profile_id}",
      "index_id": "{index_id}",
-     "attributes": [
-       {
-         "attribute": "value",
-         "attribute": "value"
-       },
-     ]
+     "attributes": {
+       "attribute": "value",
+       "attribute": "value"
+     },
    }
 
 where the contents of ``attributes`` depend on the attributes that are in the index. For example:
@@ -185,14 +183,12 @@ where the contents of ``attributes`` depend on the attributes that are in the in
    {
      "id": "{profile_id}",
      "index_id": "{index_id}",
-     "attributes": [
-       {
-         "first_name": "Daniel",
-         "last_name": "Kuhlman",
-         "email": "danielkuhlman@email.com",
-         "loyalty_id": "123456789-0"
-       },
-     ]
+     "attributes": {
+       "first_name": "Daniel",
+       "last_name": "Kuhlman",
+       "email": "danielkuhlman@email.com",
+       "loyalty_id": "123456789-0"
+     },
    }
 
 .. endpoint-get-profile-response-200ok-end

@@ -2408,7 +2408,7 @@ Early repeat purchasers represent the percentage of first-time buyers who return
 
 .. term-early-repeat-purchaser-start
 
-Early repeat purchaser is a flag that indicates if a customer made a repeat purchase within 12 weeks, or 84 days.
+Early repeat purchaser is a Boolean flag that indicates if a customer made a repeat purchase within 12 weeks, or 84 days.
 
 .. term-early-repeat-purchaser-end
 

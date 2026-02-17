@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Airship
 .. |plugin-name| replace:: "Airship"
 .. |credential-type| replace:: "airship"
-.. |required-credentials| replace:: "username", "hostname", and "private key"
+.. |required-credentials| replace:: "username", "hostname", "port", and "private key"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: "sftp.airship.com"

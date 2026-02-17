@@ -175,7 +175,7 @@ The following examples show how to send requests to the **GET /ingest/jobs** end
          curl --request GET \
                 'https://app.amperity.com/api/ingest/jobs \
                 ?created_from=2024-10-01 \
-                ?created_to=2024-10-07' \
+                &created_to=2024-10-07' \
                --header 'amperity-tenant: {tenant-id}' \
                --header 'api-version: 2024-04-01' \
                --header 'Authorization: Bearer {token}'
