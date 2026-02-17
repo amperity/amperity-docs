@@ -9,7 +9,7 @@
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: "sftp.airship.com"
 .. |remote-folder| replace:: "/folder"
-.. |sftp-port| replace:: "22"
+.. |sftp-port| replace:: "5222"
 .. |filter-the-list| replace:: "air"
 
 

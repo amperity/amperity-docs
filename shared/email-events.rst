@@ -69,8 +69,9 @@ A classification that measures engagement frequency click rates for email addres
 
 * **Non-recipient** Zero received emails.
 * **New** Fewer than five received emails.
-* **Active** Engaging with received emails.
-* **Inactive** Not engaging with received emails.
+* **Low** Modeled open rate is in the lower third.
+* **Medium** Modeled open rate is in the middle third.
+* **High** Modeled open rate is in the upper third.
 
 .. important:: Send rates must be available.
 
@@ -83,9 +84,8 @@ A classification that measures click rates for email addresses that have receive
 
 * **Non-recipient** Zero received emails.
 * **New** Fewer than five received emails.
-* **Low** Modeled open rate is in the lower third.
-* **Medium** Modeled open rate is in the middle third.
-* **High** Modeled open rate is in the upper third.
+* **Active** Engaging with received emails.
+* **Inactive** Not engaging with received emails.
 
 .. important:: Send rates must be available.
 

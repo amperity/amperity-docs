@@ -136,6 +136,18 @@ The name and description for a credential.
 
 .. credential-common-name-and-description-end
 
+
+**Port**
+
+Applies to: most SFTP sources and destinations.
+
+.. credential-common-port-start
+
+The Transmission Control Protocol (TCP) port to use for Secure Shell (SSH) transfers. Default value: "22".
+
+.. credential-common-port-end
+
+
 .. vale off
 
 **SnapPass callout**
@@ -363,7 +375,7 @@ The `subdomain <https://experienceleague.adobe.com/en/docs/marketo/using/product
 
 .. vale on
 
-The following settings are unique to Adobe Marketo.
+The following settings are unique to Adobe Target.
 
 **Authentication token**
 

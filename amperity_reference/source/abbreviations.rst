@@ -302,7 +302,9 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **SP**
      - Service Provider
    * - **SQL**
-     - Structured Query Language
+     - Secure Shell
+   * - **SSH**
+     - Single Sign-On
    * - **SSN**
      - Social Security Number
    * - **SSO**
@@ -315,6 +317,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Total Addressible Market
    * - **TAR**
      - Tape Archive
+   * - **TCP**
+     - Transmission Control Protocol
    * - **TLD**
      - Top-Level Domain
    * - **TSV**

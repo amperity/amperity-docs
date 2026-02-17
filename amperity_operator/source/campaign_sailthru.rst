@@ -5,7 +5,7 @@
 .. |destination-api| replace:: Sailthru API
 .. |plugin-name| replace:: "Sailthru"
 .. |credential-type| replace:: "sailthru"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "API key" and "API secret"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|

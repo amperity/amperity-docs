@@ -3239,7 +3239,34 @@ Definition lists
 
 A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase.
 
+.. tip:: Add a row in-between the list item and the description to generate a vertical bar styled to the left of the description in the HTML output.
+
 **Do this**
+
+.. code-block:: none
+
+   .. code-block:: rst
+
+      **list_item_one**
+
+         The description must be indented three spaces.
+
+      **list_item_two**
+
+         The description must be indented three spaces.
+
+**For this**
+
+**list_item_one**
+
+   The description must be indented three spaces.
+
+**list_item_two**
+
+   The description must be indented three spaces.
+
+
+**Or this**
 
 .. code-block:: none
 

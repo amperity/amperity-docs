@@ -103,7 +103,7 @@ Exclusions
 
 .. segments-editor-exclusions-start
 
-Exclusions define conditions that determine which customers is notlong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
+Exclusions define conditions that determine which customers do not belong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
 
 .. image:: ../../images/mockup-segments-exclusions.png
    :width: 480 px

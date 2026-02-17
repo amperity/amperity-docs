@@ -562,11 +562,13 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
 
    * - **value**
-     - **Required**
+     - **DO NOT INCLUDE IN QUERY**
 
        The monetary value of the event.
 
-       .. important:: Amperity calculates the total **value** for a transaction using the **price** and **quantity** purchase events paramaters. **value** is the sum of the price and quantity for all items purchased in a single transaction, not including shipping costs or taxes.
+       .. important:: Amperity calculates the total **value** for a transaction using the **price** and **quantity** purchase events paramaters.
+
+          **value** is the sum of the price and quantity for all items purchased in a single transaction, not including shipping costs or taxes.
 
 
    * - Custom parameters

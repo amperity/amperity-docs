@@ -9,7 +9,7 @@
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: "sftp.airship.com"
 .. |remote-folder| replace:: "/folder"
-.. |sftp-port| replace:: "22"
+.. |sftp-port| replace:: "5222"
 .. |filter-the-list| replace:: "air"
 
 
@@ -114,6 +114,8 @@ Get details
           :class: no-scaled-link
      - **Specific port number**
 
+       |destination-name| requires using port 5222.
+
        Refer to the Airship `SFTP tutorial <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/sftp-upload/>`__ |ext_link| for more details.
 
 
@@ -187,6 +189,12 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-private-key-start
              :end-before: .. credential-sftp-private-key-end
+
+       **Port**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-airship-port-start
+             :end-before: .. credential-airship-port-end
 
 .. destination-airship-credentials-steps-end
 

@@ -234,7 +234,7 @@ Add destination
           * - **Segment name**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
+                 :end-before: .. setting-yahoo-dsp-segment-name-end
           * - **Membership duration**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-common-membership-duration-start
@@ -347,7 +347,7 @@ Add data template
           * - **Segment name**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
+                 :end-before: .. setting-yahoo-dsp-segment-name-end
           * - **Membership duration**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-common-membership-duration-start

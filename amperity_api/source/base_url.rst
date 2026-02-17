@@ -55,7 +55,7 @@ Microsoft Azure
 
 .. base-url-azure-start
 
-Tenants hosted in Amazon AWS have the following base URL:
+Tenants hosted in Microsoft Azure have the following base URL:
 
 ::
 

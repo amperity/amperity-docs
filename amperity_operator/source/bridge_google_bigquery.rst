@@ -152,7 +152,7 @@ The following table describes how Google BigQuery data types map to Amperity dat
 
        A Gregorian date and time, as they might be displayed on a watch, independent of time zone.
 
-     - **Datetime**
+     - **String**
 
        ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
 

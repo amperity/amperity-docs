@@ -423,6 +423,7 @@ The PGP public key that Amperity uses to encrypt files.
 
 .. setting-common-pgp-public-key-end
 
+
 **Quote mode**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
@@ -806,7 +807,11 @@ The name of the DSP advertiser within |destination-name|.
 
 **Membership duration**
 
-Days. See common.
+.. setting-amazon-ads-membership-duration-start
+
+The length of time |duration|, after which a customer is removed from this audience. This value may be between |duration-value|.
+
+.. setting-amazon-ads-membership-duration-end
 
 
 
@@ -1377,7 +1382,7 @@ When the value of "Upload key type" is "Mobile ID", the mobile ID for the iOS or
 
 .. setting-google-ads-upload-key-type-start
 
-The key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
+The key to use for audience matching in |destination-name|. May be one of "Contact Info", "Mobile ID", or "User Id".
 
 .. setting-google-ads-upload-key-type-end
 
@@ -1563,6 +1568,16 @@ See common settings.
 Attributes sent to |destination-name| with values for a specific day, month, and year `must be in UTC and formatted as ISO 8601 strings or as EPOCH-timestamps in milliseconds <https://developers.hubspot.com/docs/guides/api/crm/properties>`__ |ext_link|.
 
 .. setting-hubspot-dates-and-datetimes-end
+
+
+**Create contacts?**
+
+.. setting-hubspot-create-contacts-start
+
+Select **Create contacts** to create contacts in |destination-name| when they do not already exist. Existing contacts are updated when this setting is unselected.
+
+.. setting-hubspot-create-contacts-end
+
 
 **List name**
 
@@ -3123,7 +3138,7 @@ Days. See common.
 
 The name of the segment in |destination-name|. This can be the name of an existing segment or a new segment within the |destination-name| taxonomy. Segments are available in |destination-name| from "Audiences". Open the "Partner" audiences, and then choose "Amperity".
 
-.. setting-yahoo-dsp-segment-name-start
+.. setting-yahoo-dsp-segment-name-end
 
 
 

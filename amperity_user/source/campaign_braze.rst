@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Braze
 .. |what-send| replace:: custom attributes
 .. |what-enable| replace:: a list of custom attributes
-.. |attributes-sent| replace:: |destination-name| requires "extern_id" or "braze_id", along with a list of custom attributes that are defined by your brand.
+.. |attributes-sent| replace:: |destination-name| requires "external_id" or "braze_id", along with a list of custom attributes that are defined by your brand.
 
 
 .. meta::

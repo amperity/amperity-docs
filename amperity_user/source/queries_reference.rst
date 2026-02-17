@@ -1424,7 +1424,7 @@ Use the following example to size revenue opportunity for multiple groups, such 
      ,AVG(l12m_order_frequency) AS avg_l12m_orders
      ,SUM(l12m_order_revenue) AS total_l12m_revenue
    FROM customers cust
-   INNER_JOIN Transaction_Attributes_Extended tae
+   INNER JOIN Transaction_Attributes_Extended tae
    ON cust.amperity_id=tae.amperity_id
    GROUP BY 1
 

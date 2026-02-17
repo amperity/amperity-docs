@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Kibo
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "sftp.monetate.com"
+.. |sftp-hostname| replace:: "sftp.monetate.net"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|

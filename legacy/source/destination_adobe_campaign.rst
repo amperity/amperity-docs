@@ -72,7 +72,7 @@ Get details
           :alt: Detail two.
           :align: center
           :class: no-scaled-link
-     - The username and passphrase.
+     - The username and private key.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

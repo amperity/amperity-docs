@@ -34,7 +34,7 @@ Configure destinations for HubSpot
 
 .. destination-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|. Amperity creates contacts when the **Create contact?** setting is enabled.
 
 .. destination-hubspot-end
 
@@ -267,6 +267,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-hubspot-list-name-start
              :end-before: .. setting-hubspot-list-name-end
+
+       **Create contacts?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-hubspot-create-contacts-start
+             :end-before: .. setting-hubspot-create-contacts-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

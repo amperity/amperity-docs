@@ -8,7 +8,7 @@
 .. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in seconds)
-.. |duration-value| replace:: "0" - "34,300,800"
+.. |duration-value| replace:: "604,800" - "34,300,800"
 .. |filter-the-list| replace:: "amaz"
 
 
@@ -374,14 +374,8 @@ Add destination
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
-
-          (A membership duration of "34,300,800 is equivalent to "9528" hours or "397" days.)
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-frequency-start
-             :end-before: .. setting-common-membership-duration-frequency-end
+             :start-after: .. setting-amazon-ads-membership-duration-start
+             :end-before: .. setting-amazon-ads-membership-duration-end
 
 
    * - .. image:: ../../images/steps-05.png

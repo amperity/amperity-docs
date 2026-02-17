@@ -5447,7 +5447,7 @@ The **Unified Product Catalog** table has the following columns:
      - String
      - The ID for the material used for a product or item.
    * - **Product MSRP**
-     - String
+     - Decimal
      - The manufacturer's suggested retail price (MSRP) for a product or item.
 
        .. include:: ../../shared/terms.rst

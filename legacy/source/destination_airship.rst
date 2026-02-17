@@ -68,7 +68,7 @@ Get details
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - The username, passphrase, and hostname for the SFTP site.
+     - The username, private key, and hostname for the SFTP site.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

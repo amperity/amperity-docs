@@ -212,7 +212,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
 
    .. grid-item-card:: Salesforce Marketing Cloud
       :link-type: doc
-      :link: destination_salesforce_marketing_cloud
+      :link: source_salesforce_marketing_cloud
 
    .. grid-item-card:: Salesforce Pardot
       :link-type: doc

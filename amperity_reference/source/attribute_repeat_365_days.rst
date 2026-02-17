@@ -42,7 +42,7 @@ Of first order?
 
 .. attribute-repeat-365-first-start
 
-You can identify if a customer made a second purchase within 365 days of their second purchase by adding the **first order is retained** attribute to a segment from the **Segment Editor**. Click **Add condition**, and then choose **Attributes**.
+You can identify if a customer made a second purchase within 365 days of their first purchase by adding the **first order is retained** attribute to a segment from the **Segment Editor**. Click **Add condition**, and then choose **Attributes**.
 
 .. image:: ../../images/attributes-picker.png
    :width: 540 px
@@ -93,7 +93,7 @@ The following table lists the operators that are available to these attributes.
    * - **is false**
      - |attribute-recommended| **More useful**
 
-       Returns a list of customers who do not made a repeat purchase within the specified time window.
+       Returns a list of customers who did not made a repeat purchase within the specified time window.
 
    * - **is not NULL**
      - Returns a list of customers who did *or* did not make a repeat purchase within the specified time window.

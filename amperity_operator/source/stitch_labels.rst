@@ -248,6 +248,6 @@ Ty and Tylian were split into two customer records, but after examining the spli
 
    row_id,label_id,partition_id,datasource,semantic,value
    1,TyTylian,1,Table:One,pk,123a-456b-789c
-   2,TyTylian,2,Table:Two,pk,234d-567e-891f
+   2,TyTylian,1,Table:Two,pk,234d-567e-891f
 
 .. stitch-labels-example-likely-nickname-end

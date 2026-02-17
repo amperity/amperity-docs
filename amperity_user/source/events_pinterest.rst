@@ -56,8 +56,7 @@ For example:
    :linenos:
 
    SELECT
-     mc.TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(email))))) AS email
-     ,TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS email_1
+     TO_HEX(SHA256(TO_UTF8(LOWER(TRIM(mc.email))))) AS email
      ,ut.order_datetime AS event_time
      ,'checkout' AS event_type
      ,'offline' AS event_source
