@@ -238,6 +238,7 @@
     // Keyword to path mapping
     const KEYWORD_MAPPING = {
       "itemized transaction semantics": "/reference/semantics.html#transactions",
+      "offline conversions": "/user/grid_events.html",
       "punnch": "/reference/connected_systems.html",
       "yotpo": "/reference/connected_systems.html"
     };
@@ -555,62 +556,83 @@
     function searchInIndex(index, query, collection) {
       const results = [];
       const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 0);
-      
+  
       if (!index.docnames || !index.titles) return results;
+
+      // Helper: score a title string against the query
+      function scoreTitleMatch(titleLower) {
+        // All query words must appear somewhere in the title
+        if (!queryWords.every(word => titleLower.includes(word))) return 0;
+
+        // Tokenise the title into words (split on non-alphanumeric runs)
+        const titleTokens = titleLower.split(/[\s\-_/]+/);
+
+        let score = 100; // base score for any title match
+
+        // Exact whole-title match
+        if (titleLower === query) score += 60;
+
+        // Every query word appears as a standalone token in the title
+        const allStandalone = queryWords.every(qw =>
+          titleTokens.some(token => token === qw)
+        );
+        if (allStandalone) score += 40;
+
+        // Query appears as a contiguous substring of a single token
+        // (i.e. embedded inside a longer word like "campaigns" ⊃ "ampai")
+        const embeddedInToken = queryWords.some(qw =>
+          titleTokens.some(token => token.includes(qw) && token !== qw)
+        );
+        if (embeddedInToken) score -= 30; // penalise embedded matches
+
+        return score;
+      }
 
       // Search through documents for page title matches
       index.docnames.forEach((docname, docIndex) => {
         const title = index.titles[docIndex] || docname;
         const titleLower = title.toLowerCase();
-        
-        // Check if query matches title
-        const titleMatches = queryWords.every(word => titleLower.includes(word));
-        
-        if (titleMatches) {
+
+        const titleScore = scoreTitleMatch(titleLower);
+        if (titleScore > 0) {
           results.push({
-            title: title,
+            title,
             url: `/${collection}/${docname}.html`,
-            collection: collection,
-            score: 100, // Highest score for page title matches
+            collection,
+            score: titleScore,
             isHeader: false,
             isContent: false
           });
         }
       });
 
-      // Search through section headers if available (H2, H3, H4 only - excluding H1 page titles)
+      // Search through section headers (H2–H4, excluding H1 page titles)
       const alltitles = index.alltitles || {};
       Object.entries(alltitles).forEach(([headerTitle, locations]) => {
         const headerLower = headerTitle.toLowerCase();
-        const headerMatches = queryWords.every(word => headerLower.includes(word));
-        
-        if (headerMatches && Array.isArray(locations)) {
+        const headerScore = scoreTitleMatch(headerLower);
+
+        if (headerScore > 0 && Array.isArray(locations)) {
           locations.forEach(location => {
             if (Array.isArray(location) && location.length >= 2) {
               const docIndex = location[0];
               const anchor = location[1];
               const docname = index.docnames[docIndex];
               const pageTitle = index.titles[docIndex] || docname;
-              
-              // Skip H1 headers (page titles):
-              // 1. They don't have anchors or have empty anchors
-              // 2. The header text matches the page title
-              if (!anchor || anchor === '' || headerTitle === pageTitle) {
-                return;
-              }
-              
-              // Construct URL with anchor
+
+              // Skip H1 headers (no anchor, or header matches page title)
+              if (!anchor || anchor === '' || headerTitle === pageTitle) return;
+
               let url = `/${collection}/${docname}.html`;
-              if (anchor) {
-                url += `#${anchor}`;
-              }
-              
+              if (anchor) url += `#${anchor}`;
+
+              // Header matches are scored relative to page-title matches but capped lower
               results.push({
                 title: headerTitle,
-                pageTitle: pageTitle,
-                url: url,
-                collection: collection,
-                score: 50, // Medium score for header matches
+                pageTitle,
+                url,
+                collection,
+                score: Math.min(headerScore, 90) - 50, // header ceiling below page titles
                 isHeader: true,
                 isContent: false
               });
@@ -625,24 +647,23 @@
         if (terms[word]) {
           const termData = terms[word];
           let docIndices = [];
-          
-          // Handle different term data formats
+
           if (Array.isArray(termData)) {
             docIndices = termData;
           } else if (typeof termData === 'object') {
             docIndices = Object.keys(termData).map(k => parseInt(k));
           }
-          
+
           docIndices.forEach(docIndex => {
             if (typeof docIndex === 'number' && index.docnames[docIndex]) {
               const docname = index.docnames[docIndex];
               const title = index.titles[docIndex] || docname;
-              
+
               results.push({
-                title: title,
+                title,
                 url: `/${collection}/${docname}.html`,
-                collection: collection,
-                score: 10, // Lower score for content matches
+                collection,
+                score: 10,
                 isHeader: false,
                 isContent: true
               });
