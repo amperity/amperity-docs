@@ -46,6 +46,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_meta_ads_manager
 
+   .. grid-item-card:: Pinterest
+      :link-type: doc
+      :link: events_pinterest
+
    .. grid-item-card:: The Trade Desk
       :link-type: doc
       :link: events_the_trade_desk
@@ -66,5 +70,6 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>
+   Pinterest <events_pinterest>
    The Trade Desk <events_the_trade_desk>
    TikTok Ads <events_tiktok_ads>
