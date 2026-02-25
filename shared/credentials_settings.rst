@@ -1771,6 +1771,33 @@ See OAuth common.
 
 
 
+.. vale off
+
+**PINTEREST EVENTS**
+
+.. vale on
+
+.. credential-pinterest-events-conversion-access-token-start
+
+A Bearer token generated from `Pinterest Ads Manager <https://ads.pinterest.com/>`__ |ext_link|.
+
+.. credential-pinterest-events-conversion-access-token-end
+
+.. credential-pinterest-events-conversion-access-token-find-start
+
+Log in to |destination-name| Ads Manager, select **Ad Account Overview**, **Conversions**, **Conversions API**, and then **Set up API**. Select **Conversion access token** and then click **Generate new token**. Copy the token, and then use it to configure the **Conversion access token** credential setting in Amperity.
+
+.. credential-pinterest-events-conversion-access-token-find-end
+
+.. credential-pinterest-events-conversion-access-token-owner-or-admin-start
+
+.. important:: The user account that generates the access token `must be the Owner of the ads account or be assigned the Admin, Analyst, Audience, or Campaign role <https://help.pinterest.com/en/business/article/business-manager-access-roles-and-permissions>`__ |ext_link| in |destination-name|.
+
+.. credential-pinterest-events-conversion-access-token-owner-or-admin-end
+
+
+
+
 
 .. vale off
 

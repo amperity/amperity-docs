@@ -2305,6 +2305,12 @@ Your brand's |destination-name| advertising account ID.
 
 .. setting-pinterest-ad-account-id-end
 
+.. setting-pinterest-ad-account-id-about-start
+
+The account identifier is a numeric value with up to 18 digits. You can find your ad account ID in the URL for |destination-name| Ads Manager after logging in or by navigating to the **Ad Account Overview** page in |destination-name| Ads Manager.
+
+.. setting-pinterest-ad-account-id-about-end
+
 **Audience primary key**
 
 See common settings.
@@ -2318,6 +2324,42 @@ The list name to which Amperity sends a list of SHA-256 hashed email addresses. 
 .. setting-pinterest-list-name-end
 
 
+
+
+
+.. vale off
+
+**PINTEREST EVENTS**
+
+.. vale on
+
+Settings unique to Pinterest.
+
+**Ad account ID**
+
+See Pinterest.
+
+**Batch size**
+
+.. setting-pinterest-events-batch-size-start
+
+The number of events included in a single request to the Conversions API. May be an integer between 1 and 1000. Default value: "500".
+
+.. setting-pinterest-events-batch-size-end
+
+**Test mode**
+
+.. setting-pinterest-events-test-mode-start
+
+When test mode is enabled events are not recorded, but a response is returned as if events were recorded. Use test mode to verify that requests to the Conversions API are working and that the responses have the correct information.
+
+.. setting-pinterest-events-test-mode-end
+
+.. setting-pinterest-events-test-mode-false-start
+
+Set this value to "false" before running this destination in production.
+
+.. setting-pinterest-events-test-mode-false-end
 
 
 
