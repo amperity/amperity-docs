@@ -7,10 +7,10 @@
 .. |required-credentials| replace:: "conversion access token"
 .. |what-send| replace:: offline conversion events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**
+.. |what-enable| replace:: **timestamp**, **currency**, and **email**
 .. |allow-for-what| replace:: offline conversion events
 .. |allow-for-duration| replace:: up to 48 hours for deduplication of events
-.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, and **email** or **phone**.
+.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, and **email**.
 
 .. meta::
     :description lang=en:
@@ -524,7 +524,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
    * - **email**
      - **em**
-     - **email** or **phone** is **Required**
+     - **Required**
 
        An email address, in lowercase.
 
@@ -644,7 +644,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
    * - **phone**
      - **ph**
-     - **email** or **phone** is **Required**.
+     - **Recommended**.
 
        A phone number with only digits, country code, area code, and number.
 

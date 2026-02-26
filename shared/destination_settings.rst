@@ -2349,7 +2349,7 @@ Set this value to "false" before running this destination in production.
 
 .. setting-pinterest-events-query-must-return-start
 
-A query must return the following parameters: **currency**, **email** or **phone**, **event_time**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
+A query must return the following parameters: **currency**, **email**, **event_time**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
 
 .. setting-pinterest-events-query-must-return-end
 
