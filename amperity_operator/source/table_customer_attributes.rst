@@ -35,11 +35,11 @@ After the **Customer Attributes** table is configured you can extend it to be mo
 
 .. table-customer-attributes-important-start
 
-.. important:: Many columns in the **Customer Attributes** table are built to enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
+.. important:: Many columns in the **Customer Attributes** table enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
 
    Any column that exists in the :ref:`column reference <table-customer-attributes-reference>` must maintain the exact column name and data type, even if your tenant requires custom SQL to enable the feature.
 
-   This table may be extended to support additional use cases. The implementation for these types of use cases are always tenant-specific, but should follow a similar approach as the :ref:`recommended <table-customer-attributes-recommended-updates>` and :ref:`optional <table-customer-attributes-optional>` extensions. Custom fields are not used by segment insights and predictive scoring, but may be used by workflows that you build within your tenant, and then enable downstream.
+   This table may be extended to support additional use cases. The implementations for these types of use cases are always tenant-specific, but should follow a similar approach as the :ref:`recommended <table-customer-attributes-recommended-updates>` and :ref:`optional <table-customer-attributes-optional>` extensions. Custom fields are not used by segment insights and predictive scoring, but may added to the **Customer Attributes** table.
 
 .. table-customer-attributes-important-end
 
