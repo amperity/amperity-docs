@@ -1,14 +1,14 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Pinterest
+.. |destination-name| replace:: Pinterest Ads Manager
 .. |plugin-name| replace:: "Pinterest Offline Events"
 .. |credential-type| replace:: "pinterest-offline-events"
 .. |required-credentials| replace:: "conversion access token"
-.. |what-send| replace:: offline events
+.. |what-send| replace:: offline conversion events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**, **price**, and **quantity**
-.. |allow-for-what| replace:: offline events
+.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**, and **value**
+.. |allow-for-what| replace:: offline conversion events
 .. |allow-for-duration| replace:: up to 48 hours for deduplication of events
 .. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, **email**, **value**, **order_id**, **extern_id**, **content_name**, **content_category**, **content_brand**, **item_name**, **item_category**, **item_brand**, **opt_out_typev, and **opt_out** attributes are optional.
 
@@ -32,13 +32,12 @@ Configure offline conversion events for Pinterest
    :start-after: .. term-pinterest-start
    :end-before: .. term-pinterest-end
 
-.. TODO: This, effectively, replaces the current /user/events_pinterest.rst topic. KEEP a reference paragraph for the option to just upload CSV files directly, but update that to note that customer opt-out behavior is not tracked by Pinterest with that use case.
-
 .. events-pinterest-offline-events-overview-start
 
 Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns and improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance within |destination-name|.
 
 Only events that occurred within the previous seven days may be sent to |destination-name| using the `Send conversions <https://developer.pinterest.com/docs/api/v5/events-create/>`__ |ext_link| endpoint in the |destination-name| Conversions API.
+
 .. events-pinterest-offline-events-overview-end
 
 .. events-pinterest-offline-events-allowfor-start
@@ -113,37 +112,21 @@ Get details
           :class: no-scaled-link
      - **Request properties**
 
-       Amperity automatically includes **action_source**, **event_id**, **event_name**, and **partner_name** in every request.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-pinterest-events-query-must-return-start
+             :end-before: .. setting-pinterest-events-query-must-return-end
 
-       All of the following properties must be included in every request: **currency**, **em**, **event_time**, and **value**.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-pinterest-events-query-should-return-start
+             :end-before: .. setting-pinterest-events-query-should-return-end
 
-       The following parameters are recommended for `improving return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **click_id**, **currency**, **em**, **external_id**, **fn**, **hashed_maids**, **ln**, and **ph**.
+          .. important::
 
-
-
-A query **MUST** return the following parameters: **currency**, **em**, **event_time**, and **value**.
-
-The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **click_id**, **currency**, **external_id**, **fn**, **hashed_maids**, **ln**, and **ph**.
-
-.. important:: Amperity adds the following parameters and applies values automatically:
-
-   * **action_source** is automatically set to **offline**
-   * **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **event_time**
-   * **event_name** is automatically set to **checkout**
-   * **partner_name** is automatically set to **ss-amperity**
-
+             .. include:: ../../shared/destination_settings.rst
+                :start-after: .. setting-pinterest-events-query-automatic-return-start
+                :end-before: .. setting-pinterest-events-query-automatic-return-end
 
 .. events-pinterest-offline-events-get-details-table-end
-
-
-
-
-
-
-
-
-
-
 
 
 .. _events-pinterest-offline-events-credentials:
@@ -360,26 +343,29 @@ Use a query to build a combination of data from the **Unified Transactions** and
 
 Review the :ref:`Conversions API parameters <events-pinterest-offline-events-conversions>` section for detailed information about the columns returned by your query.
 
-A query **MUST** return the following parameters: **currency**, **em**, **event_time**, and **value**.
-
-A query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **click_id**, **currency**, **external_id**, **fn**, **hashed_maids**, **ln**, and **ph**.
-
-.. important:: Amperity adds the following parameters and applies values automatically:
-
-   * **action_source** is automatically set to **offline**
-   * **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **event_time**
-   * **event_name** is automatically set to **checkout**
-   * **partner_name** is automatically set to **ss-amperity**
-
 .. events-pinterest-offline-events-offline-events-build-query-required-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-pinterest-events-query-must-return-start
+   :end-before: .. setting-pinterest-events-query-must-return-end
 
-.. _events-pinterest-offline-events-build-segment-orders:
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-pinterest-events-query-should-return-start
+   :end-before: .. setting-pinterest-events-query-should-return-end
+
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-pinterest-events-query-automatic-return-start
+      :end-before: .. setting-pinterest-events-query-automatic-return-end
+
+
+.. _events-pinterest-offline-events-build-query-orders:
 
 Order-level events
 --------------------------------------------------
 
-.. events-pinterest-offline-events-build-segment-orders-start
+.. events-pinterest-offline-events-build-query-orders-start
 
 A query that returns a collection of order-level events for use in |destination-name| is similar to:
 
@@ -406,15 +392,15 @@ A query that returns a collection of order-level events for use in |destination-
    LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
    WHERE ut.order_datetime > (CURRENT_DATE - interval '7' day)
 
-.. events-pinterest-offline-events-build-segment-orders-end
+.. events-pinterest-offline-events-build-query-orders-end
 
 
-.. _events-pinterest-offline-events-build-segment-items:
+.. _events-pinterest-offline-events-build-query-items:
 
 Item-level events
 --------------------------------------------------
 
-.. events-pinterest-offline-events-build-segment-items-start
+.. events-pinterest-offline-events-build-query-items-start
 
 A query that returns a collection of item-level events for use in |destination-name| is more complex. Review the tables available in your tenant and review the available parameters in the parameters in the `Send conversions <https://developer.pinterest.com/docs/api/v5/events-create/>`__ |ext_link| to determine which combinations of attributes in your tenant can be mapped to properties in the **Send conversions** endpoint.
 
@@ -507,7 +493,7 @@ The following example uses the **Customer 360**, **Unified Itemized Transactions
    FROM pinterest_events
    ORDER BY event_time DESC
 
-.. events-pinterest-offline-events-build-segment-items-end
+.. events-pinterest-offline-events-build-query-items-end
 
 
 .. _events-pinterest-offline-events-conversions:
@@ -517,7 +503,7 @@ Offline events parameters
 
 .. events-pinterest-offline-events-conversion-api-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events.
+The following table describes each of the parameters that are required by |destination-name| for offline events. Refer to the `Send conversions <https://developer.pinterest.com/docs/api/v5/events-create/>`__ |ext_link| endpoint documentation for more information about parameters, making requests, and ensuring that the shape of the data sent to |destination-name| from Amperity matches what |destination-name| expects to be in the request.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
