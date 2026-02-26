@@ -2339,22 +2339,6 @@ Settings unique to Pinterest.
 
 See Pinterest.
 
-**Batch size**
-
-.. setting-pinterest-events-batch-size-start
-
-The number of events included in a single request to the Conversions API. May be an integer between 1 and 1000. Default value: "500".
-
-.. setting-pinterest-events-batch-size-end
-
-**Test mode**
-
-.. setting-pinterest-events-test-mode-start
-
-When test mode is enabled events are not recorded, but a response is returned as if events were recorded. Use test mode to verify that requests to the Conversions API are working and that the responses have the correct information.
-
-.. setting-pinterest-events-test-mode-end
-
 .. setting-pinterest-events-test-mode-false-start
 
 Set this value to "false" before running this destination in production.
@@ -2365,13 +2349,13 @@ Set this value to "false" before running this destination in production.
 
 .. setting-pinterest-events-query-must-return-start
 
-A query **MUST** return the following parameters: **currency**, **em**, **event_time**, and **value**.
+A query must return the following parameters: **currency**, **email** or **phone**, **event_time**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
 
 .. setting-pinterest-events-query-must-return-end
 
 .. setting-pinterest-events-query-should-return-start
 
-The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **click_id**, **currency**, **external_id**, **fn**, **hashed_maids**, **ln**, and **ph**.
+The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **currency**, **extern_id**, **given_name**, **surname**, and **phone**.
 
 .. setting-pinterest-events-query-should-return-end
 

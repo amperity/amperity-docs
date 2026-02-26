@@ -4,10 +4,10 @@
 .. |destination-name| replace:: Pinterest Ads Manager
 .. |what-send| replace:: offline conversion events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**, and **value**
+.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**
 .. |allow-for-what| replace:: offline conversion events
 .. |allow-for-duration| replace:: up to 48 hours for deduplication of events
-.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, **email**, **value**, **order_id**, **extern_id**, **content_name**, **content_category**, **content_brand**, **item_name**, **item_category**, **item_brand**, **opt_out_typev, and **opt_out** attributes are optional.
+.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, and **email** or **phone**.
 
 
 .. meta::

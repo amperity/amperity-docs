@@ -7,10 +7,10 @@
 .. |required-credentials| replace:: "conversion access token"
 .. |what-send| replace:: offline conversion events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**, and **value**
+.. |what-enable| replace:: **timestamp**, **currency**, **email** or **phone**
 .. |allow-for-what| replace:: offline conversion events
 .. |allow-for-duration| replace:: up to 48 hours for deduplication of events
-.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, **email**, **value**, **order_id**, **extern_id**, **content_name**, **content_category**, **content_brand**, **item_name**, **item_category**, **item_brand**, **opt_out_typev, and **opt_out** attributes are optional.
+.. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, and **email** or **phone**.
 
 .. meta::
     :description lang=en:
@@ -279,26 +279,6 @@ Add destination
              :end-before: .. setting-pinterest-ad-account-id-about-end
 
 
-       **Batch size**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-pinterest-events-batch-size-start
-             :end-before: .. setting-pinterest-events-batch-size-end
-
-
-       **Test mode**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-pinterest-events-test-mode-start
-             :end-before: .. setting-pinterest-events-test-mode-end
-
-          .. important::
-
-             .. include:: ../../shared/destination_settings.rst
-                :start-after: .. setting-pinterest-events-test-mode-false-start
-                :end-before: .. setting-pinterest-events-test-mode-false-end
-
-
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step five.
@@ -366,21 +346,21 @@ A query that returns a collection of order-level events for use in |destination-
    :linenos:
 
    SELECT
-     c360.customer_id AS external_id
-     ,c360.given_name AS fn
-     ,c360.surname AS ln
-     ,c360.phone AS ph
-     ,c360.email AS em
-     ,c360.city AS ct
-     ,c360.state AS st
-     ,c360.postal AS zp
+     c360.customer_id AS extern_id
+     ,c360.given_name AS given_name
+     ,c360.surname AS surname
+     ,c360.phone AS phone
+     ,c360.email AS email
+     ,c360.city AS city
+     ,c360.state AS state
+     ,c360.postal AS postal
      ,c360.country AS country
-     ,c360.birthdate AS db
+     ,c360.birthdate AS birthdate
      ,ut.currency AS currency
      ,ut.order_id AS order_id
-     ,ut.order_quantity AS num_items
-     ,ut.order_datetime AS event_time
-     ,ut.order_revenue AS value
+     ,ut.order_quantity AS order_quantity
+     ,ut.order_datetime AS timestamp
+     ,ut.order_revenue AS order_revenue
    FROM Unified_Transactions ut
    LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
    WHERE ut.order_datetime > (CURRENT_DATE - interval '7' day)
@@ -401,40 +381,30 @@ The following example uses the **Customer 360**, **Unified Itemized Transactions
 
 .. code-block:: sql
 
-   WITH customer_hashed AS (
+   WITH customers AS (
      SELECT
        amperity_id
-       ,c360.email AS em
-       ,c360.phone AS ph
-       ,c360.given_name AS fn
-       ,c360.surname AS ln
-       ,CONCAT(
-         CAST(YEAR(c360.birthdate) AS VARCHAR), '-',
-         LPAD(CAST(MONTH(c360.birthdate) AS VARCHAR), 2, '0'), '-',
-         LPAD(CAST(DAY(c360.birthdate) AS VARCHAR), 2, '0')
-       ) AS db
-       ,c360.city AS ct
-       ,c360.state AS st
-       ,c360.postal AS zp
+       ,c360.email AS email
+       ,c360.phone AS phone
+       ,c360.given_name AS given_name
+       ,c360.surname AS surname
+       ,c360.city AS city
+       ,c360.state AS state
+       ,c360.postal AS postal
        ,c360.country AS country
-       ,c360 customer_id AS external_id
-     FROM Customer_360
+       ,c360.birthdate AS birthdate
+       ,c360.customer_id AS extern_id
+     FROM Customer_360 c360
      WHERE email IS NOT NULL
      OR phone IS NOT NULL
    ),
 
-   itemized_rollup AS (
+   items AS (
      SELECT
-       order_id,
-       SUM(item_quantity) AS num_items,
-       SUM(item_revenue) AS total_item_revenue,
-       ARRAY_AGG(
-         MAP(
-           ARRAY['id', 'item_price', 'quantity'],
-           ARRAY[product_id, CAST(item_revenue AS VARCHAR), CAST(item_quantity AS VARCHAR)]
-         )
-         ORDER BY product_id
-       ) AS contents
+       order_id
+       ,item_quantity AS quantity
+       ,item_revenue AS price
+       ,product_id AS item_name
      FROM Unified_Itemized_Transactions
      WHERE is_return IS NULL
      AND is_cancellation IS NULL
@@ -442,49 +412,40 @@ The following example uses the **Customer 360**, **Unified Itemized Transactions
      GROUP BY order_id
    ),
 
-   order_events AS (
+   orders AS (
      SELECT
        ut.amperity_id
        ,ut.order_id
-       ,'checkout' AS event_name
-       ,TO_UNIXTIME(ut.order_datetime) AS event_time
-       ,ut.order_id AS event_id
+       ,ut.order_datetime AS timestamp
        ,'USD' AS currency
-       ,CAST(ut.order_revenue AS VARCHAR) AS value
      FROM Unified_Transactions ut
      WHERE ut.amperity_id IS NOT NULL
    ),
 
    pinterest_events AS (
      SELECT
-       ,oe.event_name
-       ,oe.event_time
-       ,oe.event_id
-       ,oe.event_source_url
-       ,oe.action_source
-       ,c.em
-       ,c.ph
-       ,c.fn
-       ,c.ln
-       ,c.ge
-       ,c.db
-       ,c.ct
-       ,c.st
-       ,c.zp
+       ,or.timestamp
+       ,c.email
+       ,c.phone
+       ,c.given_name
+       ,c.surname
+       ,c.birthdate
+       ,c.city
+       ,c.state
+       ,c.postal
        ,c.country
-       ,c.external_id
-       ,oe.currency
-       ,oe.value
-       ,ir.num_items
-       ,ir.contents
-     FROM order_events oe
-     JOIN customer_hashed c  ON oe.amperity_id = c.amperity_id
-     LEFT JOIN itemized_rollup ir ON oe.order_id    = ir.order_id
+       ,c.extern_id
+       ,or.currency
+       ,or.value
+       ,it.quantity
+     FROM orders or
+     JOIN customers c  ON or.amperity_id = c.amperity_id
+     LEFT JOIN items it ON or.order_id = it.order_id
    )
 
    SELECT *
    FROM pinterest_events
-   ORDER BY event_time DESC
+   ORDER BY timestamp DESC
 
 .. events-pinterest-offline-events-build-query-items-end
 
@@ -498,14 +459,16 @@ Offline events parameters
 
 The following table describes each of the parameters that are required by |destination-name| for offline events. Refer to the `Send conversions <https://developer.pinterest.com/docs/api/v5/events-create/>`__ |ext_link| endpoint documentation for more information about parameters, making requests, and ensuring that the shape of the data sent to |destination-name| from Amperity matches what |destination-name| expects to be in the request.
 
+.. important:: A query must return columns with the same name as listed in the "Amperity name" column in the following table. Amperity converts column names to match the parameter names required by the **Send conversions** endpoint automatically, as long as the name of field returned by the query matches the expected name.
+
 The fields are listed alphabetically, but may be returned by a query in any order.
 
 .. list-table::
    :widths: 25 25 50
    :header-rows: 1
 
-   * - Amperity field name
-     - Pinterest field name
+   * - Amperity name
+     - Pinterest parameter
      - Description
 
    * - None.
@@ -515,7 +478,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        The location at which the conversion event occurred. The value for **action_source** is assigned automatically and is set to **offline**.
 
 
-   * - **Birthdate**
+   * - **birthdate**
      - **db**
      - **Optional**
 
@@ -526,7 +489,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **db** before sending to |destination-name|.
 
 
-   * - **City**
+   * - **city**
      - **ct**
      - **Optional**
 
@@ -537,16 +500,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **ct** before sending to |destination-name|.
 
 
-   * - Varies.
-     - **click_id**
-     - **Optional**
-
-       A unique identifier used by |destination-name| to identify users based on information sent with promoted traffic. This identifier is in the ``_epik`` cookie or in the ``&epik=`` query parameter in a URL.
-
-       .. note;: **click_id** is part of the **user_data** object in the **Send conversions** endpoint.
-
-
-   * - **Country**
+   * - **country**
      - **country**
      - **Optional**
 
@@ -557,7 +511,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **country** before sending to |destination-name|.
 
 
-   * - **Currency**
+   * - **currency**
      - **currency**
      - **Required**
 
@@ -568,9 +522,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        .. note:: **currency** is part of the **custom_data** object in the **Send conversions** endpoint.
 
 
-   * - **Email**
+   * - **email**
      - **em**
-     - **Required**
+     - **email** or **phone** is **Required**
 
        An email address, in lowercase.
 
@@ -605,7 +559,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        The type of user event. The value for **event_name** is assigned automatically and is set to **checkout**. Only checkout event types are supported.
 
 
-   * - Varies.
+   * - **extern_id**.
      - **external_id**
      - **Required**
 
@@ -616,7 +570,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **external_id** before sending to |destination-name|.
 
 
-   * - **Gender**
+   * - **gender**
      - **ge**
      - **Optional**
 
@@ -627,7 +581,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **gender**.
 
 
-   * - **Given Name**
+   * - **given_name**
      - **fn**
      - **Optional**
 
@@ -636,17 +590,6 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        .. note:: **fn** is part of the **user_data** object in the **Send conversions** endpoint.
 
           Amperity automatically applies SHA-256 hashing to **fn** before sending to |destination-name|.
-
-
-   * - Varies.
-     - **hashed_maids**
-     - **Optional**
-
-       Unique identifiers for Google Advertising IDs (GAIDs) or Apple's Identifier for Advertisers (IDFAs).
-
-       .. note:: **hashed_maids** is part of the **user_data** object in the **Send conversions** endpoint.
-
-          Amperity automatically applies SHA-256 hashing to **hashed_maids**.
 
 
    * - Varies.
@@ -669,7 +612,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        Use **opt_out_type** for situations where a customer's **opt_out** preference is known. When the **opt_out** parameter is "true" the value of **opt_out_type** must be "ldp". When **opt_out_type** is "ldp" |destination-name| enforces `limited data processing <https://help.pinterest.com/en/business/article/limited-data-processing>`__ |ext_link|.
 
 
-   * - **Order ID**
+   * - **order_id**
      - **order_id**
      - **Recommended**
 
@@ -681,6 +624,17 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           #. Use **order_id** to build the SHA-256 hash for **event_id**
 
 
+   * - **order_revenue**
+     - **value**
+     - **Required** when **price** and **quantity** are unavailable.
+
+       The total price for the offline conversion event, not including tax or shipping costs.
+
+       You may configure the SQL query to use item-level details to calculate order revenue. Use the **Unified Itemized Transactions** table and calculate order revenue using **Item Price** and **Item Quantity** for all units of items associated with a unique **Order ID**.
+
+       .. note:: **value** is part of the **custom_data** object in the **Send conversions** endpoint.
+
+
    * - None.
      - **partner_name**
      - **Automatic**
@@ -688,9 +642,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        The identifier for the third-party partner responsible for sending events to the |destination-name| Conversions AI. The value for **partner_name** is assigned automatically and is set to **ss-amperity**.
 
 
-   * - **Phone**
+   * - **phone**
      - **ph**
-     - **Recommended**.
+     - **email** or **phone** is **Required**.
 
        A phone number with only digits, country code, area code, and number.
 
@@ -699,7 +653,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **ph** before sending to |destination-name|.
 
 
-   * - **Postal**
+   * - **postal**
      - **zp**
      - **Optional**
 
@@ -710,7 +664,21 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **zp** before sending to |destination-name|.
 
 
-   * - **State**
+   * - **price**
+     - Rolled up to **value**
+     - **Optional** unless **value** is not provided.
+
+       The individual price for each item in the order.
+
+
+   * - **quantity**
+     - Rolled up to **value**
+     - **Optional** unless **value** is not provided.
+
+       The quentity of items in the order.
+
+
+   * - **state**
      - **st**
      - **Optional**
 
@@ -721,7 +689,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **st** before sending to |destination-name|.
 
 
-   * - **Surname**
+   * - **surname**
      - **ln**
      - **Optional**
 
@@ -732,23 +700,12 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           Amperity automatically applies SHA-256 hashing to **ln** before sending to |destination-name|.
 
 
-   * - **Order Datetime**
-     - **event_time**
+   * - **timestamp**
+     - **timestamp**
      - **Required**
 
        An |ext_iso_8601| timestamp for the date and time at which the offline conversion event occurred. For example: "2025-01-12T14:21:56.000Z".
 
        .. important:: All timestamps sent to |destination-name| must have occurred within the previous seven days. Events that occurred outside of the seven day window are not sent.
-
-
-   * - **Order Revenue**
-     - **value**
-     - **Required** when **price** and **quantity** are unavailable.
-
-       The total price for the offline conversion event, not including tax or shipping costs.
-
-       You may configure the SQL query to use item-level details to calculate order revenue. Use the **Unified Itemized Transactions** table and calculate order revenue using **Item Price** and **Item Quantity** for all units of items associated with a unique **Order ID**.
-
-       .. note:: **value** is part of the **custom_data** object in the **Send conversions** endpoint.
 
 .. events-pinterest-offline-events-conversion-api-parameters-end
