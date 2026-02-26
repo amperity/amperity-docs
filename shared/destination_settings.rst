@@ -2305,6 +2305,12 @@ Your brand's |destination-name| advertising account ID.
 
 .. setting-pinterest-ad-account-id-end
 
+.. setting-pinterest-ad-account-id-about-start
+
+The account identifier is a numeric value with up to 18 digits. You can find your ad account ID in the URL for |destination-name| Ads Manager after logging in or by navigating to the **Ad Account Overview** page in |destination-name| Ads Manager.
+
+.. setting-pinterest-ad-account-id-about-end
+
 **Audience primary key**
 
 See common settings.
@@ -2319,6 +2325,50 @@ The list name to which Amperity sends a list of SHA-256 hashed email addresses. 
 
 
 
+
+
+.. vale off
+
+**PINTEREST EVENTS**
+
+.. vale on
+
+Settings unique to Pinterest.
+
+**Ad account ID**
+
+See Pinterest.
+
+.. setting-pinterest-events-test-mode-false-start
+
+Set this value to "false" before running this destination in production.
+
+.. setting-pinterest-events-test-mode-false-end
+
+**Query requirements** (not a setting)
+
+.. setting-pinterest-events-query-must-return-start
+
+A query must return the following parameters: **currency**, **email**, **event_time**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
+
+.. setting-pinterest-events-query-must-return-end
+
+.. setting-pinterest-events-query-should-return-start
+
+The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **currency**, **extern_id**, **given_name**, **surname**, and **phone**.
+
+.. setting-pinterest-events-query-should-return-end
+
+.. setting-pinterest-events-query-automatic-return-start
+
+Amperity adds the following parameters and applies values automatically:
+
+* **action_source** is automatically set to **offline**
+* **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **event_time**
+* **event_name** is automatically set to **checkout**
+* **partner_name** is automatically set to **ss-amperity**
+
+.. setting-pinterest-events-query-automatic-return-end
 
 
 

@@ -122,6 +122,11 @@ Get details
              :start-after: .. setting-pinterest-ad-account-id-start
              :end-before: .. setting-pinterest-ad-account-id-end
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-pinterest-ad-account-id-about-start
+             :end-before: .. setting-pinterest-ad-account-id-about-end
+
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.

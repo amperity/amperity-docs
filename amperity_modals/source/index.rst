@@ -73,6 +73,7 @@ Site Index
    destination-pebble-post
    destination-persado
    destination-pinterest
+   destination-pinterest-offline-events
    destination-power-reviews
    destination-quad
    destination-rr-donnelly
