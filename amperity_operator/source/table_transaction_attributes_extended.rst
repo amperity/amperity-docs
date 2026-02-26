@@ -37,6 +37,18 @@ Transaction Attributes Extended table
 
 .. table-transaction-attributes-extended-table-group-links-end
 
+.. table-transaction-attributes-extended-important-start
+
+.. important:: Many columns in the **Transaction Attributes Extended** table enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
+
+   Any column that exists in the :ref:`column reference <table-transaction-attributes-extended-reference>` must maintain the exact column name and data type, even if your tenant requires custom SQL to enable the feature.
+
+   The **l12m_order_revenue**, **l12m_order_frequency** and **l12m_total_items** attributes must not be renamed. These attributes populate the Revenue tree card on the segment summary page.
+
+   This table may be extended to support additional use cases. The implementation for these types of use cases are always tenant-specific, but should follow a similar approach as :ref:`optional <table-transaction-attributes-extended-extend-attributes>` extensions. Custom fields are not used by segment insights and predictive scoring, but may added to the **Transaction Attributes Extended** table.
+
+.. table-transaction-attributes-extended-important-end
+
 
 .. _table-transaction-attributes-extended-add:
 
