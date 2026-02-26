@@ -237,13 +237,6 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your Pinterest account <events-pinterest-offline-events-credentials>`.
-
-CUSTOMIZE THIS
-
-       .. note:: You may use the same credentials to send both custom audiences and events to |destination-name|.
-
-
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
