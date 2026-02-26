@@ -766,6 +766,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send audiences using the Pinterest API. Use SFTP to send product catalog data to Pinterest to generate Pins for your product catalog.
 
+       Send offline conversion events to the **Send conversions** endpoint in the Pinterest API.
+
+
    * - **PostgreSQL Database**
      - |system-yes|
      - 
