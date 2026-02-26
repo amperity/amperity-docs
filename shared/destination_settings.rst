@@ -2361,6 +2361,30 @@ Set this value to "false" before running this destination in production.
 
 .. setting-pinterest-events-test-mode-false-end
 
+**Query requirements** (not a setting)
+
+.. setting-pinterest-events-query-must-return-start
+
+A query **MUST** return the following parameters: **currency**, **em**, **event_time**, and **value**.
+
+.. setting-pinterest-events-query-must-return-end
+
+.. setting-pinterest-events-query-should-return-start
+
+The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **click_id**, **currency**, **external_id**, **fn**, **hashed_maids**, **ln**, and **ph**.
+
+.. setting-pinterest-events-query-should-return-end
+
+.. setting-pinterest-events-query-automatic-return-start
+
+Amperity adds the following parameters and applies values automatically:
+
+* **action_source** is automatically set to **offline**
+* **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **event_time**
+* **event_name** is automatically set to **checkout**
+* **partner_name** is automatically set to **ss-amperity**
+
+.. setting-pinterest-events-query-automatic-return-end
 
 
 
