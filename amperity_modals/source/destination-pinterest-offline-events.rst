@@ -31,9 +31,7 @@ Credentials
    :start-after: .. credential-pinterest-events-conversion-access-token-find-start
    :end-before: .. credential-pinterest-events-conversion-access-token-find-end
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-pinterest-events-conversion-access-token-owner-or-admin-start
-   :end-before: .. credential-pinterest-events-conversion-access-token-owner-or-admin-end
+The user account that generates the access token must be the Owner of the ads account or be assigned the Admin, Analyst, Audience, or Campaign role in |destination-name|.
 
 
 Settings
