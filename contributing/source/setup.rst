@@ -61,6 +61,18 @@ In the same virtual environment, run the following commands to install theme and
 #. $.venv ``pip install sphinxcontrib-youtube``
 #. $.venv ``pip install sphinx-copybutton``
 #. $.venv ``pip install sphinx_design``
+#. $.venv ``pip install sphinx-new-tab-link``
+
+
+Install requirements
+==================================================
+
+In the same virtual environment, run the following commands:
+
+#. $.venv ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
+#. $.venv ``brew install python``
+#. $.venv ``pip3 install -r requirements.txt``
+#. $.venv ``brew install serve``
 
 
 Build the docs
@@ -69,9 +81,16 @@ Build the docs
 Open a new command shell window, and then run the following commands.
 
 #. $ ``cd documents/github/amperity-docs``
+#. $ ``source .venv/bin/activate``
 #. $ ``make``
 
    This builds all of the docs and place the output in the ``/build`` directory within the ``amperity-docs`` repo.
+
+
+Clean out the docs build directory
+==================================================
+
+Run the following command: ``make clean``. This removes all output in the ``/build`` directory.
 
 
 View the docs in localhost
