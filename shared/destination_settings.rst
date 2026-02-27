@@ -2349,7 +2349,7 @@ Set this value to "false" before running this destination in production.
 
 .. setting-pinterest-events-query-must-return-start
 
-A query must return the following parameters: **currency**, **email**, **event_time**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
+A query must return the following parameters: **currency**, **email**, **timestamp**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
 
 .. setting-pinterest-events-query-must-return-end
 
@@ -2364,7 +2364,7 @@ The query should return the following parameters to `improve return on ad spend 
 Amperity adds the following parameters and applies values automatically:
 
 * **action_source** is automatically set to **offline**
-* **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **event_time**
+* **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **timestamp**
 * **event_name** is automatically set to **checkout**
 * **partner_name** is automatically set to **ss-amperity**
 
