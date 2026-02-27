@@ -52,9 +52,9 @@ From the **Settings** page, select the **Credentials** tab, and then click the *
 
 In the **Create credentials** dialog box, do the following:
 
-From the **Plugin** dropdown, select |plugin-name|.
+#. From the **Plugin** dropdown, select |plugin-name|.
 
-Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+#. Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
 
 .. credential-steps-select-type-end
 
@@ -68,9 +68,9 @@ Notes: When a source or destination supports more than one credential type, use 
 
 In the **Create credentials** dialog box, do the following:
 
-From the **Plugin** dropdown, select |plugin-name|.
+#. From the **Plugin** dropdown, select |plugin-name|.
 
-Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+#. Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
 
 .. credential-steps-select-type-multiple-end
 
@@ -84,11 +84,11 @@ Notes: The "external" steps apply only to Amazon Ads, Criteo Audience API, Crite
 
 In the **Create credentials** dialog box, do the following:
 
-From the **Plugin** dropdown, select |plugin-name|.
+#. From the **Plugin** dropdown, select |plugin-name|.
 
-Click **Generate authorzation URL**, and then complete the external authorization steps shown for |destination-name|.
+#. Click **Generate authorzation URL**, and then complete the external authorization steps shown for |destination-name|.
 
-After the external authorization steps are completed, assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+#. After the external authorization steps are completed, assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
 
 .. credential-steps-select-type-external-end
 
