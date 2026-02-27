@@ -261,10 +261,8 @@ Semi-structured data types are unsupported and must be converted to a fully stru
 
 .. admonition:: Unsupported data types
 
-   **Databricks:** `BINARY <https://docs.databricks.com/aws/en/sql/language-manual/data-types/binary-type>`__ |ext_link|
+   **Google BigQuery:** `RANGE <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#range_type>`__ |ext_link|
 
-   **Google BigQuery:** `BYTES <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#bytes_type>`__ |ext_link| and `RANGE <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#range_type>`__ |ext_link|
-
-   **Snowflake:** `BINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#binary>`__ |ext_link|, `FILE <https://docs.snowflake.com/en/sql-reference/data-types-unstructured#file-data-type>`__ |ext_link|, `Semi-structured data types <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|, `VARBINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#varbinary>`__ |ext_link|, `VARIANT <https://docs.snowflake.com/en/sql-reference/data-types-semistructured#variant>`__ |ext_link|, and `VECTOR <https://docs.snowflake.com/en/sql-reference/data-types-vector>`__ |ext_link|
+   **Snowflake:** `FILE <https://docs.snowflake.com/en/sql-reference/data-types-unstructured#file-data-type>`__ |ext_link|, `Semi-structured data types <https://docs.snowflake.com/en/sql-reference/data-types-semistructured>`__ |ext_link|, `VARIANT <https://docs.snowflake.com/en/sql-reference/data-types-semistructured#variant>`__ |ext_link|, and `VECTOR <https://docs.snowflake.com/en/sql-reference/data-types-vector>`__ |ext_link|
 
 .. data-types-amperity-unsupported-end
