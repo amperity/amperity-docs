@@ -76,7 +76,7 @@ In the **Create credentials** dialog box, do the following:
 
 .. vale off
 
-Notes: The "external" steps apply only to Amazon Ads, Criteo Audience API, Criteo Retail Audience API, DV360, Facebook, Google Ads, Google Analytics, Google Customer Match, Google Enhanced Conversions, Hubspot, LinkedIn DMP, Meta Ads Offline Events, Microsoft Ads, Pinterest, Reddit Ads, Snapchat, TikTok Ads, and TikTok Ads Offline Events
+Notes: The "external" steps apply only to Amazon Ads, Criteo Audience API, Criteo Retail Audience API, DV360, Facebook, Google Ads, Google Analytics, Google Customer Match, Google Enhanced Conversions, Hubspot, LinkedIn DMP, Meta Ads Offline Events, Microsoft Ads, Pinterest, Reddit Ads, Snapchat, TikTok Ads, and TikTok Ads Offline Events.
 
 .. vale on
 
