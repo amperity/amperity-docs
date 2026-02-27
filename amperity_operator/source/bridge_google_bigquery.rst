@@ -120,7 +120,24 @@ The following table describes how Google BigQuery data types map to Amperity dat
 
        Variable-length binary data.
 
-     - .. warning:: The Google BigQuery **BYTES** data type is unsupported. Exclude fields with **BYTES** data types from tables before sharing them with Amperity.
+     - Tables with binary columns can be shared with Amperity. Use a custom domain table to:
+
+       * Decrypt encrypted binary columns
+       * Coerce binary columns to a supported Amperity data type
+
+       For example:
+
+       .. code-block:: sql
+
+          SELECT
+            customer_id
+            ,first_name
+            ,last_name
+            ,CAST(AES_DECRYPT(email_encrypted, '0123456789abcdef') AS STRING) AS email
+            ,CAST(AES_DECRYPT(phone_encrypted, '0123456789abcdef') AS STRING) AS phone
+          FROM encrypted_table
+
+       .. note:: Tables with binary columns cannot be made available to Stitch. Binary columns must be encrypted and coerced to a supported Amperity data type before making tables available to Stitch.
 
 
    * - `BYTEINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
