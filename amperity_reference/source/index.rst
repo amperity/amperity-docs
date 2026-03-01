@@ -305,6 +305,7 @@ Components
    AmpAI <ampai>
    APIs <api>
    Attribute types <grid_attributes>
+   Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
    Dashboards <grid_dashboards>
