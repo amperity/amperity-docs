@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |plugin-name| replace:: "Listrak SMS -- List Management"
+.. |plugin-name| replace:: "Listrak SMS--List Management"
 .. |credential-type| replace:: "listrak-sms"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "phone"
