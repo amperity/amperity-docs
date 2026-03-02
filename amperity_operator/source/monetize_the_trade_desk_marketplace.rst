@@ -158,7 +158,7 @@ A |destination-name| destination works like this:
 
        Amperity uses the `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| endpoint to send data rates for processing and approval.
 
-       The following settings define the data rates sent for approval. Depending on the type of audience--custom or syndicated--and the intended customer--partner or advertiser--some combination of the following settings define the data rate sent for approval.
+       The following settings define the data rates sent for approval. Depending on the type of audience--custom or syndicated--and the intended consumer--partner or advertiser--some combination of the following settings define the data rate sent for approval.
 
 
        **Cost per thousand (CPM)**
