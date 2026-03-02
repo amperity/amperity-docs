@@ -503,7 +503,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
 
    * - az-prod
      - azure_centralus
-     - MC75461
+     - TN88732
    * - az-prod
      - azure_eastus2
      - DSA38111
