@@ -154,7 +154,7 @@ A |destination-name| destination works like this:
 
           An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high-cost channels audiences yield higher vaules.
 
-          A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per million, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+          A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
 
        Amperity uses the `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| endpoint to send data rates for processing and approval.
 
@@ -163,7 +163,7 @@ A |destination-name| destination works like this:
 
        **Cost per thousand (CPM)**
 
-          A cost per million (CPM) rate defines a maximum rate to prevent runaway costs for an audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
+          A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
 
           .. note:: CPM rates lower than $5 require approval by |destination-name|.
 
@@ -207,7 +207,7 @@ A |destination-name| destination works like this:
           **Hybrid**
              A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. All audiences sent from Amperity should be configured with a hybrid data rate.
 
-             .. note:: All syndicated audiences are assigned a hybrid rate type. A cost per million (CPM) rate *and* a percent of media cost rate must be provided.
+             .. note:: All syndicated audiences are assigned a hybrid rate type. A cost per thousand (CPM) rate *and* a percent of media cost rate must be provided.
 
           **Percent of media cost**
              A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
