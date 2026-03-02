@@ -202,7 +202,7 @@ A |destination-name| destination works like this:
           The rate type defines the pricing model for an audience and establishes a consistent relative value for advertising impressions while keeping audience pricing scalable across channels.
 
           **CPM**
-             A cost per million (CPM) rate defines a maximum rate to prevent runaway costs for an audience.
+             A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience.
 
           **Hybrid**
              A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. All audiences sent from Amperity should be configured with a hybrid data rate.
