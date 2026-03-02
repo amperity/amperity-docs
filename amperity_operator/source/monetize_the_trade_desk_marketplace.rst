@@ -71,14 +71,11 @@ Amperity uses specific endpoints in the The Trade Desk Platform API:
 
 .. destination-the-trade-desk-marketplace-howitworks-endpoints-end
 
-.. TODO: Make image?
-.. 
-.. .. image:: ../../images/howitworks-the-trade-desk-marketplace.png
-..    :width: 600 px
-..    :alt: The Trade Desk Data Marketplace connector
-..    :align: left
-..    :class: no-scaled-link
-.. 
+.. image:: ../../images/howitworks-the-trade-desk-marketplace.png
+   :width: 600 px
+   :alt: The Trade Desk Data Marketplace connector
+   :align: left
+   :class: no-scaled-link
 
 .. destination-the-trade-desk-marketplace-howitworks-table-start
 
@@ -119,7 +116,7 @@ A |destination-name| destination works like this:
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step five.
+          :alt: Step four.
           :align: center
           :class: no-scaled-link
      - **TAXONOMY FOR SYNDICATED AUDIENCES**
@@ -129,7 +126,7 @@ A |destination-name| destination works like this:
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step six.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - **UPDATE AND CREATE AUDIENCES**
