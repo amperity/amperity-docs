@@ -60,17 +60,6 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
 
 .. destination-the-trade-desk-marketplace-howitworks-end
 
-.. destination-the-trade-desk-marketplace-howitworks-endpoints-start
-
-Amperity uses specific endpoints in the The Trade Desk Platform API:
-
-#. `POST /v3/thirdpartydata/query <https://partner.thetradedesk.com/v3/portal/api/ref/post-thirdpartydata-query>`__ |ext_link|
-#. `POST /v3/thirdpartydata <https://partner.thetradedesk.com/v3/portal/api/ref/post-thirdpartydata>`__ |ext_link|
-#. `PUT /v3/thirdpartydata <https://partner.thetradedesk.com/v3/portal/api/ref/put-thirdpartydata>`__ |ext_link|
-#. `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link|
-
-.. destination-the-trade-desk-marketplace-howitworks-endpoints-end
-
 .. image:: ../../images/howitworks-the-trade-desk-marketplace.png
    :width: 600 px
    :alt: The Trade Desk Data Marketplace connector
@@ -79,7 +68,7 @@ Amperity uses specific endpoints in the The Trade Desk Platform API:
 
 .. destination-the-trade-desk-marketplace-howitworks-table-start
 
-A |destination-name| destination works like this:
+|destination-name| destination works like this:
 
 .. list-table::
    :widths: 10 90
@@ -93,6 +82,13 @@ A |destination-name| destination works like this:
      - **START WORKFLOW**
 
        A workflow starts on the configured schedule, such as "every 2 weeks at 4:00 PM UTC starting March 20, 2026".
+
+       Amperity uses specific endpoints in the The Trade Desk Platform API for this workflow:
+
+       #. `POST /v3/thirdpartydata/query <https://partner.thetradedesk.com/v3/portal/api/ref/post-thirdpartydata-query>`__ |ext_link|
+       #. `POST /v3/thirdpartydata <https://partner.thetradedesk.com/v3/portal/api/ref/post-thirdpartydata>`__ |ext_link|
+       #. `PUT /v3/thirdpartydata <https://partner.thetradedesk.com/v3/portal/api/ref/put-thirdpartydata>`__ |ext_link|
+       #. `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link|
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -182,14 +178,14 @@ A |destination-name| destination works like this:
           **Partner**
              A partner rate level is assigned to custom audiences intended for specific partners and their advertisers. A partner rate level is assigned to a specific **Partner ID**, which allows that partner to access the audience at the configured data rate.
 
-             .. note:: Use the |destination-name| **Platform ID** for a partner to configure the value of **Partner ID** in this destination.
+             .. note:: Use |destination-name| **Platform ID** for a partner to configure the value of **Partner ID** in this destination.
 
                 The value of **Partner ID** may not be empty for partner rate levels.
 
           **Advertiser**
              An advertiser rate level is assigned to custom audiences intended for specific advertisers. An advertiser rate level is assigned to a specific **Advertiser ID**, which allows an advertiser to access the audience at the configured data rate.
 
-             .. note:: Use the |destination-name| **Platform ID** for an advertiser to configure the value of **Advertiser ID** in this destination.
+             .. note:: Use |destination-name| **Platform ID** for an advertiser to configure the value of **Advertiser ID** in this destination.
 
                 The value of **Advertiser ID** may not be empty for advertiser rate levels.
 
@@ -337,7 +333,7 @@ Get details
        * The display name of each segment defines the path hierarchy and taxonomy structure.
        * The location of a segment in a taxonomy defines its full path, which always starts at the root level.
        * The taxonomy hierarchy always starts with the **ROOT** element.
-       * The **ROOT** element is created for you and does appear in the |destination-name| for advertisers in the platform. For example, "Interest > Technology > Computers" appears as "Computers".
+       * The **ROOT** element is created for you and does appear in |destination-name| for advertisers in the platform. For example, "Interest > Technology > Computers" appears as "Computers".
 
 
    * - .. image:: ../../images/steps-check-off-black.png
