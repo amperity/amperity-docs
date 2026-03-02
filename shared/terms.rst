@@ -6675,6 +6675,15 @@ The Trade Desk is a platform for wide internet advertising and enables the use o
 .. term-thetradedesk-end
 
 
+**The Trade Desk Data Marketplace**
+
+.. term-thetradedesk-marketplace-start
+
+The Trade Desk Data Marketplace is a platform that allows advertisers to access and utilize third-party data for advertising campaigns.
+
+.. term-thetradedesk-marketplace-end
+
+
 **third-party data**
 
 .. term-third-party-data-start
