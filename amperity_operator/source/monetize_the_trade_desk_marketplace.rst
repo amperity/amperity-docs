@@ -170,7 +170,7 @@ A |destination-name| destination works like this:
 
        **Percent of media cost**
 
-          A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs. A percent of media cost rate must be a decimal, such as 0.12 or 0.25, which represent 12% or 25%.
+          A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs. A percent of media cost rate must be a decimal, such as 0.12 or 0.25, which represents 12% or 25%.
 
           .. note:: Percentages of media cost below 0.10 require approval by |destination-name|.
 
