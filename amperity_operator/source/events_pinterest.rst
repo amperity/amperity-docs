@@ -358,9 +358,9 @@ A query that returns a collection of order-level events for use in |destination-
      ,c360.birthdate AS birthdate
      ,ut.currency AS currency
      ,ut.order_id AS order_id
-     ,ut.order_quantity AS order_quantity
+     ,ut.order_quantity AS quantity
      ,ut.order_datetime AS timestamp
-     ,ut.order_revenue AS order_revenue
+     ,ut.order_revenue AS price
    FROM Unified_Transactions ut
    LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
    WHERE ut.order_datetime > (CURRENT_DATE - interval '7' day)
