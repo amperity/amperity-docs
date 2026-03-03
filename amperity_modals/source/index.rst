@@ -103,5 +103,6 @@ Site Index
    plugins
    quickstart-pk
    semantics
+   settings-destinations
    stitch
    stitch_benchmarks
