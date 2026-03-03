@@ -79,6 +79,14 @@ Settings
    :start-after: .. setting-amazon-ads-membership-duration-start
    :end-before: .. setting-amazon-ads-membership-duration-end
 
+**Enable consent signals?**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-amazon-ads-enable-consent-signals-start
+   :end-before: .. setting-amazon-ads-enable-consent-signals-end
+
+Consent signals are prioritized: 1. Use "tcf" for European Transparency and Consent Framework (TCF) consent signals. 2. Use "gpp" for Global Privacy Protocol (GPP) consent signals. 3. Use "amzn_user_data" and "amzn_ad_storage" for Amazon Consent Signal (ACS) consent signals.
+
 **Campaign file settings**
 
 .. include:: ../../shared/destination_settings.rst
