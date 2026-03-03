@@ -186,19 +186,43 @@ Get details
           :alt: Detail four.
           :align: center
           :class: no-scaled-link
-     - A valid consent signal and the country code in which the customer granted consent must be provided when sending personal information to |destination-name| in the United Kingdom and European Economic Area (EEA).
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
 
-       To send consent signals to |destination-name| add the following columns to the query results:
+       Use one of the following fields to send customer consent signals to |destination-name|.
 
-       **amzon_user_data**
-          The **amzon_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED".
+       **tcf**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
 
-       **amzon_ad_storage**
-          The **amzon_ad_storage** column indicates when a customer consents to Amazin reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED".
+       **gpp**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-gpp-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-gpp-end
+
+
+       **amzn_user_data** and **amzn_ad_storage**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-user-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-user-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-ads-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-ads-end
 
        .. note:: The country code is inferred from the **country** field in the customer profile.
 
-          Query results for **amzon_user_data** or **amzon_ad_storage** with values other than "GRANTED" or "DENIED" are not sent to |destination-name|.
+       Consesnt signals are prioritized:
+
+       #. **tcf**
+       #. **gpp**
+       #. **amzn_user_data** and **amzn_ad_storage**
 
 .. destination-amazon-ads-get-details-table-end
 

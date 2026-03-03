@@ -805,6 +805,57 @@ The name of the DSP advertiser within |destination-name|.
 
 .. setting-amazon-ads-dsp-advertiser-end
 
+**Enable consent signals**
+
+.. setting-amazon-ads-enable-consent-signals-start
+
+|destination-name| requires explicit consent signals for customers in the United Kingdom (UK) and European Economic Area (EEA). Select this option to send consent signals to |destination-name|.
+
+.. setting-amazon-ads-enable-consent-signals-end
+
+.. setting-amazon-ads-enable-consent-signals-about-start
+
+A valid consent signal and the country code in which the customer granted `consent must be provided <https://advertising.amazon.co.uk/help/GE2Q65JXRZA8D4KJ>`__ |ext_link| when sending personal information to |destination-name| in the United Kingdom and European Economic Area (EEA).
+
+.. setting-amazon-ads-enable-consent-signals-about-end
+
+.. setting-amazon-ads-enable-consent-signals-tcf-start
+
+A consent signal for the Interactive Advertising Bureau (IAB) European Transparency and Consent Framework (TCF).
+
+.. setting-amazon-ads-enable-consent-signals-tcf-end
+
+.. setting-amazon-ads-enable-consent-signals-gpp-start
+
+A consent signal for the Global Privacy Protocol (GPP).
+
+.. setting-amazon-ads-enable-consent-signals-gpp-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-start
+
+**amzn_user_data** and **amzn_ad_storage** Consent signals for Amazon Consent Signal (ACS).
+
+.. setting-amazon-ads-enable-consent-signals-amzn-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-user-start
+
+The **amzon_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED". Only rows with "GRANTED" or "DENIED" values are not sent to |destination-name|.
+
+.. setting-amazon-ads-enable-consent-signals-amzn-user-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-ads-start
+
+The **amzon_ad_storage** column indicates when a customer consents to Amazin reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED".Only rows with "GRANTED" or "DENIED" values are not sent to |destination-name|.
+
+.. setting-amazon-ads-enable-consent-signals-amzn-ads-end
+
+.. setting-amazon-ads-enable-consent-signals-cc-start
+
+Country code is inferred from the **country** field in the customer's profile.
+
+.. setting-amazon-ads-enable-consent-signals-cc-end
+
+
 **Membership duration**
 
 .. setting-amazon-ads-membership-duration-start
