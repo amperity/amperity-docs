@@ -30,6 +30,8 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **AAID**
      - Google Advertising ID
    * - **ACS**
+     - Amazon Consent Signal
+   * - **ACS**
      - Assertion Consumer Service
    * - **ACV**
      - Actual Cash Value
@@ -167,10 +169,14 @@ The following list combines industry-standard abbreviations and initialisms with
      - General Data Protection Regulation
    * - **GMT**
      - Greenwich Mean Time
+   * - **GPP**
+     - Global Privacy Protocol
    * - **HDFS**
      - Hadoop Distributed File System
    * - **HEM**
      - Hashed Email Address
+   * - **IAB**
+     - Interactive Advertising Bureau
    * - **IAM**
      - Identity Access Management
    * - **IDFA**
@@ -317,6 +323,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Total Addressible Market
    * - **TAR**
      - Tape Archive
+   * - **TCF**
+     - European Transparency and Consent Framework
    * - **TCP**
      - Transmission Control Protocol
    * - **TLD**
