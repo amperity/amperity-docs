@@ -182,6 +182,26 @@ Get details
 
        All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
 
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail four.
+          :align: center
+          :class: no-scaled-link
+     - A valid consent signal and the country code in which the customer granted consent must be provided when sending personal information to |destination-name| in the United Kingdom and European Economic Area (EEA).
+
+       To send consent signals to |destination-name| add the following columns to the query results:
+
+       **amzon_user_data**
+          The **amzon_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED".
+
+       **amzon_ad_storage**
+          The **amzon_ad_storage** column indicates when a customer consents to Amazin reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED".
+
+       .. note:: The country code is inferred from the **country** field in the customer profile.
+
+          Query results for **amzon_user_data** or **amzon_ad_storage** with values other than "GRANTED" or "DENIED" are not sent to |destination-name|.
+
 .. campaign-amazon-ads-get-details-table-end
 
 
