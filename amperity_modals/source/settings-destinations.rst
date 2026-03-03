@@ -1,11 +1,11 @@
 .. /downloads/markdown/
 
 
+
 Destination settings
 ==================================================
 
 A list of descriptions for destination settings. Headers for each destination, then a definition list for each configurable setting.
-
 
 
 amazon-ads
