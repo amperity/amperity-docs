@@ -1229,22 +1229,22 @@ Designate up to five goal segments on the initial journey setup window from the 
 
 If you skip goals during the initial setup and want to add them later:
 
-#. Open your journey in edit mode
-#. Locate the milestones card on the upper-right of the Journeys canvas
-#. Click **Add a goal**
-#. Select up to 5 batch segments that represent goal achievements
-#. Click **Done**
-#. Activate and run the journey to begin tracking
+#. Open your journey in edit mode.
+#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Click **Add a goal**.
+#. Select up to 5 batch segments that represent goal achievements.
+#. Click **Done**.
+#. Activate and run the journey to begin tracking.
 
 Once you have designated at least one goal, you may add or modify goals:
 
-#. Open your journey in edit mode
-#. Locate the milestones card on the upper-right of the Journeys canvas
-#. Click the caret icon
-#. Click **Modify goals**
-#. Select up to 5 batch segments that represent goal achievements
-#. Click **Done**
-#. Activate and run the journey to begin tracking
+#. Open your journey in edit mode.
+#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Click the caret icon.
+#. Click **Modify goals**.
+#. Select up to 5 batch segments that represent goal achievements.
+#. Click **Done**.
+#. Activate and run the journey to begin tracking.
 
 .. journeys-howtos-configure-journey-level-goals-steps-end
 
@@ -1265,11 +1265,11 @@ You may add goals to percent-split nodes to run A/B testing. Goals set for perce
 
 In edit mode:
 
-#. Add or select an existing percent-split node in your journey
-#. In the **Node Configuration** pane, add paths and choose whether to include a control group
-#. Configure the split percentages ensuring they sum to 100%
-#. Add up to 2 goal segments for this split from the **Select goal segments** dropdown
-#. If done editing, click **Save**
+#. Add or select an existing percent-split node in your journey.
+#. In the **Node Configuration** pane, add paths and choose whether to include a control group.
+#. Configure the split percentages ensuring they sum to 100%.
+#. Add up to 2 goal segments for this split from the **Select goal segments** dropdown.
+#. If done editing, click **Save**.
 
 .. journeys-howtos-configure-percent-split-goals-steps-end
 
@@ -1294,15 +1294,11 @@ There are three methods to access your JTL data:
 
 .. journeys-howtos-access-export-journey-travel-log-steps-start
 
-#. Configure journey with goals
-#. Open your journey in edit mode
-#. Click on the starting node
-#. In the **Journey Settings** window, choose a JTL destination from the **Select destination** dropdown
-#. Run the journey to generate travel log entries
-
-.. TODO: Decide if the admonition below is needed. Per Riley, only has amp IDs and node/segment names
-
-.. .. important:: JTL export includes PII data. Ensure proper data handling and security measures are in place.
+#. Configure journey with goals.
+#. Open your journey in edit mode.
+#. Click on the starting node.
+#. In the **Journey Settings** window, choose a JTL destination from the **Select destination** dropdown.
+#. Run the journey to generate travel log entries.
 
 .. journeys-howtos-access-export-journey-travel-log-steps-end
 
