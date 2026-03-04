@@ -924,6 +924,13 @@ A blocking strategy acts like a filter against large datasets. Each blocking str
 
 .. term-blocking-strategy-end
 
+**Bloomreach**
+
+.. term-bloomreach-start
+
+Bloomreach is a cloud-based e-commerce experience platform that integrates customer and product data to deliver a personalized shopping experience across channels. 
+
+.. term-bloomreach-end
 
 **Bluecore**
 
