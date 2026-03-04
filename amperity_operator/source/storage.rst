@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to use Amazon S3 bucket or Azure Blob Storage.
+        Configure Amperity to use Amazon S3 bucket or Azure Blob Storage. Also known as BYOS (Bring Your Own Storage).
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to use Amazon S3 bucket or Azure Blob Storage.
+        Configure Amperity to use Amazon S3 bucket or Azure Blob Storage. Also known as BYOS (Bring Your Own Storage).
 
 .. meta::
     :content class=swiftype name=title data-type=string:
