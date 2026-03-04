@@ -3,6 +3,7 @@
 
 .. |destination-name| replace:: the name of application for which credentials are configired
 .. |credential-type| replace:: selected
+.. |plugin-name| replace:: a plugin
 .. |where-send| replace:: the application for which credentials are being configured
 .. |sftp-hostname| replace:: "sftp.acme.com"
 
