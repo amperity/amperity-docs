@@ -244,6 +244,14 @@
       "yotpo": "/reference/connected_systems.html"
     };
 
+    // Synonym to full-term mapping
+    // If a user types a key, the search runs as if they typed the value instead
+    const SYNONYMS_MAPPING = {
+      "uit": "Unified Itemized Transactions",
+      "ut": "Unified Transactions",
+      "tae": "Transaction Attributes Extended"
+    };
+
     // Search indexes cache
     const searchIndexes = {
       api: null,
@@ -341,16 +349,21 @@
 
     // Perform search
     async function performSearch() {
-      const query = document.getElementById('compact-search-input').value.trim();
+      const rawQuery = document.getElementById('compact-search-input').value.trim();
       const resultsOverlay = document.getElementById('compact-results-overlay');
       const resultsDiv = document.getElementById('compact-results-list');
 
-      if (!query) {
+      if (!rawQuery) {
         resultsOverlay.classList.remove('active');
         return;
       }
 
-      // Check for keyword mapping first
+      // Check for synonym mapping and replace query if matched
+      const synonymKey = rawQuery.toLowerCase();
+      const synonymMatch = SYNONYMS_MAPPING[synonymKey];
+      const query = synonymMatch || rawQuery;
+
+      // Check for keyword mapping first (using resolved query)
       const queryLowerForMapping = query.toLowerCase();
       if (KEYWORD_MAPPING[queryLowerForMapping]) {
         const mappedPath = KEYWORD_MAPPING[queryLowerForMapping];
