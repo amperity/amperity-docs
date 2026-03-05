@@ -28,11 +28,11 @@ Package first-party data as audience products available in data marketplaces, wh
 
 You can choose between creating a **Custom audience** and a **Syndicated audience**.
 
-**Custom audiences** have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace. 
+**Custom audiences** have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace.
 
 **Syndicated audiences** have a standard global rate. They may be purchased on the data marketplace by any verified buyers not on your blocklist.
 
-Use the **Segment Editor** to define audiences, and then use the **Monetization** page to send custom or syndicated audiences to the following marketplaces:
+Use the **Monetization** page to send custom or syndicated audiences based on new or existing audience segments to the following marketplaces:
 
 * The Trade Desk
 
@@ -43,6 +43,10 @@ Use the **Segment Editor** to define audiences, and then use the **Monetization*
 
 Data marketplace concepts
 ==================================================
+
+.. monetize-data-marketplace-concepts-start
+
+When monetizing audiences, it is important to understand the pricing models and structural requirements used by data marketplaces.
 
 
 Data rates
@@ -144,219 +148,214 @@ Tasks related to audience monetization in Amperity:
 
 .. monetize-howtos-list-start
 
-* :ref:`monetize-howtos-public`
-* :ref:`monetize-howtos-private`
+* :ref:`monetize-howtos-create-custom-audience`
+* :ref:`monetize-howtos-create-syndicated-audience`
+* :ref:`monetize-howtos-delete-audience`
+* :ref:`monetize-howtos-edit-refresh-cadence`
 * :ref:`monetize-howtos-global-optout`
+* :ref:`monetize-howtos-make-not-buyable`
+* :ref:`monetize-howtos-view-audience-details`
+
 
 .. monetize-howtos-list-end
 
 
-.. _monetize-howtos-public: 
+.. _monetize-howtos-create-custom-audience: 
 
-Public marketplaces
+Create custom audience
 --------------------------------------------------
 
-.. monetize-howtos-public-start
+.. monetize-howtos-create-custom-audience-start
 
-A public marketplace has a standard rate for audiences. Audiences in a public marketplace may be purchased by an unlimited number of advertisers.
+Custom audiences have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace.
 
-* :ref:`monetize-howtos-public-custom`
-* :ref:`monetize-howtos-public-existing`
+.. monetize-howtos-create-custom-audience-end
 
-.. monetize-howtos-public-end
+**To create a custom audience**
 
+.. monetize-howtos-create-custom-audience-steps-start
 
-.. _monetize-howtos-public-custom: 
+#. On the **Audience monetization** page, click **Create audience**.
+#. Select **Custom**.
+#. Select **Create from existing segments** and use the checkboxes to pick one or more segments, or select **Create a new segment** and use the **Visual segment editor** to define a new segment.
+#. When you have selected or created segments, click **Next** to proceed to the **Select marketplace seat** page.
+#. Select an existing markletplace seat or create a new connection
+#. If creating a new connection, select an existing credential or ask your data grid operator to create a new one.
 
-Custom audience
-++++++++++++++++++++++++++++++++++++++++++++++++++
+.. TODO: link to operator's guide for credential creation
 
-.. monetize-howtos-public-custom-start
+#. If creating a new connection, select **Rate level** and designate a **Partner name** and **Partner ID**.
+#. Select **Rate type**.
+#. Set a cadence and delivery start date.
+#. If creating a new connection, click **Connect**, and then select your new connection and fill any remaining fields, then click **Save**. 
+#. Once your selected connection is highlighted, click **Next** to proceed to the **Prepare data products** page.
+#. You may rename the audience and add a description.
+#. You must set the percent of media and the cost per thousand (CPM) cap. 
+#. Click **Save and send**. 
 
-Use the visual **Segment Editor** accessible through the **Audience Monetization** page to define a new audience that is available to all advertisers in a public marketplace.
+.. tip:: On the **Prepare data products** page, your selected segment will default display with whatever internal title it may have. Renaming it and/or adding a description may help advertisers better understand what kind of audience it is.
 
-.. monetize-howtos-public-custom-end
+.. note:: If you select multiple segments when defining the audience, each of these will be sent to the data marketplace as a separate audience product. Selecting multiple segments does not combine them into one audience product.
 
-**To build a custom audience for a public marketplace**
+.. note:: New segments you create will populate an Audience Monetization folder on the **Segments** page. 
 
-.. monetize-howtos-public-custom-steps-start
+.. caution:: Segments you send to data marketplaces cannot be edited while in use for an advertiser's campaign.
 
-#. Open the **Audience Monetization** page.
-#. Click **Create syndicated audience**.
-#. Select **Create custom segment**, and then define the custom audience. When finished, click **Next**.
+.. TODO: Is that true, what i wrote in the caution? It seems to be, but not certain.  Also, too many admonitions in a row?
 
-   .. image:: ../../images/howto-monetize-segment-custom.png
-      :width: 600 px
-      :alt: Monetization page
-      :align: left
-      :class: no-scaled-link
+.. monetize-howtos-create-custom-audience-steps-end
 
-#. Choose the destination to which this audience is sent, and then configure any destination-specific settings, including the frequency at which this audience is sent. Click **Save**.
-#. Verify the audience name and description, and then define the values for **% of Media** and **CPM cap**.
+.. _monetize-howtos-create-syndicated-audience:
 
-   **% of Media** is the percentage of media cost. For example: "0.12".
-
-   **CPM cap** is the maximum cap for advertising costs--cost per thousand (CPM)--in United States dollars.
-
-   The percentage of media cost and cost per thousand (CPM) rate cap determine the hybrid data rate for audience monetization.
-
-#. When finished click **Save and send**.
-
-.. monetize-howtos-public-custom-steps-end
-
-
-.. _monetize-howtos-public-existing: 
-
-Existing audience
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. monetize-howtos-public-existing-start
-
-Select an audience that has already been defined in Amperity to make it available to all advertisers in a public marketplace.
-
-.. monetize-howtos-public-existing-end
-
-**To use an existing audience for a public marketplace**
-
-.. monetize-howtos-public-existing-steps-start
-
-#. Open the **Audience Monetization** page.
-#. Click **Create syndicated audience**.
-#. Select **Create from existing segments**.
-
-   .. image:: ../../images/howto-monetize-segment-existing.png
-      :width: 600 px
-      :alt: Monetization page
-      :align: left
-      :class: no-scaled-link
-
-   Select one or more segments by clicking the checkbox next to the name of the segment, and then click **Next**.
-
-#. Choose the destination to which this audience is sent, and then configure any destination-specific settings, including the frequency at which this audience is sent. Click **Save**.
-#. Verify the audience name and description, and then define the values for **% of Media** and **CPM cap**.
-
-   **% of Media** is the percentage of media cost. For example: "0.12".
-
-   **CPM cap** is the maximum cap for advertising costs--cost per thousand (CPM)--in United States dollars.
-
-   The percentage of media cost and cost per thousand (CPM) rate cap determine the hybrid data rate for audience monetization.
-
-#. When finished click **Save and send**.
-
-.. monetize-howtos-public-existing-steps-end
-
-
-.. _monetize-howtos-private:
-
-Private marketplace
+Create syndicated audience
 --------------------------------------------------
 
-.. monetize-howtos-private-start
+.. monetize-howtos-create-syndicated-audience-start
 
-A private marketplace has an advertiser-specific rate. An audience in a private marketplace is purchased by a single advertiser.
+Syndicated audiences have a standard global rate. They may be purchased on the data marketplace by any verified buyers not on your blocklist.
 
-* :ref:`monetize-howtos-private-custom`
-* :ref:`monetize-howtos-private-existing`
+.. monetize-howtos-create-syndicated-audience-end
 
-.. monetize-howtos-private-end
+**To create a syndicated audience**
 
+.. monetize-howtos-create-syndicated-audience-steps-start
 
-.. _monetize-howtos-private-custom: 
+#. On the **Audience monetization** page, click **Create audience**.
+#. Select **Syndicated**.
+#. Select **Create from existing segments** and use the checkboxes to pick one or more segments, or select **Create a new segment** and use the **Visual segment editor** to define a new segment.
+#. When you have selected or created segments, click **Next** to proceed to the **Select marketplace seat** page.
+#. Select an existing markletplace seat or create a new connection
+#. If creating a new connection, select an existing credential or ask your data grid operator to create a new one.
 
-Custom audience
-++++++++++++++++++++++++++++++++++++++++++++++++++
+.. TODO: link to operator's guide for credential creation
 
-.. monetize-howtos-private-custom-start
+#. Set a cadence and delivery start date.
+#. If creating a new connection, click **Connect**, and then select your new connection and fill any remaining fields, then click **Save**. 
+#. Once your selected connection is highlighted, click **Next** to proceed to the **Prepare data products** page.
+#. You may rename the audience and add a description.
+#. You must set the percent of media and the cost per thousand (CPM) cap. 
+#. Click **Save and send**. 
 
-Use the visual **Segment Editor** accessible through the **Audience Monetization** page to define a new audience for a specific deal with a single buyer.
-.. monetize-howtos-private-custom-end
+.. tip:: On the **Prepare data products** page, your selected segment will default to whatever internal title it may have. Renaming it and/or adding a description may help advertisers better understand what kind of audience it is.
 
-**To build a custom audience for a private marketplace**
+.. note:: If you select multiple segments when defining the audience, each of these will be sent to the data marketplace as a separate audience product. Selecting multiple segments does not combine them into one audience product.
 
-.. monetize-howtos-private-custom-steps-start
+.. note:: New segments you create will populate an Audience Monetization folder on the **Segments** page. 
 
-#. Open the **Audience Monetization** page.
-#. Click **Create custom audience**.
-#. Select **Create custom segment**, and then define the custom audience. When finished, click **Next**.
+.. caution:: Segments you send to data marketplaces cannot be edited while in use for an advertiser's campaign.
 
-   .. image:: ../../images/howto-monetize-segment-custom.png
-      :width: 600 px
-      :alt: Monetization page
-      :align: left
-      :class: no-scaled-link
+.. TODO: Is that true, what i wrote in the caution? It seems to be, but not certain.  Also, too many admonitions in a row?
 
-#. Choose the destination to which this audience is sent, and then configure any destination-specific settings, including the frequency at which this audience is sent. Click **Save**.
-#. Verify the audience name and description, and then define the values for **% of Media** and **CPM cap**.
+.. monetize-howtos-create-syndicated-audience-steps-end
 
-   **% of Media** is the percentage of media cost. For example: "0.12".
+.. _monetize-howtos-delete-audience:
 
-   **CPM cap** is the maximum cap for advertising costs--cost per thousand (CPM)--in United States dollars.
+Delete audience
+--------------------------------------------------
 
-   The percentage of media cost and cost per thousand (CPM) rate cap determine the hybrid data rate for audience monetization.
+.. monetize-howtos-delete-audience-start
 
-#. When finished click **Save and send**.
+You can delete an audience and remove it from the date markteplace.
 
-.. monetize-howtos-private-custom-steps-end
+.. monetize-howtos-delete-audience-end
 
+**To delete an audience**
 
-.. _monetize-howtos-private-existing: 
+.. monetize-howtos-delete-audience-steps-start
 
-Existing audience
-++++++++++++++++++++++++++++++++++++++++++++++++++
+#. On the **Audience monetization** page, use the search bar or scan the list to find the audience you wish to delete.
+#. Click the |fa-kebab| icon and select **Delete**.
 
-.. monetize-howtos-private-existing-start
+.. monetize-howtos-delete-audience-steps-end
 
-Select an audience that has already been defined in Amperity to fulfill a specific deal with a single buyer.
+.. _monetize-howtos-edit-refresh-cadence:
 
-.. monetize-howtos-private-existing-end
+Edit refresh cadence
+--------------------------------------------------
 
-**To use an existing audience for a private marketplace**
+.. monetize-howtos-edit-refresh-cadence-start
 
-.. monetize-howtos-private-existing-steps-start
+You can edit how often audience product data is refreshed to reflect any updates to the segments you used to define the audience.
 
-#. Open the **Audience Monetization** page.
-#. Click **Create custom audience**.
-#. Select **Create from existing segments**.
+.. monetize-howtos-edit-refresh-cadence-end
 
-   .. image:: ../../images/howto-monetize-segment-existing.png
-      :width: 600 px
-      :alt: Monetization page
-      :align: left
-      :class: no-scaled-link
+**To edit refresh cadence**
 
-   Select one or more segments by clicking the checkbox next to the name of the segment, and then click **Next**.
-#. Choose the destination to which this audience is sent, and then configure any destination-specific settings, including the frequency at which this audience is sent. Click **Save**.
-#. Verify the audience name and description, and then define the values for **% of Media** and **CPM cap**.
+.. monetize-howtos-edit-refresh-cadence-steps-start
 
-   **% of Media** is the percentage of media cost. For example: "0.12".
+#. On the **Audience monetization** page, use the search bar or scan the list to find the audience with the refresh cadence you want to edit.
+#. Click the audience name.
+#. On the **Data refresh** panel, locate **Refresh cadence** and click **Edit**.
+#. Edit the cadence and start timing, and then click **Save**.
 
-   **CPM cap** is the maximum cap for advertising costs--cost per thousand (CPM)--in United States dollars.
-
-   The percentage of media cost and cost per thousand (CPM) rate cap determine the hybrid data rate for audience monetization.
-
-#. When finished click **Save and send**.
-
-.. monetize-howtos-private-existing-steps-end
-
+.. monetize-howtos-edit-refresh-cadence-steps-end
 
 .. _monetize-howtos-global-optout:
 
-Opt audiences out of third-party marketplaces
+Opt customers out
 --------------------------------------------------
 
 .. monetize-howtos-global-optout-start
 
-Audiences can be excluded from availability for third-party marketplaces.
+Customers who have not given consent to use their data for advertising purposes can be excluded from availability across all audience products.
+
+.. note:: Any incremental changes to the global opt-out group are sent to data marketplaces on a daily basis to account for timely removal of customers who have newly opted-out.
 
 .. monetize-howtos-global-optout-end
 
-**To opt audiences out of third-party marketplaces**
+**To opt customers out of audience products**
 
 .. monetize-howtos-global-optout-steps-start
 
-#. Open the **Audience Monetization** page.
+#. Open the **Audience monetization** page.
 #. Click **Set global opt-out**.
 #. Use the drop-down menu to select one or more segments
 #. Click **Save**.
 
 .. monetize-howtos-global-optout-steps-end
+
+
+
+.. _monetize-howtos-make-not-buyable:
+
+Make audience not buyable
+--------------------------------------------------
+
+.. monetize-howtos-make-not-buyable-start
+
+You can make an audience no longer available for new purchases. Active campaigns currently using the audience may still use it.
+
+.. caution:: This action cannot be undone.
+
+.. monetize-howtos-make-not-buyable-end
+
+**To make an audience not buyable**
+
+.. monetize-howtos-make-not-buyable-steps-start
+
+#. On the **Audience monetization** page, use the search bar or scan the list to find the audience you wish to delete.
+#. Click the |fa-kebab| icon and select **Make not buyable**.
+#. A warning dialog will appear. Click **Confirm** or **Cancel**. 
+#. You may also make an audience not buyable by clicking into the audience and clicking **Make not buyable**. 
+
+.. monetize-howtos-make-not-buyable-steps-end
+
+.. _monetize-howtos-view-audience-details:
+
+View audience details
+--------------------------------------------------
+
+.. monetize-howtos-view-audience-details-start
+
+You can view audience details, including marketplace configuration, refresh timing, and action log.
+
+.. monetize-howtos-view-audience-details-end
+
+**To view audience details**
+
+.. monetize-howtos-view-audience-details-steps-start
+
+#. On the **Audience monetization** page, use the search bar or scan the list to find the audience you want to view.
+#. Click the audience name.
+
+.. monetize-howtos-view-audience-details-steps-end
