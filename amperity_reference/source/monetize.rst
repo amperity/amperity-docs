@@ -16,53 +16,119 @@ Audience monetization
 
 .. monetize-about-start
 
-Package audiences as first-party data, and then deliver those audiences as a product to third-party marketplaces. Monetize these audiences by allowing advertisers to purchase access to them from the third-party marketplace.
+Package first-party data as audience products available in data marketplaces, where advertisers can pay to use these audiences in their campaigns.
 
-.. image:: ../../images/mockup-monetization-page.png
+.. TODO: update image
+
+.. .. image:: ../../images/mockup-monetization-page.png
    :width: 600 px
    :alt: Monetization page
    :align: left
    :class: no-scaled-link
 
-Private audiences have advertiser-specific rates. Each private audience is purchased by a single advertiser. 
+You can choose between creating a **Custom audience** and a **Syndicated audience**.
 
-Public audiences have standard rates. A public audience may be purchased by an unlimited number of advertisers.
+**Custom audiences** have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace. 
 
-After purchase, advertisers can use your brand's audiences as a lookalike audience for their marketing campaigns. 
+**Syndicated audiences** have a standard global rate. They may be purchased on the data marketplace by any verified buyers not on your blocklist.
 
-Use the **Segment Editor** to define audiences, and then use the **Monetization** page to send public or private audiences to the following marketplaces:
+Use the **Segment Editor** to define audiences, and then use the **Monetization** page to send custom or syndicated audiences to the following marketplaces:
 
 * The Trade Desk
 
 .. monetize-about-end
 
-.. _monetize-public-private:
 
-Public vs. private marketplaces
+.. _monetize-data-marketplace-concepts: 
+
+Data marketplace concepts
 ==================================================
 
-.. monetize-public-private-start
 
-.. TODO: Yeet this whole section!  
-.. TODO: Sam's response: I will if they change the UX copy/terminology
+Data rates
+--------------------------------------------------
+All buyable audiences `must have an approved rate <https://partner.thetradedesk.com/v3/portal/data/doc/ThirdPartyDataManagement#approval-criteria>`__ |ext_link|.
 
-You can monetize audience data in two ways. The workflow you choose depends on who is buying your data.
+.. note:: The first syndicated rate submission for a brand requires approval.
 
-.. list-table::
-   :widths: 20 20 40
-   :header-rows: 1
+.. tip:: Hybrid rates are recommended for all audiences.
 
-   * - Marketplace Type
-     - UI Terminology
-     - Best For...
-   * - Public
-     - "Syndicated Audience"
-     - Selling bulk audiences, such as "All Ice Cream Buyers", to *any* advertiser on the open market.
-   * - Private
-     - "Custom Audience"
-     - Selling a specific audience, such as "Lapsed Loyalty Members", to a *specific* partner for a negotiated deal.
+An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high-cost channels, audiences yield higher vaules.
 
-.. monetize-public-private-end
+A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+
+
+
+
+Cost per thousand (CPM)
+--------------------------------------------------
+A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
+
+.. note:: CPM rates lower than $5 require approval by The Trade Desk.
+
+
+Percent of media cost
+--------------------------------------------------
+A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs. A percent of media cost rate must be a decimal, such as 0.12 or 0.25, which represents 12% or 25%.
+
+.. note:: Percentages of media cost below 0.10 require approval by The Trade Desk.
+
+
+Rate level
+--------------------------------------------------
+Amperity assigns rate levels automatically depending on the type of audience sent to The Trade Desk:
+
+**System**
+A system rate level is assigned automatically to a syndicated audience.
+
+**Partner**
+A partner rate level is assigned to custom audiences intended for specific partners and their advertisers. A partner rate level is assigned to a specific **Partner ID**, which allows that partner to access the audience at the configured data rate.
+
+.. note:: Use The Trade Desk **Platform ID** for a partner to configure the value of **Partner ID** in this destination.
+
+   The value of **Partner ID** may not be empty for partner rate levels.
+
+**Advertiser**
+An advertiser rate level is assigned to custom audiences intended for specific advertisers. An advertiser rate level is assigned to a specific **Advertiser ID**, which allows an advertiser to access the audience at the configured data rate.
+
+.. note:: Use The Trade Desk **Platform ID** for an advertiser to configure the value of **Advertiser ID** in this destination.
+
+   The value of **Advertiser ID** may not be empty for advertiser rate levels.
+
+
+Rate type
+--------------------------------------------------
+          The rate type defines the pricing model for an audience and establishes a consistent relative value for advertising impressions while keeping audience pricing scalable across channels.
+
+          **CPM**
+             A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience.
+
+          **Hybrid**
+             A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. All audiences sent from Amperity should be configured with a hybrid data rate.
+
+             .. note:: All syndicated audiences are assigned a hybrid rate type. A cost per thousand (CPM) rate *and* a percent of media cost rate must be provided.
+
+          **Percent of media cost**
+             A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
+
+             .. note:: The value for percent of media costs may be $0.00.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .. _monetize-howtos:
