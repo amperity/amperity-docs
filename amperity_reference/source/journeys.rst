@@ -132,7 +132,7 @@ Choose one or more segments from the **Select inclusion segments** dropdown list
 
 .. journeys-setup-who-enters-note-start
 
-.. note:: When adding multiple inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category in order to be considered part of it. 
+.. note:: When adding multiple inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category in order to be considered part of it. You may add up to ten inclusion segments. 
 
 .. journeys-setup-who-enters-note-end
 
@@ -170,7 +170,7 @@ When you need to exclude audience members, choose one or more segments from the 
 
 .. journeys-setup-who-is-excluded-note-start
 
-.. note:: When adding multiple exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category in order to be considered part of it. 
+.. note:: When adding multiple exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category in order to be considered part of it. You may add up to ten exclusion segments. 
 
 .. journeys-setup-who-is-excluded-note-end
 
@@ -195,14 +195,40 @@ Exit conditions are defined using a segment. One or more segments that define ex
    :align: left
    :class: no-scaled-link
 
-.. journeys-setup-who-is-excluded-note-start
+.. journeys-setup-exit-conditions-note-start
 
-.. note:: When adding multiple exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category in order to be considered part of it. 
+.. note:: When adding multiple exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category in order to be considered part of it. You may add up to ten exit condition segments.
 
-.. journeys-setup-who-is-excluded-note-end
+.. journeys-setup-exit-conditions-note-end
 
 .. journeys-exit-conditions-end
 
+.. _journeys-goal-conditions:
+
+Goal conditions
+--------------------------------------------------
+
+.. journeys-goal-conditions-start
+
+Setting goals allows you to track when customers included in the journey reach designated segments. This differs from an exit condition in that reaching a goal segment does not remove the customer from the journey, allowing you to measure progress on specific business goals while the customer continues on the journey.
+
+Goal conditions are defined using a segment. One or more segments that define goal conditions may be added to a journey using the **Select goal segments** dropdown.
+
+.. journeys-setup-goals-conditions-note-start
+
+.. note:: When adding multiple goal condition segments, all segments are unioned, so a customer only needs to match one of the segments in the goal conditions category in order to be considered part of it. You may add up to five goal condition segments.
+
+.. journeys-setup-goals-conditions-note-end
+
+.. journeys-setup-goals-batch-admonition-start
+
+.. important:: Journey goals require batch segments (SQL-based segments). Real-time segments are not currently supported for journey goals.
+
+.. journeys-setup-goals-batch-admonition-end
+
+.. journeys-goal-conditions-end
+
+.. TODO: Add re-entry to journeys set up
 
 .. _journeys-canvas:
 
@@ -474,6 +500,254 @@ If the plus button is after a split node, there will also be the option to choos
 
 .. journeys-node-add-end
 
+.. _journeys-measurement:
+
+Journey measurement
+==================================================
+
+.. journeys-measurement-overview-start
+
+.. TODO: Make the following definition a shared term
+
+Journey measurement provides insights into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
+
+.. TODO: make image
+
+.. .. image:: ../../images/mockup-journeys-measurement-overview.png
+   :width: 600 px
+   :alt: Journey goals and measurement overview
+   :align: left
+   :class: no-scaled-link
+
+Journey measurement helps you:
+
+* Track customer milestones including journey exits and goal achievements
+* Measure progress toward specific business goals without removing customers from the journey
+* Calculate path-specific goal achievement via percent-split testing
+* View metrics across multiple time windows (7, 30, and 90 days)
+* Export detailed journey travel logs for advanced analysis
+
+.. important:: Journey measurement requires batch segments (SQL-based segments). Real-time segments are not currently supported for journey measurement.
+
+.. journeys-measurement-overview-end
+
+
+.. _journeys-measurement-how-it-works:
+
+How measurement works
+--------------------------------------------------
+
+.. journeys-measurement-how-it-works-start
+
+Journey measurement uses two primary data structures to track customer progress:
+
+**Journey Travel Log (JTL)** records every stage transition with enriched metadata including:
+
+* Journey and stage identifiers
+* Traveler entry and exit timestamps
+* Split path details (test group names, control flags)
+* Exit segment information when applicable
+
+**Milestones** dashboard tracks significant events including:
+
+* Goal achievements (customers meeting success criteria after entering the journey; will not show customers already in the goal segment at the start fo the journey)
+* Exit events (customers leaving the journey)
+* Complete path reconstruction for each traveler
+* Time-based aggregations (all-time, 7-day, 30-day, 90-day windows)
+
+.. journeys-measurement-how-it-works-end
+
+
+.. _journeys-measurement-types:
+
+Types of journey goals
+--------------------------------------------------
+
+.. journeys-measurement-types-start
+
+Journey goals can be configured at two levels:
+
+**Journey-level goals**
+Applied to the entire journey to track overall success metrics:
+
+* Track achievement regardless of path taken
+* Available in the Journey Goals card on the canvas
+* Maximum 5 goal segments per journey
+
+**Percent-split goals**
+Applied to specific percent-split nodes for A/B testing:
+
+* Track achievement by split path (test vs control)
+* Enable incremental lift calculation
+* Available when configuring percent-split nodes
+* Maximum 2 goal segments per percent-split node
+
+.. important:: The total number of goal segments across your entire journey (journey-level + all percent-split nodes) cannot exceed 10.
+
+.. journeys-measurement-types-end
+
+
+.. _journeys-measurement-milestones:
+
+Milestones tracking
+--------------------------------------------------
+
+.. journeys-measurement-milestones-start
+
+The milestones dashboard on the Journeys canvas capture significant events as customers travel through your journey. The system automatically tracks:
+
+* **Goal milestones** - Customer achieved a journey or split goal
+* **Exit milestones** - Customer met exit criteria and left the journey
+
+**Milestone metrics:**
+
+.. list-table::
+   :widths: 30 50
+   :header-rows: 1
+
+   * - Metric
+     - Description
+   * - All-time count
+     - Total milestone achievements since journey start
+   * - Past 7 days
+     - Achievements in the last 7 days
+   * - Past 30 days
+     - Achievements in the last 30 days
+   * - Past 90 days
+     - Achievements in the last 90 days
+   * - Median duration
+     - Median time in days from journey entry to milestone achievement
+
+.. tip:: Use time-windowed metrics to understand recent performance trends and seasonal patterns in goal achievement.
+
+.. journeys-measurement-milestones-end
+
+
+.. _journeys-measurement-percent-split-testing:
+
+Percent-split testing
+--------------------------------------------------
+
+.. journeys-measurement-percent-split-testing-start
+
+Percent-split nodes with goals configured enable A/B testing capabilities. Goals set for percent-split nodes only apply to customers passing through that node, rather than all customers in the journey.
+
+.. TODO: make image
+
+.. .. image:: ../../images/mockup-journeys-split-goals.png
+   :width: 600 px
+   :alt: Percent-split goals with path tracking
+   :align: left
+   :class: no-scaled-link
+
+**Configuration requirements**
+
+* One path must be designated as the control group
+* Other paths become test groups
+* Weights must sum to exactly 100%
+* Maximum 2 goal segments per split node
+* Must be configured before the journey begins in order to record goals
+
+**Path-specific metrics**
+
+The system tracks goal achievement by path, enabling calculation of:
+
+* Conversion count per path
+* Incremental lift (test vs control)
+* Time-windowed performance comparison
+* Path reconstruction showing exact journey taken
+
+.. tip:: After accumulating data, review the path-specific metrics to determine which path performs better. Consider adjusting split percentages based on lift results.
+
+.. journeys-measurement-percent-split-testing-end
+
+.. _journeys-measurement-travel-log:
+
+Journey Travel Log
+--------------------------------------------------
+
+.. journeys-measurement-travel-log-start
+
+The Journey Travel Log (JTL) provides detailed tracking of every traveler's journey with enriched metadata.
+
+.. TODO: delete type column?  ABC vs XXX? Also, ABS in app. Alphabetical Order?
+
+**JTL Schema:**
+
+.. list-table::
+   :widths: 25 20 55
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Description
+   * - journey_version
+     - String
+     - Journey version ID (jnv-xxx)
+   * - stage_id
+     - String
+     - Node ID (jnn-xxx) or lifecycle stage (start, complete, exit, orphan)
+   * - event_id
+     - String
+     - Customer identifier, typically based on Amperity ID
+   * - entry_at
+     - Datetime
+     - When the traveler entered a given node
+   * - parent_id
+     - String
+     - ID of previous node customer passed through
+   * - parent_name
+     - String
+     - Name of the parent node
+   * - journey_id
+     - String
+     - ID of journey in URL (jny-xxx) 
+   * - journey_name
+     - String
+     - Name of journey
+   * - stage_name
+     - String
+     - Name of node
+   * - stage_type
+     - String
+     - Node type (activation, wait, merge, percent-split, conditional-split)
+   * - test_group_name
+     - String
+     - For percent-splits: name of the test group
+   * - is_control
+     - Boolean
+     - For percent-splits: true if control path
+   * - split_condition_name
+     - String
+     - Name of the split condition node corresponding with this path
+   * - is_remaining
+     - Boolean
+     - For conditional-splits: whether this is the last default path
+   * - exit_segments
+     - String
+     - Pipe-separated list of exit segment names (if exited)
+   * - mxs_ids
+     - String
+     - Pipe-separated list of exit segment IDs
+   
+
+**JTL egress**
+
+Travel log data can be exported to external systems for advanced analysis:
+
+* Path reconstruction
+* Split performance analysis
+* Exit pattern identification
+* Time-to-goal calculations
+
+Exporting automatically enriches metadata with node details, and includes exit information when applicable. 
+
+Only exports previously unsent entries (tracked via egress_sent_at). 
+
+JTL egress supports batch export to data warehouses.
+
+.. journeys-measurement-travel-log-end
+
 .. _journeys-use-cases:
 
 Journeys Use Cases
@@ -553,6 +827,12 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
+* :ref:`journeys-howtos-measure-journeys`
+* :ref:`journeys-howtos-define-measurement-segments`
+* :ref:`journeys-howtos-export-journey-travel-log`
+* :ref:`journeys-howtos-set-journey-level-goals`
+* :ref:`journeys-howtos-set-percent-split-goals`
+* :ref:`journeys-howtos-view-milestone-metrics`
 * :ref:`journeys-howtos-merge`
 * :ref:`journeys-howtos-monitor-resolve`
 * :ref:`journeys-howtos-organize`
@@ -917,6 +1197,166 @@ The **Journeys** canvas supports the following user interactions:
  
 .. journeys-howtos-interact-end
 
+.. _journeys-howtos-measure-journeys:
+
+Measure journeys
+--------------------------------------------------
+
+You can configure and manage measurement for your journeys:
+
+* :ref:`Define measurement segments <journeys-howtos-define-measurement-segments>`
+* :ref:`Export travel log data <journeys-howtos-export-journey-travel-log>`
+* :ref:`Set journey-level goals <journeys-howtos-set-journey-level-goals>`
+* :ref:`Set percent-split goals <journeys-howtos-set-percent-split-goals>`
+* :ref:`View milestone metrics <journeys-howtos-view-milestone-metrics>`
+
+.. _journeys-howtos-define-measurement-segments:
+
+Define measurement segments
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-define-measurement-segments-start
+
+You can define customer segments in the **Visual segment editor** based on journey activity. This allows you to see segment insights for any customers who participated in a journey, achieved a goal, or met exit criteria.  
+
+.. journeys-howtos-define-measurement-segments-end
+
+**To define measurement segments**
+
+.. journeys-howtos-define-measurement-segments-steps-start
+
+#. On the **Segments** page, click **Create segment**, or edit an existing segment. 
+#. On the **Add condition** dropdown, filter by **Activation activity**.
+#. Select a journeys activation activity from **Is in journey**, **Reached a goal in journey**, or **Exited a journey**.
+#. Use the dropdown to select the journey from which you want to create the segment.
+#. Click on **Filters** to further edit criteria, then click **Save**.
+#. When done editing your segment, click **View**. 
+
+.. journeys-howtos-define-measurement-segments-steps-end
+
+.. _journeys-howtos-export-journey-travel-log:
+
+Export travel log data
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-export-journey-travel-log-start
+
+You can configure your journey to send travel log data to a destination for analysis.
+
+.. journeys-howtos-export-journey-travel-log-end
+
+.. TODO: confirm status of API and manual; add in separate how to is applicable
+
+.. There are three methods to access your Journey travel log data:
+
+.. #. Automation: Use the API endpoint for programmatic retrieval
+.. #. Manual inspection: Download the log directly from the journey's execution history
+.. #. External analysis: Configure an egress destination to export data to your data warehouse or analytics platform
+
+**To export travel log data**
+
+.. journeys-howtos-export-journey-travel-log-steps-start
+
+#. Configure journey with goals.
+#. Open your journey in edit mode.
+#. Click on the starting node.
+#. In the **Journey settings** window, choose a travel log destination from the **Select destination** dropdown.
+#. Run the journey to generate and send travel log entries to your destination.
+
+.. journeys-howtos-export-journey-travel-log-steps-end
+
+
+.. _journeys-howtos-set-journey-level-goals:
+
+Set journey-level goals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-set-journey-level-goals-start
+
+Goals set at the journey level apply to all customers in the journey as a way of tracking performance without exiting the customer from the journey. Customers can achieve multiple goals during their journey.
+
+Journey-level goals may be set during the initial journey setup as well as added or modified later.
+
+.. journeys-howtos-set-journey-level-goals-end
+
+**To configure journey-level goals**
+
+.. journeys-howtos-set-journey-level-goals-steps-start
+
+Designate up to five goal segments on the initial journey setup window from the **Select goal segments** dropdown.
+
+If you skip designating goals during the initial setup and want to add them later:
+
+#. Open your journey in edit mode.
+#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Click **Add a goal**.
+#. Select up to 5 batch segments that represent goal achievements.
+#. Click **Done**.
+#. Activate and run the journey to begin tracking.
+
+Once you have designated at least one goal, you may add or modify goals:
+
+#. Open your journey in edit mode.
+#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Click the caret icon.
+#. Click **Modify goals**.
+#. Select up to 5 batch segments that represent goal achievements.
+#. Click **Done**.
+#. Activate and run the journey to begin tracking.
+
+.. journeys-howtos-set-journey-level-goals-steps-end
+
+.. _journeys-howtos-set-percent-split-goals:
+
+Set percent-split goals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-set-percent-split-goals-start
+
+You may add goals to percent-split nodes to run A/B testing. Goals set for percent-split nodes only apply to customers passing through that node, rather than all customers in the journey. You may set a maximum of two goals per percent-split.
+
+.. journeys-howtos-set-percent-split-goals-end
+
+**To configure percent-split goals**
+
+.. journeys-howtos-set-percent-split-goals-steps-start
+
+In edit mode:
+
+#. Add or select an existing percent-split node in your journey.
+#. In the **Node Configuration** pane, add paths and choose whether to include a control group.
+#. Configure the split percentages ensuring they sum to 100%.
+#. Add up to 2 goal segments for this split from the **Select goal segments** dropdown.
+#. If done editing, click **Save**.
+
+.. journeys-howtos-set-percent-split-goals-steps-end
+
+.. _journeys-howtos-view-milestone-metrics:
+
+View milestone metrics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-view-milestone-metrics-start
+
+You can view milestone metrics including goals and exits for any journey that has run at least once.
+
+Metrics update after each journey run. Historical data is preserved for trend analysis.
+
+.. journeys-howtos-view-milestone-metrics-end
+
+**To view milestone metrics**
+
+.. journeys-howtos-view-milestone-metrics-steps-start
+
+#. On the **Journeys** page, open a journey that has run at least once
+#. Navigate to the milestones card on the upper-right of the Journeys canvas
+#. Review milestone counts by time window: All-time total, past 7 days, past 30 days, or past 90 days
+#. Check median duration to understand time-to-goal
+#. For split goals, compare path-specific counts
+#. Click any metric to get more details
+
+.. journeys-howtos-view-milestone-metrics-steps-end
+
 .. _journeys-howtos-merge:
 
 Merge a split path
@@ -1018,47 +1458,47 @@ Alternately, you can click the |fa-kebab| icon for an existing journey to create
 Add subfolder
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. journeys-list-organize-subfolder-start
+.. journeys-howtos-list-organize-subfolder-start
 
 Use the **Create folder** option in the |fa-kebab| menu for an existing folder to add a subfolder. You may configure up to four levels of subfolders. All folder names must be unique.
 
-.. journeys-list-organize-subfolder-end
+.. journeys-howtos-list-organize-subfolder-end
 
 **To add a subfolder**
 
-.. journeys-add-subfolder-steps-start
+.. journeys-howtos-add-subfolder-steps-start
 
 #. On the **Journeys** page, open the menu for a folder or subfolder by clicking the |fa-kebab| icon, and then select **Create folder**. This opens the **Create subfolder** dialog box.
 #. Enter the name for the subfolder.
 #. Click **Save**.
 
-.. journeys-add-subfolder-steps-end
+.. journeys-howtos-add-subfolder-steps-end
 
 .. _journeys-howtos-move:
 
 Move journey
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. journeys-list-move-journey-start
+.. journeys-howtos-list-move-journey-start
 
 Use the **Move** option to move around and organize the list of folders and journeys. Folders may be expanded to view the list of journeys and subfolders contained within.
 
-.. journeys-list-move-journey-end
+.. journeys-howtos-list-move-journey-end
 
 **To move a journey**
 
-.. journeys-move-steps-start
+.. journeys-howtos-move-steps-start
 
 #. From the **Journeys** page, click the |fa-kebab| icon to open the menu for a journey, and then select **Move**. This opens the **Move journey** dialog box.
 #. Select the name of an existing folder to which a journey will be moved, and then click **Move**.
 
-.. journeys-move-steps-end
+.. journeys-howtos-move-steps-end
 
-.. journeys-move-hint-start
+.. journeys-howtos-move-hint-start
 
 .. hint:: If the folder to which a journey will be moved is not present in the list of folders, you can add it directly from the **Move journey** dialog box. Click the **New folder** link, type a name for the folder, and then select it.
 
-.. journeys-move-hint-end
+.. journeys-howtos-move-hint-end
 
 .. _journeys-howtos-rename:
 
