@@ -827,10 +827,11 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-interact`
-* :ref:`journeys-howtos-manage-measurement`
-* :ref:`journeys-howtos-access-export-journey-travel-log`
-* :ref:`journeys-howtos-configure-journey-level-goals`
-* :ref:`journeys-howtos-configure-percent-split-goals`
+* :ref:`journeys-howtos-measure-journeys`
+* :ref:`journeys-howtos-define-measurement-segments`
+* :ref:`journeys-howtos-export-journey-travel-log`
+* :ref:`journeys-howtos-set-journey-level-goals`
+* :ref:`journeys-howtos-set-percent-split-goals`
 * :ref:`journeys-howtos-view-milestone-metrics`
 * :ref:`journeys-howtos-merge`
 * :ref:`journeys-howtos-monitor-resolve`
@@ -1196,38 +1197,95 @@ The **Journeys** canvas supports the following user interactions:
  
 .. journeys-howtos-interact-end
 
-.. _journeys-howtos-manage-measurement:
+.. _journeys-howtos-measure-journeys:
 
-Manage journey measurement
+Measure journeys
 --------------------------------------------------
 
 You can configure and manage measurement for your journeys:
 
-* :ref:`Access and export Journey Travel Log data <journeys-howtos-access-export-journey-travel-log>`
-* :ref:`Configure journey-level goals <journeys-howtos-configure-journey-level-goals>`
-* :ref:`Configure percent-split goals <journeys-howtos-configure-percent-split-goals>`
+* :ref:`Define measurement segments <journeys-howtos-define-measurement-segments>`
+* :ref:`Export travel log data <journeys-howtos-export-journey-travel-log>`
+* :ref:`Set journey-level goals <journeys-howtos-set-journey-level-goals>`
+* :ref:`Set percent-split goals <journeys-howtos-set-percent-split-goals>`
 * :ref:`View milestone metrics <journeys-howtos-view-milestone-metrics>`
 
-.. _journeys-howtos-configure-journey-level-goals:
+.. _journeys-howtos-define-measurement-segments:
 
-Configure journey-level goals
+Define measurement segments
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. journeys-howtos-configure-journey-level-goals-start
+.. journeys-howtos-define-measurement-segments-start
+
+You can define customer segments in the **Visual segment editor** based on journey activity. This allows you to see segment insights for any customers who participated in a journey, achieved a goal, or met exit criteria.  
+
+.. journeys-howtos-define-measurement-segments-end
+
+**To define measurement segments**
+
+.. journeys-howtos-define-measurement-segments-steps-start
+
+#. On the **Segments** page, click **Create segment**, or edit an existing segment. 
+#. On the **Add condition** dropdown, filter by **Activation activity**.
+#. Select a journeys activation activity from **Is in journey**, **Reached a goal in journey**, or **Exited a journey**.
+#. Use the dropdown to select the journey from which you want to create the segment.
+#. Click on **Filters** to further edit criteria, then click **Save**.
+#. When done editing your segment, click **View**. 
+
+.. journeys-howtos-define-measurement-segments-steps-end
+
+.. _journeys-howtos-export-journey-travel-log:
+
+Export travel log data
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-export-journey-travel-log-start
+
+You can configure your journey to send travel log data to a destination for analysis.
+
+.. journeys-howtos-export-journey-travel-log-end
+
+.. TODO: confirm status of API and manual; add in separate how to is applicable
+
+.. There are three methods to access your Journey travel log data:
+
+.. #. Automation: Use the API endpoint for programmatic retrieval
+.. #. Manual inspection: Download the log directly from the journey's execution history
+.. #. External analysis: Configure an egress destination to export data to your data warehouse or analytics platform
+
+**To export travel log data**
+
+.. journeys-howtos-export-journey-travel-log-steps-start
+
+#. Configure journey with goals.
+#. Open your journey in edit mode.
+#. Click on the starting node.
+#. In the **Journey settings** window, choose a travel log destination from the **Select destination** dropdown.
+#. Run the journey to generate and send travel log entries to your destination.
+
+.. journeys-howtos-export-journey-travel-log-steps-end
+
+
+.. _journeys-howtos-set-journey-level-goals:
+
+Set journey-level goals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. journeys-howtos-set-journey-level-goals-start
 
 Goals set at the journey level apply to all customers in the journey as a way of tracking performance without exiting the customer from the journey. Customers can achieve multiple goals during their journey.
 
 Journey-level goals may be set during the initial journey setup as well as added or modified later.
 
-.. journeys-howtos-configure-journey-level-goals-end
+.. journeys-howtos-set-journey-level-goals-end
 
 **To configure journey-level goals**
 
-.. journeys-howtos-configure-journey-level-goals-steps-start
+.. journeys-howtos-set-journey-level-goals-steps-start
 
 Designate up to five goal segments on the initial journey setup window from the **Select goal segments** dropdown.
 
-If you skip goals during the initial setup and want to add them later:
+If you skip designating goals during the initial setup and want to add them later:
 
 #. Open your journey in edit mode.
 #. Locate the milestones card on the upper-right of the Journeys canvas.
@@ -1246,22 +1304,22 @@ Once you have designated at least one goal, you may add or modify goals:
 #. Click **Done**.
 #. Activate and run the journey to begin tracking.
 
-.. journeys-howtos-configure-journey-level-goals-steps-end
+.. journeys-howtos-set-journey-level-goals-steps-end
 
-.. _journeys-howtos-configure-percent-split-goals:
+.. _journeys-howtos-set-percent-split-goals:
 
-Configure percent-split goals
+Set percent-split goals
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. journeys-howtos-configure-percent-split-goals-start
+.. journeys-howtos-set-percent-split-goals-start
 
 You may add goals to percent-split nodes to run A/B testing. Goals set for percent-split nodes only apply to customers passing through that node, rather than all customers in the journey. You may set a maximum of two goals per percent-split.
 
-.. journeys-howtos-configure-percent-split-goals-end
+.. journeys-howtos-set-percent-split-goals-end
 
 **To configure percent-split goals**
 
-.. journeys-howtos-configure-percent-split-goals-steps-start
+.. journeys-howtos-set-percent-split-goals-steps-start
 
 In edit mode:
 
@@ -1271,36 +1329,7 @@ In edit mode:
 #. Add up to 2 goal segments for this split from the **Select goal segments** dropdown.
 #. If done editing, click **Save**.
 
-.. journeys-howtos-configure-percent-split-goals-steps-end
-
-.. _journeys-howtos-access-export-journey-travel-log:
-
-Access and export Journey Travel Log
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. journeys-howtos-access-export-journey-travel-log-start
-
-There are three methods to access your JTL data:
-
-#. Automation: Use the API endpoint for programmatic retrieval
-#. Manual inspection: Download the log directly from the journey's execution history
-#. External analysis: Configure an egress destination to export data to your data warehouse or analytics platform
-
-.. TODO: Do we need steps for all three options above?
-
-.. journeys-howtos-access-export-journey-travel-log-end
-
-**To export Journey Travel Log data**
-
-.. journeys-howtos-access-export-journey-travel-log-steps-start
-
-#. Configure journey with goals.
-#. Open your journey in edit mode.
-#. Click on the starting node.
-#. In the **Journey Settings** window, choose a JTL destination from the **Select destination** dropdown.
-#. Run the journey to generate travel log entries.
-
-.. journeys-howtos-access-export-journey-travel-log-steps-end
+.. journeys-howtos-set-percent-split-goals-steps-end
 
 .. _journeys-howtos-view-milestone-metrics:
 
