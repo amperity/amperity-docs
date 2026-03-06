@@ -139,7 +139,9 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
 
-.. monetize-data-marketplace-concept-buyable-end
+A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+
+.. monetize-data-marketplace-concept-data-rates-end
 
 
 .. _monetize-data-marketplace-concept-percentage: 
@@ -397,7 +399,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. Create a new connection to a marketplace.
+       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__.
 
           .. note:: Ask your **Datagrid Operator** for help configuring credentials for a marketplace connection.
 
@@ -492,7 +494,7 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. Create a new connection to a marketplace.
+       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__.
 
           .. note:: Ask your **Datagrid Operator** for help configuring the credentials for a marketplace connection.
 

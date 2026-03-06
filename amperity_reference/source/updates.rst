@@ -47,6 +47,9 @@ Winter 2026
 
 .. updates-2026-winter-start
 
+**Audience monetization**
+
+   :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
 **Journeys AI Assistant**
 
