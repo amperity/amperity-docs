@@ -47,6 +47,7 @@ Winter 2026
 
 .. updates-2026-winter-start
 
+
 **Journeys AI Assistant**
 
    :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Journeys** page to help build and refine journeys.
