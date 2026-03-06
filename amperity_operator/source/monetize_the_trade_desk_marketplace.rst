@@ -139,15 +139,9 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
           :class: no-scaled-link
      - **SEND DATA RATES FOR APPROVAL**
 
-       All buyable audiences `must have an approved rate <https://partner.thetradedesk.com/v3/portal/data/doc/ThirdPartyDataManagement#approval-criteria>`__ |ext_link|.
-
-       .. note:: The first syndicated rate submission for a brand requires approval.
-
-       .. tip:: Hybrid rates are recommended for all audiences.
-
-          An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high-cost channels audiences yield higher vaules.
-
-          A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-data-marketplace-concept-data-rates-start
+          :end-before: .. monetize-data-marketplace-concept-data-rates-end
 
        Amperity uses the `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| endpoint to send data rates for processing and approval.
 
@@ -156,56 +150,76 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
 
        **Cost per thousand (CPM)**
 
-          A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-cpm-start
+             :end-before: .. monetize-data-marketplace-concept-cpm-end
 
-          .. note:: CPM rates lower than $5 require approval by |destination-name|.
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-cpm-the-trade-desk-start
+             :end-before: .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
 
 
        **Percent of media cost**
 
-          A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs. A percent of media cost rate must be a decimal, such as 0.12 or 0.25, which represents 12% or 25%.
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-percentage-start
+             :end-before: .. monetize-data-marketplace-concept-percentage-end
 
-          .. note:: Percentages of media cost below 0.10 require approval by |destination-name|.
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-percentage-the-trade-desk-start
+             :end-before: .. monetize-data-marketplace-concept-percentage-the-trade-desk-end
 
 
        **Rate level**
 
-          Amperity assigns rate levels automatically depending on the type of audience sent to |destination-name|:
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-rate-levels-start
+             :end-before: .. monetize-data-marketplace-concept-rate-levels-end
 
           **System**
-             A system rate level is assigned automatically to a syndicated audience.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-level-system-start
+                :end-before: .. monetize-data-marketplace-concept-rate-level-system-end
 
           **Partner**
-             A partner rate level is assigned to custom audiences intended for specific partners and their advertisers. A partner rate level is assigned to a specific **Partner ID**, which allows that partner to access the audience at the configured data rate.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-level-partner-start
+                :end-before: .. monetize-data-marketplace-concept-rate-level-partner-end
 
-             .. note:: Use |destination-name| **Platform ID** for a partner to configure the value of **Partner ID** in this destination.
-
-                The value of **Partner ID** may not be empty for partner rate levels.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-start
+                :end-before: .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
           **Advertiser**
-             An advertiser rate level is assigned to custom audiences intended for specific advertisers. An advertiser rate level is assigned to a specific **Advertiser ID**, which allows an advertiser to access the audience at the configured data rate.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-level-advertiser-start
+                :end-before: .. monetize-data-marketplace-concept-rate-level-advertiser-end
 
-             .. note:: Use |destination-name| **Platform ID** for an advertiser to configure the value of **Advertiser ID** in this destination.
-
-                The value of **Advertiser ID** may not be empty for advertiser rate levels.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-level-advertiser-the-trade-desk-start
+                :end-before: .. monetize-data-marketplace-concept-rate-level-advertiser-the-trade-desk-end
 
 
        **Rate type**
 
-          The rate type defines the pricing model for an audience and establishes a consistent relative value for advertising impressions while keeping audience pricing scalable across channels.
+          .. include:: ../../amperity_reference/source/monetize.rst
+             :start-after: .. monetize-data-marketplace-concept-rate-types-start
+             :end-before: .. monetize-data-marketplace-concept-rate-types-end
 
           **CPM**
-             A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-type-cpm-start
+                :end-before: .. monetize-data-marketplace-concept-rate-type-cpm-end
 
           **Hybrid**
-             A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. All audiences sent from Amperity should be configured with a hybrid data rate.
-
-             .. note:: All syndicated audiences are assigned a hybrid rate type. A cost per thousand (CPM) rate *and* a percent of media cost rate must be provided.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-type-hybrid-start
+                :end-before: .. monetize-data-marketplace-concept-rate-type-hybrid-end
 
           **Percent of media cost**
-             A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
-
-             .. note:: The value for percent of media costs may be $0.00.
+             .. include:: ../../amperity_reference/source/monetize.rst
+                :start-after: .. monetize-data-marketplace-concept-rate-type-percent-start
+                :end-before: .. monetize-data-marketplace-concept-rate-type-percent-end
 
 
    * - .. image:: ../../images/steps-07.png
@@ -215,13 +229,15 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
           :class: no-scaled-link
      - **UPDATE BUYABLE STATUS**
 
-       All audiences are buyable by default when managed by Amperity.
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-data-marketplace-concept-buyable-start
+          :end-before: .. monetize-data-marketplace-concept-buyable-end
 
-       Non-buyable audiences cannot appear in |destination-name|. Any audience in Amperity can be made non-buyable. Open the segment in the **Audience monetization** page, and then click **Make not buyable**.
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-data-marketplace-concept-buyable-the-trade-desk-start
+          :end-before: .. monetize-data-marketplace-concept-buyable-the-trade-desk-end
 
        Amperity uses the `PUT /v3/thirdpartydata <https://partner.thetradedesk.com/v3/portal/api/ref/put-thirdpartydata>`__ |ext_link| endpoint to update an audience's buyable status.
-
-       .. note:: A buyable audience without a rate or without assigned users is a non-buyable audience and cannot appear in |destination-name|.
 
 
    * - .. image:: ../../images/steps-08.png
@@ -328,12 +344,9 @@ Get details
           :class: no-scaled-link
      - **Taxonomy**
 
-       |destination-name| recommends `designing and building a flat taxonomy <https://partner.thetradedesk.com/v3/portal/data/doc/DataTaxonomyDesign>`__ |ext_link|, where all segments exist as children under the **ROOT** node, with segment names representing the full path.
-
-       * The display name of each segment defines the path hierarchy and taxonomy structure.
-       * The location of a segment in a taxonomy defines its full path, which always starts at the root level.
-       * The taxonomy hierarchy always starts with the **ROOT** element.
-       * The **ROOT** element is created for you and does appear in |destination-name| for advertisers in the platform. For example, "Interest > Technology > Computers" appears as "Computers".
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-data-marketplace-concept-taxonomy-start
+          :end-before: .. monetize-data-marketplace-concept-taxonomy-end
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -461,94 +474,15 @@ Add destination
 For custom audiences
 --------------------------------------------------
 
-.. monetize-howtos-create-custom-audience-start
-
-Custom audiences have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace.
-
-.. monetize-howtos-create-custom-audience-end
+.. include:: ../../amperity_reference/source/monetize.rst
+   :start-after: .. monetize-howtos-create-custom-audience-start
+   :end-before: .. monetize-howtos-create-custom-audience-end
 
 **To create a custom audience**
 
-.. monetize-howtos-create-custom-audience-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Create audience**
-
-       #. Open the **Audience monetization** page.
-       #. Click **Create**, and then choose **Custom**
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Choose segments**
-
-       Do one of the following:
-
-       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
-
-          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
-
-       #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
-
-       When finished, click **Next**.
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Select a marketplace**
-
-       Do one of the following:
-
-       #. Select an existing marketplace connection.
-       #. Create a new connection to a marketplace.
-
-          .. note:: Ask your **Datagrid Operator** for help configuring credentials for a marketplace connection.
-
-          Click **Connect**, select a new connection, configure the credential settings and marketplace settings:
-
-          * Set **Rate level** to **Partner** or **Advertiser**
-          * Enter the **Partner name** and **Partner ID** *or* enter the **Audience name** and **Audience ID**.
-          * Set **Rate type** to **Hybrid** or **Flat CPM**
-
-       Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
-
-       When finished, click **Next**.
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Prepare data products**
-
-       #. Rename the audience, align the audience name with the taxonomy defined in The Trade Desk, and add a description.
-
-          .. tip:: On the **Prepare data products** page, each segment name defaults to the Amperity-defined title. Renaming the segments or adding a description helps advertisers better understand what kind of audience is in the segment.
-
-       #. Set the percent of media value and the cost per thousand (CPM) rate cap.
-
-       When finished, click **Save and send**.
-
-       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
-
-       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
-
-.. monetize-howtos-create-custom-audience-steps-end
+.. include:: ../../amperity_reference/source/monetize.rst
+   :start-after: .. monetize-howtos-create-custom-audience-steps-start
+   :end-before: .. monetize-howtos-create-custom-audience-steps-end
 
 
 .. _destination-the-trade-desk-marketplace-add-syndicated:
@@ -556,87 +490,12 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 For syndicated audiences
 --------------------------------------------------
 
-.. monetize-howtos-create-syndicated-audience-start
-
-Syndicated audiences have a standard global rate. They may be purchased on the data marketplace by any verified buyers not on your blocklist.
-
-.. monetize-howtos-create-syndicated-audience-end
+.. include:: ../../amperity_reference/source/monetize.rst
+   :start-after: .. monetize-howtos-create-syndicated-audience-start
+   :end-before: .. monetize-howtos-create-syndicated-audience-end
 
 **To create a syndicated audience**
 
-.. monetize-howtos-create-syndicated-audience-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Create audience**
-
-       #. Open the **Audience monetization** page.
-       #. Click **Create**, and then choose **Syndicated**
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Choose segments**
-
-       Do one of the following:
-
-       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
-
-          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
-
-       #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
-
-       When finished, click **Next**.
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Select a marketplace**
-
-       Do one of the following:
-
-       #. Select an existing marketplace connection.
-       #. Create a new connection to a marketplace.
-
-          .. note:: Ask your **Datagrid Operator** for help configuring the credentials for a marketplace connection.
-
-          Click **Connect**, select a new connection, configure the credential settings and marketplace settings, and then click **Save**
-
-       Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
-
-       When finished, click **Next**.
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Open the Segment Editor.
-          :align: center
-          :class: no-scaled-link
-     - **Prepare data products**
-
-       #. Rename the audience, align the audience name with the taxonomy defined in The Trade Desk, and add a description.
-
-          .. tip:: On the **Prepare data products** page, the selected segment names default to their Amperity-defined titles. Renaming the segments or adding a description helps advertisers better understand what kind of audience is in the segment.
-
-       #. Set the percent of media value and the cost per thousand (CPM) rate cap.
-
-       When finished, click **Save and send**.
-
-       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
-
-       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
-
-.. monetize-howtos-create-syndicated-audience-steps-end
+.. include:: ../../amperity_reference/source/monetize.rst
+   :start-after: .. monetize-howtos-create-syndicated-audience-steps-start
+   :end-before: .. monetize-howtos-create-syndicated-audience-steps-end
