@@ -24,10 +24,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for The Trade Desk Data Marketplace
+        Send audiences to The Trade Desk Data Marketplace
 
 =================================================================
-Configure destinations for The Trade Desk Data Marketplace
+Send audiences to The Trade Desk Data Marketplace
 =================================================================
 
 .. include:: ../../shared/terms.rst
@@ -40,7 +40,7 @@ Configure destinations for The Trade Desk Data Marketplace
 
 .. destination-the-trade-desk-marketplace-about-start
 
-Use this destination to monetize your brand's UID 2.0-based audiences by making them available for purchase by advertisers various rates in |destination-name|.
+Use this destination to monetize your brand's UID 2.0-based audiences by making them available for purchase by advertisers at various rates in |destination-name|.
 
 .. destination-the-trade-desk-marketplace-about-end
 

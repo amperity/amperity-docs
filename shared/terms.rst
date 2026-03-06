@@ -6679,7 +6679,7 @@ The Trade Desk is a platform for wide internet advertising and enables the use o
 
 .. term-thetradedesk-marketplace-start
 
-The Trade Desk Data Marketplace is a platform that allows advertisers to access and utilize third-party data for advertising campaigns.
+The Trade Desk Data Marketplace is a platform that allows advertisers to purchase access to your brand's audiences, and then use those audiences for their advertising campaigns.
 
 .. term-thetradedesk-marketplace-end
 
