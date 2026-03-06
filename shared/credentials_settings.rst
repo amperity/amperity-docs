@@ -2317,7 +2317,7 @@ See SFTP.
 
 .. credential-the-trade-desk-advertiser-id-start
 
-The advertiser ID for your account with |destination-name|.
+The advertiser ID for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-id-end
 
@@ -2325,7 +2325,7 @@ The advertiser ID for your account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-start
 
-The advertiser secret for your account with |destination-name|.
+The advertiser secret for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-end
 
