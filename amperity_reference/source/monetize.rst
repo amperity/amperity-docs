@@ -21,7 +21,7 @@ Package first-party data as audience products available in data marketplaces, wh
 .. monetize-about-end
 
 
-.. _monetize-audience-types: 
+.. _monetize-audience-types:
 
 Marketplace audience types
 ==================================================
@@ -55,7 +55,6 @@ Syndicated audiences
 A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer not on your blocklist.
 
 .. monetize-audience-type-syndicated-end
-
 
 .. monetize-audience-types-marketplaces-start
 
