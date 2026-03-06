@@ -399,7 +399,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__.
+       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html#configure-credentials>`__.
 
           .. note:: Ask your **Datagrid Operator** for help configuring credentials for a marketplace connection.
 
@@ -494,7 +494,7 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__.
+       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html#configure-credentials>`__.
 
           .. note:: Ask your **Datagrid Operator** for help configuring the credentials for a marketplace connection.
 
