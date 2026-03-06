@@ -254,7 +254,7 @@ Audience monetization access
 
 .. policies-audience-monetization-access-start
 
-The **Audience monetization access** policy option may be assigned to users assigned the **Datagrid Operator** policy to enable access to the :doc:`Audience monetization <monetize_the_trade_desk_marketplace>` page.
+The **Audience monetization access** policy option may be assigned to users assigned the **Datagrid Operator** policy to enable access to the `Audience monetization <../operator/monetize_the_trade_desk_marketplace.html>`__ page.
 
 .. policies-audience-monetization-access-end
 
