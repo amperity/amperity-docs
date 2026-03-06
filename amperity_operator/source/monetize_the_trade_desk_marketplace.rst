@@ -81,7 +81,7 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
           :class: no-scaled-link
      - **START WORKFLOW**
 
-       A workflow starts on the configured schedule, such as "every 2 weeks at 4:00 PM UTC starting March 20, 2026".
+       A workflow starts on the configured schedule, such as "every 2 weeks at 4:00 PM UTC starting June 20, 2026".
 
        Amperity uses specific endpoints in the The Trade Desk Platform API for this workflow:
 
@@ -343,6 +343,7 @@ Get details
           :class: no-scaled-link
      - **Partner ID**
 
+       The partner ID for an account with |destination-name|.
 
        .. note:: A **Partner ID** is required when **Partner** is selected as the **Rate level**.
 
@@ -452,16 +453,23 @@ Configure credentials
 Add destination
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-sandbox-recommendation-start
-   :end-before: .. setting-common-sandbox-recommendation-end
+|destination-name| has two types of audiences: :ref:`custom <destination-the-trade-desk-marketplace-add-custom>` and :ref:`syndicated <destination-the-trade-desk-marketplace-add-syndicated>`.
 
-**To add a destination for The Trade Desk Data Marketplace**
 
-.. destination-the-trade-desk-marketplace-add-steps-start
+.. _destination-the-trade-desk-marketplace-add-custom:
 
-.. TODO: Sync with /reference/monetize # add and blend them as needed
+For custom audiences
+--------------------------------------------------
 
+.. monetize-howtos-create-custom-audience-start
+
+Custom audiences have advertiser or partner-specific rates. Each custom audience is for purchase by a single buyer via a private deal on the data marketplace.
+
+.. monetize-howtos-create-custom-audience-end
+
+**To create a custom audience**
+
+.. monetize-howtos-create-custom-audience-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -469,49 +477,166 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step one.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - Open **Audience monetization** page.
+     - **Create audience**
+
+       #. Open the **Audience monetization** page.
+       #. Click **Create**, and then choose **Custom**
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step two.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - Click **Create**
+     - **Choose segments**
+
+       Do one of the following:
+
+       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
+
+          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+
+       #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
+
+       When finished, click **Next**.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step three.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - SEGMENTS
+     - **Select a marketplace**
+
+       Do one of the following:
+
+       #. Select an existing marketplace connection.
+       #. Create a new connection to a marketplace.
+
+          .. note:: Ask your **Datagrid Operator** for help configuring credentials for a marketplace connection.
+
+          Click **Connect**, select a new connection, configure the credential settings and marketplace settings:
+
+          * Set **Rate level** to **Partner** or **Advertiser**
+          * Enter the **Partner name** and **Partner ID** *or* enter the **Audience name** and **Audience ID**.
+          * Set **Rate type** to **Hybrid** or **Flat CPM**
+
+       Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
+
+       When finished, click **Next**.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step four.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - MARKETPLACE
+     - **Prepare data products**
+
+       #. Rename the audience, align the audience name with the taxonomy defined in The Trade Desk, and add a description.
+
+          .. tip:: On the **Prepare data products** page, each segment name defaults to the Amperity-defined title. Renaming the segments or adding a description helps advertisers better understand what kind of audience is in the segment.
+
+       #. Set the percent of media value and the cost per thousand (CPM) rate cap.
+
+       When finished, click **Save and send**.
+
+       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
+
+       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
+
+.. monetize-howtos-create-custom-audience-steps-end
 
 
-   * - .. image:: ../../images/steps-05.png
+.. _destination-the-trade-desk-marketplace-add-syndicated:
+
+For syndicated audiences
+--------------------------------------------------
+
+.. monetize-howtos-create-syndicated-audience-start
+
+Syndicated audiences have a standard global rate. They may be purchased on the data marketplace by any verified buyers not on your blocklist.
+
+.. monetize-howtos-create-syndicated-audience-end
+
+**To create a syndicated audience**
+
+.. monetize-howtos-create-syndicated-audience-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step five.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - RATES AND TAXONOMY AND BUYABLE
+     - **Create audience**
+
+       #. Open the **Audience monetization** page.
+       #. Click **Create**, and then choose **Syndicated**
 
 
-   * - .. image:: ../../images/steps-06.png
+   * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step six.
+          :alt: Open the Segment Editor.
           :align: center
           :class: no-scaled-link
-     - END
+     - **Choose segments**
 
-.. destination-the-trade-desk-marketplace-add-steps-end
+       Do one of the following:
+
+       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
+
+          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+
+       #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
+
+       When finished, click **Next**.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Open the Segment Editor.
+          :align: center
+          :class: no-scaled-link
+     - **Select a marketplace**
+
+       Do one of the following:
+
+       #. Select an existing marketplace connection.
+       #. Create a new connection to a marketplace.
+
+          .. note:: Ask your **Datagrid Operator** for help configuring the credentials for a marketplace connection.
+
+          Click **Connect**, select a new connection, configure the credential settings and marketplace settings, and then click **Save**
+
+       Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
+
+       When finished, click **Next**.
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Open the Segment Editor.
+          :align: center
+          :class: no-scaled-link
+     - **Prepare data products**
+
+       #. Rename the audience, align the audience name with the taxonomy defined in The Trade Desk, and add a description.
+
+          .. tip:: On the **Prepare data products** page, the selected segment names default to their Amperity-defined titles. Renaming the segments or adding a description helps advertisers better understand what kind of audience is in the segment.
+
+       #. Set the percent of media value and the cost per thousand (CPM) rate cap.
+
+       When finished, click **Save and send**.
+
+       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
+
+       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
+
+.. monetize-howtos-create-syndicated-audience-steps-end
