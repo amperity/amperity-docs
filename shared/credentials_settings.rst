@@ -2317,7 +2317,7 @@ See SFTP.
 
 .. credential-the-trade-desk-advertiser-id-start
 
-The advertiser ID for your account with |destination-name|.
+The advertiser ID for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-id-end
 
@@ -2325,7 +2325,7 @@ The advertiser ID for your account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-start
 
-The advertiser secret for your account with |destination-name|.
+The advertiser secret for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-end
 
@@ -2371,6 +2371,62 @@ The provider ID for your account with The Trade Desk. Ask your The Trade Desk re
 
 .. credential-the-trade-desk-provider-id-end
 
+
+
+
+.. vale off
+
+**THE TRADE DESK: DATA MARKETPLACE**
+
+.. vale on
+
+**Advertiser ID**
+
+.. credential-the-trade-desk-marketplace-advertiser-id-start
+
+The advertiser ID for an account with |destination-name|.
+
+.. credential-the-trade-desk-marketplace-advertiser-id-end
+
+**Brand ID**
+
+.. credential-the-trade-desk-marketplace-brand-id-start
+
+An ID that, when used in conjunction with the provider ID, identifies a brand's segments and data within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-brand-id-end
+
+**Partner ID**
+
+.. credential-the-trade-desk-marketplace-partner-id-start
+
+The partner ID for an account with |destination-name|.
+
+.. credential-the-trade-desk-marketplace-partner-id-end
+
+**Provider ID**
+
+.. credential-the-trade-desk-marketplace-provider-id-start
+
+The provider ID for accessing a brand's segments and data within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-provider-id-end
+
+**Provider secret**
+
+.. credential-the-trade-desk-marketplace-provider-secret-start
+
+A key for accessing endpoints in The Trade Desk Platform API that require signature header authentication.
+
+.. credential-the-trade-desk-marketplace-provider-secret-end
+
+**Platform API token**
+
+.. credential-the-trade-desk-marketplace-platform-api-token-start
+
+A long-lived token that allows access to The Trade Desk Platform API.
+
+.. credential-the-trade-desk-marketplace-platform-api-token-end
 
 
 

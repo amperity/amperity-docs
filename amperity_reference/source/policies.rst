@@ -171,6 +171,7 @@ The following policy options are available:
 * :ref:`Allow sandbox administration <policies-sandbox-administrator>`
 * :ref:`Allow source data deletion <policies-allow-source-data-deletion>`
 * :ref:`Allow user administration <policies-allow-user-administration>`
+* :ref:`Audience monetization access <policies-audience-monetization-access>`
 * :ref:`Restrict AI Assistant access <policies-option-restrict-ai-assistant>`
 * :ref:`Restrict data exports <policies-option-restrict-data-exports>`
 * :ref:`Restrict download access <policies-option-restrict-downloads>`
@@ -244,6 +245,18 @@ Allow user administration
 The **Allow user administration** policy option may be assigned to users to enable access to the :ref:`Users settings tab <policies-allowed-actions-settings-users>`, the :ref:`Security settings tab (for resource groups) <policies-allowed-actions-settings-security>`, and the :ref:`Activity log settings tab <policies-allowed-actions-settings-activity-log>`.
 
 .. policies-allow-user-administration-end
+
+
+.. _policies-audience-monetization-access:
+
+Audience monetization access
+--------------------------------------------------
+
+.. policies-audience-monetization-access-start
+
+The **Audience monetization access** policy option may be assigned to users assigned the **Datagrid Operator** policy to enable access to the `Audience monetization <../operator/monetize_the_trade_desk_marketplace.html>`__ page.
+
+.. policies-audience-monetization-access-end
 
 
 .. _policies-option-restrict-ai-assistant:
