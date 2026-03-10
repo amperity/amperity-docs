@@ -25,8 +25,12 @@ The following list combines industry-standard abbreviations and initialisms with
    :widths: 100 500
    :header-rows: 0
 
+   * - **1P**
+     - First-party audiences
    * - **2FA**
      - Two-factor Authentication
+   * - **3P**
+     - Third-party audiences
    * - **AAID**
      - Google Advertising ID
    * - **ACS**
