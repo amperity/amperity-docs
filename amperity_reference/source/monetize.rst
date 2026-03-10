@@ -158,7 +158,7 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
 
-.. monetize-data-marketplace-concept-buyable-end
+.. monetize-data-marketplace-concept-data-rates-end
 
 .. TODO: Grace mentioned something here about nixing the tip-- yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it
 
