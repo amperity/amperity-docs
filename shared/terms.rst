@@ -1566,20 +1566,20 @@ Apply the **create-dt** semantic tag to columns that identify the creation date 
 .. term-create-dt-end
 
 
-**Criteo**
+**Criteo**, **Criteo Audience API**
 
 .. term-criteo-start
 
-Criteo is a commerce media platform that helps marketers and media owners manage and scale campaigns. Send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
+Send first-party audiences to your `Commerce Growth <https://www.criteo.com/platform/commerce-growth/>`__ |ext_link| seat at Criteo. Connect with relevant audiences actively in-market for products and services, retain customers with personalized ads and seamless omnichannel experiences that drive repeat purchases and long-term value, and personalize advertising to visitors who leave your website without making a purchase.
 
 .. term-criteo-end
 
 
-**Criteo Retail Media**
+**Criteo Retail Media**, **Criteo Retail Audience API**
 
 .. term-criteo-retail-media-start
 
-Criteo Retail Media allows marketers to build audiences using their own first-party data, and then monetize those audiences by allowing other brands to use them for their own marketing campaigns.
+Send first-party audiences to your `Commerce Yield <https://www.criteo.com/platform/commerce-yield/>`__ |ext_link| seat at Criteo. Monetize onsite inventory to help brands reach more shoppers, build awareness and engagement, and increase conversions across channels.
 
 .. term-criteo-retail-media-end
 
