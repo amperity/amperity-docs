@@ -19,13 +19,98 @@ Audience monetization
 Package first-party data as audience products available in data marketplaces, where advertisers can pay to use these audiences in their campaigns.
 
 Audience monetization:
+
 * Requires signed partner marketplace agreements
 * Is admin-enabled and can only be used by admins and datagrid operators
 * Requires Amps pricing turned on, and consumes Amps based on activation volume
 
 .. monetize-about-end
 
-.. TODO: Add UID2 and marketplace agreement text from operator, add inclusions in operator pointing to text here
+.. monetize-marketplaces-start
+
+Use the **Monetization** page to send custom or syndicated audiences based on new or existing audience segments to the following marketplaces:
+
+* The Trade Desk
+
+.. monetize-marketplaces-end
+
+
+.. _monetize-requirements:
+
+Requirements
+==================================================
+
+.. monetize-requirements-start
+
+Audience monetization has the following requirements:
+
+* :ref:`Amps <monetize-requirement-amps>`
+* :ref:`Marketplace agreement <monetize-requirement-marketplace-agreement>`
+* :ref:`Standard policies <monetize-requirement-standard-policies>`
+* :ref:`UID2 <monetize-requirement-uid2>`
+
+.. monetize-requirements-end
+
+
+.. _monetize-requirement-amps:
+
+Amps consumption
+--------------------------------------------------
+
+.. monetize-requirement-amps-start
+
+Your tenant must be configured for `Amps consumption <../reference/amps.html>`__.
+
+.. monetize-requirement-amps-end
+
+
+.. _monetize-requirement-marketplace-agreement:
+
+Marketplace agreement
+--------------------------------------------------
+
+.. monetize-requirement-marketplace-agreement-start
+
+A `marketplace agreement <https://partner.thetradedesk.com/v3/portal/data/doc/DataGetStarted3pProviderAudience#initial-setup>`__ |ext_link|. After the marketplace agreement is in place a **Brand ID**, **Provider ID**, and **Provider secret** is assigned.
+
+.. monetize-requirement-marketplace-agreement-end
+
+
+.. _monetize-requirement-standard-policies:
+
+Standard policies
+--------------------------------------------------
+
+.. monetize-requirement-standard-policies-start
+
+Audience monetization must be configured by a `Datagrid Administrator <../reference/policies.html#datagrid-administrator>`__ *or* a `Datagrid Operator <../reference/policies.html#datagrid-operator>`__ with the `Audience monetization access <../reference/policies.html#audience-monetization-access>`__ policy option enabled.
+
+.. important:: Audience monetization cannot be configured in a sandbox.
+
+.. monetize-requirement-standard-policies-end
+
+
+.. _monetize-requirement-uid2:
+
+UID2
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-overview-start
+   :end-before: .. uid2-overview-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-get-access-start
+   :end-before: .. uid2-prerequisite-get-access-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-participate-start
+   :end-before: .. uid2-prerequisite-participate-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-get-credentials-start
+   :end-before: .. uid2-prerequisite-get-credentials-end
+
 
 .. _monetize-audience-types:
 
@@ -58,26 +143,10 @@ Syndicated audiences
 
 .. monetize-audience-type-syndicated-start
 
-A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer not on your blocklist.
-
-.. TODO: Add concept of access list
+A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer, with the exception of buyers assigned a `Block bid adjustment type <https://partner.thetradedesk.com/v3/portal/api/doc/BidListDefault>`__ |ext_link|.
 
 .. monetize-audience-type-syndicated-end
 
-.. _monetize-audience-types-marketplaces:
-
-Available marketplaces
---------------------------------------------------
-
-.. monetize-audience-types-marketplaces-start
-
-Use the **Monetization** page to send custom or syndicated audiences based on new or existing audience segments to the following marketplaces:
-
-* The Trade Desk
-
-.. monetize-audience-types-marketplaces-end
-
-.. TODO: Would this information about which marketplaces can be sent to make more sense right up at the top, rather than nested in the audience types subheader? It makes sense to have it up top on the one hand, but also it's nice to have an item in the right nav showing what marketplaces are available. 
 
 .. _monetize-data-marketplace-concepts: 
 
@@ -129,19 +198,22 @@ Cost per thousand (CPM)
 
 .. monetize-data-marketplace-concept-cpm-start
 
-A cost per thousand (CPM) rate defines a flat rate per thousand impressions that advertisers will pay for any impressions served for a given audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
+A cost per thousand (CPM) rate defines a flat rate per thousand impressions that advertisers will pay for any impressions served for a given audience.
 
 .. monetize-data-marketplace-concept-cpm-end
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-start
 
-.. note:: CPM rates lower than $5 require approval by The Trade Desk.
+.. note:: A CPM rate `must be in United States dollars (USD) <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| to ensure your partner account and all associated advertisers use the same currency: USD. A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount in USD, such as $5.50 or $3.00.
+
+   CPM rates lower than $5 require approval by The Trade Desk.
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
 
-.. TODO: Any note needed about use of USD in non-US markets?
+.. TODO: Any note needed about use of USD in non-US markets? J - moved sentence to note, as it's TTD-specific, added some clarifying content (that's a copypaste of TTD's phrasing).
 
-.. TODO: Make the subheader Cost per thousand impressions? This causes it to wrap. 
+.. TODO: Make the subheader Cost per thousand impressions? This causes it to wrap. J - I think we can leave the title as-is and the description is fine with the "impressions" clearly stated.
+
 
 .. _monetize-data-marketplace-concept-data-rates: 
 
@@ -154,13 +226,14 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 .. note:: The first syndicated rate submission for a brand requires approval.
 
-.. tip:: Hybrid rates are recommended for all audiences.
+.. tip:: Hybrid rates are recommended for syndicated audiences. An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
 
-An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
+   Flat CPM rates are optional for custom audiences.
 
 .. monetize-data-marketplace-concept-data-rates-end
 
-.. TODO: Grace mentioned something here about nixing the tip-- yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it
+.. TODO: Grace mentioned something here about nixing the tip yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it J - I think we keep it, but with clarifying edits. See above.
+
 
 .. _monetize-data-marketplace-concept-percentage: 
 
@@ -171,7 +244,7 @@ Percentage of media costs
 
 A percentage of media costs rate defines a percentage applied to impressions that scales with the cost of media across channels.
 
-.. tip:: Apply a rate cap in conjunction with a percent of media cost to prevent runaway costs. 
+.. tip:: Apply a rate cap in conjunction with a percent of media cost to prevent runaway costs for buyers and advertisers. 
 
 .. monetize-data-marketplace-concept-percentage-end
 
@@ -181,7 +254,13 @@ A percentage of media costs rate defines a percentage applied to impressions tha
 
 .. monetize-data-marketplace-concept-percentage-the-trade-desk-end
 
-.. TODO: "to prevent runaway costs" to the buyer/advertiser, right?  Might be worth adding a word or two at the end of the tip above to specify that
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
+
+.. TODO: "to prevent runaway costs" to the buyer/advertiser, right?  Might be worth adding a word or two at the end of the tip above to specify that J - sure, edited.
+
 
 .. _monetize-data-marketplace-concept-rate-caps: 
 
@@ -190,16 +269,20 @@ Rate caps
 
 .. monetize-data-marketplace-concept-rate-caps-start
 
-A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand, will be reached more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand and will be reached more often in high cost environments.
 
 You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace.
 
 .. monetize-data-marketplace-concept-rate-caps-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
-.. TODO: Per Grace, "Consider not giving rate cap advice", specificallyy about the line "and should be met about twenty percent of the time, where percent of media costs are the other eighty percent."
+.. TODO: Per Grace, "Consider not giving rate cap advice", specificallyy about the line "and should be met about twenty percent of the time, where percent of media costs are the other eighty percent." J - the rate cap advice is in the inclusion and i put that include in a bunch of spots, including operators guide.
 
-.. TODO: Grace recommended including "You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace," but I'm not sure. I guess we have a few options: 1) include similar gestural guidance for percent of media costs and possibly other elements 2) add how tos for all of these 3)let the how to set up audience entries below do the work
+.. TODO: Grace recommended including "You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace," but I'm not sure. I guess we have a few options: 1) include similar gestural guidance for percent of media costs and possibly other elements 2) add how tos for all of these 3)let the how to set up audience entries below do the work J - third option for now.
+
 
 .. _monetize-data-marketplace-concept-rate-levels: 
 
@@ -208,7 +291,7 @@ Rate levels
 
 .. monetize-data-marketplace-concept-rate-levels-start
 
-Amperity assigns rate levels automatically depending on the type of audience sent to The Trade Desk.
+Amperity `assigns rate levels automatically <https://partner.thetradedesk.com/v3/portal/data/doc/DataRatesOverview>`__ |ext_link| depending on the type of audience sent to The Trade Desk.
 
 .. monetize-data-marketplace-concept-rate-levels-end
 
@@ -236,7 +319,8 @@ An advertiser rate level is assigned to custom audiences intended for specific a
 
 .. monetize-data-marketplace-concept-rate-level-advertiser-the-trade-desk-end
 
-.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify.
+.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify. J - This is correct. The Platform ID is a unique identifier for TTD and it can be for advertisers or partners. Whee. If we want to be extra clear, we update the UX to say "Platform ID for advertiser" and "Platform ID for partner" in our app interface.
+
 
 .. _monetize-data-marketplace-concept-rate-level-partner: 
 
@@ -257,7 +341,8 @@ A partner rate level is assigned to custom audiences intended for specific partn
 
 .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
-.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify.
+.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify. J - Nope. Same fix as advertiser ID.
+
 
 .. _monetize-data-marketplace-concept-rate-level-system: 
 
@@ -270,7 +355,7 @@ A system rate level is assigned automatically to a syndicated audience.
 
 .. monetize-data-marketplace-concept-rate-level-system-end
 
-.. TODO: Note from Grace: "this description is confusing, can it be built out more"
+.. TODO: Note from Grace: "this description is confusing, can it be built out more" J - this is a true statement. Added link to parent topic.
 
 
 .. _monetize-data-marketplace-concept-rate-types: 
@@ -287,6 +372,10 @@ A rate type defines the pricing model for an audience and establishes a consiste
 * :ref:`Flat-rate CPM <monetize-data-marketplace-concept-rate-type-cpm>`
 * :ref:`Hybrid <monetize-data-marketplace-concept-rate-type-hybrid>`
 * :ref:`Percent of media cost <monetize-data-marketplace-concept-rate-type-percent>`
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
 
 .. _monetize-data-marketplace-concept-rate-type-cpm: 
@@ -324,11 +413,9 @@ Percent of media cost
 
 A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
 
-.. note:: The value for percent of media costs may be $0.00.
-
 .. monetize-data-marketplace-concept-rate-type-percent-end
 
-.. TODO: James wanted to verify the $0.00 note above.  Also, there's a note earlier in percentage of media cost saying that rates lower than 10% must be approved by the trade desk -- should be reproduced here?
+.. TODO: James wanted to verify the $0.00 note above.  Also, there's a note earlier in percentage of media cost saying that rates lower than 10% must be approved by the trade desk -- should be reproduced here? J - can't find where I saw that, unable to verify
 
 .. _monetize-data-marketplace-concept-taxonomy: 
 
@@ -346,7 +433,7 @@ The Trade Desk recommends `designing and building a flat taxonomy <https://partn
 
 .. monetize-data-marketplace-concept-taxonomy-end
 
-.. TODO: Grace asked us to cut the mention of ROOT in the definition and the second two bullets. James seemed to have different thoughts. 
+.. TODO: Grace asked us to cut the mention of ROOT in the definition and the second two bullets. James seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
 
 .. _monetize-howtos:
 
@@ -439,6 +526,10 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
           * Enter the **Partner name** and **Partner ID** *or* enter the **Audience name** and **Audience ID**.
           * Set **Rate type** to **Hybrid** or **Flat CPM**
 
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+          :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
        Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
 
        When finished, click **Next**.
@@ -462,9 +553,10 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
 .. monetize-howtos-create-custom-audience-steps-end
 
-.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"?
+.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - we're fine here.
 
-.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look
+.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - the answer appears to be "No." so yeet this for now.
+
 
 .. _monetize-howtos-create-syndicated-audience:
 
@@ -545,15 +637,19 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
 
        #. Set the percent of media value and the cost per thousand (CPM) rate cap.
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+             :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
        When finished, click **Save and send**.
 
        .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page.
 
 .. monetize-howtos-create-syndicated-audience-steps-end
 
-.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"?
+.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - same
 
-.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look
+.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - same
 
 .. _monetize-howtos-delete-audience:
 
@@ -637,7 +733,6 @@ Customers who have not given consent to use their data for advertising purposes 
 
 .. monetize-howtos-global-optout-steps-end
 
-.. TODO: James had an idea about explaining how this interacts with CCPA/GDPR.
 
 .. _monetize-howtos-make-not-buyable:
 

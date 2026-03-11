@@ -37,8 +37,7 @@ Consumption overview
 
 .. amps-review-consumption-start
 
-Consumption is measured in Amps and Storage (TB).
-Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
+Consumption is measured in Amps and Storage (TB). Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
 
 The storage that is required to support those compute resources is measured in terabytes (TB).
 
