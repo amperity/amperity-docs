@@ -69,7 +69,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
      ,uit.product_name AS content_name
      ,'product' AS content_type
      ,'USD' AS currency
-     ,'email' AS email
+     ,'mc.email' AS email
      ,'CompletePayment' AS event
      ,'website' AS event_channel
      ,CAST(uit.order_id AS VARCHAR) AS event_id
