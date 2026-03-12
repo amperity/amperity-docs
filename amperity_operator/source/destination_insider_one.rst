@@ -1,6 +1,5 @@
 .. https://docs.amperity.com/operator/
 
-:orphan:
 
 .. |destination-name| replace:: Insider One
 
