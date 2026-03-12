@@ -71,7 +71,7 @@ Marketplace agreement
 
 .. monetize-requirement-marketplace-agreement-start
 
-A `marketplace agreement <https://partner.thetradedesk.com/v3/portal/data/doc/DataGetStarted3pProviderAudience#initial-setup>`__ |ext_link|. After the marketplace agreement is in place a **Brand ID**, **Provider ID**, and **Provider secret** is assigned.
+A `marketplace agreement <https://partner.thetradedesk.com/v3/portal/data/doc/DataGetStarted3pProviderAudience#initial-setup>`__ |ext_link|. After the marketplace agreement is in place a **Brand ID**, **Provider ID**, and **Provider secret** are assigned.
 
 .. monetize-requirement-marketplace-agreement-end
 
@@ -232,7 +232,7 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 .. monetize-data-marketplace-concept-data-rates-end
 
-.. TODO: Grace mentioned something here about nixing the tip yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it J - I think we keep it, but with clarifying edits. See above.
+.. TODO: PM mentioned something here about nixing the tip yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it J - I think we keep it, but with clarifying edits. See above.
 
 
 .. _monetize-data-marketplace-concept-percentage: 
@@ -279,9 +279,9 @@ You can set the cost per thousand impressions rate cap on the **Prepare data pro
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
    :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
-.. TODO: Per Grace, "Consider not giving rate cap advice", specificallyy about the line "and should be met about twenty percent of the time, where percent of media costs are the other eighty percent." J - the rate cap advice is in the inclusion and i put that include in a bunch of spots, including operators guide.
+.. TODO: Per PM, "Consider not giving rate cap advice", specificallyy about the line "and should be met about twenty percent of the time, where percent of media costs are the other eighty percent." J - the rate cap advice is in the inclusion and i put that include in a bunch of spots, including operators guide.
 
-.. TODO: Grace recommended including "You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace," but I'm not sure. I guess we have a few options: 1) include similar gestural guidance for percent of media costs and possibly other elements 2) add how tos for all of these 3)let the how to set up audience entries below do the work J - third option for now.
+.. TODO: PM recommended including "You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace," but I'm not sure. I guess we have a few options: 1) include similar gestural guidance for percent of media costs and possibly other elements 2) add how tos for all of these 3)let the how to set up audience entries below do the work J - third option for now.
 
 
 .. _monetize-data-marketplace-concept-rate-levels: 
@@ -319,7 +319,7 @@ An advertiser rate level is assigned to custom audiences intended for specific a
 
 .. monetize-data-marketplace-concept-rate-level-advertiser-the-trade-desk-end
 
-.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify. J - This is correct. The Platform ID is a unique identifier for TTD and it can be for advertisers or partners. Whee. If we want to be extra clear, we update the UX to say "Platform ID for advertiser" and "Platform ID for partner" in our app interface.
+.. TODO: PM suggested removing the note above about Platform ID. J wanted to verify. J - This is correct. The Platform ID is a unique identifier for TTD and it can be for advertisers or partners. Whee. If we want to be extra clear, we update the UX to say "Platform ID for advertiser" and "Platform ID for partner" in our app interface.
 
 
 .. _monetize-data-marketplace-concept-rate-level-partner: 
@@ -341,7 +341,7 @@ A partner rate level is assigned to custom audiences intended for specific partn
 
 .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
-.. TODO: Grace suggested removing the note above about Platform ID. James wanted to verify. J - Nope. Same fix as advertiser ID.
+.. TODO: PM suggested removing the note above about Platform ID. J wanted to verify. J - Nope. Same fix as advertiser ID.
 
 
 .. _monetize-data-marketplace-concept-rate-level-system: 
@@ -355,7 +355,7 @@ A system rate level is assigned automatically to a syndicated audience.
 
 .. monetize-data-marketplace-concept-rate-level-system-end
 
-.. TODO: Note from Grace: "this description is confusing, can it be built out more" J - this is a true statement. Added link to parent topic.
+.. TODO: Note from PM: "this description is confusing, can it be built out more" J - this is a true statement. Added link to parent topic.
 
 
 .. _monetize-data-marketplace-concept-rate-types: 
@@ -415,7 +415,7 @@ A percent of media cost rate defines a percentage applied to impressions that sc
 
 .. monetize-data-marketplace-concept-rate-type-percent-end
 
-.. TODO: James wanted to verify the $0.00 note above.  Also, there's a note earlier in percentage of media cost saying that rates lower than 10% must be approved by the trade desk -- should be reproduced here? J - can't find where I saw that, unable to verify
+.. TODO: J wanted to verify the $0.00 note above.  Also, there's a note earlier in percentage of media cost saying that rates lower than 10% must be approved by the trade desk -- should be reproduced here? J - can't find where I saw that, unable to verify
 
 .. _monetize-data-marketplace-concept-taxonomy: 
 
@@ -433,7 +433,7 @@ The Trade Desk recommends `designing and building a flat taxonomy <https://partn
 
 .. monetize-data-marketplace-concept-taxonomy-end
 
-.. TODO: Grace asked us to cut the mention of ROOT in the definition and the second two bullets. James seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
+.. TODO: PM asked us to cut the mention of ROOT in the definition and the second two bullets. J seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
 
 .. _monetize-howtos:
 
@@ -555,7 +555,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
 .. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - we're fine here.
 
-.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - the answer appears to be "No." so yeet this for now.
+.. TODO: J flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - the answer appears to be "No." so yeet this for now.
 
 
 .. _monetize-howtos-create-syndicated-audience:
@@ -649,7 +649,7 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
 
 .. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - same
 
-.. TODO: James flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - same
+.. TODO: J flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - same
 
 .. _monetize-howtos-delete-audience:
 
