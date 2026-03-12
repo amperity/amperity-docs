@@ -2267,6 +2267,14 @@ I
       :end-before: .. term-infutor-end
 
 
+.. _i-insider-one:
+
+**Insider One**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-insider-one-start
+      :end-before: .. term-insider-one-end
+
+
 .. _i-interaction-record:
 
 **interaction record**
