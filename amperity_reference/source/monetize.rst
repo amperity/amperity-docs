@@ -210,11 +210,6 @@ A cost per thousand (CPM) rate defines a flat rate per thousand impressions that
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
 
-.. TODO: Any note needed about use of USD in non-US markets? J - moved sentence to note, as it's TTD-specific, added some clarifying content (that's a copypaste of TTD's phrasing).
-
-.. TODO: Make the subheader Cost per thousand impressions? This causes it to wrap. J - I think we can leave the title as-is and the description is fine with the "impressions" clearly stated.
-
-
 .. _monetize-data-marketplace-concept-data-rates: 
 
 Data rates
@@ -231,9 +226,6 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
    Flat CPM rates are optional for custom audiences.
 
 .. monetize-data-marketplace-concept-data-rates-end
-
-.. TODO: PM mentioned something here about nixing the tip yes, the UI notes that hybrid is most common, but there are specific cases where flat CPM is better for custom. So either we adjust the tip or strike it J - I think we keep it, but with clarifying edits. See above.
-
 
 .. _monetize-data-marketplace-concept-percentage: 
 
@@ -258,10 +250,6 @@ A percentage of media costs rate defines a percentage applied to impressions tha
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
    :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
-
-.. TODO: "to prevent runaway costs" to the buyer/advertiser, right?  Might be worth adding a word or two at the end of the tip above to specify that J - sure, edited.
-
-
 .. _monetize-data-marketplace-concept-rate-caps: 
 
 Rate caps
@@ -278,11 +266,6 @@ You can set the cost per thousand impressions rate cap on the **Prepare data pro
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
    :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
-
-.. TODO: Per PM, "Consider not giving rate cap advice", specificallyy about the line "and should be met about twenty percent of the time, where percent of media costs are the other eighty percent." J - the rate cap advice is in the inclusion and i put that include in a bunch of spots, including operators guide.
-
-.. TODO: PM recommended including "You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace," but I'm not sure. I guess we have a few options: 1) include similar gestural guidance for percent of media costs and possibly other elements 2) add how tos for all of these 3)let the how to set up audience entries below do the work J - third option for now.
-
 
 .. _monetize-data-marketplace-concept-rate-levels: 
 
@@ -341,9 +324,6 @@ A partner rate level is assigned to custom audiences intended for specific partn
 
 .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
-.. TODO: PM suggested removing the note above about Platform ID. J wanted to verify. J - Nope. Same fix as advertiser ID.
-
-
 .. _monetize-data-marketplace-concept-rate-level-system: 
 
 System
@@ -354,9 +334,6 @@ System
 A system rate level is assigned automatically to a syndicated audience.
 
 .. monetize-data-marketplace-concept-rate-level-system-end
-
-.. TODO: Note from PM: "this description is confusing, can it be built out more" J - this is a true statement. Added link to parent topic.
-
 
 .. _monetize-data-marketplace-concept-rate-types: 
 
@@ -414,8 +391,6 @@ Percent of media cost
 A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
 
 .. monetize-data-marketplace-concept-rate-type-percent-end
-
-.. TODO: J wanted to verify the $0.00 note above.  Also, there's a note earlier in percentage of media cost saying that rates lower than 10% must be approved by the trade desk -- should be reproduced here? J - can't find where I saw that, unable to verify
 
 .. _monetize-data-marketplace-concept-taxonomy: 
 
@@ -553,11 +528,6 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
 .. monetize-howtos-create-custom-audience-steps-end
 
-.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - we're fine here.
-
-.. TODO: J flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - the answer appears to be "No." so yeet this for now.
-
-
 .. _monetize-howtos-create-syndicated-audience:
 
 Create syndicated audience
@@ -646,10 +616,6 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
        .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page.
 
 .. monetize-howtos-create-syndicated-audience-steps-end
-
-.. TODO: removed the note about asking DGO operator to configure new credential; should we link somewhere for guidance on "configure the credential settings"? J - same
-
-.. TODO: J flagged something about "subfolders for audience monetization or segments" but my notes for that are sparse and I can't remember, it was the end of a long call. Take a look J - same
 
 .. _monetize-howtos-delete-audience:
 
