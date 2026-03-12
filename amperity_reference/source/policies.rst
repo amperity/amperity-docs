@@ -426,7 +426,7 @@ The following sections describe the set of actions that may be assigned to users
       :widths: 8 20 72
       :header-rows: 0
 
-      * - |policy| 
+      * - |policy|
         - Allowed.
         - A user assigned to this policy can perform this action.
 
@@ -491,334 +491,333 @@ The following table lists the actions that are enabled within the **Sources** pa
      - DataGrid Admin
 
    * - View **Sources** page
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Run validations
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View data lineage
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View semantics
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - **Courier groups**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add courier group
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete courier group
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit courier group
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Run courier group
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Schedule courier group
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View courier groups
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - **Couriers**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Add courier
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete courier
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit courier
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Run courier
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View couriers
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View credentials
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
 
    * - **Domain tables**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add custom domain table
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete custom domain table
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete domain tables
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit custom domain table
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Make available to Stitch
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Publish to **Queries** page
-     - 
-     - 
-     - |policy|
+     -
+     -
+     -
      - |policy|
 
    * - View custom domain tables
-     - 
-     - 
+     -
+     -
      - |poliro|
      - |policy|
 
    * - View domain tables
-     - 
-     - 
+     -
+     -
      - |poliro|
      - |policy|
 
 
    * - **Feeds**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add feed
-     - 
-     - 
-     - |policy|
+     -
+     -
+     -
      - |policy|
 
    * - Delete feed
-     - 
-     - 
-     - |policy|
+     -
+     -
+     -
      - |policy|
 
    * - Edit feed
-     - 
-     - 
-     - |policy|
+     -
+     -
+     -
      - |policy|
 
    * - Load new data
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Make available to Stitch
-     - 
-     - 
-     - |policy|
+     -
+     -
+     -
      - |policy|
 
    * - View feeds
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
 
    * - **Ingest SQL**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add ingest query
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete ingest query
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit ingest query
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View ingest queries
-
-     - 
-     - 
+     -
+     -
      - |poliro|
      - |policy|
 
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
 
    * - **Shares**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add bridge
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete bridge
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit bridge
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Rename bridge
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Sync bridge
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Upload credential
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View bridges
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
 
    * - **Workflows**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Run workflow actions
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - View workflows
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
 .. policies-allowed-actions-sources-table-end
@@ -849,79 +848,79 @@ The following table shows which policies enable user actions within the **Stitch
 
    * - View **Stitch** page
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Open **Data Explorer**
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - **Stitch**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Configure Stitch settings
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Explore Amperity IDs
      - |polino|
-     - 
+     -
      - |polino|
      - |polino|
 
    * - Run Stitch
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Select previous Stitch runs
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View semantics
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View Stitch metrics
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View Stitch Report
-     - 
-     - 
-     - 
+     - |policy|
+     -
+     - |policy|
      - |policy|
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
-     - 
-     - 
+     - |poliro|
+     -
      - |policy|
      - |policy|
 
@@ -953,233 +952,233 @@ The following table shows which policies enable user actions within the **Custom
 
    * - View **Customer 360** page
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Enable segments and campaigns
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Open **Data Explorer**
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - **Database Editor**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
    * - Activate databases
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Activate tables
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Add tables
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Configure database settings
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete tables
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit tables
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Set as "Customer 360"
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Use SQL editor
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View databases and tables
      - |poliro|
-     - 
+     -
      - |poliro|
      - |policy|
 
 
    * - **Databases**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add databases
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete databases
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete uploaded file
      - |no-upload-policy|
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
 
    * - Edit databases
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Review validation reports
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Run databases
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Upload file
      - |no-upload-policy|
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
 
    * - View data lineage
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View databases and tables
      - |poliro|
-     - 
+     -
      - |poliro|
      - |policy|
 
 
    * - **Data exports**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Activate data export
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Add data export
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Delete data export
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Edit data export
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Select tables for data export
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View data exports
      - |poliro|
-     - 
+     -
      - |poliro|
      - |policy|
 
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
-     - 
-     - 
+     - |poliro|
+     -
      - |policy|
      - |policy|
 
 
    * - **Predictive models**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add event propensity model
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Add predicted affinity model
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Add predicted customer lifetime value model
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Open predictive models editor
-     - 
-     - 
-     - 
+     -
+     -
+     - |poliro|
      - |policy|
 
 .. policies-allowed-actions-databases-table-end
@@ -1210,207 +1209,225 @@ The following table shows which policies enable user actions within the **Querie
 
    * - View **Queries** page
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - **Queries**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Delete query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Download query results
      - |no-download-policy|
-     - 
+     -
      - |no-download-policy|
      - |no-download-policy|
 
    * - Edit query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
-   * - Manage folders
+   * - Add query folder
      - |policy|
-     - 
+     -
+     - |policy|
+     - |policy|
+
+   * - Delete query folder
+     - |policy|
+     -
+     - |policy|
+     - |policy|
+
+   * - Edit query folder
+     - |policy|
+     -
+     - |policy|
+     - |policy|
+
+   * - View query folders
+     - |policy|
+     -
      - |policy|
      - |policy|
 
    * - Search queries
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View all queries
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View large output queries
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
 
    * - **Query Editor**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Access AI Assistant
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Activate query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Add to orchestration
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Build query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Copy query results to clipboard
      - |no-download-policy|
-     - 
+     -
      - |no-download-policy|
      - |no-download-policy|
 
    * - Delete uploaded file
      - |no-upload-policy|
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
 
    * - Download query results
      - |no-download-policy|
-     - 
+     -
      - |no-download-policy|
      - |no-download-policy|
 
    * - Enable performance mode
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Enable query alerts
-     - 
-     - 
+     - |policy|
+     -
      - |policy|
      - |policy|
 
    * - Make available to segments and campaigns
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Open **Data Explorer**
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Open SQL Query Editor
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Open visual Query Editor
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Run query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Select database
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Upload file
      - |no-upload-policy|
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
 
    * - Use Spark SQL
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - View orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View query results
      - |polino|
-     - 
+     -
      - |polino|
      - |polino|
 
    * - View tables
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
      - |poliro|
-     - 
+     -
      - |policy|
      - |policy|
 
@@ -1441,151 +1458,175 @@ The following table shows which policies enable user actions within the **Segmen
      - DataGrid Admin
 
    * - View **Segments** page
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - **Segments**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
    * - Add segment
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Delete segment
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Download segment results
-     - 
+     -
      - |no-download-policy|
      - |no-download-policy|
      - |no-download-policy|
 
    * - Explore segment
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Explore customer records
-     - 
+     -
      - |polino|
      - |polino|
      - |polino|
 
-   * - Manage folders
-     - 
+   * - Add segment folder
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Delete segment folder
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Edit segment folder
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - View segment folders
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Open visual Segment Editor
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Open SQL Segment Editor
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Save segment as
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Search segments
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Set segment charts
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - View segments
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - View segment insights
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
 
    * - **Segment Editor**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add attributes to segment
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Add list from query
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Add list from upload
-     - 
-     - |policy|
-     - |policy|
-     - |policy|
+     -
+     - |no-upload-policy|
+     - |no-upload-policy|
+     - |no-upload-policy|
 
    * - Delete uploaded list
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
      - |no-upload-policy|
 
    * - Refresh segment insights
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Save segment
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Upload list
-     - 
+     -
      - |no-upload-policy|
      - |no-upload-policy|
      - |no-upload-policy|
 
+   * - Use AI Assistant
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
    * - View segment details
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - View tables
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
@@ -1617,171 +1658,325 @@ The following table shows which policies enable user actions within the **Campai
      - DataGrid Admin
 
    * - View **Campaigns** tab
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
 
    * - **Campaigns**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Analyze campaign results
-     - 
+     -
      - |poliro|
      - |poliro|
      - |policy|
 
    * - Archive campaign
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Delete campaign
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Download campaign recipients
-     - 
-     - |policy|
-     - |policy|
-     - |policy|
+     -
+     - |no-download-policy|
+     - |no-download-policy|
+     - |no-download-policy|
 
    * - Download campaign results
-     - 
-     - |policy|
-     - |policy|
-     - |policy|
+     -
+     - |no-download-policy|
+     - |no-download-policy|
+     - |no-download-policy|
 
    * - Duplicate campaign
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Enable **Campaign Recipients** table
-     - 
-     - 
-     - 
+     -
+     -
+     -
      - |policy|
 
    * - Open campaign editor
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Search campaigns
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - View campaign history
-     - 
+     -
      - |poliro|
      - |poliro|
      - |policy|
 
    * - View one-time campaigns
-     - 
+     -
      - |poliro|
      - |poliro|
      - |policy|
 
    * - View recurring campaigns
-     - 
+     -
      - |poliro|
      - |poliro|
      - |policy|
 
 
    * - **Campaign Editor**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Choose destinations
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Edit campaign
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Edit destination attributes
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Schedule campaign
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Set external campaign launch date
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Use segments as audience
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Use segments as exclusion lists
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - Use segments as sub-audiences
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
    * - View delivery summary
-     - 
+     -
      - |policy|
      - |policy|
      - |policy|
 
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
-     - 
+     -
      - |poliro|
      - |policy|
      - |policy|
 
 .. policies-allowed-actions-campaigns-table-end
+
+
+.. _policies-allowed-actions-journeys:
+
+Journeys
+--------------------------------------------------
+
+.. policies-allowed-actions-journeys-start
+
+The following table shows which policies enable user actions within the **Journeys** tab on the **Activations** page.
+
+.. policies-allowed-actions-journeys-end
+
+.. policies-allowed-actions-journeys-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - View **Journeys** page
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - **Journeys**
+     -
+     -
+     -
+     -
+
+   * - Add journey
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Delete journey
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Edit journey
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - View journeys
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Access campaigns
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Access segments
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - **Notifications**
+     -
+     -
+     -
+     -
+
+   * - View detailed errors
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - View notifications
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+.. policies-allowed-actions-journeys-table-end
+
+
+.. _policies-allowed-actions-audience-monetization:
+
+Audience Monetization
+--------------------------------------------------
+
+.. policies-allowed-actions-audience-monetization-start
+
+The following table shows which policies enable user actions within the **Audience Monetization** tab on the **Activations** page. Audience monetization is available to the **DataGrid Administrator** policy by default. The **DataGrid Operator** may be granted access using the **Audience Monetization access** add-on policy. Creating and editing audiences also requires access to segments.
+
+.. policies-allowed-actions-audience-monetization-end
+
+.. policies-allowed-actions-audience-monetization-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - View **Audience Monetization** page
+     -
+     -
+     - |polius|
+     - |policy|
+
+   * - **Audience Monetization**
+     -
+     -
+     -
+     -
+
+   * - Add audience
+     -
+     -
+     - |polius|
+     - |policy|
+
+   * - Edit audience
+     -
+     -
+     - |polius|
+     - |policy|
+
+   * - View audiences
+     -
+     -
+     - |polius|
+     - |policy|
+
+   * - Access segments
+     -
+     -
+     - |polius|
+     - |policy|
+
+.. policies-allowed-actions-audience-monetization-table-end
 
 
 .. _policies-allowed-actions-orchestrations:
@@ -1809,75 +2004,75 @@ The following table shows which policies enable user actions within the **Orches
 
    * - View **Orchestrations** tab
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - View destinations
      - |poliro|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Orchestrations**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Assign database exports
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Assign queries
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Delete orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Edit orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Run orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Search orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View orchestrations
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View query
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
@@ -1910,247 +2105,247 @@ The following table shows which policies enable user actions within the **Destin
 
    * - View **Destinations** page
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Destinations**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Add destination
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Assign data template
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Delete destination
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Edit destination
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View destinations
      - |poliro|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Data templates**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add data template
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Assign to campaign
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Assign to orchestration
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Delete data template
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Edit data template
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View data templates
      - |poliro|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Orchestration groups**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add orchestration group
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Delete orchestration group
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Edit orchestration group
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Run orchestration group
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View orchestration groups
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
 
    * - **Profile API**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add endpoint
-     - 
-     - 
+     -
+     -
      - |poliky|
-     - |policy|
+     - |poliky|
 
    * - Delete endpoint
-     - 
-     - 
+     -
+     -
      - |poliky|
-     - |policy|
+     - |poliky|
 
    * - Edit endpoint
-     - 
-     - 
+     -
+     -
      - |poliky|
-     - |policy|
+     - |poliky|
 
    * - Run endpoint
-     - 
-     - 
+     -
+     -
      - |poliky|
-     - |policy|
+     - |poliky|
 
    * - Set refresh schedule
-     - 
-     - 
+     -
+     -
      - |poliky|
-     - |policy|
+     - |poliky|
 
    * - View associated query
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View Profile API endpoints
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
 
    * - **Shares**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add bridge
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Delete bridge
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Edit bridge
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Rename bridge
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Sync bridge
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - Upload credential
-     - 
-     - 
-     - 
+     -
+     -
+     - |policy|
      - |policy|
 
    * - View bridges
-     - 
-     - 
+     - |poliro|
+     -
      - |policy|
      - |policy|
 
 
    * - **Notifications**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - View detailed errors
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View notifications
      - |poliro|
-     - 
+     -
      - |policy|
      - |policy|
 
@@ -2181,8 +2376,8 @@ The following table shows which policies enable user actions within the **Settin
      - DataGrid Admin
 
    * - View **Settings** page
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
@@ -2193,32 +2388,32 @@ The following table shows which policies enable user actions within the **Settin
      - |policy|
 
    * - View :ref:`AmpAI <policies-allowed-actions-settings-ampai>` tab
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View :ref:`Credentials <policies-allowed-actions-settings-credentials>` tab
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View :ref:`Integrations <policies-allowed-actions-settings-integrations>` tab
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View :ref:`Sandboxes <policies-allowed-actions-settings-sandboxes>` tab
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View :ref:`Security <policies-allowed-actions-settings-security>` tab
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |policy|
      - |policy|
 
@@ -2255,15 +2450,15 @@ The **Activity log** tab shows records of :doc:`all user activity that occured i
      - DataGrid Admin
 
    * - **Activity log**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Download activity logs
      - |polius|
      - |polius|
-     - |polius|
+     - |policy|
      - |policy|
 
    * - View activity logs
@@ -2299,26 +2494,44 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      - DataGrid Admin
 
    * - **AmpAI**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Enable AmpAI
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Disable AmpAI
-     - 
-     - 
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - Edit custom prompts
+     -
+     -
      - |policy|
      - |policy|
 
    * - View AI conversations
-     - 
-     - 
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - View AI assets
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - Edit AI assets
+     -
+     -
      - |policy|
      - |policy|
 
@@ -2349,32 +2562,32 @@ The **Credentials** tab shows a list of credentials that have been configured fo
      - DataGrid Admin
 
    * - **Credentials**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Delete credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - Edit credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
    * - View credential
-     - 
-     - 
+     -
+     -
      - |policy|
      - |policy|
 
@@ -2407,14 +2620,32 @@ The **Integrations** tab has the following integrations:
      - DataGrid Admin
 
    * - **Integrations**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Connect Slack workspace
-     - 
-     - 
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - View BI Connect settings
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - View Databricks connections
+     -
+     -
+     - |policy|
+     - |policy|
+
+   * - Edit Databricks connections
+     -
+     -
      - |policy|
      - |policy|
 
@@ -2447,14 +2678,14 @@ The **Sandboxes** tab is available when a user is assigned the **Allow sandbox a
      - DataGrid Admin
 
    * - **Sandboxes**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Create sandbox
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
@@ -2489,86 +2720,86 @@ The **Security** tab has the following settings groups:
      - DataGrid Admin
 
    * - **API keys**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Generate API token
-     - 
-     - 
      - |poliky|
-     - |policy|
+     - |poliky|
+     - |poliky|
+     - |poliky|
 
    * - Regenerate API token
-     - 
-     - 
      - |poliky|
-     - |policy|
+     - |poliky|
+     - |poliky|
+     - |poliky|
 
    * - View API tokens
-     - 
-     - 
      - |poliky|
-     - |policy|
+     - |poliky|
+     - |poliky|
+     - |poliky|
 
    * - **Resource groups**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add resource group
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - Delete resource group
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - Edit resource group
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - View resource groups
-     - 
-     - 
+     - |policy|
+     - |policy|
      - |poliro|
      - |policy|
 
    * - **SSO group mapping**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add SSO group mapping
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - Delete SSO group mapping
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - Edit SSO group mapping
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
    * - View SSO group mapping
-     - 
-     - 
+     - |polius|
+     - |polius|
      - |polius|
      - |policy|
 
@@ -2599,10 +2830,10 @@ The **Users** tab is available when a user is assigned the **Allow user administ
      - DataGrid Admin
 
    * - **Manage users**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Add users
      - |polius|
@@ -2668,31 +2899,31 @@ The following table shows which policies enable user actions within the **Workfl
 
    * - View **Workflows** page
      - |policy|
-     - 
+     - |allowed-read-only-actions-icon|
      - |policy|
      - |policy|
 
    * - **Workflows**
-     - 
-     - 
-     - 
-     - 
+     -
+     -
+     -
+     -
 
    * - Configure workflow alerts
      - |policy|
-     - 
+     - |policy|
      - |policy|
      - |policy|
 
    * - Run workflow actions
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - View workflows
      - |policy|
-     - 
+     - |allowed-read-only-actions-icon|
      - |policy|
      - |policy|
 
@@ -2724,25 +2955,25 @@ The following table shows which policies enable user actions within the **Data E
 
    * - Open **Data Explorer**
      - |policy|
-     - 
+     -
      - |policy|
      - |policy|
 
    * - Explore data
      - |polino|
-     - 
+     -
      - |polino|
      - |polino|
 
    * - Select database
      - |poliro|
-     - 
+     -
      - |poliro|
      - |policy|
 
    * - View tables
      - |poliro|
-     - 
+     -
      - |poliro|
      - |policy|
 
@@ -2756,7 +2987,7 @@ Sandboxes
 
 .. policies-allowed-actions-sandboxes-start
 
-The following table shows which policies enable user actions within sandboxes. The table 
+The following table shows which policies enable user actions within sandboxes. The table
 
 .. policies-allowed-actions-sandboxes-end
 
@@ -2831,58 +3062,58 @@ The following table shows which policies can perform user actions within sandbox
 
 
    * - Access any sandbox
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
 
    * - Access owned sandbox
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-limited|
      - |policy-sandbox-limited|
 
 
    * - Add sandboxes
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-limited|
      - |policy-sandbox-limited|
 
    * - Configure Amperity in sandbox
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
    * - Delete sandbox
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
    * - Delete sandbox on promote
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-validation-required|
      - |policy-sandbox-validation-required|
 
    * - Pull from production
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
    * - Push to production
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-validation-required|
      - |policy-sandbox-validation-required|
 
    * - Manage sandboxes
-     - 
-     - 
+     -
+     -
      - |policy-sandbox-allow-admin|
      - |policy-sandbox-allow-admin|
 
