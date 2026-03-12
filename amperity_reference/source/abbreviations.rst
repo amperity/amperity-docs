@@ -171,6 +171,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Google Cloud Platform
    * - **GDPR**
      - General Data Protection Regulation
+   * - **GMP**
+     - Growth Management Platform
    * - **GMT**
      - Greenwich Mean Time
    * - **GPP**

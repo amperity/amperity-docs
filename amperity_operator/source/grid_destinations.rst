@@ -198,6 +198,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_infutor
 
+   .. grid-item-card:: Insider One
+      :link-type: doc
+      :link: destination_insider_one
+
    .. grid-item-card:: Klaviyo
       :link-type: doc
       :link: destination_klaviyo
@@ -432,6 +436,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Google Customer Match <destination_google_customer_match>
    HubSpot <destination_hubspot>
    Infutor <destination_infutor>
+   Insider One <destination_insider_one>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>

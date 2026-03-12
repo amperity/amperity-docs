@@ -3345,6 +3345,15 @@ An ingest query is a SQL statement that runs against data before loading data to
 .. term-ingest-service-end
 
 
+**Insider One**
+
+.. term-insider-one-start
+
+Insider One is a growth management platform (GMP) for marketers. Personalize user experiences across web, app, web push, email, and SMS. Use advanced segmentation, behavioral insights, product recommendations and active communication widgets to boost customer engagement and conversions.
+
+.. term-insider-one-end
+
+
 **Instagram**
 
 .. term-instagram-start
