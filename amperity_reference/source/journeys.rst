@@ -228,7 +228,32 @@ Goal conditions are defined using a segment. One or more segments that define go
 
 .. journeys-goal-conditions-end
 
-.. TODO: Add re-entry to journeys set up
+.. _journeys-allow-reentry:
+
+Allow re-entry?
+--------------------------------------------------
+
+.. journeys-allow-reentry-start
+
+If a journey is set to recur, you can allow the same customer to re-enter the journey on its next run if the customer has both previously exited the journey and once again qualifies for the inclusion segment.
+
+.. journeys-allow-reentry-note-start
+
+.. note:: When a journey is set to run on a recurring schedule, only customers who have newly qualified for the **inclusion** segment since the last run will enter the journey.
+
+   For example, if the segment had 1,500 members at launch, all 1,500 would enter the journey.
+
+   On the next run, if the segment has grown to 1,700, only the 200 new members--those who joined the segment after the previous run--are guaranteed to be included.
+
+   If you have selected **Allow re-entry** customers who have previously exited the journey must re-qualify for the inclusion segment. For example, if the segment is based on a time window, such as "purchased in the last 7 days", and they meet the criteria again, they can re-enter.
+
+   To prevent this, use an **exclusion** segment to filter out users who have already participated, or who meet other disqualifying conditions.
+
+.. journeys-allow-reentry-note-end
+
+.. journeys-allow-reentry-end
+
+.. TODO: reproduce edits in allow re-entry section below
 
 .. _journeys-canvas:
 
@@ -507,9 +532,9 @@ Journey measurement
 
 .. journeys-measurement-overview-start
 
-.. TODO: Make the following definition a shared term
-
-Journey measurement provides insights into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-journey-measurement-start
+   :end-before: .. term-journey-measurement-end
 
 .. TODO: make image
 
@@ -672,7 +697,7 @@ The Journey Travel Log (JTL) provides detailed tracking of every traveler's jour
 
 .. TODO: delete type column?  ABC vs XXX? Also, ABS in app. Alphabetical Order?
 
-**JTL Schema:**
+**Travel log schema:**
 
 .. list-table::
    :widths: 25 20 55
@@ -731,7 +756,7 @@ The Journey Travel Log (JTL) provides detailed tracking of every traveler's jour
      - Pipe-separated list of exit segment IDs
    
 
-**JTL egress**
+**Journey Travel Log export**
 
 Travel log data can be exported to external systems for advanced analysis:
 
@@ -744,7 +769,7 @@ Exporting automatically enriches metadata with node details, and includes exit i
 
 Only exports previously unsent entries (tracked via egress_sent_at). 
 
-JTL egress supports batch export to data warehouses.
+Journey Travel Log export supports batch export to data warehouses.
 
 .. journeys-measurement-travel-log-end
 
@@ -1030,10 +1055,12 @@ If a journey is set to recur, you can allow the same customer to re-enter the jo
 
 **To allow re-entry into a journey**
 
+You can allow re-entry during the initial journey setup as well as toggle it on or off later.
+
 .. journeys-howtos-allow-reentry-start
 
-#. From the **Journeys** canvas, open the **Journey setup** sidebar.
-#. Click the box on the lower left for **Allow re-entry**.
+#. From the **Journeys** canvas, click into the **Journey start** node.
+#. Click the **Allow re-entry** box.
 
 .. journeys-howtos-allow-reentry-end
 
@@ -1051,6 +1078,7 @@ If a journey is set to recur, you can allow the same customer to re-enter the jo
 
 .. journeys-howtos-allow-reentry-note-end
 
+.. TODO: reproduce edits in allow re-entry section above
 
 .. _journeys-howtos-delete:
 
