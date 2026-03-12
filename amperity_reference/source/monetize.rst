@@ -18,7 +18,98 @@ Audience monetization
 
 Package first-party data as audience products available in data marketplaces, where advertisers can pay to use these audiences in their campaigns.
 
+Audience monetization:
+
+* Requires signed partner marketplace agreements
+* Is admin-enabled and can only be used by admins and datagrid operators
+* Requires Amps pricing turned on, and consumes Amps based on activation volume
+
 .. monetize-about-end
+
+.. monetize-marketplaces-start
+
+Use the **Monetization** page to send custom or syndicated audiences based on new or existing audience segments to the following marketplaces:
+
+* The Trade Desk
+
+.. monetize-marketplaces-end
+
+
+.. _monetize-requirements:
+
+Requirements
+==================================================
+
+.. monetize-requirements-start
+
+Audience monetization has the following requirements:
+
+* :ref:`Amps <monetize-requirement-amps>`
+* :ref:`Marketplace agreement <monetize-requirement-marketplace-agreement>`
+* :ref:`Standard policies <monetize-requirement-standard-policies>`
+* :ref:`UID2 <monetize-requirement-uid2>`
+
+.. monetize-requirements-end
+
+
+.. _monetize-requirement-amps:
+
+Amps consumption
+--------------------------------------------------
+
+.. monetize-requirement-amps-start
+
+Your tenant must be configured for `Amps consumption <../reference/amps.html>`__.
+
+.. monetize-requirement-amps-end
+
+
+.. _monetize-requirement-marketplace-agreement:
+
+Marketplace agreement
+--------------------------------------------------
+
+.. monetize-requirement-marketplace-agreement-start
+
+A `marketplace agreement <https://partner.thetradedesk.com/v3/portal/data/doc/DataGetStarted3pProviderAudience#initial-setup>`__ |ext_link|. After the marketplace agreement is in place a **Brand ID**, **Provider ID**, and **Provider secret** are assigned.
+
+.. monetize-requirement-marketplace-agreement-end
+
+
+.. _monetize-requirement-standard-policies:
+
+Standard policies
+--------------------------------------------------
+
+.. monetize-requirement-standard-policies-start
+
+Audience monetization must be configured by a `Datagrid Administrator <../reference/policies.html#datagrid-administrator>`__ *or* a `Datagrid Operator <../reference/policies.html#datagrid-operator>`__ with the `Audience monetization access <../reference/policies.html#audience-monetization-access>`__ policy option enabled.
+
+.. important:: Audience monetization cannot be configured in a sandbox.
+
+.. monetize-requirement-standard-policies-end
+
+
+.. _monetize-requirement-uid2:
+
+UID2
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-overview-start
+   :end-before: .. uid2-overview-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-get-access-start
+   :end-before: .. uid2-prerequisite-get-access-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-participate-start
+   :end-before: .. uid2-prerequisite-participate-end
+
+.. include:: ../../amperity_reference/source/uid2.rst
+   :start-after: .. uid2-prerequisite-get-credentials-start
+   :end-before: .. uid2-prerequisite-get-credentials-end
 
 
 .. _monetize-audience-types:
@@ -52,17 +143,9 @@ Syndicated audiences
 
 .. monetize-audience-type-syndicated-start
 
-A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer not on your blocklist.
+A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer, with the exception of buyers assigned a `Block bid adjustment type <https://partner.thetradedesk.com/v3/portal/api/doc/BidListDefault>`__ |ext_link|.
 
 .. monetize-audience-type-syndicated-end
-
-.. monetize-audience-types-marketplaces-start
-
-Use the **Monetization** page to send custom or syndicated audiences based on new or existing audience segments to the following marketplaces:
-
-* The Trade Desk
-
-.. monetize-audience-types-marketplaces-end
 
 
 .. _monetize-data-marketplace-concepts: 
@@ -93,9 +176,11 @@ Buyable?
 
 .. monetize-data-marketplace-concept-buyable-start
 
-All audiences are buyable by default when managed by Amperity.
+All audiences you make available in a data marketplace via Amperity are buyable by default.
 
-A non-buyable audience cannot appear in the data marketplace. Any audience in Amperity can be made non-buyable. Open the segment in the **Audience monetization** page, and then click **Make not buyable**.
+Any audience in Amperity can be made non-buyable. Open the segment in the **Audience monetization** page, and then click **Make not buyable**.
+
+A non-buyable audience will not be available in the data marketplace for further purchase by advertisers, but any active campaigns using that audience will still be able to use it for the duration of the campaign.
 
 .. monetize-data-marketplace-concept-buyable-end
 
@@ -113,16 +198,17 @@ Cost per thousand (CPM)
 
 .. monetize-data-marketplace-concept-cpm-start
 
-A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience. A CPM rate must be in United States dollars (USD) and must be an amount, such as $5.50 or $3.00.
+A cost per thousand (CPM) rate defines a flat rate per thousand impressions that advertisers will pay for any impressions served for a given audience.
 
 .. monetize-data-marketplace-concept-cpm-end
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-start
 
-.. note:: CPM rates lower than $5 require approval by The Trade Desk.
+.. note:: A CPM rate `must be in United States dollars (USD) <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| to ensure your partner account and all associated advertisers use the same currency: USD. A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount in USD, such as $5.50 or $3.00.
+
+   CPM rates lower than $5 require approval by The Trade Desk.
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
-
 
 .. _monetize-data-marketplace-concept-data-rates: 
 
@@ -135,14 +221,11 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 .. note:: The first syndicated rate submission for a brand requires approval.
 
-.. tip:: Hybrid rates are recommended for all audiences.
+.. tip:: Hybrid rates are recommended for syndicated audiences. An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
 
-An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
-
-A rate cap protects against excessive costs, especially on premium channels. An effective cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+   Flat CPM rates are optional for custom audiences.
 
 .. monetize-data-marketplace-concept-data-rates-end
-
 
 .. _monetize-data-marketplace-concept-percentage: 
 
@@ -151,18 +234,21 @@ Percentage of media costs
 
 .. monetize-data-marketplace-concept-percentage-start
 
-A percentage of media costs rate defines a percentage applied to impressions that scales with the cost of media across channels. A percent of media cost is a decimal, such as 0.12 or 0.25, which represents 12% or 25%.
+A percentage of media costs rate defines a percentage applied to impressions that scales with the cost of media across channels.
 
-.. tip:: Apply a rate cap in conjunction with a percent of media cost to prevent runaway costs. 
+.. tip:: Apply a rate cap in conjunction with a percent of media cost to prevent runaway costs for buyers and advertisers. 
 
 .. monetize-data-marketplace-concept-percentage-end
 
 .. monetize-data-marketplace-concept-percentage-the-trade-desk-start
 
-.. note:: Percentages of media cost below 0.10 require approval by The Trade Desk.
+.. note:: Percentages of media cost below 10% require approval by The Trade Desk.
 
 .. monetize-data-marketplace-concept-percentage-the-trade-desk-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
 .. _monetize-data-marketplace-concept-rate-caps: 
 
@@ -171,10 +257,15 @@ Rate caps
 
 .. monetize-data-marketplace-concept-rate-caps-start
 
-A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand, should be seen more often in high cost environments, and should be met about twenty percent of the time, where percent of media costs are the other eighty percent.
+A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand and will be reached more often in high cost environments.
+
+You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace.
 
 .. monetize-data-marketplace-concept-rate-caps-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
 .. _monetize-data-marketplace-concept-rate-levels: 
 
@@ -183,7 +274,7 @@ Rate levels
 
 .. monetize-data-marketplace-concept-rate-levels-start
 
-Amperity assigns rate levels automatically depending on the type of audience sent to The Trade Desk.
+Amperity `assigns rate levels automatically <https://partner.thetradedesk.com/v3/portal/data/doc/DataRatesOverview>`__ |ext_link| depending on the type of audience sent to The Trade Desk.
 
 .. monetize-data-marketplace-concept-rate-levels-end
 
@@ -199,7 +290,7 @@ Advertiser
 
 .. monetize-data-marketplace-concept-rate-level-advertiser-start
 
-An advertiser rate level is assigned to custom audiences intended for specific advertisers. An advertiser rate level is assigned to a specific **Advertiser ID**, which allows an advertiser to access the audience at the configured data rate.
+An advertiser rate level is assigned to custom audiences intended for specific advertisers. An advertiser rate level is assigned to a specific **Advertiser ID**, which allows an advertiser to access the audience at the configured data rate via their marketplace seat.
 
 .. monetize-data-marketplace-concept-rate-level-advertiser-end
 
@@ -210,6 +301,8 @@ An advertiser rate level is assigned to custom audiences intended for specific a
    The value of **Advertiser ID** may not be empty for advertiser rate levels.
 
 .. monetize-data-marketplace-concept-rate-level-advertiser-the-trade-desk-end
+
+.. TODO: PM suggested removing the note above about Platform ID. J wanted to verify. J - This is correct. The Platform ID is a unique identifier for TTD and it can be for advertisers or partners. Whee. If we want to be extra clear, we update the UX to say "Platform ID for advertiser" and "Platform ID for partner" in our app interface.
 
 
 .. _monetize-data-marketplace-concept-rate-level-partner: 
@@ -231,7 +324,6 @@ A partner rate level is assigned to custom audiences intended for specific partn
 
 .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
-
 .. _monetize-data-marketplace-concept-rate-level-system: 
 
 System
@@ -242,7 +334,6 @@ System
 A system rate level is assigned automatically to a syndicated audience.
 
 .. monetize-data-marketplace-concept-rate-level-system-end
-
 
 .. _monetize-data-marketplace-concept-rate-types: 
 
@@ -255,19 +346,23 @@ A rate type defines the pricing model for an audience and establishes a consiste
 
 .. monetize-data-marketplace-concept-rate-types-end
 
-* :ref:`CPM <monetize-data-marketplace-concept-rate-type-cpm>`
+* :ref:`Flat-rate CPM <monetize-data-marketplace-concept-rate-type-cpm>`
 * :ref:`Hybrid <monetize-data-marketplace-concept-rate-type-hybrid>`
 * :ref:`Percent of media cost <monetize-data-marketplace-concept-rate-type-percent>`
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+   :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
 
 .. _monetize-data-marketplace-concept-rate-type-cpm: 
 
-CPM
+Flat-rate CPM
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. monetize-data-marketplace-concept-rate-type-cpm-start
 
-A cost per thousand (CPM) rate defines a maximum rate to prevent runaway costs for an audience.
+A cost per thousand (CPM) rate defines defines a flat rate per thousand impressions that advertisers will pay for any impressions served from a given audience..
 
 .. monetize-data-marketplace-concept-rate-type-cpm-end
 
@@ -279,9 +374,9 @@ Hybrid
 
 .. monetize-data-marketplace-concept-rate-type-hybrid-start
 
-A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. All audiences sent from Amperity should be configured with a hybrid data rate.
+A hybrid rate blends a rate that scales with the cost of media across ad environments with a maximum rate that prevents runaway costs. When configuring, you must set both a percent of media cost rate *and* a cost per thousand (CPM) rate cap.
 
-.. note:: All syndicated audiences are assigned a hybrid rate type. A cost per thousand (CPM) rate *and* a percent of media cost rate must be provided.
+.. note:: All syndicated audiences are assigned a hybrid rate type.
 
 .. monetize-data-marketplace-concept-rate-type-hybrid-end
 
@@ -295,10 +390,7 @@ Percent of media cost
 
 A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
 
-.. note:: The value for percent of media costs may be $0.00.
-
 .. monetize-data-marketplace-concept-rate-type-percent-end
-
 
 .. _monetize-data-marketplace-concept-taxonomy: 
 
@@ -316,6 +408,7 @@ The Trade Desk recommends `designing and building a flat taxonomy <https://partn
 
 .. monetize-data-marketplace-concept-taxonomy-end
 
+.. TODO: PM asked us to cut the mention of ROOT in the definition and the second two bullets. J seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
 
 .. _monetize-howtos:
 
@@ -333,6 +426,7 @@ Tasks related to audience monetization in Amperity:
 * :ref:`monetize-howtos-create-custom-audience`
 * :ref:`monetize-howtos-create-syndicated-audience`
 * :ref:`monetize-howtos-delete-audience`
+* :ref:`monetize-howtos-edit-audience`
 * :ref:`monetize-howtos-edit-refresh-cadence`
 * :ref:`monetize-howtos-global-optout`
 * :ref:`monetize-howtos-make-not-buyable`
@@ -399,9 +493,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html#configure-credentials>`__.
-
-          .. note:: Ask your **Datagrid Operator** for help configuring credentials for a marketplace connection.
+       #. Create a new connection to a marketplace.
 
           Click **Connect**, select a new connection, configure the credential settings and marketplace settings:
 
@@ -409,10 +501,13 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
           * Enter the **Partner name** and **Partner ID** *or* enter the **Audience name** and **Audience ID**.
           * Set **Rate type** to **Hybrid** or **Flat CPM**
 
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+          :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
        Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
 
        When finished, click **Next**.
-
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -425,16 +520,13 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
           .. tip:: On the **Prepare data products** page, each segment name defaults to the Amperity-defined title. Renaming the segments or adding a description helps advertisers better understand what kind of audience is in the segment.
 
-       #. Set the percent of media value and the cost per thousand (CPM) rate cap.
+       #. Set the values for percent of media value and the cost per thousand (CPM) rate cap if your rate type is hybrid, or set the flat-rate CPM if your rate type is flat-rate CPM.
 
        When finished, click **Save and send**.
 
-       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
-
-       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
+       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page.
 
 .. monetize-howtos-create-custom-audience-steps-end
-
 
 .. _monetize-howtos-create-syndicated-audience:
 
@@ -494,16 +586,13 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
        Do one of the following:
 
        #. Select an existing marketplace connection.
-       #. `Create a new connection to a marketplace <../operator/monetize_the_trade_desk_marketplace.html#configure-credentials>`__.
-
-          .. note:: Ask your **Datagrid Operator** for help configuring the credentials for a marketplace connection.
+       #. Create a new connection to a marketplace.
 
           Click **Connect**, select a new connection, configure the credential settings and marketplace settings, and then click **Save**
 
        Set a cadence and choose the date on which Amperity will start delivering audiences to the marketplace.
 
        When finished, click **Next**.
-
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -518,14 +607,15 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
 
        #. Set the percent of media value and the cost per thousand (CPM) rate cap.
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+             :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
        When finished, click **Save and send**.
 
-       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page. 
-
-       .. caution:: Segments sent to data marketplaces cannot be edited while in use by an advertiser's campaign.
+       .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page.
 
 .. monetize-howtos-create-syndicated-audience-steps-end
-
 
 .. _monetize-howtos-delete-audience:
 
@@ -534,7 +624,9 @@ Delete audience
 
 .. monetize-howtos-delete-audience-start
 
-You can delete an audience and remove it from the date markteplace.
+You can delete an audience and remove it from the Amperity user interface.
+
+.. warning:: Deleting an audience from Amperity does not remove it from the data marketplace. If you want to remove it from the marketplace, be sure to make the audience non-buyable before deleting it from the Amperity user interface.
 
 .. monetize-howtos-delete-audience-end
 
@@ -546,6 +638,18 @@ You can delete an audience and remove it from the date markteplace.
 #. Click the |fa-kebab| icon and select **Delete**.
 
 .. monetize-howtos-delete-audience-steps-end
+
+
+.. _monetize-howtos-edit-audience:
+
+Edit audience
+--------------------------------------------------
+
+.. monetize-howtos-edit-audience-start
+
+Once you have sent and audience to a data marketplace, you are unable to edit its configuration, other than to change the refresh cadence.
+
+.. monetize-howtos-edit-audience-end
 
 
 .. _monetize-howtos-edit-refresh-cadence:

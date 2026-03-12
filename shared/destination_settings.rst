@@ -3004,7 +3004,7 @@ Your brand must have a UID 2.0 agreement in-place with The Trade Desk before con
 
 .. vale off
 
-**THE TRADE DESK: 3P MARKETPLACE**
+**THE TRADE DESK: 3P MARKETPLACE**, **Audience Monetization**
 
 .. vale on
 
@@ -3022,6 +3022,13 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 .. setting-the-trade-desk-3p-segment-taxonomy-id-end
 
+**Best practices for rate caps and percentages of media costs**
+
+.. setting-the-trade-desk-marketplace-best-practices-start
+
+Talk to your The Trade Desk representative for `more information about defining percentage of media costs and effective rate caps <https://assets.thetradedesk.com/assets/documents/Onboarding-Guide-Audience-Data-Providers.pdf>`__ |ext_link| for your audiences. 
+
+.. setting-the-trade-desk-marketplace-best-practices-end
 
 
 

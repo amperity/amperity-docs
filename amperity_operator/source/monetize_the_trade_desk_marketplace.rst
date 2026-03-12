@@ -145,6 +145,10 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
 
        Amperity uses the `POST /v3/datarate/batch <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| endpoint to send data rates for processing and approval.
 
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
+             :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
        The following settings define the data rates sent for approval. Depending on the type of audience--custom or syndicated--and the intended consumer--partner or advertiser--some combination of the following settings define the data rate sent for approval.
 
 
@@ -273,7 +277,9 @@ Get details
           :alt: Detail 1.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../amperity_reference/source/uid2.rst
+     - **UID2**
+
+       .. include:: ../../amperity_reference/source/uid2.rst
           :start-after: .. uid2-overview-start
           :end-before: .. uid2-overview-end
 
@@ -295,7 +301,12 @@ Get details
           :alt: Detail 3.
           :align: center
           :class: no-scaled-link
-     - A `marketplace agreement <https://partner.thetradedesk.com/v3/portal/data/doc/DataGetStarted3pProviderAudience#initial-setup>`__ |ext_link|. After the marketplace agreement is in place a **Brand ID**, **Provider ID**, and **Provider secret** is assigned.
+     - **Marketplace agreement**
+
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-requirement-marketplace-agreement-start
+          :end-before: .. monetize-requirement-marketplace-agreement-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -373,6 +384,30 @@ Get details
           :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        .. note:: An **Advertiser ID** is required when **Advertiser** is selected as the **Rate level**.
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 7.
+          :align: center
+          :class: no-scaled-link
+     - **Standard policies**
+
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-requirement-standard-policies-start
+          :end-before: .. monetize-requirement-standard-policies-end
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 8.
+          :align: center
+          :class: no-scaled-link
+     - **Amps consumption**
+
+       .. include:: ../../amperity_reference/source/monetize.rst
+          :start-after: .. monetize-requirement-amps-start
+          :end-before: .. monetize-requirement-amps-end
 
 
 .. destination-the-trade-desk-marketplace-get-details-end
