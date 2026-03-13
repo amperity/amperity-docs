@@ -58,7 +58,7 @@ Winter 2026
 
 **Destination topics**
 
-   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Oracle Emarsys <../operator/destination_sap_emarsys.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
+   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Insider One <../operator/destination_insider_one>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
 
 
 **Incremental matching**

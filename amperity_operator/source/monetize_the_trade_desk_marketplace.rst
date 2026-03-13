@@ -1,6 +1,5 @@
 .. https://docs.amperity.com/operator/
 
-:orphan:
 
 .. |destination-name| replace:: The Trade Desk Data Marketplace
 .. |plugin-name| replace:: "The Trade Desk Data Marketplace"

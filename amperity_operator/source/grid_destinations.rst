@@ -354,9 +354,9 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_the_trade_desk
 
-   .. grid-item-card:: The Trade Desk 3P
+   .. grid-item-card:: The Trade Desk Data Marketplace
       :link-type: doc
-      :link: destination_the_trade_desk_3p
+      :link: monetize_the_trade_desk_marketplace
 
    .. grid-item-card:: Throtle
       :link-type: doc
@@ -475,7 +475,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    SoundCommerce <destination_soundcommerce>
    Tableau <destination_tableau>
    The Trade Desk <destination_the_trade_desk>
-   The Trade Desk 3P <destination_the_trade_desk_3p>
+   The Trade Desk Data Marketplace <monetize_the_trade_desk_marketplace>
    Throtle <destination_throtle>
    TikTok Ads <destination_tiktok_ads>
    Tulip <destination_tulip>
