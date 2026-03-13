@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. |destination-name| replace:: The Trade Desk 3P Marketplace
 .. |plugin-name| replace:: "The Trade Desk 3P Marketplace"
