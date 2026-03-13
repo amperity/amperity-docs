@@ -172,7 +172,7 @@ The following policy options are available:
 * :ref:`Allow source data deletion <policies-allow-source-data-deletion>`
 * :ref:`Allow user administration <policies-allow-user-administration>`
 * :ref:`Audience monetization access <policies-audience-monetization-access>`
-* :ref:`Restrict AI Assistant access <policies-option-restrict-ai-assistant>`
+* :ref:`Restrict AmpAI access <policies-option-restrict-ampai>`
 * :ref:`Restrict data exports <policies-option-restrict-data-exports>`
 * :ref:`Restrict download access <policies-option-restrict-downloads>`
 * :ref:`Restrict PII access <policies-option-restrict-pii>`
@@ -259,16 +259,16 @@ The **Audience monetization access** policy option may be assigned to users assi
 .. policies-audience-monetization-access-end
 
 
-.. _policies-option-restrict-ai-assistant:
+.. _policies-option-restrict-ampai:
 
-Restrict AI Assistant access
+Restrict AmpAI access
 --------------------------------------------------
 
-.. policies-option-restrict-data-exports-start
+.. policies-option-restrict-ampai-start
 
-The **Restrict AI Assistant access** policy option prevents users from interacting with **AmpAI** features on the **Queries** page.
+The **Restrict AmpAI access** policy option prevents users from interacting with **AmpAI** features.
 
-.. policies-option-restrict-data-exports-end
+.. policies-option-restrict-ampai-end
 
 
 .. _policies-option-restrict-data-exports:
