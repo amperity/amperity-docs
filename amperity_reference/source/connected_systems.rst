@@ -356,11 +356,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send static segments to Dynamics 365 Marketing using the Segmentation API.
 
-   * - **Emarsys**
-     - |system-yes|
-     - 
-     - Pull data to Amperity using SFTP.
-
    * - **Epsilon Abacus**
      - |system-yes|
      - |system-yes|
@@ -514,6 +509,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - 
      - Pull data to Amperity from Intercom using Fivetran.
+
+   * - **Insider One**
+     - 
+     - |system-yes|
+     - Send user and events data to Insider One using Amperity Bridge for Snowflake.
 
    * - **Iterable**
      - |system-yes|
@@ -871,9 +871,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - Pull data to Amperity from SAP Concur using Fivetran.
 
    * - **SAP Emarsys**
-     - 
      - |system-yes|
-     - Maintain contact lists using the SAP Emarsys REST API.
+     - |system-yes|
+     - Pull data to Amperity using SFTP.
+
+       Maintain contact lists using the SAP Emarsys REST API.
 
    * - **SAP ERP (S/4 HANA)**
      - |system-yes|
@@ -973,6 +975,8 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send UID2 and EUID identifiers to The Trade Desk for paid media advertising.
+
+       Send audiences to The Trade Desk data marketplace for monetization.
 
    * - **TikTok Ads**
      - 
