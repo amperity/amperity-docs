@@ -416,7 +416,9 @@ A query that returns a collection offline event is similar to:
 
 The query **MUST** contain the following fields: **email** and **timestamp**.
 
-.. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. For example:
+.. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. A `UID2 table <../reference/uid2.html#add-uid2-table-to-database>`__ must be configured in your customer 360 database.
+
+   For example:
 
    .. code-block:: sql
       :linenos:
@@ -425,8 +427,12 @@ The query **MUST** contain the following fields: **email** and **timestamp**.
         uid2.uid2
         ,uit.order_datetime AS timestamp
       FROM Unified_Itemized_Transactions uit
-      LEFT JOIN UID2 uid2 ON uit.amperity_id = uid2.uid2
-      WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
+      LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
+      LEFT JOIN (
+        SELECT DISTINCT normalized_email, uid2
+        FROM UID2
+      ) uid2 ON LOWER(c360.email) = uid2.normalized_email
+
 
    You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
