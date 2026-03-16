@@ -204,11 +204,14 @@ A cost per thousand (CPM) rate defines a flat rate per thousand impressions that
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-start
 
-.. note:: A CPM rate `must be in United States dollars (USD) <https://partner.thetradedesk.com/v3/portal/api/ref/post-datarate-batch>`__ |ext_link| to ensure your partner account and all associated advertisers use the same currency: USD. A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount in USD, such as $5.50 or $3.00.
+.. note:: Amperity sends the CPM rate in the currency that matches the default currency of your tenant. The Trade Desk defaults currency to United States dollars (USD) to help ensure partner accounts and all associated advertisers use the same currency: USD.
 
-   CPM rates lower than $5 require approval by The Trade Desk.
+   If your tenant's default currency is not USD, contact the Trade Desk to arrange sending audiences to the data marketplace in the currency that matches the default currency set in your tenant.
+
+   A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount, such as $5.50 USD or $3.00 AUD. CPM rates lower than $5.00 require approval by The Trade Desk.
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
+
 
 .. _monetize-data-marketplace-concept-data-rates: 
 
@@ -226,6 +229,7 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
    Flat CPM rates are optional for custom audiences.
 
 .. monetize-data-marketplace-concept-data-rates-end
+
 
 .. _monetize-data-marketplace-concept-percentage: 
 
@@ -250,6 +254,7 @@ A percentage of media costs rate defines a percentage applied to impressions tha
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
    :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
 
+
 .. _monetize-data-marketplace-concept-rate-caps: 
 
 Rate caps
@@ -266,6 +271,7 @@ You can set the cost per thousand impressions rate cap on the **Prepare data pro
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
    :end-before: .. setting-the-trade-desk-marketplace-best-practices-end
+
 
 .. _monetize-data-marketplace-concept-rate-levels: 
 
@@ -324,6 +330,7 @@ A partner rate level is assigned to custom audiences intended for specific partn
 
 .. monetize-data-marketplace-concept-rate-level-partner-the-trade-desk-end
 
+
 .. _monetize-data-marketplace-concept-rate-level-system: 
 
 System
@@ -334,6 +341,7 @@ System
 A system rate level is assigned automatically to a syndicated audience.
 
 .. monetize-data-marketplace-concept-rate-level-system-end
+
 
 .. _monetize-data-marketplace-concept-rate-types: 
 
@@ -392,6 +400,7 @@ A percent of media cost rate defines a percentage applied to impressions that sc
 
 .. monetize-data-marketplace-concept-rate-type-percent-end
 
+
 .. _monetize-data-marketplace-concept-taxonomy: 
 
 Taxonomy
@@ -409,6 +418,7 @@ The Trade Desk recommends `designing and building a flat taxonomy <https://partn
 .. monetize-data-marketplace-concept-taxonomy-end
 
 .. TODO: PM asked us to cut the mention of ROOT in the definition and the second two bullets. J seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
+
 
 .. _monetize-howtos:
 
@@ -528,6 +538,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
 .. monetize-howtos-create-custom-audience-steps-end
 
+
 .. _monetize-howtos-create-syndicated-audience:
 
 Create syndicated audience
@@ -616,6 +627,7 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
        .. note:: Audiences are added to the **Audience Monetization** folder on the **Segments** page.
 
 .. monetize-howtos-create-syndicated-audience-steps-end
+
 
 .. _monetize-howtos-delete-audience:
 
