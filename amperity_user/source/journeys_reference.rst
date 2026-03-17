@@ -44,7 +44,7 @@ How journeys work
 
 .. _journeys-setup:
 
-Journey setup
+Journeys setup
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst

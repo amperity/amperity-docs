@@ -14,7 +14,7 @@
         About journeys
 
 ==================================================
-About journeys
+About Journeys
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -30,7 +30,7 @@ By using **Journeys**, marketers can implement cross-channel strategies, improve
 
 .. _journeys-howitworks:
 
-How journeys work
+How Journeys work
 ==================================================
 
 .. journeys-howitworks-start
@@ -67,7 +67,7 @@ The journey can be further built out beyond this, with additional splits based o
 
 .. _journeys-setup:
 
-Journey setup
+Journeys setup
 ==================================================
 
 .. journeys-setup-start
@@ -253,7 +253,7 @@ If a journey is set to recur, you can allow the same customer to re-enter the jo
 
 .. journeys-allow-reentry-end
 
-.. TODO: reproduce edits in allow re-entry section below
+.. TODO: reproduce any future edits in allow re-entry section below
 
 .. _journeys-canvas:
 
@@ -527,7 +527,7 @@ If the plus button is after a split node, there will also be the option to choos
 
 .. _journeys-measurement:
 
-Journey measurement
+Journeys measurement
 ==================================================
 
 .. journeys-measurement-overview-start
@@ -544,7 +544,7 @@ Journey measurement
    :align: left
    :class: no-scaled-link
 
-Journey measurement helps you:
+Journeys measurement helps you:
 
 * Track customer milestones including journey exits and goal achievements
 * Measure progress toward specific business goals without removing customers from the journey
@@ -695,8 +695,6 @@ Journey Travel Log
 
 The Journey Travel Log (JTL) provides detailed tracking of every traveler's journey with enriched metadata.
 
-.. TODO: delete type column?  ABC vs XXX? Also, ABS in app. Alphabetical Order?
-
 **Travel log schema:**
 
 .. list-table::
@@ -706,30 +704,45 @@ The Journey Travel Log (JTL) provides detailed tracking of every traveler's jour
    * - Field
      - Type
      - Description
-   * - journey_version
-     - String
-     - Journey version ID (jnv-xxx)
-   * - stage_id
-     - String
-     - Node ID (jnn-xxx) or lifecycle stage (start, complete, exit, orphan)
-   * - event_id
-     - String
-     - Customer identifier, typically based on Amperity ID
    * - entry_at
      - Datetime
      - When the traveler entered a given node
-   * - parent_id
+   * - event_id
      - String
-     - ID of previous node customer passed through
-   * - parent_name
+     - Customer identifier, typically based on Amperity ID
+   * - exit_segments
      - String
-     - Name of the parent node
+     - Pipe-separated list of exit segment names
+   * - is_control
+     - Boolean
+     - For percent-splits: whether this is the control path
+   * - is_remaining
+     - Boolean
+     - For conditional-splits: whether this is the last default path
    * - journey_id
      - String
      - ID of journey in URL (jny-xxx) 
    * - journey_name
      - String
      - Name of journey
+   * - journey_version
+     - String
+     - Journey version ID (jnv-xxx)
+   * - mxs_ids
+     - String
+     - Pipe-separated list of exit segment IDs 
+   * - parent_id
+     - String
+     - ID of previous node customer passed through
+   * - parent_name
+     - String
+     - Name of the parent node
+   * - split_condition_name
+     - String
+     - Name of the split condition node corresponding with this path
+   * - stage_id
+     - String
+     - Node ID (jnn-xxx) or lifecycle stage (start, complete, exit, orphan)
    * - stage_name
      - String
      - Name of node
@@ -739,22 +752,6 @@ The Journey Travel Log (JTL) provides detailed tracking of every traveler's jour
    * - test_group_name
      - String
      - For percent-splits: name of the test group
-   * - is_control
-     - Boolean
-     - For percent-splits: true if control path
-   * - split_condition_name
-     - String
-     - Name of the split condition node corresponding with this path
-   * - is_remaining
-     - Boolean
-     - For conditional-splits: whether this is the last default path
-   * - exit_segments
-     - String
-     - Pipe-separated list of exit segment names (if exited)
-   * - mxs_ids
-     - String
-     - Pipe-separated list of exit segment IDs
-   
 
 **Journey Travel Log export**
 
@@ -775,7 +772,7 @@ Journey Travel Log export supports batch export to data warehouses.
 
 .. _journeys-use-cases:
 
-Journeys Use Cases
+Journeys use cases
 ==================================================
 
 .. journeys-reference-use-cases-start
@@ -849,9 +846,9 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-delete`
 * :ref:`journeys-howtos-edit`
 * :ref:`journeys-howtos-edit-destination-attributes`
-* :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-edit-exit-conditions`
-* :ref:`journeys-howtos-interact`
+* :ref:`journeys-howtos-edit-starting-audience`
+* :ref:`journeys-howtos-fit-canvas-to-screen`
 * :ref:`journeys-howtos-measure-journeys`
 * :ref:`journeys-howtos-define-measurement-segments`
 * :ref:`journeys-howtos-export-journey-travel-log`
@@ -860,6 +857,7 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-view-milestone-metrics`
 * :ref:`journeys-howtos-merge`
 * :ref:`journeys-howtos-monitor-resolve`
+* :ref:`journeys-howtos-move-canvas`
 * :ref:`journeys-howtos-organize`
 * :ref:`journeys-howtos-add-folder`
 * :ref:`journeys-howtos-add-subfolder`
@@ -869,6 +867,7 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-schedule-a-journey`
 * :ref:`journeys-howtos-view-journey-participant-numbers`
 * :ref:`journeys-howtos-view-node-configuration`
+* :ref:`journeys-howtos-zoom-canvas`
 
 .. journeys-howtos-list-end
 
@@ -1078,7 +1077,7 @@ You can allow re-entry during the initial journey setup as well as toggle it on 
 
 .. journeys-howtos-allow-reentry-note-end
 
-.. TODO: reproduce edits in allow re-entry section above
+.. TODO: reproduce edits any future in allow re-entry section above
 
 .. _journeys-howtos-delete:
 
@@ -1155,6 +1154,31 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-note-end
 
+.. _journeys-howtos-edit-exit-conditions:
+
+Edit exit conditions
+--------------------------------------------------
+
+.. journeys-howtos-edit-exit-conditions-start
+
+The exit criteria for a journey can be edited.
+
+.. journeys-howtos-edit-exit-conditions-end
+
+**To edit exit conditions**
+
+.. journeys-howtos-edit-exit-conditions-steps-start
+
+#. From the **Journeys** canvas, open the **Journey setup** sidebar.
+#. Under **Exit conditions** use the dropdown menus to edit the segments that should exit the journey.
+
+   .. image:: ../../images/mockup-journeys-canvas-exit-conditions.png
+      :width: 380 px
+      :alt: Choose exit conditions
+      :align: left
+      :class: no-scaled-link
+
+.. journeys-howtos-edit-exit-conditions-steps-end
 
 .. _journeys-howtos-edit-starting-audience:
 
@@ -1182,52 +1206,28 @@ The starting audience for a journey can be edited.
 
 .. journeys-howtos-edit-starting-audience-steps-end
 
+.. _journeys-howtos-fit-canvas-to-screen:
 
-.. _journeys-howtos-edit-exit-conditions:
-
-Edit exit conditions
+Fit Journeys canvas to screen 
 --------------------------------------------------
 
-.. journeys-howtos-edit-exit-conditions-start
+.. journeys-howtos-fit-canvas-to-screen-start
 
-The exit criteria for a journey can be edited.
+You can re-center and resize the the canvas so that you are able to see the whole journey at once.
 
-.. journeys-howtos-edit-exit-conditions-end
+.. journeys-howtos-fit-canvas-to-screen-end
 
-**To edit exit conditions**
+**To fit Journeys canvas to screen**
 
-.. journeys-howtos-edit-exit-conditions-steps-start
+.. journeys-howtos-fit-canvas-to-screen-steps-start
 
-#. From the **Journeys** canvas, open the **Journey setup** sidebar.
-#. Under **Exit conditions** use the dropdown menus to edit the segments that should exit the journey.
+* Click the broken square icon on the bottom left of the canvas.
 
-   .. image:: ../../images/mockup-journeys-canvas-exit-conditions.png
-      :width: 380 px
-      :alt: Choose exit conditions
-      :align: left
-      :class: no-scaled-link
-
-.. journeys-howtos-edit-exit-conditions-steps-end
-
-
-.. _journeys-howtos-interact:
-
-Interact with Journeys canvas
---------------------------------------------------
-
-.. journeys-howtos-interact-start
-
-The **Journeys** canvas supports the following user interactions:
-
-* Drag the journey using a mouse or a trackpad. You may do this directly on the canvas or on the minimap in the lower right.
-* Zoom by using the **+** / **-** buttons in the bottom left or pinching/expanding on a trackpad.
-* Center the canvas by clicking the square icon in the bottom left.
- 
-.. journeys-howtos-interact-end
+.. journeys-howtos-fit-canvas-to-screen-steps-end
 
 .. _journeys-howtos-measure-journeys:
 
-Measure journeys
+Measure Journeys
 --------------------------------------------------
 
 You can configure and manage measurement for your journeys:
@@ -1273,7 +1273,7 @@ You can configure your journey to send travel log data to a destination for anal
 
 .. journeys-howtos-export-journey-travel-log-end
 
-.. TODO: confirm status of API and manual; add in separate how to is applicable
+.. TODO: add in API and manual when these are available; add in separate how to if applicable
 
 .. There are three methods to access your Journey travel log data:
 
@@ -1441,9 +1441,30 @@ You may receive workflow alerts related to your journeys.
 
 .. journeys-howtos-monitor-resolve-workflow-alerts-end
 
+.. _journeys-howtos-move-canvas:
+
+Move around Journeys canvas
+--------------------------------------------------
+
+.. journeys-howtos-move-canvas-start
+
+You can click and drag the canvas to navigate around and see or edit the different paths and nodes of your journey.
+
+.. journeys-howtos-move-canvas-end
+
+**To move around the Journeys canvas**
+
+.. journeys-howtos-move-canvas-steps-start
+
+* Click and drag the journey using a mouse or a trackpad. 
+* You may do this directly on the canvas or on the minimap in the lower right.
+
+.. journeys-howtos-move-canvas-steps-end
+
+
 .. _journeys-howtos-organize:
 
-Organize journeys
+Organize Journeys
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -1675,3 +1696,23 @@ Open a node to view its configuration.
 #. The current settings for a node are in the **Node configuration** sidebar.
 
 .. journeys-howtos-view-node-configuration-steps-end
+
+.. _journeys-howtos-zoom-canvas:
+
+Zoom in/out on Journeys Canvas
+--------------------------------------------------
+
+.. journeys-howtos-zoom-canvas-start
+
+You can zoom in and out on the Journeys canvas. 
+
+.. journeys-howtos-zoom-canvas-end
+
+**To zoom in or out on the Journeys canvas**
+
+.. journeys-howtos-zoom-canvas-steps-start
+
+* Zoom by using the **+** / **-** buttons in the bottom left of the canvas.
+* You may also pinch/expand on a trackpad, either on the canvas or on the minimap in the lower right.
+
+.. journeys-howtos-zoom-canvas-steps-end
