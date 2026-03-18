@@ -530,6 +530,8 @@ If the plus button is after a split node, there will also be the option to choos
 Journeys measurement
 ==================================================
 
+.. journeys-measurement-inclusive-start
+
 .. journeys-measurement-overview-start
 
 .. include:: ../../shared/terms.rst
@@ -552,7 +554,7 @@ Journeys measurement helps you:
 * View metrics across multiple time windows (7, 30, and 90 days)
 * Export detailed journey travel logs for advanced analysis
 
-.. important:: Journey measurement requires batch segments (SQL-based segments). Real-time segments are not currently supported for journey measurement.
+.. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not currently supported for journey measurement.
 
 .. journeys-measurement-overview-end
 
@@ -769,6 +771,8 @@ Only exports previously unsent entries (tracked via egress_sent_at).
 Journey Travel Log export supports batch export to data warehouses.
 
 .. journeys-measurement-travel-log-end
+
+.. journeys-measurement-inclusive-end
 
 .. _journeys-use-cases:
 

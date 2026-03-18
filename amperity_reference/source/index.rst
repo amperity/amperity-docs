@@ -117,6 +117,10 @@ Components
       :link-type: doc
       :link: grid_attributes
 
+   .. grid-item-card:: |fa-money-bills| Audience monetization
+      :link-type: doc
+      :link: monetize
+
    .. grid-item-card:: |fa-badge-check| Campaigns
       :link-type: doc
       :link: campaigns
@@ -348,4 +352,4 @@ Components
    Learning Lab <https://learn.amperity.com>
    System Status <https://status.amperity.com>
    Amperity.com <https://www.amperity.com>
-
+   

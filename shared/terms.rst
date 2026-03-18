@@ -3582,7 +3582,7 @@ A folder helps you organize the list of journeys on the **Journeys** page. You m
 
 .. term-journey-measurement-start
 
-Journey measurement provides insights into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
+Journeys measurement provides insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
 
 .. term-journey-measurement-end
 

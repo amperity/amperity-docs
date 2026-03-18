@@ -81,6 +81,24 @@ Exit conditions
    :start-after: .. journeys-exit-conditions-start
    :end-before: .. journeys-exit-conditions-end
 
+.. _journeys-goal conditions:
+
+Goal conditions
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-goal-conditions-start
+   :end-before: .. journeys-goal-conditions-end
+
+.. _journeys-allow-reentry:
+
+Allow re-rentry?
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-allow-reentry-start
+   :end-before: .. journeys-allow-reentry-end
+
 
 .. _journeys-canvas:
 
@@ -214,6 +232,15 @@ Schedule a journey
 .. include:: ../../amperity_reference/source/journeys.rst
    :start-after: .. journeys-howtos-schedule-a-journey-important-admonition-start
    :end-before: .. journeys-howtos-schedule-a-journey-important-admonition-end
+
+.. _journeys-measurement:
+
+Journeys measurement
+==================================================
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-measurement-inclusive-start
+   :end-before: .. journeys-measurement-inclusive-end
 
 
 .. _journeys-example-use-cases:
