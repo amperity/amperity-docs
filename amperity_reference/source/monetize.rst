@@ -204,7 +204,7 @@ A cost per thousand (CPM) rate defines a flat rate per thousand impressions that
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-start
 
-.. note:: Amperity sends the CPM rate in the currency that matches the default currency of your tenant. The Trade Desk defaults currency to United States dollars (USD) to help ensure partner accounts and all associated advertisers use the same currency: USD.
+.. note:: Amperity sends the CPM rate in the currency that matches the default currency of your tenant. The Trade Desk defaults currency to United States dollars (USD) to help ensure partner accounts and all associated advertisers use the same currency.
 
    If your tenant's default currency is not USD, contact the Trade Desk to arrange sending audiences to the data marketplace in the currency that matches the default currency set in your tenant.
 
