@@ -137,3 +137,48 @@ Use the audience canvas to build marketing campaigns for all stages of a custome
       :link: journeys-example-use-cases
 
 .. grid-journeys-create-grid-end
+
+.. _grid-journeys-measurement:
+
+Journeys measurement
+==================================================
+
+.. grid-journeys-create-start
+
+Gain insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits.
+
+.. grid-journeys-create-end
+
+.. grid-journeys-create-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: About Journeys measurement
+      :link-type: ref
+      :link: journeys-measurement
+
+   .. grid-item-card:: How measurement works
+      :link-type: ref
+      :link: journeys-measurement-how-it-works
+
+   .. grid-item-card:: Measurement types
+      :link-type: ref
+      :link: journeys-measurement-types
+
+   .. grid-item-card:: Measurement milestones
+      :link-type: ref
+      :link: journeys-measurement-milestones
+
+   .. grid-item-card:: Percent-split testing
+      :link-type: ref
+      :link: journeys-measurement-percent-split-testing
+
+   .. grid-item-card:: Journey Travel Log
+      :link-type: ref
+      :link: journeys-measurement-travel-log
+
+.. grid-journeys-create-grid-end
+

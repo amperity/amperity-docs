@@ -3587,6 +3587,14 @@ A folder helps you organize the list of journeys on the **Journeys** page. You m
 
 .. term-journey-folder-end
 
+**journey measurement**
+
+.. term-journey-measurement-start
+
+Journeys measurement provides insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
+
+.. term-journey-measurement-end
+
 
 **journey node: Activate**
 
@@ -3643,7 +3651,6 @@ A percent split node splits a journey into branching paths, where each path appl
 .. term-journey-node-percent-split-end
 
 .. vale on
-
 
 **journey node: Start**
 

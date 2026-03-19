@@ -654,3 +654,7 @@
 
    &nbsp;<i class="fa-solid fa-circle-arrow-right"></i>&nbsp;
 
+.. |fa-money-bills| raw:: html
+
+   &nbsp;<i class="fa-solid fa-money-bills"></i>&nbsp;
+

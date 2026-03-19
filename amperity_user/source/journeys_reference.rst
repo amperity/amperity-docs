@@ -16,7 +16,7 @@
 
 
 ==================================================
-About journeys
+About Journeys
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -30,7 +30,7 @@ About journeys
 
 .. _journeys-howitworks:
 
-How journeys work
+How Journeys work
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
@@ -44,7 +44,7 @@ How journeys work
 
 .. _journeys-setup:
 
-Journey setup
+Journeys setup
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
@@ -81,10 +81,28 @@ Exit conditions
    :start-after: .. journeys-exit-conditions-start
    :end-before: .. journeys-exit-conditions-end
 
+.. _journeys-goal conditions:
+
+Goal conditions
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-goal-conditions-start
+   :end-before: .. journeys-goal-conditions-end
+
+.. _journeys-allow-reentry:
+
+Allow re-rentry?
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-allow-reentry-start
+   :end-before: .. journeys-allow-reentry-end
+
 
 .. _journeys-canvas:
 
-Journeys canvas
+Journeys Canvas
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
@@ -215,13 +233,22 @@ Schedule a journey
    :start-after: .. journeys-howtos-schedule-a-journey-important-admonition-start
    :end-before: .. journeys-howtos-schedule-a-journey-important-admonition-end
 
+.. _journeys-measurement:
+
+Journeys measurement
+==================================================
+
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-measurement-inclusive-start
+   :end-before: .. journeys-measurement-inclusive-end
+
 
 .. _journeys-example-use-cases:
 
 Journeys use case examples
 ==================================================
 
-The following examples demonstrate how to structure a journey in the Journeys canvas to achieve specific business outcomes.
+The following examples demonstrate how to structure a journey in the **Journeys Canvas** to achieve specific business outcomes.
 
 .. journeys-use-case-examples-note-start
 
