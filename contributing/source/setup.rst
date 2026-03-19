@@ -43,7 +43,7 @@ Run the following commands to create a Python virtual environment.
 
    Returns something like:
 
-   "sphinx-build 7.4.7"
+   "sphinx-build 9.1.0"
 
 .. note:: ``(.venv)`` is not part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
 
