@@ -16,7 +16,7 @@
 
 
 ==================================================
-About journeys
+About Journeys
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -30,7 +30,7 @@ About journeys
 
 .. _journeys-howitworks:
 
-How journeys work
+How Journeys work
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
@@ -102,7 +102,7 @@ Allow re-rentry?
 
 .. _journeys-canvas:
 
-Journeys canvas
+Journeys Canvas
 ==================================================
 
 .. include:: ../../amperity_reference/source/journeys.rst
@@ -248,7 +248,7 @@ Journeys measurement
 Journeys use case examples
 ==================================================
 
-The following examples demonstrate how to structure a journey in the Journeys canvas to achieve specific business outcomes.
+The following examples demonstrate how to structure a journey in the **Journeys Canvas** to achieve specific business outcomes.
 
 .. journeys-use-case-examples-note-start
 

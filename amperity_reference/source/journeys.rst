@@ -74,7 +74,7 @@ Journeys setup
 
 **Journeys** require that segments are available and that at least one destination has been configured.
 
-Access the **Journeys** canvas by selecting **Journeys** at the top of the **Activations** page, and then click **Create journey**.
+Access the **Journeys Canvas** by selecting **Journeys** at the top of the **Activations** page, and then click **Create journey**.
 
 .. journeys-setup-end
 
@@ -257,12 +257,12 @@ If a journey is set to recur, you can allow the same customer to re-enter the jo
 
 .. _journeys-canvas:
 
-Journeys canvas
+Journeys Canvas
 ==================================================
 
 .. journeys-canvas-start
 
-After establishing the audience and starting conditions of the journey, you will be taken to the **Journeys** canvas. This is the interface where you determine the steps of the journey and define how your brand will interact with customers at each step.
+After establishing the audience and starting conditions of the journey, you will be taken to the **Journeys Canvas**. This is the interface where you determine the steps of the journey and define how your brand will interact with customers at each step.
 
 .. journeys-canvas-end
 
@@ -287,7 +287,7 @@ About the Journeys AI Assistant
 
 .. journeys-ai-assistant-start
 
-The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys** canvas that lets you use natural language to edit and personalize journeys.
+The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys Canvas** that lets you use natural language to edit and personalize journeys.
 
 .. journeys-ai-assistant-end
 
@@ -308,7 +308,7 @@ Journey start
    :align: left
    :class: no-scaled-link
 
-To edit inclusions, exclusions, or exit conditions, click on the **Journey setup** sidebar. Click the plus button underneath to add nodes to the journey.
+To edit inclusions, exclusions, or exit conditions, click on the **Journey start** node. Click the plus button underneath to add nodes to the journey.
 
 .. journeys-node-start-end
 
@@ -353,7 +353,7 @@ You can configure a single activation node to send to multiple destinations at o
    
    To avoid this error, make sure each activation node within a journey has a unique name. Renaming the node will automatically update the generated filename.
    
-   You can check an activation node's path and file name in the **Node configuration** panel on the righthand side of the **Journeys** canvas, under "Destination Summary". 
+   You can check an activation node's path and file name in the **Node configuration** panel on the righthand side of the **Journeys Canvas**, under "Destination Summary". 
 
 .. journeys-node-activate-filename-conflict-tip-end 
 
@@ -566,7 +566,7 @@ How measurement works
 
 .. journeys-measurement-how-it-works-start
 
-Journey measurement uses two primary data structures to track customer progress:
+Journeys measurement uses two primary data structures to track customer progress:
 
 **Journey Travel Log (JTL)** records every stage transition with enriched metadata including:
 
@@ -621,7 +621,7 @@ Milestones tracking
 
 .. journeys-measurement-milestones-start
 
-The milestones dashboard on the Journeys canvas capture significant events as customers travel through your journey. The system automatically tracks:
+The milestones dashboard on the **Journeys Canvas** capture significant events as customers travel through your journey. The system automatically tracks:
 
 * **Goal milestones** - Customer achieved a journey or split goal
 * **Exit milestones** - Customer met exit criteria and left the journey
@@ -911,7 +911,7 @@ Add activate nodes
 
 .. journeys-howtos-node-activate-steps-start
 
-#. From the **Journeys** canvas, select the plus symbol, and then choose **Activate**.
+#. From the **Journeys Canvas**, select the plus symbol, and then choose **Activate**.
 
    .. image:: ../../images/mockup-journeys-canvas-plus-activate.png
       :width: 280 px
@@ -948,7 +948,7 @@ Add conditional split nodes
 
 .. journeys-howtos-node-conditional-split-steps-start
 
-#. From the **Journeys** canvas, select the plus symbol, and then choose **Conditional split**.
+#. From the **Journeys Canvas**, select the plus symbol, and then choose **Conditional split**.
 
    .. image:: ../../images/mockup-journeys-canvas-plus-conditional-split.png
       :width: 280 px
@@ -982,7 +982,7 @@ Add delay nodes
 
 .. journeys-howtos-node-delay-steps-start
 
-#. From the **Journeys** canvas, select the plus symbol, and then choose **Delay**.
+#. From the **Journeys Canvas**, select the plus symbol, and then choose **Delay**.
 
    .. image:: ../../images/mockup-journeys-canvas-plus-delay.png
       :width: 280 px
@@ -1019,7 +1019,7 @@ Add percent split nodes
 
 .. journeys-howtos-node-percent-split-steps-start
 
-#. From the **Journeys** canvas, select the plus symbol, and then choose **Percent split**.
+#. From the **Journeys Canvas**, select the plus symbol, and then choose **Percent split**.
 
    .. image:: ../../images/mockup-journeys-canvas-plus-percent-split.png
       :width: 280 px
@@ -1062,7 +1062,7 @@ You can allow re-entry during the initial journey setup as well as toggle it on 
 
 .. journeys-howtos-allow-reentry-start
 
-#. From the **Journeys** canvas, click into the **Journey start** node.
+#. From the **Journeys Canvas**, click into the **Journey start** node.
 #. Click the **Allow re-entry** box.
 
 .. journeys-howtos-allow-reentry-end
@@ -1090,7 +1090,7 @@ Delete node
 
 .. journeys-howtos-delete-start
 
-Any node on the **Journeys** canvas can be deleted. This action only deletes that node. All child nodes remain in the journey.
+Any node on the **Journeys Canvas** can be deleted. This action only deletes that node. All child nodes remain in the journey.
 
 .. journeys-howtos-delete-end
 
@@ -1098,7 +1098,7 @@ Any node on the **Journeys** canvas can be deleted. This action only deletes tha
 
 .. journeys-howtos-delete-steps-start
 
-#. From the **Journeys** canvas, click the |fa-kebab| icon on the node you wish to delete, then select **Delete**.
+#. From the **Journeys Canvas**, click the |fa-kebab| icon on the node you wish to delete, then select **Delete**.
 #. Continue building the journey or, if finished, click **Save**.
 
 .. journeys-howtos-delete-steps-ende
@@ -1119,7 +1119,7 @@ The settings for nodes in a journey can be edited.
 
 .. journeys-howtos-edit-steps-start
 
-#. From the **Journeys** canvas, select a node.
+#. From the **Journeys Canvas**, select a node.
 #. Open **Node Configuration** sidebar, and then make your changes.
 #. Continue building the journey or, if finished, click **Save**.
 
@@ -1143,7 +1143,7 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-steps-start
 
-#. From the **Journeys** canvas, select an activation node.
+#. From the **Journeys Canvas**, select an activation node.
 #. Open the **Node configuration** sidebar. For each configuration destination, a list of attributes may be edited.
 #. Select a destination from the **Destination** dropdown.
 #. Open the **Attributes** panel. A list of attributes is shown with the field in Amperity on the left and the field that is sent to the destination on the right.
@@ -1173,7 +1173,7 @@ The exit criteria for a journey can be edited.
 
 .. journeys-howtos-edit-exit-conditions-steps-start
 
-#. From the **Journeys** canvas, open the **Journey setup** sidebar.
+#. From the **Journeys Canvas**, open the **Journey setup** sidebar.
 #. Under **Exit conditions** use the dropdown menus to edit the segments that should exit the journey.
 
    .. image:: ../../images/mockup-journeys-canvas-exit-conditions.png
@@ -1199,7 +1199,7 @@ The starting audience for a journey can be edited.
 
 .. journeys-howtos-edit-starting-audience-steps-start
 
-#. From the **Journeys** canvas, open the **Journey setup** sidebar.
+#. From the **Journeys Canvas**, open the **Journey setup** sidebar.
 #. Under **Journey entry** use the dropdown menus to edit the included and excluded segments.
 
    .. image:: ../../images/mockup-journeys-canvas-inclusion-exclusion.png
@@ -1212,7 +1212,7 @@ The starting audience for a journey can be edited.
 
 .. _journeys-howtos-fit-canvas-to-screen:
 
-Fit Journeys canvas to screen 
+Fit Journeys Canvas to screen 
 --------------------------------------------------
 
 .. journeys-howtos-fit-canvas-to-screen-start
@@ -1221,7 +1221,7 @@ You can re-center and resize the the canvas so that you are able to see the whol
 
 .. journeys-howtos-fit-canvas-to-screen-end
 
-**To fit Journeys canvas to screen**
+**To fit Journeys Canvas to screen**
 
 .. journeys-howtos-fit-canvas-to-screen-steps-start
 
@@ -1402,7 +1402,7 @@ Merge a split path
 
 .. journeys-howtos-merge-steps-start
 
-#. From the **Journeys** canvas, select the plus symbol in any path after a split node, and then choose **Merge**.
+#. From the **Journeys Canvas**, select the plus symbol in any path after a split node, and then choose **Merge**.
 
    .. image:: ../../images/mockup-journeys-canvas-merge-select.png
       :width: 480 px
@@ -1430,7 +1430,7 @@ You can monitor journey status and determine how to resolve errors on the `Workf
 
 .. journeys-howtos-monitor-resolve-steps-start
 
-#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys** canvas you will need to exit by clicking the X on the upper left.
+#. Go to the **Workflows** page at the top level of your Amperity tenant. If you are starting from within the **Journeys Canvas** you will need to exit by clicking the X on the upper left.
 #. Locate the name of your journey and click in to monitor status and get guidance on resolving errors.
 
 .. journeys-howtos-monitor-resolve-steps-end
@@ -1447,7 +1447,7 @@ You may receive workflow alerts related to your journeys.
 
 .. _journeys-howtos-move-canvas:
 
-Move around Journeys canvas
+Move around Journeys Canvas
 --------------------------------------------------
 
 .. journeys-howtos-move-canvas-start
@@ -1456,7 +1456,7 @@ You can click and drag the canvas to navigate around and see or edit the differe
 
 .. journeys-howtos-move-canvas-end
 
-**To move around the Journeys canvas**
+**To move around the Journeys Canvas**
 
 .. journeys-howtos-move-canvas-steps-start
 
@@ -1568,7 +1568,7 @@ A journey should be assigned a name that makes it easy to find and for other use
 
 .. journeys-howtos-rename-steps-start
 
-#. From the **Journeys** canvas, click into the text of the current journey name at the top.
+#. From the **Journeys Canvas**, click into the text of the current journey name at the top.
 #. Enter a new name.
 
 .. journeys-howtos-rename-steps-end
@@ -1591,7 +1591,7 @@ Saving a journey initiates the workflow, allowing you to view results and return
 
 .. journeys-howtos-save-a-journey-steps-start
 
-#. From the **Journeys** canvas, click the **Save** button in the top right.
+#. From the **Journeys Canvas**, click the **Save** button in the top right.
 #. Use the caret button to **Save as**.
 
 .. journeys-howtos-save-a-journey-steps-end
@@ -1624,7 +1624,7 @@ A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
 .. journeys-howtos-schedule-a-journey-steps-start
 
-#. From the **Journeys** canvas, click **Edit schedule** in the top navigation.
+#. From the **Journeys Canvas**, click **Edit schedule** in the top navigation.
 #. From the **Recurrence** dropdown menu choose one of the options: "once", "every 3 hours", "every 6 hours", "twice daily", "daily", "weekly", "monthly", or "quarterly".
 
 .. journeys-howtos-schedule-a-journey-steps-end
@@ -1637,7 +1637,7 @@ A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
 .. journeys-howtos-schedule-a-journey-note-start
 
-.. note:: Once you have saved a journey, the **Edit schedule** option becomes **View schedule**. To make changes to the schedule, click **Edit** on the top right of the **Journeys** canvas.
+.. note:: Once you have saved a journey, the **Edit schedule** option becomes **View schedule**. To make changes to the schedule, click **Edit** on the top right of the **Journeys Canvas**.
 
 .. journeys-howtos-schedule-a-journey-note-end
 
@@ -1649,7 +1649,7 @@ View journey participant numbers
 
 .. journeys-howtos-view-journey-participant-numbers-start
 
-In **View** mode on the **Journeys** canvas you can see how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
+In **View** mode on the **Journeys Canvas** you can see how many total people have moved through any journey that has run at least once and how many have moved through each node in the current run.
 
 Nodes have icons and numbers, representing journey participants.
 
@@ -1676,7 +1676,7 @@ A delay node have an additional icon.
 
 .. journeys-howtos-view-participant-numbers-tip-start
 
-.. tip:: Once you have saved a journey, it defaults to **View** mode. To exit **View** mode and make changes, click **Edit** on the top right of the **Journeys** canvas.
+.. tip:: Once you have saved a journey, it defaults to **View** mode. To exit **View** mode and make changes, click **Edit** on the top right of the **Journeys Canvas**.
 
 .. journeys-howtos-view-participant-numbers-tip-end
 
@@ -1696,7 +1696,7 @@ Open a node to view its configuration.
 
 .. journeys-howtos-view-node-configuration-steps-start
 
-#. From the **Journeys** canvas, select a node.
+#. From the **Journeys Canvas**, select a node.
 #. The current settings for a node are in the **Node configuration** sidebar.
 
 .. journeys-howtos-view-node-configuration-steps-end
