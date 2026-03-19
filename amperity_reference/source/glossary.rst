@@ -743,7 +743,7 @@ C
 
 .. _c-campaigns-tab:
 
-**Campaigns tab**
+**Campaigns page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-campaigns-tab-start
       :end-before: .. term-campaigns-tab-end
@@ -1465,7 +1465,7 @@ D
 
 .. _d-destinations-tab:
 
-**Destinations tab**
+**Destinations page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-destinations-tab-start
       :end-before: .. term-destinations-tab-end
@@ -2742,14 +2742,14 @@ M
 
 **Magento**, **Adobe Magento**
    See :ref:`Adobe Commerce <a-adobe-commerce>`.
-   
-   
+
+
 .. _m-matchback:
 
 **matchback**
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-matchback-start
-         :end-before: .. term-matchback-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-matchback-start
+      :end-before: .. term-matchback-end
 
 
 .. _m-mailchimp:
@@ -2854,7 +2854,7 @@ M
 
 .. _m-metrics-tab:
 
-**Metrics tab**
+**Metrics page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-metrics-tab-start
       :end-before: .. term-metrics-tab-end
@@ -2940,7 +2940,7 @@ M
 
 .. _m-multi-brand:
 
-**multi-brand**
+**multibrand**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-brand-start
       :end-before: .. term-multi-brand-end
@@ -2980,7 +2980,7 @@ M
 
 .. _m-multi-touch-attribution:
 
-**Multi-touch-attribution**
+**Multi-touch attribution**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-touch-attribution-start
       :end-before: .. term-multi-touch-attribution-end
@@ -4396,7 +4396,7 @@ S
 
 .. _s-sources-tab:
 
-**Sources tab**
+**Sources page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-sources-tab-start
       :end-before: .. term-sources-tab-end
@@ -4562,7 +4562,7 @@ S
 
 .. _s-stitch-tab:
 
-**Stitch tab**
+**Stitch page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-tab-start
       :end-before: .. term-stitch-tab-end
@@ -4594,7 +4594,7 @@ S
 
 .. _s-stitch-labels:
 
-**stitch-labels**
+**Stitch labels**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-labels-start
       :end-before: .. term-stitch-labels-end
