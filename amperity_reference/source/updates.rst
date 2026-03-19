@@ -51,10 +51,6 @@ Winter 2026
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
-**Journeys AI Assistant**
-
-   :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Journeys** page to help build and refine journeys.
-
 
 **Destination topics**
 
@@ -64,6 +60,16 @@ Winter 2026
 **Incremental matching**
 
    :bdg-success:`NEW` An `incremental Stitch run <../operator/stitch.html#incremental-match>`__ does not reevaluate existing profiles and only attaches new records to existing profiles *or* creates new profiles. Profiles are not split or merged. PII is not reassigned.
+
+
+**Journeys AI Assistant**
+
+   :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Journeys Canvas** to help build and refine journeys.
+
+
+**Journeys measurement**
+
+   :bdg-success:`NEW` `Journeys measurement <../reference/journeys.html#journeys-measurement>`__ provides insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits.
 
 
 **Source topics**
