@@ -23,6 +23,8 @@ Stitch benchmarks are heuristic scores that define the expectations for the qual
 
 Use benchmarks to explore data quality, directly provide feedback to the quality of Stitch results, and to explore configuration changes that can help improve the quality of customer profiles in your tenant.
 
+.. note:: Stitch benchmarks are not available when durable IDs is enabled for your tenant.
+
 .. stitch-benchmark-end
 
 
@@ -34,6 +36,8 @@ Benchmark status page
 .. stitch-benchmark-status-start
 
 Stitch benchmarks are available from the **Stitch** page in your Amperity tenant. Open the **Benchmarks** tab to review the overall status for Stitch benchmark checks in your tenant.
+
+.. note:: The **Benchmarks** tab is not available when durable IDs is enabled for your tenant. Durable IDs uses an alternate mode of running Stitch called incremental matching, which is not compatible with Stitch benchmark scoring.
 
 .. image:: ../../images/mockup-stitch-benchmarks-tab.png
    :width: 600 px
