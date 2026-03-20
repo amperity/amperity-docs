@@ -461,6 +461,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
+* :ref:`segments-manage-tracked-segments`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
 * :ref:`segments-rerun-segment`

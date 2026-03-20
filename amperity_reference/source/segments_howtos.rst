@@ -56,6 +56,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-explore-copy`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
+* :ref:`segments-manage-tracked-segments`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
 * :ref:`segments-rerun-segment`
@@ -892,6 +893,27 @@ You can format a segment from the **Segments** page.
 #. Click the **Format** button.
 
 .. segments-edit-segments-steps-end
+
+
+.. _segments-manage-tracked-segments:
+
+Manage tracked segments
+==================================================
+
+.. segments-manage-tracked-segments-start
+
+A tracked segment appears as a metrics card on the **Segments** page. The metrics card shows a snapshot of the segment's results and is updated daily. Enable up to fifteen tracked segments.
+
+.. segments-manage-tracked-segments-end
+
+**To enable tracked segments**
+
+.. segments-compare-add-steps-start
+
+#. From the **Segments** page, open a segment for editing.
+#. Open the **Insights** pane and select **Enable segment tracking**.
+
+.. segments-compare-add-steps-end
 
 
 .. _segments-create-new-segment-from-overlap:
