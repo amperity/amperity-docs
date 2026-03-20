@@ -123,6 +123,12 @@ Incremental matching
    :start-after: .. stitch-run-type-incremental-match-start
    :end-before: .. stitch-run-type-incremental-match-end
 
+.. stitch-run-type-incremental-match-start
+
+.. note:: Stitch benchmarks are unavailable when Stitch runs using the incremental matching run type.
+
+.. stitch-run-type-incremental-match-end
+
 
 .. _stitch-run-type-normal:
 
@@ -421,7 +427,7 @@ Notifications for Stitch reports that run in the **Stitch** page appear after Am
 
 .. stitch-view-notifications-end
 
-.. image:: ../../images/mockup-notifications-stitch-report.png
+.. image:: ../../images/mockup-stitch-tab-metrics.png
    :width: 600 px
    :alt: The notifications pane sits on the right side of the Stitch page.
    :align: left
