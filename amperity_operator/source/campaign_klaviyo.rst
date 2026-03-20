@@ -247,17 +247,17 @@ Add destination
              :start-after: .. setting-klaviyo-list-name-note-start
              :end-before: .. setting-klaviyo-list-name-note-end
 
-       **Update contacts**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-cordial-list-name-start
-             :end-before: .. setting-cordial-list-name-end
-
        **Audience primary key**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
+
+       **Update contacts**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-klaviyo-update-contacts-start
+             :end-before: .. setting-klaviyo-update-contacts-end
 
        **Campaign file settings**
 
