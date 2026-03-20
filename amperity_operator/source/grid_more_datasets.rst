@@ -30,11 +30,11 @@ Data assets are a collection of CSV files and SQL templates that add support for
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: 1st-party data
+   .. grid-item-card:: 1P data
       :link-type: doc
       :link: data_first_party
 
-   .. grid-item-card:: 3rd-party data
+   .. grid-item-card:: 3P data
       :link-type: doc
       :link: data_third_party
 
@@ -66,8 +66,8 @@ Data assets are a collection of CSV files and SQL templates that add support for
    :maxdepth: 2
    :hidden:
 
-   1st-party data <data_first_party>
-   3rd-party data <data_third_party>
+   1P data <data_first_party>
+   3P data <data_third_party>
    Amperity data assets <grid_data_assets>
    Historical data <historical_data>
    Householding <householding>

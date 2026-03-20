@@ -123,6 +123,12 @@ Incremental matching
    :start-after: .. stitch-run-type-incremental-match-start
    :end-before: .. stitch-run-type-incremental-match-end
 
+.. stitch-run-type-incremental-match-start
+
+.. note:: Stitch benchmarks are unavailable when Stitch runs using the incremental matching run type.
+
+.. stitch-run-type-incremental-match-end
+
 
 .. _stitch-run-type-normal:
 
