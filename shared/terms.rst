@@ -6018,11 +6018,6 @@ Semi-structured data is not shaped as rows and columns, but still has elements t
 
 A separation key, or "sk", is for deterministic unmatching of records.
 
-Unmatched
-unmatched
-Unmatching
-unmatching
-
 .. term-separation-key-end
 
 
