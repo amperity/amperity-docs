@@ -1842,7 +1842,7 @@ A customer profile is a collection of attributes connected to a single unique in
 
 .. term-customer-record-start
 
-A customer profile is a row in a customer data table that has information about the customer. Who they are, where they live, and how much they spend. For example, a email list table has names, email addresses, or phone numbers.
+A customer record is a row in a customer data table that has information about the customer. Who they are, where they live, and how much they spend. For example, a email list table has names, email addresses, or phone numbers.
 
 .. term-customer-record-end
 
@@ -6017,11 +6017,6 @@ Semi-structured data is not shaped as rows and columns, but still has elements t
 .. term-separation-key-start
 
 A separation key, or "sk", is for deterministic unmatching of records.
-
-Unmatched
-unmatched
-Unmatching
-unmatching
 
 .. term-separation-key-end
 
