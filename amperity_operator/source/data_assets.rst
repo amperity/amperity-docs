@@ -416,10 +416,10 @@ Address standardization is a data asset that contains a list of address variatio
 
 .. data-asset-address-standardization-prerequisites-start
 
-The address standardization data asset is available from an Amazon S3 bucket named **Amperity Data Assets** or from Amperity Bridge.
+The address standardization data asset is available from Amperity Bridge, or, alternatively, from an Amazon S3 bucket named **Amperity Data Assets**. For most current use cases, Amperity Bridge is the preferred approach.
 
-#. Configure Amperity Bridge. Choose the **Reference data** option, and then select the **address_standardization_conversion** table.
-#. To use the Amazon S3 bucket as the source for address standardization, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
+* Configure Amperity Bridge. Choose the **Reference data** option, and then select the **address_standardization_conversion** table.
+* To use the Amazon S3 bucket as the source for address standardization, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
 
 .. data-asset-address-standardization-prerequisites-end
 
