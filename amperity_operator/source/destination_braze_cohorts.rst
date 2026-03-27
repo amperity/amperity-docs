@@ -30,7 +30,7 @@ Configure destinations for Braze Cohorts
 
 .. destination-braze-cohorts-intro-start
 
-|destination-name| allows you to send a list of user IDs from Amperity to Braze, where they are automatically added to a named cohort. You can then use that cohort to target users in Braze campaigns and Canvases.
+|destination-name| allows you to send a list of user IDs from Amperity to Braze using the `User cohort  <https://www.braze.com/docs/partners/isv_partners/cohort_import/>`__ |ext_link| endpoint, after which they are automatically added to a named cohort. You can then use that cohort with Braze campaigns and canvases.
 
 .. destination-braze-cohorts-intro-end
 
@@ -38,7 +38,9 @@ Configure destinations for Braze Cohorts
 
 Amperity manages the full sync process: creating the cohort in Braze if it does not exist, sending user IDs in optimized batches, and reporting results back to your workflow.
 
-.. note:: This destination only syncs user ID lists into cohorts. It does not sync profile attributes, events, or purchase data. To send customer profile attributes to Braze, use the :doc:`Braze destination <destination_braze>`.
+.. note:: This destination only syncs user ID lists into cohorts. It does not sync profile attributes, events, or purchase data.
+
+   To send customer profile attributes to Braze, use the :doc:`Braze destination <destination_braze>`.
 
 .. destination-braze-cohorts-context-end
 
@@ -310,8 +312,8 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-business-users-start
-          :end-before: .. destinations-steps-business-users-end
+          :start-after: .. destinations-steps-business-users-orchestration-only-start
+          :end-before: .. destinations-steps-business-users-orchestration-only-end
 
 
    * - .. image:: ../../images/steps-06.png
@@ -333,7 +335,10 @@ Build a query
 
 .. destination-braze-cohorts-build-query-start
 
-Build a query that returns the user ID column you want to sync to Braze. Only the user ID column is sent to Braze. Other columns in the query results are ignored.
+Build a query that returns a list of users matched by their **external_id**, **device_id**, or an **alias**.
+
+* **external_id** and **alias** should be used with known users
+* **device_id** should be used with anonymous users
 
 .. destination-braze-cohorts-build-query-end
 
@@ -343,9 +348,10 @@ Build a query that returns the user ID column you want to sync to Braze. Only th
 
 .. code-block:: sql
 
-   SELECT external_id
+   SELECT
+     external_id
    FROM Customer360
-   WHERE <your audience criteria>
+   WHERE email IS NOT NULL
 
 .. destination-braze-cohorts-build-query-example-end
 
@@ -357,11 +363,17 @@ If your Braze users are identified by email or a custom field, return that colum
 
 .. code-block:: sql
 
-   SELECT email AS user_braze_id
-   FROM Customer360
-   WHERE <your audience criteria>
+   SELECT
+     c360.email AS external_id
+   FROM Customer360 c360
 
-Then set **User ID Field** to ``user_braze_id``.
+For example associating anonymous web traffic with the **device_id**:
+
+.. code-block:: sql
+
+   SELECT
+     web_device_id AS device_id
+   FROM Web_Events_Table
 
 .. destination-braze-cohorts-build-query-custom-id-end
 
@@ -369,7 +381,7 @@ Then set **User ID Field** to ``user_braze_id``.
 
 .. tip:: Test with a small audience first (for example, add ``LIMIT 100``) before running a full sync.
 
-.. important:: Users with a NULL value in the ID field are automatically skipped and not sent to Braze.
+.. important:: Users with a **NULL** value in the ID field are automatically skipped and not sent to Braze.
 
 .. destination-braze-cohorts-build-query-tips-end
 
@@ -582,17 +594,3 @@ To resolve this error:
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-braze-cohorts-workflow-actions-users-not-appearing-end
-
-
-.. _destination-braze-cohorts-related-resources:
-
-Related resources
-==================================================
-
-.. destination-braze-cohorts-related-resources-start
-
-* `Braze Cohort Import documentation <https://www.braze.com/docs/partners/isv_partners/cohort_import/>`__ |ext_link|
-* Braze Technology Partners page in the Braze dashboard: **Partner Integrations > Technology Partners > Amperity**
-* :doc:`Braze destination <destination_braze>` (for sending customer profile attributes)
-
-.. destination-braze-cohorts-related-resources-end
