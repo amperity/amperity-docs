@@ -5,7 +5,7 @@ import shibuya
 # for example source
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
-project = "Legacy"
+project = "Small versions of large topics for LLM users"
 #copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
@@ -37,8 +37,8 @@ todo_include_todos = True
 sitemap_excludes = ['404/']
 
 extlinks = {
-#    'pull': ('https://github.com/amperity/amperity-docs/pull/%s', 'pull request #%s'),
-#    'issue': ('https://github.com/amperity/amperity-docs/issues/%s', 'issue #%s'),
+#    'pull': ('https://github.com/lepture/shibuya/pull/%s', 'pull request #%s'),
+#    'issue': ('https://github.com/lepture/shibuya/issues/%s', 'issue #%s'),
 }
 
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -47,7 +47,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #    "python": ("https://docs.python.org/3", None),
 #    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 #    "numpy": ("https://numpy.org/devdocs/", None),
-#    "reference": ("../../amperity_reference", None),
 #}
 
 templates_path = ["_templates"]
@@ -57,18 +56,18 @@ html_css_files = [
     "custom.css",
     "shibuya.css",
 ]
-html_title = "Legacy"
+html_title = "Small version of large topics for LLM users"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
-html_baseurl = "https://docs.amperity.com/legacy/"
+html_baseurl = "https://docs.amperity.com/chunks/"
 sitemap_url_scheme = "{link}"
 
 html_copy_source = False
 html_show_sourcelink = False
 
-#html_additional_pages = {
-#    'xxxxx': 'xxxxx.html',
-#}
+# html_additional_pages = {
+#     'xxxxx': 'xxxxx.html'
+# }
 
 
 # Config for sphinx_new_tab_link extension
@@ -201,11 +200,7 @@ html_context = {
 #    "source_type": "github",
 #    "source_user": "amperity",
 #    "source_repo": "amperity-docs",
-#        "buysellads_code": "CE7DKK3M",
-#        "buysellads_placement": "shibuya",
-#        "buysellads_container_selector": ".yue > section > section",
-#    "display_github": True, # Integrate GitHub
-#    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_api/source/", # Path in the checkout to the docs root
+#    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_guides/source/", # Path in the checkout to the docs root
 }
 
 
