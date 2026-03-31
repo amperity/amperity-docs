@@ -59,7 +59,7 @@ html_css_files = [
 html_title = "Training"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
-html_baseurl = "https://docs.amperity.com/chunks/"
+html_baseurl = "https://docs.amperity.com/training/"
 sitemap_url_scheme = "{link}"
 
 html_copy_source = False
