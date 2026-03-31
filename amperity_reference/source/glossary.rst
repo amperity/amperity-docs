@@ -408,6 +408,14 @@ A
       :end-before: .. term-audience-end
 
 
+.. _a-audience-monetization:
+
+**audience monetization**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-audience-monetization-start
+      :end-before: .. term-audience-monetization-end
+
+
 .. _a-audience-sizes:
 
 **audience sizes**
