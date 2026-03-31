@@ -49,7 +49,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the Destinations page, select the Destinations subtab, and click on New destination and For orchestrations.
+#. Navigate to the **Destinations** page, select the **Destinations** subtab, and click on **New destination** and select **For orchestrations**.
 
    .. image:: /_images/ex06_new_destination.png
       :width: 500 px
@@ -57,7 +57,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Select SFTP plugin
+#. Select **SFTP** plugin.
 
    .. image:: /_images/ex06_select_sftp.png
       :width: 380 px
@@ -65,7 +65,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. In the Credential pulldown, select Create new credential.
+#. In the **Credential** dropdown, select **Create new credential**.
 
    .. image:: /_images/ex06_create_credential.png
       :width: 400 px
@@ -73,7 +73,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. In the form that appears fill in the following fields and click Continue.
+#. In the form that appears fill in the following fields and click **Continue**.
 
    .. list-table::
       :widths: 50 50
@@ -96,7 +96,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. In the Configure destination dialog that comes up, fill in the following fields and click Save
+#. In the **Configure destination** dialog that comes up, fill in the following fields and click **Save**.
 
    .. list-table::
       :widths: 50 50
@@ -117,7 +117,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the Activations page, select the Orchestrations subtab, and click on Add orchestration.
+#. Navigate to the **Activations** page, select the **Orchestrations** subtab, and click on **Add orchestration**.
 
    .. image:: /_images/ex06_add_orchestration.png
       :width: 400 px
@@ -125,7 +125,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. In the Add orchestration dialog that comes up fill in the following fields and click Save
+#. In the **Add orchestration** dialog that comes up fill in the following fields and click **Save**.
 
    .. list-table::
       :widths: 50 50
@@ -150,7 +150,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the Sources page and click on the Actions kebab menu |fa-kebab| to the right of the Courier group Daily and select Edit.
+#. Navigate to the **Sources** page and click on the **Actions** kebab menu |fa-kebab| to the right of the **Courier group Daily** and select **Edit**.
 
    .. image:: /_images/ex06_edit_courier_group.png
       :width: 500 px
@@ -158,7 +158,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Set the Schedule cron for 8 am daily Pacific time and set the Courier group to Active and then click Save.
+#. Set the **Schedule** cron for 8 am daily Pacific time and set the courier group to **Active** and then click **Save**.
 
    .. image:: /_images/ex06_schedule_cron.png
       :width: 400 px
@@ -166,7 +166,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the Activations page, select the Orchestrations subtab, and click on Add orchestration group.
+#. Navigate to the **Activations** page, select the **Orchestrations** subtab, and click on **Add orchestration group**.
 
    .. image:: /_images/ex06_add_orchestration_group.png
       :width: 500 px
@@ -174,7 +174,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. In the Add orchestration group dialog that comes up set the Name to Daily. Select Run Options to Run after courier group Daily and click Save.
+#. In the **Add orchestration group** dialog that comes up set the **Name** to "Daily". Select **Run options** to **Run after courier group Daily** and click **Save**.
 
    .. image:: /_images/ex06_run_after_courier_group.png
       :width: 400 px
@@ -182,7 +182,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Click on the Actions kebab menu |fa-kebab| to the right of the Orchestration Most popular product and select Edit.
+#. Click on the **Actions** kebab menu |fa-kebab| to the right of the **Orchestration** named "Most popular product" and select **Edit**.
 
    .. image:: /_images/ex06_edit_orchestration.png
       :width: 500 px
@@ -190,7 +190,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Set the Workflow options to Automatic and select the Daily Orchestration group and then click Save.
+#. Set the Workflow options to **Automatic**, select the **Daily Orchestration** group, and then click **Save**.
 
    .. image:: /_images/ex06_set_workflow_options.png
       :width: 400 px
