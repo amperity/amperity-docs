@@ -22,7 +22,7 @@ Create a new sandbox
 ==================================================
 
 #. Log in to your production training tenant at https://app.amperity.com
-#. Navigate to the Settings page and locate the Sandboxes subtab on this page.
+#. Navigate to the **Settings** page and locate the **Sandboxes** subtab on this page.
 #. Create a new sandbox using the following information:
 
    .. list-table::
@@ -36,7 +36,7 @@ Create a new sandbox
       * - **Sandbox Description**
         - A sandbox to enhance customer PII data
 
-#. Use the tenant drop-down or the actions menu or the Go to sandbox button to switch to the sandbox you just created.
+#. Use the tenant drop-down or the actions menu or the **Go to sandbox** button to switch to the sandbox you just created.
 
 #. Ensure you are in the Sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
 
