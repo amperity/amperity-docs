@@ -267,6 +267,15 @@
 }
 
 
+/* Mermaid diagrams */
+
+.mermaid svg {
+  max-width: 500px;
+  font-size: 1rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
 /* Override Swiftype highlights */
 
 .st-ui-result em {
