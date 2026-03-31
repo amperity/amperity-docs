@@ -1,4 +1,3 @@
-.. destination-braze-cohorts-about-end
 .. https://docs.amperity.com/operator/
 
 
