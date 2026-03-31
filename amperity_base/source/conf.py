@@ -22,7 +22,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_design",
     "sphinx_togglebutton",
-#    "sphinx_sitemap",
+    "sphinx_sitemap",
     "sphinxcontrib.mermaid",
     "sphinxcontrib.video",
     "sphinxcontrib.youtube",
