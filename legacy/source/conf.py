@@ -6,7 +6,7 @@ import shibuya
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
 project = "Legacy"
-#copyright = "Copyright &copy; 2025, Amperity"
+#copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
 #version = shibuya.shibuya_version

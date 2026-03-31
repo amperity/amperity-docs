@@ -37,6 +37,10 @@ Send audiences to The Trade Desk Data Marketplace
    :start-after: .. term-thetradedesk-marketplace-start
    :end-before: .. term-thetradedesk-marketplace-end
 
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-audience-monetization-start
+   :end-before: .. term-audience-monetization-end
+
 .. destination-the-trade-desk-marketplace-about-start
 
 Use this destination to monetize your brand's UID 2.0-based audiences by making them available for purchase by advertisers at various rates in |destination-name|.

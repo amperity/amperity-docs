@@ -1254,6 +1254,34 @@ See SFTP.
 
 
 
+.. vale off
+
+**INSIDER ONE**
+
+.. vale on
+
+**API token**
+
+.. vale off
+
+.. setting-insider-one-api-token-start
+
+The |destination-name| API authentication token. To find this value log in to |destination-name| and navigate to **InOne**, **InOne Settings**, and then **Integration Settings**.
+
+.. setting-insider-one-api-token-end
+
+**Partner name**
+
+.. vale off
+
+.. setting-insider-one-partner-name-start
+
+The |destination-name| partner name. This value must be lowercase. To find this value log in to |destination-name| and navigate to **InOne**, **InOne Settings**, and then **Account Preferences**.
+
+.. setting-insider-one-partner-name-end
+
+
+
 
 .. vale off
 

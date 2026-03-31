@@ -14,9 +14,11 @@
 Audience monetization
 ==================================================
 
-.. monetize-about-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-audience-monetization-start
+   :end-before: .. term-audience-monetization-end
 
-Package first-party data as audience products available in data marketplaces, where advertisers can pay to use these audiences in their campaigns.
+.. monetize-about-start
 
 Audience monetization:
 

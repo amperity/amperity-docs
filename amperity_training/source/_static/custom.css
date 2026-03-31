@@ -1,0 +1,278 @@
+:root {
+  --syntax-light-pre-bg: #dff200;
+  --syntax-light-cap-bg: #dff200;
+  --syntax-light-highlight-bg: #dff200;
+  --syntax-dark-pre-bg: #dff200;
+  --syntax-dark-cap-bg: #dff200;
+  --syntax-dark-highlight-bg: #dff200;
+}
+
+.yue .align-left{
+  clear:left;
+/*  float:left; */  /* don't float text around images */
+  margin:0 1rem 1rem
+}
+
+.yue .align-right{
+  clear:right;
+/*  float:right; */  /* don't float text around images */
+  margin:0 1rem 1rem
+}
+
+
+/* Doorbell */
+
+#doorbell-button {
+  position: fixed;
+  visibility: visible;
+  cursor: pointer;
+  width: auto;
+  border: 0;
+  font-family: 'Outfit';
+  font-size: 15px;
+  font-weight: 500;
+  background: #d9feff;
+  color: #004b57;
+  padding: 10px 20px;
+  margin: 0;
+  z-index: 100;
+  bottom: 0;
+  right: 6.5%;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Doorbell button position */
+
+#doorbell-button.bottom_right {
+  position: fixed !important;
+  visibility: visible !important;
+  cursor: pointer !important;
+  width: auto !important;
+  border: 0 !important;
+  font-family: 'Outfit' !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  background: #d9feff !important;
+  color: #004b57 !important;
+  padding: 10px 20px !important;
+  margin: 0 !important;
+  z-index: 100 !important;
+  bottom: 0 !important;
+  right: 6.5% !important;
+  -webkit-border-radius: 5px 5px 0 0 !important;
+  -moz-border-radius: 5px 5px 0 0 !important;
+  border-radius: 5px 5px 0 0 !important;
+}
+
+/* Doorbell background when button is clicked */
+
+#doorbell-background {
+  background: #004b57;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99998;
+  display: none;
+}
+
+/* Doorbell feedback modal position */
+
+#doorbell {
+  position: absolute;
+  z-index: 99999;
+  /*background-color: #cedb1f !important;*/
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  top: 100px;
+}
+
+#doorbell-container {
+  margin: 0 auto;
+  position: relative
+}
+
+/* Doorbell feedback close button */
+
+#doorbell-container .close {
+  position: absolute;
+  height: auto;
+  width: auto;
+  z-index: 1;
+  top: 8px;
+  right: 20px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  color: #004b57;
+  text-shadow: 0 1px 0 #d9feff;
+  opacity: .8;
+  filter: alpha(opacity=20);
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  min-width: inherit;
+}
+
+/* Doorbell modal */
+
+#doorbell form {
+  padding: 10px 20px 15px;
+  background: #d9feff;
+  color: #004b57;
+  margin: 0;
+  border: 0px solid #004b57;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 0px 0px 0 #004b57;
+  -webkit-box-shadow: 0px 0px 0px 0 #004b57;
+  box-shadow: 0px 0px 0px 0 #004b57;
+}
+
+#doorbell form fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+
+/* Doorbell modal title */
+
+#doorbell form legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 15px 0;
+  font-size: 21px;
+  line-height: 1.428571429;
+  color: #004b57;
+  border: 0;
+  /* border-bottom: 1px solid #d9feff; */
+}
+
+/* Doorbell text areas */
+
+#doorbell .form-control {
+  display: block;
+  height: 34px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #004b57;
+  background: #ffffff;
+  border: 1px solid #004b57;
+  border-radius: 4px;
+/*  -webkit-box-shadow: inset 0 1px 1px; */
+/*  box-shadow: inset 0 1px 1px; */
+/*  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; */
+/*  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
+/*  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
+}
+
+#doorbell form textarea {
+  height: 80px;
+  resize: vertical
+}
+
+#doorbell label {
+  font-weight: 500;
+}
+
+#doorbell form textarea, #doorbell form input[type="email"], #doorbell form input[type="text"] {
+  width: 95.5%;
+  padding: 4px 2%;
+  margin-bottom: 10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Doorbell modal submit button */
+
+#doorbell-submit-button {
+  -webkit-appearance: button !important;
+  text-transform: none !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+/*  -ms-touch-action: manipulation; */
+/*  touch-action: manipulation; */
+  border: 1px solid #d9feff !important;
+  white-space: nowrap !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  line-height: 1.42857143 !important;
+  border-radius: 4px !important;
+/*  -webkit-user-select: none; */
+/*  -moz-user-select: none; */
+/*  -ms-user-select: none; */
+  user-select: none !important;
+  color: #d9feff !important;
+  background: #004b57 !important;
+}
+
+#doorbell .buttons button {
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: block !important;
+  cursor: pointer !important;
+}
+
+/* Doorbell error message */
+
+#doorbell #doorbell-success,#doorbell #doorbell-error {
+  display: none;
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: #af3708;
+  color: #ffffff;
+}
+
+#doorbell-success {
+  padding: 15px;
+  border: 1px solid #317a1c;
+  border-radius: 4px;
+  background-color: #317a1c;
+  color: #ffffff;
+}
+
+/* Doorbell powered by string */
+
+#doorbell #doorbell-powered-by {
+  margin-top: 5px !important;
+  font-size: .1px !important;
+  color: #d9feff !important;
+  text-decoration: none !important;
+  display: inline-block !important
+}
+
+#doorbell #doorbell-powered-by:hover {
+  text-decoration: none !important;
+  color: #d9feff !important
+}
+
+
+/* Override Swiftype highlights */
+
+.st-ui-result em {
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-color: #0c0c0c !important;
+  color: #0c0c0c !important;
+  background-color: #dff200 !important;
+}

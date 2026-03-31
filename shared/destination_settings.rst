@@ -1682,6 +1682,34 @@ Use public key encryption to encrypt data that has PII before using SFTP to send
 
 
 
+.. vale off
+
+**INSIDER ONE**
+
+.. vale on
+
+**Attribute name**
+
+.. vale off
+
+.. setting-insider-one-attribute-name-start
+
+The |destination-name| user attribute used to match audience members. Must be one of **email**, **phone_number**, or **uuid**, and must match the attribute name configured on the **Default Attributes** page in |destination-name|.
+
+.. setting-insider-one-attribute-name-end
+
+**Segment name**
+
+.. vale off
+
+.. setting-insider-one-segment-name-start
+
+The name of the first-party segment to create in |destination-name|. Segment names must be unique across the |destination-name| account and cannot exceed 40 characters.
+
+.. setting-insider-one-segment-name-end
+
+
+
 
 .. vale off
 

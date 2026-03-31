@@ -665,6 +665,15 @@ An audience is a list of customers who match the attributes, filters, and condit
 .. term-audience-end
 
 
+**audience monetization**
+
+.. term-audience-monetization-start
+
+Audience monetization generates revenue by packaging first-party data as audience products and making those audiences available in a data marketplace. Advertisers can pay to use these audiences in their marketing campaigns.
+
+.. term-audience-monetization-end
+
+
 **audience sizes**
 
 .. term-audience-sizes-start
