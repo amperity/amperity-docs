@@ -2615,7 +2615,7 @@ Use the **CURRENT_DATE()** function to return the current date at the start of t
 
 .. TODO: Keep this synchronized with amperity_sql_spark/current_date.rst
 
-.. important:: A table that uses the **CURRENT_DATE()** function is considered a "volatile table" and is always refreshed when :ref:`running a database with a normal refresh <databases-database-howto-run-normal>`.
+.. important:: A table that uses the **CURRENT_DATE()** function is considered a "volatile table" and is always refreshed when running a database with a normal refresh.
 
 .. sql-spark-function-current-date-volatile-table-end
 
@@ -2637,7 +2637,7 @@ Use the **CURRENT_TIMESTAMP()** function to return the current timestamp at the 
 
 .. TODO: Keep this synchronized with amperity_sql_spark/current_timestamp.rst
 
-.. important:: A table that uses the **CURRENT_TIMESTAMP()** function is considered a "volatile table" and is always refreshed when :ref:`running a database with a normal refresh <databases-database-howto-run-normal>`.
+.. important:: A table that uses the **CURRENT_TIMESTAMP()** function is considered a "volatile table" and is always refreshed when running a database with a normal refresh.
 
 .. sql-spark-function-current-timestamp-volatile-table-end
 
@@ -3483,7 +3483,7 @@ Use the **RAND([0,1])** function to return a random value with independent and i
 
 .. TODO: Keep this synchronized with amperity_sql_spark/current_date.rst
 
-.. important:: A table that uses the **RAND()** function is considered a "volatile table" and is always refreshed when :ref:`running a database with a normal refresh <databases-database-howto-run-normal>`.
+.. important:: A table that uses the **RAND()** function is considered a "volatile table" and is always refreshed when running a database with a normal refresh.
 
 .. sql-spark-function-rand-volatile-table-end
 

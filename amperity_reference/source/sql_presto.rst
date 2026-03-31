@@ -3080,7 +3080,7 @@ The following SQL will collapse all rows with Amperity IDs in the **Unified Coal
 .. _sql-presto-function-median:
 
 MEDIAN()
-++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------
 
 .. sql-presto-function-median-start
 
