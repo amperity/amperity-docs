@@ -22,7 +22,7 @@ In this exercise, you will learn how to work with personally identifiable inform
 Enhance customer 360 view
 ==================================================
 
-#. Navigate to the Quick Start page and click on View Details to the right of Identity resolutionQuick
+#. Navigate to the **Quick start** page and click on **View Details** to the right of **Identity resolution**.
 
    .. image:: /_images/ex02_start_page.png
       :width: 500 px
@@ -30,7 +30,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Under Datasources, click Training Data Bridge
+#. Under **Datasources**, click **Training Data Bridge**.
 
    .. image:: /_images/ex02_training_data_bridge.png
       :width: 500 px
@@ -38,7 +38,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click Edit Selections
+#. Click **Edit Selections**.
 
    .. image:: /_images/ex02_edit_selections_button.png
       :width: 400 px
@@ -46,7 +46,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Select the checkbox next to POS Customers Out and click Next.
+#. Select the checkbox next to **POS Customers Out** and click **Next**.
 
    .. image:: /_images/ex02_pos_customers_out_selection.png
       :width: 400 px
@@ -54,7 +54,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click Save and Sync
+#. Click **Save and Sync**.
 
    .. image:: /_images/ex02_save_and_sync_button.png
       :width: 400 px
@@ -62,13 +62,13 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click the Workflows tab and explore the Bridge - Training Data Bridge workflow.
+#. Click the **Workflows** tab and explore the "Bridge - Training Data Bridge" workflow.
 
    This workflow should take 3 to 5 minutes to complete. This is a good time to stretch your legs, grab a beverage, anything that you may need to do.
 
-#. When the workflow is complete, click on the Quick start tab and select View Details.
+#. When the workflow is complete, click on the **Quick start** tab and select **View Details**.
 
-#. Click AmpAI Select to have the AmpAI select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
+#. Click **AmpAI Select** to have the AmpAI select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
 
    .. note:: If AmpAI select does not appear to make any changes please refresh the page. This is a known bug.
 
@@ -78,7 +78,7 @@ Enhance customer 360 view
          :align: left
          :class: no-scaled-link
 
-#. Click Edit on Identity tables - You will see that both the online_customers_out and the pos_customers_out because they have identity data in them. Click Cancel to return back.
+#. Click **Edit on Identity tables**. You will see that both the **online_customers_out** and the **pos_customers_out** because they have identity data in them. Click **Cancel** to return back.
 
    .. image:: /_images/ex02_identity_tables.png
       :width: 400 px
@@ -86,7 +86,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click Edit on Primary Key
+#. Click **Edit on Primary Key**.
 
    .. image:: /_images/ex02_primary_key_edit.png
       :width: 500 px
@@ -94,7 +94,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. With the online_customers_out table selected in the top left-hand corner, select dtUpdateDate to add it to the PK Selection. Validate will run to make sure the key is 100% unique. Repeat these steps for the pos_customers_out table and then click Save.
+#. With the **online_customers_out** table selected in the top left-hand corner, select **dtUpdateDate** to add it to the **PK Selection**. Validate will run to make sure the key is 100% unique. Repeat these steps for the **pos_customers_out** table and then click **Save**.
 
    .. image:: /_images/ex02_primary_key_selection.png
       :width: 600 px
@@ -102,7 +102,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click Edit on Identify your fields
+#. Click **Edit** on **Identify your fields**.
 
    .. image:: /_images/ex02_identity_your_fields.png
       :width: 520 px
@@ -110,7 +110,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. With the online_customers_out table selected in the top left-hand corner, check that the semantic tag for the dtUpdateDate field is set to update-dt. If it is not, use the pull-down to select it. Repeat these steps for the pos_customers_out table and then click Save & Close.
+#. With the **online_customers_out** table selected in the top left-hand corner, check that the semantic tag for the **dtUpdateDate** field is set to **update-dt**. If it is not, use the dropdown to select it. Repeat these steps for the **pos_customers_out** table and then click **Save & Close**.
 
    These steps will prevent errors that have to be resolved when promoting the sandbox later.
 
@@ -120,7 +120,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click Edit on Data exclusion and review the data exclusions that are applied by default. These values are often edited to deal with unique data situations. Click on Cancel to return to Quick start.
+#. Click **Edit** on **Data exclusion** and review the data exclusions that are applied by default. These values are often edited to deal with unique data situations. Click on **Cancel** to return to **Quick start**.
 
    .. image:: /_images/ex02_data_exclusions.png
       :width: 520 px
@@ -128,7 +128,7 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click on Run Stitch on Generate Amperity IDs with Stitch
+#. Click on **Run Stitch** on **Generate Amperity IDs with Stitch**.
 
    .. image:: /_images/ex02_run_stitch.png
       :width: 500 px
@@ -136,4 +136,4 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click the Workflows tab and explore the Manually triggered stitch job workflow. This workflow should fail after about 9 to 12 minutes. We will troubleshoot this issue after the next lesson.
+#. Click the **Workflows** tab and explore the **Manually triggered stitch job** workflow. This workflow should fail after about 9 to 12 minutes. We will troubleshoot this issue after the next lesson.
