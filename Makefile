@@ -2,7 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy
+all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy legions training
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -54,6 +54,14 @@ modals: static ## Build only the "/modals" section
 legacy: static ## Build only the "/legacy" section
 	# Building Legacy pages...
 	$(BUILD_COMMAND) legacy/source $(BUILDDIR)/legacy
+
+legions: static ## Build only the "/legions" section
+	# Building Legions pages...
+	$(BUILD_COMMAND) legions/source $(BUILDDIR)/legions
+
+training: static ## Build only the "/training" section
+	# Building Training pages...
+	$(BUILD_COMMAND) amperity_training/source $(BUILDDIR)/training
 
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
