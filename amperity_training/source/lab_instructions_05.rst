@@ -22,7 +22,7 @@ To gain practical experience with running queries in Amperity. You will learn ho
 Create a Query Using SQL
 ==================================================
 
-#. Navigate to the Queries tab and then click Create and Select SQL Query.
+#. Navigate to the **Queries** page, and then click **Create** and select **SQL Query**.
 
    .. image:: /_images/ex05_create_sql_query.png
       :width: 500 px
@@ -32,11 +32,11 @@ Create a Query Using SQL
 
 #. If you are handy with SQL try writing a query to find the most popular product of all time.
 
-   .. hint:: Viewing the Unified_Itemized_Transactions table and docs will be helpful when writing the query.
+   .. hint:: Viewing the **Unified Itemized Transactions** table and docs will be helpful when writing the query.
 
 #. Or give the AI a try.
 
-#. Expand the AI Assistant tab on the left-hand side of the query editor.
+#. Expand the **AI Assistant** tab on the left-hand side of the query editor.
 
    .. image:: /_images/ex05_use_ai_assistant.png
       :width: 500 px
@@ -44,9 +44,9 @@ Create a Query Using SQL
       :align: left
       :class: no-scaled-link
 
-#. Ask the AI to help generate a query by pasting the following question in the AI Assistant message box and clicking the send button. What is the most popular product of all time
+#. Ask the AI to help generate a query by pasting the following question in the **AI Assistant** message box and clicking the send button: "What is the most popular product of all time?"
 
-   This is an example of a good query use case - not directly tied to a list of customers. How can you tell the AI generated a good result?
+   This is an example of a good query use case--not directly tied to a list of customers. How can you tell the AI generated a good result?
 
    .. image:: /_images/ex05_assistant_query.png
       :width: 500 px
@@ -54,9 +54,9 @@ Create a Query Using SQL
       :align: left
       :class: no-scaled-link
 
-#. After the SQL Query is returned click Copy SQL and paste it into the query pane. Then click Run query and view the results.
+#. After the SQL query is returned click **Copy SQL** and paste it into the query pane. Then click **Run query** and view the results.
 
-#. Click Untitled Query in the top left-hand corner to edit the name and name the query Most popular product and click Activate.
+#. Click **Untitled Query** in the top left-hand corner to edit the name and name the query "Most popular product" and click **Activate**.
 
    .. image:: /_images/ex05_activate_query.png
       :width: 400 px
@@ -64,7 +64,7 @@ Create a Query Using SQL
       :align: left
       :class: no-scaled-link
 
-#. Select Activate only and click on Activate.
+#. Select **Activate only** and click on **Activate**.
 
    .. image:: /_images/ex05_activate_only.png
       :width: 380 px
@@ -73,6 +73,6 @@ Create a Query Using SQL
       :class: no-scaled-link
 
 
-.. tip:: The AI Assistant can answer all sorts of questions. For a bit of fun, click Create and Select SQL Query again. Expand the AI Assistant tab on the left-hand side of the query editor and ask the question: "What is the airspeed velocity of an unladen swallow?"
+.. tip:: The **AI Assistant** can answer all sorts of questions. For a bit of fun, click **Create** and select **SQL Query** again. Expand the **AI Assistant** tab on the left-hand side of the query editor and ask the question: "What is the airspeed velocity of an unladen swallow?"
 
-   After you have read the result click Discard.
+   After you have read the result click **Discard**.

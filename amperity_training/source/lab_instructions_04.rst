@@ -38,7 +38,7 @@ Create a new sandbox for the exercise
 
 #. Log into your production training tenant at https://app.amperity.com
 
-#. Navigate to the Settings page and locate the Sandboxes subtab on this page.
+#. Navigate to the **Settings** page and locate the **Sandboxes** subtab on this page.
 
 #. Create a new sandbox using the following information:
 
@@ -63,7 +63,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the Quick Start page and click on View details to the right of Identity resolution.
+#. Navigate to the **Quick start** page and click on **View details** to the right of **Identity resolution**.
 
    .. image:: /_images/ex04_quickstart_idres.png
       :width: 500 px
@@ -71,7 +71,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click Edit on Identify your fields.
+#. Click **Edit** on **Identify your fields**.
 
    .. image:: /_images/ex04_identify_fields.png
       :width: 500 px
@@ -79,7 +79,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. With the online_customers_out table selected in the top left-hand corner, enter the semantic tag for the cust_id semantic field as fk-onlinecustomerid and click on Add "fk-onlinecustomerid" and then click Save & Close.
+#. With the **online_customers_out** table selected in the top left-hand corner, enter the semantic tag for the **cust_id** semantic field as **fk-onlinecustomerid** and click on **Add fk-onlinecustomerid** and then click **Save & Close**.
 
    This will automatically update the stitch rules.
 
@@ -89,7 +89,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Return to the Quick Start page, and click on View details. In the Datasources tile, click on Training Data Bridge, and then on Edit selections.
+#. Return to the **Quick start** page, and click on **View details**. In the **Datasources** tile, click on "Training Data Bridge", and then on **Edit selections**.
 
    .. image:: /_images/ex04_return_to_quickstart.png
       :width: 500 px
@@ -97,7 +97,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Select online_itemized_out and product_catalog and click on Next.
+#. Select **online_itemized_out** and **product_catalog** and click on **Next**.
 
    .. image:: /_images/ex04_training_data_bridge.png
       :width: 400 px
@@ -105,7 +105,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click on Save and sync
+#. Click on **Save and sync**.
 
    .. image:: /_images/ex04_save_and_sync.png
       :width: 400 px
@@ -113,7 +113,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. From the Sources tab in the Custom domain tables section, select Add table.
+#. From the **Sources** tab in the **Custom domain tables** section, select **Add table**.
 
    .. image:: /_images/ex04_custom_domain_tables.png
       :width: 400 px
@@ -121,7 +121,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Name the table online_itemized_transactions_CDT and click Save
+#. Name the table **online_itemized_transactions_CDT** and click **Save**.
 
    .. image:: /_images/ex04_create_custom_domain_table.png
       :width: 500 px
@@ -129,7 +129,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Paste in the following SQL and click Next
+#. Paste in the following SQL and click **Next**.
 
    .. code-block:: sql
       :linenos:
@@ -172,7 +172,7 @@ Create a new sandbox for the exercise
       FROM online_itemized_out AS OT
       LEFT JOIN product_catalog AS PC ON PC.product_id = OT.product_id
 
-#. Update the semantic tags using the following table and click Activate
+#. Update the semantic tags using the following table and click **Activate**.
 
    .. list-table::
       :widths: 40 20 40
@@ -239,7 +239,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Navigate to the "Customer 360" page, select the kebab menu |fa-kebab| next to the existing Customer Profiles database and select "Delete". Follow the prompt to delete the database.
+#. Navigate to the **Customer 360** page, select the kebab menu |fa-kebab| next to the existing **Customer Profiles** database and select **Delete**. Follow the prompt to delete the database.
 
    .. image:: /_images/ex04_navigate_to_c360.png
       :width: 340 px
@@ -247,7 +247,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click "Create Database" and in the prompt type "Customers Profiles" for the name and select the "Customer 360" template. Leave the permissions as "Admin only" and click "create" to create the new database with all the transaction tables.
+#. Click **Create Database** and in the prompt type **Customers Profiles** for the name and select the **Customer 360** template. Leave the permissions as **Admin only** and click **Create** to create the new database with all the transaction tables.
 
    .. image:: /_images/ex04_create_database.png
       :width: 340 px
@@ -255,9 +255,9 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Once the database is created you will be automatically dropped into the "Edit" interface for the database. To reach this at any time click the kebab menu |fa-kebab| and select "Edit".
+#. Once the database is created you will be automatically dropped into the **Edit** interface for the database. To reach this at any time click the kebab menu |fa-kebab| and select **Edit**.
 
-#. Click Add table to add the Has_Purchased_Brand table. In the top left corner of the screen, rename the table to: Has_Purchased_Brand then select Build Mode of custom SQL, and then paste in the following SQL then click on Next.
+#. Click **Add table** to add the **Has_Purchased_Brand** table. In the top left corner of the screen, rename the table to **Has_Purchased_Brand** then select **Build Mode** of **Custom SQL**, and then paste in the following SQL then click on **Next**.
 
    .. image:: /_images/ex04_add_table_to_database.png
       :width: 400 px
@@ -285,7 +285,7 @@ Create a new sandbox for the exercise
       FROM Unified_Itemized_Transactions
       GROUP BY 1
 
-#. In the screen that comes up, click Generate field descriptions and then Save.
+#. In the screen that comes up, click **Generate field descriptions** and then **Save**.
 
    .. image:: /_images/ex04_generate_field_descriptions.png
       :width: 500 px
@@ -293,7 +293,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click on the kebab menu |fa-kebab| to the right of the Customer_360 table and select Edit to update the table.
+#. Click on the kebab menu |fa-kebab| to the right of the **Customer 360** table and select **Edit** to update the table.
 
    .. image:: /_images/ex04_edit_to_update_table.png
       :width: 500 px
@@ -301,7 +301,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. In the screen that comes up, replace the existing SQL by pasting in the following SQL, then click on Next.
+#. In the screen that comes up, replace the existing SQL by pasting in the following SQL, then click on **Next**.
 
    .. image:: /_images/ex04_replace_sql.png
       :width: 500 px
@@ -359,7 +359,7 @@ Create a new sandbox for the exercise
       LEFT JOIN Transaction_Attributes_extended ta ON mc.amperity_id = ta.amperity_id
       LEFT JOIN Has_Purchased_Brand AS HPB ON HPB.Amperity_ID = MC.Amperity_ID
 
-#. In the screen that comes up click Generate field descriptions and then Save.
+#. In the screen that comes up click **Generate field descriptions** and then **Save**.
 
    .. image:: /_images/ex04_generate_field_descriptions2.png
       :width: 500 px
@@ -367,7 +367,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click Activate in the database editor window
+#. Click **Activate** in the database editor window.
 
    .. image:: /_images/ex04_activate_database.png
       :width: 500 px
@@ -375,7 +375,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Click Review changes in the sandbox promote notification.
+#. Click **Review changes** in the sandbox promote notification.
 
    .. image:: /_images/ex04_review_changes.png
       :width: 400 px
@@ -383,7 +383,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Select Yes, continue and update all necessary tables. Amperity requires a Merge message for promotion. Provide a descriptive Merge message such as: This merge updates existing tables and adds new tables. Click on Promote.
+#. Select **Yes**, continue and update all necessary tables. Amperity requires a **Merge message** for promotion. Provide a descriptive Merge message such as: "This merge updates existing tables and adds new tables." Click on **Promote**.
 
    .. image:: /_images/ex04_update_necessary_tables.png
       :width: 500 px
@@ -391,7 +391,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. In the Promote changes modal, select the default Promote and delete sandbox and click Promote.
+#. In the **Promote changes** modal, select the default **Promote and delete sandbox** and click **Promote**.
 
    .. image:: /_images/ex04_promote_changes.png
       :width: 380 px
@@ -399,7 +399,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. After you are returned to your production tenant, select the Sources tab and on the Actions kebab menu |fa-kebab| to the right of the Courier group Daily and select Run.
+#. After you are returned to your production tenant, select the **Sources** page and on the **Actions** kebab menu |fa-kebab| to the right of the **Courier group Daily** and select **Run**.
 
    .. image:: /_images/ex04_open_sources_page.png
       :width: 500 px
@@ -407,7 +407,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Select Partial workflow and click on Run.
+#. Select **Partial workflow** and click on **Run**.
 
    .. image:: /_images/ex04_partial_workflow.png
       :width: 400 px
@@ -415,4 +415,4 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Check that the Daily workflow under the Workflows tab has started.
+#. Check that the **Daily** workflow under the **Workflows** page has started.
