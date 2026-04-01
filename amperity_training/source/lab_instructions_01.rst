@@ -7,7 +7,7 @@ Lab 01: Creating sandboxes
 
 Sandboxes are short-lived and deleted when changes are promoted. Before you can make any changes in the sandbox, you must pull these changes from the production environment into the sandbox so that you can fully test the changes you are about to make.
 
-.. admonition:: Reference Materials
+.. admonition:: Reference materials
 
    * `About Sandboxes <../reference/sandboxes.html>`__ |ext_link|
 
@@ -21,7 +21,7 @@ Sandbox tenants are used to safely make configuration changes, test those change
 Create a new sandbox
 ==================================================
 
-#. Log in to your production training tenant at https://app.amperity.com
+#. Log in to your production training tenant at https://app.amperity.com.
 #. Navigate to the **Settings** page and locate the **Sandboxes** subtab on this page.
 #. Create a new sandbox using the following information:
 
@@ -36,9 +36,9 @@ Create a new sandbox
       * - **Sandbox Description**
         - A sandbox to enhance customer PII data
 
-#. Use the tenant drop-down or the actions menu or the **Go to sandbox** button to switch to the sandbox you just created.
+#. Use the tenant drop-down or the **Actions** menu to select the **Go to sandbox** button to switch to the sandbox you just created.
 
-#. Ensure you are in the Sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
+#. Ensure you are in the sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
 
    .. image:: /_images/ex01_create_sandbox_button.png
       :width: 300 px
