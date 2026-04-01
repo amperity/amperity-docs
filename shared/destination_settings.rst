@@ -53,8 +53,8 @@ Open the **Destinations** page, select the **New destinations** button, and then
 
 To configure a destination for |destination-name|, do one of the following:
 
-#. Click the row in which |destination-name| is located. Destinations list alphabetically and you can scroll up and down the list.
-#. Search for |destination-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
+#. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+#. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 .. destinations-steps-add-destinations-select-end
 
@@ -62,8 +62,8 @@ To configure a destination for |destination-name|, do one of the following:
 
 To configure a campaign for |destination-name|, do one of the following:
 
-#. Click the row in which |destination-name| is located. Destinations list alphabetically and you can scroll up and down the list.
-#. Search for |destination-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
+#. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+#. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 .. campaigns-steps-add-destinations-select-end
 
