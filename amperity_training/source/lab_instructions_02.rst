@@ -5,9 +5,9 @@
 Lab 02: Enhancing C360 views
 ==================================================
 
-The quality of your customer 360 is dependent on the quantity and quality of the customer data in the tenant. A common routine task would be to enhance your tenant's customer 360 view with a new dataset.
+The quality of your customer 360 data is dependent on the quantity and quality of the customer data in the tenant. A common routine task would be to enhance your tenant's customer 360 view with a new dataset.
 
-.. admonition:: Reference Materials
+.. admonition:: Reference materials
 
    * `Customer 360 table <../reference/data_tables.html#customer-360>`__ |ext_link|
    * `Semantic Tags <../reference/semantics.html>`__ |ext_link|
@@ -68,9 +68,9 @@ Enhance customer 360 view
 
 #. When the workflow is complete, click on the **Quick start** tab and select **View Details**.
 
-#. Click **AmpAI Select** to have the AmpAI select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
+#. Click **AmpAI Select** to have **AmpAI** select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
 
-   .. note:: If AmpAI select does not appear to make any changes please refresh the page. This is a known bug.
+   .. note:: If **AmpAI Select** does not appear to make any changes please refresh the page. This is a known bug.
 
       .. image:: /_images/ex02_ampai_select.png
          :width: 400 px

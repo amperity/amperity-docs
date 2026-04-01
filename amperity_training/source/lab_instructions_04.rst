@@ -7,7 +7,7 @@ Lab 04: Modifying databases
 
 Combining implementation specific data that has been ingested or transformed with these core data assets form the building blocks for your organization's reporting and analytics view. A complete view of the customer helps organizations make more informed decisions about their customers. In this lab you will explore a common scenario of changing the PII displayed about customers. You will also add additional attributes about the customer, both attributes pre-built by Amperity and custom attributes.
 
-.. admonition:: Reference Materials
+.. admonition:: Reference materials
 
    * `Core tables <../reference/databases.html#core-tables>`__ |ext_link|
    * `Customer_360 <../reference/data_tables.html#customer-360>`__ |ext_link|
@@ -29,14 +29,14 @@ Objective
 
 In this lab exercise you will learn about building and configuring Databases to build off the data assets you have ingested and stitched in the training tenant:
 
-#. Modify the PII attributes of the customer 360 table.
-#. Add pre-built transaction attributes to the customer 360 table.
+#. Modify the PII attributes of the **Customer 360** table.
+#. Add pre-built transaction attributes to the **Customer 360** table.
 
 
 Create a new sandbox for the exercise
 ==================================================
 
-#. Log into your production training tenant at https://app.amperity.com
+#. Log into your production training tenant at https://app.amperity.com.
 
 #. Navigate to the **Settings** page and locate the **Sandboxes** subtab on this page.
 
@@ -53,9 +53,9 @@ Create a new sandbox for the exercise
       * - **Sandbox Description**
         - A sandbox to update the database configuration
 
-#. Use the tenant drop-down or the actions menu or the go to sandbox button to switch to the sandbox you just created.
+#. Use the tenant dropdown or the **Actions** to select the **Go to sandbox** button to switch to the sandbox you just created.
 
-#. Ensure you are in the Sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
+#. Ensure you are in the sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
 
    .. image:: /_images/ex04_open_training_tenant.png
       :width: 300 px
@@ -81,7 +81,7 @@ Create a new sandbox for the exercise
 
 #. With the **online_customers_out** table selected in the top left-hand corner, enter the semantic tag for the **cust_id** semantic field as **fk-onlinecustomerid** and click on **Add fk-onlinecustomerid** and then click **Save & Close**.
 
-   This will automatically update the stitch rules.
+   This will automatically update Stitch rules.
 
    .. image:: /_images/ex04_update_stitch_rules.png
       :width: 500 px
@@ -113,7 +113,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. From the **Sources** tab in the **Custom domain tables** section, select **Add table**.
+#. From the **Sources** page in the **Custom domain tables** section, select **Add table**.
 
    .. image:: /_images/ex04_custom_domain_tables.png
       :width: 400 px
@@ -255,7 +255,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Once the database is created you will be automatically dropped into the **Edit** interface for the database. To reach this at any time click the kebab menu |fa-kebab| and select **Edit**.
+#. After the database is created you will be automatically dropped into the **Edit** interface for the database. To reach this at any time click the kebab menu |fa-kebab| and select **Edit**.
 
 #. Click **Add table** to add the **Has_Purchased_Brand** table. In the top left corner of the screen, rename the table to **Has_Purchased_Brand** then select **Build Mode** of **Custom SQL**, and then paste in the following SQL then click on **Next**.
 
@@ -383,7 +383,7 @@ Create a new sandbox for the exercise
       :align: left
       :class: no-scaled-link
 
-#. Select **Yes**, continue and update all necessary tables. Amperity requires a **Merge message** for promotion. Provide a descriptive Merge message such as: "This merge updates existing tables and adds new tables." Click on **Promote**.
+#. Select **Yes**, continue and update all necessary tables. Amperity requires a **Merge message** for promotion. Provide a descriptive **Merge message** such as: "This merge updates existing tables and adds new tables." Click on **Promote**.
 
    .. image:: /_images/ex04_update_necessary_tables.png
       :width: 500 px

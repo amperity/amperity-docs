@@ -61,7 +61,7 @@ Validate and promote sandbox
 
    A sandbox should be short-lived and should be used to make small, iterative changes within a tenant. After these changes are safely promoted to production, sandboxes should be deleted. Use a sandbox for each iterative change to ensure that you are never making large changes to production. You can automatically delete a sandbox using the **Promote and delete sandbox** option when promoting changes from a sandbox to production. You can verify that you have returned to your production tenant when the side bar returns to black.
 
-#. After you are returned to your production tenant select the Sources tab and take note of the number source records and **pos_customers_out** records.
+#. After you are returned to your production tenant select the **Sources** page and take note of the number source records and **pos_customers_out** records.
 
    .. image:: /_images/ex03_sources_tab_records.png
       :width: 400 px
@@ -93,4 +93,4 @@ Validate and promote sandbox
       :align: left
       :class: no-scaled-link
 
-   When promoting changes from a sandbox to a production tenant, the object configuration is copied, but not the data. After completing the last section, the POS dataset configuration has been promoted, but the data has not. It is necessary to run the Courier group to ensure the data is available in the production tenant.
+   When promoting changes from a sandbox to a production tenant, the object configuration is copied, but not the data. After completing the last section, the POS dataset configuration has been promoted, but the data has not. It is necessary to run the courier group to ensure the data is available in the production tenant.

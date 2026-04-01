@@ -5,9 +5,9 @@
 Lab 06: Using workflows
 ==================================================
 
-A workflow is the series of steps that your data follows as it moves through Amperity. Information about a workflow, including details and individual tasks, is available from the Workflows page. In this lab, you will see workflows in action.
+A workflow is the series of steps that your data follows as it moves through Amperity. Information about a workflow, including details and individual tasks, is available from the **Workflows** page. In this lab, you will see workflows in action.
 
-.. admonition:: Reference Materials
+.. admonition:: Reference materials
 
    * `About scheduled workflows <../operator/workflows.html>`__ |ext_link|
    * `About Workflows page <../reference/workflows.html>`__ |ext_link|
@@ -22,9 +22,9 @@ In this lab you will set up a workflow to gain a deeper understanding of the par
 Configure a workflow
 ==================================================
 
-#. Log into your production training tenant at https://app.amperity.com
+#. Log into your production training tenant at https://app.amperity.com.
 
-#. Navigate to the Settings page and locate the Sandboxes subtab on this page.
+#. Navigate to the **Settings** page and locate the **Sandboxes** subtab on this page.
 
 #. Create a new sandbox using the following information:
 
@@ -39,9 +39,9 @@ Configure a workflow
       * - **Sandbox Description**
         - A sandbox to create workflows
 
-#. Use the tenant drop-down or the actions menu or the go to sandbox button to switch to the sandbox you just created.
+#. Use the tenant dropdown or the **Actions** menu to select the **Go to sandbox** button to switch to the sandbox you just created.
 
-#. Ensure you are in the Sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
+#. Ensure you are in the sandbox training tenant. Sandbox tenants utilize the teal blue navigation color scheme. Sandboxes also display the sandbox status banner. You can quickly switch between tenants by clicking on the tenant selection menu in the top-right corner of the screen.
 
    .. image:: /_images/ex06_switch_to_sandbox.png
       :width: 400 px
@@ -158,7 +158,7 @@ Configure a workflow
       :align: left
       :class: no-scaled-link
 
-#. Set the **Schedule** cron for 8 am daily Pacific time and set the courier group to **Active** and then click **Save**.
+#. Set the **Schedule** cron for "8 am daily Pacific time" and set the courier group to **Active** and then click **Save**.
 
    .. image:: /_images/ex06_schedule_cron.png
       :width: 400 px
@@ -199,4 +199,4 @@ Configure a workflow
       :class: no-scaled-link
 
 
-This completes Exercise #6: Using Workflows in Amperity. In a live production tenant, the next step is to verify the workflow and promote it to the production tenant.
+This completes "Lab 06: Using workflows". In a live production tenant, the next step is to verify the workflow and promote it to the production tenant.
