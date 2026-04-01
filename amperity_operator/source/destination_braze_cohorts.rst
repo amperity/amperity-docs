@@ -1,6 +1,5 @@
 .. https://docs.amperity.com/operator/
 
-
 .. |destination-name| replace:: Braze Cohorts
 .. |plugin-name| replace:: "Braze Cohorts"
 .. |credential-type| replace:: "braze-cohort"
