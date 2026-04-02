@@ -318,22 +318,21 @@ The left-side navigation has sections for the following activities:
 Included SFTP site
 --------------------------------------------------
 
-.. start-here-tenant-sftp-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-start
+   :end-before: .. about-tenant-sftp-end
 
-Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-australia-start
+   :end-before: .. about-tenant-sftp-australia-end
 
-.. note:: The SFTP site is provisioned by an Amperity administrator *after* the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity uses SnapPass to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-older-tenants-start
+   :end-before: .. about-tenant-sftp-older-tenants-end
 
-Once this site is provisioned, you may configure the SFTP site as an SFTP source or an SFTP destination to support any desired workflow. External customer processes can be configured to connect to the site using SFTP, after which they can add data to or pick up data from the site to support any external workflow.
-
-.. include:: ../../shared/file-formats.rst
-   :start-after: .. formats-sftp-data-retention-start
-   :end-before: .. formats-sftp-data-retention-end
-
-.. important:: The hostname for the SFTP site is always ``<tenant-name>.sftp.amperity.com``. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
-
-.. start-here-tenant-sftp-end
-
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-provisioned-start
+   :end-before: .. about-tenant-sftp-provisioned-end
 
 .. _start-here-log-in-amperity:
 

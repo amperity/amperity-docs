@@ -121,19 +121,11 @@ Configure a new tenant to use an Amazon S3 storage location that is owned and ma
 
        The region for primary storage should be the same region in which Amperity is hosted.
 
-       .. note:: Amperity is hosted in one of the following Amazon AWS regions:
+       .. note::
 
-          .. list-table::
-             :widths: 50 50
-             :header-rows: 0
-
-             * - US West (Oregon)
-               - **us-west-2**
-             * - Canada (Central)
-               - **ca-central-1**
-
-          `Cross-region transfer costs <https://aws.amazon.com/s3/pricing/>`__ |ext_link| will apply when Amazon S3 storage is configured in different region than the one in which your Amperity tenant is hosted and will increase latency.
-
+          .. include:: ../../amperity_reference/source/infrastructure.rst
+             :start-after: .. infrastructure-regions-storage-aws-start
+             :end-before: .. infrastructure-regions-storage-aws-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -335,18 +327,12 @@ Configure a new tenant to use a Microsoft Azure Blob Storage location that is ow
 
        #. In the Microsoft Azure console, select the regions in which to provision primary and backup storage.
 
-          .. note:: Amperity is hosted in one of the following Microsoft Azure regions:
+          .. note::
 
-             .. list-table::
-                :widths: 50 50
-                :header-rows: 0
+             .. include:: ../../amperity_reference/source/infrastructure.rst
+                :start-after: .. infrastructure-regions-storage-azure-start
+                :end-before: .. infrastructure-regions-storage-azure-end
 
-                * - US East 2
-                  - **eastus2**
-                * - North Europe
-                  - **northeurope**
-
-             `Cross-region transfer costs <https://azure.microsoft.com/en-us/pricing/details/bandwidth/>`__ |ext_link| will apply when Azure Blob Storage is configured in different region than the one in which your Amperity tenant is hosted and will increase latency.
 
        #. When you are finished configuring the ARM deployment template click **Revew + Create**. Microsoft Azure will validate the ARM deployment template, and then create resources using the ARM deployment template.
 
