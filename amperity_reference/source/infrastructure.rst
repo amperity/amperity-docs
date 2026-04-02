@@ -22,7 +22,7 @@ Cloud infrastructure
 
 .. infrastructure-about-start
 
-Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure. This topic references the following cloud infrastructure settings and options:
+Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure. This topic consolidates information about cloud infrastructure settings and options:
 
 * :ref:`Amperity API base URLs <infrastructure-api-base-url>`
 * :ref:`IP addresses for allowlists <infrastructure-allowlists>`
@@ -30,6 +30,8 @@ Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure. This topic 
 * :ref:`Regions for storage and cloud infrastructure <infrastructure-regions>`
 * :ref:`SFTP hostnames <infrastructure-hostnames>`
 * :ref:`Snowflake account locator IDs <infrastructure-snowflake>`
+
+.. infrastructure-about-end
 
 
 .. _infrastructure-api-base-url:
@@ -64,7 +66,7 @@ Amazon AWS
 
 .. _infrastructure-api-base-url-australia:
 
-Amazon AWS in Australia
+Base URLs in Australia
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_api/source/base_url.rst
@@ -254,12 +256,6 @@ The SFTP site is provisioned by an Amperity administrator after the initial tena
 
 .. about-tenant-sftp-end
 
-.. about-tenant-sftp-australia-start
-
-In Australia, for tenants running on Amazon AWS use ``sftp-aws-apse2.amperity.com``.
-
-.. about-tenant-sftp-australia-end
-
 .. about-tenant-sftp-older-tenants-start
 
 .. important:: The hostname for the SFTP site is always ``<tenant-name>.sftp.amperity.com``. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
@@ -279,9 +275,21 @@ The hostname for the SFTP site is always **[tenant-name].sftp.amperity.com**. So
 .. about-tenant-sftp-provisioned-end
 
 
+.. _infrastructure-hostnames-australia:
+
+SFTP hostnames in Australia
+--------------------------------------------------
+
+.. about-tenant-sftp-australia-start
+
+In Australia, for tenants running on Amazon AWS use ``sftp-aws-apse2.amperity.com``.
+
+.. about-tenant-sftp-australia-end
+
+
 .. _infrastructure-snowflake:
 
-Snowflake account locator IDs for Amperity Bridge
+Snowflake account locator IDs
 ==================================================
 
 .. include:: ../../amperity_operator/source/bridge_snowflake.rst
