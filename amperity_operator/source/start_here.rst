@@ -332,6 +332,11 @@ Once this site is provisioned, you may configure the SFTP site as an SFTP source
 
 .. important:: The hostname for the SFTP site is always ``<tenant-name>.sftp.amperity.com``. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
 
+   In Australia, for tenants running on Amazon AWS use ``sftp-aws-apse2.amperity.com``.
+
+.. send-data-to-amperity-sftp-server-end
+
+
 .. start-here-tenant-sftp-end
 
 

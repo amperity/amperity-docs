@@ -48,6 +48,22 @@ You can find the tenant ID from the Amperity user interface. From the **Settings
 .. base-url-tenant-id-end
 
 
+.. _base-url-aws-australia:
+
+Amazon AWS in Australia
+--------------------------------------------------
+
+.. base-url-aws-australia-start
+
+Tenants hosted in Amazon AWS in Australia have the following base URL:
+
+::
+
+   https://app-aws-apse2.amperity.com/
+
+.. base-url-aws-australia-end
+
+
 .. _base-url-azure:
 
 Microsoft Azure

@@ -127,10 +127,14 @@ Configure a new tenant to use an Amazon S3 storage location that is owned and ma
              :widths: 50 50
              :header-rows: 0
 
-             * - US West (Oregon)
-               - **us-west-2**
+             * - Australia, primary (Sydney)
+               - **ap-southeast-2**
+             * - Australia, backup (Melbourne)
+               - **ap-southeast-4**
              * - Canada (Central)
                - **ca-central-1**
+             * - US West (Oregon)
+               - **us-west-2**
 
           `Cross-region transfer costs <https://aws.amazon.com/s3/pricing/>`__ |ext_link| will apply when Amazon S3 storage is configured in different region than the one in which your Amperity tenant is hosted and will increase latency.
 

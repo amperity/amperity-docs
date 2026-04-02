@@ -321,6 +321,7 @@ Most connections are made directly to your Amperity tenant. Use one of the follo
 Some connections are made directly to the SFTP site that is included with your Amperity tenant. The specific IP address to use depends on the location in which your tenant is hosted:
 
 * On Amazon AWS use "52.11.51.214"
+* On Amazon AWS (Australia) use "3.44.64.64/29"
 * On Amazon AWS (Canada) use "52.60.229.171"
 * On Microsoft Azure use "20.36.236.80"
 * On Microsoft Azure (EU) use "51.104.139.110"
