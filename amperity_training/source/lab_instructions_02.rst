@@ -16,7 +16,7 @@ The quality of your customer 360 data is dependent on the quantity and quality o
 Objective
 ==================================================
 
-In this exercise, you will learn how to work with personally identifiable information in Amperity to improve a customer 360 view by bringing in additional point-of-sale PII data using Bridge.
+In this exercise, you will learn how to work with personally identifiable information (PII) in Amperity to improve a customer 360 view by bringing in additional point-of-sale PII data using **Amperity Bridge**.
 
 
 Enhance customer 360 view
@@ -62,11 +62,11 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click the **Workflows** tab and explore the "Bridge - Training Data Bridge" workflow.
+#. Click the **Workflows** page and explore the "Bridge - Training Data Bridge" workflow.
 
    This workflow should take 3 to 5 minutes to complete. This is a good time to stretch your legs, grab a beverage, anything that you may need to do.
 
-#. When the workflow is complete, click on the **Quick start** tab and select **View Details**.
+#. When the workflow is complete, click on the **Quick start** page and select **View Details**.
 
 #. Click **AmpAI Select** to have **AmpAI** select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
 
@@ -136,4 +136,4 @@ Enhance customer 360 view
       :align: left
       :class: no-scaled-link
 
-#. Click the **Workflows** tab and explore the **Manually triggered stitch job** workflow. This workflow should fail after about 9 to 12 minutes. We will troubleshoot this issue after the next lesson.
+#. Click the **Workflows** page and explore the **Manually triggered stitch job** workflow. This workflow should fail after about 9 to 12 minutes. We will troubleshoot this issue after the next lesson.
