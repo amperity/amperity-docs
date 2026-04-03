@@ -82,7 +82,11 @@ System limits apply globally and cannot be changed.
 
 The **BigQuery Omni maximum query result size** defines the system limit for bi-directional sharing of data between Amperity Bridge and Google BigQuery: ``20GiB`` uncompressed.
 
-The maximum result size is 20 GiB logical bytes when querying Microsoft Azure or Amazon AWS data. If your query result is larger than 20 GiB, consider exporting the results to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Azure Blob Storage <destination_azure_blob_storage>` instead of using **Amperity Bridge for Google BigQuery**. For more information, see `BigQuery Omni limitations <https://docs.cloud.google.com/bigquery/docs/omni-introduction#limitations>`__ |ext_link|.
+.. caution: The maximum result size is 20 GiB logical bytes when querying Microsoft Azure or Amazon AWS data.
+
+Any object larger than 20 GiB cannot be transferred between |destination-name| using Amperity Bridge for Google BigQuery.
+
+Objects larger than 20 GiB must use :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Azure Blob Storage <destination_azure_blob_storage>` because of `system limitations with Google BigQuery <https://docs.cloud.google.com/bigquery/docs/omni-introduction#limitations>`__ |ext_link|.
 
 .. bridge-google-bigquery-quotas-and-system-limits-system-end
 
