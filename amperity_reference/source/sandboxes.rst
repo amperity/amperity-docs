@@ -29,7 +29,7 @@ About sandboxes
 
    Each sandbox tracks changes, provides validation workflows and audit tools that do not need to be configured or customized, and automates monitoring and alerts for changes in the sandbox.
 
-   Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `sandboxes <https://amperity.com/learning-lab/sandboxes>`__ |ext_link| work. Registration is required.
 
 .. sandboxes-learning-lab-end
 

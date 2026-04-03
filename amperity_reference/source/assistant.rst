@@ -74,7 +74,7 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
    The **AmpAI Assistants** are generative AI features that can help you build better SQL queries, generate customer segments, and structure journeys based on the data in your Amperity tenant.
 
-   Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://learn.amperity.com/the-amperity-ai-assistant>`__ |ext_link| can help you build better queries, segments, and journeys. Registration is required.
+   Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://amperity.com/learning-lab/ai-assisted-segment-creation>`__ |ext_link| can help you build better queries, segments, and journeys. Registration is required.
 
 .. assistant-learning-lab-end
 

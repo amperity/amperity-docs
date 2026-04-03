@@ -51,26 +51,21 @@ Winter 2026
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
-
 **Destination topics**
 
    :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Insider One <../operator/destination_insider_one>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
-
 
 **Incremental matching**
 
    :bdg-success:`NEW` An `incremental Stitch run <../operator/stitch.html#incremental-match>`__ does not reevaluate existing profiles and only attaches new records to existing profiles *or* creates new profiles. Profiles are not split or merged. PII is not reassigned.
 
-
 **Journeys AI Assistant**
 
    :bdg-success:`NEW` The :doc:`AI Assistant <assistant>` is available in the **Journeys Canvas** to help build and refine journeys.
 
-
 **Journeys measurement**
 
    :bdg-success:`NEW` `Journeys measurement <../reference/journeys.html#journeys-measurement>`__ provides insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits.
-
 
 **Source topics**
 
@@ -114,10 +109,6 @@ Fall 2025
 
    :bdg-success:`NEW` Keep track of customers who have `entered a journey <../user/activations.html#journey-activation-states>`__, moved through specific nodes, and first and last entry.
 
-**Learning Lab courses**
-
-   :bdg-success:`NEW` Added courses for `features in the Fall 2025 release <https://learn.amperity.com/page/fall-2025-product-release>`__ |ext_link| to the Amperity Learning Lab. Registration required.
-
 **Merge paths in journeys**
 
    :bdg-success:`NEW` A merge node :ref:`joins paths defined by conditional splits or percent splits <journeys-node-merge>` back into a shared pathway within a journey.
@@ -159,10 +150,6 @@ Summer 2025
 **Journeys**
 
    :bdg-light:`UPDATED` Use the activation canvas to build a series of audiences for :doc:`multi-touch journeys <journeys>` to support your brand's marketing ecosystem.
-
-**Learning Lab courses**
-
-   :bdg-success:`NEW` Added courses for `features in the Summer 2005 release <https://learn.amperity.com/page/july-product-launch>`__ |ext_link| to the Amperity Learning Lab. Registration required.
 
 **Multi-factor authentication**
 

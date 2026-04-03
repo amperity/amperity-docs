@@ -50,8 +50,6 @@ Click **Edit** on the **Identity tables** card to review tables that are already
 
    Learn more about `how Stitch evaluates all of your brand's data <../reference/stitch.html>`__ to discover the hidden connections in your customer records that correctly identify all of your unique customers.
 
-   Open **Learning Lab** to learn more about `how Stitch Works <https://learn.amperity.com/how-stitch-works-1>`__ |ext_link|. Registration is required.
-
    Read `Entity Matching in the Wild: a Consistent and Versatile
    Framework to Unify Data in Industrial Applications <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__ for a detailed explanation of how Amperity maintains a consistent, reliable, and stable customer ID.
 

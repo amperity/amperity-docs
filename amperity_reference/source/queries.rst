@@ -934,7 +934,7 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
 
 .. admonition:: Amperity Learning Lab
 
-   Open **Learning Lab** to learn more about how `query alerts <https://learn.amperity.com/query-alerts>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work.
 
 .. queries-enable-alerts-learning-lab-end
 
