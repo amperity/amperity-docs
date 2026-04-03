@@ -23,12 +23,6 @@ Average order revenue grouped by Amperity ID
    :end-before: .. sql-presto-group-by-example-average-order-revenue-end
 
 
-
-.. include:: ../../amperity_reference/source/sql_presto.rst
-   :start-after: .. sql-presto-group-by-clause-learning-lab-start
-   :end-before: .. sql-presto-group-by-clause-learning-lab-end
-
-
 .. _sql-presto-group-by-cube:
 
 CUBE operator

@@ -34,11 +34,11 @@ Create a Query Using SQL
 
    .. hint:: Viewing the **Unified Itemized Transactions** table and docs will be helpful when writing the query.
 
-#. Or give the **AI Assistant** a try. Expand the **AI Assistant** tab on the left-hand side of the query editor.
+#. Or give the **AI Assistant** a try. Expand the **AI Assistant** pane on the left-hand side of the query editor.
 
    .. image:: /_images/ex05_use_ai_assistant.png
       :width: 500 px
-      :alt: AI Assistant tab
+      :alt: AI Assistant pane
       :align: left
       :class: no-scaled-link
 
@@ -71,6 +71,6 @@ Create a Query Using SQL
       :class: no-scaled-link
 
 
-.. tip:: The **AI Assistant** can answer all sorts of questions. For a bit of fun, click **Create** and select **SQL Query** again. Expand the **AI Assistant** tab on the left-hand side of the query editor and ask the question: "What is the airspeed velocity of an unladen swallow?"
+.. tip:: The **AI Assistant** can answer all sorts of questions. For a bit of fun, click **Create** and select **SQL Query** again. Expand the **AI Assistant** pane on the left-hand side of the query editor and ask the question: "What is the airspeed velocity of an unladen swallow?"
 
    After you have read the result click **Discard**.

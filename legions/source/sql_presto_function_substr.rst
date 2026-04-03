@@ -22,10 +22,6 @@ Standardize on five digit ZIP codes
    :start-after: .. sql-presto-function-substr-example-return-postal-codes-start
    :end-before: .. sql-presto-function-substr-example-return-postal-codes-end
 
-.. include:: ../../amperity_reference/source/sql_presto.rst
-   :start-after: .. sql-presto-function-substr-example-return-postal-codes-learning-lab-start
-   :end-before: .. sql-presto-function-substr-example-return-postal-codes-learning-lab-end
-
 
 .. _sql-presto-function-substr-example-return-two-characters:
 

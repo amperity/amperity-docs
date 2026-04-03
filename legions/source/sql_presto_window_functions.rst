@@ -22,10 +22,6 @@ Rank customers by revenue
    :start-after: .. sql-presto-window-function-example-rank-customers-by-revenue-start
    :end-before: .. sql-presto-window-function-example-rank-customers-by-revenue-end
 
-.. include:: ../../amperity_reference/source/sql_presto.rst
-   :start-after: .. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-start
-   :end-before: .. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-end
-
 
 .. _sql-presto-window-function-example-rolling-seven-day-window:
 

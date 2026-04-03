@@ -29,16 +29,6 @@ The Profile API is unique to your tenant. The endpoints that are enabled for you
 
 .. api-profile-learning-lab-start
 
-.. admonition:: Amperity Learning Lab
-
-   The Profile API enables your brand to build a collection of RESTful API endpoints that are uniquely specific to your brand's use cases.
-
-   For example, identify returning customers, customize welcome messages, personalize emails, or extend the profiles your brand uses for campaigns in Braze, Criteo, or Salesforce Marketing Cloud.
-
-   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://amperity.com/learning-lab/query-for-profile-information-via-the-api>`__ |ext_link|. Registration is required.
-
-.. api-profile-learning-lab-end
-
 
 .. _profile-api-howitworks:
 

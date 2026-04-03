@@ -147,6 +147,15 @@ Ad suppression is an approach to marketing that intentionally limits or prevents
 .. term-ad-suppression-end
 
 
+**adaptive identity**
+
+.. term-adaptive-identity-start
+
+Adaptive identity is the process of building an identity graph that forms the foundation of customer profiles and defines a keychain of identifiers. Activate customer profiles for marketing campaigns and journeys. Integrate these profiles with other operational systems. Identity recognition uses a keychain to associate real-time events to known customer profiles.
+
+.. term-adaptive-identity-end
+
+
 **address-based householding**
 
 .. term-address-based-householding-start
@@ -486,7 +495,7 @@ Do not use.
 
 .. term-amperity-id-start
 
-An Amperity ID is a patented unique identifier assigned to clusters of customer profiles. A single Amperity ID represents a single individual.
+An Amperity ID is a unique identifier assigned to a cluster of records within an identity graph. Each Amperity ID represents all of the records within a customer profile.
 
 .. term-amperity-id-end
 
@@ -840,7 +849,7 @@ Azure Synapse Analytics is a limitless analytics service and data warehouse. Azu
 
 .. term-bad-values-blocklist-start
 
-A bad-values blocklist has known values that appear often in data. The Stitch process should exclude values from the bad-values blocklist.
+A bad-values blocklist has known values that appear often in data. The Stitch process excludes values defined by the bad-values blocklist when building an identity graph.
 
 .. term-bad-values-blocklist-end
 
@@ -905,7 +914,7 @@ A block is a group of records that match the characteristics defined by the bloc
 
 .. term-blocking-start
 
-Blocking is a process that uses rules to divide massive datasets into smaller blocks. Smaller and offer higher probabilities of discovering matching records.
+Blocking is a technique that groups records into smaller high probability groups before scoring.
 
 .. term-blocking-end
 
@@ -1251,11 +1260,20 @@ Clienteling is `a technique used by retail sales associates to establish long-te
 .. term-clienteling-end
 
 
+**Cluster FKs** (table)
+
+.. term-cluster-fks-table-start
+
+The **Cluster FKs** table shows how individual records were assigned to clusters in an identity graph.
+
+.. term-cluster-fks-table-end
+
+
 **cluster graph**
 
 .. term-cluster-graph-start
 
-A cluster graph is one of the outcomes of the Stitch process. It is a visual representation of every pairwise connection in a cluster of records.
+A cluster graph a visual representation of every pairwise connection in a cluster of records within an identity graph.
 
 .. term-cluster-graph-end
 
@@ -1264,7 +1282,7 @@ A cluster graph is one of the outcomes of the Stitch process. It is a visual rep
 
 .. term-cluster-transition-start
 
-A cluster transition occurs when records move from one cluster to another during the Stitch process.
+A cluster transition occurs when records move from one cluster to another during identity resolution.
 
 .. term-cluster-transition-end
 
@@ -1273,7 +1291,7 @@ A cluster transition occurs when records move from one cluster to another during
 
 .. term-clustering-start
 
-Clustering is the process of deciding which records to include in a customer profile. A matching threshold defines the lowest threshold at which two records match, and then included in a cluster. Lower quality matches are a transitive connection. Distinct customer profiles emerge as a cluster of record pairs.
+Clustering is the process of grouping customer records into a customer profile during identity resolution. Distinct customer profiles emerge as connected record pairs.
 
 .. term-clustering-end
 
@@ -1383,7 +1401,7 @@ The **Compliance Overview Report** passthrough table has a row for each request.
 
 .. term-component-id-start
 
-An identifier that represents a set of records that are transitively connected with a score above threshold as an outcome of blocking and initial scoring. Records that share a component ID, but have different Amperity IDs, are split during hierarchical comparison.
+An identifier that represents a set of records that are transitively connected. Records that share a component ID, but have different Amperity IDs, are split during identity resolution.
 
 .. term-component-id-end
 
@@ -1427,6 +1445,16 @@ A connected TV (CTV), is a physical device that a customer uses to watch and str
 Consumer packaged goods are items that require routine replacement or replenishment, such as food, beverages, clothes, personal items, and household products, on a daily basis.
 
 .. term-cpg-end
+
+
+**contextual identity**
+
+.. term-contextual-identity-start
+
+Contextual identity allows identity graphs to exist for any use case. For example, an identity graph for loyalty programs, an identity graph for marketing and activations, and an identity graph for operations.
+
+.. term-contextual-identity-end
+
 
 
 **control group**
@@ -1478,7 +1506,7 @@ Core dna is a service that offers integrated digital solutions for content, comm
 
 .. term-core-tables-start
 
-Core tables represent a normalized foundation for data built from the results of the Amperity identity resolution process. Use individual core tables with any database your brand builds within Amperity.
+Core tables normalize the foundation for databases built from the results of the Amperity identity resolution process. Use any core table with any database.
 
 .. term-core-tables-end
 
@@ -1693,22 +1721,6 @@ A customer is a known individual with a core set of associated personally identi
 .. term-customer-end
 
 
-**Customer Attributes**
-
-.. term-customer-attributes-table-start
-
-The **Customer Attributes** table has a series of columns that identify attributes about individuals. For example:
-
-* Is an individual contactable?
-* Is there a marketable email address?
-* Is the physical address known?
-* Is there a phone number?
-* Are they are an employee, reseller, or a test account?
-* What is the individual's revenue relationship with the brand?
-
-.. term-customer-attributes-table-end
-
-
 **customer 360 database**
 
 .. term-customer-360-database-start
@@ -1743,6 +1755,31 @@ The **Customer 360** page is the interface to view and manage all databases, inc
 The **Customer 360** table is the unified view of the customer across all points of engagement, including attributes that cross systems. This table does not exist by default. Each row represents a complete record for a unique individual, including their Amperity ID, merged PII data, and summary attributes.
 
 .. term-customer360-table-end
+
+
+**Customer Attributes**
+
+.. term-customer-attributes-table-start
+
+The **Customer Attributes** table has a series of columns that identify attributes about individuals. For example:
+
+* Is an individual contactable?
+* Is there a marketable email address?
+* Is the physical address known?
+* Is there a phone number?
+* Are they are an employee, reseller, or a test account?
+* What is the individual's revenue relationship with the brand?
+
+.. term-customer-attributes-table-end
+
+
+**Customer Data Platform (CDP)**
+
+.. term-customer-data-platform-start
+
+A customer data platform (CDP) finds matching values in customer data and builds customer profiles. Many CDPs match on exact values, such as email addresses and phone numbers. Amperity builds accurate customer profiles by using adaptive identity resolution to find transitive connections other CDPs miss.
+
+.. term-customer-data-platform-end
 
 
 **customer data table**
@@ -2060,6 +2097,42 @@ Days since latest order measures the number of days that have elapsed since a cu
 .. term-days-since-last-order-end
 
 
+**deduplication**
+
+.. term-deduplication-start
+
+Deduplication is an output of identity resolution that identifies the total number of unique individuals within a identity graph.
+
+.. term-deduplication-end
+
+
+**deduplication rate**
+
+.. term-deduplication-rate-start
+
+A deduplication rate represents the total number of unique individuals within an identity graph. This rate measures the difference between the total number of identifiers in source data and the total number of Amperity IDs assigned to unique customer profiles.
+
+.. term-deduplication-rate-end
+
+
+**delete confirmation**
+
+.. term-delete-confirmation-start
+
+A delete confirmation sent from Amperity to confirm completion of a request to delete a user record.
+
+.. term-delete-confirmation-end
+
+
+**delete user record request**
+
+.. term-delete-user-record-request-start
+
+A delete user record request. This is a written request that asks to delete data related to a specific user record from Amperity data tables.
+
+.. term-delete-user-record-request-end
+
+
 **Delighted**
 
 .. term-delighted-start
@@ -2085,42 +2158,6 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 `Delta Sharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system regardless of computing platform.
 
 .. term-delta-sharing-end
-
-
-**deduplication**
-
-.. term-deduplication-start
-
-Deduplication is an output of the Stitch process that identifies the total number of unique individuals within a customer dataset.
-
-.. term-deduplication-end
-
-
-**deduplication rate**
-
-.. term-deduplication-rate-start
-
-The deduplication rate represents the total number of unique individuals within a customer dataset. This rate measures the difference between the total number of original identifiers in customer data and the total number of Amperity IDs assigned to unique individuals.
-
-.. term-deduplication-rate-end
-
-
-**delete confirmation**
-
-.. term-delete-confirmation-start
-
-A delete confirmation sent from Amperity to confirm completion of a request to delete a user record.
-
-.. term-delete-confirmation-end
-
-
-**delete user record request**
-
-.. term-delete-user-record-request-start
-
-A delete user record request. This is a written request that asks to delete data related to a specific user record from Amperity data tables.
-
-.. term-delete-user-record-request-end
 
 
 **derived semantic**
@@ -2180,7 +2217,7 @@ The **Detailed Examples** table has detailed examples of Stitch results. Use the
 
 .. term-deterministic-start
 
-Deterministic is identity resolution that uses rules-based matching to generate exact matches. The results rank predictability over accuracy. For example: processing that connects a person with their payments.
+Deterministic record matching uses rules that define exact matching for customer keys and semantic tags. Records that do not match exactly to a rule are not scored.
 
 .. term-deterministic-end
 
@@ -2435,7 +2472,7 @@ Early repeat rate is a measure of one-time to two-time buyer conversion based on
 
 .. term-edge-start
 
-An edge is the relationship between two vertices in a graph database. Each edge has a type and must start with one vertex and end with another.
+An edge is the relationship between two records in an identity graph. Each edge is scored as a deterministic or probabilistic match or by a transitive connection.
 
 .. term-edge-end
 
@@ -2805,7 +2842,7 @@ First order total items represents the number of items purchased in a customer's
 
 .. term-first-party-data-start
 
-Customers share first-party data with a company or a brand, often directly. For example: filling out a registration card, completing an online form, requesting an emailed receipt, using a mobile app, or responding to email and SMS messaging.
+First-party data, also known as 1P data, is data collected directly from customers, including website and app interactions, purchase histories and order details, signups and registrations, and customer feedback.
 
 .. term-first-party-data-end
 
@@ -2859,7 +2896,7 @@ The **fk-[namespace]** semantic tag identifies a field as a foreign key. A forei
 
 .. term-foreign-key-start
 
-A foreign key is a column in a data table that acts as primary key and is often used for deterministic matching of records. A record pair assigns an exact match score--5.0--when foreign keys contain the same values during pairwise comparison.
+A foreign key is a semantic tag applied to columns in source data tables. A foreign key references the primary key in other source tables. Configure identity resolution to separate records when foreign keys do not match *or* cluster records when foreign keys match.
 
 .. term-foreign-key-end
 
@@ -3227,7 +3264,7 @@ Heap is a digital insights platform that helps you understand how and why custom
 
 .. term-hierarchical-comparison-start
 
-Hierarchical comparison is a step in the Stitch process that occurs after pairwise scoring. This step examines each group of records to identify edge cases. For example, married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
+Hierarchical comparison is a step during identity resolution that occurs after scoring. Hierarchical comparison examines each group of records and tries to identify potential conflicts. For example, married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
 
 .. term-hierarchical-comparison-end
 
@@ -3236,7 +3273,7 @@ Hierarchical comparison is a step in the Stitch process that occurs after pairwi
 
 .. term-high-cardinality-profile-attribute-start
 
-A high cardinality profile attribute has a large number of distinct values. For example, phone numbers, email addresses, and postal codes. High-cardinality profile attributes with an exact or close match are useful during identity resolution.
+A high cardinality attribute has a large number of distinct values. For example, phone numbers, email addresses, and postal codes. High cardinality attributes are useful during identity resolution.
 
 .. term-high-cardinality-profile-attribute-end
 
@@ -3286,7 +3323,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
+An identity graph clusters customer data into individual customer profiles, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers that your brand collects. Each unique customer profile in an identity graph is assigned an Amperity ID.
 
 .. term-identity-graph-end
 
@@ -3300,11 +3337,20 @@ An identity provider (IDP) is system that creates, maintains, and manages identi
 .. term-identity-provider-end
 
 
+**identity recognition**
+
+.. term-identity-recognition-start
+
+Identity recognition relies only on whatever is known about a customer at an exact moment to try to associate that information to a known customer profile.
+
+.. term-identity-recognition-end
+
+
 **identity resolution**
 
 .. term-identity-resolution-start
 
-Identity resolution is the process of connecting and matching different data points across many devices and channels to form a unified view of a single customer. This allows brands to connect the dots between fragmented data to form a complete picture of an actual person.
+Identity resolution is the process of connecting and matching data points that exist in many sources to build a unified view of a single customer. Identity resolution is expressed as an identity graph, which assigns an Amperity ID to each unique customer profile in the identity graph.
 
 .. term-identity-resolution-end
 
@@ -3588,6 +3634,7 @@ A journey is an automated sequence for connecting with customers across channels
 
 .. term-journey-end
 
+
 **journey folder**
 
 .. term-journey-folder-start
@@ -3595,6 +3642,7 @@ A journey is an automated sequence for connecting with customers across channels
 A folder helps you organize the list of journeys on the **Journeys** page. You may add up to four levels of subfolders.
 
 .. term-journey-folder-end
+
 
 **journey measurement**
 
@@ -3695,6 +3743,17 @@ JavaScript Object Notation (JSON) is language-independent data format that is si
 A JSON Web Token (JWT) is a compact, URL-safe means of representing claims transferred between two parties.
 
 .. term-jwt-end
+
+
+**keychain**
+
+.. TODO: By "key identifiers" does "key" imply separation key, foreign key, customer key? Or just "important identifiers" whatever they may be?
+
+.. term-keychain-start
+
+A keychain maps key identifiers in customer data to the Amperity ID for a specific identity graph.
+
+.. term-keychain-end
 
 
 **Kibo**
@@ -4121,7 +4180,7 @@ A matchback is a process where a mail file--associated with a purchase credit--m
 
 .. term-match-category-start
 
-A match category is a classifier that applies to an individual record-pair within a cluster of record-pairs. The match category is the result of this classification.
+A match category is applied to individual record-pair comparisons during identity resolution.
 
 .. list-table::
    :widths: 140 360
@@ -4130,15 +4189,15 @@ A match category is a classifier that applies to an individual record-pair withi
    * - Match Category
      - Description
    * - **Exact**
-     - Amperity has the highest confidence that these records represent the same person because all profile data exactly matches.
+     - Amperity has the highest confidence. Records represent the same person because all profile data exactly matches.
    * - **Excellent**
-     - Amperity has near perfect confidence that these records belong to the same person, despite select types of profile data not matching.
+     - Amperity has near perfect confidence that records belong to the same person, despite some profile data not matching.
    * - **High**
-     - Using deductive reasoning, Amperity has high confidence that these records match, despite some profile data not matching.
+     - Amperity has high confidence that records match, despite some profile data not matching.
    * - **Moderate**
-     - Amperity has moderate confidence that these records match, due to weak or fuzzy matches between unique customer attributes, such as email, phone, or address.
+     - Amperity has moderate confidence that records match, due to weak or fuzzy matches between unique customer attributes, such as email, phone, or address.
    * - **Weak**
-     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, ZIP code.
+     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, or ZIP code.
    * - **Non-match**
      - Amperity has high confidence that these records do NOT match, because core profile data is in conflict.
 
@@ -4160,7 +4219,7 @@ Match rate is the number of records sent from Amperity that matched with records
 
 .. term-match-type-start
 
-The score assigned to matched records. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
+The score assigned to matched records is the match type. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected by deterministic or probabilistic matching. Records assigned a "scored_transitive" value are transitively connected.
 
 .. term-match-type-end
 
@@ -4856,7 +4915,7 @@ A paid channel allows a brand to target advertising using demographics, keywords
 
 .. term-pairwise-comparison-start
 
-A pairwise comparison is a process that compares, and then scores all possible connections between all records in a group of records.
+Pairwise comparison is a process that compares all possible connections between all records, and then applies scores to build an identity graph.
 
 .. term-pairwise-comparison-end
 
@@ -4865,7 +4924,7 @@ A pairwise comparison is a process that compares, and then scores all possible c
 
 .. term-pairwise-connection-start
 
-A pairwise connection is a pair of matching records within a block that have an initial score above threshold. All pairwise connections that score above threshold represent a single, unique individual.
+A pairwise connection is a pair of matching records in a customer profile.
 
 .. term-pairwise-connection-end
 
@@ -4885,7 +4944,7 @@ The first part--the record pair score--correlates to the match category, which i
 * 1 for weak matches
 * 0 for non-matches
 
-Stitch uses the second part--the record pair strength--to show the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
+Identity resolution uses the second part--the record pair strength--to show the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
 
 .. term-pairwise-connection-score-end
 
@@ -5529,7 +5588,7 @@ A recommended audience is a feature of Amperity that answers the following quest
 
 .. term-record-count-start
 
-Record count is the total number of records, or rows, within a given dataset. This could include a source feed or Amperity table, or, it could describe the number of records that result from a probabilistic or deterministic connection between two Amperity tables.
+Record count is the total number of records, or rows, within a given dataset. This could include a source feed or Amperity table, or, it could describe the number of records that result from a deterministic, probabilistic, or transitive connection that exists in rows across two source tables.
 
 .. term-record-count-end
 
@@ -5538,7 +5597,7 @@ Record count is the total number of records, or rows, within a given dataset. Th
 
 .. term-record-pair-start
 
-The Stitch process takes customer tables, extracts the customer profiles and compares pairs of records together using over 40 different machine learning models. Each record pair score represents the strength of the match.
+Identity resolution analyzes source tables, extracts customer profiles and interactions, and then compares pairs of records using machine learning models to build an identity graph. Each record pair is scored and all records connected using deterministic, probabilistic, or transitive matches represent a unique customer profile.
 
 .. term-record-pair-end
 
@@ -5563,7 +5622,7 @@ The record pair score correlates to the match category, which is a classifier ap
 
 .. term-record-pair-strength-start
 
-The record pair strength represents the strength of the record pair score. It is a two digit number. For example: .31 is a lower strength and .93 is a higher strength.
+The record pair strength represents the strength of the record pair score assigned by Stitch during identity resolution. It is a two digit number. For example: .31 is a lower strength and .93 is a higher strength.
 
 .. term-record-pair-strength-end
 
@@ -5998,7 +6057,7 @@ A semantic is a way to apply a common understanding to individual points of data
 
 .. term-semantic-tag-start
 
-A semantic tag standardizes profile (PII), transaction, and other important customer details across all columns in all data tables.
+A semantic tag is a label that standardizes personally identifiable information (PII), transaction, and other important customer profile details across all columns in all data tables.
 
 .. term-semantic-tag-end
 
@@ -6276,7 +6335,7 @@ Spark SQL is a high performance SQL query engine used by Amperity to ingest data
 
 .. term-sparse-customer-record-start
 
-A sparse customer profile is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store ZIP codes associated with the transaction.
+A sparse customer record is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store ZIP codes associated with the transaction.
 
 .. term-sparse-customer-record-end
 
@@ -6425,7 +6484,7 @@ A stay identifies rooms, preferences, brands, and other information about hotel 
 
 .. term-stitch-start
 
-Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique customer profile.
+Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch an identity graph in which every unique customer profile is assigned an Amperity ID.
 
 .. term-stitch-end
 
@@ -6434,7 +6493,7 @@ Stitch uses patented algorithms to process massive volumes of data and discovers
 
 .. term-stitch-tab-start
 
-The **Stitch** page shows detailed results of the Stitch process, which takes customer data, extracts customer profiles, and then compares record pairs using over 40 different machine learning models. Each score represents the strength of the match. Amperity creates clusters of records based on the connection between pairs, and then gives each cluster a unique Amperity ID.
+The **Stitch** page shows detailed results of identity resolution, which analyzes customer data, applies the rules you define, and then builds an identity graph with accurate and actionable customer profiles. Each customer profile is assigned an Amperity ID.
 
 .. term-stitch-tab-end
 
@@ -6443,7 +6502,7 @@ The **Stitch** page shows detailed results of the Stitch process, which takes cu
 
 .. term-stitch-blocking-keys-table-start
 
-The **Stitch Blocking Keys** table has all blocking keys used during the Stitch process.
+The **Stitch Blocking Keys** table has all blocking keys used during identity resolution.
 
 .. term-stitch-blocking-keys-table-end
 
@@ -6452,18 +6511,9 @@ The **Stitch Blocking Keys** table has all blocking keys used during the Stitch 
 
 .. term-stitch-blocklistvalues-table-start
 
-The **Stitch BlocklistValues** table is a passthrough table for values identified by the bad-values blocklist, and then excluded from the Stitch process.
+The **Stitch BlocklistValues** table is a passthrough table for values identified by the bad-values blocklist, and then excluded from identity resolution.
 
 .. term-stitch-blocklistvalues-table-end
-
-
-**Stitch Scores**
-
-.. term-stitch-scores-table-start
-
-The **Stitch Scores** table has all scores generated by Stitch, including scores that are not associated with an Amperity ID. Use this table to help understand why records are not associated with an Amperity ID.
-
-.. term-stitch-scores-table-end
 
 
 **Stitch labels**
@@ -6472,8 +6522,8 @@ The **Stitch Scores** table has all scores generated by Stitch, including scores
 
 Stitch labels identify when
 
-* A single customer profile is incorrectly merged together, or overclustered.
-* Two customer profiles are incorrectly split apart, or underclustered.
+* A single customer profile is incorrectly merged together, or overclustered, during identity resolution.
+* Two customer profiles are incorrectly split apart, or underclustered, during identity resolution.
 
 .. term-stitch-labels-end
 
@@ -6482,7 +6532,7 @@ Stitch labels identify when
 
 .. term-stitch-qa-start
 
-Stitch QA is a process that monitors the quality of Stitch results. Stitch QA has two parts: a database and a set of queries. Analyze the results to identify values for labeling, blocklisting, or to discover ways to tune the Stitch process to better match your tenant's dataset.
+Stitch QA is a manual process for monitoring the quality of Stitch results. Stitch QA has two parts: a database and a collection of queries. Analyze query results to identify values for labeling and blocklisting, or to discover ways to tune the Stitch process to better match your tenant's dataset.
 
 .. term-stitch-qa-end
 
@@ -6500,9 +6550,36 @@ Stitch generates a series of Stitch QA. Use these tables in a dedicated database
 
 .. term-stitched-record-start
 
-A stitched record is a unique output of the Stitch process that associates the Amperity ID to a customer.
+A stitched record is a unique output of identity resolution that associates the Amperity ID to customer records in source tables.
 
 .. term-stitched-record-end
+
+
+**Stitch rules**
+
+.. term-stitch-rules-start
+
+Stitch rules define criteria for when records are separated or clustered during identity resolution.
+
+.. term-stitch-rules-end
+
+
+**Stitch Scores**
+
+.. term-stitch-scores-table-start
+
+The **Stitch Scores** table has all scores assigned by Stitch during identity resolution, including scores that are not associated with an Amperity ID. Use this table to help understand why records are not associated with an Amperity ID.
+
+.. term-stitch-scores-table-end
+
+
+**Stitch Summary** (tab)
+
+.. term-stitch-summary-tab-start
+
+The **Summary** tab on the **Stitch** page shows the results of identity resolution and how it changes over time.
+
+.. term-stitch-summary-tab-end
 
 
 **stitched table**
@@ -6581,7 +6658,7 @@ The sum of itemized revenue for the original order, not including returns or can
 
 .. term-supersized-cluster-start
 
-A supersized cluster is a cluster of records with more than 64 matching records. A supersized cluster does not typically represent a unique individual and is not worthy of further analysis.
+A supersized cluster is a set of records in an identity graph with more than 64 matches. A supersized cluster does not represent a unique individual and is not worthy of further analysis.
 
 .. term-supersized-cluster-end
 
@@ -6708,7 +6785,7 @@ The Trade Desk Data Marketplace allows advertisers to purchase access to your br
 
 .. term-third-party-data-start
 
-Third-party data is a broad category that includes, but is not limited to, data collected by an entity, and then sold or distributed to companies that want to leverage that data. The usefulness of third-party data is often restricted by a combination of lower data quality, privacy laws, and general commercial interest.
+Third-party data, also known as 3P data, is data indirectly collected from customers and is often acquired from external sources, such as data brokers, aggregators, or other organizations that specialize in collecting and selling data. Third-party data contains a range of demographics, behaviors, and preferences, depending on the external source.
 
 .. important:: Amperity **does not** sell third-party data or mark it up in any way.
 
@@ -6844,7 +6921,7 @@ Marketers use purchase activities to gather information about how customers inte
 
 .. term-transitive-connection-start
 
-A transitive connection exists between individual records when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2; record 3 matches record 2; neither records 1 nor 3 match each other, but they have a transitive connection because both match record 2.
+A transitive connection exists when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2, record 3 matches record 2, and records 1 and 3 do not match. A transitive connection exists between records 1 and 3 because both records match record 2.
 
 .. term-transitive-connection-end
 
@@ -6899,19 +6976,19 @@ Trino is a distributed SQL query engine designed to efficiently query large amou
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of records that share enough matching PII to identify a single unique individual. Stitch identifies trivial duplicates early in the identity resolution process. Stitch uses only one of the records identified as trivial duplicates.
+A trivial duplicate is a record within a set of records that share enough matching PII where only one record is necessary to identity a customer profile within an identity graph. Stitch identifies trivial duplicates early in the identity resolution process, and then uses only one of the records identified as a trivial duplicate.
 
 .. term-trivial-duplicate-end
 
 .. term-trivial-duplicate-qualified-start
 
-A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 or greater and group together.
+A qualified trivial duplicate is a set of records with enough matching PII to group together.
 
 .. term-trivial-duplicate-qualified-end
 
 .. term-trivial-duplicate-unqualified-start
 
-An unqualified trivial duplicate is a set of records that do not have enough matching PII to score 3.0 or greater and cannot group together.
+An unqualified trivial duplicate is a set of records that do not have enough matching PII and cannot group together.
 
 .. term-trivial-duplicate-unqualified-end
 
@@ -7007,7 +7084,7 @@ The **Unified Changes** table has a 30-day rolling history of every change that 
 
 .. term-unified-changes-clusters-table-start
 
-The **Unified Changes Clusters** table has a history of changes to cluster graphs, relative to the previous Stitch run.
+The **Unified Changes Clusters** table has a history of changes to cluster graphs, relative to the previous identity graph.
 
 .. term-unified-changes-clusters-table-end
 
@@ -7016,7 +7093,7 @@ The **Unified Changes Clusters** table has a history of changes to cluster graph
 
 .. term-unified-changes-pks-table-start
 
-The **Unified Changes PKS** table has a history of changes to primary keys, relative to the previous Stitch run.
+The **Unified Changes PKS** table has a history of changes to primary keys, relative to the previous identity graph.
 
 .. term-unified-changes-pks-table-end
 
@@ -7116,9 +7193,15 @@ The **Unified Paid Media** table builds customer profiles that contain all known
 
 .. term-unified-preprocessed-raw-table-start
 
-The **Unified Preprocessed Raw** table is an output of Stitch. Use this table during Stitch QA to view data exactly as Stitch uses it after preprocessing and blocklisting. This table has one row for each trivial duplicate. Semantic values represent pre-processing values. Stitch removes bad values and replaces them with **NULL**.
+The **Unified Preprocessed Raw** table is an output of Stitch with rows of preprocessed values from every source table with Amperity IDs, including trivial duplicates. Bad values are removed and replaced with **NULL**.
 
 .. term-unified-preprocessed-raw-table-end
+
+.. term-unified-preprocessed-raw-table-context-start
+
+Use the **Unified Preprocessed Raw** table during Stitch QA processes to view the same raw data Stitch used to build the identity graph.
+
+.. term-unified-preprocessed-raw-table-context-end
 
 
 **Unified Product Catalog**
@@ -7146,7 +7229,7 @@ The **Unified Product Catalog** table has a row for every item in your product c
 
 .. term-unified-scores-table-start
 
-The **Unified Scores** table records all pairwise comparison scores and match categories for all groups of records. For each group of records, records all pairwise scores that are present between records within that group.
+The **Unified Scores** table records scoring for all pairwise comparisons and match categories for all scorable record pairs within an identity graph.
 
 .. term-unified-scores-table-end
 

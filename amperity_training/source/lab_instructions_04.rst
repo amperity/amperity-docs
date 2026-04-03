@@ -5,7 +5,9 @@
 Lab 04: Modifying databases
 ==================================================
 
-Combining implementation specific data that has been ingested or transformed with these core data assets form the building blocks for your organization's reporting and analytics view. A complete view of the customer helps organizations make more informed decisions about their customers. In this lab you will explore a common scenario of changing the PII displayed about customers. You will also add additional attributes about the customer, both attributes pre-built by Amperity and custom attributes.
+Combining implementation specific data that has been ingested or transformed with these core data assets form the building blocks for your organization's reporting and analytics view. A complete view of the customer helps organizations make more informed decisions about their customers.
+
+In this lab you will explore a common scenario of changing the PII displayed about customers. You will also add additional attributes about the customer, both attributes pre-built by Amperity and custom attributes.
 
 .. admonition:: Reference materials
 
@@ -27,7 +29,7 @@ Combining implementation specific data that has been ingested or transformed wit
 Objective
 ==================================================
 
-In this lab exercise you will learn about building and configuring Databases to build off the data assets you have ingested and stitched in the training tenant:
+In this lab exercise you will learn about building and configuring databases to build off the data assets you have ingested and stitched in your training tenant:
 
 #. Modify the PII attributes of the **Customer 360** table.
 #. Add pre-built transaction attributes to the **Customer 360** table.

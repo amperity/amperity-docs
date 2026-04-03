@@ -158,7 +158,7 @@ Microsoft Azure subnet IDs
 
 .. infrastructure-microsoft-azure-start
 
-Microsoft Azure has specific settings for subnet IDs when using Databricks and Amperity Bridge.
+Microsoft Azure has specific settings for subnet IDs when using `Amperity Bridge for Databricks <../operator/bridge_databricks.html>`__.
 
 .. infrastructure-microsoft-azure-end
 
@@ -189,6 +189,12 @@ Regions for storage
 Amperity storage is hosted in :ref:`Amazon AWS <infrastructure-regions-storage-aws>` or :ref:`Microsoft Azure <infrastructure-regions-storage-azure>`.
 
 .. infrastructure-regions-storage-end
+
+.. infrastructure-regions-storage-note-start
+
+.. note:: Regions for storage are ony necessary when configuring a new tenant to u`use customer-hosted storage <../operator/storage.html>`__ instead of Amperity-hosted storage.
+
+.. infrastructure-regions-storage-note-end
 
 
 .. _infrastructure-regions-storage-aws:
@@ -291,6 +297,12 @@ In Australia, for tenants running on Amazon AWS use ``sftp-aws-apse2.amperity.co
 
 Snowflake account locator IDs
 ==================================================
+
+.. infrastructure-snowflake-note-start
+
+.. note:: Snowflake account locator IDs are used with `Amperity Bridge for Snowflake <../operator/bridge_snowflake.html>`__.
+
+.. infrastructure-snowflake-note-end
 
 .. include:: ../../amperity_operator/source/bridge_snowflake.rst
    :start-after: .. bridge-snowflake-sync-amperity-configure-snowflake-account-locator-start

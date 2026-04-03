@@ -5,15 +5,15 @@
 Lab 03: Using sandboxes
 ==================================================
 
-Operators should validate the changes made in a sandbox before the changes are promoted to production. The specific steps needed to validate any set of changes will vary based on the nature of the changes that have been made. In the previous labs you have added a new datasource. Use the following steps to validate the changes you have made before promoting the changes to production.
+Operators should validate the changes made in a sandbox before the changes are promoted to production. The specific steps needed to validate any set of changes will vary based on the nature of the changes that have been made. In the previous labs you have added a new datasource.
 
-.. note:: The ingest workflow initiated in previous steps needs to be completed before continuing. If the workflows are still running, wait for them to complete before proceeding.
+.. note:: The ingest workflow initiated in previous labs needs to be completed before continuing. If workflows are still running, wait for them to complete before proceeding.
 
 
 Objective
 ==================================================
 
-Now that you have updated the configuration in the sandbox it is time to validate the impact of those changes and promote the sandbox.
+Now that you have updated the configuration in the sandbox it is time to validate the impact of those changes and promote the sandbox. Use the following steps to validate the changes you have made before promoting the changes to production.
 
 
 Validate and promote sandbox
@@ -65,7 +65,7 @@ Validate and promote sandbox
 
    .. image:: /_images/ex03_sources_tab_records.png
       :width: 400 px
-      :alt: Sources tab records
+      :alt: Sources page records
       :align: left
       :class: no-scaled-link
 
@@ -85,7 +85,7 @@ Validate and promote sandbox
       :align: left
       :class: no-scaled-link
 
-#. Check that the **Daily** workflow under the **Workflows** tab has started. Then return to the **Sources** page and note the number of source records and **pos_customers_out** records. What changed?
+#. Check that the **Daily** workflow under the **Workflows** page has started. Then return to the **Sources** page and note the number of source records and **pos_customers_out** records. What changed?
 
    .. image:: /_images/ex03_workflow_started.png
       :width: 400 px

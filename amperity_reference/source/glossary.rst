@@ -82,6 +82,14 @@ A
       :end-before: .. term-ad-suppression-end
 
 
+.. _a-adaptive-identity:
+
+**adaptive identity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adaptive-identity-start
+      :end-before: .. term-adaptive-identity-end
+
+
 .. _a-address:
 
 **address**
@@ -1007,6 +1015,14 @@ C
       :end-before: .. term-cpg-end
 
 
+.. _c-contextual-identity:
+
+**contextual identity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-contextual-identity-start
+      :end-before: .. term-contextual-identity-end
+
+
 .. _c-control-group:
 
 **control group**
@@ -1223,6 +1239,14 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-customer-attributes-table-start
       :end-before: .. term-customer-attributes-table-end
+
+
+.. _c-customer-data-platform:
+
+**Customer Data Platform (CDP)**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-customer-data-platform-start
+      :end-before: .. term-customer-data-platform-end
 
 
 .. _c-customer-data-table:
@@ -2243,6 +2267,14 @@ I
       :end-before: .. term-identity-provider-end
 
 
+.. _i-identity-recognition:
+
+**identity resolution**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-identity-recognition-start
+      :end-before: .. term-identity-recognition-end
+
+
 .. _i-identity-resolution:
 
 **identity resolution**
@@ -2468,6 +2500,14 @@ J
 
 K
 ==================================================
+
+
+.. _k-keychain:
+
+**keychain**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-keychain-start
+      :end-before: .. term-keychain-end
 
 
 .. _k-kibo:
@@ -4558,6 +4598,14 @@ S
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-blocklistvalues-table-start
       :end-before: .. term-stitch-blocklistvalues-table-end
+
+
+.. _s-stitch-rules:
+
+**Stitch rules**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-stitch-rules-start
+      :end-before: .. term-stitch-rules-end
 
 
 .. _s-stitch-scores:
