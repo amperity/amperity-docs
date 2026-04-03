@@ -44,7 +44,7 @@ Predictive models
 
    Churn propensity predicts the likelihood of customer activity. Predicted CLV predicts the order value for purchases made within the next year. Product affinity predicts who is likely to purchase.
 
-   Open **Learning Lab** to learn more about how `predictive modeling <https://learn.amperity.com/predictive-course>`__ |ext_link| can help your brand. Registration is required.
+   Open **Learning Lab** to learn more about how `predictive modeling <https://amperity.com/learning-lab/overview-of-predictive-modeling>`__ |ext_link| can help your brand. Registration is required.
 
 .. models-learning-lab-end
 

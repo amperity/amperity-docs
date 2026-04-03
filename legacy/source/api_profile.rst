@@ -27,6 +27,8 @@ The Profile API is unique to your tenant. The endpoints that are enabled for you
 
 .. api-profile-about-start
 
+.. api-profile-learning-lab-start
+
 
 .. _profile-api-howitworks:
 
