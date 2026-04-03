@@ -127,7 +127,7 @@ AmpAI supports two types of prompts for customization and iteration:
 
 .. _ampai-write-custom-prompt:
 
-How to write an effective custom prompt
+Write an effective custom prompt
 ==================================================
 
 .. ampai-write-custom-prompt-start
@@ -175,13 +175,11 @@ Reference exact field names, values, and table names whenever possible to ensure
 
 **Avoid vague references:**
 
-.. code-block:: none
+Bad: "Use the main customer table for profiles"
+Good: "Use Customer360 for all customer profile data (names, contact info, attributes)"
 
-   Bad: "Use the main customer table for profiles"
-   Good: "Use Customer360 for all customer profile data (names, contact info, attributes)"
-
-   Bad: "Filter out internal users"
-   Good: "Exclude records where email ends with @acmeretail.com, @acmeinternal.com, or @testvendor.com"
+Bad: "Filter out internal users"
+Good: "Exclude records where email ends with @acmeretail.com, @acmeinternal.com, or @testvendor.com"
 
 .. ampai-write-custom-prompt-be-specific-end
 
@@ -290,74 +288,47 @@ If every query should filter out test accounts, employees, or bots, state it onc
 
 .. _ampai-test-custom-prompt:
 
-How to test custom prompts
+Test custom prompts
 ==================================================
 
 .. ampai-test-custom-prompt-start
 
 Testing is not "ask a question and see if it looks right." Use a structured approach to validate that your custom prompt produces the expected results.
 
-.. ampai-test-custom-prompt-end
+#. **Define test categories.**
 
+   Before writing test cases, identify what your prompt is supposed to do.
 
-.. _ampai-test-custom-prompt-define-categories:
+   .. list-table::
+      :widths: 20 35 45
+      :header-rows: 1
 
-Step 1: Define test categories
---------------------------------------------------
+      * - Category
+        - What to test
+        - Example
+      * - Term mapping
+        - Brand terminology resolves to correct columns/values
+        - "Show me online orders" uses ``channel = 'ecommerce'``
+      * - Default filters
+        - Exclusions are applied automatically
+        - Any customer count query excludes employees
+      * - Table routing
+        - AmpAI uses the right table
+        - Profile questions go to Customer360, not Unified_Coalesced
+      * - Business definitions
+        - Concepts match brand meaning
+        - "High-value customers" uses lifetime revenue > $1,500
+      * - Edge cases
+        - Opt-out works, ambiguity is handled
+        - "Show me ALL customers including employees" skips exclusion filter
 
-.. ampai-test-custom-prompt-define-categories-start
+#. **Write test questions.**
 
-Before writing test cases, identify what your prompt is supposed to do.
+   For each category, write 1-2 natural-language questions a real user would ask. Use the customer's actual vocabulary, not Amperity terminology.
 
-.. list-table::
-   :widths: 20 35 45
-   :header-rows: 1
+#. **Run tests in draft mode.**
 
-   * - Category
-     - What to test
-     - Example
-   * - Term mapping
-     - Customer jargon resolves to correct columns/values
-     - "Show me online orders" uses ``channel = 'ecommerce'``
-   * - Default filters
-     - Exclusions are applied automatically
-     - Any customer count query excludes employees
-   * - Table routing
-     - AmpAI uses the right table
-     - Profile questions go to Customer360, not Unified_Coalesced
-   * - Business definitions
-     - Concepts match brand meaning
-     - "High-value customers" uses lifetime revenue > $1,500
-   * - Edge cases
-     - Opt-out works, ambiguity is handled
-     - "Show me ALL customers including employees" skips exclusion filter
-
-.. ampai-test-custom-prompt-define-categories-end
-
-
-.. _ampai-test-custom-prompt-write-questions:
-
-Step 2: Write test questions
---------------------------------------------------
-
-.. ampai-test-custom-prompt-write-questions-start
-
-For each category, write 1-2 natural-language questions a real user would ask. Use the customer's actual vocabulary, not Amperity terminology.
-
-.. ampai-test-custom-prompt-write-questions-end
-
-
-.. _ampai-test-custom-prompt-run-tests:
-
-Step 3: Run tests in draft mode
---------------------------------------------------
-
-.. ampai-test-custom-prompt-run-tests-start
-
-#. Set your custom prompt as the draft prompt.
-#. Open **AmpAI** in a new conversation.
-#. Ask each test question one at a time.
-#. For each response, check:
+   Set your custom prompt as the draft prompt, open **AmpAI** in a new conversation, and ask each test question one at a time. For each response, check:
 
    * Did it use the correct table?
    * Did it use the correct column names?
@@ -365,82 +336,52 @@ Step 3: Run tests in draft mode
    * Did the SQL match your expected pattern?
    * If it ran a query, do the results make sense?
 
-.. ampai-test-custom-prompt-run-tests-end
+#. **Record results.**
 
+   Track your test results systematically to identify patterns and failures.
 
-.. _ampai-test-custom-prompt-record-results:
+   .. list-table::
+      :widths: 5 15 18 22 18 7 15
+      :header-rows: 1
 
-Step 4: Record results
---------------------------------------------------
+      * - #
+        - Category
+        - Question
+        - Expected
+        - Actual
+        - Pass?
+        - Notes
+      * - 1
+        - Term mapping
+        - "online orders"
+        - channel = 'ecommerce'
+        - channel = 'ecommerce'
+        - Yes
+        -
+      * - 2
+        - Default filter
+        - "how many customers"
+        - Employee exclusion applied
+        - No filter
+        - No
+        - Make exclusion rule stronger
 
-.. ampai-test-custom-prompt-record-results-start
+#. **Iterate.**
 
-Track your test results systematically to identify patterns and failures.
-
-.. list-table::
-   :widths: 5 15 18 22 18 7 15
-   :header-rows: 1
-
-   * - #
-     - Category
-     - Question
-     - Expected
-     - Actual
-     - Pass?
-     - Notes
-   * - 1
-     - Term mapping
-     - "online orders"
-     - channel = 'ecommerce'
-     - channel = 'ecommerce'
-     - Yes
-     -
-   * - 2
-     - Default filter
-     - "how many customers"
-     - Employee exclusion applied
-     - No filter
-     - No
-     - Make exclusion rule stronger
-
-.. ampai-test-custom-prompt-record-results-end
-
-
-.. _ampai-test-custom-prompt-iterate:
-
-Step 5: Iterate
---------------------------------------------------
-
-.. ampai-test-custom-prompt-iterate-start
-
-For each failure:
-
-#. Identify why **AmpAI** didn't follow the instruction. Common reasons:
+   For each failure, identify why **AmpAI** didn't follow the instruction. Common reasons:
 
    * Instruction was ambiguous ("use the customer table"—which one?)
    * Instruction was buried in too much text (move critical rules to the top)
    * Column/table name was wrong (check the actual schema)
    * Conflicting instructions in the prompt
 
-#. Make one change at a time to the draft prompt.
-#. Re-run the failing test case.
-#. Re-run passing test cases to check for regressions.
+   Make one change at a time to the draft prompt. Re-run the failing test case. Re-run passing test cases to check for regressions.
 
-.. ampai-test-custom-prompt-iterate-end
+#. **Promote to production.**
 
+   Re-run the full test set one final time on the draft. Activate the draft to production. Have a second person run 2-3 test questions to sanity check.
 
-.. _ampai-test-custom-prompt-promote:
-
-Step 6: Promote to production
---------------------------------------------------
-
-.. ampai-test-custom-prompt-promote-start
-
-#. Re-run the full test set one final time on the draft.
-#. Activate the draft to production.
-#. Have a second person run 2-3 test questions to sanity check.
-
-.. ampai-test-custom-prompt-promote-end
+.. ampai-test-custom-prompt-end
 
 
 .. _ampai-sample-test-prompts:
