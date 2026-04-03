@@ -934,12 +934,6 @@ For example, the **Merged Customers** table contains rows of customer profile da
 
 .. sql-presto-left-join-clause-end
 
-.. sql-presto-left-join-clause-learning-lab-start
-
-Open **Learning Lab** to watch a video that explains `using a left join <https://learn.amperity.com/grouping-and-joining-data>`__ |ext_link|. Registration is required.
-
-.. sql-presto-left-join-clause-learning-lab-end
-
 
 .. _sql-presto-where:
 
@@ -1194,12 +1188,6 @@ The **Unified Transactions** table contains rows of customer transactions data w
    ORDER BY average_sales_revenue DESC
 
 .. sql-presto-group-by-example-average-order-revenue-end
-
-.. sql-presto-group-by-clause-learning-lab-start
-
-Open **Learning Lab** to watch a video that explains `grouping data <https://learn.amperity.com/grouping-and-joining-data>`__ |ext_link|. Registration is required.
-
-.. sql-presto-group-by-clause-learning-lab-end
 
 
 .. _sql-presto-group-by-cube:
@@ -1654,12 +1642,6 @@ Find the total sales revenue by Amperity ID, and then rank them by sales revenue
    ORDER BY rank
 
 .. sql-presto-window-function-example-rank-customers-by-revenue-end
-
-.. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-start
-
-Open **Learning Lab** to watch a video that explains `using window functions to rank customers <https://learn.amperity.com/window-functions>`__ |ext_link|. Registration is required.
-
-.. sql-presto-window-function-example-rank-customers-by-revenue-learning-lab-end
 
 
 .. _sql-presto-window-function-example-rolling-seven-day-window:
@@ -2508,12 +2490,6 @@ Build an associative array in a window function to map each of the spelled out n
    WHERE "state" IS NOT NULL
 
 .. sql-presto-function-coalesce-example-return-state-abbreviations-end
-
-.. sql-presto-function-coalesce-example-return-state-abbreviations-learning-lab-start
-
-Open **Learning Lab** to watch a video that explains `standardizing on two letter abbreviations for states and the District of Columbia <https://learn.amperity.com/using-row-functions-in-amperity>`__ |ext_link|. Registration is required.
-
-.. sql-presto-function-coalesce-example-return-state-abbreviations-learning-lab-end
 
 
 .. _sql-presto-function-concat:
@@ -3711,12 +3687,6 @@ Validate the length of the postal code and that each digit in the value includes
    WHERE REGEXP_LIKE(SUBSTR("postal", 1, 5), '^[0-9]{5}$')
 
 .. sql-presto-function-substr-example-return-postal-codes-end
-
-.. sql-presto-function-substr-example-return-postal-codes-learning-lab-start
-
-Open **Learning Lab** to watch a video that explains `standardizing ZIP codes to five digits <https://learn.amperity.com/using-row-functions-in-amperity>`__ |ext_link|. Registration is required.
-
-.. sql-presto-function-substr-example-return-postal-codes-learning-lab-end
 
 
 .. _sql-presto-function-substr-example-return-two-characters:
