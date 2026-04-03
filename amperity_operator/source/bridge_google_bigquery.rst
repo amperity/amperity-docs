@@ -41,6 +41,52 @@ Amperity Bridge for Google BigQuery is a first-class integration that enables bi
 .. bridge-google-bigquery-switch-to-bridge-end
 
 
+.. _bridge-google-bigquery-quotas-and-system-limits:
+
+Quotas and system limits
+==================================================
+
+.. bridge-google-bigquery-quotas-and-system-limits-start
+
+Google Cloud restricts Google Cloud resources for a Google Cloud project. These restrictions take two forms: quotas and system limits.
+
+.. bridge-google-bigquery-quotas-and-system-limits-end
+
+
+.. _bridge-google-bigquery-quotas-and-system-limits-quotas:
+
+Quotas
+--------------------------------------------------
+
+.. bridge-google-bigquery-quotas-and-system-limits-quotas-start
+
+Quotas apply to `services within Google Cloud <https://docs.cloud.google.com/docs/quotas/overview>`__ |ext_link|, including to the consumption of services within the Google Cloud project configured for bi-directional access with Amperity Bridge. When quotas are exceeded Google Cloud blocks access to the project and the task that exceeded quotas fails. 
+
+Daily quotas are replenished at regular intervals. If access to |destination-name| `runs out of quota <https://docs.cloud.google.com/docs/quotas/overview#running_out>`__ |ext_link|:
+
+#. Reconfigure the size of the dataset to work within the quota restraints.
+#. Wait for a rate quota time period to reset.
+#. `Request a quota adjustment <https://docs.cloud.google.com/docs/quotas/overview#about_increase_requests>`__ |ext_link|.
+
+.. bridge-google-bigquery-quotas-and-system-limits-quotas-end
+
+
+.. _bridge-google-bigquery-quotas-and-system-limits-system:
+
+System limits
+--------------------------------------------------
+
+.. bridge-google-bigquery-quotas-and-system-limits-system-start
+
+System limits apply globally and cannot be changed.
+
+The **BigQuery Omni maximum query result size** defines the system limit for bi-directional sharing of data between Amperity Bridge and Google BigQuery: ``20GiB`` uncompressed.
+
+The maximum result size is 20 GiB logical bytes when querying Microsoft Azure or Amazon AWS data. If your query result is larger than 20 GiB, consider exporting the results to :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Azure Blob Storage <destination_azure_blob_storage>` instead of using **Amperity Bridge for Google BigQuery**. For more information, see `BigQuery Omni limitations <https://docs.cloud.google.com/bigquery/docs/omni-introduction#limitations>`__ |ext_link|.
+
+.. bridge-google-bigquery-quotas-and-system-limits-system-end
+
+
 .. _bridge-google-bigquery-data-types:
 
 Data types
