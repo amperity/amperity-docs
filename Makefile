@@ -2,7 +2,7 @@ BUILDDIR = build
 BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
 BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
 
-all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy legions training
+all: base user operator api reference guides amp360 ampiq datagrid contributing tooltips modals legacy legions training
 
 static:
 	cp -vr downloads $(BUILDDIR)/
@@ -38,6 +38,10 @@ amp360: static ## Build only the "/amp360" section
 ampiq: static ## Build only the "/ampiq" section
 	# Building redirects for AmpIQ pages...
 	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
+
+datagrid: static ## Build only the "/datagrid" section
+	# Building redirects for Datagrid pages...
+	$(BUILD_COMMAND) amperity_datagrid/source $(BUILDDIR)/datagrid
 
 contributing: static ## Build only the "/contributing" section
 	# Building redirects for Contributing pages...
