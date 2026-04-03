@@ -317,14 +317,8 @@ Use benchmarks to explore data quality, directly provide feedback to the quality
 .. stitch-benchmark-end
 
 .. include:: ../../amperity_reference/source/stitch_results.rst
-   :start-after: .. stitch-run-type-incremental-match-start
-   :end-before: .. stitch-run-type-incremental-match-end
-
-.. idres-benchmark-tab-about-start
-
-.. TODO: Finish this.
-
-.. idres-benchmark-tab-about-end
+   :start-after: .. stitch-run-type-incremental-match-note-start
+   :end-before: .. stitch-run-type-incremental-match-note-end
 
 
 
@@ -340,10 +334,4 @@ Deduplication
 .. include:: ../../shared/terms.rst
    :start-after: .. term-deduplication-rate-start
    :end-before: .. term-deduplication-rate-end
-
-.. idres-deduplication-tab-about-start
-
-.. TODO: Finish this.
-
-.. idres-deduplication-tab-about-end
 
