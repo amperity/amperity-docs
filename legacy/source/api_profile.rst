@@ -35,7 +35,7 @@ The Profile API is unique to your tenant. The endpoints that are enabled for you
 
    For example, identify returning customers, customize welcome messages, personalize emails, or extend the profiles your brand uses for campaigns in Braze, Criteo, or Salesforce Marketing Cloud.
 
-   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/profile-api>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://amperity.com/learning-lab/query-for-profile-information-via-the-api>`__ |ext_link|. Registration is required.
 
 .. api-profile-learning-lab-end
 

@@ -87,7 +87,7 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    :hidden:
 
    Help Center <https://help.amperity.com>
-   Learning Lab <https://learn.amperity.com>
+   Learning Lab <https://amperity.com/learning-lab>
    System Status <https://status.amperity.com>
    Amperity.com <https://www.amperity.com>
 

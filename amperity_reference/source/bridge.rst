@@ -44,7 +44,7 @@ Advantages of Amperity Bridge include:
 
    Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
 
-   Open **Learning Lab** to learn more about how `Amperity Bridge <https://learn.amperity.com/amperity-bridge-and-data-warehouses>`__ |ext_link| works. Registration is required.
+   Open **Learning Lab** to learn more about how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
 
 .. bridge-learning-lab-end
 
