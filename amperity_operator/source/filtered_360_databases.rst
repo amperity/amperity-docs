@@ -5,8 +5,6 @@
 Filtered 360 databases
 ==================================================
 
-.. TODO: Link to AmpU training video, if it is external-facing. https://learn.amperity.com/multi-database-implementation-best-practices
-
 .. multiple-360-databases-overview-start
 
 For tenants with more than one marketing unit, such as companies that have multiple brands and geographic regions, Amperity offers the ability to perform identity resolution across all marketing units, but then filter the data for each specific marketing unit into its own database.
