@@ -249,9 +249,10 @@
     // Synonym to full-term mapping
     // If a user types a key, the search runs as if they typed the value instead
     const SYNONYMS_MAPPING = {
+      "sfmc": "Salesforce Marketing Cloud",
+      "tae": "Transaction Attributes Extended",
       "uit": "Unified Itemized Transactions",
-      "ut": "Unified Transactions",
-      "tae": "Transaction Attributes Extended"
+      "ut": "Unified Transactions"
     };
 
     // Search indexes cache
@@ -760,16 +761,17 @@
     // Highlight matching text
     function highlightText(text, query) {
       if (!query) return text;
-      
-      const queryWords = query.split(/\s+/);
-      let highlighted = text;
-      
-      queryWords.forEach(word => {
-        const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
-        highlighted = highlighted.replace(regex, '<span class="compact-highlighted">$1</span>');
-      });
-      
-      return highlighted;
+
+      // Build a single regex from all query words so the replacement runs in one
+      // pass against the original plain text. A word-by-word loop would cause later
+      // short words (e.g. "c") to match inside the HTML already injected by earlier
+      // iterations (e.g. class="compact-highlighted"), corrupting the output.
+      const queryWords = query.split(/\s+/).filter(w => w.length > 0);
+      if (queryWords.length === 0) return text;
+
+      const pattern = queryWords.map(w => escapeRegex(w)).join('|');
+      const regex = new RegExp(`(${pattern})`, 'gi');
+      return text.replace(regex, '<span class="compact-highlighted">$1</span>');
     }
 
     // Escape special regex characters
