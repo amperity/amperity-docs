@@ -1,8 +1,5 @@
 .. https://docs.amperity.com/infrastructure/
 
-:orphan:
-
-
 
 .. meta::
     :description lang=en:
@@ -20,72 +17,83 @@
 About deduplication
 ==================================================
 
-.. stitch-tab-start
+.. stitch-deduplication-common-start
 
-The **Stitch** page shows the outcome of the Stitch process, including the number of unique Amperity IDs in customer data and a series of charts that highlight the connectivity between data sources.
+The **Stitch** page shows the outcome of identity resolution, including
 
-.. stitch-tab-end
+* A :doc:`summary of changes <stitch_summary>` within an identity graph over time
+* A :doc:`collection of benchmarks <stitch_benchmarks>` against which you can measure the quality of an identity graph
+* A :doc:`data explorer for deduplicated records <stitch_deduplication>` organized by data source
 
-.. stitch-explore-stitch-results-start
+.. stitch-deduplication-common-end
 
-The Stitch overview provides a high-level set of statistics about the current state of stitched records in Amperity, including :ref:`deduplication rates <stitch-explore-deduplication-rate>` and a way to :ref:`explore Amperity IDs <stitch-explore-by-amperity-id>` in the customer 360 database by :ref:`stitched records <stitch-explore-stitched-records>`, :ref:`cluster graphs <stitch-explore-cluster-graph>`, :ref:`pairwise connections <stitch-explore-pairwise-connections>`, and :ref:`by data source <stitch-explore-by-data-source>`.
+.. stitch-deduplication-explore-stitch-results-start
 
-.. stitch-explore-stitch-results-end
+The **Deduplication** tab shows a high-level set of statistics about the current state of identity resolution, including:
+
+* :ref:`Cluster graphs <stitch-explore-cluster-graph>`
+* :ref:`Customer profiles created by identity resolution <stitch-explore-stitched-records>`
+* :ref:`Data Explorer <stitch-explore-by-amperity-id>`
+* :ref:`Data sources <stitch-explore-by-data-source>`
+* :ref:`Deduplication rates <stitch-explore-deduplication-rate>`
+* :ref:`Pairwise connections <stitch-explore-pairwise-connections>`
+
+.. stitch-deduplication-explore-stitch-results-end
 
 
-.. _stitch-explore-by-amperity-id:
+.. _stitch-deduplication-explore-by-amperity-id:
 
-Explore by Amperity ID
+Data Explorer
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-start
    :end-before: .. term-amperity-id-end
 
-.. stitch-explore-by-amperity-id-start
+.. stitch-deduplication-explore-by-amperity-id-start
 
-As new data is input to Amperity, the Stitch process identifies when new or changed data applies to existing clusters of customer records, and then updates those records, maintains the cluster, and retaining a stable Amperity ID assignment. A new Amperity ID is only created when new individuals are identified.
+As new data is input to Amperity, identity resolution identifies when new or changed data applies to existing clusters of customer records, and then updates those records, maintains the cluster, and retaining a stable Amperity ID assignment. A new Amperity ID is only created when new individuals are identified.
 
-.. stitch-explore-by-amperity-id-end
+.. stitch-deduplication-explore-by-amperity-id-end
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-format-start
    :end-before: .. term-amperity-id-format-end
 
-.. stitch-explore-by-amperity-id-continued-start
+.. stitch-deduplication-explore-by-amperity-id-continued-start
 
 Amperity IDs do not replace primary and foreign keys already assigned in customer data. Amperity IDs exist alongside primary and foreign keys within the customer 360 profile and act as key for finding clusters of unique customer records.
 
-.. stitch-explore-by-amperity-id-continued-end
+.. stitch-deduplication-explore-by-amperity-id-continued-end
 
-**To explore by Amperity ID**
+**To explore data**
 
-.. stitch-explore-by-amperity-id-steps-start
+.. stitch-deduplication-explore-by-amperity-id-steps-start
 
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
 #. Use the left and right arrows surrounding the full name to view additional records.
 #. Click through each record and each tab. When finished exploring, click **Close**.
 
-.. stitch-explore-by-amperity-id-steps-end
+.. stitch-deduplication-explore-by-amperity-id-steps-end
 
 
-.. _stitch-explore-by-data-source:
+.. _stitch-deduplication-explore-by-data-source:
 
 Explore by data source
 --------------------------------------------------
 
-.. stitch-explore-by-data-source-start
+.. stitch-deduplication-explore-by-data-source-start
 
 The **Stitched Sources** section of the **Stitch** page shows a comparison of domain tables and the record pairs identified both within each data source and across all data sources. This is presented as an UpSet Plot chart with links to the underlying data sources via the **Data Explorer**.
 
-.. stitch-explore-by-data-source-end
+.. stitch-deduplication-explore-by-data-source-end
 
-.. stitch-explore-by-data-source-upset-plot-start
+.. stitch-deduplication-explore-by-data-source-upset-plot-start
 
 The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart have a row for each data source. This diagram shows the first two only.
 
-.. stitch-explore-by-data-source-upset-plot-end
+.. stitch-deduplication-explore-by-data-source-upset-plot-end
 
 .. image:: ../../images/mockup-stitch-tab-upset-plot.png
    :width: 450 px
@@ -93,37 +101,37 @@ The following diagram shows the components of the UpSet plot chart, inclusive of
    :align: left
    :class: no-scaled-link
 
-.. stitch-explore-by-data-source-upset-plot-explanation-start
+.. stitch-deduplication-explore-by-data-source-upset-plot-explanation-start
 
 Each individual stitched data source can be explored from the UpSet plot. The UpSet plot includes a source-by-source breakdown of stitched data. For each record, a **View source** link is available. This opens the **Data Explorer** and displays a **Schema** for the data source that shows the name of the field as it is defined in customer data, the data type, the Amperity semantic applied to the field, and sample data. A **Sample** shows 100 records from that data source, where each of the fields defined in the customer data source are presented as columns of data.
 
-.. stitch-explore-by-data-source-upset-plot-explanation-end
+.. stitch-deduplication-explore-by-data-source-upset-plot-explanation-end
 
 **To explore by data source**
 
-.. stitch-explore-by-data-source-steps-start
+.. stitch-deduplication-explore-by-data-source-steps-start
 
 #. From the **Stitch** tab, under **Stitched Sources**, review the UpSet plot chart.
 #. Click the database table name for any database table in the Upset plot chart to view more information about that data source.
 #. Click the **View source** link to open the **Data Explorer** for that table, in which you can review the schema and view sample data.
 #. When finished exploring, click **Close**.
 
-.. stitch-explore-by-data-source-steps-end
+.. stitch-deduplication-explore-by-data-source-steps-end
 
 
-.. _stitch-explore-previous-stitch-results:
+.. _stitch-deduplication-explore-previous-stitch-results:
 
 Explore previous Stitch results
 --------------------------------------------------
 
-.. stitch-explore-previous-stitch-results-start
+.. stitch-deduplication-explore-previous-stitch-results-start
 
 You can explore previous Stitch results from the **Stitch** tab. From the **Stitch** tab, next to the **Stitch** page title, select a result from the dropdown menu to view the Stitch results for that Stitch run.
 
-.. stitch-explore-previous-stitch-results-end
+.. stitch-deduplication-explore-previous-stitch-results-end
 
 
-.. _stitch-explore-semantics:
+.. _stitch-deduplication-explore-semantics:
 
 Explore semantics
 --------------------------------------------------
@@ -132,25 +140,25 @@ Explore semantics
    :start-after: .. term-semantic-start
    :end-before: .. term-semantic-end
 
-.. stitch-explore-semantics-start
+.. stitch-deduplication-explore-semantics-start
 
 The **Semantics** link at the top of the **Stitch** page opens a dialog box that lists the configured semantics made available to Stitch from domain tables. This list is broken down by domain table, and then by semantic. For each semantic, it lists the semantic, its data type, and the name of the field as defined in customer data.
 
-.. stitch-explore-semantics-end
+.. stitch-deduplication-explore-semantics-end
 
 **To explore semantics**
 
-.. stitch-explore-semantics-steps-start
+.. stitch-deduplication-explore-semantics-steps-start
 
 #. From the **Stitch** tab, click the **Semantics** link. This opens the **Stitch Tools** dialog box.
 #. Each table that contains stitched records is listed in the dialog box.
 #. For each table, a list of semantic names, their types, and the fields to which they are associated is listed.
 #. When finished, click **Close**.
 
-.. stitch-explore-semantics-steps-end
+.. stitch-deduplication-explore-semantics-steps-end
 
 
-.. _stitch-explore-cluster-graph:
+.. _stitch-deduplication-explore-cluster-graph:
 
 View cluster graph
 --------------------------------------------------
@@ -163,11 +171,11 @@ View cluster graph
    :start-after: .. term-cluster-graph-start
    :end-before: .. term-cluster-graph-end
 
-.. stitch-explore-cluster-graph-start
+.. stitch-deduplication-explore-cluster-graph-start
 
 The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line relationship between each stitched record, along with a detailed breakdown of PII similarities and differences for each pair of stitched records in the cluster graph.
 
-.. stitch-explore-cluster-graph-end
+.. stitch-deduplication-explore-cluster-graph-end
 
 .. image:: ../../images/mockup-stitch-tab-cluster-graph.png
    :width: 600 px
@@ -177,7 +185,7 @@ The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line rel
 
 **To view the cluster graph**
 
-.. stitch-explore-cluster-graph-steps-start
+.. stitch-deduplication-explore-cluster-graph-steps-start
 
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
@@ -186,10 +194,10 @@ The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line rel
 #. Use the left and right arrows surrounding the full name to view additional cluster graphs for additional record clusters.
 #. When finished exploring, click **Close**.
 
-.. stitch-explore-cluster-graph-steps-end
+.. stitch-deduplication-explore-cluster-graph-steps-end
 
 
-.. _stitch-explore-deduplication-rate:
+.. _stitch-deduplication-explore-deduplication-rate:
 
 View deduplication rate
 --------------------------------------------------
@@ -200,7 +208,7 @@ View deduplication rate
 
 **Example**
 
-.. stitch-explore-deduplication-rate-example-start
+.. stitch-deduplication-explore-deduplication-rate-example-start
 
 A tenant has three sources of customer records represented by tables 1, 2, and 3. In the Stitch report the:
 
@@ -257,30 +265,30 @@ Next compare the overlap between customer records 1 and 3 by hovering over custo
 
       (total customer key records - Amperity IDs) /  (total customer key records)
 
-.. stitch-explore-deduplication-rate-example-end
+.. stitch-deduplication-explore-deduplication-rate-example-end
 
 **To view deduplication rate**
 
-.. stitch-explore-deduplication-rate-steps-start
+.. stitch-deduplication-explore-deduplication-rate-steps-start
 
 #. From the **Stitch** tab, under **Overview**, review the total source IDs and total Amperity IDs.
 #. The deduplication rate is shown on the right as a percentage.
 
-.. stitch-explore-deduplication-rate-steps-end
+.. stitch-deduplication-explore-deduplication-rate-steps-end
 
 
-.. _stitch-view-notifications:
+.. _stitch-deduplication-view-notifications:
 
-.. stitch-view-notifications:
+.. stitch-deduplication-view-notifications:
 
 View notifications
 --------------------------------------------------
 
-.. stitch-view-notifications-start
+.. stitch-deduplication-view-notifications-start
 
 Notifications for Stitch reports that run in the **Stitch** page appear after Amperity creates clusters of records based on the connection between pairs, and then gives each cluster a unique Amperity ID. Notifications typically indicate successful outcomes. Less often, notifications contain details for non-successful outcomes, such as failures related to upstream or downstream processes.
 
-.. stitch-view-notifications-end
+.. stitch-deduplication-view-notifications-end
 
 .. image:: ../../images/mockup-notifications-stitch-report.png
    :width: 600 px
@@ -288,16 +296,16 @@ Notifications for Stitch reports that run in the **Stitch** page appear after Am
    :align: left
    :class: no-scaled-link
 
-.. stitch-view-notifications-context-start
+.. stitch-deduplication-view-notifications-context-start
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
 In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
-.. stitch-view-notifications-context-end
+.. stitch-deduplication-view-notifications-context-end
 
 
-.. _stitch-explore-pairwise-connections:
+.. _stitch-deduplication-explore-pairwise-connections:
 
 View pairwise connections
 --------------------------------------------------
@@ -306,11 +314,11 @@ View pairwise connections
    :start-after: .. term-pairwise-connection-start
    :end-before: .. term-pairwise-connection-end
 
-.. stitch-explore-pairwise-connections-start
+.. stitch-deduplication-explore-pairwise-connections-start
 
 The **Pairwise Connections** tab in the **Data Explorer** shows a breakdown of stitched record pairs by score.
 
-.. stitch-explore-pairwise-connections-end
+.. stitch-deduplication-explore-pairwise-connections-end
 
 .. image:: ../../images/mockup-stitch-tab-pairwise-connection.png
    :width: 600 px
@@ -324,7 +332,7 @@ The **Pairwise Connections** tab in the **Data Explorer** shows a breakdown of s
 
 **To view pairwise connections**
 
-.. stitch-explore-pairwise-connections-steps-start
+.. stitch-deduplication-explore-pairwise-connections-steps-start
 
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
@@ -333,19 +341,19 @@ The **Pairwise Connections** tab in the **Data Explorer** shows a breakdown of s
 #. Use the left and right arrows surrounding the full name to view additional pairwise connections for additional record clusters.
 #. When finished exploring, click **Close**.
 
-.. stitch-explore-pairwise-connections-steps-end
+.. stitch-deduplication-explore-pairwise-connections-steps-end
 
 
-.. _stitch-explore-stitch-metrics:
+.. _stitch-deduplication-explore-stitch-metrics:
 
 View Stitch metrics
 --------------------------------------------------
 
-.. stitch-explore-stitch-metrics-start
+.. stitch-deduplication-explore-stitch-metrics-start
 
 You can view metrics for changes to records and Amperity IDs that may have occurred between Stitch runs. Click the **Stitch Metrics** link in the notifications pane to open the **Stitch Metrics** dialog box.
 
-.. stitch-explore-stitch-metrics-end
+.. stitch-deduplication-explore-stitch-metrics-end
 
 .. image:: ../../images/mockup-stitch-tab-metrics.png
    :width: 600 px
@@ -353,7 +361,7 @@ You can view metrics for changes to records and Amperity IDs that may have occur
    :align: left
    :class: no-scaled-link
 
-.. stitch-explore-stitch-metrics-context-start
+.. stitch-deduplication-explore-stitch-metrics-context-start
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
 
@@ -370,10 +378,10 @@ The table contains a row for each data source that was made available to this St
 * The number of distinct cluster transitions. A cluster transition occurs when records move from one cluster to another.
 * The number of distinct cluster transitions, including those from records added to or deleted from the dataset.
 
-.. stitch-explore-stitch-metrics-context-end
+.. stitch-deduplication-explore-stitch-metrics-context-end
 
 
-.. _stitch-explore-stitched-records:
+.. _stitch-deduplication-explore-stitched-records:
 
 View stitched records
 --------------------------------------------------
@@ -382,11 +390,11 @@ View stitched records
    :start-after: .. term-stitched-record-start
    :end-before: .. term-stitched-record-end
 
-.. stitch-explore-stitched-records-start
+.. stitch-deduplication-explore-stitched-records-start
 
 The **Stitched Records** tab in the **Data Explorer** shows a table with a row for each of the individual records that share the same Amperity ID.
 
-.. stitch-explore-stitched-records-end
+.. stitch-deduplication-explore-stitched-records-end
 
 .. image:: ../../images/mockup-stitch-tab-stitched-records.png
    :width: 600 px
@@ -396,14 +404,14 @@ The **Stitched Records** tab in the **Data Explorer** shows a table with a row f
 
 **To view stitched records**
 
-.. stitch-explore-stitched-records-steps-start
+.. stitch-deduplication-explore-stitched-records-steps-start
 
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
 #. All of the records that are associated with the same Amperity ID are listed. Columns show the differences beween each record.
 #. When finished exploring, click **Close**.
 
-.. stitch-explore-stitched-records-steps-end
+.. stitch-deduplication-explore-stitched-records-steps-end
 
 View profile attributes and interactions
 --------------------------------------------------
@@ -412,7 +420,7 @@ The **Profile attributes** and **Interactions** tabs are available in the data e
 
 **To view profile attributes**
 
-.. stitch-configure-profile-attributes-start
+.. stitch-deduplication-configure-profile-attributes-start
 
 #. Create a database with the **Unified Scores** and **Unified Customer** tables, and add a customer 360 table that is tagged with a table semantic.
 #. In the query editor select the database.
@@ -421,4 +429,4 @@ The **Profile attributes** and **Interactions** tabs are available in the data e
 #. On the **Interactions** tab, select a table in the **Show matching records from** field. 
 #. View each interaction record.
 
-.. stitch-configure-profile-attributes-end
+.. stitch-deduplication-configure-profile-attributes-end
