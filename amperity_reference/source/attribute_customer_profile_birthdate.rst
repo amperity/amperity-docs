@@ -82,10 +82,10 @@ The following table lists the operators that are available to this attribute.
      - Returns customer records that do not have a value.
 
    * - **is on or after**
-     - Return all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. 
+     - Return all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
    * - **is on or before**
-     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. 
+     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
 .. attribute-customer-profile-birthdate-conditions-end
 

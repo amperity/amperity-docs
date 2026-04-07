@@ -69,6 +69,8 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
+       A relative date is always in Coordinated Universal Time (UTC).
+
        Click the **Refresh** button located on the right side of the **Segment Editor** to see how many customers are in your segment, how much they spent in their first purchase, how many are active, and how many of them should belong to a future campaign.
 
    * - .. image:: ../../images/steps-03.png

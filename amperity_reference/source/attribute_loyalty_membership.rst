@@ -164,7 +164,7 @@ The following table lists the operators that are available to these attributes.
      - Returns customer records that are not opted in to being contacted by your loyalty membership or associated with a datetime.
 
    * - **is on or after**
-     - Returns all dates that occur on or after the selected date. Use a relative date to define a rolling window.
+     - Returns all dates that occur on or after the selected date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
    * - **is on or before**
      - Returns all dates that occur on or before the selected date.
