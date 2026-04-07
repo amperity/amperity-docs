@@ -3323,7 +3323,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph clusters customer data into individual customer profiles, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers that your brand collects. Each unique customer profile in an identity graph is assigned an Amperity ID.
+An identity graph is the foundation for customer profiles and the keychain of identifiers used for marketing activations, including journeys and campaigns, and interacting with other operational systems.
 
 .. term-identity-graph-end
 
@@ -4180,7 +4180,7 @@ A matchback is a process where a mail file--associated with a purchase credit--m
 
 .. term-match-category-start
 
-A match category is applied to individual record-pair comparisons during identity resolution.
+A match category is applied to individual record-pair comparisons discovered by deterministic and probabilistic matching strategies during identity resolution.
 
 .. list-table::
    :widths: 140 360
@@ -4522,6 +4522,15 @@ Neustar--a TransUnion company--provides real-time information and analytics for 
 A nickname is a variation of a customer's given name that should not affect merging of customer profiles during identity resolution. For example: Mike is a nickname for Michael, Sue is a nickname for Susan, Tom and Tommy are nicknames for Thomas, Vicki and Vickie are nicknames for Victoria.
 
 .. term-nicknames-end
+
+
+**No matching model**
+
+.. term-no-matching-model-start
+
+Records are matched only on clustering rules. All records unable to match on a clustering rule are not included in a cluster.
+
+.. term-no-matching-model-end
 
 
 **notifications** recent activity
@@ -4924,7 +4933,7 @@ Pairwise comparison is a process that compares all possible connections between 
 
 .. term-pairwise-connection-start
 
-A pairwise connection is a pair of matching records in a customer profile.
+A pairwise connection is a pair of matching records assigned a score high enough to belong to the same customer profile.
 
 .. term-pairwise-connection-end
 
@@ -4933,9 +4942,9 @@ A pairwise connection is a pair of matching records in a customer profile.
 
 .. term-pairwise-connection-score-start
 
-Every pairwise connection has a score with two parts separated by a period.
+A pairwise connection has a score with two parts separated by a period.
 
-The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied by Amperity to individual record pairs. The record pair score corresponds to the classification:
+The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied during identity resolution to individual record pairs:
 
 * 5 for exact matches
 * 4 for excellent matches
