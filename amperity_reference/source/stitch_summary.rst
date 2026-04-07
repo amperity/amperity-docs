@@ -205,7 +205,7 @@ Each identity graph is created from a combination of deterministic and probabili
    * Exact matches are assigned minimum or maximum scores.
    * Fuzzy matches are assigned similarity scores.
 
-   It may not be possible to satisfy all of the rules-based scoring:
+   It may not be possible to satisfy all of the rules-based scoring conditions:
 
    * Default scoring model may assign a score
    * A transitive connection may be discovered
