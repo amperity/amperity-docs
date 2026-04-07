@@ -4942,7 +4942,7 @@ A pairwise connection is a pair of matching records assigned a score high enough
 
 .. term-pairwise-connection-score-start
 
-Every pairwise connection has a score with two parts separated by a period.
+A pairwise connection has a score with two parts separated by a period.
 
 The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied during identity resolution to individual record pairs:
 
