@@ -327,7 +327,6 @@ Components
    Segment Editor <segment_editor>
    Single sign-on (SSO) <sso>
    Spark SQL <sql_spark>
-   Stitch <page_stitch>
    Workflows <workflows>
 
 
