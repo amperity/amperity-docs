@@ -110,6 +110,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_braze
 
+   .. grid-item-card:: Braze Cohorts
+      :link-type: doc
+      :link: destination_braze_cohorts
+
    .. grid-item-card:: Camelot SMM
       :link-type: doc
       :link: destination_camelot_smm
@@ -414,6 +418,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    BazaarVoice <destination_bazaarvoice>
    Bluecore <destination_bluecore>
    Braze <destination_braze>
+   Braze Cohorts <destination_braze_cohorts>
    Camelot SMM <destination_camelot_smm>
    Cheetah Digital <destination_cheetah_digital>
    Cordial <destination_cordial>
