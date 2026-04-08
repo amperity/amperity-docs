@@ -66,7 +66,7 @@ The following table lists the operators that are available to this attribute.
 
           A churn prevention campaign must measure the time that has elapsed since a customer's most recent order and the current date.
 
-          Use the **in between** operator along with relative date ranges to associate customers to specific stages within your churn prevention campaign.
+          Use the **in between** operator along with relative date ranges to associate customers to specific stages within your churn prevention campaign. A relative date is always in Coordinated Universal Time (UTC).
 
           For example: if your churn prevention campaign has stages at 14 days and 1 month after the customer's most recent purchase, add the following criteria to the 14-day segment:
 

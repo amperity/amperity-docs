@@ -165,7 +165,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       :header-rows: 0
 
       * - **Relative date values**
-        - Attributes with relative date values typically contain a rolling value that is updated daily.
+        - Attributes with relative date values typically contain a rolling value that is updated daily. A relative date is always in Coordinated Universal Time (UTC).
 
           For example, the **Transaction Attributes Extended** table contains an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
 

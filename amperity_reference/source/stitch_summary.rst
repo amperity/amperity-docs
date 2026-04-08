@@ -205,7 +205,7 @@ Each identity graph is created from a combination of deterministic and probabili
    * Exact matches are assigned minimum or maximum scores.
    * Fuzzy matches are assigned similarity scores.
 
-   It may not be possible to satisfy all of the rules-based scoring:
+   It may not be possible to satisfy all of the rules-based scoring conditions:
 
    * Default scoring model may assign a score
    * A transitive connection may be discovered
@@ -341,7 +341,7 @@ and rules for separating records are similar to:
      when values differ for phone
 
    separate records
-     when values differ for email
+     when values significantly differ for email
 
 Identity resolution compares two records by starting at the top of the list of rules, and then stepping through the list of rules until a condition is met. When a condition is met the corresponding action is taken. Identity resolution stops comparing two records after the first action is taken, even if additional conditions could be met.
 

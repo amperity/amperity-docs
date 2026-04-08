@@ -63,6 +63,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :align: left
           :class: no-scaled-link
 
+       A relative date is always in Coordinated Universal Time (UTC).
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
