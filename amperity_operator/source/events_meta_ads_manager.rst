@@ -448,7 +448,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **website**
          Use when the offline conversion was made on a website.
 
-         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
+         When **action_source** is set to **website** the following fields are required: **client_ip_address**, **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
+
+         * The value for **client_ip_address** must be the IP address of the browser corresponding to the event.
 
          * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
 
@@ -456,16 +458,16 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
          * The value for **event_source_url** should be browser URL at which the event occurred.
 
-         **event_id** and **event_source_url** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
+         **event_id**, **event_source_url**, **client_user_agent**, and **client_ip_address** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
 
        The value for **action_source** is used by the Conversions API to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the action source that best associates how your brand wants to use offline conversions within |destination-name|.
 
        When **action_source** is not specified the default value is "physical_store".
 
    * - **currency**
-     - **Required**
+     - **Required for Purchase events**
 
-       A value for **currency** is required by the Conversions API for events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
+       A value for **currency** is required by the Conversions API for Purchase events. When the **event_name** column is present in the dataset, **currency** is only required for rows where the event name is "Purchase" (or blank, which defaults to "Purchase"). When **event_name** is not present, all events are treated as Purchase and **currency** is required. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
 
        Add **currency** to your query, and then set a value:
 
@@ -541,9 +543,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
      - See **email**.
 
    * - **price**
-     - **Required**
+     - **Required for Purchase events**
 
-       The price that is associated with the offline event.
+       The price that is associated with the offline event. When the **event_name** column is present in the dataset, **price** is only required for Purchase events. Non-purchase events (such as Lead) do not require **price**.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
@@ -573,9 +575,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **quantity** *or* **value**
-     - **Required**
+     - **Required for Purchase events**
 
-       A field that describes a quantity or a value amount associated with the offline event.
+       A field that describes a quantity or a value amount associated with the offline event. When the **event_name** column is present in the dataset, **quantity** (or **value**) is only required for Purchase events. Non-purchase events (such as Lead) do not require **quantity** or **value**.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity** (or **value**), and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
