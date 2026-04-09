@@ -362,12 +362,6 @@ The overall deduplication rate (32.5%) represents the total number of records re
 
 An UpSet plot chart has a row for each table. In this case, the row for table 1 shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
 
-.. image:: ../../images/deduplication-rate.png
-   :width: 600 px
-   :alt: Deduplication rates for customer records.
-   :align: left
-   :class: no-scaled-link
-
 Next compare the overlap between customer records 1 and 3 by hovering over customer record 1. The hover box shows there are more than 69k records shared between tables 1 and 3. This is a significant amount of overlap between two tables and is the primary contributor to the 32.5% overall deduplication rate.
 
 .. admonition:: Deduplication rate, explained
@@ -493,12 +487,6 @@ View Stitch metrics
 You can view metrics for changes to records and Amperity IDs that may have occurred between Stitch runs. Click the **Stitch Metrics** link in the notifications pane to open the **Stitch Metrics** dialog box.
 
 .. stitch-explore-stitch-metrics-end
-
-.. image:: ../../images/mockup-stitch-tab-metrics.png
-   :width: 600 px
-   :alt: The Stitch Metrics dialog box.
-   :align: left
-   :class: no-scaled-link
 
 .. stitch-explore-stitch-metrics-context-start
 

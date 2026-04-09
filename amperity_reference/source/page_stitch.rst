@@ -34,15 +34,15 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
       :link-type: doc
       :link: stitch
 
-   .. grid-item-card:: Stitch deduplication
+   .. grid-item-card:: About deduplication
       :link-type: doc
       :link: stitch_deduplication
 
-   .. grid-item-card:: Stitch benchmarks
+   .. grid-item-card:: About benchmarks
       :link-type: doc
       :link: stitch_benchmarks
 
-   .. grid-item-card:: Stitch summary
+   .. grid-item-card:: Identity resolution summary
       :link-type: doc
       :link: stitch_summary
 
@@ -58,6 +58,6 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
    :hidden:
 
    How Stitch works <stitch>
-   Stitch benchmarks <stitch_benchmarks>
-   Stitch deduplication <stitch_deduplication>
-   Stitch summary <stitch_summary>
+   About benchmarks <stitch_benchmarks>
+   About deduplication <stitch_deduplication>
+   Identity resolution summary <stitch_summary>

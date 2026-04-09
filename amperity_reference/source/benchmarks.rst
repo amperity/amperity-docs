@@ -26,9 +26,9 @@ Use benchmarks to explore data quality, directly provide feedback to the quality
 
 .. stitch-benchmark-end
 
-.. include:: ../../amperity_reference/source/stitch_results.rst
-   :start-after: .. stitch-run-type-incremental-match-note-start
-   :end-before: .. stitch-run-type-incremental-match-note-end
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-incremental-match-note-start
+   :end-before: .. stitch-benchmarks-incremental-match-note-end
 
 
 .. _stitch-benchmark-status:
