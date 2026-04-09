@@ -41,8 +41,6 @@ Stitched tables
 
 .. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
-.. TODO: Compare this to reference/stitch_results and sync up. Also image is updated.
-
 .. stitch-run-select-tables-start
 
 Stitch only runs against selected domain tables. A domain table is made available to Stitch by the **Make available to Stitch** configuration setting in the **Feed Editor**.

@@ -50,7 +50,7 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
       :link-type: doc
       :link: grid_review
 
-   .. grid-item-card:: Review ID resolution
+   .. grid-item-card:: Review identity resolution
       :link-type: doc
       :link: stitch_results
 
@@ -71,5 +71,5 @@ Stitch uses patented algorithms to process massive volumes of data and discover 
    Merge policy <merge_policy>
    Nicknames <stitch_nicknames>
    Review data quality <grid_review>
-   Review ID resolution <stitch_results>
+   Review identity resolution <stitch_results>
    Stitch settings <grid_settings>
