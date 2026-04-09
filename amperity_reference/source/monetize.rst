@@ -486,9 +486,11 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
        Do one of the following:
 
-       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
+       #. Select **Create from existing segments**. This opens a list of segments built with the visual **Segment Editor**. Use the checkboxes to pick one or more segments.
 
           .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+
+          .. note:: Only segments created with the visual **Segment Editor** are shown in the segments list. To use an audience defined by a SQL query, select **Create a new segment** and recreate the query criteria in the visual **Segment Editor**.
 
        #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
 
@@ -580,9 +582,11 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
 
        Do one of the following:
 
-       #. Select **Create from existing segments**. This opens a list of segments. Use the checkboxes to pick one or more segments.
+       #. Select **Create from existing segments**. This opens a list of segments built with the visual **Segment Editor**. Use the checkboxes to pick one or more segments.
 
           .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+
+          .. note:: Only segments created with the visual **Segment Editor** are shown in the segments list. To use an audience defined by a SQL query, select **Create a new segment** and recreate the query criteria in the visual **Segment Editor**.
 
        #. Select **Create a new segment**. This opens the visual **Segment Editor**. Define a new segment only for audience monetization.
 
@@ -708,7 +712,10 @@ Customers who have not given consent to use their data for advertising purposes 
 
 #. Open the **Audience monetization** page.
 #. Click **Set global opt-out**.
-#. Use the drop-down menu to select one or more segments
+#. Use the drop-down menu to select one or more segments.
+
+   .. note:: Only segments created with the visual **Segment Editor** are available for global opt-out. To designate an audience defined by a SQL query, create a new segment in the visual **Segment Editor** and recreate the query criteria there. It will then be available in the global opt-out drop-down.
+
 #. Click **Save**.
 
 .. monetize-howtos-global-optout-steps-end
