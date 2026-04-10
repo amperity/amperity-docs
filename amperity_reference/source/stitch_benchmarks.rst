@@ -39,9 +39,11 @@ Use benchmarks to explore data quality, directly provide feedback to the quality
 * :doc:`Benchmark tab <stitch_benchmarks>`
 * :doc:`Deduplication tab <stitch_deduplication>`
 
-.. include:: ../../amperity_reference/source/stitch_results.rst
-   :start-after: .. stitch-run-type-incremental-match-note-start
-   :end-before: .. stitch-run-type-incremental-match-note-end
+.. stitch-benchmarks-incremental-match-note-start
+
+.. note:: Stitch benchmarks are unavailable with incremental matching.
+
+.. stitch-benchmarks-incremental-match-note-end
 
 
 .. _stitch-benchmarks-status:

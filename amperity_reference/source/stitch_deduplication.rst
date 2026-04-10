@@ -3,15 +3,15 @@
 
 .. meta::
     :description lang=en:
-        A summary of identity resolution, including identity changes over time and how matching strategies combine to identify complex profiles.
+        The Deduplication tab compares customer profiles created by identity resolution to profile records in source data. 
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A summary of identity resolution, including identity changes over time and how matching strategies combine to identify complex profiles.
+        The Deduplication tab compares customer profiles created by identity resolution to profile records in source data. 
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About Amperity cloud infrastructure
+        About deduplication
 
 ==================================================
 About deduplication
@@ -27,18 +27,27 @@ The **Stitch** page shows the outcome of identity resolution, including
 
 .. stitch-deduplication-common-end
 
-.. stitch-deduplication-explore-stitch-results-start
 
-The **Deduplication** tab shows a high-level set of statistics about the current state of identity resolution, including:
+.. _stitch-deduplication-status:
 
-* :ref:`Cluster graphs <stitch-explore-cluster-graph>`
-* :ref:`Customer profiles created by identity resolution <stitch-explore-stitched-records>`
-* :ref:`Data Explorer <stitch-explore-by-amperity-id>`
-* :ref:`Data sources <stitch-explore-by-data-source>`
-* :ref:`Deduplication rates <stitch-explore-deduplication-rate>`
-* :ref:`Pairwise connections <stitch-explore-pairwise-connections>`
+Deduplication status page
+==================================================
 
-.. stitch-deduplication-explore-stitch-results-end
+.. stitch-deduplication-status-start
+
+The **Deduplication** tab shows a high-level set of statistics about the current state of identity resolution with links to exploring each area in more detail.
+
+.. image:: ../../images/mockup-stitch-deduplication-tab.png
+   :width: 600 px
+   :alt: The Stitch deduplication status page.
+   :align: left
+   :class: no-scaled-link
+
+Open the :ref:`Data Explorer <stitch-deduplication-explore-by-amperity-id>` to view :ref:`Cluster graphs <stitch-deduplication-explore-cluster-graph>`, :ref:`pairwise connections <stitch-deduplication-explore-pairwise-connections>`, and :ref:`individual customer profiles created by identity resolution <stitch-deduplication-explore-stitched-records>`.
+
+Compare :ref:`data sources <stitch-deduplication-explore-by-data-source>` and the :ref:`rate of deduplication <stitch-deduplication-explore-deduplication-rate>` across sources.
+
+.. stitch-deduplication-status-start
 
 
 .. _stitch-deduplication-explore-by-amperity-id:
@@ -223,12 +232,6 @@ The overall deduplication rate (32.5%) represents the total number of records re
 
 An UpSet plot chart has a row for each table. In this case, the row for table 1 shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
 
-.. image:: ../../images/deduplication-rate.png
-   :width: 600 px
-   :alt: Deduplication rates for customer records.
-   :align: left
-   :class: no-scaled-link
-
 Next compare the overlap between customer records 1 and 3 by hovering over customer record 1. The hover box shows there are more than 69k records shared between tables 1 and 3. This is a significant amount of overlap between two tables and is the primary contributor to the 32.5% overall deduplication rate.
 
 .. admonition:: Deduplication rate, explained
@@ -278,8 +281,6 @@ Next compare the overlap between customer records 1 and 3 by hovering over custo
 
 
 .. _stitch-deduplication-view-notifications:
-
-.. stitch-deduplication-view-notifications:
 
 View notifications
 --------------------------------------------------
@@ -355,12 +356,6 @@ You can view metrics for changes to records and Amperity IDs that may have occur
 
 .. stitch-deduplication-explore-stitch-metrics-end
 
-.. image:: ../../images/mockup-stitch-tab-metrics.png
-   :width: 600 px
-   :alt: The Stitch Metrics dialog box.
-   :align: left
-   :class: no-scaled-link
-
 .. stitch-deduplication-explore-stitch-metrics-context-start
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
@@ -369,7 +364,7 @@ This dialog box identifies the tenant, the time at which the job started, the ID
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 
-The table contains a row for each data source that was made available to this Stitch run, along with columns for each row that show:
+The table contains a row for each data source that was made available for identity resolution, along with columns for each row that show:
 
 * The number of Amperity IDs in the current Stitch run.
 * The number of Amperity IDs in the previous Stitch run.
@@ -413,10 +408,17 @@ The **Stitched Records** tab in the **Data Explorer** shows a table with a row f
 
 .. stitch-deduplication-explore-stitched-records-steps-end
 
+
+.. _stitch-deduplication-profile-attributes-interactions:
+
 View profile attributes and interactions
 --------------------------------------------------
 
+.. stitch-deduplication-profile-attributes-interactions-start
+
 The **Profile attributes** and **Interactions** tabs are available in the data explorer. These show information about customer 360 attributes and interaction records for an individual customer.
+
+.. stitch-deduplication-profile-attributes-interactions-end
 
 **To view profile attributes**
 

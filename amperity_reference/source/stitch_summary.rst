@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About identity resolution
+        Identity resolution summary
 
 ==================================================
-About identity resolution
+Identity resolution summary
 ==================================================
 
 .. stitch-summary-common-start
@@ -79,8 +79,6 @@ Identity changes over time
    :alt: Identity changes over time
    :align: left
    :class: no-scaled-link
-
-.. stitch-summary-tab-identity-changes-table-start
 
 .. stitch-summary-tab-identity-changes-table-start
 
@@ -155,7 +153,7 @@ Changes, such as **Added**, **Merged**, or **Recognized**, are tracked for each 
 
 .. stitch-summary-tab-identity-changes-hover-start
 
-Hover over individual days in the chart that shows identity changes over time to view statistics for specific days.
+Hover over individual days in the chart to show identity changes for specific days.
 
 .. stitch-summary-tab-identity-changes-hover-end
 
@@ -378,22 +376,9 @@ Every record that meets the conditiona for rules-based scoring is assigned a pai
 
 .. stitch-summary-tab-scoring-record-pairs-rules-end
 
-.. term-pairwise-connection-score-start
-
-A pairwise connection score is two parts separated by a period.
-
-The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied during identity resolution to individual record pairs:
-
-* 5 for exact matches
-* 4 for excellent matches
-* 3 for high matches
-* 2 for moderate matches
-* 1 for weak matches
-* 0 for non-matches
-
-Identity resolution uses the second part--the record pair strength--to show the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
-
-.. term-pairwise-connection-score-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-pairwise-connection-score-start
+   :end-before: .. term-pairwise-connection-score-end
 
 .. stitch-summary-tab-scoring-record-pairs-rules-note-start
 
@@ -416,6 +401,8 @@ Default model scoring is applied to all records that did not match a rules-based
 
 * :ref:`Amperity AI <stitch-summary-tab-scoring-record-pairs-default-ampai>`
 * :ref:`No matching model <stitch-summary-tab-scoring-record-pairs-default-none>`
+
+.. stitch-summary-tab-scoring-record-pairs-default-end
 
 
 .. _stitch-summary-tab-scoring-record-pairs-default-ampai:
