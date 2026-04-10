@@ -40,9 +40,8 @@ These three models are combined with a simple formula:
 You can use predicted CLV modeling to build high-value audiences that identify:
 
 * Which customers have the highest predicted value?
-* Which customers will respond better to special offers and perks?
-* What are the best personalized experiences for your top customers, such as personalized rewards, offers, and content?
-* Which customers have individual price preferences?
+* Which customers are better candidates for winback offers?
+* Which customers are candidates for cultivating customer value?
 
 .. model-predicted-clv-about-end
 
@@ -327,20 +326,21 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Create and evaluate model configurations. Each configuration contains the model's hyperparameters, lookback window (default 4 years), customer exclusions, and additional features.
+     - Create and evaluate model versions. Each version contains the model's hyperparameters, lookback window (default 4 years), customer exclusions, and additional features.
 
-       Evaluate a configuration to run a validation job. Review the validation results, which include metrics such as MAE, Spearman's Rank Correlation, Brier Score, and F1 Score.
+       Evaluate a version to run a validation job. Review the validation results, which include metrics such as MAE, Spearman's Rank Correlation, Brier Score, and F1 Score.
 
-       .. tip:: You can create multiple configurations with different settings and compare their evaluation results to find the best-performing configuration for your data.
+       .. tip:: You can create multiple versions with different settings and compare their evaluation results to find the best-performing version for your data.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step five.
           :align: center
           :class: no-scaled-link
-     - When you are satisfied with a configuration's performance, click **Activate**. During activation:
+     - When you are satisfied with a version's performance, click **Activate**. During activation:
 
        #. Select a **courier group**. The model must be attached to a courier group to activate.
+       #. Select a **version** to activate. It is recommended that you select the best performing version for your use cases. 
        #. Set the **training cadence**, which is how often the model is retrained with new data. The default is every 2 weeks.
        #. Set the **inference cadence**, which is how often predictions are generated. The default is daily.
 
@@ -356,7 +356,7 @@ Output tables
 
 .. model-predicted-clv-output-tables-start
 
-When a pCLV model is activated and runs inference, it produces the **Predicted CLV Attributes** table (one row per customer). The table name in the database uses the pattern **Predicted<DB>_CLVAttributes**, where **<DB>** is replaced by the database name.
+When a pCLV model is activated, a training and inference will begin. When complete, the generated **Predicted CLV Attributes** table (one row per customer) will be automatically added to the database.
 
 .. note:: Field names shown below use "365d" as the default prediction horizon. If you configure a different horizon (e.g., 180 days), the field descriptions in the database view will reflect your configured value, though the underlying column names remain consistent.
 
@@ -421,7 +421,7 @@ Export validation results
 
 After running a model validation, you can export the results to Databricks, Snowflake, or Google BigQuery. Create an outbound bridge, then select the **predictive_tables** dataset.
 
-.. note:: Only the most recently validated model version can be exported.
+.. note:: Only the most recent validation run for each model version can be exported.
 
 The dataset contains the actual customer spend and churn status for all customers in the holdout dataset and the scores from the model and comparison baseline. The format of the table is:
 
@@ -672,7 +672,7 @@ Example features
 
 .. model-predicted-clv-example-features-start
 
-The pCLV models include 200+ input features that have been derived and refined from years of pCLV modeling. Example features include:
+The pCLV models include 200+ input features generated from input data that have been derived and refined from years of pCLV modeling. Example features include:
 
 * lifetime_order_frequency
 * lifetime_order_recency
