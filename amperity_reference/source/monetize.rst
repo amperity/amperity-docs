@@ -121,7 +121,7 @@ Marketplace audience types
 
 .. monetize-audience-types-start
 
-A data marketplace makes audiences available to buyers as :ref:`custom audiences <monetize-audience-type-custom>` or :ref:`syndicated audiences <monetize-audience-type-syndicated>`
+A data marketplace makes audiences available to buyers as :ref:`custom audiences <monetize-audience-type-custom>` or :ref:`syndicated audiences <monetize-audience-type-syndicated>`. You must also set a :ref:`global opt-out segment <monetize-audience-type-opt-out>` to ensure that audiences only include customers who have consented to use of their data for advertising purposes.  
 
 .. monetize-audience-types-end
 
@@ -145,9 +145,22 @@ Syndicated audiences
 
 .. monetize-audience-type-syndicated-start
 
-A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer, with the exception of buyers assigned a `Block bid adjustment type <https://partner.thetradedesk.com/v3/portal/api/doc/BidListDefault>`__ |ext_link|.
+A syndicated audience defines a standard global rate for all purchasers and may be purchased by any verified buyer. The data marketplace may have the option to limit the group of verified buyers to an Access List or to block some verified buyers using a Block List.
 
 .. monetize-audience-type-syndicated-end
+
+.. TODO: Keeping this commented out link below in case we ever decide we need it. Remove eventually if not.
+
+.. with the exception of buyers assigned a `Block bid adjustment type <https://partner.thetradedesk.com/v3/portal/api/doc/BidListDefault>`__ |ext_link|.
+
+.. _monetize-audience-type-opt-out:
+
+Opted-out customers
+--------------------------------------------------
+
+Customers who have not given consent to use their data for advertising purposes will be excluded across all audience products.
+
+.. important:: It is required to set a global opt-out segment to send audiences to data marketplaces. If you have not selected an opt-out segment, you will be unable to send audiences from Amperity.
 
 
 .. _monetize-data-marketplace-concepts: 
@@ -210,7 +223,7 @@ A cost per thousand (CPM) rate defines a flat rate per thousand impressions that
 
    If your tenant's default currency is not USD, contact the Trade Desk to arrange sending audiences to the data marketplace in the currency that matches the default currency set in your tenant.
 
-   A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount, such as $5.50 USD or $3.00 AUD. CPM rates lower than $5.00 require approval by The Trade Desk.
+   A CPM rate must be a decimal, such as 5.50 or 3.00. The decimal represents an amount, such as $5.50 USD or $3.00 AUD. Consult with The Trade Desk for guidance on setting rates.
 
 .. monetize-data-marketplace-concept-cpm-the-trade-desk-end
 
@@ -226,7 +239,7 @@ All buyable audiences `must have an approved rate <https://partner.thetradedesk.
 
 .. note:: The first syndicated rate submission for a brand requires approval.
 
-.. tip:: Hybrid rates are recommended for syndicated audiences. An effective hybrid rate establishes a percent of media cost value that scales across media channels. As the value of an audience scales into premium high cost channels, audiences yield higher vaules.
+.. tip:: Hybrid rates are required for syndicated audiences. An effective hybrid rate establishes a percent of media cost value that scales across media channels along with a CPM cap. As the value of an audience scales into premium high cost channels, audiences yield higher revenue.
 
    Flat CPM rates are optional for custom audiences.
 
@@ -240,17 +253,11 @@ Percentage of media costs
 
 .. monetize-data-marketplace-concept-percentage-start
 
-A percentage of media costs rate defines a percentage applied to impressions that scales with the cost of media across channels.
+A percentage of media costs rate is a component of a hybrid rate and defines a percentage applied to impressions that scales with the cost of media across channels.
 
-.. tip:: Apply a rate cap in conjunction with a percent of media cost to prevent runaway costs for buyers and advertisers. 
+You must apply a rate cap in conjunction with a percent of media cost. This prevents runaway costs for buyers and advertisers. 
 
 .. monetize-data-marketplace-concept-percentage-end
-
-.. monetize-data-marketplace-concept-percentage-the-trade-desk-start
-
-.. note:: Percentages of media cost below 10% require approval by The Trade Desk.
-
-.. monetize-data-marketplace-concept-percentage-the-trade-desk-end
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
@@ -264,7 +271,7 @@ Rate caps
 
 .. monetize-data-marketplace-concept-rate-caps-start
 
-A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand and will be reached more often in high cost environments.
+A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand impressions and will be reached more often in high cost environments.
 
 You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace.
 
@@ -358,7 +365,6 @@ A rate type defines the pricing model for an audience and establishes a consiste
 
 * :ref:`Flat-rate CPM <monetize-data-marketplace-concept-rate-type-cpm>`
 * :ref:`Hybrid <monetize-data-marketplace-concept-rate-type-hybrid>`
-* :ref:`Percent of media cost <monetize-data-marketplace-concept-rate-type-percent>`
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-marketplace-best-practices-start
@@ -372,7 +378,7 @@ Flat-rate CPM
 
 .. monetize-data-marketplace-concept-rate-type-cpm-start
 
-A cost per thousand (CPM) rate defines defines a flat rate per thousand impressions that advertisers will pay for any impressions served from a given audience..
+A cost per thousand (CPM) rate defines a flat rate per thousand impressions that advertisers will pay for any impressions served using a given audience..
 
 .. monetize-data-marketplace-concept-rate-type-cpm-end
 
@@ -390,19 +396,6 @@ A hybrid rate blends a rate that scales with the cost of media across ad environ
 
 .. monetize-data-marketplace-concept-rate-type-hybrid-end
 
-
-.. _monetize-data-marketplace-concept-rate-type-percent: 
-
-Percent of media cost
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. monetize-data-marketplace-concept-rate-type-percent-start
-
-A percent of media cost rate defines a percentage applied to impressions that scales with the cost of media across channels. Apply a **CPM cap** in conjunction with a percent of media cost rate to prevent runaway costs.
-
-.. monetize-data-marketplace-concept-rate-type-percent-end
-
-
 .. _monetize-data-marketplace-concept-taxonomy: 
 
 Taxonomy
@@ -415,12 +408,9 @@ The Trade Desk recommends `designing and building a flat taxonomy <https://partn
 * The display name of each segment defines the path hierarchy and taxonomy structure.
 * The location of a segment in a taxonomy defines its full path, which always starts at the root level.
 * The taxonomy hierarchy always starts with the **ROOT** element.
-* The **ROOT** element is created for you and does appear in The Trade Desk for advertisers in the platform. For example, "Interest > Technology > Computers" appears as "Computers".
+* The **ROOT** element is created for you and will not appear in The Trade Desk for advertisers in the platform. For example, "Interest > Technology > Computers" appears as "Computers".
 
 .. monetize-data-marketplace-concept-taxonomy-end
-
-.. TODO: PM asked us to cut the mention of ROOT in the definition and the second two bullets. J seemed to have different thoughts. J - The link in the first sentence links to a page that, in the first section, is basically a regurgitation of what we have in our topic. Is OK to remove what was suggested to remove, but also we should keep enough there to encourage people to click the link and read.
-
 
 .. _monetize-howtos:
 
@@ -443,6 +433,7 @@ Tasks related to audience monetization in Amperity:
 * :ref:`monetize-howtos-global-optout`
 * :ref:`monetize-howtos-make-not-buyable`
 * :ref:`monetize-howtos-view-audience-details`
+* :ref:`monetize-howtos-troubleshoot`
 
 .. monetize-howtos-list-end
 
@@ -665,10 +656,15 @@ Edit audience
 
 .. monetize-howtos-edit-audience-start
 
-Once you have sent and audience to a data marketplace, you are unable to edit its configuration, other than to change the refresh cadence.
+Once you have sent an audience to a data marketplace, you are unable to edit its configuration, other than to change the refresh cadence.
 
 .. monetize-howtos-edit-audience-end
 
+.. monetize-howtos-edit-audience-ttd-start
+
+For The Trade Desk, if you wish to change the name or description of an audience, mark the old version as non-buyable, and then create a new audience with the desired name and description. Rates can be updated directly within The Trade Desk platform.
+
+.. monetize-howtos-edit-audience-ttd-start
 
 .. _monetize-howtos-edit-refresh-cadence:
 
@@ -700,7 +696,9 @@ Opt customers out
 
 .. monetize-howtos-global-optout-start
 
-Customers who have not given consent to use their data for advertising purposes can be excluded from availability across all audience products.
+Customers who have not given consent to use their data for advertising purposes will be excluded across all audience products.
+
+.. important:: It is required to set a global opt-out segment to send audiences to data marketplaces. If you have not selected an opt-out segment, you will be unable to send audiences from Amperity.
 
 .. note:: Any incremental changes to the global opt-out group are sent to data marketplaces on a daily basis to account for timely removal of customers who have newly opted-out.
 
@@ -745,7 +743,6 @@ You can make an audience no longer available for new purchases. Active campaigns
 
 .. monetize-howtos-make-not-buyable-steps-end
 
-
 .. _monetize-howtos-view-audience-details:
 
 View audience details
@@ -765,3 +762,24 @@ You can view audience details, including marketplace configuration, refresh timi
 #. Click the audience name.
 
 .. monetize-howtos-view-audience-details-steps-end
+
+.. _monetize-howtos-troubleshoot:
+
+Troubleshoot audience actions
+--------------------------------------------------
+
+.. monetize-howtos-troubleshoot-start
+
+You can get more details on any failed workflows in order to resolve the issue and retry the action.
+
+.. monetize-howtos-troubleshoot-details-end
+
+**To get troubleshooting info**
+
+.. monetize-howtos-view-troubleshoot-steps-start
+
+#. On the **Audience monetization** page, use the search bar or scan the list to find the audience you want to view.
+#. Click the audience name.
+#. From the **Audience details** page, click into any listed action. This will take you to the workflows page to get more details. 
+
+.. monetize-howtos-view-troubleshoot-steps-end
