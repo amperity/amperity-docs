@@ -172,7 +172,7 @@ Send audiences to |destination-name| using the `The Trade Desk Partner API <http
              :start-after: .. monetize-data-marketplace-concept-percentage-start
              :end-before: .. monetize-data-marketplace-concept-percentage-end
 
-          .. include:: ../../amperity_reference/source/monetize.rst
+..          .. include:: ../../amperity_reference/source/monetize.rst
              :start-after: .. monetize-data-marketplace-concept-percentage-the-trade-desk-start
              :end-before: .. monetize-data-marketplace-concept-percentage-the-trade-desk-end
 
