@@ -118,10 +118,34 @@ Amperity passes information on the schema information, query and segment example
 
 .. assistant-howitworks-end
 
+.. _assistant-consumption-examples:
+
+Consumption examples
+==================================================
+
+.. assistant-consumption-examples-start
+
+The **Consumption AI Assistant** lets you ask natural language questions to understand your Amps usage and consumption. It is embedded in the **Amps** dashboard, which you can access by clicking the |fa-kebab| menu next to your tenant name at the top right of the Amperity interface and selecting **Amps**.
+
+.. assistant-consumption-examples-end
+
+.. assistant-consumption-examples-list-start
+
+The following examples show some of the questions you can ask the **Consumption AI Assistant** while working in the **Amps** dashboard:
+
+* "What caused my amps spike on Jan 12th?"
+
+* "Give me a breakdown of how I am spending my amps."
+
+* "Which campaign consumes the most amps?"
+
+.. note:: The answers to these questions within your tenant will depend on your tenant's specific consumption patterns and may be different than what is shown for other tenants.
+
+.. assistant-consumption-examples-list-end
 
 .. _assistant-journey-examples:
 
-Journey Examples
+Journey examples
 ==================================================
 
 .. assistant-journey-examples-start
@@ -280,7 +304,7 @@ Why these fail:
 
 .. _assistant-query-examples:
 
-Query Examples
+Query examples
 ==================================================
 
 .. assistant-query-examples-start
@@ -406,7 +430,7 @@ You can ask the **AmpAI Assistant** to help you understand how specific types of
 
 .. _assistant-segment-examples:
 
-Segment Examples
+Segment examples
 ==================================================
 
 The following examples show some of the ways you can use the **Segments AI Assistant** while working in the **Segment Editor**.
@@ -530,28 +554,3 @@ Answers will include suggestions similar to:
    Pay attention to customers with a "likely to return" or "at-risk" predicted lifecycle, as they could be nudged toward purchase with targeted messaging.
 
 .. ampai-segments-example-get-advice-on-segment-end
-
-.. _assistant-consumption-examples:
-
-Consumption Examples
-==================================================
-
-.. assistant-consumption-examples-start
-
-The **Consumption AI Assistant** lets you ask natural language questions to understand your Amps usage and consumption. It is embedded in the **Amps** dashboard, which you can access by clicking the |fa-kebab| menu next to your tenant name at the top right of the Amperity interface and selecting **Amps**.
-
-.. assistant-consumption-examples-end
-
-.. assistant-consumption-examples-list-start
-
-The following examples show some of the questions you can ask the **Consumption AI Assistant** while working in the **Amps** dashboard:
-
-* "What caused my amps spike on Jan 12th?"
-
-* "Give me a breakdown of how I am spending my amps."
-
-* "Which campaign consumes the most amps?"
-
-.. note:: The answers to these questions within your tenant will depend on your tenant's specific consumption patterns and may be different than what is shown for other tenants.
-
-.. assistant-consumption-examples-list-end

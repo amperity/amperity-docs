@@ -40,6 +40,32 @@ What is new and what has changed?
 .. TODO: :bdg-light:`UPDATED`
 
 
+.. _updates-2026-spring:
+
+Spring 2026
+==================================================
+
+.. updates-2026-spring-start
+
+**Consumption AI Assistant**
+
+   :bdg-success:`NEW` The :doc:`Consumption AI Assistant <assistant>` is available in the **Amps** dashboard to help optimize Amps usage by using natural language to investigate patterns and identify which activities consume the most Amps.
+
+**Customer Data Agent**
+
+   :bdg-success:`NEW` The :doc:`Customer Data Agent <customer_data_agent>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
+
+**Destination topics**
+
+   :bdg-light:`UPDATED` `Insider One <../operator/destination_insider_one.html#send-audiences-using-the-api>`__ destination now supports sending first-party audiences using the API.
+
+**Identity resolution summary**
+
+   :bdg-light:`UPDATED` The :doc:`Identity resolution summary <stitch_summary>` page shows the outcome of identity resolution, including identity changes over time, matching strategies, and identity complexity.
+
+.. updates-2026-spring-end
+
+
 .. _updates-2026-winter:
 
 Winter 2026
