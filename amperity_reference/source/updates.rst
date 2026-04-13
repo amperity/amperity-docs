@@ -49,7 +49,7 @@ Spring 2026
 
 **Consumption AI Assistant**
 
-   :bdg-success:`NEW` The :doc:`Consumption AI Assistant <assistant>` is available in the **Amps** dashboard to help optimize Amps usage by using natural language to investigate patterns and identify which activities consume the most Amps.
+   :bdg-info:`BETA` The :doc:`Consumption AI Assistant <assistant>` is available in the **Amps** dashboard to help optimize Amps usage by using natural language to investigate patterns and identify which activities consume the most Amps.
 
 **Customer Data Agent**
 
