@@ -304,7 +304,7 @@ Pro tips
 
 .. tip:: **Let the agent find existing segments.** When creating a journey, the agent may identify an existing segment that matches your needs. It will ask: "I found a segment called High Value Customers that looks like it could work. Would you like to use that, or should I create a new one?" This helps avoid duplicate segments and makes good use of work already done.
 
-.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you've laid out. For example, if you've defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value"" for consistent results.
+.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you've laid out. For example, if you've defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
 
 .. customer-data-agent-pro-tips-end
 
