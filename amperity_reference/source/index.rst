@@ -97,7 +97,7 @@ Components
       :link-type: doc
       :link: activations
 
-   .. grid-item-card:: |fa-sparkles| Ai Assistant
+   .. grid-item-card:: |fa-sparkles| AI Assistants
       :link-type: doc
       :link: assistant
 
@@ -140,6 +140,10 @@ Components
    .. grid-item-card:: |fa-line-columns| Couriers
       :link-type: doc
       :link: couriers
+
+   .. grid-item-card:: |fa-sparkles| Customer Data Agent
+      :link-type: doc
+      :link: customer_data_agent
 
    .. grid-item-card:: |fa-chart-line| Dashboards
       :link-type: doc
@@ -312,6 +316,7 @@ Components
    Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
+   Customer Data Agent <customer_data_agent>
    Dashboards <grid_dashboards>
    Data exports <data_exports>
    Destinations <page_destinations>
