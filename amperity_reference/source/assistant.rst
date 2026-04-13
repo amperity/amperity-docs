@@ -42,7 +42,7 @@ These assistants are generative AI features within Amperity that use natural lan
 Use the **Consumption AI Assistant** in the **Amps** dashboard to:
 
 * Investigate spikes or changes in Amps consumption
-* Get breakdowns of how Amps are spent across workflows, campaigns, and features
+* Get a breakdown of how Amps are spent across product features (identity resolution, activations, etc.) as well as environments (production and individual sandboxes)
 * Identify which activities consume the most Amps
 
 Use the **Journeys AI Assistant** in the **Journeys** canvas to:
