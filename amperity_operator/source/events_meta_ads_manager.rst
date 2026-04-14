@@ -448,9 +448,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **website**
          Use when the offline conversion was made on a website.
 
-         When **action_source** is set to **website** the following fields are required: **client_ip_address**, **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
-
-         * The value for **client_ip_address** must be the IP address of the browser corresponding to the event.
+         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
 
          * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
 
@@ -458,7 +456,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
          * The value for **event_source_url** should be browser URL at which the event occurred.
 
-         **event_id**, **event_source_url**, **client_user_agent**, and **client_ip_address** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
+         **client_ip_address** is an optional field that, when present, is passed through to Meta. Meta recommends providing it to improve event matching quality. The value must be the IP address of the browser corresponding to the event.
+
+         **event_id**, **event_source_url**, and **client_user_agent** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
 
        The value for **action_source** is used by the Conversions API to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the action source that best associates how your brand wants to use offline conversions within |destination-name|.
 
