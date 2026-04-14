@@ -22,7 +22,6 @@ About AmpAI Assistants
 
 **AmpAI Assistants** include the following:
 
-* **Consumption AI Assistant** helps users understand Amps usage and consumption
 * **Journeys AI Assistant** helps users build and personalize multi-touch journeys
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
 * **Segments AI Assistant** helps users build segments
@@ -38,12 +37,6 @@ These assistants are generative AI features within Amperity that use natural lan
    :class: no-scaled-link
 
 .. assistant-usecases-start
-
-Use the **Consumption AI Assistant** in the **Amps** dashboard to:
-
-* Investigate spikes or changes in Amps consumption
-* Get a breakdown of how Amps are spent across product features (identity resolution, activations, etc.) as well as environments (production and individual sandboxes)
-* Identify which activities consume the most Amps
 
 Use the **Journeys AI Assistant** in the **Journeys** canvas to:
 
@@ -117,31 +110,6 @@ Amperity passes information on the schema information, query and segment example
 .. note:: More detail about how **AmpAI Assistants** work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
-
-.. _assistant-consumption-examples:
-
-Consumption examples
-==================================================
-
-.. assistant-consumption-examples-start
-
-The **Consumption AI Assistant** lets you ask natural language questions to understand your Amps usage and consumption. It is embedded in the **Amps** dashboard, which you can access by clicking the |fa-kebab| menu next to your tenant name at the top right of the Amperity interface and selecting **Amps**.
-
-.. assistant-consumption-examples-end
-
-.. assistant-consumption-examples-list-start
-
-The following examples show some of the questions you can ask the **Consumption AI Assistant** while working in the **Amps** dashboard:
-
-* "What caused my amps spike on Jan 12th?"
-
-* "Give me a breakdown of how I am spending my amps."
-
-* "Which campaign consumes the most amps?"
-
-.. note:: The answers to these questions within your tenant will depend on your tenant's specific consumption patterns and may be different than what is shown for other tenants.
-
-.. assistant-consumption-examples-list-end
 
 .. _assistant-journey-examples:
 
