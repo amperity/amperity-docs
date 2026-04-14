@@ -56,11 +56,7 @@ Spring 2026
 
 **Predictive Modeling UI**
 
-   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the :doc:`predicted customer lifetime value model <model_predicted_clv>` and :doc:`product affinity model <model_product_affinity>` so users can now self-serve and iterate on their predictive models.
-
-**Destination topics**
-
-   :bdg-light:`UPDATED` `Insider One <../operator/destination_insider_one.html#send-audiences-using-the-api>`__ destination now supports sending first-party audiences using the API.
+   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the :ref:`predicted customer lifetime value model <../operator/model_predicted_clv>` and :ref:`product affinity model <../operator/model_product_affinity>` so users can now self-serve and iterate on their predictive models.
 
 **Identity resolution summary**
 
