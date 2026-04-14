@@ -19,7 +19,7 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`, or use the :ref:`Consumption AI Assistant <amps-consumption-ai-assistant>` to ask natural language questions about your usage.
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`.
 
 .. amps-consumption-end
 
@@ -138,18 +138,6 @@ You can access the **Amps** dashboard from the |fa-kebab| menu that is located i
 
 
 .. amps-review-consumption-dashboard-end
-
-
-.. _amps-consumption-ai-assistant:
-
-Consumption AI Assistant
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-The **Consumption AI Assistant** lets you ask natural language questions to understand your Amps usage and consumption.
-
-.. include:: ../../amperity_reference/source/assistant.rst
-   :start-after: .. assistant-consumption-examples-list-start
-   :end-before: .. assistant-consumption-examples-list-end
 
 
 .. _amps-review-consumption-dashboard-summary:
@@ -846,8 +834,6 @@ Reduce Amps consumption
 .. amps-reduce-start
 
 You should review your Amps consumption on a regular basis to ensure that your brand is getting the most value out of Amperity to support all of your brand's use cases.
-
-.. tip:: Use the :ref:`Consumption AI Assistant <amps-consumption-ai-assistant>` to quickly investigate consumption patterns, such as identifying what caused a spike or which campaigns consume the most Amps.
 
 .. amps-reduce-end
 
