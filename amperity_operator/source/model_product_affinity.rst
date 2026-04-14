@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Product affinity represents product taxonomies that contain between 20 and 695 unique values for brands, categories, and sub-categories.
+        The product affinity model predicts which products each customer is most likely to purchase next using a Random Forest Classifier and Beta-Geometric Model ensemble.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Product affinity represents product taxonomies that contain between 20 and 695 unique values for brands, categories, and sub-categories.
+        The product affinity model predicts which products each customer is most likely to purchase next using a Random Forest Classifier and Beta-Geometric Model ensemble.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -23,12 +23,113 @@ Product affinity model
 
 .. model-product-affinity-about-start
 
-Amperity models product affinity for any product taxonomy that contains between 20 and 695 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+The Amperity Product Affinity model predicts which products each customer is most likely to purchase next. Given a product attribute (e.g., product category, brand, or subcategory), the model scores every customer-product pair and ranks products for each customer by affinity. It also recommends audience sizes for each product based on how well the model's predictions match actual purchase behavior.
 
-* Historical data to identify customers who have purchased a product in the past and are likely to do so again.
-* Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.
+It is recommended that you select product attributes with 10-2,000 unique values for best performance. The model combines two components:
+
+#. **Random Forest Classifier** --- For each customer, the model predicts the probability of purchasing each product attribute value within the prediction window. The output is a score between 0 and 1 for each customer-product pair. The hyperparameters for this model can be modified.
+#. **Beta-Geometric Model** --- A statistical model that estimates the probability that a customer will place any order within the next 30 days, based on their purchase recency and frequency. This acts as a calibration layer. The hyperparameters for this model cannot be modified.
+
+The final affinity score for each customer-product pair is:
+
+.. code-block:: none
+
+   Score = P(purchase product | customer) x P(order in next 30 days)
+
+Customers are then ranked by score for each product, and the top-ranked customers are assigned to recommended audience tiers.
 
 .. model-product-affinity-about-end
+
+
+.. _model-product-affinity-how-it-works:
+
+How the model works
+==================================================
+
+.. model-product-affinity-how-it-works-start
+
+The product affinity model is an ensemble of two independently trained models. Each model contributes to the final affinity score.
+
+.. model-product-affinity-how-it-works-end
+
+
+.. _model-product-affinity-random-forest:
+
+Random Forest Classifier
+--------------------------------------------------
+
+.. model-product-affinity-random-forest-start
+
+The Random Forest Classifier predicts the probability of each customer purchasing each product attribute value (e.g., "Shoes", "Outerwear") within the prediction window. It learns patterns from the customer's historical purchases: which products they've bought before, how recently, through which channels, and how those products relate to what similar customers buy. The output is a score between 0 and 1 for each customer-product pair.
+
+.. model-product-affinity-random-forest-end
+
+
+.. _model-product-affinity-beta-geometric:
+
+Beta-Geometric Model
+--------------------------------------------------
+
+.. model-product-affinity-beta-geometric-start
+
+The Beta-Geometric Model estimates the probability that a customer will place any order within the next 30 days, based on their purchase recency and frequency. This acts as a calibration layer: a customer who hasn't purchased in two years will have their product affinity scores scaled down, even if their historical product preferences are strong.
+
+.. note:: The Beta-Geometric Model's hyperparameters cannot be modified and are not visible in the UI.
+
+.. model-product-affinity-beta-geometric-end
+
+
+.. _model-product-affinity-audience-sizes:
+
+Audience size recommendations
+--------------------------------------------------
+
+.. model-product-affinity-audience-sizes-start
+
+For each product attribute value, the model recommends three audience sizes based on target hit rates. A "hit rate" is the percentage of customers in an audience who actually purchase the product. The model finds the audience size at which the predicted hit rate meets each target:
+
+* **Small audience**: target 50% hit rate (high precision, fewer customers)
+* **Medium audience**: target 70% hit rate
+* **Large audience**: target 90% hit rate (broad reach, lower precision)
+
+These targets are configurable.
+
+.. model-product-affinity-audience-sizes-end
+
+
+.. _model-product-affinity-choosing-attribute:
+
+Choosing a product attribute
+==================================================
+
+.. model-product-affinity-choosing-attribute-start
+
+Selecting a quality product attribute is an important step in model setup. The product affinity model is best used to expand an audience beyond past purchasers and narrow an audience to only the customers likeliest to purchase. Select product attributes that align to planned marketing campaigns related to new product launches or product-specific sales and promotions.
+
+It is recommended that you select product attributes with 10-2,000 unique values for best performance. To see the unique values for a given product attribute, view the unique values count in the database data explorer.
+
+.. model-product-affinity-choosing-attribute-end
+
+
+.. _model-product-affinity-selecting-values:
+
+Selecting values for inclusion
+--------------------------------------------------
+
+.. model-product-affinity-selecting-values-start
+
+When adding a new model version, you can select values for inclusion alongside a table containing the number of purchasers over the last year and 30 days. A product must meet minimum purchaser volumes of more than 100 in the last 30 days and more than 250 in the last year to be eligible for inclusion.
+
+There are two approaches to value selection:
+
+#. **Rules-based** --- Select the top N (default 50) by purchaser volume in the last 365 days.
+#. **Manual** --- Select individual values for inclusion. The inclusion list will default to the top N when switched to manual.
+
+If a new value is added to your selected product attribute, it will need to be manually added to the active model version. You can duplicate the active model version, select the new value, run a model evaluation to ensure performance remains consistent, then activate the new model version.
+
+.. note:: In some cases, a value may drop out of the modeling outputs if it falls below the required minimum purchase volumes. If the value has not been manually removed, it will receive predictions as part of the output table when it once again meets the minimum purchaser thresholds.
+
+.. model-product-affinity-selecting-values-end
 
 
 .. _model-product-affinity-use-cases:
@@ -143,11 +244,11 @@ Build a product affinity model
 
 .. model-product-affinity-configure-start
 
-You can build a product affinity model from the **Customer 360** page. Each database that is a "customer 360" database and contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
+You can build a product affinity model from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling.
 
 .. model-product-affinity-configure-end
 
-.. important:: 
+.. important::
 
    .. include:: ../../amperity_operator/source/models.rst
       :start-after: .. models-fields-used-by-all-models-start
@@ -166,82 +267,170 @@ You can build a product affinity model from the **Customer 360** page. Each data
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
+     - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models** page.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Next to **Product affinity**, click **Add model**.
+     - Click **Add model** and select **Product Affinity**. Select the **product group**, which is the field from **Unified Itemized Transactions** to predict on (e.g., product_category, product_subcategory, brand).
 
-       Select the product group for which the product affinity model will be built, and then click **Continue**. This opens the **Predictive enablement** page for product affinity models.
+       .. note:: The product group is set at model creation and cannot be changed.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from product affinity modeling.
+     - Create and evaluate model versions. Each version contains value selection settings (rules-based or manual), hyperparameters, customer exclusions, and audience size settings. When selecting values, products must meet minimum purchaser thresholds of more than 100 in the last 30 days and more than 250 in the last year.
 
-       For example, use cases for customer exclusions include:
+       Evaluate a version to run a validation job. Review the validation results, which include metrics such as Precision Improvement, Recall Improvement, and Audience Outperformance.
 
-       #. Ensuring that employees of your brand or resellers of products within your brand's product catalog are excluded.
-
-       #. Excluding customers who do not have a contactable email address or contactable physical address from direct mail campaigns.
-
-       .. note:: The list of fields in the **Customer Attributes** table that may be used for product affinity modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with product affinity modeling.
-
+       .. tip:: You can create multiple versions with different settings and compare their evaluation results to find the best-performing version for your data.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the product affinity model.
+     - When you are satisfied with a version's performance, click **Activate**. During activation:
 
-       For each additional feature, the model results will include features for "first", "last", and "most common". For example, if **Product Category** is added, the product affinity model results will include features for **First Purchase Product Category**, **Last Purchase Product Category**, and **Most Common Product Category**.
+       #. Select a **version** to activate. It is recommended that you select the best performing version for your use cases.
+       #. Select a **courier group**. The model must be attached to a courier group to activate.
+       #. Set the **training cadence**, which is how often the model is retrained with new data. The default is every 2 weeks.
+       #. Set the **inference cadence**, which is how often predictions are generated. The default is daily.
 
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step five.
-          :align: center
-          :class: no-scaled-link
-     - Configure values.
-
-       Use the **Top N** field to define the number of distinct values the product affinity model will be trained on, based on popularity in the last year. For example, a value of "50" means the product affinity model will be trained on the 50 most popular values for the specified product category by number of purchases in the past year. Default value: "50".
-
-       Use the **Exclude these values** and **Include these values** fields to exclude or include specific values from the 50 most popular values. These entries are case-sensitive. For example: "purchase", "Purchase", and "PURCHASE" are three different values.
-
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step six.
-          :align: center
-          :class: no-scaled-link
-     - Set product thresholds.
-
-       Use the **Last 30 days purchaser holdout** field to set the number of unique purchasers that must exist within the last 30 days for a given product to appear in the audience size. Default value: "500".
-
-       Use the **Last year purchaser** field to set the number of unique purchasers that must exist within the last year for predictions to appear for a given product attribute. Default value: "1000".
-
-
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step seven.
-          :align: center
-          :class: no-scaled-link
-     - Define audience sizes. Each size is defined as a percentage of the total number of customers in the audience that are required to meet an individual audience size. The product affinity model will select which customers need to be in the audience so that it captures each threshold within the next 30 days. Default values: "0.5" (small), "0.7" (medium), and "0.9" (large).
-
-
-   * - .. image:: ../../images/steps-08.png
-          :width: 60 px
-          :alt: Step eight.
-          :align: center
-          :class: no-scaled-link
-     - Click **Start validation**.
+       Click **Activate** to start a full workflow that trains the model, runs inference, and adds the model output tables to the database.
 
 .. model-product-affinity-configure-steps-end
+
+
+.. _model-product-affinity-output-tables:
+
+Output tables
+==================================================
+
+.. model-product-affinity-output-tables-start
+
+When a product affinity model is activated, a training and inference workflow will begin. When complete, the generated output table (one row per customer-product pair) will be automatically added to the database. Table names include your database name and the product group in PascalCase, using the pattern **Predicted_Affinity<ProductGroup>** (e.g., Predicted_AffinityProductCategory).
+
+.. model-product-affinity-output-tables-end
+
+.. model-product-affinity-output-tables-table-start
+
+.. list-table::
+   :widths: 25 10 65
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Description
+   * - **product_attribute**
+     - String
+     - The product attribute value (e.g., "Shoes", "Outerwear"). Only values that meet the minimum purchaser thresholds and are selected in the activated model version are included in the output.
+   * - **amperity_id**
+     - String
+     - Unique customer identifier.
+   * - **score**
+     - Float
+     - Affinity score (0-1). Higher means stronger predicted affinity. Combines product-specific affinity with general purchase likelihood. **The score should only be used in relation to other customers for the same product attribute value and should not be used in absolute terms. It is strongly recommended to use the ranking instead.**
+   * - **ranking**
+     - Integer
+     - This product's rank for the customer (1 = highest affinity product). **Using either the audience size attributes or customer rankings are strongly recommended for product affinity segmentation.**
+   * - **audience_size_small**
+     - Boolean
+     - Whether this customer falls within the small recommended audience for this product attribute value (target 50% hit rate by default). These customers have the highest likelihood of purchasing the product attribute value.
+   * - **audience_size_medium**
+     - Boolean
+     - Whether this customer falls within the medium recommended audience for this product attribute value (target 70% hit rate by default).
+   * - **audience_size_large**
+     - Boolean
+     - Whether this customer falls within the large recommended audience for this product attribute value (target 90% hit rate by default).
+
+.. model-product-affinity-output-tables-table-end
+
+
+.. _model-product-affinity-export-validation:
+
+Export validation results
+==================================================
+
+.. model-product-affinity-export-validation-start
+
+After running a model validation, you can export the results to Databricks, Snowflake, or Google BigQuery. Create an outbound bridge, then select the **predictive_tables** dataset. The validation export includes per-product metrics: total hit count, naive baseline performance, and model performance at each audience size tier with hit rate and precision improvement percentages.
+
+.. model-product-affinity-export-validation-end
+
+
+.. _model-product-affinity-validation-metrics:
+
+Validation metrics
+==================================================
+
+.. model-product-affinity-validation-metrics-start
+
+The following metrics are computed during model validation and shown in the evaluation report:
+
+.. model-product-affinity-validation-metrics-end
+
+.. model-product-affinity-validation-metrics-table-start
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Metric
+     - Description
+   * - **Precision Improvement**
+     - How much more accurately the model identifies purchasers compared to random sampling. Shown as a percentage improvement.
+   * - **Recall Improvement**
+     - How much better the model captures actual purchasers compared to a naive baseline of historical purchasers. Shown as a percentage improvement.
+   * - **Audience Outperformance**
+     - Percentage of product audiences where the model's recommendations outperform the naive historical-purchasers baseline.
+
+A model is recommended for deployment when precision and recall improvements are at least 10% and at least 75% of product audiences outperform the naive baseline.
+
+.. model-product-affinity-validation-metrics-table-end
+
+
+.. _model-product-affinity-advanced-settings:
+
+Advanced settings
+==================================================
+
+.. model-product-affinity-advanced-settings-start
+
+The following settings are available on the **Advanced** tab.
+
+.. model-product-affinity-advanced-settings-end
+
+.. model-product-affinity-advanced-settings-table-start
+
+.. list-table::
+   :widths: 25 15 60
+   :header-rows: 1
+
+   * - Parameter
+     - Default
+     - Description
+   * - **RF Num Trees**
+     - 100
+     - Number of trees in the Random Forest.
+   * - **RF Max Depth**
+     - 5
+     - Maximum depth of each tree.
+   * - **RF Max Bins**
+     - 700
+     - Number of bins for discretizing continuous features.
+   * - **RF Feature Subset Strategy**
+     - sqrt
+     - Number of features considered at each split.
+   * - **Customer Exclusions**
+     - is_outlier, is_test_account
+     - Boolean fields from the customer attributes table used to exclude specific customers.
+
+.. model-product-affinity-advanced-settings-table-end
 
 
 .. _model-product-affinity-segments:
