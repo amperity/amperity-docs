@@ -45,11 +45,7 @@ What is new and what has changed?
 Spring 2026
 ==================================================
 
-.. updates-2026-spring-start
-
-**Consumption AI Assistant**
-
-   :bdg-info:`BETA` The :doc:`Consumption AI Assistant <assistant>` is available in the **Amps** dashboard to help optimize Amps usage by using natural language to investigate patterns and identify which activities consume the most Amps.
+.. updates-2026-spring-start`
 
 **Customer Data Agent**
 
