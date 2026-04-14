@@ -39,6 +39,32 @@ What is new and what has changed?
 
 .. TODO: :bdg-light:`UPDATED`
 
+.. _updates-2026-spring:
+
+Spring 2026
+==================================================
+
+.. updates-2026-spring-start
+
+**Audience monetization**
+
+   :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
+
+**Customer Data Agent**
+
+   :bdg-success:`NEW` The :doc:`Customer Data Agent <customer_data_agent>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
+
+**Predictive Modeling UI**
+
+   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the `predicted customer lifetime value model <../operator/model_predicted_clv.html>`__ and `product affinity model <../operator/model_product_affinity.html>`__ so users can now self-serve and iterate on their predictive models.
+
+**Identity resolution summary**
+
+   :bdg-light:`UPDATED` The :doc:`Identity resolution summary <stitch_summary>` page shows the outcome of identity resolution, including identity changes over time, matching strategies, and identity complexity.
+
+.. updates-2026-spring-end
+
+
 .. _updates-2026-winter:
 
 Winter 2026
@@ -46,13 +72,9 @@ Winter 2026
 
 .. updates-2026-winter-start
 
-**Audience monetization**
-
-   :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
-
 **Destination topics**
 
-   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Insider One <../operator/destination_insider_one>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
+   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
 
 **Incremental matching**
 
