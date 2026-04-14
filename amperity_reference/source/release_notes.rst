@@ -56,13 +56,14 @@ Spring 2026
 
 **Predictive Modeling UI**
 
-   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the :ref:`predicted customer lifetime value model <../operator/model_predicted_clv>` and :ref:`product affinity model <../operator/model_product_affinity>` so users can now self-serve and iterate on their predictive models.
+   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the `predicted customer lifetime value model <../operator/model_predicted_clv.html>`__ and `product affinity model <../operator/model_product_affinity.html>`__ so users can now self-serve and iterate on their predictive models.
 
 **Identity resolution summary**
 
    :bdg-light:`UPDATED` The :doc:`Identity resolution summary <stitch_summary>` page shows the outcome of identity resolution, including identity changes over time, matching strategies, and identity complexity.
 
 .. updates-2026-spring-end
+
 
 .. _updates-2026-winter:
 
@@ -73,7 +74,7 @@ Winter 2026
 
 **Destination topics**
 
-   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Insider One <../operator/destination_insider_one>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
+   :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
 
 **Incremental matching**
 
