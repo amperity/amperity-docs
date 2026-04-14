@@ -284,7 +284,7 @@ Components
 
    Start here <start_here>
    Connected systems <connected_systems>
-   Product updates <updates>
+   Release notes <release_notes>
 
 
 

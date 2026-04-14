@@ -3,18 +3,18 @@
 
 .. meta::
     :description lang=en:
-        Product updates for Amperity.
+        Release notes for Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Product updates for Amperity.
+        Release notes for Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Product updates
+        Release notes
 
 ==================================================
-Product updates
+Release notes
 ==================================================
 
 .. updates-intro-start
@@ -23,7 +23,7 @@ What is new and what has changed?
 
 .. updates-intro-end
 
-.. tip:: Sign up to `receive emailed product updates <https://amperity.com/customers/customer-newsletter>`__ |ext_link|.
+.. tip:: Sign up to `receive Amperity product news via email <https://amperity.com/customers/customer-newsletter>`__ |ext_link|.
 
    To submit product feedback or requests use the question mark icon within your Amperity tenant, select **Product feedback**, and then follow the prompt.
 
