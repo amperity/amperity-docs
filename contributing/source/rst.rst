@@ -1661,76 +1661,77 @@ Assign ``salt`` as the name of the code block for code blocks with YAML that emb
 .. rst-code-language-yaml-with-jinja-end
 
 
-.. _rst-code-with-sidebar:
+..
+   .. _rst-code-with-sidebar:
 
-Code block with sidebar
-==================================================
+   Code block with sidebar
+   ==================================================
 
-.. rst-code-with-sidebar-start
+   .. rst-code-with-sidebar-start
 
-Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just is not wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
+   Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just is not wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
 
-.. sidebar:: A sidebar caption.
+   .. sidebar:: A sidebar caption.
 
-   Some sidebar content.
+      Some sidebar content.
 
-   * A list
-   * Is OK.
+      * A list
+      * Is OK.
 
-   More content.
+      More content.
 
-   The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
+      The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
-.. code-block:: none
-   :caption: Welcome to Chuck Data
+   .. code-block:: none
+      :caption: Welcome to Chuck Data
 
-                               .:::::::::                    
-                             -----------=++                  
-                           -***::::--::----:*#=              
-                         .**- %%%+:::+:---::#@@@             
-                        .:*+:.%++++==+:::==+#-+@             
-                        :#-.:===============*#%%             
-                      -:%:  .@@-        :@@=                 
-                    :-:+=:-: ==%    +++. ==%    +#*          
-                      ::::=+=      +++++-     .+++           
-                    :--::+++++++@@@%   +@@@++++++%:...       
-                   :+#*::=++++=@@@@@@ @@@@@@*+++%%%%-        
-                  :::::#::=*#+=-@@@.. ..-@@-++*#%@           
-                  ..:=*:::=*%%%*----@@@*---+#%%%%            
-                   +=::::--+%%%%###++++++##%%%%%@            
-                 :+::::::=++#%%%%%%%%%%%%%%%%#*+@            
-                #:::::::-++++%%%%%%@@@@@@%%%%*++%@           
-              .=-:::::::-++++*%%%@@@@@@@@@%%+++++@           
-              -*::::::::--=+++#%%@@@@@@@@@%#==+++@           
-             =+::------::--=++--#%%@@@@@@%%-++++%@           
-            *=:::---=+++-::--=+::+%%@@@%#+:=+++*%            
-            *=::---=++++++-::-    .%%%%:    =+#@             
-            *=::---=+++++#%#=    :+@@@@#-    =-              
-            *=::----=++++#%%%%  @@@@@@@@@@  --.              
-            **-:::----===:*%%@@@@@@@@@@@@@%-=*=              
-          ++-*+:::-------:*%%@@@@@@@@@@@@#--+#=              
-      :==--:::=#::::::::::*%%%@@@@@@@@%%*=--++-              
-     ==----::::-*:::::::::*%%%%@@@@@@%#-:::--                
-    #-::::::*#=   :        -%%%%%%%%%                        
-    :------          ......:-------  .........               
+                                  .:::::::::
+                                -----------=++
+                              -***::::--::----:*#=
+                            .**- %%%+:::+:---::#@@@
+                           .:*+:.%++++==+:::==+#-+@
+                           :#-.:===============*#%%
+                         -:%:  .@@-        :@@=
+                       :-:+=:-: ==%    +++. ==%    +#*
+                         ::::=+=      +++++-     .+++
+                       :--::+++++++@@@%   +@@@++++++%:...
+                      :+#*::=++++=@@@@@@ @@@@@@*+++%%%%-
+                     :::::#::=*#+=-@@@.. ..-@@-++*#%@
+                     ..:=*:::=*%%%*----@@@*---+#%%%%
+                      +=::::--+%%%%###++++++##%%%%%@
+                    :+::::::=++#%%%%%%%%%%%%%%%%#*+@
+                   #:::::::-++++%%%%%%@@@@@@%%%%*++%@
+                 .=-:::::::-++++*%%%@@@@@@@@@%%+++++@
+                 -*::::::::--=+++#%%@@@@@@@@@%#==+++@
+                =+::------::--=++--#%%@@@@@@%%-++++%@
+               *=:::---=+++-::--=+::+%%@@@%#+:=+++*%
+               *=::---=++++++-::-    .%%%%:    =+#@
+               *=::---=+++++#%#=    :+@@@@#-    =-
+               *=::----=++++#%%%%  @@@@@@@@@@  --.
+               **-:::----===:*%%@@@@@@@@@@@@@%-=*=
+             ++-*+:::-------:*%%@@@@@@@@@@@@#--+#=
+         :==--:::=#::::::::::*%%%@@@@@@@@%%*=--++-
+        ==----::::-*:::::::::*%%%%@@@@@@%#-:::--
+       #-::::::*#=   :        -%%%%%%%%%
+       :------          ......:-------  .........
 
-      ________  ___  ___  ___  ___  ________  ___  __
-     |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \
-     \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_
-      \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
-       \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \
-        \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\
-         \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__|
+         ________  ___  ___  ___  ___  ________  ___  __
+        |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \
+        \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_
+         \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
+          \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \
+           \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\
+            \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__|
 
-       ________  ________  _________  ________               
-      |\   ___ \|\   __  \|\___   ___\\   __  \
-      \ \  \_|\ \ \  \|\  \|___ \  \_\ \  \|\  \             
-       \ \  \ \\ \ \   __  \   \ \  \ \ \   __  \
-        \ \  \_\\ \ \  \ \  \   \ \  \ \ \  \ \  \           
-         \ \_______\ \__\ \__\   \ \__\ \ \__\ \__\
-          \|_______|\|__|\|__|    \|__|  \|__|\|__|          
+          ________  ________  _________  ________
+         |\   ___ \|\   __  \|\___   ___\\   __  \
+         \ \  \_|\ \ \  \|\  \|___ \  \_\ \  \|\  \
+          \ \  \ \\ \ \   __  \   \ \  \ \ \   __  \
+           \ \  \_\\ \ \  \ \  \   \ \  \ \ \  \ \  \
+            \ \_______\ \__\ \__\   \ \__\ \ \__\ \__\
+             \|_______|\|__|\|__|    \|__|  \|__|\|__|
 
-.. rst-code-with-sidebar-end
+   .. rst-code-with-sidebar-end
 
 
 .. _rst-dropdowns:
@@ -2489,17 +2490,17 @@ Add images to the documentation using the ``.. images::`` directive.
 
    .. code-block:: rst
 
-      .. image:: ../../amperity_base/source/_static/card-chuck-data.png
+      .. image:: ../../images/ampai-assist.png
          :width: 400 px
-         :alt: Chuck Data
+         :alt: AI Assistant
          :align: left
          :class: no-scaled-link
 
 **For this**
 
-.. image:: ../../amperity_base/source/_static/card-chuck-data.png
+.. image:: ../../images/ampai-assist.png
    :width: 400 px
-   :alt: Chuck Data
+   :alt: AI Assistant
    :align: left
    :class: no-scaled-link
 
