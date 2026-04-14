@@ -83,7 +83,7 @@ A query that returns a collection events for use in |destination-name| is simila
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** or **phone**, **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 

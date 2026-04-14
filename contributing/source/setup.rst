@@ -11,9 +11,9 @@ Local development of documentation for Amperity is done on your workstation and 
 Requirements
 ==================================================
 
-* Python 3.9
+* Python 3.x
 * Sphinx 7.3.7
-* docutils 0.20
+* docutils 0.21
 
 A text editor.
 
@@ -48,7 +48,21 @@ Run the following commands to create a Python virtual environment.
 .. note:: ``(.venv)`` is not part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
 
 
-Install dependencies
+Install requirements
+==================================================
+
+In the same virtual environment, run the following commands:
+
+#. $.venv ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
+#. $.venv ``brew install python``
+#. $.venv ``pip3 install -r requirements.txt``
+
+   Requirements include Sphinx (static site generator), docutils, Shibuya (base theme for static site generator), and Pygments (styles and formatting for code blocks).
+
+#. $.venv ``brew install serve``
+
+
+Install packages
 ==================================================
 
 In the same virtual environment, run the following commands to install theme and a collection of plugins required by theme.
@@ -63,16 +77,6 @@ In the same virtual environment, run the following commands to install theme and
 #. $.venv ``pip install sphinx_design``
 #. $.venv ``pip install sphinx-new-tab-link``
 
-
-Install requirements
-==================================================
-
-In the same virtual environment, run the following commands:
-
-#. $.venv ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
-#. $.venv ``brew install python``
-#. $.venv ``pip3 install -r requirements.txt``
-#. $.venv ``brew install serve``
 
 
 Build the docs

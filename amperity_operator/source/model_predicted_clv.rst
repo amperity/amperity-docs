@@ -317,7 +317,13 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Enter a **name** for the model, an optional **description**, and select a **prediction horizon**. The prediction horizon specifies how far into the future the model predicts. Options include 90 days, 180 days, and 365 days. The default value (365 days) is fine for most use cases.
+     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2025 or you may choose a relative date like "today - 4 years".
+
+       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer. 
+
+       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same. A relative date is always in Coordinated Universal Time (UTC).
+
+       .. note:: A relative date is determined at the time a model is run, where "now" is the date on which the model is run. The time window should be at least 3 years, but may be 4 or 5, depending on how much data is available to the model in Amperity.
 
        Click **Create** to create the model.
 

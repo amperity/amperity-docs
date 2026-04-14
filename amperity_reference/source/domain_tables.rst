@@ -731,7 +731,7 @@ You can delete all records in a domain table that are older than a date.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Older than a set date".
 
-   Select a field in the domain table with a **datetime** data type, and then select a date. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select a date. You may use relative dates. A relative date is always in Coordinated Universal Time (UTC).
 
 #. Click **Preview deletion**, and then review the list of records that are returned.
 #. Click **Delete records**. In the **Remove records** dialog box, confirm that you want to delete the list of records by clicking **Remove records**.

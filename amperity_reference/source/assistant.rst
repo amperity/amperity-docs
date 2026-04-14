@@ -57,7 +57,6 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 * Refine customer segments 
 * Get advice on building better customer segments to meet campaign goals
 
-
 .. assistant-usecases-end
 
 .. assistant-overview-important-start
@@ -112,10 +111,9 @@ Amperity passes information on the schema information, query and segment example
 
 .. assistant-howitworks-end
 
-
 .. _assistant-journey-examples:
 
-Journey Examples
+Journey examples
 ==================================================
 
 .. assistant-journey-examples-start
@@ -274,7 +272,7 @@ Why these fail:
 
 .. _assistant-query-examples:
 
-Query Examples
+Query examples
 ==================================================
 
 .. assistant-query-examples-start
@@ -400,7 +398,7 @@ You can ask the **AmpAI Assistant** to help you understand how specific types of
 
 .. _assistant-segment-examples:
 
-Segment Examples
+Segment examples
 ==================================================
 
 The following examples show some of the ways you can use the **Segments AI Assistant** while working in the **Segment Editor**.

@@ -433,6 +433,15 @@
           "yotpo": "/reference/connected_systems.html"
         };
 
+        // Synonym to full-term mapping
+        // If a user types a key, the search runs as if they typed the value instead
+        const SYNONYMS_MAPPING = {
+          "sfmc": "Salesforce Marketing Cloud",
+          "tae": "Transaction Attributes Extended",
+          "uit": "Unified Itemized Transactions",
+          "ut": "Unified Transactions"
+        };
+
         // Search indexes cache
         const searchIndexes = {
             api: null,
@@ -564,12 +573,16 @@
 
         // Perform search across all selected collections
         async function performSearch() {
-            const query = document.getElementById('search-input').value.trim();
-            if (!query) {
+            const rawQuery = document.getElementById('search-input').value.trim();
+            if (!rawQuery) {
                 document.getElementById('search-summary').textContent = '';
                 document.getElementById('results-list').innerHTML = '';
                 return;
             }
+
+            // Check for synonym mapping and replace query if matched
+            const synonymKey = rawQuery.toLowerCase();
+            const query = SYNONYMS_MAPPING[synonymKey] || rawQuery;
 
             // Check for keyword mapping first
             const queryLowerForMapping = query.toLowerCase();

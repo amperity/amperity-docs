@@ -697,7 +697,7 @@ Relative dates
 
 .. segments-editor-relative-dates-start
 
-A relative date is determined at the time a segment is run, where **today** is the day on which the segment is run. For example: **yesterday**, **30 days ago**, **14 days ago**, or **1 year ago**. The list of relative date values includes a series of common ranges, but you may also type in a more specific range, such as **2 months ago** or **5 days ago**.
+A relative date is determined at the time a segment is run, where **today** is the day on which the segment is run. A relative date is always in Coordinated Universal Time (UTC). For example: **yesterday**, **30 days ago**, **14 days ago**, or **1 year ago**. The list of relative date values includes a series of common ranges, but you may also type in a more specific range, such as **2 months ago** or **5 days ago**.
 
 .. segments-editor-relative-dates-end
 

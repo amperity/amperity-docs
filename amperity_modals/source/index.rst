@@ -30,6 +30,7 @@ Site Index
    destination-bazaar-voice
    destination-blue-core
    destination-braze
+   destination-braze-cohorts
    destination-camelot-smm
    destination-cheetah-digital
    destination-cordial
