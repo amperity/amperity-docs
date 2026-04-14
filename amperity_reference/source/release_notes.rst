@@ -44,7 +44,7 @@ What is new and what has changed?
 Spring 2026
 ==================================================
 
-.. updates-2026-spring-start`
+.. updates-2026-spring-start
 
 **Audience monetization**
 
