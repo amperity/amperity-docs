@@ -64,7 +64,7 @@ Spring 2026
 
 **Labels available in filters**
 
-   :bdg-light:`UPDATED` You may now add and filter by labels for :ref:`segments <segments-filter>`, :ref:`queries <queries-filter>`, :ref:`campaigns <campaigns-filter-a-campaign>`, and :ref:`journeys <journeys-filter>` to help organize your work by grouping related items together.
+   :bdg-light:`UPDATED` You may now add and filter by labels for `segments <segments_howtos.html#segments-filter>`__, `queries <queries.html#queries-filter>`__, `campaigns <campaigns.html#campaigns-filter-a-campaign>`__, and `journeys <journeys.html#journeys-filter>`__ to help organize your work by grouping related items together.
 
 .. updates-2026-spring-end
 
