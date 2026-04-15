@@ -1587,14 +1587,31 @@ Activation activity is enabled by default for every campaign and keeps track of 
 Filter campaigns
 --------------------------------------------------
 
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
 .. campaigns-filter-campaigns-start
 
-You can filter the list of campaigns that appear on the **Campaigns** page by using any combination of the following:
+You can filter the list of campaigns that appear on the **Campaigns** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
 
 * By cadence. Select **One-time** or **Recurring**.
-* By status. Select any combination of **Delivered**, **Draft**, **Error** and **Scheduled**.
+* By status. Select any combination of **Delivered**, **Draft**, **Error**, and **Scheduled**.
 * By destination. Select any combination of destinations that have been configured for your tenant.
-* By user. Users can be filtered by author (who created the campaign?) and by most recent update (who last edited the campaign?). Select any combination of users in your tenant.
+* By created by. Select any combination of users who created campaigns.
+* By last edited by. Select any combination of users who most recently edited campaigns.
+* By label. Select one or more labels to filter campaigns by organizational category.
+
+.. tip:: Labels help organize campaigns by grouping related items together. For example, use labels to identify campaign types ("Holiday", "Retention", "Acquisition"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+
+   **Label naming conventions**
+
+   * Maximum 35 characters
+   * Only alphanumeric characters, hyphens, and underscores allowed
+   * Maximum of 10 labels per campaign
+   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+
+   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+
+.. note:: When multiple labels are selected, campaigns matching any selected labels will be shown.
 
 .. campaigns-filter-campaigns-end
 

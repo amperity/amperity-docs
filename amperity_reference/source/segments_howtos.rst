@@ -54,6 +54,7 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-edit-segment-editor`
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
+* :ref:`segments-filter`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
 * :ref:`segments-manage-tracked-segments`
@@ -76,9 +77,6 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-view-sql`
 
 .. segments-howtos-list-end
-
-
-
 
 
 .. _segments-add-attribute-from-table:
@@ -871,6 +869,38 @@ You can explore a copy of a saved segment on the **Summary** tab.
 #. When done, either click **Save As** to copy the saved segment, *or* click **View** to view the segment insights on the **Summary** tab, *or* click **Cancel**.
 
 .. segments-explore-copy-steps-end
+
+.. _segments-filter:
+
+Filter segments
+==================================================
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. segments-filter-start
+
+You can filter the list of segments that appear on the **Segments** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only segments associated with that database.
+* By created by. Select any combination of users who created segments.
+* By last edited by. Select any combination of users who most recently edited segments.
+* By label. Select one or more labels to filter segments by organizational category.
+
+.. tip:: Labels help organize segments by grouping related items together. For example, use labels to identify segment types ("Holiday", "Retention", "Acquisition"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+
+   **Label naming conventions**
+
+   * Maximum 35 characters
+   * Only alphanumeric characters, hyphens, and underscores allowed
+   * Maximum of 10 labels per segment
+   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+
+   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+
+.. note:: When multiple labels are selected, segments matching any selected labels will be shown.
+
+.. segments-filter-end
 
 
 .. _segments-format-segment:

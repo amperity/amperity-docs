@@ -62,6 +62,10 @@ Spring 2026
 
    :bdg-light:`UPDATED` The :doc:`Identity resolution summary <stitch_summary>` page shows the outcome of identity resolution, including identity changes over time, matching strategies, and identity complexity.
 
+**Labels available in filters**
+
+   :bdg-light:`UPDATED` You may now add and filter by labels for :ref:`segments <segments-filter>`, :ref:`queries <queries-filter>`, :ref:`campaigns <campaigns-filter-a-campaign>`, and :ref:`journeys <journeys-filter>` to help organize your work by grouping related items together.
+
 .. updates-2026-spring-end
 
 
@@ -75,7 +79,7 @@ Winter 2026
 **Destination topics**
 
    :bdg-success:`NEW` New destinations for `Google Analytics 4 <../operator/events_google_analytics.html>`__, `Pinterest offline events <../operator/events_pinterest.html>`__, `SAP Emarsys <../operator/destination_sap_emarsys.html>`__, `The Trade Desk Data Marketplace <../operator/monetize_the_trade_desk_marketplace.html>`__, and `Tulip <../operator/destination_tulip.html>`__.
-
+   
 **Incremental matching**
 
    :bdg-success:`NEW` An `incremental Stitch run <../operator/stitch.html#incremental-match>`__ does not reevaluate existing profiles and only attaches new records to existing profiles *or* creates new profiles. Profiles are not split or merged. PII is not reassigned.
