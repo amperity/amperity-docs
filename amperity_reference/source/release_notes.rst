@@ -56,7 +56,7 @@ Spring 2026
 
 **Predictive Modeling UI**
 
-   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the `predicted customer lifetime value model <../operator/model_predicted_clv.html>`__ and `product affinity model <../operator/model_product_affinity.html>`__ so users can now self-serve and iterate on their predictive models.
+   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the `predicted customer lifetime value <../operator/model_predicted_clv.html>`__ model and `product affinity <../operator/model_product_affinity.html>`__ model so users can now self-serve and iterate on their predictive models.
 
 **Identity resolution summary**
 
@@ -64,7 +64,7 @@ Spring 2026
 
 **Labels available in filters**
 
-   :bdg-light:`UPDATED` You may now add and filter by labels for `segments <segments_howtos.html#segments-filter>`__, `queries <queries.html#queries-filter>`__, `campaigns <campaigns.html#campaigns-filter-a-campaign>`__, and `journeys <journeys.html#journeys-filter>`__ to help organize your work by grouping related items together.
+   :bdg-light:`UPDATED` You may now add and filter by labels for `segments <segments_howtos.html#filter-segments>`__, `queries <queries.html#filter-queries>`__, `campaigns <campaigns.html#filter-campaigns>`__, and `journeys <journeys.html#filter-journeys>`__ to help organize your work by grouping related items together.
 
 .. updates-2026-spring-end
 
