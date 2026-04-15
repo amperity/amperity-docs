@@ -392,6 +392,7 @@ Tasks related to building queries in Amperity:
 * :ref:`queries-edit`
 * :ref:`queries-enable-performance-mode`
 * :ref:`queries-enable-alerts`
+* :ref:`queries-filter`
 * :ref:`queries-format-sql`
 * :ref:`queries-open`
 * :ref:`queries-organize`
@@ -415,6 +416,7 @@ Tasks related to building queries in Amperity:
 * :ref:`queries-view-details`
 
 .. queries-howtos-list-end
+
 
 
 .. _queries-add-comment-to-query:
@@ -938,6 +940,37 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
 
 .. queries-enable-alerts-learning-lab-end
 
+.. _queries-filter:
+
+Filter queries
+--------------------------------------------------
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. queries-filter-start
+
+You can filter the list of queries that appear on the **Queries** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only queries associated with that database.
+* By created by. Select any combination of users who created queries.
+* By last edited by. Select any combination of users who most recently edited queries.
+* By label. Select one or more labels to filter queries by organizational category.
+
+.. tip:: Labels help organize queries by grouping related items together. For example, use labels to identify query types ("Holiday", "Retention", "Acquisition"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+
+   **Label naming conventions**
+
+   * Maximum 35 characters
+   * Only alphanumeric characters, hyphens, and underscores allowed
+   * Maximum of 10 labels per query
+   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+
+   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+
+.. note:: When multiple labels are selected, queries matching any selected labels will be shown.
+
+.. queries-filter-end
 
 .. _queries-format-sql:
 

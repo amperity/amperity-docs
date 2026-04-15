@@ -853,6 +853,7 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-edit-exit-conditions`
 * :ref:`journeys-howtos-edit-starting-audience`
 * :ref:`journeys-howtos-fit-canvas-to-screen`
+* :ref:`journeys-filter`
 * :ref:`journeys-howtos-measure-journeys`
 * :ref:`journeys-howtos-define-measurement-segments`
 * :ref:`journeys-howtos-export-journey-travel-log`
@@ -874,7 +875,6 @@ Tasks related to building journeys in Amperity:
 * :ref:`journeys-howtos-zoom-canvas`
 
 .. journeys-howtos-list-end
-
 
 .. _journeys-howtos-add:
 
@@ -1229,9 +1229,41 @@ You can re-center and resize the the canvas so that you are able to see the whol
 
 .. journeys-howtos-fit-canvas-to-screen-steps-end
 
+
+.. _journeys-filter:
+
+Filter journeys
+--------------------------------------------------
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. journeys-filter-start
+
+You can filter the list of journeys that appear on the **Journeys** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active**, **Draft**, **Paused**, and **Ended**.
+* By created by. Select any combination of users who created journeys.
+* By label. Select one or more labels to filter journeys by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to identify journey types ("Welcome-Series", "Retention", "Winback"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+
+   **Label naming conventions**
+
+   * Maximum 35 characters
+   * Only alphanumeric characters, hyphens, and underscores allowed
+   * Maximum of 10 labels per journey
+   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+
+   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+
+.. note:: When multiple labels are selected, journeys matching any selected labels will be shown.
+
+.. journeys-filter-end
+
+
 .. _journeys-howtos-measure-journeys:
 
-Measure Journeys
+Measure journeys
 --------------------------------------------------
 
 You can configure and manage measurement for your journeys:
@@ -1468,7 +1500,7 @@ You can click and drag the canvas to navigate around and see or edit the differe
 
 .. _journeys-howtos-organize:
 
-Organize Journeys
+Organize journeys
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
