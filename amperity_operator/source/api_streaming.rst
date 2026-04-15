@@ -251,8 +251,6 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-A data stream is generated for you by Amperity on request. Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ or send email to ``support@amperity.com`` to request a new data stream.
-
 Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint.
 
 .. streaming-ingest-rest-api-stream-schema-important-start
