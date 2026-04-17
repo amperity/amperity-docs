@@ -82,7 +82,7 @@ Credentials and Secrets
 
 Amperity requires the ability to connect to, and then read data from the data source. The credentials that allow that connection and the ability to read that data are entered into the Amperity user interface while configuring a courier.
 
-These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using SnapPass to complete the configuration.
+These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using |ext_snappass| to complete the configuration.
 
 .. send-data-to-amperity-credentials-and-secrets-end
 

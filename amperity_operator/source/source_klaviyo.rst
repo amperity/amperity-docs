@@ -64,7 +64,7 @@ Get details
 
 #. The `API key <https://developers.klaviyo.com/en/docs/retrieve-api-credentials>`__ |ext_link| for |source-name|.
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-klaviyo-get-details-end
 

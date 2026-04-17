@@ -6251,7 +6251,7 @@ Snapchat is a social media platform for accessing pictures and messages for a sh
 
 .. term-snappass-start
 
-SnapPass allows sharing secrets in a secure, ephemeral way. Input a single or multi-line secret, define how long someone has to view the secret, and then generate a single-use URL. Share the URL to share the secret.
+|ext_snappass| allows sharing secrets in a secure, ephemeral way. Input a single or multi-line secret, define how long someone has to view the secret, and then generate a single-use URL. Share the URL to share the secret.
 
 .. term-snappass-end
 

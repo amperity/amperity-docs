@@ -60,7 +60,7 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
 #. The RSA public key to use for PGP encryption.
 
-   This key must be downloaded from the Adobe Analytics console, and then sent to Amperity using SnapPass. A representative of Amperity adds the certificate to the SFTP location that is built into Amperity: **<tenant>.sftp.amperity.com**.
+   This key must be downloaded from the Adobe Analytics console, and then sent to Amperity using |ext_snappass|. A representative of Amperity adds the certificate to the SFTP location that is built into Amperity: **<tenant>.sftp.amperity.com**.
 
    .. tip:: Amperity provides a built-in SFTP connector for |source-name| with some pre-configured settings.
 
@@ -85,7 +85,7 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
    .. note:: Files sent from Adobe Analytics use Gzip as the compression format and contains multiple files. 
 
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-adobe-analytics-get-details-end
 

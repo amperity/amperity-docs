@@ -72,7 +72,7 @@ The |source-name| data source requires the following configuration details:
           :class: no-scaled-link
      - The API key and secret for |source-name|.
 
-       .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+       .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

@@ -105,7 +105,7 @@ Get details
 
 #. Pull additional customer profile fields to Amperity using the :ref:`Additional fields <source-listrak-get-details-additional-fields>` setting.
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-listrak-get-details-end
 
