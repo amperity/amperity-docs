@@ -156,7 +156,7 @@ The Transmission Control Protocol (TCP) port to use for Secure Shell (SSH) trans
 
 .. credential-snappass-start
 
-An individual with access to |destination-name| should use SnapPass to securely share |required-credentials| details with the individual who configures Amperity.
+An individual with access to |destination-name| should use |ext_snappass| to securely share |required-credentials| details with the individual who configures Amperity.
 
 .. credential-snappass-end
 

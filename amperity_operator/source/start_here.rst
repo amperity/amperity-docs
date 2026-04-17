@@ -82,7 +82,7 @@ The following sections provide an overview of configuring Amperity.
 
 .. start-here-configure-tip-start
 
-.. tip:: Some information about your configuration must be shared with Amperity, such as a username and passcode required to authenticate and access to various cloud storage services or REST APIs. This information, when it must be shared with an Amperity representative, should be shared using SnapPass.
+.. tip:: Some information about your configuration must be shared with Amperity, such as a username and passcode required to authenticate and access to various cloud storage services or REST APIs. This information, when it must be shared with an Amperity representative, should be shared using |ext_snappass|.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-snappass-start

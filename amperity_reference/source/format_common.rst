@@ -47,7 +47,7 @@ Connect to source
 
 .. format-common-pull-credentials-start
 
-Amperity requires the ability to connect to, and then read data from a filedrop location. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the filedrop location, which is often external to Amperity (but is sometimes a system that is owned by Amperity). The customer may need to provide credentials to Amperity using SnapPass to complete the configuration.
+Amperity requires the ability to connect to, and then read data from a filedrop location. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the filedrop location, which is often external to Amperity (but is sometimes a system that is owned by Amperity). The customer may need to provide credentials to Amperity using |ext_snappass| to complete the configuration.
 
 .. format-common-pull-credentials-end
 
@@ -358,7 +358,7 @@ Connect to destination
 
 .. format-common-send-credentials-start
 
-Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer need to provide these credentials to Amperity using SnapPass to complete the configuration.
+Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer need to provide these credentials to Amperity using |ext_snappass| to complete the configuration.
 
 .. format-common-send-credentials-end
 
@@ -664,7 +664,7 @@ Any tool that is compliant with the OpenPGP standard, as defined by `RFC 4880 <h
 
 To use PGP encryption with data sources use the **PGP credentials** setting to select a PGP credential. For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
 
-.. caution:: Be sure to include the ``BEGIN PGP PUBLIC KEY BLOCK`` and ``END PGP PUBLIC KEY BLOCK`` header and footer in the key. Only users and systems with access to the private key is able to decrypt this data. Use Snappass to share the public key.
+.. caution:: Be sure to include the ``BEGIN PGP PUBLIC KEY BLOCK`` and ``END PGP PUBLIC KEY BLOCK`` header and footer in the key. Only users and systems with access to the private key is able to decrypt this data. Use |ext_snappass| to share the public key.
 
 .. format-common-pgp-sources-end
 
@@ -704,7 +704,7 @@ To use PGP decryption with data sources use the **PGP credentials** setting to s
 
 .. caution:: Be sure to include the ``BEGIN PGP PRIVATE KEY BLOCK`` and ``END PGP PRIVATE KEY BLOCK`` header and footer in the key.
 
-   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Please keep both public and private keys confidential. Use Snappass to share the private key.
+   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Please keep both public and private keys confidential. Use |ext_snappass| to share the private key.
 
 .. format-common-pgp-sources-end
 
@@ -747,14 +747,14 @@ When Amperity pulls files from upstream systems using SFTP, use the following co
 
 #. The owner of the upstream system creates the SSH keypair and will maintain the private SSH key.
 
-#. The public SSH key is configured in Amperity. You may send the public SSH key to your Amperity representative using SnapPass.
+#. The public SSH key is configured in Amperity. You may send the public SSH key to your Amperity representative using |ext_snappass|.
 
 
 **for PGP**
 
 #. Amperity Support creates the PGP keypair and will maintain the private PGP key.
 
-#. Amperity Support sends you the public PGP key using SnapPass. The owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
+#. Amperity Support sends you the public PGP key using |ext_snappass|. The owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
 
    .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files. Compression applied *after* encryption will not reduce the size of the file.
 
@@ -776,11 +776,11 @@ When Amperity sends files to downstream systems using SFTP, use the following co
 
 #. Amperity Support creates the SSH keypair and will maintain the private SSH key
 
-#. Amperity Support sends you the public SSH key using SnapPass. Add the public SSH key to the downstream system to which Amperity is configured to send data
+#. Amperity Support sends you the public SSH key using |ext_snappass|. Add the public SSH key to the downstream system to which Amperity is configured to send data
 
 **for PGP**
 
-#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key. You may send the public PGP key to your Amperity representative using SnapPass
+#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key. You may send the public PGP key to your Amperity representative using |ext_snappass|
 
 #. Amperity uses the public PGP key to encrypt files before sending them to the downstream system.
 
@@ -801,7 +801,7 @@ Amperity performs key rotations on a periodic basis as a best practice. Key rota
 #. Generate a key pair
 #. Create a keyring file that contains the old and new private keys and uses the same passphrase
 #. Install the keyring file to the courier
-#. Share the new public key with the customer using SnapPass
+#. Share the new public key with the customer using |ext_snappass|
 #. Wait for confirmation from the customer that the public key is updated
 #. Create a keyring file that contains *only* the updated private key
 #. Install the keyring file that contains *only* the updated private key to the courier

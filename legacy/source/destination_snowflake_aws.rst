@@ -192,7 +192,7 @@ To configure Snowflake objects use a Data Definition Language (DDL) command simi
 
 .. destination-snowflake-aws-configure-objects-note-start
 
-.. note:: You must send a customer who connects directly to the Snowflake data warehouse the following information using a SnapPass link:
+.. note:: You must send a customer who connects directly to the Snowflake data warehouse the following information using a |ext_snappass| link:
 
    #. The URL of the Snowflake data warehouse.
    #. The Snowflake username.

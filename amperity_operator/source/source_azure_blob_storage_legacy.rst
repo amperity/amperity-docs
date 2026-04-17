@@ -131,7 +131,7 @@ Use credentials
 
 .. source-azure-blob-storage-legacy-credentials-start
 
-A source that uses credentials to send data to Amperity from |source-name| requires the following information be sent to Amperity via SnapPass:
+A source that uses credentials to send data to Amperity from |source-name| requires the following information be sent to Amperity via |ext_snappass|:
 
 #. The URL of the Azure authentication endpoint. This is typically in the format of ``https://login.microsoftonline.com/<directory_id>/oauth2/token``.
 #. The information needed for the selected credentials method: shared access credentials, a storage URI, or a connection string.

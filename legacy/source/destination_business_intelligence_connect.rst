@@ -110,7 +110,7 @@ Connection details
 
 .. destination-bic-request-to-enable-connection-details-start
 
-Allow the Amperity support team a few days to complete the provisioning process. When finished, the support team will share the following connection details with you via SnapPass:
+Allow the Amperity support team a few days to complete the provisioning process. When finished, the support team will share the following connection details with you via |ext_snappass|:
 
 #. The URL of the data warehouse.
 #. The **Account Name**, **Region ID**, **Database name**, **Schema name**, and **Staging path**.
@@ -251,7 +251,7 @@ A service account is a static username and password that may be provisioned for 
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-start
 
-A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via SnapPass, along with the URL of your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
+A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via |ext_snappass|, along with the URL of your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-end
 

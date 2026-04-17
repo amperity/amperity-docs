@@ -541,7 +541,7 @@ To enable the Profile API for your tenant:
 
        Support will enable the Profile API on your tenant and will notify when the process is completed.
 
-       .. important:: A support representative uses SnapPass to provide the temporary access token for the Profile API.
+       .. important:: A support representative uses |ext_snappass| to provide the temporary access token for the Profile API.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px

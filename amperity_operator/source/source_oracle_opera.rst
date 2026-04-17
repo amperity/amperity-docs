@@ -147,7 +147,7 @@ Get details
        .. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-oracle-opera-get-details-end
 

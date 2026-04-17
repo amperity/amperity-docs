@@ -65,7 +65,7 @@ Get details
 #. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| for |source-name|.
 #. The list name.
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-sailthru-get-details-end
 

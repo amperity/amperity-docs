@@ -418,7 +418,7 @@ A courier configured from the Amperity UI must be configured to use one of the e
 
 Some of these plugins have more than one option for credentials.
 
-Use SnapPass to securely share configuration data with your Amperity representative.
+Use |ext_snappass| to securely share configuration data with your Amperity representative.
 
 .. couriers-add-context-end
 

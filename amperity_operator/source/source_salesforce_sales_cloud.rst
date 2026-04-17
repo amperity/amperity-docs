@@ -67,7 +67,7 @@ Salesforce Sales Cloud requires the following configuration details:
 #. If Salesforce Sales Cloud sends data to Amperity from a sandbox instance.
 #. A sample for each file to simplify feed creation.
 
-.. tip:: Use SnapPass to securely share the credentials and setup information for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share the credentials and setup information for |source-name| between your company and your Amperity representative.
 
 .. source-salesforce-sales-cloud-get-details-end
 

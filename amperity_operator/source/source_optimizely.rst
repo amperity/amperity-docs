@@ -96,7 +96,7 @@ Amazon S3 credentials
 
 .. source-optimizely-filedrop-credentials-start
 
-Amperity requires the ability to connect to, and then read data from the Amazon S3 bucket used by Optimizely. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the Amazon S3 bucket. Use SnapPass to share credentials with your Amperity representative, if necessary.
+Amperity requires the ability to connect to, and then read data from the Amazon S3 bucket used by Optimizely. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the Amazon S3 bucket. Use |ext_snappass| to share credentials with your Amperity representative, if necessary.
 
 .. source-optimizely-filedrop-credentials-end
 

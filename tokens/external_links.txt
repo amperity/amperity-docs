@@ -108,7 +108,7 @@
 
 .. |ext_snappass| raw:: html
 
-   <a href="https://snappass.amperity.com/" target="_blank">Snappass</a>
+   <a href="https://snappass.amperity.com/" target="_blank">SnapPass</a>
 
 
 .. TODO: Keep this one as a consolidated external link.
