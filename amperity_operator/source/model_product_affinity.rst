@@ -24,7 +24,7 @@ Product affinity model
 
 .. _model-product-affinity-about:
 
-About product affinity modeling
+About product affinity models
 ==================================================
 
 .. model-product-affinity-about-start
@@ -41,7 +41,7 @@ For each product attribute, such as a product category, brand, or product subcat
 
 .. _model-product-affinity-howitworks:
 
-How the product affinity model works
+How product affinity works
 ==================================================
 
 .. model-product-affinity-howitworks-start
@@ -130,7 +130,7 @@ Customers are ranked by score for each product. Top-ranked customers are assigne
 
 .. _model-product-affinity-howitworks-audience-sizes:
 
-Predictions for recommended audience sizes
+Audience size predictions
 --------------------------------------------------
 
 .. model-product-affinity-howitworks-audience-sizes-start
@@ -169,7 +169,7 @@ Product affinity modeling enables support for marketing campaigns that benefit f
 
 .. _model-product-affinity-use-cases-recommended-audiences:
 
-Recommended audience sizes
+Audience sizes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -232,7 +232,7 @@ You can build a product affinity model from the **Customer 360** page. Any datab
 
 **To build a product affinity model**
 
-#. :ref:`Select model and create version <model-product-affinity-build-create-version>`
+#. :ref:`Select model, create version <model-product-affinity-build-create-version>`
 #. :ref:`Choose field for predictions <model-product-affinity-build-choose-field>`
 #. :ref:`Define version settings <model-product-affinity-build-version-settings>`
 #. :ref:`Configure hyperparameters for random forest classifier <model-product-affinity-build-hyperparameters>`
@@ -242,7 +242,7 @@ You can build a product affinity model from the **Customer 360** page. Any datab
 
 .. _model-product-affinity-build-create-version:
 
-Select model and create version
+Select model, create version
 --------------------------------------------------
 
 .. model-product-affinity-build-create-version-start
@@ -302,7 +302,7 @@ Select the **General** tab to configure the list of values for predicting produc
 
 .. _model-product-affinity-build-hyperparameters:
 
-Configure random forest hyperparameters
+Configure hyperparameters
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
@@ -456,7 +456,7 @@ Each version must be evaluated before it can be selected for use with product af
 
 .. _model-product-affinity-build-choose-version:
 
-Choose version for product affinity modeling
+Choose version
 --------------------------------------------------
 
 .. model-product-affinity-build-choose-version-start
