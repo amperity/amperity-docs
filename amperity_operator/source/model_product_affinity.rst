@@ -285,17 +285,24 @@ The **New version** dialog has two tabs: **General** and **Advanced**.
 
 Select the **General** tab to configure the list of values for predicting product affinity. The list of values can be managed by rules or be managed manually.
 
-**Rules**
-   Select **Rules** to build a list of values automatically up to the configured maximum number of values.
+.. list-table::
+   :widths: 15 85
+   :header-rows: 1
 
-   Use the **Max product groups** field to configure the maximum number of values for the selected field. The default value is "50". Values must have at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days to be included in product affinity model output.
+   * - Option
+     - Description
 
-   .. tip:: Use the **Show ineligible** slider to view values that do not meet the minimum thresholds for rules-based inclusion in product affinity modeling output.
+   * - **Use rules**
+     - Select **Rules** to build a list of values automatically up to the configured maximum number of values.
 
-**Manual**
-   Select **Manual** to choose the list of values included in model output. Only selected values with at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days are included in product affinity modeling output.
+       Use the **Max product groups** field to configure the maximum number of values for the selected field. The default value is "50". Values must have at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days to be included in product affinity model output.
 
-.. caution:: Do not click **Evaluate** until after `hyperparameters for the random forest classifier <model-product-affinity-build-hyperparameters>` are configured unless you intend to use the default values for hyperparameters.
+       .. tip:: Use the **Show ineligible** slider to view values that do not meet the minimum thresholds for rules-based inclusion in product affinity modeling output.
+
+   * - **Manually**
+     - Select **Manual** to choose the list of values included in model output. Only selected values with at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days are included in product affinity modeling output.
+
+.. caution:: Do not click **Evaluate** until after :ref:`hyperparameters for the random forest classifier <model-product-affinity-build-hyperparameters>` are configured unless you intend to use the default values for hyperparameters.
 
 .. model-product-affinity-build-version-settings-end
 
