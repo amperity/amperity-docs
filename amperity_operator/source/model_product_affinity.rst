@@ -21,6 +21,12 @@ Product affinity model
    :start-after: .. term-product-affinity-start
    :end-before: .. term-product-affinity-end
 
+
+.. _model-product-affinity-about:
+
+About product affinity modeling
+==================================================
+
 .. model-product-affinity-about-start
 
 The product affinity model predicts which products customers are most likely to purchase next. The product affinity model combines two components: a :ref:`random forest classifier <model-product-affinity-howitworks-random-forest>` and a :ref:`beta-geometric distribution <model-product-affinity-howitworks-beta-geometric>`.
