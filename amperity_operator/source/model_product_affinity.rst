@@ -340,6 +340,7 @@ The random forest classifier has the following hyperparameters:
        .. list-table::
           :widths: 30 70
           :header-rows: 1
+
           * - Strategy
             - Description
 
