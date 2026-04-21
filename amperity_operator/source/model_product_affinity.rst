@@ -450,9 +450,11 @@ Each version must be evaluated before it can be selected for use with product af
      - A percentage that shows how this model version compares to random sampling.
 
    * - **Recall**
-     - A percentage that shows how actual purchasers in this model version compare to a naive baseline of historical purchasers.
+     - A percentage that shows how actual purchasers in this model version compare to the naive baseline of historical purchasers.
 
-       Recall is shown for the model version and by audience size when recommendations outperform the naive baseline of historical purchasers.
+       .. note:: The naive baseline of historical purchasers is everyone who has previously purchased the product within the 450-day training window.
+
+       Recall is shown for the model version and by audience size when recommended audiences outperform the naive baseline by capturing lookalike buyers who have no prior purchase history.
 
        * **SM recall** is for small audience sizes
        * **MD recall** is for medium audience sizes
