@@ -285,8 +285,8 @@ You can build a predicted CLV model from the **Customer 360** page. Each databas
 .. important::
 
    .. include:: ../../amperity_operator/source/models.rst
-      :start-after: .. models-fields-used-by-all-models-start
-      :end-before: .. models-fields-used-by-all-models-end
+      :start-after: .. models-fields-used-by-all-models-table-start
+      :end-before: .. models-fields-used-by-all-models-table-end
 
 **To build a predicted CLV model**
 

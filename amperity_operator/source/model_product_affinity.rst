@@ -29,7 +29,7 @@ About product affinity models
 
 .. model-product-affinity-about-start
 
-The product affinity model predicts which products customers are most likely to purchase next. The product affinity model combines two components: a :ref:`random forest classifier <model-product-affinity-howitworks-random-forest>` and a :ref:`beta-geometric distribution <model-product-affinity-howitworks-beta-geometric>`.
+The product affinity model predicts which products customers are most likely to purchase next. The model combines two components: a :ref:`random forest classifier <model-product-affinity-howitworks-random-forest>` and a :ref:`beta-geometric distribution <model-product-affinity-howitworks-beta-geometric>`.
 
 For each product attribute, such as a product category, brand, or product subcategory, the model scores every customer-product pair, and then:
 
@@ -46,7 +46,7 @@ How product affinity works
 
 .. model-product-affinity-howitworks-start
 
-The product affinity model is an ensemble of two independently trained individual models: a :ref:`random forest classifier <model-product-affinity-howitworks-random-forest>` and a :ref:`beta-geometric distribution <model-product-affinity-howitworks-beta-geometric>`. Each individual model contributes to the product affinity model's output: :ref:`product affinity scores <model-product-affinity-howitworks-score>`.
+The product affinity model is an `ensemble learning method <https://en.wikipedia.org/wiki/Ensemble_learning>`__ |ext_link| with two independently trained submodels: a :ref:`random forest classifier <model-product-affinity-howitworks-random-forest>` and a :ref:`beta-geometric distribution <model-product-affinity-howitworks-beta-geometric>`. Each individual model contributes to the product affinity model's output: :ref:`product affinity scores <model-product-affinity-howitworks-score>`.
 
 .. model-product-affinity-howitworks-end
 
@@ -123,7 +123,7 @@ Every customer-product pair is assigned a product affinity score, where:
 
    Score = P ( purchase product | customer ) x P ( order in next 30 days )
 
-Customers are ranked by score for each product. Top-ranked customers are assigned to recommended audience sizes.
+Customers are ranked by score for each product. Top-ranked customers are assigned to recommended audiences.
 
 .. model-product-affinity-howitworks-score-end
 
@@ -135,7 +135,7 @@ Audience size predictions
 
 .. model-product-affinity-howitworks-audience-sizes-start
 
-Top-ranked customers are assigned to :ref:`recommended audience sizes <model-product-affinity-use-cases-recommended-audiences>` as an output of product affinity scoring.
+Top-ranked customers are assigned to :ref:`recommended audiences <model-product-affinity-use-cases-recommended-audiences>` as an output of product affinity scoring.
 
 .. image:: ../../images/use-cases-recommended-audience-size-all.png
    :width: 600 px
@@ -159,7 +159,7 @@ Use cases
 
 .. model-product-affinity-use-cases-start
 
-Product affinity modeling enables support for marketing campaigns that benefit from knowing a customer's preferences across product categories, including:
+Product affinity modeling enables support for marketing campaigns that would benefit from knowing customer preferences across product categories with:
 
 #. :ref:`Recommended audience sizes <model-product-affinity-use-cases-recommended-audiences>`
 #. :ref:`Ranking customers by affinity <model-product-affinity-use-cases-customer-ranking>`
@@ -227,8 +227,8 @@ You can build a product affinity model from the **Customer 360** page. Any datab
 .. important::
 
    .. include:: ../../amperity_operator/source/models.rst
-      :start-after: .. models-fields-used-by-all-models-start
-      :end-before: .. models-fields-used-by-all-models-end
+      :start-after: .. models-fields-used-by-all-models-table-start
+      :end-before: .. models-fields-used-by-all-models-table-end
 
 **To build a product affinity model**
 
@@ -318,7 +318,7 @@ Configure hyperparameters
 
 .. model-product-affinity-build-hyperparameters-start
 
-Select the **Advanced** tab to configure hyperparameters for the random forest classifier. Click **Evaluate** after hyperparameters for the random forest classifier are configured.
+Select the **Advanced** tab to configure hyperparameters for the random forest classifier. When finished, click **Evaluate**.
 
 .. important:: Hyperparameters for the random forest classifier are *only* configurable during initial version setup.
 
@@ -494,7 +494,7 @@ Product affinity output tables
 
 .. model-product-affinity-output-tables-start
 
-When a product affinity model is activated, a training and inference workflow begins. The product affinity model trains on 450 days of historical purchase data. The random forest classifier applies a 365-day exponential half-life decay for historical purchases to ensure that more recent purchases count more.
+When you activate a product affinity model a training and inference workflow begins. The product affinity model trains on 450 days of historical purchase data. The random forest classifier applies a 365-day `exponential half-life decay <https://en.wikipedia.org/wiki/Exponential_decay>`__ |ext_link| for historical purchases to ensure that more recent purchases count more.
 
 When the training and inference workflow finishes, an output table is generated with one row for each customer-product pair, and then added automatically to the database.
 

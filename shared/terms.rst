@@ -5310,7 +5310,7 @@ Probabilistic record matching uses rules that define approximate matching for cu
 
 .. term-product-affinity-start
 
-Product affinity is a predictive model that identifies which customers are likely to purchase next using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a ranked list of customers by product affinity and three recommended audience sizes.
+Product affinity is a predictive model that identifies which customers are likely to purchase next using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a database table with a ranked list of customers by product affinity and three recommended audience sizes.
 
 .. term-product-affinity-end
 
@@ -5545,7 +5545,7 @@ RaceRoster is event management software for races.
 
 .. term-random-forest-classifier-start
 
-A `random forest classifier <https://en.wikipedia.org/wiki/Random_forest>`__ |ext_link| is an ensemble learning method for predictive affinity modeling that learns historical purchase patterns, and then predicts the probability of customer purchases by product within a prediction window.
+A `random forest classifier <https://en.wikipedia.org/wiki/Random_forest>`__ |ext_link| is an ensemble learning method for predictive affinity modeling. It learns historical purchase patterns, and then predicts the probability of customer purchases by product within a prediction window.
 
 .. term-random-forest-classifier-end
 
@@ -5638,7 +5638,7 @@ A **Recommendation** table associates individual customers to a preferred catego
 
 .. term-recommended-audience-size-start
 
-A recommended audience is a feature of product affinity modeling that answers the following question: "Which audience size grows revenue over the next 30 days?" Product affinity modeling answers this question with small, medium, and large recommended audience sizes. A small audience captures 50% of an audience, a medium audience captures 70%, and a large audience captures 90% of purchases for that audience over the next 30 days.
+A recommended audience is a feature of product affinity modeling that answers the following question: "Which audience size grows revenue over the next 30 days?" Product affinity modeling answers this question with small, medium, and large recommended audience sizes. A recommended audience predicts future purchasers over the next 30 days.
 
 .. term-recommended-audience-size-end
 

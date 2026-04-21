@@ -99,7 +99,7 @@ Attributes for recommended audience sizes are available from the **Predicted Aff
           :start-after: .. term-audience-size-small-start
           :end-before: .. term-audience-size-small-end
 
-       A small audience size to help prevent wasted spend and to reduce opt-outs.
+       .. tip:: A small audience size helps prevent wasted spend and reduces opt-outs.
    * - **Audience Size Medium**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-audience-size-medium-start
