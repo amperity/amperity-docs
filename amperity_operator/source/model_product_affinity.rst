@@ -390,20 +390,20 @@ The random forest classifier has the following hyperparameters:
        .. code-block:: none
 
           Tree: Age > 30?
-          |-- Yes. Purchases > 3?                  < depth 1
-          |   |-- Yes. Socks?                      < depth 2
-          |   |   |-- Yes. Brand = Socktown?       < depth 3
-          |   |   |   |-- Yes.                     < depth 4
-          |   |   |   |   |-- Yes. Color = blue?   < depth 5
-          |   |   |   |   |-- No.                  < depth 5
+          |__ Yes. Purchases > 3?                  < depth 1
+          |   |__ Yes. Socks?                      < depth 2
+          |   |   |__ Yes. Brand = Socktown?       < depth 3
+          |   |   |   |__ Yes.                     < depth 4
+          |   |   |   |   |__ Yes. Color = blue?   < depth 5
+          |   |   |   |   |__ No.                  < depth 5
           |   |   |   |
-          |   |   |   |-- No.                      < depth 4
+          |   |   |   |__ No.                      < depth 4
           |   |   |
-          |   |   |-- No.                          < depth 3
+          |   |   |__ No.                          < depth 3
           |   |
-          |   |-- No.                              < depth 2
+          |   |__ No.                              < depth 2
           |
-          |-- No.                                  < depth 1
+          |__ No.                                  < depth 1
 
 
    * - **Number of trees**
