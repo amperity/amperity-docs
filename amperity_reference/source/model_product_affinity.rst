@@ -38,7 +38,7 @@ Use cases
 
 .. model-product-affinity-use-cases-start
 
-The product affinity model enables support for marketing campaigns that benefit from knowing a customer's preferences across product categories, including:
+Product affinity modeling enables support for marketing campaigns that benefit from knowing a customer's preferences across product categories, including:
 
 #. :ref:`Recommended audience sizes <model-product-affinity-use-cases-recommended-audiences>`
 #. :ref:`Ranking customers by affinity <model-product-affinity-use-cases-customer-ranking>`
@@ -95,13 +95,21 @@ Attributes for recommended audience sizes are available from the **Predicted Aff
    * - Attribute Name
      - Description
    * - **Audience Size Small**
-     - A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
-   * - **Audience Size Medium**
-     - A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
-   * - **Audience Size Large**
-     - A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-small-start
+          :end-before: .. term-audience-size-small-end
 
-Combine these attributes with the **Product Attribute** attribute to build audiences for a specific product category, class, or brand.
+       A small audience size to help prevent wasted spend and to reduce opt-outs.
+   * - **Audience Size Medium**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-medium-start
+          :end-before: .. term-audience-size-medium-end
+   * - **Audience Size Large**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-large-start
+          :end-before: .. term-audience-size-large-end
+
+Combine audience size attributes with product attributes to build audiences for a specific product categories, classes, or brands. Access these attributes directly from the **Segment Editor**.
 
 .. model-product-affinity-use-cases-recommended-audiences-attributes-end
 

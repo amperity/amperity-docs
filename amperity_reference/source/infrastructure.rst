@@ -64,16 +64,6 @@ Amazon AWS
    :end-before: .. base-url-tenant-id-end
 
 
-.. _infrastructure-api-base-url-australia:
-
-Base URLs in Australia
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. base-url-aws-australia-start
-   :end-before: .. base-url-aws-australia-end
-
-
 .. _infrastructure-api-base-url-azure:
 
 Microsoft Azure
@@ -82,6 +72,16 @@ Microsoft Azure
 .. include:: ../../amperity_api/source/base_url.rst
    :start-after: .. base-url-azure-start
    :end-before: .. base-url-azure-end
+
+
+.. _infrastructure-api-base-url-australia:
+
+Amperity in Australia
+--------------------------------------------------
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-aws-australia-start
+   :end-before: .. base-url-aws-australia-end
 
 
 .. _infrastructure-allowlists:
@@ -192,7 +192,7 @@ Amperity storage is hosted in :ref:`Amazon AWS <infrastructure-regions-storage-a
 
 .. infrastructure-regions-storage-note-start
 
-.. note:: Regions for storage are ony necessary when configuring a new tenant to u`use customer-hosted storage <../operator/storage.html>`__ instead of Amperity-hosted storage.
+.. note:: Regions for storage are ony necessary when configuring a new tenant to `use customer-hosted storage <../operator/storage.html>`__ instead of Amperity-hosted storage.
 
 .. infrastructure-regions-storage-note-end
 

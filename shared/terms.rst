@@ -693,19 +693,19 @@ Audience sizes represent the total number of customers that are necessary for a 
 
 .. term-audience-size-large-start
 
-A large audience represents the percentage of the total audience required to capture 90% of total purchases 30 days ago.
+A large audience size is predicted to include ~90% of future purchasers and to include a high number of non-purchasers.
 
 .. term-audience-size-large-end
 
 .. term-audience-size-medium-start
 
-A medium audience represents the percentage of the total audience required to capture 70% of total purchases 30 days ago.
+A medium audience size is predicted to include ~70% of future purchasers and to include a moderate number of non-purchasers.
 
 .. term-audience-size-medium-end
 
 .. term-audience-size-small-start
 
-A small audience represents the percentage of the total audience required to capture 50% of total purchases 30 days ago.
+A small audience size is predicted to include ~50% of future purchasers and to include the fewest number of non-purchasers.
 
 .. term-audience-size-small-end
 
@@ -861,6 +861,15 @@ A bad-values blocklist has known values that appear often in data. The Stitch pr
 Bazaarvoice allows retailers to manage user-generated content on their website.
 
 .. term-bazaarvoice-end
+
+
+**beta-geometric distribution**
+
+.. term-beta-geometric-distribution-start
+
+A `beta-geometric distribution <https://en.wikipedia.org/wiki/Beta_distribution>`__ |ext_link| is a statistical calibration layer for predictive affinity modeling that estimates the probability that a customer will purchase within the next 30 days based on purchase recency and purchase frequency.
+
+.. term-beta-geometric-distribution-end
 
 
 **BigCommerce**
@@ -3310,6 +3319,15 @@ HubSpot is a CRM platform built around dedicated hubs for marketing, sales, serv
 .. term-hubspot-end
 
 
+**hyperparameters**
+
+.. term-hyperparameters-start
+
+`Hyperparameters <https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)>`__ |ext_link| are external configuration variables set manually before a training process begins to control how a model learns. Hyperparameters define a model's architecture, optimize algorithm behavior, and help prevent overfitting. 
+
+.. term-hyperparameters-end
+
+
 **Identifier for Advertisers (IDFA)**
 
 .. term-idfa-start
@@ -5292,22 +5310,27 @@ Probabilistic record matching uses rules that define approximate matching for cu
 
 .. term-product-affinity-start
 
-Product affinity is a predictive model that identifies which customers are likely to purchase by using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a ranked list of customers with three recommended audience sizes.
+Product affinity is a predictive model that identifies which customers are likely to purchase next using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a ranked list of customers by product affinity and three recommended audience sizes.
 
 .. term-product-affinity-end
 
 
-**product recommendations**
+**product affinity attribute**
 
-.. 
-.. Not in glossary
-.. 
+.. term-product-affinity-attribute-start
 
-.. term-product-recommendations-start
+The field against which product affinity is measured. For example: a category, a subcategory, or a brand. Values must have at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days to be included in product affinity model output.
 
-Product recommendations identify customers who have purchased, and then associates other products to their purchase history.
+.. term-product-affinity-attribute-end
 
-.. term-product-recommendations-end
+
+**product affinity score**
+
+.. term-product-affinity-score-start
+
+The strength of a customers's affinity for this product, shown as an uncalibrated probability between 0 and 1 that combines product-specific affinity with general likelihood to purchase. A higher score represents a stronger predicted affinity.
+
+.. term-product-affinity-score-end
 
 
 **product base ID**
@@ -5518,6 +5541,33 @@ RaceRoster is event management software for races.
 .. term-raceroster-end
 
 
+**random forest classifier**
+
+.. term-random-forest-classifier-start
+
+A `random forest classifier <https://en.wikipedia.org/wiki/Random_forest>`__ |ext_link| is an ensemble learning method for predictive affinity modeling that learns historical purchase patterns, and then predicts the probability of customer purchases by product within a prediction window.
+
+.. term-random-forest-classifier-end
+
+
+**ranking** (product affinity modeling)
+
+.. term-ranking-affinity-start
+
+A product attribute's rank for this customer, where 1 equals the highest product affinity.
+
+.. term-ranking-affinity-end
+
+
+**ranking** (event propensity modeling)
+
+.. term-ranking-events-start
+
+A ranking of customers by score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
+
+.. term-ranking-events-end
+
+
 **raw data**
 
 .. term-raw-data-start
@@ -5588,7 +5638,7 @@ A **Recommendation** table associates individual customers to a preferred catego
 
 .. term-recommended-audience-size-start
 
-A recommended audience is a feature of Amperity that answers the following question: "Which audience size grows revenue over the next 30 days?" Amperity provides three answers to this question, in the form of recommended audience sizes: small, medium, and large. A small audience captures 50% of an audience, a medium audience captures 70%, and a large audience captures 90% of purchases for that audience over the next 30 days.
+A recommended audience is a feature of product affinity modeling that answers the following question: "Which audience size grows revenue over the next 30 days?" Product affinity modeling answers this question with small, medium, and large recommended audience sizes. A small audience captures 50% of an audience, a medium audience captures 70%, and a large audience captures 90% of purchases for that audience over the next 30 days.
 
 .. term-recommended-audience-size-end
 

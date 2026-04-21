@@ -596,6 +596,14 @@ B
       :end-before: .. term-bazaarvoice-end
 
 
+.. _b-beta-geometric-distribution:
+
+**beta-geometric distribution**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-beta-geometric-distribution-start
+      :end-before: .. term-beta-geometric-distribution-end
+
+
 .. _b-bigcommerce:
 
 **BigCommerce**
@@ -2237,6 +2245,14 @@ H
       :end-before: .. term-hubspot-end
 
 
+.. _h-hyperparameters:
+
+**hyperparameters**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-hyperparameters-start
+      :end-before: .. term-hyperparameters-end
+
+
 .. _glossary-i:
 
 I
@@ -3852,6 +3868,14 @@ Q
 
 R
 ==================================================
+
+
+.. _r-random-forest-classifier:
+
+**random forest classifier**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-random-forest-classifier-start
+      :end-before: .. term-random-forest-classifier-end
 
 
 .. _r-raw-data:
