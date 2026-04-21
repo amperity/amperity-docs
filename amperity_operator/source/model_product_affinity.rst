@@ -374,7 +374,7 @@ The random forest classifier has the following hyperparameters:
 
        For example, with a very low number of bins, such as 10, the random forest classifier may try for ten evenly spaced splits. More bins gives the random forest classifier more ways to find precise splits.
 
-       **Max bins** is the maximum number of bins available. Some values are grouped together when number of possible splits exceeds the maximum number of bins.
+       **Max bins** is the maximum number of bins available. Some values are grouped together when the number of possible splits exceeds the maximum number of bins.
 
        If a feature has fewer unique values than the **Max bins** value, the bin count is irrelevant. The random forest classifier evaluates every unique value as a candidate for splitting. The **Max bins** value constrains features with high cardinality or features that are truly continuous. Leaving **Max bins** set to 700 for a feature with 12 unique values results in 12 candidates for splitting.
 
