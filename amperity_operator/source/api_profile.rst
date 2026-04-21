@@ -68,8 +68,8 @@ The Profile API has the following endpoints:
 
 * :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes>`
 * :ref:`GET /indexes/{id} <profile-api-howitworks-endpoints-get-indexes-id>`
-* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles>`
-* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles-id>`
+* :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>`
+* :ref:`GET /indexes/{id}/profiles/{id} <profile-api-howitworks-endpoints-get-indexes-id-profiles-id>`
 
 .. profile-api-howitworks-endpoints-end
 
