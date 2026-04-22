@@ -33,7 +33,7 @@ Amazon AWS
 
 Tenants hosted in Amazon AWS have the following base URL:
 
-::
+.. code-block:: none
 
    https://app.amperity.com/api
 
@@ -48,22 +48,6 @@ You can find the tenant ID from the Amperity user interface. From the **Settings
 .. base-url-tenant-id-end
 
 
-.. _base-url-aws-australia:
-
-Amazon AWS in Australia
---------------------------------------------------
-
-.. base-url-aws-australia-start
-
-Tenants hosted in Amazon AWS in Australia have the following base URL:
-
-::
-
-   https://app-aws-apse2.amperity.com/
-
-.. base-url-aws-australia-end
-
-
 .. _base-url-azure:
 
 Microsoft Azure
@@ -73,7 +57,7 @@ Microsoft Azure
 
 Tenants hosted in Microsoft Azure have the following base URL:
 
-::
+.. code-block:: none
 
    https://{tenant-id}.amperity.com/api
 
@@ -83,17 +67,39 @@ Tenants hosted in Microsoft Azure have the following base URL:
 
    For example, if the tenant ID is **socktown** the base URL is:
 
-   ::
+   .. code-block:: none
 
       https://socktown.amperity.com/api
 
    with
 
-   ::
+   .. code-block:: none
 
       --header 'amperity-tenant: socktown'
 
 .. base-url-azure-end
+
+
+.. _base-url-aws-australia:
+
+Amperity in Australia
+==================================================
+
+.. base-url-aws-australia-start
+
+Tenants hosted in Australia have the following default base URL:
+
+.. code-block:: none
+
+   https://app-aws-apse2.amperity.com/
+
+Tenants hosted in Australia may also use their custom base URL:]
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/api
+
+.. base-url-aws-australia-end
 
 
 .. _api-amperity-base-url-sandboxes:
@@ -107,7 +113,7 @@ The base URL for a sandbox is the same as the base URL for production.
 
 Use the tenant ID for the sandbox for all requests made to a sandbox. unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL for production and the **amperity-tenant** header is:
 
-::
+.. code-block:: none
 
    --header 'amperity-tenant: socktown-sb-12345'
 

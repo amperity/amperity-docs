@@ -133,7 +133,11 @@ The churn and pCLV models support custom input tables for transactions and trans
 
 You may customize predictive models, such as excluding certain types of customers and adding custom features that support your brand's use cases. Customer exlusions are based off of the **Customer Attributes** table, and custom features are based off of additional fields that may exist on **Unified Itemized Transactions**.
 
-You do not need to configure the following fields:
+.. models-fields-used-by-all-models-end
+
+.. models-fields-used-by-all-models-table-start
+
+The following fields are automatically included in all predictive models:
 
 .. list-table::
    :widths: 30 70
@@ -189,7 +193,7 @@ You do not need to configure the following fields:
        * **Order ID**
        * **Product ID**
 
-.. models-fields-used-by-all-models-end
+.. models-fields-used-by-all-models-table-end
 
 
 .. _models-fields-used-by-epm:
@@ -258,7 +262,8 @@ Predictive models are configurable in Amperity:
 * :ref:`Build a churn propensity model <model-churn-propensity-configure>`
 * :ref:`Build a event propensity model <model-event-propensity-configure>`
 * :ref:`Build a predicted CLV model <model-predicted-clv-configure>`
-* :ref:`Build a product affinity model <model-product-affinity-configure>`
+
+.. * :ref:`Build a product affinity model <model-product-affinity-configure>`
 
 .. models-build-end
 
@@ -314,8 +319,9 @@ These are captured in the "Build a model" section for each of the five model-spe
 
 #. :ref:`model-churn-propensity-configure`
 #. :ref:`model-event-propensity-configure`
-#. :ref:`model-predicted-clv-configure`
-#. :ref:`model-product-affinity-configure`
+
+.. #. :ref:`model-predicted-clv-configure`
+.. #. :ref:`model-product-affinity-configure`
 
 .. models-howtows-add-steps-end
 

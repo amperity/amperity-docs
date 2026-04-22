@@ -1354,21 +1354,31 @@ The **Event Propensity** table has the following columns:
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
 
-       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-large-start
+          :end-before: .. term-audience-size-large-end
    * - **Audience Size Medium**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
 
-       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-medium-start
+          :end-before: .. term-audience-size-medium-end
    * - **Audience Size Small**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-small-start
+          :end-before: .. term-audience-size-small-end
+
+       Use a small audience size to help prevent wasted spend and to reduce opt-outs.
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-ranking-events-start
+          :end-before: .. term-ranking-events-end
 
    * - **Score**
      - Float
@@ -1928,7 +1938,7 @@ Predicted Affinity
 
 .. data-tables-affinity-table-about-start
 
-An **Affinity** table has the following columns:
+A **Predicted Affinity** table has the following columns:
 
 .. data-tables-affinity-table-about-end
 
@@ -1956,32 +1966,44 @@ An **Affinity** table has the following columns:
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
 
-       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-large-start
+          :end-before: .. term-audience-size-large-end
    * - **Audience Size Medium**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
 
-       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-medium-start
+          :end-before: .. term-audience-size-medium-end
    * - **Audience Size Small**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-small-start
+          :end-before: .. term-audience-size-small-end
    * - **Product Attribute**
      - String
-     - The field against which product affinity is measured. For example: a category, a class, or a brand.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-product-affinity-attribute-start
+          :end-before: .. term-product-affinity-attribute-end
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this product. A rank that is less than or equal to X provides the top N customers with an affinity for this product.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-ranking-affinity-start
+          :end-before: .. term-ranking-affinity-end
 
    * - **Score**
      - Float
-     - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-product-affinity-score-start
+          :end-before: .. term-product-affinity-score-end
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
+       .. caution:: A customer score should only be used in relation to other customer scores for the same product attribute value. A customer score should not be used in absolute terms. A score does not directly correlate to ranking or audience sizes and should not be used in segments.
 
-          Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
+       .. important:: Use audience size attributes *or* ranking when building segments for product affinity instead of customer scores.
 
 .. data-tables-affinity-table-end
 
