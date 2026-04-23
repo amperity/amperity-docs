@@ -251,7 +251,7 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint.
+Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint with the value of **Host** set to the :ref:`base URL <streaming-ingest-rest-api-base-url>`.
 
 .. streaming-ingest-rest-api-stream-schema-important-start
 
@@ -272,28 +272,32 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
 .. streaming-ingest-rest-api-configure-streams-postman-end
 
 
-.. _streaming-ingest-rest-api-send-json-using-http:
+.. _streaming-ingest-rest-api-base-url:
 
-Send JSON using HTTP
+Base URL for Streaming API
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-json-using-http-start
+.. streaming-ingest-rest-api-base-url-start
 
-To send JSON data to a stream using HTTP, submit a request similar to:
+The hostname for the Streaming API is:
 
 .. code-block:: none
 
-   POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/json
-   X-Amperity-Tenant: <tenant-name>
-   Authorization: Bearer <Streaming Ingest JWT token>
-   Content-Length: 32164
+   https://{tenant-id}.amperity.com/
 
-   {"field1": "value1",
-    "field2": "value2"}
+Streams are located at:
 
-.. streaming-ingest-rest-api-send-json-using-http-end
+.. code-block:: none
+
+   /stream/v0/data/<stream-id>
+
+and the base URL is:
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>
+
+.. streaming-ingest-rest-api-base-url-end
 
 
 .. _streaming-ingest-rest-api-send-json-using-curl:
@@ -309,9 +313,9 @@ To send JSON data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/json" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    ' {"field1": "value1",
       "field2": "value2"}'
@@ -319,36 +323,61 @@ To send JSON data to a stream using cURL, submit a request similar to:
 .. streaming-ingest-rest-api-send-json-using-curl-end
 
 
-.. _streaming-ingest-rest-api-send-xml-using-http:
+.. _streaming-ingest-rest-api-send-json-using-http:
 
-Send XML using HTTP
+Send JSON using HTTP
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-xml-using-http-start
+.. streaming-ingest-rest-api-send-json-using-http-start
 
-To send XML data to a stream using HTTP, submit a request similar to:
+To send JSON data to a stream using HTTP, submit a request similar to:
 
 .. code-block:: none
 
    POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/xml
-   X-Amperity-Tenant: <tenant-name>
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/json
+   X-Amperity-Tenant: {tenant-id}
    Authorization: Bearer <Streaming Ingest JWT token>
    Content-Length: 32164
 
-    <records>
-    <record>
-    <field1>value1</field1>
-    ...
-    </record>
-    <record>
-    <field1>value2</field1>
-    ... t
-    </record>
-    </records>
+   {"field1": "value1",
+    "field2": "value2"}
 
-.. streaming-ingest-rest-api-send-xml-using-http-end
+.. streaming-ingest-rest-api-send-json-using-http-end
+
+
+.. _streaming-ingest-rest-api-send-json-using-python:
+
+Send JSON using Python
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-json-using-python-start 
+
+To send JSON data to a stream using Python, submit a request similar to:
+
+.. code-block:: python
+
+   import requests
+
+   url = "https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>"
+
+   headers = {
+     "Content-Type": "application/json",
+     "X-Amperity-Tenant": "{tenant-id}",
+     "Authorization": "Bearer <Streaming Ingest JWT token>"
+   }
+
+   payload = {
+     "field1": "value1",
+     "field2": "value2"
+   }
+
+   response = requests.post(url, headers=headers, json=payload)
+
+   print(response.status_code)
+
+.. streaming-ingest-rest-api-send-json-using-python-end
 
 
 .. _streaming-ingest-rest-api-send-xml-using-curl:
@@ -364,9 +393,9 @@ To send XML data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/xml" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    '<records>
     <record>
@@ -379,6 +408,38 @@ To send XML data to a stream using cURL, submit a request similar to:
    '
 
 .. streaming-ingest-rest-api-send-xml-using-curl-end
+
+
+.. _streaming-ingest-rest-api-send-xml-using-http:
+
+Send XML using HTTP
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-xml-using-http-start
+
+To send XML data to a stream using HTTP, submit a request similar to:
+
+.. code-block:: none
+
+   POST /stream/v0/data/<stream-id> HTTP/1.1
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/xml
+   X-Amperity-Tenant: {tenant-id}
+   Authorization: Bearer <Streaming Ingest JWT token>
+   Content-Length: 32164
+
+    <records>
+    <record>
+    <field1>value1</field1>
+    ...
+    </record>
+    <record>
+    <field1>value2</field1>
+    ...
+    </record>
+    </records>
+
+.. streaming-ingest-rest-api-send-xml-using-http-end
 
 
 .. _streaming-ingest-rest-api-http-status-codes:
