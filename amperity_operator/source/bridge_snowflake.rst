@@ -471,28 +471,33 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    For example, if your Amperity tenant storage is hosted on azure_eastus2 and you host your Snowflake account on azure_westus2, queries will be slower than if both were hosted on azure_eastus2. 
 
 .. list-table::
-   :widths: 33 33 34
+   :widths: 28 44 28
    :header-rows: 1
 
    * - Amperity stack
-     - Snowflake region
+     - Customer's Snowflake region
      - Account locator
 
    * - aws-prod
      - aws_us_east_1
      - MVB61607
+
    * - aws-prod
      - aws_us_east_2
      - BL95184
+
    * - aws-prod
      - gcp_us_east4
      - YU29648
+
    * - aws-prod
      - aws_us_west_2
      - GUB98973
+
    * - aws-prod
      - azure_eastus2
      - JTA41525
+
    * - aws-prod
      - azure_westus2
      - PZ39828
@@ -504,15 +509,23 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - az-prod
      - azure_centralus
      - TN88732
+
    * - az-prod
      - azure_eastus2
      - DSA38111
+
    * - az-prod
      - aws_us_west_2
      - BCB42530
+
+   * - az-prod
+     - azure_westus2
+     - VU31691
+
    * - az-prod
      - azure_australiaeast
      - MD18696
+
    * - az-prod
      - azure_westeurope
      - RN08588
@@ -520,9 +533,11 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
    * - az-prod
      - azure_australiaeast
      - MD18696
+
    * - az-prod-en1
      - azure_australiaeast
      - TD45616
+
    * - az-prod-en1
      - azure_westeurope
      - KV75952
