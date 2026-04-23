@@ -91,9 +91,9 @@ Tenants hosted in Australia have the following default base URL:
 
 .. code-block:: none
 
-   https://app-aws-apse2.amperity.com/
+   https://app-aws-apse2.amperity.com/api
 
-Tenants hosted in Australia may also use their custom base URL:]
+Tenants hosted in Australia may also use:
 
 .. code-block:: none
 
@@ -111,7 +111,7 @@ Base URL and sandboxes
 
 The base URL for a sandbox is the same as the base URL for production.
 
-Use the tenant ID for the sandbox for all requests made to a sandbox. unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL for production and the **amperity-tenant** header is:
+Use the tenant ID for the sandbox for all requests made to a sandbox. The tenant ID is unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL for production and the **amperity-tenant** header is:
 
 .. code-block:: none
 
