@@ -50,11 +50,11 @@ From the **Settings** page, select the **Credentials** tab, and then click the *
 
 .. credential-steps-select-type-start
 
-In the **Credentials settings** dialog box, do the following:
+In the **Create credentials** dialog box, do the following:
 
-From the **Plugin** dropdown, select |destination-name|.
+#. From the **Plugin** dropdown, select |plugin-name|.
 
-Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+#. Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
 
 .. credential-steps-select-type-end
 
@@ -66,13 +66,32 @@ Notes: When a source or destination supports more than one credential type, use 
 
 .. credential-steps-select-type-multiple-start
 
-In the **Credentials settings** dialog box, do the following:
+In the **Create credentials** dialog box, do the following:
 
-From the **Plugin** dropdown, select |destination-name|.
+#. From the **Plugin** dropdown, select |plugin-name|.
 
-Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+#. Assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
 
 .. credential-steps-select-type-multiple-end
+
+.. vale off
+
+Notes: The "external" steps apply only to Amazon Ads, Criteo Audience API, Criteo Retail Audience API, DV360, Facebook, Google Ads, Google Analytics, Google Customer Match, Google Enhanced Conversions, Hubspot, LinkedIn DMP, Meta Ads Offline Events, Microsoft Ads, Pinterest, Reddit Ads, Snapchat, TikTok Ads, and TikTok Ads Offline Events.
+
+.. vale on
+
+.. credential-steps-select-type-external-start
+
+In the **Create credentials** dialog box, do the following:
+
+#. From the **Plugin** dropdown, select |plugin-name|.
+
+#. Click **Generate authorzation URL**, and then complete the external authorization steps shown for |destination-name|.
+
+#. After the external authorization steps are completed, assign the credential a name and description that ensures other users of Amperity can recognize when to use this destination.
+
+.. credential-steps-select-type-external-end
+
 
 **Step 03**
 

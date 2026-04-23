@@ -180,8 +180,8 @@ Configure credentials
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+          :start-after: .. credential-steps-select-type-external-start
+          :end-before: .. credential-steps-select-type-external-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
