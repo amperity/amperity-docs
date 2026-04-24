@@ -76,11 +76,13 @@ Direct all requests to the **GET /campaign-drafts** endpoint to the request URL.
 Rate limit
 ==================================================
 
-A rate limit is the number of requests that may be made to the Amperity API in a given time period.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-start
+   :end-before: .. rate-limits-end
 
-The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.
-
-Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-campaign-drafts-list-request:
@@ -282,12 +284,12 @@ The **200** response returns a set of draft campaigns.
        {
          "id": "ab-1CDEfGHI",
          "name": "Holiday Campaign",
-         "deliver_at": "2024-04-22T20:30:00Z"
+         "deliver_at": "2026-04-22T20:30:00Z"
        },
        {
          "id": "cd-2FGHiJKL",
          "name": "Returning Customers",
-         "deliver_at": "2024-04-23T21:00:00Z"
+         "deliver_at": "2026-04-23T21:00:00Z"
        }
      ]
    }

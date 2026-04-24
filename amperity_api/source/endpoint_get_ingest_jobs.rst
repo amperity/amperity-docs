@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-ingest-jobs-request:
 
@@ -88,8 +92,8 @@ A request to the **GET /ingest/jobs** endpoint is similar to:
 
    curl --request GET \
           'https://app.amperity.com/api/ingest/jobs \
-          ?created_from=2024-10-01 \
-          &created_to=2024-10-07' \
+          ?created_from=2026-10-01 \
+          &created_to=2026-10-07' \
         --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
@@ -174,8 +178,8 @@ The following examples show how to send requests to the **GET /ingest/jobs** end
 
          curl --request GET \
                 'https://app.amperity.com/api/ingest/jobs \
-                ?created_from=2024-10-01 \
-                &created_to=2024-10-07' \
+                ?created_from=2026-10-01 \
+                &created_to=2026-10-07' \
                --header 'amperity-tenant: {tenant-id}' \
                --header 'api-version: 2024-04-01' \
                --header 'Authorization: Bearer {token}'
@@ -221,9 +225,9 @@ The **200** response returns a set of records, files, and feeds that were ingest
              "read": 1000,
              "rejected": 200,
              "updated": 200,
-             "started_at": "2024-06-01T04:02:54.433Z",
+             "started_at": "2026-06-01T04:02:54.433Z",
              "state": "succeeded",
-             "ended_at": "2024-06-01T04:02:57.433Z",
+             "ended_at": "2026-06-01T04:02:57.433Z",
              "files": [
                {
                  "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
@@ -277,9 +281,9 @@ A **200 OK** response contains the following parameters.
             "read" : 1000,
             "rejected" : 200,
             "updated" : 200,
-            "started_at" : "2024-06-01T04:02:54.433Z",
+            "started_at" : "2026-06-01T04:02:54.433Z",
             "state" : "succeeded",
-            "ended_at" : "2024-06-01T04:02:57.433Z",
+            "ended_at" : "2026-06-01T04:02:57.433Z",
             "files" : [ {
               "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
               "name" : "part0.avro",

@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-workflows-fetch-request:
 
@@ -205,10 +209,10 @@ The **200** response returns details for the named workflow.
 
    {
      "type": "campaign.fetch",
-     "ended_at": "2024-01-22T18:02:50.769Z",
+     "ended_at": "2026-01-22T18:02:50.769Z",
      "id": "wf-20240603-12345-MNabc",
      "tenant": "socktown",
-     "created_at": "2024-01-22T17:57:36.371Z",
+     "created_at": "2026-01-22T17:57:36.371Z",
      "name": "Send audiences to Braze",
      "state": "succeeded"
    }
@@ -228,7 +232,7 @@ The **200** response returns details for the named workflow.
        "message": "Workflow manually stopped"
      },
      "id": "wf-20240603-12345-MNabc",
-     "ended_at": "2024-02-10T17:29:32.687Z",
+     "ended_at": "2026-02-10T17:29:32.687Z",
      "name": "Braze",
      "principal_name": "Justin Scott",
      "principal_id": "google-apps|justin.scott@socktown.com",
@@ -236,7 +240,7 @@ The **200** response returns details for the named workflow.
      "launched_version": "etv-20240210-12345-6AbCDE",
      "principal_email": "justin.scott@socktown.com",
      "state": "canceled",
-     "created_at": "2024-02-10T17:29:22.454Z",
+     "created_at": "2026-02-10T17:29:22.454Z",
      "tenant": "socktown",
      "current_version": "etv-20240210-12345-6AbCDE"
    }

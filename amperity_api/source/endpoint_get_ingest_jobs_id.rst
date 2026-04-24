@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-ingest-jobs-id-request:
 
@@ -196,9 +200,9 @@ The **200** response returns a set of jobs.
           "read": 1000,
           "rejected": 200,
           "updated": 200,
-          "started_at": "2024-06-01T04:02:54.433Z",
+          "started_at": "2026-06-01T04:02:54.433Z",
           "state": "succeeded",
-          "ended_at": "2024-06-01T04:02:57.433Z",
+          "ended_at": "2026-06-01T04:02:57.433Z",
           "files": [
             {
               "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
@@ -254,9 +258,9 @@ A **200 OK** response contains the following parameters.
               "read": 1000,
               "rejected": 200,
               "updated": 200,
-              "started_at": "2024-06-01T04:02:54.433Z",
+              "started_at": "2026-06-01T04:02:54.433Z",
               "state": "succeeded",
-              "ended_at": "2024-06-01T04:02:57.433Z",
+              "ended_at": "2026-06-01T04:02:57.433Z",
               "files": [
                 {
                   "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
