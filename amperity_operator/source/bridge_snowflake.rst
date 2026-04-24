@@ -519,11 +519,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - BCB42530
 
    * - az-prod
-     - azure_westus2 (Standard)
-     - VU31691
-
-   * - az-prod
-     - azure_westus2 (Business Critical)
+     - azure_westus2
      - BO18496
 
    * - az-prod
