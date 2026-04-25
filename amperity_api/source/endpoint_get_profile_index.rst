@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-profile-start
+   :end-before: .. rate-limits-profile-end
+
 
 .. _endpoint-get-profile-index-request:
 

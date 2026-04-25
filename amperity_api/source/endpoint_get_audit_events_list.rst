@@ -82,6 +82,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-audit-events-list-request-body:
 
@@ -98,8 +102,8 @@ A request to the **GET /audit-events** endpoint is similar to:
           'https://app.amperity.com/api/audit-events \
           ?limit=10 \
           &with_total=true \
-          &happened_from=2024-04-01 \
-          &happened_to=2024-04-10' \
+          &happened_from=2026-04-01 \
+          &happened_to=2026-04-10' \
         --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
@@ -136,7 +140,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_to**
      - String. Optional.
 
-       The end date (exclusive) that defines the end of the time range for which audit events are returned. For example: "2024-03-01T11:11:11Z".
+       The end date (exclusive) that defines the end of the time range for which audit events are returned. For example: "2026-03-01T11:11:11Z".
 
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -144,7 +148,7 @@ The following table describes the parameters that may be used with the **GET /au
    * - **happened_from**
      - String. Optional.
 
-       The start date (inclusive) that defines the beginning of the time range for which audit events are returned. For example: "2024-04-01T11:11:11Z".
+       The start date (inclusive) that defines the beginning of the time range for which audit events are returned. For example: "2026-04-01T11:11:11Z".
 
        The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -202,8 +206,8 @@ The following examples show how to send requests to the **GET /audit-events** en
                 'https://app.amperity.com/api/audit-events \
                 ?limit=10 \
                 &with_total=true \
-                &happened_from=2024-04-01 \
-                &happened_to=2024-04-10' \
+                &happened_from=2026-04-01 \
+                &happened_to=2026-04-10' \
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
@@ -288,7 +292,7 @@ A successful request made to the **GET /audit-events** endpoint will return a re
        {
          "event_id": "ae-Ab1cDeFg",
          "event_type": ":amperity.alert.audience/created",
-         "happened_at": "2024-04-09T17:21:06.747Z",
+         "happened_at": "2026-04-09T17:21:06.747Z",
          "principal_email": "example@amperity.com",
          "principal_id": "google-apps|amperity@amperity.com",
          "principal_name": "Socktown User",
@@ -336,7 +340,7 @@ A **200 OK** response contains the following parameters.
           The :ref:`type of event <endpoint-get-audit-events-list-common-event-types>`. For example: ``"event_type": ":amperity.alert.audience/created"``.
 
        **happened_at**
-          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
+          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2026-04-09T17:21:06.747Z"``.
 
        **principal_email**
           The email address for the user who initiated the action. For example: ``"principal_email": "user@socktown.com"``.

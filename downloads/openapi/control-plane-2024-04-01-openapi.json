@@ -1,1416 +1,1485 @@
 {
-  "schemes" : [ "https" ],
-  "definitions" : {
-    "AuditEvent" : {
-      "description" : "An audit event",
-      "example" : {
-        "tenant" : "acme-sb",
-        "principal_name" : "bob smith",
-        "object_id" : "seg-35GMWpn6Y",
-        "happened_at" : "2024-04-09T17:21:06.747Z",
-        "tenant_family" : "acme",
-        "object_name" : "demo segment",
-        "principal_email" : "example@amperity.com",
-        "principal_id" : "google-apps|amperity@amperity.com",
-        "origin_ip" : "127.0.0.1",
-        "event_id" : "ae-21HCWon6Y",
-        "event_type" : ":amperity.plugin.credential/updated"
-      },
-      "type" : "object",
-      "properties" : {
-        "tenant" : {
-          "description" : "The unique identifier for the tenant.",
-          "x-example" : "acme-sb",
-          "type" : "string"
-        },
-        "principal_name" : {
-          "description" : "The friendly name of the user associated with the activity, if available, otherwise the email address or API key.",
-          "type" : "string"
-        },
-        "object_id" : {
-          "description" : "The identifier for the object against which the action occurred.",
-          "type" : "string"
-        },
-        "happened_at" : {
-          "description" : "The date and time at which the action occurred. Dates and times are in ISO-8601 format and in UTC.",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "tenant_family" : {
-          "description" : "The unique identifier for the tenant family",
-          "x-example" : "acme",
-          "type" : "string"
-        },
-        "object_name" : {
-          "description" : "A composed string that describes the object(s) for which the action occurred.",
-          "type" : "string"
-        },
-        "principal_email" : {
-          "description" : "The email address for the user who initiated the action.",
-          "type" : "string"
-        },
-        "principal_id" : {
-          "description" : "The identifier for the user who initiated the action. This user may be an API key or a non-human user.",
-          "type" : "string"
-        },
-        "origin_ip" : {
-          "description" : "The IP address that is associated with the user who initiated the action.",
-          "type" : "string"
-        },
-        "event_id" : {
-          "description" : "The unique identifier for the event.",
-          "type" : "string"
-        },
-        "event_type" : {
-          "description" : "The type of event.",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "tenant", "principal_name", "object_id", "happened_at", "tenant_family", "object_name", "principal_email", "principal_id", "origin_ip", "event_id", "event_type" ]
-    },
-    "AuditEventListEnvelope" : {
-      "description" : "Paginated list of AuditEvents",
-      "type" : "object",
-      "properties" : {
-        "total" : {
-          "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "next_token" : {
-          "description" : "The cursor value to use in a subsequent request to return the next page of results.",
-          "example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        },
-        "data" : {
-          "description" : "AuditEvent items on this page",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/AuditEvent"
-          }
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "data" ]
-    },
-    "Campaign" : {
-      "description" : "A campaign",
-      "example" : {
-        "id" : "cc-21HCWon6Y",
-        "name" : "Holiday Campaign"
-      },
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "description" : "Campaign id",
-          "type" : "string"
-        },
-        "name" : {
-          "description" : "Campaign name",
-          "type" : "string"
-        },
-        "deliver_at" : {
-          "description" : "The instant this campaign should be delivered",
-          "type" : "string",
-          "format" : "date-time"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "id", "name" ]
-    },
-    "CampaignListEnvelope" : {
-      "description" : "Paginated list of Campaigns",
-      "type" : "object",
-      "properties" : {
-        "total" : {
-          "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "next_token" : {
-          "description" : "The cursor value to use in a subsequent request to return the next page of results.",
-          "example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        },
-        "data" : {
-          "description" : "Campaign items on this page",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Campaign"
-          }
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "data" ]
-    },
-    "ErrorResponse" : {
-      "description" : "An unexpected error response",
-      "example" : {
-        "status" : 400,
-        "message" : "An unexpected error occurred."
-      },
-      "type" : "object",
-      "properties" : {
-        "status" : {
-          "description" : "The status code of the response",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "message" : {
-          "description" : "Description of the error",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "status", "message" ]
-    },
-    "IngestFeedDetails" : {
-      "description" : "Details on an ingest job for a single feed",
-      "example" : {
-        "errors" : 200,
-        "feed_id" : "df-5L6d1veh",
-        "read" : 1000,
-        "rejected" : 200,
-        "updated" : 200,
-        "started_at" : "2024-06-01T04:02:54.433Z",
-        "state" : "succeeded",
-        "ended_at" : "2024-06-01T04:02:57.433Z",
-        "files" : [ {
-          "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
-          "name" : "part0.avro",
-          "read" : 1000,
-          "errors" : 200
-        } ],
-        "inserted" : 400,
-        "table_name" : "My table",
-        "job_id" : "isj-1f73r9u2"
-      },
-      "type" : "object",
-      "properties" : {
-        "errors" : {
-          "description" : "The number of rows with an ingest error.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "feed_id" : {
-          "description" : "The unique ID of this feed.",
-          "type" : "string"
-        },
-        "read" : {
-          "description" : "The number of rows ingested into this feed.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "rejected" : {
-          "description" : "The number of duplicate rows that were not ingested.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "updated" : {
-          "description" : "The total count of rows updated for this feed during the job.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "started_at" : {
-          "description" : "The date and time at which a job started.",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "state" : {
-          "description" : "The current state of the job.",
-          "type" : "string"
-        },
-        "ended_at" : {
-          "description" : "The date and time at which a job ended.",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "files" : {
-          "description" : "Array of IngestFileDetails",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/IngestFileDetails"
-          }
-        },
-        "inserted" : {
-          "description" : "The total count of records added to this feed.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "table_name" : {
-          "description" : "The name of the updated table.",
-          "type" : "string"
-        },
-        "job_id" : {
-          "description" : "The ingest job identifier.",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "errors", "feed_id", "read", "rejected", "updated", "started_at", "state", "ended_at", "files", "inserted", "table_name", "job_id" ]
-    },
-    "IngestFileDetails" : {
-      "description" : "Details on an ingest job for a single file",
-      "example" : {
-        "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
-        "name" : "part0.avro",
-        "read" : 1000,
-        "errors" : 200
-      },
-      "type" : "object",
-      "properties" : {
-        "file_id" : {
-          "description" : "The identifier for the file",
-          "type" : "string"
-        },
-        "read" : {
-          "description" : "The total count of records processed in this file",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "name" : {
-          "description" : "The human readable identifier for the file",
-          "type" : "string"
-        },
-        "errors" : {
-          "description" : "The number of rows with an ingest error. For example, when Amperity cannot match a field value to the expected data type.",
-          "type" : "integer",
-          "format" : "int64"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "file_id", "read", "errors" ]
-    },
-    "IngestJobDetails" : {
-      "description" : "Ingest job details",
-      "example" : {
-        "id" : "isj-1f73r9u2",
-        "tables" : [ {
-          "errors" : 200,
-          "feed_id" : "df-5L6d1veh",
-          "read" : 1000,
-          "rejected" : 200,
-          "updated" : 200,
-          "started_at" : "2024-06-01T04:02:54.433Z",
-          "state" : "succeeded",
-          "ended_at" : "2024-06-01T04:02:57.433Z",
-          "files" : [ {
-            "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
-            "name" : "part0.avro",
-            "read" : 1000,
-            "errors" : 200
-          } ],
-          "inserted" : 400,
-          "table_name" : "My table",
-          "job_id" : "isj-1f73r9u2"
-        } ],
-        "workflow_id" : "wf-20240618-3423-b45"
-      },
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "description" : "The Amperity internal identifier for the injest job.",
-          "type" : "string"
-        },
-        "workflow_id" : {
-          "description" : "The Amperity internal identifier for the workflow that ran this job.",
-          "type" : "string"
-        },
-        "tables" : {
-          "description" : "A summary of table details from this ingest job.",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/IngestFeedDetails"
-          }
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "id", "workflow_id", "tables" ]
-    },
-    "IngestJobDetailsListEnvelope" : {
-      "description" : "Wrapper containing a list of ingest details.",
-      "type" : "object",
-      "properties" : {
-        "total" : {
-          "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "data" : {
-          "description" : "List of ingest details",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/IngestJobDetails"
-          }
-        },
-        "next_token" : {
-          "description" : "CURRENTLY UNUSED BUT RESERVED FOR FUTURE USE: The cursor value to use in a subsequent request to return the next page of results.",
-          "example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "data" ]
-    },
-    "Segment" : {
-      "description" : "A segment",
-      "example" : {
-        "id" : "mx-seg-21HCWon6Y",
-        "name" : "Washington Purchasers"
-      },
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "description" : "Segment id",
-          "type" : "string"
-        },
-        "name" : {
-          "description" : "Segment name",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "id", "name" ]
-    },
-    "SegmentListEnvelope" : {
-      "description" : "Paginated list of Segments",
-      "type" : "object",
-      "properties" : {
-        "total" : {
-          "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "next_token" : {
-          "description" : "The cursor value to use in a subsequent request to return the next page of results.",
-          "example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        },
-        "data" : {
-          "description" : "Segment items on this page",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Segment"
-          }
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "data" ]
-    },
-    "Task" : {
-      "description" : "A task within a workflow",
-      "example" : {
-        "tenant" : "acme2-max",
-        "timeout_ms" : 172800000,
-        "workflow_id" : "wf-20240619-14418-6UhqSe",
-        "run_id" : "orb-20240619-EDnCxzmhrLN",
-        "task_definition_id" : "send/ct-2yrcnb2Hn/ptg-2XsDnXwEu/pd-2ycaK3gfh",
-        "state" : "failed",
-        "task_definition_type" : "campaign.send",
-        "ended_at" : "2024-06-19T04:03:10.094Z",
-        "label" : "Sending treatment customer_attribute_group to destination - S3",
-        "id" : "wft-20240619-14574-6kyYdY",
-        "state_changed_at" : "2024-06-19T04:03:10.094Z",
-        "error" : {
-          "attribution" : "customer",
-          "data" : {
-            "error_code" : "InvalidAccessKeyId",
-            "id" : "s3",
-            "request_id" : "Z74HDXNGJ7ZPMRVS",
-            "retryable?" : false
-          },
-          "message" : "The credential does not provide access to the given resource. Pl\n                      ease update the credential's access or try another credential.",
-          "type" : "amperity.plugin.error/invalid-credentials"
-        },
-        "created_at" : "2024-06-19T04:02:54.433Z"
-      },
-      "type" : "object",
-      "properties" : {
-        "tenant" : {
-          "description" : "The unique identifier for the tenant.",
-          "x-example" : "acme-sb",
-          "type" : "string"
-        },
-        "timeout_ms" : {
-          "description" : "The length of time in milliseconds after which to forcibly kill a running task instance",
-          "type" : "number",
-          "format" : "double"
-        },
-        "workflow_id" : {
-          "description" : "Unique identifier for the workflow",
-          "type" : "string"
-        },
-        "run_id" : {
-          "description" : "Unique identifier for the task instance to support execution engines\n   that can't provide an external run id",
-          "type" : "string"
-        },
-        "task_definition_id" : {
-          "description" : "Identifier for a task definition",
-          "type" : "string"
-        },
-        "state" : {
-          "description" : "Current task instance state.",
-          "type" : "string"
-        },
-        "task_definition_type" : {
-          "description" : "A keyword for identify different task types",
-          "type" : "string"
-        },
-        "ended_at" : {
-          "description" : "Time the task reached a terminal state",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "execution_type" : {
-          "description" : "The execution type for the workflow",
-          "type" : "string"
-        },
-        "label" : {
-          "description" : "Human-readable label for a task-instance",
-          "type" : "string"
-        },
-        "id" : {
-          "description" : "Unique identifier for the task instance",
-          "type" : "string"
-        },
-        "state_changed_at" : {
-          "description" : "Time the task instance most recently changed state",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "error" : {
-          "$ref" : "#/definitions/WorkflowError"
-        },
-        "created_at" : {
-          "description" : "Time the task instance was created",
-          "type" : "string",
-          "format" : "date-time"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "tenant", "workflow_id", "task_definition_id", "state", "task_definition_type", "label", "id", "created_at" ]
-    },
-    "Workflow" : {
-      "description" : "Representation of a workflow",
-      "example" : {
-        "created_at" : "2024-06-19T04:00:18.764Z",
-        "ended_at" : "2024-06-19T04:03:10.119Z",
-        "error" : {
-          "attribution" : "customer",
-          "data" : {
-            "error_code" : "InvalidAccessKeyId",
-            "id" : "s3",
-            "request_id" : "Z47DXHNGJ7ZPMRVS",
-            "retryable?" : false
-          },
-          "message" : "The credential does not provide access to the given resource. Please update \n                      the credential's access or try another credential.",
-          "type" : "amperity.plugin.error/invalid-credentials"
-        },
-        "id" : "wf-20240619-14418-6UhqSe",
-        "name" : "Customer Attribute Daily",
-        "state" : "failed",
-        "tenant" : "acme2-max",
-        "type" : "campaign.send"
-      },
-      "type" : "object",
-      "properties" : {
-        "tenant" : {
-          "description" : "The unique identifier for the tenant.",
-          "x-example" : "acme-sb",
-          "type" : "string"
-        },
-        "warn_after_ms" : {
-          "description" : "The time in milliseconds we should send a running long duration warning",
-          "type" : "number",
-          "format" : "double"
-        },
-        "principal_name" : {
-          "description" : "Human-readable name for who or what created the workflow",
-          "type" : "string"
-        },
-        "launched_version" : {
-          "description" : "The ent version that was launched with the workflow",
-          "type" : "string"
-        },
-        "name" : {
-          "description" : "Human-readable identifier for the workflow",
-          "type" : "string"
-        },
-        "principal_email" : {
-          "description" : "Email address for who or what created the workflow",
-          "type" : "string"
-        },
-        "principal_id" : {
-          "description" : "Principal id for who or what created the workflow",
-          "type" : "string"
-        },
-        "task_instances" : {
-          "description" : "The list of tasks on the workflow.",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Task"
-          }
-        },
-        "type" : {
-          "description" : "Keyword identifying the type of workflow",
-          "type" : "string"
-        },
-        "state" : {
-          "description" : "Current workflow state.",
-          "type" : "string"
-        },
-        "current_version" : {
-          "description" : "The current ent version associated with the workflow",
-          "type" : "string"
-        },
-        "ended_at" : {
-          "description" : "Time the workflow reached a terminal state",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "id" : {
-          "description" : "Unique identifier for the workflow",
-          "type" : "string"
-        },
-        "error" : {
-          "$ref" : "#/definitions/WorkflowError"
-        },
-        "created_at" : {
-          "description" : "Time the workflow was created",
-          "type" : "string",
-          "format" : "date-time"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "tenant", "type", "state", "id", "created_at" ]
-    },
-    "WorkflowError" : {
-      "description" : "An error on the workflow. Populated only for error states.",
-      "type" : "object",
-      "properties" : {
-        "type" : {
-          "description" : "The type of workflow error.",
-          "type" : "string"
-        },
-        "message" : {
-          "description" : "The error message.",
-          "type" : "string"
-        },
-        "data" : {
-          "$ref" : "#/definitions/WorkflowErrorData"
-        },
-        "attribution" : {
-          "description" : "The underlying cause of the error, either customer or platform.",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "type", "message" ]
-    },
-    "WorkflowErrorData" : {
-      "description" : "Any additional data associated with this error.",
-      "type" : "object",
-      "additionalProperties" : { }
-    },
-    "WorkflowListEnvelope" : {
-      "description" : "A paginated list of workflows.",
-      "type" : "object",
-      "properties" : {
-        "total" : {
-          "description" : "The total count of all results. This property is only returned when `with_total` is set to `true` in a request.",
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "next_token" : {
-          "description" : "The cursor value to use in a subsequent request to return the next page of results.",
-          "example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        },
-        "data" : {
-          "description" : "Workflow items in this page",
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Workflow"
-          }
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "data" ]
-    },
-    "WorkflowRunRequest" : {
-      "description" : "Fields used to launch a workflow",
-      "type" : "object",
-      "properties" : {
-        "api_version" : {
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "type" : "string"
-        },
-        "config_id" : {
-          "description" : "Configuration ID of the workflow to plan.",
-          "type" : "string"
-        },
-        "range_from" : {
-          "description" : "A timestamp indicating the date (inclusive) from which to look for files. Must be in ISO-8061 format and in UTC. If included without ‘range_to’, indicates a specific day from which to look for files.",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "range_to" : {
-          "description" : "A timestamp indicating the date (exclusive) up to which to look for files. Must be in ISO-8061 format and in UTC. When included with ‘range_from’, defines a closed:open (i.e. inclusive from, exclusive to) date range within which to look for files.",
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "run_mode" : {
-          "description" : "Indicates the workflow run mode. Acceptable values are: ‘source’ (source data refresh only), ‘refresh‘ (partial workflow up to databases), ‘full’ (full workflow including activations).",
-          "type" : "string"
-        }
-      },
-      "additionalProperties" : false,
-      "required" : [ "config_id" ]
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Amperity API",
+    "version": "2024-04-01",
+    "description": "## Overview\n\nThe Amperity API enables programmatic access to your Amperity tenant through a collection\nof RESTful endpoints that support API-first use cases for integrations, applications, and\ncustom workflows. Use Amperity API endpoints to streamline workflows, enhance marketing\nstrategies, and unlock the value of your brand's customer data.\n\n## Versioning\n\nAmperity APIs evolve and change over time. Amperity versions API endpoints to help your\nbrand track changes to the Amperity API and to offer support to developers as these\nendpoints evolve.\n\nYour team of developers can track improvements to the Amperity API from the\n[changelog](https://docs.amperity.com/api/changelog.html). Monitor the changelog to know\nwhen new versions are available or when existing versions are updated or planned for\ndeprecation.\n\n> **Important:** A version identifier is a date string that must be included with each\n> request made to an API endpoint. All endpoints are versioned together. This provides\n> consistency across all endpoints and ensures interoperability. A version identifier is\n> updated only when breaking changes occur.\n\n### Breaking changes\n\nA breaking change occurs when functionality within an API is modified in a way that causes\nintegrations or applications to function abnormally or to stop working.\n\nA breaking change often requires a third-party developer to make changes to their existing\nintegrations or applications to maintain functionality with an API.\n\nExamples of breaking changes include, but are not limited to:\n\n- Removing an endpoint\n- Renaming a URL, request or response field, HTTP header, or query parameter\n- Adding a required request field, HTTP header, or query parameter\n- Requiring a request field, HTTP header, or query parameter that was previously optional\n- Removing a request or response field, HTTP header, or query parameter\n- Modifying a data type or enumeration value\n- Adding pagination to a resource collection response\n\n### Non-breaking changes\n\nA non-breaking change does not cause integrations or applications to function abnormally\nor to stop working. A non-breaking change should not require a third-party developer to\ndo any migration work to maintain existing functionality.\n\nExamples of non-breaking changes include, but are not limited to:\n\n- Adding an endpoint\n- Adding a request or response field, HTTP header, or query parameter\n- Adding an enumeration value\n\n### Version identifiers\n\nA version identifier is a string that identifies a supported version. A version identifier\nmust be included in each request that is made to an API endpoint and may be passed as a\nrequest header or as a query parameter.\n\n```\ncurl -request GET \\\n     -url \"https://{tenant}.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: {tenant}\" \\\n     -H \"Content-Type: application/json\" \\\n     -H \"api-version: {version}\"\n```\n\n### Supported versions\n\nNew versions of the Amperity API are released periodically. Each version of an endpoint\nwill be supported for at least 1 year.\n\nCurrent versions:\n\n- **2024-04-01** The current version of the Amperity API.\n- **2025-07-31** The current version of the Profile API.\n\n### Unstable versions\n\nDuring development, Amperity may release APIs for testing using the **unstable** version\nidentifier. Unstable versions contain features that are still in progress and may not be\nbackward compatible.\n\nUnstable versions do not guarantee customer support, notification of changes or breaking\nchanges, or availability.\n\n### Deprecated versions\n\nAt least 6 months notice will be given before any supported version is marked as\nunsupported. API calls made to an endpoint using a version identifier that is no longer\nsupported will return a 400 response.\n\nTo warn developers of upcoming deprecations, Amperity uses the following headers:\n\n- [Deprecation Header](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header).\n  When **true**, a deprecation will occur at the date indicated in the header.\n- [Sunset Header](https://datatracker.ietf.org/doc/html/rfc8594).\n  When **true**, a deprecated feature stops working and returns a 4xx response at the date\n  indicated in the header.\n\nDeprecation and Sunset headers will be added at least 6 months prior to a deprecation.\nA deprecation date will be at least 3 months prior to a sunset date. For example:\n\n```\nDeprecation: Tue, 1 Sep 2024 23:59:59 GMT\nSunset: Wed, 1 Dec 2024 23:59:59 GMT\n```\n\nDeprecation and Sunset headers are informational. Amperity recommends building alerts to\nmonitor for these headers to ensure that your applications and workflows can be migrated.\n\n## Authentication\n\nAll requests that are made to Amperity API endpoints must be authenticated using an API key.\n\nAuthenticate to Amperity APIs by including the following header in each request:\n\n```\n-H \"Authorization: Bearer ${access-token}\"\n```\n\nAfter the token passes validation, the request will look up any access policies attached\nto the API key, and then determine whether the requested operation is permitted.\n\n> **Important:** A user must be assigned the **Allow API key administration** policy before\n> they can manage API keys and access tokens required by Amperity APIs.\n\n### Authentication for sandboxes\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to\nproduction. API keys must be created in a sandbox to use an Amperity API endpoint, stream\ndata using the Streaming Ingest API, or access Profile API indexes.\n\n### API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant and enable\nprogrammatic access to Amperity. Each API key has a unique internal secret that is signed\ninto the claims of all access tokens issued for that API key. This secret is one of the\nvalidation checks that occurs during authentication.\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to\nproduction. API keys must be created directly in a sandbox.\n\n### Access tokens\n\nAccess to the Amperity API requires using [JSON Web Token (JWT)](https://jwt.io/) access\ntokens that are signed by Amperity-managed API keys. Because a JWT access token\nautomatically expires, tokens should be refreshed on a regular basis.\n\nProgrammatic workflows should authenticate to Amperity APIs using JWT access tokens as the\nbearer token within the header of each request.\n\nAccess tokens are managed from the **Settings** page in Amperity. Open **Settings**,\nselect the **Security** tab, find the API key, and select **Get token** from the actions\nmenu.\n\n> **Important:** You are the only person who has access to the newly generated access\n> token. Amperity does not save the access token. Store it in a safe place.\n\n## Base URL\n\nAll requests made to Amperity API endpoints should be directed to the base URL.\n\n### Amazon AWS\n\nTenants hosted in Amazon AWS use the following base URL:\n\n```\nhttps://app.amperity.com/api\n```\n\nUse the `amperity-tenant` header to provide the tenant ID. You can find the tenant ID from\nthe Amperity user interface: open **Settings**, select the **Security** tab, and under\n**API keys** select **Copy tenant ID** from the menu for an API key.\n\n### Microsoft Azure\n\nTenants hosted in Microsoft Azure use the following base URL:\n\n```\nhttps://<tenant-id>.amperity.com/api\n```\n\nThe tenant ID must be in the base URL *and* in the `amperity-tenant` header. For example,\nif the tenant ID is **<tenant-id>** the base URL is `https://<tenant-id>.amperity.com/api` with\n`--header 'amperity-tenant: <tenant-id>'`.\n\n### Australia\n\nTenants hosted in Australia use the following default base URL:\n\n```\nhttps://app-aws-apse2.amperity.com/api\n```\n\nTenants hosted in Australia may also use `https://<tenant-id>.amperity.com/api`.\n\n### Sandboxes\n\nThe base URL for a sandbox is the same as the base URL for production. Use the tenant ID\nfor the sandbox for all requests made to a sandbox. The sandbox tenant ID is unique. For\nexample, if the sandbox tenant ID is **<tenant-id>-sb-12345** the `amperity-tenant` header\nis `--header 'amperity-tenant: <tenant-id>-sb-12345'`.\n\n## Requests\n\nRequests made to Amperity API endpoints require the following headers:\n\n- **Authorization** Required. The bearer authentication header. Use the access token for\n  your tenant's API key.\n- **Amperity-Tenant** Required. The ID for the tenant to which the request is sent.\n  A sandbox must use the tenant ID for the sandbox.\n- **api-version** Required. A supported version of the Amperity API.\n  For example: **2024-04-01**.\n\nIn addition to required headers, specify the HTTP method and append the endpoint path to\nthe base URL.\n\n**Amazon AWS \u2014 production**\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"api-version: {version}\"\n```\n\n**Amazon AWS \u2014 sandbox**\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: {sandbox-tenant-id}\" \\\n     -H \"api-version: {version}\"\n```\n\n**Microsoft Azure \u2014 production**\n\n```\ncurl -request GET \\\n     -url \"https://<tenant-id>.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"api-version: {version}\"\n```\n\n**Microsoft Azure \u2014 sandbox**\n\n```\ncurl -request GET \\\n     -url \"https://<tenant-id>.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: {sandbox-tenant-id}\" \\\n     -H \"api-version: {version}\"\n```\n\n## Responses\n\nAmperity API endpoints use conventional HTTP response status codes to indicate success or\nfailure. Response status codes fall into three categories:\n\n1. **2xx** \u2014 Success.\n2. **4xx** \u2014 Client error. Occurs when information in a request is invalid, such as\n   requesting an endpoint that does not exist or including the wrong value for a parameter.\n3. **5xx** \u2014 Server error. Caused when the API or endpoint is unavailable.\n\n### 2xx status codes\n\nThe 2xx class of status codes indicates that a request was successfully received,\nunderstood, and accepted.\n\n| Status code | Description |\n|---|---|\n| **200 OK** | A request completed successfully. |\n| **202 Accepted** | A request has been accepted for processing. |\n\n### 4xx status codes\n\nThe 4xx class of status codes indicates a fatal client error. When a request returns a\n4xx error, the response includes: **status**, **message**, and optionally **request_id**\nand **trace_id**.\n\n| Status code | Description |\n|---|---|\n| **400 Bad Request** | A request did not contain a required parameter or has an invalid parameter. |\n| **401 Authentication Required** | A request contains invalid authentication, an invalid version identifier, or an expired token. |\n| **403 Not Authorized** | A request contains valid authentication, but does not have permission to perform the requested action. |\n| **404 Not Found** | A request was made to a resource that does not exist. |\n| **405 Method not Allowed** | A request used an unsupported HTTP method. |\n| **409 Conflict** | A request conflicts with the current state. |\n| **429 Too Many Requests** | A rate limit has been exceeded. |\n\n> **Tip:** Watch for 429 errors and build a retry mechanism with exponential backoff and\n> some randomness to reduce request volume.\n\n### 5xx status codes\n\nThe 5xx class of status codes indicates a fatal server error. When an integration or\napplication experiences a 5xx error, use an exponential backoff schedule with some\nrandomness to reduce request volume.\n\n| Status code | Description |\n|---|---|\n| **500 Server Error** | An internal error occurred. Simplify the request or retry with exponential backoff. |\n| **503 Service Unavailable** | The server is unavailable. |\n\n> **Tip:** Watch for 503 errors and build a retry mechanism with exponential backoff.\n\n## Pagination\n\nAmperity uses cursor-based pagination to return pages of data for large lists. A cursor\nacts like a pointer and refers to a particular point in the data, marking the boundary\nbetween pages. A paginated endpoint returns responses with a list of results and a\n**next_token** parameter when another page is available. You have reached the last page\nwhen **next_token** is not returned.\n\n### Pagination in requests\n\nAll endpoints that support the **GET** HTTP method use the following parameters to support\npagination.\n\n| Parameter | Description |\n|---|---|\n| **limit** | The maximum number of records to include in a single page of results. |\n| **next_token** | An opaque token used to paginate results. Omit to return the first page. Use the value returned in a prior response to view the next page. Cannot be **NULL**. |\n| **with_total** | Set to **true** to include a total count of all results. Default: **false**. Obtaining the total count can be expensive when there is a high number of pages. |\n\n### Pagination in responses\n\nAll endpoints that support the **GET** HTTP method return the following properties.\n\n| Parameter | Description |\n|---|---|\n| **data** | A JSON array of values for the current page of results. |\n| **next_token** | The cursor value to use in a subsequent request to return the next page. When empty, the last page has been returned. |\n| **total** | The total count of all results. Only returned when **with_total** is **true** in the request. |\n\n## Rate limits\n\nA rate limit is the number of requests that may be made to the Amperity API in a given\ntime period. The Amperity API supports up to 10 requests per second. Response times will\nvary by endpoint and the complexity of data returned. Some requests may take seconds to\ncomplete.\n\nRequests that exceed 10 requests per second may return an HTTP 429 status code.\n",
+    "contact": {
+      "url": "https://docs.amperity.com/api/"
     }
   },
-  "produces" : [ "application/json" ],
-  "paths" : {
-    "/audit-events" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "with_total",
-          "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
-          "required" : false,
-          "type" : "boolean"
-        }, {
-          "in" : "query",
-          "name" : "limit",
-          "description" : "The maximum number of records to include in a single page of results.",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "next_token",
-          "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
-          "required" : false,
-          "x-example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "happened_from",
-          "description" : "The start date (inclusive) that defines the beginning of the time range for which audit events will be returned. The date should be in ISO-8601 format and in UTC.",
-          "required" : false,
-          "x-example" : "2023-01-03T11:11:11Z",
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "happened_to",
-          "description" : "The end date (exclusive) that defines the end of the time range for which audit events will be returned. The date should be in ISO-8601 format and in UTC.",
-          "required" : false,
-          "x-example" : "2023-01-03T22:22:22Z",
-          "type" : "string",
-          "format" : "date-time"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+  "servers": [
+    {
+      "url": "https://app.amperity.com/api",
+      "description": "Amazon AWS"
+    },
+    {
+      "url": "https://<tenant-id>.amperity.com/api",
+      "description": "Microsoft Azure",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Audit Events",
+      "description": "Return records for user activity that occurred in your tenant."
+    },
+    {
+      "name": "Campaigns",
+      "description": "Return information about campaigns and campaign drafts."
+    },
+    {
+      "name": "Segments",
+      "description": "Return a list of segments available in your tenant."
+    },
+    {
+      "name": "Ingest",
+      "description": "Return details about ingest jobs."
+    },
+    {
+      "name": "Workflow",
+      "description": "List, run, and stop workflows."
+    }
+  ],
+  "paths": {
+    "/audit-events": {
+      "get": {
+        "tags": [
+          "Audit Events"
+        ],
+        "summary": "GET /audit-events",
+        "operationId": "list-events",
+        "description": "Amperity maintains records of user activity that occured in your tenant. For example:\n\n- A user makes a configuration change to the Amperity platform\n- A user creates a sandbox\n- A user views personally identifiable information (PII)\n- A workflow was stopped by a user\n- A user configured a destination\n- A user created an API key\n- A user was assigned to a resource group\n\nUse the **GET /audit-events** endpoint to return a log of user activity that occurred with\nyour tenant. Each response may contain up to 1000 audit events.\n\n> **Note:** When requesting events for a production tenant, audit events for sandboxes are\n> included in the response. When requesting events from a sandbox, only events from that\n> sandbox are included in the response.\n\n## Common event types\n\nThe following table lists the most common event types, grouped by the component or area\nwithin Amperity that is most associated with the event type.\n\n> **Note:** Many events are prefixed with a dot-delimited string that typically starts with\n> \"amperity\". The specific event is located after a slash (\"/\"). For example, the event\n> **:amperity.plugin.destination/created** is shown in this table as\n> **destination/created**. If your tenant shows an event that is not listed here, its\n> purpose can often be inferred from the string and the event after the trailing slash.\n\n**AI Assistant**\n\nThe following events are associated with the AI Assistant:\n\n- `assistant/send-user-message` \u2014 A user sent a question to the AI Assistant. The audit event may include the response from the AI assistant.\n- `query.exec/sampled` \u2014 A set of sample data was provided to the AI Assistant.\n\n**API keys**\n\nThe following events are associated with API keys:\n\n- `api-key/created` \u2014 An API key was created.\n- `api-key/deleted` \u2014 An API key was deleted.\n- `api-key/issue` \u2014 An API token issuer was created.\n- `api-key/updated` \u2014 An API key was updated.\n\n**BI Connect**\n\nThe following events are associated with BI Connect:\n\n- `warehouse/user-added` \u2014 A user was added to BI Connect.\n- `warehouse/user-removed` \u2014 A user was removed from BI Connect.\n- `warehouse/user-renewed` \u2014 A user was allowed to continue accessing BI Connect.\n\n**Credentials**\n\nThe following events are associated with credentials:\n\n- `credential/created` \u2014 A credential was created.\n- `credential/deleted` \u2014 A credential was deleted.\n- `credential/updated` \u2014 A credential was updated.\n\n**Destinations**\n\nThe following events are associated with destinations:\n\n- `destination/cloned` \u2014 A user created a destination by copying an existing destination.\n- `destination/created` \u2014 A user created a destination.\n- `destination/deleted` \u2014 A user deleted a destination.\n- `destination/updated` \u2014 A user updated a destination.\n\n**Domain tables**\n\nThe following events are associated with domain tables:\n\n- `workflow/domain-data-records-deletion-started` \u2014 A user deleted records from a domain table.\n\n**Orchestrations**\n\nThe following events are associated with orchestrations and orchestration groups:\n\n- `orchestration/run` \u2014 A user initiated a manual run for an orchestration.\n- `orchestration.group/run` \u2014 A user initiated a manual run for an orchestration group.\n\n**Policies**\n\nThe following events are associated with policies:\n\n- `policy/attached` and `policy/attached-to` \u2014 A policy was attached to an object that was created within Amperity.\n- `policy/created` \u2014 A policy was created.\n- `policy/deleted` \u2014 A policy was deleted.\n- `policy/detached` and `policy/detached-from` \u2014 A policy was detached from an object that exists within Amperity.\n- `policy/updated` \u2014 A policy was updated.\n\n**Privacy rights**\n\nThe following events are associated with privacy rights workflows:\n\n- `workflow/domain-ccpa-deletion-started` \u2014 The CCPA delete workflow has started.\n\n**Queries**\n\nThe following events are associated with the **Queries** page:\n\n- `query/activated` \u2014 A query was activated.\n- `query/created` \u2014 A query was created.\n- `query/deleted` \u2014 A query was deleted.\n- `query/moved` \u2014 A query was moved from one folder into another.\n- `query.draft/discarded` \u2014 A query in a draft state was discarded.\n- `query.folder/created` \u2014 A folder on the **Queries** page was created.\n- `query.folder/deleted` \u2014 A folder on the **Queries** page was deleted.\n\n**Resource groups**\n\nThe following events are associated with resource groups:\n\n- `resource-group/assigned` \u2014 A user was assigned to a resource group.\n- `resource-group/created` \u2014 A resource group was created.\n- `resource-group/deleted` \u2014 A resource group was deleted.\n- `resource-group/updated` \u2014 A resource group was updated.\n\n**Sandboxes**\n\nThe following events are associated with sandboxes:\n\n- `tenant/created` \u2014 A sandbox was created.\n- `tenant/deleted` \u2014 A sandbox was deleted.\n- `tenant/updated` \u2014 A sandbox was updated.\n\n**Single Sign-on**\n\nThe following events are associated with single sign-on (SSO):\n\n- `group-mapping/created` \u2014 An SSO group mapping was created.\n- `group-mapping/deleted` \u2014 An SSO group mapping was deleted.\n- `group-mapping/updated` \u2014 An SSO group mapping was updated.\n\n**User activity**\n\nThe following events are associated with the **Users** section within the **Users and Activity** page:\n\n- `audit.user-activity/download` \u2014 A user downloaded user activity into a CSV file to view offline.\n\n**Users**\n\nThe following events are associated with Amperity user accounts managed from the **Users and Activity** page:\n\n- `user/created` \u2014 A user was created.\n- `user/deleted` \u2014 A user was deleted.\n- `user/sent-password-reset-email` \u2014 A user was sent an email so they can reset their password.\n\n**Workflow alerts**\n\nThe following events are associated with workflow alerts:\n\n- `audience/created` \u2014 An audience for a workflow alert was created.\n- `audience/updated` \u2014 The membership of an audience for a workflow alert was updated.\n\n**Workflows**\n\nThe following events are associated with workflows:\n\n- `workflow/cancel` \u2014 A workflow resolution was stopped by a user.\n- `workflow/retry` \u2014 A workflow resolution was opened, a specific resolution option was selected, and then the workflow was retried.\n- `workflow/skip` \u2014 A user opened a workflow resolution, and then skipped the task that caused the workflow failure.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
+          },
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/NextToken"
+          },
+          {
+            "$ref": "#/components/parameters/WithTotal"
+          },
+          {
+            "name": "happened_from",
+            "in": "query",
+            "required": false,
+            "description": "The start date (inclusive) that defines the beginning of the time range for which audit\nevents are returned. For example: \"2026-04-01T11:11:11Z\".\n\nThe start date must be a string, should be in ISO-8601 format, and should be in UTC.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-01T11:11:11Z",
+              "example": "2026-04-01T11:11:11Z"
             }
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "List of audit events",
-            "schema" : {
-              "$ref" : "#/definitions/AuditEventListEnvelope"
+          {
+            "name": "happened_to",
+            "in": "query",
+            "required": false,
+            "description": "The end date (exclusive) that defines the end of the time range for which audit events\nare returned. For example: \"2026-03-01T11:11:11Z\".\n\nThe values for the end date must be a string, should be in ISO-8601 format, and should be in UTC.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-10T11:11:11Z",
+              "example": "2026-04-10T11:11:11Z"
             }
           }
-        },
-        "description" : "Use the Audit Events endpoint to return a log of user activity that occurred within your tenant. When requesting events for a production tenant, all events (including events from sandboxes created for that tenant) are included in the response. When requesting events from a sandbox, only events from that sandbox are included in the response.",
-        "summary" : "List audit events",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Audit events" ],
-        "operationId" : "list-events"
+        ],
+        "responses": {
+          "200": {
+            "description": "A successful request returns a response with up to 1000 audit events.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditEventList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/campaigns" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "with_total",
-          "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
-          "required" : false,
-          "type" : "boolean"
-        }, {
-          "in" : "query",
-          "name" : "limit",
-          "description" : "The maximum number of records to include in a single page of results.",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "next_token",
-          "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
-          "required" : false,
-          "x-example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "destination_data_template_id",
-          "description" : "Use this parameter to restrict the list of campaigns that are returned to only campaigns that are configured to use specific data template.",
-          "required" : false,
-          "x-example" : "ptg-2QLLqXBEq",
-          "type" : "string"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+    "/campaigns": {
+      "get": {
+        "tags": [
+          "Campaigns"
+        ],
+        "summary": "GET /campaigns",
+        "operationId": "list-campaign",
+        "description": "Use the **GET /campaigns** endpoint to return a list of campaigns from your tenant. You may\nrestrict the list of campaigns to those associated with a specific data template.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
           },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/Limit"
           },
-          "404" : {
-            "description" : "Not Found"
+          {
+            "$ref": "#/components/parameters/NextToken"
           },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/WithTotal"
           },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "List of campaigns",
-            "schema" : {
-              "$ref" : "#/definitions/CampaignListEnvelope"
+          {
+            "name": "destination_data_template_id",
+            "in": "query",
+            "required": false,
+            "description": "Use this parameter to restrict the list of campaigns that are returned to only\ncampaigns that are configured to use a specific data template.\n\n> **Tip:** You can find the ID for the data template from the Amperity user interface. From the Destinations page, open the menu in the same row as the data template for which the ID is to be copied, and then select Copy ID.\n",
+            "schema": {
+              "type": "string",
+              "default": "ptg-2QLLqXBEq",
+              "example": "ptg-2QLLqXBEq"
             }
           }
-        },
-        "description" : "Use the Campaigns endpoint to return a list of campaigns from your tenant. You may restrict the list of campaigns to those associated with a specific data template.",
-        "summary" : "List campaigns",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Campaigns" ],
-        "operationId" : "list-campaign"
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns a set of campaigns.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CampaignList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/segments" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "with_total",
-          "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
-          "required" : false,
-          "type" : "boolean"
-        }, {
-          "in" : "query",
-          "name" : "limit",
-          "description" : "The maximum number of records to include in a single page of results.",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "next_token",
-          "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
-          "required" : false,
-          "x-example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+    "/segments": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "GET /segments",
+        "operationId": "list-segment",
+        "description": "Use the **GET /segments** endpoint to return a list of segments from your tenant.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
           },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/Limit"
           },
-          "404" : {
-            "description" : "Not Found"
+          {
+            "$ref": "#/components/parameters/NextToken"
           },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "List of segments",
-            "schema" : {
-              "$ref" : "#/definitions/SegmentListEnvelope"
-            }
+          {
+            "$ref": "#/components/parameters/WithTotal"
           }
-        },
-        "description" : "Use the Segments endpoint to return a list of segments from your tenant.",
-        "summary" : "List segments",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Segments" ],
-        "operationId" : "list-segment"
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns a set of segments.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/ingest/jobs" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "with_total",
-          "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
-          "required" : false,
-          "type" : "boolean"
-        }, {
-          "in" : "query",
-          "name" : "created_from",
-          "description" : "A timestamp that defines the start (inclusive) of the time window in which ingest jobs started to run. Must be in ISO-8061 format and in UTC. Only ingest jobs with a \"created_at\" value that falls within the \"created_from\"-\"created_to\" time window will be returned.",
-          "required" : true,
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "created_to",
-          "description" : "A timestamp that defines the end (exclusive) of the time window in which ingest jobs started to run. Must be in ISO-8061 format and in UTC. Only ingest jobs with a \"created_at\" value that falls within the \"created_from\"-\"created_to\" time window will be returned.",
-          "required" : true,
-          "type" : "string",
-          "format" : "date-time"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+    "/ingest/jobs": {
+      "get": {
+        "tags": [
+          "Ingest"
+        ],
+        "summary": "GET /ingest/jobs",
+        "operationId": "list-ingest-jobs",
+        "description": "Use the **GET /ingest/jobs** endpoint to return a list of jobs from your tenant that\noccurred within the previous 7 days.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
+          },
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/WithTotal"
+          },
+          {
+            "name": "created_from",
+            "in": "query",
+            "required": true,
+            "description": "A timestamp that defines the start (inclusive) of a 7-day time window in which one or\nmore ingest jobs started. See the **created_to** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the GET /ingest/jobs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-10-01T00:00:00Z",
+              "example": "2026-10-01T00:00:00Z"
             }
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "A summary of records, files, and feeds ingested in the set of jobs from the given datetime range (not to exceed 7 days)",
-            "schema" : {
-              "$ref" : "#/definitions/IngestJobDetailsListEnvelope"
+          {
+            "name": "created_to",
+            "in": "query",
+            "required": true,
+            "description": "A timestamp that defines the end (exclusive) of a 7-day time window in which one or\nmore ingest jobs started. See the **created_from** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the GET /ingest/jobs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-10-07T00:00:00Z",
+              "example": "2026-10-07T00:00:00Z"
             }
           }
-        },
-        "summary" : "Ingest job details list",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Ingest" ]
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns a set of records, files, and feeds that were ingested during the specified range.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngestJobDetailsList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/ingest/jobs/{job-id}" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "path",
-          "name" : "job-id",
-          "description" : "The id of the ingest job",
-          "required" : true,
-          "x-example" : "isj-20240827-54061-2l6XhD",
-          "type" : "string"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+    "/ingest/jobs/{job-id}": {
+      "get": {
+        "tags": [
+          "Ingest"
+        ],
+        "summary": "GET /ingest/jobs/{job-id}",
+        "operationId": "get-ingest-job",
+        "description": "Use the **GET /ingest/jobs/{id}** endpoint to return details for a specific ingest job,\nincluding a summary of the records, files, and feeds that were ingested.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
           },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "A summary of records, files, and feeds ingested in this job",
-            "schema" : {
-              "$ref" : "#/definitions/IngestJobDetails"
+          {
+            "name": "job-id",
+            "in": "path",
+            "required": true,
+            "description": "The Amperity internal identifier for the ingest job. For example: `isj-20240701-48815-6dcXdk`. From the workflows page, on the right side, click Recent Activity, select Ingest details under the job, and copy the job id from the open dialog box.\n",
+            "schema": {
+              "type": "string",
+              "default": "isj-20240827-54061-2l6XhD",
+              "example": "isj-20240827-54061-2l6XhD"
             }
           }
-        },
-        "summary" : "Ingest job details",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Ingest" ]
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns details for the specified ingest job.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngestJobDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/workflow/runs" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "type",
-          "description" : "Return workflows that match the specified workflow type.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "next_token",
-          "description" : "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.",
-          "required" : false,
-          "x-example" : "ZVEy1iwsKBs9a6H",
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "state",
-          "description" : "Return workflows that match the specified workflow state.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "limit",
-          "description" : "The maximum number of records to include in a single page of results.",
-          "required" : false,
-          "type" : "integer",
-          "format" : "int64"
-        }, {
-          "in" : "query",
-          "name" : "ended_from",
-          "description" : "A timestamp that defines the start (inclusive) of the time window in which workflows stopped running. Must be in ISO-8061 format and in UTC. Only workflows with an \"ended_at\" value that falls within the \"ended_from\"-\"ended_to\" time window will be returned.",
-          "required" : false,
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "created_from",
-          "description" : "A timestamp that defines the start (inclusive) of the time window in which workflows started to run. Must be in ISO-8061 format and in UTC. Only workflows with a \"created_at\" value that falls within the \"created_from\"-\"created_to\" time window will be returned.",
-          "required" : false,
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "ended_to",
-          "description" : "A timestamp that defines the end (exclusive) of the time window in which workflows stopped running. Must be in ISO-8061 format and in UTC. Only workflows with an \"ended_at\" value that falls within the \"ended_from\"-\"ended_to\" time window will be returned.",
-          "required" : false,
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "created_to",
-          "description" : "A timestamp that defines the end (exclusive) of the time window in which workflows started to run. Must be in ISO-8061 format and in UTC. Only workflows with a \"created_at\" value that falls within the \"created_from\"-\"created_to\" time window will be returned.",
-          "required" : false,
-          "type" : "string",
-          "format" : "date-time"
-        }, {
-          "in" : "query",
-          "name" : "with_total",
-          "description" : "Set this value to `true` to include a total count of all results. Default value: `false`. Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
-          "required" : false,
-          "type" : "boolean"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+    "/workflow/runs": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "GET /workflow/runs",
+        "operationId": "list-workflows",
+        "description": "Use the **GET /workflow/runs** endpoint to return a list of workflows that exist within\nthe date range defined in the request.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
+          },
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/NextToken"
+          },
+          {
+            "$ref": "#/components/parameters/WithTotal"
+          },
+          {
+            "name": "created_from",
+            "in": "query",
+            "required": false,
+            "description": "A timestamp that defines the start (inclusive) of the time window in which one or more\nworkflows started to run. See the **created_to** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the GET /workflow/runs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-01T00:00:00Z",
+              "example": "2026-04-01T00:00:00Z"
             }
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+          {
+            "name": "created_to",
+            "in": "query",
+            "required": false,
+            "description": "A timestamp that defines the end (exclusive) of the time window in which one or more\nworkflows started to run. See the **created_from** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the GET /workflow/runs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-30T00:00:00Z",
+              "example": "2026-04-30T00:00:00Z"
             }
           },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+          {
+            "name": "ended_from",
+            "in": "query",
+            "required": false,
+            "description": "A timestamp that defines the start (inclusive) of the time window in which one or more\nworkflows stopped running. See the **ended_to** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only workflows that have an **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the GET /workflow/runs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-01T00:00:00Z",
+              "example": "2026-04-01T00:00:00Z"
             }
           },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+          {
+            "name": "ended_to",
+            "in": "query",
+            "required": false,
+            "description": "A timestamp that defines the end (exclusive) of the time window in which one or more\nworkflows stopped running. See the **ended_from** request parameter.\n\nThis timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in ISO-8601 format and is in Coordinated Universal Time (UTC).\n\n> **Important:** Only workflows that have an **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the GET /workflow/runs/{id} endpoint.\n",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "default": "2026-04-30T00:00:00Z",
+              "example": "2026-04-30T00:00:00Z"
             }
           },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "description": "Return a list of workflows that only match the specified workflow state. May be one of the following:\n\n- Started\n- In progress\n- Stopping\n- Stopped\n- Succeeded\n\n> **Note:** This is the same value that is visible from the Status column on each individual workflow page.\n",
+            "schema": {
+              "type": "string",
+              "default": "succeeded",
+              "example": "succeeded"
             }
           },
-          "503" : {
-            "description" : "Service Unavailable",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "List of workflows",
-            "schema" : {
-              "$ref" : "#/definitions/WorkflowListEnvelope"
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Return a list of workflows that only match the specified workflow type.\n\n> **Tip:** Use this endpoint to return a list of workflows and workflow types, and then use a value from the `type` response parameter to make a new request that filters by that workflow type value.\n",
+            "schema": {
+              "type": "string",
+              "default": "courier.group/run",
+              "example": "courier.group/run"
             }
           }
-        },
-        "description" : "Return a list of workflows that exist within the date ranges defined in the request.",
-        "summary" : "List workflows",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Workflow" ]
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns a list of workflows.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkflowList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       },
-      "post" : {
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "WorkflowRunRequest",
-          "description" : "Fields used to launch a workflow",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/WorkflowRunRequest"
+      "post": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "POST /workflow/runs",
+        "operationId": "run-workflow",
+        "description": "Use the **POST /workflow/runs** endpoint to start a workflow. Supports running courier\ngroups, orchestration groups, and campaigns.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
+          },
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
           }
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "503" : {
-            "description" : "Service Unavailable",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "201" : {
-            "description" : "Workflow details for newly launched workflow",
-            "schema" : {
-              "$ref" : "#/definitions/Workflow"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkflowRunRequest"
+              }
             }
           }
         },
-        "description" : "Runs a new workflow, based on the inputs provided",
-        "summary" : "Run workflow",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Workflow" ]
+        "responses": {
+          "201": {
+            "description": "The **201** response returns details for the workflow that was created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Workflow"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/workflow/runs/{workflow-id}" : {
-      "get" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "query",
-          "name" : "view",
-          "description" : "Set to \"overview\" to return only \"created_at\", \"ended_at\", \"id\", \"name\", \"state\", \"tenant\", and \"type\". Set to \"verbose\" to return all response parameters, including for any tasks that were started by the workflow.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "path",
-          "name" : "workflow-id",
-          "description" : "The workflow ID.",
-          "required" : true,
-          "x-example" : "wf-20240905-66170-6HPlbJ",
-          "type" : "string"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
+    "/workflow/runs/{workflow-id}": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "GET /workflow/runs/{workflow-id}",
+        "operationId": "get-workflow",
+        "description": "Use the **GET /workflow/runs/{id}** endpoint to return details for a specific workflow.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
+          },
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "name": "workflow-id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier for a workflow, similar to: `wf-20240603-12345-MNabc`. The workflow ID must be in the URL. For example: /workflow/runs/wf-20240603-12345-MNabc. Use the GET /workflow/runs endpoint to get a list of workflow IDs or copy the ID from the Workflows page in Amperity.\n",
+            "schema": {
+              "type": "string",
+              "default": "wf-20240603-12345-MNabc",
+              "example": "wf-20240603-12345-MNabc"
             }
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "Workflow details",
-            "schema" : {
-              "$ref" : "#/definitions/Workflow"
+          {
+            "name": "view",
+            "in": "query",
+            "required": false,
+            "description": "Set this value to overview to return only the following parameters: created_at, ended_at, id, name, state, tenant, and type. Set this value to verbose to return all response parameters for the workflow, including for any tasks that were started by the workflow. Default value: overview.\n",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "overview",
+                "verbose"
+              ],
+              "default": "overview"
             }
           }
-        },
-        "description" : "Return details for a specific workflow.",
-        "summary" : "Get workflow details",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Workflow" ]
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns details for the named workflow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Workflow"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     },
-    "/workflow/runs/{workflow-id}/stop" : {
-      "post" : {
-        "parameters" : [ {
-          "in" : "query",
-          "name" : "api_version",
-          "description" : "A supported version of the Amperity API. You may use the `api-version` request header instead of the `api-version` request parameter.",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "in" : "path",
-          "name" : "workflow-id",
-          "description" : "The workflow ID.",
-          "required" : true,
-          "x-example" : "wf-20240905-66170-6HPlbJ",
-          "type" : "string"
-        } ],
-        "responses" : {
-          "400" : {
-            "description" : "Bad Request",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+    "/workflow/runs/{workflow-id}/stop": {
+      "post": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "POST /workflow/runs/{workflow-id}/stop",
+        "operationId": "stop-workflow",
+        "description": "Use the **POST /workflow/runs/{id}/stop** endpoint to stop a running workflow.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/ApiVersionHeader"
           },
-          "401" : {
-            "description" : "Authentication Required",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
           },
-          "403" : {
-            "description" : "Not Authorized",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "404" : {
-            "description" : "Not Found"
-          },
-          "405" : {
-            "description" : "Method Not Allowed",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "500" : {
-            "description" : "Internal Error",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "503" : {
-            "description" : "Service Unavailable",
-            "schema" : {
-              "$ref" : "#/definitions/ErrorResponse"
-            }
-          },
-          "200" : {
-            "description" : "Workflow stopped",
-            "schema" : {
-              "$ref" : "#/definitions/Workflow"
+          {
+            "name": "workflow-id",
+            "in": "path",
+            "required": true,
+            "description": "The Amperity internal identifier for the workflow. For example: `wf-20240619-14418-6UhqSe`. On the workflows page, under Actions, copy the workflow id from the dropdown.\n",
+            "schema": {
+              "type": "string",
+              "default": "wf-20240603-12345-MNabc",
+              "example": "wf-20240603-12345-MNabc"
             }
           }
-        },
-        "description" : "Stop a workflow.",
-        "summary" : "Stop a workflow",
-        "produces" : [ "application/json" ],
-        "consumes" : [ "application/json" ],
-        "tags" : [ "Workflow" ]
+        ],
+        "responses": {
+          "200": {
+            "description": "The **200** response returns details for the workflow that was stopped.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Workflow"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
       }
     }
   },
-  "consumes" : [ "application/json" ],
-  "host" : "app.amperity.com",
-  "info" : {
-    "title" : "Amperity API",
-    "version" : "2024-04-01",
-    "description" : "# Amperity API Overview\n\nThe Amperity API enables programmatic access to your Amperity tenant\nthrough a collection of RESTful endpoints that support API-first use\ncases for integrations, applications, and custom workflows. Use Amperity\nAPI endpoints to streamline workflows, enhance marketing strategies, and\nunlock the value of your brand\\'s customer data.\n\n# Versions\n\nAmperity APIs evolve and change over time. Amperity versions API\nendpoints to help your brand track changes to the Amperity API and to\noffer support to developers as these endpoints evolve.\n\nYour team of developers can track improvements to the Amperity API from\nthe [changelog](https://docs.amperity.com/api/changelog.html). Monitor\nthe changelog to know when new versions are available and/or when\nexisting versions are updated or planned for deprecation.\n\n## Breaking changes\n\nA breaking change occurs when functionality within an API is modified in\na way that causes integrations or applications to function abnormally or\nto stop working.\n\nA breaking change often requires a third-party developer to make changes\nto their existing integrations or applications to maintain functionality\nwith an API.\n\nExamples of breaking changes include, but are not limited to:\n\n-   Removing an endpoint\n-   Renaming a URL, request or response field, HTTP header, or query\n    parameter\n-   Adding a required request field, HTTP header, or query parameter\n-   Requiring a request field, HTTP header, or query parameter that was\n    previously optional\n-   Removing a request or response field, HTTP header, or query\n    parameter\n-   Modifying a data type or enumeration value\n-   Adding pagination to a resource collection response\n\n## Non-breaking changes\n\nA non-breaking change does not cause integrations or applications to\nfunction abnormally or to stop working.\n\nA non-breaking change should not require a third-party developer to do\nany migration work to maintain existing functionality.\n\nExamples of non-breaking changes include, but are not limited to:\n\n-   Adding an endpoint\n-   Adding a request or response field, HTTP header, or query parameter\n-   Adding an enumeration value\n\n## Version identifiers\n\nA version identifier is a date string that must be included with each\nrequest made to an API endpoint. All endpoints are versioned together.\nThis provides consistency across all endpoints and ensures\ninteroperability. A version identifier is updated only when breaking\nchanges occur.\n\nFor example:\n\n    curl -request GET \\\n         -url \"https://{tenant-id}.amperity.com/api/{endpoint}/\" \\\n         -H \"Authorization: Bearer ${access-token}\" \\\n         -H \"Amperity-Tenant: {tenant-id}\" \\\n         -H \"Content-Type: application/json\" \\\n         -H \"api-version: {version}\"\n\n## Supported versions\n\nNew versions of the Amperity API are released periodically. Each version\nof an endpoint will be supported for at least 1 year.\n\nCurrent versions:\n\n-   **2024-04-01** The current version of the Amperity API.\n\n## Unstable versions\n\nDuring development, Amperity may release APIs for testing using the\n**unstable** version identifier. Unstable versions contain features that\nare still in progress and may not be backward compatible.\n\nThere are no guarantees around customer support, notification of\nchanges, breaking changes, or availability of unstable versions.\n\n## Deprecated versions\n\nAt least 6 months notice will be given before any supported version is\nmarked as unsupported. API calls that are made to an endpoint using a\nversion identifier that is no longer supported will return a 400\nresponse.\n\nAmperity APIs evolve and change over time. To warn developers of\nupcoming deprecations Amperity uses the following headers:\n\n-   [Deprecation\n    Header](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header).\n    When **true** a deprecation will occur at the date indicated in the\n    header.\n-   [Sunset Header](https://datatracker.ietf.org/doc/html/rfc8594). When\n    **true** a deprecated feature will stop working and return a 4xx\n    response at the date indicated in the header.\n\nDeprecation and Sunset headers will be added at least 6 months prior to\na deprecation. A deprecation date will be at least 3 months prior to a\nsunset date. For example:\n\n    Deprecation: Tue, 1 Sep 2024 23:59:59 GMT\n    Sunset: Wed, 1 Dec 2024 23:59:59 GMT\n\nDeprecation and Sunset headers are informational. Amperity recommends\nbuilding alerts to monitor for these headers to ensure that your\napplications and workflows can be migrated.\n\n# Authentication\n\nAll requests that are made to Amperity API endpoints must be\nauthenticated by access tokens that are signed by Amperity-managed API\nkeys.\n\n## API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant\nand enable programmatic access to Amperity. Your API key is configured\nwithin Amperity from the **Settings** page, **Security** tab.\n\n## Access tokens\n\nAccess to the Amperity API requires using JWT access tokens that are\nsigned by Amperity-managed API keys. Access tokens are generated against\nAmperity API keys within Amperity from the **Settings** page,\n**Security** tab.\n\n# Base URL\n\nAll requests made to Amperity API endpoints should be directed to the\nfollowing base URL:\n\n    https://{tenant-id}.amperity.com/api\n\nYou can find the tenant ID from the Amperity user interface. From the\n**Users and Activity** page, select the **Actions** menu for an API key,\nand then click **Copy tenant ID**.\n\nFor example, if the tenant ID is **acme** the base URL would be\n\n    https://acme.amperity.com/api\n\n# Requests\n\nRequests made to Amperity API endpoints require the following headers:\n\n-   **Authorization** Required. The bearer authentication header. This\n    should be the access token for your tenant\\'s API key.\n-   **Amperity-Tenant** Required. The ID for the tenant to which the\n    request will be sent. You can find the tenant ID in the base URL for\n    your tenant.\n-   **api-version** Required. A supported version of the Amperity API.\n    For example: **2024-04-01**.\n\nIn addition to all required headers, you must specify the HTTP method,\nand base URL. For example:\n\n    curl -request GET \\\n         -url \"https://{tenant-id}.amperity.com/api/{endpoint}/\" \\\n         -H \"Authorization: Bearer ${access-token}\" \\\n         -H \"Amperity-Tenant: {tenant-id}\" \\\n         -H \"api-version: {version}\"\n\nMost endpoints provide a set of endpoint-specific properties that may be\nincluded within the URL header.\n\n# Responses\n\nThe Amperity API responds in JSON format. Each response includes\nrelevant HTTP status codes that indicate the success or failure of the\nrequest. The individual properties in a response will vary by endpoint;\nall endpoints that support the GET HTTP method will return lists using\npagination.\n\n# Pagination\n\nAmperity uses cursor-based pagination to return pages of data for large\nlists. A paginated endpoint returns responses with a list of results\n*and* a **next_token** parameter when another page is available in the\nreturned dataset. You have reached the last page in the results set when\nthe **next_token** parameter is not returned.\n\n## Pagination in requests\n\nOmit the **next_token** property to return the first page. Use the\ncursor value for **next_token** that was returned in a response to view\nthe next page of results. The possible values for **next_token** are\nreturned within the **200** response. **next_token** cannot be set to\n**NULL**.\n\n## Pagination in responses\n\nA response will include the value of the next page as the value of the\n**next_token** parameter. You may use this value in a subsequent request\nto return the next page of results. When the value for **next_token** is\nempty, the last page in the results set has been returned.\n\n# Rate limits\n\nA rate limit is the number of requests that may be made to the Amperity\nAPI in a given time period.\n\nThe Amperity API supports requests to endpoints that do not exceed a\nrate of 10 requests per second. Response times will vary by endpoint and\nthe complexity of data that is returned by the response. Some requests\nmay take seconds to return.\n\nRequests to the Amperity API that exceed 10 requests per second may\nreturn an error response with an HTTP 429 status code.\n",
-    "contact" : {
-      "name" : "Amperity Support",
-      "url" : "https://docs.amperity.com/",
-      "email" : "support@amperity.com"
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authenticate using a Bearer token generated from an Amperity API key. Include the token in the Authorization header of every request.\n"
+      }
     },
-    "x-logo" : {
-      "url" : "_static/logo-api.png",
-      "backgroundColor" : "#000",
-      "altText" : "Amperity API Docs"
+    "parameters": {
+      "ApiVersionHeader": {
+        "name": "api-version",
+        "in": "header",
+        "required": true,
+        "description": "A supported version of the Amperity API. For example: 2024-04-01.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "2024-04-01"
+          ],
+          "default": "2024-04-01",
+          "example": "2024-04-01"
+        }
+      },
+      "AmperityTenant": {
+        "name": "amperity-tenant",
+        "in": "header",
+        "required": true,
+        "description": "The unique identifier for the tenant.",
+        "schema": {
+          "type": "string",
+          "example": "<tenant-id>"
+        }
+      },
+      "Limit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "description": "The maximum number of records to include in a single page of results.",
+        "schema": {
+          "type": "integer"
+        }
+      },
+      "NextToken": {
+        "name": "next_token",
+        "in": "query",
+        "required": false,
+        "description": "An opaque token that is used to paginate results. Omit the `next_token` property\nto return the first page. Use the cursor value for `next_token` that was returned\nin a response to view the next page of results.\n\nFor example: `ABCd1fghIJk2l3M`\n\n> **Note:** The possible values for `next_token` are returned within the 200 response.\n\n> **Important:** The value for `next_token` cannot be null.\n",
+        "schema": {
+          "type": "string",
+          "example": "ZVEy1iwsKBs9a6H"
+        }
+      },
+      "WithTotal": {
+        "name": "with_total",
+        "in": "query",
+        "required": false,
+        "description": "Set this value to `true` to include a total count of all results. Default value: `false`.\n\n> **Note:** Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.\n",
+        "schema": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request \u2014 the request was malformed or contained invalid parameters.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "Authentication Required \u2014 no valid Bearer token was provided.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Not Authorized \u2014 the API key does not have permission for this operation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not Found \u2014 the requested resource does not exist.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "MethodNotAllowed": {
+        "description": "Method Not Allowed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "InternalError": {
+        "description": "Internal Server Error \u2014 an unexpected error occurred.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "description": "An error response returned by the API.",
+        "required": [
+          "status",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code.",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "A description of the error.",
+            "example": "An unexpected error occurred."
+          }
+        }
+      },
+      "AuditEvent": {
+        "type": "object",
+        "description": "A record of user activity that occurred within your tenant.",
+        "required": [
+          "event_id",
+          "event_type",
+          "tenant",
+          "tenant_family",
+          "happened_at",
+          "principal_id",
+          "principal_name",
+          "principal_email",
+          "object_id",
+          "origin_ip",
+          "user_agent",
+          "session_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "description": "The Amperity internal identifier for the event.",
+            "example": "ae-Ab1cDeFg"
+          },
+          "event_type": {
+            "type": "string",
+            "description": "The type of event.",
+            "example": ":amperity.alert.audience/created"
+          },
+          "tenant": {
+            "type": "string",
+            "description": "The tenant ID of the tenant associated with the action. This ID may be for a sandbox.",
+            "example": "socktown-sb"
+          },
+          "tenant_family": {
+            "type": "string",
+            "description": "The name of the tenant family that is associated with the action. When tenant is a sandbox, tenant_family is the tenant ID of the production tenant.\n",
+            "example": "socktown"
+          },
+          "happened_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the action occurred, in ISO-8601 format and in UTC.",
+            "example": "2026-04-09T17:21:06.747Z"
+          },
+          "principal_id": {
+            "type": "string",
+            "description": "The authentication identifier for the user who initiated the action. This user may be an API key or a non-human user.\n",
+            "example": "google-apps|user@socktown.com"
+          },
+          "principal_name": {
+            "type": "string",
+            "description": "The friendly name of the user associated with the activity, if available, otherwise the email address or API key.\n",
+            "example": "Socktown User"
+          },
+          "principal_email": {
+            "type": "string",
+            "description": "The email address for the user who initiated the action.",
+            "example": "user@socktown.com"
+          },
+          "object_id": {
+            "type": "string",
+            "description": "The identifier for the object against which the action occurred.",
+            "example": "seg-35GMWpn6Y"
+          },
+          "object_name": {
+            "type": "string",
+            "description": "A composed string that describes the objects for which the action occurred.",
+            "example": "Socktown Returning Customers"
+          },
+          "origin_ip": {
+            "type": "string",
+            "description": "The IP address associated with the user who initiated the action.",
+            "example": "111.11.111.1"
+          },
+          "user_agent": {
+            "type": "string",
+            "description": "The user agent string of the client that initiated the action.",
+            "example": "Mac OS X 4.5.6"
+          },
+          "session_id": {
+            "type": "string",
+            "description": "The identifier for the session from which the action occurred.",
+            "example": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123"
+          }
+        }
+      },
+      "AuditEventList": {
+        "type": "object",
+        "description": "A paginated list of audit events.",
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "Audit event items on this page.",
+            "items": {
+              "$ref": "#/components/schemas/AuditEvent"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.\n",
+            "example": "ZVEy1iwsKBs9a6H"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when with_total is set to true."
+          }
+        }
+      },
+      "Campaign": {
+        "type": "object",
+        "description": "A campaign.",
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Amperity internal identifier for the campaign.",
+            "example": "cc-21HCWon6Y"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the campaign.",
+            "example": "Holiday Campaign"
+          },
+          "deliver_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the campaign was delivered or will be delivered, in ISO-8601 format and in UTC.\n",
+            "example": "2026-04-22T20:30:00Z"
+          }
+        }
+      },
+      "CampaignList": {
+        "type": "object",
+        "description": "A paginated list of campaigns.",
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "Campaign items on this page.",
+            "items": {
+              "$ref": "#/components/schemas/Campaign"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.\n",
+            "example": "ZVEy1iwsKBs9a6H"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when with_total is set to true."
+          }
+        }
+      },
+      "Segment": {
+        "type": "object",
+        "description": "A segment.",
+        "required": [
+          "id",
+          "name",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The Amperity internal identifier for the segment.",
+            "example": "seg-35GMWpn6Y"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the segment.",
+            "example": "Returning Customers"
+          },
+          "status": {
+            "type": "string",
+            "description": "The current status of the segment.",
+            "example": "active"
+          }
+        }
+      },
+      "SegmentList": {
+        "type": "object",
+        "description": "A paginated list of segments.",
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "Segment items on this page.",
+            "items": {
+              "$ref": "#/components/schemas/Segment"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.\n",
+            "example": "ZVEy1iwsKBs9a6H"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when with_total is set to true."
+          }
+        }
+      },
+      "IngestFileDetails": {
+        "type": "object",
+        "description": "Details about a single file processed during an ingest job.",
+        "required": [
+          "file_id",
+          "read",
+          "errors"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "file_id": {
+            "type": "string",
+            "description": "The identifier for the file.",
+            "example": "cb-20240618-71992-SF3Uz/part0.avro"
+          },
+          "name": {
+            "type": "string",
+            "description": "The human-readable identifier for the file.",
+            "example": "part0.avro"
+          },
+          "read": {
+            "type": "integer",
+            "description": "The total count of records processed in this file.",
+            "example": 1000
+          },
+          "errors": {
+            "type": "integer",
+            "description": "The number of rows with an ingest error. For example, when Amperity cannot match a field value to the expected data type.\n",
+            "example": 200
+          }
+        }
+      },
+      "IngestFeedDetails": {
+        "type": "object",
+        "description": "Details about a single feed processed during an ingest job.",
+        "required": [
+          "feed_id",
+          "job_id",
+          "table_name",
+          "state",
+          "read",
+          "errors",
+          "rejected",
+          "inserted",
+          "updated",
+          "started_at",
+          "ended_at",
+          "files"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "feed_id": {
+            "type": "string",
+            "description": "The unique ID of this feed.",
+            "example": "df-5L6d1veh"
+          },
+          "job_id": {
+            "type": "string",
+            "description": "The ingest job identifier.",
+            "example": "isj-1f73r9u2"
+          },
+          "table_name": {
+            "type": "string",
+            "description": "The name of the table.",
+            "example": "My table"
+          },
+          "state": {
+            "type": "string",
+            "description": "The current state of the job. For example: Scheduled, Started, In progress, Running, Finalizing, Succeeded, Stopping, Stopped, Failed, Skipped, or Canceled.\n",
+            "example": "succeeded"
+          },
+          "read": {
+            "type": "integer",
+            "description": "The number of rows ingested into this feed.",
+            "example": 1000
+          },
+          "errors": {
+            "type": "integer",
+            "description": "The number of rows with an ingest error.",
+            "example": 200
+          },
+          "rejected": {
+            "type": "integer",
+            "description": "The number of duplicate rows that were not ingested.",
+            "example": 200
+          },
+          "inserted": {
+            "type": "integer",
+            "description": "The number of records that were inserted into the table.",
+            "example": 400
+          },
+          "updated": {
+            "type": "integer",
+            "description": "The total count of rows updated for this feed during the job.",
+            "example": 200
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the job started, in ISO-8601 format and in UTC.",
+            "example": "2026-06-01T04:02:54.433Z"
+          },
+          "ended_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the job ended, in ISO-8601 format and in UTC.",
+            "example": "2026-06-01T04:02:57.433Z"
+          },
+          "files": {
+            "type": "array",
+            "description": "A collection of file details for each file processed in this feed.",
+            "items": {
+              "$ref": "#/components/schemas/IngestFileDetails"
+            }
+          }
+        }
+      },
+      "IngestJobDetails": {
+        "type": "object",
+        "description": "Details for a single ingest job, including a summary of all feeds and files processed.\n",
+        "required": [
+          "id",
+          "workflow_id",
+          "tables"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ingest job identifier.",
+            "example": "isj-1f73r9u2"
+          },
+          "workflow_id": {
+            "type": "string",
+            "description": "The Amperity internal identifier for the workflow that ran this job.",
+            "example": "wf-20240618-3423-b45"
+          },
+          "tables": {
+            "type": "array",
+            "description": "A summary of table details from this ingest job.",
+            "items": {
+              "$ref": "#/components/schemas/IngestFeedDetails"
+            }
+          }
+        }
+      },
+      "IngestJobDetailsList": {
+        "type": "object",
+        "description": "A list of ingest jobs for the specified time window.",
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "Ingest job items for the specified time window.",
+            "items": {
+              "$ref": "#/components/schemas/IngestJobDetails"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The next_token parameter is included in the response but is not available for use with the GET /ingest/jobs endpoint.\n",
+            "example": "ZVEy1iwsKBs9a6H"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when with_total is set to true."
+          }
+        }
+      },
+      "WorkflowError": {
+        "type": "object",
+        "description": "An error associated with a workflow or workflow task.",
+        "required": [
+          "type",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A period-delimited string that indicates where an error occurred.",
+            "example": "amperity.workflow.task.stitch/table"
+          },
+          "message": {
+            "type": "string",
+            "description": "The error message.",
+            "example": "Found table in an invalid state."
+          },
+          "attribution": {
+            "type": "string",
+            "description": "The source of the error. May be attributed to `customer` or `platform`.\n\n- `customer` indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.\n- `platform` indicates there is an issue with components or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.\n",
+            "example": "customer"
+          },
+          "data": {
+            "description": "Additional data associated with the error. May be absent or null when no additional data is available.\n"
+          }
+        }
+      },
+      "WorkflowTaskInstance": {
+        "type": "object",
+        "description": "A task within a workflow.",
+        "required": [
+          "id",
+          "state",
+          "tenant"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the task instance.",
+            "example": "wft-20240619-14574-6kyYdY"
+          },
+          "state": {
+            "type": "string",
+            "description": "The current state of the task. For example:\n\n- Scheduled\n- Started\n- In progress\n- Running\n- Finalizing\n- Succeeded\n- Stopping\n- Stopped\n- Failed\n- Skipped\n- Canceled\n",
+            "example": "failed"
+          },
+          "tenant": {
+            "type": "string",
+            "description": "The unique identifier for the tenant.",
+            "example": "<tenant-id>"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which a workflow task started.",
+            "example": "2026-06-19T04:02:54.433Z"
+          },
+          "ended_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which a workflow task ended.",
+            "example": "2026-06-19T04:03:10.094Z"
+          },
+          "execution_type": {
+            "type": "string",
+            "description": "The service that runs a workflow task. Possible return values are spark-sql, prodigal, prodigal-aurora, databricks, identity, task-identity, legacy.\n",
+            "example": "spark-sql"
+          },
+          "label": {
+            "type": "string",
+            "description": "The name of the task instance.",
+            "example": "Sending treatment customer_attribute_group to destination - S3"
+          },
+          "run_id": {
+            "type": "string",
+            "description": "A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: `abc-20240210-12345-6AbCDE`.\n",
+            "example": "orb-20240619-EDnCxzmhrLN"
+          },
+          "state_changed_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which the task completed and the state of the workflow was updated. This can be the same value as ended_at.\n",
+            "example": "2026-06-19T04:03:10.094Z"
+          },
+          "task_definition_id": {
+            "type": "string",
+            "description": "A unique identifier for a task definition. These values often contain human-readable strings within a series of alphanumeric characters.\n",
+            "example": "send/ct-2yrcnb2Hn/ptg-2XsDnXwEu/pd-2ycaK3gfh"
+          },
+          "task_definition_type": {
+            "type": "string",
+            "description": "The task definition type. The possible values for this property are similar to the type property for the workflow. For example, `bridge.sync` or `campaign.append-results`.\n",
+            "example": "campaign.send"
+          },
+          "timeout_ms": {
+            "type": "integer",
+            "description": "The length of time in milliseconds after which a running task instance will be forced to stop.",
+            "example": 172800000
+          },
+          "workflow_id": {
+            "type": "string",
+            "description": "The unique identifier for the workflow to which this task belongs.",
+            "example": "wf-20240619-14418-6UhqSe"
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkflowError"
+              }
+            ],
+            "description": "An error associated with this task. Populated only for tasks in an error state.\n"
+          }
+        }
+      },
+      "Workflow": {
+        "type": "object",
+        "description": "A workflow.",
+        "required": [
+          "id",
+          "state",
+          "type",
+          "name",
+          "tenant",
+          "created_at"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the workflow.",
+            "example": "wf-20240619-14418-6UhqSe"
+          },
+          "state": {
+            "type": "string",
+            "description": "The current state of the workflow.",
+            "example": "succeeded"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of workflow.",
+            "example": "campaign.send"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the workflow.",
+            "example": "Customer Attribute Daily"
+          },
+          "tenant": {
+            "type": "string",
+            "description": "The unique identifier for the tenant.",
+            "example": "<tenant-id>"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which a workflow started.",
+            "example": "2026-06-19T04:00:18.764Z"
+          },
+          "ended_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time at which a workflow ended.\n\n> **Note:** The amount of time that elapsed between `created_at` and `ended_at` is the runtime for the workflow.\n",
+            "example": "2026-06-19T04:03:10.119Z"
+          },
+          "principal_id": {
+            "type": "string",
+            "description": "A unique identifier for the Amperity user who started the workflow. For example: `google-apps|socktown@socktown.com`.\n",
+            "example": "google-apps|<tenant-id>@<tenant-id>.com"
+          },
+          "principal_name": {
+            "type": "string",
+            "description": "The name of the Amperity user who started the workflow. For example: `Justin Scott` or `Automated workflow`.\n",
+            "example": "Justin Scott"
+          },
+          "principal_email": {
+            "type": "string",
+            "description": "The email address for the user who started the workflow.",
+            "example": "justin.scott@<tenant-id>.com"
+          },
+          "launched_version": {
+            "type": "string",
+            "description": "A unique identifier that describes the configuration state of Amperity at the start of the workflow. The value for this property is similar to: `etv-20240210-12345-6AbCDE`.\n",
+            "example": "etv-20240210-12345-6AbCDE"
+          },
+          "current_version": {
+            "type": "string",
+            "description": "A unique identifier that describes the configuration state of Amperity at the end of the workflow or at the time an error occurred. The value for this property is similar to: `etv-20240210-12345-6AbCDE`.\n",
+            "example": "etv-20240210-12345-6AbCDE"
+          },
+          "warn_after_ms": {
+            "type": "integer",
+            "description": "The length of time in milliseconds after which a warning is sent that notifies users that a workflow is running longer than expected. This parameter only applies to workflows that use SQL to write tables to storage.\n",
+            "example": 86400000
+          },
+          "task_instances": {
+            "type": "array",
+            "description": "The list of tasks in the workflow. Populated only when view is set to verbose.",
+            "items": {
+              "$ref": "#/components/schemas/WorkflowTaskInstance"
+            }
+          },
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/WorkflowError"
+              }
+            ],
+            "description": "An error associated with this workflow. Populated only for workflows in an error state.\n"
+          }
+        }
+      },
+      "WorkflowList": {
+        "type": "object",
+        "description": "A paginated list of workflows.",
+        "required": [
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "Workflow items on this page.",
+            "items": {
+              "$ref": "#/components/schemas/Workflow"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.\n",
+            "example": "ZVEy1iwsKBs9a6H"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when with_total is set to true."
+          }
+        }
+      },
+      "WorkflowRunRequest": {
+        "type": "object",
+        "description": "The request body used to start a new workflow.",
+        "required": [
+          "config_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "config_id": {
+            "type": "string",
+            "description": "The configuration ID of the workflow. This may be the ID for a courier group,\norchestration group, or campaign.\n\nYou can find the ID for the workflow to be run in the following locations:\n\n- From the Sources page, open the menu in the same row as the courier group, and then select Copy ID.\n- From the Destinations page, open the menu in the same row as the orchestration group, and then select Copy ID.\n- From the Campaigns page, open the menu in the same row as the campaign, and then select Copy ID.\n",
+            "default": "cg-123ABc4DE",
+            "example": "cg-123ABc4DE"
+          },
+          "range_from": {
+            "type": "string",
+            "format": "date-time",
+            "description": "String. Required for file-based workflows. Courier groups only.\n\n> **Important:** A value for `range_from` must be specified for any courier group that is configured to pull files from cloud storage: SFTP, Amazon S3, Azure Blob Storage, or Google Cloud Storage.\n\nA timestamp that defines the start (inclusive) of the time window for which couriers in the workflow should pull data. See the `range_to` request parameter.\n\nA timestamp must be in ISO-8601 format and in Coordinated Universal Time (UTC).\n\n> **Tip:** Use with `range_to` to define a date range within which to look for files. This date range is inclusive of `range_from` and exclusive of `range_to`. Use without `range_to` to define a specific day on which to run the workflow.\n",
+            "default": "2026-10-01T00:00:00Z",
+            "example": "2026-10-01T00:00:00Z"
+          },
+          "range_to": {
+            "type": "string",
+            "format": "date-time",
+            "description": "String. Optional. Courier groups only.\n\n> **Important:** A value for `range_from` must be specified when `range_to` is included in the request.\n\nA timestamp that defines the end (exclusive) of the time window for which couriers in the workflow should pull data. See the `range_from` request parameter.\n\nA timestamp must be in ISO-8601 format and in Coordinated Universal Time (UTC).\n",
+            "default": "2026-10-07T00:00:00Z",
+            "example": "2026-10-07T00:00:00Z"
+          },
+          "run_mode": {
+            "type": "string",
+            "description": "String. Optional. Courier groups only.\n\nIndicates the run mode for the courier group workflow. Possible values: `full`, `refresh`, or `source`.\n\n- Use `full` to pull data, refresh domain tables, run Stitch, update databases, then send workflow results downstream. All activations, including orchestrations, campaigns, and journeys, that are associated with this workflow is run.\n- Use `refresh` to pull data, refresh domain tables, run Stitch, and then update databases.\n- Use `source` to pull data and refresh domain tables.\n\n> **Tip:** `run_mode` will default to the run mode that is configured for the scheduled workflow. You may override the configured setting by providing a value for `run_mode` in the request.\n",
+            "enum": [
+              "source",
+              "refresh",
+              "full"
+            ],
+            "default": "full",
+            "example": "full"
+          }
+        }
+      }
     }
-  },
-  "swagger" : "2.0",
-  "basePath" : "/api"
+  }
 }

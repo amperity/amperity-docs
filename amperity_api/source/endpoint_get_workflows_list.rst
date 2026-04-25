@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-workflows-list-request:
 
@@ -282,14 +286,14 @@ The **200** response returns a list of workflows.
                    or by loading data to the table.",
        },
      "id": "wf-20240603-12345-MNabc",
-     "ended_at": "2024-02-10T17:29:32.687Z",
+     "ended_at": "2026-02-10T17:29:32.687Z",
      "name": "Loyalty Membership",
      "principal_name": "Justin Scott",
      "principal_id": "google-apps|justin.scott@socktown.com",
      "type": "amperity.orchestration.orchestration/run",
      "principal_email": "justin.scott@socktown.com",
      "state": "canceled",
-     "created_at": "2024-02-10T17:29:22.454Z",
+     "created_at": "2026-02-10T17:29:22.454Z",
      "tenant": "socktown",
    }
 

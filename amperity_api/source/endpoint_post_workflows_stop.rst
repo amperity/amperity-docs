@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-post-workflows-stop-request:
 
@@ -193,8 +197,8 @@ The **200** response returns details for the workflow that was stopped.
       "type":"campaign.send",
       "name":"testing",
       "tenant":"socktown",
-      "created_at":"2024-08-01T18:07:58.099Z",
-      "ended_at":"2024-08-01T18:10:47.712Z",
+      "created_at":"2026-08-01T18:07:58.099Z",
+      "ended_at":"2026-08-01T18:10:47.712Z",
       "state":"canceled"
       "task_instances": []
    }

@@ -28,7 +28,7 @@ extensions = [
     "sphinxcontrib.youtube",
     "sphinx_new_tab_link",
 ]
-todo_include_todos = True
+todo_include_todos = False
 #jupyter_sphinx_thebelab_config = {
 #    'requestKernel': True,
 #}

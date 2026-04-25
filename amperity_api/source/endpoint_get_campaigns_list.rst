@@ -74,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-campaigns-list-request:
 
@@ -275,12 +279,12 @@ The **200** response returns a set of campaigns.
        {
          "id": "ab-1CDEfGHI",
          "name": "Holiday Campaign",
-         "deliver_at": "2024-04-22T20:30:00Z"
+         "deliver_at": "2026-04-22T20:30:00Z"
        },
        {
          "id": "cd-2FGHiJKL",
          "name": "Returning Customers",
-         "deliver_at": "2024-04-23T21:00:00Z"
+         "deliver_at": "2026-04-23T21:00:00Z"
        }
      ]
    }
