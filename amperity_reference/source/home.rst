@@ -19,7 +19,7 @@ Home page
 
 .. home-start
 
-The **Home** page is the default landing screen in Amperity. It consolidates tenant health, Amps consumption, AI interaction, recent work, segment insights, and a feature adoption checklist into a single view --- giving you immediate visibility into the state of your tenant and clear pathways to take action.
+The **Home** page is the default landing screen in Amperity. It consolidates tenant health, Amps consumption, AI interaction, recent work, segment insights, and a feature adoption checklist into a single view, giving you immediate visibility into the state of your tenant and clear pathways to take action.
 
 .. home-end
 
@@ -31,7 +31,7 @@ How to access
 
 .. home-access-start
 
-The **Home** page appears when you click the Amperity logo or navigate to the root URL for your tenant. It replaces the previous default landing experience.
+The **Home** page appears when navigate to the root URL for your tenant. It replaces the previous default landing experience. You can also navigate to the **Home** page from within the app by clicking the Amperity logo on the left nav. 
 
 .. home-access-end
 
