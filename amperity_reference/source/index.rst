@@ -321,6 +321,7 @@ Components
    Data exports <data_exports>
    Destinations <page_destinations>
    File formats <grid_formats>
+   Home page <home>
    Predictive models <grid_models>
    Presto SQL <sql_presto>
    Profiles <profiles>
