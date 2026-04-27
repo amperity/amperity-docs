@@ -311,7 +311,7 @@
 
 .pt-link-wrap .md-link-dropdown {
   top: calc(100% + 4px);
-  right: 0;
+  left: 0;
 }
 
 
@@ -354,7 +354,7 @@
   display: none;
   position: absolute;
   top: calc(100% + 4px);
-  right: 0;
+  left: 0;
   min-width: 280px;
   background: #ffffff;
   border: 1px solid #01292f;
@@ -436,4 +436,10 @@
   height: 16px;
   object-fit: contain;
   text-align: center;
+}
+
+.pt-below-title {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 1rem;
 }
