@@ -86,7 +86,7 @@
       setNewTab(viewLink, mdUrl);
       setNewTab(claudeLink, 'https://claude.ai/new?q=' + encodeURIComponent('Help me understand this page: ' + mdUrl));
       setNewTab(chatgptLink, 'https://chatgpt.com/?q=' + encodeURIComponent('Read from ' + mdUrl + ' so I can ask questions about it.'));
-      setNewTab(geminiLink, 'https://gemini.google.com/app?q=' + encodeURIComponent('Read from ' + mdUrl + ' so I can ask questions about it.'));
+      setNewTab(geminiLink, 'https://gemini.google.com/app?prompt=' + encodeURIComponent('Fetch and read the page at ' + mdUrl + ' then help me ask questions about it.'));
     }
 
     btn.addEventListener('click', function(e) {
