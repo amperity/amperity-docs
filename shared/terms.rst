@@ -6543,7 +6543,7 @@ A stay identifies rooms, preferences, brands, and other information about hotel 
 
 .. term-stitch-start
 
-Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch an identity graph in which every unique customer profile is assigned an Amperity ID.
+Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch analyzes customer data, applies the rules you define, and then builds an identity graph with accurate and actionable customer profiles. Each customer profile is assigned an Amperity ID.
 
 .. term-stitch-end
 

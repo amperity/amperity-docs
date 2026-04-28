@@ -69,6 +69,7 @@ html_show_sourcelink = False
 html_additional_pages = {
     'openapi': 'openapi.html',
     'openapi-unstable': 'openapi-unstable.html',
+    'openapi-profile-v2': 'openapi-profile-v2.html',
 }
 
 

@@ -1,0 +1,556 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Amperity Profile API",
+    "version": "2025-07-31",
+    "description": "## Overview\n\nThe Amperity Profile API provides programmatic access to customer profile indexes in your Amperity tenant. Use Profile API endpoints to retrieve index definitions and return customer profile data for use in real-time personalization, loyalty, and engagement workflows.\n\n## Versioning\n\nAmperity APIs evolve and change over time. Amperity versions API endpoints to help your brand track changes and to offer support to developers as these endpoints evolve.\n\nYour team of developers can track improvements to the Amperity API from the [changelog](https://docs.amperity.com/api/changelog.html). Monitor the changelog to know when new versions are available or when existing versions are updated or planned for deprecation.\n\n> **Important:** A version identifier is a date string that must be included with each request made to an API endpoint. All endpoints are versioned together. This provides consistency across all endpoints and ensures interoperability. A version identifier is updated only when breaking changes occur.\n\n### Breaking changes\n\nA breaking change occurs when functionality within an API is modified in a way that causes integrations or applications to function abnormally or to stop working.\n\nA breaking change often requires a third-party developer to make changes to their existing integrations or applications to maintain functionality with an API.\n\nExamples of breaking changes include, but are not limited to:\n\n- Removing an endpoint\n- Renaming a URL, request or response field, HTTP header, or query parameter\n- Adding a required request field, HTTP header, or query parameter\n- Requiring a request field, HTTP header, or query parameter that was previously optional\n- Removing a request or response field, HTTP header, or query parameter\n- Modifying a data type or enumeration value\n- Adding pagination to a resource collection response\n\n### Non-breaking changes\n\nA non-breaking change does not cause integrations or applications to function abnormally or to stop working. A non-breaking change should not require a third-party developer to do any migration work to maintain existing functionality.\n\nExamples of non-breaking changes include, but are not limited to:\n\n- Adding an endpoint\n- Adding a request or response field, HTTP header, or query parameter\n- Adding an enumeration value\n\n### Version identifiers\n\nA version identifier is a string that identifies a supported version. A version identifier must be included in each request that is made to an API endpoint and may be passed as a request header or as a query parameter.\n\n```\ncurl -request GET \\\n     -url \"https://{tenant}.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: {tenant}\" \\\n     -H \"Content-Type: application/json\" \\\n     -H \"api-version: {version}\"\n```\n\n### Supported versions\n\nNew versions of the Amperity Profile API are released periodically. Each version of an endpoint will be supported for at least 1 year.\n\nCurrent versions:\n\n- **2025-07-31** The current version of the Profile API.\n\n### Unstable versions\n\nDuring development, Amperity may release APIs for testing using the **unstable** version identifier. Unstable versions contain features that are still in progress and may not be backward compatible.\n\nUnstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.\n\n### Deprecated versions\n\nAt least 6 months notice will be given before any supported version is marked as unsupported. API calls made to an endpoint using a version identifier that is no longer supported will return a 400 response.\n\nTo warn developers of upcoming deprecations, Amperity uses the following headers:\n\n- [Deprecation Header](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header). When **true**, a deprecation will occur at the date indicated in the header.\n- [Sunset Header](https://datatracker.ietf.org/doc/html/rfc8594). When **true**, a deprecated feature stops working and returns a 4xx response at the date indicated in the header.\n\nDeprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date.\n\nDeprecation and Sunset headers are informational. Amperity recommends building alerts to monitor for these headers to ensure that your applications and workflows can be migrated.\n\n## Authentication\n\nAll requests that are made to Profile API endpoints must be authenticated using an API key.\n\nAuthenticate to the Profile API by including the following header in each request:\n\n```\n-H \"Authorization: Bearer ${access-token}\"\n```\n\nAfter the token passes validation, the request will look up any access policies attached to the API key, and then determine whether the requested operation is permitted.\n\n> **Important:** A user must be assigned the **Allow API key administration** policy before they can manage API keys and access tokens required by Amperity APIs.\n\n### Authentication for sandboxes\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to production. API keys must be created in a sandbox to access Profile API indexes.\n\n### API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Each API key has a unique internal secret that is signed into the claims of all access tokens issued for that API key. This secret is one of the validation checks that occurs during authentication.\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to production. API keys must be created directly in a sandbox.\n\n### Access tokens\n\nAccess to the Profile API requires using [JSON Web Token (JWT)](https://jwt.io/) access tokens that are signed by Amperity-managed API keys. Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.\n\nProgrammatic workflows should authenticate to Profile API endpoints using JWT access tokens as the bearer token within the header of each request.\n\nAccess tokens are managed from the **Settings** page in Amperity. Open **Settings**, select the **Security** tab, find the API key, and select **Get token** from the actions menu.\n\n> **Important:** You are the only person who has access to the newly generated access token. Amperity does not save the access token. Store it in a safe place.\n\n## Base URL\n\nAll requests made to Profile API endpoints should be directed to the base URL.\n\n### Amazon AWS\n\nTenants hosted in Amazon AWS use the following base URL:\n\n```\nhttps://app.amperity.com/api\n```\n\nUse the `amperity-tenant` header to provide the tenant ID. You can find the tenant ID from the Amperity user interface: open **Settings**, select the **Security** tab, and under **API keys** select **Copy tenant ID** from the menu for an API key.\n\n### Microsoft Azure\n\nTenants hosted in Microsoft Azure use the following base URL:\n\n```\nhttps://<tenant-id>.amperity.com/api\n```\n\nThe tenant ID must be in the base URL *and* in the `amperity-tenant` header. For example, if the tenant ID is **\\<tenant-id\\>** the base URL is `https://<tenant-id>.amperity.com/api` with `--header 'amperity-tenant: <tenant-id>'`.\n\n### Australia\n\nTenants hosted in Australia use the following default base URL:\n\n```\nhttps://app-aws-apse2.amperity.com/api\n```\n\nTenants hosted in Australia may also use `https://<tenant-id>.amperity.com/api`.\n\n### Sandboxes\n\nThe base URL for a sandbox is the same as the base URL for production. Use the tenant ID for the sandbox for all requests made to a sandbox. The sandbox tenant ID is unique. For example, if the sandbox tenant ID is **\\<tenant-id\\>-sb-12345** the `amperity-tenant` header is `--header 'amperity-tenant: <tenant-id>-sb-12345'`.\n\n## Requests\n\nRequests made to Profile API endpoints require the following headers:\n\n- **Authorization** Required. The bearer authentication header. Use the access token for your tenant's API key.\n- **Amperity-Tenant** Required. The ID for the tenant to which the request is sent. A sandbox must use the tenant ID for the sandbox.\n- **api-version** Required. A supported version of the Profile API. For example: **2025-07-31**.\n\nIn addition to required headers, specify the HTTP method and append the endpoint path to the base URL.\n\n**Amazon AWS — production**\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"api-version: 2025-07-31\"\n```\n\n**Microsoft Azure — production**\n\n```\ncurl -request GET \\\n     -url \"https://<tenant-id>.amperity.com/api/{endpoint}/\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"api-version: 2025-07-31\"\n```\n\n## Responses\n\nProfile API endpoints use conventional HTTP response status codes to indicate success or failure. Response status codes fall into three categories:\n\n1. **2xx** — Success.\n2. **4xx** — Client error. Occurs when information in a request is invalid, such as requesting an endpoint that does not exist or including the wrong value for a parameter.\n3. **5xx** — Server error. Caused when the API or endpoint is unavailable.\n\n### 2xx status codes\n\nThe 2xx class of status codes indicates that a request was successfully received, understood, and accepted.\n\n| Status code | Description |\n|---|---|\n| **200 OK** | A request completed successfully. |\n\n### 4xx status codes\n\nThe 4xx class of status codes indicates a fatal client error. When a request returns a 4xx error, the response includes: **status**, **message**, and optionally **request_id** and **trace_id**.\n\n| Status code | Description |\n|---|---|\n| **400 Bad Request** | A request did not contain a required parameter or has an invalid parameter. |\n| **401 Authentication Required** | A request contains invalid authentication, an invalid version identifier, or an expired token. |\n| **403 Not Authorized** | A request contains valid authentication, but does not have permission to perform the requested action. |\n| **404 Not Found** | A request was made to a resource that does not exist. |\n| **429 Too Many Requests** | The rate limit of 2000 requests per second has been exceeded. |\n\n> **Tip:** Watch for 429 errors and build a retry mechanism with exponential backoff and some randomness to reduce request volume.\n\n### 5xx status codes\n\nThe 5xx class of status codes indicates a fatal server error. When an integration or application experiences a 5xx error, use an exponential backoff schedule with some randomness to reduce request volume.\n\n| Status code | Description |\n|---|---|\n| **500 Server Error** | An internal error occurred. Simplify the request or retry with exponential backoff. |\n| **503 Service Unavailable** | The server is unavailable. |\n\n> **Tip:** Watch for 503 errors and build a retry mechanism with exponential backoff.\n\n## Pagination\n\nAmperity uses cursor-based pagination to return pages of data for large lists. A cursor acts like a pointer and refers to a particular point in the data, marking the boundary between pages. A paginated endpoint returns responses with a list of results and a **next_token** parameter when another page is available. You have reached the last page when **next_token** is not returned.\n\n### Pagination in requests\n\nAll endpoints that support the **GET** HTTP method use the following parameters to support pagination.\n\n| Parameter | Description |\n|---|---|\n| **limit** | The maximum number of records to include in a single page of results. |\n| **next_token** | An opaque token used to paginate results. Omit to return the first page. Use the value returned in a prior response to view the next page. Cannot be **NULL**. |\n| **with_total** | Set to **true** to include a total count of all results. Default: **false**. Obtaining the total count can be expensive when there is a high number of pages. |\n\n### Pagination in responses\n\nAll endpoints that support the **GET** HTTP method return the following properties.\n\n| Parameter | Description |\n|---|---|\n| **data** | A JSON array of values for the current page of results. |\n| **next_token** | The cursor value to use in a subsequent request to return the next page. When empty, the last page has been returned. |\n| **total** | The total count of all results. Only returned when **with_total** is **true** in the request. |\n\n## Rate limits\n\nThe Amperity Profile API enforces a rate limit of 2000 requests per second across the entire tenant, including sandboxes.\n\nRequests to the Profile API that exceed 2000 requests per second may return an error response with an HTTP 429 status code.\n\nRate limit increases are supported and requests for increased rate limits will be reviewed on a case-by-case basis. Reach out to Amperity Support or your Customer Success Manager for details.",
+    "contact": {
+      "url": "https://docs.amperity.com/api/"
+    }
+  },
+
+  "servers": [
+    {
+      "url": "https://app.amperity.com/api",
+      "description": "Amazon AWS"
+    },
+    {
+      "url": "https://<tenant-id>.amperity.com/api",
+      "description": "Microsoft Azure",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+
+  "security": [
+    { "BearerAuth": [] }
+  ],
+
+  "tags": [
+    {
+      "name": "Indexes",
+      "description": "Return information about profile indexes configured in your tenant."
+    },
+    {
+      "name": "Profiles",
+      "description": "Return customer profiles from a profile index."
+    }
+  ],
+
+  "paths": {
+
+    "/indexes": {
+      "get": {
+        "tags": ["Indexes"],
+        "summary": "GET /indexes",
+        "operationId": "list-indexes",
+        "description": "Use the **GET /indexes** endpoint to return a list of indexes.\n\nEach index represents a named collection of customer profile attributes configured in your Amperity tenant. Use indexes to discover which profile data sets are available before querying individual profiles.\n\n> **Note:** The maximum number of fields for an index is 30.",
+        "parameters": [
+          { "$ref": "#/components/parameters/ApiVersionHeader" },
+          { "$ref": "#/components/parameters/AmperityTenant" },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/NextToken" },
+          { "$ref": "#/components/parameters/WithTotal" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK — returns a paginated list of indexes.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/IndexListResponse" },
+                "example": {
+                  "data": [
+                    {
+                      "id": "idx-xyz789",
+                      "name": "loyalty_members",
+                      "description": "Profiles from the loyalty program",
+                      "created_at": "2025-07-30T22:16:04.409Z",
+                      "updated_at": "2025-07-30T22:16:04.409Z"
+                    }
+                  ],
+                  "next_token": "ABCa1bcdDEe2f3G",
+                  "total": 1
+                }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" }
+        }
+      }
+    },
+
+    "/indexes/{id}": {
+      "get": {
+        "tags": ["Indexes"],
+        "summary": "GET /indexes/{id}",
+        "operationId": "get-index",
+        "description": "Use the **GET /indexes/{id}** endpoint to return the details for a specific index.\n\nReturns the index name, description, and timestamps for the index identified by `id`.\n\n> **Note:** The maximum number of fields for an index is 30.",
+        "parameters": [
+          { "$ref": "#/components/parameters/ApiVersionHeader" },
+          { "$ref": "#/components/parameters/AmperityTenant" },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier for the index.",
+            "schema": {
+              "type": "string",
+              "example": "idx-xyz789"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK — returns the details for the specified index.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Index" },
+                "example": {
+                  "id": "idx-xyz789",
+                  "name": "loyalty_members",
+                  "description": "Profiles from the loyalty program",
+                  "created_at": "2025-07-30T22:24:01.798Z",
+                  "updated_at": "2025-07-30T22:24:01.798Z"
+                }
+              }
+            }
+          },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" }
+        }
+      }
+    },
+
+    "/indexes/{id}/profiles": {
+      "get": {
+        "tags": ["Profiles"],
+        "summary": "GET /indexes/{id}/profiles",
+        "operationId": "list-profiles",
+        "description": "Use the **GET /indexes/{id}/profiles** endpoint to return a paginated list of customer profiles.\n\nEach profile includes an `id`, the `index_id` it belongs to, and an `attributes` object containing the index-specific fields for that customer. The attributes returned depend on which fields are configured in the index.\n\n### Filtering\n\nUse one or more `filter[<attribute>]=<value>` query parameters to limit the response to profiles that match the specified attribute values.\n\n```\nfilter[<attribute>]=<value>\n```\n\nwhere:\n\n- `[<attribute>]` is the name of a field in the index.\n- `<value>` is the value to match.\n\nFor example, to return only profiles where `first_name` is `Daniel`:\n\n```\nfilter[first_name]=Daniel\n```\n\nApply multiple filters to narrow the response further:\n\n```\nfilter[first_name]=Daniel&filter[loyalty_tier]=gold\n```\n\n> **Note:** The maximum number of fields for an index is 30.",
+        "parameters": [
+          { "$ref": "#/components/parameters/ApiVersionHeader" },
+          { "$ref": "#/components/parameters/AmperityTenant" },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier for the index.",
+            "schema": {
+              "type": "string",
+              "example": "idx-xyz789"
+            }
+          },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/NextToken" },
+          { "$ref": "#/components/parameters/WithTotal" },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "description": "Filter profiles by an index attribute value using bracket notation: `filter[<attribute>]=<value>`.\n\nReplace `<attribute>` with the name of a field in the index and `<value>` with the value to match. For example:\n\n```\nfilter[first_name]=Daniel\n```\n\nApply multiple filters in a single request to narrow results further:\n\n```\nfilter[first_name]=Daniel&filter[loyalty_tier]=gold\n```",
+            "schema": {
+              "type": "string",
+              "example": "Daniel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK — returns a paginated list of customer profiles from the specified index.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ProfileListResponse" },
+                "example": {
+                  "total": 2,
+                  "next_token": "ABCa1bcdDEe2f3G",
+                  "data": [
+                    {
+                      "id": "cl-abc123",
+                      "index_id": "idx-xyz789",
+                      "attributes": {
+                        "first_name": "Daniel",
+                        "last_name": "Kuhlman",
+                        "email": "danielkuhlman@email.com",
+                        "loyalty_id": "123456789-0"
+                      }
+                    },
+                    {
+                      "id": "cl-def456",
+                      "index_id": "idx-xyz789",
+                      "attributes": {
+                        "first_name": "Daniel",
+                        "last_name": "Smith",
+                        "email": "danielsmith@email.com",
+                        "loyalty_id": "987654321-0"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" }
+        }
+      }
+    },
+
+    "/indexes/{id}/profiles/{id}": {
+      "get": {
+        "tags": ["Profiles"],
+        "summary": "GET /indexes/{id}/profiles/{id}",
+        "operationId": "get-profile",
+        "description": "Use the **GET /indexes/{id}/profiles/{id}** endpoint to return a specific customer profile.\n\nThe first `{id}` identifies the index; the second `{id}` identifies the profile within that index. The response includes the profile `id`, the `index_id`, and an `attributes` object containing the index-specific fields for that customer.\n\nThe contents of `attributes` depend on the fields that are configured in the index.",
+        "parameters": [
+          { "$ref": "#/components/parameters/ApiVersionHeader" },
+          { "$ref": "#/components/parameters/AmperityTenant" },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier for the index.",
+            "schema": {
+              "type": "string",
+              "example": "idx-xyz789"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier for the customer profile.",
+            "schema": {
+              "type": "string",
+              "example": "cl-abc123"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK — returns the specified customer profile.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Profile" },
+                "example": {
+                  "id": "cl-abc123",
+                  "index_id": "idx-xyz789",
+                  "attributes": {
+                    "first_name": "Daniel",
+                    "last_name": "Kuhlman",
+                    "email": "danielkuhlman@email.com",
+                    "loyalty_id": "123456789-0"
+                  }
+                }
+              }
+            }
+          },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" }
+        }
+      }
+    }
+
+  },
+
+  "components": {
+
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authenticate using a Bearer token generated from an Amperity API key. Include the token in the Authorization header of every request."
+      }
+    },
+
+    "parameters": {
+
+      "ApiVersionHeader": {
+        "name": "api-version",
+        "in": "header",
+        "required": true,
+        "description": "A supported version of the Profile API. For example: 2025-07-31.",
+        "schema": {
+          "type": "string",
+          "enum": ["2025-07-31"],
+          "default": "2025-07-31",
+          "example": "2025-07-31"
+        }
+      },
+
+      "AmperityTenant": {
+        "name": "amperity-tenant",
+        "in": "header",
+        "required": true,
+        "description": "The unique identifier for the tenant.",
+        "schema": {
+          "type": "string",
+          "example": "<tenant-id>"
+        }
+      },
+
+      "Limit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "description": "The maximum number of records to include in a single page of results. Default value: `25`.",
+        "schema": {
+          "type": "integer",
+          "default": 25,
+          "example": 100
+        }
+      },
+
+      "NextToken": {
+        "name": "next_token",
+        "in": "query",
+        "required": false,
+        "description": "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.\n\nFor example: `ABCd1fghIJk2l3M`\n\n> **Note:** The possible values for `next_token` are returned within the 200 response.\n\n> **Important:** The value for `next_token` cannot be null.",
+        "schema": {
+          "type": "string",
+          "example": "ZVEy1iwsKBs9a6H"
+        }
+      },
+
+      "WithTotal": {
+        "name": "with_total",
+        "in": "query",
+        "required": false,
+        "description": "Set this value to `true` to include a total count of all results. Default value: `false`.\n\n> **Note:** Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.",
+        "schema": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+
+    },
+
+    "responses": {
+
+      "BadRequest": {
+        "description": "Bad Request — the request was malformed or contained invalid parameters.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      },
+
+      "Unauthorized": {
+        "description": "Authentication Required — no valid Bearer token was provided.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      },
+
+      "Forbidden": {
+        "description": "Not Authorized — the API key does not have permission for this operation.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      },
+
+      "NotFound": {
+        "description": "Not Found — the requested resource does not exist.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" },
+            "example": {
+              "status": 404,
+              "message": "The requested entity does not exist.",
+              "request_id": "7d2f4a3e-1234-5678-90ab-cd3f",
+              "trace_id": "1c9d3asdfasdf9b0c1d2e3f4"
+            }
+          }
+        }
+      },
+
+      "TooManyRequests": {
+        "description": "Too Many Requests — the Profile API rate limit of 2000 requests per second has been exceeded.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      },
+
+      "InternalError": {
+        "description": "Internal Server Error — an unexpected error occurred.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+          }
+        }
+      }
+
+    },
+
+    "schemas": {
+
+      "ErrorResponse": {
+        "type": "object",
+        "description": "An error response returned by the API.",
+        "required": ["status", "message"],
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code.",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable summary of the error.",
+            "example": "A human-readable summary of the error."
+          },
+          "request_id": {
+            "type": "string",
+            "description": "A unique identifier for the request.",
+            "example": "3fa85f64-1234-5678-901a-2c9asdfa6"
+          },
+          "trace_id": {
+            "type": "string",
+            "description": "A trace identifier for debugging.",
+            "example": "1c9d3asdfasdf9b0c1d2e3f4"
+          }
+        }
+      },
+
+      "Index": {
+        "type": "object",
+        "description": "A profile index configured in your Amperity tenant.",
+        "required": ["id", "name"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique ID for the index.",
+            "example": "idx-xyz789"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the index.",
+            "example": "loyalty_members"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the index.",
+            "example": "Profiles from the loyalty program"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the index was created.",
+            "example": "2025-07-30T22:16:04.409Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the index was last updated.",
+            "example": "2025-07-30T22:16:04.409Z"
+          }
+        }
+      },
+
+      "IndexListResponse": {
+        "type": "object",
+        "description": "A paginated list of profile indexes.",
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "A JSON array of index objects for the current page of results.",
+            "items": { "$ref": "#/components/schemas/Index" }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page in the results set has been returned.",
+            "example": "ABCa1bcdDEe2f3G"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total number of returned indexes. Only returned when `with_total` is `true` in the request.",
+            "example": 4
+          }
+        }
+      },
+
+      "ProfileAttributes": {
+        "type": "object",
+        "description": "A free-form object containing index-specific attribute fields for a customer profile. The fields present in this object depend on the attributes configured for the index. An index may contain up to 30 fields.",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "example": {
+          "first_name": "Daniel",
+          "last_name": "Kuhlman",
+          "email": "danielkuhlman@email.com",
+          "loyalty_id": "123456789-0"
+        }
+      },
+
+      "Profile": {
+        "type": "object",
+        "description": "A customer profile returned from a profile index.",
+        "required": ["id", "index_id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique ID for the customer profile.",
+            "example": "cl-abc123"
+          },
+          "index_id": {
+            "type": "string",
+            "description": "The unique ID for the profile index.",
+            "example": "idx-xyz789"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/ProfileAttributes"
+          }
+        }
+      },
+
+      "ProfileListResponse": {
+        "type": "object",
+        "description": "A paginated list of customer profiles from a profile index.",
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "A JSON array of profile objects for the current page of results.",
+            "items": { "$ref": "#/components/schemas/Profile" }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page in the results set has been returned.",
+            "example": "ABCa1bcdDEe2f3G"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total count of all results. Only returned when `with_total` is `true` in the request.",
+            "example": 42
+          }
+        }
+      }
+
+    }
+
+  }
+}
