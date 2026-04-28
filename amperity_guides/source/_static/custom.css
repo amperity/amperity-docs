@@ -354,8 +354,8 @@
   display: none;
   position: absolute;
   top: calc(100% + 4px);
-  left: 0;
-  min-width: 280px;
+  right: 0;
+  min-width: 320px;
   background: #ffffff;
   border: 1px solid #01292f;
   border-radius: 4px;
@@ -386,7 +386,7 @@
 }
 
 .md-link-item:hover {
-  background: #f2f4f5;
+  background: #ffffff;
   color: #01292f;
   text-decoration: none;
 }
