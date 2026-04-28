@@ -90,9 +90,7 @@ Add courier
 
 .. tip::
 
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
+   You can run a courier with an empty load operation using ``{}`` as the value for the load operation. Use this approach to get files to upload during feed creation, as a feed requires knowing the schema of a file before you can apply semantic tagging and other feed configuration settings.
 
 **To add a courier for Salesforce Sales Cloud**
 
