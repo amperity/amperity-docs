@@ -617,6 +617,45 @@ Export validation results
 
 Export model results to :ref:`Databricks <bridge-databricks-sync-with-databricks>`, :ref:`Google BigQuery <bridge-google-bigquery-sync-with-google-bigquery>`, or :ref:`Snowflake <bridge-snowflake-sync-with-snowflake>` using an outbound bridge.
 
-Configure an outbound bridge, and then select the **predictive_tables** dataset. The validation export includes per-product metrics such as total hit count, naive baseline performance, model performance at each audience size tier, along with hit rate and precision improvement percentages.
+Configure an outbound bridge, and then select the **predictive_tables** dataset. The validation export includes actual customer spend and churn status for all customers in the holdout dataset and the scores from the model and comparison baseline.
+
+.. model-predicted-clv-export-validation-table-start
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Column name
+     - Description
+   * - **amperity_id**
+     - The unique customer identifier.
+   * - **predicted_probability_of_transaction_next_365d**
+     - The predicted likelihood (0-1) of a customer transacting in the prediction horizon.
+   * - **predicted_order_frequency_next_365d**
+     - Assuming a customer will transact, the predicted number of orders they will make in the prediction horizon.
+   * - **predicted_average_order_revenue_next_365d**
+     - Assuming a customer will transact, the predicted average value per order for any orders in the prediction horizon.
+   * - **predicted_clv_next_365d**
+     - The total predicted spend over the prediction horizon, calculated as predicted_probability_of_transaction_next_365d * predicted_order_frequency_next_365d * predicted_average_order_revenue_next_365d.
+   * - **historical_order_frequency_lifetime**
+     - The customer's lifetime number of orders as of the start of the evaluation window.
+   * - **days_since_last_order**
+     - The days since the customer's last order, as of the start of the evaluation window.
+   * - **naive_predicted_clv_next_365d**
+     - The total expected spend over the prediction horizon, using the naive baseline. The baseline carries forward a customer's spend during the preceding period equal to the prediction horizon and assumes they will do the same in the prediction horizon.
+   * - **predicted_customer_lifecycle_status**
+     - Customer lifecycle segment: Lost, Highly at risk, At risk, Cooling down, or Active.
+   * - **predicted_customer_lifetime_value_tier**
+     - Value tier based on CLV percentile: Low, Medium, Bronze, Silver, Gold, or Platinum.
+   * - **_actual_returned**
+     - The customer's actual transaction status in the evaluation window. 1 for return, 0 for churn.
+   * - **_actual_order_freq**
+     - The customer's actual order amount in the evaluation window.
+   * - **_actual_average_order_value**
+     - The customer's actual average order value in the evaluation window.
+   * - **_actual_clv**
+     - The customer's actual spend in the evaluation window.
+
+.. model-predicted-clv-export-validation-table-end
 
 .. model-predicted-clv-export-validation-end
