@@ -619,6 +619,8 @@ Export model results to :ref:`Databricks <bridge-databricks-sync-with-databricks
 
 Configure an outbound bridge, and then select the **predictive_tables** dataset. The validation export includes actual customer spend and churn status for all customers in the holdout dataset and the scores from the model and comparison baseline.
 
+.. model-predicted-clv-export-validation-end
+
 .. model-predicted-clv-export-validation-table-start
 
 .. list-table::
@@ -657,5 +659,3 @@ Configure an outbound bridge, and then select the **predictive_tables** dataset.
      - The customer's actual spend in the evaluation window.
 
 .. model-predicted-clv-export-validation-table-end
-
-.. model-predicted-clv-export-validation-end
