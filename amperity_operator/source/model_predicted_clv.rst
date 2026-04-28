@@ -47,7 +47,7 @@ How predicted CLV works
 
 .. model-predicted-clv-howitworks-start
 
-The predicted CLV model is an `ensemble learning method <https://en.wikipedia.org/wiki/Ensemble_learning>`__ |ext_link| with three independently trained submodels: a :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`, an :ref:`order frequency regression <model-predicted-clv-howitworks-order-frequency>` and a :ref:`average order value regression <model-predicted-clv-howitworks-aov>`. Each individual model contributes independently to the predicted CLV model's output: :ref:`predicted CLV scores <model-predicted-clv-howitworks-scores>`.
+The predicted CLV model is an `ensemble learning method <https://en.wikipedia.org/wiki/Ensemble_learning>`__ |ext_link| with three independently trained submodels: a :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`, an :ref:`order frequency regression <model-predicted-clv-howitworks-order-frequency>`, and an :ref:`average order value regression <model-predicted-clv-howitworks-aov>`. Each individual model contributes independently to the predicted CLV model's output: :ref:`predicted CLV scores <model-predicted-clv-howitworks-scores>`.
 
 .. model-predicted-clv-howitworks-end
 
@@ -101,9 +101,9 @@ The average order value regression submodel predicts the average revenue per ord
 Predicted CLV scores
 --------------------------------------------------
 
-.. model-predicted-clv-howitworks-aov-start
+.. model-predicted-clv-howitworks-scores-start
 
-The :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`, :ref:`order frequency regression <model-predicted-clv-howitworks-order-frequency>` and :ref:`average order value regression <model-predicted-clv-howitworks-aov>` submodels are combined with a multiplicative ensemble:
+The :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`, :ref:`order frequency regression <model-predicted-clv-howitworks-order-frequency>`, and :ref:`average order value regression <model-predicted-clv-howitworks-aov>` submodels are combined with a multiplicative ensemble:
 
 .. code-block:: none
 
@@ -119,7 +119,7 @@ Use predicted CLV modeling to build high-value audiences that identify:
 * Which customers are better candidates for winback offers?
 * Which customers are candidates for cultivating customer value?
 
-.. model-predicted-clv-howitworks-aov-end
+.. model-predicted-clv-howitworks-scores-end
 
 
 .. _model-predicted-clv-use-cases:
@@ -279,12 +279,12 @@ Components of predictive CLV modeling have the following hyperparameters:
      - 0.0
      - Applies to **Logistic regression** model types.
 
-       Controls the mixing ratio for L1 regularization, also known as `LASSO <https://en.wikipedia.org/wiki/Lasso_(statistics)>`__, and L2 regularization, also known as `ridge regression <https://en.wikipedia.org/wiki/Ridge_regression>`__ |ext_link| applied to `elastic net regression <https://en.wikipedia.org/wiki/Elastic_net_regularization>`__ |ext_link|.
+       Controls the mixing ratio for L1 regularization, also known as `LASSO <https://en.wikipedia.org/wiki/Lasso_(statistics)>`__ |ext_link|, and L2 regularization, also known as `ridge regression <https://en.wikipedia.org/wiki/Ridge_regression>`__ |ext_link| applied to `elastic net regression <https://en.wikipedia.org/wiki/Elastic_net_regularization>`__ |ext_link|.
 
        Range: 0.0 to 1.0.
 
        * A value of "0.0" applies only L2 regularization. Weights are penalized proportional to their square, which shrinks weights toward zero.
-       * Values between 0.0 and 1.0 blend L1 and L2 regularization. A value closer to "0.0" encourages smaller and more even distribution. A value closer to "1.0" leads to sparse models.
+       * Values between 0.0 and 1.0 blend L1 and L2 regularization. A value closer to "0.0" encourages a smaller and more even distribution of weights. A value closer to "1.0" leads to sparse models.
        * A value of "1.0" applies only L1 regularization. Weights are penalized proportional to their absolute value.
 
 
@@ -533,10 +533,8 @@ Each version must be evaluated before it can be selected for use with predicted 
 
        For example: RF/RF/RF.
 
-
    * - **Brier score**
      - A Brier score measures prediction accuracy for the return classifier submodel and displays as an improvement percentage relative to a 90-day naive baseline. A lower score is better. 
-
 
    * - **Evaluation**
      - Did model evaluation pass or fail?
@@ -544,16 +542,16 @@ Each version must be evaluated before it can be selected for use with predicted 
    * - **Last ran**
      - The date and time at which the model's validation run completed.
 
+   * - **Lookback window**
+     - The number of years of historical transaction data used to train the predicted CLV model.
+
    * - **MAE**
      - Mean absolute error (MAE) measures the average dollar error between predicted CLV and actual CLV across all customers.
 
        **MAE** shows the percentage improvement over baseline and displays as actual versus predicted average spend amounts. A lower value is better. A large value indicates imprecise predictions even if rankings are good.
 
-   * - **Lookback window**
-     - The number of years of historical transaction data used to train the predicted CLV model.
-
    * - **Spearman's rank**
-     - A spearman's rank measures how well a model ranks customers by predicted lifetime value relative to their actual lifetime value and displays as an improvement percentage over a naive baseline ranking. A higher value is better and indicates a greater percentage of high-value customers who are predicted to purchase.
+     - A Spearman's rank measures how well a model ranks customers by predicted lifetime value relative to their actual lifetime value and displays as an improvement percentage over a naive baseline ranking. A higher value is better and indicates a greater percentage of high-value customers who are predicted to purchase.
 
    * - **Status**
      - The current state of the model version's training and evaluation run.
@@ -597,7 +595,7 @@ Predicted CLV output tables
 
 The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
 
-.. note:: Field names use "365d" as the default prediction horizon. If a predicted CLV model uses a different lookback window, such as "90 days" or "180 days" column names in the database table are not updated. The data in the table rows always matches the value for the lookback window.
+.. note:: Field names use "365d" as the default prediction horizon. If a predicted CLV model uses a different prediction horizon, such as "90 days" or "180 days", column names in the database table are not updated. The data in the table rows always matches the value for the lookback window.
 
 .. model-predicted-clv-output-tables-end
 
