@@ -280,6 +280,21 @@ The following building blocks are available to users for creating journeys:
 
 .. journeys-node-types-end
 
+.. journeys-unique-node-names-start
+
+.. important:: Each node in a journey must have a name that is unique within that journey. If two nodes share a name (for example, two **Activate** nodes), they must be differentiated (for example, "Activate 1" and "Activate 2").
+
+   When you open an existing journey that contains duplicate node names, a validation message appears at the top of the canvas:
+
+   *One or more node names are invalid. [Node type] — Name must be unique for this journey*
+
+   To resolve duplicate names, you can:
+
+   * Click the **Fix duplicate node names** button at the top of the journey canvas while in edit mode. This automatically renames all non-unique nodes by appending sequential numerals (for example, "Activate" becomes "Activate 1" and "Activate 2").
+   * Rename nodes manually in the **Node Configuration** sidebar.
+
+.. journeys-unique-node-names-end
+
 .. _journeys-ai-assistant:
 
 About the Journeys AI Assistant
@@ -330,7 +345,7 @@ Activate
    :align: left
    :class: no-scaled-link
 
-You can rename the activate node.
+You can rename the activate node. Node names must be unique within a journey. For example, you cannot have multiple activate nodes named "Activate" but you can have "Activate 1", "Activate 2", and so on.
 
 You can configure a single activation node to send to multiple destinations at once, and this is recommended for simplicity and efficiency.
 
@@ -389,7 +404,7 @@ Choose a combination of an integer plus "days", "weeks", or "months" to designat
 
 A delay is applied to a single parent node.
 
-You can rename the delay node.
+You can rename the delay node. Node names must be unique within a journey. For example, you cannot have multiple delay nodes named "Delay" but you can have "Delay 1", "Delay 2", and so on.
 
 .. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs.
    
@@ -419,7 +434,7 @@ Conditional split
 
 These segments may already exist or may be defined within this journey using custom criteria.
 
-You can rename the individual conditional split node and rename the "Everyone else" sub-audience.
+You can rename the conditional split node and rename the "Everyone else" sub-audience. Node names must be unique within a journey. For example, you cannot have multiple conditional split nodes named "Conditional Split" but you can have "Conditional Split 1", "Conditional Split 2", and so on.
 
 .. journeys-node-split-conditional-end
 
@@ -443,7 +458,7 @@ Percent split
 
 The percentage of all individual nodes under a percent split must add up to 100% of the audience, including the control group.
 
-You can rename the percent split node and rename the individual paths.
+You can rename the percent split node and rename the individual paths. Node names must be unique within a journey. For example, you cannot have multiple percent split nodes named "Percent Split" but you can have "Percent Split 1", "Percent Split 2", and so on.
 
 .. journeys-node-split-percent-end
 

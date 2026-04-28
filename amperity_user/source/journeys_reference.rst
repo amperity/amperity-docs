@@ -113,6 +113,10 @@ Journeys Canvas
    :start-after: .. journeys-node-types-start
    :end-before: .. journeys-node-types-end
 
+.. include:: ../../amperity_reference/source/journeys.rst
+   :start-after: .. journeys-unique-node-names-start
+   :end-before: .. journeys-unique-node-names-end
+
 
 .. _journeys-node-start:
 
