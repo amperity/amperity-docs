@@ -94,7 +94,7 @@ Winter 2026
 
 **Source topics**
 
-   :bdg-success:`NEW` New sources for `Toast <../operator/source_toast.html>`__.
+   :bdg-success:`NEW` New source for `Toast <../operator/source_toast.html>`__.
 
 .. updates-2026-winter-end
 
