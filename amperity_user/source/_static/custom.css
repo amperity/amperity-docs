@@ -278,16 +278,7 @@
 }
 
 
-/* Mermaid diagrams */
-
-.mermaid svg {
-  max-width: 500px;
-  font-size: 1rem;
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-
-/* Page title + LLMs button row */
+/* Page title + copy page button row */
 
 .pt-title-row {
   display: flex;
@@ -315,7 +306,7 @@
 }
 
 
-/* LLMs dropdown */
+/* Copy page dropdown */
 
 .md-link-wrap {
   position: relative;
@@ -355,7 +346,7 @@
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  min-width: 280px;
+  min-width: 320px;
   background: #ffffff;
   border: 1px solid #01292f;
   border-radius: 4px;
@@ -386,7 +377,7 @@
 }
 
 .md-link-item:hover {
-  background: #f2f4f5;
+  background: #ffffff;
   color: #01292f;
   text-decoration: none;
 }
@@ -437,6 +428,7 @@
   object-fit: contain;
   text-align: center;
 }
+
 .pt-below-title {
   display: block;
   margin-top: 10px;
