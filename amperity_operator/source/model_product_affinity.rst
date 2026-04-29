@@ -525,19 +525,3 @@ Export model results to :ref:`Databricks <bridge-databricks-sync-with-databricks
 Configure an outbound bridge, and then select the **predictive_tables** dataset. The validation export includes per-product metrics such as total hit count, naive baseline performance, model performance at each audience size tier, along with hit rate and precision improvement percentages.
 
 .. model-product-affinity-export-validation-end
-
-
-.. _model-product-affinity-segments:
-
-Use in segments
-==================================================
-
-.. model-product-affinity-segments-start
-
-The following table describes the fields that are available when using product affinity modeling in segments.
-
-.. model-product-affinity-segments-end
-
-.. include:: ../../amperity_reference/source/data_tables.rst
-   :start-after: .. data-tables-affinity-table-start
-   :end-before: .. data-tables-affinity-table-end
