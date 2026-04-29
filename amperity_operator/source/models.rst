@@ -261,9 +261,8 @@ Predictive models are configurable in Amperity:
 
 * :ref:`Build a churn propensity model <model-churn-propensity-configure>`
 * :ref:`Build a event propensity model <model-event-propensity-configure>`
-* :ref:`Build a predicted CLV model <model-predicted-clv-configure>`
-
-.. * :ref:`Build a product affinity model <model-product-affinity-configure>`
+* :ref:`Build a predicted CLV model <model-predicted-clv-build>`
+* :ref:`Build a product affinity model <model-product-affinity-build>`
 
 .. models-build-end
 
