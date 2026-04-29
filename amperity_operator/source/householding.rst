@@ -136,8 +136,6 @@ The **Merged Households** table starts as a SQL template that defines how addres
 #. Click **Add Table**. Name the table "Merged_Households".
 #. Set **Build Mode** to "SQL", and then define a SQL query.
 
-   .. tip:: You may `download a copy of Merged Households <../downloads/sql/merged_households.txt>`__ as a template or you may :ref:`refer to an example <householding-address-sql-template>`.
-
    .. important:: Amperity uses a single table in the customer 360 database to collect rows from the **Unified Coalesced** table, and then collapses them into a single row per Amperity ID.
 
    This is referred to as the **Merged Customers** table. Prior to August 1, 2020 the name of this table was **Unified Merged**. Verify the name of this table as it is used for your tenant, and then update the template to match the name of the table in your tenant.
