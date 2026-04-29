@@ -284,15 +284,6 @@ The following building blocks are available to users for creating journeys:
 
 .. important:: Each node in a journey must have a name that is unique within that journey. If two nodes share a name (for example, two **Activate** nodes), they must be differentiated (for example, "Activate 1" and "Activate 2").
 
-   When you open an existing journey that contains duplicate node names, a validation message appears at the top of the canvas:
-
-   *One or more node names are invalid. [Node type] — Name must be unique for this journey*
-
-   To resolve duplicate names, you can:
-
-   * Click the **Fix duplicate node names** button at the top of the journey canvas while in edit mode. This automatically renames all non-unique nodes by appending sequential numerals (for example, "Activate" becomes "Activate 1" and "Activate 2").
-   * Rename nodes manually in the **Node Configuration** sidebar.
-
 .. journeys-unique-node-names-end
 
 .. _journeys-ai-assistant:
