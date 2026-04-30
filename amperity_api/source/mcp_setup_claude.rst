@@ -42,35 +42,22 @@ Claude.ai (and Claude Desktop)
 
 Claude.ai is the canonical place to add remote MCP connectors. Once added, the connector is also available in Claude Desktop and Claude mobile apps signed into the same account. Claude Desktop's ``claude_desktop_config.json`` file is for local stdio servers only and does not need to be edited for the hosted Amperity MCP.
 
-Pro or Max plan
---------------------------------------------------
+Open the right Connectors page for your plan:
 
-1. In Claude.ai, go to **Customize** > **Connectors**.
-2. Click **+** (or **Add custom connector**).
-3. In **Remote MCP server URL**, enter:
+* **Pro or Max** -- in Claude.ai, go to **Customize** > **Connectors**, then click **+** (or **Add custom connector**).
+* **Team or Enterprise** (organization Owner only) -- go to **Organization settings** > **Connectors**, click **Add**, hover over **Custom**, then select **Web**.
 
-   ::
+Then, in either flow:
 
-      https://mcp.amperity.com
-
-4. Click **Add**. Claude opens a browser tab to complete OAuth. Sign in with your Amperity credentials.
-
-Team or Enterprise plan
---------------------------------------------------
-
-Only an organization Owner can add a custom connector for a Team or Enterprise plan.
-
-1. In Claude.ai, go to **Organization settings** > **Connectors**.
-2. Click **Add**. Hover over **Custom**, then select **Web**.
-3. In **Remote MCP server URL**, enter:
+1. In **Remote MCP server URL**, enter:
 
    ::
 
       https://mcp.amperity.com
 
-4. Click **Add**.
+2. Click **Add**. A browser tab opens to complete OAuth on first connect -- sign in with your Amperity credentials.
 
-Members of the organization can then connect by going to **Customize** > **Connectors** and clicking **Connect** on the Amperity entry. The first connect opens a browser tab to complete OAuth.
+On Team or Enterprise plans, members can then connect by going to **Customize** > **Connectors** and clicking **Connect** on the Amperity entry.
 
 
 .. _mcp-setup-claude-code:
