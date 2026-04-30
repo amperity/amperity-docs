@@ -77,7 +77,7 @@ After you select **OAuth 2.0**, choose the **Manual** type and fill in the follo
    * - Client ID
      - ``nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs``
    * - Client secret
-     - *(see note below)*
+     - Any non-empty placeholder, for example ``unused``. The Amperity MCP server is a PKCE-based public OAuth client and ignores this value, but Copilot Studio requires the field to be non-empty.
    * - Authorization URL
      - ``https://mcp.amperity.com/authorize``
    * - Token URL template
@@ -86,10 +86,6 @@ After you select **OAuth 2.0**, choose the **Manual** type and fill in the follo
      - ``https://mcp.amperity.com/oauth/token``
    * - Scopes
      - *(leave empty)*
-
-.. note::
-
-   The Amperity MCP server is a PKCE-based public OAuth client and does not issue a client secret. If the Copilot Studio UI requires a non-empty value for **Client secret**, contact your Amperity representative for guidance.
 
 After you select **Create**, Copilot Studio displays a callback URL. Copy this URL -- you (or your Amperity representative) need to register it as a valid redirect URI on the Amperity OAuth client before the connection can complete.
 
