@@ -38,19 +38,67 @@ You need:
 Add the Amperity MCP server in Copilot Studio
 ==================================================
 
+The Copilot Studio MCP onboarding wizard collects the connection details and the OAuth configuration in two steps.
+
+Configure server details
+--------------------------------------------------
+
 1. In Copilot Studio, open the agent you want to extend.
-2. Add a new connector and choose **Model Context Protocol** as the connector type.
-3. Set the server URL:
+2. Go to the **Tools** page, then select **Add a tool** > **New tool**.
+3. Select **Model Context Protocol**. The MCP onboarding wizard appears.
+4. Fill in the basic server fields:
 
-   ::
+   .. list-table::
+      :header-rows: 1
+      :widths: 30 70
 
-      https://mcp.amperity.com/mcp
+      * - Field
+        - Value
+      * - Server name
+        - ``Amperity`` (or any name your team prefers)
+      * - Server description
+        - A short description of what your team uses the connector for. The agent orchestrator uses this text to decide when to call Amperity at runtime.
+      * - Server URL
+        - ``https://mcp.amperity.com/mcp``
 
-4. Set the authentication type to **OAuth 2.0** with **PKCE**.
+5. Under **Authentication**, select **OAuth 2.0**.
 
-5. When Copilot Studio prompts you to authorize, sign in with your Amperity credentials.
+Configure OAuth 2.0 (Manual)
+--------------------------------------------------
 
-6. Save the connector and add it to your agent's available tools.
+After you select **OAuth 2.0**, choose the **Manual** type and fill in the following fields. Field order matches the Copilot Studio UI.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Field
+     - Value
+   * - Client ID
+     - ``nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs``
+   * - Client secret
+     - *(see note below)*
+   * - Authorization URL
+     - ``https://mcp.amperity.com/authorize``
+   * - Token URL template
+     - ``https://mcp.amperity.com/oauth/token``
+   * - Refresh URL
+     - ``https://mcp.amperity.com/oauth/token``
+   * - Scopes
+     - *(leave empty)*
+
+.. note::
+
+   The Amperity MCP server is a PKCE-based public OAuth client and does not issue a client secret. If the Copilot Studio UI requires a non-empty value for **Client secret**, contact your Amperity representative for guidance.
+
+After you select **Create**, Copilot Studio displays a callback URL. Copy this URL -- you (or your Amperity representative) need to register it as a valid redirect URI on the Amperity OAuth client before the connection can complete.
+
+Select **Next** to continue. On the **Add tool** dialog, choose **Create a new connection** and sign in with your Amperity credentials. Then select **Add to agent**.
+
+Alternative: Dynamic discovery
+--------------------------------------------------
+
+The Amperity MCP server also publishes OAuth discovery metadata and supports Dynamic Client Registration. If your environment allows it, choose **OAuth 2.0** > **Dynamic discovery** instead of **Manual**. In that mode, Copilot Studio reads the configuration from ``https://mcp.amperity.com/.well-known/oauth-authorization-server`` automatically and you do not need to enter any of the fields above. Use **Manual** when you need an explicit, repeatable configuration -- for example, when distributing setup steps to many users.
 
 
 Tool surface limits
