@@ -60,13 +60,13 @@ There are two supported ways for a client to identify itself.
 Tokens
 ==================================================
 
-The MCP server issues access tokens that are valid bearer credentials for both the MCP endpoint and downstream Amperity APIs. Include the token on every request:
+The MCP server requires a bearer access token on every request:
 
 ::
 
    Authorization: Bearer <access-token>
 
-Tokens are JWS-signed JWTs that the Amperity API validates by using Auth0's JSON Web Key Set. The MCP server's token endpoint sets the ``audience`` parameter automatically so that issued tokens are accepted by Amperity APIs.
+The MCP server validates incoming tokens against Auth0 and proxies the token through to downstream Amperity API calls.
 
 Tokens expire. When a token expires, the client receives a 401 response. Most MCP clients handle the refresh transparently. If yours does not, sign in again to obtain a fresh token.
 
@@ -76,9 +76,9 @@ Tokens expire. When a token expires, the client receives a 401 response. Most MC
 Tenants and scoping
 ==================================================
 
-After authentication, the MCP server scopes every tool call to the calling user's identity. If your account belongs to multiple tenants, the MCP session begins without a tenant selected. Use the ``tenant_list`` and ``tenant_use`` tools to select a tenant for the session, or set ``AMPERITY_TENANT`` if your client supports environment variables.
+After authentication, the MCP server scopes every tool call to the calling user's identity. If your account belongs to multiple tenants, the MCP session begins without a tenant selected. Use the ``tenant.list`` and ``tenant.use`` tools to select a tenant for the session.
 
-The current tenant selection is stored per-token on the server and persists across requests within the same session.
+The current tenant selection is stored per-token on the server and persists across subsequent requests on the same token.
 
 
 .. _mcp-authentication-permissions:

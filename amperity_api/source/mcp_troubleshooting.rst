@@ -57,7 +57,7 @@ A new MCP session begins without a tenant selected. If a tool that requires a te
 
    *"List my Amperity tenants, then use ``acme``."*
 
-The agent calls ``tenant_list`` followed by ``tenant_use``. The selected tenant persists for the remainder of the session.
+The agent calls ``tenant.list`` followed by ``tenant.use``. The selected tenant persists for the remainder of the session.
 
 
 Write operation refused

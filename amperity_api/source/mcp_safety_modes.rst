@@ -20,7 +20,7 @@ MCP safety modes
 
 .. mcp-safety-modes-start
 
-The Amperity MCP server gates write operations behind a per-session safety mode. The safety mode controls whether tools that create, update, or delete data can run without explicit confirmation. Safety modes are scoped to the calling user's session -- one user's setting does not affect any other user.
+The Amperity MCP server gates write operations behind a per-session safety mode. The safety mode controls whether tools that create, update, or delete data can run on production tenants. Safety modes are scoped to the calling user's session -- one user's setting does not affect any other user.
 
 .. mcp-safety-modes-end
 
@@ -37,17 +37,17 @@ Available modes
    * - Mode
      - Production tenant
      - Sandbox tenant
-   * - ``strict``
-     - All write operations are blocked.
-     - All writes are allowed.
-   * - ``confirm`` (default)
+   * - ``strict`` (default)
+     - Write operations are blocked. Reads are allowed.
+     - Reads and writes are allowed.
+   * - ``confirm``
      - Write operations require an explicit ``confirm: true`` argument from the agent.
-     - All writes are allowed.
+     - Reads and writes are allowed.
    * - ``unrestricted``
-     - All write operations are allowed without explicit confirmation.
-     - All writes are allowed.
+     - All operations are allowed without explicit confirmation.
+     - Reads and writes are allowed.
 
-The default for new sessions is ``confirm``. This requires an AI agent to pass an explicit confirmation argument to any write operation against a production tenant, while leaving sandbox tenants unrestricted for fast iteration.
+The default mode for new sessions is ``strict``, which restricts writes to sandbox tenants. Switch modes when you are ready to write to production.
 
 
 Set the safety mode
@@ -55,20 +55,20 @@ Set the safety mode
 
 The MCP server exposes tools to read and update the safety mode for the current session. Ask your agent to set the mode:
 
-   *"Set the Amperity safety mode to strict."*
+   *"Set the Amperity safety mode to confirm."*
 
-The agent calls the ``safety_set_mode`` tool. The new setting takes effect immediately and persists for the remainder of the session.
+The agent calls the ``safety.set_mode`` tool. The new setting takes effect immediately and persists for the remainder of the session. You can read the current mode with ``safety.get_mode``.
 
 
-Recommendation
+Recommended usage
 ==================================================
 
-* Use ``strict`` while you explore the tool surface or test prompts against production tenants.
-* Use ``confirm`` (default) for routine work against production tenants.
-* Use ``unrestricted`` only in sandbox tenants or when running scripted, audited automations.
+* Use ``strict`` (default) while you explore the tool surface or test prompts. The MCP server still allows full read access and full sandbox writes -- you can do meaningful work without unlocking production writes.
+* Use ``confirm`` for routine work against production tenants. Each write requires the agent to pass ``confirm: true``, which surfaces the change for human review.
+* Use ``unrestricted`` only for scripted, audited automations or in contexts where you accept full responsibility for write actions.
 
 
-Audit
+Confirm-required operations
 ==================================================
 
-Every tool call is logged with the calling user, the tenant, and the tool name. Customer-facing audit logging for MCP-originated changes is on the roadmap. In the interim, contact your Amperity representative if you need an audit trail of MCP activity.
+Some tools always require ``confirm: true`` regardless of the session safety mode. Examples include external send operations such as ``campaign.schedule`` and ``orchestration_group.run``. The tool descriptions returned by ``tools/list`` indicate when explicit confirmation is required.
