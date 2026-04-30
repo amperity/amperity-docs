@@ -35,8 +35,8 @@ The MCP server is hosted by Amperity. Customers connect to a single public endpo
 What it enables
 ==================================================
 
-* Conversational access to Amperity from Copilot, Claude, ChatGPT, and other MCP-compatible clients.
-* The full Amperity tool surface -- 200+ tools across tenants, databases, queries, identity resolution, campaigns, predictions, and more. See :doc:`mcp_tool_reference`.
+* Conversational access to Amperity from Copilot Studio, Claude, ChatGPT, and other MCP-compatible clients.
+* More than 200 tools across tenants, databases, queries, identity resolution, campaigns, predictions, and more. Some clients enforce a per-agent tool ceiling -- for example, Copilot Studio supports up to 70 tools per agent -- and surface only a subset of the full tool surface. See :doc:`mcp_setup_m365_copilot` for options when you connect a tool-count-limited client. Tool count is approximate during beta and subject to change.
 * Per-user isolation. Each request is authenticated and scoped to the calling user's identity, tenant, and permissions.
 * Configurable safety modes for write operations. See :doc:`mcp_safety_modes`.
 
@@ -45,7 +45,7 @@ What it does not do
 ==================================================
 
 * The MCP server does not bypass Amperity authorization. Users see only the tenants and operations their credentials allow.
-* The MCP server does not store conversation history or context. Sessions are stateless across requests.
+* The MCP server does not store conversation history. Per-token session state -- selected tenant and safety mode -- persists across requests within the same session.
 * The MCP server is not a replacement for the Amperity REST API. Use the :doc:`overview` for programmatic integrations that do not involve an AI agent.
 
 
