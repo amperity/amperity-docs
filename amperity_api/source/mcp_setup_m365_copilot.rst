@@ -95,11 +95,6 @@ After you select **Create**, Copilot Studio displays a callback URL. Copy this U
 
 Select **Next** to continue. On the **Add tool** dialog, choose **Create a new connection** and sign in with your Amperity credentials. Then select **Add to agent**.
 
-Alternative: Dynamic discovery
---------------------------------------------------
-
-The Amperity MCP server also publishes OAuth discovery metadata and supports Dynamic Client Registration. If your environment allows it, choose **OAuth 2.0** > **Dynamic discovery** instead of **Manual**. In that mode, Copilot Studio reads the configuration from ``https://mcp.amperity.com/.well-known/oauth-authorization-server`` automatically and you do not need to enter any of the fields above. Use **Manual** when you need an explicit, repeatable configuration -- for example, when distributing setup steps to many users.
-
 
 Tool surface limits
 ==================================================
