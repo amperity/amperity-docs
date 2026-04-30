@@ -55,7 +55,5 @@ Connect a client
 Choose a setup guide for your client:
 
 * :doc:`mcp_setup_m365_copilot` -- the primary supported integration
-* :doc:`mcp_setup_claude` -- Claude Desktop and Claude Code
+* :doc:`mcp_setup_claude` -- Claude.ai, Claude Desktop, and Claude Code
 * :doc:`mcp_setup_chatgpt` -- ChatGPT custom connectors
-
-For details about connection metadata, OAuth flow, and the public endpoint, see :doc:`mcp_connect`.

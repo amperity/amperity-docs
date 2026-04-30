@@ -89,7 +89,6 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    :hidden:
 
    About the MCP server <mcp_overview>
-   Connect <mcp_connect>
    Set up Copilot Studio <mcp_setup_m365_copilot>
    Set up Claude <mcp_setup_claude>
    Set up ChatGPT <mcp_setup_chatgpt>
