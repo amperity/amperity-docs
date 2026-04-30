@@ -82,6 +82,23 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    GET /indexes/{id}/profiles <endpoint_get_profiles_list>
    GET /indexes/{id}/profiles/{id} <endpoint_get_profile>
 
+
+.. toctree::
+   :caption: MCP
+   :maxdepth: 2
+   :hidden:
+
+   About the MCP server <mcp_overview>
+   Connect <mcp_connect>
+   Set up Microsoft 365 Copilot <mcp_setup_m365_copilot>
+   Set up Claude <mcp_setup_claude>
+   Set up ChatGPT <mcp_setup_chatgpt>
+   Authentication <mcp_authentication>
+   Safety modes <mcp_safety_modes>
+   Tool reference <mcp_tool_reference>
+   Troubleshooting <mcp_troubleshooting>
+
+
 .. toctree::
    :caption: MORE RESOURCES
    :hidden:
