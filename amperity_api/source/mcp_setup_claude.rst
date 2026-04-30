@@ -81,7 +81,7 @@ In a Claude conversation, ask:
 
    *"List my Amperity tenants."*
 
-Claude should call the ``tenant.list`` tool and return your tenants. If you see an authorization error, remove the server and add it again to retrigger the OAuth flow:
+Claude should call the ``tenant_list`` tool and return your tenants. If you see an authorization error, remove the server and add it again to retrigger the OAuth flow:
 
 ::
 

@@ -112,7 +112,7 @@ Open a chat in any M365 app where the agent is available. Ask the agent to list 
 
    *"List my Amperity tenants."*
 
-The agent should call the ``tenant.list`` tool and return your tenants. If the agent reports an authorization error, sign out of the connector and reauthorize.
+The agent should call the ``tenant_list`` tool and return your tenants. If the agent reports an authorization error, sign out of the connector and reauthorize.
 
 
 Troubleshooting

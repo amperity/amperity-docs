@@ -58,7 +58,7 @@ In a chat with the connector enabled, ask:
 
    *"List my Amperity tenants."*
 
-ChatGPT should call the ``tenant.list`` tool and return your tenants.
+ChatGPT should call the ``tenant_list`` tool and return your tenants.
 
 
 Troubleshooting

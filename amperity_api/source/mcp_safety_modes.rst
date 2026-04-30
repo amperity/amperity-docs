@@ -26,7 +26,7 @@ The Amperity MCP server gates write operations behind a per-session safety mode.
 
 .. note::
 
-   The safety mode model is being evaluated and may change during beta as Amperity moves toward more granular access controls. The agent itself can call ``safety.set_mode`` to change the current session's mode -- treat the safety mode as a guardrail, not a permission boundary, and pair it with the access controls on the underlying Amperity tenant.
+   The safety mode model is being evaluated and may change during beta as Amperity moves toward more granular access controls. The agent itself can call ``safety_set_mode`` to change the current session's mode -- treat the safety mode as a guardrail, not a permission boundary, and pair it with the access controls on the underlying Amperity tenant.
 
 
 .. _mcp-safety-modes-table:
@@ -61,7 +61,7 @@ The MCP server exposes tools to read and update the safety mode for the current 
 
    *"Set the Amperity safety mode to confirm."*
 
-The agent calls the ``safety.set_mode`` tool. The new setting takes effect immediately and persists for the remainder of the session. You can read the current mode with ``safety.get_mode``.
+The agent calls the ``safety_set_mode`` tool. The new setting takes effect immediately and persists for the remainder of the session. You can read the current mode with ``safety_get_mode``.
 
 
 Recommended usage
@@ -75,4 +75,4 @@ Recommended usage
 Confirm-required operations
 ==================================================
 
-Some tools always require ``confirm: true`` regardless of the session safety mode. Examples include external send operations such as ``campaign.schedule`` and ``orchestration_group.run``. The tool descriptions returned by ``tools/list`` indicate when explicit confirmation is required.
+Some tools always require ``confirm: true`` regardless of the session safety mode. Examples include external send operations such as ``campaign_schedule`` and ``orchestration_group_run``. The tool descriptions returned by ``tools/list`` indicate when explicit confirmation is required.

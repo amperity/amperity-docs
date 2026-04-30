@@ -76,7 +76,7 @@ Tokens expire. When a token expires, the client receives a 401 response. Most MC
 Tenants and scoping
 ==================================================
 
-After authentication, the MCP server scopes every tool call to the calling user's identity. If your account belongs to multiple tenants, the MCP session begins without a tenant selected. Use the ``tenant.list`` and ``tenant.use`` tools to select a tenant for the session.
+After authentication, the MCP server scopes every tool call to the calling user's identity. If your account belongs to multiple tenants, the MCP session begins without a tenant selected. Use the ``tenant_list`` and ``tenant_use`` tools to select a tenant for the session.
 
 The current tenant selection is stored per-token on the server and persists across subsequent requests on the same token.
 
