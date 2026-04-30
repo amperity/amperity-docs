@@ -20,19 +20,9 @@ MCP tool reference
 
 .. mcp-tool-reference-start
 
-The Amperity MCP server exposes tools across the Amperity surface. Tools are grouped here by domain. Tool names follow a ``domain_action`` convention -- for example, ``tenant_list`` or ``database_create_table``. For the canonical list available to your account, send a ``tools/list`` request from your MCP client; the result reflects the exact tool surface your account is authorized to call.
+The Amperity MCP server exposes tools across the Amperity surface, grouped here by domain. Tool names follow a ``domain_action`` convention -- for example, ``tenant_list`` or ``database_create_table``. For the canonical list available to your account, send a ``tools/list`` request from your MCP client (most clients do this automatically on connect, or you can ask your agent to list the available Amperity tools). The result reflects the exact tool surface your account is authorized to call.
 
 .. mcp-tool-reference-end
-
-
-How to discover tools
-==================================================
-
-Most MCP clients call ``tools/list`` automatically when they connect. To inspect the surface from a chat:
-
-   *"List the Amperity tools available to you."*
-
-The client returns each tool's name, description, and input schema. The names below match the tool names returned by ``tools/list``.
 
 
 Tenants and sessions

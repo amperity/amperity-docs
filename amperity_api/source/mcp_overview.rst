@@ -59,12 +59,3 @@ Choose a setup guide for your client:
 * :doc:`mcp_setup_chatgpt` -- ChatGPT custom connectors
 
 For details about connection metadata, OAuth flow, and the public endpoint, see :doc:`mcp_connect`.
-
-
-Related topics
-==================================================
-
-* :doc:`mcp_authentication` -- OAuth 2.1 with PKCE, Dynamic Client Registration, and pre-configured client IDs.
-* :doc:`mcp_safety_modes` -- how the MCP server handles write operations.
-* :doc:`mcp_tool_reference` -- a domain-grouped catalog of available tools.
-* :doc:`mcp_troubleshooting` -- common issues and how to resolve them.

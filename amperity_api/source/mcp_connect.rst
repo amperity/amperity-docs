@@ -40,9 +40,7 @@ This endpoint speaks the Model Context Protocol over HTTP using the streamable t
 Authentication summary
 ==================================================
 
-The MCP server uses OAuth 2.1 with PKCE. Most MCP clients handle the OAuth flow automatically -- on first connect, the client opens a browser, sends you to Amperity's identity provider, and receives a token after you sign in.
-
-For a complete reference -- including Dynamic Client Registration, pre-configured client IDs, and token formats -- see :doc:`mcp_authentication`.
+The MCP server uses OAuth 2.1 with PKCE. Most MCP clients handle the OAuth flow automatically -- on first connect, the client opens a browser, sends you to Amperity's identity provider, and receives a token after you sign in. The discovery table below lists the values clients use when manual configuration is required.
 
 
 .. _mcp-connect-discovery:
@@ -81,7 +79,7 @@ The discovery document advertises the following:
    * - ``token_endpoint_auth_methods_supported``
      - ``["none"]``
 
-A static client identifier is also available for clients that do not support Dynamic Client Registration. See :doc:`mcp_authentication` for details.
+A static client identifier is also published in the same discovery document for clients that do not support Dynamic Client Registration. The static identifier is a public value -- there is no client secret -- and is safe to embed in client configuration.
 
 
 First-time connect
@@ -96,13 +94,3 @@ The first time you connect a new client:
 5. The client connects to ``https://mcp.amperity.com/mcp`` with the access token. Subsequent requests reuse the token until it expires.
 
 After the token expires, most clients refresh automatically or prompt you to sign in again.
-
-
-Choose your client
-==================================================
-
-* :doc:`mcp_setup_m365_copilot` -- Copilot Studio
-* :doc:`mcp_setup_claude` -- Claude Desktop and Claude Code
-* :doc:`mcp_setup_chatgpt` -- ChatGPT custom connectors
-
-If your client is not listed, see :doc:`mcp_authentication` for the values you need to configure manually.
