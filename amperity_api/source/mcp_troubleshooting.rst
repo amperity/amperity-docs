@@ -40,7 +40,7 @@ If 401 responses persist after a fresh sign-in:
 Tools missing or truncated
 ==================================================
 
-Some MCP clients limit the number of tools that can be registered per agent or chat. Copilot Studio, for example, allows up to 70 tools per agent. The full Amperity tool surface is more than 200 tools.
+Some MCP clients limit the number of tools that can be registered per agent or chat. Copilot Studio's orchestrator handles up to 128 tools per agent, with 25-30 recommended for best performance. The full Amperity tool surface is more than 200 tools.
 
 Workarounds:
 
