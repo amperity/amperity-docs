@@ -85,11 +85,11 @@
               '<span class="md-link-title" id="pt-rate-title">Rate this page</span>',
             '</span>',
             '<div class="md-link-rate-btns">',
-              '<button class="md-link-rate-btn md-link-star" type="button" data-star="1" aria-label="1 star"><i class="fa-light fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
-              '<button class="md-link-rate-btn md-link-star" type="button" data-star="2" aria-label="2 stars"><i class="fa-light fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
-              '<button class="md-link-rate-btn md-link-star" type="button" data-star="3" aria-label="3 stars"><i class="fa-light fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
-              '<button class="md-link-rate-btn md-link-star" type="button" data-star="4" aria-label="4 stars"><i class="fa-light fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
-              '<button class="md-link-rate-btn md-link-star" type="button" data-star="5" aria-label="5 stars"><i class="fa-light fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="1" aria-label="1 star"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="2" aria-label="2 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="3" aria-label="3 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="4" aria-label="4 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="5" aria-label="5 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
             '</div>',
           '</div>',
           '<a class="md-link-item" id="pt-view-link" href="#" role="menuitem">',
@@ -121,6 +121,18 @@
     setNewTab(chatgptLink, 'https://chatgpt.com/?q=' + encodeURIComponent('Read from ' + mdUrl + ' so I can ask questions about it.'));
 
     /* Toggle md-star-on class — CSS handles showing solid vs light */
+    function sendFeedback(type) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'feedback_click',
+        'feedback_type': type,
+        'feedback_element_id': 'thumbs-' + type.replace('_', '-'),
+        'page_path': window.location.pathname,
+        'page_title': document.title,
+        'timestamp': new Date().toISOString()
+      });
+    }
+
     function setStarDisplay(count) {
       Array.prototype.forEach.call(starBtns, function(s, i) {
         s.classList.toggle('md-star-on', i < count);
@@ -135,7 +147,7 @@
         e.stopPropagation();
         currentRating = n;
         setStarDisplay(currentRating);
-        if (typeof sendFeedback === 'function') sendFeedback(n >= 4 ? 'thumbs_up' : 'thumbs_down');
+        sendFeedback(n >= 4 ? 'thumbs_up' : 'thumbs_down');
         if (rateTitle) rateTitle.textContent = 'Thanks!';
         setTimeout(function() {
           dropdown.classList.remove('md-link-open');
