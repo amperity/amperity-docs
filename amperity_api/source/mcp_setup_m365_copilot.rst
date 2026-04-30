@@ -102,7 +102,7 @@ Tool surface limits
 Copilot Studio supports up to 70 tools per agent. The full Amperity MCP surface exposes more than 200 tools. If your agent fails to register all tools, you have two options:
 
 * Use a persona-scoped MCP server. Amperity publishes split MCP servers that expose a smaller, role-scoped tool surface for clients with tool-count limits. Contact your Amperity representative for access.
-* Restrict your agent to a subset of tools by using Copilot Studio's tool selection controls.
+* Restrict your agent to a subset of tools. On your agent's **Tools** tab, select the Amperity MCP server to open its settings page. Under the **Tools** section, turn off the **Allow all** toggle, then use the individual toggles to enable only the tools your agent needs. Note that any new tools added to the server are turned off by default once **Allow all** is off.
 
 
 Verify the connection
