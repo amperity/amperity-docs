@@ -93,7 +93,7 @@ Select **Next** to continue. On the **Add tool** dialog, choose **Create a new c
 Tool surface limits
 ==================================================
 
-Copilot Studio's orchestrator handles a maximum of 128 tools per agent, and Microsoft recommends limiting agents to 25-30 tools for best performance. The full Amperity MCP surface exposes more than 200 tools, so most agents will need to scope down. Two options:
+Copilot Studio limits the number of tools an agent can register. The full Amperity MCP surface exposes more than 200 tools, so most agents will need to scope down. Two options:
 
 * Use a persona-scoped MCP server. Amperity publishes split MCP servers that expose a smaller, role-scoped tool surface for clients with tool-count limits. Contact your Amperity representative for access.
 * Restrict your agent to a subset of tools. On your agent's **Tools** tab, select the Amperity MCP server to open its settings page. Under the **Tools** section, turn off the **Allow all** toggle, then use the individual toggles to enable only the tools your agent needs. Note that any new tools added to the server are turned off by default once **Allow all** is off.

@@ -36,7 +36,7 @@ What it enables
 ==================================================
 
 * Conversational access to Amperity from Copilot Studio, Claude, ChatGPT, and other MCP-compatible clients.
-* More than 200 tools across tenants, databases, queries, identity resolution, campaigns, predictions, and more. Some clients enforce a per-agent tool ceiling -- for example, Copilot Studio's orchestrator handles up to 128 tools per agent and Microsoft recommends 25-30 -- so connected clients typically surface only a subset of the full tool surface. See :doc:`mcp_setup_m365_copilot` for options when you connect a tool-count-limited client. Tool count is approximate during beta and subject to change.
+* More than 200 tools across tenants, databases, queries, identity resolution, campaigns, predictions, and more. Some clients limit the number of tools an agent can register -- Copilot Studio is one -- so connected clients may surface only a subset of the full tool surface. See :doc:`mcp_setup_m365_copilot` for options when you connect a tool-count-limited client. Tool count is approximate during beta and subject to change.
 * Per-user isolation. Each request is authenticated and scoped to the calling user's identity, tenant, and permissions.
 * Configurable safety modes for write operations. See :doc:`mcp_safety_modes`.
 
