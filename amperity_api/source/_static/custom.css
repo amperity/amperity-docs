@@ -359,6 +359,12 @@
   opacity: 0.65;
 }
 
+.dark .md-link-btn,
+.dark-theme .md-link-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .md-caret-open { display: none; }
 .md-link-btn[aria-expanded="true"] .md-caret-closed { display: none; }
 .md-link-btn[aria-expanded="true"] .md-caret-open { display: inline-flex; }
