@@ -54,9 +54,9 @@ Spring 2026
 
    :bdg-success:`NEW` The :doc:`Customer Data Agent <customer_data_agent>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
 
-**Predictive Modeling UI**
+**Predictive modeling UI**
 
-   :bdg-success:`NEW` The Predictive Modeling UI has a new setup process for the `predicted customer lifetime value <../operator/model_predicted_clv.html>`__ model and `product affinity <../operator/model_product_affinity.html>`__ model so users can now self-serve and iterate on their predictive models.
+   :bdg-success:`NEW` The Predictive modeling UI has a new setup process for the `predicted customer lifetime value <../operator/model_predicted_clv.html>`__ model and `product affinity <../operator/model_product_affinity.html>`__ model so users can now self-serve and iterate on their predictive models.
 
 **Identity resolution summary**
 
@@ -94,7 +94,7 @@ Winter 2026
 
 **Source topics**
 
-   :bdg-success:`NEW` New sources for `Toast <../operator/source_toast.html>`__.
+   :bdg-success:`NEW` New source for `Toast <../operator/source_toast.html>`__.
 
 .. updates-2026-winter-end
 
