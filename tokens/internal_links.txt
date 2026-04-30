@@ -1,10 +1,6 @@
 .. Use only for internal links that go from one internal site (reference, datagrid, amp360, ampiq, ampid, etc.) to another. Do not use this to define links that leave https://docs.amperity.com. Do not use this to define links to other topics WITHIN the same topic collection.
 
 
-.. |amperity_api| raw:: html
-
-   <a href="https://docs.amperity.com/api/start_here.html">Amperity API</a>
-
 
 .. |add_campaigns_data_requirements| raw:: html
 
