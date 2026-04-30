@@ -1,21 +1,23 @@
 <script>
 (function() {
+  var _base = '{{ pageurl|default("") }}';
+  var _page = '{{ pagename }}';
+
   function getMdUrl() {
-    var path = window.location.pathname;
-    var m = path.match(/^\/([^/]+)\/([^/]+)\.html$/);
-    if (!m) return null;
-    return 'https://docs.amperity.com/md/' + m[1] + '/' + m[2] + '.md';
+    /* Derive collection slug from html_baseurl, e.g. https://docs.amperity.com/operator/ → operator */
+    var colMatch = _base.match(/docs\.amperity\.com\/([^/]+)\//);
+    if (!colMatch) return null;
+    return 'https://docs.amperity.com/md/' + colMatch[1] + '/' + _page + '.md';
   }
 
   function getGitHubUrl() {
-    var path = window.location.pathname;
-    var m = path.match(/^\/([^/]+)\/([^/]+)\.html$/);
-    if (!m) return null;
-    return 'https://github.com/amperity/amperity-docs/tree/main/amperity_' + m[1] + '/source/' + m[2] + '.rst';
+    var colMatch = _base.match(/docs\.amperity\.com\/([^/]+)\//);
+    if (!colMatch) return null;
+    return 'https://github.com/amperity/amperity-docs/tree/main/amperity_' + colMatch[1] + '/source/' + _page + '.rst';
   }
 
   function setNewTab(el, url) {
-    if (!el) return;
+    if (!el || !url) return;
     el.href = url;
     el.target = '_blank';
     el.rel = 'noopener';
@@ -30,7 +32,6 @@
     var mdUrl = getMdUrl();
     var ghUrl = getGitHubUrl();
 
-    /* Wrap h1 in a flex row so the icon sits inline on the right */
     var wrapper = document.createElement('div');
     wrapper.className = 'pt-title-row';
     h1.parentNode.insertBefore(wrapper, h1);
@@ -115,12 +116,13 @@
     var starBtns   = dropdown.querySelectorAll('.md-link-star');
     var currentRating = 0;
 
-    setNewTab(viewLink, mdUrl);
-    setNewTab(githubLink, ghUrl);
-    setNewTab(claudeLink, 'https://claude.ai/new?q=' + encodeURIComponent('Help me understand this page: ' + mdUrl));
-    setNewTab(chatgptLink, 'https://chatgpt.com/?q=' + encodeURIComponent('Read from ' + mdUrl + ' so I can ask questions about it.'));
+    if (mdUrl) {
+      setNewTab(viewLink, mdUrl);
+      setNewTab(claudeLink, 'https://claude.ai/new?q=' + encodeURIComponent('Read ' + mdUrl + ' and help me understand this page.'));
+      setNewTab(chatgptLink, 'https://chatgpt.com/?q=' + encodeURIComponent('Read ' + mdUrl + ' so I can ask you questions about it.'));
+    }
+    if (ghUrl) setNewTab(githubLink, ghUrl);
 
-    /* Toggle md-star-on class — CSS handles showing solid vs light */
     function sendFeedback(type) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
@@ -198,7 +200,8 @@
 
     copyUrlBtn.addEventListener('click', function() {
       if (mdUrl) {
-        navigator.clipboard.writeText(mdUrl).then(function() {
+        var prompt = 'Read the page at ' + mdUrl + ' and be ready to answer my questions about it.';
+        navigator.clipboard.writeText(prompt).then(function() {
           var titleEl = copyUrlBtn.querySelector('.md-link-title');
           if (titleEl) {
             titleEl.textContent = 'Copied!';
