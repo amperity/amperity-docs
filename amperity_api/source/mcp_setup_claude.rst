@@ -40,7 +40,7 @@ You need:
 Claude.ai (and Claude Desktop)
 ==================================================
 
-Claude.ai is the canonical place to add remote MCP connectors. Once added, the connector is also available in Claude Desktop and Claude mobile apps signed into the same account. Claude Desktop's ``claude_desktop_config.json`` file is for local stdio servers only and does not need to be edited for the hosted Amperity MCP.
+Claude.ai is the canonical place to add remote MCP connectors. Once added, the connector is also available in Claude Desktop and Claude mobile apps signed into the same account.
 
 Open the right Connectors page for your plan:
 
