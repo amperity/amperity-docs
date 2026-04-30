@@ -317,29 +317,35 @@ The following table lists the most common event types, grouped by the component 
           The CCPA delete workflow has started.
 
 
-   * - **Queries**
-     - The following events are associated with the **Queries** page:
+   * - **Segments**
+     - The following events are associated with the **Segments** page:
 
        ``query/activated``
-          A query was activated.
+          A segment was activated.
 
        ``query/created``
-          A query was created.
+          A segment was created.
 
        ``query/deleted``
-          A query was deleted.
+          A segment was deleted.
+
+       ``query/run``
+          A segment was run.
 
        ``query/moved``
-          A query was moved from one folder into another.
+          A segment was moved from one folder into another.
 
        ``query.draft/discarded``
-          A query in a draft state was discarded.
+          A segment in a draft state was discarded.
 
        ``query.folder/created``
-          A folder on the **Queries** page was created.
+          A folder on the **Segments** page was created.
 
        ``query.folder/deleted``
-          A folder on the **Queries** page was deleted.
+          A folder on the **Segments** page was deleted.
+
+       ``query.folder/updated``
+          A folder on the **Segments** page was updated.
 
 
    * - **Resource groups**
