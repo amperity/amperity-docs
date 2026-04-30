@@ -79,9 +79,9 @@ Verify the connection
 
 In a Claude conversation, ask:
 
-   *"List my Amperity tenants."*
+   *"Tell me about my Amperity tenant."*
 
-Claude should call the ``tenant_list`` tool and return your tenants. If you see an authorization error, remove the server and add it again to retrigger the OAuth flow:
+Claude should call the ``tenant_info`` tool and return details about your current Amperity tenant. If you see an authorization error, remove the server and add it again to retrigger the OAuth flow:
 
 ::
 
