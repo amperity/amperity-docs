@@ -69,7 +69,7 @@ If a write tool fails with a safety error, the session safety mode is blocking t
 Connection failures or timeouts
 ==================================================
 
-The MCP server is hosted at ``https://mcp.amperity.com/mcp``. Confirm that your network allows outbound HTTPS to that hostname. If your client supports it, send a request directly to the OAuth discovery document to verify connectivity:
+The MCP server is hosted at ``https://mcp.amperity.com``. Confirm that your network allows outbound HTTPS to that hostname. If your client supports it, send a request directly to the OAuth discovery document to verify connectivity:
 
 ::
 

@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * A ChatGPT plan that includes custom MCP connectors.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com/mcp``
+* The Amperity MCP endpoint: ``https://mcp.amperity.com``
 
 
 Add the Amperity MCP server
@@ -44,7 +44,7 @@ Add the Amperity MCP server
 
    ::
 
-      https://mcp.amperity.com/mcp
+      https://mcp.amperity.com
 
 4. Set the authentication type to **OAuth**.
 5. Save the connector. ChatGPT opens a browser tab to complete authorization. Sign in with your Amperity credentials.

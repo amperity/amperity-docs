@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * Claude Desktop or Claude Code installed.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com/mcp``
+* The Amperity MCP endpoint: ``https://mcp.amperity.com``
 
 
 .. _mcp-setup-claude-desktop:
@@ -52,7 +52,7 @@ Add an entry under ``mcpServers``:
    {
      "mcpServers": {
        "amperity": {
-         "url": "https://mcp.amperity.com/mcp"
+         "url": "https://mcp.amperity.com"
        }
      }
    }
@@ -69,7 +69,7 @@ Add the Amperity MCP server with the Claude CLI:
 
 ::
 
-   claude mcp add --transport http --scope user amperity https://mcp.amperity.com/mcp
+   claude mcp add --transport http --scope user amperity https://mcp.amperity.com
 
 When you next start Claude Code, it prompts you to authorize. Sign in with your Amperity credentials in the browser window that opens.
 
@@ -86,7 +86,7 @@ Claude should call the ``tenant_info`` tool and return details about your curren
 ::
 
    claude mcp remove amperity
-   claude mcp add --transport http --scope user amperity https://mcp.amperity.com/mcp
+   claude mcp add --transport http --scope user amperity https://mcp.amperity.com
 
 
 Troubleshooting

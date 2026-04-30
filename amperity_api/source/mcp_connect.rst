@@ -32,7 +32,7 @@ The MCP server is available at:
 
 ::
 
-   https://mcp.amperity.com/mcp
+   https://mcp.amperity.com
 
 This endpoint speaks the Model Context Protocol over HTTP using the streamable transport. All requests must include a valid bearer token in the ``Authorization`` header.
 
@@ -91,6 +91,6 @@ The first time you connect a new client:
 2. The client opens a browser window and sends you to ``https://mcp.amperity.com/authorize``.
 3. You sign in with your Amperity credentials. If you belong to multiple tenants, you may be prompted to select one.
 4. The browser returns to the client with an authorization code, which the client exchanges for an access token.
-5. The client connects to ``https://mcp.amperity.com/mcp`` with the access token. Subsequent requests reuse the token until it expires.
+5. The client connects to ``https://mcp.amperity.com`` with the access token. Subsequent requests reuse the token until it expires.
 
 After the token expires, most clients refresh automatically or prompt you to sign in again.

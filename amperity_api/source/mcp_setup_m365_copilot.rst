@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * Copilot Studio with permission to add custom connectors.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com/mcp``
+* The Amperity MCP endpoint: ``https://mcp.amperity.com``
 
 
 Add the Amperity MCP server in Copilot Studio
@@ -59,7 +59,7 @@ Configure server details
       * - Server description
         - A short description of what your team uses the connector for. The agent orchestrator uses this text to decide when to call Amperity at runtime.
       * - Server URL
-        - ``https://mcp.amperity.com/mcp``
+        - ``https://mcp.amperity.com``
 
 5. Under **Authentication**, select **OAuth 2.0**.
 
