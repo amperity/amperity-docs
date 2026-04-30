@@ -774,7 +774,7 @@ With a matching value
 
 .. domain-tables-delete-records-value-start
 
-You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address ``"email is like ``amperity.com``"`` or records that match a specific email address ``"email is "john@amperity.com"``.
+You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address or records that match a specific email address.
 
 .. domain-tables-delete-records-value-end
 
@@ -917,6 +917,42 @@ A custom domain table must have a primary key. The field to which the PK semanti
    When a single field does not contain unique values you must concatenate two or more fields with values that are stable over time into a single field. Use the concatenated field as the primary key. Hash the value for the concatenated primary key when any of input fields contain personally identifiable information (PII), such as an email address or phone number.
 
 .. domain-tables-find-primary-key-steps-end
+
+
+.. _domain-tables-make-available-to-stitch:
+
+Make available to Stitch
+--------------------------------------------------
+
+.. domain-tables-make-available-to-stitch-start
+
+A custom domain table with semantic tags applied to records that contain PII data should be made available to Stitch. A custom domain table that is made available to Stitch is used by Stitch for customer identity resolution.
+
+Custom domain table data is made available to Stitch in two steps:
+
+#. Selecting the **Make this table available for Stitch** option when configuring a custom domain table.
+
+   When selected, the name of the custom domain table is added to a list of feeds and custom domain tables available for selection in Stitch configuration settings.
+#. The custom domain tables must be selected on the **Stitched tables** tab in the **Stitch settings** dialog.
+
+.. domain-tables-make-available-to-stitch-end
+
+.. domain-tables-make-available-to-stitch-tip-start
+
+.. tip:: Only tables that contain PII data should be made available to Stitch. Tables that are later associated with Amperity IDs, but do not contain PII data, such as those that contain transactions, should use a foreign key to associate those records with an Amperity ID.
+
+.. domain-tables-make-available-to-stitch-tip-end
+
+**To make data available to Stitch**
+
+.. domain-tables-make-available-to-stitch-steps-start
+
+#. From the **Sources** page, open the menu for a custom domain table, and then select **Edit**. The **Custom Domain Table** editor page opens.
+#. Click **Next**.
+#. Under **Settings** select **Make this table available for Stitch**.
+#. Click **Activate**.
+
+.. domain-tables-make-available-to-stitch-steps-end
 
 
 .. _domain-tables-publish-to-queries:

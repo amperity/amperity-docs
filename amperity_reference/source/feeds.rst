@@ -1230,10 +1230,10 @@ A domain table with semantic tags applied to records that contain PII data shoul
 
 Domain table data is made available to Stitch in two steps:
 
-#. Selecting the **Make available to Stitch** option when configuring a feed or a custom domain table.
+#. Selecting the **Make this table available for Stitch** option when configuring a feed.
 
-   When selected, the name of the domain table that is associated with the feed or custom domain table is added to a list of domain tables that are accessible as a Stitch configuration setting.
-#. A list of domain tables within Stitch configuration that have been made available to Stitch. Each table in this list must be configured for Stitch before it can be part of the identity resolution process.
+   When selected, the name of the feed is added to a list of feeds and custom domain tables available for selection in Stitch configuration settings.
+#. The feed must be selected on the **Stitched tables** tab in the **Stitch settings** dialog.
 
 .. feeds-make-available-to-stitch-end
 
@@ -1248,7 +1248,7 @@ Domain table data is made available to Stitch in two steps:
 .. feeds-make-available-to-stitch-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
-#. Under **Domain Table** select **Make available to Stitch**.
+#. Under **Domain Table** select **Make this table available for Stitch**.
 #. Click **Activate**.
 
 .. feeds-make-available-to-stitch-steps-end
