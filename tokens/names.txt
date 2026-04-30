@@ -10,17 +10,24 @@
 
 .. |fa-drag| raw:: html
 
-   &nbsp;<i class="fa-solid fa-grip-dots-vertical"></i>&nbsp;
+   <i class="fa-solid fa-grip-dots-vertical light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-grip-dots-vertical dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-kebab| raw:: html
 
-   &nbsp;<i class="fa-solid fa-ellipsis-vertical"></i>&nbsp;
+   <i class="fa-solid fa-ellipsis-vertical light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-ellipsis-vertical dark-only" style="--fa-primary-color: #ffffff;"></i>
+
 
 
 .. |fa-help-circle| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-question"></i>&nbsp;
+   <i class="fa-solid fa-circle-question light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-question dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-index-separator| unicode:: U+25CF
@@ -28,81 +35,109 @@
 
 .. |ext_link| raw:: html
 
-   <i class="fa-solid fa-external-link-square-alt"></i>
+   <i class="fa-solid fa-arrow-up-right-from-square light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-arrow-up-right-from-square dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |bars| raw:: html
 
-   <i class="fa-solid fa-bars"></i>
+   <i class="fa-solid fa-bars light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-bars dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |notification-running| raw:: html
 
-   &nbsp;<i class="fa-solid fa-spinner"></i>&nbsp;
+   <i class="fa-solid fa-spinner light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-spinner dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |notification-complete| raw:: html
 
-   &nbsp;<i class="fa-solid fa-check"></i>&nbsp;
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |notification-alert| raw:: html
 
-   <i class="fa-solid fa-triangle-exclamation"></i>
+   <i class="fa-solid fa-triangle-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-triangle-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |notification-error| raw:: html
 
-   <i class="fa-solid fa-circle-exclamation"></i>
+   <i class="fa-solid fa-circle-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
 
 .. |attribute-stop| raw:: html
 
-   <i class="fa-solid fa-diamond-exclamation"></i>
+   <i class="fa-solid fa-diamond-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-diamond-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |attribute-recommended| raw:: html
 
-   <i class="fa-solid fa-circle-check"></i>
+   <i class="fa-solid fa-circle-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |attribute-useful| raw:: html
 
-   <i class="fa-solid fa-circle-question"></i>
+   <i class="fa-solid fa-circle-question light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-question dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
 .. |gift| raw:: html
 
-   <i class="fa-solid fa-gift"></i>
+   <i class="fa-solid fa-gift light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-gift dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |policy| raw:: html
 
-   <i class="fa-solid fa-circle-check"></i>
+   <i class="fa-solid fa-circle-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. policy table only for allowed action + read-only
 
 .. |poliro| raw:: html
 
-   <i class="fa-solid fa-book-open-reader"></i>
+   <i class="fa-solid fa-book-open-reader light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-book-open-reader dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. policy table only allowed action + blocked action
 
 .. |polino| raw:: html
 
-   <i class="fa-solid fa-ban"></i>
+   <i class="fa-solid fa-ban light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-ban dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. policy table for user management
 
 .. |polius| raw:: html
 
-   <i class="fa-solid fa-users"></i>
+   <i class="fa-solid fa-users light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-users dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
@@ -110,127 +145,173 @@
 
 .. |poliky| raw:: html
 
-   <i class="fa-solid fa-key"></i>
+   <i class="fa-solid fa-key light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-key dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. for inline reference to allowed read-only actions
 
 .. |allowed-read-only-actions-icon| raw:: html
 
-   <i class="fa-solid fa-book-open-reader"></i>
+   <i class="fa-solid fa-book-open-reader light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-book-open-reader dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. for inline reference to blocked actions
 
 .. |blocked-actions-icon| raw:: html
 
-   <i class="fa-solid fa-ban"></i>
+   <i class="fa-solid fa-ban light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-ban dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. for no upload add-on policy
 
 .. |no-upload-policy| raw:: html
 
-   <i class="fa-solid fa-upload"></i>
+   <i class="fa-solid fa-upload light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-upload dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. for no download add-on policy
 
 .. |no-download-policy| raw:: html
 
-   <i class="fa-solid fa-download"></i>
+   <i class="fa-solid fa-download light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-download dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. for inline reference to user management
 
 .. |manage-users-icon| raw:: html
 
-   <i class="fa-solid fa-users"></i>
+   <i class="fa-solid fa-users light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-users dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-github| raw:: html
 
-   <i class="fa-brands fa-github"></i>
+   <i class="fa-brands fa-github light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-brands fa-github dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |system-yes| raw:: html
 
-   <i class="fas fa-badge-check"></i>
+   <i class="fas fa-badge-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fas fa-badge-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |checkmark-required| raw:: html
 
-   <i class="fa-solid fa-badge-check"></i>
+   <i class="fa-solid fa-badge-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-badge-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |checkmark-recommended| raw:: html
 
-   <i class="fa-solid fa-badge-check"></i>
+   <i class="fa-solid fa-badge-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-badge-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |policy-sandbox-validation-required| raw:: html
 
-   <i class="fa-regular fa-square-check"></i>
+   <i class="fa-regular fa-square-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-square-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |policy-sandbox-allow-admin| raw:: html
 
-   <i class="fa-solid fa-check"></i>
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |policy-sandbox-limited| raw:: html
 
-   <i class="fa-solid fa-plus"></i>
+   <i class="fa-solid fa-plus light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-plus dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |workflow-failed| raw:: html
 
-   <i class="fa-solid fa-circle-exclamation"></i>
+   <i class="fa-solid fa-circle-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |workflow-running| raw:: html
 
-   <i class="fa-solid fa-spinner"></i>
+   <i class="fa-solid fa-spinner light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-spinner dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |workflow-skipped| raw:: html
 
-   <i class="fa-regular fa-calendar-xmark"></i>
+   <i class="fa-regular fa-calendar-xmark light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-calendar-xmark dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |workflow-succeeded| raw:: html
 
-   <i class="fa-solid fa-check"></i>
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |workflow-issue| raw:: html
 
-   <i class="fa-solid fa-triangle-exclamation"></i>
+   <i class="fa-solid fa-triangle-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-triangle-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |input-to-predictive-models| raw:: html
 
-   <i class="fa-solid fa-circle-arrow-right"></i>
+   <i class="fa-solid fa-circle-arrow-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-arrow-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |setting-provided-by-amperity| raw:: html
 
-   <i class="fa-solid fa-circle-right"></i>
+   <i class="fa-solid fa-circle-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |giuthub-pencil| raw:: html
 
-   <i class="fa-solid fa-pencil"></i>
+   <i class="fa-solid fa-pencil light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-pencil dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |question| raw:: html
 
-   <i class="fa-solid fa-question"></i>
+   <i class="fa-solid fa-question light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-question dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-checkbox| raw:: html
 
-   <i class="fa-solid fa-check"></i>
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
@@ -245,11 +326,15 @@
 
 .. |fa-sql-segment| raw:: html
 
-   <i class="fa-solid fa-code"></i>
+   <i class="fa-solid fa-code light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-code dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-visual-segment| raw:: html
 
-   <i class="fa-solid fa-sliders-h"></i>
+   <i class="fa-solid fa-sliders-h light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-sliders-h dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
@@ -257,23 +342,31 @@
 
 .. |fa-trademark| raw:: html
 
-   <i class="fa-regular fa-registered"></i>
+   <i class="fa-regular fa-registered light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-registered dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-home| raw:: html
 
-   &nbsp;<i class="fa-solid fa-house"></i>&nbsp;
+   <i class="fa-solid fa-house light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-house dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
 .. |fa-project-diagram| raw:: html
 
-   &nbsp;<i class="fa-solid fa-project-diagram"></i>&nbsp;
+   <i class="fa-solid fa-project-diagram light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-project-diagram dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-check| raw:: html
 
-   <i class="fa-solid fa-check"></i>
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 
@@ -283,379 +376,540 @@
 
 .. |fa-segment-active| raw:: html
 
-   <i class="fa-regular fa-circle"></i>
+   <i class="fa-regular fa-circle light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-circle dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-completed| raw:: html
 
-   <i class="fa-solid fa-check"></i>
+   <i class="fa-solid fa-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-draft| raw:: html
 
-   <i class="fa-solid fa-pencil"></i>
+   <i class="fa-solid fa-pencil light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-pencil dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-error| raw:: html
 
-   <i class="fa-solid fa-exclamation"></i>
+   <i class="fa-solid fa-exclamation light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-exclamation dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-folder| raw:: html
 
-   <i class="fa-solid fa-folder"></i>
+   <i class="fa-solid fa-folder light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-folder dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-inactive| raw:: html
 
-   <i class="fa-solid fa-circle-minus"></i>
+   <i class="fa-solid fa-circle-minus light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-minus dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-running| raw:: html
 
-   <i class="fa-solid fa-spinner"></i>
+   <i class="fa-solid fa-spinner light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-spinner dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-sql| raw:: html
 
-   <i class="fa-solid fa-code"></i>
+   <i class="fa-solid fa-code light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-code dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-visual| raw:: html
 
-   <i class="fa-solid fa-sliders-h"></i>
+   <i class="fa-solid fa-sliders-h light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-sliders-h dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-segment-waiting| raw:: html
 
-   <i class="fa-solid fa-hourglass-end"></i>
+   <i class="fa-solid fa-hourglass-end light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-hourglass-end dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-full-name| raw:: html
 
-   <i class="fa-solid fa-address-book"></i>
+   <i class="fa-solid fa-address-book light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-address-book dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-given-name| raw:: html
 
-   <i class="fa-solid fa-address-book"></i>
+   <i class="fa-solid fa-address-book light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-address-book dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-surname| raw:: html
 
-   <i class="fa-solid fa-address-book"></i>
+   <i class="fa-solid fa-address-book light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-address-book dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-email| raw:: html
 
-   <i class="fa-solid fa-envelope"></i>
+   <i class="fa-solid fa-envelope light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-envelope dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-phone| raw:: html
 
-   <i class="fa-solid fa-phone"></i>
+   <i class="fa-solid fa-phone light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-phone dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-address| raw:: html
 
-   <i class="fa-solid fa-home"></i>
+   <i class="fa-solid fa-home light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-home dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-city| raw:: html
 
-   <i class="fa-solid fa-city"></i>
+   <i class="fa-solid fa-city light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-city dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-company| raw:: html
 
-   <i class="fa-solid fa-building"></i>
+   <i class="fa-solid fa-building light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-building dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-state| raw:: html
 
-   <i class="fa-solid fa-road"></i>
+   <i class="fa-solid fa-road light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-road dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-postal| raw:: html
 
-   <i class="fa-solid fa-hashtag"></i>
+   <i class="fa-solid fa-hashtag light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-hashtag dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-birthdate| raw:: html
 
-   <i class="fa-solid fa-birthday-cake"></i>
+   <i class="fa-solid fa-birthday-cake light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-birthday-cake dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 .. |fa-semantic-gender| raw:: html
 
-   <i class="fa-solid fa-venus-mars"></i>
+   <i class="fa-solid fa-venus-mars light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-venus-mars dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-hexagon-check| raw:: html
 
-   &nbsp;<i class="fa-solid fa-hexagon-check"></i>&nbsp;
+   <i class="fa-solid fa-hexagon-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-hexagon-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-list-check| raw:: html
 
-   &nbsp;<i class="fa-solid fa-list-check"></i>&nbsp;
+   <i class="fa-solid fa-list-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-list-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-asterisk| raw:: html
 
-   &nbsp;<i class="fa-solid fa-asterisk"></i>&nbsp;
+   <i class="fa-solid fa-asterisk light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-asterisk dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-object-group| raw:: html
 
-   &nbsp;<i class="fa-solid fa-object-group"></i>&nbsp;
+   <i class="fa-solid fa-object-group light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-object-group dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-browser| raw:: html
 
-   &nbsp;<i class="fa-regular fa-browser"></i>&nbsp;
+   <i class="fa-regular fa-browser light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-browser dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-ruler-horizontal| raw:: html
 
-   &nbsp;<i class="fa-solid fa-ruler-horizontal"></i>&nbsp;
+   <i class="fa-solid fa-ruler-horizontal light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-ruler-horizontal dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-square-poll-horizontal| raw:: html
 
-   &nbsp;<i class="fa-regular fa-square-poll-horizontal"></i>&nbsp;
+   <i class="fa-regular fa-square-poll-horizontal light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-square-poll-horizontal dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-rotate-right| raw:: html
 
-   &nbsp;<i class="fa-solid fa-rotate-right"></i>&nbsp;
+   <i class="fa-solid fa-rotate-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-rotate-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-shuffle| raw:: html
 
-   &nbsp;<i class="fa-solid fa-shuffle"></i>&nbsp;
+   <i class="fa-solid fa-shuffle light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-shuffle dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-star| raw:: html
 
-   &nbsp;<i class="fa-solid fa-star"></i>&nbsp;
+   <i class="fa-solid fa-star light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-star dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-shield-check| raw:: html
 
-   &nbsp;<i class="fa-solid fa-shield-check"></i>&nbsp;
+   <i class="fa-solid fa-shield-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-shield-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-gears| raw:: html
 
-   &nbsp;<i class="fa-solid fa-gears"></i>&nbsp;
+   <i class="fa-solid fa-gears light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-gears dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-tags| raw:: html
 
-   &nbsp;<i class="fa-solid fa-tags"></i>&nbsp;
+   <i class="fa-solid fa-tags light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-tags dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-user-group| raw:: html
 
-   &nbsp;<i class="fa-solid fa-user-group"></i>&nbsp;
+   <i class="fa-solid fa-user-group light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-user-group dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-clone| raw:: html
 
-   &nbsp;<i class="fa-solid fa-clone"></i>&nbsp;
+   <i class="fa-solid fa-clone light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-clone dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-bell| raw:: html
 
-   &nbsp;<i class="fa-solid fa-bell"></i>&nbsp;
+   <i class="fa-solid fa-bell light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-bell dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-border-outer| raw:: html
 
-   &nbsp;<i class="fa-solid fa-border-outer"></i>&nbsp;
+   <i class="fa-solid fa-border-outer light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-border-outer dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-angles-right| raw:: html
 
-   &nbsp;<i class="fa-solid fa-angles-right"></i>&nbsp;
+   <i class="fa-solid fa-angles-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-angles-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-calculator-simple| raw:: html
 
-   &nbsp;<i class="fa-solid fa-calculator-simple"></i>&nbsp;
+   <i class="fa-solid fa-calculator-simple light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-calculator-simple dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-user-shield| raw:: html
 
-   &nbsp;<i class="fa-solid fa-user-shield"></i>&nbsp;
+   <i class="fa-solid fa-user-shield light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-user-shield dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-arrow-right-to-line| raw:: html
 
-   &nbsp;<i class="fa-solid fa-arrow-right-to-line"></i>&nbsp;
+   <i class="fa-solid fa-arrow-right-to-line light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-arrow-right-to-line dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-arrow-right-from-line| raw:: html
 
-   &nbsp;<i class="fa-solid fa-arrow-right-from-line"></i>&nbsp;
+   <i class="fa-solid fa-arrow-right-from-line light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-arrow-right-from-line dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-id-card| raw:: html
 
-   &nbsp;<i class="fa-solid fa-id-card"></i>&nbsp;
+   <i class="fa-solid fa-id-card light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-id-card dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-send-back| raw:: html
 
-   &nbsp;<i class="fa-solid fa-send-back"></i>&nbsp;
+   <i class="fa-solid fa-send-back light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-send-back dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-send-backward| raw:: html
 
-   &nbsp;<i class="fa-solid fa-send-backward"></i>&nbsp;
+   <i class="fa-solid fa-send-backward light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-send-backward dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-sitemap| raw:: html
 
-   &nbsp;<i class="fa-solid fa-sitemap"></i>&nbsp;
+   <i class="fa-solid fa-sitemap light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-sitemap dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-loader| raw:: html
 
-   &nbsp;<i class="fa-solid fa-loader"></i>&nbsp;
+   <i class="fa-solid fa-loader light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-loader dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-circle-user| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-user"></i>&nbsp;
+   <i class="fa-solid fa-circle-user light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-user dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-users-between-lines| raw:: html
 
-   &nbsp;<i class="fa-solid fa-users-between-lines"></i>&nbsp;
+   <i class="fa-solid fa-users-between-lines light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-users-between-lines dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-circle-up| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-up"></i>&nbsp;
+   <i class="fa-solid fa-circle-up light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-up dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-files| raw:: html
 
-   &nbsp;<i class="fa-solid fa-files"></i>&nbsp;
+   <i class="fa-solid fa-files light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-files dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-grid| raw:: html
 
-   &nbsp;<i class="fa-solid fa-grid"></i>&nbsp;
+   <i class="fa-solid fa-grid light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-grid dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-table-cells-large| raw:: html
 
-   &nbsp;<i class="fa-solid fa-table-cells-large"></i>&nbsp;
+   <i class="fa-solid fa-table-cells-large light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-table-cells-large dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-layer-group| raw:: html
 
-   &nbsp;<i class="fa-solid fa-layer-group"></i>&nbsp;
+   <i class="fa-solid fa-layer-group light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-layer-group dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-table-cells| raw:: html
 
-   &nbsp;<i class="fa-solid fa-table-cells"></i>&nbsp;
+   <i class="fa-solid fa-table-cells light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-table-cells dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-game-board-simple| raw:: html
 
-   &nbsp;<i class="fa-solid fa-game-board-simple"></i>&nbsp;
+   <i class="fa-solid fa-game-board-simple light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-game-board-simple dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-expand| raw:: html
 
-   &nbsp;<i class="fa-solid fa-expand"></i>&nbsp;
+   <i class="fa-solid fa-expand light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-expand dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-chart-line| raw:: html
 
-   &nbsp;<i class="fa-solid fa-chart-line"></i>&nbsp;
+   <i class="fa-solid fa-chart-line light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-chart-line dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-line-columns| raw:: html
 
-   &nbsp;<i class="fa-solid fa-line-columns"></i>&nbsp;
+   <i class="fa-solid fa-line-columns light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-line-columns dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-square-plus| raw:: html
 
-   &nbsp;<i class="fa-solid fa-square-plus"></i>&nbsp;
+   <i class="fa-solid fa-square-plus light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-square-plus dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-square-user| raw:: html
 
-   &nbsp;<i class="fa-solid fa-square-user"></i>&nbsp;
+   <i class="fa-solid fa-square-user light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-square-user dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-hexagon-nodes| raw:: html
 
-   &nbsp;<i class="fa-solid fa-hexagon"></i>&nbsp;
+   <i class="fa-solid fa-hexagon light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-hexagon dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-address-card| raw:: html
 
-   &nbsp;<i class="fa-solid fa-address-card"></i>&nbsp;
+   <i class="fa-solid fa-address-card light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-address-card dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-badge-check| raw:: html
 
-   &nbsp;<i class="fa-solid fa-badge-check"></i>&nbsp;
+   <i class="fa-solid fa-badge-check light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-badge-check dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-circle-nodes| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-nodes"></i>&nbsp;
+   <i class="fa-solid fa-circle-nodes light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-nodes dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-sparkles| raw:: html
 
-   &nbsp;<i class="fa-solid fa-sparkles"></i>&nbsp;
+   <i class="fa-solid fa-sparkles light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-sparkles dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-bullseye-pointer| raw:: html
 
-   &nbsp;<i class="fa-regular fa-bullseye-pointer"></i>&nbsp;
+   <i class="fa-regular fa-bullseye-pointer light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-regular fa-bullseye-pointer dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-user-plus| raw:: html
 
-   &nbsp;<i class="fa-solid fa-user-plus"></i>&nbsp;
+   <i class="fa-solid fa-user-plus light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-user-plus dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-square-sliders| raw:: html
 
-   &nbsp;<i class="fa-solid fa-square-sliders"></i>&nbsp;
+   <i class="fa-solid fa-square-sliders light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-square-sliders dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-object-exclude| raw:: html
 
-   &nbsp;<i class="fa-solid fa-object-exclude"></i>&nbsp;
+   <i class="fa-solid fa-object-exclude light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-object-exclude dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-outlet| raw:: html
 
-   &nbsp;<i class="fa-solid fa-outlet"></i>&nbsp;
+   <i class="fa-solid fa-outlet light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-outlet dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-wave-pulse| raw:: html
 
-   &nbsp;<i class="fa-solid fa-wave-pulse"></i>&nbsp;
+   <i class="fa-solid fa-wave-pulse light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-wave-pulse dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-code| raw:: html
 
-   &nbsp;<i class="fa-solid fa-code"></i>&nbsp;
+   <i class="fa-solid fa-code light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-code dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-book-open| raw:: html
 
-   &nbsp;<i class="fa-solid fa-book-open"></i>&nbsp;
+   <i class="fa-solid fa-book-open light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-book-open dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-arrow-right-arrow-left| raw:: html
 
-   &nbsp;<i class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp;
+   <i class="fa-solid fa-arrow-right-arrow-left light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-arrow-right-arrow-left dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-direction-left-right| raw:: html
 
-   &nbsp;<i class="fa-solid fa-chevrons-right"></i>&nbsp;
+   <i class="fa-solid fa-chevrons-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-chevrons-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-dotted-line-right| raw:: html
 
-   &nbsp;<i class="fa-solid fa-circle-arrow-right"></i>&nbsp;
+   <i class="fa-solid fa-circle-arrow-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-circle-arrow-right dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
 .. |fa-money-bills| raw:: html
 
-   &nbsp;<i class="fa-solid fa-money-bills"></i>&nbsp;
+   <i class="fa-solid fa-money-bills light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-money-bills dark-only" style="--fa-primary-color: #ffffff;"></i>
+
 
