@@ -101,7 +101,7 @@ After the token expires, most clients refresh automatically or prompt you to sig
 Choose your client
 ==================================================
 
-* :doc:`mcp_setup_m365_copilot` -- Microsoft 365 Copilot Studio
+* :doc:`mcp_setup_m365_copilot` -- Copilot Studio
 * :doc:`mcp_setup_claude` -- Claude Desktop and Claude Code
 * :doc:`mcp_setup_chatgpt` -- ChatGPT custom connectors
 

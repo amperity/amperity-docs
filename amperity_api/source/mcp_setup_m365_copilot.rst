@@ -3,24 +3,24 @@
 
 .. meta::
     :description lang=en:
-        Configure Microsoft 365 Copilot Studio to connect to the Amperity MCP server.
+        Configure Copilot Studio to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Microsoft 365 Copilot Studio to connect to the Amperity MCP server.
+        Configure Copilot Studio to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Set up Microsoft 365 Copilot
+        Set up Copilot Studio
 
 
 ==================================================
-Set up Microsoft 365 Copilot
+Set up Copilot Studio
 ==================================================
 
 .. mcp-setup-m365-copilot-start
 
-Microsoft 365 Copilot is the primary supported MCP client for Amperity. Once configured in Copilot Studio, the Amperity MCP server is available across the M365 surface, including Word, Excel, Teams, and Outlook.
+Copilot Studio is the primary supported MCP client for Amperity. Once configured in Copilot Studio, the Amperity MCP server is available to any agent you build there, including agents you publish to the Microsoft 365 surface.
 
 .. mcp-setup-m365-copilot-end
 
@@ -31,7 +31,7 @@ Before you begin
 You need:
 
 * An active Amperity account with access to at least one tenant.
-* Microsoft 365 Copilot Studio with permission to add custom connectors.
+* Copilot Studio with permission to add custom connectors.
 * The Amperity MCP endpoint: ``https://mcp.amperity.com/mcp``
 
 
@@ -99,7 +99,7 @@ Select **Next** to continue. On the **Add tool** dialog, choose **Create a new c
 Tool surface limits
 ==================================================
 
-Microsoft 365 Copilot supports up to 70 tools per agent. The full Amperity MCP surface exposes more than 200 tools. If your agent fails to register all tools, you have two options:
+Copilot Studio supports up to 70 tools per agent. The full Amperity MCP surface exposes more than 200 tools. If your agent fails to register all tools, you have two options:
 
 * Use a persona-scoped MCP server. Amperity publishes split MCP servers that expose a smaller, role-scoped tool surface for clients with tool-count limits. Contact your Amperity representative for access.
 * Restrict your agent to a subset of tools by using Copilot Studio's tool selection controls.
