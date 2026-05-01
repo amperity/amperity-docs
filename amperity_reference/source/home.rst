@@ -31,7 +31,7 @@ How to access
 
 .. home-access-start
 
-The **Home** page appears when navigate to the root URL for your tenant. It replaces the previous default landing experience. You can also navigate to the **Home** page from within the app by clicking the Amperity logo on the left nav. 
+The **Home** page appears when navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the Amperity logo on the left navigation.
 
 .. home-access-end
 
@@ -48,6 +48,9 @@ The **Home** page adapts based on your tenant's configuration and the features t
 * The :ref:`Amps display area <home-amps>` is visible only for tenants that have Amps access. It is hidden for tenants without an Amps contract.
 * Components that require a populated database, such as :ref:`Segment insights <home-segment-insights>`, show a prompt to run the database when no database has been run.
 * Components that require features your tenant does not have enabled are hidden.
+* Components requiring permissions you don't have are hidden or limited. 
+
+If you expect to see a component and don't, check with your Amperity administrator.
 
 .. home-what-you-see-end
 
@@ -59,13 +62,7 @@ Amps display
 
 .. home-amps-start
 
-The Amps display shows your tenant's Amps consumption at a glance. It includes:
-
-.. TODO: are these accurate? what I gleaned from the docs I got from PM but the tenants where I can see amps don't have all of this
-
-* A percentage indicator with a progress bar that shows consumption against your contracted capacity
-* A count of Amp IDs
-* A timestamp that shows the most recent consumption tick
+The Amps display shows your tenant's Amps consumption at a glance. It uses a percentage indicator with a progress bar that shows consumption against your contracted capacity.
 
 The Amps display is clickable and navigates to the full :doc:`Amps <amps>` page, where you can view detailed consumption breakdowns.
 
@@ -131,7 +128,7 @@ Segment insights
 
 .. home-segment-insights-start
 
-The **Segment insights** section displays metrics and a chart for a single segment that you select. Your segment selection is saved so that the **Home** page shows the same segment each time you return.
+The **Segment insights** section displays metrics and a chart for a single segment that you select. The segment selection is saved across the tenant so that the **Home** page shows the same segment each time users in your tenant return to the **Home** page.
 
 Use this section to keep a key segment's performance visible at a glance without navigating to the :doc:`Segments <segments>` page.
 
