@@ -59,6 +59,6 @@ Verify the connection
 
 In a chat with the connector enabled, ask:
 
-   *"Tell me about my Amperity tenant."*
+   "Tell me about my Amperity tenant."
 
 ChatGPT should call the ``tenant_info`` tool and return details about your current Amperity tenant.

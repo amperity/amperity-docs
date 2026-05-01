@@ -59,7 +59,7 @@ Set the safety mode
 
 The MCP server exposes tools to read and update the safety mode for the current session. Ask your agent to set the mode:
 
-   *"Set the Amperity safety mode to confirm."*
+   "Set the Amperity safety mode to confirm."
 
 The agent calls the ``safety_set_mode`` tool. The new setting takes effect immediately and persists for the remainder of the session. You can read the current mode with ``safety_get_mode``.
 

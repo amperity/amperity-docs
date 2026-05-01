@@ -104,6 +104,6 @@ Verify the connection
 
 Open a chat in any M365 app where the agent is available. Ask the agent about your Amperity tenant:
 
-   *"Tell me about my Amperity tenant."*
+   "Tell me about my Amperity tenant."
 
 The agent should call the ``tenant_info`` tool and return details about your current Amperity tenant. If the agent reports an authorization error, sign out of the connector and reauthorize.
