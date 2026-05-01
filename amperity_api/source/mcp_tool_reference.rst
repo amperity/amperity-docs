@@ -112,14 +112,21 @@ Schedule and run orchestrations and orchestration groups.
 Campaigns and journeys
 ==================================================
 
-Manage campaigns, campaign folders, journeys, and audience slices.
+Manage campaigns, campaign folders, journeys, and labels.
 
 * ``campaign_list``, ``campaign_get``, ``campaign_create``, ``campaign_update``, ``campaign_delete``, ``campaign_duplicate``, ``campaign_move`` -- manage campaigns.
 * ``campaign_schedule`` -- schedule (or unschedule) a campaign send.
 * ``campaign_folder_list``, ``campaign_folder_get``, ``campaign_folder_create``, ``campaign_folder_update``, ``campaign_folder_delete`` -- manage campaign folders.
 * ``journey_list``, ``journey_get``, ``journey_create``, ``journey_update``, ``journey_delete`` -- manage journeys.
-* ``slice_list``, ``slice_get``, ``slice_create``, ``slice_update``, ``slice_delete`` -- manage audience slices.
 * ``label_list``, ``label_get``, ``label_create``, ``label_update``, ``label_delete`` -- manage labels.
+
+
+Data export slices
+==================================================
+
+Slices define which tables from a database get exported to a destination via an orchestration.
+
+* ``slice_list``, ``slice_get``, ``slice_create``, ``slice_update``, ``slice_delete`` -- manage database export slices (``slc-xxx``).
 
 
 Predictions
