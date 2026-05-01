@@ -105,7 +105,7 @@ The agent calls the **safety_set_mode** tool, after which the setting updates im
 
 Some tools in the MCP server, such as scheduling a campaign, running a courier group, or running an orchestration group, always require confirmation regardless of the session safety mode. This is because these actions send data to downstream systems that exist outside of Amperity. 
 
-.. note:: The **campaign_schedule**, **courier_group**, and **orchestration_group_run** tools always require safety mode to be set to **unrestricted** *and* always require **confirm: true**. If either are missing the tool is not allowed to run.
+.. note:: The **campaign_schedule**, **courier_group_run**, and **orchestration_group_run** tools always require safety mode to be set to **unrestricted** *and* always require **confirm: true**. If either are missing the tool is not allowed to run.
 
 Tool descriptions returned by **tools/list** indicate when explicit confirmation is required.
 

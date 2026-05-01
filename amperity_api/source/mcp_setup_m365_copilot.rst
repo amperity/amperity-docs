@@ -69,7 +69,7 @@ Use the **Copilot Studio** MCP onboarding wizard to configure server details and
       * - **Server name**
         - "Amperity" or any name your team prefers
       * - **Server description**
-        - A short description of what the is connector for. The agent orchestrator uses this text to decide when to call Amperity at runtime.
+        - A short description of what the connector is for. The agent orchestrator uses this text to decide when to call Amperity at runtime.
       * - **Server URL**
         - **https://mcp.amperity.com**
 
@@ -137,7 +137,7 @@ Open a chat in any Microsoft 365 application in which an agent with access to th
 
    "Tell me about my Amperity tenant."
 
-The agent calls the **tenant_info** tool and return details about your current Amperity tenant.
+The agent calls the **tenant_info** tool and returns details about your current Amperity tenant.
 
 .. tip:: If the agent returns an authorization error, sign out, and then reauthorize the connector.
 
