@@ -94,7 +94,6 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    Set up ChatGPT <mcp_setup_chatgpt>
    Safety modes <mcp_safety_modes>
    Tool reference <mcp_tool_reference>
-   Troubleshooting <mcp_troubleshooting>
 
 
 .. toctree::

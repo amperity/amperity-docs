@@ -95,9 +95,3 @@ Claude should call the ``tenant_info`` tool and return details about your curren
 
    claude mcp remove amperity
    claude mcp add --transport http --scope user amperity https://mcp.amperity.com
-
-
-Troubleshooting
-==================================================
-
-For common errors, see :doc:`mcp_troubleshooting`.
