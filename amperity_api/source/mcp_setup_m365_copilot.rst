@@ -85,7 +85,7 @@ After you select **OAuth 2.0**, choose the **Manual** type and fill in the follo
    * - Refresh URL
      - ``https://mcp.amperity.com/oauth/token``
 
-After you select **Create**, Copilot Studio displays a callback URL. Copy this URL -- you (or your Amperity representative) need to register it as a valid redirect URI on the Amperity OAuth client before the connection can complete.
+Select **Create**. (Copilot Studio will display a callback URL after creation; you can ignore it -- the Amperity OAuth proxy registers callbacks dynamically.)
 
 Select **Next** to continue. On the **Add tool** dialog, choose **Create a new connection** and sign in with your Amperity credentials. Then select **Add to agent**.
 
