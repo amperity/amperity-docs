@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * Copilot Studio with permission to add custom connectors.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com``
+* The Amperity MCP endpoint for your stack. The values below assume the default ``aws-prod`` stack (``https://mcp.amperity.com``); if your tenant is on a different stack, substitute the matching URL from :ref:`mcp-overview-stack-urls` in every field on this page.
 
 
 Add the Amperity MCP server in Copilot Studio

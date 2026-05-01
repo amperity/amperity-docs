@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * A Claude account (Pro, Max, Team, or Enterprise) and / or Claude Code installed.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com``
+* The Amperity MCP endpoint for your stack. The examples below assume the default ``aws-prod`` stack (``https://mcp.amperity.com``); if your tenant is on a different stack, substitute the matching URL from :ref:`mcp-overview-stack-urls`.
 
 
 .. _mcp-setup-claude-web:

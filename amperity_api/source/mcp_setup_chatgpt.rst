@@ -32,7 +32,7 @@ You need:
 
 * An active Amperity account with access to at least one tenant.
 * ChatGPT on the web on a plan that supports custom MCP connectors.
-* The Amperity MCP endpoint: ``https://mcp.amperity.com``
+* The Amperity MCP endpoint for your stack. The example below assumes the default ``aws-prod`` stack (``https://mcp.amperity.com``); if your tenant is on a different stack, substitute the matching URL from :ref:`mcp-overview-stack-urls`.
 
 
 Add the Amperity MCP server

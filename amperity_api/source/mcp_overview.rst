@@ -22,7 +22,7 @@ About the Amperity MCP server
 
 The Amperity MCP server enables AI assistants and agents to operate Amperity programmatically by using the `Model Context Protocol <https://modelcontextprotocol.io/>`__ (MCP). Connect any MCP-compatible client -- such as Copilot Studio, Claude, or ChatGPT -- to your Amperity tenant and use natural language to inspect data, run queries, manage campaigns, run identity resolution, and more.
 
-The MCP server is hosted by Amperity. Customers connect to a single public endpoint and authenticate by using their existing Amperity credentials. There is nothing to install or run locally.
+The MCP server is hosted by Amperity. Customers connect to the public endpoint for their stack and authenticate by using their existing Amperity credentials. There is nothing to install or run locally.
 
 .. mcp-overview-end
 
@@ -30,6 +30,39 @@ The MCP server is hosted by Amperity. Customers connect to a single public endpo
 .. admonition:: Beta
 
    The Amperity MCP server is available as a private beta. Tool surface, configuration, and behavior may change as the beta progresses. Contact your Amperity representative for access.
+
+
+.. _mcp-overview-stack-urls:
+
+Find your MCP URL
+==================================================
+
+Each Amperity production stack has its own MCP endpoint. Use the URL that matches the region of your Amperity tenant:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 45 30
+
+   * - Stack
+     - Public MCP URL
+     - Cloud / region
+   * - ``aws-prod`` (default)
+     - ``https://mcp.amperity.com``
+     - AWS us-west-2
+   * - ``aws-prod-cc1``
+     - ``https://mcp-aws-cc1.amperity.com``
+     - AWS ca-central-1
+   * - ``aws-prod-apse2``
+     - ``https://mcp-aws-apse2.amperity.com``
+     - AWS ap-southeast-2
+   * - ``az-prod``
+     - ``https://mcp-az-prod.amperity.com``
+     - Azure eastus2
+   * - ``az-prod-en1``
+     - ``https://mcp-az-prod-en1.amperity.com``
+     - Azure northeurope
+
+The setup pages below show ``https://mcp.amperity.com`` (aws-prod) in their examples. If your tenant is on a different stack, substitute the corresponding URL in every place that the docs reference an MCP host. If you are unsure which stack hosts your tenant, contact your Amperity representative.
 
 
 What it enables
