@@ -28,13 +28,76 @@ Common issues you may encounter when connecting to or using the Amperity MCP ser
 401 Unauthorized
 ==================================================
 
+The MCP server returns a 401 with a body like:
+
+::
+
+   {"error": "unauthorized", "detail": "Missing or malformed Authorization header"}
+
+or:
+
+::
+
+   {"error": "unauthorized", "detail": "Invalid token: ..."}
+
 The most common cause is an expired access token. Most MCP clients refresh automatically; if yours does not, sign out of the connector and sign back in.
 
 If 401 responses persist after a fresh sign-in:
 
-* Confirm that the user account exists in the target tenant.
-* Confirm that you are signing in to the correct identity provider. The MCP server uses ``https://amperity.auth0.com/`` as the issuer.
-* If your client lets you inspect the access token, confirm it has three segments separated by periods (a JWS-signed JWT). If your token has five segments (a JWE), contact your Amperity representative.
+* Confirm that the user account exists in the target tenant and that the user has not been removed.
+* Confirm the client is signing in to the correct identity provider. The MCP server authenticates against ``https://amperity.auth0.com/`` -- if your client is configured to point at a different issuer, fix the configuration and reconnect.
+
+
+Tool returns ``isError: true``
+==================================================
+
+When an individual tool call fails, the MCP server returns a result of the form:
+
+::
+
+   {"isError": true, "error": "<message>"}
+
+The agent typically surfaces the message in the chat. Common causes:
+
+* **Missing permissions on the tenant.** Your account does not have the role required for the tool. Check the user's permissions in the Amperity tenant settings.
+* **Missing or invalid arguments.** The agent supplied a value that the underlying API rejected. Re-run with the corrected argument, or ask the agent to inspect the tool's input schema with ``tools/list``.
+* **Stale references.** The agent referenced an ID (campaign, query, table) that has since been deleted or renamed. Re-list the parent resource and try again.
+
+If the same tool fails repeatedly with the same error, share the exact error text with your Amperity representative.
+
+
+No tenant selected
+==================================================
+
+A new MCP session begins without a tenant selected. Tools that operate on tenant data return:
+
+::
+
+   No tenant selected. Use tenant_list to see available tenants, then tenant_use to select one.
+
+Ask your agent to list tenants and pick one:
+
+   *"List my Amperity tenants, then use ``acme``."*
+
+The selected tenant persists for the remainder of the session.
+
+
+Tenant or sandbox missing from ``tenant_list``
+==================================================
+
+Tenants are cached server-side per token. When a new sandbox or tenant is provisioned, the cache may not reflect it immediately. Ask the agent to refresh:
+
+   *"Resync my Amperity tenants."*
+
+The agent calls ``tenant_resync``, which clears the cache and re-fetches tenants from the API. The new tenant should appear on the next ``tenant_list``.
+
+
+Write operation refused
+==================================================
+
+If a write tool fails with a safety error, the session safety mode is blocking the call. The default is ``strict``, which restricts writes to sandbox tenants. To write to a production tenant, switch the session to ``confirm`` (writes require an explicit ``confirm: true`` argument from the agent) or ``unrestricted``. See :doc:`mcp_safety_modes`.
+
+For external send operations -- ``campaign_schedule`` and ``orchestration_group_run`` -- the safety mode must be ``unrestricted`` and the agent must pass ``confirm: true``. These two requirements are independent of the safety mode for other writes.
 
 
 Tools missing or truncated
@@ -47,35 +110,13 @@ Workarounds:
 * Use a persona-scoped MCP server. Amperity publishes split MCP servers that expose smaller, role-scoped tool surfaces. Contact your Amperity representative for access.
 * Restrict your client to a subset of tools by using the client's tool selection controls.
 
-If a specific tool you expect to see is missing, ask your agent to call ``tools/list`` and check whether it appears. If it does not, your account may not have permission to use it on the current tenant.
+If a specific tool you expect to see is missing entirely (rather than truncated), ask your agent to call ``tools/list`` and check whether the tool appears. If it does not, your account may not have permission to use it on the current tenant.
 
 
-No tenant selected
+Connection failures
 ==================================================
 
-A new MCP session begins without a tenant selected. If a tool that requires a tenant fails with a "no tenant selected" error, ask your agent to list and select a tenant:
-
-   *"List my Amperity tenants, then use ``acme``."*
-
-The agent calls ``tenant_list`` followed by ``tenant_use``. The selected tenant persists for the remainder of the session.
-
-
-Write operation refused
-==================================================
-
-If a write tool fails with a safety error, the session safety mode is blocking the call. See :doc:`mcp_safety_modes` for the list of modes and how to change them. The default ``confirm`` mode requires an explicit ``confirm: true`` argument from the agent for writes against production tenants.
-
-
-Connection failures or timeouts
-==================================================
-
-The MCP server is hosted at ``https://mcp.amperity.com``. Confirm that your network allows outbound HTTPS to that hostname. If your client supports it, send a request directly to the OAuth discovery document to verify connectivity:
-
-::
-
-   curl https://mcp.amperity.com/.well-known/oauth-authorization-server
-
-A successful response returns a JSON document with the authorization server metadata.
+The MCP server is hosted at ``https://mcp.amperity.com``. Confirm that your network allows outbound HTTPS to that hostname.
 
 
 Still stuck?
@@ -84,5 +125,5 @@ Still stuck?
 Contact your Amperity representative with:
 
 * The MCP client and version you are using.
-* The exact error text or status code.
+* The exact error text or status code (the JSON ``detail`` or ``error`` field is most useful).
 * The approximate time the error occurred (UTC), so we can correlate with server logs.
