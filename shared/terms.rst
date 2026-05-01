@@ -6636,7 +6636,7 @@ The **Stitch Scores** table has all scores assigned by Stitch during identity re
 
 .. term-stitch-summary-tab-start
 
-The **Summary** tab on the **Stitch** page shows the results of identity resolution and how it changes over time.
+The **Summary** tab on the **Stitch** page shows the results of identity resolution and how it adapts and changes over time.
 
 .. term-stitch-summary-tab-end
 
