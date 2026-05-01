@@ -72,7 +72,14 @@ Recommended usage
 * Use ``unrestricted`` only for scripted, audited automations or in contexts where you accept full responsibility for write actions.
 
 
-Confirm-required operations
+External send operations
 ==================================================
 
-Some tools always require ``confirm: true`` regardless of the session safety mode. Examples include external send operations such as ``campaign_schedule`` and ``orchestration_group_run``. The tool descriptions returned by ``tools/list`` indicate when explicit confirmation is required.
+A small set of tools sit at a higher bar than the regular write gate. External send operations -- currently ``campaign_schedule`` and ``orchestration_group_run`` -- push data to real-world systems (customers, downstream destinations) outside of Amperity. Because the impact reaches outside the tenant, sandbox tenants do **not** get an exemption.
+
+External sends require **both** of the following, on every call, on every tenant:
+
+* Session safety mode is set to ``unrestricted``.
+* The tool call includes ``confirm: true``.
+
+If either is missing, the call is blocked. The tool descriptions returned by ``tools/list`` flag external sends so the agent knows to request both before invoking.
