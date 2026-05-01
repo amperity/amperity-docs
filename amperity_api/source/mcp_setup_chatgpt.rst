@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/api/mcp_setup_chatgpt.html
+.. https://docs.amperity.com/api/
 
 
 .. meta::
@@ -25,40 +25,66 @@ Connect ChatGPT to the Amperity MCP server by adding it as a custom connector. C
 .. mcp-setup-chatgpt-end
 
 
-Before you begin
+.. _mcp-setup-chatgpt-requirements:
+
+Requirements
 ==================================================
 
-You need:
+.. mcp-setup-chatgpt-requirements-start
+
+Connecting ChatGPT to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
-* ChatGPT on the web on a plan that supports custom MCP connectors.
-* The Amperity MCP endpoint for your stack. The example below assumes the default ``aws-prod`` stack (``https://mcp.amperity.com``); if your tenant is on a different stack, substitute the matching URL from :ref:`mcp-overview-stack-urls`.
+* Access to ChatGPT with a plan that supports custom MCP connectors.
+* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
 
+.. mcp-setup-chatgpt-requirements-end
+
+
+.. _mcp-setup-chatgpt-add:
 
 Add the Amperity MCP server
 ==================================================
 
-1. In ChatGPT, go to **Settings** > **Connectors**, then choose **Create**.
-2. Set the server URL:
+.. mcp-setup-chatgpt-add-start
 
-   ::
+To add the Amperity MCP server to ChatGPT:
+
+#. Open ChatGPT and log in.
+#. Open **Settings**, select **Connectors**, and then choose **Create**.
+
+   .. note:: A workplace administrator may need to allow using custom MCP connectors for **Business** or **Enterprise** plans. Contact your workplace administrator if the **Create** option is unavailable.
+
+#. Set the server URL:
+
+   .. code-block:: none
 
       https://mcp.amperity.com
 
-3. Set the authentication type to **OAuth**.
-4. Save the connector. ChatGPT opens a browser tab to complete authorization. Sign in with your Amperity credentials.
-5. Enable the Amperity connector for any chat where you want it available.
+   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` for this setting.
 
-.. note::
+#. Set the authentication type to **OAuth**. Use **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs** as the OAuth client ID.
+#. Save the connector. A browser tab opens. Sign in with your Amperity OAuth credentials.
+#. Enable the Amperity connector for any chat session.
 
-   On Business or Enterprise plans, your workspace admin may need to allow custom MCP connectors before you can add one. If you do not see the **Create** option, contact your workspace admin. Write tools fire a manual-confirm prompt in the chat the first time they are called.
+.. mcp-setup-chatgpt-add-end
 
 
-Verify the connection
+.. _mcp-setup-chatgpt-interacting:
+
+Start interacting with ChatGPT
 ==================================================
 
-In a chat with the connector enabled, ask:
+.. mcp-setup-chatgpt-interacting-start
+
+In a ChatGPT session with the Amperity connector enabled, ask:
+
+.. code-block:: none
 
    "Tell me about my Amperity tenant."
 
-ChatGPT should call the ``tenant_info`` tool and return details about your current Amperity tenant.
+ChatGPT calls the **tenant_info** tool and return details about your current Amperity tenant.
+
+.. note:: Write operations in ChatGPT require a manual-confirm prompt in the chat the first time they are called.
+
+.. mcp-setup-chatgpt-interacting-end

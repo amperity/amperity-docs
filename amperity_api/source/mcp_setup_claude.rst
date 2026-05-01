@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/api/mcp_setup_claude.html
+.. https://docs.amperity.com/api/
 
 
 .. meta::
@@ -20,44 +20,58 @@ Set up Claude
 
 .. mcp-setup-claude-start
 
-Connect Amperity to Claude in two places: through Claude.ai (which also makes the connector available in Claude Desktop and the Claude mobile apps), and through Claude Code for terminal use.
+Connect Claude to the Amperity MCP server through Claude.ai, which also makes the MCP server available in Claude Desktop and Claude mobile apps, or through Claude Code.
 
 .. mcp-setup-claude-end
 
 
-Before you begin
+.. _mcp-setup-claude-requirements:
+
+Requirements
 ==================================================
 
-You need:
+.. mcp-setup-claude-requirements-start
+
+Connecting Claude to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
-* A Claude account (Pro, Max, Team, or Enterprise) and / or Claude Code installed.
-* The Amperity MCP endpoint for your stack. The examples below assume the default ``aws-prod`` stack (``https://mcp.amperity.com``); if your tenant is on a different stack, substitute the matching URL from :ref:`mcp-overview-stack-urls`.
+* Access to a Claude account--**Pro**, **Max**, **Team**, or **Enterprise**--or access to Claude Code.
+* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
+
+.. mcp-setup-claude-requirements-end
 
 
-.. _mcp-setup-claude-web:
+.. _mcp-setup-claude-ai:
 
-Claude.ai (and Claude Desktop)
+Claude.ai
 ==================================================
 
-Claude.ai is the canonical place to add remote MCP connectors. Once added, the connector is also available in Claude Desktop and Claude mobile apps signed into the same account.
+.. mcp-setup-claude-ai-start
 
-Open the right Connectors page for your plan:
+Claude.ai is the canonical location to add remote MCP connectors. Once added, the connector is also available in Claude Desktop and Claude mobile apps signed into the same account.
 
-* **Pro or Max** -- in Claude.ai, go to **Customize** > **Connectors**, then click **+** (or **Add custom connector**).
-* **Team or Enterprise** (organization Owner only) -- go to **Organization settings** > **Connectors**, click **Add**, hover over **Custom**, then select **Web**.
+#. Open Claude.ai and log in.
+#. Open the **Connectors** page for your plan:
 
-Then, in either flow:
+   For **Pro** or **Max** plans in Claude.ai, open **Customize**, select **Connectors**, and then click **+** or **Add custom connector**.
 
-1. In **Remote MCP server URL**, enter:
+   For **Team** or **Enterprise** plans, as the organization Owner only, open **Organization settings**, select **Connectors**, click **Add**, hover over **Custom**, then select **Web**.
 
-   ::
+#. For **Remote MCP server URL** enter:
+
+   .. code-block:: none
 
       https://mcp.amperity.com
 
-2. Click **Add**. A browser tab opens to complete OAuth on first connect -- sign in with your Amperity credentials.
+   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` for this setting.
 
-On Team or Enterprise plans, members can then connect by going to **Customize** > **Connectors** and clicking **Connect** on the Amperity entry.
+   Use **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs** as the OAuth client ID.
+
+#. Click **Add**. A browser tab opens. Sign in with your Amperity OAuth credentials.
+
+   For **Team** or **Enterprise** plans open **Customize**, select **Connectors**, and then click **Connect** for the Amperity connector.
+
+.. mcp-setup-claude-ai-end
 
 
 .. _mcp-setup-claude-code:
@@ -65,33 +79,58 @@ On Team or Enterprise plans, members can then connect by going to **Customize** 
 Claude Code
 ==================================================
 
-Add the Amperity MCP server with the Claude CLI:
+.. mcp-setup-claude-code-start
 
-::
+Configure the Amperity MCP server for Claude Code.
 
-   claude mcp add --transport http --scope user amperity https://mcp.amperity.com
+#. Open Claude Code.
 
-The server is registered in your user-scope Claude configuration and is available in every Claude Code session. The first time Claude Code calls an Amperity tool it opens a browser tab to complete OAuth -- sign in with your Amperity credentials.
+#. Add the Amperity MCP server:
 
-To verify the server is registered:
+   .. code-block:: bash
 
-::
+      claude mcp add --transport http --scope user amperity https://mcp.amperity.com
 
-   claude mcp list
+   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command.
 
-The Amperity entry should appear with status **Needs authentication** until your first authorized call, then **Connected**.
+   The server is registered in your user-scoped Claude configuration and is available in every Claude Code session.
+
+#. To verify the server is registered with Claude Code:
+
+   .. code-block:: bash
+
+      claude mcp list
+
+   The Amperity entry appears with a status of **Needs authentication** or **Connected**.
+
+   .. note:: The first time Claude Code calls an Amperity tool a browser tab opens for OAuth. Sign in with your Amperity credentials, after which the registration status is set to **Connected**.
+
+.. mcp-setup-claude-code-end
 
 
-Verify the connection
+.. _mcp-setup-claude-interacting:
+
+Start interacting with Claude
 ==================================================
 
-In a Claude conversation, ask:
+.. mcp-setup-claude-interacting-start
+
+Open a Claude conversation and ask:
+
+.. code-block:: none
 
    "Tell me about my Amperity tenant."
 
-Claude should call the ``tenant_info`` tool and return details about your current Amperity tenant. If you see an authorization error, remove the server and add it again to retrigger the OAuth flow:
+Claude calls the **tenant_info** tool and return details about your current Amperity tenant.
 
-::
+.. tip:: If you see an authorization error, remove the server and add it again to force the OAuth flow.
 
-   claude mcp remove amperity
-   claude mcp add --transport http --scope user amperity https://mcp.amperity.com
+   .. code-block:: none
+
+      claude mcp remove amperity
+
+      claude mcp add --transport http --scope user amperity https://mcp.amperity.com
+
+      .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command.
+
+.. mcp-setup-claude-interacting-end
