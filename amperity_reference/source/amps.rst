@@ -19,7 +19,7 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`.
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`, or use :ref:`Amp Insights <amp-insights>` to ask natural language questions about your usage.
 
 .. amps-consumption-end
 
@@ -125,10 +125,10 @@ Storage is typically stable after the implementation period has completed. Stora
 
 .. _amps-review-consumption-dashboard:
 
-Consumption dashboard
+Amps dashboard
 --------------------------------------------------
 
-.. amps-review-consumption-dashboard-start
+.. amps-review-amps-dashboard-start
 
 The Amps consumption dashboard shows your brand's total Amps and storage (TB) consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
 
@@ -137,7 +137,19 @@ You can access the **Amps** dashboard from the |fa-kebab| menu that is located i
 .. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
 
 
-.. amps-review-consumption-dashboard-end
+.. amps-review-amps-dashboard-end
+
+
+.. _amp-insights:
+
+Amp Insights
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**Amp Insights** lets you ask natural language questions to understand your Amps usage and consumption.
+
+.. include:: ../../amperity_reference/source/assistant.rst
+   :start-after: .. amp-insights-examples-list-start
+   :end-before: .. amp-insights-examples-list-end
 
 
 .. _amps-review-consumption-dashboard-summary:
@@ -836,6 +848,8 @@ Reduce Amps consumption
 You should review your Amps consumption on a regular basis to ensure that your brand is getting the most value out of Amperity to support all of your brand's use cases.
 
 .. amps-reduce-end
+
+.. tip:: Use :ref:`Amp Insights <amp-insights>` to quickly investigate consumption patterns, such as identifying what caused a spike or which campaigns consume the most Amps.
 
 
 .. _amps-reduce-category:
