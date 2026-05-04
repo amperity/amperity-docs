@@ -3341,7 +3341,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph is the foundation for customer profiles and the keychain of identifiers used for marketing activations, including journeys and campaigns, and interacting with other operational systems.
+An identity graph is the foundation for unified customer profiles. Each customer profile represents a unique customer. Records are connected using a combination of deterministic, probabilistic, and transitive matching. A keychain of identifiers links records in each profile back to source data.
 
 .. term-identity-graph-end
 
@@ -3368,7 +3368,7 @@ Identity recognition relies only on whatever is known about a customer at an exa
 
 .. term-identity-resolution-start
 
-Identity resolution is the process of connecting and matching data points that exist in many sources to build a unified view of a single customer. Identity resolution is expressed as an identity graph, which assigns an Amperity ID to each unique customer profile in the identity graph.
+Identity resolution is the process of connecting and matching data points that exist in many sources to build a unified view of a single customer.
 
 .. term-identity-resolution-end
 
@@ -6116,7 +6116,7 @@ A semantic is a way to apply a common understanding to individual points of data
 
 .. term-semantic-tag-start
 
-A semantic tag is a label that standardizes personally identifiable information (PII), transaction, and other important customer profile details across all columns in all data tables.
+A semantic tag is a label that standardizes personally identifiable information (PII), transaction, and other important customer profile details across all columns in all source data tables.
 
 .. term-semantic-tag-end
 
