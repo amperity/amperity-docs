@@ -335,7 +335,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
       :avatar: _static/amperity_circle.png
       :avatar-link: https://docs.amperity.com/reference/start.html
       :avatar-outline: muted
-      :author: Identity resolution agent
+      :author: Identity Resolution Assistant
       :date: |today|
       :read-time: 10 min read. ~1 hour to complete
       :class-container: sd-p-2 sd-outline-muted sd-rounded-1
@@ -346,7 +346,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
    :avatar: _static/amperity_circle.png
    :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Identity resolution agent
+   :author: Identity Resolution Assistant
    :date: |today|
    :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
