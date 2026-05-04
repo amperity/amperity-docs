@@ -187,9 +187,6 @@ An identity graph is built by comparing records, such as those with personally i
 
 Each identity graph is created from a combination of deterministic and probabilistic matching rules that define conditions for when records should be clustered or separated. The **Rules Editor** defines a heirarchy of deterministic and probabilistic matching strategies for each identity graph. Identity resolution attempts to match on a rule starting at the top of the list of rules in the rules heirarchy. The first rule that matches is scored.
 
-* Deterministic matching strategies try to cluster records together when conditions are met. For example, a deterministic strategy for loyalty IDs tries to match records with the same loyalty ID.
-* Probabilistic matching strategies try to separate records when conditions are met. For example, a probabilistic strategy for email addresses tries to separate records with different email addresses.
-
 .. stitch-summary-tab-matching-strategies-context-end
 
 .. stitch-summary-tab-matching-strategies-tries-start
