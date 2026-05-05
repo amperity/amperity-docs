@@ -19,7 +19,15 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`, or use :ref:`Amp Insights <amp-insights>` to ask natural language questions about your usage.
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`. 
+
+You can also use :ref:`Amp Insights <amp-insights>` to ask natural language questions about your usage.
+
+.. image:: ../../images/ampai-amp-insights.png
+   :width: 420 px
+   :alt: Amp Insights chat interface
+   :align: left
+   :class: no-scaled-link
 
 .. amps-consumption-end
 
