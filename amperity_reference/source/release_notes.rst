@@ -50,9 +50,9 @@ Spring 2026
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
-**Customer Data Agent**
+**Customer Data Assistant**
 
-   :bdg-success:`NEW` The :doc:`Customer Data Agent <customer_data_agent>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
+   :bdg-success:`NEW` The :doc:`Customer Data Assistant <customer_data_assistant>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
 
 **Predictive modeling UI**
 

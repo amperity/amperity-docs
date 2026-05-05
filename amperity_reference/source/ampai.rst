@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        AmpAI is the engine that drives the conversational AI tools within Amperity, from the Customer Data Agent to the AI Assistants.
+        AmpAI is the engine that drives the conversational AI tools within Amperity, from the Customer Data Assistant to the AI Assistants.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        AmpAI is the engine that drives the conversational AI tools within Amperity, from the Customer Data Agent to the AI Assistants.
+        AmpAI is the engine that drives the conversational AI tools within Amperity, from the Customer Data Assistant to the AI Assistants.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ About AmpAI
 
 .. ampai-overview-start
 
-**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Agent** and the **AI Assistants**. **AmpAI** lets you ask and answer complex questions about your customers, with support for visualizations, and operates over the data in the database.
+**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. **AmpAI** lets you ask and answer complex questions about your customers, with support for visualizations, and operates over the data in the database.
 
 **AmpAI** supports customization through custom prompting capabilities. This enables organizations to encode specific business logic and defintions, tailoring **AmpAI** to align with their business requirements and ensuring consistency in results.
 
@@ -44,11 +44,11 @@ AmpAI tools
 
 .. ampai-tools-start
 
-**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Agent** is a conversational starting point --- describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point --- describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
 
-A typical workflow might start with the **Customer Data Agent** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
+A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
-.. note:: Custom prompts set in **AmpAI** apply to all AmpAI tools, including the Customer Data Agent and all AI Assistants.
+.. note:: Custom prompts set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all AI Assistants.
 
 .. ampai-tools-overview-table-start
 
@@ -59,7 +59,7 @@ A typical workflow might start with the **Customer Data Agent** to quickly creat
    * - Tool
      - Best for
      - Access point
-   * - Customer Data Agent
+   * - Customer Data Assistant
      - Starting from intent, creating segments and journeys from scratch, multi-step workflows
      - AmpAI button in sidebar
    * - Segments AI Assistant
@@ -79,7 +79,7 @@ A typical workflow might start with the **Customer Data Agent** to quickly creat
 
 .. ampai-tools-links-start
 
-Learn more about :doc:`Customer Data Agent <customer_data_agent>` and :doc:`AI Assistants <assistant>`.
+Learn more about :doc:`Customer Data Assistant <customer_data_assistant>` and :doc:`AI Assistants <assistant>`.
 
 .. ampai-tools-links-end
 
@@ -120,7 +120,7 @@ About the custom prompt
 
 .. ampai-custom-prompt-start
 
-The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all AmpAI tools, including the Customer Data Agent and AI Assistants, and can be updated to include:
+The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all AmpAI tools, including the Customer Data Assistant and AI Assistants, and can be updated to include:
 
 * Customer definitions, such as defining how your brand interprets retention metrics
 * Priority tables and fields, such as specifying priority for default tables and fields that are used with loyalty-related queries
@@ -690,7 +690,7 @@ Disable AmpAI features
 
 .. ampai-disable-start
 
-The **Customer Data Agent** and the **AmpAI Assistants** can be disabled for all users. Open the **Settings** page, select the **AmpAI** tab, and then click **Disable AmpAI features**.
+The **Customer Data Assistant** and the **AmpAI Assistants** can be disabled for all users. Open the **Settings** page, select the **AmpAI** tab, and then click **Disable AmpAI features**.
 
 .. ampai-disable-end
 
@@ -702,8 +702,8 @@ Audit conversations
 
 .. ampai-audit-start
 
-**Customer Data Agent** and **AmpAI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
-The **AmpAI** tab on the **Settings** page logs the questions that are asked to the **Customer Data Agent** and the **AmpAI Assistants** under **AI Conversations**.
+**Customer Data Assistant** and **AmpAI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
+The **AmpAI** tab on the **Settings** page logs the questions that are asked to the **Customer Data Assistant** and the **AmpAI Assistants** under **AI Conversations**.
 
 The **Activity log** tab on the **Settings** page logs when **AmpAI Assistant** questions are asked using the "amperity.query.exec/sampled" action.
 

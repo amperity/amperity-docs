@@ -141,9 +141,9 @@ Components
       :link-type: doc
       :link: couriers
 
-   .. grid-item-card:: |fa-sparkles| Customer Data Agent
+   .. grid-item-card:: |fa-sparkles| Customer Data Assistant
       :link-type: doc
-      :link: customer_data_agent
+      :link: customer_data_assistant
 
    .. grid-item-card:: |fa-chart-line| Dashboards
       :link-type: doc
@@ -316,7 +316,7 @@ Components
    Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
-   Customer Data Agent <customer_data_agent>
+   Customer Data Assistant <customer_data_assistant>
    Dashboards <grid_dashboards>
    Data exports <data_exports>
    Destinations <page_destinations>

@@ -11,17 +11,17 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Identity resolution agent
+        Identity Resolution Assistant
 
 ==================================================
-Identity resolution agent
+Identity Resolution Assistant
 ==================================================
 
 .. article-info::
    :avatar: _static/amperity_circle.png
    :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Identity resolution agent
+   :author: Identity Resolution Assistant
    :date: |today|
    :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
@@ -50,18 +50,18 @@ By the end of this guide you will know how to do the following:
 
 .. _start-data-model:
 
-Identity resolution agent data model
+Identity Resolution Assistant data model
 ==================================================
 
 .. start-data-model-start
 
-The following diagram shows the data model for the sample data that is part of the identity resolution agent. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
+The following diagram shows the data model for the sample data that is part of the Identity Resolution Assistant. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
 
 .. start-data-model-end
 
 .. image:: ../../images/quickstart_sample_erd.png
    :width: 600 px
-   :alt: The sample data model for Amperity identity resolution agent.
+   :alt: The sample data model for Amperity Identity Resolution Assistant.
    :align: left
    :class: no-scaled-link
 
@@ -287,7 +287,7 @@ After all of the source tables to which semantic tags should be applied have sem
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - The identity resolution agent will refresh to show high-level results of identity resolution similar to:
+     - The Identity Resolution Assistant will refresh to show high-level results of identity resolution similar to:
 
        .. image:: ../../images/quick-start-identity-resolution-results.png
           :width: 320 px
@@ -402,7 +402,7 @@ Sync identity data to Databricks
 
 .. start-sync-to-databricks-start
 
-.. important:: The Amperity identity resolution agent does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. As long as you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
+.. important:: The Amperity Identity Resolution Assistant does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. As long as you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
 
 Amperity can sync customer profiles to your Databricks account.
 
