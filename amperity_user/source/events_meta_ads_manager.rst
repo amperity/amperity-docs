@@ -51,66 +51,15 @@ Send events to Meta Ads Manager
 Build a query
 ==================================================
 
-.. events-meta-ads-manager-offline-events-build-query-start
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-offline-events-build-query-start
+   :end-before: .. events-meta-ads-manager-offline-events-build-query-end
 
-Use a query to build a combination of data from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables to represent the set of events that your brand wants to use within |destination-name|.
+**Multiple event types in the same query**
 
-A query that returns a collection events for use in |destination-name| is similar to:
-
-.. code-block:: sql
-   :linenos:
-
-   SELECT
-     c360.amperity_id AS external_id
-     ,c360.email AS email
-     ,c360.phone AS phone
-     ,c360.given_name AS given_name
-     ,c360.surname AS surname
-     ,c360.birthdate AS birthdate
-     ,c360.gender AS gender
-     ,c360.city AS city
-     ,c360.state AS state
-     ,c360.postal AS postal
-     ,c360.country AS country
-     ,uit.order_id AS order_id
-     ,uit.item_quantity AS quantity
-     ,uit.product_id AS product_id
-     ,uit.order_datetime AS timestamp
-     ,CAST(uit.item_revenue / uit.item_quantity AS DOUBLE) AS price
-     ,'USD' AS currency
-     ,'physical_store' AS action_source 
-   FROM Unified_Itemized_Transactions uit
-   LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
-   WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
-
-The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
-
-You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
-
-.. tip::
-
-   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
-
-   For example:
-
-   .. code-block:: sql
-      :linenos:
-
-      WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
-      AND uit.purchase_channel = 'channel'
-      AND uit.purchase_brand = "ACME Essentials"
-      AND uit.item_quantity > 0
-      AND (c360.email IS NOT NULL OR c360.phone IS NOT NULL)
-      AND (
-          (is_cancellation IS NULL)
-          OR (NOT is_cancellation)
-      )
-      AND (
-          (is_return IS NULL)
-          OR (NOT is_return)
-      )
-
-.. events-meta-ads-manager-offline-events-build-query-end
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-offline-events-build-query-variations-start
+   :end-before: .. events-meta-ads-manager-offline-events-build-query-variations-end
 
 .. events-meta-ads-manager-offline-events-parameters-start
 

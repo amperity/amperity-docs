@@ -342,7 +342,7 @@ A query that returns a collection events for use in |destination-name| is simila
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-The query **MUST** contain the following fields: **external_id**, **order_id**, **quantity**, **email** OR **phone**, **timestamp**, **price**, and **currency**. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
@@ -370,6 +370,43 @@ You may include any of the following customer profile fields to help improve mat
       )
 
 .. events-meta-ads-manager-offline-events-build-query-end
+
+**Multiple event types in the same query**
+
+.. events-meta-ads-manager-offline-events-build-query-variations-start
+
+Events parameters can vary depending on the type of event. For example, website purchases capture more events data than in-store purchases. To send consolidated events data to |destination-name| create a database table to store the consolidated events and map the values in that table to the values required by |destination-name| :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` or to **NULL** values.
+
+The following SQL shows how to send multiple event types stored in a table named **Customer Events**:
+
+.. code-block:: sql
+   :emphasize-lines: 6
+   :linenos:
+
+   SELECT
+     c360.amperity_id AS external_id
+     ,c360.email AS email
+     ,c360.phone AS phone
+     ,events.order_id AS order_id
+     ,events.event_datetime AS timestamp
+     ,events.event_type AS event_name
+     ,events.channel AS action_source 
+     ,events.revenue AS value
+     ,'USD' AS currency
+     ,events.user_agent AS client_user_agent
+     ,events.event_uuid AS event_id
+     ,events.page_url AS event_source_url
+     ,events.client_ip AS client_ip_address
+   FROM Customer_Events events
+   LEFT JOIN Customer_360 c360 ON events.amperity_id = c360.amperity_id
+   WHERE events.event_datetime > (CURRENT_DATE - interval '7' day)
+
+The table from which multiple events are sourced must have values that map to values required by the Conversions API:
+
+#. Line 8 sets the value of **action_source** to the value of the **channel** field in the **Customer Events** table. In this example the values in the **channel** field are **physical_store** or **website**.
+#. Lines 11-14 are events that only apply to **website** events in the **Customer Events** table. When **action_source** is **physical_store** the values for **user_agent**, **event_uuid**, **page_url**, and **client_ip** in the **Customer Events** table are **NULL**.
+
+.. events-meta-ads-manager-offline-events-build-query-variations-end
 
 .. events-meta-ads-manager-offline-events-parameters-start
 
@@ -477,6 +514,12 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
+
+   * - **delivery_category**
+     - Optional for "Purchase" events.
+
+       Possible values: **in_store**, **curbside**, **home_delivery**, or **shipping**.
+
    * - **email** or **phone**
      - **Required**
 
@@ -496,9 +539,27 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        Identifies an offline event within |destination-name|.
 
-       .. note:: The default value for **event_name** is "Purchase". 
+       .. note:: The default value for **event_name** is "Purchase". Blank or **NULL** values for **event_name** will default to "Purchase".
 
           This value may be set to one of: "ViewContent", "Search", "AddToCart", "AddToWishlist", "InitiateCheckout", "AddPaymentInfo", "Purchase", "Lead", or "Other".
+
+          To send non-"Purchase" event types add the **event_name** field to the SQL query and set the value to the event type. For example:
+
+          .. code-block:: sql
+             :emphasize-lines: 6
+             :linenos:
+
+             SELECT
+               c360.amperity_id AS external_id
+               ,c360.email AS email
+               ,c360.phone AS phone
+               ,leads.lead_datetime AS timestamp
+               ,'Lead' AS event_name
+               ,'website' AS action_source
+             FROM Customer_Leads leads
+             LEFT JOIN Customer_360 c360
+             ON leads.amperity_id = c360.amperity_id
+             WHERE leads.lead_datetime > (CURRENT_DATE - interval '7' day)
 
 
    * - **external_id**
@@ -537,7 +598,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           #. Transactions from the **Unified Itemized Transactions** table group items by order ID to ensure that individual events are combined to describe a complete transaction. |destination-name| processes each item as a unique conversion. For example, an order ID with three individual items is attributed by |destination-name| as three conversions.
 
-          #. Transactions from the **Unified Transactions** table are already grouped by order ID. |destination-name| processes each order as a single conversion.
+          #. Transactions from the **Unified Transactions** table are grouped by order ID. Each unique combination of **order_id** and **event_name** is sent to |destination-name| as a single conversion. If **event_name** column is not included all rows grouped by order ID are assigned the "Purchase" event type and each **order_id** produces one conversion.
 
    * - **phone**
      - See **email**.
@@ -545,7 +606,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **price**
      - **Required for Purchase events**
 
-       The price that is associated with the offline event. When the **event_name** column is present in the dataset, **price** is only required for Purchase events. Non-purchase events (such as Lead) do not require **price**.
+       The price that is associated with the offline event. When the **event_name** column is present in the dataset, **price** is only required for "Purchase" events. Non-"Purchase" events (such as "Lead") do not require **price**.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
@@ -577,7 +638,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **quantity** *or* **value**
      - **Required for Purchase events**
 
-       A field that describes a quantity or a value amount associated with the offline event. When the **event_name** column is present in the dataset, **quantity** (or **value**) is only required for Purchase events. Non-purchase events (such as Lead) do not require **quantity** or **value**.
+       A field that describes a quantity or a value amount associated with the offline event. When the **event_name** column is present in the dataset, **quantity** (or **value**) is only required for "Purchase" events. Non-"Purchase" events (such as "Lead") do not require **quantity** or **value**.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity** (or **value**), and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
@@ -615,7 +676,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **value**
-     - See **quantity**.
+     - The total value for a "Purchase" event. Required when **price** and **quantity** are not provided.
+
+       .. note:: **value** is not required for non-"Purchase" events, such as "Lead".
 
    * - Optional profile attributes
      - You may include any of the profile attributes that are supported by the Marketing API, including **Gender**, **Birthdate**, **First Name**, **Last Name**, **City**, **State**, **Zip Code**, and **Country Code**.

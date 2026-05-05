@@ -148,6 +148,8 @@ Rules can be configured to cluster records together when personally identifiable
    * - **values approximately match**
      - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
 
+.. configure-stitch-rules-cluster-end
+
 For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-cluster-complex.png
@@ -173,8 +175,6 @@ For example:
    :alt: Cluster records when values match for fk-customerid.
    :align: left
    :class: no-scaled-link
-
-.. configure-stitch-rules-cluster-end
 
 
 .. _configure-stitch-rules-separate:
@@ -207,6 +207,8 @@ Rules can be configured to separate records together when values differ or when 
    * - **company is not the same (fuzzy match)**
      - Compares values for company and separates records when values are not the same.
 
+.. configure-stitch-rules-separate-end
+
 For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-separation-complex.png
@@ -233,8 +235,6 @@ For example:
    :align: left
    :class: no-scaled-link
 
-.. configure-stitch-rules-separate-end
-
 .. vale on
 
 
@@ -245,15 +245,17 @@ Rules can be in any order
 
 .. configure-stitch-rules-order-start
 
-Rules can be put in any order you want. Click the |fa-drag| icon, and then drag the rule into the desired position. For example:
+Rules can be put in any order you want. Click the |fa-drag| icon, and then drag the rule into the desired position.
+
+.. configure-stitch-rules-order-end
+
+For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-any-order.png
    :width: 500 px
    :alt: Rules can be put in any order you want.
    :align: left
    :class: no-scaled-link
-
-.. configure-stitch-rules-order-end
 
 
 .. _configure-stitch-rules-remaining:
