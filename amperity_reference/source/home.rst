@@ -23,7 +23,6 @@ The **Home** page is the default landing screen in Amperity. It consolidates ten
 
 .. home-end
 
-
 .. _home-access:
 
 How to access
@@ -31,10 +30,9 @@ How to access
 
 .. home-access-start
 
-The **Home** page appears when navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the Amperity logo on the left navigation.
+The **Home** page appears when navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the **Home** icon on the left navigation.
 
 .. home-access-end
-
 
 .. _home-what-you-see:
 
@@ -70,6 +68,12 @@ The Amps display is clickable and navigates to the full :doc:`Amps <amps>` page,
 
 .. home-amps-end
 
+.. image:: ../../images/home-amps-meter.png
+   :width: 240 px
+   :alt: Home widget measuring Amps consumption
+   :align: left
+   :class: no-scaled-link
+
 .. _home-ask-ampai:
 
 Ask AmpAI
@@ -83,6 +87,11 @@ Use this section to quickly start a conversation with AmpAI without navigating a
 
 .. home-ask-ampai-end
 
+.. image:: ../../images/home-ask-ampai.png
+   :width: 540 px
+   :alt: Home widget for asking AmpAI questions
+   :align: left
+   :class: no-scaled-link
 
 .. _home-make-something-new:
 
@@ -99,6 +108,11 @@ Each checklist item shows its completion state. Use this section to discover fea
 
 .. home-make-something-new-end
 
+.. image:: ../../images/home-make-something-new-building.png
+   :width: 340 px
+   :alt: Home widget tracking Amperity feature use
+   :align: left
+   :class: no-scaled-link
 
 .. _home-my-work:
 
@@ -110,6 +124,12 @@ My work
 The **My work** section shows your recently edited objects, grouped by time period: **Today**, **Yesterday**, and **This Week**. Each item includes the object name and type, and is a clickable link that navigates to that object.
 
 **My work** shows a maximum of 10 records, sorted by most recent. It includes objects you have modified within the last 30 days. "Modified" means you created, edited the content of, or renamed the object. Opening an object without saving changes or edits made by other users are not included.
+
+.. image:: ../../images/home-my-work.png
+   :width: 340 px
+   :alt: Home widget tracking recent actions taken
+   :align: left
+   :class: no-scaled-link
 
 The following object types are supported:
 
@@ -134,7 +154,31 @@ Use this section to keep a key segment's performance visible at a glance without
 
 .. home-segment-insights-end
 
-.. TODO: Confirm: segment selection by user or by tenant?
+.. image:: ../../images/home-segment-insights.png
+   :width: 640 px
+   :alt: Home widget display showing segment measurements
+   :align: left
+   :class: no-scaled-link
+
+
+.. _home-segment-metrics:
+
+Segment metrics
+==================================================
+
+.. home-segment-metrics-start
+
+The **Segment metrics** section displays a high level metric for up to three designated segments across the top of the **Home** page.
+
+Contact your DataGrid Operator or Amperity administrator to add a segment metric. 
+
+.. home-segment-metrics-end
+
+.. image:: ../../images/home-segment-metrics.png
+   :width: 640 px
+   :alt: Home widget display showing high level segment metrics
+   :align: left
+   :class: no-scaled-link
 
 
 .. _home-tenant-health:
@@ -147,6 +191,12 @@ Tenant health
 The Tenant health section displays the operational health of your tenant's key data pipelines and the most recent Stitch run. Use this section to quickly identify errors or confirm that your data pipelines are running as expected.
 
 .. home-tenant-health-end
+
+.. image:: ../../images/home-tenant-health.png
+   :width: 640 px
+   :alt: Home widget display showing operational health of key data pipelines and stitch operations
+   :align: left
+   :class: no-scaled-link
 
 
 .. _home-tenant-health-pipelines:
@@ -187,7 +237,9 @@ Stitch details show the following information about the most recent :doc:`Stitch
 
 * Last run timestamp
 * Run time
-* Records stitched
-* Total records
+* AmpIDs (number of unique customer identities produced by Stitch)
+* Total records stitched (number of source records processed by Stitch to create AmpIDs)
+
+.. note:: AmpIDs are also displayed at the top of the **Home** page.
 
 .. home-tenant-health-stitch-end
