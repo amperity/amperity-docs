@@ -46,6 +46,10 @@ Spring 2026
 
 .. updates-2026-spring-start
 
+**Amp Insights**
+
+   :bdg-success:`NEW` Use natural language to ask `Amp Insights <assistant.html>`__ questions to understand Amps usage and consumption.
+
 **Audience monetization**
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
@@ -54,9 +58,9 @@ Spring 2026
 
    :bdg-success:`NEW` The :doc:`Customer Data Assistant <customer_data_assistant>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
 
-**Predictive modeling UI**
+**Home page**
 
-   :bdg-success:`NEW` The Predictive modeling UI has a new setup process for the `predicted customer lifetime value <../operator/model_predicted_clv.html>`__ model and `product affinity <../operator/model_product_affinity.html>`__ model so users can now self-serve and iterate on their predictive models.
+   :bdg-success:`NEW` The `Home page <home.html>`__ provides an at-a-glance view of tenant health, Amps consumption, recent work, segment insights, and feature adoption.
 
 **Identity resolution summary**
 
@@ -65,6 +69,14 @@ Spring 2026
 **Labels available in filters**
 
    :bdg-light:`UPDATED` You can now add and filter by labels for `segments <segments_howtos.html#filter-segments>`__, `queries <queries.html#filter-queries>`__, `campaigns <campaigns.html#filter-campaigns>`__, and `journeys <journeys.html#filter-journeys>`__ to help organize your work by grouping related items together.
+
+**MCP server**
+
+   :bdg-success:`NEW` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to manage your tenant.
+
+**Predictive modeling UI**
+
+   :bdg-success:`NEW` The Predictive modeling UI has a new setup process for the `predicted customer lifetime value <../operator/model_predicted_clv.html>`__ model and `product affinity <../operator/model_product_affinity.html>`__ model so users can now self-serve and iterate on their predictive models.
 
 .. updates-2026-spring-end
 
