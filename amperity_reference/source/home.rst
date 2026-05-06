@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Home page
+        About the Home page
 
 ==================================================
-Home page
+About the Home page
 ==================================================
 
 .. home-start
