@@ -157,6 +157,15 @@ Use terminology correctly within Amperity documentation and the user interface.
 
 .. vale on
 
+.. vale off
+
+.. _term-realtime:
+
+**real-time**
+   Use the hyphenated for **real-time** rather than the portmanteau **realtime**. With a hyphen it looks like a serious technical term; without a hyphen it looks like a marketing buzzword. 
+
+.. vale on
+
 
 .. _term-replica:
 
