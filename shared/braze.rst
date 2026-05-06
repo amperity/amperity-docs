@@ -92,9 +92,11 @@ The following table describes the default `user profile fields <https://www.braz
 
 .. braze-customer-profiles-common-attributes-note-start
 
-.. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
+.. note:: Default user profile fields also exist for **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
 
    These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value or values, and to use lowercase.
+
+   Alias-based identification (via the Braze ``user_alias`` object) is not supported by the |destination-name| destination. The **User identifier** setting must be set to ``external_id`` or ``braze_id``.
 
 .. braze-customer-profiles-common-attributes-note-end
 
