@@ -115,7 +115,7 @@ Rules
 
 .. configure-stitch-rules-start
 
-Use the **Rules** tab to define a prioritized collection of rules that are used for identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab, until a rule returns true.
+Use the **Rules** tab to define a prioritized collection of rules used during identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab, until a rule returns true.
 
 .. image:: ../../images/mockup-stitch-settings-rules.png
    :width: 520 px
@@ -186,7 +186,7 @@ Separate records
 
 .. configure-stitch-rules-separate-start
 
-Rules can be configured to separate records together when values differ or when specific types of PII are similar, but do not match.
+Rules can be configured to separate records when values differ or when specific types of PII are similar, but do not match.
 
 .. list-table::
    :widths: 50 50
