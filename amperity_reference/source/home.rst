@@ -30,7 +30,7 @@ How to access
 
 .. home-access-start
 
-The **Home** page appears when navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the **Home** icon on the left navigation.
+The **Home** page appears when you navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the **Home** icon on the left navigation.
 
 .. home-access-end
 
