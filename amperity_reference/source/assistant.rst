@@ -3,24 +3,24 @@
 
 .. meta::
     :description lang=en:
-        AmpAI Assistants help author SQL queries and create customer segments from natural language commands.
+        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        AmpAI Assistants help author SQL queries and create customer segments from natural language commands.
+        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI Assistants
+        AmpAI assistants
 
 
 ==================================================
-About AmpAI Assistants
+About AmpAI assistants
 ==================================================
 
 .. assistant-overview-start
 
-**AmpAI Assistants** include the following:
+**AmpAI** assistants include the following:
 
 * **Amp Insights** helps users understand Amps usage and consumption
 * **Journeys AI Assistant** helps users build and personalize multi-touch journeys
@@ -68,7 +68,7 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 .. assistant-overview-important-start
 
-.. important:: As with all generative AI capabilities, the outputs of **AmpAI Assistants** are probabilistic. Users should double check outputs for accuracy.
+.. important:: As with all generative AI capabilities, the outputs of **AmpAI** assistants are probabilistic. Users should double check outputs for accuracy.
 
    Review the |support_ai_assistant_privacy_faq| to learn more about how the **AmpAI Assistant** interacts with LLMs and the Microsoft Azure OpenAI Service.
 
@@ -78,7 +78,7 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 .. admonition:: Amperity Learning Lab
 
-   The **AmpAI Assistants** are generative AI features that can help you build better SQL queries, generate customer segments, and structure journeys based on the data in your Amperity tenant.
+   The **AmpAI** assistants are generative AI features that can help you build better SQL queries, generate customer segments, and structure journeys based on the data in your Amperity tenant.
 
    Open **Learning Lab** to learn more about how the `AmpAI Assistant <https://amperity.com/learning-lab/ai-assisted-segment-creation>`__ |ext_link| can help you build better queries, segments, and journeys. Registration is required.
 
@@ -87,16 +87,16 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 .. _assistant-enable-disable:
 
-Enable or disable AmpAI Assistants
+Enable or disable AmpAI assistants
 ==================================================
 
 .. assistant-enable-disable-start
 
-AmpAI features, including **AmpAI Assistants**, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
+AmpAI features, including **AmpAI** assistants, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
 
 .. assistant-enable-disable-end
 
-**To disable AmpAI Assistants**
+**To disable AmpAI assistants**
 
 .. include:: ../../amperity_reference/source/ampai_settings.rst
    :start-after: .. settings-user-ampai-steps-start
@@ -105,16 +105,16 @@ AmpAI features, including **AmpAI Assistants**, may be enabled (or disabled) by 
 
 .. _assistant-howitworks:
 
-How AmpAI Assistants work
+How AmpAI assistants work
 ==================================================
 
 .. assistant-howitworks-start
 
-**AmpAI Assistants** are powered by LLMs on a private instance of Azure OpenAI Service.
+**AmpAI** assistants are powered by LLMs on a private instance of Azure OpenAI Service.
 
 Amperity passes information on the schema information, query and segment examples, results, errors, table usage, and performs a series of research tool calls to improve the quality of results.
 
-.. note:: More detail about how **AmpAI Assistants** work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
+.. note:: More detail about how **AmpAI** assistants work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
 
