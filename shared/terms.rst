@@ -3009,7 +3009,7 @@ The `General Data Protection Regulation (GDPR) <https://en.wikipedia.org/wiki/Ge
 
 .. term-generational-suffix-start
 
-The suffix that identifies to which family generation a customer profile belongs. For example: Jr., Sr. II, and III.
+The suffix that identifies to which family generation a customer record belongs. For example: Jr., Sr. II, and III.
 
 .. term-generational-suffix-end
 
