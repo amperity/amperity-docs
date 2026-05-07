@@ -22,7 +22,7 @@ Send events to TikTok Ads Manager
 
 .. events-tiktok-ads-offline-events-start
 
-Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Support for `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+Send events to |destination-name| to help your brand track offline and web conversions that result from your marketing campaigns. Support for `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
 For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
@@ -73,7 +73,7 @@ Use a query to build a combination of data from the your brand's customer 360 da
      ,'CompletePayment' AS event
      ,'website' AS event_channel
      ,CAST(uit.order_id AS VARCHAR) AS event_id
-     ,'7654321098765432109' AS event_set_id
+     ,'7654321098765432109' AS event_source_id
      ,uit.order_id
      ,CONCAT('+1','',REGEXP_REPLACE(mc.phone,'[$\D\s]','')) AS phone
      ,uit.item_price AS price
@@ -85,7 +85,9 @@ Use a query to build a combination of data from the your brand's customer 360 da
    LEFT JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-and **MUST** contain the following fields: **email**, **event**, **event_id**, and **event_set_id**. Review the list of supported events parameters while building the query.
+Offline events **MUST** contain at least one identity field (**email** or **phone**) and a **timestamp**. 
+Web events **MUST** contain at least one identity field (**email**, **phone**, or **external_id**), a **timestamp**, and a **page_url**.
+The query should also include an **event** column unless the **Fixed event name** connector setting is configured. Review the list of supported events parameters while building the query.
 
 Fields that contain PII--email address and phone numbers, for example--should have one-way SHA-256 hashing applied to them.
 

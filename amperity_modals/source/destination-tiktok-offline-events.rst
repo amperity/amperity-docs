@@ -10,7 +10,7 @@
 TikTok Ads Events
 ==================================================
 
-Send events to TikTok Ads Manager to help your brand track offline conversions that result from your marketing campaigns. Support for events and parameters is part of the TikTok Events API.
+Send events to TikTok Ads Manager to help your brand track offline and web conversions that result from your marketing campaigns. Support for events and parameters is part of the TikTok Events API.
 
 
 Credentials
@@ -59,17 +59,11 @@ Settings
    :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
    :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-**Event set ID** (Required at orchestration)
+**Event source ID** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-start
    :end-before: .. setting-tiktok-ads-manager-offline-event-set-id-end
-
-**Event set name**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-tiktok-ads-manager-offline-event-set-name-start
-   :end-before: .. setting-tiktok-ads-manager-offline-event-set-name-end
 
 **Event source**
 
@@ -82,6 +76,18 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-offline-auto-tracking-start
    :end-before: .. setting-tiktok-ads-manager-offline-auto-tracking-end
+
+**Fixed event name**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-tiktok-ads-manager-events-fixed-event-name-start
+   :end-before: .. setting-tiktok-ads-manager-events-fixed-event-name-end
+
+**Limited data use**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-tiktok-ads-manager-events-limited-data-use-start
+   :end-before: .. setting-tiktok-ads-manager-events-limited-data-use-end
 
 **Campaign file settings**
 

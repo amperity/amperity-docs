@@ -3174,45 +3174,49 @@ The advertiser ID for the TikTok Ads account.
 
 .. setting-tiktok-ads-manager-offline-auto-tracking-start
 
-Select **Auto tracking** to use this event set for add tracking and attribution.
+Select **Auto tracking** to use this event set for ad tracking and attribution.
 
 .. setting-tiktok-ads-manager-offline-auto-tracking-end
 
-**Event set ID**
+**Event source ID**
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-The event set ID is a nineteen character string similar to "7654321098765432109".
+The event source ID is a nineteen character string similar to "7654321098765432109". For offline events, use the **Offline ID** of the targeted offline event set in the TikTok Event Manager Dashboard. For web events, use the **Pixel ID** of the targeted web event source in the TikTok Event Manager Dashboard.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
 
 .. setting-tiktok-ads-manager-offline-event-set-id-context-start
 
-The event set must exist before you can send data to it from Amperity. You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the |destination-name| user interface.
+The event source must exist before you can send data to it from Amperity. You can configure event sources from the |destination-name| user interface.
 
-Add an event set ID if it does not exist.
-
-Open the TikTok Ads Manager user interface. Choose **Assets**, then **Events**, and then from the **Offline** box select **Manage**.
-
-Each event set has its own card. The event set ID is located under the name of the event set.
+Open the TikTok Ads Manager user interface. Choose **Assets**, then **Events**. For offline events, select **Manage** from the **Offline** box; the Offline ID is located under the name of each event set. For web events, select **Manage** from the **Web** box; the Pixel ID is located under the name of each pixel.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-context-end
-
-**Event set name**
-
-.. setting-tiktok-ads-manager-offline-event-set-name-start
-
-The name of the events set in TikTok Ads Manager.
-
-.. setting-tiktok-ads-manager-offline-event-set-name-end
 
 **Event source**
 
 .. setting-tiktok-ads-manager-offline-event-source-start
 
-The event uploaded to TikTok Ads Manager. May be one of "web" or "offline". Use "web" for events that took place on your website and collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and measured by an offline event set ID.
+The type of event to be sent to TikTok Ads Manager. Select "offline" for events that took place in a physical store. Select "web" for events that took place on your website.
 
 .. setting-tiktok-ads-manager-offline-event-source-end
+
+**Fixed event name**
+
+.. setting-tiktok-ads-manager-events-fixed-event-name-start
+
+When the dataset does not include an **event** column, the connector uses this value to populate the event field across all requests in the batch. Either include an **event** column in the query or configure this setting. One of the two is required.
+
+.. setting-tiktok-ads-manager-events-fixed-event-name-end
+
+**Limited data use**
+
+.. setting-tiktok-ads-manager-events-limited-data-use-start
+
+When enabled, signals TikTok to apply limited data processing for web events in applicable U.S. states, supporting compliance with state-level privacy opt-out requirements. Has no effect on offline events.
+
+.. setting-tiktok-ads-manager-events-limited-data-use-end
 
 
 

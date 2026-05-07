@@ -31,7 +31,7 @@ Configure events for TikTok Ads
 
 .. events-tiktok-ads-start
 
-Events help your brand track offline conversions from your marketing campaigns on |destination-name|. Support for sending `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+Events help your brand track offline and web conversions from your marketing campaigns on |destination-name|. Support for sending `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
 .. events-tiktok-ads-end
 
@@ -94,7 +94,7 @@ Get details
              :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-       **Event set ID**
+       **Event source ID**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-start
@@ -104,17 +104,23 @@ Get details
              :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-context-start
              :end-before: .. setting-tiktok-ads-manager-offline-event-set-id-context-end
 
-       **Event set name**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-tiktok-ads-manager-offline-event-set-name-start
-             :end-before: .. setting-tiktok-ads-manager-offline-event-set-name-end
-
        **Event source**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-tiktok-ads-manager-offline-event-source-start
              :end-before: .. setting-tiktok-ads-manager-offline-event-source-end
+
+       **Fixed event name**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-tiktok-ads-manager-events-fixed-event-name-start
+             :end-before: .. setting-tiktok-ads-manager-events-fixed-event-name-end
+
+       **Limited data use**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-tiktok-ads-manager-events-limited-data-use-start
+             :end-before: .. setting-tiktok-ads-manager-events-limited-data-use-end
 
 .. events-tiktok-ads-get-details-end
 
@@ -280,7 +286,7 @@ Add destination
              :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-       **Event set ID**
+       **Event source ID**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-start
@@ -289,12 +295,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-tiktok-ads-manager-offline-event-set-id-context-start
              :end-before: .. setting-tiktok-ads-manager-offline-event-set-id-context-end
-
-       **Event set name**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-tiktok-ads-manager-offline-event-set-name-start
-             :end-before: .. setting-tiktok-ads-manager-offline-event-set-name-end
 
        **Event source**
 
@@ -307,6 +307,18 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-tiktok-ads-manager-offline-auto-tracking-start
              :end-before: .. setting-tiktok-ads-manager-offline-auto-tracking-end
+
+       **Fixed event name**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-tiktok-ads-manager-events-fixed-event-name-start
+             :end-before: .. setting-tiktok-ads-manager-events-fixed-event-name-end
+
+       **Limited data use**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-tiktok-ads-manager-events-limited-data-use-start
+             :end-before: .. setting-tiktok-ads-manager-events-limited-data-use-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -338,7 +350,9 @@ Events parameters
 
 .. events-tiktok-ads-offline-events-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for events.
+The following table describes each of the parameters that are supported by |destination-name| for offline and web events.
+
+.. important:: If **Event source ID**, **Advertiser ID**, and **Event name** are not correctly configured, TikTok will return an error without an explanation of the problem. Verify that the **Event source ID**, **Advertiser ID**, and **Event name** are correct before troubleshooting other issues.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -350,147 +364,152 @@ The fields are listed alphabetically, but may be returned by a query in any orde
      - Description
 
    * - **agent**
-     - Web events only. A non-hashed user agent from the user's device. This field should be sent along with **ip** when both are available. (Amperity renames this field to "(user_agent)" when events are sent to TikTok Ads Manager.)
+     - Web events only. A non-hashed user agent from the user's device. This field should be sent along with **ip** when both are available. (Amperity sends this field as **user_agent** in the user object.)
 
    * - **brand**
-     - The brand name of the product item.
+     - The brand name of the product item. Sent in the contents array.
 
 
    * - **content_category**
-     - A product category.
+     - A product category. Sent in the contents array.
 
 
    * - **content_id**
-     - A product identifier.
+     - A product identifier. TikTok recommends using **sku_id** or **item_group_id** if available.
 
 
    * - **content_name**
-     - The name of a product.
+     - The name of a product. Sent in the contents array.
 
 
    * - **content_type**
-     - A product or product type.
+     - The type of content in the event. Set to "product" when **content_id** is a sku_id, or "product_group" when **content_id** is an item_group_id. Defaults to "product" when blank.
 
    * - **cookie_id**
-     - Web events only. A unique ID that matches website visitor events with ads on TikTok. (Amperity renames this field to "(ttp)" when events are sent to TikTok Ads Manager.)
+     - Web events only. A unique ID that matches website visitor events with ads on TikTok. (Amperity sends this field as **ttp** (TikTok Pixel cookie) in the user object.)
 
    * - **currency**
-     - The |ext_iso_4217| code for the currency that is associated with the offline event. For example: "USD".
+     - The |ext_iso_4217| code for the currency that is associated with the event. For example: "USD". Defaults to "USD" if blank.
+
+
+   * - **description**
+     - A description of the event. Sent in properties.
 
 
    * - **email**
-     - **Required**. The email associated with the order. 
+     - At least one identity field, **email** or **phone**, is required for offline events. At least one of **email**, **phone**, or **external_id** is required for web events.
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-email-start
           :end-before: .. term-email-end
 
+       .. note:: PII fields (**email**, **phone**, and **external_id**) are normalized and SHA-256 hashed automatically before sending. Values that already match the 64-character lowercase hex pattern are passed through as-is to prevent double-hashing.
+
 
    * - **event**
-     - **Required**
+     - The event name for each row (e.g. "CompletePayment"). If this column is missing from the dataset, the **Fixed event name** connector setting is used. One of the two is required.
 
-       The type of offline event.
+       The value for **event** is used to categorize conversions within the |destination-name| user interface. Use the event type that best associates how your brand wants to use events within |destination-name|.
 
-       Add **event** to your query and then set a value:
+       Add **event** to your query and then set a value, for example:
 
        ::
 
-          ,event AS 'CompletePayment'
+          ,event AS 'AddPaymentInfo'
 
-       .. important:: The value for **event** must be one of the supported offline event types defined by |destination-name|. A partial list of event types--ones that are more likely to align to your Amperity use cases--is described in the following table.
+       The value for **event** may be one of the supported event types defined by |destination-name|. The following is a partial list of event types that align to common Amperity use cases. See the `TikTok supported events documentation <https://business-api.tiktok.com/portal/docs/supported-events/v1.3>`__ |ext_link| for a full list of event values.
 
-       The value for **event** must be one of the following:
+       .. note:: Supported event types are case-sensitive. For example, "AddPaymentInfo" is a supported event name, but "addpaymentinfo" is treated as a custom event name.
 
        **AddPaymentInfo**
-         Use when the offline event is associated with a customer adding their payment information as part of the checkout process on your brand's website.
+         Use when the conversion event is associated with a customer adding their payment information as part of the checkout process on your brand's website.
 
        **AddToCart**
-         Use when the offline event is associated with a customer adding a product in your product catalog to the cart on your brand's website.
+         Use when the conversion event is associated with a customer adding a product in your product catalog to the cart on your brand's website.
 
        **CompletePayment**
-         Use when the offline event is associated with a completed transaction, either in-store or from your brand's website.
+         Use when the conversion event is associated with a completed transaction, either in-store or from your brand's website.
 
        **CompleteRegistration**
-         Use when the offline event is associated with a customer signing up for something, such as joining your brand's loyalty program or creating an accounnt on your brand's website.
+         Use when the conversion event is associated with a customer signing up for something, such as joining your brand's loyalty program or creating an account on your brand's website.
 
        **Contact**
-         Use when the offline event is associated with a customer's interaction with your brand's customer support team.
+         Use when the conversion event is associated with a customer's interaction with your brand's customer support team.
 
        **Download**
-         Use when the offline event is associated with a customer downloading something from your brand's website.
+         Use when the conversion event is associated with a customer downloading something from your brand's website.
 
        **PlaceAnOrder**
-         Use when the offline event is associated with a customer placing an order from your brand's website.
+         Use when the conversion event is associated with a customer placing an order from your brand's website.
 
        **Subscribe**
-         Use when the offline event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
+         Use when the conversion event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
 
-       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use events within |destination-name|.
+       
 
-
-   * - **event_channel**
-     - The event channel type. Must be one of the following values: **email**, **website**, **phone_call**, **in_store**, **crm**, or **other**.
+  
 
 
    * - **event_id**
-     - **Required**. The unique identifier for the offline event. |destination-name| recommends that the value for **event_id** be a string of 32 characters that includes any combination of numeric digits (0-9), uppercase letters (A-Z), and lowercase letters (a-z).
+     - The unique identifier for the event. Auto-generated from a hash of email|phone|event|timestamp (36 characters) if omitted. Used for deduplication.
 
 
-   * - **event_set_id**
-     - **Required**. The event set ID. (The event set must exist before you can send data to it from Amperity.)
+   * - **external_id**
+     - Web events only. An external identifier for the user. Trimmed and SHA-256 hashed before sending. At least one of **email**, **phone**, or **external_id** is required for web events.
 
-       An event set ID is a nineteen character string similar to "7654321098765432109".
-
-       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card. The event set ID is located under the name of the event set.
-
-
-   * - **event_source**
-     - The type of event to be uploaded to TikTok Ads Manager. May be one of "web" or "offline".
-
-       Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
-
-       .. note:: This value is specified from the **Event source** setting in the destination that is configured to send events to |destination-name|. This value should not be specified in the query that returns the set of events.
 
    * - **ip**
-     - Web events only. A non-hashed public IP address for the user's device. May be an IPv4 or an IPv6 address, full or compressed. This field should be sent along with **agent** when both are available. 
+     - Web events only. A non-hashed public IP address for the user's device. May be an IPv4 or an IPv6 address, full or compressed. This field should be sent along with **agent** when both are available.
+
+
+   * - **locale**
+     - Web events only. The locale of the user. Sent in the user object.
 
 
    * - **order_id**
-     - The unique ID for a transaction.
+     - The unique ID for a transaction. Sent in properties.
+
+
+   * - **page_url**
+     - Web events only. **Required for web events.** The URL of the page where the event occurred.
 
 
    * - **phone**
-     - **Recommended**.
+     - At least one identity field (**email** or **phone**) is required for offline events. At least one of **email**, **phone**, or **external_id** is required for web events.
 
        .. include:: ../../shared/terms.rst
           :start-after: .. term-phone-start
           :end-before: .. term-phone-end
 
-       .. note:: A phone number must be in |ext_e164_format|, which represents a phone number as a number up to fifteen digits in length (without spaces) that starts with a + symbol. For example: +12061234567.
+       .. note:: Phone numbers are normalized to E.164 format (US region) and SHA-256 hashed automatically before sending.
 
 
    * - **price**
-     - The price of a product or service.
+     - The price of a product or service. Used with **quantity** to compute the **value** field; both columns must be present for the value to be sent to TikTok.
 
 
    * - **quantity**
-     - The number of items associated with an offline event.
+     - The number of items associated with the event. Used with **price** to compute the **value** field; both columns must be present for the value to be sent to TikTok.
+
+
+   * - **referrer_url**
+     - Web events only. The referrer URL. Sent as **referrer** in the page object.
 
 
    * - **shop_id**
-     - The unique ID for a physical store location or for your brand's website.
+     - The unique ID for a physical store location or for your brand's website. Sent in properties.
 
 
    * - **tiktok_click_id**
-     - Web events only. A parameter that is appended to a landing page URL whenever a user clicks on an ad in TikTok. (Amperity renames this field to "ttclid" when events are sent to TikTok Ads Manager.)
+     - Web events only. A parameter that is appended to a landing page URL whenever a user clicks on an ad in TikTok. (Amperity sends this field as **ttclid** in the user object.)
 
 
    * - **timestamp**
-     - The date and time at which the offline event occurred. The timestamp should use |ext_iso_8601| formatting.
+     - **Required**. The date and time at which the event occurred. Accepts |ext_iso_8601| format, Unix seconds, or Unix milliseconds.
 
 
    * - **value**
-     - The value associated with the offline event.
+     - Computed automatically as the sum of (price * quantity) when both columns are present. You do not supply this field directly.
 
        .. note:: This value is required for revenue reports within |destination-name|.
 

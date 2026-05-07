@@ -983,9 +983,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull data to Amperity from TikTok Ads using Fivetran.
 
-       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send events to track offline conversions from your marketing campaigns.
-
-       Send events to track offline conversions from your marketing campaigns.
+       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send events to track offline and web conversions from your marketing campaigns.
 
    * - **Toast**
      - |system-yes|
