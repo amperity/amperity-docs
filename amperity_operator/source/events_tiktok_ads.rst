@@ -451,7 +451,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **event_id**
-     - The unique identifier for the event. Auto-generated from a hash of email|phone|event|timestamp (36 characters) if omitted. Used for deduplication.
+     - The unique identifier for the event. Auto-generated from a hash of **email**, **phone**, **event**, and **timestamp** (36 characters) if omitted. Used for deduplication.
 
 
    * - **external_id**
