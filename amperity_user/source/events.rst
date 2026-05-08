@@ -174,10 +174,10 @@ TikTok Ads Manager
 
 TikTok is the world's leading destination for short-form mobile videos. TikTok's mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
 
-Send :doc:`events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline conversions that result from your marketing campaigns. Support for events is part of the TikTok Events API.
+Send :doc:`events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline and web conversions that result from your marketing campaigns. Support for events is part of the TikTok Events API.
 
 For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
-When events are shared with TikTok, they can better inform measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
+When events are shared with TikTok, they can better inform measurement systems by providing insights into customer actions such as in-store purchases, website conversions, subscriptions, and more.
 
 .. events-tiktok-ads-manager-end
