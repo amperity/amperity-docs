@@ -1251,7 +1251,12 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('Advanced search initialized');
+            const params = new URLSearchParams(window.location.search);
+            const q = params.get('q');
+            if (q) {
+                document.getElementById('search-input').value = q;
+                performSearch();
+            }
         });
   </script>
 </section>
