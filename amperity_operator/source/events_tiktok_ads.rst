@@ -407,7 +407,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **event**
-     - The event name for each row (e.g. "CompletePayment"). If this column is missing from the dataset, the **Fixed event name** connector setting is used. One of the two is required.
+     - The event name for each row. For example: "CompletePayment". If this column is missing from the dataset, the **Fixed event name** connector setting is used. One of the two is required.
 
        The value for **event** is used to categorize conversions within the |destination-name| user interface. Use the event type that best associates how your brand wants to use events within |destination-name|.
 
@@ -419,7 +419,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        The value for **event** may be one of the supported event types defined by |destination-name|. The following is a partial list of event types that align to common Amperity use cases. See the `TikTok supported events documentation <https://business-api.tiktok.com/portal/docs/supported-events/v1.3>`__ |ext_link| for a full list of event values.
 
-       .. note:: Supported event types are case-sensitive. For example, "AddPaymentInfo" is a supported event name, but "addpaymentinfo" is treated as a custom event name.
+       .. caution:: Names of event types are case-sensitive.
 
        **AddPaymentInfo**
          Use when the conversion event is associated with a customer adding their payment information as part of the checkout process on your brand's website.
@@ -445,13 +445,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **Subscribe**
          Use when the conversion event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
 
-       
-
-  
-
 
    * - **event_id**
-     - The unique identifier for the event. Auto-generated from a hash of email|phone|event|timestamp (36 characters) if omitted. Used for deduplication.
+     - The unique identifier for the event. A string of 32 characters A-Z, a-z, 0-9. An **event_id** is auto-generated from a hash of the **email**, **phone**, **event**, and **timestamp** if omitted. Used for deduplication.
 
 
    * - **external_id**
