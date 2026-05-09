@@ -222,9 +222,13 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_listrak
 
-   .. grid-item-card:: Listrak SMS
+   .. grid-item-card:: Listrak SMS--List management
       :link-type: doc
       :link: destination_listrak_sms
+
+   .. grid-item-card:: Listrak SMS--Profiles only
+      :link-type: doc
+      :link: destination_listrak_sms_profile
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -446,7 +450,8 @@ Set up connections to send data from Amperity to other marketing applications, t
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
    Listrak Email <destination_listrak>
-   Listrak SMS <destination_listrak_sms>
+   Listrak SMS--List management <destination_listrak_sms>
+   Listrak SMS--Profiles only <destination_listrak_sms_profile>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>

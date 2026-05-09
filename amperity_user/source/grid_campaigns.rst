@@ -243,9 +243,13 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_listrak
 
-   .. grid-item-card:: Listrak SMS
+   .. grid-item-card:: Listrak SMS--List management
       :link-type: doc
       :link: campaign_listrak_sms
+
+   .. grid-item-card:: Listrak SMS--Profile updates
+      :link-type: doc
+      :link: campaign_listrak_sms_profile
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -327,7 +331,8 @@ Send campaigns to any of the following marketing applications and workflows.
    HubSpot <campaign_hubspot>
    Klaviyo <campaign_klaviyo>
    Listrak Email <campaign_listrak>
-   Listrak SMS <campaign_listrak_sms>
+   Listrak SMS--List management <campaign_listrak_sms>
+   Listrak SMS--Profile updates <campaign_listrak_sms_profile>
    LiveRamp <campaign_liveramp>
    Meta Ads Manager <campaign_meta_ads_manager>
    Microsoft Ads <campaign_microsoft_ads>
