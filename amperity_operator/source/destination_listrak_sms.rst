@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |plugin-name| replace:: "Listrak SMS -- List Management"
+.. |plugin-name| replace:: "Listrak SMS--List management"
 .. |credential-type| replace:: "listrak-sms"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "phone"
@@ -32,6 +32,12 @@ Configure destinations for Listrak SMS list management
 |destination-name| is an automation platform for audience activation through mobile messaging campaigns and personalized SMS marketing.
 
 .. destination-listrak-sms-about-end
+
+.. destination-listrak-sms-about-list-management-start
+
+.. important:: This destination creates, deletes, subscribes, or unsubscribes contacts in |destination-name|. To only update profiles that already exist in |destination-name| use the :doc:`Listrak SMS--Profile updates <destination_listrak_sms_profile>` destination.
+
+.. destination-listrak-sms-about-list-management-end
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-sms-optin-start
