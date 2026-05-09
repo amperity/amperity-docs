@@ -2,19 +2,20 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |audience-primary-key| replace:: "phone" 
-.. |what-send| replace:: SMS profiles
+.. |audience-primary-key| replace:: "phone"
+.. |what-send| replace:: SMS profile updates
 .. |where-send| replace:: |destination-name|
 
 
-Listrak SMS (Manage lists)
+Listrak SMS (Update profiles)
 ==================================================
 
-Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to manage SMS profiles in |destination-name|.
+Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to update SMS profile attributes for contacts that already exist in |destination-name|.
 
 `Custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| must be created in |destination-name| before Amperity can send custom attributes.
 
-.. important:: This destination creates, deletes, subscribes, or unsubscribes contacts. Use the Listrak SMS (Update profiles) connector to only update profiles for contacts that already exist in Listrak SMS.
+.. important:: This destination only updates existing profiles in |destination-name|. This connector does not create, delete, subscribe, or unsubscribe contacts. Use the Listrak SMS (Manage lists) connector to create, delete, subscribe, or unsubscribe contacts.
+
 
 
 Credentials
@@ -51,12 +52,6 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
-
-**SMS list ID**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-sms-phone-list-id-start
-   :end-before: .. setting-listrak-sms-phone-list-id-end
 
 **Sender code ID**
 
