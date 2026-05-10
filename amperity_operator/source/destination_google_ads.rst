@@ -13,6 +13,7 @@
 .. |filter-the-list| replace:: "google"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, **zip**, **mobile_id**, and **user_id**
 
 .. meta::
     :description lang=en:
@@ -66,6 +67,9 @@ Configure destinations for Google Ads
 
 .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-google-ads-api-note-start
 

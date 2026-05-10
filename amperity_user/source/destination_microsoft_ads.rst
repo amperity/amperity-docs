@@ -5,6 +5,7 @@
 .. |what-send| replace:: customer data
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -62,6 +63,10 @@ Build query
 .. include:: ../../shared/sendtos.rst
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. important::
 

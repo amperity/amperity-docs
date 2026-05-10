@@ -9,6 +9,7 @@
 .. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "snap"
+.. |hashed-fields| replace:: **email**, **phone**, and **mobile_id**
 
 
 .. meta::
@@ -32,6 +33,10 @@ Configure destinations for Snapchat
 Send email addresses, mobile advertiser IDs, or phone numbers to |destination-name|, and then manage ads and advertising campaign.
 
 .. destination-snapchat-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-snapchat-api-note-start
 

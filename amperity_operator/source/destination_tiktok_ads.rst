@@ -11,6 +11,7 @@
 .. |filter-the-list| replace:: "tik"
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **IDFA**, or **user_id**
 
 
 .. meta::
@@ -40,6 +41,10 @@ Custom audiences help find people who already know about or have engaged with yo
 .. important:: A custom audience must have at least 1000 members in |destination-name| before it can be used in an ad group.
 
 .. destination-tiktok-ads-custom-audiences-size-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. TODO: Sync following with ampiq/destination_tiktok_ads
 

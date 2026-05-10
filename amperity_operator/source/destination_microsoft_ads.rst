@@ -11,6 +11,7 @@
 .. |filter-the-list| replace:: "micro"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -48,6 +49,10 @@ Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/adve
 * Access to external partners, such as Yahoo.com, along with sites owned and operated by Yahoo, DuckDuckGo, AOL.com, along with sites owned and operated by AOL, Xandr, and Nine.
 
 .. destination-microsoft-ads-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-microsoft-ads-api-note-start
 

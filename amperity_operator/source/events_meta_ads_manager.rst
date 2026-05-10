@@ -11,6 +11,7 @@
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **GEN**, and **EXTERN_ID**
 
 .. meta::
     :description lang=en:
@@ -52,6 +53,9 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. events-meta-ads-manager-allowfor-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. _events-meta-ads-manager-get-details:
 

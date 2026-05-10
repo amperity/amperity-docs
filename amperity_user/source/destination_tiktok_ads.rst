@@ -5,6 +5,7 @@
 .. |what-send| replace:: email addresses, phone numbers, or advertising IDs (IDFAs for iOS devices or AAIDs for Android devices)
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
+.. |hashed-fields| replace:: **email**, **phone**, and **external_id**
 
 
 .. meta::
@@ -76,6 +77,10 @@ Build query
 You need to build a query that outputs email addresses and phone numbers.
 
 .. sendto-tiktok-ads-build-query-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. sendto-tiktok-ads-build-query-options-start
 

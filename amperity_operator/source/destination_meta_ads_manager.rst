@@ -10,6 +10,7 @@
 .. |filter-the-list| replace:: "meta"
 .. |allow-for-what| replace:: custom audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **GEN**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, and **MADID**
 
 
 .. meta::
@@ -37,6 +38,10 @@ The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
 .. destination-meta-ads-manager-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. note::
 
