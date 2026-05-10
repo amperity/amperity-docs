@@ -39,7 +39,7 @@ Events
       :link-type: doc
       :link: events_criteo
 
-   .. grid-item-card:: Google Ads
+   .. grid-item-card:: Google Enhanced Conversions
       :link-type: doc
       :link: events_google_enhanced_conversions
 

@@ -31,10 +31,6 @@ Send online events to Google Enhanced Conversions
    :start-after: .. events-google-enhanced-conversions-about-start
    :end-before: .. events-google-enhanced-conversions-about-end
 
-.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
-   :start-after: .. events-google-enhanced-conversions-offline-start
-   :end-before: .. events-google-enhanced-conversions-offline-end
-
 .. include:: ../../shared/sendtos.rst
    :start-after: .. sendtos-ask-to-configure-start
    :end-before: .. sendtos-ask-to-configure-end
@@ -45,33 +41,60 @@ Send online events to Google Enhanced Conversions
 Build a query
 ==================================================
 
-.. events-google-enhanced-conversions-build-query-start
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-end
 
-After the destination is configured, use a query to collect first-party data that is associated with transactions. Use SHA-256 hashing for all customer profile fields that are returned by the query.
 
-For example:
+.. _events-google-enhanced-conversions-user-howitworks-web:
 
-.. code-block:: sql
-   :linenos:
+Offline web purchases
+--------------------------------------------------
 
-   SELECT
-     SHA256(c.email) AS Email,
-     SHA256(c.phone) AS Phone,
-     SHA256(c.given_name) AS FirstName,
-     SHA256(c.surname) AS LastName
-   FROM Customer_360 c
-   JOIN Unified_Transactions t ON c.amperity_id = t.amperity_id
-   WHERE t.order_datetime >= DATE_ADD('day', -30, CURRENT_DATE)
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-web-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-web-end
 
-Extend the SQL to include :ref:`any of the additional fields <events-google-enhanced-conversions-fields>` that are accepted by |destination-name|.
 
-.. events-google-enhanced-conversions-build-query-end
+.. _events-google-enhanced-conversions-user-howitworks-app:
 
-.. important::
+Offline app purchases
+--------------------------------------------------
 
-   .. include:: ../../shared/destination_settings.rst
-      :start-after: .. destinations-steps-validate-audience-start
-      :end-before: .. destinations-steps-validate-audience-end
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-app-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-app-end
+
+
+.. _events-google-enhanced-conversions-user-howitworks-store:
+
+In-store purchases
+--------------------------------------------------
+
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-store-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-store-end
+
+
+.. _events-google-enhanced-conversions-user-howitworks-consolidated:
+
+Multiple purchase channels in the same query
+--------------------------------------------------
+
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-consolidated-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-consolidated-end
+
+
+.. _events-google-enhanced-conversions-user-howitworks-sftp:
+
+Optional. In-store, physical addresses
+--------------------------------------------------
+
+.. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
+   :start-after: .. events-google-enhanced-conversions-howitworks-sftp-start
+   :end-before: .. events-google-enhanced-conversions-howitworks-sftp-end
+
 
 .. _events-google-enhanced-conversions-fields:
 

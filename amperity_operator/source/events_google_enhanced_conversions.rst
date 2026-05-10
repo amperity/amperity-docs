@@ -20,7 +20,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configire events for Google Enhanced Conversions
+        Configure events for Google Enhanced Conversions
 
 =======================================================
 Configure events for Google Enhanced Conversions
@@ -39,19 +39,251 @@ First-party customer data that is associated with online transactions can be sen
 * Track sales and events that happen on a website.
 * Track sales that happen from a website.
 * Match customers to their Google accounts, which were signed-in to when they engaged with one of your ads.
-* Attribute customer engagment with a Google Ads campaign by matching data collected on your website with the signed-in Google accounts that engaged with your ads.
+* Attribute customer engagement with a Google Ads campaign by matching data collected on your website with the signed-in Google accounts that engaged with your ads.
 
 .. events-google-enhanced-conversions-about-end
 
-.. events-google-enhanced-conversions-offline-start
 
-.. admonition:: How to send events to Google Enhanced Conversions?
+.. _events-google-enhanced-conversions-howitworks:
 
-   First-party customer data that is associated with `offline transactions <https://support.google.com/google-ads/answer/10018336?hl=en&ref_topic=15532419&sjid=11531980841842439788-NC>`__ |ext_link| can be uploaded to |destination-name|, after which it can be used to enhance conversion measurement in Google Ads.
+How this destination works
+==================================================
 
-   Configure Amperity to send a CSV file to |destination-name| using :doc:`SFTP <destination_sftp>`.
+.. events-google-enhanced-conversions-howitworks-start
 
-.. events-google-enhanced-conversions-offline-end
+When a customer sees or clicks a Google ad and later makes a purchase, that purchase does not automatically appear in Google Ads. |destination-name| closes that gap by uploading first-party data from Amperity to Google Ads, which then matches the purchase back to the original ad interaction. The method of matching depends on where and how the purchase happened.
+
+.. events-google-enhanced-conversions-howitworks-end
+
+
+.. _events-google-enhanced-conversions-howitworks-web:
+
+Offline web purchases
+--------------------------------------------------
+
+.. events-google-enhanced-conversions-howitworks-web-start
+
+When a customer clicks a Google ad a **gclid** (Google Click ID) is captured in the URL at the moment of the click. The customer navigates away and returns the next day to complete a purchase on your website without clicking another ad. Google Ads has no record of that purchase because no conversion tag fired at checkout.
+
+Amperity uploads the purchase with the original **gclid** attached. Google Ads matches the uploaded conversion back to the click and attributes the purchase to the campaign.
+
+The **gclid** is the primary match signal for web purchases. Hashed email addresses and hashed phone numbers are optional, but should be included when available to improve match rates when the **gclid** is stale or unavailable.
+
+**Example query**
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     uit.order_id
+     ,oe.gclid
+     ,uit.order_datetime AS timestamp
+     ,mc.email
+     ,mc.phone
+     ,uit.unit_price
+     ,uit.quantity
+     ,uit.product_id
+     ,'USD' AS currency_code
+   FROM Unified_Itemized_Transactions uit
+   JOIN Online_Events oe ON uit.amperity_id = oe.amperity_id
+   JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
+   WHERE oe.gclid IS NOT NULL
+
+where the following fields are:
+
+* Required: **order_id**, **gclid**, and **timestamp**.
+* Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
+* Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
+* Omit: **gbraid**, **wbraid**, and **conversion_environment**. **gbraid** and **wbraid** apply only to "APP" purchases.
+
+.. events-google-enhanced-conversions-howitworks-web-end
+
+
+.. _events-google-enhanced-conversions-howitworks-app:
+
+Offline app purchases
+--------------------------------------------------
+
+.. events-google-enhanced-conversions-howitworks-app-start
+
+App purchases use different click identifiers depending on which direction the ad interaction went:
+
+* **gbraid** The customer clicked a web ad and was directed to your iOS app.
+* **wbraid** The customer clicked an iOS app ad and was directed to a webpage before completing the purchase in-app.
+
+These identifiers work the same way as **gclid** for matching. Include hashed email and phone as supplementary identifiers.
+
+You may also set ``conversion_environment`` to ``APP`` to record that the conversion occurred in an app. This field is only available to allowlisted Google Ads accounts. Omit it if your account is not allowlisted.
+
+**Example query**
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     uit.order_id
+     ,oe.gbraid
+     ,oe.wbraid
+     ,uit.order_datetime AS timestamp
+     ,mc.email
+     ,mc.phone
+     ,uit.unit_price
+     ,uit.quantity
+     ,uit.product_id
+     ,'USD' AS currency_code
+     ,'APP' AS conversion_environment
+   FROM Unified_Itemized_Transactions uit
+   JOIN Online_Events oe ON uit.amperity_id = oe.amperity_id
+   JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
+   WHERE oe.gbraid IS NOT NULL
+      OR oe.wbraid IS NOT NULL
+
+where the following fields are:
+
+* Required: **order_id**, **timestamp**, and at least one of **gbraid** or **wbraid**
+* Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
+* Optional: **product_id**, **merchant_id**, **ad_personalization**, **ad_user_data**, and **conversion_environment**.
+* Omit: **gclid**
+
+
+.. events-google-enhanced-conversions-howitworks-app-end
+
+
+.. _events-google-enhanced-conversions-howitworks-store:
+
+In-store purchases
+--------------------------------------------------
+
+.. events-google-enhanced-conversions-howitworks-store-start
+
+A customer sees a Google ad, does not click it, and later walks into a physical store to make a purchase. There is no click ID of any kind. The only link between the purchase and the ad is the customer's identity.
+
+Amperity uploads the transaction with hashed email and phone. Google Ads matches those values against the signed-in Google accounts that previously engaged with your ads. If the customer's email or phone on file with you matches their Google account, the purchase is attributed to the campaign.
+
+**Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them — each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone automatically before upload.
+
+``conversion_environment`` does not apply to in-store purchases. Neither ``APP`` nor ``WEB`` is accurate for a store transaction. Omit it.
+
+**Example query**
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     uit.order_id
+     ,uit.order_datetime AS timestamp
+     ,mc.email
+     ,mc.phone
+     ,uit.unit_price
+     ,uit.quantity
+     ,uit.product_id
+     ,'USD' AS currency_code
+   FROM Unified_Itemized_Transactions uit
+   JOIN Merged_Customers mc ON uit.amperity_id = mc.amperity_id
+   WHERE mc.email IS NOT NULL
+      OR mc.phone IS NOT NULL
+
+where the following fields are:
+
+* Required: **order_id**, **timestamp**, and at least one of **email** or **phone**
+* Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
+
+  .. important:: Rows where both **email** and **phone** are NULL are dropped before upload. They cannot be matched and are silently excluded. Filter them out in your query, as shown above, to keep row counts accurate.
+
+* Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
+* Omit: **gclid**, **gbraid**, **wbraid**, and **conversion_environment**.
+
+.. events-google-enhanced-conversions-howitworks-store-end
+
+
+.. _events-google-enhanced-conversions-howitworks-consolidated:
+
+Multiple purchase channels in the same query
+--------------------------------------------------
+
+.. events-google-enhanced-conversions-howitworks-consolidated-start
+
+If your events data consolidates web, app, and in-store purchases into a single events table, you can send all three to |destination-name| in one query. Each row must include at least one match signal--**gclid**, **gbraid**, or **wbraid**--or a customer identifier--**email** or **phone**. Fields that do not apply to a given channel are NULL. The connector sends only the fields that are present and drops rows where no match signal exists.
+
+.. code-block:: sql
+   :emphasize-lines: 4-8,13,17-21
+   :linenos:
+
+   SELECT
+     events.order_id
+     ,events.event_datetime AS timestamp
+     ,events.gclid
+     ,events.gbraid
+     ,events.wbraid
+     ,mc.email
+     ,mc.phone
+     ,uit.unit_price
+     ,uit.quantity
+     ,uit.product_id
+     ,'USD' AS currency_code
+     ,events.conversion_environment
+   FROM Customer_Events events
+   JOIN Unified_Itemized_Transactions uit ON events.order_id = uit.order_id
+   LEFT JOIN Merged_Customers mc ON events.amperity_id = mc.amperity_id
+   WHERE events.gclid IS NOT NULL
+      OR events.gbraid IS NOT NULL
+      OR events.wbraid IS NOT NULL
+      OR mc.email IS NOT NULL
+      OR mc.phone IS NOT NULL
+
+The source table must have values that map correctly across all three purchase channels:
+
+#. **gclid** is set for web purchases. It is NULL for app and in-store purchases.
+#. **gbraid** is set when a customer clicked a web ad and was directed to your iOS app. It is NULL for web and in-store purchases.
+#. **wbraid** is set when a customer clicked an iOS app ad and was directed to a webpage. It is NULL for web and in-store purchases.
+#. **email** and **phone** are the primary match signals for in-store purchases, and supplement click IDs for web and app purchases. Amperity hashes both automatically before upload. Do not hash them in the query.
+#. **conversion_environment** should be "WEB" or "APP" when known. Set to NULL for in-store purchases. This field is only available to allowlisted Google Ads accounts; omit **conversion_environment** if your account is not allowlisted.
+#. The WHERE clause ensures every row has at least one match signal. Rows that do not satisfy this condition are dropped by the connector before upload.
+
+.. events-google-enhanced-conversions-howitworks-consolidated-end
+
+
+.. _events-google-enhanced-conversions-howitworks-sftp:
+
+Optional. In-store, physical addresses
+--------------------------------------------------
+
+.. events-google-enhanced-conversions-howitworks-sftp-start
+
+For retailers with large in-store transaction volumes, Google offers a `separate program called Store Sales <https://support.google.com/google-ads/answer/10018336>`__ |ext_link| that supports physical address as a match identifier. This is useful when customers have provided a mailing address but not an email or phone number.
+
+Store Sales is a distinct Google Ads program from Enhanced Conversions. It requires allowlisting by Google and has minimum volume thresholds: at least 30,000 in-store transactions and 500,000 ad interactions within the previous 90 days. If your account does not meet these thresholds, use the in-store purchases approach described above instead.
+
+When using Store Sales, Amperity exports a formatted CSV file via :doc:`SFTP <destination_sftp>`, which is then uploaded to Google Ads through the UI or API. The CSV file uses a two-row header structure required by Google:
+
+* The first row contains metadata, such as timezone, loyalty rate, or transaction upload rate.
+* The second row contains column names. Google hashes PII automatically on upload, or you can pre-hash using SHA-256.
+
+**Identifiers supported by Store Sales**
+
+Store Sales supports more identifiers per customer than the Enhanced Conversions API path:
+
+* Email addresses: up to 3 per customer
+* Phone numbers: up to 3 per customer. Phone numbers must be in E.164 format
+* Physical address, including first name, last name, street, city, state, postal code, and country
+
+Include as many identifiers as your data contains. Each additional identifier helps improve match rates.
+
+**When to use this instead of the in-store API path**
+
+Use Store Sales instead of in-store purchases when:
+
+* Your account is allowlisted for the Store Sales program.
+* You have customers whose physical address is known, but email and phone are not. Those customers cannot be matched using |destination-name|.
+* Your in-store transaction volume exceeds program thresholds.
+
+Use the in-store API path for purchases when:
+
+* Your account is not enrolled in Store Sales.
+* Your customers reliably provide email or phone at checkout.
+* You want a single automated pipeline that handles web, app, and in-store conversions.
+
+.. events-google-enhanced-conversions-howitworks-sftp-end
 
 
 .. _events-google-enhanced-conversions-get-details:
@@ -84,6 +316,8 @@ Get details
        #. Create at least one ConversionAction.
 
           The conversion_action_type must be set to **UPLOAD_CLICKS**.
+
+          .. note:: Amperity will automatically create a ConversionAction with the name you provide if one does not already exist in Google Ads.
 
        #. `Configure Google tag settings <https://support.google.com/google-ads/answer/11021502#configure>`__ |ext_link| to enable enhanced conversions for leads.
 
@@ -312,6 +546,8 @@ Fields for enhanced conversions must include hashed customer profile data--email
 
 The following table describes the fields that may be sent to |destination-name| for customer attribution. You should send as many of these fields as you can for each potential attribution to customer activity.
 
+.. important:: The **order_id** field is required. Each conversion must also include at least one of: **gclid**, **gbraid**, **wbraid**, **email**, or **phone**. Rows that do not meet these requirements are dropped before upload. When a batch is uploaded, row-level failures do not fail the entire batch (``partialFailure`` is enabled). Each conversion supports a maximum of five user identifiers (email and phone combined).
+
 .. events-google-enhanced-conversions-fields-end
 
 .. events-google-enhanced-conversions-fields-table-start
@@ -339,7 +575,9 @@ The following table describes the fields that may be sent to |destination-name| 
 
    * - Varies.
      - **conversion_environment**
-     - The environment in which the conversion occurred. For example: ``APP`` or ``WEB``.
+     - The environment in which the conversion occurred. Valid values are ``APP`` or ``WEB``.
+
+       .. note:: This field is only available to allowlisted customers. ``UNSPECIFIED`` and ``UNKNOWN`` are API-internal values and cannot be set by users.
 
        .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
 
@@ -353,7 +591,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **email**
      - The email address for the customer.
 
-       The value for the email address **must** be SHA-256 hashed.
+       Amperity automatically normalizes email addresses by converting to lowercase, trimming spaces, removing dots from Gmail addresses, and then using SHA-256 to hash the value before uploading to |destination-name|.
 
        .. tip:: Use the **email** field in the **Merged Customers** table.
 
@@ -381,7 +619,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
        This is the best identifier for online events and Google Ads.
 
-       .. important:: Send all relevant data for a conversion even if the **gclid** is unavailable. Converstions data that only includes user-provided data is still useful.
+       .. important:: Send all relevant data for a conversion even if the **gclid** is unavailable. Conversions data that only includes user-provided data is still useful.
 
        .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
 
@@ -406,6 +644,8 @@ The following table describes the fields that may be sent to |destination-name| 
 
        |destination-name| refers to this as the transaction ID for the conversion. This field is required.
 
+       .. important:: Order IDs must be unique per conversion action. Duplicate order IDs within the same conversion action are silently ignored by Google Ads.
+
        .. tip:: Use the **Order ID** field in the **Unified Itemized Transactions** table.
 
 
@@ -413,7 +653,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **phone**
      - The phone number for the customer.
 
-       The value for the phone number **must** be SHA-256 hashed.
+       Amperity automatically normalizes phone numbers by converting to E.164 format, and then using SHA-256 to hash the value before uploading to |destination-name|.
 
        .. tip:: Use the **phone** field in the **Merged Customers** table.
 
@@ -434,7 +674,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
    * - Varies.
      - **timestamp**
-     - The date and time of the conversion. The value must have a timezone and the format must be ``yyyy-mm-dd HH:mm:ss+|-HH:mm``. Daylight Savings Time (DST) may be ignored.
+     - The date and time of the conversion. The value must have a timezone and the format must be ``yyyy-mm-dd hh:mm:ss+|-hh:mm``. Daylight Savings Time (DST) may be ignored.
 
        .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads *or* it may be the **Order Datetime** field in the **Unified Itemized Transactions** table.
 
@@ -442,6 +682,8 @@ The following table describes the fields that may be sent to |destination-name| 
    * - **Unit List Price**
      - **unit_price**
      - Unit list price is the manufacturer's suggested retail price (MSRP) for a single unit of an item.
+
+       .. note:: Amperity calculates the conversion value sent to |destination-name| as ``SUM(unit_price * quantity)`` aggregated by order ID. This value is not a directly configurable field.
 
        .. tip:: Use the **Unit List Price** field in the **Unified Itemized Transactions** table.
 
@@ -453,3 +695,19 @@ The following table describes the fields that may be sent to |destination-name| 
        .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
 
 .. events-google-enhanced-conversions-fields-table-end
+
+
+.. _events-google-enhanced-conversions-api-reference:
+
+Google Ads API reference
+==================================================
+
+.. events-google-enhanced-conversions-api-reference-start
+
+Amperity uses the `Google Ads API v24 <https://developers.google.com/google-ads/api/reference/rpc/v24/>`__ |ext_link| to send data to |destination-name|. The following services are called:
+
+* `GoogleAdsService.SearchStream <https://developers.google.com/google-ads/api/reference/rpc/v24/GoogleAdsService#searchstream>`__ |ext_link| — used to retrieve conversion tracking settings and look up existing conversion actions.
+* `ConversionUploadService.UploadClickConversions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionUploadService#uploadclickconversions>`__ |ext_link| — used to upload click conversions. Batches are capped at 2,000 rows.
+* `ConversionActionService.MutateConversionActions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionActionService#mutateconversionactions>`__ |ext_link| — used to create a conversion action when one with the configured name does not already exist.
+
+.. events-google-enhanced-conversions-api-reference-end
