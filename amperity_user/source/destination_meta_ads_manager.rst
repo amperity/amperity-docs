@@ -5,6 +5,7 @@
 .. |what-send| replace:: customer data
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **GEN**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, and **MADID**
 
 
 .. meta::
@@ -88,6 +89,10 @@ Build audience
 You need to build an audience using a query that shapes the data so that fields in the output are mapped to the :ref:`Facebook Marketing API keys <destination-meta-ads-manager-api-keys>`.
 
 .. sendto-meta-ads-manager-build-query-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. sendto-meta-ads-manager-build-query-tip-start
 

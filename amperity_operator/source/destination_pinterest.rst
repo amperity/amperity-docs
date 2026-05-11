@@ -12,6 +12,7 @@
 .. |filter-the-list| replace:: "pin"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -35,6 +36,10 @@ Configure destinations for Pinterest
 |destination-name| is a visual discovery engine on which your brand can engage with your customers. Send a list of products that are in your product catalog to |destination-name| to enable pins, and then send a list of customers with whom your brand wants to engage.
 
 .. destination-pinterest-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-pinterest-configure-start
 

@@ -11,6 +11,7 @@
 .. |filter-the-list| replace:: "tik"
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
+.. |hashed-fields| replace:: **email**, **phone**, and **external_id**
 
 
 .. meta::
@@ -46,6 +47,9 @@ Events help your brand track offline and web conversions from your marketing cam
 
 .. events-tiktok-ads-attribution-windows-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. _events-tiktok-ads-get-details:
 

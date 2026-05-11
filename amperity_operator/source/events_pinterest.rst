@@ -11,6 +11,7 @@
 .. |allow-for-what| replace:: offline conversion events
 .. |allow-for-duration| replace:: up to 48 hours for deduplication of events
 .. |attributes-sent| replace:: |destination-name| requires the **timestamp**, **currency**, and **email**.
+.. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **city**, **state**, **postal**, **country**, **birthdate**, **gender**, and **extern_id**
 
 .. meta::
     :description lang=en:
@@ -46,6 +47,9 @@ Only events that occurred within the previous seven days may be sent to |destina
 
 .. events-pinterest-offline-events-allowfor-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. _events-pinterest-offline-events-get-details:
 

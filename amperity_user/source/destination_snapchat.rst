@@ -3,6 +3,7 @@
 
 .. |destination-name| replace:: Snapchat
 .. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
+.. |hashed-fields| replace:: **email**, **phone**, and **mobile_id**
 
 
 .. meta::
@@ -52,6 +53,10 @@ Build query
 .. include:: ../../shared/sendtos.rst
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. sendto-snapchat-build-query-note-start
 

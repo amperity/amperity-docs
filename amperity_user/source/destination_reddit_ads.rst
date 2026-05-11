@@ -3,6 +3,7 @@
 
 .. |destination-name| replace:: Reddit Ads
 .. |plugin-name| replace:: SFTP
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -69,10 +70,13 @@ Query results
 
 .. destination-reddit-ads-audience-targeting-query-start
 
-The following example describes the steps required to send an audience from Amperity to |destination-name| using a query that returns a list of hashed email addresses.
+The following example describes the steps required to send an audience from Amperity to |destination-name| using a query that returns a list of email addresses.
 
 .. note:: This example uses attributes from Amperity standard output to build a list of customers who are active and who have recently purchased products from your brand.
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. list-table::
    :widths: 10 90
@@ -99,23 +103,15 @@ The following example describes the steps required to send an audience from Ampe
           :align: center
           :class: no-scaled-link
 
-     - Build a query that returns a list of hashed email addresses that are contactable by your brand. Use additional filters to scope your audience for your use cases and goals for marketing to your customers within |destination-name|.
+     - Build a query that returns a list of email addresses that are contactable by your brand. Use additional filters to scope your audience for your use cases and goals for marketing to your customers within |destination-name|.
 
-       For example, the following query returns a list of hashed email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
+       For example, the following query returns a list of email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
 
        .. code-block:: sql
           :linenos:
 
           SELECT
-            TO_HEX(
-              SHA256(
-                TO_UTF8(
-                  UPPER(
-                    TRIM(email)
-                  )
-                )
-              )
-            ) AS email
+            LOWER(TRIM(email)) AS email
           FROM Merged_Customers mc
           INNER JOIN Customer_Attributes ca
             ON mc.amperity_id = ca.amperity_id

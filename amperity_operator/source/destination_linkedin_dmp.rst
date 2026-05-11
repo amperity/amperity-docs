@@ -11,6 +11,8 @@
 .. |filter-the-list| replace:: "link"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **email**
+
 
 .. meta::
     :description lang=en:
@@ -52,6 +54,10 @@ The CSV file may contain the following contact information fields:
 The CSV file must have between 300 and 300,000 contacts.
 
 .. destination-linkedin-dmp-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-linkedin-dmp-api-note-start
 

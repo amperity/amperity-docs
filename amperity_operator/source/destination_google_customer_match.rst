@@ -10,6 +10,7 @@
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "540"
 .. |filter-the-list| replace:: "google"
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**
 
 
 .. meta::
@@ -33,6 +34,10 @@ Configure destinations for Google Customer Match
 Use Google Customer Match to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
 
 .. destination-google-customer-match-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-whatis-google-customer-match-start

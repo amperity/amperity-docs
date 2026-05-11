@@ -10,6 +10,7 @@
 .. |duration| replace:: (in seconds)
 .. |duration-value| replace:: "604,800" - "34,300,800"
 .. |filter-the-list| replace:: "amaz"
+.. |hashed-fields| replace:: **email**, **phone**, and **address**
 
 
 .. meta::
@@ -41,6 +42,10 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 * Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's `Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/solutions/products/amazon-marketing-cloud>`__ |ext_link| account is configured.
 
 .. destination-amazon-ads-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-amazon-ads-ask-start
 
