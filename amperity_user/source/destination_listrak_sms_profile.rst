@@ -73,6 +73,16 @@ An SMS profile in |destination-name| requires only a phone number, but may inclu
 
 .. sendto-listrak-sms-profile-build-query-fields-end
 
+.. sendto-listrak-sms-profile-build-query-fields-replace-underscores-start
+
+Replace spaces in `custom SMS profile field names <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| with underscores in the Amperity SQL query. For example, a custom SMS profile field is named "Loyalty Tier" in |destination-name|. Alias the field name in the query using underscores:
+
+.. code-block:: sql
+
+   current_tier AS Loyalty_Tier
+
+.. sendto-listrak-sms-profile-build-query-fields-replace-underscores-end
+
 .. include:: ../../amperity_operator/source/destination_listrak_sms_profile.rst
    :start-after: .. destination-listrak-sms-profile-howitworks-optin-start
    :end-before: .. destination-listrak-sms-profile-howitworks-optin-end
@@ -87,23 +97,21 @@ An SMS profile in |destination-name| requires only a phone number, but may inclu
    WITH sms_opt_status AS (
      SELECT
        so.amperity_id
-       ,so.phone
        ,so.is_sms_opted_in
      FROM SMS_Opt_Status so
    )
 
    SELECT
-     co.amperity_id
-     ,co.Phone AS "Phone"
-     ,co.Email AS "Email Address"
-     ,co.FirstName AS "First Name"
-     ,co.LastName AS "Last Name"
-     ,co.PostalCode AS "Postal Code"
-     ,co.Birthdate AS "Birthday"
-     ,co.LoyaltyTier AS "Loyalty"
-   FROM Customer360 co
-   LEFT JOIN SMS_Opt_Status so ON co.amperity_id = so.amperity_id
-   WHERE is_sms_opted_in = true
+     co.phone
+     ,co.email AS "Email Address"
+     ,co.given_name AS "First Name"
+     ,co.surname AS "Last Name"
+     ,co.postal AS "Postal Code"
+     ,co.birthdate AS "Birthday"
+     ,co.current_tier AS Loyalty_Tier
+   FROM Customer_360 co
+   JOIN sms_opt_status so ON co.amperity_id = so.amperity_id
+   WHERE so.is_sms_opted_in = true
 
 .. sendto-listrak-sms-profile-build-query-end
 

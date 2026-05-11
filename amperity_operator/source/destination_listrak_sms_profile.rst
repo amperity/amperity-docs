@@ -250,19 +250,13 @@ Use system attributes to personalize messages, such as adding a first name to an
 
 **Custom attributes**
 
-Enable the **Include attributes that match custom profile fields** field to sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|.
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
-   :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
-
-|destination-name| supports up to fifty custom SMS profile attributes. Use these to define additional SMS profile attributes to support your brand's use cases.
-
-.. important:: Each custom attribute must be defined in |destination-name| before Amperity can send them with SMS profiles.
-
-Custom attributes must be one of the following data types: `Checkbox, Date, Number, or Text <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide#custom-profile-fields>`__ |ext_link|. Any custom attributes sent from Amperity must match one of these data types.
+Custom attributes sent from Amperity must match custom attributes that already exist in |destination-name|.
 
 .. destination-listrak-sms-profile-attributes-end
+
+.. include:: ../../amperity_user/source/destination_listrak_sms_profile.rst
+   :start-after: .. sendto-listrak-sms-profile-build-query-fields-replace-underscores-start
+   :end-before: .. sendto-listrak-sms-profile-build-query-fields-replace-underscores-end
 
 
 .. _destination-listrak-sms-profile-credentials:
@@ -424,16 +418,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
-
-       **Include attributes that match custom profile fields**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
 
 
    * - .. image:: ../../images/steps-05.png
