@@ -8,6 +8,7 @@
 .. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "google"
+.. |hashed-fields| replace:: **email** and **phone**
 
 
 .. meta::
@@ -43,6 +44,11 @@ First-party customer data that is associated with online transactions can be sen
 
 .. events-google-enhanced-conversions-about-end
 
+.. 
+.. .. include:: ../../shared/destination_settings.rst                            
+..    :start-after: .. setting-common-sha-256-hashed-fields-start
+..    :end-before: .. setting-common-sha-256-hashed-fields-end
+.. 
 
 .. _events-google-enhanced-conversions-howitworks:
 

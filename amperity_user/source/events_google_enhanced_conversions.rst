@@ -5,6 +5,7 @@
 .. |what-send| replace:: first-party customer data associated with transactions
 .. |what-enablex| replace:: **email**
 .. |attributes-sent| replace:: |destination-name| requires first-party data that is associated with transactions.
+.. |hashed-fields| replace:: **email** and **phone**
 
 
 .. meta::
@@ -44,6 +45,12 @@ Build a query
 .. include:: ../../amperity_operator/source/events_google_enhanced_conversions.rst
    :start-after: .. events-google-enhanced-conversions-howitworks-start
    :end-before: .. events-google-enhanced-conversions-howitworks-end
+
+.. 
+.. .. include:: ../../shared/destination_settings.rst                            
+..    :start-after: .. setting-common-sha-256-hashed-fields-start
+..    :end-before: .. setting-common-sha-256-hashed-fields-end
+.. 
 
 
 .. _events-google-enhanced-conversions-user-howitworks-web:
