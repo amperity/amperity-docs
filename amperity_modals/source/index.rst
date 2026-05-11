@@ -60,6 +60,7 @@ Site Index
    destination-linkedin-dmp
    destination-listrak
    destination-listrak-sms
+   destination-listrak-sms-profile-update
    destination-liveramp
    destination-mailchimp
    destination-marketo
