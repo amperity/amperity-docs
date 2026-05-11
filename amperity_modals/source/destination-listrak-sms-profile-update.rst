@@ -7,14 +7,14 @@
 .. |where-send| replace:: |destination-name|
 
 
-Listrak SMS (Update profiles)
+Listrak SMS -- Profile Updates
 ==================================================
 
 Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to update SMS profile attributes for contacts that already exist in |destination-name|.
 
 `Custom SMS profile attributes <https://help.listrak.com/en/articles/1852936-sms-profile-fields-and-personalization-guide>`__ |ext_link| must be created in |destination-name| before Amperity can send custom attributes.
 
-.. important:: This destination only updates existing profiles in |destination-name|. This connector does not create, delete, subscribe, or unsubscribe contacts. Use the Listrak SMS (Manage lists) connector to create, delete, subscribe, or unsubscribe contacts.
+Important: This destination only updates existing profiles in |destination-name|. This connector does not create, delete, subscribe, or unsubscribe contacts. Use the Listrak SMS -- List Management connector to create, delete, subscribe, or unsubscribe contacts.
 
 
 
