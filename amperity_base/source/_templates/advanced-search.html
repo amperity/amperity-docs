@@ -823,17 +823,41 @@
                 return excludeWords.some(word => textLower.includes(word));
             }
 
+            // Score a title match: bonuses for whole-word matches, penalty for embedded matches.
+            // "ampai" as a standalone token scores higher than "ampai" embedded inside "campaigns".
+            function scoreTitleMatch(titleLower) {
+                const titleTokens = titleLower.split(/[\s\-_/]+/);
+                let score = 100;
+
+                // Exact whole-title match
+                if (titleLower === queryLower) score += 60;
+
+                // All query words appear as standalone tokens in the title
+                const allStandalone = queryWords.every(qw =>
+                    titleTokens.some(token => token === qw)
+                );
+                if (allStandalone) score += 40;
+
+                // Any query word is only a substring of a longer token (e.g. "ampai" inside "campaigns")
+                const embeddedInToken = queryWords.some(qw =>
+                    titleTokens.some(token => token.includes(qw) && token !== qw)
+                );
+                if (embeddedInToken) score -= 30;
+
+                return score;
+            }
+
             // Search through page titles
             if (searchPageTitles) {
                 index.docnames.forEach((docname, docIndex) => {
                     const title = index.titles[docIndex] || docname;
-                    
+
                     if (textMatchesQuery(title) && !containsExcludedWords(title)) {
                         results.push({
                             title: title,
                             url: `/${collection}/${docname}.html`,
                             collection: collection,
-                            score: 100,
+                            score: scoreTitleMatch(title.toLowerCase()),
                             isHeader: false,
                             isContent: false
                         });
@@ -845,7 +869,7 @@
             if (searchSectionHeaders) {
                 const alltitles = index.alltitles || {};
                 Object.entries(alltitles).forEach(([headerTitle, locations]) => {
-                    
+
                     if (textMatchesQuery(headerTitle) && !containsExcludedWords(headerTitle)) {
                         if (Array.isArray(locations)) {
                             locations.forEach(location => {
@@ -854,23 +878,23 @@
                                     const anchor = location[1];
                                     const docname = index.docnames[docIndex];
                                     const pageTitle = index.titles[docIndex] || docname;
-                                    
+
                                     // Skip H1 headers
                                     if (!anchor || anchor === '' || headerTitle === pageTitle) {
                                         return;
                                     }
-                                    
+
                                     let url = `/${collection}/${docname}.html`;
                                     if (anchor) {
                                         url += `#${anchor}`;
                                     }
-                                    
+
                                     results.push({
                                         title: headerTitle,
                                         pageTitle: pageTitle,
                                         url: url,
                                         collection: collection,
-                                        score: 50,
+                                        score: Math.min(scoreTitleMatch(headerTitle.toLowerCase()), 90) - 50,
                                         isHeader: true,
                                         isContent: false
                                     });
