@@ -52,6 +52,14 @@ Build a query
 ..    :end-before: .. setting-common-sha-256-hashed-fields-end
 .. 
 
+.. TODO: Switch to the inclusion after other PRs are merged.
+
+.. setting-common-sha-256-hashed-fields-start
+
+.. caution:: The values for |hashed-fields| sent to |destination-name| are SHA-256 hashed automatically by Amperity before sending. Do not use the **TO_HEX()** function with the |hashed-fields| fields for queries that return results for |destination-name|.
+
+.. setting-common-sha-256-hashed-fields-end
+
 
 .. _events-google-enhanced-conversions-user-howitworks-web:
 
