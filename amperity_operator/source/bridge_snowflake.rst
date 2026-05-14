@@ -58,6 +58,8 @@ Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-su
 
 .. warning:: Complex types--arrays, objects, and maps--must have defined schemas.
 
+.. note:: Snowflake field names shared with Amperity Bridge must use consistent casing. A field name must contain only uppercase letters, digits, and underscores (A–Z, 0–9, _) or only lowercase letters, digits, and underscores (a–z, 0–9, _). Mixed-case field names are not supported. Fields that do not meet this requirement are flagged as unsupported in the Bridge configuration and cannot be synced.
+
 The following table describes how Snowflake data types map to Amperity data types.
 
 .. list-table::
@@ -627,7 +629,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas, tables, and views to be connected to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -635,7 +637,9 @@ Configure an inbound bridge to connect Snowflake with Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection. 
+       Within each schema, tables and views are listed in separate **Tables** and **Views** sub-folders.
+
+       If you select a schema, all tables and views in that schema will be connected. Any new tables or views added later need to be manually added to the connection.
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 

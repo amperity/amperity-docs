@@ -100,7 +100,7 @@ All users who should no longer be allowed access to Amperity should be deleted. 
 .. settings-users-delete-steps-start
 
 #. Open the **Settings** page, and then select **Users**.
-#. Under **Users**, from the list of users, select the ellipses menu, and then click **Delete**.
+#. Under **Users**, from the list of users, click the kebab icon--|fa-kebab|--under **Actions**, and then click **Delete**.
 
 .. settings-users-delete-steps-end
 
@@ -121,7 +121,7 @@ If the details for a user change, such as changing the policy to which they are 
 .. settings-users-edit-steps-start
 
 #. Open the **Settings** page, and then select **Users**.
-#. Under **Users**, from the list of users, select the ellipses menu, and then click **Edit**. The **Edit User** dialog box opens.
+#. Under **Users**, from the list of users, click the kebab icon--|fa-kebab|--under **Actions**, and then click **Edit**. The **Edit User** dialog box opens.
 #. Make your changes.
 #. Click **Save**.
 
@@ -144,7 +144,7 @@ Amperity users may have access to more than one tenant in Amperity. For example 
 .. settings-users-revoke-steps-start
 
 #. Open the **Settings** page, and then select **Users**.
-#. Under **Users**, from the list of users, select the ellipses menu, and then click **Revoke tenant access**.
+#. Under **Users**, from the list of users, click the kebab icon--|fa-kebab|--under **Actions**, and then click **Revoke tenant access**.
 
 .. settings-users-revoke-steps-end
 
@@ -214,7 +214,7 @@ You can reset another user's MFA if you are a Datagrid Administrator or you are 
 .. settings-users-multifactor-authentication-other-user-steps-start
 
 #. Go to the **Settings** page and click the **Users** tab.
-#. Click the kebab icon--fa-kebab--under **Actions** next to the name of the user whose MFA you want to reset.
+#. Click the kebab icon--|fa-kebab|--under **Actions** next to the name of the user whose MFA you want to reset.
 #. Select **Reset MFA**.
 
    Users are not logged out, but are required to re-enroll in MFA on their next Amperity login or after the current authorization expires.

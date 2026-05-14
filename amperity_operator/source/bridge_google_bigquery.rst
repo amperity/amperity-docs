@@ -106,6 +106,8 @@ Most `Google BigQuery data types <https://cloud.google.com/bigquery/docs/referen
 
 .. note:: **BYTES** and **RANGE** data types are unsupported.
 
+.. note:: The **_PARTITIONTIME** and **_PARTITIONDATE** partition pseudo-columns present in ingestion-time partitioned tables are automatically excluded during sync. These columns have no backing storage and are not available as queryable data.
+
 The following table describes how Google BigQuery data types map to Amperity data types.
 
 .. list-table::

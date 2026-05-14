@@ -194,7 +194,7 @@ Allow API key administration
 
 .. policies-api-key-administrator-start
 
-The **Allow API key administration** policy option allows full access to managing the API keys and access tokens that are used with the Profile and Streaming Ingest APIs. This policy option enables the **API keys** list on the **Users and Activity** page.
+The **Allow API key administration** policy option allows full access to managing the API keys and access tokens that are used with the Profile and Streaming Ingest APIs. This policy option enables the **API keys** list on the **Security** tab on the **Settings** page.
 
 .. policies-api-key-administrator-end
 
