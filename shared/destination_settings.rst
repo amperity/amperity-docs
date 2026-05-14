@@ -172,7 +172,7 @@ After configuring this destination users may send campaigns to |destination-name
 
 .. destinations-steps-validate-audience-start
 
-Test the connection with |destination-name| by using an audience with a very small membership. For example: 10 or 100 members or the minimum audience size recommended by |destination-name|. Send the test audience to |destination-name| and verify the audience is correct in |destination-name|. Make adjustments if necessary. Only send full audiences after validation is complete.
+Validate the audience with |destination-name| by using a sample audience with a very small membership. For example: 10 or 100 members or the minimum audience size recommended by |destination-name|. Send the sample audience to |destination-name| and verify the sample audience is correct in |destination-name|. Make adjustments if necessary. Only send full audiences after validation is complete.
 
 .. destinations-steps-validate-audience-end
 
@@ -487,7 +487,7 @@ Use the **Column name** setting to specify the name of the row number column in 
 
 .. setting-common-sandbox-recommendation-start
 
-Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the results in |destination-name|. After verifying the end-to-end workflow, push the destination from the sandbox to production.
+Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a sample audience, and then verify the results in |destination-name|. After verifying the end-to-end workflow, push the destination from the sandbox to production.
 
 .. setting-common-sandbox-recommendation-end
 
