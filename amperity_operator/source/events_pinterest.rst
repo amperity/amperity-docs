@@ -713,3 +713,118 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        .. important:: All timestamps sent to |destination-name| must have occurred within the previous seven days. Events that occurred outside of the seven day window are not sent.
 
 .. events-pinterest-offline-events-conversion-api-parameters-end
+
+
+.. _events-pinterest-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. events-pinterest-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`events-pinterest-workflow-actions-invalid-credentials`
+       * :ref:`events-pinterest-workflow-actions-invalid-settings`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. events-pinterest-workflow-actions-end
+
+
+.. _events-pinterest-workflow-actions-invalid-credentials:
+
+Invalid credentials
+--------------------------------------------------
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-generic-invalid-credentials-start
+   :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _events-pinterest-workflow-actions-invalid-settings:
+
+Invalid settings
+--------------------------------------------------
+
+.. events-pinterest-workflow-actions-invalid-settings-start
+
+The configuration for this workflow contains a setting that |destination-name| was unable to accept. This can occur when the conversion access token, ad account ID, or conversion tag ID does not match the values configured in |destination-name|.
+
+.. events-pinterest-workflow-actions-invalid-settings-end
+
+.. events-pinterest-workflow-actions-invalid-settings-steps-start
+
+To resolve this error, verify the settings configured for this workflow in Amperity.
+
+#. Open the **Destinations** page and review the settings for the |destination-name| destination associated with this workflow. Verify that the conversion access token, ad account ID, and conversion tag ID are correct.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. events-pinterest-workflow-actions-invalid-settings-steps-end

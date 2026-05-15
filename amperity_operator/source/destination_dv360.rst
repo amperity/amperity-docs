@@ -35,13 +35,22 @@ Configure destinations for DV360
    :start-after: .. term-dv360-start
    :end-before: .. term-dv360-end
 
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-end
+.. admonition:: What is Display & Video 360?
 
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+   `Display & Video 360 <https://marketingplatform.google.com/about/display-video-360/>`__ |ext_link|
+   (DV360) is Google's demand-side platform (DSP) for programmatic advertising. It enables brands
+   and agencies to plan, buy, and measure digital media across display, video, TV, and audio
+   channels--including YouTube and web placements--through a single platform.
+
+   DV360 supports two account types:
+
+   * **Display Video Advertiser** An individual brand or business that runs programmatic
+     campaigns directly within DV360.
+   * **Display Video Partner** An agency, trading desk, or large advertiser that manages
+     programmatic campaigns across multiple advertiser accounts under a single partner account.
+
+   Use Amperity to build high-value audience segments from first-party data, and then send those
+   segments to DV360 to activate them in programmatic advertising campaigns.
 
 .. destination-dv360-api-note-start
 
@@ -182,17 +191,17 @@ Get details
 Configure credentials
 ==================================================
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-configure-first-start
-   :end-before: .. credential-configure-first-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-snappass-start
-   :end-before: .. credential-snappass-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-intro-start
+   :end-before: .. destinations-oauth-intro-end
 
-**To configure credentials for Google Ads**
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google prior to configuring OAuth in Amperity.
 
-.. destination-dv360-credentials-steps-start
+**To configure OAuth for DV360**
 
 .. list-table::
    :widths: 10 90
@@ -203,35 +212,27 @@ Configure credentials
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-add-credential-start
-          :end-before: .. credential-steps-add-credential-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-1-start
+          :end-before: .. destinations-oauth-configure-step-1-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-2-start
+          :end-before: .. destinations-oauth-configure-step-2-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-settings-intro-start
-          :end-before: .. credential-steps-settings-intro-end
-
-       **Refresh token**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
-
-.. destination-dv360-credentials-steps-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-3-start
+          :end-before: .. destinations-oauth-configure-step-3-end
 
 
 .. _destination-dv360-reauthorize-amperity:
@@ -253,7 +254,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Google Ads**
+**To add a destination for Display & Video 360**
 
 .. destination-dv360-add-steps-start
 
@@ -488,7 +489,7 @@ European Union user consent
 
 .. destination-dv360-api-matching-eu-consent-start
 
-The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
+The Google Audience Partner API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
 .. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and to adhere to the European Union (EU) user consent policy.
 
