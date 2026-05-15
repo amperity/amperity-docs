@@ -202,6 +202,8 @@ OAuth
           :start-after: .. destinations-oauth-configure-step-1-start
           :end-before: .. destinations-oauth-configure-step-1-end
 
+       From the **Credential type** dropdown, select **klaviyo-oauth**.
+
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
