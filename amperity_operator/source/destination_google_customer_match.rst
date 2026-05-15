@@ -118,17 +118,17 @@ Get details
 Configure credentials
 ==================================================
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-configure-first-start
-   :end-before: .. credential-configure-first-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-snappass-start
-   :end-before: .. credential-snappass-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-intro-start
+   :end-before: .. destinations-oauth-intro-end
 
-**To configure credentials for Google Customer Match**
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google prior to configuring OAuth in Amperity.
 
-.. destination-google-customer-match-credentials-steps-start
+**To configure OAuth for Google Customer Match**
 
 .. list-table::
    :widths: 10 90
@@ -139,35 +139,27 @@ Configure credentials
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-add-credential-start
-          :end-before: .. credential-steps-add-credential-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-1-start
+          :end-before: .. destinations-oauth-configure-step-1-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-2-start
+          :end-before: .. destinations-oauth-configure-step-2-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-settings-intro-start
-          :end-before: .. credential-steps-settings-intro-end
-
-       **Refresh token**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
-
-.. destination-google-customer-match-credentials-steps-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-3-start
+          :end-before: .. destinations-oauth-configure-step-3-end
 
 
 .. _destination-google-customer-match-reauthorize-amperity:
