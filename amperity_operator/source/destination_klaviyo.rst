@@ -5,7 +5,7 @@
 .. |destination-api| replace:: Klaviyo API
 .. |plugin-name| replace:: "Klaviyo"
 .. |credential-type| replace:: "klaviyo"
-.. |required-credentials| replace:: "API key"
+.. |required-credentials| replace:: "API key" or "OAuth"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: audience lists
 .. |where-send| replace:: |destination-name|
@@ -81,6 +81,10 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
+       .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-klaviyo-oauth-about-start
+          :end-before: .. credential-klaviyo-oauth-about-end
+
        **API key**
 
           |checkmark-required| **Required**
@@ -92,6 +96,12 @@ Get details
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-klaviyo-api-key-scopes-start
              :end-before: .. credential-klaviyo-api-key-scopes-end
+
+       **OAuth**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-klaviyo-oauth-start
+             :end-before: .. credential-klaviyo-oauth-end
 
 .. destination-klaviyo-get-details-end
 
@@ -105,11 +115,22 @@ Configure credentials
    :start-after: .. credential-configure-first-start
    :end-before: .. credential-configure-first-end
 
+Amperity supports the following credential types for |destination-name|:
+
+#. :ref:`API key <destination-klaviyo-credentials-api-key>`
+#. :ref:`OAuth <destination-klaviyo-credentials-oauth>`
+
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Klaviyo**
+
+.. _destination-klaviyo-credentials-api-key:
+
+API key
+--------------------------------------------------
+
+**To configure credentials using an API key**
 
 .. destination-klaviyo-credentials-steps-start
 
@@ -132,8 +153,10 @@ Configure credentials
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+          :start-after: .. credential-steps-select-type-multiple-start
+          :end-before: .. credential-steps-select-type-multiple-end
+
+       From the **Credential type** dropdown, select **klaviyo**.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -153,6 +176,63 @@ Configure credentials
              :end-before: .. credential-klaviyo-api-key-end
 
 .. destination-klaviyo-credentials-steps-end
+
+
+.. _destination-klaviyo-credentials-oauth:
+
+OAuth
+--------------------------------------------------
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-klaviyo-oauth-start
+   :end-before: .. credential-klaviyo-oauth-end
+
+**To configure credentials using OAuth**
+
+.. destination-klaviyo-credentials-oauth-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-multiple-start
+          :end-before: .. credential-steps-select-type-multiple-end
+
+       From the **Credential type** dropdown, select **klaviyo-oauth**.
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - Follow the OAuth process to authorize Amperity to send data to |destination-name|. The refresh token is generated automatically.
+
+.. destination-klaviyo-credentials-oauth-steps-end
+
+
+.. _destination-klaviyo-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
 
 
 .. _destination-klaviyo-add:

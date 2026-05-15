@@ -22,6 +22,10 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-klaviyo-oauth-about-start
+   :end-before: .. credential-klaviyo-oauth-about-end
+
 **API key**
 
 .. include:: ../../shared/credentials_settings.rst
@@ -31,6 +35,12 @@ Credentials
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-klaviyo-api-key-scopes-start
    :end-before: .. credential-klaviyo-api-key-scopes-end
+
+**OAuth**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-klaviyo-oauth-start
+   :end-before: .. credential-klaviyo-oauth-end
 
 
 Settings

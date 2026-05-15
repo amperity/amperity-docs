@@ -544,13 +544,19 @@ Klaviyo
    :start-after: .. term-klaviyo-start
    :end-before: .. term-klaviyo-end
 
-Klaviyo requires the following credentials:
+Klaviyo supports the following credential types:
 
 **API key**
 
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-klaviyo-api-key-start
    :end-before: .. credential-klaviyo-api-key-end
+
+**OAuth**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-klaviyo-oauth-start
+   :end-before: .. credential-klaviyo-oauth-end
 
 
 .. _credential-koupon-media:
