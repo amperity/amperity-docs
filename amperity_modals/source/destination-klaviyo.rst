@@ -36,11 +36,11 @@ Credentials
    :start-after: .. credential-klaviyo-api-key-scopes-start
    :end-before: .. credential-klaviyo-api-key-scopes-end
 
-**OAuth**
+**Refresh token** (OAuth)
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-klaviyo-oauth-start
-   :end-before: .. credential-klaviyo-oauth-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 Settings

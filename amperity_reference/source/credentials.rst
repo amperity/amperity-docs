@@ -552,11 +552,11 @@ Klaviyo supports the following credential types:
    :start-after: .. credential-klaviyo-api-key-start
    :end-before: .. credential-klaviyo-api-key-end
 
-**OAuth**
+**Refresh token** (OAuth)
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-klaviyo-oauth-start
-   :end-before: .. credential-klaviyo-oauth-end
+   :start-after: .. credential-oauth-refresh-token-start
+   :end-before: .. credential-oauth-refresh-token-end
 
 
 .. _credential-koupon-media:

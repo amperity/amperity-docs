@@ -97,11 +97,13 @@ Get details
              :start-after: .. credential-klaviyo-api-key-scopes-start
              :end-before: .. credential-klaviyo-api-key-scopes-end
 
-       **OAuth**
+       **Refresh token** (OAuth)
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-klaviyo-oauth-start
-             :end-before: .. credential-klaviyo-oauth-end
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
 
 .. destination-klaviyo-get-details-end
 
@@ -220,7 +222,17 @@ OAuth
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Follow the OAuth process to authorize Amperity to send data to |destination-name|. The refresh token is generated automatically.
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
 
 .. destination-klaviyo-credentials-oauth-steps-end
 
