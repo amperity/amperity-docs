@@ -51,7 +51,7 @@ The Amperity MCP server is available at a single front-door URL, **https://mcp.a
    * - **https://mcp.amperity.com**
      - Any stack (automatic per-tenant routing)
      - --
-   * - **https://mcp-aws-prod.amperity.com**
+   * - **https://mcp-aws-uw2.amperity.com**
      - aws-prod
      - AWS us-west-2
    * - **https://mcp-aws-cc1.amperity.com**
