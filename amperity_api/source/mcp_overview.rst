@@ -39,32 +39,35 @@ MCP server URLs
 
 .. mcp-overview-mcp-urls-start
 
-Each Amperity production stack has its own MCP server endpoint. Use the URL that matches the region of your Amperity tenant:
+The Amperity MCP server is available at a single front-door URL, **https://mcp.amperity.com**, which automatically routes each request to the Amperity stack that hosts the calling user's tenant. Per-stack URLs are also available for clients that need to connect to a specific stack directly:
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 45 30
+   :widths: 40 30 30
 
-   * - Stack
-     - Public URL
+   * - URL
+     - Routes to
      - Cloud / region
-   * - **aws-prod** (default)
-     - **https://mcp.amperity.com**
+   * - **https://mcp.amperity.com**
+     - Any stack (automatic per-tenant routing)
+     - --
+   * - **https://mcp-aws-prod.amperity.com**
+     - aws-prod
      - AWS us-west-2
-   * - **aws-prod-cc1**
-     - **https://mcp-aws-cc1.amperity.com**
+   * - **https://mcp-aws-cc1.amperity.com**
+     - aws-prod-cc1
      - AWS ca-central-1
-   * - **aws-prod-apse2**
-     - **https://mcp-aws-apse2.amperity.com**
+   * - **https://mcp-aws-apse2.amperity.com**
+     - aws-prod-apse2
      - AWS ap-southeast-2
-   * - **az-prod**
-     - **https://mcp-az-prod.amperity.com**
+   * - **https://mcp-az-prod.amperity.com**
+     - az-prod
      - Azure eastus2
-   * - **az-prod-en1**
-     - **https://mcp-az-prod-en1.amperity.com**
+   * - **https://mcp-az-prod-en1.amperity.com**
+     - az-prod-en1
      - Azure northeurope
 
-The setup pages below show **https://mcp.amperity.com** (aws-prod) in their examples. If your tenant is on a different stack, substitute the corresponding URL in every place that the docs reference an MCP host. If you are unsure which stack hosts your tenant, contact your Amperity representative.
+For most clients, use **https://mcp.amperity.com**. If you need to connect directly to a specific stack--for example, to reduce the latency added by the cross-stack routing layer--use the matching per-stack URL in every place that the setup pages reference an MCP host. If you are unsure which stack hosts your tenant, contact your Amperity representative.
 
 .. mcp-overview-mcp-urls-end
 
