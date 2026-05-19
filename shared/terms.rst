@@ -7654,6 +7654,15 @@ YouTube is an online video platform on which your brand can run in-stream, bumpe
 .. term-youtube-end
 
 
+**Zapier**
+
+.. term-zapier-start
+
+Zapier is a no-code automation platform that connects more than 8,000 apps through trigger-and-action workflows called Zaps. Use Zapier to route data between applications without writing custom integration code.
+
+.. term-zapier-end
+
+
 **Zendesk**
 
 .. term-zendesk-start
