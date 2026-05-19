@@ -356,8 +356,8 @@ Configure Amperity to send campaigns to any marketing workflow.
    Klaviyo <campaign_klaviyo>
    LinkedIn DMP <campaign_linkedin_dmp>
    Listrak Email <campaign_listrak>
-   Listrak SMS--List management <campaign_listrak_sms>
-   Listrak SMS--Profiles only <campaign_listrak_sms_profile>
+   Listrak SMS - List management <campaign_listrak_sms>
+   Listrak SMS - Profiles only <campaign_listrak_sms_profile>
    LiveRamp <campaign_liveramp>
    Mailchimp <campaign_mailchimp>
    Meta Ads Manager <campaign_meta_ads_manager>

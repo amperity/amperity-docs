@@ -554,8 +554,8 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
    Listrak Email <destination_listrak>
-   Listrak SMS--List management <destination_listrak_sms>
-   Listrak SMS--Profile updates <destination_listrak_sms_profile>
+   Listrak SMS - List management <destination_listrak_sms>
+   Listrak SMS - Profile updates <destination_listrak_sms_profile>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>

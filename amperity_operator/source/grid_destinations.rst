@@ -450,8 +450,8 @@ Set up connections to send data from Amperity to other marketing applications, t
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
    Listrak Email <destination_listrak>
-   Listrak SMS--List management <destination_listrak_sms>
-   Listrak SMS--Profiles only <destination_listrak_sms_profile>
+   Listrak SMS - List management <destination_listrak_sms>
+   Listrak SMS - Profiles only <destination_listrak_sms_profile>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>
