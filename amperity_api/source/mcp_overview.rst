@@ -34,40 +34,12 @@ The MCP server is hosted by Amperity. Customers connect to a single public endpo
 
 .. _mcp-overview-mcp-urls:
 
-MCP server URLs
+MCP server URL
 ==================================================
 
 .. mcp-overview-mcp-urls-start
 
-The Amperity MCP server is available at a single front-door URL, **https://mcp.amperity.com**, which automatically routes each request to the Amperity stack that hosts the calling user's tenant. Per-stack URLs are also available for clients that need to connect to a specific stack directly:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 30 30
-
-   * - URL
-     - Routes to
-     - Cloud / region
-   * - **https://mcp.amperity.com**
-     - Any stack (automatic per-tenant routing)
-     - --
-   * - **https://mcp-aws-uw2.amperity.com**
-     - aws-prod
-     - AWS us-west-2
-   * - **https://mcp-aws-cc1.amperity.com**
-     - aws-prod-cc1
-     - AWS ca-central-1
-   * - **https://mcp-aws-apse2.amperity.com**
-     - aws-prod-apse2
-     - AWS ap-southeast-2
-   * - **https://mcp-az-prod.amperity.com**
-     - az-prod
-     - Azure eastus2
-   * - **https://mcp-az-prod-en1.amperity.com**
-     - az-prod-en1
-     - Azure northeurope
-
-For most clients, use **https://mcp.amperity.com**. If you need to connect directly to a specific stack--for example, to reduce the latency added by the cross-stack routing layer--use the matching per-stack URL in every place that the setup pages reference an MCP host. If you are unsure which stack hosts your tenant, contact your Amperity representative.
+The Amperity MCP server is available at **https://mcp.amperity.com**. This URL automatically routes each request to the Amperity stack that hosts the calling user's tenant. Use this URL in every place that the setup pages below reference an MCP host.
 
 .. mcp-overview-mcp-urls-end
 
