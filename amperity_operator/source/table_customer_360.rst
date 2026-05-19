@@ -34,7 +34,7 @@ The **Customer 360** table is the most important table in the customer 360 datab
 Attributes vary tenant-to-tenant, but typically include:
 
 * Profile information, such as names, addresses, email, and phone
-* Interactions by channel, such as ecommerce, point of sale, and loyalty
+* Interactions by channel, such as e-commerce, point of sale, and loyalty
 * Insights, such as total lifetime value, transaction frequency, and recency
 * Predictions, such as next best purchase, next best action, and churn prediction
 
