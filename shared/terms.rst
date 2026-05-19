@@ -52,7 +52,7 @@ This is an example paragraph that shows how to use snippets to include content i
 
 .. term-active-campaign-start
 
-ActiveCampaign is an automation platform for ecommerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
+ActiveCampaign is an automation platform for e-commerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
 
 .. term-active-campaign-end
 
@@ -229,7 +229,7 @@ Adobe Customer Attributes is a part of Adobe Experience Cloud. Upload visitor in
 
 .. term-adobe-commerce-start
 
-Adobe Commerce is a digital commerce and order management platform for building multichannel ecommerce experiences on a single platform. Adobe Commerce uses MySQL for database management.
+Adobe Commerce is a digital commerce and order management platform for building multichannel e-commerce experiences on a single platform. Adobe Commerce uses MySQL for database management.
 
 .. term-adobe-commerce-end
 
@@ -386,7 +386,7 @@ Amazon Marketing Cloud (AMC) is a secure, privacy-safe, and cloud-based clean ro
 
 .. term-amazon-quicksight-start
 
-Amazon QuickSight is a cloud-based, self-service BI tool for creating and publishing interactive dashboards for retail, ecommerce, manufacturing, and more.
+Amazon QuickSight is a cloud-based, self-service BI tool for creating and publishing interactive dashboards for retail, e-commerce, manufacturing, and more.
 
 .. term-amazon-quicksight-end
 
@@ -5572,7 +5572,7 @@ A ranking of customers by score for this event. A rank that is less than or equa
 
 .. term-raw-data-start
 
-Amperity loads data in raw form preserving the original schema as well as identifiers from all systems. Examples of identifiers include loyalty numbers, ecommerce IDs, cookies, or any other identifier mapped to a customer.
+Amperity loads data in raw form preserving the original schema as well as identifiers from all systems. Examples of identifiers include loyalty numbers, e-commerce IDs, cookies, or any other identifier mapped to a customer.
 
 .. term-raw-data-end
 
@@ -6197,7 +6197,7 @@ A shared dataset represents all databases and database tables configured for out
 
 .. term-shopify-start
 
-Shopify is an ecommerce platform for online stores and retail point-of-sale systems that consolidates shopping, payments, marketing, shipping, and customer engagement tools into a single unified experience.
+Shopify is an e-commerce platform for online stores and retail point-of-sale systems that consolidates shopping, payments, marketing, shipping, and customer engagement tools into a single unified experience.
 
 .. term-shopify-end
 
@@ -6855,7 +6855,7 @@ Third-party data, also known as 3P data, is data indirectly collected from custo
 
 .. term-thirstie-start
 
-Thirstie is an ecommerce platform for liquor brands.
+Thirstie is an e-commerce platform for liquor brands.
 
 .. term-thirstie-end
 
