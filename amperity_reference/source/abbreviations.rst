@@ -45,6 +45,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Azure Data Lake Storage
    * - **ADW**
      - Amperity Data Warehouse
+   * - **AEL**
+     - Amperity expression language
    * - **ANSI**
      - American National Standards Institute
    * - **API**
@@ -83,6 +85,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Concise Binary Object Representation
    * - **CCPA**
      - California Consumer Privacy Act
+   * - **CDN**
+     - Content Delivery Network
    * - **CDC**
      - Customer Data Cloud
    * - **CDP**
@@ -109,6 +113,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Consumer Packaged Goods
    * - **CRM**
      - Customer Relationship Management
+   * - **CSAT**
+     - Customer Satisfaction Score
    * - **CSE**
      - Customer Success Engineering
    * - **CTE**
@@ -181,6 +187,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Hadoop Distributed File System
    * - **HEM**
      - Hashed Email Address
+   * - **HMAC**
+     - Hash-based Message Authentication Code
    * - **IAB**
      - Interactive Advertising Bureau
    * - **IAM**
@@ -243,6 +251,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Net Promoter System
    * - **ODBC**
      - Open Database Connectivity
+   * - **OHIP**
+     - Oracle Hospitality Integration Platform
    * - **OIDC**
      - OpenID Connect
    * - **ORC**
@@ -301,6 +311,10 @@ The following list combines industry-standard abbreviations and initialisms with
      - Shared Access Signature
    * - **SaaS**
      - Software-as-a-Service
+   * - **SFCC**
+     - Salesforce Commerce Cloud
+   * - **SFMC**
+     - Salesforce Marketing Cloud
    * - **SFTP**
      - Secure File Transfer Protocol
    * - **SHA**
@@ -314,9 +328,11 @@ The following list combines industry-standard abbreviations and initialisms with
    * - **SP**
      - Service Provider
    * - **SQL**
-     - Secure Shell
+     - Structured Query Language
    * - **SSH**
-     - Single Sign-On
+     - Secure Shell
+   * - **SSJS**
+     - Server-side JavaScript
    * - **SSN**
      - Social Security Number
    * - **SSO**
@@ -337,6 +353,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Top-Level Domain
    * - **TSV**
      - Tab-Separated Values
+   * - **TTL**
+     - Time to Live
    * - **UI**
      - User Interface
    * - **UID2**
