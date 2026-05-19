@@ -37,7 +37,7 @@ Use the recent activity pane to learn more about the state of workflows running 
 
 Review the following sections:
 
-#. The first section describes :ref:`notification types <notifications-types>` -- :ref:`Running <notifications-type-running>`, :ref:`Completed <notifications-type-completed>`, :ref:`Warnings <notifications-type-warnings>`, and :ref:`Error <notifications-type-errors>` -- and describes what you should expect from each notification type as they appear in the recent activity pane.
+#. The first section describes :ref:`notification types <notifications-types>`--:ref:`Running <notifications-type-running>`, :ref:`Completed <notifications-type-completed>`, :ref:`Warnings <notifications-type-warnings>`, and :ref:`Error <notifications-type-errors>`--and describes what you should expect from each notification type as they appear in the recent activity pane.
 
    :ref:`Fields are shown in notifications <notifications-fields>`, such as links to validation reports and workflows, job, trace, IDs for use with troubleshooting, and status indicators, such as the amount of time a workflow ran.
 
@@ -82,7 +82,7 @@ Running
 
 .. notifications-type-status-start
 
-A running notification -- indicated by the |notification-running| icon -- is shown when a workflow is running, but has not finished every step in the workflow.
+A running notification--indicated by the |notification-running| icon--is shown when a workflow is running, but has not finished every step in the workflow.
 
 .. notifications-type-status-end
 
