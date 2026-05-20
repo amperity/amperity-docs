@@ -96,7 +96,7 @@ The following table describes the default `user profile fields <https://www.braz
 
    These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value or values, and to use lowercase.
 
-   Alias-based identification (via the Braze ``user_alias`` object) is not supported by the |destination-name| destination. The **User identifier** setting must be set to ``external_id`` or ``braze_id``.
+   The **User identifier** setting may be set to ``external_id``, ``braze_id``, or ``user_alias``. When ``user_alias`` is selected, the dataset must include fields named **alias_name** and **alias_label**. These fields are automatically packed into a nested ``user_alias`` object before being sent to the Braze API. For more information about user aliases, see `User aliases <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link|.
 
 .. braze-customer-profiles-common-attributes-note-end
 

@@ -1122,13 +1122,15 @@ For example, if your URL of |destination-name| is ``https://dashboard-03.braze.c
 
 .. setting-braze-user-identifier-start
 
-The identifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
+The identifier to use for matching users in |destination-name|. May be "external_id", "braze_id", or "user_alias".
 
 .. setting-braze-user-identifier-end
 
 .. setting-braze-user-identifier-about-start
 
-The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
+The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers. The `user_alias <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link| identifies users by an alias; when selected, the dataset must include **alias_name** and **alias_label** fields.
+
+.. important:: The Braze API requires exactly one identifier type per request. A request that contains more than one of ``external_id``, ``braze_id``, or ``user_alias`` will be rejected by the Braze API, and the orchestration will fail. Ensure that your dataset contains only the identifier that matches the **User identifier** setting.
 
 .. setting-braze-user-identifier-about-end
 
