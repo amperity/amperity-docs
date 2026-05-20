@@ -284,7 +284,9 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
 
        Orchestration audience building
 
-       Data send
+       Data send to cloud storage
+
+       Data send to managed connectors
 
        Profile API
 
