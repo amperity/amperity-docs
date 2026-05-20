@@ -21,6 +21,16 @@ About segments
    :start-after: .. term-segment-start
    :end-before: .. term-segment-end
 
+.. segments-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Segment Editor to build audiences for your campaigns.
+
+   Open **Learning Lab** to learn more about `creating segments <https://amperity.com/learning-lab/creating-segments>`__ |ext_link|, `segment insights <https://amperity.com/learning-lab/segment-insights>`__ |ext_link|, and `creating segments from segment insights <https://amperity.com/learning-lab/creating-segments-from-segment-insights>`__ |ext_link|. Registration is required.
+
+.. segments-learning-lab-end
+
 .. _segments-page:
 
 About the Segments page

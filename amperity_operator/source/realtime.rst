@@ -23,6 +23,16 @@ Real-time tables contain data that is streamed to Amperity. Real-time tables are
 
 .. real-time-about-end
 
+.. realtime-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Real-time tables enable use cases that require time-sensitive data updated more frequently than the daily batch process.
+
+   Open **Learning Lab** to learn more about `improving customer engagement with real-time tables <https://amperity.com/learning-lab/improving-customer-engagement-with-real-time-tables>`__ |ext_link|. Registration is required.
+
+.. realtime-learning-lab-end
+
 
 .. _realtime-howitworks:
 

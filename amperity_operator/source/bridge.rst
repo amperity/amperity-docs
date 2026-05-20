@@ -46,9 +46,7 @@ Advantages of Amperity Bridge include:
 
    Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be configured for inbound and outbound shares to give you access to shared tables without replication.
 
-   Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
-
-   Open **Learning Lab** to learn more about how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
+   Open **Learning Lab** to learn more about `data warehouses <https://amperity.com/learning-lab/data-warehouses>`__ |ext_link| and how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
 
 .. bridge-learning-lab-end
 

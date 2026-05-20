@@ -40,6 +40,16 @@ Framework to Unify Data in Industrial Applications <https://docs.amperity.com/do
 
 .. stitch-entity-matching-end
 
+.. stitch-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Stitch evaluates all of your brand's data to discover hidden connections in customer records and identify unique customers.
+
+   Open **Learning Lab** to learn more about `how Stitch works <https://amperity.com/learning-lab/how-stitch-works>`__ |ext_link|. Registration is required.
+
+.. stitch-learning-lab-end
+
 
 .. _stitch-stages-of-identity-resolution:
 

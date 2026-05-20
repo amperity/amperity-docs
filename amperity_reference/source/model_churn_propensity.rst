@@ -40,6 +40,16 @@ By leveraging churn propensity modeling, you can take a proactive approach to cu
 
 .. model-churn-propensity-about-end
 
+.. model-churn-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Churn propensity determines the likelihood that a customer will be active based on their purchase history.
+
+   Open **Learning Lab** to learn more about `predicted churn <https://amperity.com/learning-lab/predicted-churn>`__ |ext_link|. Registration is required.
+
+.. model-churn-propensity-learning-lab-end
+
 
 .. _model-churn-propensity-use-cases:
 

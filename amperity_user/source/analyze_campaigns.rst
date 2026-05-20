@@ -24,6 +24,16 @@ You can analyze data for campaigns by downloading campaign results or recipient 
 
 .. analyze-campaign-about-end
 
+.. analyze-campaign-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Analyze campaign data, including campaign results and recipient lists.
+
+   Open **Learning Lab** to learn more about `understanding campaign recipients and campaign results <https://amperity.com/learning-lab/understanding-campaign-recipients-and-campaign-results>`__ |ext_link|. Registration is required.
+
+.. analyze-campaign-learning-lab-end
+
 
 .. _download-campaign-recipients:
 

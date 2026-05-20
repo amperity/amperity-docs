@@ -23,6 +23,16 @@ Use the **Campaigns** page to build the audiences to which you want to send mess
 
 .. campaigns-overview-context-end
 
+.. campaigns-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Campaigns break audiences into sub-audiences that align to your marketing strategies and goals.
+
+   Open **Learning Lab** to learn more about `creating and launching a campaign <https://amperity.com/learning-lab/creating-and-launching-a-campaign>`__ |ext_link|. Registration is required.
+
+.. campaigns-learning-lab-end
+
 
 .. _campaigns-tab:
 

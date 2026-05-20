@@ -39,6 +39,16 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
 .. queries-howitworks-end
 
+.. queries-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   The Queries page allows you to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link|. Registration is required.
+
+.. queries-learning-lab-end
+
 .. queries-howitworks-callouts-start
 
 .. list-table::

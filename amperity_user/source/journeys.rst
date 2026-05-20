@@ -33,6 +33,16 @@ The following sections describe the steps you will follow to set up and configur
 
 .. journeys-howitworks-steps-end
 
+.. journeys-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   A journey is an automated sequence for connecting with customers across channels.
+
+   Open **Learning Lab** to learn more about how to `automate multi-touch marketing with journeys <https://amperity.com/learning-lab/automate-multi-touch-marketing-with-journeys>`__ |ext_link|. Registration is required.
+
+.. journeys-learning-lab-end
+
 .. journeys-howitworks-callouts-start
 
 .. list-table::

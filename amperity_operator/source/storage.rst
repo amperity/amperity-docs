@@ -40,6 +40,16 @@ Amperity stores the following outputs in Amazon S3 storage or Azure Blob Storage
 
 .. storage-about-warning-end
 
+.. storage-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Amperity stores outputs in Amazon S3 or Azure Blob Storage, depending on your cloud platform.
+
+   Open **Learning Lab** to learn more about `configuring Amazon S3 storage <https://amperity.com/learning-lab/configuring-amazon-s3-storage-for-amperity>`__ |ext_link| and `configuring Azure storage <https://amperity.com/learning-lab/configuring-azure-storage-for-amperity>`__ |ext_link| for Amperity. Registration is required.
+
+.. storage-learning-lab-end
+
 
 .. _storage-configure-location:
 

@@ -21,6 +21,16 @@ About queries
    :start-after: .. term-query-start
    :end-before: .. term-query-end
 
+.. queries-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   The Queries page allows you to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link| and how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work. Registration is required.
+
+.. queries-learning-lab-end
+
 
 .. _queries-ai-assistant:
 

@@ -45,6 +45,16 @@ Use benchmarks to explore data quality, directly provide feedback to the quality
 
 .. stitch-benchmarks-incremental-match-note-end
 
+.. stitch-benchmarks-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Stitch benchmarks are heuristic scores that measure the quality of customer profiles output by Stitch.
+
+   Open **Learning Lab** to learn more about `Stitch benchmarking <https://amperity.com/learning-lab/stitch-benchmarking>`__ |ext_link|. Registration is required.
+
+.. stitch-benchmarks-learning-lab-end
+
 
 .. _stitch-benchmarks-status:
 

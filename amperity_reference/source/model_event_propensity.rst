@@ -21,6 +21,16 @@ Event propensity
    :start-after: .. term-event-propensity-start
    :end-before: .. term-event-propensity-end
 
+.. model-event-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Event propensity determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+
+   Open **Learning Lab** to learn more about `predicted average order revenue <https://amperity.com/learning-lab/predicted-average-order-revenue>`__ |ext_link|. Registration is required.
+
+.. model-event-propensity-learning-lab-end
+
 
 .. _model-event-propensity-use-cases:
 

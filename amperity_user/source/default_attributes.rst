@@ -48,6 +48,16 @@ The following sections describe the steps you will follow to configure the defau
 
 .. campaigns-default-attributes-steps-intro-end
 
+.. campaigns-default-attributes-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Default attributes configure the data that your brand sends to each destination.
+
+   Open **Learning Lab** to learn more about `advanced campaign configurations and setting default attributes <https://amperity.com/learning-lab/advanced-campaign-configurations-setting-default-attributes>`__ |ext_link|. Registration is required.
+
+.. campaigns-default-attributes-learning-lab-end
+
 .. campaigns-default-attributes-steps-start
 
 .. list-table::

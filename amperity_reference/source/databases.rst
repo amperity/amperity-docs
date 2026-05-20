@@ -33,6 +33,16 @@ The **Customer 360** page provides:
 
 .. databases-customer-360-page-end
 
+.. databases-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Build databases from unified customer profiles to help your brand better understand your customers.
+
+   Open **Learning Lab** to learn more about `multi-database implementation best practices <https://amperity.com/learning-lab/multi-database-implementation-best-practices>`__ |ext_link|. Registration is required.
+
+.. databases-learning-lab-end
+
 
 .. _databases-profiles:
 

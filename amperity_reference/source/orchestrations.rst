@@ -36,6 +36,16 @@ The **Destinations** page shows the status of every orchestration and orchestrat
 
 .. orchestrations-view-end
 
+.. orchestrations-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Orchestrations send query results to any downstream workflow through configured destinations.
+
+   Open **Learning Lab** to learn more about `creating destinations for orchestrations <https://amperity.com/learning-lab/creating-destinations-for-orchestrations>`__ |ext_link|. Registration is required.
+
+.. orchestrations-learning-lab-end
+
 
 .. _orchestrations-howtos:
 

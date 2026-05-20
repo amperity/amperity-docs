@@ -46,6 +46,16 @@ For each data source that your brand makes available to Amperity that contains t
 
 .. setup-transactions-end
 
+.. setup-transactions-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Transaction records contain information about your customers' purchase histories with your brand.
+
+   Open **Learning Lab** to learn more about `transactions <https://amperity.com/learning-lab/transactions>`__ |ext_link|. Registration is required.
+
+.. setup-transactions-learning-lab-end
+
 
 .. _setup-transactions-apply-semantics:
 

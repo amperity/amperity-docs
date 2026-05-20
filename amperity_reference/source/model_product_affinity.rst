@@ -30,6 +30,16 @@ Amperity models product affinity for any product taxonomy that contains between 
 
 .. model-product-affinity-about-end
 
+.. model-product-affinity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Product affinity predicts which customers are most likely to purchase from specific product categories.
+
+   Open **Learning Lab** to learn more about `predicted affinity <https://amperity.com/learning-lab/predicted-affinity>`__ |ext_link|. Registration is required.
+
+.. model-product-affinity-learning-lab-end
+
 
 .. _model-product-affinity-use-cases:
 

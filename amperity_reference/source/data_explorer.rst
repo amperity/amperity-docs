@@ -41,6 +41,16 @@ About the Data Explorer
    :start-after: .. databases-database-howto-explore-steps-start
    :end-before: .. databases-database-howto-explore-steps-end
 
+.. data-explorer-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   The Data Explorer lets you explore databases, tables, schemas, and example data.
+
+   Open **Learning Lab** to learn more about `understanding and exploring your data <https://amperity.com/learning-lab/understanding-and-exploring-your-data>`__ |ext_link|. Registration is required.
+
+.. data-explorer-learning-lab-end
+
 
 .. _data-explorer-data-lineage:
 

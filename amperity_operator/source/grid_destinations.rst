@@ -23,6 +23,14 @@ Set up connections to send data from Amperity to other marketing applications, t
 
 .. destinations-about-end
 
+.. destinations-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Open **Learning Lab** to learn more about `creating destinations for orchestrations <https://amperity.com/learning-lab/creating-destinations-for-orchestrations>`__ |ext_link|. Registration is required.
+
+.. destinations-learning-lab-end
+
 .. destinations-about-grid-start
 
 .. grid:: 1 1 2 2
