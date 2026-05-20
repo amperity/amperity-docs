@@ -38,6 +38,16 @@ You can use predicted CLV modeling to build high-value audiences that identify:
 
 .. model-predicted-clv-about-end
 
+.. model-predicted-clv-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predicted CLV forecasts the total value of orders a customer will make in the next 365 days.
+
+   Open **Learning Lab** to learn more about `predicted high value <https://amperity.com/learning-lab/predicted-high-value>`__ |ext_link|. Registration is required.
+
+.. model-predicted-clv-learning-lab-end
+
 
 .. _model-predicted-clv-use-cases:
 

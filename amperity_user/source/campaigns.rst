@@ -40,6 +40,16 @@ The following sections describe the steps you will follow to set up and configur
 
 .. campaigns-howitworks-steps-end
 
+.. campaigns-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Campaigns break audiences into sub-audiences that align to your marketing strategies and goals.
+
+   Open **Learning Lab** to learn more about `creating and launching a campaign <https://amperity.com/learning-lab/creating-and-launching-a-campaign>`__ |ext_link|. Registration is required.
+
+.. campaigns-learning-lab-end
+
 .. campaigns-howitworks-callouts-start
 
 .. list-table::

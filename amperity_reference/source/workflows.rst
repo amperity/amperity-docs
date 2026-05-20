@@ -54,6 +54,16 @@ Both tabs in the **Workflows** page automatically refresh for current status, in
 
 .. workflow-policy-end
 
+.. workflows-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Workflows automate end-to-end processes within Amperity, including data ingestion, identity resolution, database generation, and results delivery.
+
+   Open **Learning Lab** to learn more about `workflows <https://amperity.com/learning-lab/workflows>`__ |ext_link| and how to `trigger workflows on-demand <https://amperity.com/learning-lab/trigger-workflows-on-demand>`__ |ext_link|. Registration is required.
+
+.. workflows-learning-lab-end
+
 
 .. _workflows-discover-alerts:
 

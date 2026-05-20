@@ -37,6 +37,17 @@ To enhance response accuracy, **AmpAI** leverages tenant-specific information, s
 
 .. ampai-privacy-note-end
 
+.. ampai-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   **AmpAI** is the engine that drives conversational AI tools within Amperity, including the Customer Data Assistant and other AI Assistants.
+
+   Open **Learning Lab** to learn more about `the Amperity AI Assistant <https://amperity.com/learning-lab/the-amperity-ai-assistant>`__ |ext_link|, `exploring data with AmpAI <https://amperity.com/learning-lab/exploring-data-with-ampai>`__ |ext_link|, and `creating custom prompts with AmpAI <https://amperity.com/learning-lab/creating-custom-prompts-with-ampai>`__ |ext_link|. Registration is required.
+
+.. ampai-learning-lab-end
+
+
 .. _ampai-tools:
 
 AmpAI tools

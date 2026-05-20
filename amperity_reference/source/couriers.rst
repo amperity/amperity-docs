@@ -38,6 +38,16 @@ What a courier needs:
 
 .. couriers-what-they-do-end
 
+.. couriers-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Couriers bring data from external systems to Amperity, supporting a variety of data sources and file formats.
+
+   Open **Learning Lab** to learn more about `adding a new source courier in Quick Start <https://amperity.com/learning-lab/adding-a-new-source-courier-in-quick-start>`__ |ext_link| and `creating an S3 courier <https://amperity.com/learning-lab/creating-an-s3-courier>`__ |ext_link|. Registration is required.
+
+.. couriers-learning-lab-end
+
 
 .. _couriers-files:
 

@@ -23,6 +23,14 @@ Configure Amperity to send campaigns to any marketing workflow.
 
 .. campaigns-about-end
 
+.. campaigns-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Open **Learning Lab** to learn more about `creating destinations for campaigns and journeys <https://amperity.com/learning-lab/creating-destinations-for-campaigns-and-journeys>`__ |ext_link|. Registration is required.
+
+.. campaigns-learning-lab-end
+
 .. campaigns-about-grid-start
 
 .. grid:: 1 1 2 2

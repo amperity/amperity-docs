@@ -37,6 +37,16 @@ You can also use :ref:`Amp Insights <amp-insights>` to ask natural language ques
 
 .. amps-sandboxes-end
 
+.. amps-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Amps are a normalized unit that measure total consumption across categories and features within the Amperity platform.
+
+   Open **Learning Lab** to learn more about `what are Amps <https://amperity.com/learning-lab/what-are-amps>`__ |ext_link|. Registration is required.
+
+.. amps-learning-lab-end
+
 
 .. _amps-consumption-overview:
 

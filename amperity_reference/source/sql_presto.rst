@@ -21,6 +21,16 @@ About Presto SQL
    :start-after: .. term-presto-sql-start
    :end-before: .. term-presto-sql-end
 
+.. sql-presto-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Presto SQL is the underlying SQL engine used by the SQL Segment Editor in the Queries and Segment tabs.
+
+   Open **Learning Lab** to learn more about `using window functions to summarize data <https://amperity.com/learning-lab/using-window-functions-to-summarize-data>`__ |ext_link|, `using row functions to standardize data <https://amperity.com/learning-lab/using-row-functions-to-standardize-data>`__ |ext_link|, and `grouping and joining data <https://amperity.com/learning-lab/grouping-and-joining-data>`__ |ext_link|. Registration is required.
+
+.. sql-presto-learning-lab-end
+
 
 .. _sql-presto-why-should-i-use-this:
 

@@ -33,6 +33,16 @@ After a destination is configured, users of Amperity can:
 
 .. destinations-about-end
 
+.. destinations-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Destinations are connections between Amperity and downstream systems that enable sending data to those systems.
+
+   Open **Learning Lab** to learn more about `creating destinations for campaigns and journeys <https://amperity.com/learning-lab/creating-destinations-for-campaigns-and-journeys>`__ |ext_link|. Registration is required.
+
+.. destinations-learning-lab-end
+
 
 .. _destinations-add:
 

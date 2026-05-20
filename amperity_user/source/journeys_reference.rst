@@ -27,6 +27,16 @@ About Journeys
    :start-after: .. journeys-about-context-start
    :end-before: .. journeys-about-context-end
 
+.. journeys-reference-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   A journey is an automated sequence for connecting with customers across channels.
+
+   Open **Learning Lab** to learn more about how to `automate multi-touch marketing with journeys <https://amperity.com/learning-lab/automate-multi-touch-marketing-with-journeys>`__ |ext_link|. Registration is required.
+
+.. journeys-reference-learning-lab-end
+
 
 .. _journeys-howitworks:
 
