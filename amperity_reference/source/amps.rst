@@ -118,13 +118,13 @@ Storage consumption
 
 .. amps-review-consumption-storage-start
 
-The rate at which source tables consume Amps is a combination of how much data is being loaded to Amperity and the file type for that data. For example, a large CSV file consumes more Amps than an Apache Parquet file when both tables contain similar record counts.
+Storage does not consume any Amps; instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
 
-More data--more rows, more fields, more complete data--will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
+Similarly to Amps, Storage consumption is attributable to the product feature where that data is stored. Additionally, all storage can be attributable to the environment (production and individual sandboxes) where it is stored. 
 
-Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
+Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted promptly after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
 
-.. note:: Storage is not a significant driver of Amps consumption and should be a small percentage (<5%) of overall Amps consumption.
+.. note:: Storage does not consume any Amps and is metered separately in TBs. Typically, storage is less than 5% of total consumption.
 
 .. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage increases your Amps consumption.
 
@@ -278,40 +278,38 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
      - Feature areas
 
    * - **Activation**
-     - Building audiences for campaigns
+     - Campaign audience building
 
-       Building audiences for journeys
+       Journey audience building
 
-       Building audiences for orchestrations
+       Orchestration audience building
 
-       Sending data to cloud storage
-
-       Sending data to managed connectors
+       Data send
 
        Profile API
 
    * - **Analytics**
      - BI Connect
 
-       Predictive modeling
+       Predictive
 
        Queries
 
        Segments
 
-       Spark SQL sessions
+       Spark SQL
 
    * - **Databases**
      - Databases
 
    * - **Sources**
-     - Amperity Bridge
+     - Bridge
 
        Ingest
 
-       Tables
+       Source tables
 
-       Transformations
+       Source transformations
 
    * - **Stitch**
      - Stitch
