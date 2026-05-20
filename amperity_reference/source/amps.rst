@@ -1,4 +1,4 @@
-.. https://docs.amperity.com/reference/
+q.. https://docs.amperity.com/reference/
 
 
 .. meta::
@@ -284,9 +284,9 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
 
        Orchestration audience building
 
-       Data send to cloud storage
+       Data sends - cloud storage
 
-       Data send to managed connectors
+       Data sends - managed connectors
 
        Profile API
 
@@ -299,7 +299,7 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
 
        Segments
 
-       Spark SQL
+       Spark SQL sessions
 
    * - **Databases**
      - Databases
@@ -309,9 +309,9 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
 
        Ingest
 
-       Source tables
+       Tables
 
-       Source transformations
+       Transformations
 
    * - **Stitch**
      - Stitch
