@@ -37,7 +37,7 @@ To add data sources open the **Identity resolution** page in **Quick start**, fr
 
    Add connections between Amperity and the locations from which your brand will make data available.
 
-   Open **Learning Lab** to learn more about `adding a new source courier in Quick Start <https://amperity.com/learning-lab/adding-a-new-source-courier-in-quick-start>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about `adding a new source courier <https://amperity.com/learning-lab/adding-a-new-source-courier-in-quick-start>`__ |ext_link|. Registration is required.
 
 .. identity-resolution-data-learning-lab-end
 

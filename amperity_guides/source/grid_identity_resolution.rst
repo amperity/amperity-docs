@@ -33,7 +33,7 @@ Amperity accurately resolves customer identities and generates a customer identi
 
 .. admonition:: Amperity Learning Lab
 
-   Open **Learning Lab** to learn more about the `Quick Start: Identity Resolution Agent <https://amperity.com/learning-lab/quick-start-identity-resolution-agent>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about the `Identity Resolution Agent <https://amperity.com/learning-lab/quick-start-identity-resolution-agent>`__ |ext_link|. Registration is required.
 
 .. guides-identity-resolution-learning-lab-end
 
