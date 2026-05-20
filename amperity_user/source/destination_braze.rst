@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Braze
 .. |plugin-name| replace:: Braze
 .. |what-send| replace:: custom attributes
-.. |attributes-sent| replace:: |destination-name| requires "external_id" or "braze_id", along with a list of custom attributes that are defined by your brand.
+.. |attributes-sent| replace:: |destination-name| requires "external_id", "braze_id", or "user_alias", along with a list of custom attributes that are defined by your brand.
 
 
 .. meta::
@@ -178,7 +178,7 @@ Build query
 
 .. sendto-braze-build-query-start
 
-Use the query editor to filter by the user identifier associated with your segment in |destination-name|--"external_id" or "braze_id"--and then return the list of custom attributes. Use an orchestration to send the results of this query to |destination-name|.
+Use the query editor to filter by the user identifier associated with your segment in |destination-name|--"external_id", "braze_id", or "user_alias"--and then return the list of custom attributes. Use an orchestration to send the results of this query to |destination-name|.
 
 For example, ACME wants to manage custom attributes in |destination-name| by sending customer profile attributes, along with set of purchase history attributes. The following example uses the following standard output tables:
 
