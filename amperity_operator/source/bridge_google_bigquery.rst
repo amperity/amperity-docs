@@ -553,7 +553,7 @@ Create data exchange
 
 A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#console>`__ |ext_link| in |destination-name| is private by default. Only users and groups that have access to the data exchange can view or subscribe to data listings within the data exchange.
 
-`Create a data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#create-exchange>`__ |ext_link| in |destination-name| and then allow Amperity access to that data exchange.
+`Create a data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#create-exchange>`__ |ext_link| in |destination-name|, add datasets to the data exchange, and then allow Amperity access to that data exchange. Only datasets added to the data exchange to which Amperity is allowed access are visible to Amperity.
 
 .. bridge-google-bigquery-sync-amperity-configure-bigquery-exchange-end
 
