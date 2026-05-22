@@ -1,4 +1,4 @@
-q.. https://docs.amperity.com/reference/
+.. https://docs.amperity.com/reference/
 
 
 .. meta::
@@ -280,13 +280,13 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
    * - **Activation**
      - Campaign audience building
 
+       Data sent to cloud storage
+
+       Data sent to managed connectors
+
        Journey audience building
 
        Orchestration audience building
-
-       Data sends - cloud storage
-
-       Data sends - managed connectors
 
        Profile API
 
