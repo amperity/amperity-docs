@@ -33,7 +33,7 @@ Amperity can pull data in a wide variety of file types, file formats, and file s
 
 .. identity-resolution-data-from-amazon-s3-prerequisites-start
 
-**To add a data source for an Amazon S3 buckete**
+**To add a data source for an Amazon S3 bucket**
 
 .. source-amazon-s3-add-bridge-steps-start
 
