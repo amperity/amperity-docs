@@ -63,8 +63,6 @@ Claude.ai is the canonical location to add remote MCP connectors. Once added, th
 
       https://mcp.amperity.com
 
-   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` for this setting.
-
    Use **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs** as the OAuth client ID.
 
 #. Click **Add**. A browser tab opens. Sign in with your Amperity OAuth credentials.
@@ -90,8 +88,6 @@ Configure the Amperity MCP server for Claude Code.
    .. code-block:: bash
 
       claude mcp add --transport http --scope user amperity https://mcp.amperity.com
-
-   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command.
 
    The server is registered in your user-scoped Claude configuration and is available in every Claude Code session.
 
@@ -130,7 +126,5 @@ Claude calls the **tenant_info** tool and return details about your current Ampe
       claude mcp remove amperity
 
       claude mcp add --transport http --scope user amperity https://mcp.amperity.com
-
-      .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command.
 
 .. mcp-setup-claude-interacting-end
