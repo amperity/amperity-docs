@@ -349,7 +349,8 @@ Components
    Glossary <glossary>
    Abbreviations <abbreviations>
    Naming conventions <naming>
-   Quick start <start>
+   Guided setup <start>
+   System requirements <system_requirements>
 
 
 
