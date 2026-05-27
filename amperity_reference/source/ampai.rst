@@ -21,7 +21,7 @@ About AmpAI
 
 **AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. **AmpAI** lets you ask and answer complex questions about your customers, with support for visualizations, and operates over the data in the database.
 
-**AmpAI** supports customization through custom prompting capabilities. This enables organizations to encode specific business logic and defintions, tailoring **AmpAI** to align with their business requirements and ensuring consistency in results.
+**AmpAI** supports customization through :ref:`custom prompts <ampai-custom-prompt>` and :ref:`company context <ampai-company-context>`. Custom prompts encode specific business logic and definitions that apply to every prompt you write, while company context provides a library of reference documents for AmpAI to better understand your business. Together, these help you tailor **AmpAI** to align with your business requirements and keep results consistent.
 
 **AmpAI** offers enterprise-grade privacy and security and is built on the Azure OpenAI Service.
 
@@ -59,7 +59,7 @@ AmpAI tools
 
 A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
-.. note:: Custom prompts set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all AI Assistants.
+.. note:: Custom prompts and company context set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all other AI Assistants.
 
 .. ampai-tools-overview-table-start
 
@@ -124,14 +124,41 @@ To achieve optimal results when using **AmpAI**, follow these best practices for
 .. ampai-getting-good-results-end
 
 
+.. _ampai-customize:
+
+Customize AmpAI
+==================================================
+
+.. ampai-customize-start
+
+Both custom prompts and context files are managed on the **Prompts** page. To open the **Prompts** page:
+
+#. On the **AmpAI** page, click **Production prompts** to view the production prompt. 
+#. Click **Edit prompts** in the **Production prompt** window.
+
+* **Custom prompts** are short, always-on instructions that are injected into every AmpAI conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors.
+* **Company context** is a library of reference documents that the assistant searches only when a question involves business-specific knowledge. Use context files to provide richer background material such as brand guidelines, product catalogs, and business term definitions.
+
+The **Prompts** page uses a draft and production workflow:
+
+#. Make changes on the **Draft prompt** side.
+#. Click **Test draft** to validate changes in your own AmpAI session without affecting other users.
+#. Click **Activate draft** to push draft changes to production for all users.
+#. Click **Revert draft** to discard draft changes and return to the current production version.
+
+Learn more about :ref:`custom prompts <ampai-custom-prompt>` and :ref:`company context <ampai-company-context>`.
+
+.. ampai-customize-end
+
+
 .. _ampai-custom-prompt:
 
-About the custom prompt
+Custom prompts
 ==================================================
 
 .. ampai-custom-prompt-start
 
-The custom prompt in **AmpAI** enables your brand to tailor responses to align with specific business logic. Custom prompts apply to all AmpAI tools, including the Customer Data Assistant and AI Assistants, and can be updated to include:
+Custom prompts are short, always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to all AmpAI tools, including the Customer Data Assistant and AI Assistants, and can be updated to include:
 
 * Customer definitions, such as defining how your brand interprets retention metrics
 * Priority tables and fields, such as specifying priority for default tables and fields that are used with loyalty-related queries
@@ -139,53 +166,19 @@ The custom prompt in **AmpAI** enables your brand to tailor responses to align w
 * Default customer identifiers
 * Fiscal calendar information
 
+Set a custom prompt on the **Prompts** page: On the **AmpAI** page, click **Production prompts** and then **Edit prompts**.
+
 While **AmpAI** works out of the box, updating the custom prompt is often necessary to keep AmpAI aligned with how your brand understands your customers. The custom prompt should be updated when an AmpAI response does not meet expectations.
-
-.. ampai-custom-prompt-end
-
-
-.. _ampai-configure:
-
-Configure AmpAI
-==================================================
-
-.. ampai-configure-start
 
 When your brand starts using AmpAI you should start with a list of 3-5 key customer questions that AmpAI should answer correctly. Test these questions, and then refine the custom prompt to ensure accurate and meaningful responses. This will help establish an effective first iteration of the custom prompt.
 
-.. ampai-configure-end
-
-
-.. _ampai-configure-custom-prompt:
-
-Custom prompt iteration
---------------------------------------------------
-
-.. ampai-configure-custom-prompt-start
-
-AmpAI supports two types of prompts for customization and iteration:
-
-#. **Production prompt**
-
-   The production prompt applies universally to all users and queries within AmpAI. Any changes to this prompt should be deliberate and well-tested using the draft prompt.
-
-#. **Draft prompt**
-
-   The draft prompt is a testing environment where changes can be made and evaluated without affecting all users. Changes to the draft prompt only apply to your specific instance of AmpAI and not to any other users.
-
-   Use the draft prompt to test modifications until the changes are ready for deployment.
-
-   Click "Revert prompt" to revert the draft prompt to the current version of the production prompt.
-
-   Click "Activate draft" to update the production prompt to match the current version of the draft prompt. This will make the updates available to all users.
-
-.. ampai-configure-custom-prompt-end
+.. ampai-custom-prompt-end
 
 
 .. _ampai-write-custom-prompt:
 
 Write an effective custom prompt
-==================================================
+--------------------------------------------------
 
 .. ampai-write-custom-prompt-start
 
@@ -197,7 +190,7 @@ Follow these guidelines to create custom prompts that help **AmpAI** understand 
 .. _ampai-write-custom-prompt-database-headers:
 
 Use database section headers
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-database-headers-start
 
@@ -224,7 +217,7 @@ If the tenant only has one database, the header is still recommended for clarity
 .. _ampai-write-custom-prompt-be-specific:
 
 Be specific with exact names
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-be-specific-start
 
@@ -244,7 +237,7 @@ Good: "Exclude records where email ends with @acmeretail.com, @acmeinternal.com,
 .. _ampai-write-custom-prompt-map-terms:
 
 Map business terms to Amperity terms
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-map-terms-start
 
@@ -269,7 +262,7 @@ For example, customers say "SKU" but the column is ``product_id``. Customers say
 .. _ampai-write-custom-prompt-sql-patterns:
 
 Provide SQL patterns for complex logic
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-sql-patterns-start
 
@@ -298,7 +291,7 @@ For reusable filters and complex business logic, give **AmpAI** a complete CTE i
 .. _ampai-write-custom-prompt-define-concepts:
 
 Define business concepts
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-define-concepts-start
 
@@ -326,7 +319,7 @@ If your brand has specific definitions for retention, churn, high-value, or loya
 .. _ampai-write-custom-prompt-default-exclusions:
 
 Specify default exclusions
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-write-custom-prompt-default-exclusions-start
 
@@ -346,7 +339,7 @@ If every query should filter out test accounts, employees, or bots, state it onc
 .. _ampai-test-custom-prompt:
 
 Test custom prompts
-==================================================
+--------------------------------------------------
 
 .. ampai-test-custom-prompt-start
 
@@ -444,7 +437,7 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
 .. _ampai-sample-test-prompts:
 
 Sample test prompts
-==================================================
+--------------------------------------------------
 
 .. ampai-sample-test-prompts-start
 
@@ -456,7 +449,7 @@ Copy these into **AmpAI** with the draft prompt active. Adapt the expected resul
 .. _ampai-sample-test-prompts-term-mapping:
 
 Term mapping
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-term-mapping-start
 
@@ -477,7 +470,7 @@ Term mapping
 .. _ampai-sample-test-prompts-default-filters:
 
 Default exclusion filters
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-default-filters-start
 
@@ -503,7 +496,7 @@ Default exclusion filters
 .. _ampai-sample-test-prompts-table-routing:
 
 Table routing
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-table-routing-start
 
@@ -525,7 +518,7 @@ Table routing
 .. _ampai-sample-test-prompts-business-definitions:
 
 Business definitions
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-business-definitions-start
 
@@ -548,7 +541,7 @@ Business definitions
 .. _ampai-sample-test-prompts-stress-tests:
 
 Stress tests
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-stress-tests-start
 
@@ -571,14 +564,14 @@ Stress tests
 .. _ampai-sample-test-prompts-segments-journeys:
 
 Segment and journey prompts
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-sample-test-prompts-segments-journeys-start
 
 .. code-block:: none
 
    "Create a segment of high-value customers at risk of churning"
-   -> Verify: delegates to the Segment Agent and the resulting segment
+   -> Verify: delegates to the Segments AI Assistant and the resulting segment
       uses your definitions
 
    "Build me a segment of customers who bought online in the last 30 days"
@@ -594,7 +587,7 @@ Segment and journey prompts
 .. _ampai-prompt-patterns-by-industry:
 
 Common prompt patterns by industry
-==================================================
+--------------------------------------------------
 
 .. ampai-prompt-patterns-by-industry-start
 
@@ -606,7 +599,7 @@ Use these patterns as a starting point when writing custom prompts for your indu
 .. _ampai-prompt-patterns-retail:
 
 Retail and e-commerce
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-prompt-patterns-retail-start
 
@@ -621,7 +614,7 @@ Retail and e-commerce
 .. _ampai-prompt-patterns-financial:
 
 Financial services
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-prompt-patterns-financial-start
 
@@ -635,7 +628,7 @@ Financial services
 .. _ampai-prompt-patterns-hospitality:
 
 Hospitality
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. ampai-prompt-patterns-hospitality-start
 
@@ -649,7 +642,7 @@ Hospitality
 .. _ampai-custom-prompt-limitations:
 
 Custom prompt limitations
-==================================================
+--------------------------------------------------
 
 .. ampai-custom-prompt-limitations-start
 
@@ -659,9 +652,133 @@ The custom prompt cannot:
 * Override core SQL syntax rules (Presto SQL)
 * Make **AmpAI** access tables outside the active database
 * Configure destinations, campaigns, or orchestrations
-* For segment/journey creation, the custom prompt provides context but the Segment Agent and Journey Agent have their own specialized logic
+* For segment/journey creation, the custom prompt provides context but the Segment assistant and Journey assistant have their own specialized logic
 
 .. ampai-custom-prompt-limitations-end
+
+
+.. _ampai-company-context:
+
+Company context
+==================================================
+
+.. ampai-company-context-start
+
+Company context lets tenant administratorss upload company-specific knowledge like business definitions, brand guidelines, product catalogs, strategy documents, so that **AmpAI** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
+
+Context files are available across the following AmpAI tools: **Customer Data Assistant**, **Segments AI Assistant**, and **Journeys AI Assistant**.
+
+.. ampai-company-context-end
+
+
+.. _ampai-company-context-manage:
+
+Manage context files
+--------------------------------------------------
+
+.. ampai-company-context-manage-start
+
+Context files are managed in the **Context files** section on the **Prompts** page, below the prompt text area. The **Context files** section appears on both the **Draft** side and the **Production** side.
+
+To add context files:
+
+#. Open the **Prompts** page: On the **AmpAI** page, click **Production prompts** and then **Edit prompts**.
+#. Click **Upload file** or drag and drop files into the **Context files** section on the **Draft** side.
+#. Use the checkbox next to each file to enable or disable it. Only enabled files are searched by the assistant.
+#. Click **Activate draft** to push context file changes to production.
+
+Uploaded files are listed with the file name, the user who uploaded the file, file size, and upload timestamp.
+
+**Supported formats and limits**
+
+* File types: .txt, .md, and .csv
+* Maximum file size: 100 MB per file
+
+.. ampai-company-context-manage-end
+
+
+.. _ampai-company-context-how-it-works:
+
+How the assistant uses context
+--------------------------------------------------
+
+.. ampai-company-context-how-it-works-start
+
+When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant semantically searches the context library and returns the most relevant excerpts --- typically two to three short passages --- along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
+
+No specific action is required when prompting. Context lookup is automatic when the assistant determines that a question involves business-specific knowledge.
+
+.. ampai-company-context-how-it-works-end
+
+
+.. _ampai-company-context-best-practices:
+
+Best practices for context files
+--------------------------------------------------
+
+.. ampai-company-context-best-practices-start
+
+Upload files that contain knowledge the assistant needs to answer business-specific questions accurately. Good candidates for context files include:
+
+* **Business term definitions** such as "high-value customer," "active subscriber," or "churn"
+* **Brand voice and messaging guidelines** that describe tone, terminology, and communication standards
+* **Product line descriptions and catalog information** that describe products, categories, and pricing tiers
+* **Channel preferences and routing rules** that specify how customers should be reached
+* **Campaign naming conventions** that define how campaigns and programs are named and organized
+
+Write context files in plain language. The assistant searches them semantically, so clear, well-organized documents produce better results than raw data dumps. Use descriptive headings and group related information together within each file.
+
+.. ampai-company-context-best-practices-end
+
+
+.. _ampai-company-context-test:
+
+Test context files
+--------------------------------------------------
+
+.. ampai-company-context-test-start
+
+Use the same draft and production workflow on the **Prompts** page to test context files. After uploading files to the **Draft** side, click **Test draft** and then ask questions that should require business-specific knowledge.
+
+For each response, verify:
+
+* Did the assistant retrieve relevant context from the uploaded files?
+* Did the response use correct business-specific terminology and definitions?
+* Did the response reflect your brand's actual thresholds, tiers, or rules rather than generic defaults?
+
+Test with questions at different levels of specificity:
+
+.. code-block:: none
+
+   "How do we define a high-value customer?"
+   -> Verify: uses your uploaded definition, not a generic threshold
+
+   "Create a segment of customers at risk of churning"
+   -> Verify: the segment uses your churn definition from the context files
+
+   "What channels should we use for a win-back campaign?"
+   -> Verify: reflects your channel preferences, not generic best practices
+
+If the assistant does not retrieve context for a question that should use it, try rephrasing the question to include more specific business terminology. If results are inconsistent, review the context file for clarity and organization.
+
+.. ampai-company-context-test-end
+
+
+.. _ampai-company-context-limitations:
+
+Context file limitations
+--------------------------------------------------
+
+.. ampai-company-context-limitations-start
+
+Company context has the following limitations:
+
+* Only text-based file formats are supported: .txt, .md, and .csv. PDF, Word, and image files are not supported.
+* Maximum file size is 100 MB per file.
+* The assistant must recognize that a question involves business-specific knowledge to trigger a context search. Very generic questions may not trigger context lookup.
+* Context search adds a small amount of latency to responses that use it.
+
+.. ampai-company-context-limitations-end
 
 
 .. _ampai-permissions-and-policies:
@@ -689,7 +806,7 @@ AmpAI has the following user-level policy options:
 
 #. **Allow prompt administration**
 
-   Allows users to update the custom prompt. **Datagrid Operators** and **Datagrid Administrators** always have the ability to modify prompts.
+   Allows users to update the custom prompt and company context. **Datagrid Operators** and **Datagrid Administrators** always have the ability to modify prompts.
 
 .. ampai-permissions-and-policies-end
 

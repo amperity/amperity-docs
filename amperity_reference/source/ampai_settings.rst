@@ -53,6 +53,8 @@ Prompts can also be used to provide context to AmpAI to help ensure answers from
 
 Use the prompt testing environment to validate that prompts achieve the desired results, and then promote effective prompts to your production environment.
 
+The **Prompts** page also supports :ref:`company context <ampai-company-context>`, which lets admins upload reference documents, such as business term definitions, brand guidelines, and product catalogs, that the agent searches when answering business-specific questions.
+
 **Example prompts**
 
 * Use the [table_name] table instead of the **Customer 360** table.
