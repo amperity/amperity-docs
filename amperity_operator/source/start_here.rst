@@ -363,10 +363,6 @@ You must provide your credentials to Amperity in order to log in.
 Supported browsers
 --------------------------------------------------
 
-.. start-here-tenant-browsers-start
-
-Amperity works best with Google Chrome and works fine with Chromium-based browsers, such as Brave.
-
-Amperity is not supported from Firefox, Safari, Internet Explorer, or from mobile and tablet devices.
-
-.. start-here-tenant-browsers-end
+.. include:: ../../amperity_reference/source/system_requirements.rst
+   :start-after: .. system-requirements-browsers-start
+   :end-before: .. system-requirements-browsers-end
