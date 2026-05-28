@@ -63,7 +63,11 @@ Claude.ai is the canonical location to add remote MCP connectors. Once added, th
 
       https://mcp.amperity.com
 
-   Use **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs** as the OAuth client ID.
+   Use the following OAuth client ID:
+
+   .. code-block:: none
+
+      nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs
 
 #. Click **Add**. A browser tab opens. Sign in with your Amperity OAuth credentials.
 

@@ -84,7 +84,9 @@ Use the **Copilot Studio** MCP onboarding wizard to configure server details and
       * - Field
         - Value
       * - **Client ID**
-        - **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs**
+        - .. code-block:: none
+
+             nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs
       * - **Client secret**
         - Any non-empty placeholder, for example "unused". The Amperity MCP server is a PKCE-based public OAuth client and ignores this value, but **Copilot Studio** requires the field to be non-empty.
       * - **Authorization URL**

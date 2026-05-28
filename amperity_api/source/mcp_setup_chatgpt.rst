@@ -61,7 +61,11 @@ To add the Amperity MCP server to ChatGPT:
 
       https://mcp.amperity.com
 
-#. Set the authentication type to **OAuth**. Use **nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs** as the OAuth client ID.
+#. Set the authentication type to **OAuth**, and then use the following OAuth client ID:
+
+   .. code-block:: none
+
+      nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs
 #. Save the connector. A browser tab opens. Sign in with your Amperity OAuth credentials.
 #. Enable the Amperity connector for any chat session.
 
