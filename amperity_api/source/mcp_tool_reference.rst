@@ -51,9 +51,7 @@ Manage which Amperity tenant the current session targets, and read session-level
        **tenant_resync**
 
    * - Manage sandbox tenants
-     - **sandbox_list**
-
-       **sandbox_create**
+     - **sandbox_create**
 
        **sandbox_get_create_status**
 
@@ -477,6 +475,25 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_delete**
 
+   * - Manage journey versions
+     - **journey_list_versions**
+
+       **journey_get_version**
+
+       **journey_create_version**
+
+       **journey_update_version**
+
+   * - Run, schedule, and unschedule journeys
+     - **journey_run**
+
+       **journey_schedule**
+
+       **journey_unschedule**
+
+   * - Read a journey's node schema
+     - **journey_get_node_schema**
+
    * - Manage labels
      - **label_list**
 
@@ -801,3 +818,21 @@ Manage alert subscriptions and run training tasks for semantic tagging.
 
    * - Run training tasks for semantic tagging
      - **training_setup_semantic_tags**
+
+
+.. _mcp-tool-deep-links:
+
+Deep links
+==================================================
+
+Build deep-link URLs to Amperity UI pages. Constructed locally, with no API call.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Build a deep-link URL to an Amperity UI page
+     - **build_object_url**
