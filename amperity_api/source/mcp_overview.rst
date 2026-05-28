@@ -57,7 +57,7 @@ The MCP server enables:
 
 * More than 200 tools across tenants, such as databases, queries, identity resolution, campaigns, and predictive modeling. This full toolset is the default for connected clients.
 
-  .. note:: Some clients, such as Copilot Studio, limit the number of individual tools an agent can register. For these clients, the Amperity MCP server automatically serves a curated subset of tools that fits within the client's limit. See :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+  .. note:: Copilot Studio limits the number of individual tools an agent can register. For Copilot Studio connections, the Amperity MCP server automatically serves a curated subset of tools that fits within this limit. See :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 * Per-user isolation. Each request is authenticated and scoped to the calling user's identity, tenant, and permissions.
 
