@@ -55,9 +55,9 @@ The MCP server enables:
 
 * Conversational access to Amperity from Copilot Studio, Claude, ChatGPT, and other MCP-compatible clients.
 
-* More than 200 tools across tenants, such as databases, queries, identity resolution, campaigns, and predictive modeling.
+* More than 200 tools across tenants, such as databases, queries, identity resolution, campaigns, and predictive modeling. This full toolset is the default for connected clients.
 
-  .. note:: Some clients, such as Copilot Studio, limit the number of individual tools an agent can register and may require surfacing only a subset of the full toolset available in the MCP server.
+  .. note:: Some clients, such as Copilot Studio, limit the number of individual tools an agent can register. For these clients, the Amperity MCP server automatically serves a curated subset of tools that fits within the client's limit. See :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 * Per-user isolation. Each request is authenticated and scoped to the calling user's identity, tenant, and permissions.
 
