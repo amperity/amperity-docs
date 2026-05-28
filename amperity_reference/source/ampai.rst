@@ -664,7 +664,7 @@ Company context
 
 .. ampai-company-context-start
 
-Company context lets tenant administratorss upload company-specific knowledge like business definitions, brand guidelines, product catalogs, strategy documents, so that **AmpAI** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
+Company context lets tenant administrators upload company-specific knowledge like business definitions, brand guidelines, product catalogs, and strategy documents, so that **AmpAI** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
 
 Context files are available across the following AmpAI tools: **Customer Data Assistant**, **Segments AI Assistant**, and **Journeys AI Assistant**.
 
@@ -704,9 +704,19 @@ How the assistant uses context
 
 .. ampai-company-context-how-it-works-start
 
-When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant semantically searches the context library and returns the most relevant excerpts --- typically two to three short passages --- along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
+When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant  searches the context library and returns the most relevant excerpts --- typically a few short passages, at most five --- along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
 
 No specific action is required when prompting. Context lookup is automatic when the assistant determines that a question involves business-specific knowledge.
+
+Some examples of situations where the assistant will check company context:
+
+* Answering questions about promotions, campaigns, products, policies, or company assets
+* Creating segments or building journeys
+* Checking for company-specific definitions of terms like "high value," "churn," "VIP," etc.
+
+You can also manually trigger the context lookup by adding a sentence like "Please use company context to answer this next question." 
+
+.. note:: AmpAI only uses your context files for reference when answering your questions or responding to your prompts. Company context is not used to train any models or applied in any other capacity.
 
 .. ampai-company-context-how-it-works-end
 
@@ -725,6 +735,8 @@ Upload files that contain knowledge the assistant needs to answer business-speci
 * **Product line descriptions and catalog information** that describe products, categories, and pricing tiers
 * **Channel preferences and routing rules** that specify how customers should be reached
 * **Campaign naming conventions** that define how campaigns and programs are named and organized
+* **Unique fiscal calendars** that reflect the rhythm of the business
+
 
 Write context files in plain language. The assistant searches them semantically, so clear, well-organized documents produce better results than raw data dumps. Use descriptive headings and group related information together within each file.
 
@@ -774,7 +786,10 @@ Context file limitations
 Company context has the following limitations:
 
 * Only text-based file formats are supported: .txt, .md, and .csv. PDF, Word, and image files are not supported.
-* Maximum file size is 100 MB per file.
+
+.. note:: While .csv files are supported, tabular data is not as effective for extracting excerpts. If using .csv, small lookup tables with descriptive headers would be more useful than wide or long .csv tables. 
+
+* Maximum file size is 100 MB per file. 
 * The assistant must recognize that a question involves business-specific knowledge to trigger a context search. Very generic questions may not trigger context lookup.
 * Context search adds a small amount of latency to responses that use it.
 
