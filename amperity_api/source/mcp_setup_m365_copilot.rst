@@ -73,8 +73,6 @@ Use the **Copilot Studio** MCP onboarding wizard to configure server details and
       * - **Server URL**
         - **https://mcp.amperity.com**
 
-          .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command.
-
 #. Under **Authentication**, select **OAuth 2.0**.
 
    Choose the **Manual** type and fill in the following fields.
@@ -95,8 +93,6 @@ Use the **Copilot Studio** MCP onboarding wizard to configure server details and
         - **https://mcp.amperity.com/oauth/token**
       * - **Refresh URL**
         - **https://mcp.amperity.com/oauth/token**
-
-   .. important:: Use the :ref:`correct MCP server URL <mcp-overview-mcp-urls>` in the command, and then append **/authorize** and **/oauth/token** to that URL for the **Authorization URL**, **Token URL template**, and **Refresh URL** values.
 
 #. Select **Create**. **Copilot Studio** displays a callback URL. The Amperity OAuth proxy registers the callback URL dynamically.
 
