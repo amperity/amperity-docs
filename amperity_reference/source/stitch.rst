@@ -1,25 +1,29 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
+
 
 .. meta::
     :description lang=en:
-        Learn how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
+        Learn how Stitch discovers the hidden connections in your customer profiles that identify unique individuals.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Learn how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
+        Learn how Stitch discovers the hidden connections in your customer profiles that identify unique individuals.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        How Stitch works
+        How identity resolution works
 
 ==================================================
-How Stitch works
+How identity resolution works
 ==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-stitch-start
-   :end-before: .. term-stitch-end
+.. term-identity-resolution-start
+
+Identity resolution is the process of connecting and matching data points that exist in many sources to build a unified view of a single customer.
+
+.. term-identity-resolution-end
 
 .. image:: ../../images/howitworks-stitch-intro-01-who.png
    :width: 500 px
@@ -27,976 +31,929 @@ How Stitch works
    :align: left
    :class: no-scaled-link
 
-.. stitch-how-it-works-start
+.. stitch-overview-context-start
 
-Amperity uses a `series of patented innovations <https://amperity.com/patents>`__ to ensure that identity resolution against your customer data is accurate and that the output of the Stitch process represents a unified view of your customers.
+Identity resolution is a complex customer data challenge that turns fragmented and siloed data sources into a collection of contextual customer profiles in an identity graph that changes and adapts over time as new information is discovered.
 
-.. stitch-how-it-works-end
+* Apply semantic tags to identify personally identifiable information (PII) and important anchors within source data. 
+* Build a series of rules that define when records should match or should not match. 
+* Apply AI modeling, also known as Stitch, to combine deterministic confidence with probabilistic discovery to build an identity graph. The identity graph then forms the basis for creating customer profiles that power a range of marketing and analytics use cases.
 
-.. stitch-entity-matching-start
-
-Read `Entity Matching in the Wild: a Consistent and Versatile
-Framework to Unify Data in Industrial Applications <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__ for a detailed explanation of how Amperity provides a consistent, reliable, and stable customer ID.
-
-.. stitch-entity-matching-end
-
-.. stitch-learning-lab-start
-
-.. admonition:: Amperity Learning Lab
-
-   Stitch evaluates all of your brand's data to discover hidden connections in customer records and identify unique customers.
-
-   Open **Learning Lab** to learn more about `how Stitch works <https://amperity.com/learning-lab/how-stitch-works>`__ |ext_link|. Registration is required.
-
-.. stitch-learning-lab-end
+.. stitch-overview-context-end
 
 
-.. _stitch-stages-of-identity-resolution:
+.. _stitch-about:
 
-Stages of identity resolution
+About Stitch
 ==================================================
 
-.. stitch-stages-of-identity-resolution-start
+.. term-stitch-start
 
-Identity resolution is a critical step in understanding who your customers are. Stitch is the component within Amperity that performs identity resolution by comparing all of your customer data, identifying unifying groups of customer records, and then identifying unique customer profiles that represent each of your unique, individual customers.
+Stitch uses patented algorithms to process massive volumes of data and discover the hidden connections in your customer profiles that identify unique individuals. Stitch analyzes customer data, applies the rules you define, and then builds an identity graph with accurate and actionable customer profiles. Each customer profile is assigned an Amperity ID.
 
-.. stitch-stages-of-identity-resolution-end
+.. term-stitch-end
 
-.. stitch-stages-of-identity-resolution-steps-start
+.. term-stitch-summary-tab-start
 
-The stages of identity resolution are:
+The **Summary** tab on the **Stitch** page shows the results of identity resolution and how it adapts and changes over time.
 
-#. :ref:`Semantic tagging <stitch-semantic-tags>`
-#. :ref:`Preprocessing data <stitch-preprocess-data>`
-#. :ref:`Union of tables <stitch-union-of-tables>`
-#. :ref:`Blocking <stitch-blocking>`
-#. :ref:`Initial scoring <stitch-initial-scoring>`
-#. :ref:`Pairwise comparison <stitch-pairwise-comparison>`
-#. :ref:`Stable ID assignment <stitch-stable-ids>`
+.. term-stitch-summary-tab-end
 
-.. stitch-stages-of-identity-resolution-steps-end
+.. image:: ../../images/mockup-stitch-summary-tab.png
+   :width: 500 px
+   :alt: The Summary tab for identity resolution
+   :align: left
+   :class: no-scaled-link
+
+.. TODO: These following 3 sections are commented out. They may make it if it makes sense to talk about what the previous How Stitch works doc talked about in greater detail, but here in a more paraphrased, skip past the parts people focus in on. Probably a yeet candidate.
+
+.. 
+.. Data preparation
+.. --------------------------------------------------
+.. 
+.. Semantic tagging
+.. Preprocessing
+.. Union of tables
+.. 
+.. Matching
+.. --------------------------------------------------
+.. 
+.. Blocking
+.. Pairwise comparison and rules
+.. Clustering
+.. 
+.. Data asset generation
+.. --------------------------------------------------
+.. 
+.. Merge rules
+.. Build customer profiles and assign Amperity IDs
+.. Standardize outputs
+.. 
+
+
+.. _stitch-whatis-identity-graph:
+
+What is an identity graph?
+==================================================
+
+.. term-identity-graph-start
+
+An identity graph is the foundation for unified customer profiles. Each customer profile represents a unique customer. Stitch creates a customer profile by connecting records using a combination of matching techniques: deterministic (exact), probabilistic (approximate), and transitive (derived from other confident matches). A keychain of identifiers links records in each profile back to source data.
+
+.. term-identity-graph-end
+
+.. stitch-summary-tab-matching-strategies-context-start
+
+An identity graph is built by comparing records, such as those with personally identifiable information (PII), transaction histories, shopping preferences, and loyalty account information, then finding matches among these records and clustering them into individual customer profiles. Each customer profile in an identity graph is assigned an Amperity ID.
+
+Each identity graph is created from a combination of deterministic and probabilistic matching rules that define conditions for when records should be clustered together or separated out. The **Rules Editor** defines a hierarchy of deterministic and probabilistic matching strategies for each identity graph. Identity resolution attempts to match on a rule starting at the top of the list of rules in the rules hierarchy. The first rule that applies is given a score.
+
+Matching strategies use confident matches and confident conflicts to identify which records belong to the same customer profile. For example, a confident match would be a case where both records have the same data, like an identical email address, while a confident conflict may be two records with the same phone number but different first and last names. From a starting point of hundreds of millions of records and billions of possible connections, an identity graph connects records that identify unique customer profiles.
+
+.. stitch-summary-tab-matching-strategies-context-end
+
+.. stitch-whatis-identity-graph-diagram-unconnected-start
+
+An identity graph starts with many possible connections between records.
+
+.. image:: ../../images/howitworks-identity-graph-overview.png
+   :width: 500 px
+   :alt: An individual customer profile within an identity graph
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-whatis-identity-graph-diagram-unconnected-end
+
+.. stitch-whatis-identity-graph-diagram-connected-start
+
+After identity resolution each cluster is a set of connected records. For example, the following diagram shows a cluster of six connected records that form a unique customer profile. Records 1 and 6 and records 1 and 3 matched confidently on cluster rules for loyalty account identifiers. 6 and 5 matched confidently on email addresses. 3 and 5, 3 and 6, and 5 and 1 matched transitively, because each pair shares a strong match to another record. 2 and 4 have no match and so are separated out of the cluster.
+
+.. image:: ../../images/howitworks-identity-graph-overview-connected.png
+   :width: 500 px
+   :alt: An individual customer profile within an identity graph
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-whatis-identity-graph-diagram-connected-end
+
+
+.. _stitch-data-changes-graphs-adapt:
+
+Data changes, graphs adapt
+==================================================
+
+.. stitch-data-changes-graphs-adapt-start
+
+Adaptive identity is the process of building an identity graph that adapts as source data changes over time to maintain an accurate foundation of customer profiles and keychains.
+
+An identity graph adapts as source data changes over time. For example:
+
+* Personally identifiable information (PII) is updated
+* New data sources are made available
+* A rule is added for a new foreign key
+* Customers provide additional points of contact
+* Loyalty account data changes
+* Customers have more interations with your brand
+
+Stitch rebuilds the identity graph each time it runs by comparing the defined set of rules to all record pairs in the current collection of source data.
+
+This creates opportunities for finding more confident matches, more confident conflicts, and discovering new transitive connections between records.
+
+.. stitch-data-changes-graphs-adapt-end
+
+.. stitch-data-changes-graphs-adapt-summary-start
+
+.. TODO: Link to the /reference/stitch_summary.rst section for the Summary tab in the following paragraph.
+
+Amperity tracks changes to identity graphs from the **Summary** tab on the **Stitch** page. Changes, such as **Added**, **Deleted**, **Merged**, **Recognized**, and **Split**, are tracked for an identity graph over a 90-day time period.
+
+.. stitch-data-changes-graphs-adapt-summary-start
+
+.. image:: ../../images/mockup-stitch-identity-changes.png
+   :width: 500 px
+   :alt: Identity changes over time
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-summary-tab-identity-changes-table-start
+
+.. term-record-pair-start
+
+Identity resolution analyzes source tables, extracts customer profiles and interactions, and then compares pairs of records using machine learning models to build an identity graph. Each record pair is scored and then all records that were connected using deterministic, probabilistic, or transitive matches represent a unique customer profile.
+
+.. term-record-pair-end
+
+.. image:: ../../images/mockup-stitch-identity-changes-hover.png
+   :width: 500 px
+   :alt: Hover over the graph to view detailed identity changes over time
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-summary-tab-identity-changes-unchanged-start
+
+.. admonition:: Identity changes are a very small percentage of total customer profiles.
+
+   Enable the **Include unchanged** slider on the right side below the chart to view unchanged customer profiles. Unchanged customer profiles are shown in grey.
+
+   .. image:: ../../images/mockup-stitch-identity-changes-hover-unchanged.png
+      :width: 500 px
+      :alt: Hover over the graph to view unchanged identities over time
+      :align: left
+      :class: no-scaled-link
+
+.. stitch-summary-tab-identity-changes-unchanged-end
+
+.. stitch-data-changes-graphs-adapt-unwanted-start
+
+.. TODO: Maybe not the right spot. But these are reasons that cause jitter, which is bad. We should say something about that.
+
+.. admonition:: Not all changes are good changes
+
+   Some changes to source data can be unhelpful to an identity graph. For example:
+
+   * An upstream operational issue that removes data from a data source or removes an entire data source
+   * A privacy rights workflow that fails to redact all personally identifiable information (PII) from upstream data sources after a customer's request to delete records or PII
+   * A workflow that exceeds the expected runtime and fails to load all records. Missing records can show as deletions, which will affect clusters of records within an identity graph
+   * Rules are changed in a way that reorders how records are clustered when foreign keys match
+
+   These situations can create a noisy identity graph or create clusters within an identity graph that normally would not cluster.
+
+.. stitch-data-changes-graphs-adapt-unwanted-end
+
+.. _stitch-example-matching-strategies:
+
+Matching strategies
+==================================================
+
+.. stitch-example-matching-strategies-start
+
+There are three types of matching strategies:
+
+* :ref:`Deterministic matches <stitch-example-matching-strategy-deterministic>`
+* :ref:`Probabilistic matches <stitch-example-matching-strategy-probabilistic>`
+* :ref:`Transitive matches <stitch-example-matching-strategy-transitive>`
+
+.. stitch-example-matching-strategies-end
+
+.. stitch-summary-tab-matching-strategies-percentages-context-start
+
+.. TODO: Possible diagram for this spot. It's different from the others.
+
+Identity graphs can be configured to be more deterministic or less deterministic. Most often an identity graph uses a combination of deterministic and probabilistic rules for identity resolution. In addition to deterministic matching and probabilistic matching, identity resolution discovers transitive connections that lead to more accurate and more complete customer profiles.
+
+.. stitch-summary-tab-matching-strategies-percentages-context-end
+
+.. stitch-summary-tab-matching-strategies-percentages-start
+
+The **Summary** tab, under **Matching strategies**, shows the percentage of total profiles in the identity graph that were discovered using deterministic, probabilistic, and transitive matching.
+
+.. stitch-summary-tab-matching-strategies-percentages-end
+
+.. stitch-summary-tab-matching-strategies-tries-start
+
+.. admonition:: Why does Amperity "try" to match records?
+
+   Amperity does not force a record to be assigned to an identity.
+
+   Amperity uses deterministic and probabilistic matching strategies to define conditions that determine when records should or should not match. All record pairs are scored. The scores represent the strength or weakness of the relationship between two records.
+
+   * Exact matches are assigned minimum or maximum scores.
+   * Fuzzy matches are assigned similarity scores.
+
+   It may not be possible to satisfy all of the rules-based scoring conditions:
+
+   * Default scoring model may assign a score
+   * A transitive connection may be discovered
+   * Edge analysis identifies records that should or should not cluster together
+
+   For example, it is possible for a customer profile within an identity graph to have more than one email address because *other records* within the customer profile scored high enough to match *or* additional email addresses were discovered transitively.
+
+.. stitch-summary-tab-matching-strategies-tries-end
+
+
+.. _stitch-example-matching-strategy-deterministic:
+
+Deterministic matches
+--------------------------------------------------
+
+.. term-deterministic-connection-start
+
+Deterministic record matching uses rules that define exact matching for customer keys and semantic tags.
+
+.. term-deterministic-connection-end
+
+.. stitch-example-matching-strategy-deterministic-start
+
+Deterministic matching strategies try to cluster records together when conditions are met. For example, a deterministic strategy for loyalty IDs tries to match records with the same loyalty ID.
+
+.. image:: ../../images/howitworks-identity-graph-deterministic.png
+   :width: 500 px
+   :alt: A deterministic match
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-strategy-deterministic-end
+
+
+.. _stitch-example-matching-strategy-probabilistic:
+
+Probabilistic matches
+--------------------------------------------------
+
+.. term-probabilistic-connection-start
+
+Probabilistic record matching uses rules that define approximate matching for customer keys and semantic tags to score approximate similarity between records. Records that approximately match are evaluated by Stitch and scored.
+
+.. term-probabilistic-connection-end
+
+.. stitch-example-matching-strategy-probabilistic-start
+
+Probabilistic matching strategies can lead to clustering or separation when conditions are met. For example, a separation rule for "values significantly differ" on email addresses tries to separate records when email addresses do not have approximate similarity.
+
+.. image:: ../../images/howitworks-identity-graph-probabilistic.png
+   :width: 500 px
+   :alt: A probabilistic match
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-strategy-probabilistic-end
+
+
+.. _stitch-example-matching-strategy-transitive:
+
+Transitive matches
+--------------------------------------------------
+
+.. term-transitive-connection-start
+
+A transitive connection exists when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record one matches record two, record three matches record two, and records one and three do not match. A transitive connection exists between records one and three because both records match record two.
+
+.. term-transitive-connection-end
+
+.. stitch-example-matching-strategy-transitive-start
+
+Transitive connections are discovered during identity resolution.
+
+.. image:: ../../images/howitworks-identity-graph-transitive.png
+   :width: 500 px
+   :alt: A transitive match
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-strategy-transitive-end
 
 
 .. _stitch-semantic-tags:
 
-Semantic tags
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-semantic-start
-   :end-before: .. term-semantic-end
-
-.. stitch-semantic-noetl-start
-
-.. admonition:: Extract, load, transform (ELT)
-
-   An important benefit of semantic tagging is that raw data can be provided directly to Amperity, which avoids a traditional and more expensive extract, transform, and load (ETL) process. Amperity can extract, load, and then transform raw data from any number of large datasets.
-
-.. stitch-semantic-noetl-end
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-semantic-tag-start
-   :end-before: .. term-semantic-tag-end
-
-.. feeds-semantic-tagging-which-start
-
-.. admonition:: What semantic tags does Stitch rely on?
-
-   Stitch relies on the following semantic tags to be applied to customer records:
-
-   * **given-name** (first name) and **surname** (last name). In some cases, a **full-name** is inferred (if not available).
-   * Other important profile details, such as **birthdate**, **email**, and **phone**.
-   * The **address**, **address2**, **city**, **state**, and **postal** tags are combined to represent a complete physical address.
-   * Other location details, such as **country** and **company**.
-   * Additional profile details, when available, such as **gender**, **generational-suffix** (Jr., Sr., III, etc.), and **title**.
-
-   Stitch uses foreign keys to associate individual customers to their interactions with your brands.
-
-.. feeds-semantic-tagging-which-end
-
-.. feeds-semantic-tagging-start
-
-Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
-
-Semantic tagging works like this:
-
-#. A field in the customer's system named "fname" stores an individual's given name.
-#. A field in the customer's system named "lname" stores the same individual's last name.
-#. A field in the customer's system named "primary-phone" stores a phone number.
-#. A field in the customer's system named "date" stores an individual's birthdate.
-
-For those semantic tags, the feed should apply semantic tags like this:
-
-.. list-table::
-   :widths: 100 100
-   :header-rows: 1
-
-   * - Input Field
-     - Semantic Tag
-   * - fname
-     - given-name
-   * - lname
-     - surname
-   * - primary-phone
-     - phone
-   * - date
-     - birthdate
-
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
-
-Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
-
-.. feeds-semantic-tagging-end
-
-
-.. _stitch-preprocess-data:
-
-Preprocess data
---------------------------------------------------
-
-.. stitch-preprocess-data-start
-
-Data is preprocessed into a consistent data pattern before it is combined into a virtual table for use with record matching, blocking, and pairwise comparison. Amperity preprocesses all values in all fields to which semantic tags for profile data were applied. 
-
-.. stitch-preprocess-data-end
-
-.. stitch-preprocess-data-note-start
-
-.. note:: Preprocessing data ensures that Stitch has access to consistent formatting of data for matching purposes. Preprocessed data is written to the **Unified Preprocessed Raw** data table. Amperity does not assert that preprocessed data values are better than the original values in the customer's data.
-
-.. stitch-preprocess-data-note-end
-
-
-.. _stitch-preprocess-data-address:
-
-Addresses
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-preprocess-data-address-start
-
-Amperity preprocesses addresses by converting common abbreviations to complete words, removing periods and commas--``.`` and ``,``--and converting all characters to UPPERCASE.
-
-.. list-table::
-   :widths: 300 300
-   :header-rows: 1
-
-   * - Original value
-     - Preprocessed to
-   * - ``123 W. Elm St.``
-
-       ``123 West Elm St.``
-
-       ``123 W Elm St``
-
-       ``123 West Elm Street``
-     - ``123 WEST ELM STREET``
-   * - ``44 holiday dr.``
-
-       ``44 Holiday Dr.``
-
-       ``44 Holiday Drive``
-     - ``44 HOLIDAY DRIVE``
-   * - ``1000 1st Ave. Ste. 1960``
-     - ``1000 FIRST AVENUE SUITE 1960``
-   * - ``555 Puget Ave``
-
-       ``P.O. Box 555``
-     - ``555 PUGET AVENUE PO BOX 555``
-
-.. stitch-preprocess-data-address-end
-
-
-.. _stitch-preprocess-data-phone:
-
-Phone numbers
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-preprocess-data-phone-start
-
-Amperity preprocesses phone numbers by removing parentheses, hyphens, and spaces, consolidating every phone number to a numeric string. Stitch uses the last 10 digits of a phone number for identity resolution.
-
-.. list-table::
-   :widths: 300 300
-   :header-rows: 1
-
-   * - Original value
-     - Preprocessed to
-   * - ``(333)-444-5678``
-     - ``3334445678``
-   * - ``415 290 5727``
-     - ``4152905727``
-   * - ``+1 (978) 425 6779``
-     - ``9784256779``
-   * - ``222 4455``
-     - ``2224455``
-
-.. stitch-preprocess-data-phone-end
-
-
-.. _stitch-preprocess-data-email:
-
-Email addresses
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-preprocess-data-email-start
-
-Amperity preprocesses email addresses by ensuring that only the local username and domain are present, separated by ``@``, and converted to UPPERCASE.
-
-.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, or ``reservation@``. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
-
-.. list-table::
-   :widths: 300 300
-   :header-rows: 1
-
-   * - Original value
-     - Preprocessed to
-   * - ``derek+1234@amperity.com``
-     - ``DEREK@AMPERITY.COM``
-   * - ``test@goaway.com``
-     - NULL
-   * - ``gary.smith+123@gmail.com``
-     - ``GARY.SMITH@GMAIL.COM``
-
-.. note:: Field values that were ignored during preprocessing are available as output of Stitch from the **Unified Preprocessed Raw** table. Fields values that were ignored due to blocklisting are available as output of Stitch from the **Unified Coalesced** table.
-
-.. stitch-preprocess-data-email-end
-
-
-.. _stitch-union-of-tables:
-
-Union of tables
---------------------------------------------------
-
-.. stitch-union-of-tables-start
-
-All records from all tables that contain customer profile data are merged into a single virtual table that aligns all of the data that is associated with all defined semantic groups.
-
-.. stitch-union-of-tables-end
-
-.. stitch-union-of-tables-context-start
-
-Semantic tags are applied consistently across data sources. Every email address, physical address, phone number, first and last name is associated to profile semantics. Every order, item, purchase amount, discount amount, return, is associated to transaction semantics.
-
-.. image:: ../../images/howitworks-stitch-union-of-tables.png
-   :width: 500 px
-   :alt: All records are merged into a single virtual table.
-   :align: left
-   :class: no-scaled-link
-
-It is OK if each row does not contain a value for each column. The alignment itself is what is necessary to make this data usable by Stitch for downstream processing and identity resolution.
-
-.. stitch-union-of-tables-context-end
-
-.. stitch-union-of-tables-table-start
-
-The following example shows a couple rows from a few tables, the aligned and preprocessed semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
-
-.. vale off
-
-.. list-table::
-   :widths: 100 100 100 100 100 100
-   :header-rows: 1
-
-   * - Source
-     - Surname
-     - Address
-     - Email
-     - Postal
-     - Loyalty ID
-   * - Loyalty
-     - SMITH
-     - 123 MAIN STREET
-     - JOHN@MAIL.COM
-     - 98101
-     - A-12345-a
-   * - Loyalty
-     - JONES
-     - 10 SOUTH LANE
-     - JONES@GMAIL.COM
-     - 10101
-     - B-23456-b
-   * - In-store
-     - SMITH
-     - 
-     - 
-     - 98101
-     - A-12345-a
-   * - Online
-     - SMITH
-     - 123 MAIN STREET
-     - JOHN@MAIL.COM
-     - 98101
-     - A-12345-a
-   * - Online
-     - JONES
-     - 10 SOUTH LANE
-     - JONES@GMAIL.COM
-     - 10101
-     - B-23456-b
-   * - Clickstream
-     - 
-     - 
-     - 
-     - 
-     - A-12345-a
-   * - Clickstream
-     - 
-     - 
-     - 
-     - 
-     - B-23456-b
-
-.. vale on
-
-.. stitch-union-of-tables-table-end
-
-
-.. _stitch-blocking:
-
-Blocking
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-blocking-start
-   :end-before: .. term-blocking-end
-
-.. stitch-blocking-note-start
-
-.. note:: Blocking is a non-trivial step for record linking in the Stitch process. 
-
-   * An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated. This can affect system performance.
-   * An overly conservative blocking strategy may result in a low recall rate, which means too few pairs being evaluated.
-   * Individual blocking keys may be conservative or generous.
-
-   The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
-
-.. stitch-blocking-note-end
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-blocking-strategy-start
-   :end-before: .. term-blocking-strategy-end
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-bk-stitch-context-start
-   :end-before: .. term-bk-stitch-context-end
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-block-start
-   :end-before: .. term-block-end
-
-.. stitch-blocking-block-example-start
-
-Blocks are created by comparing all records against all blocking strategies. When a record contains values that match a blocking strategy these values are combined into a single string value, also referred to as a blocking key.
-
-For example, a blocking strategy that matches:
-
-* given-name(3)
-* surname(3)
-* postal
-
-results in a blocking key string value similar to ``Jus:Cur:98101``. This operation is similar to the following ``SELECT`` statement:
-
-.. code-block:: none
-
-   SELECT
-     left.pk 
-     ,right.pk 
-   FROM unified_semantic_data AS left 
-   JOIN unified_semantic_data AS right
-   ON left.given_name(0,3) = right.given_name(0,3)
-   AND left.surname(0,3) = right.surname(0,3)
-   AND left.postal=right.postal
-
-.. stitch-blocking-block-example-end
-
-.. stitch-blocking-block-see-also-start
-
-The following sections step through a series of diagrams that describe how blocking works.
-
-.. stitch-blocking-block-see-also-end
-
-
-.. _stitch-blocking-potential:
-
-Potential blocks
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-blocking-potential-start
-
-The blocking process starts with no matches between records.
-
-.. stitch-blocking-potential-end
-
-.. image:: ../../images/howitworks-stitch-blocking-01-potential.png
-   :width: 600 px
-   :alt: The start of the blocking process contains zero matching records.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-blocking-potential-diagram-context-start
-
-Each of these individual dots represents an individual record that can match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
-
-.. stitch-blocking-potential-diagram-context-end
-
-
-.. _stitch-blocking-strategy-example-birthdate:
-
-Given name, surname, birthdate
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-blocking-strategy-example-birthdate-start
-
-The blocking process steps through each blocking strategy, with each blocking strategy defining specific matching patterns against which all records are compared. As records are analyzed and matched to patterns, the matching strings are grouped together for later comparison.
-
-.. stitch-blocking-strategy-example-birthdate-end
-
-.. image:: ../../images/howitworks-stitch-blocking-02-birthdate.png
-   :width: 600 px
-   :alt: Blocking by given-name(3), surname(1), and birthdate.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-blocking-strategy-example-birthdate-diagram-intro-start
-
-This example shows an important blocking strategy that groups values associated with the following semantics:
-
-* The first three characters in **given-name**
-* The first character in **surname**
-* **birthdate**.
-
-.. stitch-blocking-strategy-example-birthdate-diagram-intro-end
-
-
-.. _stitch-blocking-strategy-example-postal:
-
-Given name, surname, ZIP code
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-blocking-strategy-example-postal-start
-
-A record can match more than one blocking key. Some of the records highlighted in this example were also matched in the previous example.
-
-.. stitch-blocking-strategy-example-postal-end
-
-.. image:: ../../images/howitworks-stitch-blocking-03-postal.png
-   :width: 600 px
-   :alt: Blocking by given-name(3), surname(3), and postal code.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-blocking-strategy-example-postal-diagram-intro-start
-
-This example shows another important blocking strategy that groups values associated with the following semantics:
-
-* The first three characters in **given-name**
-* The first three characters in **surname**
-* **postal**.
-
-.. stitch-blocking-strategy-example-postal-diagram-intro-end
-
-
-.. _stitch-blocking-strategy-example-email:
-
-First 5 characters in email
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-blocking-strategy-example-email-start
-
-As each blocking strategy is applied, more groups of records are identified.
-
-.. stitch-blocking-strategy-example-email-end
-
-.. configure-stitch-advanced-email-address-patterns-start
-
-Many email addresses are not useful for identity resolution. Some of them are generic, such as *info@some-domain.com*, and are often associated with a place of business and should never be associated with a unique individual. Other email addresses are bogus, having been entered as a requirement for providing a genuine email address, but are otherwise fake, such as *123@some-domain.com*.
-
-.. configure-stitch-advanced-email-address-patterns-end
-
-.. stitch-blocking-strategy-example-email-name-matching-start
-
-Amperity uses a list of known "bad" email patterns, such as *admin@*, *contact@*, *guest@*, *no@*, *none@*, and then uses the list to exclude from Stitch results any email address that matches a pattern in the list. (This step is done during preprocessing, not blocking.)
-
-.. stitch-blocking-strategy-example-email-name-matching-end
-
-.. image:: ../../images/howitworks-stitch-blocking-04-email.png
-   :width: 600 px
-   :alt: Blocking by email(5).
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-blocking-strategy-example-email-diagram-intro-start
-
-This example shows additional record matches discovered after comparing the first five characters in email addresses across records.
-
-.. stitch-blocking-strategy-example-email-diagram-intro-end
-
-
-.. _stitch-blocking-complete:
-
-Blocking complete
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-blocking-complete-start
-
-When finished, the blocking process has unioned all of the matching blocking keys together into distinct groups of records.
-
-.. stitch-blocking-complete-end
-
-.. image:: ../../images/howitworks-stitch-blocking-05-final-a.png
-   :width: 600 px
-   :alt: The end of the blocking process has identified groups of records that are ready for pairwise comparison.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-blocking-complete-context-start
-
-These groups of records will be scored, first as an initial scoring pass that filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
-
-.. stitch-blocking-complete-context-end
-
-
-.. _stitch-initial-scoring:
-
-Initial scoring
---------------------------------------------------
-
-.. stitch-initial-scoring-start
-
-Each of the matching pairs that were directly identified during blocking are scored. Matching pairs that score below threshold are filtered out, which creates smaller groups of records and also new groups of records, depending on which matching pairs are filtered out.
-
-.. stitch-initial-scoring-end
-
-.. stitch-initial-scoring-filters-start
-
-The following example shows several matching pairs scoring below threshold, using larger dots to indicate which matching pairs scored below threshold.
-
-* Four groups of records show matching pairs scoring below threshold in a way that will split each of them into two groups of records.
-* One group of records shows three scores below threshold, one that does not affect the number of records in the group (because other scores for that record were above threshold) and one that is removed entirely.
-
-.. stitch-initial-scoring-filters-end
-
-.. image:: ../../images/howitworks-stitch-scoring-01-initial.png
-   :width: 600 px
-   :alt: Matching pairs discovered during blocking are scored.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-initial-scoring-result-start
-
-The remaining matching pairs that scored above threshold remain in groups. The following example shows most groups getting smaller, but also four new groups identified.
-
-.. stitch-initial-scoring-result-end
-
-.. image:: ../../images/howitworks-stitch-scoring-02-initial.png
-   :width: 600 px
-   :alt: Fewer records in groups, but also new groups.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-initial-scoring-note-start
-
-.. note:: Initial scoring uses the same scoring method as :ref:`pairwise comparison <stitch-pairwise-comparison>`, with exact, excellent, and high scores being "above threshold" and moderate, weak, and non-matching scores being "below threshold". The individual scoring methods are covered in greater detail in the following section about pairwise comparisons.
-
-.. stitch-initial-scoring-note-end
-
-
-.. _stitch-pairwise-comparison:
-
-Pairwise comparison
---------------------------------------------------
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-pairwise-comparison-start
-   :end-before: .. term-pairwise-comparison-end
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-pairwise-connection-start
-   :end-before: .. term-pairwise-connection-end
-
-.. stitch-pairwise-connection-note-start
-
-.. note:: Pairwise comparison uses the same scoring method as :ref:`initial scoring <stitch-initial-scoring>`, but expands scoring to include records with transitive connections.
-
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-transitive-connection-start
-      :end-before: .. term-transitive-connection-end
-
-.. stitch-pairwise-connection-note-end
-
-.. stitch-pairwise-comparison-single-block-intro-start
-
-An example of pairwise scoring using a single block of records:
-
-.. stitch-pairwise-comparison-single-block-intro-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-00-block-b.png
-   :width: 600 px
-   :alt: A single block of records ready for pairwise comparison scoring.
-   :align: left
-   :class: no-scaled-link
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-pairwise-connection-score-start
-   :end-before: .. term-pairwise-connection-score-end
-
-.. stitch-pairwise-comparison-score-types-start
-
-The following thresholds are available:
-
-.. list-table::
-   :widths: 200 200
-   :header-rows: 1
-
-   * - Threshold
-     - Match category
-   * - 5
-     - Exact
-   * - 4
-     - Excellent
-   * - 3
-     - High
-   * - 2
-     - Moderate
-   * - 1
-     - Weak
-
-By default, only record pairs with a pairwise comparison score of exact, excellent or high are kept.
-
-.. stitch-pairwise-comparison-score-types-end
-
-.. vale off
-
-.. stitch-pairwise-comparison-important-start
-
-.. important:: Records are scored based on a number of features, including:
-
-   * String matching patterns, such as Levenshtein and Jaro-Winkler distances, and Jaccard similarity
-   * Commonality statistics that focus on name distributions
-   * Name matching, including for nicknames, combined with addresses and phone numbers
-   * Lookup tables
-
-   Comparisons are made across a broad set of categories, including names, birthdates, email addresses, physical locations, and phone numbers.
-
-   .. list-table::
-      :widths: 200 400
-      :header-rows: 1
-
-      * - Category
-        - Comparisons
-      * - **Names**
-        - * How popular is the name?
-          * How closely do the names match?
-          * Do the names match on first *or* last, but not first *and* last?
-          * Are there any obvious conflicts?
-          * Are the names unlike each other?
-
-      * - **Birthdates**
-        - * How closely do the birthdates match?
-          * Are the birthdates unlike each other?
-
-      * - **Email addresses**
-        - * Do the usernames match exactly?
-          * Are there common *or* uncommon usernames that match, despite having different domains?
-          * Does one side of the email address--username *or* domain--have an exact match and the other side have an approximate match?
-
-      * - **Physical locations**
-        - * How closely do the addresses match?
-          * Do the addresses have the same ZIP code or city?
-          * Are there any obvious conflicts?
-          * Are the addresses unlike each other?
-
-      * - **Phone numbers**
-        - * Do the phone numbers match exactly?
-
-.. stitch-pairwise-comparison-important-end
-
-.. vale on
-
-
-.. _stitch-pairwise-comparison-potential:
-
-Potential connections
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-potential-start
-
-The pairwise comparison process goes beyond initial scoring to compare and then score all of the possible connections between all of the records that belong to the same group.
-
-A group of eight records shows how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
-
-.. stitch-pairwise-comparison-potential-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-01-potential.png
-   :width: 600 px
-   :alt: The start of the pairwise comparison process contains zero connections.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-potential-diagram-context-start
-
-This example shows the start of the pairwise comparison process and zero connections.
-
-.. stitch-pairwise-comparison-potential-diagram-context-start
-
-
-.. _stitch-pairwise-comparison-exact:
-
-Exact matches
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-exact-start
-
-An exact match score is applied to records in which all profile data matches or when a foreign key is present for both pairs and the associated values are identical.
-
-.. stitch-pairwise-comparison-exact-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-02-exact.png
-   :width: 600 px
-   :alt: An exact pairwise comparison scoring match between two records.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-exact-diagram-context-start
-
-This example shows an exact match between two records.
-
-.. stitch-pairwise-comparison-exact-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-excellent:
-
-Excellent matches
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-excellent-start
-
-An excellent match score is applied to records that, even with certain types of profile data not matching, are an obvious match.
-
-.. stitch-pairwise-comparison-excellent-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-03-excellent.png
-   :width: 600 px
-   :alt: An excellent pairwise comparison scoring match between two records
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-excellent-diagram-context-start
-
-This example shows an excellent match between two records.
-
-.. stitch-pairwise-comparison-excellent-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-high:
-
-High matches
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-high-start
-
-A high match score is applied to records that, even with some profile data not matching, after some deductive reasoning, appear to be records that match.
-
-.. stitch-pairwise-comparison-high-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-04-high.png
-   :width: 600 px
-   :alt: A high pairwise comparison scoring match between two records
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-high-diagram-context-start
-
-This example shows a high match between two records. The last names and ZIP codes are exact matches. The first names do not match, but do share a common nickname. The email addresses do not match, but are identical before the ``@`` symbol.
-
-.. stitch-pairwise-comparison-high-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-moderate:
-
-Moderate matches
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-moderate-start
-
-A moderate match score is applied to records that have weak or fuzzy matches between highly unique customer attributes, such as email, phone, and address.
-
-.. stitch-pairwise-comparison-moderate-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-05-moderate.png
-   :width: 600 px
-   :alt: A moderate pairwise comparison scoring match between two records.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-moderate-diagram-context-start
-
-This example shows a moderate match between two records.
-
-.. stitch-pairwise-comparison-moderate-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-weak:
-
-Weak matches
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-weak-start
-
-A weak match score is applied to records that match on non-unique customer attributes, such as name, state, and ZIP code, but cannot be easily associated with the same unique individual.
-
-.. stitch-pairwise-comparison-weak-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-06-weak.png
-   :width: 600 px
-   :alt: A weak pairwise comparison scoring match between two records.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-weak-diagram-context-start
-
-This example shows a weak match between two records.
-
-.. stitch-pairwise-comparison-weak-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-none:
-
-Non-match
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-none-start
-
-A non-matching score is applied to records in which core profile data between records does not match or when a separation key is present for both pairs and the associated values are conflicting.
-
-.. stitch-pairwise-comparison-none-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-07-none.png
-   :width: 600 px
-   :alt: Non-matching scores between two records.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-none-diagram-context-start
-
-This example shows non-matching scores between two records.
-
-.. stitch-pairwise-comparison-none-diagram-context-end
-
-
-.. _stitch-pairwise-comparison-all:
-
-All connections
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. stitch-pairwise-comparison-all-start
-
-After pairwise comparisons are completed and scored, the connections that scored below threshold (moderate, weak, and non-matching) are dropped. What remains is a group of records that identifies a unique person and to which an Amperity ID is assigned.
-
-.. stitch-pairwise-comparison-all-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-09-scores-x.png
-   :width: 600 px
-   :alt: All of the pairwise comparisons that scored above threshold.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-pairwise-comparison-all-diagram-context-start
-
-This example shows all of the pairwise comparisons that scored above threshold (exact, excellent, and high). The score at which record pairs fall below threshold is configurable. Moderate is the default threshold at which record pairs are dropped.
-
-.. stitch-pairwise-comparison-all-diagram-context-end
-
-
-.. _stitch-hierarchical-comparison:
-
-Hierarchical comparison
-++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-hierarchical-comparison-start
-   :end-before: .. term-hierarchical-comparison-end
-
-.. stitch-hierarchical-comparison-start
-
-A hierarchical comparison that identifies enough conflicting data allows Amperity to assert that a group of records should be split into two or more groups of records.
-
-.. stitch-hierarchical-comparison-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-11-hierarchical-x.png
-   :width: 600 px
-   :alt: A hierarchical comparison identifies a cluster as actually being two individuals, and then splits them.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-hierarchical-comparison-diagram-two-records-start
-
-This example shows a group of records (shown in the diagram as record set B) that has been identified by hierarchical comparison to represent two individuals, after which they are split into two groups of records (shown in the diagram as record sets B1 and B2).
-
-.. stitch-hierarchical-comparison-diagram-split-records-end
-
-
-.. _stitch-stable-ids:
-
-Stable ID assignment
---------------------------------------------------
-
-.. term-amperity-id-start
-
-An Amperity ID is a `patented unique identifier <https://amperity.com/patents>`__ that is `assigned to clusters of customer records <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__. A single Amperity ID represents a single individual. Unlike other systems, the Amperity ID is reassessed every day for the most comprehensive view of your customers.
-
-.. term-amperity-id-end
-
-.. stitch-stable-ids-important-start
-
-.. important:: Stable ID assignment is about minimizing unnecessary changes in Amperity ID assignment to customer records over time.
-
-.. stitch-stable-ids-important-end
-
-.. stitch-run-explore-by-amperity-id-start
-
-As new data is input to Amperity, the Stitch process identifies when new or changed data applies to existing clusters of customer records, and then updates those records, maintains the cluster, and retains a stable Amperity ID assignment. A new Amperity ID is only created when new individuals are identified.
-
-.. stitch-run-explore-by-amperity-id-end
-
-.. image:: ../../images/howitworks-stitch-pairwise-10-amperity-ids.png
-   :width: 600 px
-   :alt: A cluster with three unique individuals, each of which were assigned an Amperity ID.
-   :align: left
-   :class: no-scaled-link
-
-.. stitch-stable-ids-start
-
-This example shows three unique clusters of records, each of which were assigned an Amperity ID.
-
-.. stitch-stable-ids-end
-
-.. stitch-stable-ids-jitter-start
-
-.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
-
-.. stitch-stable-ids-jitter-ends
-
-
-.. _stitch-your-data-your-customers:
-
-Your data, your customers
+What are semantic tags?
 ==================================================
 
-.. stitch-your-data-your-customers-start
+.. term-semantic-start
 
-Amperity accurately identifies all of your unique customers in your data. All of your unique customers are assigned an Amperity ID.
+A semantic applies a common understanding to individual points of data across data sources, even when data sources have different schemas, naming conventions, and levels of data quality.
 
-.. stitch-your-data-your-customers-end
+.. term-semantic-end
 
-.. image:: ../../images/howitworks-stitch-intro-01-ampid.png
-   :width: 600 px
-   :alt: This is how Amperity finds your customers in your data.
+.. TODO: Edited glossary terms. The second one maybe doesn't work as well as an edited glossary term and is more tailored to this topic.
+
+.. term-semantic-tag-start
+
+A semantic tag is a label assigned to individual fields in source data to identify sources of personally identifiable information (PII), such as email addresses, phone numbers, and important business identifiers, such as a loyalty account ID. 
+
+.. term-semantic-tag-end
+
+.. stitch-semantic-tags-admonition-start
+
+.. admonition:: Which fields best identify your customers?
+
+   There are two considerations for identifying fields in source data that best identify your customers:
+
+   #. What do customers use to identify themselves to your brand?
+
+      This is often an email address or a phone number, but it might be a mileage plan number, a loyalty account number, a physical address, or some other identifier.
+
+   #. How does your brand identify customers?
+
+      This is most often a primary key in a source data tables that has personally identifiable information (PII) *and* information about some type of interaction customers have with your brand, such as a loyalty account table, a mileage plan table, a table for bookings, or a table for website or in-store transactions.
+
+.. stitch-semantic-tags-admonition-end
+
+
+.. _stitch-semantic-tags-profile:
+
+Profile tags identify PII
+--------------------------------------------------
+
+.. stitch-semantic-tags-profile-start
+
+Use customer profile semantic tags to identity PII in source data.
+
+The most important profile tags have unique values when tied to names and addresses. For example:
+
+* **email**
+* **phone**
+* **birthdate**
+
+Other profile semantic tags exist for **address**, **address2**, **city**, **company**, **country**, **gender**, **given-name**, **postal**, **state**, **surname**, and **title**. These are often less useful for cluster and separation rules.
+
+.. important:: A rule for each profile semantic tag is not required. Only configure rules for the most important profile semantic tags.
+
+   The **generational-suffix** semantic tag is a default rule, along with the combination of **given-name** and **surname** as a full **name**. Stitch rules, by default, separate on those semantic tags probabilistically when they do not fuzzy match.
+
+   Default rules can be moved to any location within the rules hierarchy, or even be removed, but if they remain in the default location, records with "John Smith III" and "John Smith II" or "John A Smith" and "John M Smith" are separated before they could match a non-default rule.
+
+.. stitch-semantic-tags-profile-end
+
+
+.. _stitch-semantic-tags-foreign-key:
+
+Foreign keys identify anchors
+--------------------------------------------------
+
+.. term-foreign-key-start
+
+A foreign key is a custom semantic tag applied to columns in source data tables that uniquely identify your business. For example, a loyalty ID, a durable customer ID, a website or mobile app login, a mileage ID, or a hospitality ID. Define cluster rules that match foreign key values to ensure that your most important identifiers become important identifiers within an identity graph.
+
+.. term-foreign-key-end
+
+.. stitch-semantic-tags-foreign-key-start
+
+Assign foreign keys to fields that uniquely identify customers in source tables. These are often, but not always, a primary key.
+
+A foreign key semantic tag starts with **fk-** and then appends a custom string: **fk-loyalty**. The custom string can have hyphens: **fk-loyalty-id**.
+
+For example:
+
+* Assign **fk-loyalty** to a loyalty account identifier
+* Assign **fk-booking** to a car or hotel reservation number
+* Assign **fk-stays** to hotel stay identifier
+* Assign **fk-rental** to a car rental identifier
+* Assign **fk-webstore** to a website transaction identifier
+* Assign **fk-store** to an in-store transaction identifier
+
+Define cluster rules with deterministic matching for the most important foreign key semantics, which often appear in source tables with PII.
+
+.. stitch-semantic-tags-foreign-key-end
+
+
+.. _stitch-what-are-rules:
+
+What are rules?
+==================================================
+
+.. stitch-what-are-rules-start
+
+An identity graph is built by comparing all of the possible connections between records, and then deciding which records should belong to a cluster of records within the identity graph and which ones should not.
+
+Rules help Stitch determine when to cluster or separate records.
+
+.. stitch-what-are-rules-end
+
+.. TODO: The following paragraph has unfinished phrasings. Where is the Rules tab?
+
+.. configure-stitch-rules-start
+
+Use the **Rules** tab to define a prioritized collection of rules that are used for identity resolution. Rules are evaluated in order, from top to bottom, starting from the first rule defined in this tab, until a rule is applied.
+
+.. image:: ../../images/mockup-stitch-settings-rules.png
+   :width: 520 px
+   :alt: Use the Rules tab to configure deterministic identity resolution.
    :align: left
    :class: no-scaled-link
 
-.. stitch-your-data-your-customers-context-start
+An individual rule defines when a set of records should be clustered together or be separated.
 
-Use the Amperity ID to understand how your customers have interacted with your brands and to determine the best ways your company can identify your best and most valuable customers and continue to engage with them.
+.. configure-stitch-rules-end
 
-.. stitch-your-data-your-customers-context-end
+
+.. _stitch-rules-define-outcomes:
+
+Rules define outcomes
+--------------------------------------------------
+
+.. stitch-rules-define-outcomes-start
+
+Define rules that align to your brand's business use cases *and* align to how your brand understands your customers. Put the rules into a specific order that identifies which foreign key identifiers are the most important to your brand.
+
+.. note:: The same field can serve opposite purposes depending on the chosen identity strategy.
+
+For example, if your brand's most important use case *and* data source is from a loyalty program then use a clustering rule that deterministically matches on loyalty ID and put that rule near or at the top of the list of rules.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - **Account-focused outcomes**
+     - **Customer-focused outcomes**
+   * - Account-focused outcomes build identity around how customers identify themselves to your brand using a combination of deterministic *and* probabilistic rules.
+
+       Account-focused outcomes increase uniqueness within identity graphs by separating records on:
+
+       * Phone numbers
+       * Email addresses
+       * Certain unique identifiers, such as private label credit cards
+
+       Use cases for account-focused identity graphs include:
+
+       * Personalization
+       * Clienteling
+       * Cart recovery
+       * Personalized marketing
+
+     - Customer-focused outcomes build a complete picture of an individual retail customer across all personas and accounts.
+
+       Customer-focused outcomes cluster records together on PII like phone numbers, email addresses, and private label credit cards.
+
+       Customer-focused outcomes rely on default scoring using Amperity AI, which is a hybrid approach to identity resolution that uses deterministic *and* probabilistic matching and leads to discovering transitive connections between records that might not otherwise match.
+
+       Customer-focused outcomes enrich profiles by:
+
+       * Associating interactions, such as purchases, website visits, cart activity, and other indicators of engagement
+       * Associate anonymous traffic with known profiles
+       * Lead to profiles with a more complete picture of who your customers are
+
+       Use cases for customer-focused identity graphs include:
+
+       * Abandoned carts
+       * Anonymous-to-known
+       * Cart recovery
+       * Personalized marketing
+
+.. TODO: This feels like a good and useful tip, but what does uniqueness mean and what does breadth mean and is it true?
+
+.. tip:: Use separation rules to increase uniqueness within the identity graph and create more smaller profiles. Use cluster rules to increase breadth and create fewer larger profiles.
+
+.. stitch-rules-define-outcomes-end
+
+.. _stitch-rules-order-matters:
+
+Rule order matters
+--------------------------------------------------
+
+.. stitch-rules-order-matters-start
+
+Since Stitch applies rules sequentially, and gives a score based on the first rule that produces useful information, the order of rules matters.
+
+For example, the **name is not the same** rule:
+
+#. Compares gender, given names, and surnames to determine if records should be separated.
+#. Records that do not match on gender are separated.
+#. For given names the rule looks for exact matches and nicknames, after which it looks for string similarities.
+#. For surnames the rule looks for exact matches, surnames swapped with given names, and string similarities. Popular surnames must match exactly.
+
+This rule, without any clustering rules configured in the rules list, will help ensure that only customers with names that almost match and have the same gender will belong to the same customer profile within the identity graph.
+
+This type of rule does not conflict with a clustering rule for matching loyalty IDs.
+
+Consider that a loyalty ID may be shared by more than one individual, especially in the same household.
+
+* If the **name is not the same** rule runs ahead of a clustering rule for loyalty IDs, each unique individual who may share a loyalty ID is more likely to be placed into their own customer profile within the identity graph.
+* If the **name is not the same** rule runs after a clustering rule for loyalty IDs, Stitch will try to cluster the records.
+
+.. TODO: Need to verify this is a good example of rules ordering. If not, find a better one.
+
+.. stitch-rules-order-matters-end
+
+.. _stitch-rule-types:
+
+About rule types
+--------------------------------------------------
+
+There are two types of rules:
+
+* :ref:`Cluster rules <stitch-rule-type-cluster>`
+* :ref:`Separation rules <stitch-rule-type-separation>`
+
+Cluster and separation rules let you decide when connections should be separated or when connections should be clustered.
+
+The right way to think about how to use these two types of rules for identity resolution is to think of each rule as an anchor for your brand's identity resolution strategy. An anchor is a durable customer identifier that belongs to a customer and stays with them for long periods of time. Anchors align to your brand's business goals and outcomes.
+
+An anchor is a value within a dataset that can uniquely identify individual customers. An email address. A phone number. A loyalty account ID. A mileage plan number. A branded credit account ID. Any transaction ID that uniquely identifies purchase interactions your customers have with your brand.
+
+Create a rule for every important anchor, and then rank them in order of importance.
+
+Identify anchors with the following questions:
+
+#. What does a customer use to identify themselves?
+
+   A customer uses their name, their email address, their phone number, their physical address. In many cases they use a website or app sign-in. After sign-in they may have a loyalty account ID. If they signed into your brand's web app they may also identify themselves from a device ID.
+
+#. What data defines your business?
+
+   Each source table that is made available to Amperity has important primary identifiers, also referred to as keys.
+
+   A source table for loyalty accounts will have a loyalty ID.
+
+   A booking and a stay or a trip is a type of transaction. These types of tables have unique identifiers for each stage in the transaction.
+
+   Website and in-store purchases have unique identifiers that are often tracked in tables dedicated to each channel. Each of these data sources have unique identifiers for the transaction.
+
+A huge identity graph of possible connections is turned into customer profiles by cutting connections between records that do not exactly match or have low matching scores *and* by keeping connections between records that exactly match or have high matching scores.
+
+.. TODO: Include as tip or note.
+
+.. configure-stitch-rules-order-start
+
+Rules can be put in any order you want, but they will be applied in the order that you arrange them, and scored based on the first rule that produces useful information. That means different rule orders will produce different outcomes. Click the |fa-drag| icon, and then drag the rule into the desired position.
+
+.. configure-stitch-rules-order-end
+
+
+.. _stitch-rule-type-cluster:
+
+Cluster rule types
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. TODO: Added context. Need to update and re-hook the inclusion.
+
+.. TODO: Need to redo the inclusions and table whantots in the event the updated nav structure holds.
+
+.. stitch-rule-type-cluster-start
+
+Cluster rules are a powerful way to ensure certain unique identifiers become important identifiers within an indentity graph.
+
+Cluster rules are deterministic because a loyalty ID is always a loyalty ID and an email address used to log in to your app is always an email address used to log into your app. These are unique identifiers that represent a specific known customer.
+
+.. stitch-rule-type-cluster-end
+
+.. configure-stitch-rules-cluster-start
+
+Rules can be configured to cluster records together when personally identifiable information (PII) matches or with matching foreign keys.
+
+.. TODO: In /operator/configure_stitch there is a big table here. In this topic the rows in the table are headers. After this topic ships, use includes to pull into the operator topic the sections from this topic.
+
+.. configure-stitch-rules-cluster-end
+
+
+.. _stitch-rule-type-cluster-values-match:
+
+Values match
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-cluster-values-match-start
+
+The **values match** rule compares values for the selected semantic tag and clusters records when values match exactly.
+
+Both records must have non-NULL, non-empty values that match exactly. A NULL or empty value on either side does not create a match.
+
+.. note:: When a record has multiple values for the same field, a match on any single value is sufficient 
+
+Use this condition for loyalty IDs, key business identifiers like booking IDs and stay IDs, email addresses and phone numbers, hashed values, and device IDs.
+
+.. stitch-rule-type-cluster-values-match-end
+
+
+.. _stitch-rule-type-cluster-values-approximately-match:
+
+Values approximately match
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-cluster-values-approximately-match-start
+
+The **values approximately match** rule compares values for the selected semantic tag and clusters records when values match or differ by up to a single character.
+
+Both records must have non-NULL, non-empty values. A NULL or empty value on either side does not create a match.
+
+Use this condition when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+
+.. stitch-rule-type-cluster-values-approximately-match-end
+
+
+.. _stitch-rule-type-separation:
+
+Separation rule types
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. TODO: Added context. Need to update and re-hook the inclusion.
+
+.. TODO: Need to redo the inclusions and table whantots in the event the updated nav structure holds.
+
+.. stitch-rule-type-separate-start
+
+Separation rules are a powerful way to control how clusters form within an indentity graph. They tell Stitch when records should not be in the same cluster.
+
+.. stitch-rule-type-separate-end
+
+.. configure-stitch-rules-separate-start
+
+Rules can be configured to separate records when values differ or when specific types of PII are similar, but do not match.
+
+.. TODO: In /operator/configure_stitch there is a big table here. In this topic the rows in the table are headers. After this topic ships, use includes to pull into the operator topic the sections from this topic.
+
+.. configure-stitch-rules-separate-end
+
+
+.. _stitch-rule-type-separation-birthdate:
+
+Birthdate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-birthdate-start
+
+The **birthdate is not the same (fuzzy match)** rule compares values for birthdates and separates records when values clearly differ.
+
+However, records are not separated when:
+
+* Birthdates are missing from one or both records
+* Birthdates differ by a single character
+* Exactly one component--YYYY, MM, or DD--differs by only one. For example: "2002-12-12" and "2001-12-12", "2002-12-12" and "2002-11-12", or "2002-12-09" and "2002-12-10"
+* MM and DD values appear swapped between records
+* A record has a placeholder value: "1900-01-01", "1910-01-01", "1920-01-01", "1930-01-01", "1940-01-01", "1950-01-01", "1960-01-01", "1970-01-01", "1980-01-01", "1990-01-01", "2000-01-01", "2010-01-01", and "2008-08-08".
+
+.. stitch-rule-type-separation-birthdate-end
+
+
+.. _stitch-rule-type-separation-company:
+
+Company
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-company-start
+
+The **company is not the same (fuzzy match)** rule compares values for company and separates records when values are not the same.
+
+.. tip:: This rule is more useful in business-to-business contexts where the value of **company** is stable and meaningful.
+
+.. stitch-rule-type-separation-company-end
+
+
+.. _stitch-rule-type-separation-generational-suffix:
+
+Generational suffix
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-generational-suffix-start
+
+The **generational suffix is not the same (fuzzy match)** rule compares values for generational suffix and separates records when values are not the same.
+
+.. stitch-rule-type-separation-generational-suffix-end
+
+
+.. _stitch-rule-type-separation-name:
+
+Name
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-name-start
+
+The **name is not the same (fuzzy match)** rule compares gender, given names, and surnames to determine if records should be separated.
+
+Records that do not match on gender are separated.
+
+For given names the rule looks for exact matches and nicknames, after which it looks for string similarities.
+
+For surnames the rule looks for exact matches, surnames swapped with given names, and string similarities. Common surnames must match exactly.
+
+.. stitch-rule-type-separation-name-end
+
+
+.. _stitch-rule-type-separation-values-differ:
+
+Values differ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-values-differ-start
+
+The **values differ** rule compares values for the selected semantic tag and separates records when values do not match exactly.
+
+Both records must have non-NULL, non-empty values that are not equal. A NULL or empty value on either side does not create a conflict.
+
+.. important:: Any difference, including a single character difference, creates a conflict. For tolerance of minor variations, such as typos or transpositions, use **values significantly differ**.
+
+.. stitch-rule-type-separation-values-differ-end
+
+
+.. _stitch-rule-type-separation-values-significantly-differ:
+
+Values significantly differ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. stitch-rule-type-separation-values-significantly-differ-start
+
+The **values significantly differ** rule compares values for the selected semantic tag and separates records when values differ by more than a single character.
+
+Both records must have non-NULL, non-empty values that differ by more than a single character. A NULL or empty value on either side does not create a conflict. A single character difference does not create a conflict.
+
+The following values do not conflict:
+
+* "Jon" and "John"
+* "Smith" and "Smyth"
+* "Phoenix" and "Pheonix"
+* "Santa Ana" and "Santa Anna"
+
+The following values conflict:
+
+* "Bob" and "Bobby"
+* "Jim" and "James"
+* "Fort Smith" and "Fort Worth"
+* "San Marcos" and "San Carlos"
+
+.. stitch-rule-type-separation-values-significantly-differ-end
+
+
+.. _stitch-scoring-confidence:
+
+Confidence and scoring
+--------------------------------------------------
+
+.. stitch-scoring-matches-and-conflicts-start
+
+A confident match is strong evidence that two records are the same person. A confident conflict is strong evidence that two records are not the same person.
+
+In many cases no meaningful signal exists to show that two records belong or do not belong to the same person.
+
+Identity resolution follows connections through the identity graph. When confident matches are discovered identity resolution keeps looking for additional matches.
+
+.. image:: ../../images/howitworks-identity-graph-matches.png
+   :width: 500 px
+   :alt: A transitive match
+   :align: left
+   :class: no-scaled-link
+
+When confident conflicts are discovered, identity resolution stops.
+
+.. image:: ../../images/howitworks-identity-graph-conflicts.png
+   :width: 500 px
+   :alt: A transitive match
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-scoring-matches-and-conflicts-end
+
+
+.. _stitch-scoring-remaining-records:
+
+Scoring remaining records
+--------------------------------------------------
+
+.. configure-stitch-rules-remaining-start
+
+For records that do not match any of the prioritized collection of rules there are two options: use the **AI model** or use **No matching model**.
+
+#. Recommended. Use the **AI model** and allow Stitch to evaluate these records, discover connections, and then use those connections to build clusters.
+
+#. Use **No matching model** and only score using the prioritized collection of rules to build clusters. Records that do not match one of the rules may end up as singleton clusters of one.
+
+.. configure-stitch-rules-remaining-end
+
+
+.. _stitch-examples:
+
+Cluster examples
+==================================================
+
+.. TODO: This section might need some heavy editing.
+
+.. stitch-examples-start
+
+It's not possible to describe how records match and form clusters by starting with the sheer potential size of an identity graph and the even larger number of potential matching records. Instead, this section uses diagrams to show how records in clusters can match and how customer profiles emerge from an identity graph.
+
+.. stitch-examples-end
+
+.. stitch-examples-cluster-graph-start
+
+.. tip:: Use the **Cluster graph** tab in the **Data Explorer** to explore the identity graph and view a detailed breakdown of the scoring relationships between all records within any cluster.
+
+   The **Cluster graph** tab shows the scores *and* source data for each pair of records within a cluster and shows why those two records matched well enough to belong to the same cluster.
+
+.. stitch-examples-cluster-graph-end
+
+.. stitch-example-matching-clusters-start
+
+The following examples describe how customer profiles emerge from an identity graph and how they adapt to new or changing information.
+
+* :ref:`Cluster A <stitch-example-matching-cluster-a>`
+* :ref:`Cluster B <stitch-example-matching-cluster-b>`
+* :ref:`Clusters adapt <stitch-example-matching-clusters-adapt>`
+
+.. stitch-example-matching-clusters-end
+
+
+.. _stitch-example-matching-cluster-a:
+
+Cluster A
+--------------------------------------------------
+
+.. stitch-example-matching-cluster-a-start
+
+Records one and six, one and three, and six and five all have confident matches. Transitive matches are present between records three and six, three and five, and five and one.
+
+.. image:: ../../images/howitworks-identity-graph-cluster1.png
+   :width: 500 px
+   :alt: A cluster of matched records
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-cluster-a-end
+
+
+.. _stitch-example-matching-cluster-b:
+
+Cluster B
+--------------------------------------------------
+
+.. stitch-example-matching-cluster-b-start
+
+Records one and four have similar names, do not have generational suffixes, and record 4 does not have a loyalty ID, booking ID, or stay ID.
+
+The email addresses for records one and four differer and the sixth rule in the rules set separates records when values for **email** differ.
+
+Record four confidently matches records eight and ten and transitively matches record 9 because records 9 and 10 confidently match.
+
+.. image:: ../../images/howitworks-identity-graph-cluster2.png
+   :width: 500 px
+   :alt: A cluster of matched records
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-cluster-b-end
+
+
+.. _stitch-example-matching-clusters-adapt:
+
+Clusters adapt
+--------------------------------------------------
+
+.. stitch-example-matching-clusters-adapt-start
+
+Individual clusters within an identity graph adapt and change as the underlying data made available to an identity graph changes.
+
+.. note:: A stable identity graph with rich data sources often has a low percentage of clusters that changed. One percent or fewer is not uncommon.
+
+   Adding a new high quality data sources causes some changes initially, but that will settle down after a short period of time.
+
+Every time Stitch builds an identity graph it starts with analyzing all source records. If the underlying data changes, in this case new data is available, Stitch adapts and adds the new information to the identity graph, reapplies rules, and rebuilds clusters of records that represent unique customer profiles within the identity graph.
+
+For example, a new data source with PII is added to Amperity. New record number seven confidently matches record one.
+
+.. image:: ../../images/howitworks-identity-graph-cluster3a.png
+   :width: 500 px
+   :alt: A cluster adapts to new information
+   :align: left
+   :class: no-scaled-link
+
+Record seven confidently matches record two.
+
+.. image:: ../../images/howitworks-identity-graph-cluster3b.png
+   :width: 500 px
+   :alt: A cluster adapts to new information
+   :align: left
+   :class: no-scaled-link
+
+Record seven confidently matches records one and two. Records one and two do not have a confident match, but are transitively connected because of the other confident matches.
+
+.. image:: ../../images/howitworks-identity-graph-cluster3c.png
+   :width: 500 px
+   :alt: A cluster adapts to new information
+   :align: left
+   :class: no-scaled-link
+
+All of the other records in the cluster scored like they did before the new data source was added. The cluster is updated to include records two and seven and the number of records in the rebuilt cluster is now seven.
+
+.. image:: ../../images/howitworks-identity-graph-cluster3d.png
+   :width: 500 px
+   :alt: A cluster adapts to new information
+   :align: left
+   :class: no-scaled-link
+
+.. stitch-example-matching-clusters-adapt-end
