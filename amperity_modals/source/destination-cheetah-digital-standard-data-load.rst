@@ -1,13 +1,13 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: Cheetah Digital Advanced Event Trigger
+.. |destination-name| replace:: Cheetah Digital Standard Data Load
 
 
-Cheetah Digital Advanced Event Trigger
+Cheetah Digital Standard Data Load
 ==================================================
 
-The |destination-name| destination triggers a campaign in Cheetah Digital (Marigold Engage Plus) the moment a customer qualifies for a journey activation step. Amperity calls the Campaign Trigger API directly using username and password authentication.
+The |destination-name| destination loads profile data into a Cheetah Digital (Marigold Engage Plus) recipient list the moment a customer qualifies for real-time activation. Use this destination to keep recipient data current for campaigns that run on Cheetah Digital's own schedule.
 
 
 Credentials
@@ -39,8 +39,6 @@ Settings
 
 **Required payload fields**
 
-The activation node payload must include the following fields:
+The activation node payload must include the following field:
 
-**cheetah_digital_campaign_id** The ID of the campaign to trigger. Obtain from your Cheetah Digital account manager or the Cheetah Digital platform.
-
-**cheetah_digital_table** The table ID for data import. Obtain from your Cheetah Digital account manager or the Cheetah Digital platform.
+**form_id** The API post ID of the recipient list in Cheetah Digital. All profile attributes and custom attributes in the activation node payload are loaded as name-value pairs into this list. Obtain the API post ID from your Cheetah Digital account manager or the Cheetah Digital platform.
