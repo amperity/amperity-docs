@@ -138,14 +138,24 @@ html_theme_options = {
                     "summary": "Programmatic access to your Amperity tenant."
                 },
                 {
-                    "title": "Profile API",
-                    "url": "../operator/api_profile",
-                    "summary": "Endpoints for unified customer profiles."
+                    "title": "Profile API v2",
+                    "url": "../api/endpoint_get_profile",
+                    "summary": "Batched profile lookup and enrichment."
+                },
+                {
+                    "title": "Real-time Events API",
+                    "url": "../realtime/overview#events-api",
+                    "summary": "Real-time, single-profile events stream."
+                },
+                {
+                    "title": "Real-time Profiles API",
+                    "url": "../realtime/overview#profile-api-v3",
+                    "summary": "Real-time profile lookups."
                 },
                 {
                     "title": "Streaming API",
                     "url": "../operator/api_streaming",
-                    "summary": "Stream from external systems in real-time."
+                    "summary": "High-volume event streaming."
                 },
             ]
         },
