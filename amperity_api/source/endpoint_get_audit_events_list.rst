@@ -194,11 +194,11 @@ The following examples show how to send requests to the **GET /audit-events** en
 
 .. endpoint-get-audit-events-list-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /audit-events** endpoint.
+      The following example shows how to use cURL to audit access logs during a compliance review.
 
       .. code-block:: rest
 
@@ -214,9 +214,9 @@ The following examples show how to send requests to the **GET /audit-events** en
 
       This example is formatted for readability in a narrow page layout.
 
-   .. tab-item:: Python
+   .. tab:: Python
 
-      The following example shows how to use Python to send a request to the **GET /audit-events** endpoint. This example converts the JSON response into a CSV file named "audit_events.csv".
+      The following example shows how to use Python to export audit events to a CSV file during a compliance review.
 
       .. code-block:: python
          :linenos:

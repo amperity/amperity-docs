@@ -149,11 +149,11 @@ The following examples show how to send requests to the **POST workflow/runs/{id
 
 .. endpoint-post-workflows-stop-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **POST workflow/runs/{id}/stop** endpoint.
+      The following example shows how to use cURL to halt a running workflow from an external system.
 
       .. code-block:: rest
 
@@ -163,7 +163,7 @@ The following examples show how to send requests to the **POST workflow/runs/{id
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
-      (This example is formatted for readability in a narrow page layout.)
+      This example is formatted for readability in a narrow page layout.
 
 .. endpoint-post-workflows-stop-request-examples-tabs-end
 

@@ -161,11 +161,11 @@ The following examples show how to send requests to the **GET /workflow/runs/{id
 
 .. endpoint-get-workflows-fetch-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /workflow/runs/{id}** endpoint.
+      The following example shows how to use cURL to check the status of a specific workflow run.
 
       .. code-block:: rest
 
