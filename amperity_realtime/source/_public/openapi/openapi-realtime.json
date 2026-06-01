@@ -1,0 +1,746 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Amperity Real-time API",
+    "version": "unstable",
+    "description": "## Overview\n\nThe Amperity Real-time API provides programmatic access to real-time customer profiles and segment membership in your Amperity tenant. Use Real-time API endpoints to look up live customer profiles by identity key, retrieve profile attributes, and query real-time segment membership for use in personalization, activation, and engagement workflows.\n\n## Versioning\n\nThe Real-time API is currently in an **unstable** release. Unstable versions contain features that are still in progress and may not be backward compatible.\n\nUnstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.\n\n## Authentication\n\nAll requests made to Real-time API endpoints must be authenticated using an API key that has the **Real-time API data access** policy attached.\n\nAuthenticate by including the following header in each request:\n\n```\n-H \"Authorization: Bearer ${access-token}\"\n```\n\nAfter the token passes validation, the request will look up any access policies attached to the API key, and then determine whether the requested operation is permitted.\n\n> **Important:** A user must be assigned the **Allow API key administration** policy before they can manage API keys and access tokens required by Amperity APIs.\n\n### API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Each API key has a unique internal secret that is signed into the claims of all access tokens issued for that API key.\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to production. API keys must be created directly in a sandbox.\n\n### Access tokens\n\nAccess to the Real-time API requires using [JSON Web Token (JWT)](https://jwt.io/) access tokens that are signed by Amperity-managed API keys. Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.\n\nAccess tokens are managed from the **Settings** page in Amperity. Open **Settings**, select the **Security** tab, find the API key, and select **Get token** from the actions menu.\n\n> **Important:** You are the only person who has access to the newly generated access token. Amperity does not save the access token. Store it in a safe place.\n\n## Base URL\n\nAll requests made to Real-time API endpoints should be directed to the base URL.\n\n### Amazon AWS\n\nTenants hosted in Amazon AWS use the following base URL:\n\n```\nhttps://app.amperity.com/prof\n```\n\nUse the `Amperity-Tenant` header to provide the tenant ID. You can find the tenant ID from the Amperity user interface: open **Settings**, select the **Security** tab, and under **API keys** select **Copy tenant ID** from the menu for an API key.\n\n### Microsoft Azure\n\nTenants hosted in Microsoft Azure use the following base URL:\n\n```\nhttps://<tenant-id>.amperity.com/prof\n```\n\nThe tenant ID must be in the base URL *and* in the `Amperity-Tenant` header.\n\n### Australia\n\nTenants hosted in Australia use the following default base URL:\n\n```\nhttps://app-aws-apse2.amperity.com/prof\n```\n\n## Requests\n\nRequests made to Real-time API endpoints require the following headers:\n\n- **Authorization** Required. The bearer authentication header. Use the access token for your tenant's API key.\n- **Amperity-Tenant** Required. The ID for the tenant to which the request is sent.\n\n**Example**\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/profiles/{collection-id}/lookup?email=user@example.com\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n\n## Responses\n\nReal-time API endpoints use conventional HTTP response status codes to indicate success or failure.\n\n### 2xx status codes\n\n| Status code | Description |\n|---|---|\n| **200 OK** | A request completed successfully. |\n\n### 4xx status codes\n\n| Status code | Description |\n|---|---|\n| **400 Bad Request** | A request did not contain a required parameter or has an invalid parameter. |\n| **401 Authentication Required** | A request contains invalid authentication or an expired token. |\n| **403 Not Authorized** | A request contains valid authentication, but does not have permission to perform the requested action. |\n| **404 Not Found** | A request was made to a resource that does not exist. |\n| **429 Too Many Requests** | The rate limit has been exceeded. |\n\n### 5xx status codes\n\n| Status code | Description |\n|---|---|\n| **500 Server Error** | An internal error occurred. |\n\n## Pagination\n\nAmperity uses cursor-based pagination to return pages of data for large lists. A cursor acts like a pointer and refers to a particular point in the data, marking the boundary between pages. A paginated endpoint returns responses with a list of results and a **next_token** parameter when another page is available. You have reached the last page when **next_token** is not returned.\n\n### Pagination in requests\n\n| Parameter | Description |\n|---|---|\n| **limit** | The maximum number of records to include in a single page of results. |\n| **next_token** | An opaque token used to paginate results. Omit to return the first page. Use the value returned in a prior response to view the next page. Cannot be **NULL**. |\n\n### Pagination in responses\n\n| Parameter | Description |\n|---|---|\n| **data** | A JSON array of values for the current page of results. |\n| **next_token** | The cursor value to use in a subsequent request to return the next page. When empty, the last page has been returned. |\n| **total** | The total count of all results. |\n",
+    "contact": {
+      "url": "https://docs.amperity.com/api/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://app.amperity.com/prof",
+      "description": "Amazon AWS"
+    },
+    {
+      "url": "https://{tenant-id}.amperity.com/prof",
+      "description": "Microsoft Azure",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Profiles",
+      "description": "Look up real-time customer profiles from a profile collection."
+    },
+    {
+      "name": "Segments",
+      "description": "Query real-time segment membership for profiles."
+    }
+  ],
+  "paths": {
+    "/profiles/{collection-id}/lookup": {
+      "get": {
+        "tags": [
+          "Profiles"
+        ],
+        "summary": "GET /profiles/{collection-id}/lookup",
+        "operationId": "lookup-profile",
+        "description": "Use the **GET /profiles/{collection-id}/lookup** endpoint to look up a customer profile from a collection using an identity key.\n\nProvide exactly one identity key as a query parameter. The key name must match a linking key configured for the collection. If the key matches a profile, the full profile is returned. If no match is found, a **404** response is returned.\n\nOptionally include `enrich=true` to return enriched profile data.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/profiles/{collection-id}/lookup?email=user@example.com\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/CollectionId"
+          },
+          {
+            "name": "enrich",
+            "in": "query",
+            "required": false,
+            "description": "Set to `true` to return enriched profile data.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "<linking-key>",
+            "in": "query",
+            "required": true,
+            "description": "The identity linking key and value to use for the lookup. Exactly one linking key must be provided. Replace `<linking-key>` with the name of a configured identity key for this collection.\n\nFor example: `?email=user@example.com` or `?loyalty_id=123456789`.\n",
+            "schema": {
+              "type": "string",
+              "example": "user@example.com"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns the matching customer profile.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                },
+                "example": {
+                  "collection_id": "col-abc123",
+                  "profile_id": "prf-xyz789",
+                  "attributes": {
+                    "first_name": "Daniel",
+                    "last_name": "Kuhlman",
+                    "email": "danielkuhlman@email.com",
+                    "loyalty_id": "123456789-0"
+                  },
+                  "created_at": "2026-01-15T10:30:00.000Z",
+                  "updated_at": "2026-05-14T08:00:00.000Z"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request \u2014 exactly one linking key must be specified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "error": "invalid-lookup-key",
+                  "message": "Exactly one lookup key must be specified",
+                  "collection": "col-abc123"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "description": "Not Found \u2014 no profile matched the specified linking key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "error": "not-found",
+                  "message": "No profile found for 'email'='user@example.com'",
+                  "collection": "col-abc123",
+                  "key": "email",
+                  "value": "user@example.com"
+                }
+              }
+            }
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    },
+    "/profiles/{collection-id}/stats": {
+      "get": {
+        "tags": [
+          "Profiles"
+        ],
+        "summary": "GET /profiles/{collection-id}/stats",
+        "operationId": "get-collection-stats",
+        "description": "Use the **GET /profiles/{collection-id}/stats** endpoint to return statistics for a profile collection.\n\nReturns aggregate information about the collection, including profile counts and last-updated timestamps.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/profiles/{collection-id}/stats\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/CollectionId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns statistics for the specified profile collection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollectionStats"
+                },
+                "example": {
+                  "collection_id": "col-abc123",
+                  "profile_count": 1482903,
+                  "updated_at": "2026-05-14T06:00:00.000Z"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    },
+    "/profiles/{collection-id}/{profile-id}": {
+      "get": {
+        "tags": [
+          "Profiles"
+        ],
+        "summary": "GET /profiles/{collection-id}/{profile-id}",
+        "operationId": "get-profile",
+        "description": "Use the **GET /profiles/{collection-id}/{profile-id}** endpoint to return a specific customer profile from a collection.\n\nThe `collection-id` identifies the profile collection. The `profile-id` identifies the individual customer profile within that collection.\n\nOptionally include `enrich=true` to return enriched profile data.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/profiles/{collection-id}/{profile-id}\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/CollectionId"
+          },
+          {
+            "$ref": "#/components/parameters/ProfileId"
+          },
+          {
+            "name": "enrich",
+            "in": "query",
+            "required": false,
+            "description": "Set to `true` to return enriched profile data.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns the specified customer profile.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                },
+                "example": {
+                  "collection_id": "col-abc123",
+                  "profile_id": "prf-xyz789",
+                  "attributes": {
+                    "first_name": "Daniel",
+                    "last_name": "Kuhlman",
+                    "email": "danielkuhlman@email.com",
+                    "loyalty_id": "123456789-0"
+                  },
+                  "created_at": "2026-01-15T10:30:00.000Z",
+                  "updated_at": "2026-05-14T08:00:00.000Z"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "description": "Not Found \u2014 no profile with the specified ID exists in the collection.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "error": "not-found",
+                  "message": "No profile in collection col-abc123 with id prf-xyz789",
+                  "collection": "col-abc123",
+                  "profile": "prf-xyz789"
+                }
+              }
+            }
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    },
+    "/profiles/{collection-id}/{profile-id}/segments": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "GET /profiles/{collection-id}/{profile-id}/segments",
+        "operationId": "list-profile-segments",
+        "description": "Use the **GET /profiles/{collection-id}/{profile-id}/segments** endpoint to return a paginated list of real-time segments that the specified profile is a member of.\n\nEach result includes the segment ID and segment name.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/profiles/{collection-id}/{profile-id}/segments\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/CollectionId"
+          },
+          {
+            "$ref": "#/components/parameters/ProfileId"
+          },
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/NextToken"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns a paginated list of segments the profile belongs to.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentMembershipListResponse"
+                },
+                "example": {
+                  "data": [
+                    {
+                      "segment_id": "rts-abc001",
+                      "segment_name": "Gold Loyalty Members"
+                    },
+                    {
+                      "segment_id": "rts-abc002",
+                      "segment_name": "High LTV \u2014 90 Day"
+                    }
+                  ],
+                  "next_token": "ABCa1bcdDEe2f3G",
+                  "total": 2
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    },
+    "/segments/{segment-id}/profiles": {
+      "get": {
+        "tags": [
+          "Segments"
+        ],
+        "summary": "GET /segments/{segment-id}/profiles",
+        "operationId": "list-segment-profiles",
+        "description": "Use the **GET /segments/{segment-id}/profiles** endpoint to return a paginated list of profiles that are members of the specified real-time segment.\n\nEach result includes the profile ID.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/segments/{segment-id}/profiles\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/SegmentId"
+          },
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/NextToken"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns a paginated list of profiles that are members of the segment.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentProfileListResponse"
+                },
+                "example": {
+                  "data": [
+                    {
+                      "profile_id": "prf-xyz789"
+                    },
+                    {
+                      "profile_id": "prf-def456"
+                    }
+                  ],
+                  "next_token": "ABCa1bcdDEe2f3G",
+                  "total": 4821
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authenticate using a Bearer token generated from an Amperity API key with the Real-time API data access policy. Include the token in the Authorization header of every request."
+      }
+    },
+    "parameters": {
+      "AmperityTenant": {
+        "name": "Amperity-Tenant",
+        "in": "header",
+        "required": true,
+        "description": "The unique identifier for the tenant.",
+        "schema": {
+          "type": "string",
+          "example": "<tenant-id>"
+        }
+      },
+      "CollectionId": {
+        "name": "collection-id",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier for the profile collection.",
+        "schema": {
+          "type": "string",
+          "example": "col-abc123"
+        }
+      },
+      "ProfileId": {
+        "name": "profile-id",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier for the customer profile.",
+        "schema": {
+          "type": "string",
+          "example": "prf-xyz789"
+        }
+      },
+      "SegmentId": {
+        "name": "segment-id",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier for the real-time segment.",
+        "schema": {
+          "type": "string",
+          "example": "rts-abc001"
+        }
+      },
+      "Limit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "description": "The maximum number of records to include in a single page of results.",
+        "schema": {
+          "type": "integer",
+          "example": 25
+        }
+      },
+      "NextToken": {
+        "name": "next_token",
+        "in": "query",
+        "required": false,
+        "description": "An opaque token that is used to paginate results. Omit the `next_token` property to return the first page. Use the cursor value for `next_token` that was returned in a response to view the next page of results.\n\n> **Important:** The value for `next_token` cannot be null.\n",
+        "schema": {
+          "type": "string",
+          "example": "ZVEy1iwsKBs9a6H"
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request \u2014 the request was malformed or contained invalid parameters.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "Authentication Required \u2014 no valid Bearer token was provided or the token has expired.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Not Authorized \u2014 the API key does not have permission for this operation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not Found \u2014 the requested resource does not exist.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "status": 404,
+              "message": "The requested entity does not exist.",
+              "request_id": "7d2f4a3e-1234-5678-90ab-cd3f",
+              "trace_id": "1c9d3asdfasdf9b0c1d2e3f4"
+            }
+          }
+        }
+      },
+      "TooManyRequests": {
+        "description": "Too Many Requests \u2014 the rate limit has been exceeded.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "InternalError": {
+        "description": "Internal Server Error \u2014 an unexpected error occurred.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "description": "An error response returned by the API.",
+        "required": [
+          "status",
+          "message"
+        ],
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code.",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable summary of the error.",
+            "example": "A human-readable summary of the error."
+          },
+          "request_id": {
+            "type": "string",
+            "description": "A unique identifier for the request.",
+            "example": "3fa85f64-1234-5678-901a-2c9asdfa6"
+          },
+          "trace_id": {
+            "type": "string",
+            "description": "A trace identifier for debugging.",
+            "example": "1c9d3asdfasdf9b0c1d2e3f4"
+          }
+        }
+      },
+      "ProfileAttributes": {
+        "type": "object",
+        "description": "A free-form object containing the attribute fields for a customer profile. The fields present in this object depend on the attributes configured for the collection.",
+        "additionalProperties": true,
+        "example": {
+          "first_name": "Daniel",
+          "last_name": "Kuhlman",
+          "email": "danielkuhlman@email.com",
+          "loyalty_id": "123456789-0"
+        }
+      },
+      "Profile": {
+        "type": "object",
+        "description": "A customer profile from a real-time profile collection.",
+        "required": [
+          "collection_id",
+          "profile_id"
+        ],
+        "properties": {
+          "collection_id": {
+            "type": "string",
+            "description": "The unique identifier for the profile collection.",
+            "example": "col-abc123"
+          },
+          "profile_id": {
+            "type": "string",
+            "description": "The unique identifier for the customer profile.",
+            "example": "prf-xyz789"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/ProfileAttributes"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the profile was created.",
+            "example": "2026-01-15T10:30:00.000Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the profile was last updated.",
+            "example": "2026-05-14T08:00:00.000Z"
+          },
+          "ticked_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the profile was last processed by the identity resolution pipeline.",
+            "example": "2026-05-14T06:00:00.000Z"
+          },
+          "links": {
+            "type": "array",
+            "description": "Identity links associated with this profile.",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        }
+      },
+      "CollectionStats": {
+        "type": "object",
+        "description": "Aggregate statistics for a profile collection.",
+        "properties": {
+          "collection_id": {
+            "type": "string",
+            "description": "The unique identifier for the profile collection.",
+            "example": "col-abc123"
+          },
+          "profile_count": {
+            "type": "integer",
+            "description": "The total number of profiles in the collection.",
+            "example": 1482903
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp at which the collection statistics were last updated.",
+            "example": "2026-05-14T06:00:00.000Z"
+          }
+        }
+      },
+      "SegmentMembership": {
+        "type": "object",
+        "description": "A real-time segment that a profile is a member of.",
+        "required": [
+          "segment_id"
+        ],
+        "properties": {
+          "segment_id": {
+            "type": "string",
+            "description": "The unique identifier for the real-time segment.",
+            "example": "rts-abc001"
+          },
+          "segment_name": {
+            "type": "string",
+            "description": "The display name of the real-time segment.",
+            "example": "Gold Loyalty Members"
+          }
+        }
+      },
+      "SegmentMembershipListResponse": {
+        "type": "object",
+        "description": "A paginated list of real-time segments a profile belongs to.",
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "A JSON array of segment membership objects for the current page of results.",
+            "items": {
+              "$ref": "#/components/schemas/SegmentMembership"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.",
+            "example": "ABCa1bcdDEe2f3G"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total number of segments the profile belongs to.",
+            "example": 2
+          }
+        }
+      },
+      "SegmentProfile": {
+        "type": "object",
+        "description": "A profile that is a member of a real-time segment.",
+        "required": [
+          "profile_id"
+        ],
+        "properties": {
+          "profile_id": {
+            "type": "string",
+            "description": "The unique identifier for the customer profile.",
+            "example": "prf-xyz789"
+          }
+        }
+      },
+      "SegmentProfileListResponse": {
+        "type": "object",
+        "description": "A paginated list of profiles that are members of a real-time segment.",
+        "properties": {
+          "data": {
+            "type": "array",
+            "description": "A JSON array of profile objects for the current page of results.",
+            "items": {
+              "$ref": "#/components/schemas/SegmentProfile"
+            }
+          },
+          "next_token": {
+            "type": "string",
+            "description": "The cursor value to use in a subsequent request to return the next page of results. When empty, the last page has been returned.",
+            "example": "ABCa1bcdDEe2f3G"
+          },
+          "total": {
+            "type": "integer",
+            "description": "The total number of profiles in the segment.",
+            "example": 4821
+          }
+        }
+      }
+    }
+  }
+}

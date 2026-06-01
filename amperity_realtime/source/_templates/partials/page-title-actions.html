@@ -1,0 +1,217 @@
+<script>
+(function() {
+  var _base = '{{ pageurl|default("") }}';
+  var _page = '{{ pagename }}';
+
+  function getMdUrl() {
+    /* Derive collection slug from html_baseurl, e.g. https://docs.amperity.com/operator/ → operator */
+    var colMatch = _base.match(/docs\.amperity\.com\/([^/]+)\//);
+    if (!colMatch) return null;
+    return 'https://docs.amperity.com/md/' + colMatch[1] + '/' + _page + '.md';
+  }
+
+  function getGitHubUrl() {
+    var colMatch = _base.match(/docs\.amperity\.com\/([^/]+)\//);
+    if (!colMatch) return null;
+    return 'https://github.com/amperity/amperity-docs/tree/main/amperity_' + colMatch[1] + '/source/' + _page + '.rst';
+  }
+
+  function setNewTab(el, url) {
+    if (!el || !url) return;
+    el.href = url;
+    el.target = '_blank';
+    el.rel = 'noopener';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var article = document.querySelector('article.yue');
+    if (!article) return;
+    var h1 = article.querySelector('h1');
+    if (!h1) return;
+
+    var mdUrl = getMdUrl();
+    var ghUrl = getGitHubUrl();
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'pt-title-row';
+    h1.parentNode.insertBefore(wrapper, h1);
+    wrapper.appendChild(h1);
+
+    wrapper.insertAdjacentHTML('beforeend', [
+      '<div class="pt-link-wrap">',
+        '<button class="md-link-btn" id="pt-link-btn" type="button" aria-haspopup="true" aria-expanded="false">',
+          'Page actions',
+          '<i class="fa-solid fa-angle-down md-caret-closed"></i>',
+          '<i class="fa-solid fa-angle-up md-caret-open"></i>',
+        '</button>',
+        '<div class="md-link-dropdown" id="pt-link-dropdown" role="menu">',
+          '<a class="md-link-item" id="pt-chatgpt-link" href="#" role="menuitem">',
+            '<i class="fa-brands fa-openai md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">Ask ChatGPT</span>',
+              '<span class="md-link-sub">Ask ChatGPT questions about this page</span>',
+            '</span>',
+          '</a>',
+          '<a class="md-link-item" id="pt-claude-link" href="#" role="menuitem">',
+            '<i class="fa-brands fa-claude md-link-icon md-link-icon-claude"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">Ask Claude</span>',
+              '<span class="md-link-sub">Ask Claude questions about this page</span>',
+            '</span>',
+          '</a>',
+          '<button class="md-link-item" id="pt-gemini-btn" type="button" role="menuitem">',
+            '<i class="fa-solid fa-sparkle md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">Ask Gemini after copying prompt to clipboard</span>',
+              '<span class="md-link-sub">Paste the prompt into Gemini</span>',
+            '</span>',
+          '</button>',
+          '<button class="md-link-item" id="pt-copy-md-url" type="button" role="menuitem">',
+            '<i class="fa-solid fa-robot md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">Ask other LLMs</span>',
+              '<span class="md-link-sub">Copy URL for Markdown page for use with other LLMs</span>',
+            '</span>',
+          '</button>',
+          '<a class="md-link-item" id="pt-github-link" href="#" role="menuitem">',
+            '<i class="fa-brands fa-github md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">Edit this page</span>',
+              '<span class="md-link-sub">Open this page in GitHub</span>',
+            '</span>',
+          '</a>',
+          '<div class="md-link-item md-link-rate-row" role="menuitem">',
+            '<i class="fa-solid fa-check md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title" id="pt-rate-title">Rate this page</span>',
+            '</span>',
+            '<div class="md-link-rate-btns">',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="1" aria-label="1 star"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="2" aria-label="2 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="3" aria-label="3 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="4" aria-label="4 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+              '<button class="md-link-rate-btn md-link-star" type="button" data-star="5" aria-label="5 stars"><i class="fa-regular fa-star md-star-empty"></i><i class="fa-solid fa-star md-star-filled"></i></button>',
+            '</div>',
+          '</div>',
+          '<a class="md-link-item" id="pt-view-link" href="#" role="menuitem">',
+            '<i class="fa-brands fa-markdown md-link-icon"></i>',
+            '<span class="md-link-text">',
+              '<span class="md-link-title">View Markdown</span>',
+              '<span class="md-link-sub">View this page as Markdown</span>',
+            '</span>',
+          '</a>',
+        '</div>',
+      '</div>'
+    ].join(''));
+
+    var btn        = document.getElementById('pt-link-btn');
+    var dropdown   = document.getElementById('pt-link-dropdown');
+    var copyUrlBtn = document.getElementById('pt-copy-md-url');
+    var githubLink = document.getElementById('pt-github-link');
+    var viewLink   = document.getElementById('pt-view-link');
+    var claudeLink = document.getElementById('pt-claude-link');
+    var chatgptLink= document.getElementById('pt-chatgpt-link');
+    var geminiBtn  = document.getElementById('pt-gemini-btn');
+    var rateTitle  = document.getElementById('pt-rate-title');
+    var starBtns   = dropdown.querySelectorAll('.md-link-star');
+    var currentRating = 0;
+
+    if (mdUrl) {
+      setNewTab(viewLink, mdUrl);
+      setNewTab(claudeLink, 'https://claude.ai/new?q=' + encodeURIComponent('Read ' + mdUrl + ' and help me understand this page.'));
+      setNewTab(chatgptLink, 'https://chatgpt.com/?q=' + encodeURIComponent('Read ' + mdUrl + ' so I can ask you questions about it.'));
+    }
+    if (ghUrl) setNewTab(githubLink, ghUrl);
+
+    function sendFeedback(type) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'feedback_click',
+        'feedback_type': type,
+        'feedback_element_id': 'thumbs-' + type.replace('_', '-'),
+        'page_path': window.location.pathname,
+        'page_title': document.title,
+        'timestamp': new Date().toISOString()
+      });
+    }
+
+    function setStarDisplay(count) {
+      Array.prototype.forEach.call(starBtns, function(s, i) {
+        s.classList.toggle('md-star-on', i < count);
+      });
+    }
+
+    Array.prototype.forEach.call(starBtns, function(star) {
+      var n = parseInt(star.getAttribute('data-star'));
+      star.addEventListener('mouseover', function() { setStarDisplay(n); });
+      star.addEventListener('mouseout', function() { setStarDisplay(currentRating); });
+      star.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentRating = n;
+        setStarDisplay(currentRating);
+        sendFeedback(n >= 4 ? 'thumbs_up' : 'thumbs_down');
+        if (rateTitle) rateTitle.textContent = 'Thanks!';
+        setTimeout(function() {
+          dropdown.classList.remove('md-link-open');
+          dropdown.style.minWidth = '';
+          btn.setAttribute('aria-expanded', 'false');
+          currentRating = 0;
+          setStarDisplay(0);
+          if (rateTitle) rateTitle.textContent = 'Rate this page';
+        }, 2000);
+      });
+    });
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = dropdown.classList.contains('md-link-open');
+      if (open) {
+        dropdown.style.minWidth = '';
+      }
+      dropdown.classList.toggle('md-link-open', !open);
+      if (!open) {
+        dropdown.style.minWidth = dropdown.offsetWidth + 'px';
+      }
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+
+    document.addEventListener('click', function() {
+      dropdown.classList.remove('md-link-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+
+    geminiBtn.addEventListener('click', function() {
+      if (mdUrl) {
+        var prompt = 'Read the page at ' + mdUrl + ' and be ready to answer my questions about it.';
+        window.open('https://gemini.google.com', '_blank', 'noopener');
+        navigator.clipboard.writeText(prompt).then(function() {
+          var titleEl = geminiBtn.querySelector('.md-link-title');
+          if (titleEl) {
+            titleEl.textContent = 'Copied!';
+            setTimeout(function() { titleEl.textContent = 'Ask Gemini after copying prompt to clipboard'; }, 1500);
+          }
+        });
+      }
+      dropdown.classList.remove('md-link-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    copyUrlBtn.addEventListener('click', function() {
+      if (mdUrl) {
+        var prompt = 'Read the page at ' + mdUrl + ' and be ready to answer my questions about it.';
+        navigator.clipboard.writeText(prompt).then(function() {
+          var titleEl = copyUrlBtn.querySelector('.md-link-title');
+          if (titleEl) {
+            titleEl.textContent = 'Copied!';
+            setTimeout(function() { titleEl.textContent = 'Ask other LLMs'; }, 1500);
+          }
+        });
+      }
+      dropdown.classList.remove('md-link-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
