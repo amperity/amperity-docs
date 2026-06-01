@@ -4327,9 +4327,9 @@ Use tabs selectively, such as for showing request code samples for APIs.
 
 .. code-block:: none
 
-   .. tab-set::
+   .. tabs::
 
-      .. tab-item:: cURL
+      .. tab:: cURL
 
          The following example shows how to use cURL to send a request to the **GET /campaigns** endpoint.
 
@@ -4347,7 +4347,7 @@ Use tabs selectively, such as for showing request code samples for APIs.
 
          (This example is formatted for readability in a narrow page layout.)
 
-      .. tab-item:: Python
+      .. tab:: Python
 
          The following example shows how to use Python to send a request to the **GET /campaigns** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
 
@@ -4395,9 +4395,9 @@ Use tabs selectively, such as for showing request code samples for APIs.
 
 **For this**
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
       The following example shows how to use cURL to send a request to the **GET /campaigns** endpoint.
 
@@ -4415,7 +4415,7 @@ Use tabs selectively, such as for showing request code samples for APIs.
 
       (This example is formatted for readability in a narrow page layout.)
 
-   .. tab-item:: Python
+   .. tab:: Python
 
       The following example shows how to use Python to send a request to the **GET /campaigns** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
 
