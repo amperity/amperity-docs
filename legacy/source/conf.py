@@ -143,12 +143,12 @@ html_theme_options = {
                 },
                 {
                     "title": "Real-time Events API",
-                    "url": "../realtime/overview#events-api",
+                    "url": "../realtime/overview",
                     "summary": "Real-time, single-profile events stream."
                 },
                 {
                     "title": "Real-time Profiles API",
-                    "url": "../realtime/overview#profile-api-v3",
+                    "url": "../realtime/overview",
                     "summary": "Real-time profile lookups."
                 },
                 {
