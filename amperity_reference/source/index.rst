@@ -324,6 +324,7 @@ Components
    Dashboards <grid_dashboards>
    Data exports <data_exports>
    Destinations <page_destinations>
+   Events <grid_events>
    File formats <grid_formats>
    Home <home>
    Predictive models <grid_models>
