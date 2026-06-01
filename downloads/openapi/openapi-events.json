@@ -1,0 +1,333 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Events API",
+    "version": "unstable",
+    "description": "## Overview\n\nThe Events API enables real-time behavioral event streaming to your Amperity tenant. Use the Events API to send customer behavioral events \u2014 such as page views, product interactions, purchases, and custom events \u2014 to a configured event stream for use in real-time profile enrichment and personalization workflows.\n\n## Versioning\n\nThe Events API is released under the **unstable** version identifier. Unstable versions contain features that are still in progress and may not be backward compatible.\n\nUnstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.\n\nRequests to Events API endpoints do not require a version header. The **Authorization** and **Amperity-Tenant** headers are the only required headers.\n\n## Authentication\n\nAll requests made to Events API endpoints must be authenticated using an API key that has the **Real-time API data access** policy attached.\n\nAuthenticate by including the following header in each request:\n\n```\n-H \"Authorization: Bearer ${access-token}\"\n```\n\nAfter the token passes validation, the request will look up any access policies attached to the API key, and then determine whether the requested operation is permitted.\n\n> **Important:** A user must be assigned the **Allow API key administration** policy before they can manage API keys and access tokens required by Amperity APIs.\n\n### API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Each API key has a unique internal secret that is signed into the claims of all access tokens issued for that API key.\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to production. API keys must be created in a sandbox to send events to the Events API.\n\n### Access tokens\n\nAccess to the Events API requires using JSON Web Token (JWT) access tokens that are signed by Amperity-managed API keys. Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.\n\nAccess tokens are managed from the **Settings** page in Amperity. Open **Settings**, select the **Security** tab, find the API key, and select **Get token** from the actions menu.\n\n> **Important:** You are the only person who has access to the newly generated access token. Amperity does not save the access token. Store it in a safe place.\n\n## Base URL\n\nEvents API endpoints use a base URL without the `/prof/` path prefix.\n\n### Amazon AWS\n\nTenants hosted in Amazon AWS use the following base URL:\n\n```\nhttps://app.amperity.com\n```\n\nUse the `Amperity-Tenant` header to provide the tenant ID.\n\n### Microsoft Azure\n\nTenants hosted in Microsoft Azure use the following base URL:\n\n```\nhttps://<tenant-id>.amperity.com\n```\n\nThe tenant ID must be in the base URL *and* in the `Amperity-Tenant` header.\n\n## Requests\n\nRequests made to Events API endpoints require the following headers:\n\n- **Authorization** Required. The bearer authentication header. Use the access token for your tenant's API key.\n- **Amperity-Tenant** Required. The ID for the tenant to which the request is sent.\n- **Content-Length** Required for POST requests. The byte length of the request body. Requests without this header will be rejected with a **411** response.\n- **Content-Type** Required for POST requests. Must be `application/json`.\n\n## Responses\n\nEvents API endpoints use conventional HTTP response status codes to indicate success or failure.\n\n### 2xx status codes\n\n| Status code | Description |\n|---|---|\n| **202 Accepted** | The event was accepted and queued for processing. |\n| **204 No Content** | The stream is configured to drop events. No action was taken. |\n\n### 4xx status codes\n\n| Status code | Description |\n|---|---|\n| **400 Bad Request** | The request body was malformed or not a JSON object. |\n| **401 Authentication Required** | The request contains invalid authentication or an expired token. |\n| **403 Not Authorized** | The API key does not have permission to write to this stream. |\n| **404 Not Found** | No stream with the specified ID exists for the tenant. |\n| **409 Conflict** | The stream is not currently accepting events. |\n| **411 Length Required** | The `Content-Length` header is missing. |\n| **413 Payload Too Large** | The request body exceeds the 64 KB size limit. |\n| **429 Too Many Requests** | The rate limit has been exceeded. |\n\n### 5xx status codes\n\n| Status code | Description |\n|---|---|\n| **503 Service Unavailable** | The event stream backend is temporarily unavailable. Retry with exponential backoff. |\n\n## Stream modes\n\nA stream can be in one of three modes that determine how submitted events are handled:\n\n| Mode | Response | Description |\n|---|---|---|\n| **active** | 202 Accepted | The event is accepted and queued for processing. |\n| **drop** | 204 No Content | The stream is configured to silently discard events. |\n| **reject** | 409 Conflict | The stream is not currently accepting events. |\n\n## Rate limits\n\nThe Events API enforces a rate limit of 2000 requests per second across the entire tenant, including sandboxes. Requests that exceed this limit may return an HTTP 429 response.\n",
+    "contact": {
+      "url": "https://docs.amperity.com/realtime/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://app.amperity.com",
+      "description": "Amazon AWS"
+    },
+    {
+      "url": "https://{tenant-id}.amperity.com",
+      "description": "Microsoft Azure",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Events",
+      "description": "Send behavioral events to a real-time event stream and sample recent events.\n"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authenticate using a Bearer token generated from an Amperity API key. Include the token in the Authorization header of every request.\n"
+      }
+    },
+    "parameters": {
+      "AmperityTenant": {
+        "name": "Amperity-Tenant",
+        "in": "header",
+        "required": true,
+        "description": "The unique identifier for the tenant.",
+        "schema": {
+          "type": "string",
+          "example": "<tenant-id>"
+        }
+      },
+      "StreamId": {
+        "name": "stream-id",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier for the event stream. For example: `esm-2cnVk9ngm`.\n",
+        "schema": {
+          "type": "string",
+          "example": "esm-2cnVk9ngm"
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "description": "An error response returned by the API.",
+        "required": [
+          "status",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code.",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "A description of the error.",
+            "example": "An unexpected error occurred."
+          }
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request \u2014 the request body was malformed or not a JSON object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "Authentication Required \u2014 no valid Bearer token was provided.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Not Authorized \u2014 the API key does not have permission for this operation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not Found \u2014 no stream with the specified ID exists for the tenant.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Conflict": {
+        "description": "Conflict \u2014 the stream is not currently accepting events.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "TooManyRequests": {
+        "description": "Too Many Requests \u2014 the rate limit has been exceeded.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ContentTooLarge": {
+        "description": "Payload Too Large \u2014 the request body exceeds the 64 KB size limit.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ServiceUnavailable": {
+        "description": "Service Unavailable \u2014 the event stream backend is temporarily unavailable. Retry with exponential backoff.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/streams/{stream-id}/sample-events": {
+      "get": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "GET /streams/{stream-id}/sample-events",
+        "operationId": "get-sample-events",
+        "description": "Returns a sample of recent events received by the stream. Returns up to **50** of the most recently received events.\n\nOptionally filter by event processing state or event type.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/StreamId"
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "description": "Filter results to events in a specific processing state. For example: `processed`.\n",
+            "schema": {
+              "type": "string",
+              "example": "processed"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": "Filter results to events with the specified event type. For example: `page_view` or `purchase`.\n",
+            "schema": {
+              "type": "string",
+              "example": "page_view"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A sample of up to 50 recent events from the stream.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "description": "An array of recent event objects. The fields in each event object reflect the fields that were included when the event was submitted.\n",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  }
+                },
+                "example": [
+                  {
+                    "event_name": "page_view",
+                    "event_timestamp": "2026-05-14T23:42:38.510Z",
+                    "page_title": "Acme Hotels - Luxury Hotels & Resorts",
+                    "page_location": "https://acmehotels.com/promotions/",
+                    "user_pseudo_id": "4a3271a9f4a22dbd.1778796153",
+                    "geo_country": "United States",
+                    "device_category": "desktop"
+                  }
+                ]
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          }
+        }
+      }
+    },
+    "/events/{stream-id}": {
+      "post": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "POST /events/{stream-id}",
+        "operationId": "post-event",
+        "description": "Sends a behavioral event to a real-time event stream.\n\nThe request body must be a single JSON object. Arrays are not supported. The body may not exceed **64 KB**. The **Content-Length** header is required.\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/StreamId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "A JSON object representing the behavioral event. The object may contain any fields relevant to the event. The body must not exceed 64 KB.\n\n> **Important:** The `Content-Length` header is required. Requests that do not include this header will return a **411** response.\n",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "A JSON object representing the event. The shape of this object is defined by the stream's event schema and may contain any fields relevant to the event.\n",
+                "additionalProperties": true
+              },
+              "example": {
+                "event_name": "room_search",
+                "event_timestamp": "2026-05-15T14:23:00.000Z",
+                "property_id": "SW001",
+                "check_in_date": "2026-08-10",
+                "check_out_date": "2026-08-14",
+                "nights": 4,
+                "guests": 2,
+                "room_type": "Suite",
+                "geo_country": "United Kingdom",
+                "device_category": "desktop",
+                "user_pseudo_id": "4a3271a9f4a22dbd.1778796153"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted \u2014 the event was received and queued for processing. No response body is returned."
+          },
+          "204": {
+            "description": "No Content \u2014 the stream is configured to drop events. The event was not processed and no response body is returned."
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "$ref": "#/components/responses/Conflict"
+          },
+          "411": {
+            "description": "Length Required \u2014 the `Content-Length` header is missing."
+          },
+          "413": {
+            "$ref": "#/components/responses/ContentTooLarge"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        }
+      }
+    }
+  }
+}
