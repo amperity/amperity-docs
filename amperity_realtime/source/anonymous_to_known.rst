@@ -196,8 +196,8 @@ These integrations stream identification events from login and authentication pl
    * - Auth0
      - Stream login and registration events from Auth0 Log Streams to Amperity. Auth0's **user_name** field carries the email address; **user_id** carries the Auth0 internal identifier. Every login event is an anonymous-to-known signal: the customer has identified themselves at this moment, with this email, from this connection.
 
-   * - Google
-     - Anonymous-to-known resolution via Google sign-in has not yet been documented. Integration patterns for Google Identity Services are under research.
+   * - Google Sign-In
+     - Stream a Google Sign-In identification event to Amperity from your site's backend at the moment the ID token is verified. The verified email in the token is the linking key. Sites that manage Google sign-in through Auth0 or Okta capture the same signal through those stream integrations without a separate relay.
 
    * - Okta
      - Stream login and lifecycle events from Okta Event Hooks to Amperity. Okta's **alternateId** field on the event target carries the email. User creation events (**user.lifecycle.create**) are particularly valuable for initial profile creation at the moment of account registration.
