@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="https://amperity-static-assets.s3-us-west-2.amazonaws.com/resources/img/favicon-16x16.png">
+    <script type="text/javascript" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPYT43JP04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GPYT43JP04');
+    </script>
+    <style>
+      rapi-doc {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <rapi-doc
+      spec-url="https://docs.amperity.com/downloads/openapi/openapi-events.json"
+      show-header="false"
+      render-style="read"
+      regular-font="Outfit"
+      mono-font="Roboto Mono"
+      font-size="largest"
+      sort-tags="true"
+      theme="light"
+      bg-color="#f2f4f5"
+      text-color="#0c0c0c"
+      header-color="#0c0c0c"
+      primary-color="#09717f"
+      nav-bg-color="#ffffff"
+      nav-text-color="#0c0c0c"
+      nav-hover-bg-color="#def2f7"
+      nav-hover-text-color="#004b57"
+      nav-accent-color="#067483"
+      nav-accent-text-color="#067483"
+      show-info="true"
+      info-description-headings-in-navbar="true"
+      allow-authentication="true"
+      allow-advanced-search="true"
+      allow-spec-file-download="true"
+      allow-try="true"
+      show-curl-before-try="true"
+      allow-server-selection="false"
+      allow-schema-description-expand-toggle="true"
+      schema-description-expanded="true"
+      schema-style="table"
+      default-schema-tab="example"
+      show-method-in-nav-bar="false"
+      nav-item-spacing="relaxed"
+      api-key-value="&lt;bearer-token&gt;"
+    >
+      <div slot="nav-logo" style="display: flex; align-items: center; justify-content: left; width: 100%;">
+        <img src="../_static/amp-yellow.png" style="width:80px; margin-right: 0">
+        <span style="color: #0c0c0c; font-size: 1.3em; font-weight: 600;">Real-time APIs</span>
+      </div>
+    </rapi-doc>
+    <script>
+      // Apply Amperity brand styles to RapiDoc's shadow DOM after the spec loads.
+      // To change method badge colors, update METHOD_COLORS here and in
+      // docs/claude/openapi/STYLING.md (the human-readable color reference).
+      document.addEventListener('DOMContentLoaded', function () {
+        var el = document.querySelector('rapi-doc');
+        if (!el) return;
+
+        var METHOD_COLORS = {
+          GET:     { background: '#b4e2ea', color: '#0d0e0e' },
+          POST:    { background: '#cbe5c3', color: '#0d0e0e' },
+          PUT:     { background: '#f5d9ba', color: '#0d0e0e' },
+          DELETE:  { background: '#eaed95', color: '#0d0e0e' },
+          PATCH:   { background: '#e7ecee', color: '#0d0e0e' },
+          HEAD:    { background: '#e7ecee', color: '#0d0e0e' },
+          OPTIONS: { background: '#e7ecee', color: '#0d0e0e' },
+        };
+
+        // Color badges in a shadow root, recursing into any nested shadow roots.
+        function colorBadges(root) {
+          // Content-pane badges via documented CSS part
+          root.querySelectorAll('[part~="label-operation-method"]').forEach(function (badge) {
+            var method = badge.textContent.trim().toUpperCase();
+            var c = METHOD_COLORS[method];
+            if (c) {
+              badge.style.backgroundColor = c.background;
+              badge.style.color = c.color;
+              badge.style.padding = '2px 4px';
+            }
+          });
+
+        }
+
+        function relabelExamples(root) {
+          var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+          var node;
+          while ((node = walker.nextNode())) {
+            if (node.nodeValue.indexOf('Examples:') !== -1) {
+              node.nodeValue = node.nodeValue.replace(/Examples:/g, 'For example:');
+            }
+          }
+        }
+
+        function applyStyles() {
+          var sr = el.shadowRoot;
+          if (!sr) return;
+
+          colorBadges(sr);
+          relabelExamples(sr);
+          // Hide the "OPERATIONS" section divider in the left nav
+          var walker = document.createTreeWalker(sr, NodeFilter.SHOW_TEXT);
+          var node;
+          while ((node = walker.nextNode())) {
+            if (node.nodeValue.trim() === 'OPERATIONS') {
+              if (node.parentElement) node.parentElement.style.display = 'none';
+              break;
+            }
+          }
+
+          // Hide "View OpenAPI spec (New Tab)" button
+          sr.querySelectorAll('button').forEach(function (btn) {
+            if (/view\s+openapi\s+spec/i.test(btn.textContent.trim())) {
+              btn.style.display = 'none';
+            }
+          });
+
+          // Inject structural CSS once
+          if (!sr.getElementById('amperity-custom-css')) {
+            var s = document.createElement('style');
+            s.id = 'amperity-custom-css';
+            s.textContent = [
+              'th { text-align: left !important; }',
+              'h1, h2, h3, h4, h5, h6 { font-weight: bold !important; }',
+              'h2 { border-bottom: 1px solid #c8cfd2; padding-bottom: 6px; margin-top: 20px; }',
+              '#api-info { padding-left: 0 !important; margin-left: 0 !important; }',
+              '.section-gap--read-mode { padding-left: 32px !important; }',
+              '.section-gap { padding-left: 32px !important; }',
+              '.nav-bar { padding: 0 14px !important; }',
+              '.nav-bar-logo { width: 100% !important; padding: 0 !important; }',
+              '.nav-bar-info, .nav-bar-tag, .nav-bar-path, .nav-bar-h { padding-left: 10px !important; padding-right: 0 !important; }',
+              '.nav-bar-tag, .nav-bar-info, [part~="section-navbar-tag"], [part~="section-navbar-active-tag"] { border-bottom: 1px solid #c8cfd2 !important; padding-bottom: 4px !important; margin-bottom: 2px !important; }',
+              '.nav-bar-path { align-items: stretch !important; }',
+              'td { padding-top: 12px !important; padding-bottom: 12px !important; }',
+              'p { margin-bottom: 1.5em !important; }',
+              'blockquote { padding-top: 5px !important; padding-bottom: 5px !important; margin-top: 6px !important; margin-bottom: 6px !important; }',
+              'blockquote p { margin-top: 0 !important; margin-bottom: 0 !important; }',
+            ].join('\n');
+            sr.appendChild(s);
+          }
+        }
+
+        el.addEventListener('spec-loaded', function () {
+          var sr = el.shadowRoot;
+          if (!sr) return;
+          applyStyles();
+
+          // Poll for 3s to override any late RapiDoc color applications
+          var ticks = 0;
+          var poll = setInterval(function () {
+            colorBadges(sr);
+            relabelExamples(sr);
+            if (++ticks >= 15) clearInterval(poll);
+          }, 200);
+
+          // Also watch for structural DOM changes (lazy-rendered nav items)
+          if (!sr._amperityObserver) {
+            sr._amperityObserver = new MutationObserver(function () { colorBadges(sr); relabelExamples(sr); });
+            sr._amperityObserver.observe(sr, { childList: true, subtree: true });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

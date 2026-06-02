@@ -148,11 +148,11 @@ The following examples show how to send requests to the **GET /ingest/jobs/{id}*
 
 .. endpoint-get-ingest-jobs-id-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /ingest/jobs/{id}** endpoint.
+      The following example shows how to use cURL to look up a specific ingestion job to check its progress.
 
       .. code-block:: rest
 

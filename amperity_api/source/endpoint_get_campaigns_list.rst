@@ -180,11 +180,11 @@ The following examples show how to send requests to the **GET /campaigns** endpo
 
 .. endpoint-get-campaigns-list-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /campaigns** endpoint.
+      The following example shows how to use cURL to list active campaigns for reporting or sync.
 
       .. code-block:: rest
 
@@ -199,9 +199,9 @@ The following examples show how to send requests to the **GET /campaigns** endpo
 
       This example is formatted for readability in a narrow page layout.
 
-   .. tab-item:: Python
+   .. tab:: Python
 
-      The following example shows how to use Python to send a request to the **GET /campaigns** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
+      The following example shows how to use Python to retrieve active campaigns and export them to a CSV file for reporting or sync.
 
       .. code-block:: python
          :linenos:

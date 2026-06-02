@@ -189,15 +189,15 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
 .. endpoint-post-workflows-start-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL, run campaign
+   .. tab:: cURL, run campaign
 
-      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a campaign.
+      The following example shows how to use cURL to trigger a campaign workflow from an external system.
 
       .. code-block:: rest
 
-         curl --request POST \ 
+         curl --request POST \
                 'https://app.amperity.com/api/workflow/runs' \
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
@@ -206,13 +206,13 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
       This example is formatted for readability in a narrow page layout.
 
-   .. tab-item:: cURL, run orchestration
+   .. tab:: cURL, run orchestration
 
-      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run an orchestration.
+      The following example shows how to use cURL to trigger an orchestration workflow from an external system.
 
       .. code-block:: rest
 
-         curl --request POST \ 
+         curl --request POST \
                 'https://app.amperity.com/api/workflow/runs' \
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
@@ -222,13 +222,13 @@ The following examples show how to send requests to the **POST /workflow/runs/**
       This example is formatted for readability in a narrow page layout.
 
 
-   .. tab-item:: cURL, run workflow
+   .. tab:: cURL, run workflow
 
-      The following example shows how to use cURL to send a request to the **POST /workflow/runs/** endpoint to run a courier group.
+      The following example shows how to use cURL to trigger a courier group workflow from an external system.
 
       .. code-block:: rest
 
-         curl --request POST \ 
+         curl --request POST \
                 'https://app.amperity.com/api/workflow/runs' \
               --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
@@ -238,9 +238,9 @@ The following examples show how to send requests to the **POST /workflow/runs/**
 
       This example is formatted for readability in a narrow page layout.
 
-   .. tab-item:: Python
+   .. tab:: Python
 
-      The following example shows how to use Python to send a request to the **POST /workflow/runs/** endpoint.
+      The following example shows how to use Python to trigger a courier group workflow from an external system.
 
       .. code-block:: python
          :linenos:

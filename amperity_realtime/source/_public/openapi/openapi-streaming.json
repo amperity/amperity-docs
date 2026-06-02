@@ -1,0 +1,396 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Amperity Streaming Ingest API",
+    "version": "unstable",
+    "description": "## Overview\n\nThe Amperity Streaming Ingest API enables real-time behavioral event streaming to your Amperity tenant. Use the Streaming Ingest API to send customer behavioral events \u2014 such as page views, product interactions, purchases, and custom events \u2014 to a configured event stream for use in real-time profile enrichment and personalization workflows.\n\n## Versioning\n\nThe Streaming Ingest API is currently in an **unstable** release. Unstable versions contain features that are still in progress and may not be backward compatible.\n\nUnstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.\n\n## Authentication\n\nAll requests made to Streaming Ingest API endpoints must be authenticated using an API key that has the **Streaming Ingest Write Access** policy attached.\n\nAuthenticate by including the following header in each request:\n\n```\n-H \"Authorization: Bearer ${access-token}\"\n```\n\nAfter the token passes validation, the request will look up any access policies attached to the API key, and then determine whether the requested operation is permitted.\n\n> **Important:** A user must be assigned the **Allow API key administration** policy before they can manage API keys and access tokens required by Amperity APIs.\n\n### API keys\n\nAmperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Each API key has a unique internal secret that is signed into the claims of all access tokens issued for that API key.\n\nAPI keys are tenant-specific and are not pulled to a sandbox or promoted from a sandbox to production. API keys must be created directly in a sandbox.\n\n### Access tokens\n\nAccess to the Streaming Ingest API requires using [JSON Web Token (JWT)](https://jwt.io/) access tokens that are signed by Amperity-managed API keys. Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.\n\nAccess tokens are managed from the **Settings** page in Amperity. Open **Settings**, select the **Security** tab, find the API key, and select **Get token** from the actions menu.\n\n> **Important:** You are the only person who has access to the newly generated access token. Amperity does not save the access token. Store it in a safe place.\n\n## Base URL\n\nAll requests made to Streaming Ingest API endpoints should be directed to the base URL.\n\n### Amazon AWS\n\nTenants hosted in Amazon AWS use the following base URL:\n\n```\nhttps://app.amperity.com/prof\n```\n\nUse the `Amperity-Tenant` header to provide the tenant ID. You can find the tenant ID from the Amperity user interface: open **Settings**, select the **Security** tab, and under **API keys** select **Copy tenant ID** from the menu for an API key.\n\n### Microsoft Azure\n\nTenants hosted in Microsoft Azure use the following base URL:\n\n```\nhttps://<tenant-id>.amperity.com/prof\n```\n\nThe tenant ID must be in the base URL *and* in the `Amperity-Tenant` header.\n\n### Australia\n\nTenants hosted in Australia use the following default base URL:\n\n```\nhttps://app-aws-apse2.amperity.com/prof\n```\n\n## Requests\n\nRequests made to the Streaming Ingest API require the following headers:\n\n- **Authorization** Required. The bearer authentication header. Use the access token for your tenant's API key.\n- **Amperity-Tenant** Required. The ID for the tenant to which the request is sent.\n- **Content-Length** Required for POST requests. The byte length of the request body. Requests without this header will be rejected with a **411** response.\n- **Content-Type** Required for POST requests. Must be `application/json`.\n\n**Example**\n\n```\ncurl -request POST \\\n     -url \"https://app.amperity.com/prof/events/{stream-id}\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"Content-Type: application/json\" \\\n     --data-binary '{\n       \"event_name\": \"page_view\",\n       \"page_title\": \"Home\",\n       \"user_pseudo_id\": \"4a3271a9f4a22dbd.1778796153\"\n     }'\n```\n\n## Responses\n\nStreaming Ingest API endpoints use conventional HTTP response status codes to indicate success or failure.\n\n### 2xx status codes\n\n| Status code | Description |\n|---|---|\n| **202 Accepted** | The event was accepted and queued for processing. |\n| **204 No Content** | The stream is configured to drop events. No action was taken. |\n\n### 4xx status codes\n\n| Status code | Description |\n|---|---|\n| **400 Bad Request** | The request body was malformed or not a JSON object. |\n| **401 Authentication Required** | The request contains invalid authentication or an expired token. |\n| **403 Not Authorized** | The API key does not have permission to write to this stream. |\n| **404 Not Found** | No stream with the specified ID exists for the tenant. |\n| **409 Conflict** | The stream is not currently accepting events. |\n| **411 Length Required** | The `Content-Length` header is missing. |\n| **413 Payload Too Large** | The request body exceeds the 64 KB size limit. |\n\n### 5xx status codes\n\n| Status code | Description |\n|---|---|\n| **503 Service Unavailable** | The event stream backend is temporarily unavailable. Retry with exponential backoff. |\n\n## Stream modes\n\nA stream can be in one of three modes that determine how submitted events are handled:\n\n| Mode | Response | Description |\n|---|---|---|\n| **active** | 202 Accepted | The event is accepted and queued for processing. |\n| **drop** | 204 No Content | The stream is configured to silently discard events. |\n| **reject** | 409 Conflict | The stream is not currently accepting events. |\n",
+    "contact": {
+      "url": "https://docs.amperity.com/api/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://app.amperity.com/prof",
+      "description": "Amazon AWS"
+    },
+    {
+      "url": "https://{tenant-id}.amperity.com/prof",
+      "description": "Microsoft Azure",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Events",
+      "description": "Stream behavioral events to a real-time profile collection."
+    }
+  ],
+  "paths": {
+    "/events/{stream-id}": {
+      "post": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "POST /events/{stream-id}",
+        "operationId": "post-event",
+        "description": "Use the **POST /events/{stream-id}** endpoint to stream a behavioral event to a real-time profile collection.\n\nThe request body must be a single JSON object. Arrays are not supported. Each request may contain up to **64 KB** of data.\n\nThe `Content-Length` header is required. Requests without a `Content-Length` header will be rejected with a **411** response.\n\n### Example\n\n```\ncurl -request POST \\\n     -url \"https://app.amperity.com/prof/events/{stream-id}\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\" \\\n     -H \"Content-Type: application/json\" \\\n     --data-binary '{\n       \"event_name\": \"page_view\",\n       \"event_timestamp\": \"2026-05-14T23:42:38.510Z\",\n       \"page_title\": \"Acme Hotels - Luxury Hotels & Resorts\",\n       \"page_location\": \"https://acmehotels.com/promotions/\",\n       \"user_pseudo_id\": \"4a3271a9f4a22dbd.1778796153\",\n       \"geo_country\": \"United States\",\n       \"device_category\": \"desktop\"\n     }'\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/StreamId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "A JSON object representing the behavioral event. The object may contain any fields relevant to the event. The body must not exceed 64 KB and the `Content-Length` header is required.\n",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventPayload"
+              },
+              "example": {
+                "event_name": "page_view",
+                "event_timestamp": "2026-05-14T23:42:38.510Z",
+                "page_title": "Acme Hotels - Luxury Hotels & Resorts",
+                "page_location": "https://acmehotels.com/promotions/",
+                "user_pseudo_id": "4a3271a9f4a22dbd.1778796153",
+                "geo_country": "United States",
+                "device_category": "desktop"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted \u2014 the event was received and queued for processing."
+          },
+          "204": {
+            "description": "No Content \u2014 the stream is configured to drop events. No action was taken."
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "description": "Not Found \u2014 no stream with the specified ID exists for the tenant.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "error": "stream-not-found",
+                  "message": "No stream esm-abc123 for tenant",
+                  "stream": "esm-abc123"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict \u2014 the stream is not currently accepting events.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "error": "stream-rejected",
+                  "message": "Stream esm-abc123 is not accepting events",
+                  "stream": "esm-abc123"
+                }
+              }
+            }
+          },
+          "411": {
+            "$ref": "#/components/responses/LengthRequired"
+          },
+          "413": {
+            "$ref": "#/components/responses/PayloadTooLarge"
+          },
+          "503": {
+            "$ref": "#/components/responses/ServiceUnavailable"
+          }
+        }
+      }
+    },
+    "/events/{stream-id}/recent": {
+      "get": {
+        "tags": [
+          "Events"
+        ],
+        "summary": "GET /events/{stream-id}/recent",
+        "operationId": "get-recent-events",
+        "description": "Use the **GET /events/{stream-id}/recent** endpoint to return a sample of recent events received by the stream.\n\nReturns up to **50** of the most recently received events. Optionally filter by processing state or event name.\n\n### Example\n\n```\ncurl -request GET \\\n     -url \"https://app.amperity.com/prof/events/{stream-id}/recent?name=page_view\" \\\n     -H \"Authorization: Bearer ${access-token}\" \\\n     -H \"Amperity-Tenant: <tenant-id>\"\n```\n",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/AmperityTenant"
+          },
+          {
+            "$ref": "#/components/parameters/StreamId"
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "description": "Filter results to events in a specific processing state.",
+            "schema": {
+              "type": "string",
+              "example": "processed"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "description": "Filter results to events with the specified event name. For example, `page_view` or `purchase`.",
+            "schema": {
+              "type": "string",
+              "example": "page_view"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK \u2014 returns a list of recent events from the stream.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EventRecord"
+                  }
+                },
+                "example": [
+                  {
+                    "event_name": "page_view",
+                    "event_timestamp": "2026-05-14T23:42:38.510Z",
+                    "user_pseudo_id": "4a3271a9f4a22dbd.1778796153"
+                  }
+                ]
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "429": {
+            "$ref": "#/components/responses/TooManyRequests"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Authenticate using a Bearer token generated from an Amperity API key with the Streaming Ingest Write Access policy. Include the token in the Authorization header of every request."
+      }
+    },
+    "parameters": {
+      "AmperityTenant": {
+        "name": "Amperity-Tenant",
+        "in": "header",
+        "required": true,
+        "description": "The unique identifier for the tenant.",
+        "schema": {
+          "type": "string",
+          "example": "<tenant-id>"
+        }
+      },
+      "StreamId": {
+        "name": "stream-id",
+        "in": "path",
+        "required": true,
+        "description": "The unique identifier for the event stream.",
+        "schema": {
+          "type": "string",
+          "example": "esm-2cnVk9ngm"
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request \u2014 the request body was malformed or was not a JSON object.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "Authentication Required \u2014 no valid Bearer token was provided or the token has expired.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Not Authorized \u2014 the API key does not have permission for this operation.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not Found \u2014 the requested resource does not exist.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "LengthRequired": {
+        "description": "Length Required \u2014 the `Content-Length` header is missing from the request.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "status": 411,
+              "message": "Missing content-length header"
+            }
+          }
+        }
+      },
+      "PayloadTooLarge": {
+        "description": "Payload Too Large \u2014 the request body exceeds the 64 KB size limit.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "status": 413,
+              "message": "JSON content too large"
+            }
+          }
+        }
+      },
+      "TooManyRequests": {
+        "description": "Too Many Requests \u2014 the rate limit has been exceeded.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ServiceUnavailable": {
+        "description": "Service Unavailable \u2014 the event stream backend is temporarily unavailable. Retry with exponential backoff.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "InternalError": {
+        "description": "Internal Server Error \u2014 an unexpected error occurred.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ErrorResponse": {
+        "type": "object",
+        "description": "An error response returned by the API.",
+        "required": [
+          "status",
+          "message"
+        ],
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code.",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "A human-readable summary of the error.",
+            "example": "A human-readable summary of the error."
+          },
+          "request_id": {
+            "type": "string",
+            "description": "A unique identifier for the request.",
+            "example": "3fa85f64-1234-5678-901a-2c9asdfa6"
+          },
+          "trace_id": {
+            "type": "string",
+            "description": "A trace identifier for debugging.",
+            "example": "1c9d3asdfasdf9b0c1d2e3f4"
+          }
+        }
+      },
+      "EventPayload": {
+        "type": "object",
+        "description": "A JSON object representing a behavioral event. The object may contain any fields relevant to the event. No specific fields are required, but the object must include at least one property. The body must not exceed 64 KB.\n",
+        "additionalProperties": true,
+        "example": {
+          "event_name": "page_view",
+          "event_timestamp": "2026-05-14T23:42:38.510Z",
+          "page_title": "Acme Hotels - Luxury Hotels & Resorts",
+          "page_location": "https://acmehotels.com/promotions/",
+          "user_pseudo_id": "4a3271a9f4a22dbd.1778796153",
+          "geo_country": "United States",
+          "device_category": "desktop"
+        }
+      },
+      "EventRecord": {
+        "type": "object",
+        "description": "A record of a received event as stored in the stream.",
+        "additionalProperties": true,
+        "example": {
+          "event_name": "page_view",
+          "event_timestamp": "2026-05-14T23:42:38.510Z",
+          "user_pseudo_id": "4a3271a9f4a22dbd.1778796153"
+        }
+      }
+    }
+  }
+}

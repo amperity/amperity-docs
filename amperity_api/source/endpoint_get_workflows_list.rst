@@ -231,11 +231,11 @@ The following examples show how to send requests to the **GET /workflow/runs** e
 
 .. endpoint-get-workflows-list-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /workflow/runs** endpoint.
+      The following example shows how to use cURL to list workflow runs for operational monitoring.
 
       .. code-block:: rest
 

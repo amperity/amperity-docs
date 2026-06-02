@@ -94,3 +94,4 @@ Site index
    data_templates
    format_dat
    ingest_queries
+   stitch

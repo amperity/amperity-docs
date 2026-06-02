@@ -185,11 +185,11 @@ The following examples show how to send requests to the **GET /campaign-drafts**
 
 .. endpoint-get-campaign-drafts-list-request-examples-tabs-start
 
-.. tab-set::
+.. tabs::
 
-   .. tab-item:: cURL
+   .. tab:: cURL
 
-      The following example shows how to use cURL to send a request to the **GET /campaign-drafts** endpoint.
+      The following example shows how to use cURL to check draft campaign status before publishing.
 
       .. code-block:: rest
 
@@ -204,9 +204,9 @@ The following examples show how to send requests to the **GET /campaign-drafts**
 
       This example is formatted for readability in a narrow page layout.
 
-   .. tab-item:: Python
+   .. tab:: Python
 
-      The following example shows how to use Python to send a request to the **GET /campaign-drafts** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
+      The following example shows how to use Python to retrieve draft campaigns and export them to a CSV file before a publishing review.
 
       .. code-block:: python
          :linenos:

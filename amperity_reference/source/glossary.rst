@@ -26,6 +26,14 @@ A
 ==================================================
 
 
+.. _a-abandoned-cart:
+
+**abandoned cart**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-abandoned-cart-start
+      :end-before: .. term-abandoned-cart-end
+
+
 .. _a-activation-states-tables:
 
 **Activation States**
@@ -344,6 +352,14 @@ A
       :end-before: .. term-amplitude-end
 
 
+.. _a-anonymous-profile:
+
+**anonymous profile**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-anonymous-profile-start
+      :end-before: .. term-anonymous-profile-end
+
+
 .. _a-anonymous-visitor:
 
 **anonymous visitor**
@@ -463,6 +479,15 @@ A
       :start-after: .. term-australian-privacy-principles-start
       :end-before: .. term-australian-privacy-principles-end
 
+
+.. _a-auth0:
+
+**Auth0**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-auth0-start
+      :end-before: .. term-auth0-end
+
+
 .. _a-authentication:
 
 **authentication**
@@ -565,6 +590,14 @@ A
       :end-before: .. term-azure-data-share-end
 
 
+.. _a-azure-functions:
+
+**Azure Functions**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-microsoft-azure-functions-start
+      :end-before: .. term-microsoft-azure-functions-end
+
+
 .. _a-azure-synapse-analytics:
 
 **Azure Synapse Analytics**
@@ -572,6 +605,13 @@ A
       :start-after: .. term-azure-synapse-analytics-start
       :end-before: .. term-azure-synapse-analytics-end
 
+
+.. _b-backend-for-frontend-bff:
+
+**backend for frontend (BFF)**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-bff-start
+      :end-before: .. term-bff-end
 
 
 .. _glossary-b:
@@ -795,6 +835,14 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-channel-start
       :end-before: .. term-channel-end
+
+
+.. _c-chargebee:
+
+**Chargebee**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-chargebee-start
+      :end-before: .. term-chargebee-end
 
 
 .. _c-cheetah-digital:
@@ -1457,6 +1505,14 @@ D
       :end-before: .. term-delete-user-record-request-end
 
 
+.. _d-deliverect:
+
+**Deliverect**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-deliverect-start
+      :end-before: .. term-deliverect-end
+
+
 .. _d-delta-lake:
 
 **Delta Lake**
@@ -1589,6 +1645,14 @@ D
    .. include:: ../../shared/terms.rst
       :start-after: .. term-domo-start
       :end-before: .. term-domo-end
+
+
+.. _d-doordash:
+
+**DoorDash**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-doordash-start
+      :end-before: .. term-doordash-end
 
 
 .. _d-dotdigital:
@@ -2016,6 +2080,22 @@ F
       :end-before: .. term-full-name-ampid-end
 
 
+.. _f-fullstory:
+
+**FullStory**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-fullstory-start
+      :end-before: .. term-fullstory-end
+
+
+.. _g-ga4-measurement-protocol:
+
+**GA4 Measurement Protocol**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-ga4-measurement-protocol-start
+      :end-before: .. term-ga4-measurement-protocol-end
+
+
 .. _glossary-g:
 
 G
@@ -2144,6 +2224,22 @@ G
       :end-before: .. term-google-pubsub-end
 
 
+.. _g-google-tag-manager:
+
+**Google Tag Manager**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-google-tag-manager-start
+      :end-before: .. term-google-tag-manager-end
+
+
+.. _g-gorgias:
+
+**Gorgias**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-gorgias-start
+      :end-before: .. term-gorgias-end
+
+
 .. _g-graph-database:
 
 **graph database**
@@ -2213,6 +2309,14 @@ H
    .. include:: ../../shared/terms.rst
       :start-after: .. term-high-cardinality-profile-attribute-start
       :end-before: .. term-high-cardinality-profile-attribute-end
+
+
+.. _h-hospitality-booking-events:
+
+**hospitality booking events**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-hospitality-start
+      :end-before: .. term-hospitality-end
 
 
 .. _h-holdout-control-group:
@@ -2542,6 +2646,14 @@ K
       :end-before: .. term-klaviyo-end
 
 
+.. _k-known-profile:
+
+**known profile**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-known-profile-start
+      :end-before: .. term-known-profile-end
+
+
 .. _k-koupon-media:
 
 **Koupon Media**
@@ -2626,6 +2738,14 @@ L
    .. include:: ../../shared/terms.rst
       :start-after: .. term-latest-order-total-items-start
       :end-before: .. term-latest-order-total-items-end
+
+
+.. _l-lightspeed-ecom:
+
+**Lightspeed eCom**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-lightspeed-ecom-start
+      :end-before: .. term-lightspeed-ecom-end
 
 
 .. _l-lcv:
@@ -2796,6 +2916,14 @@ L
       :end-before: .. term-loyalty-id-ampid-end
 
 
+.. _l-loyaltylion:
+
+**LoyaltyLion**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-loyaltylion-start
+      :end-before: .. term-loyaltylion-end
+
+
 .. _glossary-m:
 
 M
@@ -2908,6 +3036,14 @@ M
       :end-before: .. term-meta-ads-manager-end
 
 
+.. _m-metarouter:
+
+**MetaRouter**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-metarouter-start
+      :end-before: .. term-metarouter-end
+
+
 .. _m-metrics:
 
 **metrics**
@@ -2964,6 +3100,14 @@ M
       :end-before: .. term-mobile-interactions-table-end
 
 
+.. _m-mobile-app-event-streaming:
+
+**mobile app event streaming**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-mobile-start
+      :end-before: .. term-mobile-end
+
+
 .. _m-moengage:
 
 **MoEngage**
@@ -2992,6 +3136,14 @@ M
    .. include:: ../../shared/terms.rst
       :start-after: .. term-moveable-ink-start
       :end-before: .. term-moveable-ink-end
+
+
+.. _m-mparticle:
+
+**mParticle**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-mparticle-start
+      :end-before: .. term-mparticle-end
 
 
 .. _m-msrp:
@@ -3097,6 +3249,22 @@ N
       :end-before: .. term-neustar-end
 
 
+.. _n-netlify:
+
+**Netlify**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-netlify-start
+      :end-before: .. term-netlify-end
+
+
+.. _n-netlify-forms:
+
+**Netlify Forms**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-netlify-forms-start
+      :end-before: .. term-netlify-forms-end
+
+
 .. _n-nicknames:
 
 **nicknames**
@@ -3131,6 +3299,14 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-odbc-start
       :end-before: .. term-odbc-end
+
+
+.. _o-okta:
+
+**Okta**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-okta-start
+      :end-before: .. term-okta-end
 
 
 .. _o-offline-conversions:
@@ -3206,6 +3382,14 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-oracle-dmp-start
       :end-before: .. term-oracle-dmp-end
+
+
+.. _o-oracle-hospitality-opera-cloud:
+
+**Oracle Hospitality OPERA Cloud**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-oracle-hospitality-start
+      :end-before: .. term-oracle-hospitality-end
 
 
 .. _o-oracle-opera:
@@ -3759,6 +3943,14 @@ P
       :end-before: .. term-psv-end
 
 
+.. _p-punchh:
+
+**Punchh**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-punchh-start
+      :end-before: .. term-punchh-end
+
+
 .. _p-purchase-brand:
 
 **purchase brand**
@@ -3864,6 +4056,14 @@ Q
       :end-before: .. term-query-folder-end
 
 
+.. _r-rabbitmq:
+
+**RabbitMQ**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-rabbitmq-start
+      :end-before: .. term-rabbitmq-end
+
+
 .. _glossary-r:
 
 R
@@ -3900,6 +4100,14 @@ R
    .. include:: ../../shared/terms.rst
       :start-after: .. term-rcfile-start
       :end-before: .. term-rcfile-end
+
+
+.. _r-real-time-segment:
+
+**real-time segment**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-realtime-segment-start
+      :end-before: .. term-realtime-segment-end
 
 
 .. _r-real-time-profile-api:
@@ -4010,6 +4218,14 @@ R
       :end-before: .. term-rectangular-data-end
 
 
+.. _r-recurly:
+
+**Recurly**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-recurly-start
+      :end-before: .. term-recurly-end
+
+
 .. _r-recurring-campaign:
 
 **recurring campaign**
@@ -4066,6 +4282,14 @@ R
       :end-before: .. term-retention-rate-end
 
 
+.. _r-revenuecat:
+
+**RevenueCat**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-revenuecat-start
+      :end-before: .. term-revenuecat-end
+
+
 .. _r-rfm:
 
 **RFM** (customer value)
@@ -4074,12 +4298,44 @@ R
       :end-before: .. term-rfm-end
 
 
+.. _r-rivo:
+
+**Rivo**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-rivo-start
+      :end-before: .. term-rivo-end
+
+
 .. _r-rrd:
 
 **RR Donnelly**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-rrd-start
       :end-before: .. term-rrd-end
+
+
+.. _r-ruby:
+
+**Ruby**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-ruby-start
+      :end-before: .. term-ruby-end
+
+
+.. _r-ruby-on-rails:
+
+**Ruby on Rails**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-ruby-on-rails-start
+      :end-before: .. term-ruby-on-rails-end
+
+
+.. _r-rudderstack:
+
+**RudderStack**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-rudderstack-start
+      :end-before: .. term-rudderstack-end
 
 
 .. _r-rsa:
@@ -4390,6 +4646,14 @@ S
    .. include:: ../../shared/terms.rst
       :start-after: .. term-slice-start
       :end-before: .. term-slice-end
+
+
+.. _s-smileio:
+
+**Smile.io**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-smile-io-start
+      :end-before: .. term-smile-io-end
 
    See :ref:`segment <s-segment>`.
 
@@ -4722,6 +4986,14 @@ S
       :end-before: .. term-streaming-ingest-api-end
 
 
+.. _s-stripe:
+
+**Stripe**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-stripe-start
+      :end-before: .. term-stripe-end
+
+
 .. _s-streaming-json:
 
 **streaming JSON**
@@ -4791,6 +5063,14 @@ S
       :end-before: .. term-surname-ampid-end
 
 
+.. _s-swell:
+
+**Swell**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-swell-start
+      :end-before: .. term-swell-end
+
+
 .. _glossary-t:
 
 T
@@ -4817,6 +5097,14 @@ T
    .. include:: ../../shared/terms.rst
       :start-after: .. term-taxonomy-start
       :end-before: .. term-taxonomy-end
+
+
+.. _t-tealium:
+
+**Tealium**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-tealium-start
+      :end-before: .. term-tealium-end
 
 
 .. _t-temporary-table:
@@ -4962,6 +5250,15 @@ T
 
    See :ref:`qualified trivial duplicate <q-qualified-trivial-duplicate>`.
 
+
+.. _t-trueloyal:
+
+**TrueLoyal**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-trueloyal-start
+      :end-before: .. term-trueloyal-end
+
+
 .. _t-tsv:
 
 **TSV**, **tab-separated value**
@@ -4976,6 +5273,22 @@ T
    .. include:: ../../shared/terms.rst
       :start-after: .. term-tulip-start
       :end-before: .. term-tulip-end
+
+
+.. _t-typeform:
+
+**Typeform**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-typeform-start
+      :end-before: .. term-typeform-end
+
+
+.. _u-uber-eats:
+
+**Uber Eats**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-uber-eats-start
+      :end-before: .. term-uber-eats-end
 
 
 .. _glossary-u:
@@ -5270,6 +5583,21 @@ U
       :end-before: .. term-uuid-end
 
 
+.. _v-ventrata:
+
+**Ventrata**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-ventrata-start
+      :end-before: .. term-ventrata-end
+
+
+.. _v-vercel:
+
+**Vercel**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-vercel-start
+      :end-before: .. term-vercel-end
+
 
 .. _glossary-v:
 
@@ -5350,6 +5678,14 @@ W
       :end-before: .. term-walmart-connect-end
 
 
+.. _w-webengage:
+
+**WebEngage**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-webengage-start
+      :end-before: .. term-webengage-end
+
+
 .. _w-win-back-campaign:
 
 **win-back campaign**
@@ -5364,6 +5700,22 @@ W
    .. include:: ../../shared/terms.rst
       :start-after: .. term-win-back-percentage-start
       :end-before: .. term-win-back-percentage-end
+
+
+.. _w-wix:
+
+**Wix**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-wix-start
+      :end-before: .. term-wix-end
+
+
+.. _w-woocommerce:
+
+**WooCommerce**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-woocommerce-start
+      :end-before: .. term-woocommerce-end
 
 
 .. _w-workflow:
@@ -5400,6 +5752,15 @@ X
 
 Y
 ==================================================
+
+
+.. _y-yotpo:
+
+**Yotpo**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-yotpo-start
+      :end-before: .. term-yotpo-end
+
 
 .. _y-youtube:
 

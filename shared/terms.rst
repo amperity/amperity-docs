@@ -35,6 +35,15 @@ This is an example paragraph that shows how to use snippets to include content i
 .. term-placeholder-end
 
 
+**abandoned cart**
+
+.. term-abandoned-cart-start
+
+An abandoned cart is an e-commerce event that occurs when a shopper adds items to a cart but does not complete the purchase. Abandoned cart events capture the session, cart contents, and identity signals at the moment of abandonment, enabling immediate re-engagement through real-time journeys and activations.
+
+.. term-abandoned-cart-end
+
+
 
 .. The following group of terms are general. Use these in the glossary (always) and use them as the first-level overview of concepts, sections, and other whatnots across the documentation.
 
@@ -574,6 +583,15 @@ Amplitude is a self-service digital analytics platform to understand your users,
 .. term-amplitude-end
 
 
+**anonymous profile**
+
+.. term-anonymous-profile-start
+
+An anonymous profile is a real-time profile that has not been matched to a known customer profile. Anonymous profiles are created when incoming events carry identity signals, such as a device IDs or session cookies, that cannot be linked to a known profile. As additional identity signals arrive, an anonymous profile may be resolved to a known profile.
+
+.. term-anonymous-profile-end
+
+
 **anonymous visitor**
 
 .. term-anonymous-visitor-start
@@ -719,6 +737,15 @@ A small audience size is predicted to include ~50% of future purchasers and to i
 .. term-australian-privacy-principles-end
 
 
+**Auth0**
+
+.. term-auth0-start
+
+Auth0 manages authentication and authorization for web and mobile applications. It handles login, registration, password changes, and account lifecycle events.
+
+.. term-auth0-end
+
+
 **authentication** SSO
 
 .. term-authentication-start
@@ -836,6 +863,15 @@ Azure Data Factory is a service in Azure that can convert any data format into a
 .. term-azure-data-factory-end
 
 
+**Azure Functions**
+
+.. term-microsoft-azure-functions-start
+
+`Azure Functions <https://learn.microsoft.com/en-us/azure/azure-functions/>`__ |ext_link| is a serverless compute service from Microsoft Azure. It runs event-driven code on demand and scales automatically. HTTP-triggered functions expose a URL endpoint that can receive webhook deliveries from any external platform.
+
+.. term-microsoft-azure-functions-end
+
+
 **Azure Synapse Analytics**
 
 .. term-azure-synapse-analytics-start
@@ -843,6 +879,26 @@ Azure Data Factory is a service in Azure that can convert any data format into a
 Azure Synapse Analytics is a limitless analytics service and data warehouse. Azure Synapse Analytics has four parts: SQL analytics, Apache Spark, hybrid data integration, and a unified user experience.
 
 .. term-azure-synapse-analytics-end
+
+
+**backend for frontend (BFF)**
+
+.. term-bff-start
+
+A backend for frontend (BFF) is a server-side component that sits between a
+frontend client or upstream service and one or more backend APIs. In real-time
+profile activation, the BFF is a lightweight relay endpoint, such as a
+`Vercel Route Handler
+<https://nextjs.org/docs/app/building-your-application/routing/route-handlers>`__,
+an `AWS Lambda function behind an API Gateway
+<https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html>`__,
+a `Netlify function <https://docs.netlify.com/functions/overview/>`__, or a
+`Ruby on Rails controller action
+<https://guides.rubyonrails.org/action_controller_overview.html>`__, that
+receives the Amperity activation payload, verifies the bearer token, and calls
+the destination platform's API using that platform's own credentials.
+
+.. term-bff-end
 
 
 **bad-values blocklist**
@@ -1163,6 +1219,15 @@ A channel is the purchase method used by a customer. For example: online, point-
 A channel interaction is data about customer purchases, such as online, point-of-sale, and loyalty.
 
 .. term-channel-interaction-end
+
+
+**Chargebee**
+
+.. term-chargebee-start
+
+Chargebee manages subscription billing and lifecycle records for SaaS businesses. It handles recurring billing cycles, trial periods, plan upgrades and downgrades, and cancellations.
+
+.. term-chargebee-end
 
 
 **Cheetah Digital**
@@ -2151,6 +2216,15 @@ Delighted creates and sends customer experience surveys, tracks and analyzes fee
 .. term-delighted-end
 
 
+**Deliverect**
+
+.. term-deliverect-start
+
+Deliverect normalizes food delivery orders from multiple aggregator channels into a single webhook stream. It routes orders from Uber Eats, DoorDash, GrubHub, Just Eat, and direct ordering systems to the restaurant POS.
+
+.. term-deliverect-end
+
+
 **Delta Lake**
 
 .. term-delta-lake-start
@@ -2344,6 +2418,15 @@ A stitched domain table exists for each domain table with:
 Domo is a cloud-based, self-service BI tool that helps you visualize data from a single dashboard.
 
 .. term-domo-end
+
+
+**DoorDash**
+
+.. term-doordash-start
+
+DoorDash operates a food delivery platform with two integration options for merchants. Drive delivers orders from merchant-operated ordering systems. Marketplace connects consumers directly to restaurants through the DoorDash consumer app.
+
+.. term-doordash-end
 
 
 **Dotdigital**
@@ -2905,7 +2988,7 @@ The **fk-[namespace]** semantic tag identifies a field as a foreign key. A forei
 
 .. term-foreign-key-start
 
-A foreign key is a semantic tag applied to columns in source data tables. A foreign key references the primary key in other source tables. Configure identity resolution to separate records when foreign keys do not match *or* cluster records when foreign keys match.
+A foreign key is a custom semantic tag applied to columns in source data tables that uniquely identify your business. For example, a loyalty ID, a durable customer ID, a website or mobile app login, a mileage ID, or a hospitality ID. Define cluster rules that match foreign key values to ensure that your most important identifiers become important identifiers within an identity graph.
 
 .. term-foreign-key-end
 
@@ -2952,6 +3035,24 @@ A combination of given name and surname--or first name and last name--for a cust
 #. A value tagged with **surname**.
 
 .. term-full-name-unified-coalesced-end
+
+
+**FullStory**
+
+.. term-fullstory-start
+
+FullStory captures digital experience data across web and mobile: clicks, scrolls, navigation, form interactions, custom behavioral events, and frustration signals such as rage clicks and error clicks. It provides session replay, product analytics, and the Streams real-time webhook system for routing events to downstream systems.
+
+.. term-fullstory-end
+
+
+**GA4 Measurement Protocol**
+
+.. term-ga4-measurement-protocol-start
+
+The `GA4 Measurement Protocol <https://developers.google.com/analytics/devguides/collection/protocol/ga4>`__ |ext_link| is a server-side API for sending events directly to Google Analytics 4. It supports fan-out patterns in which the same event is simultaneously forwarded to Amperity, providing server-confirmed identity signals that are not subject to browser tracking restrictions.
+
+.. term-ga4-measurement-protocol-end
 
 **gender**
 
@@ -3196,6 +3297,24 @@ Google Shopping ads enable paid media advertising from the Shopping tab on Googl
 .. term-google-shopping-end
 
 
+**Google Tag Manager**
+
+.. term-google-tag-manager-start
+
+`Google Tag Manager <https://marketingplatform.google.com/about/tag-manager/>`__ |ext_link| is a tag management system for deploying tracking scripts and event collection code across websites and mobile apps. A server-side GTM container can forward events to external HTTP endpoints without exposing credentials to the browser.
+
+.. term-google-tag-manager-end
+
+
+**Gorgias**
+
+.. term-gorgias-start
+
+Gorgias is a helpdesk platform built for e-commerce brands that centralizes customer support across email, chat, social media, and SMS. It integrates natively with Shopify, BigCommerce, and WooCommerce to surface order context inside every support ticket.
+
+.. term-gorgias-end
+
+
 
 **graph database**
 
@@ -3285,6 +3404,15 @@ Hierarchical comparison is a step during identity resolution that occurs after s
 A high cardinality attribute has a large number of distinct values. For example, phone numbers, email addresses, and postal codes. High cardinality attributes are useful during identity resolution.
 
 .. term-high-cardinality-profile-attribute-end
+
+
+**hospitality booking events**
+
+.. term-hospitality-start
+
+Hospitality booking events capture the web-side of the guest journey: property browsing, room selection, and reservation completions across rooms, dining, amenities, and excursions. They connect anonymous pre-arrival intent to known guest profiles at the moment of booking.
+
+.. term-hospitality-end
 
 
 **holdout control group**
@@ -3794,6 +3922,15 @@ Klaviyo is an email platform for targeting, personalizing, measuring, and optimi
 .. term-klaviyo-end
 
 
+**known profile**
+
+.. term-known-profile-start
+
+A known profile is a customer record that has an Amperity ID, along with a complete set of attributes derived from identity resolution and customer interaction histories. Incoming real-time events are matched to known profiles using keychain linking keys, such as an email addresses or loyalty IDs.
+
+.. term-known-profile-end
+
+
 **Koupon Media**
 
 .. term-koupon-media-start
@@ -3918,6 +4055,15 @@ A leaky bucket ratio (LBR) represents the ratio of customers acquired to custome
 The **Lifecycle Events** table has data for event-driven customer behaviors within campaigns as a set of fields that combine predictions for customer behaviors with transaction details from the **Unified Transactions** table.
 
 .. term-lifecycle-events-table-end
+
+
+**Lightspeed eCom**
+
+.. term-lightspeed-ecom-start
+
+Lightspeed eCom is a hosted e-commerce platform used by retail and specialty brands to manage online storefronts, orders, subscriptions, and customer reviews. It delivers order and customer data through webhooks at the moment each event occurs.
+
+.. term-lightspeed-ecom-end
 
 
 **lifetime average item price**
@@ -4145,6 +4291,15 @@ The identifier for a loyalty program connected with a unique Amperity ID.
 .. term-loyalty-id-ampid-end
 
 
+**LoyaltyLion**
+
+.. term-loyaltylion-start
+
+LoyaltyLion manages loyalty programs for e-commerce stores. It tracks tier changes, points transactions, and reward redemptions for Shopify and other e-commerce platforms.
+
+.. term-loyaltylion-end
+
+
 **MailChimp**
 
 .. term-mailchimp-start
@@ -4297,6 +4452,15 @@ Meta Ads Manager is a unified ad creation tool that your brand can use to create
 .. term-meta-ads-manager-end
 
 
+**MetaRouter**
+
+.. term-metarouter-start
+
+MetaRouter collects events from Analytics.js browser tags, mobile SDKs, and server-side HTTP API calls. It routes events through a configurable pipeline -- applying consent filtering, identity enrichment, and field transformations -- before forwarding them to 100+ downstream destinations including Amperity.
+
+.. term-metarouter-end
+
+
 **metrics** concept, as exists for the Metrics tab
 
 .. term-metrics-start
@@ -4387,6 +4551,15 @@ A mobile interactions table is represents the history a customer has with mobile
 .. term-mobile-interactions-table-end
 
 
+**mobile app event streaming**
+
+.. term-mobile-start
+
+Mobile app event streaming captures in-app behavioral signals from iOS and Android devices and forwards them to Amperity in real-time through a serverless proxy. It supports both anonymous pre-login tracking and authenticated post-login identity linking.
+
+.. term-mobile-end
+
+
 **MoEngage**
 
 .. term-moengage-start
@@ -4423,6 +4596,15 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. term-moveable-ink-end
+
+
+**mParticle**
+
+.. term-mparticle-start
+
+`mParticle <https://www.mparticle.com/>`__ |ext_link| is a customer data platform that collects and routes behavioral events from web, mobile, and server sources to downstream marketing and analytics platforms. Its webhook output forwards event batches to external HTTP endpoints.
+
+.. term-mparticle-end
 
 
 **MSRP**, **manufacturer's suggested retail price**
@@ -4531,6 +4713,24 @@ The total amount of the gross sales minus deductions, such as returns, discounts
 Neustar--a TransUnion company--provides real-time information and analytics for the Internet, risk, digital performance, and defense, telecommunications, entertainment, and marketing industries. Neustar also provides clearinghouse and directory services to the global communications and Internet industries.
 
 .. term-neustar-end
+
+
+**Netlify**
+
+.. term-netlify-start
+
+`Netlify <https://www.netlify.com>`__ |ext_link| is a cloud platform for deploying web applications and serverless functions. It provides edge hosting, CI/CD pipelines, and instant deployments optimized for frontend frameworks.
+
+.. term-netlify-end
+
+
+**Netlify Forms**
+
+.. term-netlify-forms-start
+
+`Netlify Forms <https://www.netlify.com/platform/core/forms/>`__ |ext_link| is a built-in form handling service on Netlify that collects and stores form submissions from Netlify-hosted sites without requiring custom backend code.
+
+.. term-netlify-forms-end
 
 
 **nicknames**
@@ -4650,6 +4850,15 @@ Open Database Connectivity (ODBC) uses a driver-based system to define how any c
 .. term-odbc-end
 
 
+**Okta**
+
+.. term-okta-start
+
+Okta is an enterprise identity platform that manages authentication, user provisioning, and access control for workforce and customer-facing applications.
+
+.. term-okta-end
+
+
 **Optimizely**
 
 .. term-optimizely-start
@@ -4693,6 +4902,15 @@ Oracle Data Management Platform (DMP), formerly known as BlueKai, is a cloud-bas
 Oracle Eloqua is a marketing automation platform that helps your brand design and manage cross-channel marketing campaigns.
 
 .. term-oracle-eloqua-end
+
+
+**Oracle Hospitality OPERA Cloud**
+
+.. term-oracle-hospitality-start
+
+Oracle Hospitality OPERA Cloud is the property management system (PMS) for hotels, resorts, and casino-hotels. Its streaming API delivers reservation, check-in, check-out, front desk, and loyalty events using a GraphQL subscription over WebSocket.
+
+.. term-oracle-hospitality-end
 
 
 **Oracle OPERA**
@@ -5409,6 +5627,15 @@ A pipe-separated values (PSV) file is a delimited text file that uses a pipe to 
 .. term-psv-end
 
 
+**Punchh**
+
+.. term-punchh-start
+
+Punchh is a loyalty and guest engagement platform purpose-built for restaurant and retail chains. It handles check-ins, offer redemptions, points awards, and loyalty enrollment for in-store and in-restaurant visits.
+
+.. term-punchh-end
+
+
 **purchase brand**
 
 .. term-purchase-brand-start
@@ -5532,6 +5759,15 @@ A folder helps you organize the list of segments in the **Queries** page. You ma
 .. term-query-folder-end
 
 
+**RabbitMQ**
+
+.. term-rabbitmq-start
+
+`RabbitMQ <https://www.rabbitmq.com>`__ |ext_link| is an open-source message broker that enables applications to communicate asynchronously through message queues. It supports multiple messaging protocols and is widely used for decoupling services in distributed systems.
+
+.. term-rabbitmq-end
+
+
 **RaceRoster**
 
 .. term-raceroster-start
@@ -5599,6 +5835,15 @@ Raw UID2 values are unencrypted alphanumeric identifiers that are created from a
 `Record Columnar File (RCFile) <https://en.wikipedia.org/wiki/RCFile>`__ |ext_link| is a data placement structure that determines how to store relational tables on computer clusters using the MapReduce framework.
 
 .. term-rcfile-end
+
+
+**real-time segment**
+
+.. term-realtime-segment-start
+
+A real-time segment is a continuously maintained set of profile identifiers. Membership in a real-time segment is defined by an expression that is evaluated against attributes within profiles. For example, ``loyalty_tier == "gold"`` or ``income >= 100000``. Profiles in a real-time segment are continuously evaluated against the expressions that determine membership. Profiles enter the real-time segment automatically when they match the conditions and exit immediately when they do not. Real-time segments support Profile API v3 endpoints and single-profile activations in journeys.
+
+.. term-realtime-segment-end
 
 .. vale on
 
@@ -5731,6 +5976,15 @@ Rectangular data is a structured dataset with defined rows and columns, such as 
 .. term-rectangular-data-end
 
 
+**Recurly**
+
+.. term-recurly-start
+
+Recurly manages subscription billing and lifecycle records for media, SaaS, and consumer subscription businesses. It handles recurring billing cycles, trial periods, plan upgrades and downgrades, cancellations, and payment recovery.
+
+.. term-recurly-end
+
+
 **recurring campaign**
 
 .. term-recurring-campaign-start
@@ -5824,6 +6078,15 @@ Retention rate is the percentage of customers who continue to purchase your prod
 .. term-retention-rate-end
 
 
+**RevenueCat**
+
+.. term-revenuecat-start
+
+RevenueCat manages in-app subscription and purchase lifecycles across iOS, Android, and web. It handles trial starts, first payments, renewals, cancellations, billing failures, and plan changes.
+
+.. term-revenuecat-end
+
+
 **RFM**, **recency, frequency, monetary**
 
 .. term-rfm-start
@@ -5837,6 +6100,15 @@ RFM is a method used to analyze customer value that represents three dimensions:
 Individual scores for recency, frequency, and monetary have a scale of 1-10. Combined RFM scores exist on a scale. "111" represents the lowest possible RFM score. "101010" represents the highest possible RFM score, or "three '10' scores". Higher scores represent preferred behaviors.
 
 .. term-rfm-end
+
+
+**Rivo**
+
+.. term-rivo-start
+
+Rivo manages loyalty programs for Shopify stores. It tracks points balances, VIP tier transitions, paid memberships, and referral activity for enrolled loyalty members.
+
+.. term-rivo-end
 
 
 **RSA**, **Rivest-Shamir-Adleman**
@@ -5855,6 +6127,33 @@ RSA is a cryptographic system for generating public and private key pairs. RSA s
 RR Donnelly provides marketing and business communications, commercial printing, and related services.
 
 .. term-rrd-end
+
+
+**Ruby**
+
+.. term-ruby-start
+
+The `Ruby <https://www.ruby-lang.org/>`__ |ext_link| SDK-lite is a dependency-free HTTP client for forwarding events to an Amperity event stream from any Ruby application. It works with Rails, Sinatra, AWS Lambda, or any Ruby process that can make outbound HTTP requests.
+
+.. term-ruby-end
+
+
+**Ruby on Rails**
+
+.. term-ruby-on-rails-start
+
+`Ruby on Rails <https://rubyonrails.org>`__ |ext_link| is an open-source web application framework written in Ruby. It follows the model-view-controller (MVC) pattern and convention-over-configuration principles, making it well suited for building relay endpoints and API services.
+
+.. term-ruby-on-rails-end
+
+
+**RudderStack**
+
+.. term-rudderstack-start
+
+`RudderStack <https://rudderstack.com/>`__ |ext_link| is an open-source customer data platform that collects behavioral events from web, mobile, and server sources and routes them to downstream destinations. Its webhook output forwards event data to external HTTP endpoints.
+
+.. term-rudderstack-end
 
 
 **Sailthru**
@@ -6279,6 +6578,15 @@ Do not use the term "slice" when referring to data sent from Amperity to externa
 .. term-slice-end
 
 
+**Smile.io**
+
+.. term-smile-io-start
+
+Smile.io powers loyalty programs for e-commerce storefronts on Shopify, BigCommerce, and WooCommerce. It manages points transactions, VIP tier progressions, referrals, and reward redemptions.
+
+.. term-smile-io-end
+
+
 **SMS Opt Status**
 
 .. term-sms-opt-status-table-start
@@ -6677,6 +6985,15 @@ The Streaming API is a tenant-specific API that supports real-time streaming of 
 .. term-streaming-ingest-api-end
 
 
+**Stripe**
+
+.. term-stripe-start
+
+Stripe processes payments and manages subscription billing for businesses. It handles payment intents, recurring invoices, subscription lifecycle changes, and customer records.
+
+.. term-stripe-end
+
+
 **structured data**
 
 .. term-structured-data-start
@@ -6771,6 +7088,15 @@ SurveyGizmo is an enterprise-level data collection platform to help enable infor
 .. term-surveygizmo-end
 
 
+**Swell**
+
+.. term-swell-start
+
+`Swell <https://www.swell.is>`__ |ext_link| is a headless ecommerce platform with an API-first backend for managing products, orders, subscriptions, and customer data. It is designed for building custom storefronts using any frontend framework.
+
+.. term-swell-end
+
+
 **table**
 
 .. term-table-start
@@ -6796,6 +7122,15 @@ Tableau is a visual analytics platform that enables people and organizations to 
 A taxonomy defines a formal structure for classes of objects. For example, a product taxonomy defines product categories, and then organizes individual product types within each category or subcategory.
 
 .. term-taxonomy-end
+
+
+**Tealium**
+
+.. term-tealium-start
+
+`Tealium <https://tealium.com/>`__ |ext_link| is a customer data platform and tag management system. Its AudienceStream product collects behavioral events across web and mobile and can forward enriched visitor data to external endpoints when audience criteria are met.
+
+.. term-tealium-end
 
 
 **temporary table**
@@ -7051,6 +7386,15 @@ An unqualified trivial duplicate is a set of records that do not have enough mat
 
 .. term-trivial-duplicate-unqualified-end
 
+
+**TrueLoyal**
+
+.. term-trueloyal-start
+
+`TrueLoyal <https://www.trueloyal.com/>`__ |ext_link| manages loyalty programs, referral mechanics, and UGC communities for consumer brands. It tracks member enrollment, points transactions, tier changes, referral completions, and campaign participation.
+
+.. term-trueloyal-end
+
 .. vale on
 
 
@@ -7088,6 +7432,24 @@ Tune is a partner marketing platform for advertisers and networks.
 Turnkey Intelligence offers sports industry intelligence, data-driven research, and advisory services for sports leagues, teams, and venues.
 
 .. term-turnkey-intelligence-end
+
+
+**Typeform**
+
+.. term-typeform-start
+
+`Typeform <https://www.typeform.com/>`__ |ext_link| is an online form and survey platform that collects responses through conversational, interactive forms. Typeform delivers form submissions and quiz results as webhook events to configured endpoints.
+
+.. term-typeform-end
+
+
+**Uber Eats**
+
+.. term-uber-eats-start
+
+Uber Eats delivers food orders for restaurants through a marketplace platform. It provides order lifecycle webhooks that fire when order and delivery states change, enabling post-delivery journeys and profile enrichment.
+
+.. term-uber-eats-end
 
 
 **UID2 tokens**
@@ -7483,6 +7845,24 @@ Predicted customer lifetime value (predicted CLV) sorts customers into the follo
 .. term-value-tiers-end
 
 
+**Ventrata**
+
+.. term-ventrata-start
+
+Ventrata manages ticket sales and booking records for attractions, tours, and activity operators. It handles booking creation, confirmation, redemption, and cancellation across direct and third-party sales channels.
+
+.. term-ventrata-end
+
+
+**Vercel**
+
+.. term-vercel-start
+
+`Vercel <https://vercel.com>`__ |ext_link| is a cloud platform for deploying frontend applications and serverless functions. It provides a global edge network, CI/CD, and instant deployments, and is commonly used to host relay endpoints for real-time activation workflows.
+
+.. term-vercel-end
+
+
 **vertex**, **vertices**
 
 .. term-vertex-start
@@ -7564,6 +7944,15 @@ A data warehouse is a repository of data that can store massive volumes of curre
 .. term-warehouse-end
 
 
+**WebEngage**
+
+.. term-webengage-start
+
+WebEngage orchestrates multi-channel messaging campaigns and journeys. It tracks notification engagement events -- delivered, opened, clicked, bounced, unsubscribed -- across email, push, SMS, WhatsApp, and in-app channels and delivers them as webhook callbacks to configured endpoints.
+
+.. term-webengage-end
+
+
 **WhatsApp**
 
 .. term-whatsapp-start
@@ -7589,6 +7978,24 @@ A win-back campaign uses a series of personalized email messages sent to custome
 A win-back percentage represents the percentage of inactive customers who have returned to make a purchase within the measurement window.
 
 .. term-win-back-percentage-end
+
+
+**Wix**
+
+.. term-wix-start
+
+`Wix <https://www.wix.com>`__ |ext_link| is a cloud-based website builder and ecommerce platform. It provides drag-and-drop site creation, online store, booking, and marketing tools for small and mid-sized businesses.
+
+.. term-wix-end
+
+
+**WooCommerce**
+
+.. term-woocommerce-start
+
+`WooCommerce <https://woocommerce.com>`__ |ext_link| is an open-source ecommerce plugin for WordPress. It enables merchants to sell products and manage orders, inventory, and payments from within a WordPress site.
+
+.. term-woocommerce-end
 
 
 **workflow**
@@ -7643,6 +8050,15 @@ Yahoo Advertising is a search and display advertising network that can measure p
 Yahoo DSP is a demand-side platform (DSP) to which you can send audiences. Advertise across the Yahoo brand ecosystem, including Yahoo, Yahoo Mail, TechCrunch, Yahoo Finance, Yahoo Sports, and Yahoo News.
 
 .. term-yahoo-dsp-end
+
+
+**Yotpo**
+
+.. term-yotpo-start
+
+Yotpo is a marketing platform for loyalty programs, reviews, subscriptions, and user-generated content. It tracks customer engagement signals including VIP tier status, points balances, and review activity.
+
+.. term-yotpo-end
 
 
 **YouTube**

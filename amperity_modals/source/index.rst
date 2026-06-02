@@ -25,6 +25,7 @@ Site Index
    destination-amazon-ads
    destination-attentive
    destination-attentive-api
+   destination-attentive-events
    destination-attentivemobile
    destination-azure-blob
    destination-bazaar-voice
@@ -33,7 +34,9 @@ Site Index
    destination-braze-cohorts
    destination-camelot-smm
    destination-cheetah-digital
+   destination-cheetah-digital-standard-data-load
    destination-cordial
+   destination-cordial-send
    destination-criteo
    destination-criteo-retail-media
    destination-cross-country-computer
@@ -56,11 +59,13 @@ Site Index
    destination-infutor
    destination-kibo
    destination-klaviyo
+   destination-klaviyo-messaging
    destination-koupon-media
    destination-linkedin-dmp
    destination-listrak
    destination-listrak-sms
    destination-listrak-sms-profile-update
+   destination-listrak-messaging
    destination-liveramp
    destination-mailchimp
    destination-marketo
@@ -83,6 +88,7 @@ Site Index
    destination-sailthru
    destination-salesforce
    destination-salesforce-marketing-cloud
+   destination-sfmc-messaging
    destination-sfmc-sftp
    destination-sftp
    destination-smg

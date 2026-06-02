@@ -23,8 +23,8 @@ Review identity resolution
    :end-before: .. term-identity-resolution-end
 
 .. include:: ../../amperity_reference/source/stitch.rst
-   :start-after: .. stitch-stages-of-identity-resolution-start
-   :end-before: .. stitch-stages-of-identity-resolution-end
+   :start-after: .. stitch-overview-context-start
+   :end-before: .. stitch-overview-context-end
 
 
 .. _stitch-results-summary:
