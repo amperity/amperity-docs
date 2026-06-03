@@ -80,7 +80,7 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to EUID using the `POST /identity/buckets <https://euid.eu/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All EUID tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
+          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the EUID token), and a salt bucket ID.
 
@@ -206,7 +206,7 @@ Enable EUID token generation
 
 .. euid-configure-amperity-enable-euid-start
 
-EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **EUID Generation** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
+EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 and EUID Configuration** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-euid.png
    :width: 460 px
@@ -235,6 +235,26 @@ Add the **EUID** table to any database as a passthrough table. The **EUID** tabl
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-euid-table-start
    :end-before: .. data-tables-euid-table-end
+
+
+.. _euid-configure-amperity-add-euid-history-table:
+
+Add EUID History table to database
+--------------------------------------------------
+
+.. euid-configure-amperity-add-euid-history-table-start
+
+Add the **EUID History** table to any database as a passthrough table. The **EUID History** table is a core table that records every version of a customer's EUID token over time. A new row is appended each time a customer's EUID token is refreshed due to salt bucket rotation.
+
+.. euid-configure-amperity-add-euid-history-table-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-euid-history-table-about-start
+   :end-before: .. data-tables-euid-history-table-about-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-euid-history-table-start
+   :end-before: .. data-tables-euid-history-table-end
 
 
 .. _euid-workflows:

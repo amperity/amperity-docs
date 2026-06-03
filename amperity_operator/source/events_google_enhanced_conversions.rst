@@ -279,7 +279,7 @@ When using Store Sales, Amperity exports a formatted CSV file via :doc:`SFTP <de
 Store Sales supports more identifiers per customer than the Enhanced Conversions API path:
 
 * Email addresses: up to 3 per customer
-* Phone numbers: up to 3 per customer. Phone numbers must be in E.164 format
+* Phone numbers: up to 3 per customer. Phone numbers must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link| format
 * Physical address, including first name, last name, street, city, state, postal code, and country
 
 Include as many identifiers as your data contains. Each additional identifier helps improve match rates.
@@ -668,7 +668,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **phone**
      - The phone number for the customer.
 
-       Amperity automatically normalizes phone numbers by converting to E.164 format, and then using SHA-256 to hash the value before uploading to |destination-name|.
+       Amperity automatically normalizes phone numbers by converting to `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link| format, and then using SHA-256 to hash the value before uploading to |destination-name|.
 
        .. tip:: Use the **phone** field in the **Merged Customers** table.
 

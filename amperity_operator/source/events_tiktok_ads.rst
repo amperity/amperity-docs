@@ -481,7 +481,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           :start-after: .. term-phone-start
           :end-before: .. term-phone-end
 
-       .. note:: Phone numbers are normalized to E.164 format (US region) and SHA-256 hashed automatically before sending.
+       .. note:: Phone numbers are normalized to `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link| format (US region) and SHA-256 hashed automatically before sending.
 
 
    * - **price**

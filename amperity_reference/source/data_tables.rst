@@ -1305,6 +1305,49 @@ The **EUID** table has the following columns:
 .. vale on
 
 
+.. data-tables-euid-history-table-about-start
+
+The **EUID History** table has the following columns:
+
+.. data-tables-euid-history-table-about-end
+
+.. vale off
+
+.. data-tables-euid-history-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - The salt bucket ID associated with this version of the EUID token.
+
+   * - **Created At**
+     - Datetime
+     - The timestamp at which this version of the EUID token was recorded.
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+   * - **EUID**
+     - String
+     - The raw EUID token value at the time this record was written.
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address used when generating the EUID token.
+
+.. data-tables-euid-history-table-end
+
+.. vale on
+
+
 .. _data-tables-predicted-event-propensity:
 
 Event Propensity
@@ -3280,6 +3323,49 @@ The **UID2** table has the following columns:
      - The raw UID2 value for the customer. This value, when encrypted, may be used as a UID2 token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-uid2-table-end
+
+.. vale on
+
+
+.. data-tables-uid2-history-table-about-start
+
+The **UID2 History** table has the following columns:
+
+.. data-tables-uid2-history-table-about-end
+
+.. vale off
+
+.. data-tables-uid2-history-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - The salt bucket ID associated with this version of the UID2 token.
+
+   * - **Created At**
+     - Datetime
+     - The timestamp at which this version of the UID2 token was recorded.
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address used when generating the UID2 token.
+
+   * - **UID2**
+     - String
+     - The raw UID2 token value at the time this record was written.
+
+.. data-tables-uid2-history-table-end
 
 .. vale on
 
