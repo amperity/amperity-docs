@@ -377,16 +377,6 @@ Add destination
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
 
-       **Include attributes that match custom profile fields**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
-
        **Campaign file settings**
 
           .. include:: ../../shared/destination_settings.rst
