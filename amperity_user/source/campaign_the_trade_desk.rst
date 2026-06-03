@@ -3,8 +3,8 @@
 
 .. |destination-name| replace:: The Trade Desk
 .. |what-send| replace:: email address lists
-.. |what-enable| replace:: **email**
-.. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
+.. |what-enable| replace:: **email** or **phone**
+.. |attributes-sent| replace:: |destination-name| requires an email address or a phone number. Phone numbers must be in |ext_e164_format|.
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 
@@ -169,19 +169,25 @@ Configure default attributes
    * - **Source attribute**
      - **Destination attribute**
 
-   * - email
-     - email
+   * - **email**
+     - **email**
 
-   * - uid2
+   * - **uid2**
 
        You may use **uid2** as a source attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
-     - uid2
+     - **uid2**
 
-   * - euid
+   * - **euid**
 
        You may use **euid** as a source attribute when your brand is a participant in `European Unified ID (EUID) <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
-     - euid
+     - **euid**
+
+   * - **phone**
+
+       You may use **phone** as a source attribute for rows where an email address is not available. Phone numbers must be in |ext_e164_format|.
+
+     - **phone**
 
 .. channel-the-trade-desk-configure-default-attributes-end
