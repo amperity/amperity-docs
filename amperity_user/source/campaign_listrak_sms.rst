@@ -104,6 +104,11 @@ Build a segment
 
        Use for date-based segmentation.
 
+   * - optedOut
+     - Opt status
+
+       Optional. Set to true to mark a contact as opted out. When not included, the contact is treated as opted in by default.
+
    * - Custom attributes
      - Custom profile fields
 

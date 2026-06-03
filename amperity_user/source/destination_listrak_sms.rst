@@ -97,9 +97,9 @@ An SMS profile in |destination-name| requires only a phone number, but may inclu
      ,co.PostalCode AS "Postal Code"
      ,co.Birthdate AS "Birthday"
      ,co.LoyaltyTier AS "Loyalty"
+     ,NOT so.is_sms_opted_in AS "optedOut"
    FROM Customer360 co
    LEFT JOIN SMS_Opt_Status so ON co.amperity_id = so.amperity_id
-   WHERE is_sms_opted_in = true
 
 .. sendto-listrak-sms-build-query-end
 

@@ -85,13 +85,13 @@ Select the credential for |destination-name| from the **Credential** dropdown, a
 
 .. destinations-steps-test-connection-start
 
-If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
+Amperity validates the connection when the destination is saved. If the connection cannot be validated, an error is shown and the destination is not saved.
 
 .. destinations-steps-test-connection-end
 
 .. campaigns-steps-test-connection-start
 
-If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
+Amperity validates the connection when the destination is saved. If the connection cannot be validated, an error is shown and the destination is not saved.
 
 .. campaigns-steps-test-connection-end
 
@@ -1904,7 +1904,7 @@ See common settings. This one defaults to "phone".
 
    To avoid sending unsubscribed customers, apply filters to remove any customers who have unsubscribed from receiving SMS messages before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
 
-   Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional attributes may be sent when a matching custom segmentation field exists in |destination-name|.
+   Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, **postal code**, and opt status. Additional attributes may be sent when a matching custom profile field exists in |destination-name|.
 
    Talk with your Amperity representative about the |destination-name| connector before configuring it in your tenant.
 
@@ -1934,7 +1934,7 @@ The SMS list ID is available from the |destination-name| user interface. Open th
 
 .. setting-listrak-sms-enable-segmentation-start
 
-Select **Include attributes that match custom profile fields** to have Amperity synchronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|. Custom attributes must match the name of the custom profile field in Listrak and must be a supported Listrak data.
+Custom attributes that match custom profile fields defined in |destination-name| are automatically synchronized.
 
 .. setting-listrak-sms-enable-segmentation-end
 

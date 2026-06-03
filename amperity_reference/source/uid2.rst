@@ -80,7 +80,7 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/buckets <https://unifiedid.com/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All UID2 tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/map <https://unifiedid.com/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
+          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/map <https://unifiedid.com/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the UID2 token), and a salt bucket ID.
 
@@ -206,7 +206,7 @@ Enable UID2 token generation
 
 .. uid2-configure-amperity-enable-uid2-start
 
-UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
+UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 and EUID Configuration** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-uid2.png
    :width: 460 px
@@ -235,6 +235,26 @@ Add the **UID2** table to any database as a passthrough table. The **UID2** tabl
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-uid2-table-start
    :end-before: .. data-tables-uid2-table-end
+
+
+.. _uid2-configure-amperity-add-uid2-history-table:
+
+Add UID2 History table to database
+--------------------------------------------------
+
+.. uid2-configure-amperity-add-uid2-history-table-start
+
+Add the **UID2 History** table to any database as a passthrough table. The **UID2 History** table is a core table that records every version of a customer's UID2 token over time. A new row is appended each time a customer's UID2 token is refreshed due to salt bucket rotation.
+
+.. uid2-configure-amperity-add-uid2-history-table-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-uid2-history-table-about-start
+   :end-before: .. data-tables-uid2-history-table-about-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-uid2-history-table-start
+   :end-before: .. data-tables-uid2-history-table-end
 
 
 .. _uid2-workflows:

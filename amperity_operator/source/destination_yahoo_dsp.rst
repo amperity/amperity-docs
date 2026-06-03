@@ -299,3 +299,140 @@ Add destination
           :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-yahoo-dsp-add-steps-end
+
+
+.. _destination-yahoo-dsp-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-yahoo-dsp-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-yahoo-dsp-workflow-actions-invalid-mdm-id`
+       * :ref:`destination-yahoo-dsp-workflow-actions-invalid-expiration`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-yahoo-dsp-workflow-actions-end
+
+
+.. _destination-yahoo-dsp-workflow-actions-invalid-mdm-id:
+
+Invalid MDM ID
+--------------------------------------------------
+
+.. destination-yahoo-dsp-workflow-actions-invalid-mdm-id-start
+
+The Seat MDM ID configured in the |destination-name| credential does not match a valid seat in the |destination-name| taxonomy. When an invalid MDM ID is detected, a workflow action named "Invalid MDM ID Included on Node" is generated.
+
+The Seat MDM ID identifies your brand's seat within the |destination-name| taxonomy. If the wrong value is configured, Amperity cannot place audiences in the correct location and the workflow cannot be retried until the credential is corrected.
+
+.. destination-yahoo-dsp-workflow-actions-invalid-mdm-id-end
+
+.. destination-yahoo-dsp-workflow-actions-invalid-mdm-id-steps-start
+
+To resolve this error, verify that the correct Seat MDM ID is configured in the |destination-name| credential.
+
+#. Open the Amperity **Credentials** page in a new tab.
+#. Verify the value for the **Seat MDM ID** field.
+
+   .. tip:: The Seat MDM ID is visible from the **Advertisers** page in |destination-name|. Log in to |destination-name|, open your brand's profile, and look for the **MDM ID** field.
+
+#. Update the **Seat MDM ID** value as necessary, and then save the credential.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-yahoo-dsp-workflow-actions-invalid-mdm-id-steps-end
+
+
+.. _destination-yahoo-dsp-workflow-actions-invalid-expiration:
+
+Invalid membership duration
+--------------------------------------------------
+
+.. destination-yahoo-dsp-workflow-actions-invalid-expiration-start
+
+The membership duration configured for this destination is outside the range accepted by |destination-name|. Membership duration must be between 0 and 90 days. When an out-of-range value is detected, a workflow action named "Invalid Expiration" is generated.
+
+.. destination-yahoo-dsp-workflow-actions-invalid-expiration-end
+
+.. destination-yahoo-dsp-workflow-actions-invalid-expiration-steps-start
+
+To resolve this error, update the membership duration setting for this destination.
+
+#. Open the |destination-name| destination configuration.
+#. Update the **Membership duration** setting to a value between "0" and "90".
+#. Save the destination configuration.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-yahoo-dsp-workflow-actions-invalid-expiration-steps-end
