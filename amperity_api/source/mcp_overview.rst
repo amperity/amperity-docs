@@ -81,6 +81,10 @@ The Amperity MCP server does not:
 
 * Store conversation history. Per-token session state--selected tenant and safety mode--persists across requests within the same session.
 
+* Control the AI client or its underlying model. You connect your own MCP-compatible client, and Amperity does not control how that client or its model processes, stores, or transmits the data returned to it.
+
+  .. important:: Tool results may include personally identifiable information (PII). You are responsible for ensuring that the client and model you connect are approved to handle this data under your organization's policies and any agreements with the model provider.
+
 * Replace the Amperity REST API.
 
   .. important:: Use the :doc:`Amperity API <overview>` for programmatic integrations that do not involve an AI agent.
