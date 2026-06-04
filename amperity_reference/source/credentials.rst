@@ -37,7 +37,7 @@ Use the **Credentials** page to view and manage credentials for data sources and
 
 .. credentials-context-start
 
-In some cases, sources and destinations may use the same credentials, such as for an SFTP site or Amazon S3 bucket.
+The credentials list shows the name, type, and description of each credential, the number of couriers and destinations that currently use it, and the date and time each credential was last updated. Credentials are specific to an external service. Any courier, destination, campaign, or Audience Monetization connection that uses the same service can use the same credential. For example, a single set of Braze credentials can be used by a destination that sends audience data, a courier that pulls data back, and a campaign.
 
 .. credentials-context-end
 
@@ -85,6 +85,162 @@ In some cases, sources and destinations may use the same credentials, such as fo
           :end-before: .. credential-oauth-refresh-token-end
 
 .. credentials-common-steps-end
+
+
+.. _credentials-howtos:
+
+How-tos
+==================================================
+
+.. credentials-howtos-list-start
+
+Tasks related to managing credentials in Amperity:
+
+* :ref:`credentials-add`
+* :ref:`credentials-delete`
+* :ref:`credentials-edit`
+* :ref:`credentials-filter`
+* :ref:`credentials-search`
+* :ref:`credentials-view`
+
+.. note:: Managing credentials requires the **DataGrid Operator** or **DataGrid Administrator** policy.
+
+.. credentials-howtos-list-end
+
+
+.. _credentials-add:
+
+Add credential
+--------------------------------------------------
+
+.. credentials-add-start
+
+Use the **Add credential** button to add a new set of credentials to Amperity.
+
+.. credentials-add-end
+
+**To add a credential**
+
+.. credentials-add-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. Click **Add credential**.
+#. From the **Plugin** dropdown, select the credential type.
+#. Enter a name and description for the credential.
+#. Enter the required credential settings.
+#. Click **Save**.
+
+.. credentials-add-steps-end
+
+
+.. _credentials-delete:
+
+Delete credential
+--------------------------------------------------
+
+.. credentials-delete-start
+
+A credential can only be deleted when it is not in use. The delete button is disabled when the **Couriers** or **Destinations** column shows a non-zero count. Remove the credential from all couriers, destinations, and campaigns that use it before attempting to delete it.
+
+.. credentials-delete-end
+
+**To delete a credential**
+
+.. credentials-delete-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. From the row actions menu for a credential, select **Delete**.
+#. Click **Delete** to confirm.
+
+.. credentials-delete-steps-end
+
+
+.. _credentials-edit:
+
+Edit credential
+--------------------------------------------------
+
+.. credentials-edit-start
+
+Use the **Edit** option to update the settings for an existing credential. For example, when an API key is rotated or a password changes.
+
+.. credentials-edit-end
+
+**To edit a credential**
+
+.. credentials-edit-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. From the row actions menu for a credential, select **Edit**.
+#. Make your changes.
+#. Click **Save**.
+
+.. credentials-edit-steps-end
+
+
+.. _credentials-filter:
+
+Filter credentials
+--------------------------------------------------
+
+.. credentials-filter-start
+
+Use the credential type filter to narrow the credentials list to a specific type.
+
+.. credentials-filter-end
+
+**To filter credentials by type**
+
+.. credentials-filter-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. Click **Filters** to expand the filter panel.
+#. Select one or more credential types from the **Credential type** picklist.
+#. Click **Reset** to clear all active filters.
+
+.. credentials-filter-steps-end
+
+
+.. _credentials-search:
+
+Search credentials
+--------------------------------------------------
+
+.. credentials-search-start
+
+Use the search bar to filter the credentials list by name or description.
+
+.. credentials-search-end
+
+**To search credentials**
+
+.. credentials-search-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. Enter a search term in the **Search credentials** field. The list updates as you type.
+
+.. credentials-search-steps-end
+
+
+.. _credentials-view:
+
+View credential
+--------------------------------------------------
+
+.. credentials-view-start
+
+Use the **View** option to open the settings for a credential without making changes.
+
+.. credentials-view-end
+
+**To view a credential**
+
+.. credentials-view-steps-start
+
+#. Open the **Settings** page, and then select the **Credentials** tab.
+#. Click the name of a credential, or open the row actions menu and select **View**.
+
+.. credentials-view-steps-end
 
 
 .. _credentials-by-plugin:
@@ -219,6 +375,30 @@ Adobe Marketo requires the following credentials:
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-adobe-marketo-subdomain-start
    :end-before: .. credential-adobe-marketo-subdomain-end
+
+
+.. _credential-adobe-target:
+
+Adobe Target
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-adobe-target-start
+   :end-before: .. term-adobe-target-end
+
+Adobe Target requires the following credentials:
+
+**API key**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-adobe-target-authentication-token-start
+   :end-before: .. credential-adobe-target-authentication-token-end
+
+**Client code**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-adobe-target-client-code-start
+   :end-before: .. credential-adobe-target-client-code-end
 
 
 .. _credential-airship:
@@ -391,6 +571,66 @@ Cross Country Computer
 :ref:`See SFTP <credentials-sftp>`.
 
 
+.. _credential-cheetah-digital:
+
+Cheetah Digital
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-cheetah-digital-start
+   :end-before: .. term-cheetah-digital-end
+
+Cheetah Digital requires the following credentials:
+
+**Username and password**
+
+The username and password for Cheetah Digital API authentication.
+
+
+.. _credential-databricks:
+
+Databricks
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-databricks-start
+   :end-before: .. term-databricks-end
+
+Databricks requires the following credentials:
+
+**Server hostname and HTTP path**
+
+The cluster server hostname and HTTP path for the Databricks workspace.
+
+**Personal access token**
+
+A personal access token generated from the Databricks workspace.
+
+
+.. _credential-dotdigital:
+
+Dotdigital
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-dotdigital-start
+   :end-before: .. term-dotdigital-end
+
+Dotdigital requires the following credentials:
+
+**API username**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-dotdigital-api-username-start
+   :end-before: .. credential-dotdigital-api-username-end
+
+**API password**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-dotdigital-api-password-start
+   :end-before: .. credential-dotdigital-api-password-end
+
+
 .. _credential-dynamics-365-marketing:
 
 Dynamics 365 Marketing
@@ -413,6 +653,22 @@ Dynamics 365 Marketing requires the following credentials:
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-microsoft-dynamics-365-marketing-azure-client-id-and-secret-start
    :end-before: .. credential-microsoft-dynamics-365-marketing-azure-client-id-and-secret-end
+
+
+.. _credential-emarsys:
+
+Emarsys
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-emarsys-start
+   :end-before: .. term-emarsys-end
+
+Emarsys requires the following credentials:
+
+**Client ID and client secret**
+
+The OAuth2 client ID and client secret for Emarsys API access.
 
 
 .. _credential-epsilon-abacus:
@@ -523,6 +779,46 @@ Infutor
 :ref:`See SFTP <credentials-sftp>`.
 
 
+.. _credential-insider-one:
+
+Insider One
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-insider-one-start
+   :end-before: .. term-insider-one-end
+
+Insider One requires the following credentials:
+
+**Partner name**
+
+The Insider One partner name (must be lowercase). Found at InOne > InOne Settings > Account Preferences.
+
+**API token**
+
+The API authentication token. Found at InOne > InOne Settings > Integration Settings.
+
+
+.. _credential-iterable:
+
+Iterable
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-iterable-start
+   :end-before: .. term-iterable-end
+
+Iterable requires the following credentials:
+
+**API key**
+
+A server-side API key from Iterable (Integrations > API Keys).
+
+**Base URL**
+
+The Iterable data center URL. Use ``https://api.iterable.com`` for US or ``https://api.eu.iterable.com`` for EU.
+
+
 .. _credential-kibo:
 
 Kibo
@@ -567,6 +863,22 @@ Koupon Media
    :end-before: .. term-koupon-media-end
 
 :ref:`See SFTP <credentials-sftp>`.
+
+
+.. _credential-linkedin-dmp:
+
+LinkedIn DMP
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-linkedin-dmp-start
+   :end-before: .. term-linkedin-dmp-end
+
+LinkedIn DMP requires the following credentials:
+
+**Refresh token**
+
+An OAuth2 refresh token for LinkedIn DMP API access.
 
 
 .. _credential-listrak:
@@ -859,6 +1171,18 @@ Quad
    :end-before: .. term-quad-end
 
 :ref:`See SFTP <credentials-sftp>`.
+
+
+.. _credential-reddit:
+
+Reddit
+--------------------------------------------------
+
+Reddit requires the following credentials:
+
+**Refresh token**
+
+An OAuth2 refresh token, auto-populated when you connect to Reddit using the **Connect with Reddit** button during credential setup.
 
 
 .. _credential-rrd:

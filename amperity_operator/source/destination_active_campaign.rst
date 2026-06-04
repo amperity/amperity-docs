@@ -46,6 +46,21 @@ Configure destinations for ActiveCampaign
 .. destination-active-campaign-api-note-end
 
 
+.. destination-active-campaign-behavior-note-start
+
+.. note:: On each run, Amperity performs a full membership sync. Contacts in the
+   audience that are not already on the list are added, and contacts currently on
+   the list that are no longer in the audience are removed.
+
+   Amperity filters out invalid emails before sending to |destination-name|.
+   Emails that are blank, contain consecutive dots, or have multiple consecutive
+   **@** symbols are excluded. If |destination-name| identifies additional invalid
+   contacts during import, Amperity removes those contacts from the batch and
+   retries with the remaining valid contacts.
+
+.. destination-active-campaign-behavior-note-end
+
+
 .. _destination-active-campaign-get-details:
 
 Get details
@@ -76,7 +91,7 @@ Get details
              :start-after: .. credential-active-campaign-api-key-start
              :end-before: .. credential-active-campaign-api-key-end
 
-       **Base URL**
+       **URL**
 
           |checkmark-required| **Required**
 

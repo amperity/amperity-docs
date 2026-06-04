@@ -170,7 +170,7 @@ High
 
 High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
-Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
+Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Show recommendations**, and then review the list of options that are available to help improve this particular benchmark result.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-abnormal.png
    :width: 380 px
@@ -303,6 +303,26 @@ Depending on the outcome of reviewing benchmark check results and examples, a se
 Changes should be made incrementally. You can review benchmark checks on a daily basis. Review the results, and then make additional incremental changes, if necessary. Monitor the benchmark results after a configuration change for signs of improvement.
 
 .. stitch-benchmark-check-update-config-end
+
+
+.. _stitch-benchmark-check-ignore:
+
+Ignore a benchmark
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-check-ignore-start
+   :end-before: .. stitch-benchmarks-check-ignore-end
+
+
+.. _stitch-benchmark-rule-based:
+
+Rule-based benchmarks
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-rule-based-start
+   :end-before: .. stitch-benchmarks-rule-based-end
 
 
 .. _stitch-benchmark-categories:

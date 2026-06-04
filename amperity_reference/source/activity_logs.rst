@@ -51,10 +51,11 @@ All activity may be :ref:`downloaded <settings-user-activity-logs-download>` to 
 
 The activity list displays the following columns:
 
-* **Date** The date and time of the action (displayed in your local time-zone).
 * **User** The user who took the action. For most users, this is that user's friendly name or email address.
 
-  An auth token is displayed for users that accesses Amperity programatically.
+  An auth token is displayed for users that access Amperity programmatically.
+* **Tenant** The tenant from which the action originated. This column is visible when viewing activity logs from a parent tenant that has access to one or more sandbox tenants.
+* **Date** The date and time of the action (displayed in your local time-zone).
 * **Action** The action taken in the application. This takes the form of "action type/action". For example, activating a segment appears as "segment/activate" and running a segment for download appears as "query.exec/download".
 
   .. note:: A few actions in the list are not user-initiated. For example, when a user is granted a new authorization policy, both the grant and the receipt appear on separate rows.
@@ -65,6 +66,37 @@ The activity list displays the following columns:
 .. settings-user-activity-logs-list-end
 
 
+.. _settings-user-activity-logs-filter:
+
+Filter activity
+==================================================
+
+.. settings-user-activity-logs-filter-start
+
+Use the controls above the activity list to narrow which events are shown.
+
+**Search**
+
+Enter a search term to filter events by matching text in the event data.
+
+**Date range**
+
+Choose a preset window from the date range selector: last 30 days (default), last 90 days, last 365 days, or all available events.
+
+**Additional filters**
+
+Click **Filters** to expand the filter panel. Each picklist is populated with values drawn from your tenant's activity history, so only options that appear in your logs are shown. The following picklist filters are available:
+
+* **User** Filter by one or more specific users who initiated the action.
+* **Tenant** Filter by tenant. This filter is available from parent tenants that have access to one or more sandbox tenants.
+* **Action** Filter by one or more event types.
+* **Email domain** Filter by the email domain of the user who initiated the action.
+
+The filter badge next to **Filters** shows a count of how many picklist filters are active. Click **Reset** to clear all active filters and return to the default view.
+
+.. settings-user-activity-logs-filter-end
+
+
 .. _settings-user-activity-logs-download:
 
 Download user activity
@@ -72,7 +104,10 @@ Download user activity
 
 .. settings-user-activity-logs-download-start
 
-The Amperity user interface shows the most recent 1000 user activity events. You can download a CSV file that contains events for any date range for which user events are available.
+You can download a CSV file of activity events. Two download options are available in the top-right corner of the activity log.
+
+* **Download time range** opens a date picker so you can choose a specific start and end date. Any active search terms and picklist filters are included in the download.
+* **Download** exports all events that match your current filters and date range selector. The button label changes to **Download all** when no filters are active.
 
 .. settings-user-activity-logs-download-end
 
@@ -81,7 +116,8 @@ The Amperity user interface shows the most recent 1000 user activity events. You
 .. settings-user-activity-logs-download-steps-start
 
 #. From the ellipses menu in the top right, click **Settings**, and then select **Activity log**.
-#. Under **Activity** click **Download**.
+#. Apply any search terms or filters to narrow the events you want to export, or leave the defaults to export all available events.
+#. Click **Download time range** to choose a specific date window, or click **Download all** to export all events that match the current filters.
 #. A CSV file named **events-yyyy-mm-dd-timestamp.csv** is downloaded.
 
 .. settings-user-activity-logs-download-steps-end
@@ -108,7 +144,7 @@ The first row of the user activity file contains the following column headers, a
        This value is also available from the **Action** column under **Users** on the **Users and Activity** page.
 
    * - **external-id**
-     - Internal value only. This value will be **NULL** in downloaded log files.
+     - Internal value only.
 
    * - **happened-at**
      - The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
@@ -218,6 +254,9 @@ The following table lists the most common event types, grouped by the component 
 
              ``policy/attached-to``
 
+       ``api-key/issue-oauth2-client-credentials``
+          An OAuth2 client credentials token issuer was created.
+
        ``api-key/updated``
           An API key was updated.
 
@@ -233,6 +272,13 @@ The following table lists the most common event types, grouped by the component 
 
        ``warehouse/user-renewed``
           A user was allowed to continue accessing BI Connect.
+
+
+   * - **Campaigns**
+     - The following events are associated with campaigns:
+
+       ``campaign/send``
+          A campaign was sent.
 
 
    * - **Credentials**
@@ -376,6 +422,15 @@ The following table lists the most common event types, grouped by the component 
    * - **Single Sign-on**
      - The following events are associated with single sign-on (SSO):
 
+       ``connection/created``
+          An SSO connection was created.
+
+       ``connection/deleted``
+          An SSO connection was deleted.
+
+       ``connection/updated``
+          An SSO connection was updated.
+
        ``group-mapping/created``
           An SSO group mapping was created.
 
@@ -402,8 +457,14 @@ The following table lists the most common event types, grouped by the component 
        ``user/deleted``
           A user was deleted.
 
+       ``user/reset-mfa``
+          The multi-factor authentication settings for a user were reset.
+
        ``user/sent-password-reset-email``
           A user was sent an email to they can reset their password.
+
+       ``user/updated``
+          A user account was updated.
 
 
    * - **Workflow alerts**
@@ -416,6 +477,12 @@ The following table lists the most common event types, grouped by the component 
 
        ``audience/updated``
           The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses or Slack channels to or from a workflow alert.
+
+       ``subscription/created``
+          A subscription for a workflow alert was created.
+
+       ``subscription/updated``
+          A subscription for a workflow alert was updated.
 
 
    * - **Workflows**

@@ -26,6 +26,9 @@ About AmpAI assistants
 * **Journeys AI Assistant** helps users build and personalize multi-touch journeys
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
 * **Segments AI Assistant** helps users build segments
+* Explains workflow task errors inline on the **Workflows** page
+* Generates field descriptions for database tables in the table editor
+* Formats SQL in the custom table editor, with optional custom instructions
 
 These assistants are generative AI features within Amperity that use natural language as input commands.
 
@@ -61,8 +64,14 @@ Use the **Queries AI Assistant** in the SQL **Query Editor** to:
 Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 * Generate customer segments
-* Refine customer segments 
+* Refine customer segments
 * Get advice on building better customer segments to meet campaign goals
+
+When a workflow task fails, click **Explain this error** on the **Workflows** page to get an AI-generated plain-language explanation of why the task failed.
+
+When editing a database table, click **Generate field descriptions** in the table settings panel to have AmpAI write descriptions for any fields that do not yet have one.
+
+When editing a custom SQL table, use **Format SQL** to reformat the SQL in the editor. Choose **Custom format** to provide specific formatting instructions, such as adding explanatory comments to each CTE.
 
 .. assistant-usecases-end
 
@@ -112,11 +121,31 @@ How AmpAI assistants work
 
 **AmpAI** assistants are powered by LLMs on a private instance of Azure OpenAI Service.
 
-Amperity passes information on the schema information, query and segment examples, results, errors, table usage, and performs a series of research tool calls to improve the quality of results.
+Amperity passes information on the schema information, query and segment examples, results, errors, table usage, and performs a series of research tool calls to improve the quality of results. While working, the assistant shows each step with a running, succeeded, or failed indicator so you can follow its progress.
 
 .. note:: More detail about how **AmpAI** assistants work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
+
+.. assistant-workflow-errors-start
+
+When a workflow task fails with a system-level error, an **Explain this error** link appears in the task error panel on the **Workflows** page. Click it to send the error details to AmpAI and receive a plain-language explanation of what went wrong. The explanation appears inline, directly below the error message.
+
+.. note:: The **Explain this error** link is available for system-level errors only. Errors caused by customer configuration do not show this option.
+
+.. assistant-workflow-errors-end
+
+.. assistant-generate-field-descriptions-start
+
+In the table editor, a **Generate field descriptions** link appears in the **Description** settings group on the right side panel. Click it to have AmpAI write descriptions for any fields that do not already have one. When the table is defined by a SQL query, AmpAI queries the upstream schema to improve the accuracy of the generated descriptions. Generation may take a few minutes depending on the number of fields. Fields that already have descriptions are left unchanged.
+
+.. assistant-generate-field-descriptions-end
+
+.. assistant-format-sql-start
+
+In the SQL editor for a custom database table, a **Format SQL** button appears in the toolbar. It offers two modes. **Standard format** reformats the SQL using default style rules. **Custom format** opens a dialog where you can provide additional instructions — for example, "add a comment explaining the content of each CTE" — that AmpAI applies on top of standard formatting. The editor is read-only while formatting is in progress.
+
+.. assistant-format-sql-end
 
 .. _amp-insights-examples:
 

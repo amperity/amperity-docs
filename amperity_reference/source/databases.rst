@@ -2045,6 +2045,60 @@ The process for exporting tables is the same as :ref:`exporting databases <datab
 .. databases-database-howto-export-table-end
 
 
+.. _databases-database-howto-format-sql:
+
+Format SQL
+--------------------------------------------------
+
+.. databases-database-howto-format-sql-start
+
+AmpAI can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
+
+* **Standard format** — reformats the SQL using default style rules.
+* **Custom format** — opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
+
+.. databases-database-howto-format-sql-end
+
+**To format SQL in a custom table**
+
+.. databases-database-howto-format-sql-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a custom SQL table.
+#. In the toolbar, click **Format SQL**.
+#. Choose **Standard format** to apply default formatting, or choose **Custom format** to enter specific formatting instructions.
+#. Click **Save**.
+
+.. databases-database-howto-format-sql-steps-end
+
+
+.. _databases-database-howto-generate-field-descriptions:
+
+Generate field descriptions
+--------------------------------------------------
+
+.. databases-database-howto-generate-field-descriptions-start
+
+AmpAI can generate descriptions for database table fields that do not already have one. Click **Generate field descriptions** in the **Description** settings group on the right side of the table editor. When the table is defined by a SQL query, AmpAI uses the upstream schema to improve the accuracy of the generated descriptions. This may take a few minutes depending on the number of fields.
+
+.. note:: The **Generate field descriptions** link is disabled when all fields already have descriptions.
+
+.. databases-database-howto-generate-field-descriptions-end
+
+**To generate field descriptions**
+
+.. databases-database-howto-generate-field-descriptions-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a table, and then click **Next** to move to the second step in the table editor.
+#. In the **Description** settings group, click **Generate field descriptions**.
+#. After the descriptions are generated, click **Save**.
+
+.. databases-database-howto-generate-field-descriptions-steps-end
+
+
 .. _databases-database-howto-hide-table:
 
 Hide database table
