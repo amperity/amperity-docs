@@ -5,7 +5,7 @@
 .. |plugin-name| replace:: "The Trade Desk 3P Marketplace"
 .. |credential-type| replace:: "tradedesk-3rd-party"
 .. |required-credentials| replace:: "advertiser ID", "advertiser secret", "provider ID", and "platform API token"
-.. |what-send| replace:: email addresses, EUID, or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"

@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: The Trade Desk 3P
-.. |what-send| replace:: email addresses or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
