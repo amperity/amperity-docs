@@ -73,6 +73,9 @@ Manage which Amperity tenant the current session targets, and read session-level
 
        **safety_set_mode**
 
+   * - Submit feedback to the Amperity team
+     - **feedback_submit**
+
 
 .. _mcp-tool-databases:
 
@@ -494,17 +497,6 @@ Manage campaigns, campaign folders, journeys, and audiences.
    * - Read a journey's node schema
      - **journey_get_node_schema**
 
-   * - Manage labels
-     - **label_list**
-
-       **label_get**
-
-       **label_create**
-
-       **label_update**
-
-       **label_delete**
-
 
 .. _mcp-tool-data-exports:
 
@@ -581,90 +573,6 @@ Configure and run prediction models.
      - **prediction_get_validation_results**
 
        **prediction_get_model_config_validation_results**
-
-
-.. _mcp-tool-profile-collections-realtime-segments:
-
-Profile collections and realtime segments
-==================================================
-
-Manage profile collections and realtime segments.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 60 40
-
-   * - Description
-     - Tools
-
-   * - Manage profile collections
-     - **profile_collection_list**
-
-       **profile_collection_get**
-
-       **profile_collection_create**
-
-       **profile_collection_update**
-
-       **profile_collection_delete**
-   * - Manage attributes and runs
-     - **profile_collection_set_attribute**
-
-       **profile_collection_delete_attribute**
-
-       **profile_collection_refresh**
-
-       **profile_collection_run**
-
-   * - Manage realtime segments
-     - **real_time_segment_list**
-
-       **real_time_segment_get**
-
-       **real_time_segment_create**
-
-       **real_time_segment_update**
-
-       **real_time_segment_delete**
-
-
-.. _mcp-tool-events:
-
-Events
-==================================================
-
-Manage event streams and event types.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 60 40
-
-   * - Description
-     - Tools
-
-   * - Manage event streams
-     - **event_stream_list**
-
-       **event_stream_get**
-
-       **event_stream_create**
-
-       **event_stream_update**
-
-       **event_stream_delete**
-
-       **event_stream_get_recent_events**
-
-   * - Manage event type definitions
-     - **event_type_list**
-
-       **event_type_get**
-
-       **event_type_create**
-
-       **event_type_update**
-
-       **event_type_delete**
 
 
 .. _mcp-tool-segments:
