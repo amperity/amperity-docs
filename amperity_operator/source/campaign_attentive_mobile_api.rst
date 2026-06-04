@@ -34,7 +34,7 @@ Configure campaigns for Attentive (attributes)
 
 |destination-name| is your source of truth for your customers' subscription status, while Amperity is your source of truth for profile attributes that describe those customers.
 
-Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+Amperity uses the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
 .. campaign-attentive-mobile-api-attributes-end
 
@@ -84,6 +84,14 @@ Get details
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-attentive-api-key-start
              :end-before: .. credential-attentive-api-key-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-scopes-start
+             :end-before: .. credential-attentive-api-key-scopes-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-update-permissions-start
+             :end-before: .. credential-attentive-api-key-update-permissions-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
