@@ -367,7 +367,7 @@ The random forest classifier has the following hyperparameters:
             - Use a base 2 `binary logarithm <https://en.wikipedia.org/wiki/Binary_logarithm>`__ |ext_link| to determine the split. For example, if there are 100 features, the split is ~7.
 
           * - **One third**
-            - Use one third of of features to determine the split. For example, if there are 100 features, the split is 33.
+            - Use one third of features to determine the split. For example, if there are 100 features, the split is 33.
 
           * - **Square root**
             - Default. Use the square root of features to determine the split. For example, if there are 100 features, the split is 10.
@@ -392,7 +392,7 @@ The random forest classifier has the following hyperparameters:
      - 5
      - The maximum depth of each tree in the random forest classifier.
 
-       This setting controls the levels of splits a tree is allowed to make. At each level a yes/no question is asked and, depending on the answer, the data is split into two groups. For example:
+       This setting controls the levels of splits a tree is allowed to make. At each level a yes or no question is asked and, depending on the answer, the data is split into two groups. For example:
 
        .. code-block:: none
 

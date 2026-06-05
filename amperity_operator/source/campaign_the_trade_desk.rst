@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: "The Trade Desk"
 .. |credential-type| replace:: "tradedesk"
 .. |required-credentials| replace:: "advertiser ID" and "advertiser secret"
-.. |what-send| replace:: email addresses, EUID, or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"

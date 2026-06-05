@@ -195,7 +195,7 @@ High
 
 High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
-Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
+Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Show recommendations**, and then review the list of options that are available to help improve this particular benchmark result.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-abnormal.png
    :width: 380 px
@@ -287,6 +287,8 @@ All benchmark checks include example Amperity IDs that can be reviewed and grade
 
 Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. Stitch configuration settings can be updated directly in the benchmark check.
 
+The **Grade and calibrate** button shows your progress as a counter, for example **(3/10)**, while you work through the 10 examples. When you have reviewed enough examples, the button changes to **Show recommendations**.
+
 .. stitch-benchmarks-cards-grade-and-calibrate-end
 
 .. TODO: Need mockup here that shows one of the review/grade pages.
@@ -328,6 +330,51 @@ Depending on the outcome of reviewing benchmark check results and examples, a se
 Changes should be made incrementally. You can review benchmark checks on a daily basis. Review the results, and then make additional incremental changes, if necessary. Monitor the benchmark results after a configuration change for signs of improvement.
 
 .. stitch-benchmarks-check-update-config-end
+
+
+.. _stitch-benchmarks-check-ignore:
+
+Ignore a benchmark
+---------------------------------------------------
+
+.. stitch-benchmarks-check-ignore-start
+
+Each benchmark card has an action menu from which you can ignore that benchmark. An ignored benchmark is removed from the active view and its grading examples are no longer shown. Use this option for benchmark checks that are not relevant to your tenant.
+
+To reactivate an ignored benchmark, click **Reactivate**. This returns the benchmark to the active view and restores access to its grading examples.
+
+.. note:: The **Ignore** and **Reactivate** options require the **Configure Stitch settings** action, which is available to users assigned the **DataGrid Administrator** policy.
+
+.. stitch-benchmarks-check-ignore-end
+
+
+.. _stitch-benchmarks-rule-based:
+
+Rule-based benchmarks
+---------------------------------------------------
+
+.. stitch-benchmarks-rule-based-start
+
+Rule-based benchmarks appear in their own **Rules-based Stitch** section of the **Benchmarks** page. These benchmarks track how your deterministic Stitch rules perform. Each card shows the percentage of Amperity ID clusters that conflict with a specific rule.
+
+A conflict occurs when a higher-priority rule has already determined the outcome for a record pair, leaving this rule with no effect. Rules are evaluated in order, with the first rule having the highest precedence.
+
+Click a rule-based benchmark card to open the details dialog, which shows:
+
+* The percentage and count of conflicting clusters
+* The rule description
+* An interpretation of the conflict rate
+* Example Amperity IDs that conflict with the rule
+
+The interpretation shown in the details dialog is based on the conflict rate:
+
+* **First rule, zero percent conflicts** The first rule always has the highest precedence, so conflicts are not possible.
+* **Any other rule, zero percent conflicts** This rule is redundant. Higher-priority rules already satisfy it.
+* **Fewer than 0.001% conflicts** This rule has very few conflicts and may be redundant.
+* **Nearly 100% conflicts** Most or all clusters conflict with this rule. If this rule is important, increase its priority.
+* **All other values** This conflict rate does not indicate a problem with your rule configuration.
+
+.. stitch-benchmarks-rule-based-end
 
 
 .. _stitch-benchmarks-categories:

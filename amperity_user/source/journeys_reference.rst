@@ -281,7 +281,7 @@ The goal of a new customer journey is to turn a new customer into an engaged par
 
 .. admonition:: Why new customer journeys work
 
-   A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act quickly.
+   A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act.
 
 **Example basic new customer journey:**
 

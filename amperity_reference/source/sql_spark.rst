@@ -391,7 +391,7 @@ Subqueries
 
 .. sql-spark-recommendation-indentation-subqueries-start
 
-Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner—this is especially true where you have nested subqueries.
+Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner. This is especially true where you have nested subqueries.
 
 .. sql-spark-recommendation-indentation-subqueries-end
 
@@ -468,7 +468,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes. In practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -1001,25 +1001,19 @@ Spaces should be used to line up the code so that the root keywords all start on
 .. code-block:: sql
    :linenos:
 
-   (SELECT f.species_name
-     ,AVG(f.height) AS `average_height`
-     ,AVG(f.diameter) AS `average_diameter`
-   FROM flora AS f
-   WHERE f.species_name = 'Banksia'
-     OR f.species_name = 'Sheoak'
-     OR f.species_name = 'Wattle'
-   GROUP BY f.species_name, f.observation_date)
-
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'online'
+   GROUP BY uit.product_category)
    UNION ALL
-
-   (SELECT b.species_name
-     ,AVG(b.height) AS `average_height`
-     ,AVG(b.diameter) AS `average_diameter`
-   FROM botanic_garden_flora AS b
-   WHERE b.species_name = 'Banksia'
-     OR b.species_name = 'Sheoak'
-     OR b.species_name = 'Wattle'
-   GROUP BY b.species_name, b.observation_date)
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'in-store'
+   GROUP BY uit.product_category)
 
 Although not exhaustive always include spaces:
 
@@ -1421,17 +1415,17 @@ The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** w
    .. code-block:: sql
 
       SELECT *
-      FROM table_a
-      LEFT ANTI JOIN (SELECT id FROM table_b) AS remove
-      ON table_a.id = remove.id
+      FROM Merged_Customers AS mc
+      LEFT ANTI JOIN (SELECT amperity_id FROM Unified_Transactions) AS purchasers
+      ON mc.amperity_id = purchasers.amperity_id
 
    instead of:
 
    .. code-block:: sql
 
       SELECT *
-      FROM table_a
-      WHERE table_a.id NOT IN (SELECT id FROM table_b)
+      FROM Merged_Customers AS mc
+      WHERE mc.amperity_id NOT IN (SELECT amperity_id FROM Unified_Transactions)
 
 .. sql-spark-where-clause-expression-not-in-warning-end
 
@@ -1566,14 +1560,14 @@ GROUP BY clause
 
 The **GROUP BY** clause divides the output of a **SELECT** statement into groups of rows containing matching values. A simple **GROUP BY** clause may contain any expression composed of input columns or it may be an ordinal number selecting an output column by position, starting at one.
 
-The following queries are equivalent. They both group the output by the nationkey input column with the first query using the ordinal position of the output column and the second query using the input column name:
+The following queries are equivalent. They both group the output by the purchase_channel input column with the first query using the ordinal position of the output column and the second query using the input column name:
 
 .. code-block:: sql
 
    SELECT
      COUNT(*)
-     ,nationkey
-   FROM customer
+     ,purchase_channel
+   FROM Unified_Transactions
    GROUP BY 2
 
 is equivalent to:
@@ -1582,18 +1576,18 @@ is equivalent to:
 
    SELECT
      COUNT(*)
-     ,nationkey
-   FROM customer
-   GROUP BY nationkey
+     ,purchase_channel
+   FROM Unified_Transactions
+   GROUP BY purchase_channel
 
-**GROUP BY** clauses can group output by input column names not appearing in the output of a select statement. For example, the following query generates row counts for the customer table using the input column "mktsegment":
+**GROUP BY** clauses can group output by input column names not appearing in the output of a select statement. For example, the following query generates row counts for the Unified_Transactions table using the input column "purchase_channel":
 
 .. code-block:: sql
 
    SELECT
      COUNT(*)
-   FROM customer
-   GROUP BY mktsegment
+   FROM Unified_Transactions
+   GROUP BY purchase_channel
 
 returns a table similar to:
 
@@ -1684,7 +1678,7 @@ It says "Group the records by amperity_id, and for each group return the one wit
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
 * **PARTITION BY amperity_id** The **PARTITION BY <field name>** function is similar to **GROUP BY** and groups all records with unique values for the specified field together and creates a subset of rows for each Amperity ID.
 * **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it is sorting the rows for each Amperity ID. **DESC** sorts in descending order and the most recent date is first.
-* **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
+* **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you have used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
 
 .. sql-spark-window-functions-end
 

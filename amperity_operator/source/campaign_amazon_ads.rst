@@ -528,9 +528,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-amazon-ads-workflow-actions-invalid-advertiser-id`
-       * :ref:`destination-amazon-ads-workflow-actions-invalid-credentials`
-       * :ref:`destination-amazon-ads-workflow-actions-missing-required-field`
+       * :ref:`campaign-amazon-ads-workflow-actions-invalid-advertiser-id`
+       * :ref:`campaign-amazon-ads-workflow-actions-invalid-credentials`
+       * :ref:`campaign-amazon-ads-workflow-actions-missing-required-field`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -562,7 +562,7 @@ Invalid advertiser account ID
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID, such as when an advertiser account ID has been deleted, Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

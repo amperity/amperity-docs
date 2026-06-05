@@ -58,7 +58,7 @@ Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-su
 
 .. warning:: Complex types--arrays, objects, and maps--must have defined schemas.
 
-.. note:: Snowflake field names shared with Amperity Bridge must use consistent casing. A field name must contain only uppercase letters, digits, and underscores (A–Z, 0–9, _) or only lowercase letters, digits, and underscores (a–z, 0–9, _). Mixed-case field names are not supported. Fields that do not meet this requirement are flagged as unsupported in the Bridge configuration and cannot be synced.
+.. note:: Snowflake field names shared with Amperity Bridge must use consistent casing. A field name must contain only uppercase letters, digits, and underscores (A to Z, 0 to 9, _) or only lowercase letters, digits, and underscores (a to z, 0 to 9, _). Mixed-case field names are not supported. Fields that do not meet this requirement are flagged as unsupported in the Bridge configuration and cannot be synced.
 
 The following table describes how Snowflake data types map to Amperity data types.
 

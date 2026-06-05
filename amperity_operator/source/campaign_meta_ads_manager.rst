@@ -447,14 +447,14 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-meta-ads-manager-workflow-actions-authorization-error`
-       * :ref:`destination-meta-ads-manager-workflow-actions-cannot-create-ads`
-       * :ref:`destination-meta-ads-manager-workflow-actions-extern-id-missing`
-       * :ref:`destination-meta-ads-manager-workflow-actions-invalid-credentials`
-       * :ref:`destination-meta-ads-manager-workflow-actions-maximum-audiences`
-       * :ref:`destination-meta-ads-manager-workflow-actions-facebook-terms`
-       * :ref:`destination-meta-ads-manager-workflow-actions-business-account`
-       * :ref:`destination-meta-ads-manager-workflow-actions-security-challenge`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-authorization-error`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-cannot-create-ads`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-extern-id-missing`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-invalid-credentials`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-maximum-audiences`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-facebook-terms`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-business-account`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-security-challenge`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -687,7 +687,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
@@ -705,7 +705,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Converts to m and f
        * Hashes data as one-way SHA-256
 
@@ -732,7 +732,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -741,7 +741,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -755,7 +755,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
@@ -764,7 +764,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
    * - **ZIP Code**
@@ -774,8 +774,8 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Removes whitespace from lower-case for United Kingdom
+       * Converts to lowercase
+       * Removes whitespace from lowercase for United Kingdom
        * Trims to five digits for United States
        * Hashes data as one-way SHA-256
    * - **Country Code**
@@ -785,14 +785,14 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
        * Hashes data as one-way SHA-256
 

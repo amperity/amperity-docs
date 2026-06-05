@@ -22,7 +22,7 @@ Cloud infrastructure
 
 .. infrastructure-about-start
 
-Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure. This topic consolidates information about cloud infrastructure settings and options:
+Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure.
 
 * :ref:`Amperity API base URLs <infrastructure-api-base-url>`
 * :ref:`IP addresses for allowlists <infrastructure-allowlists>`

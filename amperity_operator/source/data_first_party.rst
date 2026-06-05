@@ -52,7 +52,7 @@ Amperity is built to handle this complexity. Billions of PII-based customer reco
 
 Amperity can analyze first-party cookies and clickstream events to associate those interaction records to a unique customer. For example. clickstream events identify a product was browsed via a mobile application, first-party cookies identify that product was purchased online, and the Amperity ID associates a unique individual to both clickstream and first-party cookie interaction records. All of these results are available in the customer 360 database Use these results to create more useful marketing and analytics use cases.
 
-In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data, along knowing to which individual its associated, will help you be ready for future best practices around information security and knowing who's who in your data set.
+In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data, along knowing to which individual its associated, will help you be ready for future best practices around information security and knowing who is who in your data set.
 
 .. why-amperity-end
 

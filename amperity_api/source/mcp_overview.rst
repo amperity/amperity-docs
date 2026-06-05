@@ -22,7 +22,7 @@ About the Amperity MCP server
 
 The Amperity MCP server enables AI assistants and agents to operate Amperity programmatically by using the `Model Context Protocol <https://modelcontextprotocol.io/>`__ (MCP). Connect any MCP-compatible client, such as Copilot Studio, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to inspect data, run identity resolution, build queries and segments, create activations, run campaigns and journeys, and build predictive models.
 
-The MCP server is hosted by Amperity. Customers connect to a single public endpoint and authenticate to the MCP server by using their existing Amperity credentials. There is nothing to install or run locally.
+The MCP server is hosted by Amperity. Customers connect to a single public endpoint and authenticate to the MCP server by using their existing Amperity credentials. The MCP server is not installed or run locally.
 
 .. mcp-overview-end
 

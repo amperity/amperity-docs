@@ -76,7 +76,7 @@ Get details
           :class: no-scaled-link
      - For an **FTP Profile**: a username and password is required, along with the remote folder to which Amperity sends data.
 
-       .. note:: The hostname for the SFTP server in |destination-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |destination-name| username, separated by " - " (space, hyphen, space). For example: "sftp://acme - justinc".
+       .. note:: The hostname for the SFTP server in |destination-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |destination-name| username, separated by `` - `` (space, hyphen, space). For example: ``sftp://acme - justinc``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

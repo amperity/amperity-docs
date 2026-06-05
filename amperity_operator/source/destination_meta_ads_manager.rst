@@ -685,7 +685,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
@@ -703,7 +703,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Converts to m and f
        * Hashes data as one-way SHA-256
 
@@ -730,7 +730,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -739,7 +739,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -753,7 +753,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
@@ -762,7 +762,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
    * - **ZIP Code**
@@ -772,8 +772,8 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Removes whitespace from lower-case for United Kingdom
+       * Converts to lowercase
+       * Removes whitespace from lowercase for United Kingdom
        * Trims to five digits for United States
        * Hashes data as one-way SHA-256
    * - **Country Code**
@@ -783,14 +783,14 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
        * Hashes data as one-way SHA-256
 

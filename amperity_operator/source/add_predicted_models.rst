@@ -75,7 +75,7 @@ What components of predictive models are visible within Amperity?
      - Feeds that define the data model for predictive modeling tables within Amperity:
 
        * **PCLV**
-       * **PCLV - Changes**
+       * **PCLV Changes**
        * **Predicted Affinity ProductAttribute**
        * **Predicted Affinity Audience ProductAttribute**
 
@@ -89,7 +89,7 @@ What components of predictive models are visible within Amperity?
        Couriers to pull the results of predictive modeling to Amperity on a daily basis:
 
        * **PCLV** (including **PCLV Changes** and **PCLV Metadata**)
-       * **PCLV - Validation**
+       * **PCLV Validation**
        * **Predicted Affinity**
        * **Predicted Affinity Audience**
 

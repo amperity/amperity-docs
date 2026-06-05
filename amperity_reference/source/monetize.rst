@@ -273,7 +273,7 @@ Rate caps
 
 A rate cap protects against excessive costs, especially on premium channels. An effective rate cap exceeds the desired average cost per thousand impressions and will be reached more often in high cost environments.
 
-You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace.
+You can set the cost per thousand impressions rate cap on the **Prepare data products** page, step three of configuring an audience for the marketplace. The rate cap must be expressed as a decimal value, such as 5.50 or 3.00.
 
 .. monetize-data-marketplace-concept-rate-caps-end
 
@@ -726,7 +726,7 @@ Make audience not buyable
 
 .. monetize-howtos-make-not-buyable-start
 
-You can make an audience no longer available for new purchases. Active campaigns currently using the audience may still use it.
+You can make an audience no longer available for new purchases. Active campaigns using the audience may still use it.
 
 .. caution:: This action cannot be undone.
 

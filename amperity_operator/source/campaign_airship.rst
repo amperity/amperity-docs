@@ -488,8 +488,11 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-airship-workflow-actions-invalid-credentials`
-       * :ref:`destination-airship-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-airship-workflow-actions-invalid-credentials`
+       * :ref:`campaign-airship-workflow-actions-invalid-hostname`
+       * :ref:`campaign-airship-workflow-actions-permission-error`
+       * :ref:`campaign-airship-workflow-actions-remote-folder-not-found`
+       * :ref:`campaign-airship-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -522,6 +525,62 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _campaign-airship-workflow-actions-invalid-hostname:
+
+Invalid hostname
+--------------------------------------------------
+
+.. destination-airship-workflow-actions-invalid-hostname-start
+
+Amperity could not resolve the hostname for the |destination-name| SFTP server. This error occurs when the hostname configured in the credentials does not match a valid DNS record.
+
+To resolve this error, verify the hostname.
+
+#. Open the **Credentials** page.
+#. Review the hostname configured for |destination-name|. The default hostname is |sftp-hostname|. Correct any typos or confirm with |destination-name| that the hostname has not changed.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-airship-workflow-actions-invalid-hostname-end
+
+
+.. _campaign-airship-workflow-actions-permission-error:
+
+Permission error
+--------------------------------------------------
+
+.. destination-airship-workflow-actions-permission-error-start
+
+Amperity could not write files to |destination-name|. The SFTP user does not have write permission on the configured remote folder.
+
+A common cause is a missing or empty remote folder setting. When no remote folder is configured, Amperity attempts to write to the root of the SFTP server, which the SFTP user typically does not have permission to access.
+
+To resolve this error, verify the remote folder and SFTP user permissions.
+
+#. Open the **Destinations** page and review the settings for |destination-name|. Confirm that a remote folder is configured and that the path is correct.
+#. Verify with |destination-name| that the SFTP user has write permission on the remote folder.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-airship-workflow-actions-permission-error-end
+
+
+.. _campaign-airship-workflow-actions-remote-folder-not-found:
+
+Remote folder not found
+--------------------------------------------------
+
+.. destination-airship-workflow-actions-remote-folder-not-found-start
+
+Amperity could not find the remote folder on the |destination-name| SFTP server. The configured path does not exist.
+
+To resolve this error, verify the remote folder path.
+
+#. Open the **Destinations** page and review the remote folder setting for |destination-name|. Confirm that the path exists on the SFTP server and that there are no typos.
+#. If the folder does not exist, create it on the |destination-name| SFTP server, or update the remote folder setting in Amperity to point to an existing path.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-airship-workflow-actions-remote-folder-not-found-end
 
 
 .. _campaign-airship-workflow-actions-sftp-unavailable:

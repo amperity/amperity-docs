@@ -55,7 +55,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :align: center
           :class: no-scaled-link
 
-     - To identify which customers have made their first purchase within the previous 30 days, choose the **Amperity ID** and **First Order Datetime** attributes from the **Transaction Attributes Extended** table. Set the condition for **Amperity ID** to "is not NULL" and the condition for **First Order Datetime** to "is after", and then configure a relative date range of "now - 30 days":
+     - To identify which customers have made their first purchase within the previous 30 days, choose the **Amperity ID** and **First Order Datetime** attributes from the **Transaction Attributes Extended** table. Set the condition for **Amperity ID** to "is not NULL" and the condition for **First Order Datetime** to "is after", and then configure a relative date range of ``now - 30 days``:
 
        .. image:: ../../images/attribute-first-order-datetime-last-30-days-visual-query.png
           :width: 540 px

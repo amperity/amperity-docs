@@ -66,7 +66,7 @@ Apply semantics
 
 You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that contains transactions data.
 
-Transaction semantics include a set of required semantic tags --- **is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id** --- along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
+Transaction semantics include a set of required semantic tags--**is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id**--along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
 
 .. important:: All transaction semantic tags are prefixed with **txn-item/**. For example: **txn-item/order-datetime**.
 
@@ -440,7 +440,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-454-calendar-start
 
-A 4-5-4 calendar divides years into months using a 4 weeks - 5 weeks - 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
+A 4-5-4 calendar divides years into months using a 4 weeks × 5 weeks × 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
 

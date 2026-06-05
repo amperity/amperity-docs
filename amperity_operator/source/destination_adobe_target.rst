@@ -115,7 +115,7 @@ Use |destination-name| to test variations of websites and mobile apps to optimiz
      - Use `manual A/B testing <https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab>`__ |ext_link| to compare experiences to identify which experience improves conversion rates.
 
    * - **Multivariate testing**
-     - Use `multivariate testing (MVT) <https://experienceleague.adobe.com/en/docs/target/using/activities/multivariate-test/multivariate-testing>`__ |ext_link| to compare combinations of offers to determine which combination offer is best for a specific audience.
+     - Use `multivariate testing <https://experienceleague.adobe.com/en/docs/target/using/activities/multivariate-test/multivariate-testing>`__ |ext_link| to compare combinations of offers to determine which combination offer is best for a specific audience.
 
    * - **Recommendations**
      - Use `recommendations <https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations>`__ |ext_link| to automatically display products, services, or content that might interest visitors based on their previous activity, preferences, or other criteria.
@@ -197,9 +197,9 @@ Get details
 
            The **pcId** is not the best identity type to send from Amperity because **pcId** interacts with the |destination-name| profile store directly from the cookie.
 
-            When a visitor accesses a page on which |destination-name| is enabled, that visitor is assigned a **pcId**. If the visitor then logs in, and the implementation passes the **mbox3rdPartyId** to |destination-name|, |destination-name| connects that visitor’s **mbox3rdPartyId** with the **pcId**.
+            When a visitor accesses a page on which |destination-name| is enabled, that visitor is assigned a **pcId**. If the visitor then logs in, and the implementation passes the **mbox3rdPartyId** to |destination-name|, |destination-name| connects that visitor's **mbox3rdPartyId** with the **pcId**.
 
-          `Updates are synced with the profile store every 5-10 minutes <https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id>`__ |ext_link|. When the visitor’s session ends, the merged data replaces the previous data associated with the **mbox3rdPartyId**, creating a complete record of that visitor’s actions.
+          `Updates are synced with the profile store every 5-10 minutes <https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id>`__ |ext_link|. When the visitor's session ends, the merged data replaces the previous data associated with the **mbox3rdPartyId**, creating a complete record of that visitor's actions.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -221,7 +221,7 @@ Get details
 
        * **thirdPartyId** or **pcId** must be the name of the first column in the dataset sent to |destination-name|.
 
-       * There is no restriction on the number of attributes you can upload to the |destination-name| profile store. However, the total size of external profile data, which includes Adobe Customer Attributes, profile parameters in the |destination-name| profile store, |destination-name| Mbox profile parameters, and profile script output, must not exceed 64 KB.
+       * Any number of attributes may be uploaded to the |destination-name| profile store. However, the total size of external profile data, which includes Adobe Customer Attributes, profile parameters in the |destination-name| profile store, |destination-name| Mbox profile parameters, and profile script output, must not exceed 64 KB.
 
 .. destination-adobe-target-get-details-table-end
 

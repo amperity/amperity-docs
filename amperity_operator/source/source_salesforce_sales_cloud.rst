@@ -149,7 +149,7 @@ Add courier
 
    .. important:: Do not connect to a Salesforce sandbox or enter a custom login URL.
 
-   .. note:: You can enable a sandbox or add a custom login URL for this courier later. A custom URL for Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity. A sandbox instance is ignored when a custom URL for Salesforce logins is used.
+   .. note:: You can enable a sandbox or add a custom login URL of this courier later. A custom URL of Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity. A sandbox instance is ignored when a custom URL of Salesforce logins is used.
 
 #. Click **Save**.
 

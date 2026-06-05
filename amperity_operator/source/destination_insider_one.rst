@@ -101,7 +101,7 @@ A destination for |destination-name| works like this:
 
        .. note:: Amperity writes the audience to a single-column CSV file without a header row. Each row in the CSV file contains a single value. The file is available to |destination-name| for up to 12 hours.
 
-          Amperity generates a presigned download URL for the CSV file and submits the segment creation request to the |destination-api|.
+          Amperity generates a presigned download URL of the CSV file and submits the segment creation request to the |destination-api|.
 
           Amperity makes a `POST /fps/v1/upload <https://academy.insiderone.com/docs/first-party-segments-api>`__ |ext_link| request to submit the segment to |destination-name|.
 

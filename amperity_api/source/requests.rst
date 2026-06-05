@@ -28,7 +28,7 @@ Requests made to Amperity API endpoints require the following headers:
      :start-after: .. base-url-tenant-id-start
      :end-before: .. base-url-tenant-id-end
 
-  .. important:: A sandbox must use the tenant ID for the sandbox. The request URL must be the same as the base URL for your production tenant.
+  .. important:: A sandbox must use the tenant ID for the sandbox. The request URL must be the same as the base URL of your production tenant.
 
 * **api-version** Required. A supported version of the Amperity API. For example: **2024-04-01**.
 

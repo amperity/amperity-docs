@@ -60,7 +60,7 @@ How this destination works
 
 This destination updates SMS profile attributes for existing contacts in |destination-name|. It does not create new contacts, does not add contacts to lists, and does not change subscription status.
 
-Audience members whose phone numbers do not already exist in |destination-name| are silently dropped by the API.
+Audience members whose phone numbers do not already exist in |destination-name| are dropped by the API.
 
 .. destination-listrak-sms-profile-howitworks-end
 
@@ -129,7 +129,7 @@ A |destination-name| profile update destination works like this:
 
        Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
 
-       .. important:: This destination only updates profile attributes for contacts that already exist in |destination-name|. Audience members whose phone numbers do not exist in |destination-name| are silently dropped. This destination never creates new contacts and never changes subscription status.
+       .. important:: This destination only updates profile attributes for contacts that already exist in |destination-name|. Audience members whose phone numbers do not exist in |destination-name| are dropped. This destination never creates new contacts and never changes subscription status.
 
 
    * - .. image:: ../../images/steps-03.png

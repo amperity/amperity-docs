@@ -120,12 +120,12 @@ The following table lists the operators that are available to these attributes.
    * - **is on or after**
      - Returns all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
-       For example, use "today - 90 days" to return orders that have been made during the previous 90 days.
+       For example, use ``today - 90 days`` to return orders that have been made during the previous 90 days.
 
    * - **is on or before**
      - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
-       For example, use "today - 1080 days" to return orders that were made 3 or more years ago.
+       For example, use ``today - 1080 days`` to return orders that were made 3 or more years ago.
 
 .. attribute-order-datetimes-conditions-end
 

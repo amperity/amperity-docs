@@ -61,7 +61,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify customers who have recently made their first purchase, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is between" operator, enable the **Use relative dates** option, and then configure the dates to be between "now" and "now - 3 months":
+     - To identify customers who have recently made their first purchase, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is between" operator, enable the **Use relative dates** option, and then configure the dates to be between ``now`` and ``now - 3 months``:
 
        .. image:: ../../images/attribute-first-order-datetime-example.png
           :width: 540 px

@@ -453,7 +453,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
    * - **customer_type**
      - **Optional**
 
-       Indicates a new or returning known customer. A new known customer hasn't purchased within a given time window. A returning known customer has purchased within a given time window.
+       Indicates a new or returning known customer. A new known customer has not purchased within a given time window. A returning known customer has purchased within a given time window.
 
        The values for **customer_type** must be "new" or "returning". |destination-name| uses 540 days as the default window.
 
@@ -645,7 +645,7 @@ All fields, including optional fields, are listed alphabetically, but may be ret
    * - **customer_type**
      - **Customer Type** (custom field)
 
-       Indicates a new or returning known customer. A new known customer hasn't purchased within a given time window. A returning known customer has purchased within a given time window.
+       Indicates a new or returning known customer. A new known customer has not purchased within a given time window. A returning known customer has purchased within a given time window.
 
        The values for **customer_type** must be "new" or "returning". |destination-name| uses 540 days as the default window.
 

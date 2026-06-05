@@ -251,7 +251,7 @@ Get details
 
           .. image:: ../../images/destination-braze-rest-api-endpoints.png
              :width: 500 px
-             :alt: The endpoints that are required for an Amperity-to-Braze workflow.
+             :alt: The endpoints that are required for a Braze workflow.
              :align: left
              :class: no-scaled-link
 

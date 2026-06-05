@@ -21,12 +21,12 @@ Responses
 
 Amperity API endpoints use conventional HTTP response status codes--3-digit numbers where the first digit of the code defines the class of response--to indicate success or failure for any API request. Response status codes fall into three categories:
 
-#. 2xx - Success
-#. 4xx - Error
+#. 2xx Success
+#. 4xx Error
 
    A 4xx error occurs when information in a request is invalid, such as requesting access to an endpoint that does not exist or by including the wrong value for a query parameter.
 
-#. 5xx - Error
+#. 5xx Error
 
    A 5xx error is caused when the API or endpoint is unavailable.
 

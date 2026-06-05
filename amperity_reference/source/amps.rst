@@ -128,11 +128,11 @@ Storage consumption
 
 .. amps-review-consumption-storage-start
 
-Storage does not consume any Amps; instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
+Storage does not consume any Amps. Instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
 
 Similarly to Amps, Storage consumption is attributable to the product feature where that data is stored. Additionally, all storage can be attributable to the environment (production and individual sandboxes) where it is stored. 
 
-Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted promptly after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
+Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
 
 .. note:: Storage does not consume any Amps and is metered separately in TBs. Typically, storage is less than 5% of total consumption.
 
@@ -163,7 +163,7 @@ You can access the **Amps** dashboard from the |fa-kebab| menu that is located i
 Amp Insights
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**Amp Insights** lets you ask natural language questions to understand your Amps usage and consumption.
+Use **Amp Insights** to ask natural language questions and understand your Amps usage and consumption.
 
 .. include:: ../../amperity_reference/source/assistant.rst
    :start-after: .. amp-insights-examples-list-start
@@ -242,7 +242,7 @@ By category
 
 .. amps-review-consumption-dashboard-category-start
 
-Consumption breakdown by category shows which category--Sources, Stitch, Databases, Analytics, or Activation--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which category--**Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. image:: ../../images/amps-consumption-category-view.png
    :width: 600 px
@@ -260,7 +260,7 @@ By feature
 
 .. amps-review-consumption-dashboard-feature-start
 
-Consumption breakdown by category shows which feature--BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which feature--**BI Connect**, **Bridge**, **Campaigns**, **Databases**, **Ingest**, **Orchestrations**, **Predictive modeling**, **Profile API**, **Segmentation**, **Source tables**, **Source transforms**, or **Stitch**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. amps-review-consumption-dashboard-feature-end
 
@@ -278,7 +278,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, Databases, Analytics, and Activation--and is further broken down into product features.
+Amps and storage (TB) consumption is tracked in 5 categories--**Sources**, **Stitch**, **Databases**, **Analytics**, and **Activation**--and is further broken down into product features.
 
 .. list-table::
    :widths: 30 70

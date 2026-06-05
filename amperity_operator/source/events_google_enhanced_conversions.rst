@@ -109,7 +109,7 @@ where the following fields are:
 * Required: **order_id**, **gclid**, and **timestamp**.
 * Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
 * Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
-* Omit: **gbraid**, **wbraid**, and **conversion_environment**. **gbraid** and **wbraid** apply only to "APP" purchases.
+* Omit: **gbraid**, **wbraid**, and **conversion_environment**. **gbraid** and **wbraid** apply only to ``APP`` purchases.
 
 .. events-google-enhanced-conversions-howitworks-web-end
 
@@ -171,13 +171,13 @@ In-store purchases
 
 .. events-google-enhanced-conversions-howitworks-store-start
 
-A customer sees a Google ad, does not click it, and later walks into a physical store to make a purchase. There is no click ID of any kind. The only link between the purchase and the ad is the customer's identity.
+A customer sees a Google ad, does not click it, and later walks into a physical store to make a purchase. The only link between the purchase and the ad is the customer's identity.
 
 Amperity uploads the transaction with hashed email and phone. Google Ads matches those values against the signed-in Google accounts that previously engaged with your ads. If the customer's email or phone on file with you matches their Google account, the purchase is attributed to the campaign.
 
-**Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them — each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone automatically before upload.
+**Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them. Each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone values automatically before upload.
 
-``conversion_environment`` does not apply to in-store purchases. Neither ``APP`` nor ``WEB`` is accurate for a store transaction. Omit it.
+**conversion_environment** does not apply to in-store purchases because neither ``APP`` nor ``WEB`` is accurate for describing a store transaction.
 
 **Example query**
 
@@ -203,7 +203,7 @@ where the following fields are:
 * Required: **order_id**, **timestamp**, and at least one of **email** or **phone**
 * Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
 
-  .. important:: Rows where both **email** and **phone** are NULL are dropped before upload. They cannot be matched and are silently excluded. Filter them out in your query, as shown above, to keep row counts accurate.
+  .. important:: Rows where both **email** and **phone** are **NULL** are dropped before upload. They cannot be matched and are excluded. Filter them out in your query, as shown above, to keep row counts accurate.
 
 * Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
 * Omit: **gclid**, **gbraid**, **wbraid**, and **conversion_environment**.
@@ -218,7 +218,12 @@ Multiple purchase channels in the same query
 
 .. events-google-enhanced-conversions-howitworks-consolidated-start
 
-If your events data consolidates web, app, and in-store purchases into a single events table, you can send all three to |destination-name| in one query. Each row must include at least one match signal--**gclid**, **gbraid**, or **wbraid**--or a customer identifier--**email** or **phone**. Fields that do not apply to a given channel are NULL. The connector sends only the fields that are present and drops rows where no match signal exists.
+If your events data consolidates web, app, and in-store purchases into a single events table, you can send all three to |destination-name| in one query. Each row must include:
+
+#. At least one match signal: **gclid**, **gbraid**, or **wbraid**
+#. A customer identifier: **email** or **phone**
+
+Fields that do not apply to a given channel are **NULL**. The connector sends only the fields that are present and drops rows where no match signal exists.
 
 .. code-block:: sql
    :emphasize-lines: 4-8,13,17-21
@@ -248,12 +253,12 @@ If your events data consolidates web, app, and in-store purchases into a single 
 
 The source table must have values that map correctly across all three purchase channels:
 
-#. **gclid** is set for web purchases. It is NULL for app and in-store purchases.
-#. **gbraid** is set when a customer clicked a web ad and was directed to your iOS app. It is NULL for web and in-store purchases.
-#. **wbraid** is set when a customer clicked an iOS app ad and was directed to a webpage. It is NULL for web and in-store purchases.
+#. **gclid** is set for web purchases. It is **NULL** for app and in-store purchases.
+#. **gbraid** is set when a customer clicked a web ad and was directed to your iOS app. It is **NULL** for web and in-store purchases.
+#. **wbraid** is set when a customer clicked an iOS app ad and was directed to a webpage. It is **NULL** for web and in-store purchases.
 #. **email** and **phone** are the primary match signals for in-store purchases, and supplement click IDs for web and app purchases. Amperity hashes both automatically before upload. Do not hash them in the query.
-#. **conversion_environment** should be "WEB" or "APP" when known. Set to NULL for in-store purchases. This field is only available to allowlisted Google Ads accounts; omit **conversion_environment** if your account is not allowlisted.
-#. The WHERE clause ensures every row has at least one match signal. Rows that do not satisfy this condition are dropped by the connector before upload.
+#. **conversion_environment** should be ``WEB`` or ``APP`` when known. Set to **NULL** for in-store purchases. This field is only available to allowlisted Google Ads accounts; omit **conversion_environment** if your account is not allowlisted.
+#. The **WHERE** clause ensures every row has at least one match signal. Rows that do not satisfy this condition are dropped by the connector before upload.
 
 .. events-google-enhanced-conversions-howitworks-consolidated-end
 
@@ -659,7 +664,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
        |destination-name| refers to this as the transaction ID for the conversion. This field is required.
 
-       .. important:: Order IDs must be unique per conversion action. Duplicate order IDs within the same conversion action are silently ignored by Google Ads.
+       .. important:: Order IDs must be unique per conversion action. Duplicate order IDs within the same conversion action are ignored by Google Ads.
 
        .. tip:: Use the **Order ID** field in the **Unified Itemized Transactions** table.
 
@@ -717,12 +722,24 @@ The following table describes the fields that may be sent to |destination-name| 
 Google Ads API reference
 ==================================================
 
+.. vale off
+
 .. events-google-enhanced-conversions-api-reference-start
 
 Amperity uses the `Google Ads API v24 <https://developers.google.com/google-ads/api/reference/rpc/v24/>`__ |ext_link| to send data to |destination-name|. The following services are called:
 
-* `GoogleAdsService.SearchStream <https://developers.google.com/google-ads/api/reference/rpc/v24/GoogleAdsService#searchstream>`__ |ext_link| — used to retrieve conversion tracking settings and look up existing conversion actions.
-* `ConversionUploadService.UploadClickConversions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionUploadService#uploadclickconversions>`__ |ext_link| — used to upload click conversions. Batches are capped at 2,000 rows.
-* `ConversionActionService.MutateConversionActions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionActionService#mutateconversionactions>`__ |ext_link| — used to create a conversion action when one with the configured name does not already exist.
+* `GoogleAdsService.SearchStream <https://developers.google.com/google-ads/api/reference/rpc/v24/GoogleAdsService#searchstream>`__ |ext_link|
+
+  Used to retrieve conversion tracking settings and look up existing conversion actions.
+
+* `ConversionUploadService.UploadClickConversions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionUploadService#uploadclickconversions>`__ |ext_link|
+
+  Used to upload click conversions. Batches are capped at 2,000 rows.
+
+* `ConversionActionService.MutateConversionActions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionActionService#mutateconversionactions>`__ |ext_link|
+
+  Used to create a conversion action when one with the configured name does not already exist.
 
 .. events-google-enhanced-conversions-api-reference-end
+
+.. vale on

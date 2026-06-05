@@ -180,7 +180,7 @@ Get details
 
              .. image:: ../../images/destination-braze-rest-api-endpoints.png
                 :width: 500 px
-                :alt: The endpoints that are required for an Amperity-to-Braze workflow.
+                :alt: The endpoints that are required for a Braze workflow.
                 :align: left
                 :class: no-scaled-link
 
@@ -496,10 +496,10 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-braze-workflow-actions-invalid-credentials`
-       * :ref:`destination-braze-workflow-actions-missing-required-field`
-       * :ref:`destination-braze-workflow-actions-conflicting-identifiers`
-       * :ref:`destination-braze-workflow-actions-status-401`
+       * :ref:`campaign-braze-workflow-actions-invalid-credentials`
+       * :ref:`campaign-braze-workflow-actions-missing-required-field`
+       * :ref:`campaign-braze-workflow-actions-conflicting-identifiers`
+       * :ref:`campaign-braze-workflow-actions-status-401`
 
 
    * - .. image:: ../../images/steps-04.png

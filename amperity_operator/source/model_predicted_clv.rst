@@ -67,7 +67,7 @@ Return classifier
 
 The return classifier submodel predicts the probability that a customer will make at least one purchase during the prediction horizon. This is a binary classification: will a customer return or not return? The prediction is output as a probability score between 0 and 1.
 
-.. note:: Customers with a very low return probability will naturally have a low predicted CLV regardless of other factors.
+.. note:: Customers with a very low return probability have a low predicted CLV regardless of other factors.
 
 .. model-predicted-clv-howitworks-return-classifier-end
 
@@ -109,7 +109,7 @@ The :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`,
 
    Predicted CLV = P(return) x Predicted Order Frequency x Predicted Avg Order Value
 
-A customer with a high probability of return but low order frequency and modest order value will have a moderate CLV, while a customer who is likely to return frequently and spend heavily will have a high CLV.
+A customer with a high probability of return but low order frequency and modest order value have a moderate CLV, while a customer who is likely to return frequently and spend has a high CLV.
 
 After raw scores are computed, a sigmoid rescaling step compresses extreme outlier predictions to produce a smoother distribution of values.
 
@@ -336,11 +336,11 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        The predictive CLV model uses impurity to evaluate the quality of a candidate split at each node.
 
-       For example: "Customers with more than 3 orders in the last 90 days" go into one branch of the split and "Everyone else" goes into the other. Impurity measures if the split produces more homogenous groups than the parent node did. A good split pushes customers who will return into one branch and customers who won't into the other.
+       For example: "Customers with more than 3 orders in the last 90 days" go into one branch of the split and "Everyone else" goes into the other. Impurity measures if the split produces more homogenous groups than the parent node did. A good split pushes customers who will return into one branch and customers who will not into the other.
 
        The predictive CLV model picks the branch with the greatest reduction in impurity.
 
-       Use "Gini" to measure the probability of misclassifying a randomly chosen customer. Gini favors splits that isolate the single largest class and is well-suited for imbalanced datasets where non-returners significantly outnumber returners.
+       Use "Gini" to measure the probability of misclassifying a randomly chosen customer. Gini favors splits that isolate the single largest class and is well-suited for imbalanced datasets where non-returners outnumber returners.
 
        Use "Entropy" to measure the average amount of information needed to describe a randomly chosen customer. Entropy produces more balanced splits and finds patterns when returners contain meaningful subgroups.
 
@@ -383,7 +383,7 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        Range: 1 to 30.
 
-       This setting controls the levels of splits a tree is allowed to make. At each level a yes/no question is asked and, depending on the answer, the data is split into two groups. For example:
+       This setting controls the levels of splits a tree is allowed to make. At each level a yes or no question is asked and, depending on the answer, the data is split into two groups. For example:
 
        .. code-block:: none
 
@@ -591,6 +591,8 @@ On the **Schedule** page:
 Predicted CLV output tables
 ==================================================
 
+.. vale off
+
 .. model-predicted-clv-output-tables-start
 
 The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
@@ -598,6 +600,8 @@ The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
 .. note:: Field names use "365d" as the default prediction horizon. If a predicted CLV model uses a different prediction horizon, such as "90 days" or "180 days", column names in the database table are not updated. The data in the table rows always matches the value for the lookback window.
 
 .. model-predicted-clv-output-tables-end
+
+.. vale on
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-predicted-clv-attributes-table-about-start

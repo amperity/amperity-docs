@@ -101,7 +101,7 @@ To connect Amperity to data sources, do the following:
 #. Log in to `Amperity <https://app.amperity.com>`__.
 #. Open the **Quick start** page. This is located in the left-side menu at the top.
 #. Under **Identity resolution** click **Add datasource**.
-#. Select one of the following options: **More sources ...**, and then choose **Sample data**.
+#. Select one of the following options: **More sources**, and then choose **Sample data**.
 
    This opens a page that will walk you through steps for connecting to Amperity to sample customer profiles.
 

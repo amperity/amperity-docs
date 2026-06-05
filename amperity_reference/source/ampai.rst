@@ -19,7 +19,7 @@ About AmpAI
 
 .. ampai-overview-start
 
-**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. **AmpAI** lets you ask and answer complex questions about your customers, with support for visualizations, and operates over the data in the database.
+**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. Use **AmpAI** to ask and answer complex questions about your customers, with support for visualizations, over the data in the database.
 
 **AmpAI** supports customization through :ref:`custom prompts <ampai-custom-prompt>` and :ref:`company context <ampai-company-context>`. Custom prompts encode specific business logic and definitions that apply to every prompt you write, while company context provides a library of reference documents for AmpAI to better understand your business. Together, these help you tailor **AmpAI** to align with your business requirements and keep results consistent.
 
@@ -55,9 +55,9 @@ AmpAI tools
 
 .. ampai-tools-start
 
-**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point --- describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
 
-A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
+A typical workflow might start with using the **Customer Data Assistant** to create a segment and journey, and then using the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
 .. note:: Custom prompts and company context set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all other AI Assistants.
 
@@ -103,7 +103,7 @@ Getting good results with AmpAI
 
 To achieve optimal results when using **AmpAI**, follow these best practices for structuring your prompts:
 
-* **Understand the question’s scope**
+* **Understand the question's scope**
 
   Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
 
@@ -418,11 +418,11 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
 
 #. **Iterate.**
 
-   For each failure, identify why **AmpAI** didn't follow the instruction. Common reasons:
+   For each failure, identify why **AmpAI** did not follow the instruction. Common reasons:
 
-   * Instruction was ambiguous ("use the customer table"—which one?)
-   * Instruction was buried in too much text (move critical rules to the top)
-   * Column/table name was wrong (check the actual schema)
+   * Instruction was ambiguous, such as "use the customer table". Which customer table?
+   * Instruction was buried in too much text. Move critical rules to the top.
+   * Column/table name was wrong. Check the actual schema.
    * Conflicting instructions in the prompt
 
    Make one change at a time to the draft prompt. Re-run the failing test case. Re-run passing test cases to check for regressions.
@@ -704,7 +704,7 @@ How the assistant uses context
 
 .. ampai-company-context-how-it-works-start
 
-When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant  searches the context library and returns the most relevant excerpts --- typically a few short passages, at most five --- along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
+When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant searches the context library and returns the most relevant excerpts, along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
 
 No specific action is required when prompting. Context lookup is automatic when the assistant determines that a question involves business-specific knowledge.
 

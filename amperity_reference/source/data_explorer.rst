@@ -45,7 +45,7 @@ About the Data Explorer
 
 .. admonition:: Amperity Learning Lab
 
-   The Data Explorer lets you explore databases, tables, schemas, and example data.
+   Use the Data Explorer to explore databases, tables, schemas, and example data.
 
    Open **Learning Lab** to learn more about `understanding and exploring your data <https://amperity.com/learning-lab/understanding-and-exploring-your-data>`__ |ext_link|. Registration is required.
 

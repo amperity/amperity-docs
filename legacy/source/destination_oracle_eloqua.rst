@@ -95,8 +95,8 @@ Get details
 
        Use filename templates or data templates to configure Amperity to support managing more than one shared list. For example:
 
-       * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
-       * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- updates the same shared list each time the audience is sent from Amperity.
+       * A timestamp at the end of a filename template--**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**--creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
+       * A campaign that is configured only for campaign name and group name--**{{ campaign_name }} - {{ group_name }}**--updates the same shared list each time the audience is sent from Amperity.
 
        .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
 

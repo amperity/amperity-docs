@@ -220,7 +220,7 @@ Goal conditions
 
 .. journeys-goal-conditions-start
 
-Setting goals allows you to track when customers included in the journey reach designated segments. This differs from an exit condition in that reaching a goal segment does not remove the customer from the journey, allowing you to measure progress on specific business goals while the customer continues on the journey.
+Set goals to track when customers included in the journey reach designated segments. This differs from an exit condition in that reaching a goal segment does not remove the customer from the journey. You can measure progress on specific business goals while the customer continues on the journey.
 
 Goal conditions are defined using a segment. One or more segments that define goal conditions may be added to a journey using the **Select goal segments** dropdown.
 
@@ -232,7 +232,7 @@ Goal conditions are defined using a segment. One or more segments that define go
 
 .. journeys-setup-goals-batch-admonition-start
 
-.. important:: Journey goals require batch segments (SQL-based segments). Real-time segments are not currently supported for journey goals.
+.. important:: Journey goals require batch segments (SQL-based segments). Real-time segments are not supported for journey goals.
 
 .. journeys-setup-goals-batch-admonition-end
 
@@ -303,7 +303,7 @@ About the Journeys AI Assistant
 
 .. journeys-ai-assistant-start
 
-The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys Canvas** that lets you use natural language to edit and personalize journeys.
+The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys Canvas**. Use it to edit and personalize journeys with natural language.
 
 .. journeys-ai-assistant-end
 
@@ -570,7 +570,7 @@ Journeys measurement helps you:
 * View metrics across multiple time windows (7, 30, and 90 days)
 * Export detailed journey travel logs for advanced analysis
 
-.. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not currently supported for journey measurement.
+.. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not supported for journey measurement.
 
 .. journeys-measurement-overview-end
 
@@ -639,8 +639,8 @@ Milestones tracking
 
 The milestones dashboard on the **Journeys Canvas** capture significant events as customers travel through your journey. The system automatically tracks:
 
-* **Goal milestones** - Customer achieved a journey or split goal
-* **Exit milestones** - Customer met exit criteria and left the journey
+* **Goal milestones** Customer achieved a journey or split goal
+* **Exit milestones** Customer met exit criteria and left the journey
 
 **Milestone metrics:**
 
@@ -816,7 +816,7 @@ To help you get started with journeys, Amperity provides example journeys of com
      - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
 
    * - `Abandoned cart <https://docs.amperity.com/user/journeys_reference.html#abandoned-cart>`__
-     - Convert users who started a purchase but didn't finish.
+     - Convert users who started a purchase but did not finish.
 
    * - `Birthday <https://docs.amperity.com/user/journeys_reference.html#birthday>`__
      - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
@@ -840,7 +840,7 @@ To help you get started with journeys, Amperity provides example journeys of com
      - Drive repeat purchases based on predicted product consumption cycles.
 
    * - `Financial services welcome <https://docs.amperity.com/user/journeys_reference.html#financial-services-welcome>`__
-     - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
+     - Guide new account holders to full product adoption and usage. For example: depositing funds or setting up direct deposit.
 
 .. journeys-reference-use-cases-end
 
@@ -1233,7 +1233,7 @@ Fit Journeys Canvas to screen
 
 .. journeys-howtos-fit-canvas-to-screen-start
 
-You can re-center and resize the the canvas so that you are able to see the whole journey at once.
+You can re-center and resize the canvas so that you are able to see the whole journey at once.
 
 .. journeys-howtos-fit-canvas-to-screen-end
 
@@ -1261,18 +1261,21 @@ You can filter the list of journeys that appear on the **Journeys** page. Click 
 * By created by. Select any combination of users who created journeys.
 * By label. Select one or more labels to filter journeys by organizational category.
 
-.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to identify journey types ("Welcome-Series", "Retention", "Winback"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
 
-   **Label naming conventions**
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
 
-   * Maximum 35 characters
-   * Only alphanumeric characters, hyphens, and underscores allowed
-   * Maximum of 10 labels per journey
-   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
 
-   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, journeys matching any selected labels will be shown.
+.. note:: When multiple labels are selected, journeys matching any selected labels are shown.
 
 .. journeys-filter-end
 
@@ -1297,7 +1300,7 @@ Define measurement segments
 
 .. journeys-howtos-define-measurement-segments-start
 
-You can define customer segments in the **Visual segment editor** based on journey activity. This allows you to see segment insights for any customers who participated in a journey, achieved a goal, or met exit criteria.  
+You can define customer segments in the **Visual segment editor** based on journey activity. Use these segments to see insights for any customers who participated in a journey, achieved a goal, or met exit criteria.
 
 .. journeys-howtos-define-measurement-segments-end
 
@@ -1368,7 +1371,7 @@ Designate up to five goal segments on the initial journey setup window from the 
 If you skip designating goals during the initial setup and want to add them later:
 
 #. Open your journey in edit mode.
-#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Locate the milestones card on the upper-right of the **Journeys Canvas**.
 #. Click **Add a goal**.
 #. Select up to 5 batch segments that represent goal achievements.
 #. Click **Done**.
@@ -1377,7 +1380,7 @@ If you skip designating goals during the initial setup and want to add them late
 Once you have designated at least one goal, you may add or modify goals:
 
 #. Open your journey in edit mode.
-#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Locate the milestones card on the upper-right of the **Journeys Canvas**.
 #. Click the caret icon.
 #. Click **Modify goals**.
 #. Select up to 5 batch segments that represent goal achievements.
@@ -1429,7 +1432,7 @@ Metrics update after each journey run. Historical data is preserved for trend an
 .. journeys-howtos-view-milestone-metrics-steps-start
 
 #. On the **Journeys** page, open a journey that has run at least once
-#. Navigate to the milestones card on the upper-right of the Journeys canvas
+#. Navigate to the milestones card on the upper-right of the **Journeys Canvas**
 #. Review milestone counts by time window: All-time total, past 7 days, past 30 days, or past 90 days
 #. Check median duration to understand time-to-goal
 #. For split goals, compare path-specific counts
@@ -1751,20 +1754,20 @@ Open a node to view its configuration.
 
 .. _journeys-howtos-zoom-canvas:
 
-Zoom in/out on Journeys Canvas
+Zoom in or out on the Journeys Canvas
 --------------------------------------------------
 
 .. journeys-howtos-zoom-canvas-start
 
-You can zoom in and out on the Journeys canvas. 
+You can zoom in and out on the **Journeys Canvas**. 
 
 .. journeys-howtos-zoom-canvas-end
 
-**To zoom in or out on the Journeys canvas**
+**To zoom in or out on the Journeys Canvas**
 
 .. journeys-howtos-zoom-canvas-steps-start
 
-* Zoom by using the **+** / **-** buttons in the bottom left of the canvas.
-* You may also pinch/expand on a trackpad, either on the canvas or on the minimap in the lower right.
+* Zoom by using the **+** / **-** buttons in the bottom left of the **Journeys Canvas**.
+* You may also pinch or expand on a trackpad, either on the canvas or on the minimap in the lower right.
 
 .. journeys-howtos-zoom-canvas-steps-end

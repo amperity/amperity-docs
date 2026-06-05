@@ -59,7 +59,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify customers have purchased from your brand within the past year, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is on or after" operator, enable the **Use relative dates** checkbox, and then enter "today - 1 year":
+     - To identify customers have purchased from your brand within the past year, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is on or after" operator, enable the **Use relative dates** checkbox, and then enter ``today - 1 year``:
 
        .. image:: ../../images/usecase-active-store-shopper-order-datetime.png
           :width: 540 px

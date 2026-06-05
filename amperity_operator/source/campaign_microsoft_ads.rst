@@ -37,7 +37,7 @@ Microsoft Advertising is a pay-per-click partner syndication network, which enab
 
 .. campaign-microsoft-ads-about-start
 
-Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
+Use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
 * Bing, along with sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk
 * `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
@@ -388,12 +388,12 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-microsoft-ads-workflow-actions-email-address-required`
-       * :ref:`destination-microsoft-ads-workflow-actions-expired-credentials`
-       * :ref:`destination-microsoft-ads-workflow-actions-invalid-credentials`
-       * :ref:`destination-microsoft-ads-workflow-actions-must-accept-terms`
-       * :ref:`destination-microsoft-ads-workflow-actions-not-authorized`
-       * :ref:`destination-microsoft-ads-workflow-actions-mfa-required`
+       * :ref:`campaign-microsoft-ads-workflow-actions-email-address-required`
+       * :ref:`campaign-microsoft-ads-workflow-actions-expired-credentials`
+       * :ref:`campaign-microsoft-ads-workflow-actions-invalid-credentials`
+       * :ref:`campaign-microsoft-ads-workflow-actions-must-accept-terms`
+       * :ref:`campaign-microsoft-ads-workflow-actions-not-authorized`
+       * :ref:`campaign-microsoft-ads-workflow-actions-mfa-required`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -482,7 +482,7 @@ Must accept terms and conditions
 
 .. campaign-microsoft-ads-workflow-actions-must-accept-terms-start
 
-You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
 
 To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 

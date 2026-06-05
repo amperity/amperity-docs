@@ -414,7 +414,9 @@ A query that returns a collection offline event is similar to:
    WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
    GROUP BY amperity_id
 
-The query **MUST** contain the following fields: **email** and **timestamp**.
+The query **MUST** contain **timestamp** and at least one of **email** or **phone**.
+
+.. tip:: You may use **phone** as an alternative to **email**. When both are present in the same row, Amperity generates a separate event for each identifier.
 
 .. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. A `UID2 table <../reference/uid2.html#add-uid2-table-to-database>`__ must be configured in your customer 360 database.
 
@@ -464,17 +466,17 @@ The fields are listed alphabetically, but may be returned by the query in any or
      - Description
 
    * - **cat**
-     - **Optional**, but **Recommended** when transaction details are included with events. See **item_code**, **name**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **item_code**, **price**, and **qty**.
 
        The name of a product in your product catalog.
 
-       This value is most often associated with the **Product Category** field in the **Unified Itemized Transactions** table. Within the **SELECT** statement, return **Product Category**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Product Category** field in the **Unified Itemized Transactions** table. Include **product_category** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,product_category AS cat
+          ,product_category
 
 
    * - **city**
@@ -500,11 +502,11 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **email**
-     - **Required**
+     - **Required** unless **phone** is provided.
 
        The email address that is associated with the offline event.
 
-       .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** or **EUID** ID type. Rows that are sent to |destination-name| that do not have a UID 2.0 value or have an empty value are removed by |destination-name|.
+       .. note:: Amperity converts email addresses to a UID 2.0 value, and then sends them to |destination-name|, after which they are available from within |destination-name| as a **UID2** or **EUID** ID type. Rows without a valid UID 2.0 value or with an empty value are removed by Amperity before sending.
 
    * - **euid**
      - **Optional**
@@ -574,31 +576,18 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **item_code**
-     - **Optional**, but **Required** when transaction details are included with events. See **cat**, **name**, **price**, and **qty**.
+     - **Optional**, but **Required** when transaction details are included with events. See **cat**, **price**, and **qty**.
 
        The unique identifier for a product in your brand's product catalog.
 
-       This value is most often associated with the **Product ID** field in the **Unified Itemized Transactions** table. Within the **SELECT** statement, return **Product ID**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Product ID** field in the **Unified Itemized Transactions** table. Include **product_id** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,product_id AS item_code
+          ,product_id
 
-
-   * - **name**
-     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **price**, and **qty**.
-
-       The name of a product in your brand's product catalog.
-
-       This value is most often associated with the **Product Name** field in the **Unified Itemized Transactions** table. Within the **SELECT** statement, return **Product Name**, and then rename it to the field name required by |destination-name|.
-
-       For example:
-
-       .. code-block:: sql
-
-          ,product_name AS name
 
 
    * - **orderid**
@@ -608,27 +597,43 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        .. note:: This field should be included with events to help |destination-name| deduplicate conversion events.
 
-       This value is most often associated with the **Order ID** field in the **Unified Transactions** table. Within the **SELECT** statement, return **Order ID**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Order ID** field in the **Unified Transactions** table. Include **order_id** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,order_id AS orderid
+          ,order_id
+
+
+   * - **phone**
+     - **Required** unless **email** is provided.
+
+       The phone number associated with the offline event. Phone numbers are normalized to E.164 format and converted to a UID 2.0 value before being sent to |destination-name|.
+
+       .. note:: A row that contains both **email** and **phone** generates two events, one for each identifier.
+
+       This value is most often associated with the **Phone** field in the **Customer 360** table. Include **phone** in the **SELECT** statement.
+
+       For example:
+
+       .. code-block:: sql
+
+          ,c360.phone AS phone
 
 
    * - **price**
-     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **name**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, and **qty**.
 
        The price of each item that is associated with an offline event. For example: "$9.99"
 
-       This value is most often associated with the **Item Price** field in the **Unified Itemized Transactions** table. Within the **SELECT** statement, return **Item Price**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Item Price** field in the **Unified Itemized Transactions** table. Include **item_price** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,item_price AS price
+          ,item_price
 
 
    * - **qty**
@@ -637,13 +642,13 @@ The fields are listed alphabetically, but may be returned by the query in any or
        The number of items that are associated with an offline event. For example: "10".
 
 
-       This value is most often associated with the **Item Quantity** field in the **Unified Itemized Transactions** table. Within the **SELECT** statement, return **Item Quantity**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Item Quantity** field in the **Unified Itemized Transactions** table. Include **item_quantity** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,item_quantity AS qty
+          ,item_quantity
 
 
    * - **region**
@@ -651,14 +656,14 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The region in which the offline event occurred. For the United States, **region** refers to the state in which the offline event occurred.
 
-       Within the **SELECT** statement, return **region** in the query results when **country** is also returned in the query results. This is done typically by mapping a column in a database table to **region**.
+       Include **state** and **country** in the **SELECT** statement when **country** is also returned in the query results.
 
        For example:
 
        .. code-block:: sql
 
-          ,country AS country
-          ,state AS region
+          ,country
+          ,state
 
        .. tip:: Use a **WHERE** clause to limit query results to only events that occurred in specific states.
 
@@ -672,19 +677,19 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        A unique identifier for the location in which the offline event occurred. For retail transactions, this is most often a unique ID for a store or for a website.
 
-       This value is most often associated with the **Store ID** field in the **Unified Transactions** table. Within the **SELECT** statement, return **Store ID**, and then rename it to the field name required by |destination-name|.
+       This value is most often associated with the **Store ID** field in the **Unified Transactions** table. Include **store_id** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,store_id AS storeid
+          ,store_id
 
        If you do not need to track events by individual physical stores, you may use a purchase channel to define this value. For example:
 
        .. code-block:: sql
 
-          ,purchase_channel AS storeid
+          ,purchase_channel AS store_id
 
 
    * - **TD1** - **TD10**
@@ -745,13 +750,13 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The currency that was associated with the offline event.
 
-       For retail-focused events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Include **currency** in the **SELECT** statement.
 
        For example:
 
        .. code-block:: sql
 
-          ,currency AS valuecurrency
+          ,currency
 
 
 .. events-the-trade-desk-parameters-offline-end

@@ -61,7 +61,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify customers whose most recent order was at least 1 year ago, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is before" operator, enable the **Use relative dates** option, and then configure the dates to be "today - 1 year":
+     - To identify customers whose most recent order was at least 1 year ago, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is before" operator, enable the **Use relative dates** option, and then configure the dates to be ``today - 1 year``:
 
        .. image:: ../../images/attribute-latest-order-datetime-is-before-1-year.png
           :width: 540 px

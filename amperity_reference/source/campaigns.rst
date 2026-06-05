@@ -1610,16 +1610,22 @@ You can filter the list of campaigns that appear on the **Campaigns** page. Clic
 * By last edited by. Select any combination of users who most recently edited campaigns.
 * By label. Select one or more labels to filter campaigns by organizational category.
 
-.. tip:: Labels help organize campaigns by grouping related items together. For example, use labels to identify campaign types ("Holiday", "Retention", "Acquisition"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
 
-   **Label naming conventions**
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
 
-   * Maximum 35 characters
-   * Only alphanumeric characters, hyphens, and underscores allowed
-   * Maximum of 10 labels per campaign
-   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
 
-   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When multiple labels are selected, journeys matching any selected labels are shown.
+
 
 .. note:: When multiple labels are selected, campaigns matching any selected labels will be shown.
 

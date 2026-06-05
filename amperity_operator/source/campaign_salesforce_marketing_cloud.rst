@@ -614,13 +614,13 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-import-wrong-type`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key`
-       * :ref:`destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-import-wrong-type`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-import-wrong-location`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-incorrect-folder`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-invalid-credentials`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-missing-primary-key`
+       * :ref:`campaign-salesforce-marketing-cloud-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png

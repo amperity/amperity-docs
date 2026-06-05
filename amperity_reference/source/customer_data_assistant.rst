@@ -19,7 +19,7 @@ Customer Data Assistant
 
 .. customer-data-agent-overview-start
 
-The **Customer Data Assistant** is a feature within the **AmpAI** suite that helps marketers move quickly from intent to action. Through natural language conversation, users can create segments, build journeys, and explore customer data without navigating manual configuration.
+The **Customer Data Assistant** is a feature within the **AmpAI** suite that helps marketers move from intent to action. Through natural language conversation, users can create segments, build journeys, and explore customer data without navigating manual configuration.
 
 The **Customer Data Assistant** is designed as a starting point: describe what you want to accomplish, and the agent generates a working draft that you can review, refine, and save. Think of it as a collaborative tool that handles the initial setup work, allowing you to focus on strategic refinement.
 
@@ -76,7 +76,7 @@ To access the **Canvas**, click into any draft that has a split-screen icon on t
       :align: left
       :class: no-scaled-link
 
-The Canvas allows you to:
+Use the Canvas to:
 
 * View proposed segments with customer counts and filter criteria
 * Preview journey structures with their entry segments and channel configurations
@@ -105,10 +105,10 @@ The **Customer Data Assistant** operates in a drafting model for segments: when 
 
 This drafting approach provides several benefits:
 
-* **Review before saving.** Inspect the draft before saving. Check segment filters, customer count, and structure.
-* **Iterative refinement.** Ask the agent to modify the proposal (e.g. "Actually, change the time frame to the last two months") and see the updated version before saving.
-* **Compare versions.** Click between proposed drafts in the **Customer Data Assistant** chat history to compare different iterations side-by-side.
-* **Safe exploration.** Experiment with different segment definitions or journey flows without affecting your production data.
+* **Review before saving** Inspect the draft before saving. Check segment filters, customer count, and structure.
+* **Iterative refinement** Ask the agent to modify the proposal and see the updated version before saving. For example: "Actually, change the time frame to the last two months".
+* **Compare versions** Click between proposed drafts in the **Customer Data Assistant** chat history to compare different iterations side-by-side.
+* **Safe exploration** Experiment with different segment definitions or journey flows without affecting your production data.
 
 Once satisfied with a proposal, explicitly ask the agent to save it. After saving, use the **Manual edit** button in the **Canvas** to open the full segment or journey editor for additional refinement.
 
@@ -160,7 +160,7 @@ For example, if you ask: "Create a segment of high-value members and build a jou
 #. Execute each task in sequence
 #. Track progress through the plan, showing completed and pending items
 
-You can interrupt a plan to ask questions about a draft mid-process without losing the agent's place. For example, after the agent creates a segment but before it builds the journey, you can ask "What's the preferred marketing channel for this segment?" The agent will answer and then continue with the journey creation.
+You can interrupt a plan to ask questions about a draft mid-process without losing the agent's place. For example, after the agent creates a segment but before it builds the journey, you can ask "What is the preferred marketing channel for this segment?" The agent will answer and then continue with the journey creation.
 
 .. customer-data-agent-planning-end
 
@@ -227,13 +227,13 @@ Limitations
 
 .. customer-data-agent-limitations-start
 
-The **Customer Data Assistant** is optimized for customer data operations. It cannot currently:
+The **Customer Data Assistant** is optimized for customer data operations. It cannot:
 
-* **Answer configuration questions.** Questions like "What journeys do I currently have?" or "What destinations can I send to?" are not supported. The agent operates on customer data, not tenant configuration metadata.
+* **Answer configuration questions.** Questions like "What journeys do I have?" or "What destinations can I send to?" are not supported. The agent operates on customer data, not tenant configuration metadata.
 
-* **Perform troubleshooting or error recovery.** If you encounter an error message and ask "What should I do?", the agent cannot currently diagnose the issue.
+* **Perform troubleshooting or error recovery.** If you encounter an error message and ask "What should I do?", the agent cannot diagnose the issue.
 
-* **Modify destinations, orchestrations, or other non-segment/journey configurations.** The agent's scope is currently limited to segments and journeys.
+* **Modify destinations, orchestrations, or other non-segment/journey configurations.** The agent's scope is limited to segments and journeys.
 
 .. customer-data-agent-limitations-end
 
@@ -247,9 +247,9 @@ Prompting philosophy
 
 Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Like any tool, it performs best when you provide clear direction and iterate based on results.
 
-**Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who haven't purchased in 90 days" is more effective than "Find me some customers to target."
+**Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who have not purchased in 90 days" is more effective than "Find me some customers to target."
 
-**Iterate and refine.** If the first result isn't quite right, coach the agent with specific feedback:
+**Iterate and refine.** If the first result is not correct, coach the agent with specific feedback:
 
 * "The date range should be last year, not this year"
 * "Add a filter for customers in the Gold loyalty tier"
@@ -260,9 +260,9 @@ Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Lik
 * "Can you look into my data to see when there is purchase data around Valentine's Day?"
 * "What date range has the most transaction data?"
 
-The agent can query your data to find valid parameters, helping you build effective segments even when you're unsure of the exact values.
+The agent can query your data to find valid parameters, helping you build effective segments even when you are unsure of the exact values.
 
-**Reframe the question.** If you're not getting the results you expect, try asking the same question in a different way. The framing of your question can significantly affect the response.
+**Reframe the question.** If you are not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
 
 .. customer-data-agent-prompting-end
 
@@ -300,11 +300,11 @@ Pro tips
 
 .. customer-data-agent-pro-tips-start
 
-.. tip:: **Build marketing personas.** Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you're trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
+.. tip:: **Build marketing personas.** Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you are trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
 
 .. tip:: **Let the agent find existing segments.** When creating a journey, the agent may identify an existing segment that matches your needs. It will ask: "I found a segment called High Value Customers that looks like it could work. Would you like to use that, or should I create a new one?" This helps avoid duplicate segments and makes good use of work already done.
 
-.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you've laid out. For example, if you've defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
+.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you have laid out. For example, if you have defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
 
 .. customer-data-agent-pro-tips-end
 
@@ -322,7 +322,7 @@ The **Customer Data Assistant** has capabilities that overlap with the existing 
    :start-after: .. ampai-tools-overview-table-start
    :end-before: .. ampai-tools-overview-table-end
 
-A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
+A typical workflow might start with the **Customer Data Assistant** to create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
 
 .. customer-data-agent-relationship-to-assistants-end
 

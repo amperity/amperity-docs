@@ -20,7 +20,7 @@ Search the docs
 
 .. .. search-navigation-start
 
-There are three ways to search for information on the Amperity docs site:
+You can search for information on the Amperity docs site:
 
 #. :ref:`Search from navigation <search-navigation>`
 #. :ref:`Open advanced search <search-advanced>`
@@ -58,7 +58,7 @@ Navigation search is pinned at the top of every page in the Amperity docs site.
 
    When a glossary entry exactly matches the search term the glossary entry is shown as the first search result.
 
-.. note:: If you don't quickly find what you are looking for:
+.. note:: If you do not find what you are looking for:
 
    #. Filter by :ref:`topic collection <search-advanced-filters-collections>`. All topic collections are selected by default. Deselect one or more topic collections to narrow your search.
 
@@ -110,7 +110,7 @@ Filter options include:
 
 Single words, complete names, and multiword searches set to match exactly often work best. For example: **Adobe**, **Adobe Target**, and **Adobe Target** (set to **Exact matches only**) return different numbers of results.
 
-.. tip:: Avoid phrases or questions, such as **How to configure ...?** or "Where is the customer 360 database?".
+.. tip:: Avoid phrases or questions, such as **How to configure [word]?** or "Where is the customer 360 database?".
 
 .. tip:: Use the **Exact matches only** and **Exact order only** options instead of quotation marks within the search term.
 

@@ -61,7 +61,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify which customers have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then configure the dates to be between "now - 30 days":
+     - To identify which customers have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then configure the dates to be between ``now - 30 days``:
 
        .. image:: ../../images/attribute-first-order-datetime-last-30-days.png
           :width: 540 px

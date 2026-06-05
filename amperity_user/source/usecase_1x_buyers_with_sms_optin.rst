@@ -61,7 +61,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To find customers who have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then enter "today - 1 month":
+     - To find customers who have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then enter ``today - 1 month``:
 
        .. image:: ../../images/usecase-engage-sms-first-time-buyers.png
           :width: 540 px
