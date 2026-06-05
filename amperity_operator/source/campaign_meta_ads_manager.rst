@@ -447,14 +447,14 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-meta-ads-manager-workflow-actions-authorization-error`
-       * :ref:`destination-meta-ads-manager-workflow-actions-cannot-create-ads`
-       * :ref:`destination-meta-ads-manager-workflow-actions-extern-id-missing`
-       * :ref:`destination-meta-ads-manager-workflow-actions-invalid-credentials`
-       * :ref:`destination-meta-ads-manager-workflow-actions-maximum-audiences`
-       * :ref:`destination-meta-ads-manager-workflow-actions-facebook-terms`
-       * :ref:`destination-meta-ads-manager-workflow-actions-business-account`
-       * :ref:`destination-meta-ads-manager-workflow-actions-security-challenge`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-authorization-error`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-cannot-create-ads`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-extern-id-missing`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-invalid-credentials`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-maximum-audiences`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-facebook-terms`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-business-account`
+       * :ref:`campaign-meta-ads-manager-workflow-actions-security-challenge`
 
 
    * - .. image:: ../../images/steps-04.png

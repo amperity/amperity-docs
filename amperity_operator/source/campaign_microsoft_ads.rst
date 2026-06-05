@@ -388,12 +388,12 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-microsoft-ads-workflow-actions-email-address-required`
-       * :ref:`destination-microsoft-ads-workflow-actions-expired-credentials`
-       * :ref:`destination-microsoft-ads-workflow-actions-invalid-credentials`
-       * :ref:`destination-microsoft-ads-workflow-actions-must-accept-terms`
-       * :ref:`destination-microsoft-ads-workflow-actions-not-authorized`
-       * :ref:`destination-microsoft-ads-workflow-actions-mfa-required`
+       * :ref:`campaign-microsoft-ads-workflow-actions-email-address-required`
+       * :ref:`campaign-microsoft-ads-workflow-actions-expired-credentials`
+       * :ref:`campaign-microsoft-ads-workflow-actions-invalid-credentials`
+       * :ref:`campaign-microsoft-ads-workflow-actions-must-accept-terms`
+       * :ref:`campaign-microsoft-ads-workflow-actions-not-authorized`
+       * :ref:`campaign-microsoft-ads-workflow-actions-mfa-required`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px

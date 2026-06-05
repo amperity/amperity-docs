@@ -683,8 +683,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-credentials`
-       * :ref:`destination-azure-blob-storage-workflow-actions-invalid-permissions`
+       * :ref:`campaign-azure-blob-storage-workflow-actions-invalid-credentials`
+       * :ref:`campaign-azure-blob-storage-workflow-actions-invalid-permissions`
 
 
    * - .. image:: ../../images/steps-04.png

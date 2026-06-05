@@ -496,10 +496,10 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-braze-workflow-actions-invalid-credentials`
-       * :ref:`destination-braze-workflow-actions-missing-required-field`
-       * :ref:`destination-braze-workflow-actions-conflicting-identifiers`
-       * :ref:`destination-braze-workflow-actions-status-401`
+       * :ref:`campaign-braze-workflow-actions-invalid-credentials`
+       * :ref:`campaign-braze-workflow-actions-missing-required-field`
+       * :ref:`campaign-braze-workflow-actions-conflicting-identifiers`
+       * :ref:`campaign-braze-workflow-actions-status-401`
 
 
    * - .. image:: ../../images/steps-04.png

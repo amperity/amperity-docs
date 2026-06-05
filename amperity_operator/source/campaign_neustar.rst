@@ -475,8 +475,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-neustar-workflow-actions-invalid-credentials`
-       * :ref:`destination-neustar-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-neustar-workflow-actions-invalid-credentials`
+       * :ref:`campaign-neustar-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png

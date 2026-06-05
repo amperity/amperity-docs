@@ -415,10 +415,10 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-linkedin-dmp-workflow-actions-dataset-size-error`
-       * :ref:`destination-linkedin-dmp-workflow-actions-invalid-account-id`
-       * :ref:`destination-linkedin-dmp-workflow-actions-invalid-fields`
-       * :ref:`destination-linkedin-dmp-workflow-actions-linkedin-is-processing-data`
+       * :ref:`campaign-linkedin-dmp-workflow-actions-dataset-size-error`
+       * :ref:`campaign-linkedin-dmp-workflow-actions-invalid-account-id`
+       * :ref:`campaign-linkedin-dmp-workflow-actions-invalid-fields`
+       * :ref:`campaign-linkedin-dmp-workflow-actions-linkedin-is-processing-data`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px

@@ -402,9 +402,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-cordial-workflow-actions-invalid-credentials`
-       * :ref:`destination-cordial-workflow-actions-required-attributes-missing`
-       * :ref:`destination-cordial-workflow-actions-unique-list-name-required`
+       * :ref:`campaign-cordial-workflow-actions-invalid-credentials`
+       * :ref:`campaign-cordial-workflow-actions-required-attributes-missing`
+       * :ref:`campaign-cordial-workflow-actions-unique-list-name-required`
 
 
    * - .. image:: ../../images/steps-04.png
