@@ -37,7 +37,7 @@ Use the **Credentials** page to view and manage credentials for data sources and
 
 .. credentials-context-start
 
-The credentials list shows the name, type, and description of each credential, the number of couriers and destinations that currently use it, and the date and time each credential was last updated. Credentials are specific to an external service. Any courier, destination, campaign, or Audience Monetization connection that uses the same service can use the same credential. For example, a single set of Braze credentials can be used by a destination that sends audience data, a courier that pulls data back, and a campaign.
+The credentials list shows the name, type, and description of each credential, the number of couriers and destinations that use it, and the date and time each credential was last updated. Credentials are specific to an external service. Any courier, destination, campaign, or Audience Monetization connection that uses the same service can use the same credential. For example, a single set of Braze credentials can be used by a destination that sends audience data, a courier that pulls data back, and a campaign.
 
 .. credentials-context-end
 

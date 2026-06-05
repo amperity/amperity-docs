@@ -232,7 +232,7 @@ Goal conditions are defined using a segment. One or more segments that define go
 
 .. journeys-setup-goals-batch-admonition-start
 
-.. important:: Journey goals require batch segments (SQL-based segments). Real-time segments are not currently supported for journey goals.
+.. important:: Journey goals require batch segments (SQL-based segments). Real-time segments are not supported for journey goals.
 
 .. journeys-setup-goals-batch-admonition-end
 
@@ -570,7 +570,7 @@ Journeys measurement helps you:
 * View metrics across multiple time windows (7, 30, and 90 days)
 * Export detailed journey travel logs for advanced analysis
 
-.. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not currently supported for journey measurement.
+.. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not supported for journey measurement.
 
 .. journeys-measurement-overview-end
 

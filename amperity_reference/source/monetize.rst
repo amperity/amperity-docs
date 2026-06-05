@@ -726,7 +726,7 @@ Make audience not buyable
 
 .. monetize-howtos-make-not-buyable-start
 
-You can make an audience no longer available for new purchases. Active campaigns currently using the audience may still use it.
+You can make an audience no longer available for new purchases. Active campaigns using the audience may still use it.
 
 .. caution:: This action cannot be undone.
 

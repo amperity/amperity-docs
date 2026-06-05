@@ -64,7 +64,7 @@ The Amps display shows your tenant's Amps consumption at a glance. It uses a per
 
 The Amps display is clickable and navigates to the full :doc:`Amps <amps>` page, where you can view detailed consumption breakdowns.
 
-.. important:: The Amps display area is visible only for tenants that have Amps access. It is hidden completely for tenants without an Amps contract.
+.. important:: The Amps display area is visible only for tenants that have Amps access. It is hidden for tenants without an Amps contract.
 
 .. home-amps-end
 

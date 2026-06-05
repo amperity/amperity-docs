@@ -306,7 +306,7 @@ The following prompts provide the necessary context for the assistant to build a
 
 Why these work:
 
-* **Specific node types:** Clearly identifies splits, delays, activations, or merges.
+* **Specific node types:** Identifies splits, delays, activations, or merges.
 * **Clear criteria:** Defines the logic (high value, gender, loyalty tier).
 * **Explicit destinations:** Names the downstream systems (SFMC, S3).
 * **Explicit segments:** Names the segment (Club Members) 

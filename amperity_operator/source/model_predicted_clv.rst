@@ -340,7 +340,7 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        The predictive CLV model picks the branch with the greatest reduction in impurity.
 
-       Use "Gini" to measure the probability of misclassifying a randomly chosen customer. Gini favors splits that isolate the single largest class and is well-suited for imbalanced datasets where non-returners significantly outnumber returners.
+       Use "Gini" to measure the probability of misclassifying a randomly chosen customer. Gini favors splits that isolate the single largest class and is well-suited for imbalanced datasets where non-returners outnumber returners.
 
        Use "Entropy" to measure the average amount of information needed to describe a randomly chosen customer. Entropy produces more balanced splits and finds patterns when returners contain meaningful subgroups.
 

@@ -227,13 +227,13 @@ Limitations
 
 .. customer-data-agent-limitations-start
 
-The **Customer Data Assistant** is optimized for customer data operations. It cannot currently:
+The **Customer Data Assistant** is optimized for customer data operations. It cannot:
 
-* **Answer configuration questions.** Questions like "What journeys do I currently have?" or "What destinations can I send to?" are not supported. The agent operates on customer data, not tenant configuration metadata.
+* **Answer configuration questions.** Questions like "What journeys do I have?" or "What destinations can I send to?" are not supported. The agent operates on customer data, not tenant configuration metadata.
 
-* **Perform troubleshooting or error recovery.** If you encounter an error message and ask "What should I do?", the agent cannot currently diagnose the issue.
+* **Perform troubleshooting or error recovery.** If you encounter an error message and ask "What should I do?", the agent cannot diagnose the issue.
 
-* **Modify destinations, orchestrations, or other non-segment/journey configurations.** The agent's scope is currently limited to segments and journeys.
+* **Modify destinations, orchestrations, or other non-segment/journey configurations.** The agent's scope is limited to segments and journeys.
 
 .. customer-data-agent-limitations-end
 
@@ -249,7 +249,7 @@ Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Lik
 
 **Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who haven't purchased in 90 days" is more effective than "Find me some customers to target."
 
-**Iterate and refine.** If the first result isn't quite right, coach the agent with specific feedback:
+**Iterate and refine.** If the first result isn't correct, coach the agent with specific feedback:
 
 * "The date range should be last year, not this year"
 * "Add a filter for customers in the Gold loyalty tier"
@@ -262,7 +262,7 @@ Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Lik
 
 The agent can query your data to find valid parameters, helping you build effective segments even when you're unsure of the exact values.
 
-**Reframe the question.** If you're not getting the results you expect, try asking the same question in a different way. The framing of your question can significantly affect the response.
+**Reframe the question.** If you're not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
 
 .. customer-data-agent-prompting-end
 

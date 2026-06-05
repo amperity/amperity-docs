@@ -49,7 +49,7 @@ Configure destinations for ActiveCampaign
 .. destination-active-campaign-behavior-note-start
 
 .. note:: On each run, Amperity performs a full membership sync. Contacts in the
-   audience that are not already on the list are added, and contacts currently on
+   audience that are not already on the list are added, and contacts on
    the list that are no longer in the audience are removed.
 
    Amperity filters out invalid emails before sending to |destination-name|.
