@@ -58,7 +58,7 @@ Navigation search is pinned at the top of every page in the Amperity docs site.
 
    When a glossary entry exactly matches the search term the glossary entry is shown as the first search result.
 
-.. note:: If you don't find what you are looking for:
+.. note:: If you do not find what you are looking for:
 
    #. Filter by :ref:`topic collection <search-advanced-filters-collections>`. All topic collections are selected by default. Deselect one or more topic collections to narrow your search.
 

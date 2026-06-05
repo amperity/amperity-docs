@@ -324,7 +324,7 @@ The most reliable way to decide which table to use is to run an A/B test:
 
 #. Build a broad audience in Amperity.
 #. Send that audience once from **Merged Customers** and once from **Unified Paid Media**.
-#. After the destination finishes matching, typically within 24–48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
+#. After the destination finishes matching, typically within 24 to 48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
 #. Choose the table that best aligns to your campaign objective.
 
 .. paid-media-what-table-ab-test-end

@@ -2054,8 +2054,8 @@ Format SQL
 
 AmpAI can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
 
-* **Standard format** — reformats the SQL using default style rules.
-* **Custom format** — opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
+* **Standard format** Reformats the SQL using default style rules.
+* **Custom format** Opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
 
 .. databases-database-howto-format-sql-end
 

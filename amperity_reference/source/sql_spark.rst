@@ -391,7 +391,7 @@ Subqueries
 
 .. sql-spark-recommendation-indentation-subqueries-start
 
-Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner—this is especially true where you have nested subqueries.
+Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner. This is especially true where you have nested subqueries.
 
 .. sql-spark-recommendation-indentation-subqueries-end
 
@@ -468,7 +468,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes. In practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -1678,7 +1678,7 @@ It says "Group the records by amperity_id, and for each group return the one wit
 * **OVER()** The **OVER()** function sets up the window in which records are found. This function should include both **PARTITION BY** and **ORDER_BY** functions.
 * **PARTITION BY amperity_id** The **PARTITION BY <field name>** function is similar to **GROUP BY** and groups all records with unique values for the specified field together and creates a subset of rows for each Amperity ID.
 * **ORDER BY merged_date DESC** The **ORDER BY()** function is just like it is in a **SELECT** statement, it sorts the rows being operated on. The only difference is that in this case, it is only sorting the rows within the partition, so in this example it is sorting the rows for each Amperity ID. **DESC** sorts in descending order and the most recent date is first.
-* **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you've used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
+* **AS <field name>** The final clause of the statement above is not part of the window function at all, but is the **AS** statement you have used before to set the name of the projected column. In this example the results will be put in a column with the name email address.
 
 .. sql-spark-window-functions-end
 

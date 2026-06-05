@@ -274,7 +274,7 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
 
 .. _streaming-ingest-rest-api-base-url:
 
-Base URL for Streaming API
+Base URL of Streaming API endpoints
 --------------------------------------------------
 
 .. streaming-ingest-rest-api-base-url-start

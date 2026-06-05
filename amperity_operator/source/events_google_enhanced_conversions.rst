@@ -109,7 +109,7 @@ where the following fields are:
 * Required: **order_id**, **gclid**, and **timestamp**.
 * Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
 * Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
-* Omit: **gbraid**, **wbraid**, and **conversion_environment**. **gbraid** and **wbraid** apply only to "APP" purchases.
+* Omit: **gbraid**, **wbraid**, and **conversion_environment**. **gbraid** and **wbraid** apply only to ``APP`` purchases.
 
 .. events-google-enhanced-conversions-howitworks-web-end
 
@@ -177,7 +177,7 @@ Amperity uploads the transaction with hashed email and phone. Google Ads matches
 
 **Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them. Each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone values automatically before upload.
 
-**conversion_environment** does not apply to in-store purchases because neither "APP" nor "WEB" is accurate for describing a store transaction.
+**conversion_environment** does not apply to in-store purchases because neither ``APP`` nor ``WEB`` is accurate for describing a store transaction.
 
 **Example query**
 
@@ -203,7 +203,7 @@ where the following fields are:
 * Required: **order_id**, **timestamp**, and at least one of **email** or **phone**
 * Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
 
-  .. important:: Rows where both **email** and **phone** are NULL are dropped before upload. They cannot be matched and are excluded. Filter them out in your query, as shown above, to keep row counts accurate.
+  .. important:: Rows where both **email** and **phone** are **NULL** are dropped before upload. They cannot be matched and are excluded. Filter them out in your query, as shown above, to keep row counts accurate.
 
 * Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
 * Omit: **gclid**, **gbraid**, **wbraid**, and **conversion_environment**.
@@ -223,7 +223,7 @@ If your events data consolidates web, app, and in-store purchases into a single 
 #. At least one match signal: **gclid**, **gbraid**, or **wbraid**
 #. A customer identifier: **email** or **phone**
 
-Fields that do not apply to a given channel are NULL. The connector sends only the fields that are present and drops rows where no match signal exists.
+Fields that do not apply to a given channel are **NULL**. The connector sends only the fields that are present and drops rows where no match signal exists.
 
 .. code-block:: sql
    :emphasize-lines: 4-8,13,17-21
@@ -253,12 +253,12 @@ Fields that do not apply to a given channel are NULL. The connector sends only t
 
 The source table must have values that map correctly across all three purchase channels:
 
-#. **gclid** is set for web purchases. It is NULL for app and in-store purchases.
-#. **gbraid** is set when a customer clicked a web ad and was directed to your iOS app. It is NULL for web and in-store purchases.
-#. **wbraid** is set when a customer clicked an iOS app ad and was directed to a webpage. It is NULL for web and in-store purchases.
+#. **gclid** is set for web purchases. It is **NULL** for app and in-store purchases.
+#. **gbraid** is set when a customer clicked a web ad and was directed to your iOS app. It is **NULL** for web and in-store purchases.
+#. **wbraid** is set when a customer clicked an iOS app ad and was directed to a webpage. It is **NULL** for web and in-store purchases.
 #. **email** and **phone** are the primary match signals for in-store purchases, and supplement click IDs for web and app purchases. Amperity hashes both automatically before upload. Do not hash them in the query.
-#. **conversion_environment** should be "WEB" or "APP" when known. Set to NULL for in-store purchases. This field is only available to allowlisted Google Ads accounts; omit **conversion_environment** if your account is not allowlisted.
-#. The WHERE clause ensures every row has at least one match signal. Rows that do not satisfy this condition are dropped by the connector before upload.
+#. **conversion_environment** should be ``WEB`` or ``APP`` when known. Set to **NULL** for in-store purchases. This field is only available to allowlisted Google Ads accounts; omit **conversion_environment** if your account is not allowlisted.
+#. The **WHERE** clause ensures every row has at least one match signal. Rows that do not satisfy this condition are dropped by the connector before upload.
 
 .. events-google-enhanced-conversions-howitworks-consolidated-end
 

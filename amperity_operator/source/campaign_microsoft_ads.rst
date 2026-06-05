@@ -37,7 +37,7 @@ Microsoft Advertising is a pay-per-click partner syndication network, which enab
 
 .. campaign-microsoft-ads-about-start
 
-Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
+Use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
 * Bing, along with sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk
 * `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
@@ -482,7 +482,7 @@ Must accept terms and conditions
 
 .. campaign-microsoft-ads-workflow-actions-must-accept-terms-start
 
-You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
 
 To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 

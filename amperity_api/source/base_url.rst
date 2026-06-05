@@ -109,9 +109,9 @@ Base URL and sandboxes
 
 .. api-amperity-base-url-sandboxes-start
 
-The base URL for a sandbox is the same as the base URL for production.
+The base URL of a sandbox is the same as the base URL of production.
 
-Use the tenant ID for the sandbox for all requests made to a sandbox. The tenant ID is unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL for production and the **amperity-tenant** header is:
+Use the tenant ID for the sandbox for all requests made to a sandbox. The tenant ID is unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL of production and the **amperity-tenant** header is:
 
 .. code-block:: none
 

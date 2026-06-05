@@ -894,7 +894,7 @@ Before you can create outbound sharing between Amperity and |destination-name| r
 
        The data center in which Amazon S3 or Azure Blob Storage is located **must be** colocated with a `compatible Google data center <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
 
-       .. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that contains the tables you're querying.
+       .. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that contains the tables you are querying.
 
           Your Amperity tenant *or* :doc:`configured storage <storage>` location **must be** colocated in a `BigQuery Omni supported region <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
 

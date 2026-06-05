@@ -137,12 +137,12 @@ A complete transaction with good underlying data has a combination of values tha
 * An item cannot be returned *and* canceled.
 * canceled item revenue should be negative
 * Discount amounts should be positive
-* Discount percent should be "discount amount / list price"
+* Discount percent should be "discount amount divided by list price"
 * From which store was a purchase made?
 * Quantity should be negative when items were canceled or returned
 * Quantity should be positive
 * Returned item revenue should be negative
-* Revenue should be "list price - discount amount"
+* Revenue should be "list price minus discount amount"
 * Revenue should be positive
 * Through which channel was a purchase made?
 * Was an item canceled or returned? This should be true or false.

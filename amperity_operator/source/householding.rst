@@ -167,7 +167,7 @@ The **Merged Households** table starts as a SQL template that defines how addres
 
    If you are using the bad-values blocklist, uncomment the following sections.
 
-   The **blv_address** block (lines 209 - 220):
+   The **blv_address** block (lines 209 to 220):
 
    ::
 

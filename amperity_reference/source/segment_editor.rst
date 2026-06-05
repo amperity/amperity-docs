@@ -34,7 +34,7 @@ About the Segments AI Assistant
 
 .. segments-ai-assistant-start
 
-The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor** that lets you use natural language to generate and refine segments.
+The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor**. Use it to generate and refine segments with natural language.
 
 .. segments-ai-assistant-end
 

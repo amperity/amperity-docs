@@ -86,7 +86,7 @@ You need to build a query that outputs fields that can be mapped to audience fie
 
 .. sendto-adobe-marketo-build-query-example-start
 
-Build a query named "Marketo - Audience List and Attributes" builds an audience list that includes email address, first name, last name, phone, and company:
+Build a query named "Marketo Audience List and Attributes" builds an audience list that includes email address, first name, last name, phone, and company:
 
 .. code-block:: sql
    :linenos:

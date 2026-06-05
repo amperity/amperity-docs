@@ -46,7 +46,7 @@ A **Criteo_Events** table consolidates data for in-store purchases and maps fiel
 
 .. important:: Use table versioning to ensure that events can be queried for specific days by :ref:`enabling table versioning for the Criteo_Events table <historical-data-available-versions>`.
 
-The following SQL shows an example table for consolidating |destination-name| events. If your database collects events data in other tables you'll need to extend the example to support those tables.
+The following SQL shows an example table for consolidating |destination-name| events. If your database collects events data in other tables you will need to extend the example to support those tables.
 
 .. code-block:: sql
    :linenos:

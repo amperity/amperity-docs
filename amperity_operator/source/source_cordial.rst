@@ -220,7 +220,7 @@ Contact activities
 
 .. source-cordial-contact-activities-start
 
-Contact activities capture all activities or events - opens, clicks, and custom actions created by the user. Contact activities are linked with a customer via their primary and secondary identifier. The secondary identifier can have multiple values, such as email address, phone number, or customer ID. For this reason, contact activities can encompass email activity and web engagement.
+Contact activities capture all activities or events, such as opens, clicks, and custom actions created by the user. Contact activities are linked with a customer via their primary and secondary identifier. The secondary identifier can have multiple values, such as email address, phone number, or customer ID. For this reason, contact activities can encompass email activity and web engagement.
 
 The feed and domain table for contact activities will match the following fields:
 

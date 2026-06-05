@@ -171,7 +171,7 @@ The following table lists the operators that are available to these attributes.
 
        .. tip:: Use the **Current Balance Expiration Datetime**, **Current Tier Expiration Datetime**, **Latest Opted Out Datetime**, **Latest Opted In Datetime**, and **Current Tier Start Datetime** attributes with this condition to return audiences based on the selected date.
 
-          For example, use "today - 730 days" to return customer records with a current tier start datetime that occurred two years ago to include in a discount campaign that encourages customers to move up to the next tier.
+          For example, use ``today - 730 days`` to return customer records with a current tier start datetime that occurred two years ago to include in a discount campaign that encourages customers to move up to the next tier.
 
    * - **is true**
      - |attribute-recommended| **More useful**

@@ -336,7 +336,7 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        The predictive CLV model uses impurity to evaluate the quality of a candidate split at each node.
 
-       For example: "Customers with more than 3 orders in the last 90 days" go into one branch of the split and "Everyone else" goes into the other. Impurity measures if the split produces more homogenous groups than the parent node did. A good split pushes customers who will return into one branch and customers who won't into the other.
+       For example: "Customers with more than 3 orders in the last 90 days" go into one branch of the split and "Everyone else" goes into the other. Impurity measures if the split produces more homogenous groups than the parent node did. A good split pushes customers who will return into one branch and customers who will not into the other.
 
        The predictive CLV model picks the branch with the greatest reduction in impurity.
 

@@ -220,7 +220,7 @@ The following example is a query that sends additional contact information for c
 
 .. sendto-zendesk-build-query-example-custom-fields-start
 
-Build a query named "Zendesk - Users" to collect name and phone data from the customer 360 database, along with the Amperity ID and a custom field:
+Build a query named "Zendesk Users" to collect name and phone data from the customer 360 database, along with the Amperity ID and a custom field:
 
 .. code-block:: sql
    :linenos:

@@ -115,7 +115,7 @@ Use |destination-name| to test variations of websites and mobile apps to optimiz
      - Use `manual A/B testing <https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab>`__ |ext_link| to compare experiences to identify which experience improves conversion rates.
 
    * - **Multivariate testing**
-     - Use `multivariate testing (MVT) <https://experienceleague.adobe.com/en/docs/target/using/activities/multivariate-test/multivariate-testing>`__ |ext_link| to compare combinations of offers to determine which combination offer is best for a specific audience.
+     - Use `multivariate testing <https://experienceleague.adobe.com/en/docs/target/using/activities/multivariate-test/multivariate-testing>`__ |ext_link| to compare combinations of offers to determine which combination offer is best for a specific audience.
 
    * - **Recommendations**
      - Use `recommendations <https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations>`__ |ext_link| to automatically display products, services, or content that might interest visitors based on their previous activity, preferences, or other criteria.

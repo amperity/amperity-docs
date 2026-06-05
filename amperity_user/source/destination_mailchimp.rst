@@ -94,7 +94,7 @@ You need to build a query that outputs fields that can be mapped to audience fie
 
 The customer 360 database can provide email, first name, last name, and birthdate data. Use another table in the customer 360 database to keep a list of known email addresses with their subscription status available from a status column that can provide "subscribed" and "unsubscribed" values.
 
-Build a query named "Mailchimp - Upcoming Birthdays" to collect email address, first name, last name, and birthdate data from the customer 360 database, but with a window for birthdays that spans "within the next 10 days from the current date", and then find only those individuals who are also subscribed to the mailing list:
+Build a query named "Mailchimp Upcoming Birthdays" to collect email address, first name, last name, and birthdate data from the customer 360 database, but with a window for birthdays that spans "within the next 10 days from the current date", and then find only those individuals who are also subscribed to the mailing list:
 
 .. code-block:: sql
    :linenos:

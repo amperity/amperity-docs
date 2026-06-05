@@ -365,12 +365,12 @@ The following policies have read-only options:
 
 .. _policies-read-only-amp360-user:
 
-Amp360 User - Read Only
+Amp360 User Read Only
 --------------------------------------------------
 
 .. policies-read-only-amp360-user-start
 
-The **Amp360 User - Read Only** policy allows read-only access to the **Customer 360** and **Queries** pages.
+The **Amp360 User Read Only** policy allows read-only access to the **Customer 360** and **Queries** pages.
 
 Assign this policy to users who will explore databases and SQL queries, but will not create queries or send the results of queries to configured destinations.
 
@@ -379,12 +379,12 @@ Assign this policy to users who will explore databases and SQL queries, but will
 
 .. _policies-read-only-ampiq-user:
 
-AmpIQ User - Read Only
+AmpIQ User Read Only
 --------------------------------------------------
 
 .. policies-read-only-ampiq-user-start
 
-The **AmpIQ User - Read Only** policy allows read-only access to the **Segments** and **Activations** pages.
+The **AmpIQ User Read Only** policy allows read-only access to the **Segments** and **Activations** pages.
 
 Assign this policy to users who will view and explore metrics, segments, and campaigns, but will not create segments or run campaigns.
 
@@ -393,12 +393,12 @@ Assign this policy to users who will view and explore metrics, segments, and cam
 
 .. _policies-read-only-datagrid-operator:
 
-DataGrid Operator - Read Only
+DataGrid Operator Read Only
 --------------------------------------------------
 
 .. policies-read-only-datagrid-operator-start
 
-The **DataGrid Operator - Read Only** policy allows read-only access to the **Sources**, **Stitch**, **Customer 360**, **Queries**, **Segments**, **Activations**, and **Destinations** page.
+The **DataGrid Operator Read Only** policy allows read-only access to the **Sources**, **Stitch**, **Customer 360**, **Queries**, **Segments**, **Activations**, and **Destinations** page.
 
 Assign this policy to users who need to view the entire application, including *all resource groups*, but should not make changes.
 

@@ -243,7 +243,7 @@ Subqueries
 
 .. sql-presto-style-guide-indentation-subqueries-start
 
-Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner—this is especially true where you have nested subqueries.
+Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner. This is especially true where you have nested subqueries.
 
 .. code-block:: sql
    :linenos:
@@ -2696,7 +2696,7 @@ Specifier     Description
 %c            Month, numeric (1 .. 12). This specifier does not support 0 as a month or day.
 %d            Day of the month, numeric (01 .. 31). This specifier does not support 0 as a month or day.
 %e            Day of the month, numeric (1 .. 31). This specifier does not support 0 as a month or day.
-%f            Fraction of second (6 digits for printing: 000000 .. 999000. 1 - 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
+%f            Fraction of second (6 digits for printing: 000000 .. 999000. 1 to 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
 %H            Hour (00 .. 23)
 %h            Hour (01 .. 12)
 %I            Hour (01 .. 12)

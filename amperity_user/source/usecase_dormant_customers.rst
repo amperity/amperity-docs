@@ -59,7 +59,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify dormant customers, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** checkbox, and then enter "today - 2 years" in the field:
+     - To identify dormant customers, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** checkbox, and then enter ``today - 2 years`` in the field:
 
        .. image:: ../../images/usecase-dormant-customers.png
           :width: 540 px

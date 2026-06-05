@@ -19,7 +19,7 @@ About AmpAI
 
 .. ampai-overview-start
 
-**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. **AmpAI** lets you ask and answer complex questions about your customers, with support for visualizations, and operates over the data in the database.
+**AmpAI** is the engine that drives the conversational AI tools within Amperity, including the **Customer Data Assistant** and the **AI Assistants**. Use **AmpAI** to ask and answer complex questions about your customers, with support for visualizations, over the data in the database.
 
 **AmpAI** supports customization through :ref:`custom prompts <ampai-custom-prompt>` and :ref:`company context <ampai-company-context>`. Custom prompts encode specific business logic and definitions that apply to every prompt you write, while company context provides a library of reference documents for AmpAI to better understand your business. Together, these help you tailor **AmpAI** to align with your business requirements and keep results consistent.
 
@@ -418,11 +418,11 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
 
 #. **Iterate.**
 
-   For each failure, identify why **AmpAI** didn't follow the instruction. Common reasons:
+   For each failure, identify why **AmpAI** did not follow the instruction. Common reasons:
 
-   * Instruction was ambiguous ("use the customer table"—which one?)
-   * Instruction was buried in too much text (move critical rules to the top)
-   * Column/table name was wrong (check the actual schema)
+   * Instruction was ambiguous, such as "use the customer table". Which customer table?
+   * Instruction was buried in too much text. Move critical rules to the top.
+   * Column/table name was wrong. Check the actual schema.
    * Conflicting instructions in the prompt
 
    Make one change at a time to the draft prompt. Re-run the failing test case. Re-run passing test cases to check for regressions.

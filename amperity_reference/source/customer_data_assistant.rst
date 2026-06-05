@@ -76,7 +76,7 @@ To access the **Canvas**, click into any draft that has a split-screen icon on t
       :align: left
       :class: no-scaled-link
 
-The Canvas allows you to:
+Use the Canvas to:
 
 * View proposed segments with customer counts and filter criteria
 * Preview journey structures with their entry segments and channel configurations
@@ -160,7 +160,7 @@ For example, if you ask: "Create a segment of high-value members and build a jou
 #. Execute each task in sequence
 #. Track progress through the plan, showing completed and pending items
 
-You can interrupt a plan to ask questions about a draft mid-process without losing the agent's place. For example, after the agent creates a segment but before it builds the journey, you can ask "What's the preferred marketing channel for this segment?" The agent will answer and then continue with the journey creation.
+You can interrupt a plan to ask questions about a draft mid-process without losing the agent's place. For example, after the agent creates a segment but before it builds the journey, you can ask "What is the preferred marketing channel for this segment?" The agent will answer and then continue with the journey creation.
 
 .. customer-data-agent-planning-end
 
@@ -247,9 +247,9 @@ Prompting philosophy
 
 Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Like any tool, it performs best when you provide clear direction and iterate based on results.
 
-**Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who haven't purchased in 90 days" is more effective than "Find me some customers to target."
+**Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who have not purchased in 90 days" is more effective than "Find me some customers to target."
 
-**Iterate and refine.** If the first result isn't correct, coach the agent with specific feedback:
+**Iterate and refine.** If the first result is not correct, coach the agent with specific feedback:
 
 * "The date range should be last year, not this year"
 * "Add a filter for customers in the Gold loyalty tier"
@@ -260,9 +260,9 @@ Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Lik
 * "Can you look into my data to see when there is purchase data around Valentine's Day?"
 * "What date range has the most transaction data?"
 
-The agent can query your data to find valid parameters, helping you build effective segments even when you're unsure of the exact values.
+The agent can query your data to find valid parameters, helping you build effective segments even when you are unsure of the exact values.
 
-**Reframe the question.** If you're not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
+**Reframe the question.** If you are not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
 
 .. customer-data-agent-prompting-end
 
@@ -300,11 +300,11 @@ Pro tips
 
 .. customer-data-agent-pro-tips-start
 
-.. tip:: **Build marketing personas.** Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you're trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
+.. tip:: **Build marketing personas.** Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you are trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
 
 .. tip:: **Let the agent find existing segments.** When creating a journey, the agent may identify an existing segment that matches your needs. It will ask: "I found a segment called High Value Customers that looks like it could work. Would you like to use that, or should I create a new one?" This helps avoid duplicate segments and makes good use of work already done.
 
-.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you've laid out. For example, if you've defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
+.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you have laid out. For example, if you have defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
 
 .. customer-data-agent-pro-tips-end
 

@@ -128,7 +128,7 @@ Storage consumption
 
 .. amps-review-consumption-storage-start
 
-Storage does not consume any Amps; instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
+Storage does not consume any Amps. Instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
 
 Similarly to Amps, Storage consumption is attributable to the product feature where that data is stored. Additionally, all storage can be attributable to the environment (production and individual sandboxes) where it is stored. 
 
@@ -163,7 +163,7 @@ You can access the **Amps** dashboard from the |fa-kebab| menu that is located i
 Amp Insights
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-**Amp Insights** lets you ask natural language questions to understand your Amps usage and consumption.
+Use **Amp Insights** to ask natural language questions and understand your Amps usage and consumption.
 
 .. include:: ../../amperity_reference/source/assistant.rst
    :start-after: .. amp-insights-examples-list-start

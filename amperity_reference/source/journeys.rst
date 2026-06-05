@@ -220,7 +220,7 @@ Goal conditions
 
 .. journeys-goal-conditions-start
 
-Setting goals allows you to track when customers included in the journey reach designated segments. This differs from an exit condition in that reaching a goal segment does not remove the customer from the journey, allowing you to measure progress on specific business goals while the customer continues on the journey.
+Set goals to track when customers included in the journey reach designated segments. This differs from an exit condition in that reaching a goal segment does not remove the customer from the journey. You can measure progress on specific business goals while the customer continues on the journey.
 
 Goal conditions are defined using a segment. One or more segments that define goal conditions may be added to a journey using the **Select goal segments** dropdown.
 
@@ -303,7 +303,7 @@ About the Journeys AI Assistant
 
 .. journeys-ai-assistant-start
 
-The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys Canvas** that lets you use natural language to edit and personalize journeys.
+The :doc:`Journeys AI Assistant <assistant>` is a generative AI feature within the **Journeys Canvas**. Use it to edit and personalize journeys with natural language.
 
 .. journeys-ai-assistant-end
 
@@ -639,8 +639,8 @@ Milestones tracking
 
 The milestones dashboard on the **Journeys Canvas** capture significant events as customers travel through your journey. The system automatically tracks:
 
-* **Goal milestones** - Customer achieved a journey or split goal
-* **Exit milestones** - Customer met exit criteria and left the journey
+* **Goal milestones** Customer achieved a journey or split goal
+* **Exit milestones** Customer met exit criteria and left the journey
 
 **Milestone metrics:**
 
@@ -816,7 +816,7 @@ To help you get started with journeys, Amperity provides example journeys of com
      - Turn a new subscriber or customer into an engaged participant by providing helpful, sequenced information.
 
    * - `Abandoned cart <https://docs.amperity.com/user/journeys_reference.html#abandoned-cart>`__
-     - Convert users who started a purchase but didn't finish.
+     - Convert users who started a purchase but did not finish.
 
    * - `Birthday <https://docs.amperity.com/user/journeys_reference.html#birthday>`__
      - Drive immediate, high-margin revenue through personalized, time-sensitive offers.
@@ -1300,7 +1300,7 @@ Define measurement segments
 
 .. journeys-howtos-define-measurement-segments-start
 
-You can define customer segments in the **Visual segment editor** based on journey activity. This allows you to see segment insights for any customers who participated in a journey, achieved a goal, or met exit criteria.  
+You can define customer segments in the **Visual segment editor** based on journey activity. Use these segments to see insights for any customers who participated in a journey, achieved a goal, or met exit criteria.
 
 .. journeys-howtos-define-measurement-segments-end
 

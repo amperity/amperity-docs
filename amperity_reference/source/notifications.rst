@@ -695,7 +695,7 @@ The following is a list of status notifications that appear within a notificatio
 * Loading data
 * Running custom domain tables
 * Processing Stitch request
-* Stitch skipped - no work to do
+* Stitch skipped
 * Spark job submitted
 * Starting Stitch job
 * Stitch started

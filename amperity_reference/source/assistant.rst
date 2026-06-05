@@ -143,7 +143,7 @@ In the table editor, a **Generate field descriptions** link appears in the **Des
 
 .. assistant-format-sql-start
 
-In the SQL editor for a custom database table, a **Format SQL** button appears in the toolbar. It offers two modes. **Standard format** reformats the SQL using default style rules. **Custom format** opens a dialog where you can provide additional instructions — for example, "add a comment explaining the content of each CTE" — that AmpAI applies on top of standard formatting. The editor is read-only while formatting is in progress.
+In the SQL editor for a custom database table, a **Format SQL** button appears in the toolbar. It offers two modes. **Standard format** reformats the SQL using default style rules. **Custom format** opens a dialog where you can provide additional instructions. For example: "Add a comment explaining the content of each CTE" that AmpAI applies on top of standard formatting. The editor is read-only while formatting is in progress.
 
 .. assistant-format-sql-end
 
@@ -154,7 +154,7 @@ Amp Insights examples
 
 .. amp-insights-examples-start
 
-**Amp Insights** lets you ask natural language questions to understand your tenant's Amps usage and consumption. It is embedded in the **Amps** dashboard, which you can access by clicking the |fa-kebab| menu next to your tenant name at the top right of the Amperity interface and selecting **Amps**.
+Use **Amp Insights** to ask natural language questions and understand your tenant's Amps usage and consumption. It is embedded in the **Amps** dashboard, which you can access by clicking the |fa-kebab| menu next to your tenant name at the top right of the Amperity interface and selecting **Amps**.
 
 .. amp-insights-examples-end
 
@@ -298,19 +298,19 @@ Good prompts (specific and clear)
 
 The following prompts provide the necessary context for the assistant to build accurate steps:
 
-* "Create a split for high value customers, send them to SFMC, everyone else to S3"
+* "Create a split for high value customers, send them to Salesforce Marketing Cloud, and then everyone else to S3"
 * "Add a 7-day delay after the welcome email activation"
-* "Split by gender, then for each path split by loyalty tier (gold, silver, bronze)"
+* "Split by gender, then for each path split by loyalty tier, such as gold, silver, or bronze"
 * "Merge the two email paths and send a final survey email to everyone"
 * "Use Club Members as the inclusion segment"
 
 Why these work:
 
-* **Specific node types:** Identifies splits, delays, activations, or merges.
-* **Clear criteria:** Defines the logic (high value, gender, loyalty tier).
-* **Explicit destinations:** Names the downstream systems (SFMC, S3).
-* **Explicit segments:** Names the segment (Club Members) 
-* **Sequential structure:** Outlines the order of operations.
+* **Specific node types** Identifies splits, delays, activations, or merges.
+* **Clear criteria** Defines the logic, such as high value, gender, or loyalty tier.
+* **Explicit destinations** Names the downstream systems, such as Salesforce Marketing Cloud or Amazon S3.
+* **Explicit segments** Names the segment, such as "Club Members"
+* **Sequential structure** Outlines the order of operations.
 
 Bad prompts (vague or ambiguous)
 ++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -324,13 +324,13 @@ The following prompts may result in generic or incorrect journey steps because t
 * "Add personalization"
    (Personalize by what attribute? Where in the journey?)
 * "Do the usual thing"
-   (The AI doesn't know your specific preferences or history)
+   (The AI does not know your specific preferences or history)
 
 Why these fail:
 
-* **No specific actions:** The assistant does not know which nodes to add.
-* **Ambiguous goals:** Terms like "better" or "personalization" are subjective without context.
-* **Missing information:** Lacks segments, destinations, or split criteria.
+* **No specific actions** The assistant does not know which nodes to add.
+* **Ambiguous goals** Terms like "better" or "personalization" are subjective without context.
+* **Missing information** Lacks segments, destinations, or split criteria.
 
 .. assistant-journey-effective-prompt-patterns-start
 
@@ -581,7 +581,7 @@ Answers will include suggestions similar to:
 
 #. Lapsed but Historically Loyal Customers:
 
-   Identify customers who have bought jeans in the past but have not purchased any recently—they may respond well to a "welcome back" campaign for new jeans.
+   Identify customers who have bought jeans in the past but have not purchased any recently. They may respond well to a "welcome back" campaign for new jeans.
 
 #. Customer Lifecycle Status:
 

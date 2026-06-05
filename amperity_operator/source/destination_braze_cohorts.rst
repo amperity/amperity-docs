@@ -29,7 +29,7 @@ Configure destinations for Braze Cohorts
 
 .. destination-braze-cohorts-intro-start
 
-|destination-name| allows you to send a list of user IDs from Amperity to Braze using the `User cohort  <https://www.braze.com/docs/partners/isv_partners/cohort_import/>`__ |ext_link| endpoint, after which they are automatically added to a named cohort. You can then use that cohort with Braze campaigns and canvases.
+Use |destination-name| to send a list of user IDs from Amperity to Braze using the `User cohort  <https://www.braze.com/docs/partners/isv_partners/cohort_import/>`__ |ext_link| endpoint, after which they are automatically added to a named cohort. You can then use that cohort with Braze campaigns and canvases.
 
 .. destination-braze-cohorts-intro-end
 
@@ -99,7 +99,7 @@ Get details
 
        .. admonition:: Get the Client Data Import Key
 
-          Log in to the Braze dashboard and navigate to **Partner Integrations > Technology Partners > Amperity** (the exact path may vary by Braze version; sometimes under **Integrations > Technology Partners**).
+          Log in to the Braze dashboard and navigate to **Partner Integrations > Technology Partners > Amperity**. The exact path may vary by Braze version and sometimes is under **Integrations > Technology Partners**.
 
           Copy the **Data Import Key**. This value is used to configure credentials in Amperity.
 
@@ -432,8 +432,8 @@ To send cohorts to Braze, add an orchestration that connects your query or segme
           :class: no-scaled-link
      - Configure the destination settings:
 
-       * **Cohort Name**—the name of the cohort as it should appear in Braze
-       * **User ID Field**—the column name containing user IDs (default: ``external_id``)
+       * **Cohort Name** The name of the cohort as it should appear in Braze
+       * **User ID Field** The column name containing user IDs. Default value: "external_id".
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

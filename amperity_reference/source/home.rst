@@ -30,7 +30,7 @@ How to access
 
 .. home-access-start
 
-The **Home** page appears when you navigate to the root URL for your tenant. You can also navigate to the **Home** page from within the app by clicking the **Home** icon on the left navigation.
+The **Home** page appears when you navigate to the root URL of your tenant. You can also navigate to the **Home** page from within the app by clicking the **Home** icon on the left navigation.
 
 .. home-access-end
 
@@ -46,9 +46,9 @@ The **Home** page adapts based on your tenant's configuration and the features t
 * The :ref:`Amps display area <home-amps>` is visible only for tenants that have Amps access. It is hidden for tenants without an Amps contract.
 * Components that require a populated database, such as :ref:`Segment insights <home-segment-insights>`, show a prompt to run the database when no database has been run.
 * Components that require features your tenant does not have enabled are hidden.
-* Components requiring permissions you don't have are hidden or limited. 
+* Components requiring permissions you do not have are hidden or limited.
 
-If you expect to see a component and don't, check with your Amperity administrator.
+If you expect to see a component and do not, check with your Amperity administrator.
 
 .. home-what-you-see-end
 
@@ -81,9 +81,9 @@ Ask AmpAI
 
 .. home-ask-ampai-start
 
-The Ask AmpAI section provides an embedded input field that lets you submit a question directly from the **Home** page. When you submit a query, Amperity navigates you to the :doc:`AmpAI <ampai>` page, where the response is loaded.
+The **Ask AmpAI** section provides an embedded input field for submitting a question directly from the **Home** page. When you submit a query, Amperity navigates you to the :doc:`AmpAI <ampai>` page, where the response is loaded.
 
-Use this section to start a conversation with AmpAI without navigating away from the **Home** page first.
+Use the **Ask AmpAI** section to start a conversation with AmpAI without navigating away from the **Home** page first.
 
 .. home-ask-ampai-end
 
@@ -102,7 +102,7 @@ Make something new
 
 The **Make something new** section is a tenant-wide feature adoption checklist. It tracks your tenant's progress across foundational, building, and advanced use cases and provides links to the relevant features.
 
-Each checklist item shows its completion state. Use this section to discover features your tenant has not yet adopted and to navigate directly to those features.
+Each checklist item shows its completion state. Use the **Make something new** section to discover features your tenant has not yet adopted and to navigate directly to those features.
 
 .. note:: The **Make something new** checklist reflects tenant-wide adoption, not individual user progress. Users without the required permissions can view the checklist as read-only.
 
@@ -150,7 +150,7 @@ Segment insights
 
 The **Segment insights** section displays metrics and a chart for a single segment that you select. The segment selection is saved across the tenant so that the **Home** page shows the same segment each time users in your tenant return to the **Home** page.
 
-Use this section to keep a key segment's performance visible at a glance without navigating to the :doc:`Segments <segments>` page.
+Use the **Segment insights** section to keep a key segment's performance visible at a glance without navigating to the :doc:`Segments <segments>` page.
 
 .. home-segment-insights-end
 
@@ -188,7 +188,7 @@ Tenant health
 
 .. home-tenant-health-start
 
-The **Tenant health** section displays the operational health of your tenant's key data pipelines and the most recent Stitch run. Use this section to identify errors or confirm that your data pipelines are running as expected.
+The **Tenant health** section displays the operational health of your tenant's key data pipelines and the most recent Stitch run. Use the **Tenant health** section to identify errors or confirm that your data pipelines are running as expected.
 
 .. home-tenant-health-end
 

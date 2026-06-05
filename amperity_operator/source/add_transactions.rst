@@ -440,7 +440,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-454-calendar-start
 
-A 4-5-4 calendar divides years into months using a 4 weeks - 5 weeks - 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
+A 4-5-4 calendar divides years into months using a 4 weeks × 5 weeks × 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
 

@@ -84,7 +84,7 @@ Cross-site search
 
 Cross-site search enables a single interface that returns results for all topics in all topic collections.
 
-Synonyms are applied to search results to associate commonly used search terms to the right topics. For example: "SFMC" is a synonym for "Salesforce Marketing Cloud" and a search for either will return the same result.
+Synonyms are applied to search results to associate commonly used search terms to the right topics. For example: ``SFMC`` is a synonym for "Salesforce Marketing Cloud" and a search for either will return the same result.
 
 A naming pattern is used to help you recognize reference content and user-focused content within the search results:
 
