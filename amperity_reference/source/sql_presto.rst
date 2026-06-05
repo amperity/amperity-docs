@@ -199,14 +199,14 @@ Make use of **BETWEEN** where possible instead of combining multiple statements 
 .. code-block:: sql
    :linenos:
 
-   SELECT CASE postcode
-     WHEN 'BN1' THEN 'Brighton'
-     WHEN 'EH1' THEN 'Edinburgh'
-     END AS 'city_uk'
-   FROM office_locations
-   WHERE country = 'United Kingdom'
-     AND opening_time BETWEEN 8 AND 9
-     AND postcode IN ('EH1', 'BN1', 'NN1', 'KW1')
+   SELECT CASE purchase_channel
+     WHEN 'online' THEN 'Digital'
+     WHEN 'in-store' THEN 'Retail'
+     WHEN 'phone' THEN 'Call Center'
+     END AS channel_group
+   FROM Unified_Transactions
+   WHERE order_datetime BETWEEN '2023-01-01' AND '2023-12-31'
+     AND purchase_channel IN ('online', 'in-store', 'phone', 'catalog')
 
 .. sql-presto-style-guide-indentation-formalisms-end
 
@@ -223,14 +223,15 @@ Joins should be aligned with the **FROM** clause and grouped with a new line whe
 .. code-block:: sql
    :linenos:
 
-   SELECT r.last_name
-   FROM riders AS r
-   INNER JOIN bikes AS b
-     ON r.bike_vin_num = b.vin_num
-     AND b.engine_tally > 2
-   INNER JOIN crew AS c
-     ON r.crew_chief_last_name = c.last_name
-     AND c.chief = 'Y';
+   SELECT mc.given_name
+     ,mc.surname
+   FROM Merged_Customers AS mc
+   INNER JOIN Unified_Transactions AS ut
+     ON mc.amperity_id = ut.amperity_id
+     AND ut.order_revenue > 100
+   INNER JOIN Transaction_Attributes_Extended AS tae
+     ON mc.amperity_id = tae.amperity_id
+     AND tae.lifetime_order_frequency > 2
 
 .. sql-presto-style-guide-indentation-joins-end
 
@@ -247,17 +248,17 @@ Subqueries should be aligned to the line above them, but then follow standard in
 .. code-block:: sql
    :linenos:
 
-   SELECT r.last_name,
-     (SELECT MAX(YEAR(championship_date))
-     FROM champions AS c
-     WHERE c.last_name = r.last_name
-       AND c.confirmed = 'Y') AS `last_championship_year`
-   FROM riders AS r
-   WHERE r.last_name IN
-     (SELECT c.last_name
-     FROM champions AS c
-     WHERE YEAR(championship_date) > '2008'
-       AND c.confirmed = 'Y');
+   SELECT mc.surname,
+     (SELECT MAX(YEAR(ut.order_datetime))
+     FROM Unified_Transactions AS ut
+     WHERE ut.amperity_id = mc.amperity_id
+       AND ut.order_revenue > 0) AS last_purchase_year
+   FROM Merged_Customers AS mc
+   WHERE mc.amperity_id IN
+     (SELECT ut.amperity_id
+     FROM Unified_Transactions AS ut
+     WHERE YEAR(ut.order_datetime) > '2020'
+       AND ut.order_revenue > 0)
 
 .. sql-presto-style-guide-indentation-subqueries-end
 
@@ -626,25 +627,19 @@ Use spaces to line up code so that the root keywords all start on the same chara
 .. code-block:: sql
    :linenos:
 
-   (SELECT f.species_name
-     ,AVG(f.height) AS `average_height`
-     ,AVG(f.diameter) AS `average_diameter`
-   FROM flora AS f
-   WHERE f.species_name = 'Banksia'
-     OR f.species_name = 'Sheoak'
-     OR f.species_name = 'Wattle'
-   GROUP BY f.species_name, f.observation_date)
-
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'online'
+   GROUP BY uit.product_category)
    UNION ALL
-
-   (SELECT b.species_name
-     ,AVG(b.height) AS `average_height`
-     ,AVG(b.diameter) AS `average_diameter`
-   FROM botanic_garden_flora AS b
-   WHERE b.species_name = 'Banksia'
-     OR b.species_name = 'Sheoak'
-     OR b.species_name = 'Wattle'
-   GROUP BY b.species_name, b.observation_date)
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'in-store'
+   GROUP BY uit.product_category)
 
 Although not exhaustive always include spaces:
 
@@ -679,16 +674,16 @@ The following example shows selecting the Amperity ID, purchase date, and order 
    :linenos:
 
    SELECT
-     t.Amperity_Id,
-     t.purchasedate,
-     t.orderid,
-     rank() OVER (PARTITION BY t.Amperity_Id
-                  ORDER BY t.transactiontotal DESC) AS rank,
-     t.transactiontotal,
-     sum(t.transactiontotal) OVER (PARTITION BY t.Amperity_Id
-                                   ORDER BY t.purchasedate) AS rolling_sum
-   FROM TransactionsEcomm t
-   ORDER BY t.Amperity_Id, rank
+     ut.amperity_id,
+     ut.order_datetime,
+     ut.order_id,
+     RANK() OVER (PARTITION BY ut.amperity_id
+                  ORDER BY ut.order_revenue DESC) AS order_rank,
+     ut.order_revenue,
+     SUM(ut.order_revenue) OVER (PARTITION BY ut.amperity_id
+                                 ORDER BY ut.order_datetime) AS rolling_revenue
+   FROM Unified_Transactions AS ut
+   ORDER BY ut.amperity_id, order_rank
    LIMIT 100
 
 .. sql-presto-style-guide-example-query-end
@@ -809,9 +804,12 @@ The **EXISTS** predicate determines if a subquery returns any rows:
 .. code-block:: sql
    :linenos:
 
-   SELECT name
-   FROM nation
-   WHERE EXISTS (SELECT * FROM region WHERE region.regionkey = nation.regionkey)
+   SELECT mc.given_name, mc.surname
+   FROM Merged_Customers AS mc
+   WHERE EXISTS (
+     SELECT * FROM Unified_Transactions AS ut
+     WHERE ut.amperity_id = mc.amperity_id
+   )
 
 .. sql-presto-select-statement-subquery-predicate-exists-end
 
@@ -828,9 +826,9 @@ The **IN** predicate determines if any values produced by the subquery are equal
 .. code-block:: sql
    :linenos:
 
-   SELECT name
-   FROM nation
-   WHERE regionkey IN (SELECT regionkey FROM region)
+   SELECT mc.given_name, mc.surname
+   FROM Merged_Customers AS mc
+   WHERE mc.amperity_id IN (SELECT amperity_id FROM Unified_Transactions)
 
 .. sql-presto-select-statement-subquery-predicate-in-end
 
