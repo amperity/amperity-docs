@@ -57,7 +57,7 @@ AmpAI tools
 
 **AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
 
-A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
+A typical workflow might start with using the **Customer Data Assistant** to create a segment and journey, and then using the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
 .. note:: Custom prompts and company context set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all other AI Assistants.
 
@@ -103,7 +103,7 @@ Getting good results with AmpAI
 
 To achieve optimal results when using **AmpAI**, follow these best practices for structuring your prompts:
 
-* **Understand the question’s scope**
+* **Understand the question's scope**
 
   Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
 

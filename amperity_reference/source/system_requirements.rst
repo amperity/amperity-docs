@@ -19,21 +19,24 @@ System requirements
 
 Amperity has the following system requirements.
 
+.. vale off
 
 Processor
 --------------------------------------------------
 
 **Minimum**
 
-* Intel 11th Gen (Rocket Lake) or newer, or
-* AMD Ryzen 7 5700U series or newer, or 
+* Intel 11th Gen (Rocket Lake) or newer
+* AMD Ryzen 7 5700U series or newer
 * Apple M1 or newer
 
 **Recommended**
 
-* Intel 12th Gen (Alder Lake) or newer, or
-* AMD Ryzen 7 6800U series or newer, or 
+* Intel 12th Gen (Alder Lake) or newer
+* AMD Ryzen 7 6800U series or newer
 * Apple M2 or newer
+
+.. vale on
 
 
 RAM
@@ -48,12 +51,12 @@ GPU
 
 **Minimum**
 
-* Dedicated GPU with 4 GB VRAM (2020 or newer), or 
+* Dedicated GPU with 4 GB VRAM (2020 or newer)
 * Apple Silicon integrated GPU
 
 **Recommended**
 
-* Dedicated GPU with 8 GB VRAM (2020 or newer), or 
+* Dedicated GPU with 8 GB VRAM (2020 or newer)
 * Apple Silicon integrated GPU
 
 Network

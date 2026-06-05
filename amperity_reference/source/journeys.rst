@@ -840,7 +840,7 @@ To help you get started with journeys, Amperity provides example journeys of com
      - Drive repeat purchases based on predicted product consumption cycles.
 
    * - `Financial services welcome <https://docs.amperity.com/user/journeys_reference.html#financial-services-welcome>`__
-     - Guide new account holders to full product adoption and usage (e.g., depositing funds, setting up direct deposit).
+     - Guide new account holders to full product adoption and usage. For example: depositing funds or setting up direct deposit.
 
 .. journeys-reference-use-cases-end
 
@@ -1261,18 +1261,21 @@ You can filter the list of journeys that appear on the **Journeys** page. Click 
 * By created by. Select any combination of users who created journeys.
 * By label. Select one or more labels to filter journeys by organizational category.
 
-.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to identify journey types ("Welcome-Series", "Retention", "Winback"), assign team ownership ("Marketing", "Analytics"), track status ("In-Review", "Approved"), or indicate priority ("High-Priority", "Evergreen").
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
 
-   **Label naming conventions**
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
 
-   * Maximum 35 characters
-   * Only alphanumeric characters, hyphens, and underscores allowed
-   * Maximum of 10 labels per journey
-   * Use consistent prefixes for related labels (e.g., "Q1-", "Holiday-")
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
 
-   Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**.
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, journeys matching any selected labels will be shown.
+.. note:: When multiple labels are selected, journeys matching any selected labels are shown.
 
 .. journeys-filter-end
 

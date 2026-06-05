@@ -20,7 +20,7 @@ Search the docs
 
 .. .. search-navigation-start
 
-There are three ways to search for information on the Amperity docs site:
+You can search for information on the Amperity docs site:
 
 #. :ref:`Search from navigation <search-navigation>`
 #. :ref:`Open advanced search <search-advanced>`

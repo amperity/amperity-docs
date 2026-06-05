@@ -591,6 +591,8 @@ On the **Schedule** page:
 Predicted CLV output tables
 ==================================================
 
+.. vale off
+
 .. model-predicted-clv-output-tables-start
 
 The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
@@ -598,6 +600,8 @@ The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
 .. note:: Field names use "365d" as the default prediction horizon. If a predicted CLV model uses a different prediction horizon, such as "90 days" or "180 days", column names in the database table are not updated. The data in the table rows always matches the value for the lookback window.
 
 .. model-predicted-clv-output-tables-end
+
+.. vale on
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-predicted-clv-attributes-table-about-start

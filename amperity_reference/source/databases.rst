@@ -163,7 +163,7 @@ PII profile attributes commonly available as part of the customer profile includ
 
 .. note:: The profile attribute names that are shown in the profile attributes section are the same strings that were entered as friendly names when creating the **Customer 360** database table in the primary customer 360 database.
 
-   These strings will default to the same as the field name if not specified as friendly names, including lower-case strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
+   These strings will default to the same as the field name if not specified as friendly names, including lowercase strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
 
 .. databases-profiles-about-attributes-note-end
 
@@ -1384,8 +1384,8 @@ A pick-list may be configured with custom values, where each item in the pick-li
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select a sort order.
 #. Select the **Custom** method for the pick-list, and then enter each custom value on a new line. For example:
 
@@ -1419,7 +1419,7 @@ A pick-list may be deleted. This will disable any selection options in the visua
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. De-select the checkbox in the **Pick-list** column in the row for which a picklist is to be deleted.
+#. De-select the checkbox in the **Pick list** column in the row for which a picklist is to be deleted.
 #. Click **Save**.
 
 .. databases-database-howto-pick-list-delete-steps-end
@@ -1443,7 +1443,7 @@ Many pick-lists remain static over time, but if the data inputs change, you may 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Make your changes.
 #. Click **Save**.
 
@@ -1471,8 +1471,8 @@ A alphabetical sort order is best for strings, such as for columns with values f
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Alphabetical** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1501,8 +1501,8 @@ A natural sort order is best for alphanumeric lists, such as for columns with sc
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Natural** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1530,8 +1530,8 @@ A most frequent sort order is best for columns with a smaller selection of frequ
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Most Frequent** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.

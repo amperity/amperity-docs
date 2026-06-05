@@ -171,13 +171,13 @@ In-store purchases
 
 .. events-google-enhanced-conversions-howitworks-store-start
 
-A customer sees a Google ad, does not click it, and later walks into a physical store to make a purchase. There is no click ID of any kind. The only link between the purchase and the ad is the customer's identity.
+A customer sees a Google ad, does not click it, and later walks into a physical store to make a purchase. The only link between the purchase and the ad is the customer's identity.
 
 Amperity uploads the transaction with hashed email and phone. Google Ads matches those values against the signed-in Google accounts that previously engaged with your ads. If the customer's email or phone on file with you matches their Google account, the purchase is attributed to the campaign.
 
-**Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them — each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone automatically before upload.
+**Email and phone are both required for in-store attribution.** Without at least one of them, Google has nothing to match against. Include both whenever your point-of-sale system captures them. Each additional identifier improves the chance of a successful match. Amperity SHA-256 hashes email and phone values automatically before upload.
 
-``conversion_environment`` does not apply to in-store purchases. Neither ``APP`` nor ``WEB`` is accurate for a store transaction. Omit it.
+**conversion_environment** does not apply to in-store purchases because neither "APP" nor "WEB" is accurate for describing a store transaction.
 
 **Example query**
 
@@ -218,7 +218,12 @@ Multiple purchase channels in the same query
 
 .. events-google-enhanced-conversions-howitworks-consolidated-start
 
-If your events data consolidates web, app, and in-store purchases into a single events table, you can send all three to |destination-name| in one query. Each row must include at least one match signal--**gclid**, **gbraid**, or **wbraid**--or a customer identifier--**email** or **phone**. Fields that do not apply to a given channel are NULL. The connector sends only the fields that are present and drops rows where no match signal exists.
+If your events data consolidates web, app, and in-store purchases into a single events table, you can send all three to |destination-name| in one query. Each row must include:
+
+#. At least one match signal: **gclid**, **gbraid**, or **wbraid**
+#. A customer identifier: **email** or **phone**
+
+Fields that do not apply to a given channel are NULL. The connector sends only the fields that are present and drops rows where no match signal exists.
 
 .. code-block:: sql
    :emphasize-lines: 4-8,13,17-21
@@ -717,12 +722,24 @@ The following table describes the fields that may be sent to |destination-name| 
 Google Ads API reference
 ==================================================
 
+.. vale off
+
 .. events-google-enhanced-conversions-api-reference-start
 
 Amperity uses the `Google Ads API v24 <https://developers.google.com/google-ads/api/reference/rpc/v24/>`__ |ext_link| to send data to |destination-name|. The following services are called:
 
-* `GoogleAdsService.SearchStream <https://developers.google.com/google-ads/api/reference/rpc/v24/GoogleAdsService#searchstream>`__ |ext_link| — used to retrieve conversion tracking settings and look up existing conversion actions.
-* `ConversionUploadService.UploadClickConversions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionUploadService#uploadclickconversions>`__ |ext_link| — used to upload click conversions. Batches are capped at 2,000 rows.
-* `ConversionActionService.MutateConversionActions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionActionService#mutateconversionactions>`__ |ext_link| — used to create a conversion action when one with the configured name does not already exist.
+* `GoogleAdsService.SearchStream <https://developers.google.com/google-ads/api/reference/rpc/v24/GoogleAdsService#searchstream>`__ |ext_link|
+
+  Used to retrieve conversion tracking settings and look up existing conversion actions.
+
+* `ConversionUploadService.UploadClickConversions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionUploadService#uploadclickconversions>`__ |ext_link|
+
+  Used to upload click conversions. Batches are capped at 2,000 rows.
+
+* `ConversionActionService.MutateConversionActions <https://developers.google.com/google-ads/api/reference/rpc/v24/ConversionActionService#mutateconversionactions>`__ |ext_link|
+
+  Used to create a conversion action when one with the configured name does not already exist.
 
 .. events-google-enhanced-conversions-api-reference-end
+
+.. vale on

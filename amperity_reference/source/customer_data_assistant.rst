@@ -105,10 +105,10 @@ The **Customer Data Assistant** operates in a drafting model for segments: when 
 
 This drafting approach provides several benefits:
 
-* **Review before saving.** Inspect the draft before saving. Check segment filters, customer count, and structure.
-* **Iterative refinement.** Ask the agent to modify the proposal (e.g. "Actually, change the time frame to the last two months") and see the updated version before saving.
-* **Compare versions.** Click between proposed drafts in the **Customer Data Assistant** chat history to compare different iterations side-by-side.
-* **Safe exploration.** Experiment with different segment definitions or journey flows without affecting your production data.
+* **Review before saving** Inspect the draft before saving. Check segment filters, customer count, and structure.
+* **Iterative refinement** Ask the agent to modify the proposal and see the updated version before saving. For example: "Actually, change the time frame to the last two months".
+* **Compare versions** Click between proposed drafts in the **Customer Data Assistant** chat history to compare different iterations side-by-side.
+* **Safe exploration** Experiment with different segment definitions or journey flows without affecting your production data.
 
 Once satisfied with a proposal, explicitly ask the agent to save it. After saving, use the **Manual edit** button in the **Canvas** to open the full segment or journey editor for additional refinement.
 

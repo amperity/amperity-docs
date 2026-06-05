@@ -195,7 +195,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **mobile_id**
@@ -203,7 +203,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
        * Hashes data as one-way SHA-256
 

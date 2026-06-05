@@ -242,7 +242,7 @@ By category
 
 .. amps-review-consumption-dashboard-category-start
 
-Consumption breakdown by category shows which category--Sources, Stitch, Databases, Analytics, or Activation--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which category--**Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. image:: ../../images/amps-consumption-category-view.png
    :width: 600 px
@@ -260,7 +260,7 @@ By feature
 
 .. amps-review-consumption-dashboard-feature-start
 
-Consumption breakdown by category shows which feature--BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which feature--**BI Connect**, **Bridge**, **Campaigns**, **Databases**, **Ingest**, **Orchestrations**, **Predictive modeling**, **Profile API**, **Segmentation**, **Source tables**, **Source transforms**, or **Stitch**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. amps-review-consumption-dashboard-feature-end
 
@@ -278,7 +278,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, Databases, Analytics, and Activation--and is further broken down into product features.
+Amps and storage (TB) consumption is tracked in 5 categories--**Sources**, **Stitch**, **Databases**, **Analytics**, and **Activation**--and is further broken down into product features.
 
 .. list-table::
    :widths: 30 70

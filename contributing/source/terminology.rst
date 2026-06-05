@@ -196,7 +196,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 
    Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.
 
-   Any other use of stitch should have a lower-case "s" and may follow any other standard use cases.
+   Any other use of stitch should have a lowercase "s" and may follow any other standard use cases.
 
 
 .. _term-web-ui:

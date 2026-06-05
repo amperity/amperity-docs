@@ -158,6 +158,8 @@ Amp Insights examples
 
 .. amp-insights-examples-end
 
+.. vale off
+
 .. amp-insights-examples-list-start
 
 The following examples show some of the questions you can ask while working in the **Amps** dashboard:
@@ -169,6 +171,8 @@ The following examples show some of the questions you can ask while working in t
 * "Which campaign consumes the most Amps?"
 
 .. amp-insights-examples-list-end
+
+.. vale on
 
 
 .. _assistant-journey-examples:
