@@ -132,7 +132,7 @@ Storage does not consume any Amps; instead, storage is measured separately, in T
 
 Similarly to Amps, Storage consumption is attributable to the product feature where that data is stored. Additionally, all storage can be attributable to the environment (production and individual sandboxes) where it is stored. 
 
-Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted promptly after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
+Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
 
 .. note:: Storage does not consume any Amps and is metered separately in TBs. Typically, storage is less than 5% of total consumption.
 

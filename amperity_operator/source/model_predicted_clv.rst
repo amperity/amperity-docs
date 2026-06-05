@@ -67,7 +67,7 @@ Return classifier
 
 The return classifier submodel predicts the probability that a customer will make at least one purchase during the prediction horizon. This is a binary classification: will a customer return or not return? The prediction is output as a probability score between 0 and 1.
 
-.. note:: Customers with a very low return probability will naturally have a low predicted CLV regardless of other factors.
+.. note:: Customers with a very low return probability have a low predicted CLV regardless of other factors.
 
 .. model-predicted-clv-howitworks-return-classifier-end
 
@@ -109,7 +109,7 @@ The :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`,
 
    Predicted CLV = P(return) x Predicted Order Frequency x Predicted Avg Order Value
 
-A customer with a high probability of return but low order frequency and modest order value will have a moderate CLV, while a customer who is likely to return frequently and spend heavily will have a high CLV.
+A customer with a high probability of return but low order frequency and modest order value have a moderate CLV, while a customer who is likely to return frequently and spend has a high CLV.
 
 After raw scores are computed, a sigmoid rescaling step compresses extreme outlier predictions to produce a smoother distribution of values.
 

@@ -83,7 +83,7 @@ Ask AmpAI
 
 The Ask AmpAI section provides an embedded input field that lets you submit a question directly from the **Home** page. When you submit a query, Amperity navigates you to the :doc:`AmpAI <ampai>` page, where the response is loaded.
 
-Use this section to quickly start a conversation with AmpAI without navigating away from the **Home** page first.
+Use this section to start a conversation with AmpAI without navigating away from the **Home** page first.
 
 .. home-ask-ampai-end
 
@@ -188,7 +188,7 @@ Tenant health
 
 .. home-tenant-health-start
 
-The Tenant health section displays the operational health of your tenant's key data pipelines and the most recent Stitch run. Use this section to quickly identify errors or confirm that your data pipelines are running as expected.
+The **Tenant health** section displays the operational health of your tenant's key data pipelines and the most recent Stitch run. Use this section to identify errors or confirm that your data pipelines are running as expected.
 
 .. home-tenant-health-end
 
@@ -206,7 +206,7 @@ Pipeline health
 
 .. home-tenant-health-pipelines-start
 
-Pipeline health shows counts for the following data pipeline components:
+**Pipeline health** shows counts for the following data pipeline components:
 
 .. list-table::
    :widths: 30 70
@@ -233,7 +233,7 @@ Stitch details
 
 .. home-tenant-health-stitch-start
 
-Stitch details show the following information about the most recent :doc:`Stitch <stitch>` run:
+**Stitch details** show the following information about the most recent :doc:`Stitch <stitch>` run:
 
 * Last run timestamp
 * Run time

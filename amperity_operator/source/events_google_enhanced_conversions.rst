@@ -203,7 +203,7 @@ where the following fields are:
 * Required: **order_id**, **timestamp**, and at least one of **email** or **phone**
 * Recommended: **email**, **phone**, **unit_price**, **quantity**, and **currency_code**
 
-  .. important:: Rows where both **email** and **phone** are NULL are dropped before upload. They cannot be matched and are silently excluded. Filter them out in your query, as shown above, to keep row counts accurate.
+  .. important:: Rows where both **email** and **phone** are NULL are dropped before upload. They cannot be matched and are excluded. Filter them out in your query, as shown above, to keep row counts accurate.
 
 * Optional: **product_id**, **merchant_id**, **feed_country_code**, **feed_language_code**, **local_transaction_cost**, **ad_personalization**, and **ad_user_data**
 * Omit: **gclid**, **gbraid**, **wbraid**, and **conversion_environment**.
@@ -664,7 +664,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
        |destination-name| refers to this as the transaction ID for the conversion. This field is required.
 
-       .. important:: Order IDs must be unique per conversion action. Duplicate order IDs within the same conversion action are silently ignored by Google Ads.
+       .. important:: Order IDs must be unique per conversion action. Duplicate order IDs within the same conversion action are ignored by Google Ads.
 
        .. tip:: Use the **Order ID** field in the **Unified Itemized Transactions** table.
 

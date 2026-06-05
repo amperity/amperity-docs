@@ -69,7 +69,7 @@ Build query
 
 An SMS profile in |destination-name| requires only a phone number, but may include all system profile attributes, including email address, first name, last name, postal code, and birthdate. Custom attributes may be included in the query results.
 
-.. important:: Only phone numbers that already exist in |destination-name| will be updated. Phone numbers that do not exist are silently dropped. Use the **SMS Opt Status** table to filter the results to include only customers who have opted in to receiving SMS messaging.
+.. important:: Only phone numbers that already exist in |destination-name| will be updated. Phone numbers that do not exist are dropped. Use the **SMS Opt Status** table to filter the results to include only customers who have opted in to receiving SMS messaging.
 
 .. sendto-listrak-sms-profile-build-query-fields-end
 

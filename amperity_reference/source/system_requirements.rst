@@ -80,4 +80,4 @@ Amperity is not supported from Firefox, Safari, Internet Explorer, or from mobil
 Display
 --------------------------------------------------
 
-1920x1080 minimum resolution
+1920 × 1080 minimum resolution

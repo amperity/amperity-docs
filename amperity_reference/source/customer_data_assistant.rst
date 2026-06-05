@@ -19,7 +19,7 @@ Customer Data Assistant
 
 .. customer-data-agent-overview-start
 
-The **Customer Data Assistant** is a feature within the **AmpAI** suite that helps marketers move quickly from intent to action. Through natural language conversation, users can create segments, build journeys, and explore customer data without navigating manual configuration.
+The **Customer Data Assistant** is a feature within the **AmpAI** suite that helps marketers move from intent to action. Through natural language conversation, users can create segments, build journeys, and explore customer data without navigating manual configuration.
 
 The **Customer Data Assistant** is designed as a starting point: describe what you want to accomplish, and the agent generates a working draft that you can review, refine, and save. Think of it as a collaborative tool that handles the initial setup work, allowing you to focus on strategic refinement.
 
@@ -322,7 +322,7 @@ The **Customer Data Assistant** has capabilities that overlap with the existing 
    :start-after: .. ampai-tools-overview-table-start
    :end-before: .. ampai-tools-overview-table-end
 
-A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
+A typical workflow might start with the **Customer Data Assistant** to create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
 
 .. customer-data-agent-relationship-to-assistants-end
 
