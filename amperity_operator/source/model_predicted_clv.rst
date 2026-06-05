@@ -383,7 +383,7 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        Range: 1 to 30.
 
-       This setting controls the levels of splits a tree is allowed to make. At each level a yes/no question is asked and, depending on the answer, the data is split into two groups. For example:
+       This setting controls the levels of splits a tree is allowed to make. At each level a yes or no question is asked and, depending on the answer, the data is split into two groups. For example:
 
        .. code-block:: none
 

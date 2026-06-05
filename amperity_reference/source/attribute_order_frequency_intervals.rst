@@ -24,7 +24,7 @@ Order frequency intervals
 
 .. attribute-order-frequency-intervals-start
 
-Order frequency is the the count of distinct order IDs a customer has made at defined intervals, such as:
+Order frequency is the count of distinct order IDs a customer has made at defined intervals, such as:
 
 * L30D Order Frequency (30 days)
 * L3M Order Frequency (3 months)

@@ -1233,7 +1233,7 @@ Fit Journeys Canvas to screen
 
 .. journeys-howtos-fit-canvas-to-screen-start
 
-You can re-center and resize the the canvas so that you are able to see the whole journey at once.
+You can re-center and resize the canvas so that you are able to see the whole journey at once.
 
 .. journeys-howtos-fit-canvas-to-screen-end
 
@@ -1371,7 +1371,7 @@ Designate up to five goal segments on the initial journey setup window from the 
 If you skip designating goals during the initial setup and want to add them later:
 
 #. Open your journey in edit mode.
-#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Locate the milestones card on the upper-right of the **Journeys Canvas**.
 #. Click **Add a goal**.
 #. Select up to 5 batch segments that represent goal achievements.
 #. Click **Done**.
@@ -1380,7 +1380,7 @@ If you skip designating goals during the initial setup and want to add them late
 Once you have designated at least one goal, you may add or modify goals:
 
 #. Open your journey in edit mode.
-#. Locate the milestones card on the upper-right of the Journeys canvas.
+#. Locate the milestones card on the upper-right of the **Journeys Canvas**.
 #. Click the caret icon.
 #. Click **Modify goals**.
 #. Select up to 5 batch segments that represent goal achievements.
@@ -1432,7 +1432,7 @@ Metrics update after each journey run. Historical data is preserved for trend an
 .. journeys-howtos-view-milestone-metrics-steps-start
 
 #. On the **Journeys** page, open a journey that has run at least once
-#. Navigate to the milestones card on the upper-right of the Journeys canvas
+#. Navigate to the milestones card on the upper-right of the **Journeys Canvas**
 #. Review milestone counts by time window: All-time total, past 7 days, past 30 days, or past 90 days
 #. Check median duration to understand time-to-goal
 #. For split goals, compare path-specific counts
@@ -1754,20 +1754,20 @@ Open a node to view its configuration.
 
 .. _journeys-howtos-zoom-canvas:
 
-Zoom in/out on Journeys Canvas
+Zoom in or out on the Journeys Canvas
 --------------------------------------------------
 
 .. journeys-howtos-zoom-canvas-start
 
-You can zoom in and out on the Journeys canvas. 
+You can zoom in and out on the **Journeys Canvas**. 
 
 .. journeys-howtos-zoom-canvas-end
 
-**To zoom in or out on the Journeys canvas**
+**To zoom in or out on the Journeys Canvas**
 
 .. journeys-howtos-zoom-canvas-steps-start
 
-* Zoom by using the **+** / **-** buttons in the bottom left of the canvas.
-* You may also pinch/expand on a trackpad, either on the canvas or on the minimap in the lower right.
+* Zoom by using the **+** / **-** buttons in the bottom left of the **Journeys Canvas**.
+* You may also pinch or expand on a trackpad, either on the canvas or on the minimap in the lower right.
 
 .. journeys-howtos-zoom-canvas-steps-end
