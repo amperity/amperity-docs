@@ -41,7 +41,7 @@ Review the following sections:
 
    :ref:`Fields are shown in notifications <notifications-fields>`, such as links to validation reports and workflows, job, trace, IDs for use with troubleshooting, and status indicators, such as the amount of time a workflow ran.
 
-#. The second section describes the notifications that appear within individual pages in the Amperity user interface. These sections are listed alphabetically by page: :ref:`Campaign <notifications-campaigns>`, :ref:`Database <notifications-databases>`, :ref:`Orchestrations <notifications-orchestrations>`, :ref:`Queries <notifications-queries>`, :ref:`Sources <notifications-sources>`, :ref:`Stitch reports <notifications-stitch-reports>`, and :ref:`Stitch runs <notifications-stitch-runs>`.
+#. The second section describes the notifications that appear within individual pages in the Amperity user interface. These sections are listed alphabetically by page: :ref:`Campaign <notifications-campaigns>`, :ref:`Database <notifications-databases>`, :ref:`Journeys <notifications-journeys>`, :ref:`Orchestrations <notifications-orchestrations>`, :ref:`Queries <notifications-queries>`, :ref:`Sources <notifications-sources>`, :ref:`Stitch reports <notifications-stitch-reports>`, and :ref:`Stitch runs <notifications-stitch-runs>`.
 
 #. A list of how-tos that are available to workflows, including :ref:`resolving workflow errors <notifications-resolve-workflow-errors>`.
 
@@ -389,6 +389,52 @@ The following is a list of status notifications that appear within a notificatio
 * Completed in
 
 .. notifications-databases-common-warnings-end
+
+
+.. _notifications-journeys:
+
+Journeys
+==================================================
+
+.. notifications-journeys-overview-start
+
+You can find information about notifications--per status--found on the **Journeys** page listed below.
+
+.. notifications-journeys-overview-end
+
+**Common error notifications**
+
+.. notifications-journeys-errors-start
+
+Journey error notifications are most often related to:
+
+#. Finding travelers to enter the journey
+#. Running a journey node
+#. Sending a journey activation to a destination
+
+If you see a journey error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+
+.. notifications-journeys-errors-end
+
+**Common status notifications**
+
+.. notifications-journeys-other-start
+
+The following is a list of status notifications that appear within a notification as it is running or after it has completed:
+
+* Starting journey
+* Finding travelers to enter journey
+* Running node
+* Sending to destination
+* Completing journey
+* Recording traveler visits in the travel log
+* Sending travel log to destination
+* Cleaning up
+* Journey finished
+* Journey canceled
+* Completed in
+
+.. notifications-journeys-other-end
 
 
 .. _notifications-orchestrations:
