@@ -8,113 +8,10 @@ Set up your writing environment
 Local development of documentation for Amperity is done on your workstation and requires some configuration.
 
 
-Requirements
-==================================================
-
-* Python 3.x
-* Sphinx 7.3.7
-* docutils 0.21
-
-A text editor.
-
-EditPad Pro is recommended for PCs and TextMate is recommended for macOS. You may use your preferred text editor as long as it supports the following:
-
-#. Line wrapping
-#. Does not automatically remove spaces at the end of strings.
-#. Does not use tabs instead of spaces
-
-
-Pull the Amperity docs repo
-==================================================
-
-Download the https://github.com/amperity/amperity-docs GitHub repo using GitHub Desktop.
-
-
-Create Python virtual environment
-==================================================
-
-Run the following commands to create a Python virtual environment.
-
-#. $ ``cd documents/github/amperity-docs``
-#. $ ``python3 -m venv .venv``
-#. $ ``source .venv/bin/activate``
-#. (.venv) $ ``python3 -m pip install sphinx``
-#. (.venv) $ ``sphinx-build --version``
-
-   Returns something like:
-
-   "sphinx-build 9.1.0"
-
-.. note:: ``(.venv)`` is not part of the command you should run. This just means "From the Python virtual environment, run the command after ``$``."
-
-
-Install requirements
-==================================================
-
-In the same virtual environment, run the following commands:
-
-#. $.venv ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
-#. $.venv ``brew install python``
-#. $.venv ``pip3 install -r requirements.txt``
-
-   Requirements include Sphinx (static site generator), docutils, Shibuya (base theme for static site generator), and Pygments (styles and formatting for code blocks).
-
-#. $.venv ``brew install serve``
-
-
-Install packages
-==================================================
-
-In the same virtual environment, run the following commands to install theme and a collection of plugins required by theme.
-
-#. $.venv ``pip install shibuya``
-#. $.venv ``pip install sphinx-togglebutton``
-#. $.venv ``pip install sphinx_sitemap``
-#. $.venv ``pip install sphinxcontrib-mermaid``
-#. $.venv ``pip install sphinxcontrib-video``
-#. $.venv ``pip install sphinxcontrib-youtube``
-#. $.venv ``pip install sphinx-copybutton``
-#. $.venv ``pip install sphinx_design``
-#. $.venv ``pip install sphinx-new-tab-link``
-
-
-
-Build the docs
-==================================================
-
-Open a new command shell window, and then run the following commands.
-
-#. $ ``cd documents/github/amperity-docs``
-#. $ ``source .venv/bin/activate``
-#. $ ``make``
-
-   This builds all of the docs and place the output in the ``/build`` directory within the ``amperity-docs`` repo.
-
-
-Clean out the docs build directory
-==================================================
-
-Run the following command: ``make clean``. This removes all output in the ``/build`` directory.
-
-
-View the docs in localhost
-==================================================
-
-Open a new command shell window, and then run the following commands.
-
-#. $ ``cd documents/github/amperity-docs``
-#. $ ``make serve``
-
-   This starts a local server for the contents of the ``/build`` directory.
-#. Open a browser and enter the following URL: ``http://localhost:8080/``.
-
-
 .. _contributing-set-up-environment-venv:
 
 Set up your Python virtual environment
 ==================================================
-
-.. TODO: Make this the "default" and get rid of the more convoluted steps that use the built-in macOS Pythonisms.
 
 .. contributing-set-up-environment-venv-start
 
@@ -184,11 +81,11 @@ To set up your local authoring environment:
           :align: left
           :class: no-scaled-link
 
-     - Create a python virtual environment in the repository by running:
+     - Create a Python virtual environment inside the repository by running:
 
        .. code-block:: text
 
-          $ python3 -m venv amperity-docs
+          $ cd amperity-docs && python3 -m venv .venv
 
          
    * - .. image:: ../../images/steps-07.png
@@ -201,8 +98,7 @@ To set up your local authoring environment:
 
        .. code-block:: text
 
-          $ cd amperity-docs && source /bin/activate \
-          && pip install -r requirements.txt
+          $ source .venv/bin/activate && pip install -r requirements.txt
 
 
    * - .. image:: ../../images/steps-08.png
@@ -218,4 +114,24 @@ To set up your local authoring environment:
        Run ``make serve``, and then open ``http://localhost:8080/`` to view the documenation.
 
 .. contributing-set-up-environment-venv-end
+
+
+Install Vale
+==================================================
+
+.. contributing-install-vale-start
+
+Vale is a command-line style linter that checks documentation against the Amperity style guide. Install it using Homebrew:
+
+.. code-block:: text
+
+   $ brew install vale
+
+Verify the installation:
+
+.. code-block:: text
+
+   $ vale --version
+
+.. contributing-install-vale-end
 

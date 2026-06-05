@@ -66,7 +66,7 @@ Apply semantics
 
 You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that contains transactions data.
 
-Transaction semantics include a set of required semantic tags --- **is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id** --- along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
+Transaction semantics include a set of required semantic tags--**is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id**--along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
 
 .. important:: All transaction semantic tags are prefixed with **txn-item/**. For example: **txn-item/order-datetime**.
 

@@ -55,7 +55,7 @@ AmpAI tools
 
 .. ampai-tools-start
 
-**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point --- describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
 
 A typical workflow might start with the **Customer Data Assistant** to quickly create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
@@ -704,7 +704,7 @@ How the assistant uses context
 
 .. ampai-company-context-how-it-works-start
 
-When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant  searches the context library and returns the most relevant excerpts --- typically a few short passages, at most five --- along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
+When a user asks a question that involves business-specific knowledge, the assistant automatically searches enabled context files behind the scenes. The assistant searches the context library and returns the most relevant excerpts, along with the source document title. The assistant then uses those excerpts to inform its response, including segment thresholds, journey channels, terminology, and other business-specific details.
 
 No specific action is required when prompting. Context lookup is automatic when the assistant determines that a question involves business-specific knowledge.
 
