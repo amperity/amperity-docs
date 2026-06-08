@@ -36,7 +36,6 @@ Connecting Claude to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
 * Access to a Claude account--**Pro**, **Max**, **Team**, or **Enterprise**--or access to Claude Code.
-* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
 
 .. mcp-setup-claude-requirements-end
 

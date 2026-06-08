@@ -36,7 +36,6 @@ Connecting ChatGPT to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
 * Access to ChatGPT with a plan that supports custom MCP connectors.
-* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
 
 .. mcp-setup-chatgpt-requirements-end
 

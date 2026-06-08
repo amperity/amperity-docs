@@ -38,7 +38,6 @@ Connecting Gemini CLI to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
 * Gemini CLI installed and signed in.
-* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
 
 .. mcp-setup-gemini-requirements-end
 
