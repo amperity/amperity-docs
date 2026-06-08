@@ -88,8 +88,6 @@ Authenticate
 
 .. mcp-setup-gemini-authenticate-start
 
-Complete the OAuth flow to connect to the MCP server.
-
 #. Start Gemini CLI, or restart it if it was already running, so it reloads ``settings.json``:
 
    .. code-block:: bash
@@ -129,7 +127,5 @@ In a Gemini CLI session, ask:
    "Tell me about my Amperity tenant."
 
 Gemini CLI calls the **tenant_info** tool and returns details about your current Amperity tenant.
-
-.. tip:: If you see a ``dynamic client registration is disabled`` error during ``/mcp auth``, confirm the ``oauth.clientId`` field is present in your ``amperity`` server entry in ``settings.json``, and then restart Gemini CLI to reload the configuration.
 
 .. mcp-setup-gemini-interacting-end
