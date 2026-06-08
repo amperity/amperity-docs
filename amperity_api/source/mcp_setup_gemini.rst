@@ -20,7 +20,7 @@ Set up Gemini CLI
 
 .. mcp-setup-gemini-start
 
-Connect Gemini CLI to the Amperity MCP server by registering it as a remote HTTP server and configuring OAuth with Amperity's static client ID.
+Connect Gemini CLI to the Amperity MCP server by adding it as a remote MCP server and signing in with your Amperity credentials.
 
 .. important:: Gemini CLI only works for organizations on a Gemini Code Assist Standard or Enterprise license.
 
@@ -57,8 +57,6 @@ Register the Amperity MCP server in your Gemini CLI configuration.
    .. code-block:: bash
 
       gemini mcp add --transport http --scope user amperity https://mcp.amperity.com
-
-   The ``--scope user`` flag registers the server in your user-scoped configuration (``~/.gemini/settings.json``) so it is available in every Gemini CLI session. Use ``--scope project`` to register it for a single project instead (``.gemini/settings.json``).
 
 #. Add Amperity's OAuth client ID to the server entry. Open ``~/.gemini/settings.json`` and add an ``oauth`` block to the ``amperity`` server so it matches the following:
 
