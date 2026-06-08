@@ -76,7 +76,7 @@ Register the Amperity MCP server in your Gemini CLI configuration.
         }
       }
 
-   .. important:: The ``oauth.clientId`` field is required. By default Gemini CLI attempts dynamic client registration, which the Amperity MCP server rejects with ``dynamic client registration is disabled``. Providing the static client ID tells Gemini CLI to use Amperity's pre-registered public client instead. Amperity uses PKCE, so no client secret is needed.
+   .. important:: The ``oauth.clientId`` field is required. Without it, Gemini CLI cannot authenticate to the Amperity MCP server.
 
 .. mcp-setup-gemini-add-end
 
