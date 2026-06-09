@@ -190,7 +190,7 @@ About benchmark cards
 
 .. stitch-benchmark-cards-start
 
-Each benchmark card contains a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
+Each benchmark card has a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
 
 .. stitch-benchmark-cards-end
 
@@ -423,7 +423,7 @@ Shared names and emails
 
 The **Shared names and emails across Amperity IDs** benchmark computes the ratio of unique name and email address combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and email address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and email address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-emails-end
 
@@ -437,7 +437,7 @@ Shared names and phones
 
 The **Shared names and phones across Amperity IDs** benchmark computes the ratio of unique name and phone number combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and phone number combination is associated with multiple Amperity IDs more than often expected.
+A large ratio implies that a name and phone number combination is associated with many Amperity IDs more than often expected.
 
 .. stitch-benchmark-category-shared-names-and-phones-end
 
@@ -451,6 +451,6 @@ Shared names and addresses
 
 The **Shared names and addresses across Amperity IDs** benchmark computes the ratio of unique name and address (including street, city, state, and postal code) combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-addresses-end

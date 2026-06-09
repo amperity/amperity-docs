@@ -70,7 +70,7 @@ Enhance customer 360 view
 
 #. Click **AmpAI Select** to have **AmpAI** select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
 
-   .. note:: If **AmpAI Select** does not appear to make any changes please refresh the page. This is a known bug.
+   .. note:: If **AmpAI Select** does not appear to make any changes refresh the page. This is a known bug.
 
       .. image:: /_images/ex02_ampai_select.png
          :width: 400 px

@@ -33,7 +33,7 @@ Pull from Amazon S3
 
 .. source-amazon-s3-about-start
 
-Amperity can pull data from Amazon S3. Amazon S3 is an efficient cloud storage option that supports a wide variety of file types, file formats, and file sizes and is the most frequently used data source across all Amperity tenants.
+Amperity can pull data from Amazon S3. Amazon S3 is an efficient cloud storage option that supports a wide variety of file types, file formats, and file sizes and is the most often used data source across all Amperity tenants.
 
 .. source-amazon-s3-about-end
 

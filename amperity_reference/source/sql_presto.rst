@@ -43,7 +43,7 @@ The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto S
 
 This reference is focused on how Presto SQL is used with Amperity and is not focused on anything that you would not expect to do from the **Queries** and **Segment** tabs in Amperity.
 
-Please refer to this reference first, and then to the official `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| documentation.
+Refer to this reference first, and then to the official `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| documentation.
 
 .. sql-presto-why-should-i-use-this-end
 
@@ -194,7 +194,7 @@ Formalisms
 
 .. sql-presto-style-guide-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
+Make use of **BETWEEN** where possible instead of combining many statements with **AND**. Similarly use **IN()** instead of many **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
 
 .. code-block:: sql
    :linenos:
@@ -274,7 +274,7 @@ Ensure the name is unique and does not exist as a reserved keyword. Keep the len
 
 Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names.
 
-Use underscores where you would include a space in the name. For example, "first name" becomes "first_name". Avoid the use of multiple consecutive underscores because they can be hard to read.
+Use underscores where you would include a space in the name. For example, "first name" becomes "first_name". Avoid the use of many consecutive underscores because they can be hard to read.
 
 Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
@@ -396,13 +396,13 @@ The following suffixes represent patterns that should be applied to column names
    * - **_total**
      - The total or sum of a collection of values.
    * - **_num**
-     - Denotes the field contains any kind of number.
+     - Denotes the field has any kind of number.
    * - **_name**
      - Signifies a name such as ``first_name``.
    * - **_seq**
      - Contains a contiguous sequence of values.
    * - **_date**
-     - Denotes a column that contains the date of something.
+     - Denotes a column that has the date of something.
    * - **_tally**
      - A count.
    * - **_size**
@@ -595,7 +595,7 @@ Always include newlines and vertical space:
 * before **AND** or **OR**
 * after semicolons to separate queries for easier reading
 * after each keyword definition
-* before a comma when separating multiple columns into logical groups
+* before a comma when separating many columns into logical groups
 * to separate code into related sections, which helps to ease the readability of large chunks of code.
 
 Putting commas and conjunctions at the start of the line makes it easier to comment out a single line without disturbing the rest of the query
@@ -706,7 +706,7 @@ The **WITH** clause defines a common table expression (CTE).
 
 .. sql-presto-with-clause-example-multiple-ctes-start
 
-The following example shows using multiple CTEs:
+The following example shows using many CTEs:
 
 .. code-block:: sql
    :linenos:
@@ -928,7 +928,7 @@ LEFT JOIN clause
 
 The **LEFT JOIN** clause joins rows from two tables. For a **LEFT JOIN**, each row in the left table is joined with all matching rows from the right table. For rows with no match in the right table, the join is completed with **NULL** to represent column values.
 
-For example, the **Merged Customers** table contains rows of customer profile data, with each row unique by Amperity ID. Select the average order revenue from **Unified Transactions**, and then use a **LEFT JOIN** to include average sales revenue in the query results, unique by Amperity ID.
+For example, the **Merged Customers** table has rows of customer profile data, with each row unique by Amperity ID. Select the average order revenue from **Unified Transactions**, and then use a **LEFT JOIN** to include average sales revenue in the query results, unique by Amperity ID.
 
 .. code-block:: sql
 
@@ -1184,7 +1184,7 @@ Average order revenue grouped by Amperity ID
 
 .. sql-presto-group-by-example-average-order-revenue-start
 
-The **Unified Transactions** table contains rows of customer transactions data with each row assigned an Amperity ID. Select the average order revenue from **Unified Transactions**, group by Amperity ID, and then order by average sales revenue in descending order.
+The **Unified Transactions** table has rows of customer transactions data with each row assigned an Amperity ID. Select the average order revenue from **Unified Transactions**, group by Amperity ID, and then order by average sales revenue in descending order.
 
 .. code-block:: sql
 
@@ -1480,7 +1480,7 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 * Arrays are expanded into a single column.
 * Maps are expanded into two columns (key, value).
 
-**UNNEST** can also be used with multiple arguments, in which case they are expanded into multiple columns, with as many rows as the highest cardinality argument (the other columns are padded with **NULL** values).
+**UNNEST** can also be used with many arguments, in which case they are expanded into many columns, with as many rows as the highest cardinality argument (the other columns are padded with **NULL** values).
 
 **UNNEST** can optionally have a **WITH ORDINALITY** clause, in which case an additional ordinality column is added to the end. **UNNEST** is normally used with a **JOIN** and can reference columns from relations on the left side of the join.
 
@@ -2078,7 +2078,7 @@ A function is a SQL statement that accepts input parameters, performs actions, a
 
 .. sql-presto-functions-list-start
 
-The following list contains some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
+The following list has some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
 
 * :ref:`sql-presto-function-array-agg`
 * :ref:`sql-presto-function-array-join`
@@ -2513,7 +2513,7 @@ Use the **CONCAT(array1, array2)** function to concatenate a set of arrays into 
 
 .. sql-presto-function-concat-note-about-null-start
 
-.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example, use:
+.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example, use:
 
    ::
 
@@ -2746,6 +2746,8 @@ DATE_TRUNC()
 
 Use the **DATE_TRUNC(unit, x)** function to return ``x`` truncated to one of the following ``unit`` values (shown in **bold**):
 
+.. vale off
+
 =========== ===========================
 Unit        Example Truncated Value
 =========== ===========================
@@ -2758,6 +2760,8 @@ Unit        Example Truncated Value
 **quarter** 2001-07-01 00:00:00.000
 **year**    **2001**-01-01 00:00:00.000
 =========== ===========================
+
+.. vale on
 
 .. sql-presto-function-date-trunc-end
 
@@ -3663,7 +3667,7 @@ SUBSTR()
 Use the **SUBSTR()** or **SUBSTRING(string, start, length)** function to return N characters in a string. Do one of the following:
 
 * Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
-* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
+* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that has the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 
 .. sql-presto-function-substr-end
 
@@ -3732,7 +3736,7 @@ Use the **SUM(x)** function to return the sum of all input values.
 
 .. sql-presto-function-sum-note-about-null-start
 
-.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example:
+.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example:
 
    ::
 

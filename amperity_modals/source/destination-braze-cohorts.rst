@@ -57,7 +57,7 @@ The name of the cohort to create or update in Braze. This name appears in the Br
 
 **User ID Field**
 
-The name of the column in your query or segment results that contains the Braze user identifier. Defaults to ``external_id``. If your Braze users are identified by email or a custom field, set this value to match the column name in your query results.
+The name of the column in your query or segment results that has the Braze user identifier. Defaults to ``external_id``. If your Braze users are identified by email or a custom field, set this value to match the column name in your query results.
 
 **Campaign file settings**
 

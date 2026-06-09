@@ -34,7 +34,7 @@ Pull from Amazon S3 (Legacy)
 
 .. source-amazon-s3-legacy-about-start
 
-Amperity can pull data from Amazon S3. A common scenario: a file is output from a customer data source with a consistent datestamp pattern appended to a static file name, added to an Amazon S3 bucket, and then updated on a regular basis. Amazon S3 can be a source for any number of file types and formats. A courier can be configured to ingest multiple file types and formats as a fileset.
+Amperity can pull data from Amazon S3. A common scenario: a file is output from a customer data source with a consistent datestamp pattern appended to a static file name, added to an Amazon S3 bucket, and then updated on a regular basis. Amazon S3 can be a source for any number of file types and formats. A courier can be configured to ingest many file types and formats as a fileset.
 
 .. source-amazon-s3-legacy-about-end
 

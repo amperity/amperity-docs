@@ -499,7 +499,7 @@ Invalid fields
 
 .. campaign-linkedin-dmp-workflow-actions-invalid-fields-start
 
-To resolve this error, verify that the list you want to upload contains only allowed fields.
+To resolve this error, verify that the list you want to upload has only allowed fields.
 
 #. Open the **Activations** page and locate the segment used with this workflow.
 #. Confirm that fields included are only 1) **email** or 2) **firstname** and **lastname**.

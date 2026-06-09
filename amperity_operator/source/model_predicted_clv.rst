@@ -109,7 +109,7 @@ The :ref:`return classifier <model-predicted-clv-howitworks-return-classifier>`,
 
    Predicted CLV = P(return) x Predicted Order Frequency x Predicted Avg Order Value
 
-A customer with a high probability of return but low order frequency and modest order value have a moderate CLV, while a customer who is likely to return frequently and spend has a high CLV.
+A customer with a high probability of return but low order frequency and modest order value have a moderate CLV, while a customer who is likely to return and spend has a high CLV.
 
 After raw scores are computed, a sigmoid rescaling step compresses extreme outlier predictions to produce a smoother distribution of values.
 
@@ -144,7 +144,7 @@ How much will customers spend?
 
 .. model-predicted-clv-use-cases-spend-start
 
-The **Predicted CLV Next 365 Days** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days. You can access this attribute directly from the **Segment Editor**.
+The **Predicted CLV Next 365 Days** attribute in the **Predicted CLV Attributes** table has the total predicted customer spend over the next 365 days. You can access this attribute directly from the **Segment Editor**.
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 
@@ -167,7 +167,7 @@ When predictive modeling is enabled for your tenant you can use output from the 
 * Gold represents customers who fall between 1% and 5%
 * Silver represents customers who fall between 5% and 10%
 
-Select all three of these predicted value tiers to build an audience that contains customers who are predicted to be in your top 10% (inclusive) high value customers.
+Select all three of these predicted value tiers to build an audience that has customers who are predicted to be in your top 10% (inclusive) high value customers.
 
 .. usecase-predicted-top-10-percent-end
 
@@ -179,7 +179,7 @@ Build a predicted CLV model
 
 .. model-predicted-clv-build-start
 
-You can build a predicted CLV model from the **Customer 360** page. Any database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling.
+You can build a predicted CLV model from the **Customer 360** page. Any database that has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling.
 
 .. model-predicted-clv-build-end
 
@@ -425,7 +425,7 @@ Components of predictive CLV modeling have the following hyperparameters:
 
        A split is only made when it reduces **Impurity** by at least the value of **Min info gain**. At zero the model considers every possible split regardless of improvement and produces more complex trees.
 
-       A value greater than zero prunes away weak splits early and leads to less complex trees that train faster and generalize better. Increase this value to limit tree depth when training contains low-value splits.
+       A value greater than zero prunes away weak splits early and leads to less complex trees that train faster and generalize better. Increase this value to limit tree depth when training has low-value splits.
 
 
    * - **Min instances per node**

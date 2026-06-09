@@ -286,7 +286,7 @@ Responses
 
 .. endpoint-post-workflows-start-responses-start
 
-A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 201 created response contains workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST /workflow/runs/** endpoint will match an :doc:`HTTP status code <responses>`. A 201 created response has workflow details for the workflow run that was started. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-start-responses-end
 
@@ -327,7 +327,7 @@ Response parameters
 
 .. endpoint-post-workflows-start-response-parameters-start
 
-A **201** response contains the following parameters.
+A **201** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -407,7 +407,7 @@ A **201** response contains the following parameters.
      - The state of the workflow.
 
    * - **task_instances**
-     - A JSON array that contains zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
+     - A JSON array that has zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
 
        **ended_at**
           The date and time at which a workflow task ended.

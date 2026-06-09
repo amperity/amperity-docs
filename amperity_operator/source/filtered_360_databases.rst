@@ -7,7 +7,7 @@ Filtered 360 databases
 
 .. multiple-360-databases-overview-start
 
-For tenants with more than one marketing unit, such as companies that have multiple brands and geographic regions, Amperity offers the ability to perform identity resolution across all marketing units, but then filter the data for each specific marketing unit into its own database.
+For tenants with more than one marketing unit, such as companies that have many brands and geographic regions, Amperity offers the ability to perform identity resolution across all marketing units, but then filter the data for each specific marketing unit into its own database.
 
 This approach ensures that:
 
@@ -34,7 +34,7 @@ To enable filtering customer 360 databases by marketing unit you must do the fol
 
 #. Each database must :ref:`use a Database_Filter <multiple-360-databases-table>` table to identify a marketing unit.
 
-#. :ref:`SEMI JOIN the Database_Filter table <multiple-360-databases-join>` to each table in the filtered 360 database that contains data about marketing units.
+#. :ref:`SEMI JOIN the Database_Filter table <multiple-360-databases-join>` to each table in the filtered 360 database that has data about marketing units.
 
    This step ensures that data is filtered to return only data that is associated with the marketing unit that is defined in the **Database_Filter** table.
 
@@ -78,7 +78,7 @@ Custom core tables
 
 .. admonition:: Sharing tables across filtered 360 databases
 
-   Custom core tables are reusable across filtered 360 databases. Core tables store SQL logic that can be referenced by multiple databases, but can be adapted to provide database-specific logic as well. 
+   Custom core tables are reusable across filtered 360 databases. Core tables store SQL logic that can be referenced by many databases, but can be adapted to provide database-specific logic as well. 
 
    For example, the **Customer Attributes** table typically requires customization to align features within that table to how your brand defines churn prevention status indicators, historical purchase lifecycles, and customer types. This table can be extended to support custom features, and each marketing unit may have different requirements.
 
@@ -116,7 +116,7 @@ Database_Filter table
 
 .. multiple-360-databases-table-start
 
-Each filtered database must contain a **Database_Filter** table, which contains a single record with a hard-coded string value that defines a specific brand or geographic region.
+Each filtered database must contain a **Database_Filter** table, which has a single record with a hard-coded string value that defines a specific brand or geographic region.
 
 For example, the **Database_Filter** table in a region-specific database for Japan would use SQL similar to:
 
@@ -134,7 +134,7 @@ Filter tables by marketing unit
 
 .. multiple-360-databases-join-start
 
-For each table in the filtered 360 database that contains data the **database_key** column you must use a **SEMI JOIN** to ensure data within that table is filtered to match only the value defined in the **Database_Filter** table.
+For each table in the filtered 360 database that has data the **database_key** column you must use a **SEMI JOIN** to ensure data within that table is filtered to match only the value defined in the **Database_Filter** table.
 
 For example, to filter the **Unified Coalesced** table use SQL similar to:
 

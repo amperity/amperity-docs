@@ -134,7 +134,7 @@ Data requirements
 
 Predictive models have :ref:`the same requirements as segments and campaigns <add-campaigns-data-requirements>`, along with the following additional requirements:
 
-#. Data sources must provide at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
+#. Data sources must have at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
 #. A defined product catalog with 20-2000 distinct values is required to support recommended audience sizes for product affinity.
 
    .. important:: SKU-level recommendations are not supported.
@@ -384,7 +384,7 @@ After you have configured Amperity for the recommended patterns and workflows fo
 
 .. add-predicted-models-request-to-enable-important-start
 
-.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has multiple brands. To fit predictions for each brand:
+.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has many brands. To fit predictions for each brand:
 
    #. A customer must purchase predictive models for each individual brand.
    #. The tenant must be configured to support brand-specific databases, with a database for each brand with dedicated **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables.

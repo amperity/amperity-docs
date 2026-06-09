@@ -675,7 +675,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Optimizely**
      - |system-yes|
      - |system-yes|
-     - Pull enriched events export data from Optimizely using Amazon S3. (This must be converted from Apache Parquet format to CSV prior to loading it to Amperity.) Send Apache Parquet format from Amperity to Optimizely.
+     - Pull enriched events export data from Optimizely using Amazon S3. (This must be converted from Apache Parquet format to CSV before loading it to Amperity.) Send Apache Parquet format from Amperity to Optimizely.
 
    * - **Oracle Data Cloud**
      - |system-yes|

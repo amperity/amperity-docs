@@ -129,7 +129,7 @@ Topic pane
 
 .. docs-topic-pane-start
 
-The topic pane contains all of the content. The right-side navigation shows the structure of the topic. For example, a topic titled "About Couriers" contains all of the information about couriers and a topic titled "Send to Klaviyo" contains all of the information about sending query results to Klaviyo from Amperity.
+The topic pane has all of the content. The right-side navigation shows the structure of the topic. For example, a topic titled "About Couriers" has all of the information about couriers and a topic titled "Send to Klaviyo" has all of the information about sending query results to Klaviyo from Amperity.
 
 Some topics are very long, like the Presto SQL and Spark SQL reference topics. All topics are complete based on the title of the topic. Use your browser's finder window to search within large topics for keywords as necessary.
 
@@ -161,7 +161,7 @@ Feedback
 
 .. docs-feedback-start
 
-A feedback button is available in the lower right. Please use this button to send us feedback about Amperity documentation.
+A feedback button is available in the lower right. Use this button to send us feedback about Amperity documentation.
 
 .. image:: ../../images/docs-feedback.png
    :width: 380 px
@@ -175,7 +175,7 @@ It is easy to send documentation feedback:
 #. Type your feedback.
 #. A valid email address is required. Provide your email address or use ``docs@amperity.com`` to send your feedback anonymously. The docs team will review your feedback and will address all feedback.
 
-   .. important:: If you have a genuine support issue, please click the **Get Support** link in the site navigation, and then follow the directions listed there, or contact your Amperity representative directly.
+   .. important:: If you have a genuine support issue, click the **Get Support** link in the site navigation, and then follow the directions listed there, or contact your Amperity representative directly.
 #. Send your feedback. Thank you.
 
 .. docs-feedback-end

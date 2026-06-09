@@ -112,7 +112,7 @@ When the date format is not similar to the expected date format, Amperity attemp
 
 .. format-common-pull-date-formats-tip-start
 
-.. tip:: Spark SQL may be used to transform source data into a supported date format prior to loading it to Amperity.
+.. tip:: Spark SQL may be used to transform source data into a supported date format before loading it to Amperity.
 
 .. format-common-pull-date-formats-tip-end
 
@@ -312,9 +312,9 @@ for single files
 .. format-common-send-input-examples-single-end
 
 
-.. _format-common-send-input-examples-multiple:
+.. _format-common-send-input-examples-many:
 
-for multiple files
+for many files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. format-common-send-input-examples-multiple-start
@@ -456,7 +456,7 @@ Amperity supports the following compression and archiving formats:
 * Zip
 * GZip
 
-When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder contains one or more files, each of which have generated names.
+When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder has one or more files, each of which have generated names.
 
 .. tip:: Compression and archive file extensions are not added to the filename template automatically. These may be added while configuring an orchestration. To add the file compression format to the output filename, append .tar, .tgz, .zip, or .gz after the file format extension in the filename template. For example: parquet.tar, csv.zip, or tsv.gz.
 
@@ -531,9 +531,9 @@ for single tables
 .. format-common-send-output-examples-single-end
 
 
-.. _format-common-send-output-examples-multiple:
+.. _format-common-send-output-examples-many:
 
-for multiple tables
+for many tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. format-common-send-output-examples-multiple-start
@@ -639,7 +639,7 @@ Files that are encrypted using PGP are appended with the .pgp extension.
 
 .. format-common-pgp-important-subkeys-start
 
-.. important:: PGP public keys have two types: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Please provide a subkey or a keyring with exactly one subkey."
+.. important:: PGP public keys have two types: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Provide a subkey or a keyring with exactly one subkey."
 
 .. format-common-pgp-important-subkeys-end
 
@@ -704,7 +704,7 @@ To use PGP decryption with data sources use the **PGP credentials** setting to s
 
 .. caution:: Be sure to include the ``BEGIN PGP PRIVATE KEY BLOCK`` and ``END PGP PRIVATE KEY BLOCK`` header and footer in the key.
 
-   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Please keep both public and private keys confidential. Use |ext_snappass| to share the private key.
+   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Keep both public and private keys confidential. Use |ext_snappass| to share the private key.
 
 .. format-common-pgp-sources-end
 
@@ -754,7 +754,7 @@ When Amperity pulls files from upstream systems using SFTP, use the following co
 
 #. Amperity Support creates the PGP keypair and will maintain the private PGP key.
 
-#. Amperity Support sends you the public PGP key using |ext_snappass|. The owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
+#. Amperity Support sends you the public PGP key using |ext_snappass|. The owner of the upstream system will encrypt files using the public PGP key before adding the files to the location from which Amperity will pull data.
 
    .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files. Compression applied *after* encryption will not reduce the size of the file.
 
@@ -799,11 +799,11 @@ Key rotations
 Amperity performs key rotations on a periodic basis as a best practice. Key rotations are sometimes necessary in situations where a key may have been compromised. When a key rotation happens, Amperity will:
 
 #. Generate a key pair
-#. Create a keyring file that contains the old and new private keys and uses the same passphrase
+#. Create a keyring file that has the old and new private keys and uses the same passphrase
 #. Install the keyring file to the courier
 #. Share the new public key with the customer using |ext_snappass|
 #. Wait for confirmation from the customer that the public key is updated
-#. Create a keyring file that contains *only* the updated private key
-#. Install the keyring file that contains *only* the updated private key to the courier
+#. Create a keyring file that has *only* the updated private key
+#. Install the keyring file that has *only* the updated private key to the courier
 
 .. format-common-pgp-key-rotations-end

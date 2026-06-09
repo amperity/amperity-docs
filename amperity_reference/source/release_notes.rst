@@ -219,7 +219,7 @@ Spring 2025
 
 **Activation IDs**
 
-   :bdg-success:`NEW` Define and manage multiple `activation identifiers <../operator/activation_ids.html>`__ to support multiple channels and a variety of downstream audience requirements.
+   :bdg-success:`NEW` Define and manage many `activation identifiers <../operator/activation_ids.html>`__ to support many channels and a variety of downstream audience requirements.
 
 **Benchmarks**
 

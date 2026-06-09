@@ -816,7 +816,7 @@ Invalid settings
 
 .. events-pinterest-workflow-actions-invalid-settings-start
 
-The configuration for this workflow contains a setting that |destination-name| was unable to accept. This can occur when the conversion access token, ad account ID, or conversion tag ID does not match the values configured in |destination-name|.
+The configuration for this workflow has a setting that |destination-name| was unable to accept. This can occur when the conversion access token, ad account ID, or conversion tag ID does not match the values configured in |destination-name|.
 
 .. events-pinterest-workflow-actions-invalid-settings-end
 

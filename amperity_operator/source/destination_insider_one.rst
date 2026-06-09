@@ -51,7 +51,7 @@ Send audiences using the API
 
 Send first-party audience segments directly to |destination-name| using the `First-Party Segment API <https://developers.insiderone.com/#fe7e4b47-84e6-4574-910b-e847d9816282>`__ |ext_link|.
 
-First-party audience segments group existing users into segments based on attribute values and are defined by a single user attribute. For example, a first name, an email address, a unique identifier, or the ID for the store a user most frequently shops at.
+First-party audience segments group existing users into segments based on attribute values and are defined by a single user attribute. For example, a first name, an email address, a unique identifier, or the ID for the store a user most often shops at.
 
 .. caution:: |destination-name| recommends that names of attributes be created in lowercase and without spaces. For example: **email**, **first_name**, or **store_id**. The name of the attribute sent from Amperity must match the `name of an attribute <https://academy.insiderone.com/docs/event-vs-attribute#attributes>`__ |ext_link| defined in |destination-name|.
 
@@ -99,7 +99,7 @@ A destination for |destination-name| works like this:
        #. Validates the audience. The audience must be a single column whose name matches the value of the **Attribute name** field configured for this destination.
 
 
-       .. note:: Amperity writes the audience to a single-column CSV file without a header row. Each row in the CSV file contains a single value. The file is available to |destination-name| for up to 12 hours.
+       .. note:: Amperity writes the audience to a single-column CSV file without a header row. Each row in the CSV file has a single value. The file is available to |destination-name| for up to 12 hours.
 
           Amperity generates a presigned download URL of the CSV file and submits the segment creation request to the |destination-api|.
 

@@ -152,7 +152,7 @@ Upload a CSV file
 
 .. events-pinterest-upload-csv-start
 
-Upload a CSV file that contains `offline conversion events <https://help.pinterest.com/en/business/article/upload-conversions-with-ads-manager>`__ |ext_link| to |destination-name|, after which |destination-name| will match campaigns to these conversions so your brand can review total conversions in |destination-name| as they relate to all active campaigns.
+Upload a CSV file that has `offline conversion events <https://help.pinterest.com/en/business/article/upload-conversions-with-ads-manager>`__ |ext_link| to |destination-name|, after which |destination-name| will match campaigns to these conversions so your brand can review total conversions in |destination-name| as they relate to all active campaigns.
 
 .. events-pinterest-upload-csv-end
 

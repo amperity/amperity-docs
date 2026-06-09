@@ -42,7 +42,7 @@ Download recipients
 
 .. download-campaign-recipients-start
 
-You can download a file that contains a list of campaign recipients (Amperity IDs) who belonged to a treatment group for a delivered campaign.
+You can download a file that has a list of campaign recipients (Amperity IDs) who belonged to a treatment group for a delivered campaign.
 
 .. important:: For recurring campaigns, each date on which that campaign was sent must be selected, and then downloaded individually.
 
@@ -66,7 +66,7 @@ Download results
 
 .. download-campaign-results-start
 
-You can download a file that contains a list of campaign results.
+You can download a file that has a list of campaign results.
 
 For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 

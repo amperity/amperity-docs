@@ -223,7 +223,7 @@ The following steps describe how to configure Amperity to use Azure Data Share t
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - The customer determines the location from which data will be shared with Amperity, and then configures the schedule for how frequently snapshots of the data will be shared.
+     - The customer determines the location from which data will be shared with Amperity, and then configures the schedule for how often snapshots of the data will be shared.
 
        Amperity places shared data into a customer-dedicated Azure Blob Storage instance.
 

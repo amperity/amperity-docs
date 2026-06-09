@@ -506,7 +506,7 @@ Only for destinations where SHA-256 hashing is applied automatically to the list
 
 .. setting-common-split-outputs-start
 
-Split delimiter-separated output--CSV, PSV, TSV, or files with custom delimiters--into multiple files to ensure downstream file limits are not exceeded.
+Split delimiter-separated output--CSV, PSV, TSV, or files with custom delimiters--into many files to ensure downstream file limits are not exceeded.
 
 Choose "Rows" and set "Rows limit" to a value between "50000" and "10000000". This is the maximum number of rows for split output files.
 
@@ -1108,13 +1108,17 @@ Settings unique to Braze.
 
 .. setting-braze-instance-start
 
-Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| for your account. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", or "EU-02".
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| for your account. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", "EU-02", or "JP-01".
 
 .. setting-braze-instance-end
 
 .. setting-braze-instance-example-start
 
-For example, if your URL of |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+The instance identifier determines the REST API endpoint URL:
+
+* **US** instances (US-01 through US-08) use ``https://rest.iad-NN.braze.com``. For example, "US-03" maps to ``https://rest.iad-03.braze.com``.
+* **EU** instances (EU-01, EU-02) use ``https://rest.fra-NN.braze.eu``. For example, "EU-01" maps to ``https://rest.fra-01.braze.eu``.
+* **JP** instances (JP-01) use ``https://rest.jp-NN.braze.com``. For example, "JP-01" maps to ``https://rest.jp-01.braze.com``.
 
 .. setting-braze-instance-example-end
 
@@ -1130,7 +1134,7 @@ The identifier to use for matching users in |destination-name|. May be "external
 
 The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers. The `user_alias <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link| identifies users by an alias; when selected, the dataset must include **alias_name** and **alias_label** fields.
 
-.. important:: The Braze API requires exactly one identifier type per request. A request that contains more than one of ``external_id``, ``braze_id``, or ``user_alias`` will be rejected by the Braze API, and the orchestration will fail. Ensure that your dataset contains only the identifier that matches the **User identifier** setting.
+.. important:: The Braze API requires exactly one identifier type per request. A request that has more than one of ``external_id``, ``braze_id``, or ``user_alias`` will be rejected by the Braze API, and the orchestration will fail. Ensure that your dataset has only the identifier that matches the **User identifier** setting.
 
 .. setting-braze-user-identifier-about-end
 
@@ -1138,7 +1142,7 @@ The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_
 
 .. setting-braze-update-existing-profiles-start
 
-Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled a new user profile is created when a profile with a matching ``external_id`` value does not already exist.
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled, a new user profile is created when a matching profile does not already exist.
 
 .. setting-braze-update-existing-profiles-end
 
@@ -2537,7 +2541,7 @@ Note: There is an SFTP-based connector also.
 
 .. setting-salesforce-marketing-cloud-account-id-start
 
-The account ID for the business unit in |destination-name|.
+The account ID for the business unit in |destination-name|, also known as the member ID.
 
 .. setting-salesforce-marketing-cloud-account-id-end
 
@@ -2596,9 +2600,9 @@ The directory within the |destination-name| SFTP site from which the Marketing C
 
 .. setting-salesforce-marketing-cloud-primary-key-start
 
-Set to one of the following: "subscriber_key" or "email".
+Set to one of the following: ``subscriber_key``, ``email``, ``emailaddress``, or ``email_address``.
 
-Use "subscriber_key" when a field maps directly to the subscriber key in |destination-name|, otherwise use "email".
+Use ``subscriber_key`` when a field maps directly to the subscriber key in |destination-name|, otherwise use one of the email variants.
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -2606,7 +2610,7 @@ Use "subscriber_key" when a field maps directly to the subscriber key in |destin
 
 .. setting-salesforce-marketing-cloud-subscriber-field-start
 
-Recommended. The subscriber key for |destination-name|.
+Required. The subscriber key for |destination-name|.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-end
 

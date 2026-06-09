@@ -60,7 +60,7 @@ Assign the credential a name and description that ensures other users of Amperit
 
 .. vale off
 
-Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
+Notes: When a source or destination supports more than one credential type, use the "many" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
 
 .. vale on
 
@@ -918,40 +918,9 @@ Required. The API key for your |destination-name| account.
 
 .. credential-cordial-api-url-start
 
-Required. The API URL of your |destination-name| account. May be one of the following: ``https://api.cordial.io/`` or ``https://api.usw2.cordial.io/``.
+Required. The API URL of your |destination-name| account. May be one of the following: ``https://api.cordial.io/``, ``https://api.use1.cordial.io/``, or ``https://api.usw2.cordial.io/``.
 
 .. credential-cordial-api-url-end
-
-**IAM access key**
-
-.. credential-cordial-iam-access-key-start
-
-Required. The IAM access key is one part of two that allows Amperity to authenticate to an Amazon S3 bucket. The value for this part of the access key is the access key ID. For example: "AKIAIOSFODNN7EXAMPLE".
-
-.. credential-cordial-iam-access-key-end
-
-**IAM secret key**
-
-.. vale off
-
-.. credential-cordial-iam-secret-key-start
-
-Requried. The IAM secret key is one part of two that allows Amperity to authenticate to an Amazon S3 bucket. The value for this part of the access key is the secret access key. For example: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY".
-
-.. credential-cordial-iam-secret-key-end
-
-.. vale on
-
-
-**S3 bucket name**
-
-.. credential-cordial-s3-bucket-name-start
-
-Required. The name of the Amazon S3 bucket.
-
-.. credential-cordial-s3-bucket-name-end
-
-
 
 
 
@@ -2339,11 +2308,11 @@ Required. The IAM secret key, along with the access key, that allows Amperity to
 
 .. vale on
 
-.. credential-snowflake-account-name-start
+.. credential-snowflake-azure-account-name-start
 
 The account name for Microsoft Azure Blob Storage.
 
-.. credential-snowflake-account-name-end
+.. credential-snowflake-azure-account-name-end
 
 **Shared access signature**
 

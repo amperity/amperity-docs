@@ -87,7 +87,7 @@ Domain tables that contain interactions, such as customer orders, loyalty profil
 
 Use foreign keys to associate unique identifiers in tables that **DO NOT** contain interactions to unique identifiers in tables that **DO** contain customer profile data.
 
-When foreign keys are present in tables that contain interactions that match foreign keys in tables that contain customer profile data an Amperity ID is assigned to each row in the table that contains interactions.
+When foreign keys are present in tables that contain interactions that match foreign keys in tables that contain customer profile data an Amperity ID is assigned to each row in the table that has interactions.
 
 The list of tables that contain interactions and in which rows of data are associated with an Amperity ID is found on the **Stitched tables** tab under **Interaction tables**.
 
@@ -154,7 +154,7 @@ For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-cluster-complex.png
    :width: 440 px
-   :alt: Use multiple criteria to define a single rule.
+   :alt: Use many criteria to define a single rule.
    :align: left
    :class: no-scaled-link
 
@@ -213,7 +213,7 @@ For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-separation-complex.png
    :width: 440 px
-   :alt: Use multiple criteria to define a single rule.
+   :alt: Use many criteria to define a single rule.
    :align: left
    :class: no-scaled-link
 
@@ -348,7 +348,7 @@ General settings
 
 .. configure-stitch-general-start
 
-The **General** settings tab contains a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
+The **General** settings tab has a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
 
 .. image:: ../../images/mockup-stitch-settings-general.png
    :width: 520 px
@@ -511,7 +511,7 @@ You may configure Stitch to assign Amperity IDs to customers that are identified
 
 Use the following steps to configure your tenant for one-to-one Stitch:
 
-#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that contains the existing customer ID.
+#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that has the existing customer ID.
 
    .. tip:: You may apply the **ck** semantic tag from a feed or from a custom domain table.
 
@@ -557,7 +557,7 @@ The following table describes the changes you will see in your tenant after it i
 
        Fields related to the bad-values blocklist are not available, including **has_blv**, **blv_address**, **blv_email**, **blv_given_name**, **blv_phone**, and **blv_surname**.
 
-       All standard tables contains a **ck** field.
+       All standard tables has a **ck** field.
 
        The Stitch QA database template is not needed.
    * - **Queries**
@@ -613,7 +613,7 @@ Skip unified scores
 
 .. tooltip-stitch-config-skip-scores-start
 
-The unified scores table contains all of the scoring between record pairs for the previous Stitch run. This table is resource intensive and may be skipped.
+The unified scores table has all of the scoring between record pairs for the previous Stitch run. This table is resource intensive and may be skipped.
 
 .. tooltip-stitch-config-skip-scores-end
 
@@ -661,7 +661,7 @@ Stable ID assignment can be a resource-intensive process, in particular when:
 
 #. Adding data sources that contain large numbers of rows, such as sources with 100+ million rows of customer records.
 #. Updating existing data sources with large numbers of rows on a periodic basis, such as monthly or quarterly.
-#. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
+#. Data has a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
 .. configure-stitch-general-stitch-stable-id-end
 
@@ -1664,7 +1664,7 @@ The advanced configuration setting for trivial duplicates is:
 
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10
 
-An increase to this value will decrease the likelihood that multiple records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
+An increase to this value will decrease the likelihood that many records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
 
 .. configure-stitch-advanced-trivial-duplicates-config-end
 
@@ -1722,7 +1722,7 @@ For each unique combination of PII--excluding email addresses--the distinct emai
 
 .. configure-stitch-advanced-trivial-duplicates-warning-start
 
-.. warning:: Semantic exclusions should be applied. Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
+.. warning:: Semantic exclusions should be applied. Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change before applying a semantic change to a production environment.
 
 .. configure-stitch-advanced-trivial-duplicates-warning-end
 

@@ -60,7 +60,7 @@ Because this segment has only one condition and returns a list of customers who 
    :align: left
    :class: no-scaled-link
 
-Only one city in the United States is named "Chicago", which means the results of this segment will not include customers who live in multiple states.
+Only one city in the United States is named "Chicago", which means the results of this segment will not include customers who live in many states.
 
 .. note:: Some attributes in your customer 360 database work best in segments when they are the only condition, such as **One and Done** and **Early Repeat Purchaser**.
 
@@ -96,7 +96,7 @@ This segment returns a list of customers who live in a city named "Chicago" that
 
 .. admonition:: Expected behaviors
 
-   Attributes can belong to the same inclusion block or to multiple inclusion blocks and in many cases the list of customers that are returned will be identical when the operators in the inclusion blocks are the same.
+   Attributes can belong to the same inclusion block or to many inclusion blocks and in many cases the list of customers that are returned will be identical when the operators in the inclusion blocks are the same.
 
    .. image:: ../../images/segments-and-or-example-city-and-state-dual-conditions.png
       :width: 340 px
@@ -144,7 +144,7 @@ This segment returns a list of customers who live in a city named "Chicago" and 
 
 .. admonition:: Expected behaviors
 
-   Attributes can belong to the same inclusion block or to multiple inclusion blocks and in many cases the list of customers that are returned will be identical when the operators in the inclusion blocks are the same.
+   Attributes can belong to the same inclusion block or to many inclusion blocks and in many cases the list of customers that are returned will be identical when the operators in the inclusion blocks are the same.
 
    .. image:: ../../images/segments-and-or-example-city-or-state-dual-conditions.png
       :width: 340 px
@@ -198,7 +198,7 @@ City, state AND City, state
 
 .. segments-and-vs-or-city-and-state-and-city-and-state-start
 
-You can use multiple inclusion blocks, but be careful to avoid creating mutually exclusive sets of inclusions. For example, defining two **Include** blocks, each with its own **City** and **State** attributes and using the **AND** operator.
+You can use many inclusion blocks, but be careful to avoid creating mutually exclusive sets of inclusions. For example, defining two **Include** blocks, each with its own **City** and **State** attributes and using the **AND** operator.
 
 .. image:: ../../images/segments-and-or-example-city-and-state-and-city-and-state-conditions.png
    :width: 340 px
@@ -214,7 +214,7 @@ This segment returns a list of customers who live in both cities, which, because
    :align: left
    :class: no-scaled-link
 
-Some segments use multiple sets of inclusion blocks to return a list of zero customers. A segment that typically returns zero, but sometimes does not return zero, can be interesting.
+Some segments use many sets of inclusion blocks to return a list of zero customers. A segment that typically returns zero, but sometimes does not return zero, can be interesting.
 
 .. segments-and-vs-or-city-and-state-and-city-and-state-end
 
@@ -226,7 +226,7 @@ City, state OR City, state
 
 .. segments-and-vs-or-city-and-state-or-city-and-state-start
 
-A more likely scenario is using multiple inclusion blocks to return a list of customers that matches either set of conditions. For example, defining two **Include** blocks, each with its own **City** and **State** attributes and using the **OR** operator.
+A more likely scenario is using many inclusion blocks to return a list of customers that matches either set of conditions. For example, defining two **Include** blocks, each with its own **City** and **State** attributes and using the **OR** operator.
 
 .. image:: ../../images/segments-and-or-example-city-and-state-or-city-and-state-conditions.png
    :width: 340 px

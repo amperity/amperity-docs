@@ -142,7 +142,7 @@ Choose one or more segments from the **Select inclusion segments** dropdown list
 
 .. journeys-setup-who-enters-note-start
 
-.. note:: When adding multiple inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category in order to be considered part of it. You may add up to ten inclusion segments. 
+.. note:: When adding many inclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the inclusion category to be considered part of it. You may add up to ten inclusion segments. 
 
 .. journeys-setup-who-enters-note-end
 
@@ -180,7 +180,7 @@ When you need to exclude audience members, choose one or more segments from the 
 
 .. journeys-setup-who-is-excluded-note-start
 
-.. note:: When adding multiple exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category in order to be considered part of it. You may add up to ten exclusion segments. 
+.. note:: When adding many exclusion segments, all segments are unioned, so a customer only needs to match one of the segments in the exclusion category to be considered part of it. You may add up to ten exclusion segments. 
 
 .. journeys-setup-who-is-excluded-note-end
 
@@ -207,7 +207,7 @@ Exit conditions are defined using a segment. One or more segments that define ex
 
 .. journeys-setup-exit-conditions-note-start
 
-.. note:: When adding multiple exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category in order to be considered part of it. You may add up to ten exit condition segments.
+.. note:: When adding many exit condition segments, all segments are unioned, so a customer only needs to match one of the segments in the exit conditions category to be considered part of it. You may add up to ten exit condition segments.
 
 .. journeys-setup-exit-conditions-note-end
 
@@ -226,7 +226,7 @@ Goal conditions are defined using a segment. One or more segments that define go
 
 .. journeys-setup-goals-conditions-note-start
 
-.. note:: When adding multiple goal condition segments, all segments are unioned, so a customer only needs to match one of the segments in the goal conditions category in order to be considered part of it. You may add up to five goal condition segments.
+.. note:: When adding many goal condition segments, all segments are unioned, so a customer only needs to match one of the segments in the goal conditions category to be considered part of it. You may add up to five goal condition segments.
 
 .. journeys-setup-goals-conditions-note-end
 
@@ -346,9 +346,9 @@ Activate
    :align: left
    :class: no-scaled-link
 
-You can rename the activate node. Node names must be unique within a journey. For example, you cannot have multiple activate nodes named "Activate" but you can have "Activate 1", "Activate 2", and so on.
+You can rename the activate node. Node names must be unique within a journey. For example, you cannot have many activate nodes named "Activate" but you can have "Activate 1", "Activate 2", and so on.
 
-You can configure a single activation node to send to multiple destinations at once, and this is recommended for simplicity and efficiency.
+You can configure a single activation node to send to many destinations at once, and this is recommended for simplicity and efficiency.
 
 .. journeys-node-activate-note-start
 
@@ -365,7 +365,7 @@ You can configure a single activation node to send to multiple destinations at o
    * the **journey name**
    * the **activation node name**
    
-   If multiple activation nodes have the same filename, it will cause an error. 
+   If many activation nodes have the same filename, it will cause an error. 
    
    To avoid this error, make sure each activation node within a journey has a unique name. Renaming the node will automatically update the generated filename.
    
@@ -405,7 +405,7 @@ Choose a combination of an integer plus "days", "weeks", or "months" to designat
 
 A delay is applied to a single parent node.
 
-You can rename the delay node. Node names must be unique within a journey. For example, you cannot have multiple delay nodes named "Delay" but you can have "Delay 1", "Delay 2", and so on.
+You can rename the delay node. Node names must be unique within a journey. For example, you cannot have many delay nodes named "Delay" but you can have "Delay 1", "Delay 2", and so on.
 
 .. important:: Customers do not automatically move forward after the wait period ends. Progression only occurs the next time the journey runs.
    
@@ -435,7 +435,7 @@ Conditional split
 
 These segments may already exist or may be defined within this journey using custom criteria.
 
-You can rename the conditional split node and rename the "Everyone else" sub-audience. Node names must be unique within a journey. For example, you cannot have multiple conditional split nodes named "Conditional Split" but you can have "Conditional Split 1", "Conditional Split 2", and so on.
+You can rename the conditional split node and rename the "Everyone else" sub-audience. Node names must be unique within a journey. For example, you cannot have many conditional split nodes named "Conditional Split" but you can have "Conditional Split 1", "Conditional Split 2", and so on.
 
 .. journeys-node-split-conditional-end
 
@@ -459,7 +459,7 @@ Percent split
 
 The percentage of all individual nodes under a percent split must add up to 100% of the audience, including the control group.
 
-You can rename the percent split node and rename the individual paths. Node names must be unique within a journey. For example, you cannot have multiple percent split nodes named "Percent Split" but you can have "Percent Split 1", "Percent Split 2", and so on.
+You can rename the percent split node and rename the individual paths. Node names must be unique within a journey. For example, you cannot have many percent split nodes named "Percent Split" but you can have "Percent Split 1", "Percent Split 2", and so on.
 
 .. journeys-node-split-percent-end
 
@@ -567,7 +567,7 @@ Journeys measurement helps you:
 * Track customer milestones including journey exits and goal achievements
 * Measure progress toward specific business goals without removing customers from the journey
 * Calculate path-specific goal achievement via percent-split testing
-* View metrics across multiple time windows (7, 30, and 90 days)
+* View metrics across many time windows (7, 30, and 90 days)
 * Export detailed journey travel logs for advanced analysis
 
 .. important:: Journeys measurement requires batch segments (SQL-based segments). Real-time segments are not supported for journey measurement.
@@ -642,7 +642,7 @@ The milestones dashboard on the **Journeys Canvas** capture significant events a
 * **Goal milestones** Customer achieved a journey or split goal
 * **Exit milestones** Customer met exit criteria and left the journey
 
-**Milestone metrics:**
+**Milestone metrics**
 
 .. list-table::
    :widths: 30 50
@@ -689,7 +689,7 @@ Percent-split nodes with goals configured enable A/B testing capabilities. Goals
 * Other paths become test groups
 * Weights must sum to exactly 100%
 * Maximum 2 goal segments per split node
-* Must be configured before the journey begins in order to record goals
+* Must be configured before the journey begins to record goals
 
 **Path-specific metrics**
 
@@ -713,7 +713,7 @@ Journey Travel Log
 
 The Journey Travel Log (JTL) provides detailed tracking of every traveler's journey with enriched metadata.
 
-**Travel log schema:**
+**Travel log schema**
 
 .. list-table::
    :widths: 25 20 55
@@ -949,7 +949,7 @@ Add activate nodes
 
 .. journeys-howtos-node-activate-steps-end
 
-.. tip:: You can add multiple destinations to a single activation node. However, if your destinations require different custom attributes, use separate activation nodes for each destination.
+.. tip:: You can add many destinations to a single activation node. However, if your destinations require different custom attributes, use separate activation nodes for each destination.
 
 .. _journeys-howtos-node-conditional-split:
 
@@ -1170,7 +1170,7 @@ The attributes that are sent to each destination that are configured for activat
 
 .. journeys-howtos-edit-destination-attributes-note-start
 
-.. note:: If you have multiple destinations in a single activation node and your destinations require different custom attributes, use separate activation nodes for each destination.
+.. note:: If you have many destinations in a single activation node and your destinations require different custom attributes, use separate activation nodes for each destination.
 
 .. journeys-howtos-edit-destination-attributes-note-end
 
@@ -1275,7 +1275,7 @@ Labels are created on the **Settings** page, in the **Labels** tab, by clicking 
 * Not exceed 10 labels per journey
 * Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, journeys matching any selected labels are shown.
+.. note:: When many labels are selected, journeys matching any selected labels are shown.
 
 .. journeys-filter-end
 
@@ -1356,7 +1356,7 @@ Set journey-level goals
 
 .. journeys-howtos-set-journey-level-goals-start
 
-Goals set at the journey level apply to all customers in the journey as a way of tracking performance without exiting the customer from the journey. Customers can achieve multiple goals during their journey.
+Goals set at the journey level apply to all customers in the journey as a way of tracking performance without exiting the customer from the journey. Customers can achieve many goals during their journey.
 
 Journey-level goals may be set during the initial journey setup as well as added or modified later.
 
@@ -1682,7 +1682,7 @@ A journey may be configured to run once, daily, weekly, monthly, or quarterly.
 
 .. journeys-howtos-schedule-a-journey-important-admonition-start
 
-.. important:: Delay nodes require the journey to run again in order to progress. For journeys set to run only once, customers will not move beyond delay nodes. Use recurring schedules to ensure customers continue through the journey after delay node wait periods.
+.. important:: Delay nodes require the journey to run again to progress. For journeys set to run only once, customers will not move beyond delay nodes. Use recurring schedules to ensure customers continue through the journey after delay node wait periods.
 
 .. journeys-howtos-schedule-a-journey-important-admonition-end
 

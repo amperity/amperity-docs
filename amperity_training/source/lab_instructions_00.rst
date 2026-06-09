@@ -5,14 +5,14 @@
 Pre-lab: Check access
 ==================================================
 
-In this class, you will be completing exercises that are tailored specifically for your training exercises. Prior to the start of class, please follow the steps below to check that you have access to your student tenant.
+In this class, you will be completing exercises that are tailored specifically for your training exercises. Prior to the start of class, follow the steps below to check that you have access to your student tenant.
 
 Verify access to lab
 ==================================================
 
 #. Using Google Chrome, navigate to https://app.amperity.com/.
 
-   .. note:: If you do not already have Chrome, please install it. Amperity requires Chrome (or a Chromium-based browser like Brave).
+   .. note:: If you do not already have Chrome, install it. Amperity requires Chrome (or a Chromium-based browser like Brave).
 
 #. Log in to Amperity. If you've never before logged into Amperity, log in using your email address and reset your password. If you normally log into Amperity using single sign-on (SSO), a password will not be required.
 

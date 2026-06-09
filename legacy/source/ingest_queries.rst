@@ -47,7 +47,7 @@ Courier load operations
 
 .. ingest-queries-courier-load-operations-start
 
-An ingest query can be used to transform data prior to loading it to Amperity. For example, to remove errant commas, removing extra line breaks, flattening hierarchical data structures, joining data, or resolving other formatting issues. Write an ingest query in Spark SQL and test the query prior to running it in Amperity. An ingest query must be added to a courier as a load operation.
+An ingest query can be used to transform data before loading it to Amperity. For example, to remove errant commas, removing extra line breaks, flattening hierarchical data structures, joining data, or resolving other formatting issues. Write an ingest query in Spark SQL and test the query before running it in Amperity. An ingest query must be added to a courier as a load operation.
 
 .. ingest-queries-courier-load-operations-end
 
@@ -83,7 +83,7 @@ where:
 * ``FEED_ID`` is set to the ID for the feed for which the ingest query runs.
 * ``delimiter`` specifies the delimiter to use with CSV, TSV, and PSV files. These default to ``,``, ``\t``, and ``|`` respectively if not otherwise specified.
 * ``escape`` defines the character used for escaping quotes inside an already quoted value in the source file. The default escape character in Spark is the backslash ``\``.
-* ``multiline`` indicates the presence of records that cross multiple lines. Use only for CSV, TSV, or PSV file types and set to ``true`` only if that file has fields with newline characters in them.
+* ``multiline`` indicates the presence of records that cross many lines. Use only for CSV, TSV, or PSV file types and set to ``true`` only if that file has fields with newline characters in them.
 
   .. note:: Use an ingest query to remove the multiline elements. For example:
 
@@ -121,7 +121,7 @@ Add ingest query
 
 .. ingest-queries-add-start
 
-An ingest query allows transformations to be done against customer data prior to adding it to a domain table, such as field-level cleaning, row-level filtering, and joins between files. An ingest query is authored directly from the **Sources** page using an editor that supports Spark SQL syntax.
+An ingest query allows transformations to be done against customer data before adding it to a domain table, such as field-level cleaning, row-level filtering, and joins between files. An ingest query is authored directly from the **Sources** page using an editor that supports Spark SQL syntax.
 
 .. ingest-queries-add-end
 
@@ -159,7 +159,7 @@ Delete ingest query
 
 .. ingest-queries-delete-start
 
-You can delete an ingest query. Verify that both upstream and downstream processes no longer depend on this ingest query prior to deleting it.
+You can delete an ingest query. Verify that both upstream and downstream processes no longer depend on this ingest query before deleting it.
 
 .. ingest-queries-delete-end
 
@@ -345,7 +345,7 @@ Parse nested records
 
 .. format-csv-pull-ingest-queries-nested-records-start
 
-Occasionally, a CSV file contains nested records. For example, a field within the CSV file contains JSON data similar to:
+Occasionally, a CSV file has nested records. For example, a field within the CSV file has JSON data similar to:
 
 .. code-block:: none
 
@@ -365,10 +365,10 @@ which is JSON data in a nested format:
      }
    ]
 
-When a CSV file contains nested records do one of the following:
+When a CSV file has nested records do one of the following:
 
 #. Recommended. The customer should update the process for how the data is provided to Amperity to ensure the file does not contain nested records.
-#. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields prior to loading it to Amperity.
+#. If the file cannot be provided without nested records, use an ingest query to flatten the data in these fields before loading it to Amperity.
 
    .. note:: This increases the preprocessing effort required by Amperity. Large datasets takes more time and this approach should be avoided with very large datasets and should be used with datasets that is processed on a daily basis.
 
@@ -438,7 +438,7 @@ Remove field
 
 .. ingest-queries-example-remove-field-start
 
-Some data sources contain fields that should not be loaded to Amperity. The following table contains a field named ``_update`` that you want to remove before loading the table to Amperity:
+Some data sources contain fields that should not be loaded to Amperity. The following table has a field named ``_update`` that you want to remove before loading the table to Amperity:
 
 .. code-block:: mysql
 

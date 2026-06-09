@@ -126,7 +126,7 @@ You can download a CSV file of activity events. Two download options are availab
 
 .. settings-user-activity-logs-download-column-names-start
 
-The first row of the user activity file contains the following column headers, and then a row for each tracked event:
+The first row of the user activity file has the following column headers, and then a row for each tracked event:
 
 .. list-table::
    :widths: 35 65
@@ -473,7 +473,7 @@ The following table lists the most common event types, grouped by the component 
        ``audience/created``
           An audience for a workflow alert was created.
 
-          .. note:: This event shows *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All subsequent events related to workflow alerts shows the ``audience/updated`` event.
+          .. note:: This event shows *only* the first time an email addresss or Slack channel is configured to receive workflow alerts for courier groups, scheduled orchestration groups, or campaigns. All later events related to workflow alerts shows the ``audience/updated`` event.
 
        ``audience/updated``
           The membership of an audience for a workflow alert was updated. This includes adding or removing email addresses or Slack channels to or from a workflow alert.

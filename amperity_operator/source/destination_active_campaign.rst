@@ -53,7 +53,7 @@ Configure destinations for ActiveCampaign
    the list that are no longer in the audience are removed.
 
    Amperity filters out invalid emails before sending to |destination-name|.
-   Emails that are blank, contain consecutive dots, or have multiple consecutive
+   Emails that are blank, contain consecutive dots, or have many consecutive
    **@** symbols are excluded. If |destination-name| identifies additional invalid
    contacts during import, Amperity removes those contacts from the batch and
    retries with the remaining valid contacts.

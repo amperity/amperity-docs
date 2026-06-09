@@ -24,7 +24,7 @@ Send data to Yahoo DSP
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ |ext_link|.
 
 .. vale on
 
@@ -124,7 +124,7 @@ Get details
 
        When these fields are present in an audience, any users for whom the fields are not set or are both set to "false" is omitted from the upload to |destination-name|. Only users who have both fields set and at least one field set to "true" are uploaded.
 
-       .. important:: If your brand knows your audience contains users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
+       .. important:: If your brand knows your audience has users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
 
 .. destination-yahoo-dsp-get-details-end
 

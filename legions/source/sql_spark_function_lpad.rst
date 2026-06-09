@@ -15,7 +15,7 @@ Spark SQL function: LPAD()
 
 .. _sql-spark-function-lpad-example-postal-codes:
 
-Clean postal codes prior to identity resolution
+Clean postal codes before identity resolution
 ==================================================
 
 .. include:: ../../amperity_reference/source/sql_spark.rst

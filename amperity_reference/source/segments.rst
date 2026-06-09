@@ -86,7 +86,7 @@ Recommended segments
 
 .. segments-recommended-start
 
-The **Segments** page contains a list of active segments along with recommended segments highlighted across the top of the page.
+The **Segments** page has a list of active segments along with recommended segments highlighted across the top of the page.
 
 .. segments-recommended-end
 
@@ -210,7 +210,7 @@ Use the information on the **Summary** tab to help determine the best way to ini
 
 .. segments-summary-details-start
 
-Each **Summary** tab contains the following details:
+Each **Summary** tab has the following details:
 
 #. The number of unique customers.
 #. The number of customers who have been active within the last year.
@@ -318,14 +318,14 @@ Breakdown tab
 
 .. segments-breakdown-details-start
 
-The **Breakdown** tab contains insight charts for customer behaviors and customer attributes. You can ask questions to analyze customer demographics and identify target market segments:
+The **Breakdown** tab has insight charts for customer behaviors and customer attributes. You can ask questions to analyze customer demographics and identify target market segments:
 
 * What is the distribution of customers across categories?
 * What are potential customer groups for my marketing efforts?
 
 These charts have a configurable date range and the displayed attributes charts are customizable. To customize the breakdown charts displayed on the **Breakdown** tab, click the **Customize** link, select up to six charts on the **Customize Breakdown Charts** window, and then click **Apply**.
 
-.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by:** dropdown menu.
+.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by** dropdown menu.
 
 .. tip:: You can expand a breakdown chart by clicking the icon and then clicking **Expand**.
 
@@ -360,7 +360,7 @@ Compare tab
 
 The **Compare** tab shows how two or more segment statistics compare. You can ask questions that compare key metrics and identify shared audiences to identify new opportunities to reach customers. 
 
-* What is the overlap if I compare multiple segments? 
+* What is the overlap if I compare many segments? 
 * How do metrics like active customers, revenue, average revenue per customer, average units per order, and average order value compare across segments?
 
 .. note:: Up to five total segments can be compared together. 
@@ -408,7 +408,7 @@ The **Customers** tab shows the all data for all of the customers in this segmen
 * Depending on your company's PII restrictions, age group and birthday.
 * Other categories that are identified in your Customer 360 table.
 
-.. tip:: You can customize the columns to display in order to only focus on certain attributes. You can also download the segment as a CSV file.
+.. tip:: You can customize the columns to display to only focus on certain attributes. You can also download the segment as a CSV file.
 
 .. segments-customers-end
 

@@ -114,7 +114,7 @@ The following example shows how to send results using a mobile advertising ID:
    FROM MobileID_Table
    WHERE mobile_id_field IS NOT NULL
 
-.. note:: **mobile_id_field** represents a field in Amperity that contains the mobile advertising ID and **MobileID_Table** represents the table in which that field is located.
+.. note:: **mobile_id_field** represents a field in Amperity that has the mobile advertising ID and **MobileID_Table** represents the table in which that field is located.
 
 .. sendto-snapchat-build-query-madid-end
 
@@ -180,7 +180,7 @@ Snapchat schema types
 
 The following Amperity columns may be mapped to the corresponding schema type to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| using `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link|.
 
-.. note:: A row that contains a **NULL** value is automatically filtered out and is shown in the error logs.
+.. note:: A row that has a **NULL** value is automatically filtered out and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

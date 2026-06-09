@@ -101,10 +101,10 @@ The following sections describe the individual elements within the **Segment Edi
 
           Amperity provides the following tables as standard output:
 
-          * The **Customer 360** table contains customer profile data--names, addresses, email addresses, and phone numbers--summarized by unique customer.
-          * The **Unified Transactions** table contains order-level details for a transaction.
-          * The **Unified Itemized Transactions** table contains line-item and product catalog details for a transaction.
-          * The **Transaction Attributes Extended** table contains calculated attributes that are built from order-level and item-level details in transaction tables.
+          * The **Customer 360** table has customer profile data--names, addresses, email addresses, and phone numbers--summarized by unique customer.
+          * The **Unified Transactions** table has order-level details for a transaction.
+          * The **Unified Itemized Transactions** table has line-item and product catalog details for a transaction.
+          * The **Transaction Attributes Extended** table has calculated attributes that are built from order-level and item-level details in transaction tables.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -193,7 +193,7 @@ The following sections describe the individual elements within the **Segment Edi
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have many brands or have many regions.
 
           Some examples:
 

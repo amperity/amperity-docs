@@ -40,7 +40,7 @@ The customer 360 database is a collection of tables. For example:
 * Unified Itemized Transactions
 * Unified Transactions
 
-The customer 360 database also contains passthrough tables that bring domain tables to the customer 360 database. For example:
+The customer 360 database also has passthrough tables that bring domain tables to the customer 360 database. For example:
 
 * Domain_Table_A
 * Domain_Table_B
@@ -48,7 +48,7 @@ The customer 360 database also contains passthrough tables that bring domain tab
 
 These tables are visible from the **Customer 360** page, the **Data Explorer**, and the **Queries** page.
 
-For each table with versioning enabled a table is created with the same name with **_versioned** appended. This table has the version history for the table. A table named **amperity_table_versions** is created that contains a record of all versioned tables.
+For each table with versioning enabled a table is created with the same name with **_versioned** appended. This table has the version history for the table. A table named **amperity_table_versions** is created that has a record of all versioned tables.
 
 For example:
 
@@ -180,7 +180,7 @@ Build a delta that identifies which records are new or updated since the previou
       FROM amperity_table_versions
       where offset = 0
 
-   .. tip:: Version identifiers are unique to a database. If deltas are required for multiple databases, use a latest version query for each database.
+   .. tip:: Version identifiers are unique to a database. If deltas are required for many databases, use a latest version query for each database.
 
 #. Use an orchestration to send the results of the "Latest_Version" query to a storage location, such as an Amazon S3 bucket. Automate this workflow to run at the same time as orchestrations that send deltas.
 
@@ -262,7 +262,7 @@ For example:
      WHERE v.offset = 5) AS v
    ON v.version = a.amperity_version
 
-.. note:: This approach is less reliable than :ref:`using a delta <historical-data-send-only-updated-records>` because it is more likely to contain multiple record updates even if it is unlikely to miss sending any incremental records.
+.. note:: This approach is less reliable than :ref:`using a delta <historical-data-send-only-updated-records>` because it is more likely to contain many record updates even if it is unlikely to miss sending any incremental records.
 
    The downstream workflow **must** allow upserts.
 

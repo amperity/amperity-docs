@@ -39,7 +39,7 @@ Return username from email
 
 .. _sql-spark-function-split-example-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ==================================================
 
 .. include:: ../../amperity_reference/source/sql_spark.rst

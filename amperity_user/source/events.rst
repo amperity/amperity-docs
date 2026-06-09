@@ -130,7 +130,7 @@ Pinterest
 
 .. events-pinterest-start
 
-Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that contains offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
+Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that has offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
 
 :doc:`Send events <events_pinterest>` to Pinterest at least once a month and send conversion data within 30 days of each conversion occurrence to Pinterest Ads Manager.
 
@@ -146,7 +146,7 @@ Snapchat
 
 Snapchat is a social media platform for accessing pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
 
-:doc:`Send events <events_snapchat>` to Snapchat as a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
+:doc:`Send events <events_snapchat>` to Snapchat as a CSV file that has `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
 
 .. events-snapchat-end
 

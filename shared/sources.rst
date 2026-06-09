@@ -71,7 +71,7 @@ Amperity can pull data from |source-name| by using Fivetran as the interface to 
 
 A request to Amperity support to enable |source-name| as a data source for your tenant.
 
-.. important:: Please allow for up to 24 hours after making the request for the |source-name| connection to be enabled.
+.. important:: Allow for up to 24 hours after making the request for the |source-name| connection to be enabled.
 
 .. sources-get-details-fivetran-request-to-enable-end
 
@@ -79,7 +79,7 @@ A request to Amperity support to enable |source-name| as a data source for your 
 
 Access to the instance of Snowflake that stores the |source-name| data tables that were pulled by Fivetran.
 
-.. important:: The amount of time required to complete the initial population of data from |source-name| to Snowflake can vary, depending on the amount of data. Please allow for up 72 hours for this process to complete as a general guideline.
+.. important:: The amount of time required to complete the initial population of data from |source-name| to Snowflake can vary, depending on the amount of data. Allow for up 72 hours for this process to complete as a general guideline.
 
 .. sources-get-details-fivetran-access-to-snowflake-start
 
@@ -166,7 +166,7 @@ Load operations associate each table in the list of tables to a feed. (The initi
       ]
 
 #. Enter the name of the Snowflake stage.
-#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, or periods. For example: "Query_name.12-345a".
+#. Optional. Use a query to select specific columns from a Snowflake table before pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, or periods. For example: "Query_name.12-345a".
 
    Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 
@@ -232,7 +232,7 @@ An introduction to entities lists and a note about required or optional file beh
 .. sources-add-courier-s3-generic-start
 
 #. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
+#. Find, and then click the row that has |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
@@ -271,7 +271,7 @@ Applies ONLY to data sources that use APIs and automatically handle the feed cre
 .. sources-add-courier-api-automatic-start
 
 #. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
+#. Find, and then click the row that has |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
@@ -934,9 +934,9 @@ Select a date from the calendar picker that is before today, but after the date 
 
 Leave the load options unselected, and then click **Run**.
 
-After the courier has run successfully, inspect the domain table that contains the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
+After the courier has run successfully, inspect the domain table that has the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
 
-* If the data contains customer records, edit the feed and make that data available to Stitch.
+* If the data has customer records, edit the feed and make that data available to Stitch.
 * If the data should be loaded to Amperity on a regular basis, add the courier to a courier group that runs on the desired schedule.
 * If the data will be a foundation for custom domain tables, use Spark SQL to build out that customization.
 

@@ -25,7 +25,7 @@ When predictive modeling is enabled for your tenant you can use output from the 
 * Gold represents customers who fall between 1% and 5%
 * Silver represents customers who fall between 5% and 10%
 
-Select all three of these predicted value tiers to build an audience that contains customers who are predicted to be in your top 10% (inclusive) high value customers.
+Select all three of these predicted value tiers to build an audience that has customers who are predicted to be in your top 10% (inclusive) high value customers.
 
 .. usecase-predicted-top-10-percent-end
 
@@ -120,7 +120,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px

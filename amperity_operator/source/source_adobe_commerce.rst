@@ -278,7 +278,7 @@ Customers
 
 .. source-adobe-commerce-review-data-customer-start
 
-The feed and domain table for customer details contains the following fields:
+The feed and domain table for customer details has the following fields:
 
 .. vale off
 
@@ -310,7 +310,7 @@ Customer address
 
 .. source-adobe-commerce-review-data-customer-address-start
 
-The feed and domain table for customer addresses contains the following fields:
+The feed and domain table for customer addresses has the following fields:
 
 .. vale off
 
@@ -341,7 +341,7 @@ Customer group
 
 .. source-adobe-commerce-review-data-customer-group-start
 
-The feed and domain table for customer group contains the following fields:
+The feed and domain table for customer group has the following fields:
 
 .. vale off
 
@@ -363,7 +363,7 @@ Orders
 
 .. source-adobe-commerce-review-data-orders-start
 
-The feed and domain table for orders contains the following fields:
+The feed and domain table for orders has the following fields:
 
 .. vale off
 
@@ -488,7 +488,7 @@ Order address
 
 .. source-adobe-commerce-review-data-order-address-start
 
-The feed and domain table for order address contains the following fields:
+The feed and domain table for order address has the following fields:
 
 .. vale off
 
@@ -524,7 +524,7 @@ Order items
 
 .. source-adobe-commerce-review-data-order-items-start
 
-The feed and domain table for order items contains the following fields:
+The feed and domain table for order items has the following fields:
 
 .. vale off
 

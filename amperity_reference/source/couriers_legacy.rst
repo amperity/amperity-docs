@@ -122,7 +122,7 @@ Each filedrop load setting must specify the file pattern, which is the path to t
 
 An archive must specify the archive *and* the file contained within it. If the file is archived as "some-file.zip" then the ``"object/type"`` would be "archive" and the content type of the file within it would be "text/csv".
 
-If an archive contains only a single file *or* if all the files within the archive have the same file tag, content type, and other settings, then ``"archive/contents"`` can be omitted and ``"object/land-as"`` can be specified instead. The files within the archive will all use the specified ``"object/land-as"`` settings.
+If an archive has only a single file *or* if all the files within the archive have the same file tag, content type, and other settings, then ``"archive/contents"`` can be omitted and ``"object/land-as"`` can be specified instead. The files within the archive will all use the specified ``"object/land-as"`` settings.
 
 If an archive is missing contents and you would like to ignore or skip those missing contents, then ``"archive/skip-missing-contents"`` can be added to your settings.
 
@@ -179,7 +179,7 @@ and will not match any of these:
 * /customers-0/1/file.csv
 * /customers.csv
 
-The following example shows using multiple wildcards:
+The following example shows using many wildcards:
 
 .. code-block:: none
 
@@ -392,9 +392,9 @@ for single files
    :end-before: .. format-common-send-input-examples-single-end
 
 
-.. _couriers-legacy-load-settings-input-example-multiple:
+.. _couriers-legacy-load-settings-input-example-many:
 
-for multiple files
+for many files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/format_common.rst
@@ -534,7 +534,7 @@ Empty
 
 .. couriers-legacy-load-operation-type-empty-start
 
-An empty load operation will bring files to Amperity, but not try to load those files into a feed. An empty load operation is ideal for bringing sample files to Amperity prior to configuring the feed that defines the schema within Amperity for a data source. Use the sample file while configuring the feed, and then update the load operation to match the configuration requirements for the associated file type.
+An empty load operation will bring files to Amperity, but not try to load those files into a feed. An empty load operation is ideal for bringing sample files to Amperity before configuring the feed that defines the schema within Amperity for a data source. Use the sample file while configuring the feed, and then update the load operation to match the configuration requirements for the associated file type.
 
 .. couriers-legacy-load-operation-type-empty-end
 
@@ -550,7 +550,7 @@ An empty load operation will bring files to Amperity, but not try to load those 
 
 .. couriers-legacy-load-operation-type-empty-tip-start
 
-.. tip:: You cannot use an empty load operation for files that require the use of an ingest query to transform the data prior to it being made available to the feed.
+.. tip:: You cannot use an empty load operation for files that require the use of an ingest query to transform the data before it being made available to the feed.
 
    For example, a JSON file with nested data must use an ingest query to flatten the file. A feed cannot use a JSON file with nested data as a sample file. And a courier cannot run to successful completion unless the courier is configured with a feed ID.
 
@@ -664,7 +664,7 @@ Truncate, then load
 
 .. couriers-legacy-load-operation-type-truncate-then-load-start
 
-You can empty the contents of a table prior to loading a data file to a domain table as a load operation.
+You can empty the contents of a table before loading a data file to a domain table as a load operation.
 
 .. note:: A truncate operation is always run first, regardless of where it is specified within the load operation.
 
@@ -754,7 +754,7 @@ Apache Parquet
 
 .. format-parquet-pull-couriers-load-settings-partition-start
 
-.. note:: Apache Parquet files are almost always partitioned, where a single logical Parquet file is comprised of multiple physical files in a directory structure, each of them representing a partition.
+.. note:: Apache Parquet files are almost always partitioned, where a single logical Parquet file is comprised of many physical files in a directory structure, each of them representing a partition.
 
    Parquet partitioning optionally permits for data to be nested in a directory structure determined by the value of partitioning columns. Amperity only detects Parquet partition files one directory level below the configured file pattern. For example:
 
@@ -1972,7 +1972,7 @@ Use the **Add Courier** button to add a courier to Amperity. A courier should be
 
 .. couriers-legacy-add-context-start
 
-For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but multiple feeds associated with a single courier are run sequentially.
+For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but many feeds associated with a single courier are run sequentially.
 
 For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
 
@@ -2180,7 +2180,7 @@ A courier can be configured to load data from a specific day.
 #. Select a calendar date.
 #. To prevent downstream processing, select **Ingest only**.
 
-   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
+   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that has PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
 .. couriers-legacy-run-for-specific-day-steps-end
@@ -2208,7 +2208,7 @@ A courier can be configured to load all data from a specified time period.
    .. important:: The start of the selected date range is inclusive, whereas the end of the selected date range is exclusive.
 #. To prevent downstream processing, select **Ingest only**.
 
-   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
+   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that has PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
 .. couriers-legacy-run-for-time-period-steps-end

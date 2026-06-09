@@ -396,7 +396,7 @@ Amps consumption for the **Ingest** feature is determined by:
 
   Time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size.
 
-* The use of ingest queries that preprocess data prior to ingest
+* The use of ingest queries that preprocess data before ingest
 
 Storage for the **Ingest** feature is determined by:
 * The volume of data that is loaded to Amperity
@@ -907,7 +907,7 @@ Analytics
 
 To reduce Amps consumption for the **Analytics** category:
 
-* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
+* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
 
 .. amps-reduce-category-analytics-end
 
@@ -929,7 +929,7 @@ To reduce Amps consumption for the **Databases** category:
 
 * Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
 
-* Review compute settings. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
+* Review compute settings. Ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
 
 .. amps-reduce-category-databases-end
 
@@ -973,7 +973,7 @@ To reduce Amps consumption for the **Stitch** category:
 
 * Review all of the foreign keys (FKs) that are applied to all source tables that are made available to Stitch. Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run and lead to higher Amps consumption. Consider adding automated bad-value detection for foreign keys.
 
-* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
+* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
 
 .. amps-reduce-category-stitch-end
 
@@ -985,7 +985,7 @@ Adjust compute settings
 
 .. amps-reduce-adjust-compute-start
 
-Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes increases the rate at which Amps are consumed per hour. This rate varies by feature and may be affected by other configurations within your tenant. Please ask Amperity Support for assistance with questions before adjusting compute resources.
+Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes increases the rate at which Amps are consumed per hour. This rate varies by feature and may be affected by other configurations within your tenant. Ask Amperity Support for assistance with questions before adjusting compute resources.
 
 You can adjust the compute settings for your tenant for the following categories:
 
@@ -1001,6 +1001,6 @@ Compute settings for each category may be adjusted to one of XS (smallest), S, M
 
 Fine-tuning compute resource sizes is a balance between speed and cost. For well-distributed jobs, increasing compute resources might reduce runtime while consuming Amps at the same rate. For inefficient SQL operations, increasing compute resources may increase Amps consumption, without significant runtime reduction. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
 
-.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Please ask your Amperity representative for assistance with any questions around adjusting compute resources.
+.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Ask your Amperity representative for assistance with any questions around adjusting compute resources.
 
 .. amps-reduce-adjust-compute-end

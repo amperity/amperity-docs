@@ -82,7 +82,7 @@ Adobe Analytics may be configured to send data to Amperity using SFTP, Amazon S3
 
 #. A sample for each file to simplify feed creation.
 
-   .. note:: Files sent from Adobe Analytics use Gzip as the compression format and contains multiple files. 
+   .. note:: Files sent from Adobe Analytics use Gzip as the compression format and has many files. 
 
 
 .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
@@ -103,7 +103,7 @@ Adobe Analytics can send data to the SFTP location that is built into Amperity. 
 
 .. source-adobe-analytics-clickstream-files-schedule-start
 
-When configured to run on a schedule, the output from Adobe Analytics is a compressed Gzip that contains multiple files. One of these files--**hit_data.tsv**--is the primary table and should be configured to run on a daily basis. All of the other files are static lookup tables for codes in the primary table.
+When configured to run on a schedule, the output from Adobe Analytics is a compressed Gzip that has many files. One of these files--**hit_data.tsv**--is the primary table and should be configured to run on a daily basis. All of the other files are static lookup tables for codes in the primary table.
 
 .. source-adobe-analytics-clickstream-files-schedule-end
 

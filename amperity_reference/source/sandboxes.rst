@@ -195,7 +195,7 @@ Some objects are not copied to a sandbox:
 
    Versioned table histories are not copied to a sandbox.
 
-   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database contains data.
+   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database has data.
 
    The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
 
@@ -657,7 +657,7 @@ Changes that are promoted to production from a sandbox may be restored to a prev
 
 #. In many situations you can use a sandbox workflow to restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
 
-#. In situations where this cannot be done using a sandbox workflow, please ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
+#. In situations where this cannot be done using a sandbox workflow, ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
 
    .. important:: If your tenant is restored to a previous version, all changes that were made to your tenant *after* that version will be lost. This includes changes made in production *and* changes that may have been promoted from other sandbox workflows.
 

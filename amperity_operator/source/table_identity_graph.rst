@@ -74,7 +74,7 @@ Column reference
 
 .. table-identity-graph-reference-start
 
-The **Identity Graph** table contains the following columns.
+The **Identity Graph** table has the following columns.
 
 .. table-identity-graph-reference-end
 

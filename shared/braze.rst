@@ -154,6 +154,8 @@ Profile attributes, such as **email**, **birthdate**, **address**, and **phone**
 
 Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
 
+The Braze API limits the ``/users/track`` endpoint to `75 attribute objects per request <https://www.braze.com/docs/api/endpoints/user_data/post_user_track/>`__ |ext_link|.
+
 .. braze-attribute-updates-end
 
 .. braze-attribute-updates-admonition-start
@@ -169,7 +171,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       * - **Relative date values**
         - Attributes with relative date values typically contain a rolling value that is updated daily. A relative date is always in Coordinated Universal Time (UTC).
 
-          For example, the **Transaction Attributes Extended** table contains an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
+          For example, the **Transaction Attributes Extended** table has an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
 
           Using **Days Since Latest Order** as an attribute within customer profiles ensures that every customer profile associated with a customer who did not purchase during the previous X days will get an updated profile.
 
@@ -187,7 +189,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       * - **Calculated attribute values**
         - Many attributes are calculated by Amperity, including all time period rollups.
 
-          For example, the **Transaction Attributes Extended** table contains an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
+          For example, the **Transaction Attributes Extended** table has an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
 
           Instead of using the time period rollup attributes directly you can build a custom attribute to define thresholds or to return a yes or no. For example, instead of using the specific revenue amount for **L6M Order Revenue** you could build a custom attribute that returns true when the value for **L6M Order Revenue** is greater than $500.
 

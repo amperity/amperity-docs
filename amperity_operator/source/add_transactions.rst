@@ -25,7 +25,7 @@ Transactions are a type of interaction record that contain information about you
 
 .. setup-transactions-start
 
-The process for adding transaction records to Amperity requires individual data sources that provide order-level, item-level, and product catalog data. The actual steps will vary from tenant to tenant, depending on how the individual data sources provide data for canceled and returned items, quantities, discounts, and revenue.
+The process for adding transaction records to Amperity requires individual data sources that have order-level, item-level, and product catalog data. The actual steps will vary from tenant to tenant, depending on how the individual data sources handle data for canceled and returned items, quantities, discounts, and revenue.
 
 At a high level, start with deciding how to apply semantic tags to your brand's transaction records. After you have run Stitch you will then configure a series of tables that associate each transaction with a customer profile.
 
@@ -33,7 +33,7 @@ At a high level, start with deciding how to apply semantic tags to your brand's 
 
 .. setup-transactions-start
 
-For each data source that your brand makes available to Amperity that contains transactions:
+For each data source that your brand makes available to Amperity that has transactions:
 
 #. :ref:`Apply transactions semantic tags <setup-transactions-apply-semantics>`
 #. :ref:`Review input validations <setup-transactions-input-validations>`
@@ -64,7 +64,7 @@ Apply semantics
 
 .. setup-customer-profiles-apply-semantics-start
 
-You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that contains transactions data.
+You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that has transactions data.
 
 Transaction semantics include a set of required semantic tags--**is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id**--along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
 
@@ -90,7 +90,7 @@ Purchase histories
 
 .. database-interactions-apply-to-itemized-transactions-start
 
-For each incoming data source that contains item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction semantic tags can be applied.
+For each incoming data source that has item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction semantic tags can be applied.
 
 .. database-interactions-apply-to-itemized-transactions-end
 
@@ -210,7 +210,7 @@ Extend your customer 360 database for transactions by adding the following table
 
 .. important:: Most of the work required to extend your customer 360 database for transaction histories and product catalogs happens one time.
 
-   Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates. For example, if your brand adds a data source that contains PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
+   Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates. For example, if your brand adds a data source that has PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
 
    The initial configuration of your customer 360 database requires using SQL to add or extend a series of tables that are an extension that captures the interactions your brand has with your customers.
 
@@ -448,7 +448,7 @@ A 4-5-4 calendar divides years into months using a 4 weeks × 5 weeks × 4 weeks
 
 .. setup-transactions-extend-attributes-fiscal-calendars-steps-start
 
-#. Pre-requisite. Apply fiscal calendar attributes to a data source that contains the data that defines your brand's fiscal calendar.
+#. Pre-requisite. Apply fiscal calendar attributes to a data source that has the data that defines your brand's fiscal calendar.
 #. Optional. :ref:`Extended attributes for fiscal calendars may be added to the Transaction Attributes Extended table <table-transaction-attributes-extended-extend-attributes-net-order-revenue>`.
 
 .. setup-transactions-extend-attributes-fiscal-calendars-steps-end
@@ -610,7 +610,7 @@ Many types of C360 validation reports exist, including for customer attributes, 
 
 Validation reports for customer attributes include:
 
-* Are records associated with multiple Amperity IDs?
+* Are records associated with many Amperity IDs?
 * Are known purchasers also classified as prospects?
 * Are any prospects associated with a purchase history?
 * Are physical addresses complete?
@@ -626,7 +626,7 @@ Validation reports for customer attributes include:
 
 Validation reports for email addresses and phone numbers include:
 
-* Are email events associated with multiple Amperity IDs?
+* Are email events associated with many Amperity IDs?
 * Are email events unique by brand?
 * Does an email event have an associated event type, such as opens or clicks?
 * Are there conflicting opt-in preferences for email addresses or phone numbers?
@@ -665,9 +665,9 @@ Validation reports for fiscal calenders include:
 Validation reports for transactions include:
 
 * Are there records without an associated Amperity ID?
-* Are orders associated with multiple Amperity IDs?
+* Are orders associated with many Amperity IDs?
 * Are there records without an associated order ID?
-* Are orders associated with multiple order IDs?
+* Are orders associated with many order IDs?
 * Are orders associated with a store ID?
 * Are there orders without associated product information, such as ID, category, subcategory, or description?
 * Are costs, quantities, and revenue non-positive for returns and cancellations?

@@ -28,7 +28,7 @@ Send data to DV360
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dv360.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dv360.html>`__ |ext_link|.
 
 .. vale on
 
@@ -111,7 +111,7 @@ Get details
 
        A refresh token that is generated from the authentication process that authorizes Amperity to send data to the selected product. This must be a Google account with permission to access the configured customer ID and product within Google.
 
-       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring DV360 in Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -216,7 +216,7 @@ Add destination
 
        To create a new credential for |destination-name|, generate an authorization link, and then use that link to log into your |destination-name| account. After you have completed that process, you will be provided a refresh token. Add the value for the refresh token to the **Refresh Token** setting in Amperity.
 
-       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring DV360 in Amperity.
 
        .. image:: ../../images/mockup-destinations-tab-credentials-02-select-dv360.png
           :width: 500 px
@@ -431,7 +431,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -534,7 +534,7 @@ Mobile Device ID Matching
 
 .. destination-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

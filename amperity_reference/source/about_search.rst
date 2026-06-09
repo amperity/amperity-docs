@@ -126,7 +126,7 @@ Topic collections
 
 .. search-advanced-filters-collections-start
 
-Use the **Topic collections** filter to choose which topic collections to include in search results. All topic collections begin selected by default. At least one topic collection must be selected in order to return search results.
+Use the **Topic collections** filter to choose which topic collections to include in search results. All topic collections begin selected by default. At least one topic collection must be selected to return search results.
 
 Amperity documentation has the following topic collections:
 

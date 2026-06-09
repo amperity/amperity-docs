@@ -120,7 +120,7 @@ Use the **Feed selection** section of the courier configuration page to identify
 From the **Load type** dropdown select one of:
 
 * **Load** Use this option to load data to the associated domain table.
-* **Spark** Use this option to load data when the XML file contains complex types, such as within the **complexType** element.
+* **Spark** Use this option to load data when the XML file has complex types, such as within the **complexType** element.
 * **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
 .. format-xml-pull-couriers-feed-selection-end

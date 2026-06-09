@@ -100,7 +100,7 @@ When using JSON files, it is recommend to:
         :start-after: .. formats-json-rfc-8259-start
         :end-before: .. formats-json-rfc-8259-end
 
-* Compress files prior to encryption using ZIP, GZIP, or TAR
+* Compress files before encryption using ZIP, GZIP, or TAR
 * Encrypt files using PGP. Compression will not reduce the size of an encrypted file
 
 .. format-json-pull-data-sources-recommendations-end
@@ -164,7 +164,7 @@ Use the **Feed selection** section of the courier configuration page to identify
 From the **Load type** dropdown select one of:
 
 * **Load** Use this option to load data to the associated domain table.
-* **Spark** Use this option to load data when the JSON file contains complex types, such as nested objects and arrays.
+* **Spark** Use this option to load data when the JSON file has complex types, such as nested objects and arrays.
 * **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
 .. format-json-pull-couriers-feed-selection-end

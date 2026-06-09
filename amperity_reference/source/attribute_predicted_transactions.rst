@@ -60,7 +60,7 @@ Use a combination of predicted CLV attributes to identify high-value audiences f
 For example:
 
 #. Start with predicted probability of transaction to identify customers with a higher likelihood of return.
-#. Add predicted order frequency to identify which of those customers are more likely to order multiple times.
+#. Add predicted order frequency to identify which of those customers are more likely to order many times.
 #. Add predicted average order value to identify customers who are most likely to spend, on average, at least $100 per order.
 
 .. attribute-predicted-transactions-about-clv-example-end

@@ -258,7 +258,7 @@ The segment data schema supports the following fields:
           :start-after: .. term-birthdate-start
           :end-before: .. term-birthdate-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **closest_mik_distance**
      - 
@@ -271,7 +271,7 @@ The segment data schema supports the following fields:
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **Hashed_Email**
      - The MD5 hash of the normalized email address. A normalized email address:
@@ -300,7 +300,7 @@ The segment data schema supports the following fields:
           :start-after: .. term-state-start
           :end-before: .. term-state-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **wedding_dt**
      - 

@@ -26,7 +26,7 @@ Use the following naming conventions to ensure that your tenant is configured wi
 
 .. naming-note-start
 
-.. note:: A tenant that is configured to support multiple brands or regions should use a consistent prefix for each brand and region.
+.. note:: A tenant that is configured to support many brands or regions should use a consistent prefix for each brand and region.
 
 .. naming-note-end
 
@@ -97,13 +97,13 @@ Courier names
 
 .. naming-couriers-start
 
-Use a combination of source and feed for the name of the courier as much as possible. Separate the source and feed name using an underscore (``_``). Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand. Consider if the courier is pulling a dedicated data source or if it is pulling multiple sources.
+Use a combination of source and feed for the name of the courier as much as possible. Separate the source and feed name using an underscore (``_``). Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand. Consider if the courier is pulling a dedicated data source or if it is pulling many sources.
 
 For example:
 
 * Adobe_Clickstream
 * Adobe_Clickstream_Daily
-* Amazon_S3:Static, which contains individual files for postal codes, and geolocation data
+* Amazon_S3:Static, which has individual files for postal codes, and geolocation data
 * Braze_Audience_EMEA
 * Braze_Audience_PNW
 * Sailthru_Responses

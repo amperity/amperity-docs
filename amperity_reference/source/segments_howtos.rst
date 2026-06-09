@@ -360,7 +360,7 @@ You can compare segment by the following:
 
 .. segments-compare-add-steps-start
 
-#. From the **Breakdown** tab click the down arrow in the **Compare by:** field.
+#. From the **Breakdown** tab click the down arrow in the **Compare by** field.
 #. Select one of the following options from the list:
 
    * **% of Purchasers**
@@ -901,7 +901,7 @@ Labels are created on the **Settings** page, in the **Labels** tab, by clicking 
 * Not exceed 10 labels per journey
 * Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, segments matching any selected labels will be shown.
+.. note:: When many labels are selected, segments matching any selected labels will be shown.
 
 .. segments-filter-end
 
@@ -1093,15 +1093,15 @@ Bulk delete segments
 
 .. segments-bulk-delete-segments-start
 
-You can delete multiple segments from the **Segments** page.
+You can delete many segments from the **Segments** page.
 
 .. segments-bulk-delete-segments-end
 
-**To delete multiple segments**
+**To delete many segments**
 
 .. segments-bulk-delete-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Delete**.
 #. On the **Bulk Delete** window, click **Delete <#> Items**.
 
@@ -1115,15 +1115,15 @@ Bulk move segments
 
 .. segments-bulk-move-segments-start
 
-You can move multiple segments to a folder from the **Segments** page.
+You can move many segments to a folder from the **Segments** page.
 
 .. segments-bulk-move-segments-end
 
-**To move multiple segments to a folder**
+**To move many segments to a folder**
 
 .. segments-bulk-move-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Move**.
 #. On the **Bulk Move** window, select a folder.
 #. Click **Move**.
@@ -1226,12 +1226,12 @@ You can build a segment against any database that is visible from the **Customer
 
 .. _segments-select-multi-values:
 
-Select multiple values
+Select many values
 ==================================================
 
 .. segments-select-multiple-values-start
 
-You can select multiple values from the **Segment Editor**.
+You can select many values from the **Segment Editor**.
 
 .. segments-select-multiple-values-end
 
@@ -1512,7 +1512,7 @@ You can view matching records from a table from the **Customers** page on the **
 .. segments-view-matching-records-steps-start
 
 #. From the **Segments** page, on the **Customers** page, expand the **Show [x] columns from [table]** link.
-#. Click in the **Show matching records from:** field.
+#. Click in the **Show matching records from** field.
 #. In the list that appears, select a table.
 
 .. segments-view-matching-records-steps-end

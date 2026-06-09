@@ -20,15 +20,15 @@ High-value multichannel customers
 
 .. usecase-customers-high-value-multi-channel-start
 
-A multichannel marketing strategy often leads to higher revenue. Customers who respond to multiple channels are easier to reach and lead to more effective marketing campaigns. The first step to building an effective multichannel marketing strategy is to identify high-value customers whose purchases can be associated with multiple channels.
+A multichannel marketing strategy often leads to higher revenue. Customers who respond to many channels are easier to reach and lead to more effective marketing campaigns. The first step to building an effective multichannel marketing strategy is to identify high-value customers whose purchases can be associated with many channels.
 
-You can find high-value multichannel customers first by identifying which customers have spent an amount over a defined threshold, and then by identifying which of those customers have purchased across multiple channels.
+You can find high-value multichannel customers first by identifying which customers have spent an amount over a defined threshold, and then by identifying which of those customers have purchased across many channels.
 
 .. usecase-customers-high-value-multi-channel-end
 
 .. usecase-customers-high-value-multi-channel-howitworks-start
 
-The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across many channels.
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 
@@ -74,17 +74,17 @@ The following sections describe using the **Segment Editor** to build a segment 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Find customers who have purchased across multiple channels.
+          :alt: Find customers who have purchased across many channels.
           :align: center
           :class: no-scaled-link
 
      - Add a second attribute to your segment.
 
-       To identify customers who have purchased from multiple channels, choose the **Multi Purchase Channel** attribute from the **Transaction Attributes Extended** table, and then select the "is true" operator:
+       To identify customers who have purchased from many channels, choose the **Multi Purchase Channel** attribute from the **Transaction Attributes Extended** table, and then select the "is true" operator:
 
        .. image:: ../../images/usecase-high-value-multi-channel-combo.png
           :width: 540 px
-          :alt: Find customers who have purchased across multiple channels.
+          :alt: Find customers who have purchased across many channels.
           :align: left
           :class: no-scaled-link
 
@@ -105,7 +105,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

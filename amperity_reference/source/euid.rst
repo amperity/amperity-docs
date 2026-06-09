@@ -80,7 +80,7 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to EUID using the `POST /identity/buckets <https://euid.eu/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All EUID tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
+          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request has a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the EUID token), and a salt bucket ID.
 

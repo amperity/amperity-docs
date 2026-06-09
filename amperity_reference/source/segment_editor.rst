@@ -57,7 +57,7 @@ A good segment name is clear and concise, is not longer than necessary, uses pat
 
    Be sure to follow good naming patterns to ensure that downstream users can always find your segments when they need them. Add details like "historical", "daily", or "test" as appropriate.
 
-   Be sure to include the brand name or the region name if you have multiple brands or have multiple regions.
+   Be sure to include the brand name or the region name if you have many brands or have many regions.
 
    Some examples:
 
@@ -163,7 +163,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       In this example, there is only one condition. The audience that is returned contains only customers who have an email address.
+       In this example, there is only one condition. The audience that is returned has only customers who have an email address.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -639,7 +639,7 @@ The following operators are available to all attributes with the **string** data
 
    * - Operator
      - Description
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**
@@ -673,7 +673,7 @@ NULL and NOT NULL values
 
 .. segments-editor-null-not-null-start
 
-A field with a **NULL** value is a field with a value that is empty. A **NULL** value is different than a value of zero, a blank value, or a value that contains only spaces. 
+A field with a **NULL** value is a field with a value that is empty. A **NULL** value is different than a value of zero, a blank value, or a value that has only spaces. 
 
 An attribute can only have a **NULL** value if it remained empty after the record was created. With **NULL**, you can insert a new record or update a record without adding a value to this field and the field will be saved with a **NULL** value.
 
@@ -752,7 +752,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 
        For example, if the current day is "Thursday 01 / 12 / 2023" then **1 year ago** is "Wednesday 01 / 12 / 2022".
 
-.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, or **Revenue/Purchaser** by changing the option in the **Compare by:** field.
+.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, or **Revenue/Purchaser** by changing the option in the **Compare by** field.
 
 .. segments-editor-relative-date-values-end
 
@@ -779,7 +779,7 @@ Segment insights include the following categories:
 
 .. segments-editor-insights-note-start
 
-.. note:: Segment insights are available when your customer 360 database contains certain tables.
+.. note:: Segment insights are available when your customer 360 database has certain tables.
 
    * **Unique Customers**, **1-year Active Customers**, and **1-year Segment Revenue** require access to the **Transaction Attributes Extended** and **Customer 360** tables.
    * **Reachable Customers** requires access to the **Customer Attributes** table.

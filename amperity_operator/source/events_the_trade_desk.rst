@@ -611,7 +611,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The phone number associated with the offline event. Phone numbers are normalized to E.164 format and converted to a UID 2.0 value before being sent to |destination-name|.
 
-       .. note:: A row that contains both **email** and **phone** generates two events, one for each identifier.
+       .. note:: A row that has both **email** and **phone** generates two events, one for each identifier.
 
        This value is most often associated with the **Phone** field in the **Customer 360** table. Include **phone** in the **SELECT** statement.
 
@@ -701,7 +701,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
    * - **timestamp**
      - **Required**
 
-       A field in a database table that contains the date and time at which the offline event occurred.
+       A field in a database table that has the date and time at which the offline event occurred.
 
        For retail-focused events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
 

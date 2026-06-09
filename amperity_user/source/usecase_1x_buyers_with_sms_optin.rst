@@ -93,7 +93,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who made their first purchase within the previous 30 days *and* who have opted in to SMS.
 
-       .. tip:: For companies with multiple brands or are in multiple regions, you may use the **Brand** and **Region** attributes in the **SMS Opt Status** table to identify customer opt-in status by brand or by region.
+       .. tip:: For companies with many brands or are in many regions, you may use the **Brand** and **Region** attributes in the **SMS Opt Status** table to identify customer opt-in status by brand or by region.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -109,7 +109,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px

@@ -560,7 +560,7 @@ Run Stitch
 Run the Stitch process to update the results for the bad-values blocklist.
 
 #. On the **Stitch** page, click **Run**.
-#. Re-run each data table in the customer 360 database that contains data that could be affected by the bad-values blocklist. This adds the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
+#. Re-run each data table in the customer 360 database that has data that could be affected by the bad-values blocklist. This adds the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-has-blv-start
@@ -795,7 +795,7 @@ Expand returned values
 
 .. bad-values-blocklist-advanced-expand-returned-values-start
 
-In situations where multiple values exist for phone numbers or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
+In situations where many values exist for phone numbers or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
 
 .. bad-values-blocklist-advanced-expand-returned-values-end
 
@@ -833,7 +833,7 @@ When **address** is added to the bad-values blocklist, be sure to verify that re
 
 An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold--at least "40", but higher if necessary--for **address**, verify the results, and then adjust the threshold until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
 
-When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group--**address**, **city**, and **state**--does not replace the **address** value in the **Stitch_BadValues** table. The same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
+When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group--**address**, **city**, and **state**--does not replace the **address** value in the **Stitch_BadValues** table. The same address value may appear many times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
 
 .. bad-values-blocklist-advanced-addresses-context-end
 
@@ -900,7 +900,7 @@ to:
      ELSE UPPER(CONCAT(address,' ',address2))
    END AS value
 
-.. caution:: This approach should not be used when the **address** field is known to contain a high volume of bad addresses that should be removed, and also the **address2** fields within that subset of records contains a variety of junk values. Updating the **bad_address** block in this scenario may cause addresses to be missed as the blocklist values are applied.
+.. caution:: This approach should not be used when the **address** field is known to contain a high volume of bad addresses that should be removed, and also the **address2** fields within that subset of records has a variety of junk values. Updating the **bad_address** block in this scenario may cause addresses to be missed as the blocklist values are applied.
 
 .. bad-values-blocklist-advanced-addresses-address2-concatenate-end
 
@@ -961,7 +961,7 @@ The CSV file itself would be similar to:
 
 .. bad-values-blocklist-advanced-custom-csv-steps-start
 
-#. Use a custom CSV file to blocklist birthdates that exist across multiple data sources. For example:
+#. Use a custom CSV file to blocklist birthdates that exist across many data sources. For example:
 
    .. code-block:: none
 

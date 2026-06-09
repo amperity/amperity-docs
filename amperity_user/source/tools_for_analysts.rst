@@ -43,7 +43,7 @@ The most common workflows for analysts within Amperity is a focus on data and da
 Use Amperity to:
 
 * Build your customer 360
-* Use SQL to define multiple databases, custom databases, and custom tables
+* Use SQL to define many databases, custom databases, and custom tables
 * Extend your customer 360 to make use of vertical-specific attributes and to define your own custom attributes
 * Explore data using the Data Explorer
 
@@ -79,9 +79,9 @@ Flexible merge rules
 
 .. tools-for-analysts-flexible-merge-rules-start
 
-Some customer data platforms require using an inflexible merge rule across multiple fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to multiple customer 360 databases.
+Some customer data platforms require using an inflexible merge rule across many fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to many customer 360 databases.
 
-Amperity combines the use of flexible merge rules with a patented system that allows multiple customer 360 databases to exist within the same tenant. This ensures that:
+Amperity combines the use of flexible merge rules with a patented system that allows many customer 360 databases to exist within the same tenant. This ensures that:
 
 #. Merge rules are 100% configurable
 #. Each field can have its own merge rule
@@ -96,7 +96,7 @@ For example, data sources from call centers, online transactions, and email plat
    :align: left
    :class: no-scaled-link
 
-After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support multiple customer 360 databases.
+After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support many customer 360 databases.
 
 * Your operations teams can combine prioritizing the most common values for each customer with deterministic matching
 * Your email marketing team can combine prioritizing customer profile values from your email platform with probabilistic matching
@@ -194,9 +194,9 @@ The data tables diagram has four groups of tables:
        Stitch QA activities rely on a series of tables: **Unified Coalesced**, **Unified Scores**, **Detailed Examples**, **Unified Preprocessed Raw**, **Unified Changes Clusters**, and **Unified Changes PKs**. These tables are the basis for the Stitch QA process. The specific use of individual tables will vary from tenant to tenant. Together they provide visibility into how Amperity grouped or did not group individual customer records to a single Amperity ID.
 
    * - **Predictive tables**
-     - Tables may be enabled for users of Amperity. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1:1 or 1:many relationship between those three tables and tables. The **Predicted CLV Attributes** table contains one row per Amperity ID, whereas the **Affinity** and **Recommendation** tables contain many rows per Amperity ID.
+     - Tables may be enabled for users of Amperity. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1:1 or 1:many relationship between those three tables and tables. The **Predicted CLV Attributes** table has one row per Amperity ID, whereas the **Affinity** and **Recommendation** tables contain many rows per Amperity ID.
 
-       The **Campaign Recipients** table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
+       The **Campaign Recipients** table has a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
 
 .. tools-for-analysts-data-model-table-types-end
 
@@ -242,7 +242,7 @@ Use queries to find lists of customers, get insights into their preferences and 
 
 The **Queries** page provides a SQL interface for building queries. Use the visual editor to build queries with dropdowns and picklists. Use the SQL editor to build more advanced queries. The **Queries** page keeps a list of all queries, in both active and draft states.
 
-Both editors can access all tables in the customer 360 database, which contains all of your important customer attributes, along with passthrough tables that bring data that was pulled to Amperity from the domain tables to the customer 360.
+Both editors can access all tables in the customer 360 database, which has all of your important customer attributes, along with passthrough tables that bring data that was pulled to Amperity from the domain tables to the customer 360.
 
 .. tools-for-analysts-queries-tab-sql-interfaces-end
 

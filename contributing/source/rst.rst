@@ -415,7 +415,7 @@ Card carousel
 
 .. rst-card-carousel-start
 
-.. caution:: This formatting option is unused. Please ask the Amperity docs team before using it.
+.. caution:: This formatting option is unused. Ask the Amperity docs team before using it.
 
 Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of cards. Set an integer value between 1 and 4 to configure the number of visible cards on the page.
 
@@ -1654,7 +1654,7 @@ Assign ``salt`` as the name of the code block for code blocks with YAML that emb
 
 .. admonition:: Why salt?
 
-   Using ``salt`` seems like an odd way to specify a code block that contains both Jinja and YAML.
+   Using ``salt`` seems like an odd way to specify a code block that has both Jinja and YAML.
 
    SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states. The ``salt`` lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.
 
@@ -2540,7 +2540,7 @@ The ``/shared`` directory in Amperity docs has a collection of files that contai
    destinations_settings.rst
    terms.rst
 
-Inside these topics are reusable paragraphs. ``terms.rst`` contains **ALL** of the glossary terms used across **ALL** Amperity documentation. From ``terms.rst`` they are shared into the `glossary <https://docs.amperity.com/reference/glossary.html>`__ and also into any other topic that needs that term.
+Inside these topics are reusable paragraphs. ``terms.rst`` has **ALL** of the glossary terms used across **ALL** Amperity documentation. From ``terms.rst`` they are shared into the `glossary <https://docs.amperity.com/reference/glossary.html>`__ and also into any other topic that needs that term.
 
 For example:
 
@@ -3802,7 +3802,7 @@ Top
 
 .. rst-navigation-top-start
 
-The top navigation contains the following clickable elements, from left to right:
+The top navigation has the following clickable elements, from left to right:
 
 * A site logo that links to the root of the docs site.
 * Menus for Guides, APIs, Connections, and Reference.
@@ -4132,7 +4132,7 @@ CSV table
 
 .. rst-tables-csv-start
 
-Use a CSV file that contains tabular information to build a table. For example, a CSV file that contains:
+Use a CSV file that has tabular information to build a table. For example, a CSV file that has:
 
 .. code-block:: rst
 
@@ -4696,7 +4696,7 @@ The topic location is a string added to the top of each file as a comment. All t
 
    .. https://docs.amperity.com/contributing/
 
-This string helps a technical writer know which collection a topic is in when they are editing multiple files across collections in the same text editor.
+This string helps a technical writer know which collection a topic is in when they are editing many files across collections in the same text editor.
 
 .. rst-topic-location-end
 

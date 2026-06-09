@@ -277,11 +277,11 @@ You must upload the application code and any dependencies to AWS Lambda as a ZIP
 
          sh util/lambda-build.sh filename=amazon_pinpoint.py
 
-      This creates a ZIP file that contains the following files: **amazon_pinpoint.py**, **amperity_runner.py**, and **helpers.py**.
+      This creates a ZIP file that has the following files: **amazon_pinpoint.py**, **amperity_runner.py**, and **helpers.py**.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code and any dependencies, and then click **Upload**.
+#. Find the ZIP file archive that has the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-amazon-pinpoint-manual-upload-function-end

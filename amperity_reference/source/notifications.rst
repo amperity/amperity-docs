@@ -68,9 +68,9 @@ All notifications within the recent activity pane fall into one of the following
 
 .. important:: Notifications fall into general behaviors, but all notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of data sources, feeds, couriers, tables, databases, queries, orchestrations, destinations, and campaigns appears in the notifications.
 
-   If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you chose for the custom table and also for the columns within that table.
+   If there is an error, such as a processing error related to a specific column within a custom table, the notification has the names you chose for the custom table and also for the columns within that table.
 
-   If you are unable to resolve a warning or an error using workflow actions, please contact Amperity support.
+   If you are unable to resolve a warning or an error using workflow actions, contact Amperity support.
 
 .. notifications-types-important-end
 
@@ -118,7 +118,7 @@ A completed notification--indicated by the |notification-complete| icon--is show
 
 .. notifications-type-completed-context-start
 
-For example, a notification for a workflow that has completed successfully contains links to:
+For example, a notification for a workflow that has completed successfully has links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated
@@ -153,7 +153,7 @@ For example, a notification for a workflow that has detected an issue shows the 
    Unique validation failed for database "Customer 360" table
    "Unified_Transactions" column "order_id"
 
-and then contains links to:
+and then has links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated
@@ -183,7 +183,7 @@ An error notification--indicated by the |notification-error| icon--is shown when
 
 .. notifications-type-errors-context-start
 
-For example, a notification for a workflow that contains an error shows the error icon |notification-error| and the workflow stops.
+For example, a notification for a workflow that has an error shows the error icon |notification-error| and the workflow stops.
 
 A message is shown that describes the error, such as:
 
@@ -205,7 +205,7 @@ A message is shown that describes the error, such as:
 
    Select the radio button for the workflow action that you determine to be the best way to resolve this error, after which the workflow will perform that action.
    
-.. tip:: If you are unable to resolve an error, please contact your Amperity representative.
+.. tip:: If you are unable to resolve an error, contact your Amperity representative.
 
 .. notifications-type-errors-context-end
 

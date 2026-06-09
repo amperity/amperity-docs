@@ -188,7 +188,7 @@ Responses
 
 .. endpoint-get-workflows-fetch-responses-start
 
-A response from the **GET /workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-fetch-responses-end
 
@@ -255,7 +255,7 @@ Response parameters
 
 .. endpoint-get-workflows-fetch-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -360,7 +360,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **task_instances**
-     - A JSON array that contains zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
+     - A JSON array that has zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
 
        **created_at**
           The date and time at which a workflow task started.

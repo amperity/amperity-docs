@@ -192,9 +192,9 @@ Get details
        #. Apply **Read** and **Write** permissions to the data extension.
        #. Apply **Read**, **Write**, and **Execute** permissions for Automations.
 
-       .. important:: Each installed package is configured to have access to one business unit *or* multiple business units, depending on the desired workflow.
+       .. important:: Each installed package is configured to have access to one business unit *or* many business units, depending on the desired workflow.
 
-          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to multiple business units, you must configure a data template for each business unit.
+          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to many business units, you must configure a data template for each business unit.
 
           Amperity cannot send data to a shared business unit in |destination-name|.
 

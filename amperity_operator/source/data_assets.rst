@@ -182,7 +182,7 @@ Fiscal calendars
 
 .. data-asset-fiscal-calendars-start
 
-You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that contains your brand's complete fiscal calendar:
+You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that has your brand's complete fiscal calendar:
 
 * :ref:`data-asset-fiscal-calendar-nrf`
 * :ref:`data-asset-fiscal-calendar-extended`
@@ -197,7 +197,7 @@ NRF calendar
 
 .. data-asset-fiscal-calendar-nrf-start
 
-The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
+The NRF calendars data asset has a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
 
 .. data-asset-fiscal-calendar-nrf-end
 
@@ -410,7 +410,7 @@ Address standardization
 
 .. data-asset-address-standardization-start
 
-Address standardization is a data asset that contains a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
+Address standardization is a data asset that has a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
 
 .. data-asset-address-standardization-end
 
@@ -462,7 +462,7 @@ Use the gender name ratios data asset to use :doc:`gender prediction <predict_ge
 
 .. data-asset-gender-name-ratios-start
 
-The **gender_name_ratios.csv** file contains a list of baby names from the past ~130 years, along with their associated gender.
+The **gender_name_ratios.csv** file has a list of baby names from the past ~130 years, along with their associated gender.
 
 The source of the data in the **gender_name_ratios.csv** file is from United States Social Security Administration records for `popularity and frequency of baby names <https://www.ssa.gov/oact/babynames/limits.html>`__ |ext_link|. These records were used to generate the **gender_name_ratios.csv** file, which is similar to:
 
@@ -504,7 +504,7 @@ You can add predicted gender to your customer 360 database in two ways, dependin
 
    Edit the **Merged Customers** table and extend the table for predicted gender.
 
-Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
+Use a common table expression (CTE) to pull data from the domain table that has predicted gender data ("Predictions_Gender"):
 
 .. code-block:: sql
    :linenos:

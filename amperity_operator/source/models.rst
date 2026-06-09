@@ -23,7 +23,7 @@ Amperity predictive modeling is based on your brand's customer profiles and beha
 
 .. models-end
 
-.. TODO: For more information on our models for churn and customer lifetime value, please see https://link.springer.com/article/10.1007/s11129-023-09272-x.
+.. TODO: For more information on our models for churn and customer lifetime value, see https://link.springer.com/article/10.1007/s11129-023-09272-x.
 
 
 .. _models-list:
@@ -62,7 +62,7 @@ Every customer has a unique purchase history. Instead of relying on hard-coded R
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Support a churn prevention campaign that has a series of escalating win-back offers
 * Optimize suppression and spend
 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
@@ -112,7 +112,7 @@ Product affinity
 
 .. model-product-affinity-about-start
 
-Amperity models :doc:`product affinity <model_product_affinity>` for any product taxonomy that contains between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+Amperity models :doc:`product affinity <model_product_affinity>` for any product taxonomy that has between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
 
 * Historical data to identify customers who have purchased a product in the past and are likely to do so again.
 * Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.
@@ -223,7 +223,7 @@ Extending models
 
 .. models-extend-start
 
-You can build predictive models from the **Customer 360** page. Each database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn or pCLV model per database, but you may have any number of product affinity and event propensity models.
+You can build predictive models from the **Customer 360** page. Each database that has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You can only activate one churn or pCLV model per database, but you may have any number of product affinity and event propensity models.
 
 .. warning:: Even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
 
@@ -243,7 +243,7 @@ Each predictive model allows for additional fields to be added to support your b
 
    Add all possible fields that are relevant for modeling, including all optional fields that are available from the **Unified Itemized Transactions** table.
 
-   Ensure that the **Customer Attributes** table contains all possible exceptions that your brand may want to use.
+   Ensure that the **Customer Attributes** table has all possible exceptions that your brand may want to use.
 
    Ensure that custom features your brand wants to use in predictive models are populated, have a small percentage of **NULL** values, and have reliable values that do not change much day-to-day)
 

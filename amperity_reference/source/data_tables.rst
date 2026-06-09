@@ -100,9 +100,9 @@ The data tables diagram has four groups of tables:
        Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process. The use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
    * - **Predictive models**
-     - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table contains one row per Amperity ID, whereas the :ref:`data-tables-affinity` table contains many rows per Amperity ID.
+     - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table has one row per Amperity ID, whereas the :ref:`data-tables-affinity` table has many rows per Amperity ID.
 
-       The :ref:`data-tables-campaign-recipients` table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
+       The :ref:`data-tables-campaign-recipients` table has a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
 
 .. data-tables-data-model-table-types-end
 
@@ -335,7 +335,7 @@ All Opted-In Emails
 
 .. data-tables-all-opted-in-emails-context-start
 
-The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used in the **Segment Editor**.
+The **All Opted-In Emails** table has the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used in the **Segment Editor**.
 
 .. data-tables-all-opted-in-emails-context-end
 
@@ -1255,7 +1255,7 @@ EUID
 
 .. data-tables-euid-start
 
-The **EUID** table contains the results of EUID token generation when enabled for your tenant.
+The **EUID** table has the results of EUID token generation when enabled for your tenant.
 
 .. data-tables-euid-end
 
@@ -1733,7 +1733,7 @@ The **Merged Customers** table has the following columns:
 
 .. admonition:: Additional columns in the Merged Customers table
 
-   The **Merged Customers** table contains additional columns that help you understand how and why customer profile values are present in the **Merged Customers** table.
+   The **Merged Customers** table has additional columns that help you understand how and why customer profile values are present in the **Merged Customers** table.
 
    These column names start with one of **Name**, **Address**, **Email**, **Phone**, **Birthday**, or **Gender**, and then are grouped as described in the following table. For example: **Name Completion**, **Name Datasource**, **Name PK**, **Name Priority**, and **Name Update DT**.
 
@@ -1807,7 +1807,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an email.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an email.
 
 .. data-tables-optin-status-email-not-source-of-truth-end
 
@@ -1815,7 +1815,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. note:: The **Email Opt Status** table represents every email address for which you have provided customer consent data to Amperity. There should be only one consent status by combination of email address, brand, region, or email program.
 
-   If you have multiple brands, regions or email programs, it is possible for the same email address to have more than one customer consent status.
+   If you have many brands, regions or email programs, it is possible for the same email address to have more than one customer consent status.
 
    If a brand, region, or email program does not exist, there should be only one customer consent status for each unique email address.
 
@@ -1896,7 +1896,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the SMS campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an SMS message.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an SMS message.
 
 .. data-tables-optin-status-sms-not-source-of-truth-end
 
@@ -1904,7 +1904,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. note:: The **SMS Opt Status** table represents every phone number for which you have provided customer consent data to Amperity. There should be only one consent status by combination of phone number, brand, region, or SMS program.
 
-   If you have multiple brands, regions or SMS programs, it is possible for the same phone number to have more than one customer consent status.
+   If you have many brands, regions or SMS programs, it is possible for the same phone number to have more than one customer consent status.
 
    If a brand, region, or SMS program does not exist, there should be only one customer consent status for each unique phone number.
 
@@ -2151,7 +2151,7 @@ Stitch BadValues
 
 .. data-tables-stitch-bad-values-start
 
-The **Stitch BadValues** table contains all of the values that were added to the bad-values blocklist.
+The **Stitch BadValues** table has all of the values that were added to the bad-values blocklist.
 
 .. data-tables-stitch-bad-values-end
 
@@ -2747,7 +2747,7 @@ Customer orders
 
 .. data-tables-transaction-attributes-extended-customer-orders-start
 
-Each record contains a subset of order data from a customers first, second, and latest order. Each set of attributes is prefixed by first, second, or latest, depending on the order data that is being summarized.
+Each record has a subset of order data from a customers first, second, and latest order. Each set of attributes is prefixed by first, second, or latest, depending on the order data that is being summarized.
 
 .. data-tables-transaction-attributes-extended-customer-orders-end
 
@@ -2835,7 +2835,7 @@ Date differences
 
 .. data-tables-transaction-attributes-extended-date-differences-start
 
-Each record contains three attributes that specify the number of days between certain events.
+Each record has three attributes that specify the number of days between certain events.
 
 .. data-tables-transaction-attributes-extended-date-differences-end
 
@@ -2880,7 +2880,7 @@ Time period rollups
 
 .. data-tables-transaction-attributes-extended-period-rollups-start
 
-Each record contains time period rollups of the customer's transaction history. The time periods used are lifetime, L12M (the 12 months of transaction history starting 12 months ago), LY12M (the 12 months of transaction history starting 24 months ago), and L30D (the last 30 days).
+Each record has time period rollups of the customer's transaction history. The time periods used are lifetime, L12M (the 12 months of transaction history starting 12 months ago), LY12M (the 12 months of transaction history starting 24 months ago), and L30D (the last 30 days).
 
 .. data-tables-transaction-attributes-extended-period-rollups-end
 
@@ -3277,7 +3277,7 @@ UID2
 
 .. data-tables-uid2-start
 
-The **UID2** table contains the results of UID2 token generation when enabled for your tenant.
+The **UID2** table has the results of UID2 token generation when enabled for your tenant.
 
 .. data-tables-uid2-end
 
@@ -4670,7 +4670,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        This field is often the primary key and associated with the **pk** semantic tag.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
+       .. note:: For data that has itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
 
        .. note::
 
@@ -4733,7 +4733,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
+       .. note:: For data that has itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 
@@ -5810,7 +5810,7 @@ The **Unified Transactions** table has the following columns:
           :start-after: .. term-fiscal-calendar-start
           :end-before: .. term-fiscal-calendar-end
 
-       The SQL template for the **Unified Transaction** table contains a series of fields for use with fiscal calendars. For example:
+       The SQL template for the **Unified Transaction** table has a series of fields for use with fiscal calendars. For example:
 
        * **Fiscal Year**
        * **Fiscal Quarter**
@@ -5957,7 +5957,7 @@ The **Unified Transactions** table has the following columns:
        This column is the primary key and must be associated with the **PK** semantic tag. Each unique order ID must:
 
        * Appear only once in the **Unified Transactions**.
-       * Match an order ID in the **Unified Itemized Transactions** table. This order ID might be associated to multiple items within a single transactions.
+       * Match an order ID in the **Unified Itemized Transactions** table. This order ID might be associated to many items within a single transactions.
 
        .. note::
 

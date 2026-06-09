@@ -75,7 +75,7 @@ Optimizely and PII data
 
 Optimizely terms of service prohibit PII data--names, social security numbers, email addresses, and similar data--from being collected by or sent to |destination-name| services for use with customer profiles or any other feature. It is important to ensure that queries and database exports from Amperity comply with requirements for using |destination-name| services.
 
-Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
+Because the data sent to |destination-name| has the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 
 If email addresses or other types of fields that contain PII must be provided, use :ref:`one-way SHA-256 hashing <sendto-optimizely-build-query-sha-256>` or :ref:`cast the value to a random unique identifier (UUID) <sendto-optimizely-build-query-cast-as-uuid>`.
 
@@ -235,7 +235,7 @@ List attributes
 
 .. sendto-optimizely-build-query-list-attributes-start
 
-A `list attributes <https://docs.developers.optimizely.com/web/docs/list-attributes>`__ |ext_link| targets users who are already part of a defined audience that exists in a downstream system that is not in |destination-name|. All the list attribute requires is a CSV file that contains unique IDs in a single column. This may be the Amperity ID or it may be some other unique ID. The ID that is set to the |destination-name| list attribute must be the ID that is required by the external downstream system.
+A `list attributes <https://docs.developers.optimizely.com/web/docs/list-attributes>`__ |ext_link| targets users who are already part of a defined audience that exists in a downstream system that is not in |destination-name|. All the list attribute requires is a CSV file that has unique IDs in a single column. This may be the Amperity ID or it may be some other unique ID. The ID that is set to the |destination-name| list attribute must be the ID that is required by the external downstream system.
 
 .. sendto-optimizely-build-query-list-attributes-end
 

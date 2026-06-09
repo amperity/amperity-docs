@@ -239,7 +239,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -599,7 +599,7 @@ When the business user has not agreed to Facebook terms, an error similar to the
 ::
 
    Permissions error: To create or edit an audience with an uploaded customer list,
-   please agree to the Custom Audience terms at
+ agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
 
 .. campaign-meta-ads-manager-workflow-actions-facebook-terms-end

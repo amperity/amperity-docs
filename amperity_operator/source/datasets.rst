@@ -49,7 +49,7 @@ Customer profiles
 
 .. datasets-customer-360-start
 
-A customer profile dataset contains a collection of unified customer profiles that your brand can use to build audiences that enable any marketing workflow.
+A customer profile dataset has a collection of unified customer profiles that your brand can use to build audiences that enable any marketing workflow.
 
 A customer profile dataset is most often represented by the **Customer 360** database in your Amperity tenant. This may be configured to :doc:`filter databases by brand <filtered_360_databases>`.
 
@@ -99,7 +99,7 @@ Stitched tables
 
 Stitch uses a patented identity resolution workflow to find the hidden connections in your brand's online and offline customer data. Stitch assigns each customer profile a unique identifier that remains stable over time, even when new and conflicting data is collected.
 
-A stitched dataset contains a collection of unified customer profiles that are maintained by Stitch. A stitched dataset provides the foundation for all of the datasets that your brand can build within Amperity. Tables within the stitched dataset are also referred to as "standard core tables".
+A stitched dataset has a collection of unified customer profiles that are maintained by Stitch. A stitched dataset provides the foundation for all of the datasets that your brand can build within Amperity. Tables within the stitched dataset are also referred to as "standard core tables".
 
 .. datasets-stitched-end
 
@@ -131,7 +131,7 @@ Custom core tables
 
 .. databases-stitched-custom-core-start
 
-Custom core tables are reusable across databases, including :doc:`filtered 360 databases <filtered_360_databases>`. Core tables store SQL logic that can be referenced by multiple databases, but can be adapted to provide database-specific logic as well. 
+Custom core tables are reusable across databases, including :doc:`filtered 360 databases <filtered_360_databases>`. Core tables store SQL logic that can be referenced by many databases, but can be adapted to provide database-specific logic as well. 
 
 For example, the **Customer Attributes** table typically requires customization to align features within that table to how your brand defines churn prevention status indicators, historical purchase lifecycles, and customer types. This table can be extended to support custom features, and each marketing unit may have different requirements.
 
