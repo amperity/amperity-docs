@@ -41,7 +41,7 @@ Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/p
 
 .. admonition:: Why are there two ways to send data to Attentive?
 
-   Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+   Amperity uses SFTP to manage audience segments and the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes. Use custom attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
 .. campaign-attentive-sftp-and-api-end
 

@@ -432,11 +432,13 @@ Attentive
 
 .. credential-attentive-start
 
-Attentive is an automation platform for email and SMS marketing. Use the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to extend customer profiles in Attentive with attributes from Amperity.
+Attentive is an automation platform for email and SMS marketing. Uses the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to extend customer profiles in Attentive with customer attributes from Amperity.
 
 Use the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage lists of customers.
 
 .. credential-attentive-end
+
+The API key must be associated with a custom app that has **Custom Attributes** and **Subscribers** set to **Write**. See `Create and manage custom apps <https://docs.attentive.com/docs/create-and-manage-custom-apps>`__ |ext_link| for details on updating app permissions.
 
 Attentive requires the following credentials:
 

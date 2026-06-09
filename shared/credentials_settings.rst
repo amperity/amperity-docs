@@ -658,6 +658,34 @@ The API key for your |destination-name| account.
 
 .. credential-attentive-api-key-end
 
+.. credential-attentive-api-key-scopes-start
+
+The API key must be associated with a custom app that has the following permissions:
+
+* **Custom Attributes**: Write
+* **Subscribers**: Write
+
+If these permissions are not set, any workflow that sends data to |destination-name| will fail with a 403 error.
+
+.. credential-attentive-api-key-scopes-end
+
+.. credential-attentive-api-key-update-permissions-start
+
+To update permissions for Amperity as an existing custom app in |destination-name|:
+
+#. Sign in to the Attentive dashboard.
+#. In the sidebar, click **Marketplace**.
+#. Open the **Built by you** tab.
+#. Select the custom app named "Amperity".
+
+   .. important:: Do not select "Amperity CAPI," "Amperity Events," or any similarly named app.
+
+#. Under **Permissions**, set **Custom Attributes** and **Subscribers** to **Write**, then click **Save**.
+
+See `Create and manage custom apps <https://docs.attentive.com/docs/create-and-manage-custom-apps>`__ |ext_link| in the Attentive documentation for more information.
+
+.. credential-attentive-api-key-update-permissions-end
+
 .. vale off
 
 **Hostname** SFTP
