@@ -106,7 +106,7 @@ For example:
      ,company AS "organization"
    FROM Merged_Customers mc
 
-You can use a **LEFT JOIN** to add parameters from the **Unified Transactions** table, such as the most recently purchased product and the date and time of that purchase, similar to:
+You can use a **LEFT JOIN** to add columns from the **Unified Transactions** table, such as the date of the most recent purchase and the product name:
 
 .. code-block:: sql
    :linenos:
@@ -117,7 +117,35 @@ You can use a **LEFT JOIN** to add parameters from the **Unified Transactions** 
    FROM Merged_Customers mc
    LEFT JOIN Unified_Transactions ut ON mc.amperity_id = ut.amperity_id
 
-where **last_event_date** is a built-in parameter and **product** is an example of sending a custom parameter to |destination-name|.
+Amperity maps query columns to three locations in the |destination-name| request. Named profile fields (``email``, ``first_name``, and so on) map to top-level attributes. Location fields (``address1``, ``city``, ``region``, and so on) are grouped under ``location``. Every other column — including ``last_event_date`` and ``product`` in this example — is sent as a key-value pair inside ``properties``:
+
+.. code-block:: json
+
+   {
+     "data": {
+       "type": "profile",
+       "attributes": {
+         "external_id": "db8a6ecd1de3e85e",
+         "first_name": "John",
+         "last_name": "Doe",
+         "email": "j.doe@example.com",
+         "phone_number": "+12061234567",
+         "organization": "Acme Corp",
+         "location": {
+           "address1": "123 Main St",
+           "address2": "Apt 4B",
+           "city": "Seattle",
+           "region": "WA",
+           "zip": "98101",
+           "country": "US"
+         },
+         "properties": {
+           "last_event_date": "2024-11-15",
+           "product": "Coffee Maker"
+         }
+       }
+     }
+   }
 
 .. important:: This option requires the **Use full profile to update list** setting to be enabled in the data template used to send query results to |destination-name|.
 

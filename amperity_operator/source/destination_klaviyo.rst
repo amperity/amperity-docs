@@ -496,11 +496,27 @@ Customer profile parameters
 
 .. destination-klaviyo-customer-profile-parameters-start
 
-The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties as key-value pairs to represent events.
+Amperity sends customer profile data to |destination-name| using the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint. Column names in the query determine how data is mapped in the request:
 
-Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
 
-The list of customer profile parameters supported by |destination-name| are described in the following table. Parameters are listed alphabetically, but may be returned in any order.
+   * - Field type
+     - Description
+
+   * - **Profile fields**
+     - Standard |destination-name| attributes sent directly to the ``attributes`` object: ``email``, ``first_name``, ``last_name``, ``external_id``, ``phone_number``, ``organization``, ``title``, ``image``.
+
+   * - **Location fields**
+     - Address and geography columns grouped into a nested ``location`` object within ``attributes``: ``address1``, ``address2``, ``city``, ``country``, ``region``, ``zip``, ``latitude``, ``longitude``, ``timezone``, ``ip``.
+
+   * - **Custom properties**
+     - Any column that is not a named profile or location field is automatically grouped into the ``properties`` object within ``attributes`` as a key-value pair.
+
+Any column with a NULL value is added to the ``meta.patch_properties.unset`` array, which tells |destination-name| to explicitly clear that field on the profile rather than leave it unchanged.
+
+The following table describes the parameters supported by |destination-name|.
 
 .. list-table::
    :widths: 25 75
@@ -581,14 +597,6 @@ The list of customer profile parameters supported by |destination-name| are desc
        An IP address that is associated with this customer profile.
 
 
-   * - **last_event_date**
-     - **Optional**
-
-       A timestamp for an event that is associated with this customer profile.
-
-       For example, the date and time of the most recent transaction from your brand's website or store.
-
-
    * - **last_name**
      - **Optional**
 
@@ -634,9 +642,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **properties**
      - **Optional**
 
-       A series of custom properties represented as key-value pairs for additional data that your brand wants to associate with this customer profile.
-
-       For example, a store ID or the name (or SKU) of the most recent product purchase associated with this customer profile.
+       Any column in the query that is not a named profile or location field is automatically sent here as a key-value pair. Use this to associate custom data with a customer profile, such as a store ID, the date of the most recent transaction, or the name or SKU of the most recently purchased product.
 
 
    * - **region**
