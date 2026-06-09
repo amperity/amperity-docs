@@ -87,7 +87,7 @@ For those fields apply semantic tags like this:
 
 .. vale on
 
-Apply the same pattern every customer data source that is brought into Amperity that contains customer profiles to ensure that all customer profile data is evaluated by Stitch in exactly the same way.
+Apply the same pattern every customer data source that is brought into Amperity that has customer profiles to ensure that all customer profile data is evaluated by Stitch in exactly the same way.
 
 .. semantics-howitworks-end
 
@@ -253,7 +253,7 @@ The following table describes the semantic tags that are used for CCPA and GDPR 
 
        The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
 
-        .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+        .. note:: An address group has many fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
 
    * - **custom-key**
@@ -323,7 +323,7 @@ The following table describes recommended patterns to use when defining custom s
 
        A loyalty ID may be associated with a customer key (**ck**) or a foreign key, but otherwise follows all patterns associated with PII semantics. For example: **fk-loyalty-id**
 
-       .. tip:: Use additional custom semantic tags when the data contains more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data contains a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
+       .. tip:: Use additional custom semantic tags when the data has more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data has a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
 
    * - **PII**
      - All custom semantics that are associated with transactions should be prefixed with the PII semantic to which the custom semantic is most closely associated. For example: **email-personal** and **email-work** are most closely associated with the **email** semantic.
@@ -401,7 +401,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
    .. caution:: The data volume for email events data can be very large. Talk with your Amperity representative before applying email events semantic tags to raw email events data.
 
-#. Use :ref:`email summary <semantics-email-summary>` semantic tags when data is aggregated prior to sending it to Amperity.
+#. Use :ref:`email summary <semantics-email-summary>` semantic tags when data is aggregated before sending it to Amperity.
 
 .. semantics-email-end
 
@@ -423,7 +423,7 @@ Apply email event semantic tags to data sources that contain data for raw email 
 
 .. semantics-email-events-important-start
 
-.. important:: Email events semantic tags should only be applied to data sources that provide at least 15 months of raw email events data. The storage requirements for this type of data can be significant. Talk with your Amperity representative about your downstream use cases prior to applying email events semantic tags to raw email events data sources.
+.. important:: Email events semantic tags should only be applied to data sources that provide at least 15 months of raw email events data. The storage requirements for this type of data can be significant. Talk with your Amperity representative about your downstream use cases before applying email events semantic tags to raw email events data sources.
 
 .. semantics-email-events-important-end
 
@@ -774,7 +774,7 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that has customer records automatically assigns the **pk** semantic to any field identified as a primary key.
 
 For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
 
@@ -875,9 +875,9 @@ Use foreign keys to define meaningful connections across all types of data sourc
    This relationship exists when three conditions are met:
 
    * Records may have **NULL** foreign keys.
-   * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
-   * There may be multiple foreign keys per Amperity ID.
-   * There should not be multiple Amperity IDs per foreign key.
+   * There may be many foreign keys in the data source, but there may not be duplicate foreign keys.
+   * There may be many foreign keys per Amperity ID.
+   * There should not be many Amperity IDs per foreign key.
 
    #. At least one source table with customer profile semantic tags is made available to Stitch **and** a foreign key is applied to at least one field in that table.
 
@@ -925,7 +925,7 @@ Primary keys (pk)
 
 .. semantics-key-primary-caution-start
 
-.. caution:: Amperity allows assignment of the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
+.. caution:: Amperity allows assignment of the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that has events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
 
    A domain table can have only one primary key. When the **pk** semantic tag is applied to more than one field in the **Feed Editor**, those values are concatenated into a primary key, which is stored in the **_pk** field in the domain table. You should limit the number of fields to which the **pk** semantic tag is applied.
 
@@ -1403,7 +1403,7 @@ The following table lists the tags available to this semantic group (with requir
      - Description
    * - **brand**
      - String
-     - |checkmark-recommended| **Recommended** (when your tenant has data for multiple brands).
+     - |checkmark-recommended| **Recommended** (when your tenant has data for many brands).
 
        The brand to which the opt-in status applies.
 
@@ -1476,7 +1476,7 @@ The following table lists the tags available to this semantic group (with requir
      - Description
    * - **brand**
      - String
-     - |checkmark-recommended| **Recommended** (when your tenant has data for multiple brands).
+     - |checkmark-recommended| **Recommended** (when your tenant has data for many brands).
 
        The brand to which the opt-in status applies.
 
@@ -1857,7 +1857,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-generational-suffix-start
           :end-before: .. term-generational-suffix-end
 
-       .. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that contains the suffix separated from the first and last names.
+       .. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that has the suffix separated from the first and last names.
 
    * - **given-name**
      - String
@@ -2448,7 +2448,7 @@ The following table lists the tags available to this semantic group (with requir
 
           Fields to which **txn-item/** product catalog semantic tags are applied will be built into the **Unified Itemized Transactions** table in your customer 360 database.
 
-       #. You may use **pc/** product catalog semantic tags in any data source that contains details about your product catalog. Fields to which the **pc/** product catalog semantic tags are applied will be built into the **Unified Product Catalog** table.
+       #. You may use **pc/** product catalog semantic tags in any data source that has details about your product catalog. Fields to which the **pc/** product catalog semantic tags are applied will be built into the **Unified Product Catalog** table.
 
        .. important:: The names of the semantic tags that are available for product catalogs are identical. For example: "product-brand", "product-category", and "product-gender". The difference is the prefix that you choose to use and the pattern your tenant chooses for defining your product catalog within Amperity. You should determine which pattern you want to use early in your configuration and deployment process. Talk with your Amperity representative if you have questions about the best ways to approach this within your tenant.
 
@@ -2468,7 +2468,7 @@ The following table lists the tags available to this semantic group (with requir
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID must appear only once per order ID in the **Unified Itemized Transactions** table. Multiple instances of the same product must be added to the item quantity in the same row.
+       For data that has itemized transactions, where a single transaction includes more than one of the same product, the product ID must appear only once per order ID in the **Unified Itemized Transactions** table. Multiple instances of the same product must be added to the item quantity in the same row.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 

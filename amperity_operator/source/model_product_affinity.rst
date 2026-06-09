@@ -220,7 +220,7 @@ Build a product affinity model
 
 .. model-product-affinity-build-start
 
-You can build a product affinity model from the **Customer 360** page. Any database that contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling.
+You can build a product affinity model from the **Customer 360** page. Any database that has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling.
 
 .. model-product-affinity-build-end
 

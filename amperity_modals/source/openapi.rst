@@ -142,7 +142,7 @@ Pagination in responses
 
 .. TODO: This is NOT single-sourced. The docs page has more content about request pagination and this is a paraphrased version of the key details.
 
-A response will include the value of the next page as the value of the **next_token** parameter. You may use this value in a subsequent request to return the next page of results. When the value for **next_token** is empty, the last page in the results set has been returned.
+A response will include the value of the next page as the value of the **next_token** parameter. You may use this value in the next request to return the next page of results. When the value for **next_token** is empty, the last page in the results set has been returned.
 
 
 Rate limits

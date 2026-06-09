@@ -108,7 +108,7 @@ Get details
           :class: no-scaled-link
      - |destination-name| has the following additional requirements:
 
-       #. Data that contains PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
+       #. Data that has PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
        #. If an escape character is not specified *and* quote mode is set to "None" (as required by Infutor) this may result in unescaped, unquoted files.
        #. Quotations must be removed from files.
 

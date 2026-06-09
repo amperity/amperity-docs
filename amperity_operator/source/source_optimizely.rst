@@ -112,7 +112,7 @@ Optimizely S3 partitions
 
 .. source-optimizely-s3-partitions-start
 
-Enriched events exports are exported to a bucket named **optimizely-events-data** that contains two partitions: decisions and conversions.
+Enriched events exports are exported to a bucket named **optimizely-events-data** that has two partitions: decisions and conversions.
 
 The paths to these partitions are similar to:
 

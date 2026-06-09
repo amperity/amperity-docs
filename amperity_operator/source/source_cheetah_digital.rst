@@ -62,7 +62,9 @@ Configure |source-name| to use `SFTP <https://docs.cheetahces.com/en-us/messagin
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - For an **FTP Profile**: a username and password is required, along with the remote folder to which Amperity sends data.
+     - **FTP Profile**
+
+       A username and password is required, along with the remote folder to which Amperity sends data.
 
        .. note:: The hostname for the SFTP server in |source-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |source-name| username, separated by `` - `` (space, hyphen, space). For example: ``sftp://acme - justinc``.
 

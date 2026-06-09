@@ -717,7 +717,7 @@ Revoke access tokens
 
 You may revoke access tokens associated with an API key by opening the **Actions** menu for an API key, and then choosing **Revoke tokens**. Do one of the following:
 
-#. Revoke all tokens that were issued prior to the last rotation.
+#. Revoke all tokens that were issued before the last rotation.
 #. Revoke all tokens immediately.
 
 The selected action cannot be undone.
@@ -761,7 +761,7 @@ The selected action cannot be undone.
           :align: left
           :class: no-scaled-link
 
-       Use **Revoke old tokens** to revoke only tokens that were created prior to the last rotation.
+       Use **Revoke old tokens** to revoke only tokens that were created before the last rotation.
 
        Use **Revoke all tokens** to immediately revoke all tokens.
 

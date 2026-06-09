@@ -55,7 +55,7 @@ The following table lists the operators that are available to this attribute.
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**

@@ -364,7 +364,7 @@ Before you can create inbound sharing between Snowflake and Amperity you need to
 
           Open the account selector and browse to the account for which Amperity Bridge will be configured. Hover over the account name to view additional details, and then copy the account identifier.
 
-          The copied identifier contains both organization and account name in the format `organization-name.account-name`.
+          The copied identifier has both organization and account name in the format `organization-name.account-name`.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -548,7 +548,7 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - azure_westeurope
      - KV75952
 
-.. important:: If the account ID / region ID pair does not exist in your stack please contact Amperity Support.
+.. important:: If the account ID / region ID pair does not exist in your stack contact Amperity Support.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-account-locator-end
 
@@ -736,7 +736,7 @@ Before you can create outbound sharing between Snowflake and Amperity you need t
 
           Open the account selector and browse to the account for which Amperity Bridge will be configured. Hover over the account name to view additional details, and then copy the account identifier.
 
-          The copied identifier contains both organization and account name in the format `organization-name.account-name`.
+          The copied identifier has both organization and account name in the format `organization-name.account-name`.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png

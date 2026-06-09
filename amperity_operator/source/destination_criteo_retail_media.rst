@@ -137,7 +137,7 @@ Configure credentials
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo before configuring OAuth in Amperity.
 
 **To configure OAuth**
 

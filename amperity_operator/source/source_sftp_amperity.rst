@@ -33,7 +33,7 @@ Pull to Amperity SFTP
 
 Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
 
-The SFTP site is provisioned by an Amperity administrator after the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity uses |ext_snappass| to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
+The SFTP site is provisioned by an Amperity administrator after the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity uses |ext_snappass| to send you the connection details. If you wish to use RSA key-based authentication, provide the public key to your Amperity administrator when requesting SFTP access.
 
 .. about-tenant-sftp-end
 
@@ -45,7 +45,7 @@ Once provisioned, you may configure the SFTP site to support any desired SFTP wo
    :start-after: .. formats-sftp-data-retention-start
    :end-before: .. formats-sftp-data-retention-end
 
-The hostname for the SFTP site is always |sftp-hostname|. Some older tenants may use the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
+The hostname for the SFTP site is always |sftp-hostname|. Some older tenants may use the legacy address ``sftp.amperity.com``, if so, contact your Amperity administrator about migrating.
 
 .. about-tenant-sftp-provisioned-end
 

@@ -175,7 +175,7 @@ Add empty database
 
 .. databases-manage-add-empty-start
 
-An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
+An empty database has no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
 
 .. databases-manage-add-empty-end
 
@@ -197,7 +197,7 @@ Add database from template
 
 .. databases-manage-add-from-template-start
 
-Use the :ref:`Customer 360 <databases-manage-add-from-template-c360>`, :ref:`Passthrough <databases-manage-add-from-template-passthrough>`, or :ref:`Stitch QA <databases-manage-add-from-template-stitch-qa>` database templates to add a database that contains the set of tables for use with that type of database.
+Use the :ref:`Customer 360 <databases-manage-add-from-template-c360>`, :ref:`Passthrough <databases-manage-add-from-template-passthrough>`, or :ref:`Stitch QA <databases-manage-add-from-template-stitch-qa>` database templates to add a database that has the set of tables for use with that type of database.
 
 .. databases-manage-add-from-template-end
 
@@ -289,20 +289,20 @@ Use this database to :doc:`validate the quality of Stitch output <qa_stitch>`.
 .. databases-manage-add-from-template-stitch-qa-end
 
 
-.. _databases-multiple:
+.. _databases-many:
 
-Use multiple databases
+Use many databases
 --------------------------------------------------
 
 .. databases-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each customer 360 database contains a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each customer 360 database has a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
 
 .. databases-multiple-end
 
 .. image:: ../../images/use-cases-c360-multiple-alt.png
    :width: 600 px
-   :alt: Customer 360 tab, multiple databases, alternate
+   :alt: Customer 360 tab, many databases, alternate
    :align: left
    :class: no-scaled-link
 
@@ -314,7 +314,7 @@ Apply flexible merge rules
 
 .. databases-flexible-merge-rules-start
 
-Amperity allows multiple databases to exist within the same tenant. Each database may define its own unique set of rules for merging customer profile data. These merge rules are configured using Spark SQL and each field within the merge rules can be customized.
+Amperity allows many databases to exist within the same tenant. Each database may define its own unique set of rules for merging customer profile data. These merge rules are configured using Spark SQL and each field within the merge rules can be customized.
 
 For example, a tenant may have data sources from call centers, online transactions, and email platforms that may contain slightly different sets of customer profile data:
 
@@ -324,7 +324,7 @@ For example, a tenant may have data sources from call centers, online transactio
    :align: left
    :class: no-scaled-link
 
-After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support multiple customer 360 databases.
+After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support many customer 360 databases.
 
 * Your operations teams can combine prioritizing the most common values for each customer with deterministic matching
 * Your email marketing team can combine prioritizing customer profile values from your email platform with probabilistic matching
@@ -362,7 +362,7 @@ Add as passthrough
 
 .. databases-tables-add-passthrough-start
 
-If a table already contains an Amperity ID, you may use a passthrough table.
+If a table already has an Amperity ID, you may use a passthrough table.
 
 .. databases-tables-add-passthrough-end
 
@@ -515,7 +515,7 @@ The SQL editor shows a validation alert when syntax is detected in your query th
 
 .. admonition:: What should I do if my query has a validation alert?
 
-   A validation alert does not mean your SQL is invalid. If your query has a validation alert, review the alert, review the SQL, and consider alternates that can help you avoid performance issues or avoid the situation the alert describes. You may activate a query even when it contains a validation alert.
+   A validation alert does not mean your SQL is invalid. If your query has a validation alert, review the alert, review the SQL, and consider alternates that can help you avoid performance issues or avoid the situation the alert describes. You may activate a query even when it has a validation alert.
 
 Examples of validation alerts include:
 
@@ -652,7 +652,7 @@ A database may be configured to export one or more tables or even the entire dat
 #. From the **Database** dropdown, select a database.
 #. From the **Entities** list, select one or more database tables to add to the database export.
 
-   For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
+   For a single table, click the table. For many tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
 #. Click **Activate**.
 #. Assign the database export to an orchestration.

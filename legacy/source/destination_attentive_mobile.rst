@@ -29,7 +29,7 @@ Send data to Attentive
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_attentive_mobile.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_attentive_mobile.html>`__ |ext_link|.
 
 .. vale on
 
@@ -68,7 +68,7 @@ Amperity can manage audiences in |destination-name| and provide attributes about
 
 An |destination-name| destination works like this:
 
-#. Use a query or segment to a) build a list of subscribers for whom you have opt-in/out data, and then b) build a segment that contains a list of customers to whom you want to send email or SMS messages.
+#. Use a query or segment to a) build a list of subscribers for whom you have opt-in/out data, and then b) build a segment that has a list of customers to whom you want to send email or SMS messages.
 
 #. Configure destinations that manage :ref:`audience segments <destination-attentive-segments>`, and then provide :ref:`attributes about the customers <destination-attentive-attributes>` who belong to those audiences.
 

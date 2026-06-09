@@ -62,7 +62,7 @@ The **Customer Attributes** table has a small number of specific requirements, w
 The **Customer Attributes** table has the following requirements:
 
 * PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain the following types of customer records: email addresses, phone numbers, and physical addresses.
-* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide multiple email addresses or phone numbers.
+* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide many email addresses or phone numbers.
 * The **Merged Customers** table is extended to :doc:`exclude common or "bad" email, phone, or physical address values <blocklist_bad_values>`.
 
 .. table-customer-attributes-start-here-requirements-end

@@ -102,7 +102,7 @@ The |source-name| data source requires the following configuration details:
           :class: no-scaled-link
      - The remote folder from which Amperity will pull data.
 
-       Review the `data exchange <https://help.emarsys.com/hc/en-us/articles/213705529-Data-exchange-resources>`__ |ext_link| documentation to ensure that data exported from |source-name| contains the data fields you want to use with Amperity.
+       Review the `data exchange <https://help.emarsys.com/hc/en-us/articles/213705529-Data-exchange-resources>`__ |ext_link| documentation to ensure that data exported from |source-name| has the data fields you want to use with Amperity.
 
        .. important:: A "/" (forward slash) must be used as the first character for this value. For example: "/folder/name".
 

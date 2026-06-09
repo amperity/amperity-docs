@@ -92,7 +92,7 @@ Build an event propensity model
 
 .. model-event-propensity-configure-start
 
-You can build an event propensity model from the **Customer 360** page. Each database that is a "customer 360" database and contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
+You can build an event propensity model from the **Customer 360** page. Each database that is a "customer 360" database and has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
 
 .. model-event-propensity-configure-end
 
@@ -134,7 +134,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
      - Configure the target event.
 
        #. From the **Target event table** dropdown, select the table in which the event for which event propensity modeling will be built.
-       #. From the **Target event date** dropdown, select the field that contains the date on which the target event occurs.
+       #. From the **Target event date** dropdown, select the field that has the date on which the target event occurs.
        #. If this event is a repeating event enable the **Repeat event** checkbox.
 
 
@@ -162,7 +162,7 @@ You can build an event propensity model from the **Customer 360** page. Each dat
      - Configure revenue events.
 
        #. From the **Revenue event table** dropdown, select the table in which revenue-generating events are located.
-       #. From the **Revenue event date** dropdown, select the field that contains the date on which the revenue-generating event occurs.
+       #. From the **Revenue event date** dropdown, select the field that has the date on which the revenue-generating event occurs.
        #. From the **Revenue event realization date** dropdown, select the field that differentiates between revenue generation and realization. For example, a hotel booking (generation) and a hotel stay (realization).
        #. From the **Event revenue** dropdown, select the field that captures the revenue from the realized event date.
 

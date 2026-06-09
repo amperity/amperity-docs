@@ -159,7 +159,7 @@ The following sections describe the steps you will follow to set up and configur
 
           If brand names or region names are specific to sub-audiences, consider using the brand names within the treatment group names.
 
-          Add details like "historical", "daily", or "test" as appropriate. Be sure to include the region name if you have multiple regions.
+          Add details like "historical", "daily", or "test" as appropriate. Be sure to include the region name if you have many regions.
 
           Some examples:
 

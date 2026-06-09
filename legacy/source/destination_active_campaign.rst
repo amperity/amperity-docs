@@ -23,7 +23,7 @@ Send data to ActiveCampaign
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_active_campaign.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_active_campaign.html>`__ |ext_link|.
 
 .. vale on
 
@@ -332,7 +332,7 @@ Add data template
           * - **List name**
             - The name of an email list in |destination-name|. This can be the name of an existing list or a new list.
           * - **Enable verbose logs**
-            - Select this option to return a log file that contains a list of email addresses that were not accepted by |destination-name|.
+            - Select this option to return a log file that has a list of email addresses that were not accepted by |destination-name|.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px

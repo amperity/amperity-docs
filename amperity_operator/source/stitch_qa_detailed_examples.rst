@@ -167,7 +167,7 @@ Configure query
 #. Update the list of fields for filtered examples for the list of semantic values you want included in the results.
 
    For example, to include **email**, **given_name**, **address**, and **phone**:
-   
+
    .. code-block:: sql
       :linenos:
       :emphasize-lines: 3,4,5,6

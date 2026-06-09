@@ -356,7 +356,7 @@ Microsoft Azure may be configured to use a shared access signature (SAS) to gran
 
    A shared access signature (SAS) grants limited access to storage resources in Microsoft Azure. A SAS may be constrained to access only specific storage resources, have specific permissions to those resources, and be configured to expire after a set amount of time. Every SAS is signed with a key.
 
-   The SAS is appended to the URI for a storage resource. The combined URI and SAS become a token that contains a set of query parameters that indiciate how a storage resource may be accessed. Use the SAS token to configure Amperity credentials to storage resources in Microsoft Azure.
+   The SAS is appended to the URI for a storage resource. The combined URI and SAS become a token that has a set of query parameters that indiciate how a storage resource may be accessed. Use the SAS token to configure Amperity credentials to storage resources in Microsoft Azure.
 
 .. workflow-actions-azure-sas-whatis-end
 
@@ -376,7 +376,7 @@ An SAS token may have invalid permissions for any of the following situations:
 
 .. workflow-actions-azure-sas-report-problem-start
 
-.. note:: If the shared access signature is provisioned by Amperity, please use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
+.. note:: If the shared access signature is provisioned by Amperity, use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
 
    The "Report a problem" option is available from the |fa-help-circle| menu in the top navigation.
 
@@ -421,7 +421,7 @@ The SFTP site at |sftp-hostname| is unavailable. This may be due to any of the f
 * The SFTP server does not have enough storage space.
 * Too many connection attempts are made to the SFTP server.
 
-.. note:: Amperity will make multiple attempts to connect to an SFTP server before showing this workflow error.
+.. note:: Amperity will make many attempts to connect to an SFTP server before showing this workflow error.
 
 To resolve this error, do any of the following.
 

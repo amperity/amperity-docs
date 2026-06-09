@@ -209,11 +209,11 @@ You must upload the application code and any dependencies to AWS Lambda as a ZIP
 
          sh util/lambda-build.sh filename=application_name.py
 
-      This creates a ZIP file that contains the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
+      This creates a ZIP file that has the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code and any dependencies, and then click **Upload**.
+#. Find the ZIP file archive that has the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-webhook-manual-upload-function-end
@@ -473,7 +473,7 @@ Extend the AWS Lambda function
 
 .. destination-webhook-extend-function-start
 
-Amperity provides an open source toolkit that you can use as a reference when building AWS Lambda functions. This toolkit contains example AWS Lambda functions, an AWS Lambda function you can use as a template, a helper class, and a tools that help you set up and configure your local environment.
+Amperity provides an open source toolkit that you can use as a reference when building AWS Lambda functions. This toolkit has example AWS Lambda functions, an AWS Lambda function you can use as a template, a helper class, and a tools that help you set up and configure your local environment.
 
 **To extend the AWS Lambda function using the Amperity open source toolkit**
 

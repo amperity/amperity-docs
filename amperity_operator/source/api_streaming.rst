@@ -255,7 +255,7 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
 
 .. streaming-ingest-rest-api-stream-schema-important-start
 
-.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have multiple data schemas on a single stream, instead use multiple streams to support multiple schemas.
+.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have many data schemas on a single stream, instead use many streams to support many schemas.
 
 .. streaming-ingest-rest-api-stream-schema-important-end
 
@@ -623,7 +623,7 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 #. Enter the name of the courier. For example: "|source-name|".
-#. A courier that pulls data that was streamed to Amperity by the Streaming API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming API".
+#. A courier that pulls data that was streamed to Amperity by the Streaming API does not require a credential even though the configuration steps will ask you to add a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming API".
 
 #. Under **Streaming Ingest Settings**, add the Streaming Ingest endpoint ID which is available from the **Stream ID** column in the **Sources** page.
 
@@ -633,9 +633,9 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 
    Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
 
-#. Set the load operations to a string that is incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
+#. Set the load operations to a string that is wrong, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use a wrong string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
    .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 

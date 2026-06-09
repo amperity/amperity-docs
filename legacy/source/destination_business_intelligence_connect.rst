@@ -555,7 +555,7 @@ Connect BI tools
 
 .. destination-bic-connect-to-bi-tools-important-start
 
-.. important:: Please refer to the documentation for individual BI tools for troubleshooting connectivity issues with |bic| and to Snowflake documentation for troubleshooting connectivity issues related to the Snowflake ODBC or JDBC drivers.
+.. important:: Refer to the documentation for individual BI tools for troubleshooting connectivity issues with |bic| and to Snowflake documentation for troubleshooting connectivity issues related to the Snowflake ODBC or JDBC drivers.
 
 .. destination-bic-connect-to-bi-tools-important-end
 

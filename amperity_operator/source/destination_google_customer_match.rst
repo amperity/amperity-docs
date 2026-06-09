@@ -76,7 +76,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Customer Match" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Google Customer Match" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -126,7 +126,7 @@ Configure credentials
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Google Customer Match" *must* be completed within Google prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google before configuring OAuth in Amperity.
 
 **To configure OAuth for Google Customer Match**
 

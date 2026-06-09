@@ -266,7 +266,7 @@ Hash profile data
 
 .. _domain-data-reshape-example-parse-multiple-separators:
 
-Parse multiple separators
+Parse many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst

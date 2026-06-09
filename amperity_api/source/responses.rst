@@ -96,10 +96,10 @@ For example:
      - A request did not contain a required parameter or has an invalid parameter.
 
    * - **401 Authentication Required**
-     - A request contains invalid authentication, an invalid version identifier, or an expired token.
+     - A request has invalid authentication, an invalid version identifier, or an expired token.
 
    * - **403 Not Authorized**
-     - A request contains valid authentication, but does have permission to perform the requested action.
+     - A request has valid authentication, but does have permission to perform the requested action.
 
    * - **404 Not Found**
      - A request was made to a resource that does not exist.

@@ -92,7 +92,7 @@ It can be hard to make a connection and the window of opportunity is often short
 
 The most important step to identify your one-time buyers is to consolidate all of your customer and transaction data into one location, including across marketing channels, purchase locations, including points of sale, online, *and* in-store, and all of your brands.
 
-.. important:: One-time buyers can be harder to spot when looking at single-channel purchase patterns. For example: someone might look like a one-time buyer in a store, but have purchased online multiple times.
+.. important:: One-time buyers can be harder to spot when looking at single-channel purchase patterns. For example: someone might look like a one-time buyer in a store, but have purchased online many times.
 
 Adding data from your email service provider, such as clicks, opens, and sends, helps ensure that you know how to contact your customers during your one-time buyer campaign.
 

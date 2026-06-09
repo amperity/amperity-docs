@@ -47,7 +47,7 @@ Configure destinations for DV360
    * **Display Video Advertiser** An individual brand or business that runs programmatic
      campaigns directly within DV360.
    * **Display Video Partner** An agency, trading desk, or large advertiser that manages
-     programmatic campaigns across multiple advertiser accounts under a single partner account.
+     programmatic campaigns across many advertiser accounts under a single partner account.
 
    Use Amperity to build high-value audience segments from first-party data, and then send those
    segments to DV360 to activate them in programmatic advertising campaigns.
@@ -91,7 +91,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -199,7 +199,7 @@ Configure credentials
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Google Customer Match" *must* be completed within Google prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google before configuring OAuth in Amperity.
 
 **To configure OAuth for DV360**
 
@@ -419,7 +419,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -522,7 +522,7 @@ Mobile Device ID Matching
 
 .. destination-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

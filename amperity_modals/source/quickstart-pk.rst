@@ -16,7 +16,7 @@ After all of your source data is stitched together to form a single, unified cus
 Amperity ID stability
 ==================================================
 
-Stitch depends on primary keys being defined for each source table in order to keep track of which source rows are linked to each unified customer profile after ID resolution.
+Stitch depends on primary keys being defined for each source table to keep track of which source rows are linked to each unified customer profile after ID resolution.
 
 When a source row changes, such as when a user adds a secondary phone number or changes their account preferences, Stitch wants to assign the same Amperity ID to that customer instead of creating a new one.
 

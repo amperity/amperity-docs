@@ -152,9 +152,9 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail seven.
           :align: center
           :class: no-scaled-link
-     - Conversions data pulled from |source-name| has a field named **message_text** that contains the lines of an SMS message using **\n** to separate each line of the message.
+     - Conversions data pulled from |source-name| has a field named **message_text** that has the lines of an SMS message using **\n** to separate each line of the message.
 
-       Remove the **\n** prior to pulling this data to Amperity.
+       Remove the **\n** before pulling this data to Amperity.
 
        For example:
 

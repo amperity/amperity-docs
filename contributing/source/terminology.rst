@@ -61,7 +61,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-datasheet:
 
 **data sheet** vs. **datasheet**
-   Use **datasheet** as a single word to describe a deliverable that contains technical information for customers about an |company_name| product or scenario.
+   Use **datasheet** as a single word to describe a deliverable that has technical information for customers about an |company_name| product or scenario.
 
 
 .. _term-datasource:

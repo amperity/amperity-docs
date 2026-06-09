@@ -170,7 +170,7 @@ The following attributes are available from the **Customer Attributes** table.
      - A flag that indicates if a customer can be contacted by phone.
 
    * - **Customer classifications**
-     - A string that contains all of the classifications for a customer. For example: ``"is reseller, is outlier"`` or ``"is test account"``. A value of ``" "`` indicates that all classifications are false.
+     - A string that has all of the classifications for a customer. For example: ``"is reseller, is outlier"`` or ``"is test account"``. A value of ``" "`` indicates that all classifications are false.
 
    * - **Customer type**
      - The type of user: "purchaser" or "prospect". A purchaser has a historical revenue relationship with a brand. A prospect does not have a revenue relationship with a brand.

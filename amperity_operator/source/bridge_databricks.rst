@@ -445,7 +445,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
           :class: no-scaled-link
      - Open sharing uses token-based authentication.
 
-       The credentials file that contains the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who downloads the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>`.
+       The credentials file that has the token is available from an `activation link <https://docs.databricks.com/en/data-sharing/create-recipient.html#step-2-get-the-activation-link>`__ |ext_link|. Use a secure channel to share the activation link with the user who downloads the credentials file, and then :ref:`configure Amperity for inbound sharing <bridge-databricks-sync-with-amperity-add-bridge>`.
 
        .. important:: You can download the credential file only once. Recipients should treat the downloaded credential as a secret and must not share it outside of their organization. If you have concerns that a credential may have been handled insecurely, you can `rotate credentials <https://docs.databricks.com/en/data-sharing/create-recipient.html#security-considerations-for-tokens>`__ |ext_link| at any time.
 

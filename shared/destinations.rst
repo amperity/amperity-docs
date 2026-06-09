@@ -215,7 +215,7 @@ Configure Amperity to send data to |destination-name| using the |destination-api
 
 .. destinations-add-destinations-api-oauth-reminder-start
 
-.. warning:: Amperity must be authorized to send data to your |destination-name| account prior to configuring the destination.
+.. warning:: Amperity must be authorized to send data to your |destination-name| account before configuring the destination.
 
 .. destinations-add-destinations-api-oauth-reminder-end
 
@@ -442,7 +442,7 @@ Complete the following **SFTP Settings**:
 
 * The path to the **Remote folder**.
 
-   .. tip:: If the path to the remote folder contains a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
+   .. tip:: If the path to the remote folder has a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
 * The **File format**. Select the file format--|file-format|--from the dropdown list.
 

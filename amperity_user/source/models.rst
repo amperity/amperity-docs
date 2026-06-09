@@ -26,7 +26,7 @@ Predictive models
 
 .. note:: Predictive models require at least four years of historical data (five years or more is recommended). You should have at least 100,000 customer transactions on an annual basis, with at least a 10% retention rate.
 
-   The following tables must be configured in your customer 360 database prior to running predictive models:
+   The following tables must be configured in your customer 360 database before running predictive models:
 
    #. **Customer 360**
    #. **Merged Customers**

@@ -26,7 +26,7 @@ Send offline conversions to Snapchat
 
 .. events-snapchat-overview-start
 
-Upload a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to |destination-name|.
+Upload a CSV file that has `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to |destination-name|.
 
 .. events-snapchat-overview-end
 

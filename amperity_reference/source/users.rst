@@ -192,7 +192,7 @@ Users must choose one of the following options to enroll in MFA:
 * A one-time password via authenticator app
 * A security key
 
-Once initial enrollment in multi-factor authentication is completed, subsequent logins can also use email and recovery codes.
+Once initial enrollment in multi-factor authentication is completed, later logins can also use email and recovery codes.
 
 .. settings-users-multifactor-authentication-end
 

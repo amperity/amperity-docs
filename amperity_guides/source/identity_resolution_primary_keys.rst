@@ -19,7 +19,7 @@ Select primary keys
 
 .. identity-resolution-03-primary-keys-start
 
-Stable and unique primary keys are crucial for unified customer profiles and for linking rows in source tables to rows in unified customer profiles. Stitch depends on well-defined primary keys being defined for each source table in order to keep track of which source rows are linked to each unified customer profile after ID resolution.
+Stable and unique primary keys are crucial for unified customer profiles and for linking rows in source tables to rows in unified customer profiles. Stitch depends on well-defined primary keys being defined for each source table to keep track of which source rows are linked to each unified customer profile after ID resolution.
 
 When a source row changes, such as when a user adds a secondary phone number or changes their account preferences, and as long as the customer profile remains stable, Stitch will assign the same Amperity ID to that customer profile instead of creating a new Amperity ID.
 

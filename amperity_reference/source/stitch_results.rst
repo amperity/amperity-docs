@@ -290,7 +290,7 @@ The **Semantics** link at the top of the **Stitch** page opens a dialog box that
 .. stitch-explore-semantics-steps-start
 
 #. From the **Stitch** tab, click the **Semantics** link. This opens the **Stitch Tools** dialog box.
-#. Each table that contains stitched records is listed in the dialog box.
+#. Each table that has stitched records is listed in the dialog box.
 #. For each table, a list of semantic names, their types, and the fields to which they are associated is listed.
 #. When finished, click **Close**.
 
@@ -496,7 +496,7 @@ This dialog box identifies the tenant, the time at which the job started, the ID
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 
-The table contains a row for each data source that was made available to this Stitch run, along with columns for each row that show:
+The table has a row for each data source that was made available to this Stitch run, along with columns for each row that show:
 
 * The number of Amperity IDs in the current Stitch run.
 * The number of Amperity IDs in the previous Stitch run.

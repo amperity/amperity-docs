@@ -83,14 +83,14 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
      - String
      - Optional. May be used instead of **external_id**. The primary email address for the customer record. Zendesk uses the **email** field to identify users within Zendesk by default. You may use the **external_id** field to provide the Amperity ID to Zendesk, after which you may use the Amperity ID within Zendesk to identify a user.
 
-       When the **email** field is present and **external_id** is not present, multiple records orchestrated with the same email address are treated as updates to the same user.
+       When the **email** field is present and **external_id** is not present, many records orchestrated with the same email address are treated as updates to the same user.
 
        .. tip:: Use this field in conjunction with the **verified** field to define when email address updates are made to a customer's primary or secondary email address.
    * - **external_id**
      - String
      - Optional. Should be used instead of **email**. This field should be associated with the Amperity ID.
 
-       When **external_id** field is provided, it takes precedence over **email** and becomes the field Zendesk uses to identify users. After the creation of a user with a given **external_id**, subsequent requests with the same **external_id** are treated as updates and, in the presence of the same **external_id** and different **email** values, additional email addresses are added to the same user as secondary email addresses.
+       When **external_id** field is provided, it takes precedence over **email** and becomes the field Zendesk uses to identify users. After the creation of a user with a given **external_id**, later requests with the same **external_id** are treated as updates and, in the presence of the same **external_id** and different **email** values, additional email addresses are added to the same user as secondary email addresses.
 
        .. tip:: Zendesk requires one of **email** or **external_id**, but is designed to *prefer* the **external_id** when it is available.
 
@@ -107,7 +107,7 @@ Results that are sent to Zendesk must be correctly mapped to the following attri
        .. note:: The Zendesk User API requires phone numbers to be compliant with the |ext_e164_format|.
    * - **user_fields.[field]**
      - String
-     - Optional. The Zendesk User API contains 37 fields, most of which are not required. The Zendesk User API supports custom fields as long as they are prefixed with **user_fields.** in the field name. For example: **user_fields.city**.
+     - Optional. The Zendesk User API has 37 fields, most of which are not required. The Zendesk User API supports custom fields as long as they are prefixed with **user_fields.** in the field name. For example: **user_fields.city**.
 
        .. note:: Fields submitted to Zendesk that are not built into the Zendesk User API or are not formatted as valid custom fields, including misspellings, are ignored.
 
@@ -167,7 +167,7 @@ The following query builds an attributes table that maps the Amperity ID to the 
 
 A user can build a visual query or visual segment by selecting fields from this attributes table, and then send the results to Zendesk with the correct mapping already applied.
 
-.. caution:: You cannot build an attributes table that contains custom fields. A column name may only contain alphanumeric characters (a-Z), underscores (_), and must start with an alphanumeric character. Use a query for results that send custom fields to Zendesk.
+.. caution:: You cannot build an attributes table that has custom fields. A column name may only contain alphanumeric characters (a-Z), underscores (_), and must start with an alphanumeric character. Use a query for results that send custom fields to Zendesk.
 
 .. sendto-zendesk-map-results-with-attributes-table-example-end
 
@@ -183,7 +183,7 @@ Use a query
 
 .. sendto-zendesk-build-query-example-minimum-start
 
-The following example is a query that contains only the fields that are required by Zendesk: a name, an email address, and the Amperity ID, which is used to identify the users in Zendesk:
+The following example is a query that has only the fields that are required by Zendesk: a name, an email address, and the Amperity ID, which is used to identify the users in Zendesk:
 
 .. code-block:: sql
    :linenos:

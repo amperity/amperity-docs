@@ -75,7 +75,7 @@ Infutor and PII data
 
 .. sendto-infutor-build-query-pii-start
 
-Data that is sent to Infutor primarily contains PII for use with building and maintaining enriched customer profile data for downstream workflows.
+Data that is sent to Infutor primarily has PII for use with building and maintaining enriched customer profile data for downstream workflows.
 
 In certain cases, it may be necessary to hash the data, such as for birthdates or for other individual-specific identifiers like a social security number (SSN).
 
@@ -167,7 +167,7 @@ Infutor field reference
 
 Map fields in Amperity to the following fields in Infutor. (The Amperity column lists the names of the fields as if they were identical to the semantic tag associated with that field.) Most Infutor fields allow alternate field names.
 
-.. important:: Talk to your Infutor Solutions Engineering representative about date of birth (DOB) or social security number (SSN) data prior to sending results with that data to Infutor.
+.. important:: Talk to your Infutor Solutions Engineering representative about date of birth (DOB) or social security number (SSN) data before sending results with that data to Infutor.
 
 .. list-table::
    :widths: 130 130 340
@@ -245,7 +245,7 @@ Map fields in Amperity to the following fields in Infutor. (The Amperity column 
 
    * - **phone-2**
      - **Phone2**
-     - An additional phone number that is created by phone ordinal semantic tags that are used when multiple phone numbers are available in the source data.
+     - An additional phone number that is created by phone ordinal semantic tags that are used when many phone numbers are available in the source data.
 
        Alternate field names: **Second Phone**, **Second Phone Number**, **Second_Phone**, **Second_Phone_Number**, and **Phone Number 2**.
 

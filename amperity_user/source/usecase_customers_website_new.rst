@@ -28,7 +28,7 @@ You can find customers who made their first purchase from your website within th
 
 .. usecase-customers-new-website-customers-howitworks-start
 
-The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across many channels.
 
 .. usecase-customers-new-website-customers-howitworks-end
 
@@ -108,7 +108,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

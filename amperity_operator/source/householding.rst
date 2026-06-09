@@ -49,7 +49,7 @@ How it works
 
 Address-based householding is built upon the results of the **Merged Customers** table. This enables address-based householding the ability to use the results of individual identity resolution that is available from the **Merged Customers** table.
 
-Apply the results of address-based householding to campaigns that rely on physical addresses, such as direct mail campaigns, to ensure that a single household gets a single piece of direct mail, even when multiple unique individuals reside within the same household.
+Apply the results of address-based householding to campaigns that rely on physical addresses, such as direct mail campaigns, to ensure that a single household gets a single piece of direct mail, even when many unique individuals reside within the same household.
 
 .. householding-address-based-end
 
@@ -98,7 +98,7 @@ Add the data asset
 
 .. householding-address-add-feed-start
 
-Address standardization starts as a feed that loads a CSV file that contains a list of address variations for state and street names.
+Address standardization starts as a feed that loads a CSV file that has a list of address variations for state and street names.
 
 .. householding-address-add-feed-end
 
@@ -210,7 +210,7 @@ The **Merged Households** table starts as a SQL template that defines how addres
 #. Click **Validate** to verify that the SQL query runs correctly.
 #. Make the table available to the visual **Segment Editor** by checking the box in the **Show in VSE?** column.
 
-   .. note:: The **Merged Households** table contains the Amperity ID and should be made available to the **Visual Segment Editor**.
+   .. note:: The **Merged Households** table has the Amperity ID and should be made available to the **Visual Segment Editor**.
 #. Click **Activate** to update the customer 360 database with your changes, and then run the customer 360 database to update the **Merged Households** table.
 
 .. householding-address-add-merged-households-table-steps-end

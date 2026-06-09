@@ -139,7 +139,7 @@ Combined RFM scores
 
 The RFM score for the customer is based on transactions that occurred within the last 12 months. The RFM score is represented as an integer between "111" and "101010". This is a concatenated score that uses each of the individual recency, frequency, and monetary scores. The order is recency, then frequency, and then monetary.
 
-For example, you can build an audience that contains your top 20% customers for recency, your top 30% customers for frequency, and your top 10% customers for monetary by setting the **L12M RFM Score** attribute to "9810" (or "9" for recency, "8" for frequency, and then "10" for monetary).
+For example, you can build an audience that has your top 20% customers for recency, your top 30% customers for frequency, and your top 10% customers for monetary by setting the **L12M RFM Score** attribute to "9810" (or "9" for recency, "8" for frequency, and then "10" for monetary).
 
 .. image:: ../../images/attribute-rfm-combined-example-9810.png
    :width: 600 px

@@ -78,7 +78,7 @@ Filter out returns and cancellations by extending the **WHERE** clause:
    AND uit.is_return = false
    AND uit.is_cancellation = false
 
-Extend the table to support multiple brands by adding a **CASE** statement to the **SELECT** statement:
+Extend the table to support many brands by adding a **CASE** statement to the **SELECT** statement:
 
 .. code-block:: sql
 

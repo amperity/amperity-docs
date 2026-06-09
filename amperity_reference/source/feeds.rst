@@ -226,7 +226,7 @@ You may configure a field for a specific precision scale. You may apply that sca
 * 1874.38 (message sizes)
 * 141.48 (order subtotals)
 
-.. note:: Fields in which every value contains trailing zeroes, such as quantities and totals, are automatically converted to an :ref:`integer <feed-field-type-integer>` field type.
+.. note:: Fields in which every value has trailing zeroes, such as quantities and totals, are automatically converted to an :ref:`integer <feed-field-type-integer>` field type.
 
    Fields that end in non-zero decimals cannot be set to the integer field type.
 
@@ -306,7 +306,7 @@ Semantic tags
 
 .. feeds-semantic-tags-start
 
-Semantic tagging is defined as part of every feed. This ensures that data from multiple sources is brought into Amperity in a consistent manner to improve the outcome of the Stitch process and identity resolution.
+Semantic tagging is defined as part of every feed. This ensures that data from many sources is brought into Amperity in a consistent manner to improve the outcome of the Stitch process and identity resolution.
 
 Semantic tagging works like this:
 
@@ -363,7 +363,7 @@ Apply a similar pattern to every data source your tenant chooses to bring into A
 
 .. caution:: The semantic tagging process is not strictly enforced. For example:
 
-   * You may choose to not apply tag a semantic tag to a column that contains first names
+   * You may choose to not apply tag a semantic tag to a column that has first names
    * You may use custom semantic tags instead of the default semantic tags. For example phone-1, phone-2, and phone-3 instead of phone.
 
    Non-standard semantic tagging often lowers the accuracy of Amperity ID assignment and greater frequency of incomplete customer profiles.
@@ -807,7 +807,7 @@ Custom semantic values may be applied to any column in Amperity. Amperity has ma
 
 Amperity may not have all of the semantics required by a customer. Before adding custom semantics to Amperity you should work with the customer to define which custom semantic tags are required, what their purpose is, and what types of customized SQL queries is required to present the outcome of the tagging effort in a way that is usable from a queries editor.
 
-.. caution:: If a semantic tag is added to Amperity that contains a typo--such as **emali** vs. **email**--both will be treated by Amperity as if they are unique semantic tags.
+.. caution:: If a semantic tag is added to Amperity that has a typo--such as **emali** vs. **email**--both will be treated by Amperity as if they are unique semantic tags.
 
 .. feeds-apply-semantic-tags-custom-end
 
@@ -856,7 +856,7 @@ Configure feed schema
 
 .. feeds-configure-feed-schema-start
 
-A feed defines the schema for that data source, associates semantic tags with specific columns in the data, and assigns a primary key. A feed must be activated, after which the feed loads the data to a domain table. A feed that contains customer records for PII data must be made available to the Stitch process.
+A feed defines the schema for that data source, associates semantic tags with specific columns in the data, and assigns a primary key. A feed must be activated, after which the feed loads the data to a domain table. A feed that has customer records for PII data must be made available to the Stitch process.
 
 If changes are made to a feed or the data schema in the data source itself changes, the feed must reload the data. In some cases, this also requires the domain table itself be purged, and then rebuilt upon feed reactivation.
 
@@ -929,7 +929,7 @@ Edit domain table name
 
 You may edit the name of the domain table from the **Feed Editor**.
 
-.. warning:: Changing the table name will reference the newly specified table for subsequent data ingestion. This table will be created if it does not exist. All data previously ingested is in the prior table.
+.. warning:: Changing the table name will reference the newly specified table for later data ingestion. This table will be created if it does not exist. All data previously ingested is in the prior table.
 
 .. feeds-configure-edit-domain-table-name-end
 
@@ -938,7 +938,7 @@ You may edit the name of the domain table from the **Feed Editor**.
 .. feeds-configure-edit-domain-table-name-steps-start
 
 #. From the **Sources** page, open the menu for a feed, and then select **Edit**. The **Feed Editor** page opens.
-#. Under **Domain Table** select **Edit**. This allows the text box that contains the name of the domain table to be editable.
+#. Under **Domain Table** select **Edit**. This allows the text box that has the name of the domain table to be editable.
 #. Enter the new name for the domain table with the pattern <source-name>:<feed-name>. For example: "Customers:Online".
 #. Click **Activate**.
 
@@ -968,7 +968,7 @@ Rename fields
 
 .. feeds-configure-field-rename-start
 
-A field name may contain only letters, numbers, and underscores. If an incoming field contains unsupported characters, such as hyphens or spaces, use the **Rename To** column to replace the unsupported characters with letters, numbers, or underscores.
+A field name may contain only letters, numbers, and underscores. If an incoming field has unsupported characters, such as hyphens or spaces, use the **Rename To** column to replace the unsupported characters with letters, numbers, or underscores.
 
 For example, a sample CSV file:
 
@@ -1001,7 +1001,7 @@ Set primary key
 
 .. feeds-configure-set-primary-key-start
 
-At least one field must be set as a primary key. Any feed that contains customer records or interaction records must have a field that can be associated with a primary key. This is typically an obvious field, like a customer ID or transaction ID, but some data sources are not as clear. You may tag more than one field as the primary key.
+At least one field must be set as a primary key. Any feed that has customer records or interaction records must have a field that can be associated with a primary key. This is typically an obvious field, like a customer ID or transaction ID, but some data sources are not as clear. You may tag more than one field as the primary key.
 
 .. feeds-configure-set-primary-key-end
 
@@ -1030,7 +1030,7 @@ Delete feeds
 
 .. feeds-delete-start
 
-Use the **Delete** option to remove a feed from Amperity. Verify that both upstream and downstream processes no longer depend on this feed prior to deleting it. This action will not delete the associated data file.
+Use the **Delete** option to remove a feed from Amperity. Verify that both upstream and downstream processes no longer depend on this feed before deleting it. This action will not delete the associated data file.
 
 .. feeds-delete-end
 
@@ -1278,13 +1278,13 @@ A data source may need to be replaced when there are minor schema changes or whe
 
       If the primary key field is identical in both data sources, assign the foreign key to the primary key fields, otherwise identify a field in each source that can be assigned a shared foreign key.
 
-#. Make both tables :ref:`available to Stitch <feeds-make-available-to-stitch>` when the data source contains PII data.
+#. Make both tables :ref:`available to Stitch <feeds-make-available-to-stitch>` when the data source has PII data.
 #. :ref:`Run Stitch <stitch-run>`.
 
    .. note:: Be sure that the second version is :ref:`added to the Stitch configuration <stitch-run-select-tables>` before running Stitch.
 #. Step through the |stitch_qa| process, and then examine both versions for foreign key validation.
 
-   .. important:: The foreign key that is shared by the original and second version should not show multiple Amperity IDs within either the original or second versions. The same individual across both versions should not show different Amperity IDs.
+   .. important:: The foreign key that is shared by the original and second version should not show many Amperity IDs within either the original or second versions. The same individual across both versions should not show different Amperity IDs.
 
 .. feeds-replace-data-source-steps-end
 
@@ -1348,7 +1348,7 @@ Set last updated field
 
 .. feeds-set-last-updated-field-start
 
-Amperity requires each feed to specify a field that describes when each record was last updated. If multiple records in the incoming data or the existing domain table have the same primary key, the record with the most recent "last updated" field will be retained. This may be associated with a field that has a datetime field type, or an integer (such as for unix timestamps).
+Amperity requires each feed to specify a field that describes when each record was last updated. If many records in the incoming data or the existing domain table have the same primary key, the record with the most recent "last updated" field will be retained. This may be associated with a field that has a datetime field type, or an integer (such as for unix timestamps).
 
 .. note:: Amperity does not use a field with a **date** data type because that value is not granular enough to determine priority.
 
@@ -1358,9 +1358,9 @@ If you have no such updated field, you can choose to autogenerate a field, in wh
 
 #. If couriers are run over a date range, records from files associated with later dates will be retained.
 
-#. If multiple files are loaded for the same date, records for the latest-loaded file are retained. File loading order depends on the behavior of the source system, but is deterministic.
+#. If many files are loaded for the same date, records for the latest-loaded file are retained. File loading order depends on the behavior of the source system, but is deterministic.
 
-#. If the same primary key appears on multiple records on the same text-based file, the latest row on the file is retained.
+#. If the same primary key appears on many records on the same text-based file, the latest row on the file is retained.
 
 .. note:: When using ingest queries, the above tiebreakers are unavailable, so upserting behavior can be nondeterministic. Ensure that you either specify a "last updated" field, or that your ingest query only returns a single record for each primary key, to ensure deterministic results.
 

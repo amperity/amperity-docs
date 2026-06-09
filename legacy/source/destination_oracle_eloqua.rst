@@ -19,7 +19,7 @@ Send data to Oracle Eloqua
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_oracle_eloqua.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_oracle_eloqua.html>`__ |ext_link|.
 
 .. vale on
 
@@ -221,7 +221,7 @@ Add destination
           * - **Shared List Name**
             - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity creates it.
 
-              .. important:: Amperity does not create custom attributes for a shared list. A shared list that contains custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
+              .. important:: Amperity does not create custom attributes for a shared list. A shared list that has custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
 
           * - **Audience Primary Key**
             - This value must be set to **C_EmailAddress**.

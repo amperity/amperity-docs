@@ -55,7 +55,7 @@ AmpAI tools
 
 .. ampai-tools-start
 
-**AmpAI** encompasses multiple tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+**AmpAI** encompasses many tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
 
 A typical workflow might start with using the **Customer Data Assistant** to create a segment and journey, and then using the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
@@ -194,9 +194,9 @@ Use database section headers
 
 .. ampai-write-custom-prompt-database-headers-start
 
-The custom prompt is set per tenant, but a tenant may have multiple databases. To define different behavior per database, use the database name as a section header. When **AmpAI** runs a session, it operates against a single active database. The system prompt instructs **AmpAI** to use the section matching the active database name for additional context.
+The custom prompt is set per tenant, but a tenant may have many databases. To define different behavior per database, use the database name as a section header. When **AmpAI** runs a session, it operates against a single active database. The system prompt instructs **AmpAI** to use the section matching the active database name for additional context.
 
-If a tenant has rules for multiple databases, structure the prompt like this:
+If a tenant has rules for many databases, structure the prompt like this:
 
 .. code-block:: none
 
@@ -223,7 +223,7 @@ Be specific with exact names
 
 Reference exact field names, values, and table names whenever possible to ensure precise results.
 
-**Avoid vague references:**
+**Avoid vague references**
 
 Bad: "Use the main customer table for profiles"
 Good: "Use Customer360 for all customer profile data (names, contact info, attributes)"

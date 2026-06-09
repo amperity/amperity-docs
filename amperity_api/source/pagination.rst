@@ -84,7 +84,7 @@ All endpoints that support the **GET** HTTP method return following properties t
      - A JSON array of values for the current page of results.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

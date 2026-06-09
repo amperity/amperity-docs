@@ -64,7 +64,7 @@ The following table lists the operators that are available to these attributes.
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that match a string of characters.

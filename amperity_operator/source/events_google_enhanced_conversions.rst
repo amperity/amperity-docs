@@ -276,8 +276,8 @@ Store Sales is a distinct Google Ads program from Enhanced Conversions. It requi
 
 When using Store Sales, Amperity exports a formatted CSV file via :doc:`SFTP <destination_sftp>`, which is then uploaded to Google Ads through the UI or API. The CSV file uses a two-row header structure required by Google:
 
-* The first row contains metadata, such as timezone, loyalty rate, or transaction upload rate.
-* The second row contains column names. Google hashes PII automatically on upload, or you can pre-hash using SHA-256.
+* The first row has metadata, such as timezone, loyalty rate, or transaction upload rate.
+* The second row has column names. Google hashes PII automatically on upload, or you can pre-hash using SHA-256.
 
 **Identifiers supported by Store Sales**
 
@@ -287,7 +287,7 @@ Store Sales supports more identifiers per customer than the Enhanced Conversions
 * Phone numbers: up to 3 per customer. Phone numbers must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link| format
 * Physical address, including first name, last name, street, city, state, postal code, and country
 
-Include as many identifiers as your data contains. Each additional identifier helps improve match rates.
+Include as many identifiers as your data has. Each additional identifier helps improve match rates.
 
 **When to use this instead of the in-store API path**
 
@@ -365,7 +365,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Enhanced Conversions" *must* be completed within Google prior to configuring Amperity to send ads to |destination-name|.
+          .. important:: Authentication for "Google Enhanced Conversions" *must* be completed within Google before configuring Amperity to send ads to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -583,14 +583,14 @@ The following table describes the fields that may be sent to |destination-name| 
      - **ad_personalization**
      - The customer consent status for personalization for Google Ads.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads, but may be located in a table for consent tracking.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads, but may be located in a table for consent tracking.
 
 
    * - Varies.
      - **ad_user_data**
      - The customer consent status for Google Ads.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads, but may be located in a table for consent tracking.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads, but may be located in a table for consent tracking.
 
 
    * - Varies.
@@ -599,7 +599,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
        .. note:: This field is only available to allowlisted customers. ``UNSPECIFIED`` and ``UNKNOWN`` are API-internal values and cannot be set by users.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads.
 
 
    * - Varies.
@@ -630,7 +630,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **gbraid**
      - A gbraid is a URL parameter present when a user clicks on an ad on the web, and then is directed to your brand's iOS app.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads.
 
 
    * - Varies.
@@ -641,7 +641,7 @@ The following table describes the fields that may be sent to |destination-name| 
 
        .. important:: Send all relevant data for a conversion even if the **gclid** is unavailable. Conversions data that only includes user-provided data is still useful.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads.
 
 
    * - **Item Cost**
@@ -696,7 +696,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **timestamp**
      - The date and time of the conversion. The value must have a timezone and the format must be ``yyyy-mm-dd hh:mm:ss+|-hh:mm``. Daylight Savings Time (DST) may be ignored.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads *or* it may be the **Order Datetime** field in the **Unified Itemized Transactions** table.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads *or* it may be the **Order Datetime** field in the **Unified Itemized Transactions** table.
 
 
    * - **Unit List Price**
@@ -712,7 +712,7 @@ The following table describes the fields that may be sent to |destination-name| 
      - **wbraid**
      - A **wbraid** is a URL parameter that is present when a user clicks on an ad in an iOS app and is directed to a webpage.
 
-       .. note:: This field should be in the table that contains online events data for websites and mobile apps collected by Google Ads.
+       .. note:: This field should be in the table that has online events data for websites and mobile apps collected by Google Ads.
 
 .. events-google-enhanced-conversions-fields-table-end
 

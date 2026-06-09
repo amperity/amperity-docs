@@ -88,7 +88,7 @@ The correct approach here depends on the data and the desired use cases for down
    * Two or more headers in the output file are identical.
    * The audience key in the output file does not match the audience key in LiveRamp.
    * The audience key is missing.
-   * Mismatched identifiers. For example, if |destination-name| expects first and last names to be in the same field, but the output contains first and last names in separate fields.
+   * Mismatched identifiers. For example, if |destination-name| expects first and last names to be in the same field, but the output has first and last names in separate fields.
 
 .. sendto-liveramp-build-query-important-end
 
@@ -108,7 +108,7 @@ LiveRamp and PII data
 
 `LiveRamp terms of service restrict PII data <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|. Government-issued identification numbers (like social security numbers), financial and customer account numbers, birthdates, gender, email addresses, names (first, last, and full), and similar data should be excluded from query data that is sent to |destination-name|.
 
-Because the data sent to |destination-name| contains the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
+Because the data sent to |destination-name| has the Amperity ID, should you need to associate data with PII, you can use other systems that allow PII data along with the Amperity ID to make these associations.
 
 `Hash fields that must be sent to LiveRamp <https://docs.liveramp.com/connect/en/hashing-identifiers.html>`__ |ext_link| by using :ref:`one-way SHA-256 hashing <sendto-liveramp-build-query-sha-256>` or by :ref:`casting the value to a random unique identifier (UUID) <sendto-liveramp-build-query-cast-as-uuid>`.
 

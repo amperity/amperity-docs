@@ -31,7 +31,7 @@ Identify tables with PII
 
 To identify tables with personally identifiable information (PII) open the **Identity resolution** page in **Quick start**. On the **Identity tables** card, do one of the following:
 
-#. Click **AmpAI select** to have the **AmpAI Assistant** determine which tables contain the best data for identity resolution, which fields in each data source are the optimal primary key, and which customer profile semantic tags to apply to fields in each data source.
+#. Click **AmpAI select** to have the **AmpAI Assistant** automatically select which tables contain the best data for identity resolution, identify the optimal primary key fields, and apply customer profile semantic tags. The selections are applied immediately. Click **Edit** on the **Identity tables** card to review or override them.
 #. Click **Manually select** to make the table selections yourself.
 
    .. image:: ../../images/mockup-guided-idres-tables-with-pii.png
@@ -39,8 +39,6 @@ To identify tables with personally identifiable information (PII) open the **Ide
       :alt: Identify tables with PII.
       :align: left
       :class: no-scaled-link
-
-Click **Edit** on the **Identity tables** card to review tables that are already selected.
 
 .. identity-resolution-02-tables-with-pii-end
 

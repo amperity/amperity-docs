@@ -174,7 +174,7 @@ Customer
 
 .. source-shopify-api-review-data-customer-start
 
-The feed and domain table for customer details contains the following fields:
+The feed and domain table for customer details has the following fields:
 
 * **created_at**
 * **currency**
@@ -205,7 +205,7 @@ Customer address
 
 .. source-shopify-api-review-data-customer-address-start
 
-The feed and domain table for customer addresses contains the following fields:
+The feed and domain table for customer addresses has the following fields:
 
 * **address1** Assigned the **address** semantic tag.
 * **address2** Assigned the **address2** semantic tag.
@@ -234,7 +234,7 @@ Customer tags
 
 .. source-shopify-api-review-data-customer-tags-start
 
-The feed and domain table for customer tags contains the following fields:
+The feed and domain table for customer tags has the following fields:
 
 * **customer_id**
 * **value**
@@ -249,7 +249,7 @@ Discount allocation
 
 .. source-shopify-api-review-data-discount-allocation-start
 
-The feed and domain table for discount allocations contains the following fields:
+The feed and domain table for discount allocations has the following fields:
 
 * **amount**
 * **discount_allocation_index**
@@ -265,7 +265,7 @@ Discount codes
 
 .. source-shopify-api-review-data-discount-codes-start
 
-The feed and domain table for discount codes contains the following fields:
+The feed and domain table for discount codes has the following fields:
 
 * **amount**
 * **code**
@@ -282,7 +282,7 @@ Locations
 
 .. source-shopify-api-review-data-locations-start
 
-The feed and domain table for locations contains the following fields:
+The feed and domain table for locations has the following fields:
 
 * **active**
 * **address1** Assigned the **addresss** semantic tag.
@@ -313,7 +313,7 @@ Order
 
 .. source-shopify-api-review-data-order-start
 
-The feed and domain table for orders contains the following fields:
+The feed and domain table for orders has the following fields:
 
 * **app_id**
 * **browser_ip**
@@ -375,7 +375,7 @@ Order line
 
 .. source-shopify-api-review-data-order-line-start
 
-The feed and domain table for order lines contains the following fields:
+The feed and domain table for order lines has the following fields:
 
 * **fulfillable_quantity**
 * **fulfillment_service**
@@ -407,7 +407,7 @@ Order line refund
 
 .. source-shopify-api-review-data-order-line-refund-start
 
-The feed and domain table for order line refunds contains the following fields:
+The feed and domain table for order line refunds has the following fields:
 
 * **id**
 * **line_item_id**
@@ -428,7 +428,7 @@ Order tags
 
 .. source-shopify-api-review-data-order-tags-start
 
-The feed and domain table for order tags contains the following fields:
+The feed and domain table for order tags has the following fields:
 
 * **order_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
@@ -443,7 +443,7 @@ Product
 
 .. source-shopify-api-review-data-product-start
 
-The feed and domain table for products contains the following fields:
+The feed and domain table for products has the following fields:
 
 * **body_html**
 * **created_at**
@@ -469,7 +469,7 @@ Product tags
 
 .. source-shopify-api-review-data-product-tags-start
 
-The feed and domain table for product tags contains the following fields:
+The feed and domain table for product tags has the following fields:
 
 * **product_id** Assigned the **ck** and **pk** semantic tags.
 * **value**
@@ -484,7 +484,7 @@ Product variant
 
 .. source-shopify-api-review-data-product-variant-start
 
-The feed and domain table for product variants contains the following fields:
+The feed and domain table for product variants has the following fields:
 
 * **barcode**
 * **compare_at_price**

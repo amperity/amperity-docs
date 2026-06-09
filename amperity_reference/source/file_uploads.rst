@@ -23,8 +23,8 @@ Use file uploads from the **Customer 360** and **Queries** pages to upload CSV f
 
 When making files available in the segment editor, you can choose how the file matches to customer records:
 
-* **Activation ID**: Choose a column in the file that exactly matches one of your configured activation IDs. Files configured this way can be used in segments that use the selected activation ID.
-* **Legacy match**: Select an email column to join on the **Merged Customers** table and return the Amperity ID. Files configured this way can only be used in segments that use the Amperity ID (not segments using a different activation ID).
+* **Activation ID** Choose a column in the file that exactly matches one of your configured activation IDs. Files configured this way can be used in segments that use the selected activation ID.
+* **Legacy match** Select an email column to join on the **Merged Customers** table and return the Amperity ID. Files configured this way can only be used in segments that use the Amperity ID (not segments using a different activation ID).
 
 .. image:: ../../images/modal-file-uploads.png
    :width: 400 px
@@ -85,13 +85,13 @@ Activation ID
 
 .. file-uploads-activation-id-start
 
-Use activation ID matching when your uploaded file contains a column that corresponds to one of your tenant's configured activation IDs.
+Use activation ID matching when your uploaded file has a column that corresponds to one of your tenant's configured activation IDs.
 
 #. From the **Configure File** window, select **Make available in segment editor**.
 #. Select **Activation ID**.
 #. From the dropdown, choose a column in your file that exactly matches one of your configured activation IDs.
 
-Files configured with activation ID matching can be used in segments that use the selected activation ID. For example, if your file contains a column of email addresses that match your email activation ID, you can use this file in segments activated on email.
+Files configured with activation ID matching can be used in segments that use the selected activation ID. For example, if your file has a column of email addresses that match your email activation ID, you can use this file in segments activated on email.
 
 .. file-uploads-activation-id-end
 
@@ -107,7 +107,7 @@ Use legacy matching when you want to associate customers in your uploaded file w
 
 #. From the **Configure File** window, select **Make available in segment editor**.
 #. Select **Legacy match**.
-#. From the **Email Column** dropdown, select the column in your file that contains email addresses.
+#. From the **Email Column** dropdown, select the column in your file that has email addresses.
 
 Legacy matching joins the email column in your uploaded file to the **Merged Customers** table and returns the corresponding Amperity ID. Files configured with legacy matching can only be used in segments that use the Amperity ID.
 
@@ -264,8 +264,8 @@ The data appears on the **Segments** page.
 
 .. note:: In order for an uploaded file to appear in the **Segment Editor**, you must configure it with one of the following matching methods:
 
-   * **Activation ID**: The file contains a column that matches one of your configured activation IDs. The file can be used in segments using that activation ID.
-   * **Legacy match**: The file contains an email column that joins to the **Merged Customers** table to return the Amperity ID. The file can only be used in segments using the Amperity ID.
+   * **Activation ID** The file has a column that matches one of your configured activation IDs. The file can be used in segments using that activation ID.
+   * **Legacy match** The file has an email column that joins to the **Merged Customers** table to return the Amperity ID. The file can only be used in segments using the Amperity ID.
 
 .. file-uploads-add-query-steps-end
 

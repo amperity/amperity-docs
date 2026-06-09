@@ -69,7 +69,7 @@ The following operators are available to purchase brand intervals.
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns purchase brand intervals with values that match a string of characters.
 
    * - **does not contain**

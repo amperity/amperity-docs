@@ -6844,7 +6844,7 @@ The Trade Desk Data Marketplace allows advertisers to purchase access to your br
 
 .. term-third-party-data-start
 
-Third-party data, also known as 3P data, is data indirectly collected from customers and is often acquired from external sources, such as data brokers, aggregators, or other organizations that specialize in collecting and selling data. Third-party data contains a range of demographics, behaviors, and preferences, depending on the external source.
+Third-party data, also known as 3P data, is data indirectly collected from customers and is often acquired from external sources, such as data brokers, aggregators, or other organizations that specialize in collecting and selling data. Third-party data has a range of demographics, behaviors, and preferences, depending on the external source.
 
 .. important:: Amperity **does not** sell third-party data or mark it up in any way.
 

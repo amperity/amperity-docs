@@ -23,7 +23,7 @@ Unified Loyalty table
 
 .. table-unified-loyalty-note-multiple-loyalty-ids-start
 
-.. note:: An Amperity ID may be associated with multiple loyalty programs or may be associated with multiple accounts within the same loyalty program.
+.. note:: An Amperity ID may be associated with many loyalty programs or may be associated with many accounts within the same loyalty program.
 
 .. table-unified-loyalty-note-multiple-loyalty-ids-end
 

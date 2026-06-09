@@ -3,7 +3,7 @@
 :orphan:
 
 ==================================================
-Spark SQL recommendations: Avoid multiple passes
+Spark SQL recommendations: Avoid many passes
 ==================================================
 
 .. _sql-spark-recommendation-avoid-multiple-passes:

@@ -195,7 +195,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -381,7 +381,7 @@ You may include any of the following customer profile fields to help improve mat
 
 Events parameters can vary depending on the type of event. For example, website purchases capture more events data than in-store purchases. To send consolidated events data to |destination-name| create a database table to store the consolidated events and map the values in that table to the values required by |destination-name| :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` or to **NULL** values.
 
-The following SQL shows how to send multiple event types stored in a table named **Customer Events**:
+The following SQL shows how to send many event types stored in a table named **Customer Events**:
 
 .. code-block:: sql
    :emphasize-lines: 6
@@ -405,7 +405,7 @@ The following SQL shows how to send multiple event types stored in a table named
    LEFT JOIN Customer_360 c360 ON events.amperity_id = c360.amperity_id
    WHERE events.event_datetime > (CURRENT_DATE - interval '7' day)
 
-The table from which multiple events are sourced must have values that map to values required by the Conversions API:
+The table from which many events are sourced must have values that map to values required by the Conversions API:
 
 #. Line 8 sets the value of **action_source** to the value of the **channel** field in the **Customer Events** table. In this example the values in the **channel** field are **physical_store** or **website**.
 #. Lines 11-14 are events that only apply to **website** events in the **Customer Events** table. When **action_source** is **physical_store** the values for **user_agent**, **event_uuid**, **page_url**, and **client_ip** in the **Customer Events** table are **NULL**.

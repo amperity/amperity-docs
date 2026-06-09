@@ -139,7 +139,7 @@ Align to campaign objectives
 
 After you have associated your customers to their lifecycle status and value tier, align the audience to your overall marketing objectives for your direct mail campaign, such as what types of discount preferences, promo codes, or offers you want to use.
 
-After determining which customer groups to market to, apply additional segments to align campaigns with your overall marketing goals. For example, you may want to focus on customers who opted in to receive emails. With the ability to add multiple segments, you can determine which groups are more inclined to make a purchase.
+After determining which customer groups to market to, apply additional segments to align campaigns with your overall marketing goals. For example, you may want to focus on customers who opted in to receive emails. With the ability to add many segments, you can determine which groups are more inclined to make a purchase.
 
 .. direct-mail-align-to-objectives-end
 

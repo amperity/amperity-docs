@@ -172,7 +172,11 @@ Get details
 
           .. admonition:: Create the Braze API key
 
-             Open the `Developer Console <https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys>`__ |ext_link|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**: "users.track", "users.export.segment", and "segments.list".
+             Open the `Developer Console <https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys>`__ |ext_link|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**:
+
+             * "users.track"
+             * "users.export.segment"
+             * "segments.list"
 
              Save the API key.
 
@@ -581,7 +585,7 @@ Conflicting user identifiers
 
 .. campaign-braze-workflow-actions-conflicting-identifiers-start
 
-The Braze API requires exactly one identifier type per request. If a request contains more than one of ``external_id``, ``braze_id``, or ``user_alias``, the Braze API will reject the request and the orchestration will fail.
+The Braze API requires exactly one identifier type per request. If a request has more than one of ``external_id``, ``braze_id``, or ``user_alias``, the Braze API will reject the request and the orchestration will fail.
 
 To resolve this error, verify that your query results or campaign attributes contain only the identifier field that matches the **User identifier** setting configured for this destination. Remove any additional identifier fields from the dataset.
 

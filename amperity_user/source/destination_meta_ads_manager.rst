@@ -146,7 +146,7 @@ A Facebook table collects PII data from the **Customer 360** table, and then cre
 
 and then run the customer 360 database to update that table. After the table has run, you can use a visual query to define a query that filters by matching records in the Facebook table. This will return any record in the Facebook table that matches the query and will return the results with *all* of the fields in the Facebook table.
 
-For example, you could define a query that finds all transactions in the past week for all email addresses, and then match records against the Facebook table. The results contains the columns in the Facebook table for all emails associated with a transaction in the past week.
+For example, you could define a query that finds all transactions in the past week for all email addresses, and then match records against the Facebook table. The results has the columns in the Facebook table for all emails associated with a transaction in the past week.
 
 .. sendto-meta-ads-manager-build-query-use-table-end
 
@@ -158,7 +158,7 @@ Use a SQL query
 
 .. sendto-meta-ads-manager-build-query-use-query-start
 
-A SQL query can output results that map to fields in the Facebook Marketing API. This process is similar to building a table, but instead of the output to a table, it is to a query. This approach does not require a data template, but may not be reusable for multiple downstream workflows.
+A SQL query can output results that map to fields in the Facebook Marketing API. This process is similar to building a table, but instead of the output to a table, it is to a query. This approach does not require a data template, but may not be reusable for many downstream workflows.
 
 Add a SQL table with a **SELECT** statement similar to:
 

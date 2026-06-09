@@ -270,7 +270,7 @@ Responses
 
 .. endpoint-get-audit-events-list-responses-start
 
-A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-audit-events-list-responses-end
 
@@ -319,7 +319,7 @@ Response parameters
 
 .. endpoint-get-audit-events-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. endpoint-get-audit-events-list-response-parameters-start
 
@@ -373,7 +373,7 @@ A **200 OK** response contains the following parameters.
           The user agent string of the client that initiated the action. For example: ``"user_agent": "Mac OS X 4.5.6"`` or ``"user_agent": "Chrome 1.2.3"``.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

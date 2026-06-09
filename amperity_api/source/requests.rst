@@ -32,7 +32,7 @@ Requests made to Amperity API endpoints require the following headers:
 
 * **api-version** Required. A supported version of the Amperity API. For example: **2024-04-01**.
 
-In addition to all required headers, you must specify the HTTP method and append endpoint path to the base URL. Most endpoints provide a set of endpoint-specific properties that may be included within the request header.
+In addition to all required headers, you must specify the HTTP method and append endpoint path to the base URL. Most endpoints have a set of endpoint-specific properties that may be included within the request header.
 
 **For Amazon AWS**
 

@@ -110,3 +110,4 @@ Amperity documentation
    setup
    styles
    terminology
+   verbs

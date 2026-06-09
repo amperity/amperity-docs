@@ -217,7 +217,7 @@ Combine day, month, year as birthdate
 
 .. domain-tables-custom-sql-use-case-combine-birthdate-start
 
-Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined in order to use the **birthdate** semantic tag.
+Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined to use the **birthdate** semantic tag.
 
 The following example shows an ``IF`` statement within a ``SELECT`` statement that finds the values in day, month, and year fields, and then combines them into a field that captures the birthdate value as ``DD/MM/YYYY``:
 
@@ -297,7 +297,7 @@ Hash PII data that has been resent to Amperity
 
 .. _domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst
@@ -378,8 +378,8 @@ Added columns
 Amperity adds the following columns to all domain tables. The added columns start with underscores (``_``) and are used by Amperity during Stitch processing.
 
 #. The **_pk** column is an identifier that is generated based on the all of the columns in the feed that were associated to the primary key.
-#. The **_uuid_pk** column contains a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
-#. The **_updated** column contains details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
+#. The **_uuid_pk** column has a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
+#. The **_updated** column has details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
 
    Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files and days in the same load.
 
@@ -468,7 +468,7 @@ A custom domain table is table that is created from a Spark SQL query built from
 Feeds load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
 
 * Enabling privacy rights workflows to help remove data based on individual requests from customers, as required by CCPA and GDPR.
-* Applying semantic tags to data that contains :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
+* Applying semantic tags to data that has :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
 * Supporting workflows that |data_first_party_raw_clickstream|.
 
 .. domain-tables-custom-add-end
@@ -679,7 +679,7 @@ Delete domain table
 
 .. domain-tables-delete-start
 
-Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table prior to deleting it. This action will *not* delete the feeds associated with the domain table.
+Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table before deleting it. This action will *not* delete the feeds associated with the domain table.
 
 .. domain-tables-delete-end
 

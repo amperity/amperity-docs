@@ -283,7 +283,7 @@ The goal of a new customer journey is to turn a new customer into an engaged par
 
    A new customer journey ensures the customer receives prompt, relevant communication, and non-engaged users get an additional message on a separate channel with an incentive to act.
 
-**Example basic new customer journey:**
+**Example basic new customer journey**
 
 .. list-table::
    :widths: 30 70
@@ -309,7 +309,7 @@ The goal of a new customer journey is to turn a new customer into an engaged par
    :class: no-scaled-link
 
 
-**Example new customer journey flow with split:**
+**Example new customer journey flow with split**
 
 .. list-table::
    :widths: 30 70
@@ -324,12 +324,12 @@ The goal of a new customer journey is to turn a new customer into an engaged par
    * - **Conditional split** 
      - Check if the customer has viewed a product page within 7 days.
    * - **Path A (Engaged)**
-     - **Activate:** Send a "Tips and Tricks" email relevant to their viewed product.
+     - **Activate** Send a "Tips and Tricks" email relevant to their viewed product.
    * - **Path B (Not Engaged)**
      - For customers who have not made a second purchase or viewed any additional products, take the following steps: 
        
-       #. **Delay:** Wait 3 days.
-       #. **Activate:** Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!").
+       #. **Delay** Wait 3 days.
+       #. **Activate** Send a short, high value SMS (for example, "Use code WELCOME10 for 10% off your next order!").
    * - **Exit** 
      - Customers exit a new customer journey when they complete a second purchase.
 
@@ -353,11 +353,11 @@ The goal of an abandoned cart journey is to convert users who started a purchase
 
 .. admonition:: Why abandoned cart journeys work
 
-   An abandoned cart journey reinforces the same intent across multiple touchpoints without redundancy. It uses immediate, low-incentive reminders first, reserving the higher-value incentive (the 10% discount) for the most valuable, high-AOV abandoned carts, thus protecting margins.
+   An abandoned cart journey reinforces the same intent across many touchpoints without redundancy. It uses immediate, low-incentive reminders first, reserving the higher-value incentive (the 10% discount) for the most valuable, high-AOV abandoned carts, thus protecting margins.
 
 .. note:: Abandoned cart journeys require real-time functionality to be enabled.
 
-**Example abandoned cart journey flow:**
+**Example abandoned cart journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -376,11 +376,11 @@ The goal of an abandoned cart journey is to convert users who started a purchase
    * - **Path B (Has not purchased)**
      - For customers who have not purchased, take the following steps:
 
-       #. **Activate**: Send a simple "Did you forget something?" reminder email with product image.
-       #. **Delay**: Wait 24 hours.
-       #. **Activate**: Send SMS with a 10% discount code        
-       #. **Delay**: Wait 24 hours.
-       #. **Activate**: Add customer to a Facebook/Google Retargeting Ad Audience for the specific product.
+       #. **Activate** Send a simple "Did you forget something?" reminder email with product image.
+       #. **Delay** Wait 24 hours.
+       #. **Activate** Send SMS with a 10% discount code        
+       #. **Delay** Wait 24 hours.
+       #. **Activate** Add customer to a Facebook/Google Retargeting Ad Audience for the specific product.
    * - **Exit**
      - Customers exit an abandoned cart journey when they complete the purchase.
 
@@ -408,7 +408,7 @@ It can also be used for other similar milestones, like the aniversary of reachin
 
    A birthday journey uses a highly personal attribute and tailors the channel and incentive to protect margin while getting the most impact from the most valuable customers.
 
-**Example birthday journey flow:**
+**Example birthday journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -421,11 +421,11 @@ It can also be used for other similar milestones, like the aniversary of reachin
    * - **Conditional split**
      - Split based on loyalty tier (for example, VIP vs. Standard).
    * - **Path A (VIP)**
-     - **Activate:** Send an exclusive "Happy birthday, VIP!" email with a high-value offer (for example, 20% off, double points, etc). 
+     - **Activate** Send an exclusive "Happy birthday, VIP!" email with a high-value offer (for example, 20% off, double points, etc). 
        
-       **Activate:** (optional) Send a physical postcard with a high value offer.
+       **Activate** Optional. Send a physical postcard with a high value offer.
    * - **Path B (Standard)** 
-     - **Activate:** Send a "Happy Birthday" email with a standard offer (for example, 10% off).
+     - **Activate** Send a "Happy Birthday" email with a standard offer (for example, 10% off).
    * - **Merge**
      - Merges paths back together.
    * - **Conditional split**
@@ -433,7 +433,7 @@ It can also be used for other similar milestones, like the aniversary of reachin
    * - **Path A (Did redeem)** 
      - Customer exits the journey.
    * - **Path B (Did not redeem)** 
-     - **Activate:** Send an SMS reminder that the offer expires soon.
+     - **Activate** Send an SMS reminder that the offer expires soon.
    * - **Exit**
      - Customers exit a birthday journey if they redeem the offer and make a purchase.
 
@@ -458,7 +458,7 @@ The goal of a product consideration journey is to convert recent browsers and pr
 
    Product consideration journeys use multi-channel engagement to keep the product top-of-mind, while the A/B test measures the incremental lift provided by the paid advertising or discount channel against organic email.
 
-**Example product consideration journey flow:**
+**Example product consideration journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -475,9 +475,9 @@ The goal of a product consideration journey is to convert recent browsers and pr
    * - **Percent split**
      - A/B test with a 50/50 split.
    * - **Path A (Treatment)**
-     - **Activate:** Add the customer to a lookalike/retargeting audience to receive ads featuring a discount code. 
+     - **Activate** Add the customer to a lookalike/retargeting audience to receive ads featuring a discount code. 
    * - **Path B (Control)**
-     - **Activate:** Send a "Bestsellers in Category X" email without a discount.
+     - **Activate** Send a "Bestsellers in Category X" email without a discount.
    * - **Merge**
      - Merges paths back together.
    * - **Activate**
@@ -519,9 +519,9 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
    * - **Conditional split**
      - Check if the customer is already a VIP/loyalty member.
    * - **Path A**
-     - **Activate**: Send a "Complete your look" email to VIPs featuring high-margin, complementary products and offering double loyalty points on the next purchase.
+     - **Activate** Send a "Complete your look" email to VIPs featuring high-margin, complementary products and offering double loyalty points on the next purchase.
    * - **Path B**
-     - **Activate**: Send a "Complementary items" email to everyone else with a focus on free shipping for the next order.
+     - **Activate** Send a "Complementary items" email to everyone else with a focus on free shipping for the next order.
    * - **Merge**
      - Bring the two paths back together.
    * - **Delay**
@@ -535,8 +535,8 @@ The goal of a cross-sell journey is to increase order frequency by recommending 
 
        Path B takes the following steps:
 
-       #. **Activate**: Use SMS advertising to send a reminder focused on purchasing a complementary product.
-       #. **Delay**: Wait 24 hours.
+       #. **Activate** Use SMS advertising to send a reminder focused on purchasing a complementary product.
+       #. **Delay** Wait 24 hours.
        #. **Activate** Use a lookalike audience on a paid media platform to run a carousel ad that features complementary items.
    * - **Exit**
      - Customers exit a cross-sell journey after they make a second, qualifying purchase within the timeframe defined by the cross-sell journey.
@@ -560,9 +560,9 @@ The goal of a seasonal campaign journey is to drive revenue and brand engagement
 
 .. admonition:: Why seasonal campaign journeys work
 
-   The seasonal campaign journey uses highly personalized, category-specific messaging and time-sensitive incentives across multiple channels, mitigating message fatigue and ensuring campaign theme consistency.
+   The seasonal campaign journey uses highly personalized, category-specific messaging and time-sensitive incentives across many channels, mitigating message fatigue and ensuring campaign theme consistency.
 
-**Example seasonal campaign journey flow:**
+**Example seasonal campaign journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -585,9 +585,9 @@ The goal of a seasonal campaign journey is to drive revenue and brand engagement
    * - **Conditional split**
      - Check if the customer is a VIP/loyalty member
    * - **Path A (VIP)**
-     - **Activate:** Exclusive direct mail catalog with QR to curated collection. 
+     - **Activate** Exclusive direct mail catalog with QR to curated collection. 
    * - **Path B (Non-VIP)**
-     - **Activate:** Social media ad carousel featuring relevant items.
+     - **Activate** Social media ad carousel featuring relevant items.
    * - **Exit**
      - Customers exit a seasonal campaign journey by making a purchase during the defined seasonal window.
 
@@ -612,7 +612,7 @@ The goal of a loyalty tier upgrade journey is to reward and retain high value cu
 
    Loyalty tier upgrade journeys provide the recognition and exclusivity that build emotional connection and brand loyalty.
 
-**Example loyalty tier upgrade journey flow:**
+**Example loyalty tier upgrade journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -654,7 +654,7 @@ The goal of a car test-drive journey is to convert website interest (for example
 
    Car test-drive journeys create a multi-touchpoint experience, bridging the gap between digital behavior and physical action by sending a lead to the sales CRM to trigger a response outside the marketing automation system. 
 
-**Example car test-drive journey flow:**
+**Example car test-drive journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -667,13 +667,13 @@ The goal of a car test-drive journey is to convert website interest (for example
    * - **Conditional split**
      - Check if the customer has already booked an appointment.
    * - **Path A (Appointment booked)**
-     - **Activate:** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
+     - **Activate** Send a "Pre-appointment checklist" email with confirmation details and required documentation.
    * - **Path B (No appointment)**
      - For customers who have not yet booked an appointment, take the following steps:
 
-       #. **Activate**: Send an email offering a local dealer consultation or link to book a test drive.
-       #. **Delay**: Wait 48 hours.
-       #. **Activate**: Send a follow up SMS with a link to book a test drive.
+       #. **Activate** Send an email offering a local dealer consultation or link to book a test drive.
+       #. **Delay** Wait 48 hours.
+       #. **Activate** Send a follow up SMS with a link to book a test drive.
    * - **Merge**
      - Bring the two paths back together.
    * - **Activate**
@@ -685,7 +685,7 @@ The goal of a car test-drive journey is to convert website interest (for example
    * - **Path A (Purchase made)**
      - Exit condition is satisfied.
    * - **Path B (No purchase made)** 
-     - **Activate:** CRM alerts sales rep to call customer.
+     - **Activate** CRM alerts sales rep to call customer.
    * - **Exit**
      - A customer exits a car test-drive journey when they have completed a purchase.
 
@@ -711,7 +711,7 @@ The goal of a product replenishment journey is to drive repeat purchases based o
    A product replenishment journey segments customers not just by what they bought but by when they are predicted to need it again, combining precise timing with a multi-channel nudge to maximize repeat sales.
 
 
-**Example product replenishment journey flow:**
+**Example product replenishment journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -726,12 +726,12 @@ The goal of a product replenishment journey is to drive repeat purchases based o
    * - **Conditional split**
      - Check if the customer has clicked the reorder link within 3 days.
    * - **Path A (clicked link)**
-     - **Activate:** Add customer to a retargeting audience to see display ads featuring the product and a small incentive (for example, free sample with reorder). 
+     - **Activate** Add customer to a retargeting audience to see display ads featuring the product and a small incentive (for example, free sample with reorder). 
    * - **Path B (did not click)**
      - For customers who did not click the reorder link, take the following steps:
 
-       #. **Delay**: Wait 7 days.
-       #. **Activate**: Send an SMS asking "Did you run out yet?" with a link to reorder, also highlighting the option to subscribe.
+       #. **Delay** Wait 7 days.
+       #. **Activate** Send an SMS asking "Did you run out yet?" with a link to reorder, also highlighting the option to subscribe.
    * - **Exit**
      - Customers exit a product replenishment journey when they purchase the specific product or activate a subscription.
 
@@ -756,7 +756,7 @@ The goal of a financial services welcome journey is to guide new account holders
 
    A financial services welcome journey uses data across channels to move customers from awareness to activation, building deeper engagement. 
 
-**Example financial services welcome journey flow:**
+**Example financial services welcome journey flow**
 
 .. list-table::
    :widths: 30 70
@@ -769,14 +769,14 @@ The goal of a financial services welcome journey is to guide new account holders
    * - **Conditional split**
      - Split based on setup progress (for example, Has direct deposit been set up?).
    * - **Path A (Direct deposit set up)**
-     - **Activate:** Send "Congratulations!" email introducing advanced features (for example, mobile check deposit). 
+     - **Activate** Send "Congratulations!" email introducing advanced features (for example, mobile check deposit). 
    * - **Path B (Direct deposit not set up)**
      - For customers who have not yet set up direct deopsit take the following steps:
 
-       #. **Delay**: Wait 48 hours.
-       #. **Activation**: Trigger a personalized in-app notification with a step-by-step guide for setting up direct deposit.
-       #. **Delay**: Wait 7 days.
-       #. **Activate**: CRM flags a task in the call center queue for a proactive outreach call.
+       #. **Delay** Wait 48 hours.
+       #. **Activation** Trigger a personalized in-app notification with a step-by-step guide for setting up direct deposit.
+       #. **Delay** Wait 7 days.
+       #. **Activate** CRM flags a task in the call center queue for a proactive outreach call.
    * - **Exit**
      - Customers exit a financial services welcome journey when direct deposit is set up.
 

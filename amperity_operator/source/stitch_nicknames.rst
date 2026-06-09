@@ -103,7 +103,7 @@ Upload CSV file
 
 .. stitch-nicknames-semantic-tags-start
 
-You may upload a file to Amperity that contains a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
+You may upload a file to Amperity that has a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
 
 .. code-block:: none
 

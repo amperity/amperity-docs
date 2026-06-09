@@ -125,7 +125,7 @@ The following sections describe the individual steps within the workflow that oc
 
           The request match category resulting from a match on Amperity ID will be **connected** and can be viewed from the **Unified_Compliance** table.
 
-          A Stitch cluster often contains variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
+          A Stitch cluster often has variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
 
           To avoid exposing additional customer PII in the DSAR report and possible DSAR response it is recommended to use the **exact** strategy as often as possible.
 
@@ -389,7 +389,7 @@ You can configure compliance actions to support the following request strategies
 #. Find all rows that exactly match the compliance request.
 #. Find all rows that exactly match the compliance request *along with* any row in a stitched table that shares an Amperity ID with those records.
 
-.. important:: You may wish to use Amperity to identify which records belong to a customer. If the strategy field is set to **connected_pii**, records are connected by the Amperity ID using probabilistic Stitch. The detailed report contains those records. Send these results to your downstream workflows to locate data that should be deleted from other systems.
+.. important:: You may wish to use Amperity to identify which records belong to a customer. If the strategy field is set to **connected_pii**, records are connected by the Amperity ID using probabilistic Stitch. The detailed report has those records. Send these results to your downstream workflows to locate data that should be deleted from other systems.
 
 .. privacy-rights-request-strategies-end
 
@@ -419,13 +419,13 @@ Inbound requests table
 
 .. privacy-rights-inbound-requests-table-start
 
-An inbound request table contains information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
+An inbound request table has information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
 
-If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
+If many identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
 
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
-It also contains information about the request type and request strategy.
+It also has information about the request type and request strategy.
 
 .. tip:: You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
 
@@ -475,7 +475,7 @@ Inbound requests must include at least one field that can be used to identify re
 
 In addition to email, phone number and physical address can be used to identify records belonging to a person.
 
-.. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+.. note:: An address group has many fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
 .. privacy-rights-semantic-tag-find-records-end
 
@@ -561,7 +561,7 @@ In some cases a compliance request cannot directly match to source rows. This in
 
 .. privacy-rights-build-linkage-tables-note-start
 
-.. note:: The main reason for using a linkage table instead of using source keys is when the custom domain table to which you are linking aggregates records using multiple keys. Amperity does not allow source keys to be composed of multiple columns.
+.. note:: The main reason for using a linkage table instead of using source keys is when the custom domain table to which you are linking aggregates records using many keys. Amperity does not allow source keys to be composed of many columns.
 
 .. privacy-rights-build-linkage-tables-note-end
 
@@ -601,7 +601,7 @@ Unified Compliance Overview
    :start-after: .. term-unified-compliance-overview-table-start
    :end-before: .. term-unified-compliance-overview-table-end
 
-The **Unified Compliance Overview** table contains the following columns:
+The **Unified Compliance Overview** table has the following columns:
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-overview-table-start
@@ -617,7 +617,7 @@ Unified Compliance
    :start-after: .. term-unified-compliance-table-start
    :end-before: .. term-unified-compliance-table-end
 
-The **Unified Compliance** table contains the following columns:
+The **Unified Compliance** table has the following columns:
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-table-start
@@ -645,7 +645,7 @@ A match in the **Unified Compliance** table will be assigned one of the followin
    Occurs when matches are made from keys that are present in upstream data sources.
 
 **linkage_table**
-   Occurs when matches are identified by a custom domain table that traces records back to a source table that contained records with multiple keys.
+   Occurs when matches are identified by a custom domain table that traces records back to a source table that contained records with many keys.
 
 If a record is not found in the Unified Compliance table use the expected matching category to troubleshoot why a record is missing.
 

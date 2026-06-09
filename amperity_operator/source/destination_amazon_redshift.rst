@@ -38,6 +38,6 @@ Configure destinations for Amazon Redshift
 
 #. Configure Amperity to send data to :doc:`Amazon S3 <destination_amazon_s3>`, and then configure your instance of |destination-name| to pull data from that Amazon S3 bucket.
 
-#. Within Amazon Web Services there are multiple options for moving data from an Amazon S3 bucket to |destination-name|, such as configuring `AWS Glue <https://aws.amazon.com/glue/>`__ |ext_link| or using an `Amazon S3 lambda function <https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html>`__ |ext_link|.
+#. Within Amazon Web Services there are many options for moving data from an Amazon S3 bucket to |destination-name|, such as configuring `AWS Glue <https://aws.amazon.com/glue/>`__ |ext_link| or using an `Amazon S3 lambda function <https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html>`__ |ext_link|.
 
 .. destination-amazon-redshift-steps-to-send-end

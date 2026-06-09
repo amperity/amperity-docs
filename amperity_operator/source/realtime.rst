@@ -19,7 +19,7 @@ Real-time tables
 
 .. real-time-about-start
 
-Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that builds and maintains complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more frequently.
+Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that builds and maintains complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more often.
 
 .. real-time-about-end
 
@@ -27,7 +27,7 @@ Real-time tables contain data that is streamed to Amperity. Real-time tables are
 
 .. admonition:: Amperity Learning Lab
 
-   Real-time tables enable use cases that require time-sensitive data updated more frequently than the daily batch process.
+   Real-time tables enable use cases that require time-sensitive data updated more often than the daily batch process.
 
    Open **Learning Lab** to learn more about `improving customer engagement with real-time tables <https://amperity.com/learning-lab/improving-customer-engagement-with-real-time-tables>`__ |ext_link|. Registration is required.
 
@@ -99,7 +99,7 @@ Real-time tables have the following limitations:
 #. Events that match part of the schema for a real-time table appears in a real-time table. Events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append. Data may not be deleted from a real-time table.
-#. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
+#. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that has the updated schema. (This may be the same Streaming Ingest API endpoint.)
 #. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
 
 .. realtime-howitworks-limitations-end
@@ -307,7 +307,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
-       .. note:: The schema for every real-time table contains the following additional fields at the query layer:
+       .. note:: The schema for every real-time table has the following additional fields at the query layer:
 
           * **_received_at** The time at which data arrived at the streaming endpoint.
           * **_written_at** The time at which data was written to the real-time table.
@@ -372,7 +372,7 @@ For example, a cURL request is similar to:
 
 where ``<stream>`` represents the unique stream ID, ``<token>`` represents the full Bearer token, and ``<tenant>`` represents the unique ID for your Amperity tenant.
 
-The ``--data-raw`` section contains the list of fields and field values that are sent by the upstream system to the streaming endpoint. The schema that is sent to the streaming endpoint must match the :ref:`schema that is defined for the real-time table <realtime-configure-real-time-table>`.
+The ``--data-raw`` section has the list of fields and field values that are sent by the upstream system to the streaming endpoint. The schema that is sent to the streaming endpoint must match the :ref:`schema that is defined for the real-time table <realtime-configure-real-time-table>`.
 
 .. note:: You may use any of the following `cURL command line options <https://curl.se/docs/manpage.html>`__ |ext_link| to define the set of fields that are sent to the streaming endpoint: ``-d``, ``-data-binary``, and ``--data-raw``.
 
@@ -428,7 +428,7 @@ Open the **Queries** page. Real-time tables are shown in the list of tables in t
 
 You may build queries that reference real-time tables *and* other database tables in the same query.
 
-To make a query that references real-time tables available to the segments and campaigns ensure that the query results return an Amperity ID. You may join the results to a table that already contains an Amperity ID.
+To make a query that references real-time tables available to the segments and campaigns ensure that the query results return an Amperity ID. You may join the results to a table that already has an Amperity ID.
 
 For example, a query that returns data from a real-time table named **Winback_Suppressions** can be joined to the **Customer 360** table:
 

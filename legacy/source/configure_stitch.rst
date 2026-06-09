@@ -63,7 +63,7 @@ General settings
 
 .. configure-stitch-general-start
 
-The **General** settings tab contains a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
+The **General** settings tab has a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
 
 .. image:: ../../images/mockup-stitch-settings-general.png
    :width: 420 px
@@ -604,7 +604,7 @@ Stable ID assignment can be a resource-intensive process, in particular when:
 
 #. Adding data sources that contain large numbers of rows--100+ million rows--of customer records.
 #. Updating existing data sources with large numbers of rows on a periodic basis, such as monthly or quarterly.
-#. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
+#. Data has a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
 You can configure the stable ID assignment process in the following ways:
 
@@ -680,7 +680,7 @@ One-to-one Stitch
 
 Use the following steps to configure your tenant for one-to-one Stitch:
 
-#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that contains the existing customer ID.
+#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that has the existing customer ID.
 
    .. tip:: You may apply the **ck** semantic tag from a feed or from a custom domain table.
 
@@ -726,7 +726,7 @@ The following table describes the changes you will see in your tenant after it i
 
        Fields related to the bad-values blocklist are not available, including **has_blv**, **blv_address**, **blv_email**, **blv_given_name**, **blv_phone**, and **blv_surname**.
 
-       All standard tables contains a **ck** field.
+       All standard tables has a **ck** field.
 
        The Stitch QA database template is not needed.
    * - **Queries**
@@ -1106,7 +1106,7 @@ A supersized cluster is a cluster of records that is discovered during the Stitc
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 
-A supersized cluster is created when multiple transitive connections are present across clusters of records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
+A supersized cluster is created when many transitive connections are present across clusters of records. For example, individuals named Mary Johnson and Jeffrey Johnson with the following records:
 
 .. vale off
 
@@ -1220,7 +1220,7 @@ The advanced configuration setting for trivial duplicates is:
 
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10
 
-An increase to this value will decrease the likelihood that multiple records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
+An increase to this value will decrease the likelihood that many records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-setting-end
 
@@ -1278,7 +1278,7 @@ For each unique combination of PII--excluding email addresses--the distinct emai
 
 .. configure-stitch-advanced-profile-trivial-duplicates-warning-start
 
-.. warning:: Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
+.. warning:: Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change before applying a semantic change to a production environment.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-warning-end
 

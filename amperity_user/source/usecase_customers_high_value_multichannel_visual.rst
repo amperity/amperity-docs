@@ -4,11 +4,11 @@
 
 .. meta::
     :description lang=en:
-        Return a list of customers with a high lifetime value who have purchased across multiple channels.
+        Return a list of customers with a high lifetime value who have purchased across many channels.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a list of customers with a high lifetime value who have purchased across multiple channels.
+        Return a list of customers with a high lifetime value who have purchased across many channels.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ High-value multichannel customers
 
 .. usecase-customers-high-value-multi-channel-howitworks-start
 
-The following sections describe using the visual **Query Editor** to build a query that returns a list of customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the visual **Query Editor** to build a query that returns a list of customers with a high lifetime value who have purchased across many channels.
 
 .. usecase-customers-high-value-multi-channel-howitworks-end
 
@@ -67,17 +67,17 @@ The following sections describe using the visual **Query Editor** to build a que
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Find customers who have purchased across multiple channels.
+          :alt: Find customers who have purchased across many channels.
           :align: center
           :class: no-scaled-link
 
      - Add a second attribute to your segment.
 
-       To identify customers who have purchased from multiple channels, choose the **Multi Purchase Channel** attribute from the **Transaction Attributes Extended** table, and then select the "is true" operator:
+       To identify customers who have purchased from many channels, choose the **Multi Purchase Channel** attribute from the **Transaction Attributes Extended** table, and then select the "is true" operator:
 
        .. image:: ../../images/usecase-high-value-multi-channel-combo-visual-query.png
           :width: 540 px
-          :alt: Find customers who have purchased across multiple channels.
+          :alt: Find customers who have purchased across many channels.
           :align: left
           :class: no-scaled-link
 
@@ -102,6 +102,6 @@ The following sections describe using the visual **Query Editor** to build a que
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build queries that are brand- or region-specific.
 
 .. usecase-customers-high-value-multi-channel-callouts-end

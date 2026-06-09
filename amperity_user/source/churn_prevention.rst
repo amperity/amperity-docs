@@ -144,7 +144,7 @@ Test the campaign
 
 .. churn-prevention-howto-test-start
 
-Testing and measuring the performance of a churn prevention campaign can be a challenge. A sophisticated marketing campaign is run across multiple channels: email, direct mail, display advertising, Facebook, etc. and likely identifies many types of sub-audiences within a larger group of customers.
+Testing and measuring the performance of a churn prevention campaign can be a challenge. A sophisticated marketing campaign is run across many channels: email, direct mail, display advertising, Facebook, etc. and likely identifies many types of sub-audiences within a larger group of customers.
 
 To get there, start with a simple campaign using only customers that are *cooling down*, and then divide them randomly into three groups:
 

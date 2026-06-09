@@ -111,7 +111,7 @@ This group of topics describes the specific steps that are required for those da
 
 .. source-fivetran-sources-important-start
 
-.. caution:: The documentation for how to configure each Fivetran-enabled data source is available from Fivetran. Please use link in the "Fivetran Docs" column in the table below to open that page and to learn more about how to configure that data source for Fivetran.
+.. caution:: The documentation for how to configure each Fivetran-enabled data source is available from Fivetran. Use link in the "Fivetran Docs" column in the table below to open that page and to learn more about how to configure that data source for Fivetran.
 
    All of the configuration requirements and steps for each Fivetran-enabled data source are found on the page for that data source within Fivetran documentation. Use the link in the table below to open that data source's page within the |fivetran_documentation| site.
 

@@ -25,7 +25,7 @@ The **Email AmpID Assignment** table narrows the many-to-many relationships betw
 
 .. table-email-ampid-assignment-note-start
 
-.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with multiple email addresses *or* prevent email addresses from being associated with multiple Amperity IDs.
+.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with many email addresses *or* prevent email addresses from being associated with many Amperity IDs.
 
    This table enforces a one-to-one relationship for use in the **Merged Customers** table.
 

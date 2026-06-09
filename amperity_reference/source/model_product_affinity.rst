@@ -23,7 +23,7 @@ Product affinity model
 
 .. model-product-affinity-about-start
 
-Amperity models product affinity for any product taxonomy that contains between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+Amperity models product affinity for any product taxonomy that has between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
 
 * Historical data to identify customers who have purchased a product in the past and are likely to do so again.
 * Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.

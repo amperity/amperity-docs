@@ -69,7 +69,7 @@ What are profile parameters?
 
 `Profile parameters <https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/profile-parameters>`__ |ext_link| in Adobe Target are attributes specific to the customer identified by a **thirdPartyId**. Profile parameters are stored in the |destination-name| profile store and can be accessed by the |destination-name| cookie to collect information that supports personalization and optimization use cases.
 
-Each customer's profile collection contains demographic and behavioral information, such as age, gender, purchase history, product preferences, and geographic location.
+Each customer's profile collection has demographic and behavioral information, such as age, gender, purchase history, product preferences, and geographic location.
 
 Profile parameters are an object referenced from a profile script using the **profile.get('<profile_parameter>')** function call. Each profile parameter sent to |destination-name| from Amperity is accessble using individual function calls. For example, if profile properties exist for **gender**, **favoriteProduct**, **lastPurchaseDate**, and **loyaltyTier** in Adobe Target, each profile parameter is accessable from a profile script using a function call for each profile parameter. For example: **profile.get('<favoriteProduct>')**.
 
@@ -423,13 +423,13 @@ Adobe Target table
 
 Add a database table to your customer 360 database with all profile parameters your brand wants to send to |destination-name|. The |destination-name| table should use attributes in the customer 360 database mapped to the names of profile properties your brand keeps in the |destination-name| profile store.
 
-An |destination-name| table consolidates data from multiple tables and uses an **INNER JOIN** on the Amperity ID.
+An |destination-name| table consolidates data from many tables and uses an **INNER JOIN** on the Amperity ID.
 
 * Give the table a name that ensures all users in your tenant will know what the table is for. For example: **Adobe_Target_Profile_Parameters**.
 * The first column in the table must be named **thirdPartyId**. The value of **thirdPartyId** must be a persistent identifier that uniquely identifies visitors to a website, mobile app, social media platform, and other cross-channel locations to which your customers log in. For example, a loyalty ID, a membership number, or a web account ID.
 * Parameter names are case-sensitive: **firstName**, **firstname**, **first_name**, and **Firstname** are different parameter names.
 * `Parameter names cannot be the same as a system parameter name <https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/variables-profiles-parameters-methods>`__ |ext_link|, inculding **averageDaysBetweenVisits**, **browserTime**, **geolocation**, **mobile**, **parameter**, **sessionCount** or **user**.
-* Parameters should not contain unhashed personally identifiable information (PII). Apply SHA-256 hashing to any profile parameter that contains PII.
+* Parameters should not contain unhashed personally identifiable information (PII). Apply SHA-256 hashing to any profile parameter that has PII.
 * Parameters must not contain sensitive data, such as medical records, financial records, or information about minors.
 * A database table with rows unique by Amperity ID may be made available to the **Segments Editor**.
 
@@ -483,13 +483,13 @@ A query that returns profile parameters to send to |destination-name| maps attri
 
 .. destination-adobe-target-build-dataset-query-tips-start
 
-An query can consolidate data from multiple tables.
+An query can consolidate data from many tables.
 
 * Give the query a name that ensures all users in your tenant will know what the query is for. For example: **Adobe_Target_Profile_Parameters**.
 * The first column returned by the query must be named **thirdPartyId**. The value of **thirdPartyId** must be a persistent identifier that uniquely identifies visitors to a website, mobile app, social media platform, and other cross-channel locations to which your customers log in. For example, a loyalty ID, a membership number, or a web account ID.
 * Parameter names are case-sensitive: **firstName**, **firstname**, **first_name**, and **Firstname** are different parameter names.
 * `Parameter names cannot be the same as a system parameter name <https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/variables-profiles-parameters-methods>`__ |ext_link|, inculding **averageDaysBetweenVisits**, **browserTime**, **geolocation**, **mobile**, **parameter**, **sessionCount** or **user**.
-* Parameters should not contain unhashed personally identifiable information (PII). Apply SHA-256 hashing to any profile parameter that contains PII.
+* Parameters should not contain unhashed personally identifiable information (PII). Apply SHA-256 hashing to any profile parameter that has PII.
 * Parameters must not contain sensitive data, such as medical records, financial records, or information about minors.
 * A query that returns rows unique by Amperity ID may be made available to the **Segments Editor**.
 

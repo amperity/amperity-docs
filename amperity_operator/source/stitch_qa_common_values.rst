@@ -20,7 +20,7 @@ Common values
 
 .. stitch-qa-query-common-values-start
 
-Use this query to return common values across semantics in a single view that shows cardinality for semantic values and shows the context for values that occur across multiple records and clusters.
+Use this query to return common values across semantics in a single view that shows cardinality for semantic values and shows the context for values that occur across many records and clusters.
 
 .. stitch-qa-query-common-values-end
 

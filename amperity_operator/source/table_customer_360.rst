@@ -91,7 +91,7 @@ Add SHA-256 hashed columns
 
 You can add SHA-256 hashed PII columns to your **Customer 360** table to enable their use from within campaigns.
 
-For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file contains SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that contains the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
+For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file has SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that has the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
 
 Add hashed PII columns to the **Customer 360** table using the |sql_spark_function_sha2| function:
 

@@ -38,7 +38,7 @@ Your brand can configure |source-name| to push profile and reservation events da
 
 .. note:: This connector requires configuration steps to be completed in |source-name| first, and then within Amperity. Enable the profiles and events stream in |source-name| *only after* the courier is configured in Amperity.
 
-.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
+.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more often, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 .. source-oracle-opera-context-end
 
@@ -144,7 +144,7 @@ Get details
           :class: no-scaled-link
      - |source-name| makes streamed data available from the `Streaming API <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/c_streaming_api.htm>`__ |ext_link|.
 
-       .. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
+       .. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more often, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 
 .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
@@ -183,7 +183,7 @@ Add courier
 
 .. source-oracle-opera-add-courier-important-start
 
-.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more frequently, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
+.. important:: Configure only one courier in Amperity for |source-name|. Each time the courier runs it pulls all of the data that is available *at that time* to Amperity. This courier should be configured to run at least one time per week to avoid data loss. Depending on the volume of data that is pushed to Amperity, this courier may need to be configured to run more often, such as daily, every six hours, or some other frequency that is required to support your brand's use cases and to prevent loss of streamed events data.
 
 .. source-oracle-opera-add-courier-important-end
 
@@ -201,6 +201,19 @@ Add courier
 #. Under **Oracle Opera Settings** configure the **Gateway URL**, **Application key**, **Enterprise ID**, and **Chain code**.
 
    .. note:: The combination of gateway URL, application key, and chain code uniquely identifies a stream.
+
+#. Under **Oracle Opera Settings**, select the **Load Type**:
+
+   .. list-table::
+      :widths: 30 70
+      :header-rows: 1
+
+      * - Load type
+        - Description
+      * - Truncate and Load
+        - Replaces all existing data in the feed with the current load. Use this when you want a clean load each time the courier runs.
+      * - Load
+        - Appends or updates data in the feed without removing existing records. Load operations help associate each table in the list of tables to a feed.
 
 #. Under **Oracle Opera Settings** configure the load operations to pull each of the business events datasets that were made available. For example:
 

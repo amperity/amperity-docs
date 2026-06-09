@@ -479,7 +479,7 @@ Custom audiences have advertiser or partner-specific rates. Each custom audience
 
        #. Select **Create from existing segments**. This opens a list of segments built with the visual **Segment Editor**. Use the checkboxes to pick one or more segments.
 
-          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting many segments does not combine them into a single audience.
 
           .. note:: Only segments created with the visual **Segment Editor** are shown in the segments list. To use an audience defined by a SQL query, select **Create a new segment** and recreate the query criteria in the visual **Segment Editor**.
 
@@ -575,7 +575,7 @@ Syndicated audiences have a standard global rate. They may be purchased on the d
 
        #. Select **Create from existing segments**. This opens a list of segments built with the visual **Segment Editor**. Use the checkboxes to pick one or more segments.
 
-          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting multiple segments does not combine them into a single audience.
+          .. note:: Each selected segment is sent to the data marketplace as a standalone audience. Selecting many segments does not combine them into a single audience.
 
           .. note:: Only segments created with the visual **Segment Editor** are shown in the segments list. To use an audience defined by a SQL query, select **Create a new segment** and recreate the query criteria in the visual **Segment Editor**.
 
@@ -770,7 +770,7 @@ Troubleshoot audience actions
 
 .. monetize-howtos-troubleshoot-start
 
-You can get more details on any failed workflows in order to resolve the issue and retry the action.
+You can get more details on any failed workflows to resolve the issue and retry the action.
 
 .. monetize-howtos-troubleshoot-details-end
 

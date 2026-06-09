@@ -945,7 +945,7 @@ Delete courier group
 
 .. courier-groups-howto-delete-start
 
-Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group prior to deleting it.
+Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group before deleting it.
 
 .. important:: This action will *not* delete couriers that are associated with the courier group.
 

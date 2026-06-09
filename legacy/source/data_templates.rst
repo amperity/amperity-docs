@@ -611,7 +611,7 @@ Truncate
 
 .. data-templates-snowflake-table-action-truncate-start
 
-Use the **Truncate table** option when the contents of the table should be emptied prior to loading data.
+Use the **Truncate table** option when the contents of the table should be emptied before loading data.
 
 .. data-templates-snowflake-table-action-truncate-end
 
@@ -745,7 +745,7 @@ Delete data template
 
 .. data-templates-delete-start
 
-Use the **Delete Settings** option to remove a data template from Amperity. Verify that both upstream and downstream processes no longer depend on this data template prior to deleting it.
+Use the **Delete Settings** option to remove a data template from Amperity. Verify that both upstream and downstream processes no longer depend on this data template before deleting it.
 
 .. data-templates-delete-end
 

@@ -115,7 +115,7 @@ Use the **File settings** section of the courier configuration page to specify t
 
 .. format-parquet-pull-couriers-load-settings-partition-start
 
-.. note:: Apache Parquet files are partitioned, where a single logical Parquet file is comprised of multiple physical files in a directory structure, each of them representing a partition.
+.. note:: Apache Parquet files are partitioned, where a single logical Parquet file is comprised of many physical files in a directory structure, each of them representing a partition.
 
    Parquet partitioning optionally permits for data to be nested in a directory structure determined by the value of partitioning columns. Amperity only detects Parquet partition files one directory level below the configured file pattern. For example:
 
@@ -138,7 +138,7 @@ Use the **Feed selection** section of the courier configuration page to identify
 From the **Load type** dropdown select one of:
 
 * **Load** Use this option to load data to the associated domain table.
-* **Spark** Use this option to load data when the Apache Parquet file contains complex types, such as **structs**, **arrays**, or **maps**.
+* **Spark** Use this option to load data when the Apache Parquet file has complex types, such as **structs**, **arrays**, or **maps**.
 * **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
 .. format-parquet-pull-couriers-feed-selection-end
@@ -179,7 +179,7 @@ Amperity overwrites Apache Parquet files when they are sent to the same location
 
 .. format-parquet-destination-note-start
 
-.. tip:: By default, Amperity uses Snappy to compress Apache Parquet files prior to sending them to a destination. If you do not need PGP encryption or output as a single file, you should not use compression.
+.. tip:: By default, Amperity uses Snappy to compress Apache Parquet files before sending them to a destination. If you do not need PGP encryption or output as a single file, you should not use compression.
 
 .. format-parquet-destination-note-end
 

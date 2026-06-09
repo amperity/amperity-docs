@@ -61,7 +61,7 @@ The following groups of semantic tags are available: |semantics_customer_profile
       The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with the LAST UPDATED FIELD dropdown list.
 #. Apply any other semantic tags, such as for transactions, itemized transactions, or custom semantic tags, as appropriate.
 
-   .. important:: Semantic tags for interactions records, such as transactions, itemized transactions, loyalty profiles, and email events, may need to be reshaped prior to applying semantic tags. Use custom domain tables and reshape the data using domain SQL prior to applying semantic tags.
+   .. important:: Semantic tags for interactions records, such as transactions, itemized transactions, loyalty profiles, and email events, may need to be reshaped before applying semantic tags. Use custom domain tables and reshape the data using domain SQL before applying semantic tags.
 
       In those situations, leave the semantic tag fields empty in the **Feed Editor**, build a custom domain table that shapes the fields to align to the semantic tagging requirements, and then apply semantic tags.
 #. Click **Activate**.
@@ -183,7 +183,7 @@ Email addresses
 
 .. semantics-profile-type-email-start
 
-A customer data source may have more than one field that contains an email address, such as for personal email and work email addresses.
+A customer data source may have more than one field that has an email address, such as for personal email and work email addresses.
 
 When a data source provides more than one email address in the data, it is important to apply the **email** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
@@ -193,7 +193,7 @@ When a data source provides more than one email address in the data, it is impor
 
 Determine the best way to configure Amperity for email addresses:
 
-* :ref:`semantics-profile-type-email-namespace` (recommended when multiple email addresses are present)
+* :ref:`semantics-profile-type-email-namespace` (recommended when many email addresses are present)
 * :ref:`semantics-profile-type-email-ordinals`
 * :ref:`semantics-profile-type-email-consolidate`
 * :ref:`semantics-profile-type-email-exclude`
@@ -832,7 +832,7 @@ When Stitch generates clusters of customer records, a generational suffix is use
 
 .. semantics-profile-type-generational-suffix-derived-caution-start
 
-.. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that contains the suffix separated from the first and last names.
+.. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that has the suffix separated from the first and last names.
 
 .. semantics-profile-type-generational-suffix-derived-caution-end
 
@@ -848,7 +848,7 @@ Phone numbers
 
 .. semantics-profile-type-phone-start
 
-A customer data source may have more than one field that contains a phone number, such as a home phone number, a work phone number, or a mobile phone number.
+A customer data source may have more than one field that has a phone number, such as a home phone number, a work phone number, or a mobile phone number.
 
 When a data source provides more than one phone number in the data, it is important to apply the **phone** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
@@ -858,7 +858,7 @@ When a data source provides more than one phone number in the data, it is import
 
 Determine the best way to configure Amperity for phone numbers:
 
-* :ref:`semantics-profile-type-phone-namespaces` (recommended when multiple phone numbers are present)
+* :ref:`semantics-profile-type-phone-namespaces` (recommended when many phone numbers are present)
 * :ref:`semantics-profile-type-phone-ordinals`
 * :ref:`semantics-profile-type-phone-consolidate`
 
@@ -1001,13 +1001,13 @@ Domain SQL vs. feeds
 
 .. semantics-interactions-domain-sql-vs-feeds-start
 
-The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely need to use a custom domain table to shape the SQL prior to applying semantic tags.
+The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely need to use a custom domain table to shape the SQL before applying semantic tags.
 
 Some things to consider when determining the best approach for applying semantic tags:
 
 * What shape is the data after it has been loaded to the **Feed Editor**? Can all of the required tags be applied to fields that exist within the data?
 * What shape do you want to work with downstream, including the customer 360 database, segments that are sent from Amperity to downstream systems, and the **Campaigns** page within Amperity.
-* Can the data be trimmed using a saved query prior to loading it to Amperity? Consider clickstream data, which offers a very wide set of fields, many of which are not applicable to using interaction records to associate your customers with their most important activities.
+* Can the data be trimmed using a saved query before loading it to Amperity? Consider clickstream data, which offers a very wide set of fields, many of which are not applicable to using interaction records to associate your customers with their most important activities.
 * Do high quality customer records and interaction records exist side-by-side within this data source? In some cases, using domain SQL to build custom domain tables to capture the customer records separately from the interactions records may be necessary. In this situation, the same feed can be used to load the data, after which two custom tables are built using domain SQL.
 
 .. semantics-interactions-domain-sql-vs-feeds-end
@@ -1097,7 +1097,7 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that has customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -1184,7 +1184,7 @@ Customer keys (ck)
 
    * Records may have **NULL** customer keys. **NULL** customer keys are ignored by Stitch.
    * There may be only one customer key per data source.
-   * There may be multiple customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
+   * There may be many customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
 
 .. semantics-key-customer-tip-end
 
@@ -1206,7 +1206,7 @@ Foreign keys (fk)
 
 A foreign key semantic tag may be applied to any column in any data source, but should be associated with a field that can also act as a primary key for that data source *and* is present in other tables.
 
-A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source contains customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
+A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source has customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
 
 .. semantics-key-foreign-context-end
 
@@ -1228,9 +1228,9 @@ Use foreign keys to define meaningful connections across all types of data sourc
 .. tip:: What happens to foreign keys in the **Unified Coalesced** table?
 
    * Records may have **NULL** foreign keys.
-   * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
-   * There may be multiple foreign keys per Amperity ID.
-   * There should not be multiple Amperity IDs per foreign key.
+   * There may be many foreign keys in the data source, but there may not be duplicate foreign keys.
+   * There may be many foreign keys per Amperity ID.
+   * There should not be many Amperity IDs per foreign key.
 
 .. semantics-key-foreign-tip-end
 
@@ -1478,7 +1478,7 @@ sk-birthdate
 
 Add the **sk-birthdate** separation key to fields that are tagged with the **birthdate** semantic to prevent Stitch from using birthdates to match records.
 
-For example, a tenant has a datasource with high-quality **birthdate** data, yet post-Stitch output contains generational issues where parents and siblings are clustered together despite having different birth dates. 
+For example, a tenant has a datasource with high-quality **birthdate** data, yet post-Stitch output has generational issues where parents and siblings are clustered together despite having different birth dates. 
 
 .. semantics-key-separation-associate-to-birthdate-end
 

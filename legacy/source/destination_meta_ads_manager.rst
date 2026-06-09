@@ -27,7 +27,7 @@ Send data to Meta Ads Manager
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_meta_ads_manager.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_meta_ads_manager.html>`__ |ext_link|.
 
 .. vale on
 
@@ -304,7 +304,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -1086,7 +1086,7 @@ When the business user has not agreed to Facebook terms, an error similar to the
 ::
 
    Permissions error: To create or edit an audience with an uploaded customer list,
-   please agree to the Custom Audience terms at
+ agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-end

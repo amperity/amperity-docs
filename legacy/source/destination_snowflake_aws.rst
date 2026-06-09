@@ -19,7 +19,7 @@ Send data to Snowflake on Amazon AWS
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_snowflake_aws.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_snowflake_aws.html>`__ |ext_link|.
 
 .. vale on
 
@@ -569,7 +569,7 @@ Add data template
 
               .. important:: Always use this option when Snowflake is managed by |bic| or when user roles in Snowflake have permission to access all tables in the database.
           * - **Truncate table**
-            - Use the **Truncate table** option when the contents of the table should be emptied prior to loading data.
+            - Use the **Truncate table** option when the contents of the table should be emptied before loading data.
 
               .. caution:: Only use this option when Snowflake is not managed by |bic| and when user roles in Snowflake have permissions set on a per-table basis..
 

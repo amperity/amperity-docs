@@ -29,7 +29,7 @@ To set up your local authoring environment:
 
      - Choose your favorite text editor. On a Mac, TextMate is recommended.
 
-       .. important:: On a Mac, please do not use the built-in TextEdit application to make changes to files in the documentation repo. Its behavior is inconsistent, sometimes unreliable, and *can* introduce unwanted formatting behaviors and build outcomes.
+       .. important:: On a Mac, do not use the built-in TextEdit application to make changes to files in the documentation repo. Its behavior is inconsistent, sometimes unreliable, and *can* introduce unwanted formatting behaviors and build outcomes.
 
 
    * - .. image:: ../../images/steps-02.png

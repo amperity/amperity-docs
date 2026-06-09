@@ -105,7 +105,7 @@ About Presto SQL
 
 .. queries-editor-presto-sql-start
 
-Amperity queries are built using Presto SQL to define a **SELECT** statement. Please refer to the |sql_presto| reference.
+Amperity queries are built using Presto SQL to define a **SELECT** statement. Refer to the |sql_presto| reference.
 
 .. queries-editor-presto-sql-end
 
@@ -1409,7 +1409,7 @@ Revenue opportunity, many groups
 
 .. queries-example-revenue-opportunity-many-groups-start
 
-Use the following example to size revenue opportunity for multiple groups, such as moving from "one-and-done" to "repeat purchaser". This query is most effective when run against the **Transaction Attributes Extended** table, but may be useful when run against other tables. Customize the **WITH** statement to define a list of fields to be used for comparing movements between groups. Customize the main **SELECT** statement to define the time periods for which this movement will be measured.
+Use the following example to size revenue opportunity for many groups, such as moving from "one-and-done" to "repeat purchaser". This query is most effective when run against the **Transaction Attributes Extended** table, but may be useful when run against other tables. Customize the **WITH** statement to define a list of fields to be used for comparing movements between groups. Customize the main **SELECT** statement to define the time periods for which this movement will be measured.
 
 .. code-block:: sql
    :linenos:

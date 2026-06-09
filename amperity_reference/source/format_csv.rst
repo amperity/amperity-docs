@@ -53,7 +53,7 @@ Double quotes
 `RFC 4180 <https://tools.ietf.org/html/rfc4180>`__ |ext_link| has the following guidelines for the use of double quotes in CSV files:
 
 * A field may or may not be enclosed by double quotes. When a field is not enclosed by double quotes, double quotes may not appear inside a field.
-* A field that contains line breaks (CRLF), double quotes, or commas should be enclosed in double quotes.
+* A field that has line breaks (CRLF), double quotes, or commas should be enclosed in double quotes.
 * When a field is enclosed by double quotes, a double quote that appears inside a field must be escaped using a double quote.
 
 When an escape character is not specified, Amperity will assume that the escape character is double quotes. This follows the RFC as closely as possible: "If double quotes are used to enclose fields, then a double quote appearing inside a field must be escaped by preceding it with another double quote."
@@ -138,7 +138,7 @@ When using CSV files, it is recommend to:
 * Escape commas or quotes that appear in the data
 * Quote string values
 * Encode files in UTF-8 or UTF-16. Amperity automatically detects the 2-byte header present with the UTF-16 encoding format. If the 2-byte header is missing, the file is treated as UTF-8.
-* Compress files prior to encryption using ZIP, GZIP, or TAR. Amperity automatically decompresses GZIP files. ZIP and TAR decompression must be specified in courier file load settings.
+* Compress files before encryption using ZIP, GZIP, or TAR. Amperity automatically decompresses GZIP files. ZIP and TAR decompression must be specified in courier file load settings.
 * Encrypt files using PGP. Compression will not reduce the size of an encrypted file
 
 .. format-csv-pull-data-sources-recommendations
@@ -262,7 +262,7 @@ Domain SQL allows the data in CSV files to be transformed *after* it has been lo
 * :ref:`Combining postal codes <domain-tables-custom-sql-use-case-combine-postal>`
 * :ref:`Extracting first and last names <domain-tables-custom-sql-use-case-extract-names>`
 * :ref:`Hashing profile (PII) data <domain-tables-custom-sql-use-case-rehash-data>`
-* :ref:`Parsing fields with multiple separators <domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators>`
+* :ref:`Parsing fields with many separators <domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators>`
 * :ref:`Setting non-US-ASCII email addresses to NULL <domain-tables-custom-sql-use-case-set-email-to-null>`
 * :ref:`Standardizing values for USA states <domain-tables-custom-sql-use-case-standardize-values-for-usa-states>`
 
@@ -287,7 +287,7 @@ Amperity can send CSV files to downstream workflows using any of the following d
 
 .. format-csv-destination-note-start
 
-.. note:: Sometimes CSV files with Japanese or other East Asian languages may not display the characters when uploaded to Microsoft Excel, even if the file contains UTF-8 or UTF-16 character encoding. Try using an alternate character encoding, `such as Shift JIS <https://en.wikipedia.org/wiki/Shift_JIS>`__ |ext_link|, to work around `character encoding problems in Microsoft Excel <https://learn.microsoft.com/en-us/answers/questions/5142715/not-able-to-see-proper-japanese-fonts-in-excel-csv>`__ |ext_link|.
+.. note:: Sometimes CSV files with Japanese or other East Asian languages may not display the characters when uploaded to Microsoft Excel, even if the file has UTF-8 or UTF-16 character encoding. Try using an alternate character encoding, `such as Shift JIS <https://en.wikipedia.org/wiki/Shift_JIS>`__ |ext_link|, to work around `character encoding problems in Microsoft Excel <https://learn.microsoft.com/en-us/answers/questions/5142715/not-able-to-see-proper-japanese-fonts-in-excel-csv>`__ |ext_link|.
 
 .. format-csv-destination-note-end
 

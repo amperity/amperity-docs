@@ -80,7 +80,7 @@ Use the Canvas to:
 
 * View proposed segments with customer counts and filter criteria
 * Preview journey structures with their entry segments and channel configurations
-* Switch between multiple drafts, using the hamburger icon in the top left of the **Canvas** to select from recent work.
+* Switch between many drafts, using the hamburger icon in the top left of the **Canvas** to select from recent work.
 * Access manual editing options to make fine-grained adjustments, using the **Manual edit** button in the top right of the **Canvas**.
 
 .. note:: Selecting **Manual edit** will take you to the relevant area of Amperity. For example, if you have a draft journey and you select **Manual edit**, you will be taken to the **Journeys** editor where you can proceed with edits. 
@@ -146,7 +146,7 @@ Multi-step planning
 
 .. customer-data-agent-planning-start
 
-When you ask the **Customer Data Assistant** to perform multiple related actions, it automatically generates a plan, which is a task list to coordinate the work.
+When you ask the **Customer Data Assistant** to perform many related actions, it automatically generates a plan, which is a task list to coordinate the work.
 
 .. image:: ../../images/customer_data_agent_plan.png
       :width: 550 px
@@ -276,17 +276,17 @@ Iterative refinement example
 
 Consider this scenario:
 
-#. **Initial request:** "Create a segment of customers who made Valentine's Day purchases."
+#. **Initial request** "Create a segment of customers who made Valentine's Day purchases."
 
-#. **Result:** The agent creates a segment for Valentine's Day 2026, but it only returns 5 customers.
+#. **Result** The agent creates a segment for Valentine's Day 2026, but it only returns 5 customers.
 
-#. **Refinement:** "Actually, can you make it the three weeks leading up to Valentine's Day?"
+#. **Refinement** "Actually, can you make it the three weeks leading up to Valentine's Day?"
 
-#. **Result:** The agent updates the segment to the new time frame, returning a larger segment, but still fewer than the desired size of at least 100.
+#. **Result** The agent updates the segment to the new time frame, returning a larger segment, but still fewer than the desired size of at least 100.
 
-#. **Investigation:** "Can you look into the data for the past few years to see when there are enough purchases around Valentine's Day to create a segment larger than 100 customers?"
+#. **Investigation** "Can you look into the data for the past few years to see when there are enough purchases around Valentine's Day to create a segment larger than 100 customers?"
 
-#. **Result:** The agent explores the data and finds that Valentine's Day 2024 has substantial purchase data, then proposes a segment that includes Valentine's Day customers from the past three years.
+#. **Result** The agent explores the data and finds that Valentine's Day 2024 has substantial purchase data, then proposes a segment that includes Valentine's Day customers from the past three years.
 
 This example illustrates how iterative prompting and asking the agent to explore your data leads to successful outcomes, even when initial assumptions are incorrect.
 

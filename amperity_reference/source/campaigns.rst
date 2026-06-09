@@ -277,7 +277,7 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Audience members that are removed from the control group belong to a treatment group on the next send.
 
-   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a static group of customers, but with small fluctuations in audience size.
+   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and has a static group of customers, but with small fluctuations in audience size.
 
    #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
    #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
@@ -339,7 +339,7 @@ Sometimes campaigns need to exclude certain members of your audience. For exampl
 
 When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
-.. note:: When you select multiple exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
+.. note:: When you select many exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
 
 .. campaigns-exclusion-lists-end
 
@@ -579,7 +579,7 @@ You can finds details about the columns found in the campaign results download f
 
    * - **Measurement End Date**
      - Datetime
-     - The end of the campaign measurement period, plus the number of days selected prior to that date. The date prior to all preceding transactions and events associated with outcomes of this campaign.
+     - The end of the campaign measurement period, plus the number of days selected before that date. The date before all preceding transactions and events associated with outcomes of this campaign.
 
        .. note:: By default, this end date is 7 days preceding the selected measurement start date.
 
@@ -870,19 +870,19 @@ Allocate customers to more than one sub-audience
 
 .. campaigns-allocate-multiple-sub-audiences-start
 
-You can allocate customers (Amperity IDs) to multiple sub-audiences in a campaign on the **Edit Campaign** page.
+You can allocate customers (Amperity IDs) to many sub-audiences in a campaign on the **Edit Campaign** page.
 
 .. note:: Amperity defaults to allocating customers (Amperity IDs) to the first (mutually exclusive) sub-audience.
 
 .. campaigns-allocate-multiple-sub-audiences-end
 
-**To allocate customers (Amperity IDs) multiple sub-audiences in a campaign**
+**To allocate customers (Amperity IDs) many sub-audiences in a campaign**
 
 .. campaigns-allocate-multiple-sub-audiences-steps-start
 
 #. From the **Edit Campaign** page, in the **Sub-audiences and Destinations** section, switch the **Assign to first match only** toggle off.
 
-Amperity will allocate your customers (Amperity IDs) to multiple sub-audiences in your campaign. 
+Amperity will allocate your customers (Amperity IDs) to many sub-audiences in your campaign. 
 
 .. campaigns-allocate-multiple-sub-audiences-steps-end
 
@@ -1083,7 +1083,7 @@ Archive campaign
 
 Use the archive feature for campaigns you have actively used, but you do not need anymore.
 
-.. note:: This action deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, please contact Amperity support.
+.. note:: This action deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, contact Amperity support.
 
 .. campaigns-build-audience-end
 
@@ -1215,21 +1215,21 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
    A control group should be set to 10%, with the initial treatment group set to 90%. Click **Add treatment** to add more treatment groups. Rename them as necessary and adjust the percentages as appropriate.
 
-#. For each treatment group (including the control group, if configured for this campaign), assign multiple destinations.
+#. For each treatment group (including the control group, if configured for this campaign), assign many destinations.
 
-   .. note:: A treatment group with multiple destinations sends data to *all* of the configured destinations.
+   .. note:: A treatment group with many destinations sends data to *all* of the configured destinations.
 
 #. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
-#. Optional. Assign multiple destinations to each treatment group in a sub-audience.
+#. Optional. Assign many destinations to each treatment group in a sub-audience.
 
 #. Configure recipient list delivery. One-time campaigns you have two options: at a scheduled date and time in the future or as soon as possible.
 
@@ -1237,7 +1237,7 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-multi-channel-steps-end
 
@@ -1261,7 +1261,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
@@ -1283,7 +1283,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-onetime-steps-end
 
@@ -1307,7 +1307,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
@@ -1329,7 +1329,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-recurring-steps-end
 
@@ -1424,7 +1424,7 @@ You can discard a campaign on the **Edit Campaign** page.
 
 .. campaigns-discard-campaign-steps-start
 
-Use the **Discard** option to remove a campaign from Amperity. Verify that both upstream and downstream processes no longer depend on this campaign prior to discarding it.
+Use the **Discard** option to remove a campaign from Amperity. Verify that both upstream and downstream processes no longer depend on this campaign before discarding it.
 
 #. From the **Campaigns** page, open a campaign, and then select **Discard**.
 #. The **Discard Campaign** dialog box opens. Click **Confirm**.
@@ -1439,7 +1439,7 @@ Download campaign results
 
 .. campaigns-download-start
 
-You can download a file that contains a list of campaign results.
+You can download a file that has a list of campaign results.
 
 For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 
@@ -1474,7 +1474,7 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 
 #. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. In the menu, click **Download Recipients**.
-#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** dropdown menu.
+#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date** dropdown menu.
 #. Click **Download**. An .CSV file downloads to your Downloads folder on your computer.
 #. Open the .CSV file in a program and then view the recipients list.
 
@@ -1624,10 +1624,10 @@ Labels are created on the **Settings** page, in the **Labels** tab, by clicking 
 * Not exceed 10 labels per journey
 * Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, journeys matching any selected labels are shown.
+.. note:: When many labels are selected, journeys matching any selected labels are shown.
 
 
-.. note:: When multiple labels are selected, campaigns matching any selected labels will be shown.
+.. note:: When many labels are selected, campaigns matching any selected labels will be shown.
 
 .. campaigns-filter-campaigns-end
 
@@ -1884,7 +1884,7 @@ You can set a campaign launch date on the **Edit Campaign** page.
 
 .. campaigns-set-launch-date-steps-start
 
-#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, enter the amount of days in the **Campaign launch date:** field.
+#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, enter the amount of days in the **Campaign launch date** field.
 
 .. campaigns-set-launch-date-steps-end
 

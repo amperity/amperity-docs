@@ -139,7 +139,7 @@ The following table lists the operators that are available to these attributes.
    * - **is false**
      - |attribute-recommended| **More useful**
 
-       Returns an audience that contains customers who have not opted in to being contacted by your loyalty program.
+       Returns an audience that has customers who have not opted in to being contacted by your loyalty program.
 
        .. tip:: Combine the **Is Opted In** and **Latest Opted Out Datetime** attributes with this condition to return an audience of customers who have opted out of being contacted by your loyalty program to exclude from an advertising campaign.
 

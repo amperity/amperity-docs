@@ -233,7 +233,7 @@ Completion
 
 .. queries-data-explorer-full-screen-completion-tip-start
 
-.. tip:: Ensure that prior to filtering a column that it actually contains data that can match the search criteria.
+.. tip:: Ensure that before filtering a column that it actually has data that can match the search criteria.
 
 .. queries-data-explorer-full-screen-completion-tip-end
 
@@ -342,7 +342,7 @@ About Presto SQL
 
 .. queries-editor-presto-sql-start
 
-Amperity queries are built using Presto SQL to define a **SELECT** statement. Please refer to the :doc:`sql_presto`.
+Amperity queries are built using Presto SQL to define a **SELECT** statement. Refer to the :doc:`sql_presto`.
 
 .. queries-editor-presto-sql-end
 
@@ -743,7 +743,7 @@ Delete query
 
 .. queries-delete-start
 
-Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query prior to deleting it.
+Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query before deleting it.
 
 .. queries-delete-end
 
@@ -907,7 +907,7 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. Alert levels include:
+Alerts are sent when the record count in the query output has errors that exceed the configured threshold. Alert levels include:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
 
@@ -981,7 +981,7 @@ Labels are created on the **Settings** page, in the **Labels** tab, by clicking 
 * Not exceed 10 labels per journey
 * Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
 
-.. note:: When multiple labels are selected, queries matching any selected labels will be shown.
+.. note:: When many labels are selected, queries matching any selected labels will be shown.
 
 .. queries-filter-end
 
@@ -1085,7 +1085,7 @@ Bulk delete
 
 .. queries-bulk-delete-start
 
-Bulk delete multiple queries on the **Queries** page.
+Bulk delete many queries on the **Queries** page.
 
 .. queries-bulk-delete-end
 
@@ -1106,7 +1106,7 @@ Bulk move
 
 .. queries-bulk-move-start
 
-Bulk move multiple queries on the **Queries** page.
+Bulk move many queries on the **Queries** page.
 
 .. queries-bulk-move-end
 
@@ -1240,7 +1240,7 @@ Rename query
 
 .. queries-rename-start
 
-Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query prior to renaming it.
+Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query before renaming it.
 
 .. queries-rename-end
 

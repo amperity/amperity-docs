@@ -106,7 +106,7 @@ The URL of this endpoint is:
       :align: left
       :class: no-scaled-link
 
-   The copied URL contains the correct value for the selected endpoint's **{tenant-domain}**. Change the **{index-id}** to "indexes".
+   The copied URL has the correct value for the selected endpoint's **{tenant-domain}**. Change the **{index-id}** to "indexes".
 
 **cURL example**
 
@@ -192,7 +192,7 @@ where **{index-id}** :ref:`matches the index ID <profile-api-howitworks-index-id
       :align: left
       :class: no-scaled-link
 
-   The copied URL contains the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**. Append the lookup key using **?key={key-value}** to the copied URL to return a single unique record *or* a list of attributes associated with that row.
+   The copied URL has the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**. Append the lookup key using **?key={key-value}** to the copied URL to return a single unique record *or* a list of attributes associated with that row.
 
 **cURL example for a single unique record**
 
@@ -216,7 +216,7 @@ where
 
 .. note:: The URL should not have a trailing slash.
 
-**cURL example for multiple matching records**
+**cURL example for many matching records**
 
 ::
 
@@ -227,7 +227,7 @@ where
         ?key={key-value}\
         &all_matches=true'
 
-where all of the parameters are the same as the example request for a single unique record *with the addition of the* **all_matches=true** paramater, which returns all matching records :ref:`up to the configured limit for this endpoint <profile-api-enable-add-index>`. Each returned record contains its own list of attributes.
+where all of the parameters are the same as the example request for a single unique record *with the addition of the* **all_matches=true** paramater, which returns all matching records :ref:`up to the configured limit for this endpoint <profile-api-enable-add-index>`. Each returned record has its own list of attributes.
 
 **Responses**
 
@@ -263,7 +263,7 @@ For example, an index that uses "loyalty_id" as the lookup key, and returns "fir
      }
    }
 
-An index that returns multiple matching records have a response similar to:
+An index that returns many matching records have a response similar to:
 
 .. code-block:: salt
    :linenos:
@@ -326,7 +326,7 @@ The Profile API returns the following HTTP status codes:
        * 404: No build found for index-id: "index-id".
        * 404: No node found for build-id: "build-id".
 
-       .. note:: A 404 Not Found status code is returned when the URL contains a trailing slash.
+       .. note:: A 404 Not Found status code is returned when the URL has a trailing slash.
 
    * - **503 Service Unavailable**
      - A generic error has occurred. The service may be unavailable. Verify the configuration of the request and the expected response values and try again.
@@ -353,7 +353,7 @@ Queries used to define Profile API endpoints have the following requirements:
 
 #. At least one attribute must be returned in the response to the request to the endpoint for the specified lookup key. The number of attributes that can be in an index is not limited, but it is recommended to keep the list of attributes specific to your use case.
 
-   Plan to use a variety of indexes to support a variety of use cases instead of using a single, large index. Some indexes, with the right combination of attributes, may be used to support multiple workflows.
+   Plan to use a variety of indexes to support a variety of use cases instead of using a single, large index. Some indexes, with the right combination of attributes, may be used to support many workflows.
 
 .. profile-api-howitworks-queries-end
 
@@ -425,7 +425,7 @@ and then use the lookup key in your workflow to return individual attribute valu
       :align: left
       :class: no-scaled-link
 
-   The copied URL contains the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**.
+   The copied URL has the correct values for the selected endpoint's **{tenant-domain}** and **{index-id}**.
 
 .. profile-api-howitworks-index-ids-tip-end
 
@@ -514,7 +514,7 @@ The Profile API must be configured for use in Amperity. This is done in a series
 
    #. Use a sandbox to make changes directly to the "production" index, but run it from the sandbox to validate the changes and the effects those changes may have on the downstream workflow. This approach keeps the same index ID in place and helps prevent disruption to any live Profile API integrations.
 
-   #. Build a new index that contains the changes, and then test those changes incrementally downstream on individual locations within the workflow. This requires updating the index ID in the downstream workflow.
+   #. Build a new index that has the changes, and then test those changes incrementally downstream on individual locations within the workflow. This requires updating the index ID in the downstream workflow.
 
 .. profile-api-enable-api-note-end
 
@@ -566,11 +566,11 @@ Build a query
 
 .. profile-api-enable-build-query-start
 
-Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to light up these workflows. Consider your goals for each workflow, build a query that returns the list of attributes and lookup key that enables that workflow.
+Build a query that has the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to light up these workflows. Consider your goals for each workflow, build a query that returns the list of attributes and lookup key that enables that workflow.
 
 .. TODO: This admonition is the paragraph as the intro for the use cases section. Is fine for now.
 
-.. important:: The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that contains the attributes you need to light up that use case.
+.. important:: The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that has the attributes you need to light up that use case.
 
 .. profile-api-enable-build-query-end
 
@@ -716,9 +716,9 @@ An index must be defined for each query that is used to generate an endpoint for
           :class: no-scaled-link
      - Save the index.
 
-       If this save is for an initial test of the endpoint and contains only a small number of rows of data, the amount of time it can take to generate the index is measured in minutes. Use the **LIMIT** clause in the query to control the size of the index.
+       If this save is for an initial test of the endpoint and has only a small number of rows of data, the amount of time it can take to generate the index is measured in minutes. Use the **LIMIT** clause in the query to control the size of the index.
 
-       .. note:: A very large index that is generated for the first time can up to six hours. Please allow the index to finish generating before trying to access it from a downstream workflow.
+       .. note:: A very large index that is generated for the first time can up to six hours. Allow the index to finish generating before trying to access it from a downstream workflow.
 
 .. api-profile-add-index-steps-end
 
@@ -803,7 +803,7 @@ Validate the endpoint
 
 .. profile-api-enable-validate-endpoint-start
 
-After the index has generated, validate the endpoint to verify that it is in the list of indexes, and then contains the data that is required by your workflow.
+After the index has generated, validate the endpoint to verify that it is in the list of indexes, and then has the data that is required by your workflow.
 
 The most direct way to validate the endpoints is to use cURL commands:
 
@@ -822,7 +822,7 @@ Build into use cases
 
 .. profile-api-enable-build-usecase-start
 
-After you have verified that a specific endpoint is accessible and that it contains the data you expect it to contain, you can start building that endpoint into your workflows. See the :ref:`list of use cases <profile-api-usecases>` for some ideas as starting points.
+After you have verified that a specific endpoint is accessible and that it has the data you expect it to contain, you can start building that endpoint into your workflows. See the :ref:`list of use cases <profile-api-usecases>` for some ideas as starting points.
 
 The Amperity Profile API can be accessed using cURL, Postman, or any other mechanism that can access a REST API and provide the access token that is required by the request.
 
@@ -865,7 +865,7 @@ The performance of each index depends on the number of columns and the number of
 
    The following sections show response times for :ref:`5 column <profile-api-response-times-5-columns>`, :ref:`10 column <profile-api-response-times-10-columns>`, and :ref:`30 column <profile-api-response-times-30-columns>` index sizes and a range of output rows.
 
-   Response times were measured using simulated traffic across multiple Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50 ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
+   Response times were measured using simulated traffic across many Profile API endpoints simultaneously from US-East to US-West. Response times for US-West to US-West were less than 50 ms. Use these response times as an indicator for the types of response times you will see for your tenant's set of Profile API endpoints.
 
 .. profile-api-response-times-start
 
@@ -1108,7 +1108,7 @@ Use cases
 
 .. profile-api-usecases-start
 
-The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that contains the attributes you need to light up that use case.
+The Profile API can support an unlimited number of potential use cases. All you need to do is imagine the use case, identify the requirements for building that use case for your downstream workflow, and then build a query in Amperity that can be used to generate an index that has the attributes you need to light up that use case.
 
 The following sections describe some ways to use the Profile API:
 
@@ -1177,7 +1177,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile, such as address, state, postal, and full name:
+     - Build an index that has the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles. For example: loyalty ID and loyalty tier, predicted CLV tiers, and the rest of the customer profile, such as address, state, postal, and full name:
 
        .. code-block:: sql
 
@@ -1358,8 +1358,8 @@ You can use hashed email addresses to associate unified customer profiles to the
 
 This use case uses a combination of Profile API endpoints:
 
-#. An endpoint that contains a unified customer profile that :ref:`uses a hashed email address <profile-api-usecase-hashed-email-address-profiles>` as the lookup key.
-#. An endpoint that contains wireless access points unique identifiers as the lookup key. For example, this endpoint could be built using a query similar to:
+#. An endpoint that has a unified customer profile that :ref:`uses a hashed email address <profile-api-usecase-hashed-email-address-profiles>` as the lookup key.
+#. An endpoint that has wireless access points unique identifiers as the lookup key. For example, this endpoint could be built using a query similar to:
 
    .. code-block:: sql
 
@@ -1371,7 +1371,7 @@ This use case uses a combination of Profile API endpoints:
 
 For example: A customer logs into the secure wireless that is offered by your hotel or resort using their email address.
 
-A hashed version of that email address is built, and then is used as the lookup key for the endpoint in your Profile API that contains the hashed email profile. The unique ID for the wireless access point is used to look up the hotel or resort.
+A hashed version of that email address is built, and then is used as the lookup key for the endpoint in your Profile API that has the hashed email profile. The unique ID for the wireless access point is used to look up the hotel or resort.
 
 Use the Profile API to update the welcome screen. For example:
 

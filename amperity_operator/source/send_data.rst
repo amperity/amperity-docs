@@ -68,7 +68,7 @@ Character encoding
 
 Character encoding within files must be in `UTF-8 <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link| or `UTF-16 <https://en.wikipedia.org/wiki/UTF-16>`__ |ext_link|, including the use of valid escape characters for the provided file format.
 
-When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all subsequent data rows.
+When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all later data rows.
 
 .. send-data-to-amperity-character-encoding-end
 

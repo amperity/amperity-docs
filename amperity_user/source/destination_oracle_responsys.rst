@@ -156,7 +156,7 @@ After these files are delivered to |destination-name| you must import this data 
       * - **Amperity**
 
           Enable the **Header** option to use column names as column headers in your output.
-        - **First line contains column names**
+        - **First line has column names**
 
           Select this checkbox if **Include header row in output files** is selected in Amperity.
       * - **PGP public key**

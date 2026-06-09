@@ -20,7 +20,7 @@ Split clusters
 
 .. stitch-qa-query-split-clusters-start
 
-Use this query to investigate patterns in split clusters that lack transitive matching for names, email addresses, or post office boxes, and for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
+Use this query to investigate patterns in split clusters that lack transitive matching for names, email addresses, or post office boxes, and for semantic tagging issues that may arise when using many, ordinal, or namespaced semantics.
 
 .. stitch-qa-query-split-clusters-end
 

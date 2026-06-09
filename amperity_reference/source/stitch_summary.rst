@@ -457,7 +457,7 @@ Each identity graph is a combination of deterministic, probabilistic, and transi
 
 .. stitch-summary-tab-identity-complexity-context-start
 
-Your best and most valuable customers are often within the mid-range of the identity complexity story. They have transaction histories, exist within multiple data sources, and have more complete and contactable PII.
+Your best and most valuable customers are often within the mid-range of the identity complexity story. They have transaction histories, exist within many data sources, and have more complete and contactable PII.
 
 .. stitch-summary-tab-identity-complexity-context-end
 

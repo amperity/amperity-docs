@@ -114,7 +114,7 @@ The following sections describe what you should do to monitor the health of each
 
        .. important:: All notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of tables, databases, queries, orchestrations, and destinations appears in the notifications.
 
-          If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you used for that custom table and also for the columns within that table.
+          If there is an error, such as a processing error related to a specific column within a custom table, the notification has the names you used for that custom table and also for the columns within that table.
 
        A warning is shown when the workfow was able to complete all steps, but detected issues with at least one step within the workflow.
 
@@ -122,6 +122,6 @@ The following sections describe what you should do to monitor the health of each
 
        A notification will describe the issues related to warnings and errors, with specific information about what caused them. For errors, you should open the **Workflows** page and review the error. A list of suggested workflow actions will be available.
 
-       .. tip:: If you are unable to resolve an error, please contact Amperity support.
+       .. tip:: If you are unable to resolve an error, contact Amperity support.
 
 .. workflows-howitworks-callouts-end

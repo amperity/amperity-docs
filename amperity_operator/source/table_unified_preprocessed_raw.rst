@@ -121,8 +121,8 @@ Cleaned vs. uncleaned data
 
 You can compare cleaned data to uncleaned data to improve the quality of data in the customer 360 database.
 
-* The **Unified Preprocessed Raw** table contains a row from every table that is associated with an Amperity ID and contains the results of Stitch processing. Values in this table are "cleaned" data.
-* The **Unified Coalesced** table contains the data exactly as it was processed by Stitch. Values in this table are "uncleaned data".
+* The **Unified Preprocessed Raw** table has a row from every table that is associated with an Amperity ID and has the results of Stitch processing. Values in this table are "cleaned" data.
+* The **Unified Coalesced** table has the data exactly as it was processed by Stitch. Values in this table are "uncleaned data".
 
 Use a query similar to the following to join fields in the **Unified Preprocessed Raw** table to the **Unified Coalesced** table, and then compare the results.
 

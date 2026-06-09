@@ -120,7 +120,7 @@ Use the **Feed selection** section of the courier configuration page to identify
 From the **Load type** dropdown select one of:
 
 * **Load** Use this option to load data to the associated domain table.
-* **Spark** Use this option to load data when the Apache Avro file contains complex types, such as **records**, **enums**, **arrays**, **maps**, **unions**, and **fixed**.
+* **Spark** Use this option to load data when the Apache Avro file has complex types, such as **records**, **enums**, **arrays**, **maps**, **unions**, and **fixed**.
 * **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
 .. format-avro-pull-couriers-feed-selection-end

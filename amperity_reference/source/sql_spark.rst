@@ -31,7 +31,7 @@ Why should you use this reference?
 
 The **Sources** and **Databases** pages use Spark SQL as the underlying SQL engine. Amperity database tables, custom domain tables, and ingest queries are built almost exclusively by using a **SELECT** statement and window functions, along with the clauses, operators, expressions, and functions you would expect to be available.
 
-Please refer to this reference first, and then to the official Spark SQL documentation for `SELECT statements <https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements>`__ |ext_link| and the `list of built-in functions <https://spark.apache.org/docs/latest/api/sql/index.html>`__ |ext_link|.
+Refer to this reference first, and then to the official Spark SQL documentation for `SELECT statements <https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements>`__ |ext_link| and the `list of built-in functions <https://spark.apache.org/docs/latest/api/sql/index.html>`__ |ext_link|.
 
 .. sql-spark-why-should-i-use-this-end
 
@@ -146,18 +146,18 @@ Code comments should describe:
 
 .. _sql-spark-recommendation-avoid-multiple-passes:
 
-Avoid multiple passes
+Avoid many passes
 --------------------------------------------------
 
 .. sql-spark-recommendation-avoid-multiple-passes-start
 
-In some cases information from Amperity must be added to the data ingest process so that Amperity can correctly shape the data prior to the Stitch process. This should be done in a single pass.
+In some cases information from Amperity must be added to the data ingest process so that Amperity can correctly shape the data before the Stitch process. This should be done in a single pass.
 
-#. At the end of processing on day 1 create a "feedback segment" that contains the data to be shaped on day 2, and then output that segment data so that it may be ingested by Amperity on day 2.
+#. At the end of processing on day 1 create a "feedback segment" that has the data to be shaped on day 2, and then output that segment data so that it may be ingested by Amperity on day 2.
 #. On day 2 ingest data from the customer's sources normally, and then ingest the feedback segment.
 #. Join the day 2 data to the feedback segment, and then shape the results for Stitch.
 #. Ensure the data is made available to Stitch, and then run Stitch.
-#. Repeat the feedback segment process on subsequent days if necessary.
+#. Repeat the feedback segment process on later days if necessary.
 
 .. sql-spark-recommendation-avoid-multiple-passes-end
 
@@ -333,7 +333,7 @@ Filter NULL values, then join
 
 .. sql-spark-recommendation-filter-null-values-then-join-start
 
-In some cases the presence of **NULL** values can cause skew when joined to other tables. You can reduce skew by filtering out **NULL** values prior to the **JOIN** operation. For example:
+In some cases the presence of **NULL** values can cause skew when joined to other tables. You can reduce skew by filtering out **NULL** values before the **JOIN** operation. For example:
 
 .. code-block:: sql
    :linenos:
@@ -367,7 +367,7 @@ Formalisms
 
 .. sql-spark-recommendation-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly, use **IN()** instead of multiple **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** statements can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible.
+Make use of **BETWEEN** where possible instead of combining many statements with **AND**. Similarly, use **IN()** instead of many **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** statements can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible.
 
 .. sql-spark-recommendation-indentation-formalisms-end
 
@@ -468,7 +468,7 @@ Naming conventions
 
 .. sql-spark-recommendation-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes. In practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes. In practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of many consecutive underscores, as they can be hard to read. Use underscores where you would include a space in the name. For example "first name" becomes "first_name". Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -579,13 +579,13 @@ The following suffixes represent patterns that should be applied to column names
    * - **_total**
      - The total or sum of a collection of values.
    * - **_num**
-     - Denotes the field contains any kind of number.
+     - Denotes the field has any kind of number.
    * - **_name**
      - Signifies a name such as "first_name".
    * - **_seq**
      - Contains a contiguous sequence of values.
    * - **_date**
-     - Denotes a column that contains the date of something.
+     - Denotes a column that has the date of something.
    * - **_tally**
      - A count.
    * - **_size**
@@ -644,7 +644,7 @@ and uses the following Spark SQL functions:
 * **SHA2()** hashes data with a one-way SHA-256 hash.
 * **LOWER()** sets all characters to lowercase.
 * **TRIM()** removes leading and trailing whitespace.
-* **FIELD** is the name of the field that contains PII data.
+* **FIELD** is the name of the field that has PII data.
 
 For example:
 
@@ -920,10 +920,10 @@ Subqueries
 
 .. sql-spark-recommendation-subqueries-start
 
-A subquery can be useful for shaping data prior to running a query. A subquery is a task that is required to be completed before additional processing can be performed. A well-formed subquery is fast and low risk. A poorly formed subquery will affect performance. Keep the following tips in mind when using a subquery:
+A subquery can be useful for shaping data before running a query. A subquery is a task that is required to be completed before additional processing can be performed. A well-formed subquery is fast and low risk. A poorly formed subquery will affect performance. Keep the following tips in mind when using a subquery:
 
 #. Do not join to an outer query from a subquery, as it may cause the subquery to run recursively for every value of the join key in the outer query. This may cause the subquery to run many times, or even millions of times. This type of subquery is sometimes referred to as a correlated subquery. The best way to avoid them is to never join between the inner and outer queries.
-#. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for multiple fields, try to use a single subquery instead of many.
+#. Each level of a subquery adds overhead. The fewer levels within a subquery, the easier it is to optimize the query. Try to flatten queries using joins instead of using additional levels. If you need to pull data into a subquery for many fields, try to use a single subquery instead of many.
 #. Remove columns or use as few columns in a subquery as possible. For example, use:
 
    .. code-block:: none
@@ -970,7 +970,7 @@ Always include newlines and vertical space:
 * before **AND** or **OR**
 * after semicolons to separate queries for easier reading
 * after each keyword definition
-* before a comma when separating multiple columns into logical groups
+* before a comma when separating many columns into logical groups
 * to separate code into related sections, which helps to ease the readability of large chunks of code.
 
 Putting commas and conjunctions at the start of the line makes it easier to comment out a single line without disturbing the rest of the query
@@ -996,7 +996,7 @@ Spaces
 
 .. sql-spark-recommendation-whitespace-spaces-start
 
-Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that this makes it easy to keep track of where you are in a query that may be multiple layers deep.
+Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that this makes it easy to keep track of where you are in a query that may be many layers deep.
 
 .. code-block:: sql
    :linenos:
@@ -1381,7 +1381,7 @@ IN expression
 
 .. sql-spark-where-clause-expression-in-start
 
-The **IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list contains **NULL**.
+The **IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list has **NULL**.
 
 .. tip:: The **IN** expression is equivalent to the **OR** operator. For example: **IN (a, b)** is equivalent to **a OR b**.
 
@@ -1395,7 +1395,7 @@ NOT IN expression
 
 .. sql-spark-where-clause-expression-not-in-start
 
-The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list contains **NULL**. Use **WHERE** followed by **NOT IN** when the argument within the **NOT IN** expression is:
+The **NOT IN** expression returns a **TRUE** or **FALSE** value or **UNKNOWN** when the returned list has **NULL**. Use **WHERE** followed by **NOT IN** when the argument within the **NOT IN** expression is:
 
 * A small table with no more than a few thousand rows *and* is not expected to grow over time.
 * A hard-coded list of values. For example:
@@ -1980,7 +1980,7 @@ PIVOT operator
 
 The **PIVOT** operator allows data to be reshaped into a new table. Use values from within a field to define column names, and then group rows by those values and by other fields, such as the Amperity ID. A pivot must declare *how* data is to be reshaped -- **SUM()**, **MAX()**, or by some other grouping or aggregation -- and then must declare from which field in the existing table the new column names are derived.
 
-For example, a transactions table has a field with three values: **PUR** (purchases), **RET** (returns), and **OTH** (other). Use **PIVOT** to return a table that contains columns named **Purchases**, **Returns**, and **Other**, each containing the sum for that value in the transactions table, and then a row for each Amperity ID and brand:
+For example, a transactions table has a field with three values: **PUR** (purchases), **RET** (returns), and **OTH** (other). Use **PIVOT** to return a table that has columns named **Purchases**, **Returns**, and **Other**, each containing the sum for that value in the transactions table, and then a row for each Amperity ID and brand:
 
 .. code-block:: sql
    :linenos:
@@ -2020,7 +2020,7 @@ A function is a SQL statement that accepts input parameters, performs actions, a
 
 .. sql-spark-functions-list-start
 
-The following list contains some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
+The following list has some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
 
 * :ref:`sql-spark-function-abs`
 * :ref:`sql-spark-function-avg`
@@ -2159,13 +2159,13 @@ COALESCE()
 
 Use the **COALESCE(column_name, value)** function to return the first non-**NULL** argument. Use a value of ``""``, ``0``, or ``1``.
 
-.. tip:: Some functions fails if they encounter **NULL** values. Use this function prior to the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
+.. tip:: Some functions fails if they encounter **NULL** values. Use this function before the **CONCAT()** and **SUM()** functions to ensure they do not encounter **NULL** values.
 
 .. sql-spark-function-coalesce-end
 
 .. sql-spark-function-concat-note-about-null-start
 
-.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example, use:
+.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example, use:
 
    .. code-block:: none
 
@@ -2406,7 +2406,7 @@ CONCAT()
 
 .. sql-spark-function-concat-start
 
-Use the **CONCAT(column1, column2, columnN)** function to return a concatenation of all columns. This function returns **NULL** if any value of any field is **NULL**. Use the **COALESCE()** function to map fields to zero-length string values prior to using this function.
+Use the **CONCAT(column1, column2, columnN)** function to return a concatenation of all columns. This function returns **NULL** if any value of any field is **NULL**. Use the **COALESCE()** function to map fields to zero-length string values before using this function.
 
 .. sql-spark-function-concat-end
 
@@ -2727,7 +2727,7 @@ DATE_TRUNC()
 
 .. sql-spark-function-date-trunc-start
 
-Use the **DATE_TRUNC(format, timestamp)** function to return a "timestamp" truncated to "format". A timestamp is represented by a column in Amperity data that contains a valid timestamp.
+Use the **DATE_TRUNC(format, timestamp)** function to return a "timestamp" truncated to "format". A timestamp is represented by a column in Amperity data that has a valid timestamp.
 
 Format may be any of the following:
 
@@ -2941,8 +2941,8 @@ EXPLODE()
 
 Use the **EXPLODE(expression)** function to use "expression" to:
 
-#. Separate elements of an array into multiple columns
-#. Separate elements of a map into multiple rows and columns
+#. Separate elements of an array into many columns
+#. Separate elements of a map into many rows and columns
 
 .. sql-spark-function-explode-end
 
@@ -3041,7 +3041,7 @@ Build birthdate
 
 .. sql-spark-function-if-example-build-birthdate-start
 
-If incoming data contains birthdate data split by day, month, and year, you can build a complete birthdate using an ingest query. For example, incoming data has the following fields:
+If incoming data has birthdate data split by day, month, and year, you can build a complete birthdate using an ingest query. For example, incoming data has the following fields:
 
 .. code-block:: mysql
 
@@ -3239,12 +3239,12 @@ Use the **LPAD(string, length, padding)** function to return "string" left-padde
 
 .. _sql-spark-function-lpad-example-postal-codes:
 
-Clean postal codes prior to Stitch
+Clean postal codes before Stitch
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sql-spark-function-lpad-example-postal-codes-start
 
-The following example will ensure postal codes have consistent character counts prior to making them available to Stitch:
+The following example will ensure postal codes have consistent character counts before making them available to Stitch:
 
 .. code-block:: sql
 
@@ -3513,12 +3513,12 @@ Extract first and last names
 
 .. sql-spark-function-regexp-extract-example-names-start
 
-Some data sources do not contain fields that can be directly assigned the **given-name** and **surname** semantic tags. These tags are important to downstream Stitch processes. When a field is present in the data source that contains data that can be tagged with the **full-name** semantic tag, you can use domain SQL to extract the first and last name details from that field, add them as new columns, and then apply the correct semantic tags.
+Some data sources do not contain fields that can be directly assigned the **given-name** and **surname** semantic tags. These tags are important to downstream Stitch processes. When a field is present in the data source that has data that can be tagged with the **full-name** semantic tag, you can use domain SQL to extract the first and last name details from that field, add them as new columns, and then apply the correct semantic tags.
 
 Use the **REGEXP_EXTRACT()** function to:
 
 #. Trim whitespace from before (or after) the first and last names.
-#. Individually extract the first and last names from the field that contains the full name.
+#. Individually extract the first and last names from the field that has the full name.
 #. Add columns for the first and last names.
 
 The following example shows part of a **SELECT** statement that extracts first and last names from the **BILLING_NAME** field, and then adds columns for first and last names:
@@ -3804,12 +3804,12 @@ To return only the username from an email address (the characters before the @ s
 
 .. _sql-spark-function-split-example-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sql-spark-function-split-example-parse-fields-with-multiple-separators-start
 
-Sometimes incoming data contains data that should be tagged with more than one semantic tag, but also contain different separators within the incoming field. For example:
+Sometimes incoming data has data that should be tagged with more than one semantic tag, but also contain different separators within the incoming field. For example:
 
 .. code-block:: mysql
 
@@ -3923,7 +3923,7 @@ Remove country code from phone numbers
 
 .. sql-spark-function-substring-example-remove-country-codes-start
 
-The following example returns phone numbers from multiple tables, and then removes "+1 ", "+1-", "1 " and "1-".
+The following example returns phone numbers from many tables, and then removes "+1 ", "+1-", "1 " and "1-".
 
 .. code-block:: none
    :linenos:
@@ -3989,13 +3989,13 @@ SUM()
 
 Use the **SUM(expression)** to return a sum calculated from values defined in "expression".
 
-Use the **COALESCE()** function to map fields with **NULL** values to zero prior to using this function.
+Use the **COALESCE()** function to map fields with **NULL** values to zero before using this function.
 
 .. sql-spark-function-sum-end
 
 .. sql-spark-function-sum-note-about-null-start
 
-.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example:
+.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example:
 
    .. code-block:: none
 

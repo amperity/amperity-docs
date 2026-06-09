@@ -37,7 +37,7 @@ Tenants hosted in Amazon AWS have the following base URL:
 
    https://app.amperity.com/api
 
-Use the **amperity-tenant** header to provide the tenant ID.
+Use the **amperity-tenant** header to specify the tenant ID.
 
 .. base-url-aws-end
 

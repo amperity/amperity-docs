@@ -49,7 +49,7 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. destination-amazon-ads-ask-start
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+.. warning:: Ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
 
 .. destination-amazon-ads-ask-end
 
@@ -135,7 +135,7 @@ Get details
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that has any of the following attributes:
 
        .. code-block:: sql
 
