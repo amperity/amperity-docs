@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Criteo
 .. |plugin-name| replace:: "Criteo"
 .. |credential-type| replace:: "criteo"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "OAuth"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
@@ -64,6 +64,12 @@ Your brand can send custom audiences and events to |destination-name|:
        Use :ref:`transactions data <destination-criteo-send-transactions>` to help your brand track offline conversions from your marketing campaigns.
 
 .. destination-criteo-custom-audiences-and-offline-events-end
+
+.. destination-criteo-audience-replacement-start
+
+.. note:: Each time Amperity sends an audience to |destination-name|, the `entire audience is replaced <https://developers.criteo.com/marketing-solutions/docs/audience-segments#deleting-all-users>`__ |ext_link|. Amperity clears all existing contacts before adding contacts from the current send. Contacts from a previous send who are not included in the current send are removed.
+
+.. destination-criteo-audience-replacement-end
 
 
 .. _destination-criteo-send-transactions:
@@ -133,11 +139,9 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       **Refresh token**
+       **OAuth**
 
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
+          Amperity connects to |destination-name| using OAuth. After clicking the generated authorization link, sign in to |destination-name| and select the portfolios to which access will be granted. The credential is created automatically after |destination-name| sends the authorization callback to Amperity.
 
        .. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
@@ -227,11 +231,9 @@ Configure credentials
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
-       **Refresh token**
+       **OAuth**
 
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
+          Click the generated authorization link, sign in to |destination-name|, and select the portfolios to which access will be granted. The credential is created automatically after |destination-name| sends the authorization callback to Amperity.
 
 .. destination-criteo-credentials-steps-end
 
