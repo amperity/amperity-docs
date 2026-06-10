@@ -7,7 +7,7 @@
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |credential-type| replace:: **cordial**
 .. |what-pull| replace:: contact and activity data
-.. |credential-fields| replace:: the name of the credential, a description, the |source-name| API key and secret
+.. |credential-fields| replace:: the name of the credential, a description, the |source-name| API key, and the API URL
 .. |box-names| replace:: Contacts or Contacts Activities
 
 
@@ -70,7 +70,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - The API key and secret for |source-name|.
+     - The API key and API URL for |source-name|.
 
        .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
@@ -155,6 +155,12 @@ Add courier
    .. note:: When this field is empty, Amperity will pull all activity types.
 
 #. Under **Select Data**, enable |box-names|.
+
+#. Choose a **Load type**:
+
+   * **Truncate and load** deletes all rows in the domain table before loading data from |source-name|.
+   * **Load** adds data from |source-name| without removing existing rows.
+
 #. Click **Create**.
 
 .. source-cordial-add-courier-end

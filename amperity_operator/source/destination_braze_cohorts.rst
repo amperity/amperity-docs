@@ -68,7 +68,7 @@ Cohorts sent from Amperity are available in the Braze dashboard under **Segments
 
 .. destination-braze-cohorts-internal-id-start
 
-.. note:: Amperity prefixes cohort IDs with ``amperity-`` internally. For example, a cohort named "High Value" creates a cohort ID of ``amperity-High Value``. The cohort name (without the prefix) is what appears in the Braze dashboard.
+.. note:: The cohort name you enter is used as the cohort ID when syncing to Braze. The cohort appears in the Braze dashboard under the name you entered.
 
 .. destination-braze-cohorts-internal-id-end
 
@@ -127,12 +127,20 @@ Get details
                - ``https://rest.iad-01.braze.com``
              * - US-02
                - ``https://rest.iad-02.braze.com``
-             * - US-03 through US-08
+             * - US-03 through US-07
                - ``https://rest.iad-0X.braze.com``
+             * - EU-01
+               - ``https://rest.fra-01.braze.eu``
+             * - EU-02
+               - ``https://rest.fra-02.braze.eu``
+             * - AU-01
+               - ``https://rest.au-01.braze.com``
              * - JP-01
                - ``https://rest.jp-01.braze.com``
-             * - EU formats
-               - ``https://rest.fra-0X.braze.eu``
+             * - ID-01
+               - ``https://rest.id-01.braze.com``
+             * - KR-01
+               - ``https://rest.kr-01.braze.com``
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -146,7 +154,7 @@ Get details
 
           The name of the cohort to create or update in Braze. This is how the cohort appears in the Braze dashboard.
 
-          .. note:: Amperity prefixes cohort IDs with ``amperity-``. For example, a name of ``High Value`` creates cohort ID in Braze of ``amperity-High Value``.
+          .. note:: The cohort name you enter is used directly as the cohort ID. Use a descriptive name — this is how the cohort appears in the Braze dashboard.
 
        **User ID Field**
 

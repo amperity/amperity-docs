@@ -64,6 +64,10 @@ Get details
 
 #. The `API key <https://developers.klaviyo.com/en/docs/retrieve-api-credentials>`__ |ext_link| for |source-name|.
 
+   .. include:: ../../shared/credentials_settings.rst
+      :start-after: .. credential-klaviyo-api-key-source-scopes-start
+      :end-before: .. credential-klaviyo-api-key-source-scopes-end
+
 .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-klaviyo-get-details-end

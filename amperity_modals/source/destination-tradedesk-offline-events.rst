@@ -11,7 +11,7 @@
 The Trade Desk Events
 ==================================================
 
-Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.
+Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting using email addresses and phone numbers.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 

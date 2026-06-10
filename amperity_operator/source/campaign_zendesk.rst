@@ -119,7 +119,7 @@ Get details
 
        .. important:: Fields must exist in |destination-name| and should follow a "user_fields.[field_name]" naming pattern, where "field_name" is the name of the field that is sent to |destination-name| from Amperity.
 
-       The **name**, **email** or **external_id** fields must be included.
+       The **name** field and either the **email** or **external_id** field must be included.
 
        Values for states should be 2 uppercase letters only.
 

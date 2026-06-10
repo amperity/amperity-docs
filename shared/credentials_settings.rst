@@ -1325,6 +1325,18 @@ The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#priva
 
 .. credential-klaviyo-api-key-scopes-end
 
+.. credential-klaviyo-api-key-source-scopes-start
+
+The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#private-key-authentication>`__ |ext_link| used for authentication must have the following scopes added:
+
+* **events:read**
+* **lists:read**
+* **metrics:read**
+* **profiles:read**
+* **segments:read**
+
+.. credential-klaviyo-api-key-source-scopes-end
+
 
 **OAuth**
 

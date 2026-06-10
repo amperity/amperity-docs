@@ -11,7 +11,7 @@
 The Trade Desk 3P
 ==================================================
 
-Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting.
+Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting using email addresses and phone numbers.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 

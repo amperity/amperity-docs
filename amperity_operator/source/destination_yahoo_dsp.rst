@@ -99,7 +99,7 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       None. The segment name will be applied automatically if not specified. Membership duration defaults to 30 days.
+       **Segment name** is required. This is the name of the segment in |destination-name| and must be 255 characters or fewer. The segment can be an existing segment or a new segment within the |destination-name| taxonomy. Membership duration defaults to 30 days.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
