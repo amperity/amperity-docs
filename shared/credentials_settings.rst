@@ -662,8 +662,8 @@ The API key for your |destination-name| account.
 
 The API key must be associated with a custom app that has the following permissions:
 
-* **Custom Attributes**: Write
-* **Subscribers**: Write
+* **Custom Attributes**: All
+* **Subscribers**: All
 
 If these permissions are not set, any workflow that sends data to |destination-name| will fail with a 403 error.
 
@@ -680,7 +680,7 @@ To update permissions for Amperity as an existing custom app in |destination-nam
 
    .. important:: Do not select "Amperity CAPI," "Amperity Events," or any similarly named app.
 
-#. Under **Permissions**, set **Custom Attributes** and **Subscribers** to **Write**, then click **Save**.
+#. Under **Permissions**, set **Custom Attributes** and **Subscribers** to **All**, then click **Save**.
 
 See `Create and manage custom apps <https://docs.attentive.com/docs/create-and-manage-custom-apps>`__ |ext_link| in the Attentive documentation for more information.
 
