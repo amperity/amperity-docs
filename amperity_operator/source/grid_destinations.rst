@@ -322,6 +322,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_quad
 
+   .. grid-item-card:: Reddit Ads
+      :link-type: doc
+      :link: destination_reddit_ads
+
    .. grid-item-card:: RR Donnelly
       :link-type: doc
       :link: destination_rr_donnelly
@@ -481,6 +485,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Pinterest <destination_pinterest>
    PowerReviews <destination_powerreviews>
    Quad <destination_quad>
+   Reddit Ads <destination_reddit_ads>
    RR Donnelly <destination_rr_donnelly>
    Sailthru <destination_sailthru>
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
