@@ -124,6 +124,7 @@ Individual tasks that are related to managing a bridge:
 * :ref:`bridge-howto-delete`
 * :ref:`bridge-howto-download-credentials`
 * :ref:`bridge-howto-rename`
+* :ref:`bridge-howto-rotate-credentials`
 * :ref:`bridge-howto-sync`
 * :ref:`bridge-howto-upload-credentials`
 
@@ -213,6 +214,8 @@ Download credentials
 
 To connect Amperity with a data warehouse you may need to configure credentials for Amperity within the data warehouse. You can download these credentials from the Amperity user interface.
 
+.. important:: Credentials can only be downloaded once. Store the credentials file securely after downloading. If the file is lost or compromised, you must generate new credentials.
+
 .. bridge-howto-download-credentials-end
 
 **To download credentials for a bridge**
@@ -224,6 +227,34 @@ To connect Amperity with a data warehouse you may need to configure credentials 
 #. From the **Destinations** page, under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credentials**.
 
 .. bridge-howto-download-credentials-steps-end
+
+
+.. _bridge-howto-rotate-credentials:
+
+Rotate credentials
+--------------------------------------------------
+
+.. bridge-howto-rotate-credentials-start
+
+Rotating credentials generates a new credential file for an outbound bridge. The previous credentials remain active until their configured expiration date, which allows time to update the data warehouse connection before the old credentials expire.
+
+Rotate credentials when a credential file may have been compromised, when credentials are approaching expiration, or as part of a regular security practice.
+
+.. bridge-howto-rotate-credentials-end
+
+**To rotate credentials for an outbound bridge**
+
+.. bridge-howto-rotate-credentials-steps-start
+
+#. Open the **Destinations** page.
+
+#. Under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credential**.
+
+#. Download the new credential file and store it securely.
+
+#. Update the data warehouse connection to use the new credential before the previous credentials expire.
+
+.. bridge-howto-rotate-credentials-steps-end
 
 
 .. _bridge-howto-rename:

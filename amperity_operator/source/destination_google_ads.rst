@@ -656,6 +656,8 @@ Contact Info Matching
 
 A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
+.. note:: **firstname**, **lastname**, **zip**, and **country** must all be present or all be absent. If any one of these four fields is included, all four are required. Rows missing any of the four are filtered out. You can match using only **email** or only **phone** without including the name and address fields.
+
 .. list-table::
    :widths: 130 130 340
    :header-rows: 1

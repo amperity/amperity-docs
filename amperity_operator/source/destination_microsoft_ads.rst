@@ -54,6 +54,10 @@ Use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advert
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
+
 .. destination-microsoft-ads-api-note-start
 
 .. note:: This destination uses the `Bing Ads API <https://docs.microsoft.com/en-us/advertising/guides/?view=bingads-13>`__ |ext_link|.
@@ -61,6 +65,8 @@ Use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advert
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
+
+.. note:: Each time data is sent to |destination-name|, the customer list is fully replaced. Contacts that were in a previous send but are not in the current one are removed from the list.
 
 .. destination-microsoft-ads-api-note-end
 

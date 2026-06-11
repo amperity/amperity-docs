@@ -10,7 +10,7 @@
 .. |filter-the-list| replace:: "meta"
 .. |allow-for-what| replace:: custom audiences
 .. |allow-for-duration| replace:: up to 24 hours
-.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **GEN**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, and **MADID**
+.. |hashed-fields| replace:: **EXTERN_ID**, **EMAIL**, **PHONE**, **GEN**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, and **MADID**
 
 
 .. meta::

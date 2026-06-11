@@ -89,7 +89,7 @@ Offline events **MUST** contain at least one identity field (**email** or **phon
 Web events **MUST** contain at least one identity field (**email**, **phone**, or **external_id**), a **timestamp**, and a **page_url**.
 The query should also include an **event** column unless the **Fixed event name** connector setting is configured. Review the list of supported events parameters while building the query.
 
-Fields that contain PII--email address and phone numbers, for example--should have one-way SHA-256 hashing applied to them.
+Amperity automatically normalizes and SHA-256 hashes **email**, **phone**, and **external_id** before sending. Do not apply SHA-256 hashing in the query.
 
 .. note:: Currency must be in |ext_iso_4217|. For example: "EUR", "USD", or "JPY".
 

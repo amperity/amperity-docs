@@ -11,7 +11,7 @@
 .. |filter-the-list| replace:: "tik"
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
-.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **IDFA**, or **user_id**
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, or **AAID**
 
 
 .. meta::
@@ -45,6 +45,12 @@ Custom audiences help find people who already know about or have engaged with yo
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. destination-tiktok-ads-email-normalization-start
+   :end-before: .. destination-tiktok-ads-email-normalization-end
+
+.. note:: Values that already match the 64-character lowercase hex pattern are passed through as-is to prevent double-hashing.
 
 .. TODO: Sync following with ampiq/destination_tiktok_ads
 
@@ -415,6 +421,7 @@ Workflow actions
 
        * :ref:`destination-tiktok-ads-workflow-actions-advertiser-not-found`
        * :ref:`destination-tiktok-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-tiktok-ads-workflow-actions-max-audience-limit`
        * :ref:`destination-tiktok-ads-workflow-actions-missing-advertiser-permissions`
 
 
@@ -476,6 +483,24 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-tiktok-ads-workflow-actions-max-audience-limit:
+
+Maximum audience limit
+--------------------------------------------------
+
+.. destination-tiktok-ads-workflow-actions-max-audience-limit-start
+
+|destination-name| allows a maximum of 400 custom audiences per account. When this limit is reached, Amperity cannot create new audiences and the workflow will fail.
+
+To resolve this error, delete unused custom audiences from your |destination-name| account to bring the total below 400, and then retry the workflow.
+
+#. Open `TikTok Ads Manager <https://ads.tiktok.com/>`__ |ext_link| and navigate to **Assets**, then **Audiences**.
+#. Review the list of custom audiences and delete any that are no longer needed.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-tiktok-ads-workflow-actions-max-audience-limit-end
 
 
 .. _destination-tiktok-ads-workflow-actions-missing-advertiser-permissions:

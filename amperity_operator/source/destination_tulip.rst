@@ -150,6 +150,12 @@ Configure credentials
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
+       **Host public key**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-host-public-key-start
+             :end-before: .. credential-sftp-host-public-key-end
+
        **Hostname**
 
           |checkmark-required| **Required**
@@ -165,6 +171,12 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-passphrase-start
              :end-before: .. credential-sftp-passphrase-end
+
+       **Port**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-port-start
+             :end-before: .. credential-sftp-port-end
 
        **Username**
 

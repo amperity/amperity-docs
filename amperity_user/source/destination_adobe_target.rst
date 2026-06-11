@@ -77,7 +77,7 @@ Build a query
 
 .. destination-adobe-target-build-query-build-query-select-all-start
 
-If your customer 360 database has configured an `Adobe Target table <../operator/destination_adobe_target.html#adobe-target-table>`__ then the query can select all rows from that table.
+If your customer 360 database has configured an `Adobe Target table <../operator/destination_adobe_target.html#destination-adobe-target-build-dataset-table>`__ then the query can select all rows from that table.
 
 .. code-block:: sql
 

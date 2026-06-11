@@ -41,6 +41,10 @@ Configure destinations for Pinterest
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
+
 .. destination-pinterest-configure-start
 
 You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses before sending them to |destination-name|.)
@@ -51,7 +55,7 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity. If more than one customer list exists with the same name Amperity uses the most recent customer list.
+Amperity creates the customer list if it does not already exist, and then adds email addresses to that customer list. Amperity updates the customer list incrementally if it already exists, adding email addresses for new audience members and removing email addresses for members who have left the audience. If more than one customer list exists with the same name Amperity uses the most recent customer list.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
@@ -73,7 +77,7 @@ When a customer list is not associated with an audience in |destination-name|, A
 
    * The `update customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/update>`__ |ext_link| endpoint to manage the list of email addresses in a customer list.
 
-   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link| at up to 100 requests per second.
+   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|. Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -224,6 +228,8 @@ Reauthorize Amperity
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-oauth-reauthorize-start
    :end-before: .. destinations-oauth-reauthorize-end
+
+.. note:: Amperity automatically renews the Pinterest refresh token when it is within 14 days of expiration. Manual reauthorization is only needed if the token is explicitly revoked or if automatic renewal fails.
 
 
 .. _destination-pinterest-add:

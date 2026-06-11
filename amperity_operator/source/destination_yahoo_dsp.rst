@@ -90,7 +90,7 @@ Get details
              :start-after: .. credential-yahoo-dsp-mdm-id-start
              :end-before: .. credential-yahoo-dsp-mdm-id-end
 
-          .. tip:: You can find your brand's **Site MDM ID** from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The **Site MDM ID** is available from the **MDM ID** field.
+          .. tip:: You can find your brand's **Seat MDM ID** from the |destination-name| user interface. Log in to |destination-name|, then navigate to the **Advertisers** page. Open your brand's profile. The **Seat MDM ID** is available from the **MDM ID** field.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -99,7 +99,9 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
-       **Segment name** is required. This is the name of the segment in |destination-name| and must be 255 characters or fewer. The segment can be an existing segment or a new segment within the |destination-name| taxonomy. Membership duration defaults to 30 days.
+       **Segment name** is required. This is the name of the segment in |destination-name| and must be 255 characters or fewer. The segment can be an existing segment or a new segment within the |destination-name| taxonomy.
+
+       **Membership duration** is configurable (|duration-value| days) and controls how long audience members remain in the segment. The default is 30 days. Set to "0" to remove all audience members immediately.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

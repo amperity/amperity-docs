@@ -158,7 +158,7 @@ Get details
 
        **User ID Field**
 
-          The name of the column in your query or segment results that has the Braze user identifier. Defaults to ``external_id``. Change this if your dataset uses a different column name.
+          The column in your query or segment results that contains the Braze user identifier. This value is fixed to ``external_id`` and cannot be changed.
 
 .. destination-braze-cohorts-get-details-end
 

@@ -477,6 +477,12 @@ Add destination
              :start-after: .. setting-salesforce-marketing-cloud-folder-name-start
              :end-before: .. setting-salesforce-marketing-cloud-folder-name-end
 
+       **Folder type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-salesforce-marketing-cloud-folder-type-start
+             :end-before: .. setting-salesforce-marketing-cloud-folder-type-end
+
        **Primary key**
 
           .. include:: ../../shared/destination_settings.rst

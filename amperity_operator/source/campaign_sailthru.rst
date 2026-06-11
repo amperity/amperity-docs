@@ -346,7 +346,7 @@ The following SQL query shows how to return results that map to |destination-nam
      ,state AS postal_state
    FROM Customer360
 
-.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
+.. note:: |destination-name| field names are case sensitive and cannot be all numbers, cannot start with a number, and cannot consist entirely of special characters. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
 
 .. campaign-sailthru-extended-profile-attributes-end
 

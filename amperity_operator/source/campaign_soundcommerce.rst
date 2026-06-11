@@ -166,6 +166,12 @@ Configure credentials
              :start-after: .. credential-sftp-hostname-start
              :end-before: .. credential-sftp-hostname-end
 
+       **Port**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-port-start
+             :end-before: .. credential-sftp-port-end
+
        **Private key**
 
           .. include:: ../../shared/credentials_settings.rst

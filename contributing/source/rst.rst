@@ -2546,28 +2546,28 @@ For example:
 
 .. code-block:: none
 
-   **Moveable Ink**
+   **Movable Ink**
 
    .. term-moveable-ink-start
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
    .. term-moveable-ink-end
 
-Moveable Ink is an entry in the ``terms.rst`` file. The title of the term--**Moveable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
+Movable Ink is an entry in the ``terms.rst`` file. The title of the term--**Movable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
 
-The glossary term for Moveable Ink is:
+The glossary term for Movable Ink is:
 
 .. code-block:: none
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 The section references are:
 
 #. ".. term-moveable-ink-start"
 #. ".. term-moveable-ink-end"
 
-To include the glossary term for Moveable Ink into a topic, such as into the Amperity glossary or into topics that `mention Moveable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
+To include the glossary term for Movable Ink into a topic, such as into the Amperity glossary or into topics that `mention Movable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
 
 .. code-block:: none
 
@@ -2605,7 +2605,7 @@ To include the glossary term for Moveable Ink into a topic, such as into the Amp
 
       .. _m-moveable-ink:
 
-      **Moveable Ink**
+      **Movable Ink**
          .. include:: ../../shared/terms.rst
             :start-after: .. term-moveable-ink-start
             :end-before: .. term-moveable-ink-end

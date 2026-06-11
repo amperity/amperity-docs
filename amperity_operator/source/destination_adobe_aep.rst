@@ -50,6 +50,8 @@ Configure destinations for Adobe Experience Platform
 
 .. destination-adobe-aep-caution-static-schema-end
 
+.. note:: After each successful upload, Amperity creates a ``.fin`` file in the same SFTP location. Adobe Experience Platform uses this file as a completion signal to begin processing the uploaded data.
+
 .. destination-adobe-aep-steps-to-send-start
 
 .. include:: ../../shared/destinations.rst

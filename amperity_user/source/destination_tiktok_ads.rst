@@ -82,6 +82,10 @@ You need to build a query that outputs email addresses and phone numbers.
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. destination-tiktok-ads-email-normalization-start
+   :end-before: .. destination-tiktok-ads-email-normalization-end
+
 .. sendto-tiktok-ads-build-query-options-start
 
 .. tip:: Email addresses most often lead to the best match rates.

@@ -58,6 +58,8 @@ First-party customer data that is associated with online transactions can be sen
 
 .. setting-common-sha-256-hashed-fields-end
 
+.. note:: For **gmail.com** and **googlemail.com** addresses, Amperity removes dots from the username portion before hashing. For example, **justin.c@gmail.com** is normalized to **justinc@gmail.com** before the SHA-256 hash is applied. This matches Google's own normalization and improves match rates for Gmail addresses.
+
 
 .. _events-google-enhanced-conversions-howitworks:
 

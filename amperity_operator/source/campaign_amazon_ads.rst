@@ -220,7 +220,7 @@ Get details
 
        .. note:: The country code is inferred from the **country** field in the customer profile.
 
-       Consesnt signals are prioritized:
+       Consent signals are prioritized:
 
        #. **tcf**
        #. **gpp**

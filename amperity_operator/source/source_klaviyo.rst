@@ -68,6 +68,8 @@ Get details
       :start-after: .. credential-klaviyo-api-key-source-scopes-start
       :end-before: .. credential-klaviyo-api-key-source-scopes-end
 
+   Alternatively, use OAuth to authorize Amperity to pull data from |source-name|. From the **Credential type** dropdown, select **klaviyo-oauth**, and then complete the OAuth authorization flow.
+
 .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-klaviyo-get-details-end
@@ -92,7 +94,7 @@ Add courier
 
    From the **Credential** field, select an existing credential or select **Create a new credential**.
 
-   To add a credential, enter |credential-fields|. Click **Save**.
+   To add a credential, enter |credential-fields|. Click **Save**. Alternatively, from the **Credential type** dropdown select **klaviyo-oauth** and complete the OAuth authorization flow.
 
    When finished click **Continue**.
 

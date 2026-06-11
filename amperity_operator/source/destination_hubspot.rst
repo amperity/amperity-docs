@@ -268,7 +268,7 @@ Add destination
              :start-after: .. setting-hubspot-list-name-start
              :end-before: .. setting-hubspot-list-name-end
 
-       **Create contacts?**
+       **Create new contacts?**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-hubspot-create-contacts-start

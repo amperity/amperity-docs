@@ -211,7 +211,7 @@ The contacts ingress type will only capture all data, regardless of if a date re
 * **cID**
 * **createDate**
 * **ID**
-* **subscribedAt**
+* **subscribeDate**
 * **subscribeStatus**
 
 .. vale on

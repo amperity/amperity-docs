@@ -188,6 +188,10 @@ Add courier
    To add a credential, enter |credential-fields|. Click **Save**.
    
 #. Under **Settings** enter the |settings-details|.
+
+   Enable **Subscribed contacts only?** to pull only contacts subscribed to the list, excluding unsubscribed contacts. When disabled, both subscribed and unsubscribed contacts are pulled.
+
+   Enable **Opted-in SMS contacts only?** to pull only SMS contacts who are opted-in, excluding opted-out (DNC) contacts. When disabled, both opted-in and opted-out SMS contacts are pulled.
 #. Under **Select Data**, enable |box-names|.
 #. Click **Create**.
 

@@ -451,7 +451,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **event_id**
-     - The unique identifier for the event. A string of 32 characters A-Z, a-z, 0-9. An **event_id** is auto-generated from a hash of the **email**, **phone**, **event**, and **timestamp** if omitted. Used for deduplication.
+     - The unique identifier for the event. A string of 36 characters A-Z, a-z, 0-9. An **event_id** is auto-generated from a hash of the **email**, **phone**, **event**, and **timestamp** if omitted. Used for deduplication.
 
 
    * - **external_id**
@@ -505,7 +505,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
 
    * - **timestamp**
-     - **Required**. The date and time at which the event occurred. Accepts |ext_iso_8601| format, Unix seconds, or Unix milliseconds.
+     - **Required**. The date and time at which the event occurred. Accepts |ext_iso_8601| format, Unix seconds, or Unix milliseconds. Amperity automatically normalizes all formats to Unix epoch seconds before sending.
 
 
    * - **value**
