@@ -64,8 +64,7 @@ Register the Amperity MCP server in your Gemini CLI configuration.
       {
         "mcpServers": {
           "amperity": {
-            "url": "https://mcp.amperity.com",
-            "type": "http",
+            "httpUrl": "https://mcp.amperity.com",
             "oauth": {
               "clientId": "nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs",
               "authorizationUrl": "https://mcp.amperity.com/authorize",
