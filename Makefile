@@ -1,6 +1,6 @@
 BUILDDIR = build
-BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
-BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
+BUILD_COMMAND = python3 -m sphinx -b html --jobs auto -W
+BUILD_HELP_COMMAND = python3 -m sphinx -b text --jobs auto -W
 
 all: base user operator api reference guides amp360 ampiq datagrid contributing tooltips modals legacy legions training
 
