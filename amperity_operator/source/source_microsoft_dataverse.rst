@@ -121,11 +121,7 @@ Add data source and feed
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-settings-start
-          :end-before: .. sources-steps-settings-end
-
-       **Power Apps Environment Region**
+     - **Power Apps Environment Region**
 
           |checkmark-required| **Required**
 
