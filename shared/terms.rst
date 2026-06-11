@@ -7501,6 +7501,15 @@ Vibes offers a variety of mobile marketing products and services, such as text m
 .. term-vibes-end
 
 
+**Viant DSP**
+
+.. term-viant-dsp-start
+
+Viant DSP is a demand-side platform (DSP) that enables programmatic advertising campaigns across display, video, connected TV (CTV), audio, and native channels. Viant uses household-level identity that is linked to real people and real households to deliver and measure advertising that reaches specific customers across devices and channels. Audience segments built in Viant DSP can target customers using hashed emails, phone numbers, IP addresses, mobile device IDs, or cookie IDs.
+
+.. term-viant-dsp-end
+
+
 **view_freshness**
 
 .. term-view-freshness-table-start

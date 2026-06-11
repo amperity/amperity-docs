@@ -2573,6 +2573,23 @@ See SFTP.
 
 .. vale off
 
+**VIANT DSP**
+
+.. vale on
+
+**Refresh token**
+
+.. credential-viant-dsp-refresh-token-start
+
+The OAuth2 refresh token for the Viant Advertiser account. This token is issued by Viant during the OAuth2 authorization flow and should be treated as a secret.
+
+.. credential-viant-dsp-refresh-token-end
+
+
+
+
+.. vale off
+
 **YAHOO DSP**
 
 .. vale on

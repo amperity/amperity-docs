@@ -310,6 +310,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_tulip
 
+   .. grid-item-card:: Viant DSP
+      :link-type: doc
+      :link: campaign_viant_dsp
+
    .. grid-item-card:: Vibes
       :link-type: doc
       :link: campaign_vibes
@@ -398,6 +402,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    The Trade Desk 3P<campaign_the_trade_desk_3p>
    TikTok Ads Manager <campaign_tiktok_ads>
    Tulip <campaign_tulip>
+   Viant DSP <campaign_viant_dsp>
    Vibes <campaign_vibes>
    Yahoo DSP <campaign_yahoo_dsp>
    Zendesk <campaign_zendesk>

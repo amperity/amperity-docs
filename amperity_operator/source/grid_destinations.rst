@@ -386,6 +386,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_tulip
 
+   .. grid-item-card:: Viant DSP
+      :link-type: doc
+      :link: destination_viant_dsp
+
    .. grid-item-card:: Vibes
       :link-type: doc
       :link: destination_vibes
@@ -497,6 +501,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Throtle <destination_throtle>
    TikTok Ads <destination_tiktok_ads>
    Tulip <destination_tulip>
+   Viant DSP <destination_viant_dsp>
    Vibes <destination_vibes>
    Webhook <destination_webhook>
    Yahoo DSP <destination_yahoo_dsp>

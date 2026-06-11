@@ -96,6 +96,7 @@ Site Index
    destination-tradedesk-offline-events
    destination-tradedesk-3rd-party
    destination-tulip
+   destination-viant-dsp
    destination-vibes
    destination-webhook
    destination-webhook-single-record
