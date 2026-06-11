@@ -36,7 +36,6 @@ Connecting Copilot Studio to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
 * Access to Copilot Studio with permission to add custom connectors.
-* The :ref:`URL for your tenant's MCP server endpoint <mcp-overview-mcp-urls>`.
 
 .. mcp-setup-copilot-requirements-end
 
