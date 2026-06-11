@@ -76,7 +76,7 @@ Get details
              :start-after: .. credential-active-campaign-api-key-start
              :end-before: .. credential-active-campaign-api-key-end
 
-       **Base URL**
+       **URL**
 
           |checkmark-required| **Required**
 

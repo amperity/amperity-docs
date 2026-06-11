@@ -44,6 +44,12 @@ Send email addresses, mobile advertiser IDs, or phone numbers to |destination-na
 
 .. destination-snapchat-api-note-end
 
+.. destination-snapchat-replace-behavior-start
+
+.. caution:: Each send to |destination-name| replaces the audience completely. Amperity removes all existing members before adding the users in the current send. Members not included in the current send are removed from the audience.
+
+.. destination-snapchat-replace-behavior-end
+
 .. _destination-snapchat-get-details:
 
 Get details

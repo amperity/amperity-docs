@@ -47,11 +47,13 @@ This connector automates uploading data into the |destination-name| as a CSV fil
 The CSV file may contain the following contact information fields:
 
 * **email**
+* **firstname**
+* **lastname**
 * **title**
-* **employeecountry**
-* **company**
+* **country**
+* **employeecompany**
 
-The CSV file must have between 300 and 300,000 contacts.
+Either **email** or both **firstname** and **lastname** must be included. Country values are automatically normalized to ISO 3166-1 alpha-2 country codes before sending. If a raw email address is detected in any non-email field, it is automatically removed before sending. The CSV file must have between 300 and 300,000 contacts.
 
 .. destination-linkedin-dmp-about-end
 

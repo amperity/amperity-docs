@@ -44,6 +44,10 @@ Send query results to Snapchat
    :start-after: .. sendtos-ask-to-configure-start
    :end-before: .. sendtos-ask-to-configure-end
 
+.. include:: ../../amperity_operator/source/destination_snapchat.rst
+   :start-after: .. destination-snapchat-replace-behavior-start
+   :end-before: .. destination-snapchat-replace-behavior-end
+
 
 .. _sendto-snapchat-build-query:
 

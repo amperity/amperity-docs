@@ -1933,7 +1933,7 @@ The API key for your |destination-name| account.
 
 .. credential-sailthru-api-key-end
 
-**Secret**
+**API secret**
 
 .. credential-sailthru-secret-start
 
@@ -1975,7 +1975,7 @@ You can find the API key and secret after you log in to |destination-name| and a
 
 .. credential-salesforce-marketing-cloud-api-client-secret-start
 
-The client ID and client secret for your brand's instance of the Marketing Cloud SOAP API.
+The client ID and client secret for your brand's instance of the Marketing Cloud REST API.
 
 .. credential-salesforce-marketing-cloud-api-client-secret-end
 
@@ -1983,7 +1983,7 @@ The client ID and client secret for your brand's instance of the Marketing Cloud
 
 .. credential-salesforce-marketing-cloud-api-subdomain-start
 
-The authentication subdomain for your brand's instance of the Marketing Cloud SOAP API.
+The authentication subdomain for your brand's instance of the Marketing Cloud REST API.
 
 .. credential-salesforce-marketing-cloud-api-subdomain-end
 
@@ -2120,7 +2120,7 @@ Required. The host name for |where-send|. For example: |sftp-hostname|.
 
 .. credential-sftp-passphrase-start
 
-The passphrase associated with the username.
+Required. The passphrase associated with the username.
 
 .. credential-sftp-passphrase-end
 
@@ -2128,7 +2128,7 @@ The passphrase associated with the username.
 
 .. credential-sftp-port-start
 
-The port number required by |where-send|. Use this setting only when the SFTP site uses a non-default port value.
+The port number for |where-send|. Use this setting only when the SFTP site uses a non-default port value.
 
 .. credential-sftp-port-end
 
@@ -2136,7 +2136,7 @@ The port number required by |where-send|. Use this setting only when the SFTP si
 
 .. credential-sftp-private-key-start
 
-A private key for encrypting files sent to |where-send|.
+A private key for SSH authentication to |where-send|.
 
 .. credential-sftp-private-key-end
 
@@ -2154,7 +2154,7 @@ This setting is required by the "private-key" credential type.
 
 .. credential-sftp-username-start
 
-Required. A username with access to |where-send|. This username must have permission to write data to the remote folder to which Amperity sends data.
+Required. A username with access to |where-send|. This username must have appropriate permissions for the configured remote folder.
 
 .. credential-sftp-username-end
 
@@ -2480,6 +2480,22 @@ A long-lived token that allows access to The Trade Desk Platform API.
 
 .. credential-the-trade-desk-marketplace-platform-api-token-end
 
+**UID2 Key**
+
+.. credential-the-trade-desk-marketplace-uid2-key-start
+
+An API key used for UID2 enrichment within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-uid2-key-end
+
+**UID2 Secret**
+
+.. credential-the-trade-desk-marketplace-uid2-secret-start
+
+A client secret used for UID2 enrichment within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-uid2-secret-end
+
 
 
 
@@ -2567,7 +2583,7 @@ See SFTP.
 
 .. credential-yahoo-dsp-mdm-id-start
 
-Required. The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
+Required. The "Seat MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
 
 .. credential-yahoo-dsp-mdm-id-end
 

@@ -4,7 +4,7 @@
 .. |destination-name| replace:: The Trade Desk 3P Marketplace
 .. |plugin-name| replace:: "The Trade Desk 3P Marketplace"
 .. |credential-type| replace:: "tradedesk-3rd-party"
-.. |required-credentials| replace:: "advertiser ID", "advertiser secret", "provider ID", and "platform API token"
+.. |required-credentials| replace:: "brand ID", "platform API token", "provider ID", "provider secret", "UID2 key", and "UID2 secret"
 .. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
@@ -69,41 +69,53 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       **Advertiser ID**
+       **Brand ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-the-trade-desk-advertiser-id-start
-             :end-before: .. credential-the-trade-desk-advertiser-id-end
-
-       **Advertiser secret**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-the-trade-desk-advertiser-secret-start
-             :end-before: .. credential-the-trade-desk-advertiser-secret-end
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-the-trade-desk-find-id-and-secret-start
-             :end-before: .. credential-the-trade-desk-find-id-and-secret-end
-
-       **Provider ID**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-the-trade-desk-provider-id-start
-             :end-before: .. credential-the-trade-desk-provider-id-end
+             :start-after: .. credential-the-trade-desk-marketplace-brand-id-start
+             :end-before: .. credential-the-trade-desk-marketplace-brand-id-end
 
        **Platform API token**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-the-trade-desk-platform-api-token-start
-             :end-before: .. credential-the-trade-desk-platform-api-token-end
+             :start-after: .. credential-the-trade-desk-marketplace-platform-api-token-start
+             :end-before: .. credential-the-trade-desk-marketplace-platform-api-token-end
+
+       **Provider ID**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-marketplace-provider-id-start
+             :end-before: .. credential-the-trade-desk-marketplace-provider-id-end
+
+       **Provider secret**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-marketplace-provider-secret-start
+             :end-before: .. credential-the-trade-desk-marketplace-provider-secret-end
+
+       **UID2 Key**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-marketplace-uid2-key-start
+             :end-before: .. credential-the-trade-desk-marketplace-uid2-key-end
+
+       **UID2 Secret**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-marketplace-uid2-secret-start
+             :end-before: .. credential-the-trade-desk-marketplace-uid2-secret-end
 
 .. campaign-the-trade-desk-3p-get-details-end
 

@@ -2988,7 +2988,7 @@ M
 
 .. _m-moveable-ink:
 
-**Moveable Ink**
+**Movable Ink**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-moveable-ink-start
       :end-before: .. term-moveable-ink-end

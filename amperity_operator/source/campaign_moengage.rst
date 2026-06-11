@@ -46,7 +46,7 @@ Get details
    :start-after: .. setting-common-get-details-start
    :end-before: .. setting-common-get-details-end
 
-.. campaign-pinterest-get-details-table-start
+.. campaign-moengage-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -126,7 +126,7 @@ Get details
 
        Review the imported file, and then map columns in the imported file to |destination-name| attributes.
 
-.. campaign-pinterest-get-details-table-start
+.. campaign-moengage-get-details-table-start
 
 
 .. _campaign-moengage-add:
@@ -138,7 +138,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Throtle**
+**To add a destination for MoEngage**
 
 .. campaign-moengage-add-steps-start
 

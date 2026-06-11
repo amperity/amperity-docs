@@ -78,16 +78,18 @@ Build query
 
 .. sendto-linkedin-dmp-build-query-example-start
 
-You may include additional audience details for title, country, and company.
+Either **email** or both **firstname** and **lastname** are required. You may include additional audience details for title, country, and company.
 
 .. code-block:: sql
    :linenos:
 
-   SELECT 
+   SELECT
      email AS email
+     ,given_name AS firstname
+     ,surname AS lastname
      ,title AS title
-     ,country AS employeecountry
-     ,company AS company
+     ,country AS country
+     ,company AS employeecompany
    FROM Merged_Customers
    WHERE email IS NOT NULL
 

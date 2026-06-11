@@ -142,7 +142,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Throtle**
+**To add a destination for MoEngage**
 
 .. destination-moengage-add-steps-start
 

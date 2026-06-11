@@ -10,7 +10,7 @@
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "540"
 .. |filter-the-list| replace:: "google"
-.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, and **phone**
 
 
 .. meta::
@@ -38,6 +38,8 @@ Use Google Customer Match to create and publish search, display, and video ads a
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. note:: The **country** field is normalized to an ISO 3166-1 alpha-2 country code before sending but is not hashed. The **zip** field is sent as-is without normalization or hashing.
 
 .. include:: ../../amperity_operator/source/destination_google_ads.rst
    :start-after: .. destination-google-ads-whatis-google-customer-match-start
@@ -109,6 +111,15 @@ Get details
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-google-ads-upload-key-type-start
              :end-before: .. setting-google-ads-upload-key-type-end
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: center
+          :class: no-scaled-link
+     - **European Union user consent**
+
+       .. important:: :ref:`Review the user consent policy <destination-google-customer-match-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
 .. destination-google-customer-match-get-details-end
 
@@ -321,3 +332,13 @@ Add destination
           :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-google-customer-match-add-steps-end
+
+
+.. _destination-google-customer-match-api-matching-eu-consent:
+
+European Union user consent
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-api-matching-eu-consent-start
+   :end-before: .. destination-google-ads-api-matching-eu-consent-end

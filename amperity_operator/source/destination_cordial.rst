@@ -43,6 +43,8 @@ Use Amperity to manage contacts--attributes and list membership--in |destination
 
 Build a query or segment that has the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
 
+.. note:: Custom attribute names are automatically normalized before sending: uppercase letters are converted to lowercase and non-alphanumeric characters, such as spaces and hyphens, are replaced with underscores. For example, **First Name** becomes **first_name**.
+
 .. destination-cordial-end
 
 .. destination-cordial-get-details-alternate-note-start
@@ -132,7 +134,7 @@ Get details
 
            GET /accountlists
            POST /accountlists
-           PUT /accountlists/{key}/clear
+           PUT /accountlists/{id}/clear
 
            POST /contactimports
 

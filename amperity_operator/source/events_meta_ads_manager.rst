@@ -11,7 +11,7 @@
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
-.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **GEN**, and **EXTERN_ID**
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, and **EXTERN_ID**
 
 .. meta::
     :description lang=en:
@@ -96,7 +96,7 @@ Get details
 
        **Dataset ID**
 
-          |checkmark-required| **May be required at orchestration**
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-meta-ads-manager-dataset-id-start
@@ -280,7 +280,7 @@ Add destination
 
        **Dataset ID**
 
-          |checkmark-required| **May be required at orchestration**
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-meta-ads-manager-dataset-id-start

@@ -112,15 +112,6 @@ Get details
                 :start-after: .. setting-attentive-primary-identifier-context-start
                 :end-before: .. setting-attentive-primary-identifier-context-end
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 3.
-          :align: center
-          :class: no-scaled-link
-     - **Sign-up units**
-
-       The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
-
 .. campaign-attentive-api-get-details-end
 
 

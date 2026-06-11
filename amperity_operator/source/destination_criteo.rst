@@ -37,6 +37,10 @@ Configure destinations for Criteo
 
 .. destination-criteo-api-note-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
+
 .. destination-criteo-custom-audiences-and-offline-events-start
 
 Your brand can send custom audiences and events to |destination-name|:

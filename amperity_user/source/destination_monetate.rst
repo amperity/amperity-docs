@@ -69,6 +69,8 @@ You may need to build a query that shapes the data so that fields in the output 
 
    Review the `customer dataset upload requirements <https://docs.kibocommerce.com/114237-customer-data/631062-customer-dataset-upload-requirements>`__ |ext_link| for additional information. 
 
+.. note:: Amperity automatically hashes email addresses before sending data to |destination-name|. A case-sensitive column named exactly **email** in the query output will have each value converted to lowercase, trimmed of whitespace, encoded using IBM037 (EBCDIC), hashed with SHA-1, and converted to uppercase. Columns with any other name are sent as-is.
+
 .. destination-monetate-get-details-note-end
 
 .. important::

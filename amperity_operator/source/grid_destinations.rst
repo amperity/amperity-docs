@@ -274,7 +274,7 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_monetate
 
-   .. grid-item-card:: Moveable Ink
+   .. grid-item-card:: Movable Ink
       :link-type: doc
       :link: destination_moveableink
 
@@ -469,7 +469,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Microsoft Power BI <destination_power_bi>
    MoEngage <destination_moengage>
    Monetate <destination_monetate>
-   Moveable Ink <destination_moveableink>
+   Movable Ink <destination_moveableink>
    Neustar <destination_neustar>
    Optimizely <destination_optimizely>
    Oracle Data Cloud <destination_oracle_data_cloud>

@@ -129,6 +129,14 @@ Get details
 
              If an Amazon Marketing Cloud instance is configured, Amperity attempts to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
+       **Membership duration**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-membership-duration-start
+             :end-before: .. setting-amazon-ads-membership-duration-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -181,6 +189,8 @@ Get details
 
            If both **extern_id** and **amperity_id** are provided, only **extern_id** is used.
 
+       Rows with a missing or unrecognizable **country** value are filtered out before sending. The count of removed rows is reported in the workflow run log.
+
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
        All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
@@ -191,9 +201,15 @@ Get details
           :alt: Detail four.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
-          :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
+     - **Enable consent signals**
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-end
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-about-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-about-end
 
        Use one of the following fields to send customer consent signals to |destination-name|.
 
@@ -223,7 +239,7 @@ Get details
 
        .. note:: The country code is inferred from the **country** field in the customer profile.
 
-       Consesnt signals are prioritized:
+       Consent signals are prioritized:
 
        #. **tcf**
        #. **gpp**

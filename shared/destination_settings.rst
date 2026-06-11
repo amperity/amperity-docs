@@ -502,6 +502,15 @@ Only for destinations where SHA-256 hashing is applied automatically to the list
 .. setting-common-sha-256-hashed-fields-end
 
 
+.. used with Criteo, Microsoft Ads, and Pinterest destinations.
+
+.. setting-common-invalid-emails-filtered-start
+
+.. note:: Invalid email addresses are automatically filtered out before data is sent to |destination-name|. The count of removed rows is reported in the workflow run log.
+
+.. setting-common-invalid-emails-filtered-end
+
+
 **Split outputs**
 
 .. setting-common-split-outputs-start
@@ -849,13 +858,13 @@ A consent signal for the Global Privacy Protocol (GPP).
 
 .. setting-amazon-ads-enable-consent-signals-amzn-user-start
 
-The **amzon_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED". Only rows with "GRANTED" or "DENIED" values are not sent to Amazon Ads.
+The **amzn_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED". Rows without a valid "GRANTED" or "DENIED" value omit this consent signal.
 
 .. setting-amazon-ads-enable-consent-signals-amzn-user-end
 
 .. setting-amazon-ads-enable-consent-signals-amzn-ads-start
 
-The **amzon_ad_storage** column indicates when a customer consents to Amazin reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED".Only rows with "GRANTED" or "DENIED" values are not sent to Amazon Ads.
+The **amzn_ad_storage** column indicates when a customer consents to Amazon reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED". Rows without a valid "GRANTED" or "DENIED" value omit this consent signal.
 
 .. setting-amazon-ads-enable-consent-signals-amzn-ads-end
 
@@ -1178,7 +1187,7 @@ See common.
 
 .. setting-cordial-list-name-start
 
-The name of the list in |destination-name| managed by Amperity. Amperity creates the list when it does not exist.
+The name of the list in |destination-name| managed by Amperity. Amperity creates the list when it does not exist. List names are automatically normalized before sending: uppercase letters are converted to lowercase and non-alphanumeric characters, such as spaces and hyphens, are replaced with underscores.
 
 .. setting-cordial-list-name-end
 
@@ -1186,7 +1195,9 @@ The name of the list in |destination-name| managed by Amperity. Amperity creates
 
 .. setting-cordial-subscription-status-start
 
-Enable "Do not set subscription status automatically" to prevent subscriptions when "channels.email.subscribeStatus" is not set.
+By default, new contacts added to a list without a **channels.email.subscribeStatus** value are automatically assigned the **subscribed** status. Existing contacts retain their current status in all cases.
+
+Enable **Do not set subscription status automatically** to prevent new contacts from being auto-subscribed. When enabled, contacts without a **channels.email.subscribeStatus** value are added to the list without a subscription status assigned.
 
 .. setting-cordial-subscription-status-end
 
@@ -1415,7 +1426,7 @@ A description of the audience managed by Amperity.
 
 .. setting-google-ads-audience-name-start
 
-The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist. Audience names may only contain letters, numbers, underscores, dashes, and spaces. Any other characters are automatically removed.
 
 .. setting-google-ads-audience-name-end
 
@@ -1433,7 +1444,7 @@ See common.
 
 .. setting-google-ads-membership-duration-start
 
-Set this value to "10000" for unlimited audience membership.
+The number of days a user remains in the audience. Must be an integer between 0 and 540. Set to 540 for the maximum duration allowed by |destination-name|.
 
 .. setting-google-ads-membership-duration-end
 
@@ -1449,7 +1460,7 @@ When the value of "Upload key type" is "Mobile ID", the mobile ID for the iOS or
 
 .. setting-google-ads-upload-key-type-start
 
-The key to use for audience matching in |destination-name|. May be one of "Contact Info", "Mobile ID", or "User Id".
+The key to use for audience matching in |destination-name|. May be one of "Contact Info", "Mobile ID", or "User Id". The upload key type cannot be changed after an audience is created. To use a different key type, create a new audience.
 
 .. setting-google-ads-upload-key-type-end
 
@@ -1516,7 +1527,7 @@ See Common.
 
 .. setting-google-cloud-storage-object-prefix-start
 
-Required. The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
+The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
 
 .. setting-google-cloud-storage-object-prefix-end
 
@@ -1600,7 +1611,7 @@ Settings unique to Google Enhanced Conversions.
 
 .. setting-google-enhanced-conversions-action-name-start
 
-The name of the conversion action.
+The name of the conversion action. Amperity creates the conversion action if it does not already exist.
 
 .. setting-google-enhanced-conversions-action-name-end
 
@@ -1608,7 +1619,7 @@ The name of the conversion action.
 
 .. setting-google-enhanced-conversions-customer-id-start
 
-The Customer ID of the Google Enhanced Conversions account.
+The Customer ID of the Google Ads account.
 
 .. setting-google-enhanced-conversions-customer-id-end
 
@@ -1637,11 +1648,11 @@ Attributes sent to |destination-name| with values for a specific day, month, and
 .. setting-hubspot-dates-and-datetimes-end
 
 
-**Create contacts?**
+**Create new contacts?**
 
 .. setting-hubspot-create-contacts-start
 
-Select **Create contacts** to create contacts in |destination-name| when they do not already exist. Existing contacts are updated when this setting is unselected.
+Select **Create new contacts?** to create contacts in |destination-name| when they do not already exist. Existing contacts are updated when this setting is unselected.
 
 .. setting-hubspot-create-contacts-end
 
@@ -1809,7 +1820,7 @@ The account ID for your |destination-name| account.
 
 .. setting-linkedin-dmp-identifier-type-start
 
-The name of the identifier type must be one of the following: 1) **email** 2) **firstname** and **lastname**. Including any other fields will return an error. Map the output of query results and segments before sending to LinkedIn.
+The identifier type determines how |destination-name| matches contacts. Either **email** alone or both **firstname** and **lastname** together must be included. The optional fields **title**, **country**, and **employeecompany** may also be included. Any field not in this set of six will return an error.
 
 .. setting-linkedin-dmp-identifier-type-end
 
@@ -1865,7 +1876,7 @@ The name of the email list in |destination-name| and managed by Amperity.
 
 .. setting-listrak-segment-name-start
 
-The name of a segment in |destination-name| managed by Amperity.
+The name of the segmentation field in |destination-name| that Amperity creates if it does not already exist. Contacts in your list can be segmented based on this field in |destination-name|.
 
 .. setting-listrak-segment-name-end
 
@@ -1997,7 +2008,7 @@ The audience ID to which Amperity writes data. This is sometimes referred to as 
 
 .. setting-mailchimp-list-name-start
 
-The name of the list that by Amperity in |destination-name|.
+The name of the list in |destination-name| managed by Amperity.
 
 .. setting-mailchimp-list-name-end
 
@@ -2005,7 +2016,7 @@ The name of the list that by Amperity in |destination-name|.
 
 .. setting-mailchimp-tag-name-start
 
-A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to apply to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it applies to all audience members added by Amperity.
+A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to apply to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, Amperity creates it and applies it to all audience members added by Amperity.
 
 .. setting-mailchimp-tag-name-end
 
@@ -2032,7 +2043,7 @@ The account ID for your |destination-name| account.
 
 .. setting-meta-ads-manager-custom-audience-name-start
 
-The name of the custom audience in |destination-name|. The name of a custom audience should not include the word "treatment".
+The name of the custom audience in |destination-name|. Amperity creates the audience if it does not already exist. If more than one audience exists with the same name, Amperity returns an error. The name of a custom audience should not include the word "treatment".
 
 .. setting-meta-ads-manager-custom-audience-name-end
 
@@ -2064,9 +2075,11 @@ Settings unique to Meta Ads Manager: Events.
 
 .. setting-meta-ads-manager-dataset-id-start
 
-`Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources--such as from websites, mobile apps, physical store locations or business chats--from one location.
+`Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources, such as from websites, mobile apps, physical store locations or business chats, from one location.
 
 A `dataset ID configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| supports sending send events from Amperity.
+
+.. note:: The dataset must be configured as a consolidated dataset in |destination-name|, which unifies pixel and offline conversion data in one location. Amperity will return an error if the dataset ID is not a consolidated dataset.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -2134,7 +2147,7 @@ Settings unique to Microsoft Dataverse.
 
 .. setting-microsoft-dataverse-table-logical-name-start
 
-The table name in |destination-name|. This is the table to which the connector writes data. For example: "abc123_customers".
+The logical name for the table in |destination-name| to which the connector writes data. For example: "abc123_customers".
 
 .. setting-microsoft-dataverse-table-logical-name-end
 
@@ -2592,17 +2605,23 @@ For orchestrations, assign a name to the data extension.
 
 .. setting-salesforce-marketing-cloud-folder-name-start
 
-The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API finds CSV files.
+The name of the folder in |destination-name| where data extensions are created. If not specified, defaults to "Amperity API".
 
 .. setting-salesforce-marketing-cloud-folder-name-end
+
+**Folder type**
+
+.. setting-salesforce-marketing-cloud-folder-type-start
+
+Select the folder in which the Data Extension is created. Use "Data Extensions" for standard destinations within a single business unit. Use "Shared Data Extensions" when the Data Extension must be accessible across multiple business units.
+
+.. setting-salesforce-marketing-cloud-folder-type-end
 
 **Primary key**
 
 .. setting-salesforce-marketing-cloud-primary-key-start
 
-Set to one of the following: ``subscriber_key``, ``email``, ``emailaddress``, or ``email_address``.
-
-Use ``subscriber_key`` when a field maps directly to the subscriber key in |destination-name|, otherwise use one of the email variants.
+The column from your data that serves as the unique identifier for records in the data extension. Set to **subscriber_key** when a field maps directly to the subscriber key in |destination-name|. Otherwise, use one of the email variants: **email**, **emailaddress**, or **email_address**.
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -2610,13 +2629,13 @@ Use ``subscriber_key`` when a field maps directly to the subscriber key in |dest
 
 .. setting-salesforce-marketing-cloud-subscriber-field-start
 
-Required. The subscriber key for |destination-name|.
+Required. The field in |destination-name| used to identify subscribers. Set to "Subscriber Key" to match subscribers on their subscriber key, or "Email Address" to match on email.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-end
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-start
 
-A subscriber key is the "primary key" for the destination. Choose the |destination-name| subscriber key or choose email.
+The primary key and subscriber field must align: use **subscriber_key** with "Subscriber Key", or an email variant with "Email Address".
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-end
 
@@ -2671,7 +2690,7 @@ Configure the external ID as "Amperity_ID__c". The "__c" identifies the field as
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-When enabled, "Upsert" operations ignore **NULL** values in data sent from Amperity. If a field has a **NULL** value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
+When enabled, batches of data are loaded in parallel. Parallelism may improve performance, but can cause lock contention for highly overlapping data. When disabled, batches are loaded serially.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
 
@@ -2701,7 +2720,7 @@ The name of the object, or audience list, in Salesforce Sales Cloud to which Amp
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-Enable to use **NULL** values when fields are empty.
+When enabled, empty fields in data sent from Amperity are converted to **NULL** values. For "Upsert" operations, if a field is empty and the corresponding Salesforce object already has a value, that existing value is cleared. When disabled, empty fields are ignored and existing Salesforce values are preserved.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
@@ -3008,7 +3027,7 @@ See common.
 
 .. setting-the-trade-desk-membership-duration-minmax-start
 
-The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
+The default value is "90". The maximum value is "180". Set to "0" to remove all audience members from the segment.
 
 .. setting-the-trade-desk-membership-duration-minmax-end
 
@@ -3017,7 +3036,7 @@ The minimum value should be "7" because |destination-name| uses the previous sev
 
 .. setting-the-trade-desk-membership-duration-example-start
 
-The membership duration is in days. Adjust the membership duration value to be greater than or equal to than the frequency at which your brand sends campaigns or orchestrations from Amperity.
+The membership duration is in days. Adjust the membership duration value to be greater than or equal to the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
 For example: if your brand sends a campaign to |destination-name| every 30 days, then set membership duration to "30". If your brand sends a campaign every 14 days, then set membership duration to "14".
 
@@ -3058,6 +3077,22 @@ Settings unique to The Trade Desk: 3P Marketplace.
 
 See common.
 
+**Buyable**
+
+.. setting-the-trade-desk-3p-buyable-start
+
+When enabled, the segment is visible and available to buyers in |destination-name|. Enabled by default.
+
+.. setting-the-trade-desk-3p-buyable-end
+
+**Display name**
+
+.. setting-the-trade-desk-3p-display-name-start
+
+The display name for the segment in |destination-name|. This name determines the relationships between the segments in the taxonomy.
+
+.. setting-the-trade-desk-3p-display-name-end
+
 **Segment taxonomy ID**
 
 .. setting-the-trade-desk-3p-segment-taxonomy-id-start
@@ -3065,6 +3100,14 @@ See common.
 The taxonomy ID for a monetized segment in The Trade Desk.
 
 .. setting-the-trade-desk-3p-segment-taxonomy-id-end
+
+**Segment type**
+
+.. setting-the-trade-desk-3p-segment-type-start
+
+The type of segment. Set to **syndicated** for segments that are available across all advertisers in |destination-name|, or **custom** for segments that are available only to specific advertisers.
+
+.. setting-the-trade-desk-3p-segment-type-end
 
 **Best practices for rate caps and percentages of media costs**
 
@@ -3155,7 +3198,7 @@ The advertiser ID for your |destination-name| account. This is a nineteen charac
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. If an audience with this name already exists, Amperity will reuse it rather than create a duplicate. If the audience does not exist, Amperity will create it.
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -3165,7 +3208,16 @@ The name of the audience in |destination-name| managed by Amperity. Amperity cre
 
 The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). "EMAIL" and "PHONE" are the default values for campaigns.
 
+**EMAIL**, **PHONE**, and **AAID** values are SHA-256 hashed automatically by Amperity before sending. **IDFA** values (Apple advertising IDs) are sent without hashing.
+
 .. setting-tiktok-ads-manager-user-id-type-end
+
+
+.. destination-tiktok-ads-email-normalization-start
+
+.. note:: Before hashing, Amperity normalizes email addresses sent to |destination-name|: converts to lowercase, removes dots (.) from the local part, and removes plus-sign suffixes (+tag). For example, ``John.Doe+promo@example.com`` becomes ``johndoe@example.com`` before hashing. This normalization improves match rates by standardizing email formats.
+
+.. destination-tiktok-ads-email-normalization-end
 
 
 

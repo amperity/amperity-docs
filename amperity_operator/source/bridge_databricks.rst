@@ -742,7 +742,7 @@ Configure an outbound bridge to connect with Databricks.
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Add the name for the bridge and a description, and then set the duration for which the token will remain active.
+     - Add the name for the bridge and a description, and then set the duration for which the token will remain active. Available durations are **1 month**, **6 months**, **1 year** (default), and **2 years**.
 
        .. image:: ../../images/bridge-add-name-and-set-token.png
           :width: 500 px
@@ -750,7 +750,7 @@ Configure an outbound bridge to connect with Databricks.
           :align: left
           :class: no-scaled-link
 
-       Optional. You may restrict access to specific IP addresses or to a valid CIDR for a range of IP addresses. Place separate entries on a new line. Expand **Advanced Settings** to restrict access.
+       Optional. Expand **Advanced Settings** to restrict credential access by IP address. Enter one IP address or CIDR block per line. For example: ``192.168.1.1`` for a single address or ``192.168.1.0/24`` for a range. When left empty, credentials can be used from any IP address.
 
        When finished, click **Create**. This opens the **Select tables** dialog box, in which you will :ref:`configure any combination of schemas and tables <bridge-databricks-sync-with-databricks-select-tables>` to share with Databricks.
 

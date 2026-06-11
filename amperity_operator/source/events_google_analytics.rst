@@ -252,6 +252,10 @@ Add destination
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
+       **Debug Mode**
+
+          Enable to send events to the GA4 debug endpoint instead of the production endpoint. Use during initial setup and testing to validate event payloads in the `GA4 DebugView <https://support.google.com/analytics/answer/7201382>`__ |ext_link| before enabling production sends. Disable for all production workflows.
+
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -403,7 +407,7 @@ GA4 events parameters
 
 The following table describes each of the purchase events parameters that are supported by |destination-name|. Use a query to map fields in the **Unified Transactions** and **Unified Itemized Transactions** tables to `purchase events parameters <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events#purchase>`__ |ext_link|.
 
-The following |destination-name| purchase events parameters must be returned by the query: **client_id**, **currency**, **item_id**, **item_name**, **price**, and **transaction_id**.
+The following |destination-name| purchase events parameters must be returned by the query: **client_id**, **currency**, at least one of **item_id** or **item_name**, **price**, and **transaction_id**.
 
 All fields, including optional fields, are listed alphabetically, but may be returned by a query in any order.
 
@@ -466,6 +470,12 @@ All fields, including optional fields, are listed alphabetically, but may be ret
        The item-level discount. Applies only to individual items within a transaction and is part of the **items** array.
 
 
+   * - **index**
+     - **Optional**
+
+       The position of an item in a list. Applies only to individual items within a transaction and is part of the **items** array.
+
+
    * - **item_brand**
      - **Optional**
 
@@ -484,13 +494,13 @@ All fields, including optional fields, are listed alphabetically, but may be ret
 
 
    * - **item_id**
-     - **Required**
+     - **Required** (either **item_id** or **item_name** must be present; both may be included)
 
        A unique ID for an item, such as a stock keeping unit (SKU). Applies only to individual items within a transaction and is part of the **items** array.
 
 
    * - **item_name**
-     - **Required**
+     - **Required** (either **item_id** or **item_name** must be present; both may be included)
 
        The name of an item. Applies only to individual items within a transaction and is part of the **items** array.
 

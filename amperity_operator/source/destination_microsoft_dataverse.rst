@@ -37,34 +37,26 @@ Configure destinations for Microsoft Dataverse
 
 .. UNCOMMENT
 
-.. 
-.. .. _destination-microsoft-dataverse-howitworks:
-.. 
-.. How this destination works
-.. ==================================================
-.. 
-.. .. destination-microsoft-dataverse-howitworks-start
-.. 
-.. Use |destination-name| to send rows of data from Amperity, and then add them to tables in |destination-name|. The connector will validate each row of data that is sent from Amperity against the table schema in |destination-name|. Only rows that validate against the table schema will be added to the table.
-.. 
-.. .. destination-microsoft-dataverse-howitworks-end
-.. 
-.. .. image:: ../../images/destination-microsoft-dataverse.png
-..    :width: 600 px
-..    :alt: Send rows of data from Amperity to Microsoft Dataverse.
-..    :align: left
-..    :class: no-scaled-link
-.. 
-.. .. destination-microsoft-dataverse-howitworks-callouts-start
-.. 
-.. A |destination-name| destination works like this:
-.. 
-.. #. Use a query to build a table with rows of data that match the schema of a table in |destination-name|. The column names, data types, and column order must match the schema that is defined in |destination-name|.
-.. #. Configure the :ref:`Microsoft Dataverse destination <destination-microsoft-dataverse-add>` in Amperity.
-.. #. Validated table rows are sent to |destination-name|.
-.. 
-.. .. destination-microsoft-dataverse-howitworks-callouts-end
-.. 
+.. _destination-microsoft-dataverse-howitworks:
+
+How this destination works
+==================================================
+
+.. destination-microsoft-dataverse-howitworks-start
+
+Use |destination-name| to send rows of data from Amperity, and then add them to tables in |destination-name|. Amperity validates each row against the table schema in |destination-name| and sends only the fields that exist in both the dataset and the table. Fields present in the dataset but not in the |destination-name| table schema are silently dropped. If no fields match, the workflow returns an error.
+
+.. destination-microsoft-dataverse-howitworks-end
+
+.. destination-microsoft-dataverse-howitworks-callouts-start
+
+A |destination-name| destination works like this:
+
+#. Use a query to build a table with rows of data that match the schema of a table in |destination-name|. Column names and data types must match the schema defined in |destination-name|.
+#. Configure the :ref:`Microsoft Dataverse destination <destination-microsoft-dataverse-add>` in Amperity.
+#. Amperity sends only the fields that match the |destination-name| table schema. Non-matching fields are dropped silently.
+
+.. destination-microsoft-dataverse-howitworks-callouts-end
 
 
 .. _destination-microsoft-dataverse-get-details:

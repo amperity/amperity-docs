@@ -34,6 +34,8 @@ Configure destinations for Dotdigital
    :start-after: .. setting-common-file-configure-start
    :end-before: .. setting-common-file-configure-end
 
+.. note:: Amperity manages list membership incrementally. Each time an audience is sent, new contacts are added to the list, existing contacts are updated, and contacts no longer in the audience are removed. The list reflects the current audience state, not a cumulative history.
+
 
 .. _destination-dotdigital-get-details:
 
