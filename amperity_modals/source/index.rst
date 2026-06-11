@@ -78,6 +78,7 @@ Site Index
    destination-pinterest-offline-events
    destination-power-reviews
    destination-quad
+   destination-reddit-ads
    destination-rr-donnelly
    destination-s3
    destination-sailthru

@@ -5744,7 +5744,7 @@ A recurring campaign automatically sends an updated or refreshed audience with a
 
 .. term-reddit-ads-start
 
-Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link| using targeted ads and promoted posts.
+Reddit Ads connects brands to more than 490 million weekly visitors across the 100K+ active communities on Reddit. Reddit users come to the platform with specific research intent, looking for product information and peer recommendations from communities organized around shared interests and expertise. Ninety percent of Reddit users trust the platform to learn about new products and brands, making it a high-intent environment for ad targeting.
 
 .. term-reddit-ads-end
 
