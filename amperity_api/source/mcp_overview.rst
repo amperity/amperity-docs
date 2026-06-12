@@ -79,7 +79,7 @@ The Amperity MCP server does not:
 
   .. important:: A user of the Amperity MCP server sees only the tenants and operations allowed by their credentials.
 
-* Store conversation history. Per-token session state--selected tenant and safety mode--persists across requests within the same session.
+* Store conversation history. The safety mode is the only per-token state that persists across requests within the same session. Tenant context never persists--every tenant-scoped tool call names its tenant with a **tenant_id** argument.
 
 * Control the AI client or its underlying model.
 
