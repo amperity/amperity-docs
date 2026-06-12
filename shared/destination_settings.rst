@@ -9,6 +9,24 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. setting-iterable-user-identifier-start
+
+The field used to identify users in |destination-name|. Select **email** for email-based projects or **userId** for user ID-based projects.
+
+.. setting-iterable-user-identifier-end
+
+.. setting-iterable-audience-name-start
+
+The name of the list in |destination-name| to which the audience will be sent. The list will be created if it does not already exist.
+
+.. setting-iterable-audience-name-end
+
+.. setting-iterable-update-existing-only-start
+
+When enabled, only existing user profiles in |destination-name| will be updated. When disabled, new user profiles will be created if they do not already exist. Behavior varies by |destination-name| project type; in hybrid projects, new users may be created even when this setting is enabled.
+
+.. setting-iterable-update-existing-only-end
+
 .. setting-lorem-ipsum-long-start
 
 Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

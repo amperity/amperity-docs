@@ -3610,6 +3610,12 @@ Iterable enables brands to create, execute and optimize campaigns across email, 
 
 **Japs-Olson**
 
+.. term-iterable-start
+
+Iterable is a cross-channel marketing platform that enables personalized customer experiences through email, push notifications, SMS, and in-app messaging.
+
+.. term-iterable-end
+
 .. term-japs-olson-start
 
 `Japs-Olson <https://japsolson.com/>`__ |ext_link| is a direct mail partner that offers complete services for print, envelope, and direct mail, along with response and data optimization strategies that maximize response rates from print and in-house mailing services.
