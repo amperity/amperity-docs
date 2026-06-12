@@ -3289,6 +3289,47 @@ When enabled, signals TikTok to apply limited data processing for web events in 
 
 
 
+.. vale off
+
+**VIANT DSP**
+
+.. vale on
+
+**Account ID**
+
+.. setting-viant-dsp-account-id-start
+
+The Viant account ID. Required when Amperity creates a new audience segment. The account ID is available from your Viant account representative.
+
+.. setting-viant-dsp-account-id-end
+
+**Advertiser ID**
+
+.. setting-viant-dsp-advertiser-id-start
+
+The Viant advertiser ID. Required when Amperity creates a new audience segment. The advertiser ID is available in Viant DSP under **Settings** > **Advertisers**.
+
+.. setting-viant-dsp-advertiser-id-end
+
+**Audience name**
+
+.. setting-viant-dsp-audience-name-start
+
+The name of the audience segment in Viant DSP. If the segment does not exist, Amperity creates it automatically using the configured account ID and advertiser ID.
+
+.. setting-viant-dsp-audience-name-end
+
+**Identifier type**
+
+.. setting-viant-dsp-identifier-type-start
+
+The type of identifier in the audience data. Options: **Email**, **Phone Number**, **IP**, **Cookie**, **Mobile ID**. This value must match the data type of the Viant audience segment. The segment data type cannot be changed after the segment is created.
+
+.. setting-viant-dsp-identifier-type-end
+
+
+
+
 
 .. vale off
 
