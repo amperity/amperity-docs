@@ -54,6 +54,8 @@ Site Index
    destination-google-enhanced-conversions
    destination-hubspot
    destination-infutor
+   destination-iterable
+
    destination-kibo
    destination-klaviyo
    destination-koupon-media
