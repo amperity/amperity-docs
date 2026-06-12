@@ -32,7 +32,7 @@ For the canonical list available to your account, send a **tools/list** request 
 Tenants and sessions
 ==================================================
 
-Manage which Amperity tenant the current session targets, and read session-level safety configuration.
+Discover the tenants available to your account, and read session-level safety configuration. Every tenant-scoped tool takes a **tenant_id** argument -- an id from **tenant_list**, optionally stack-qualified as **stack:tenant_id** -- so each call names the tenant it runs against. There is no session-selected tenant to switch.
 
 .. list-table::
    :header-rows: 1
@@ -41,12 +41,10 @@ Manage which Amperity tenant the current session targets, and read session-level
    * - Description
      - Tools
 
-   * - List, inspect, switch, and refresh tenants
+   * - List, inspect, and refresh tenants
      - **tenant_list**
 
        **tenant_info**
-
-       **tenant_use**
 
        **tenant_resync**
 
