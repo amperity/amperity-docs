@@ -305,8 +305,8 @@ Debugging steps
    * - A Databricks workload fails and Amperity shows a generic "Workload failed, see run output for details" message.
      - The detailed error is written to the Databricks run output. Open the corresponding run in your Databricks workspace -- the Stitch run name has the form ``st-<timestamp>-<random>`` -- to see the underlying error and stack trace.
 
-   * - A multipart table (for example, a CRT) fails to mount.
-     - Multipart tables are not supported as native Databricks tables. This is a known limitation; do not build multipart tables on Databricks compute.
+   * - A multipart table (for example, a CRT) fails to build or mount.
+     - Multipart tables are not supported on Databricks compute in this release; support is planned for a future release. Until then, avoid building multipart tables on a tenant that uses bring your own compute on Databricks.
 
    * - A Stitch job fails partway through with an S3 ``403`` (access denied).
      - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
