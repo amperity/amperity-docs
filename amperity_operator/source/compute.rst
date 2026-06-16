@@ -41,23 +41,24 @@ What runs on your compute
 
 When bring your own compute is enabled for Databricks, the following workloads run on your brand's Databricks account:
 
+* Source transformations -- customer attributes (CDTs) -- and domain tables
 * Stitch, which runs on an on-demand Spark cluster
-* Customer attribute (CDT) authoring and generation
 * Customer profile (database) generation
-* Queries and segmentation that run against domain tables and customer profiles
+* Queries and segments
 
-The following capabilities continue to run on Amperity-managed compute, and rely on Amperity-managed storage:
+The following capabilities continue to run on Amperity-managed compute:
 
-* Predictive models, AmpIQ, and the AI Assistant
-* Real-time profiles and the Profile API
+* Activation, including campaigns and journeys, and workflow orchestration
 * Bridge and data ingest
-* Control-plane operations: the user interface, workflow orchestration, and managed-connector orchestration
+* Real-time profiles and the Profile API
+* Predictive models, AmpIQ, and the AI Assistant
+* Control-plane operations: the user interface, monitoring, and managed connectors
 
 .. compute-what-runs-where-end
 
 .. compute-what-runs-where-note-start
 
-.. note:: A tenant uses a single compute provider and a single SQL dialect. When bring your own compute is enabled, all of the workloads listed above run on that provider.
+.. note:: A tenant uses a single primary compute provider and a single SQL dialect; routing workloads across more than one compute provider is not supported. Bring your own compute is enabled for the full set of supported workloads, not selected on a per-workload basis.
 
 .. compute-what-runs-where-note-end
 
@@ -70,6 +71,8 @@ Run Amperity workloads on your own Databricks
 .. compute-databricks-start
 
 Configure a tenant to run Amperity workloads on a Databricks workspace that is owned and managed by your brand. Amperity connects to your workspace using a service principal, provisions the `Unity Catalog <https://docs.databricks.com/aws/en/data-governance/unity-catalog/>`__ |ext_link| objects that it needs, and runs compute against data in your storage location.
+
+Amperity does not require unmanaged access to your infrastructure. You provision or approve the workspace; Amperity is granted only the permissions it needs to orchestrate supported workloads; jobs are initiated from Amperity and execute in your workspace; and results, metadata, and logs flow back to Amperity for monitoring and support.
 
 .. compute-databricks-end
 
@@ -100,7 +103,10 @@ Before you connect Amperity to your Databricks workspace, verify the following.
      - The person who completes the integration must be a Databricks *account* administrator (not only a workspace administrator). Account-administrator access is required to read the account ID, create a service principal, and generate access tokens.
 
    * - **Region**
-     - Your Databricks workspace should be in the same cloud region as your Amperity storage location to avoid cross-region data transfer.
+     - Your Databricks workspace and your Amperity storage location should be in the same cloud region. Running compute and storage in different regions causes slower jobs, additional networking charges, and harder troubleshooting.
+
+   * - **Network capacity**
+     - The workspace network must have enough available IP addresses for Stitch to start on-demand Spark clusters. Databricks assigns two IP addresses per node, so size the subnet for the largest cluster a Stitch run will use.
 
 .. compute-databricks-prerequisites-end
 
@@ -306,6 +312,9 @@ Debugging steps
    * - A Stitch job fails partway through with an S3 ``403`` (access denied).
      - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
 
+   * - Stitch fails to start with an "insufficient free addresses in subnet" error.
+     - The workspace network does not have enough available IP addresses for the Spark cluster. Work with your cloud or Databricks administrator to add or migrate to a larger subnet, or use a larger node type so the job needs fewer nodes, then re-run.
+
 .. compute-databricks-debugging-end
 
 
@@ -331,9 +340,11 @@ Bring your own compute follows a least-privilege model and a shared responsibili
 
    * - * Creating and scoping the service principal, storage credentials, external locations, catalog, and grants to the minimum required.
        * Storing the service principal secret securely and not returning it after creation.
+       * Orchestrating supported workloads and providing recommended compute-sizing guidance.
        * The Amperity control plane: the user interface, workflow orchestration, and managed connectors.
      - * Security of your Databricks account and workspace, including user and administrator access.
        * Network and access controls on the workspace, such as IP access lists and token lifetimes.
+       * Provisioning and scaling compute capacity -- cluster and warehouse policies, cloud quotas, and subnet capacity -- to meet Amperity's workload requirements.
        * Security and access controls on your storage location, including any PII redaction or column-level permissions.
        * Reviewing the resources and grants Amperity provisions, and the ANSI mode setting, before running production workloads.
 
