@@ -10,5 +10,5 @@ sphinxcontrib-mermaid==1.0.0
 sphinxcontrib-video==0.4.1
 sphinxcontrib-youtube==1.4.1
 sphinx-new-tab-link==0.8.0
-PyJWT==2.4.0
+PyJWT==2.13.0
 Pygments==2.19.1
