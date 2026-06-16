@@ -312,7 +312,7 @@ Debugging steps
      - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
 
    * - Stitch fails to start with an "insufficient free addresses in subnet" error.
-     - The workspace network does not have enough available IP addresses for the Spark cluster. Work with your cloud or Databricks administrator to add or migrate to a larger subnet, or use a larger node type so the job needs fewer nodes, then re-run.
+     - The workspace network does not have enough available IP addresses for the Spark cluster. Work with your cloud or Databricks administrator to add or migrate to a larger subnet or approved network configuration, then re-run.
 
 .. compute-databricks-debugging-end
 
