@@ -302,9 +302,6 @@ Debugging steps
    * - Provisioning fails while creating the catalog, with a cloud-storage "forbidden" or invalid-credential-trust-policy error.
      - The IAM role trust policy that grants Databricks access to your storage is still propagating. Amperity retries automatically; if the error persists, re-run provisioning after a few minutes.
 
-   * - Catalog creation fails because the metastore has no managed storage location.
-     - Amperity sets a managed location at the catalog level and does not require a metastore default. If you see this error, confirm your tenant is on a current Amperity release and contact Support.
-
    * - A Databricks workload fails and Amperity shows a generic "Workload failed, see run output for details" message.
      - The detailed error is written to the Databricks run output. Open the corresponding run in your Databricks workspace -- the Stitch run name has the form ``st-<timestamp>-<random>`` -- to see the underlying error and stack trace.
 
