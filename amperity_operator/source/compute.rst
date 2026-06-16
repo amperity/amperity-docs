@@ -371,7 +371,7 @@ Set up Databricks resources manually
 
 Amperity provisions the resources in this section automatically through the integration wizard. The steps below describe the same resources for brands that prefer to create them by hand, or that need to review exactly what Amperity provisions. Run the SQL in a Unity Catalog-enabled SQL warehouse or notebook as a user with the required privileges.
 
-Throughout, ``<tenant>`` is your Amperity tenant identifier, ``<sp-application-id>`` is the application (client) ID of the service principal, and Amperity provides the exact IAM role ARNs, bucket or container URLs, and external IDs for your tenant.
+Throughout, ``<tenant>`` is your Amperity tenant family identifier, ``<sp-application-id>`` is the application (client) ID of the service principal, and Amperity provides the exact IAM role ARNs, bucket or container URLs, and external IDs for your tenant. Use these names exactly -- Amperity's compute service expects this naming.
 
 .. compute-databricks-manual-end
 
@@ -483,8 +483,8 @@ Account prerequisites
    * - Prerequisite
      - Description
 
-   * - **Bring your own storage**
-     - Your Amperity tenant must be configured to use a :ref:`storage location <storage-configure-location>` that is owned and managed by your brand.
+   * - **Storage**
+     - Bring your own compute works with either Amperity-managed storage or :ref:`bring your own storage <storage-configure-location>`. Brands that need both data residency and compute governance use bring your own storage and bring your own compute together.
 
    * - **Account administrator**
      - Onboarding requires a Snowflake user with the ``ACCOUNTADMIN`` role (or equivalent) to create roles, users, warehouses, storage integrations, and external access integrations.
@@ -547,7 +547,7 @@ Set up Snowflake resources manually
 
 .. compute-snowflake-manual-start
 
-The following objects make up a Snowflake bring-your-own-compute integration. Amperity provides the public key (``<amperity-public-key>``), the artifact role ARN, and the execution role ARN for your tenant. Throughout, ``<TENANT>`` is your Amperity tenant identifier in uppercase.
+The following objects make up a Snowflake bring-your-own-compute integration. Amperity provides the public key (``<amperity-public-key>``), the artifact role ARN, and the execution role ARN for your tenant. Throughout, ``<TENANT>`` is your Amperity tenant family identifier in uppercase. Use these names exactly -- Amperity's compute service expects this naming.
 
 .. compute-snowflake-manual-end
 
