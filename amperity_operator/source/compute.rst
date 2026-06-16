@@ -27,7 +27,7 @@ Amperity runs data processing workloads -- such as Stitch, customer profile (dat
 
 .. compute-about-note-start
 
-.. note:: Bring your own compute pairs with :ref:`bring your own storage <storage-configure-location>`. Together they keep both the storage and the processing of your brand's data within infrastructure that your brand owns and manages.
+.. note:: Bring your own compute and :ref:`bring your own storage <storage-configure-location>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
 
 .. compute-about-note-end
 
@@ -95,8 +95,8 @@ Before you connect Amperity to your Databricks workspace, verify the following.
    * - Prerequisite
      - Description
 
-   * - **Bring your own storage**
-     - Your Amperity tenant must be configured to use a :ref:`storage location <storage-configure-location>` that is owned and managed by your brand. Databricks is where compute happens; both the source and the destination for business data remain in your storage location.
+   * - **Storage**
+     - Bring your own compute works with either Amperity-managed storage or :ref:`bring your own storage <storage-configure-location>`. Databricks is where compute happens; the source and destination for business data remain in the configured storage location. Brands that need both data residency and compute governance use bring your own storage and bring your own compute together.
 
    * - **Unity Catalog**
      - Your workspace must be enabled for `Unity Catalog <https://docs.databricks.com/aws/en/data-governance/unity-catalog/>`__ |ext_link|. Amperity creates a catalog for its workloads and does not require a default (managed) storage location to be set on the metastore.
