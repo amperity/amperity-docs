@@ -70,6 +70,8 @@ Run Amperity workloads on your own Databricks
 
 .. compute-databricks-start
 
+.. note:: Running Amperity workloads on Databricks is in public preview. Functionality is added in phases, and bring your own compute is enabled for your tenant by Amperity.
+
 Configure a tenant to run Amperity workloads on a Databricks workspace that is owned and managed by your brand. Amperity connects to your workspace using a service principal, provisions the `Unity Catalog <https://docs.databricks.com/aws/en/data-governance/unity-catalog/>`__ |ext_link| objects that it needs, and runs compute against data in your storage location.
 
 Amperity does not require unmanaged access to your infrastructure. You provision or approve the workspace; Amperity is granted only the permissions it needs to orchestrate supported workloads; jobs are initiated from Amperity and execute in your workspace; and results, metadata, and logs flow back to Amperity for monitoring and support.
