@@ -79,7 +79,7 @@ Do one of the following to select |source-name|:
 
 .. credentials-destinations-configure-options-start
 
-Select |destination-name| from the **Plugin** dropdown.
+Select |plugin-name| from the **Plugin** dropdown.
 
 .. credentials-destinations-configure-options-end
 
