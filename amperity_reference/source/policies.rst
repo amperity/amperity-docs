@@ -492,6 +492,12 @@ The following table shows which policies enable user actions within **AmpAI** fe
      - DataGrid Operator
      - DataGrid Admin
 
+   * - Amps Insights
+     - 
+     -
+     - |policy|
+     - |policy|
+
    * - Open **AmpAI** page
      - |policy|
      - |policy|
