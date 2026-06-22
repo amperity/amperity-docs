@@ -2515,6 +2515,31 @@ See SFTP.
 
 
 
+.. vale off
+
+**REDDIT ADS**
+
+.. vale on
+
+**Ad account ID**
+
+.. setting-reddit-ads-ad-account-id-start
+
+The Reddit Ads account ID. This value follows the format ``a2_xxxxxxxxx`` and is available in Reddit Ads Manager under account settings.
+
+.. setting-reddit-ads-ad-account-id-end
+
+**List name**
+
+.. setting-reddit-ads-list-name-start
+
+Optional. The name of the custom audience in Reddit Ads. When provided, this name is used as-is. When omitted, the audience name defaults to "Amperity - " followed by the segment name.
+
+.. setting-reddit-ads-list-name-end
+
+
+
+
 
 .. vale off
 

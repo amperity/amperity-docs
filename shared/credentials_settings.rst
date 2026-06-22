@@ -1917,6 +1917,23 @@ See SFTP.
 
 
 
+.. vale off
+
+**REDDIT ADS**
+
+.. vale on
+
+**Refresh token**
+
+.. credential-reddit-ads-refresh-token-start
+
+The OAuth2 refresh token for the Reddit Ads account. This token is issued by Reddit during the OAuth2 authorization flow and should be treated as a secret.
+
+.. credential-reddit-ads-refresh-token-end
+
+
+
+
 
 
 .. vale off
