@@ -201,6 +201,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_infutor
 
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: destination_iterable
+
    .. grid-item-card:: Klaviyo
       :link-type: doc
       :link: destination_klaviyo
@@ -550,6 +554,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Google Cloud Storage <destination_google_cloud_storage>
    HubSpot <destination_hubspot>
    Infutor <destination_infutor>
+   Iterable <destination_iterable>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>

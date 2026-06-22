@@ -9,6 +9,24 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. credential-iterable-api-key-start
+
+The server-side API key for your |destination-name| account.
+
+.. credential-iterable-api-key-end
+
+.. credential-iterable-base-url-start
+
+The base URL for your |destination-name| data center. Use ``https://api.iterable.com`` for US accounts or ``https://api.eu.iterable.com`` for EU accounts.
+
+.. credential-iterable-base-url-end
+
+.. credential-iterable-api-find-key-start
+
+You can find the API key in |destination-name| by navigating to **Integrations > API Keys** after logging in to your account.
+
+.. credential-iterable-api-find-key-end
+
 .. credential-lorem-ipsum-long-start
 
 Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

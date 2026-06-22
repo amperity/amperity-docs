@@ -235,6 +235,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_hubspot
 
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: campaign_iterable
+
    .. grid-item-card:: Klaviyo
       :link-type: doc
       :link: campaign_klaviyo
@@ -329,6 +333,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
    HubSpot <campaign_hubspot>
+   Iterable <campaign_iterable>
    Klaviyo <campaign_klaviyo>
    Listrak Email <campaign_listrak>
    Listrak SMS - Lists <campaign_listrak_sms>

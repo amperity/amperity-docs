@@ -166,6 +166,12 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_infutor
 
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: campaign_iterable
+
+
+
    .. grid-item-card:: Klaviyo
       :link-type: doc
       :link: campaign_klaviyo
@@ -369,6 +375,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    Google Customer Match <campaign_google_customer_match>
    HubSpot <campaign_hubspot>
    Infutor <campaign_infutor>
+   Iterable <campaign_iterable>
    Klaviyo <campaign_klaviyo>
    LinkedIn DMP <campaign_linkedin_dmp>
    Listrak Email <campaign_listrak>
