@@ -4642,7 +4642,7 @@ One and done is a flag that indicates if a customer has made only one purchase.
 
 .. term-onetrust-start
 
-OneTrust is a privacy, security, and third-party risk technology platform that helps companies meet compliance goals related to privacy and security laws, such as CCPA, GDPR, and ISO27001.
+OneTrust is a consent and preference management platform that tracks customer opt-in and opt-out status across email, SMS, and other marketing channels and helps companies meet compliance goals related to privacy and security laws, such as CCPA, GDPR, and ISO27001.
 
 .. term-onetrust-end
 
