@@ -412,7 +412,7 @@ Allowed actions
 
 .. policies-allowed-actions-start
 
-The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Workflows <policies-allowed-actions-workflows>`, and :ref:`Credentials <policies-allowed-actions-settings>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
+The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`AmpAI <policies-allowed-actions-amp-ai>`, :ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Journeys <policies-allowed-actions-journeys>`, :ref:`Audience Monetization <policies-allowed-actions-audience-monetization>`, :ref:`Orchestrations <policies-allowed-actions-orchestrations>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Settings <policies-allowed-actions-settings>`, :ref:`Workflows <policies-allowed-actions-workflows>`, and :ref:`Credentials <policies-allowed-actions-settings-credentials>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
 
 .. policies-allowed-actions-end
 
@@ -465,6 +465,70 @@ The following sections describe the set of actions that may be assigned to users
           .. important:: Only users who are assigned the **Allow sandbox administration** policy option may promote changes from a sandbox to production.
 
 .. policies-allowed-actions-icons-end
+
+
+.. _policies-allowed-actions-amp-ai:
+
+AmpAI
+--------------------------------------------------
+
+.. policies-allowed-actions-amp-ai-start
+
+The following table shows which policies enable user actions within **AmpAI** features, including the AmpAI page, the Customer Data Agent, and the AI assistants embedded in the Journeys, Segments, and Queries editors.
+
+.. note:: The read-only variants of the Amp360 and AmpIQ policies--**Amp360 User - Read Only** and **AmpIQ User - Read Only**--explicitly deny access to AmpAI features. The authorization system applies deny statements first and a deny statement always overrides an allow statement. Assigning a read-only role alongside a full role that includes AmpAI access will deny access to AmpAI features.
+
+.. policies-allowed-actions-amp-ai-end
+
+.. policies-allowed-actions-amp-ai-table-start
+
+.. list-table::
+   :widths: 40 15 15 15 15
+   :header-rows: 1
+
+   * - Actions
+     - Amp360 User
+     - AmpIQ User
+     - DataGrid Operator
+     - DataGrid Admin
+
+   * - Open **AmpAI** page
+     - |policy|
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Use Customer Data Agent
+     - |policy|
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Use Journeys AI assistant
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Use Queries AI assistant
+     - |policy|
+     -
+     - |policy|
+     - |policy|
+
+   * - Use Segments AI assistant
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
+   * - Use SQL query assistant
+     - |policy|
+     -
+     - |policy|
+     - |policy|
+
+.. policies-allowed-actions-amp-ai-table-end
 
 
 .. _policies-allowed-actions-sources:
@@ -973,6 +1037,7 @@ The following table shows which policies enable user actions within the **Custom
      -
      -
      -
+
    * - Activate databases
      -
      -
@@ -1468,6 +1533,7 @@ The following table shows which policies enable user actions within the **Segmen
      -
      -
      -
+
    * - Add segment
      -
      - |policy|
@@ -1672,8 +1738,8 @@ The following table shows which policies enable user actions within the **Campai
 
    * - Analyze campaign results
      -
-     - |poliro|
-     - |poliro|
+     - |policy|
+     - |policy|
      - |policy|
 
    * - Archive campaign
@@ -1726,20 +1792,20 @@ The following table shows which policies enable user actions within the **Campai
 
    * - View campaign history
      -
-     - |poliro|
-     - |poliro|
+     - |policy|
+     - |policy|
      - |policy|
 
    * - View one-time campaigns
      -
-     - |poliro|
-     - |poliro|
+     - |policy|
+     - |policy|
      - |policy|
 
    * - View recurring campaigns
      -
-     - |poliro|
-     - |poliro|
+     - |policy|
+     - |policy|
      - |policy|
 
 
@@ -1896,6 +1962,12 @@ The following table shows which policies enable user actions within the **Journe
      - |policy|
      - |policy|
 
+   * - Create segments from journey
+     -
+     - |policy|
+     - |policy|
+     - |policy|
+
    * - **Notifications**
      -
      -
@@ -1924,7 +1996,7 @@ Audience Monetization
 
 .. policies-allowed-actions-audience-monetization-start
 
-The following table shows which policies enable user actions within the **Audience Monetization** tab on the **Activations** page. Audience monetization is available to the **DataGrid Administrator** policy by default. The **DataGrid Operator** may be granted access using the **Audience Monetization access** add-on policy. Creating and editing audiences also requires access to segments.
+The following table shows which policies enable user actions within the **Audience Monetization** tab on the **Activations** page. Audience Monetization is available to the **DataGrid Administrator** policy by default. The **DataGrid Operator** may be granted access using the **Audience Monetization access** add-on policy. Creating and editing audiences also requires access to segments.
 
 .. policies-allowed-actions-audience-monetization-end
 
@@ -1973,7 +2045,7 @@ The following table shows which policies enable user actions within the **Audien
    * - Access segments
      -
      -
-     - |polius|
+     - |policy|
      - |policy|
 
 .. policies-allowed-actions-audience-monetization-table-end
@@ -2499,13 +2571,13 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      -
      -
 
-   * - Enable AmpAI
+   * - Disable AmpAI
      -
      -
      - |policy|
      - |policy|
 
-   * - Disable AmpAI
+   * - Edit AI assets
      -
      -
      - |policy|
@@ -2517,7 +2589,7 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      - |policy|
      - |policy|
 
-   * - View AI conversations
+   * - Enable AmpAI
      -
      -
      - |policy|
@@ -2529,7 +2601,7 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      - |policy|
      - |policy|
 
-   * - Edit AI assets
+   * - View AI conversations
      -
      -
      - |policy|
@@ -2631,6 +2703,12 @@ The **Integrations** tab has the following integrations:
      - |policy|
      - |policy|
 
+   * - Edit Databricks connections
+     -
+     -
+     - |policy|
+     - |policy|
+
    * - View BI Connect settings
      -
      -
@@ -2638,12 +2716,6 @@ The **Integrations** tab has the following integrations:
      - |policy|
 
    * - View Databricks connections
-     -
-     -
-     - |policy|
-     - |policy|
-
-   * - Edit Databricks connections
      -
      -
      - |policy|

@@ -117,6 +117,8 @@ You can use a **LEFT JOIN** to add columns from the **Unified Transactions** tab
    FROM Merged_Customers mc
    LEFT JOIN Unified_Transactions ut ON mc.amperity_id = ut.amperity_id
 
+.. important:: This option requires the **Use full profile to update list** setting to be enabled in the data template used to send query results to |destination-name|.
+
 Amperity maps query columns to three locations in the |destination-name| request. Named profile fields (``email``, ``first_name``, and so on) map to top-level attributes. Location fields (``address1``, ``city``, ``region``, and so on) are grouped under ``location``. Every other column — including ``last_event_date`` and ``product`` in this example — is sent as a key-value pair inside ``properties``:
 
 .. code-block:: json
@@ -146,8 +148,6 @@ Amperity maps query columns to three locations in the |destination-name| request
        }
      }
    }
-
-.. important:: This option requires the **Use full profile to update list** setting to be enabled in the data template used to send query results to |destination-name|.
 
 .. sendto-klaviyo-build-query-email-plus-profile-end
 
