@@ -130,4 +130,6 @@ Claude calls the **tenant_info** tool and return details about your current Ampe
 
       claude mcp add --transport http --scope user amperity https://mcp.amperity.com
 
+.. tip:: If Claude is unable to start a session, the ``session_start`` tool may need to be explicitly allowed. In Claude.ai, open **Customize** > **Connectors**, select the Amperity connector, find ``session_start`` in the tool list, and set it to **Always allow**.
+
 .. mcp-setup-claude-interacting-end
