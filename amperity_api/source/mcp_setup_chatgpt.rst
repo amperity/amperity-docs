@@ -88,4 +88,6 @@ ChatGPT calls the **tenant_info** tool and return details about your current Amp
 
 .. note:: Write operations in ChatGPT require a manual-confirm prompt in the chat the first time they are called.
 
+.. note:: ChatGPT snapshots the tool list when an MCP connector is published. If you are unable to access tools documented in the :doc:`tool reference </mcp_tool_reference>`, the connector may need to be updated. Contact your workplace administrator to review and publish an updated version of the connector.
+
 .. mcp-setup-chatgpt-interacting-end
