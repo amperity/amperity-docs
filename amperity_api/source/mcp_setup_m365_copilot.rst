@@ -72,7 +72,7 @@ Use the **Copilot Studio** MCP onboarding wizard to configure server details and
       * - **Server URL**
         - **https://mcp.amperity.com**
 
-#. Under **Authentication**, select **OAuth 2.0**, and then choose the **Dynamic discovery** type. No Client ID, secret, or endpoint URLs are required.
+#. Under **Authentication**, select **OAuth 2.0**, and then choose the **Dynamic discovery** type.
 
 #. Select **Create**, and then **Next** to continue. On the **Add tool** dialog, choose **Create a new connection** and sign in with your Amperity credentials.
 #. Select **Add to agent**.
