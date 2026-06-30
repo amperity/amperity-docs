@@ -6,11 +6,11 @@
 
 .. meta::
     :description lang=en:
-        Amperity Bridge for Databricks is a first-class integration that uses Delta Sharing to enable bi-directional data access between Amperity and Databricks.
+        Amperity Bridge for Databricks is a first-class integration that uses OpenSharing to enable bi-directional data access between Amperity and Databricks.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Bridge for Databricks is a first-class integration that uses Delta Sharing to enable bi-directional data access between Amperity and Databricks.
+        Amperity Bridge for Databricks is a first-class integration that uses OpenSharing to enable bi-directional data access between Amperity and Databricks.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -27,21 +27,21 @@ Amperity Bridge for Databricks is a first-class integration that enables bi-dire
 .. bridge-databricks-about-end
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-delta-sharing-start
-   :end-before: .. term-delta-sharing-end
+   :start-after: .. term-opensharing-start
+   :end-before: .. term-opensharing-end
 
 .. bridge-databricks-audits-and-encryption-start
 
 .. admonition:: About encryption, credentials, and audit logs
 
-   Delta Sharing uses end-to-end TLS encryption from client to server to storage account along with short-lived credentials, such as pre-signed URLs, to access data.
+   OpenSharing uses end-to-end TLS encryption from client to server to storage account along with short-lived credentials, such as pre-signed URLs, to access data.
 
    Review |destination-name| documentation for `security best practices <https://www.databricks.com/blog/2022/08/01/security-best-practices-for-delta-sharing.html>`__ |ext_link|, including setting token lifetimes for metastores, rotating credentials, applying granularity for shares and recipients, configuring IP access lists, and audit logging.
 
    Audit logging occurs in Databricks *and* in Amperity.
 
    * `Audit logging <https://docs.amperity.com/reference/settings.html#about-activity-logs>`__ in Amperity shows each users actions and interactions along with access to a history of workflows with tasks that use a bridge to connect Amperity and Databricks.
-   * Databricks captures `Delta Sharing provider events <https://docs.databricks.com/en/admin/account-settings/audit-logs.html#delta-sharing-events>`__ |ext_link|, which includes logging for when a recipient (Amperity) accesses data.
+   * Databricks captures `OpenSharing provider events <https://docs.databricks.com/en/admin/account-settings/audit-logs.html#delta-sharing-events>`__ |ext_link|, which includes logging for when a recipient (Amperity) accesses data.
 
 .. bridge-databricks-audits-and-encryption-end
 
@@ -297,7 +297,7 @@ Get details
 
 .. bridge-databricks-sync-with-amperity-prerequisites-start
 
-Before you can create inbound sharing between Databricks and Amperity, Delta Sharing must be enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|, a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient.
+Before you can create inbound sharing between Databricks and Amperity, OpenSharing must be enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|, a recipient and share must be created in Databricks, after which tables are added to the share and access to the share is granted to the recipient.
 
 The user who performs these actions may use the Databricks CLI or the Databricks Catalog Explorer and must be assigned the **CREATE RECIPIENT**, **CREATE SHARE**, **USE CATALOG**, **USE SCHEMA**, and **SELECT** permissions, along with the ability to grant the recipient access to the share.
 
@@ -310,7 +310,7 @@ The user who performs these actions may use the Databricks CLI or the Databricks
           :alt: Requirement 1.
           :align: center
           :class: no-scaled-link
-     - Enable Delta Sharing on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
+     - Enable OpenSharing on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -412,7 +412,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Verify that Delta Sharing is enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
+     - Verify that OpenSharing is enabled on the `Unity Catalog metastore <https://docs.databricks.com/en/delta-sharing/set-up.html#enable-delta-sharing-on-a-metastore>`__ |ext_link|.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -421,7 +421,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
           :class: no-scaled-link
      - A share is a securable object in Unity Catalog that can be configured to share tables with Amperity.
 
-       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, then select **Share data**, and then `create a share <https://docs.databricks.com/en/data-sharing/create-share.html#create-a-share-object>`__ |ext_link|.
+       Open the Databricks Catalog Explorer. Under OpenSharing, choose **Shared by me**, then select **Share data**, and then `create a share <https://docs.databricks.com/en/data-sharing/create-share.html#create-a-share-object>`__ |ext_link|.
 
        After you have created the share you may `add tables to the share <https://docs.databricks.com/en/data-sharing/create-share.html#add-tables-to-a-share>`__ |ext_link|. Click **Add assets**, and then select the tables to share.
 
@@ -433,7 +433,7 @@ To configure Databricks to connect with Amperity you need to `CREATE SHARE <http
           :class: no-scaled-link
      - A recipient in Databricks represents the entity that will consume shared data: Amperity. Configure the recipient for open sharing and to use token-based authentication.
 
-       Open the Databricks Catalog Explorer. Under Delta Sharing, choose **Shared by me**, and then click **New recipient** to `create a recipient <https://docs.databricks.com/aws/en/delta-sharing/create-recipient-token>`__ |ext_link|.
+       Open the Databricks Catalog Explorer. Under OpenSharing, choose **Shared by me**, and then click **New recipient** to `create a recipient <https://docs.databricks.com/aws/en/delta-sharing/create-recipient-token>`__ |ext_link|.
 
        After the recipient is created, `grant the recipient access to the share <https://docs.databricks.com/en/data-sharing/create-recipient.html#grant-the-recipient-access-to-a-share>`__ |ext_link|.
 
@@ -878,7 +878,7 @@ You can create a provider directly from the Databricks user interface. Upload th
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the Databricks user interface. Open **Catalog Explorer**, then **Delta Sharing**, and then **Shared with me**.
+     - Open the Databricks user interface. Open **Catalog Explorer**, then **OpenSharing**, and then **Shared with me**.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -1077,7 +1077,7 @@ A catalog is the first layer in a Unity Catalog namespace and is used to organiz
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - In the **Catalog Explorer**, expand **Delta Sharing**, and then select **Shared with me**.
+     - In the **Catalog Explorer**, expand **OpenSharing**, and then select **Shared with me**.
 
        This will display the list of schemas to which you have access.
 

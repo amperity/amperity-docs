@@ -73,8 +73,8 @@ Amperity Bridge for Databricks
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-delta-sharing-start
-   :end-before: .. term-delta-sharing-end
+   :start-after: .. term-opensharing-start
+   :end-before: .. term-opensharing-end
 
 .. bridge-sync-data-with-databricks-start
 

@@ -74,11 +74,11 @@ Configure inbound and outbound shares in Amperity to enable `bi-directional conn
 
 .. bridge-connect-databricks-end
 
-.. admonition:: About Delta Sharing
+.. admonition:: About OpenSharing
 
    .. include:: ../../shared/terms.rst
-      :start-after: .. term-delta-sharing-start
-      :end-before: .. term-delta-sharing-end
+      :start-after: .. term-opensharing-start
+      :end-before: .. term-opensharing-end
 
 
 .. _bridge-connect-google-bigquery:

@@ -126,7 +126,7 @@ You have two options:
 #. Use the provided data assets
 #. Use your own data from your own instance of Databricks
 
-   .. note:: For this option you need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
+   .. note:: For this option you need a Databricks account, a configured Unity Catalog, and the ability to set up and manage OpenSharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
 
 .. start-connect-end
 

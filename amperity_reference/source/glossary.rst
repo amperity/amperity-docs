@@ -1465,14 +1465,6 @@ D
       :end-before: .. term-delta-lake-end
 
 
-.. _d-delta-sharing:
-
-**Delta Sharing**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-delta-sharing-start
-      :end-before: .. term-delta-sharing-end
-
-
 .. _d-demandware:
 
 **Demandware**
@@ -3182,6 +3174,14 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-one-and-done-start
       :end-before: .. term-one-and-done-end
+
+
+.. _o-opensharing:
+
+**OpenSharing**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-opensharing-start
+      :end-before: .. term-opensharing-end
 
 
 .. _o-oracle-business-analytics:
