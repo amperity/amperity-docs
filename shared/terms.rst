@@ -2160,15 +2160,6 @@ Delta Lake is an open source format that involves a metadata layer on top of col
 .. term-delta-lake-end
 
 
-**Delta Sharing**
-
-.. term-delta-sharing-start
-
-`Delta Sharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system regardless of computing platform.
-
-.. term-delta-sharing-end
-
-
 **derived semantic**
 
 .. vale off
@@ -4654,6 +4645,15 @@ OneTrust is a consent and preference management platform that tracks customer op
 Open Database Connectivity (ODBC) uses a driver-based system to define how any client may access any database.
 
 .. term-odbc-end
+
+
+**OpenSharing**
+
+.. term-opensharing-start
+
+`OpenSharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for secure sharing of live data between organizations, hosted by the Linux Foundation. OpenSharing is an evolution of Delta Sharing, extending the protocol for use with AI agents. OpenSharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system regardless of computing platform.
+
+.. term-opensharing-end
 
 
 **Optimizely**
