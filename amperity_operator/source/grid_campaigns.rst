@@ -90,6 +90,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_bazaarvoice
 
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: campaign_bloomreach
+
    .. grid-item-card:: Bluecore
       :link-type: doc
       :link: campaign_bluecore
@@ -357,6 +361,8 @@ Configure Amperity to send campaigns to any marketing workflow.
    Attentive (Audiences) <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
    BazaarVoice <campaign_bazaarvoice>
+   Bloomreach <campaign_bloomreach>
+
    Bluecore <campaign_bluecore>
    Braze <campaign_braze>
    Camelot SMM <campaign_camelot_smm>

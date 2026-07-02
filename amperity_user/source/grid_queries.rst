@@ -149,6 +149,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_bluecore
 
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: destination_bloomreach
+
    .. grid-item-card:: Braze
       :link-type: doc
       :link: destination_braze
@@ -541,6 +545,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Azure Blob Storage <destination_azure_blob_storage>
    BazaarVoice <destination_bazaarvoice>
    Bluecore <destination_bluecore>
+   Bloomreach <destination_bloomreach>
    Braze <destination_braze>
    Cheetah Digital <destination_cheetah_digital>
    Cordial <destination_cordial>

@@ -9,6 +9,26 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. setting-bloomreach-import-name-start
+
+The name of the import definition that will be created in Bloomreach Engagement. Amperity manages import definitions with this name.
+
+.. setting-bloomreach-import-name-end
+
+
+.. setting-bloomreach-identity-column-start
+
+The Bloomreach hard identifier to which the source column maps. Options include **email**, **cookie**, **google_analytics**, or **external_id**.
+
+.. setting-bloomreach-identity-column-end
+
+
+.. setting-bloomreach-identity-source-column-start
+
+The column in your dataset whose value is sent as the Bloomreach identifier. This column must be present in your dataset.
+
+.. setting-bloomreach-identity-source-column-end
+
 .. setting-iterable-user-identifier-start
 
 The field used to identify users in |destination-name|. Select **email** for email-based projects or **userId** for user ID-based projects.
