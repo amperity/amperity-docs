@@ -104,6 +104,6 @@ Connect a client to the MCP server:
 * :doc:`ChatGPT custom connectors <mcp_setup_chatgpt>`
 * :doc:`Claude.ai, Claude Desktop, and Claude Code <mcp_setup_claude>`
 * :doc:`Copilot Studio <mcp_setup_m365_copilot>`
-* :doc:`Gemini CLI <mcp_setup_gemini>`
+* :doc:`Gemini -- Antigravity and Gemini CLI <mcp_setup_gemini>`
 
 .. mcp-connect-client-end

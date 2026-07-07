@@ -93,7 +93,7 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    Set up ChatGPT <mcp_setup_chatgpt>
    Set up Claude <mcp_setup_claude>
    Set up Copilot Studio <mcp_setup_m365_copilot>
-   Set up Gemini CLI <mcp_setup_gemini>
+   Set up Gemini <mcp_setup_gemini>
    Safety modes <mcp_safety_modes>
    Tools reference <mcp_tool_reference>
 
