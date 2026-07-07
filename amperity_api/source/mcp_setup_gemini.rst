@@ -64,13 +64,7 @@ Add the Amperity MCP server
 
 Register the Amperity MCP server as a custom server in your Antigravity configuration.
 
-#. Open your Antigravity MCP configuration file. This is the global file at ``~/.gemini/config/mcp_config.json`` (applies to every workspace) or the workspace-local file at ``.agents/mcp_config.json`` (applies to the current project only).
-
-   You can edit this file directly, or open it from within Antigravity:
-
-   * **Antigravity IDE**: In the editor's agent side panel, click **...**, select **MCP Servers**, click **Manage MCP Servers**, then click **View raw config**.
-   * **Antigravity 2.0**: Click **Settings** at the bottom left, select **Customizations**, then edit the raw config under **Installed MCP Servers**.
-   * **Antigravity CLI**: Type ``/mcp`` in the prompt panel to open the MCP Manager, or edit the file directly.
+#. Open your global Antigravity MCP configuration file at ``~/.gemini/config/mcp_config.json``.
 
 #. Add the ``amperity`` server with Amperity's OAuth client ID:
 
@@ -98,8 +92,6 @@ Authenticate
 --------------------------------------------------
 
 .. mcp-setup-antigravity-authenticate-start
-
-#. Reload your MCP servers so Antigravity picks up the new configuration: click **...** at the top of the agent side panel, select **MCP Servers**, then refresh.
 
 #. Open **Agent Settings** with :kbd:`Cmd+,` (macOS) or :kbd:`Ctrl+,` (Windows/Linux) and go to the **Customizations** tab.
 
