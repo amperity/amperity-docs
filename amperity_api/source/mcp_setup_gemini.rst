@@ -93,8 +93,6 @@ Authenticate
 
 .. mcp-setup-antigravity-authenticate-start
 
-#. Open **Agent Settings** with :kbd:`Cmd+,` (macOS) or :kbd:`Ctrl+,` (Windows/Linux) and go to the **Customizations** tab.
-
 #. Click **Authenticate** next to the **amperity** server. A browser tab opens. Sign in with your Amperity OAuth credentials and select your tenant.
 
 #. Copy the authorization code from the browser, paste it back into the settings panel, and click **Submit**. The server reconnects automatically and its tools become available.
