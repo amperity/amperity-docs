@@ -49,7 +49,7 @@ Use householding to support a wide variety of householding use cases, such as:
 Householding table
 ==================================================
 
-Use the |householding| table to build customer profiles by household, and then use segments and queries to build audiences by household using all of the attributes in your customer 360 database.
+Use the `Merged Households <https://docs.amperity.com/operator/table_merged_households.html>`__ table to build customer profiles by household, and then use segments and queries to build audiences by household using all of the attributes in your customer 360 database.
 
 
 .. _direct-mail-build-audience:
