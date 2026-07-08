@@ -134,6 +134,12 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
+
        **Customer ID**
 
           .. include:: ../../shared/destination_settings.rst
@@ -276,9 +282,10 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. campaigns-steps-add-destinations-select-start
-          :end-before: .. campaigns-steps-add-destinations-select-end
+       To configure a campaign for |destination-name|, do one of the following:
+
+       #. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+       #. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -325,6 +332,12 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
+
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
 
        **Customer ID**
 

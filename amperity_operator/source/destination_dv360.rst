@@ -52,6 +52,10 @@ Configure destinations for DV360
    Use Amperity to build high-value audience segments from first-party data, and then send those
    segments to DV360 to activate them in programmatic advertising campaigns.
 
+.. note:: DV360 audiences are configured through the **Google Customer Match** plugin. For the
+   **Customer product**, select **Display Video Advertiser** or **Display Video Partner**, depending
+   on your DV360 account type. Then enter that account's ID as the **Customer ID**.
+
 .. destination-dv360-api-note-start
 
 .. note:: This destination uses the `Google Audience Partner API <https://support.google.com/google-ads/answer/7361372?hl=en>`__ |ext_link|.
@@ -143,6 +147,12 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
+
        **Customer ID**
 
           .. include:: ../../shared/destination_settings.rst
@@ -212,9 +222,11 @@ Configure credentials
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-1-start
-          :end-before: .. destinations-oauth-configure-step-1-end
+     - Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
+
+       Select |plugin-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select **Create a new credential**.
+
+       This opens the **Create New Credential** dialog box.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -230,9 +242,11 @@ Configure credentials
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-oauth-configure-step-3-start
-          :end-before: .. destinations-oauth-configure-step-3-end
+     - Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
+
+       Select |plugin-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select the credential that is authorized to access |destination-name|.
+
+       .. note:: The value for the **Refresh Token** setting is updated automatically after you select the credential.
 
 
 .. _destination-dv360-reauthorize-amperity:
@@ -277,9 +291,10 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-add-destinations-select-start
-          :end-before: .. destinations-steps-add-destinations-select-end
+       To configure a destination for |destination-name|, do one of the following:
+
+       #. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+       #. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -326,6 +341,12 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
+
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
 
        **Customer ID**
 
