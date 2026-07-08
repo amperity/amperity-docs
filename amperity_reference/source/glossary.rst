@@ -1190,7 +1190,7 @@ C
 
 .. _c-custom-domain-table:
 
-**custom domain table**
+**custom domain table**, **CDT**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-custom-domain-table-start
       :end-before: .. term-custom-domain-table-end
