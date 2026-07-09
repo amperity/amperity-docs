@@ -188,7 +188,7 @@ You can build a churn propensity model from the **Customer 360** page. Each data
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
+     - Open the **Customer 360** page, and then select the **Predictive models** tab. This opens the **Predictive models** page.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px

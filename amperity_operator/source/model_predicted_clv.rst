@@ -206,7 +206,7 @@ Select model, create version
 
 .. model-predicted-clv-build-create-version-start
 
-Open the **Customer 360** page and select a database. Click the |fa-kebab| menu to open the menu, and then select **Predictive models**. This opens the **Predictive models** page.
+Open the **Customer 360** page, and then select the **Predictive models** tab. This opens the **Predictive models** page.
 
 Click the **Add model** button and select **Predicted customer lifetime value (pCLV)**. In the **New model** dialog assign a name to the model and add a description.
 
