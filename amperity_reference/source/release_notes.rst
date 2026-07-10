@@ -39,6 +39,36 @@ What is new and what has changed?
 
 .. TODO: :bdg-light:`UPDATED`
 
+.. _updates-2026-summer:
+
+Summer 2026
+==================================================
+
+.. updates-2026-summer-start
+
+**Amperity MCP server**
+
+   :bdg-light:`UPDATED` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to manage your tenant. The MCP server is now in GA as a hosted, multi-user service with OAuth authentication, alongside an expanded tool set and reliability improvements.
+
+**Event propensity model**
+
+   :bdg-success:`NEW` The `event propensity model <../operator/model_event_propensity.html>`__ predicts the likelihood that a customer will perform a revenue-generating event within the next 30 days, and then groups customers by recommended audience size and by ranking to support your marketing campaigns.
+
+**Paid Media Measurement & Optimization**
+
+   :bdg-success:`NEW` `Paid Media Measurement & Optimization <paid_media_measurement.html>`__ brings your paid media performance data from Meta and Google into Amperity, where it is available to AmpAI for analysis alongside your customer data.
+
+**Recommended Actions**
+
+   :bdg-success:`NEW` :doc:`Recommended Actions <recommended_actions>` turns your unified customer data into a prioritized list of marketing plays, each including the opportunity it addresses, the segment it targets, and its expected business impact.
+
+**Destination topics**
+
+   :bdg-success:`NEW` New destinations for `Iterable <../operator/destination_iterable.html>`__, `Reddit Ads <../operator/destination_reddit_ads.html>`__, `Snapchat CAPI <../user/events_snapchat.html>`__, and `Viant DSP <../operator/destination_viant_dsp.html>`__.
+
+.. updates-2026-summer-end
+
+
 .. _updates-2026-spring:
 
 Spring 2026
