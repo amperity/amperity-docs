@@ -229,6 +229,10 @@ Components
       :link-type: doc
       :link: notifications
 
+   .. grid-item-card:: |fa-sparkles| Recommended Actions
+      :link-type: doc
+      :link: recommended_actions
+
    .. grid-item-card:: |fa-object-group| Resource groups
       :link-type: doc
       :link: resource_groups
@@ -331,6 +335,7 @@ Components
    Profiles <profiles>
    Queries <queries>
    Recent activity <notifications>
+   Recommended Actions <recommended_actions>
    Sandboxes <sandboxes>
    Settings <settings>
    Segments <segments>
