@@ -2629,7 +2629,7 @@ An escape character is specific to a data format and allows certain character se
 
 .. term-event-propensity-start
 
-Event propensity is a predictive model that finds the likelihood that a customer performs a revenue-generating event within the next 30 days.
+Event propensity is a predictive model that finds the likelihood that a customer performs a target event within the next 30 days.
 
 .. term-event-propensity-end
 
