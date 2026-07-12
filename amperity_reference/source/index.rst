@@ -205,6 +205,10 @@ Components
       :link-type: doc
       :link: orchestrations
 
+   .. grid-item-card:: |fa-chart-line| Paid Media Measurement
+      :link-type: doc
+      :link: paid_media_measurement
+
    .. grid-item-card:: |fa-user-shield| Policies
       :link-type: doc
       :link: policies
@@ -330,6 +334,7 @@ Components
    Destinations <page_destinations>
    File formats <grid_formats>
    Home <home>
+   Paid Media Measurement <paid_media_measurement>
    Predictive models <grid_models>
    Presto SQL <sql_presto>
    Profiles <profiles>
