@@ -35,8 +35,9 @@ Use cases
 .. model-event-propensity-use-cases-start
 
 The event propensity model enables support for marketing campaigns that benefit from knowing a customer's likelihood to perform a target event, including:
-#. :ref:`Recommended audience sizes <model-event-propensity-use-cases-recommended-audiences>`
-#. :ref:`Ranking customers by propensity <model-event-propensity-use-cases-customer-ranking>`
+
+* :ref:`Recommended audience sizes <model-event-propensity-use-cases-recommended-audiences>`
+* :ref:`Ranking customers by propensity <model-event-propensity-use-cases-customer-ranking>`
 
 .. model-event-propensity-use-cases-end
 
