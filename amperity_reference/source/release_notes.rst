@@ -56,7 +56,7 @@ Summer 2026
 
 **Paid Media Measurement & Optimization**
 
-   :bdg-success:`NEW` `Paid Media Measurement & Optimization <paid_media_measurement.html>`__ brings your paid media performance data from Meta and Google into Amperity, where it is available to AmpAI for analysis alongside your customer data.
+   :bdg-success:`NEW` :doc:`Paid Media Measurement & Optimization <paid_media_measurement>` brings your paid media performance data from Meta and Google into Amperity, where it is available to AmpAI for analysis alongside your customer data.
 
 **Recommended Actions**
 
@@ -102,7 +102,7 @@ Spring 2026
 
 **MCP server**
 
-   :bdg-success:`NEW` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to manage your tenant.
+   :bdg-success:`NEW` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to get insights from and take action on your customer data.
 
 **Predictive modeling UI**
 
