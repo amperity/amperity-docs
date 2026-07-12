@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Determine the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+        Determine the likelihood that a customer will perform a target event within the next 30 days.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Determine the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+        Determine the likelihood that a customer will perform a target event within the next 30 days.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -25,7 +25,7 @@ Event propensity
 
 .. admonition:: Amperity Learning Lab
 
-   Event propensity determines the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+   Event propensity determines the likelihood that a customer will perform a target event within the next 30 days.
 
    Open **Learning Lab** to learn more about `predicted average order revenue <https://amperity.com/learning-lab/predicted-average-order-revenue>`__ |ext_link|. Registration is required.
 
