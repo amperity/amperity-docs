@@ -48,11 +48,11 @@ Summer 2026
 
 **Amperity MCP server**
 
-   :bdg-light:`UPDATED` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT, to your Amperity tenant, and then use natural language to manage your tenant. The MCP server is now in GA as a hosted, multi-user service with OAuth authentication, alongside an expanded tool set and reliability improvements.
+   :bdg-light:`UPDATED` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT to your Amperity tenant, and then use natural language to get insights from and take action on your customer data. The MCP server is now in GA as a hosted, multi-user service with OAuth authentication, alongside an expanded tool set and reliability improvements.
 
 **Event propensity model**
 
-   :bdg-success:`NEW` The `event propensity model <../operator/model_event_propensity.html>`__ predicts the likelihood that a customer will perform a revenue-generating event within the next 30 days, and then groups customers by recommended audience size and by ranking to support your marketing campaigns.
+   :bdg-success:`NEW` The `event propensity model <../operator/model_event_propensity.html>`__ predicts the likelihood that a customer will perform a specific target event within the next 30 days, and then groups customers by recommended audience size and by ranking to support your marketing campaigns.
 
 **Paid Media Measurement & Optimization**
 
