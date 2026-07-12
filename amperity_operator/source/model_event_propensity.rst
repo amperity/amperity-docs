@@ -1,13 +1,12 @@
 .. https://docs.amperity.com/operator/
 
-
 .. meta::
     :description lang=en:
-        What is the likelihood that a customer will perform a revenue-generating event within the next 30 days?
+        What is the likelihood that a customer will perform a target event within the next 30 days?
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        What is the likelihood that a customer will perform a revenue-generating event within the next 30 days?
+        What is the likelihood that a customer will perform a target event within the next 30 days?
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -35,8 +34,7 @@ Use cases
 
 .. model-event-propensity-use-cases-start
 
-The event propensity model enables support for marketing campaigns that benefit from knowing a customer's likelihood to perform a revenue-generating event, including:
-
+The event propensity model enables support for marketing campaigns that benefit from knowing a customer's likelihood to perform a target event, including:
 #. :ref:`Recommended audience sizes <model-event-propensity-use-cases-recommended-audiences>`
 #. :ref:`Ranking customers by propensity <model-event-propensity-use-cases-customer-ranking>`
 
