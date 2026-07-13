@@ -27,11 +27,6 @@ The MCP server is hosted by Amperity. Customers connect to a single public endpo
 .. mcp-overview-end
 
 
-.. admonition:: Private beta
-
-   The MCP server is available as a private beta. Tool surface, configuration, and behavior may change as the beta progresses. Tool count is approximate during beta and subject to change. Contact your Amperity representative for access.
-
-
 .. _mcp-overview-mcp-urls:
 
 MCP server URL
