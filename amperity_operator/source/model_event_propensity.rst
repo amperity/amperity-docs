@@ -48,8 +48,8 @@ Recommended audience sizes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-recommended-audience-size-start
-   :end-before: .. term-recommended-audience-size-end
+   :start-after: .. term-recommended-audience-size-events-start
+   :end-before: .. term-recommended-audience-size-events-end
 
 .. include:: ../../amperity_reference/source/model_event_propensity.rst
    :start-after: .. model-event-propensity-use-cases-recommended-audiences-about-start
@@ -231,9 +231,9 @@ When you add an event propensity model you first choose a model type. The four p
 
 .. model-event-propensity-configure-output-start
 
-After a model version passes evaluation, activate and schedule the model to begin generating predictions. See :ref:`predictive model how-tos <models-howtos>` for the steps to activate, schedule, and run a model.
+After a model version passes evaluation, activate the model to begin generating predictions. See :ref:`predictive model how-tos <models-howtos>` for the steps to activate a model.
 
-An active model produces a **Predicted Propensity** table named ``Predicted_Propensity_{EventName}``, where ``{EventName}`` is generated based the target event name provided during model creation. The fields in this table are :ref:`available in segments <model-event-propensity-segments>`.
+An active model produces a **Predicted Propensity** table named ``Predicted_Propensity_{EventName}``, where ``{EventName}`` is generated based on the target event name provided during model creation. The fields in this table are :ref:`available in segments <model-event-propensity-segments>`.
 
 .. model-event-propensity-configure-output-end
 

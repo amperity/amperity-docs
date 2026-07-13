@@ -1397,23 +1397,17 @@ The **Event Propensity** table has the following columns:
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
 
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-audience-size-large-start
-          :end-before: .. term-audience-size-large-end
+       A large audience is predicted to include ~90% of customers who are likely to perform the target event.
    * - **Audience Size Medium**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
 
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-audience-size-medium-start
-          :end-before: .. term-audience-size-medium-end
+       A medium audience is predicted to include ~70% of customers who are likely to perform the target event.
    * - **Audience Size Small**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-audience-size-small-start
-          :end-before: .. term-audience-size-small-end
+       A small audience is predicted to include ~50% of customers who are likely to perform the target event.
 
        Use a small audience size to help prevent wasted spend and to reduce opt-outs.
 
@@ -1425,15 +1419,15 @@ The **Event Propensity** table has the following columns:
 
    * - **Score**
      - Float
-     - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
+     - The strength of a customer's propensity for this event, shown as an uncalibrated probability between 0 and 1.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
+       .. tip:: **Ranking** is derived directly from the score--customers are ranked in descending order of score--so a higher score corresponds to a higher ranking. Because the score is uncalibrated, target customers using **Ranking** and audience size rather than the raw score.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
 
    * - **Target Event Name**
      - String
-     - The name of the target event used with a event propensity model.
+     - The name of the target event used with an event propensity model.
 
 .. data-tables-event-propensity-table-end
 
