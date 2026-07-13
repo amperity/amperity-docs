@@ -1196,7 +1196,7 @@ Churn prevention is a process of identifying, and then marketing to users who ar
 
 .. term-churn-propensity-start
 
-Churn propensity is a predictive model that finds the likelihood that a customer is active based on their purchase history. The churn propensity model outputs a score between 0 and 1 that represents a customer's probability of returning to make a purchase.
+Churn propensity is a predictive measure of the likelihood that a customer is active based on their purchase history. It is an output of the predicted CLV (pCLV) model, which produces a score between 0 and 1--also known as p(return), or predicted probability of transaction--that represents a customer's probability of returning to make a purchase.
 
 * A score closer to 1 indicates a low probability of churn, suggesting the customer is likely to remain active.
 
