@@ -28,7 +28,7 @@ The Amperity MCP server gates write operations behind a per-session safety mode.
 
 .. note::
 
-   The safety mode model may change as Amperity moves toward more granular access controls. The agent can call the **safety_set_mode** tool to change the current session's mode. Treat the safety mode as a guardrail and not as a permission boundary. Pair safety mode with the access controls on the underlying Amperity tenant.
+   The safety mode model may change during beta as Amperity moves toward more granular access controls. The agent can call the **safety_set_mode** tool to change the current session's mode. Treat the safety mode as a guardrail and not as a permission boundary. Pair safety mode with the access controls on the underlying Amperity tenant.
 
 
 
