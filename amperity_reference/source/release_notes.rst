@@ -64,7 +64,7 @@ Summer 2026
 
 **Destination topics**
 
-   :bdg-success:`NEW` New destinations for `Iterable <../operator/destination_iterable.html>`__, `Reddit Ads <../operator/destination_reddit_ads.html>`__, `Snapchat CAPI <../user/events_snapchat.html>`__, and `Viant DSP <../operator/destination_viant_dsp.html>`__.
+   :bdg-success:`NEW` New destinations for `Reddit Ads <../operator/destination_reddit_ads.html>`__, `Snapchat CAPI <../user/events_snapchat.html>`__, and `Viant DSP <../operator/destination_viant_dsp.html>`__.
 
 .. updates-2026-summer-end
 
