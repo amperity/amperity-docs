@@ -52,7 +52,7 @@ Requirements
 
 Before you set up a measurement courier, make sure you have:
 
-* An authorized credential for the platform you want to measure--Meta or Google. Add and authorize credentials from the **Credentials** page. See :doc:`Credentials <credentials>`.
+* An authorized credential for the platform you want to measure--Meta or Google. You can reuse an existing credential, including one you already use to send data to a Meta or Google destination, so you do not need to create a separate credential for measurement. Add and authorize credentials from the **Credentials** page. See :doc:`Credentials <credentials>`.
 * Access to the ad account whose performance data you want to bring into Amperity.
 * AmpAI enabled for your tenant, so that you can ask questions about paid media performance. See :doc:`AmpAI <ampai>`.
 
@@ -78,6 +78,10 @@ Set up one measurement courier for each platform and ad account you want to meas
    * For **Google Ads Measurements**, select a **Customer ID**.
 
 #. Save the courier.
+
+.. tip::
+
+   When you select a credential, Amperity automatically detects the ad accounts available to it and lists them for you to choose from, so you do not need to look up an account ID in advance.
 
 .. note::
 
