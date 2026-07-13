@@ -165,103 +165,21 @@ Build a churn propensity model
 
 .. model-churn-propensity-configure-start
 
-You can build a churn propensity model from the **Customer 360** page. Each database that is a "customer 360" database and has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
+Churn propensity is an output of the predicted CLV (pCLV) model--there is no separate churn propensity model to build. When you build and activate a predicted CLV model, Amperity generates the churn propensity attributes--predicted lifecycle status, predicted probability of transaction, predicted spend, and value tiers--in the **Predicted CLV Attributes** table.
 
 .. model-churn-propensity-configure-end
 
-.. important:: 
+.. note:: Churn propensity and predicted CLV are both outputs of the predicted customer lifetime value (pCLV) model. Fields that support both models are available to queries, segments, and campaigns from the **Predicted CLV Attributes** table.
 
-   .. include:: ../../amperity_operator/source/models.rst
-      :start-after: .. models-fields-used-by-all-models-table-start
-      :end-before: .. models-fields-used-by-all-models-table-end
-
-**To build a churn propensity model**
+**To produce churn propensity attributes**
 
 .. model-churn-propensity-configure-steps-start
 
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
+#. Build a predicted CLV model. See :ref:`Build a predicted CLV model <model-predicted-clv-build>`.
 
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: center
-          :class: no-scaled-link
-     - Open the **Customer 360** page, and then select the **Predictive models** tab. This opens the **Predictive models** page.
+#. Activate the model version that performs best for your marketing use cases. Activating a pCLV model version generates both the predicted CLV and churn propensity attributes.
 
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: center
-          :class: no-scaled-link
-     - Next to **Predicted customer lifetime value (pCLV)**, click **Add model**. This opens the **Predictive enablement** page for churn propensity models.
-
-       .. note:: Churn propensity and predicted CLV are both outputs of the predicted customer lifetime value (pCLV) model. Fields that support both models are available to queries, segments, and campaigns from the **Predicted CLV Attributes** table.
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: center
-          :class: no-scaled-link
-     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2020 or you may choose a relative date like ``today - 4 years``.
-
-       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer.
-
-       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same. A relative date is always in Coordinated Universal Time (UTC).
-
-       .. note:: A relative date is determined at the time a model is run, where "now" is the date on which the model is run. The time window should be at least 3 years, but may be 4 or 5, depending on how much data is available to the model in Amperity.
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step four.
-          :align: center
-          :class: no-scaled-link
-     - Select the tables from which order-level and item-level data is made available to the model.
-
-       For order-level data, select **Unified Transactions**. For item-level data, select **Unified Itemized Transactions**.
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step five.
-          :align: center
-          :class: no-scaled-link
-     - Use the **Prediction horizon** field to specify the number of days into the future for which you want pCLV modeling. The default value ("365") is fine for most use cases.
-
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step six.
-          :align: center
-          :class: no-scaled-link
-     - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from pCLV modeling.
-
-       For example, use cases for customer exclusions include:
-
-       #. Ensuring that employees of your brand or resellers of products within your brand's product catalog are excluded.
-
-       #. Excluding customers who do not have a contactable email address or contactable physical address from direct mail campaigns.
-
-       .. note:: The list of fields in the **Customer Attributes** table that may be used for pCLV modeling are listed in the dropdown. Not all fields in the **Customer Attributes** table may be used with pCLV modeling.
-
-
-   * - .. image:: ../../images/steps-07.png
-          :width: 60 px
-          :alt: Step seven.
-          :align: center
-          :class: no-scaled-link
-     - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
-
-       For each additional feature, the model results will include features for "first", "last", and "most common". For example, if **Product Category** is added, the pCLV model results will include features for **First Purchase Product Category**, **Last Purchase Product Category**, and **Most Common Product Category**.
-
-
-   * - .. image:: ../../images/steps-08.png
-          :width: 60 px
-          :alt: Step eight.
-          :align: center
-          :class: no-scaled-link
-     - Click **Start validation**.
+The churn propensity attributes are then :ref:`available in segments <model-churn-propensity-segments>` from the **Predicted CLV Attributes** table.
 
 .. model-churn-propensity-configure-steps-end
 
