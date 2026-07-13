@@ -56,10 +56,11 @@ Use cases
 
 .. model-predicted-clv-use-cases-start
 
-The predicted CLV model helps you identify your highest value customers by year or by value tier:
+The predicted CLV model helps you identify your highest value customers and the customers who are most likely to churn:
 
 #. :ref:`How much will customers spend in the next year? <model-predicted-clv-use-cases-spend>`
 #. :ref:`Which customers are your most valuable customers? <model-predicted-clv-use-cases-most-valuable>`
+#. :ref:`Which customers are likely to churn? <model-predicted-clv-use-cases-churn>`
 
 .. model-predicted-clv-use-cases-end
 
@@ -98,3 +99,32 @@ Which customers are the most valuable?
 .. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-callouts-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-callouts-end
+
+
+.. _model-predicted-clv-use-cases-churn:
+
+Which customers are likely to churn?
+--------------------------------------------------
+
+.. model-predicted-clv-use-cases-churn-start
+
+Predicted CLV also powers churn and retention use cases. Each customer's predicted probability of transaction--also known as p(return)--and predicted customer lifecycle status let you identify customers who are likely to churn, so you can build audiences that:
+
+* Identify customers who are likely to churn.
+* Provide insight into the root causes of churn to help you determine what will compel customers to stay with right-timed messaging and relevant products.
+* Support a churn prevention campaign that has a series of escalating win-back offers.
+* Optimize suppression and spend.
+
+The **Predicted Customer Lifecycle Status** attribute in the **Predicted CLV Attributes** table groups customers by their likelihood to purchase again:
+
+.. include:: ../../shared/models.rst
+   :start-after: .. models-churn-propensitity-tiers-repeat-start
+   :end-before: .. models-churn-propensitity-tiers-repeat-end
+
+.. include:: ../../shared/models.rst
+   :start-after: .. models-churn-propensitity-tiers-onetime-start
+   :end-before: .. models-churn-propensitity-tiers-onetime-end
+
+Combine lifecycle status with predicted value tiers to build highly targeted churn-prevention and retention campaigns that focus on your most valuable customers at the optimal time.
+
+.. model-predicted-clv-use-cases-churn-end

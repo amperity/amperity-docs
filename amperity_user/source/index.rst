@@ -165,10 +165,6 @@ Build audiences using predicted behavior, including lifetime value, churn propen
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: Churn propensity
-      :link-type: doc
-      :link: model_predicted_churn
-
    .. grid-item-card:: Event propensity
       :link-type: doc
       :link: model_event_propensity
@@ -262,7 +258,6 @@ Build audiences around activities like first orders, repeat orders, and who has 
    :maxdepth: 3
    :hidden:
 
-   Churn propensity <model_predicted_churn>
    Event propensity <model_event_propensity>
    Predicted CLV <model_predicted_clv>
    Product affinity <model_predicted_product_affinity>
