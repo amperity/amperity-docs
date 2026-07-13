@@ -13,7 +13,7 @@
         Event propensity
 
 ==================================================
-Event propensity model
+Event Propensity model
 ==================================================
 
 .. include:: ../../shared/terms.rst
