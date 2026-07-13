@@ -50,9 +50,9 @@ Summer 2026
 
    :bdg-light:`UPDATED` The `Amperity MCP server <../api/mcp_overview.html>`__ lets AI assistants operate Amperity programmatically. Connect any MCP-compatible client, such as Copilot, Claude, or ChatGPT to your Amperity tenant, and then use natural language to get insights from and take action on your customer data. The MCP server is now in GA as a hosted, multi-user service with OAuth authentication, alongside an expanded tool set and reliability improvements.
 
-**Event propensity model**
+**Event Propensity model**
 
-   :bdg-success:`NEW` The `event propensity model <../operator/model_event_propensity.html>`__ predicts the likelihood that a customer will perform a specific target event within the next 30 days, and then groups customers by recommended audience size and by ranking to support your marketing campaigns.
+   :bdg-success:`NEW` The `Event Propensity model <../operator/model_event_propensity.html>`__ predicts the likelihood that a customer will perform a specific target event within the next 30 days, and then groups customers by recommended audience size and by ranking to support your marketing campaigns.
 
 **Paid Media Measurement & Optimization**
 
@@ -80,7 +80,7 @@ Spring 2026
 
    :bdg-success:`NEW` Use natural language to ask `Amp Insights <assistant.html>`__ questions to understand Amps usage and consumption.
 
-**Audience monetization**
+**Audience Monetization**
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
