@@ -28,7 +28,7 @@ The Amperity MCP server gates write operations behind a per-session safety mode.
 
 .. note::
 
-   The agent can call the **safety_set_mode** tool to change the current session's mode. Treat the safety mode as a guardrail and not as a permission boundary. The true permission boundary is the tool permissions configured in your MCP client (for example, Claude's per-tool "Always allow," "Needs approval," and "Blocked" settings).
+   The agent can call the **safety_set_mode** tool to change the current session's mode. Treat the safety mode as a guardrail and not as a permission boundary. The true permission boundary is the tool permissions configured in your MCP client.
 
 
 
