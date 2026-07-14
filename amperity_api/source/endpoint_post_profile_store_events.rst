@@ -171,5 +171,8 @@ A response from the **POST /events/{stream-id}** endpoint will match an :doc:`HT
    * - **413**
      - The request body exceeds the 64 KB limit.
 
+   * - **415**
+     - The request **Content-Type** is not **application/json**.
+
    * - **503**
      - The event could not be published because of a temporary downstream error. Retry the request.

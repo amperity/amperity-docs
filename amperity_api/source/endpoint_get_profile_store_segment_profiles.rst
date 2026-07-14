@@ -122,15 +122,7 @@ The following table describes the parameters that may be used with the **GET /se
 
        The ID of the real-time segment.
 
-   * - **limit**
-     - Integer. Optional.
-
-       The maximum number of profiles to include in a single page of results.
-
-   * - **next_token**
-     - String. Optional.
-
-       An opaque token that is used to paginate results. Omit the **next_token** property to return the first page. Use the cursor value for **next_token** that was returned in a response to view the next page of results.
+.. note:: This endpoint does not currently accept pagination request parameters. A single page of results is returned.
 
 .. endpoint-get-profile-store-segment-profiles-request-parameters-end
 
@@ -192,9 +184,7 @@ A **200 OK** response contains the following parameters.
      - A JSON array of member profiles. Each item contains the **profile_id** of a profile that is a member of the segment.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
-
-       .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
+     - A pagination cursor returned with the results. This endpoint does not currently accept a **next_token** request parameter.
 
    * - **total**
      - The total number of profiles that are members of the segment.

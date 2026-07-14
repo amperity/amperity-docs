@@ -168,7 +168,10 @@ The **200** response returns the matching profile.
      "created_at": "{timestamp}",
      "updated_at": "{timestamp}",
      "ticked_at": "{timestamp}",
-     "links": []
+     "links": {
+       "email": ["customer@example.com"],
+       "phone": ["+15555550100"]
+     }
    }
 
 .. endpoint-get-profile-store-lookup-response-200ok-end

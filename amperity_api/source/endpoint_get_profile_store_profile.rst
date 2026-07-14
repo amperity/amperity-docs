@@ -168,7 +168,10 @@ The **200** response returns the profile.
      "created_at": "{timestamp}",
      "updated_at": "{timestamp}",
      "ticked_at": "{timestamp}",
-     "links": []
+     "links": {
+       "email": ["customer@example.com"],
+       "phone": ["+15555550100"]
+     }
    }
 
 .. endpoint-get-profile-store-profile-response-200ok-end
@@ -209,7 +212,7 @@ A **200 OK** response contains the following parameters.
      - The timestamp at which the profile was last processed.
 
    * - **links**
-     - The keychain links associated with the profile.
+     - A map of keychain link type to the array of linked values for that type.
 
 .. endpoint-get-profile-store-profile-response-parameters-end
 

@@ -151,7 +151,10 @@ The **200** response returns statistics for the profile store.
 
    {
      "total-profiles": 0,
-     "link-cardinality": {}
+     "link-cardinality": {
+       "email": 0,
+       "phone": 0
+     }
    }
 
 .. endpoint-get-profile-store-stats-response-200ok-end
@@ -177,6 +180,6 @@ A **200 OK** response contains the following parameters.
      - The total number of profiles in the profile store.
 
    * - **link-cardinality**
-     - A map of keychain link type to the number of profiles that have a link of that type.
+     - A map of keychain link type to the number of indexed link values for that type.
 
 .. endpoint-get-profile-store-stats-response-parameters-end
