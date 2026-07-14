@@ -23,6 +23,8 @@ Use the **GET /segments/{segment-id}/profiles** endpoint to return a paginated l
 
 .. endpoint-get-profile-store-segment-profiles-end
 
+.. note:: This endpoint is part of the Real-time Profile API, an unstable API that may change without advance notice of breaking changes.
+
 .. note:: In the Amperity user interface a real-time segment is configured from a profile store. The list of member profiles is shown as **Customers**.
 
 

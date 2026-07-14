@@ -71,12 +71,12 @@ Profile API: 2025-07-31
 .. changelog-profile-api-current-end
 
 
-.. _changelog-profile-store-api-current:
+.. _changelog-realtime-events-api-current:
 
-Profile Store API: 2026-07-14
+Real-time Events API: unstable
 ==================================================
 
-.. changelog-profile-store-api-current-start
+.. changelog-realtime-events-api-current-start
 
 **Breaking changes**
 
@@ -85,6 +85,23 @@ Profile Store API: 2026-07-14
 **Non-breaking changes**
 
 * Add :doc:`endpoint_post_profile_store_events` endpoint.
+
+.. changelog-realtime-events-api-current-end
+
+
+.. _changelog-realtime-profile-api-current:
+
+Real-time Profile API: unstable
+==================================================
+
+.. changelog-realtime-profile-api-current-start
+
+**Breaking changes**
+
+* None
+
+**Non-breaking changes**
+
 * Add :doc:`endpoint_get_profile_store_lookup` endpoint.
 * Add :doc:`endpoint_post_profile_store_lookup` endpoint.
 * Add :doc:`endpoint_get_profile_store_profile` endpoint.
@@ -92,4 +109,4 @@ Profile Store API: 2026-07-14
 * Add :doc:`endpoint_get_profile_store_stats` endpoint.
 * Add :doc:`endpoint_get_profile_store_history` endpoint.
 
-.. changelog-profile-store-api-current-end
+.. changelog-realtime-profile-api-current-end

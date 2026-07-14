@@ -23,6 +23,8 @@ Use the **POST /events/{stream-id}** endpoint to send a real-time event to an ev
 
 .. endpoint-post-profile-store-events-end
 
+.. note:: This endpoint is part of the Real-time Events API, an unstable API that may change without advance notice of breaking changes.
+
 .. note:: In the Amperity user interface an event stream is shown on the **Events** > **Event streams** page. The value for **{stream-id}** is shown as the **Endpoint ID** for that event stream.
 
 
