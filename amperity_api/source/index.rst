@@ -85,6 +85,20 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
 
 
 .. toctree::
+   :caption: PROFILE STORE API ENDPOINTS
+   :maxdepth: 2
+   :hidden:
+
+   POST /events/{stream-id} <endpoint_post_profile_store_events>
+   GET /lookup/{collection-id}/keychain <endpoint_get_profile_store_lookup>
+   POST /lookup/{collection-id}/keychain <endpoint_post_profile_store_lookup>
+   GET /profiles/{collection-id}/{profile-id} <endpoint_get_profile_store_profile>
+   GET /segments/{segment-id}/profiles <endpoint_get_profile_store_segment_profiles>
+   GET /collections/{collection-id}/stats <endpoint_get_profile_store_stats>
+   GET /collections/{collection-id}/history <endpoint_get_profile_store_history>
+
+
+.. toctree::
    :caption: MCP SERVER
    :maxdepth: 2
    :hidden:

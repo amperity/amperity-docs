@@ -69,3 +69,27 @@ Profile API: 2025-07-31
 * Add :doc:`endpoint_get_profile` endpoint.
 
 .. changelog-profile-api-current-end
+
+
+.. _changelog-profile-store-api-current:
+
+Profile Store API: 2026-07-14
+==================================================
+
+.. changelog-profile-store-api-current-start
+
+**Breaking changes**
+
+* None
+
+**Non-breaking changes**
+
+* Add :doc:`endpoint_post_profile_store_events` endpoint.
+* Add :doc:`endpoint_get_profile_store_lookup` endpoint.
+* Add :doc:`endpoint_post_profile_store_lookup` endpoint.
+* Add :doc:`endpoint_get_profile_store_profile` endpoint.
+* Add :doc:`endpoint_get_profile_store_segment_profiles` endpoint.
+* Add :doc:`endpoint_get_profile_store_stats` endpoint.
+* Add :doc:`endpoint_get_profile_store_history` endpoint.
+
+.. changelog-profile-store-api-current-end
