@@ -41,6 +41,9 @@ Manage which Amperity tenant the current session targets, and read session-level
    * - Description
      - Tools
 
+   * - Begin a session and mint a session token (hosted multi-user clients call this first)
+     - **session_start**
+
    * - List, inspect, switch, and refresh tenants
      - **tenant_list**
 
@@ -364,6 +367,11 @@ Configure data movement into and out of Amperity.
 
        **feed_delete**
 
+   * - Manage data sources (the objects feeds attach to)
+     - **source_list**
+
+       **source_create**
+
    * - Manage destinations
      - **destination_list**
 
@@ -472,10 +480,6 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_get**
 
-       **journey_create**
-
-       **journey_update**
-
        **journey_delete**
 
    * - Manage journey versions
@@ -549,7 +553,7 @@ Configure and run prediction models.
 
        **prediction_delete_model**
 
-   * - Model configuration
+   * - Model configuration (versions)
      - **prediction_list_model_configs**
 
        **prediction_get_model_config**
@@ -558,19 +562,8 @@ Configure and run prediction models.
 
        **prediction_delete_model_config**
 
-       **prediction_activate_model_config**
-
-       **prediction_save_model_settings**
-
-   * - Run and inspect prediction workflows
-     - **prediction_run_workflow**
-
-       **prediction_get_run_history**
-
-       **prediction_get_full_job_history** 
-
-   * - Inspect validation output
-     - **prediction_get_validation_results**
+   * - Validate model configs
+     - **prediction_validate_model_config**
 
        **prediction_get_model_config_validation_results**
 
@@ -613,10 +606,38 @@ Manage segments and folders.
 
        **iq_folder_delete**
 
-   * - Read company context assets
-     - **assets_list_company_context_documents**
+   * - Manage company context documents
+     - **context_documents_list**
 
-       **assets_get_company_context_document**
+       **context_documents_get**
+
+       **context_documents_create**
+
+
+.. _mcp-tool-labels:
+
+Labels
+==================================================
+
+Manage labels.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Manage labels
+     - **label_list**
+
+       **label_get**
+
+       **label_create**
+
+       **label_update**
+
+       **label_delete**
 
 
 .. _mcp-tool-configuration-history:
@@ -671,6 +692,8 @@ Inspect Amperity workflows and Spark execution.
      - **workflow_list**
 
        **workflow_get_status**
+
+       **workflow_get_task**
 
        **workflow_cancel**
 
