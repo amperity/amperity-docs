@@ -86,20 +86,12 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
 
 
 .. toctree::
-   :caption: REAL-TIME EVENTS API ENDPOINTS
+   :caption: REAL-TIME API ENDPOINTS
    :maxdepth: 2
    :hidden:
 
-   About the Real-time Events API <endpoints_realtime_events>
+   About the Real-time API <endpoints_realtime>
    POST /events/{stream-id} <endpoint_post_profile_store_events>
-
-
-.. toctree::
-   :caption: REAL-TIME PROFILE API ENDPOINTS
-   :maxdepth: 2
-   :hidden:
-
-   About the Real-time Profile API <endpoints_realtime_profile>
    GET /lookup/{collection-id}/keychain <endpoint_get_profile_store_lookup>
    POST /lookup/{collection-id}/keychain <endpoint_post_profile_store_lookup>
    GET /profiles/{collection-id}/{profile-id} <endpoint_get_profile_store_profile>

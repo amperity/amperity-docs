@@ -23,7 +23,7 @@ Use the **GET /collections/{collection-id}/stats** endpoint to return statistics
 
 .. endpoint-get-profile-store-stats-end
 
-.. note:: This endpoint is part of the Real-time Profile API, an unstable API that may change without advance notice of breaking changes.
+.. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
 .. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
 

@@ -23,7 +23,7 @@ Use the **GET /lookup/{collection-id}/keychain** endpoint to find a single profi
 
 .. endpoint-get-profile-store-lookup-end
 
-.. note:: This endpoint is part of the Real-time Profile API, an unstable API that may change without advance notice of breaking changes.
+.. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
 .. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
 

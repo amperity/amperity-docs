@@ -3,32 +3,51 @@
 
 .. meta::
     :description lang=en:
-        A landing page for the collection of content about the Amperity Real-time Profile API.
+        A landing page for the collection of content about the Amperity Real-time API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A landing page for the collection of content about the Amperity Real-time Profile API.
+        A landing page for the collection of content about the Amperity Real-time API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Amperity Real-time Profile API endpoints
+        Amperity Real-time API endpoints
 
 ==================================================
-Real-time Profile API
+Real-time API
 ==================================================
 
-.. endpoints-realtime-profile-about-start
+.. endpoints-realtime-about-start
 
-Use the Real-time Profile API to look up real-time customer profiles, query segment membership, and retrieve profile store statistics. Profile lookups return live data from the profile store and support low-latency use cases such as personalization, decisioning, and in-session activation.
+Use the Real-time API to stream customer events into Amperity and to look up unified customer profiles on demand. Send events, such as page views, purchases, and loyalty actions, to an event stream, then look up profiles by identity key, retrieve profiles by ID, query segment membership, and retrieve profile store statistics. The Real-time API supports low-latency use cases such as personalization, decisioning, and in-session activation.
 
-.. endpoints-realtime-profile-about-end
+.. endpoints-realtime-about-end
 
-.. note:: The Real-time Profile API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
+.. note:: The Real-time API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
 
-.. note:: Creating a profile store is not a self-service API operation. To set up a profile store or a real-time segment, contact your Amperity representative.
+.. note:: Creating a profile store is not a self-service API operation. To set up a profile store, an event stream, or a real-time segment, contact your Amperity representative.
 
 
-.. _endpoints-realtime-profile-lookup:
+.. _endpoints-realtime-events:
+
+Events
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: POST /events/{stream-id}
+      :link-type: doc
+      :link: endpoint_post_profile_store_events
+
+      .. include:: ../../amperity_api/source/endpoint_post_profile_store_events.rst
+         :start-after: .. endpoint-post-profile-store-events-start
+         :end-before: .. endpoint-post-profile-store-events-end
+
+
+.. _endpoints-realtime-lookup:
 
 Lookup
 ==================================================
@@ -55,7 +74,7 @@ Lookup
          :end-before: .. endpoint-post-profile-store-lookup-end
 
 
-.. _endpoints-realtime-profile-profiles:
+.. _endpoints-realtime-profiles:
 
 Profiles
 ==================================================
@@ -74,7 +93,7 @@ Profiles
          :end-before: .. endpoint-get-profile-store-profile-end
 
 
-.. _endpoints-realtime-profile-segments:
+.. _endpoints-realtime-segments:
 
 Segments
 ==================================================
@@ -93,7 +112,7 @@ Segments
          :end-before: .. endpoint-get-profile-store-segment-profiles-end
 
 
-.. _endpoints-realtime-profile-profile-stores:
+.. _endpoints-realtime-profile-stores:
 
 Profile stores
 ==================================================
