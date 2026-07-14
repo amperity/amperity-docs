@@ -1,0 +1,137 @@
+.. https://docs.amperity.com/api/
+
+
+.. meta::
+    :description lang=en:
+        A landing page for the collection of content about the Amperity Profile Store API.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        A landing page for the collection of content about the Amperity Profile Store API.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Amperity Profile Store API endpoints
+
+==================================================
+Profile Store API
+==================================================
+
+.. endpoints-profile-store-about-start
+
+The Amperity Profile Store API provides real-time access to the profiles in a profile store. Use these endpoints to send events, look up and read profiles, list segment members, and view profile store statistics.
+
+.. endpoints-profile-store-about-end
+
+.. note:: Creating a profile store is not a self-service API operation. To set up a profile store, an event stream, or a real-time segment, contact your Amperity representative.
+
+
+.. _endpoints-profile-store-events:
+
+Events
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: POST /events/{stream-id}
+      :link-type: doc
+      :link: endpoint_post_profile_store_events
+
+      .. include:: ../../amperity_api/source/endpoint_post_profile_store_events.rst
+         :start-after: .. endpoint-post-profile-store-events-start
+         :end-before: .. endpoint-post-profile-store-events-end
+
+
+.. _endpoints-profile-store-lookup:
+
+Lookup
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: GET /lookup/{collection-id}/keychain
+      :link-type: doc
+      :link: endpoint_get_profile_store_lookup
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_store_lookup.rst
+         :start-after: .. endpoint-get-profile-store-lookup-start
+         :end-before: .. endpoint-get-profile-store-lookup-end
+
+   .. grid-item-card:: POST /lookup/{collection-id}/keychain
+      :link-type: doc
+      :link: endpoint_post_profile_store_lookup
+
+      .. include:: ../../amperity_api/source/endpoint_post_profile_store_lookup.rst
+         :start-after: .. endpoint-post-profile-store-lookup-start
+         :end-before: .. endpoint-post-profile-store-lookup-end
+
+
+.. _endpoints-profile-store-profiles:
+
+Profiles
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: GET /profiles/{collection-id}/{profile-id}
+      :link-type: doc
+      :link: endpoint_get_profile_store_profile
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_store_profile.rst
+         :start-after: .. endpoint-get-profile-store-profile-start
+         :end-before: .. endpoint-get-profile-store-profile-end
+
+
+.. _endpoints-profile-store-segments:
+
+Segments
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: GET /segments/{segment-id}/profiles
+      :link-type: doc
+      :link: endpoint_get_profile_store_segment_profiles
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_store_segment_profiles.rst
+         :start-after: .. endpoint-get-profile-store-segment-profiles-start
+         :end-before: .. endpoint-get-profile-store-segment-profiles-end
+
+
+.. _endpoints-profile-store-profile-stores:
+
+Profile stores
+==================================================
+
+.. grid:: 1 1 1 1
+   :gutter: 2
+   :padding: 0
+   :class-container: surface
+
+   .. grid-item-card:: GET /collections/{collection-id}/stats
+      :link-type: doc
+      :link: endpoint_get_profile_store_stats
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_store_stats.rst
+         :start-after: .. endpoint-get-profile-store-stats-start
+         :end-before: .. endpoint-get-profile-store-stats-end
+
+   .. grid-item-card:: GET /collections/{collection-id}/history
+      :link-type: doc
+      :link: endpoint_get_profile_store_history
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_store_history.rst
+         :start-after: .. endpoint-get-profile-store-history-start
+         :end-before: .. endpoint-get-profile-store-history-end
