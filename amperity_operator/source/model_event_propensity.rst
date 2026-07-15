@@ -325,7 +325,7 @@ Predicts the likelihood that a customer makes a repeat booking or purchase.
 * **Model type:** Repeat bookings (preset)
 * **Prediction audience:** Repeat event
 
-Use a target event table with one row per booking. Because this is a revenue-generating event, add a revenue field:
+Use a target event table with one row per booking. Because bookings generate revenue, add a revenue field:
 
 .. list-table:: ``Hotel_Bookings`` (target event)
    :widths: 18 18 18 18 18
