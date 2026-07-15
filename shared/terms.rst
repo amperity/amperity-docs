@@ -2641,13 +2641,6 @@ Event propensity is a predictive model that finds the likelihood that a customer
 
 An **Event Propensity** table associates individual customers to the events that, depending on the event, are most likely to lead to engagement with your brand.
 
-.. term-event-propensity-table-end)
-
-
-.. term-event-propensity-table-start
-
-An **Event Propensity** table associates individual customers to the events that, depending on the event, are most likely to lead to engagement with your brand.
-
 .. term-event-propensity-table-end
 
 
@@ -5647,6 +5640,13 @@ A **Recommendation** table associates individual customers to a preferred catego
 A recommended audience is a feature of product affinity modeling that answers the following question: "Which audience size grows revenue over the next 30 days?" Product affinity modeling answers this question with small, medium, and large recommended audience sizes. A recommended audience predicts future purchasers over the next 30 days.
 
 .. term-recommended-audience-size-end
+
+
+.. term-recommended-audience-size-events-start
+
+A recommended audience is a feature of event propensity modeling that answers the following question: "Which audience size best captures the customers who are most likely to perform the target event over the next 30 days?" Event propensity modeling answers this question with small, medium, and large recommended audience sizes.
+
+.. term-recommended-audience-size-events-end
 
 
 **record count**

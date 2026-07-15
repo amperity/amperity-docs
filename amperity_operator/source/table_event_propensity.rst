@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Configure and manage the Event Propensity table.
+        Learn about the Event Propensity table produced by an event propensity model.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure and manage the Event Propensity table.
+        Learn about the Event Propensity table produced by an event propensity model.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -27,59 +27,24 @@ Event Propensity table
 
 .. table-event-propensity-note-end
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-unified-product-catalog-table-with-ampiq-start
-   :end-before: .. term-unified-product-catalog-table-with-ampiq-end
-
 
 .. _table-event-propensity-add-table:
 
-Add the Event Propensity table
+How the Event Propensity table is created
 ==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-event-propensity-table-start
-   :end-before: .. term-event-propensity-table-end
 
 .. table-event-propensity-add-table-about-start
 
-To add a **Event Propensity** table you must extend the customer 360 database to add a table that joins the **Event Propensity ProductAttribute** passthrough table to the **Event Propensity Audience ProductAttribute** passthrough table.
+Amperity creates the **Event Propensity** table automatically when you build and activate an event propensity model. You do not need to add the table by hand or write any SQL.
+
+Each active event propensity model produces its own output table, named ``Predicted_Propensity_{EventName}`` after the target event name provided during model setup. The table contains one row per customer per event, along with the customer's score, ranking, and recommended audience-size flags. See the :ref:`column reference <table-event-propensity-reference>` for details.
 
 .. table-event-propensity-add-table-about-end
 
-**To add the Event Propensity table**
+To start producing an **Event Propensity** table, build an event propensity model and then activate it:
 
-.. table-event-propensity-add-table-steps-start
-
-#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
-#. From the **Database Editor**, click **Add Table**.
-#. Name the table "Event Propensity" or some other name that identifies this table as the event propensity table for your tenant.
-#. Set the build mode to **SQL**.
-#. Add the following SQL:
-
-   .. code-block:: sql
-      :linenos:
-
-      SELECT 
-        r.product_attribute AS `target_event_name`
-        ,r.amperity_id
-        ,r.score
-        ,r.ranking
-        ,r.ranking <= s.audience_size_small AS audience_size_small
-        ,r.ranking <= s.audience_size_medium AS audience_size_medium
-        ,r.ranking <= s.audience_size_large AS audience_size_large
-      FROM Predicted_Affinity_ProductAttribute AS r
-      LEFT JOIN Predicted_Affinity_Audience_ProductAttribute AS s
-      ON r.product_attribute = s.product_attribute
-
-#. Click **Validate** to verify the SQL runs without error.
-#. Click **Next**. This opens the **Database Table Definition** page.
-#. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
-#. Under **Version History**, select **Enable table version history**.
-#. Click **Save**.
-
-.. table-event-propensity-add-table-steps-end
+* :ref:`Build an event propensity model <model-event-propensity-configure>`
+* :ref:`Predictive model how-tos <models-howtos>` for the steps to activate a model.
 
 
 .. _table-event-propensity-reference:

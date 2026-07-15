@@ -48,8 +48,8 @@ Recommended audience sizes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-recommended-audience-size-start
-   :end-before: .. term-recommended-audience-size-end
+   :start-after: .. term-recommended-audience-size-events-start
+   :end-before: .. term-recommended-audience-size-events-end
 
 .. include:: ../../amperity_reference/source/model_event_propensity.rst
    :start-after: .. model-event-propensity-use-cases-recommended-audiences-about-start

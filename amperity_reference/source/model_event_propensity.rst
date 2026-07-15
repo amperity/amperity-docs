@@ -53,12 +53,12 @@ Recommended audience sizes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-recommended-audience-size-start
-   :end-before: .. term-recommended-audience-size-end
+   :start-after: .. term-recommended-audience-size-events-start
+   :end-before: .. term-recommended-audience-size-events-end
 
 .. model-event-propensity-use-cases-recommended-audiences-about-start
 
-Recommended audience sizes are calculated for 30-day window. An event curve is generated, along with corresponding audience sizes that show what size audience is required to capture 50%, 70%, and 90% of occurrences of a given target event during the previous 30 days.
+Recommended audience sizes are calculated for a 30-day window. An event curve is generated, along with corresponding audience sizes that show what size audience is required to capture 50%, 70%, and 90% of occurrences of a given target event during the previous 30 days.
 
 Audience sizes are inclusive of all smaller audience sizes.
 
