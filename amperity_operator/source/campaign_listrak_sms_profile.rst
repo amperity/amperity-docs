@@ -34,10 +34,6 @@ Configure campaigns for Listrak SMS profile updates
    :start-after: .. destination-listrak-sms-profile-updates-only-start
    :end-before: .. destination-listrak-sms-profile-updates-only-end
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-sms-optin-start
-   :end-before: .. setting-listrak-sms-optin-end
-
 .. include:: ../../amperity_operator/source/destination_listrak_sms_profile.rst
    :start-after: .. destination-listrak-sms-profile-context-start
    :end-before: .. destination-listrak-sms-profile-context-end
