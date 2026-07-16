@@ -38,10 +38,6 @@ Configure destinations for Listrak SMS profile updates
 
 .. destination-listrak-sms-profile-updates-only-end
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-listrak-sms-optin-start
-   :end-before: .. setting-listrak-sms-optin-end
-
 .. destination-listrak-sms-profile-context-start
 
 Use the `Listrak SMS REST API <https://api.listrak.com/sms>`__ |ext_link| to update SMS profile attributes for contacts that already exist in |destination-name|.
