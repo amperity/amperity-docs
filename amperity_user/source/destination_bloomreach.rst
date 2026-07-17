@@ -119,9 +119,13 @@ You can also use the Amperity ID as an external identifier:
 
 .. sendto-bloomreach-build-query-important-start
 
-.. important:: The column you use for the Bloomreach identifier must match the **Identity source column** setting configured for the destination. Rows with blank values in the identity column will be skipped.
+.. important:: Your query results must include a column named to match the **Bloomreach identifier** selected for the destination (for example, a column named ``email`` when the identifier is **email**). If no column matches, the orchestration fails with an error before any data is sent. Rows with blank values in the identity column are skipped.
 
 .. sendto-bloomreach-build-query-important-end
+
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-attribute-limit-start
+   :end-before: .. destination-bloomreach-attribute-limit-end
 
 
 .. _sendto-bloomreach-add-orchestration:
@@ -152,3 +156,7 @@ Run orchestration
 .. include:: ../../shared/sendtos.rst
    :start-after: .. sendtos-run-orchestration-steps-start
    :end-before: .. sendtos-run-orchestration-steps-end
+
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-async-start
+   :end-before: .. destination-bloomreach-async-end

@@ -18,16 +18,16 @@ The name of the import definition that will be created in Bloomreach Engagement.
 
 .. setting-bloomreach-identity-column-start
 
-The Bloomreach hard identifier to which the source column maps. Options include **email**, **cookie**, **google_analytics**, or **external_id**.
+The Bloomreach hard identifier to use as the primary key. Options include **email**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
 
 .. setting-bloomreach-identity-column-end
 
 
-.. setting-bloomreach-identity-source-column-start
+.. setting-bloomreach-segment-name-start
 
-The column in your dataset whose value is sent as the Bloomreach identifier. This column must be present in your dataset.
+A name for the segment being sent to Bloomreach. Every customer sent through this destination is tagged in Bloomreach with a boolean **Is <segment name> member?** attribute set to true.
 
-.. setting-bloomreach-identity-source-column-end
+.. setting-bloomreach-segment-name-end
 
 .. setting-iterable-user-identifier-start
 

@@ -58,9 +58,17 @@ Use Amperity to manage customer profiles in |destination-name|. Build a query or
 
 .. destination-bloomreach-import-limit-end
 
+.. destination-bloomreach-attribute-limit-start
+
+.. caution:: Bloomreach allows at most 255 attributes per customer. The connector adds a segment-membership attribute to every customer, so a single orchestration or campaign can send at most 254 attributes. A send with more than 254 attributes fails with an error before any data is sent.
+
+.. destination-bloomreach-attribute-limit-end
+
 .. destination-bloomreach-async-start
 
-.. note:: |destination-name| processes imports asynchronously after Amperity sends the data. Amperity reports rows as succeeded once the import is triggered. There is no import status tracking.
+.. note:: |destination-name| processes imports asynchronously after Amperity sends the data. Amperity reports rows as succeeded once the import is triggered. There is no import status tracking. To confirm a send or troubleshoot missing customer data, check the import in the |destination-name| dashboard.
+
+.. note:: Attributes accumulate across all imports in a Bloomreach project. If a project exceeds 255 attributes, Bloomreach discards the over-limit import; Amperity does not track this cumulative total, so the failure appears only in the |destination-name| dashboard.
 
 .. destination-bloomreach-async-end
 
@@ -138,7 +146,7 @@ Get details
              :start-after: .. setting-bloomreach-import-name-start
              :end-before: .. setting-bloomreach-import-name-end
 
-       **Identity column**
+       **Bloomreach identifier**
 
           |checkmark-required| **Required**
 
@@ -146,13 +154,13 @@ Get details
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
 
-       **Identity source column**
+       **Segment name**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-identity-source-column-start
-             :end-before: .. setting-bloomreach-identity-source-column-end
+             :start-after: .. setting-bloomreach-segment-name-start
+             :end-before: .. setting-bloomreach-segment-name-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -339,17 +347,17 @@ Add destination
              :start-after: .. setting-bloomreach-import-name-start
              :end-before: .. setting-bloomreach-import-name-end
 
-       **Identity column**
+       **Bloomreach identifier**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
 
-       **Identity source column**
+       **Segment name**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-identity-source-column-start
-             :end-before: .. setting-bloomreach-identity-source-column-end
+             :start-after: .. setting-bloomreach-segment-name-start
+             :end-before: .. setting-bloomreach-segment-name-end
 
 
    * - .. image:: ../../images/steps-05.png

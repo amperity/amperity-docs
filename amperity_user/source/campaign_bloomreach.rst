@@ -61,9 +61,13 @@ Build a segment
 
 .. channel-bloomreach-build-segment-important-start
 
-.. important:: The segment you build must include a Bloomreach hard identifier such as email, external ID, cookie, or Google Analytics ID. All other attributes in your segment will be sent as customer properties to |destination-name|. Rows with blank values in the identity column will be skipped.
+.. important:: The segment you build must include an attribute named to match the **Bloomreach identifier** selected for the destination, such as email, external ID, cookie, or Google Analytics ID. If no attribute matches, the campaign fails with an error before any data is sent. All other attributes in your segment are sent as customer properties to |destination-name|. Rows with blank values in the identity column are skipped.
 
 .. channel-bloomreach-build-segment-important-end
+
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-attribute-limit-start
+   :end-before: .. destination-bloomreach-attribute-limit-end
 
 
 .. _channel-bloomreach-build-campaign:
@@ -121,6 +125,10 @@ Add to a campaign
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
 
 .. channel-bloomreach-build-campaign-steps-end
+
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-async-start
+   :end-before: .. destination-bloomreach-async-end
 
 
 .. _channel-bloomreach-configure-default-attributes:

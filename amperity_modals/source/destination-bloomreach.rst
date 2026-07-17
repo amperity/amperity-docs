@@ -78,17 +78,17 @@ Settings
    :start-after: .. setting-bloomreach-import-name-start
    :end-before: .. setting-bloomreach-import-name-end
 
-**Identity column**
+**Bloomreach identifier**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-bloomreach-identity-column-start
    :end-before: .. setting-bloomreach-identity-column-end
 
-**Identity source column**
+**Segment name**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-bloomreach-identity-source-column-start
-   :end-before: .. setting-bloomreach-identity-source-column-end
+   :start-after: .. setting-bloomreach-segment-name-start
+   :end-before: .. setting-bloomreach-segment-name-end
 
 **Campaign file settings**
 

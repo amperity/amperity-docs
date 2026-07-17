@@ -55,6 +55,10 @@ Use Amperity to send campaigns to |destination-name|. Build a campaign in Amperi
    :end-before: .. destination-bloomreach-import-limit-end
 
 .. include:: destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-attribute-limit-start
+   :end-before: .. destination-bloomreach-attribute-limit-end
+
+.. include:: destination_bloomreach.rst
    :start-after: .. destination-bloomreach-async-start
    :end-before: .. destination-bloomreach-async-end
 
@@ -132,7 +136,7 @@ Get details
              :start-after: .. setting-bloomreach-import-name-start
              :end-before: .. setting-bloomreach-import-name-end
 
-       **Identity column**
+       **Bloomreach identifier**
 
           |checkmark-required| **Required**
 
@@ -140,13 +144,13 @@ Get details
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
 
-       **Identity source column**
+       **Segment name**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-identity-source-column-start
-             :end-before: .. setting-bloomreach-identity-source-column-end
+             :start-after: .. setting-bloomreach-segment-name-start
+             :end-before: .. setting-bloomreach-segment-name-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -339,17 +343,17 @@ Add destination
              :start-after: .. setting-bloomreach-import-name-start
              :end-before: .. setting-bloomreach-import-name-end
 
-       **Identity column**
+       **Bloomreach identifier**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
 
-       **Identity source column**
+       **Segment name**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-identity-source-column-start
-             :end-before: .. setting-bloomreach-identity-source-column-end
+             :start-after: .. setting-bloomreach-segment-name-start
+             :end-before: .. setting-bloomreach-segment-name-end
 
 
    * - .. image:: ../../images/steps-05.png
