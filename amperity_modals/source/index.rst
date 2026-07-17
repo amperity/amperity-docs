@@ -28,6 +28,8 @@ Site Index
    destination-attentivemobile
    destination-azure-blob
    destination-bazaar-voice
+   destination-bloomreach
+
    destination-blue-core
    destination-braze
    destination-braze-cohorts

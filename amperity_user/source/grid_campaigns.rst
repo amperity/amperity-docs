@@ -199,6 +199,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_azure_blob_storage
 
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: campaign_bloomreach
+
    .. grid-item-card:: Braze
       :link-type: doc
       :link: campaign_braze
@@ -324,6 +328,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Amazon S3 <campaign_amazon_s3>
    Attentive <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
+   Bloomreach <campaign_bloomreach>
    Braze <campaign_braze>
    Cheetah Digital <campaign_cheetah_digital>
    Cordial <campaign_cordial>

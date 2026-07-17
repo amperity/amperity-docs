@@ -963,6 +963,12 @@ Bluecore is a marketing technology company that intelligently connects casual sh
 
 **blv_address**
 
+.. term-bloomreach-start
+
+Bloomreach Engagement (formerly Exponea) is a customer data and marketing automation platform. Use Bloomreach Engagement to create personalized customer experiences across multiple channels.
+
+.. term-bloomreach-end
+
 .. term-blv-address-start
 
 When true, the **address** on this customer profile matches a blocklist value.

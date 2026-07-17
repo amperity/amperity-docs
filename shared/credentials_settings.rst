@@ -9,6 +9,40 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. credential-bloomreach-base-url-start
+
+The API base URL for your Bloomreach Engagement project.
+
+.. credential-bloomreach-base-url-end
+
+
+.. credential-bloomreach-project-token-start
+
+The project token for your Bloomreach Engagement project.
+
+.. credential-bloomreach-project-token-end
+
+
+.. credential-bloomreach-api-key-id-start
+
+The public API key ID for your Bloomreach Engagement project.
+
+.. credential-bloomreach-api-key-id-end
+
+
+.. credential-bloomreach-api-secret-start
+
+The private API secret for your Bloomreach Engagement project. The API key must have the "Imports > Allow to Create new Imports" permission enabled.
+
+.. credential-bloomreach-api-secret-end
+
+
+.. credential-bloomreach-find-credentials-start
+
+You can find the API base URL and project token in your Bloomreach Engagement project settings. The API key ID and API secret are available in the API access section of your project settings.
+
+.. credential-bloomreach-find-credentials-end
+
 .. credential-iterable-api-key-start
 
 The server-side API key for your |destination-name| account.
