@@ -130,7 +130,7 @@ Authorize the connection
 
 Before the server can be used, each user completes a one-time OAuth sign-in to Amperity. Authorize from Snowsight or from SQL:
 
-* In Snowsight, go to **CoWork** > **Connectors**, find the Amperity connector, and select **Connect**.
+* In Snowsight, open the **MCP connectors** page under **Settings** > **Cortex**, find the **Amperity MCP** connector, and select **Connect**. You can also reach this page by selecting the Amperity MCP connector from any Cortex chat.
 * From SQL, start the flow directly:
 
   .. code-block:: sql
