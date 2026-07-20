@@ -25,7 +25,7 @@ Use the **GET /segments/{segment-id}/profiles** endpoint to return a paginated l
 
 .. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
-.. note:: In the Amperity user interface a real-time segment is configured from a profile store. The list of member profiles is shown as **Customers**.
+.. note:: In the Amperity user interface a real-time segment is configured from a profile collection. The list of member profiles is shown as **Customers**.
 
 
 .. _endpoint-get-profile-store-segment-profiles-prerequisites:
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. A profile store and a real-time segment must be configured for your tenant. To set up a profile store, contact your Amperity representative.
+#. A profile collection and a real-time segment must be configured for your tenant. Before creating a profile collection or a real-time segment, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-get-profile-store-segment-profiles-prerequisites-end
 

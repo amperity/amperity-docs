@@ -19,13 +19,13 @@ Real-time API
 
 .. endpoints-realtime-about-start
 
-Use the Real-time API to stream customer events into Amperity and to look up unified customer profiles on demand. Send events, such as page views, purchases, and loyalty actions, to an event stream, then look up profiles by identity key, retrieve profiles by ID, query segment membership, and retrieve profile store statistics. The Real-time API supports low-latency use cases such as personalization, decisioning, and in-session activation.
+Use the Real-time API to stream customer events into Amperity and to look up unified customer profiles on demand. Send events, such as page views, purchases, and loyalty actions, to an event stream, then look up profiles by identity key, retrieve profiles by ID, query segment membership, and retrieve profile collection statistics. The Real-time API supports low-latency use cases such as personalization, decisioning, and in-session activation.
 
 .. endpoints-realtime-about-end
 
 .. note:: The Real-time API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
 
-.. note:: Creating a profile store is not a self-service API operation. To set up a profile store, an event stream, or a real-time segment, contact your Amperity representative.
+.. note:: Before creating a profile collection, an event stream, or a real-time segment, you must contact your Amperity representative to enable real-time product features.
 
 
 .. _endpoints-realtime-events:
@@ -114,7 +114,7 @@ Segments
 
 .. _endpoints-realtime-profile-stores:
 
-Profile stores
+Profile collections
 ==================================================
 
 .. grid:: 1 1 1 1

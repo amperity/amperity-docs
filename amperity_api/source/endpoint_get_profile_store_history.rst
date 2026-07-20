@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Return a bucketed time series of profile counts for a profile store.
+        Return a bucketed time series of profile counts for a profile collection.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a bucketed time series of profile counts for a profile store.
+        Return a bucketed time series of profile counts for a profile collection.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,13 +19,13 @@ GET /collections/{collection-id}/history
 
 .. endpoint-get-profile-store-history-start
 
-Use the **GET /collections/{collection-id}/history** endpoint to return a bucketed time series of profile counts for a profile store.
+Use the **GET /collections/{collection-id}/history** endpoint to return a bucketed time series of profile counts for a profile collection.
 
 .. endpoint-get-profile-store-history-end
 
 .. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
-.. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
+.. note:: In the Amperity user interface a profile collection is shown on the **Profiles** page. The value for **{collection-id}** identifies that profile collection.
 
 
 .. _endpoint-get-profile-store-history-prerequisites:
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. A profile store must be configured for your tenant. To set up a profile store, contact your Amperity representative.
+#. A profile collection must be configured for your tenant. Before creating a profile collection, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-get-profile-store-history-prerequisites-end
 
@@ -122,7 +122,7 @@ The following table describes the parameters that may be used with the **GET /co
    * - **collection-id**
      - String. Required.
 
-       The ID of the profile store.
+       The ID of the profile collection.
 
    * - **scale**
      - String. Optional.

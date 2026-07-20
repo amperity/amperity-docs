@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Look up a profile in a profile store by keychain keys.
+        Look up a profile in a profile collection by keychain keys.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Look up a profile in a profile store by keychain keys.
+        Look up a profile in a profile collection by keychain keys.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,13 +19,13 @@ GET /lookup/{collection-id}/keychain
 
 .. endpoint-get-profile-store-lookup-start
 
-Use the **GET /lookup/{collection-id}/keychain** endpoint to find a single profile in a profile store by one or more keychain keys, such as an email address or loyalty ID. Keychain keys are passed as query string parameters.
+Use the **GET /lookup/{collection-id}/keychain** endpoint to find a single profile in a profile collection by one or more keychain keys, such as an email address or loyalty ID. Keychain keys are passed as query string parameters.
 
 .. endpoint-get-profile-store-lookup-end
 
 .. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
-.. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
+.. note:: In the Amperity user interface a profile collection is shown on the **Profiles** page. The value for **{collection-id}** identifies that profile collection.
 
 
 .. _endpoint-get-profile-store-lookup-prerequisites:
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. A profile store must be configured for your tenant. To set up a profile store, contact your Amperity representative.
+#. A profile collection must be configured for your tenant. Before creating a profile collection, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-get-profile-store-lookup-prerequisites-end
 
@@ -91,6 +91,8 @@ Requests
 
 A request to the **GET /lookup/{collection-id}/keychain** endpoint passes one or more keychain keys as query string parameters. At least one key is required.
 
+.. note:: Query string values must be URL-encoded. This matters most for values containing a literal ``+`` character, which is otherwise decoded as a space. Alternatively, use the :doc:`POST /lookup/{collection-id}/keychain <endpoint_post_profile_store_lookup>` endpoint to send keychain keys in the request body.
+
 .. code-block:: rest
 
    curl --request GET \
@@ -122,7 +124,7 @@ The following table describes the parameters that may be used with the **GET /lo
    * - **collection-id**
      - String. Required.
 
-       The ID of the profile store to search.
+       The ID of the profile collection to search.
 
    * - **keychain keys**
      - String. Required.
@@ -195,4 +197,4 @@ Other responses
      - No keychain keys were provided. At least one key is required.
 
    * - **404**
-     - No matching profile was found in the profile store.
+     - No matching profile was found in the profile collection.

@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Return statistics for a profile store.
+        Return statistics for a profile collection.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return statistics for a profile store.
+        Return statistics for a profile collection.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,13 +19,13 @@ GET /collections/{collection-id}/stats
 
 .. endpoint-get-profile-store-stats-start
 
-Use the **GET /collections/{collection-id}/stats** endpoint to return statistics for a profile store, including the total number of profiles it contains.
+Use the **GET /collections/{collection-id}/stats** endpoint to return statistics for a profile collection, including the total number of profiles it contains.
 
 .. endpoint-get-profile-store-stats-end
 
 .. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
-.. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
+.. note:: In the Amperity user interface a profile collection is shown on the **Profiles** page. The value for **{collection-id}** identifies that profile collection.
 
 
 .. _endpoint-get-profile-store-stats-prerequisites:
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. A profile store must be configured for your tenant. To set up a profile store, contact your Amperity representative.
+#. A profile collection must be configured for your tenant. Before creating a profile collection, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-get-profile-store-stats-prerequisites-end
 
@@ -122,7 +122,7 @@ The following table describes the parameters that may be used with the **GET /co
    * - **collection-id**
      - String. Required.
 
-       The ID of the profile store.
+       The ID of the profile collection.
 
 .. endpoint-get-profile-store-stats-request-parameters-end
 
@@ -134,7 +134,7 @@ Responses
 
 .. endpoint-get-profile-store-stats-responses-start
 
-A response from the **GET /collections/{collection-id}/stats** endpoint will match an :doc:`HTTP status code <responses>`. A **200** response returns statistics for the profile store.
+A response from the **GET /collections/{collection-id}/stats** endpoint will match an :doc:`HTTP status code <responses>`. A **200** response returns statistics for the profile collection.
 
 .. endpoint-get-profile-store-stats-responses-end
 
@@ -146,7 +146,7 @@ A response from the **GET /collections/{collection-id}/stats** endpoint will mat
 
 .. endpoint-get-profile-store-stats-response-200ok-start
 
-The **200** response returns statistics for the profile store.
+The **200** response returns statistics for the profile collection.
 
 .. code-block:: json
    :linenos:
@@ -179,7 +179,7 @@ A **200 OK** response contains the following parameters.
      - Description
 
    * - **total-profiles**
-     - The total number of profiles in the profile store.
+     - The total number of profiles in the profile collection.
 
    * - **link-cardinality**
      - A map of keychain link type to the number of indexed link values for that type.

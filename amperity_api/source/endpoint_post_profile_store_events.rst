@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Send an event to a profile store event stream.
+        Send an event to a profile collection event stream.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send an event to a profile store event stream.
+        Send an event to a profile collection event stream.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ POST /events/{stream-id}
 
 .. endpoint-post-profile-store-events-start
 
-Use the **POST /events/{stream-id}** endpoint to send a real-time event to an event stream. Events are the primary way to update profiles in a profile store in real time.
+Use the **POST /events/{stream-id}** endpoint to send a real-time event to an event stream. Events are the primary way to update profiles in a profile collection in real time.
 
 .. endpoint-post-profile-store-events-end
 
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. An event stream must be configured for your tenant. To set up a profile store and its event streams, contact your Amperity representative.
+#. An event stream must be configured for your tenant. Before creating a profile collection or an event stream, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-post-profile-store-events-prerequisites-end
 

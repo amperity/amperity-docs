@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Return a single profile from a profile store by its profile ID.
+        Return a single profile from a profile collection by its profile ID.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Return a single profile from a profile store by its profile ID.
+        Return a single profile from a profile collection by its profile ID.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,13 +19,13 @@ GET /profiles/{collection-id}/{profile-id}
 
 .. endpoint-get-profile-store-profile-start
 
-Use the **GET /profiles/{collection-id}/{profile-id}** endpoint to return a single profile from a profile store by its profile ID.
+Use the **GET /profiles/{collection-id}/{profile-id}** endpoint to return a single profile from a profile collection by its profile ID.
 
 .. endpoint-get-profile-store-profile-end
 
 .. note:: This endpoint is part of the Real-time API, an unstable API that may change without advance notice of breaking changes.
 
-.. note:: In the Amperity user interface a profile store is shown on the **Profiles** page and may also be referred to as a profile collection. The value for **{collection-id}** identifies that profile store.
+.. note:: In the Amperity user interface a profile collection is shown on the **Profiles** page. The value for **{collection-id}** identifies that profile collection.
 
 
 .. _endpoint-get-profile-store-profile-prerequisites:
@@ -37,7 +37,7 @@ Prerequisites
 
 #. :ref:`Add an API key <authentication-api-keys-add>`.
 #. :ref:`Generate an access token <authentication-access-token-generate>`.
-#. A profile store must be configured for your tenant. To set up a profile store, contact your Amperity representative.
+#. A profile collection must be configured for your tenant. Before creating a profile collection, you must contact your Amperity representative to enable real-time product features.
 
 .. endpoint-get-profile-store-profile-prerequisites-end
 
@@ -122,7 +122,7 @@ The following table describes the parameters that may be used with the **GET /pr
    * - **collection-id**
      - String. Required.
 
-       The ID of the profile store that contains the profile.
+       The ID of the profile collection that contains the profile.
 
    * - **profile-id**
      - String. Required.
@@ -196,13 +196,13 @@ A **200 OK** response contains the following parameters.
      - Description
 
    * - **collection_id**
-     - The ID of the profile store that contains the profile.
+     - The ID of the profile collection that contains the profile.
 
    * - **profile_id**
      - The unique ID for the profile.
 
    * - **attributes**
-     - A map of key-value profile attributes. The specific keys and values depend on how the profile store is configured.
+     - A map of key-value profile attributes. The specific keys and values depend on how the profile collection is configured.
 
    * - **created_at**
      - The timestamp at which the profile was created.
@@ -226,6 +226,6 @@ A **200 OK** response contains the following parameters.
 
 .. endpoint-get-profile-store-profile-response-404-start
 
-No profile with the given **{profile-id}** exists in the profile store.
+No profile with the given **{profile-id}** exists in the profile collection.
 
 .. endpoint-get-profile-store-profile-response-404-end
