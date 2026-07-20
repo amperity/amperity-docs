@@ -100,5 +100,6 @@ Connect a client to the MCP server:
 * :doc:`Claude.ai, Claude Desktop, and Claude Code <mcp_setup_claude>`
 * :doc:`Copilot Studio <mcp_setup_m365_copilot>`
 * :doc:`Gemini -- Antigravity and Gemini CLI <mcp_setup_gemini>`
+* :doc:`Snowflake Cortex Agents <mcp_setup_snowflake_cortex>`
 
 .. mcp-connect-client-end
