@@ -96,6 +96,7 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    POST /lookup/{collection-id}/keychain <endpoint_post_profile_store_lookup>
    GET /profiles/{collection-id}/{profile-id} <endpoint_get_profile_store_profile>
    GET /segments/{segment-id}/profiles <endpoint_get_profile_store_segment_profiles>
+   GET /profiles/{collection-id}/{profile-id}/segments <endpoint_get_profile_segments>
    GET /collections/{collection-id}/stats <endpoint_get_profile_store_stats>
    GET /collections/{collection-id}/history <endpoint_get_profile_store_history>
 

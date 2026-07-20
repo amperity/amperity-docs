@@ -111,6 +111,14 @@ Segments
          :start-after: .. endpoint-get-profile-store-segment-profiles-start
          :end-before: .. endpoint-get-profile-store-segment-profiles-end
 
+   .. grid-item-card:: GET /profiles/{collection-id}/{profile-id}/segments
+      :link-type: doc
+      :link: endpoint_get_profile_segments
+
+      .. include:: ../../amperity_api/source/endpoint_get_profile_segments.rst
+         :start-after: .. endpoint-get-profile-segments-start
+         :end-before: .. endpoint-get-profile-segments-end
+
 
 .. _endpoints-realtime-profile-stores:
 
