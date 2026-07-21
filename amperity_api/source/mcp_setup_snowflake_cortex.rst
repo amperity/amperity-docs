@@ -57,7 +57,7 @@ Create an API integration
 
 .. mcp-setup-cortex-integration-start
 
-Create an API integration that allows Snowflake to reach the Amperity MCP server and complete the OAuth handshake. Run the following as ``ACCOUNTADMIN`` (or a role with ``CREATE INTEGRATION``):
+Create an API integration that allows Snowflake to reach the Amperity MCP server and complete the OAuth handshake. Run the following as ``ACCOUNTADMIN``:
 
 .. code-block:: sql
 
@@ -88,7 +88,7 @@ Register the external MCP server
 
 .. mcp-setup-cortex-register-start
 
-Register the Amperity MCP server as an external MCP server through the integration you just created. The server object is created in your current database and schema, so set your context first. Replace ``<db>`` and ``<schema>`` with the database and schema where you want the server object to live:
+Register the Amperity MCP server through the integration you just created. The server object is created in your current database and schema, so set your context first. Replace ``<db>`` and ``<schema>`` with the database and schema where you want the server object to live:
 
 .. code-block:: sql
 
