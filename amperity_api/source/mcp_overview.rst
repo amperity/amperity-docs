@@ -87,6 +87,20 @@ The Amperity MCP server does not:
 .. mcp-what-mcp-not-enabled-end
 
 
+.. _mcp-token-usage:
+
+Does the MCP server use tokens?
+==================================================
+
+.. mcp-token-usage-start
+
+Enabling the Amperity MCP server does not use tokens. The MCP server is a connector to your Amperity data; connecting a client does not consume tokens on the Amperity side.
+
+Tokens are consumed by your AI client when its agent calls a tool and processes the response. That usage is metered and billed within your own AI platform, such as Claude or ChatGPT, and never by Amperity. The more data an agent pulls, the more tokens it uses.
+
+.. mcp-token-usage-end
+
+
 .. _mcp-connect-client:
 
 Connect a client
