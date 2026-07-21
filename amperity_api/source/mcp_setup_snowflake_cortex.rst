@@ -135,8 +135,6 @@ Before the server can be used, each user signs in to Amperity with OAuth. Author
 
 A browser tab opens. Sign in with your Amperity credentials and select your tenant. Snowflake stores the resulting token for your user.
 
-.. tip:: The stored token expires. When it does, the agent returns an authorization error--repeat the sign-in above to reauthorize.
-
 .. mcp-setup-cortex-authorize-end
 
 
