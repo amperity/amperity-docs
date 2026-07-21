@@ -20,7 +20,7 @@ Set up Snowflake Cortex
 
 .. mcp-setup-cortex-start
 
-Connect Snowflake Cortex to the Amperity MCP server by registering it as an external MCP server and signing in with your Amperity credentials. Once connected, CoCo (Snowflake's Cortex Code assistant), Snowflake Intelligence, and Cortex Agents can call Amperity tools directly from Snowflake.
+Connect Snowflake Cortex to the Amperity MCP server by registering it as an external MCP server and signing in with your Amperity credentials. Once connected, CoCo (Cortex Code), Snowflake Intelligence, and Cortex Agents can call Amperity tools directly from Snowflake.
 
 Setup involves four steps:
 
