@@ -22,12 +22,13 @@ Set up Snowflake Cortex
 
 Connect Snowflake Cortex Agents to the Amperity MCP server by registering it as an external MCP server and signing in with your Amperity credentials. Once registered, you can attach the Amperity MCP server to any Cortex Agent so the agent can call Amperity tools directly from Snowflake.
 
-Configuration happens in SQL and follows four steps:
+Setup involves five steps:
 
 #. :ref:`Create an API integration <mcp-setup-cortex-integration>` that points at the Amperity MCP server and its OAuth endpoints.
 #. :ref:`Register the external MCP server <mcp-setup-cortex-register>` through that integration.
 #. :ref:`Grant usage <mcp-setup-cortex-grant>` on the server and integration to the roles that need it.
-#. :ref:`Authorize the connection <mcp-setup-cortex-authorize>` by completing an OAuth sign-in to Amperity.
+#. :ref:`Authorize the connection <mcp-setup-cortex-authorize>` by signing in to Amperity with OAuth.
+#. :ref:`Attach the server to a Cortex Agent <mcp-setup-cortex-attach>` so the agent can call Amperity tools.
 
 For details on Snowflake's external MCP connector feature, see the `Snowflake documentation <https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp-connectors>`__.
 
