@@ -146,18 +146,7 @@ Attach the server to a Cortex Agent (optional)
 
 .. mcp-setup-cortex-attach-start
 
-After you authorize the connection, the Amperity MCP server is already available in CoCo and Snowflake Intelligence. Attach the server to a Cortex Agent only when you want a specific agent's saved definition to always include the Amperity tools.
-
-Update the agent's specification to reference the server object by its fully qualified name. Keep your existing agent specification and add the ``mcp_servers`` block. Replace ``<agent_name>`` and the ``<db>.<schema>`` prefix to match your environment:
-
-.. code-block:: sql
-
-   ALTER AGENT <agent_name> MODIFY LIVE VERSION SET SPECIFICATION $$
-     <...your existing agent spec...>
-     mcp_servers:
-       - server_spec:
-           name: "<db>.<schema>.amperity_mcp"
-   $$;
+After you authorize the connection, the Amperity MCP server is already available in CoCo and Snowflake Intelligence. Attach it to a Cortex Agent only when you want a specific agent's saved definition to always include the Amperity tools--for example, to share a purpose-built agent with a team or to invoke one through the Agent REST API. Add the server to the agent's ``mcp_servers`` specification; see the `Snowflake documentation <https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp-connectors>`__ for the specification syntax.
 
 .. mcp-setup-cortex-attach-end
 
