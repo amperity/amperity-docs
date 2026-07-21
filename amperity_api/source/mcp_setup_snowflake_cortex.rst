@@ -171,9 +171,9 @@ Confirm the server is registered and that the agent can reach Amperity.
 
    .. code-block:: none
 
-      "List my Amperity tenants."
+      "Tell me about my Amperity tenant."
 
-   The agent calls the **tenant_list** tool and returns the tenants available to your Amperity account. This confirms the connection end to end.
+   The agent calls the **tenant_info** tool and returns details about your current Amperity tenant. This confirms the connection end to end.
 
 .. note:: Cortex Agent MCP tool calls are not written to Snowflake's monitoring tables. To confirm a tool ran, review the agent's live tool-invocation trace rather than looking for a query in your account history.
 
