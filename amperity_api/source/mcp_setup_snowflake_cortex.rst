@@ -44,7 +44,7 @@ Requirements
 Connecting Snowflake Cortex to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
-* A Snowflake account in a supported region and cloud. The examples on this page use AWS ``us-west-2``.
+* A Snowflake account in a region and cloud where external MCP connectors are available. See the `Snowflake documentation <https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp-connectors>`__ for current availability.
 * The ``ACCOUNTADMIN`` role, or a role with the ``CREATE INTEGRATION`` privilege, to create the API integration and the external MCP server.
 * ``USAGE`` on both the external MCP server object and the API integration for any role that will use the connection, such as the analyst role behind a Cortex Agent.
 
