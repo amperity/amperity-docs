@@ -127,16 +127,12 @@ Authorize the connection
 
 .. mcp-setup-cortex-authorize-start
 
-Before the server can be used, each user signs in to Amperity with OAuth. Authorize from Snowsight or from SQL:
+Before the server can be used, each user signs in to Amperity with OAuth. Authorize from the Snowflake interface where you use the agent:
 
-* In Snowsight, open the **MCP connectors** page under **Settings** > **Cortex**, find the **Amperity MCP** connector, and select **Connect**. You can also reach this page by selecting the Amperity MCP connector from any Cortex chat.
-* From SQL, start the flow directly:
+* In Snowflake Intelligence, select **+** in the message box, choose **Connectors**, then select **Connect** next to **Amperity MCP**.
+* In Snowsight, open the **MCP connectors** page under **Settings** > **Cortex**, find the **Amperity MCP** connector, and select **Connect**.
 
-  .. code-block:: sql
-
-     SELECT SYSTEM$START_USER_OAUTH_FLOW('amperity_mcp_integration');
-
-Either path opens a browser tab. Sign in with your Amperity credentials and select your tenant. Snowflake stores the resulting token for your user.
+A browser tab opens. Sign in with your Amperity credentials and select your tenant. Snowflake stores the resulting token for your user.
 
 .. tip:: The stored token expires. When it does, the agent returns an authorization error--repeat the sign-in above to reauthorize.
 
