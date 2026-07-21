@@ -76,7 +76,7 @@ Create an API integration that allows Snowflake to reach the Amperity MCP server
 
 ``OAUTH_CLIENT_ID`` is Amperity's public MCP client ID and is the same for every customer.
 
-.. important:: The Amperity MCP server is a public OAuth client that uses PKCE and does not issue a client secret. Snowflake still requires ``OAUTH_CLIENT_SECRET`` to be non-empty, so supply any non-empty placeholder value, such as ``placeholder``. This is expected and does not weaken the connection.
+.. important:: The Amperity MCP server is a public OAuth client that uses PKCE and does not issue a client secret. Snowflake still requires ``OAUTH_CLIENT_SECRET`` to be non-empty, so supply any non-empty placeholder value, such as ``placeholder``.
 
 .. mcp-setup-cortex-integration-end
 
