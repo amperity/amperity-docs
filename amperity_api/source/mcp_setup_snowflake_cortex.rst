@@ -20,7 +20,7 @@ Set up Snowflake Cortex
 
 .. mcp-setup-cortex-start
 
-Connect Snowflake Cortex Agents to the Amperity MCP server by registering it as an external MCP server and signing in with your Amperity credentials. Once registered, you can attach the Amperity MCP server to any Cortex Agent so the agent can call Amperity tools directly from Snowflake.
+Connect Snowflake Cortex to the Amperity MCP server by registering it as an external MCP server and signing in with your Amperity credentials. Once connected, CoCo, Snowflake Intelligence, and Cortex Agents can call Amperity tools directly from Snowflake.
 
 Setup involves four steps:
 
@@ -29,7 +29,7 @@ Setup involves four steps:
 #. :ref:`Grant usage <mcp-setup-cortex-grant>` on the server and integration to the roles that need it.
 #. :ref:`Authorize the connection <mcp-setup-cortex-authorize>` by signing in to Amperity with OAuth.
 
-Once you authorize, the Amperity MCP server is available in CoCo and Snowflake Intelligence. To make the Amperity tools part of a specific Cortex Agent's saved definition, optionally :ref:`attach the server to that agent <mcp-setup-cortex-attach>`.
+Once you authorize, the Amperity MCP server is available in CoCo and Snowflake Intelligence.
 
 For details on Snowflake's external MCP connector feature, see the `Snowflake documentation <https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp-connectors>`__.
 
@@ -137,18 +137,6 @@ Before the server can be used, each user signs in to Amperity with OAuth. Author
 A browser tab opens. Sign in with your Amperity credentials and select your tenant. Snowflake stores the resulting token for your user.
 
 .. mcp-setup-cortex-authorize-end
-
-
-.. _mcp-setup-cortex-attach:
-
-Attach the server to a Cortex Agent (optional)
-==================================================
-
-.. mcp-setup-cortex-attach-start
-
-After you authorize the connection, the Amperity MCP server is already available in CoCo and Snowflake Intelligence. Attach it to a Cortex Agent only when you want a specific agent's saved definition to always include the Amperity tools--for example, to share a purpose-built agent with a team or to invoke one through the Agent REST API. Add the server to the agent's ``mcp_servers`` specification; see the `Snowflake documentation <https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp-connectors>`__ for the specification syntax.
-
-.. mcp-setup-cortex-attach-end
 
 
 .. _mcp-setup-cortex-verify:
