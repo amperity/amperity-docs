@@ -92,6 +92,18 @@ All the steps that all credentials follow. Custom information belongs in specifi
 
 **Step 01**
 
+.. credential-roku-audience-refresh-token-start
+
+The OAuth2 refresh token used to authenticate with the Roku Ads API.
+
+.. credential-roku-audience-refresh-token-end
+
+.. credential-roku-audience-find-refresh-token-start
+
+Contact your Amperity representative for assistance with obtaining a refresh token for your Roku Ads account.
+
+.. credential-roku-audience-find-refresh-token-end
+
 .. credential-steps-add-credential-start
 
 From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.

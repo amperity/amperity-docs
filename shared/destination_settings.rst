@@ -2593,6 +2593,26 @@ See common settings.
 
 **List name**
 
+.. setting-roku-audience-account-uid-start
+
+The Roku Ads account UID that owns the audience. This is a unique identifier for your Roku Ads account (for example: ``Pxxxxxxxxxxxx``).
+
+.. setting-roku-audience-account-uid-end
+
+.. setting-roku-audience-list-name-start
+
+The name of the audience list to create in Roku Ads Manager.
+
+.. setting-roku-audience-list-name-end
+
+.. setting-roku-audience-list-name-unique-start
+
+.. important:: Roku requires unique audience names. Each sync must use a different list name. If an audience with the specified name already exists in your Roku Ads account, the sync will fail.
+
+   This is a temporary limitation while Roku's Ads API does not support updating or deleting existing audiences.
+
+.. setting-roku-audience-list-name-unique-end
+
 .. setting-sailthru-list-name-start
 
 The name of the list in |destination-name| managed by Amperity. Amperity creates the list if it does not exist.

@@ -5880,6 +5880,12 @@ Sailthru by Zeta is a cross-channel marketing platform built to deliver personal
 
 **Salesforce Commerce Cloud**
 
+.. term-roku-audience-start
+
+Roku Audience is a CTV (connected TV) advertising platform that enables brands to target custom audiences through Roku Ads Manager. Use Amperity to sync first-party customer data to Roku for household-based ad targeting across Roku streaming devices.
+
+.. term-roku-audience-end
+
 .. term-salesforce-commerce-cloud-start
 
 Salesforce Commerce Cloud​ is a multi-tenant, cloud-based commerce platform that enables brands to create intelligent, unified buying experiences across all channels.
