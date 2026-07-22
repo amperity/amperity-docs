@@ -2609,7 +2609,7 @@ The name of the audience list to create in Roku Ads Manager.
 
 .. important:: Roku requires unique audience names. Each sync must use a different list name. If an audience with the specified name already exists in your Roku Ads account, the sync will fail.
 
-   This is a temporary limitation while Roku's Ads API does not support updating or deleting existing audiences.
+   Roku's Ads API does not support updating or deleting existing audiences, so each sync creates a new audience.
 
 .. setting-roku-audience-list-name-unique-end
 

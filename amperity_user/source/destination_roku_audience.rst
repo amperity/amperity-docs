@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Roku Audience
-.. |what-send| replace:: audience segments
+.. |what-send| replace:: audiences
 
 
 .. meta::
@@ -94,6 +94,7 @@ The following example shows a query that returns email addresses and device iden
      email
      ,phone
      ,mobile_advertiser_id AS maid
+     ,ip
    FROM Customer_360
 
 .. note:: Roku matches audiences using email as the primary identifier. Phone numbers, mobile advertiser IDs, and IP addresses are optional and can improve match rates when included.

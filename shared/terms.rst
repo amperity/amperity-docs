@@ -5882,7 +5882,7 @@ Sailthru by Zeta is a cross-channel marketing platform built to deliver personal
 
 .. term-roku-audience-start
 
-Roku Audience is a CTV (connected TV) advertising platform that enables brands to target custom audiences through Roku Ads Manager. Use Amperity to sync first-party customer data to Roku for household-based ad targeting across Roku streaming devices.
+Roku Audience is a CTV (connected TV) advertising platform that enables brands to target custom audiences through Roku Ads Manager. Send first-party customer data to Roku for household-based ad targeting across Roku streaming devices.
 
 .. term-roku-audience-end
 

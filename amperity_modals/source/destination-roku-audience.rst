@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: Roku Audience
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: audience segments
+.. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 
 

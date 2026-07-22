@@ -5,9 +5,9 @@
 .. |destination-api| replace:: Roku Ads API
 .. |plugin-name| replace:: "Roku Audience"
 .. |credential-type| replace:: "roku-audience"
-.. |required-credentials| replace:: "Refresh token"
+.. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: audience segments
+.. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "roku"
 
@@ -34,7 +34,11 @@ Configure campaigns for Roku Audience
 
 .. campaign-roku-audience-start
 
-Use Amperity to send campaign results to |destination-name|. Build a campaign that matches specific criteria, and then send the email addresses and device identifiers for customers who belong to that audience to |destination-name|.
+You can configure Amperity to send a campaign audience of SHA-256 hashed email addresses to |destination-name| using the |destination-api|. Amperity automatically applies SHA-256 hashing to email addresses before sending them; plaintext email never leaves Amperity. You can also include phone number, mobile advertiser ID (MAID), and IP address, which are sent as-is to improve the household match rate. Rows that contain none of these identifiers are skipped and counted as failed.
+
+Each campaign send uploads the entire audience to |destination-name| as a single file and creates a new Roku audience from it. |destination-name| does not support updating or deleting an existing audience, so each send must use a unique list name; re-running a send with a name that already exists fails with a name conflict.
+
+|destination-name| matches the uploaded file to households in the background, and a full match can take up to about an hour. Amperity reports the number of rows sent once Roku accepts the file. Validation failures, such as a malformed file or a record count below Roku's minimum, surface during the send. Roku requires roughly 1,000 or more matched households to build a usable audience.
 
 .. campaign-roku-audience-end
 
@@ -312,7 +316,7 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. campaigns-steps-validate-audience-start
-          :end-before: .. campaigns-steps-validate-audience-end
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. campaign-roku-audience-add-steps-end

@@ -334,9 +334,9 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_reddit_ads
 
-.. grid-item-card:: Roku Audience
-   :link-type: doc
-   :link: destination_roku_audience
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: destination_roku_audience
 
    .. grid-item-card:: RR Donnelly
       :link-type: doc
@@ -505,8 +505,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    PowerReviews <destination_powerreviews>
    Quad <destination_quad>
    Reddit Ads <destination_reddit_ads>
-Roku Audience <destination_roku_audience>
-
+   Roku Audience <destination_roku_audience>
    RR Donnelly <destination_rr_donnelly>
    Sailthru <destination_sailthru>
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>

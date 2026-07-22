@@ -5,9 +5,9 @@
 .. |destination-api| replace:: Roku Ads API
 .. |plugin-name| replace:: "Roku Audience"
 .. |credential-type| replace:: "roku-audience"
-.. |required-credentials| replace:: "Refresh token"
+.. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "email"
-.. |what-send| replace:: audience segments
+.. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "roku"
 
@@ -34,7 +34,11 @@ Configure destinations for Roku Audience
 
 .. destination-roku-audience-start
 
-Use Amperity to manage audience segments in |destination-name|. Build a query using the **email** field, and then send the results of that query to |destination-name| or build a segment that matches specific criteria, and then send the email addresses and device identifiers for customers who belong to that audience.
+You can configure Amperity to send an audience of SHA-256 hashed email addresses to |destination-name| using the |destination-api|. Amperity automatically applies SHA-256 hashing to email addresses before sending them; plaintext email never leaves Amperity. You can also include phone number, mobile advertiser ID (MAID), and IP address, which are sent as-is to improve the household match rate. Rows that contain none of these identifiers are skipped and counted as failed.
+
+Each sync uploads the entire audience to |destination-name| as a single file and creates a new Roku audience from it. |destination-name| does not support updating or deleting an existing audience, so each sync must use a unique list name; re-running a sync with a name that already exists fails with a name conflict.
+
+|destination-name| matches the uploaded file to households in the background, and a full match can take up to about an hour. Amperity reports the number of rows sent once Roku accepts the file. Validation failures, such as a malformed file or a record count below Roku's minimum, surface during the sync. Roku requires roughly 1,000 or more matched households to build a usable audience.
 
 .. destination-roku-audience-end
 
@@ -102,7 +106,7 @@ Get details
              :start-after: .. setting-roku-audience-account-uid-start
              :end-before: .. setting-roku-audience-account-uid-end
 
-       **List name**
+       **List name** (Required at orchestration)
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-roku-audience-list-name-start
@@ -117,7 +121,7 @@ Get details
           :alt: Detail 3.
           :align: center
           :class: no-scaled-link
-     - A query that outputs the fields that must be mapped to the |destination-name| audience.
+     - A query that outputs the fields to send to |destination-name|. The **email** field is required as the primary match key; **phone**, **maid** (mobile advertiser ID), and **ip** are optional and improve the household match rate.
 
 .. destination-roku-audience-get-details-end
 

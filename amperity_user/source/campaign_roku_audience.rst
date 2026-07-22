@@ -2,8 +2,7 @@
 
 
 .. |destination-name| replace:: Roku Audience
-.. |what-send| replace:: audience segments
-.. |what-enable| replace:: household-based ad targeting on Roku streaming devices
+.. |what-send| replace:: audiences
 .. |attributes-sent| replace:: email addresses, phone numbers, mobile advertiser IDs, and IP addresses
 
 
