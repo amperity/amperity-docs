@@ -2,7 +2,6 @@
 
 
 .. |destination-name| replace:: Roku Audience
-.. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 
@@ -53,12 +52,6 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
-
-**Audience primary key**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-audience-primary-key-start
-   :end-before: .. setting-common-audience-primary-key-end
 
 **Roku Ads account ID**
 

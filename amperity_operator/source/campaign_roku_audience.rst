@@ -6,7 +6,6 @@
 .. |plugin-name| replace:: "Roku Audience"
 .. |credential-type| replace:: "roku-audience"
 .. |required-credentials| replace:: "refresh token"
-.. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "roku"
@@ -89,14 +88,6 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
-
-       **Audience primary key**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-audience-primary-key-start
-             :end-before: .. setting-common-audience-primary-key-end
 
        **Roku Ads account ID**
 
@@ -270,12 +261,6 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
-
-       **Audience primary key**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-audience-primary-key-start
-             :end-before: .. setting-common-audience-primary-key-end
 
        **Roku Ads account ID**
 
