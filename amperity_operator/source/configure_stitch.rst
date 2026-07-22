@@ -115,7 +115,7 @@ Rules
 
 .. configure-stitch-rules-start
 
-Use the **Rules** tab to define a prioritized collection of rules used during identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab, until a rule returns true.
+Use the **Rules** tab to define a prioritized collection of rules used during identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab. A rule applies only when all of its conditions match a pair of records. When any condition does not match, evaluation continues to the next rule. When no rule applies, the option selected for :ref:`remaining records <configure-stitch-rules-remaining>` determines how the pair of records is evaluated.
 
 .. image:: ../../images/mockup-stitch-settings-rules.png
    :width: 520 px
@@ -263,15 +263,13 @@ For example:
 Remaining records
 --------------------------------------------------
 
-.. TODO: Is this the old clustering algorithm setting? :hierarchical vs. :nil?
-
 .. configure-stitch-rules-remaining-start
 
 For records that do not match any of the prioritized collection of rules there are two options:
 
-#. Recommended. Allow Stitch to evaluate these records, discover connections, and then use those connections to build clusters.
+#. Recommended. Allow Stitch to evaluate these records, discover connections, and then use those connections to build clusters. In the **Code** view this corresponds to ``:base [:ordinal-regression {:threshold 3.0, :version 3}]``, the probabilistic Amperity AI model.
 
-#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules is not included in a cluster.
+#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules is not included in a cluster. In the **Code** view this corresponds to ``:base :abstain`` (no matching model).
 
 .. configure-stitch-rules-remaining-end
 
@@ -283,7 +281,7 @@ Visual vs. Code views
 
 .. configure-stitch-rules-code-start
 
-Use the **Visual** view to configure a prioritized collection of rules that are used for deterministic identity resolution. Use the **Code** view to configure advanced seettings or to override general settings.
+Use the **Visual** view to configure a prioritized collection of rules that are used for deterministic identity resolution. Use the **Code** view to configure advanced settings or to override general settings.
 
 The **Code** view uses Extensible Data Notation (EDN) formatting and is similar to:
 
@@ -311,6 +309,16 @@ Rules in the Code view
 .. configure-stitch-rules-code-view-start
 
 Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and :ref:`separating records <configure-stitch-rules-cluster>` have specific names in the **Code** view.
+
+A rules configuration is stored under the ``:amperity.stitch.rules/config`` key as an ordered vector of rules plus a base model. Each rule is either ``:match-if`` (cluster records) or ``:conflict-if`` (separate records) and holds a vector of conditions that must all match for the rule to apply. For example:
+
+::
+
+   {:rules [[:conflict-if [[:fuzzy/incompatible-names]]]
+            [:match-if [[:present-and-equal "fk-customerid"]]]]
+    :base [:ordinal-regression {:threshold 3.0, :version 3}]}
+
+Conditions use plain semantic tag names, such as "email" or "fk-customerid". The system-generated semantics ``pk``, ``updated``, and ``system-updated`` cannot be used in rules.
 
 .. list-table::
    :widths: 50 50
