@@ -253,6 +253,8 @@ Run, inspect, and tune identity resolution.
 
        **stitch_update_settings**
 
+       **stitch_update_rules**
+
        **stitch_set_table_availability**
 
    * - Review benchmark coverage
