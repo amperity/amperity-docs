@@ -283,6 +283,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_pinterest
 
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: campaign_roku_audience
+
    .. grid-item-card:: Sailthru
       :link-type: doc
       :link: campaign_sailthru
@@ -349,6 +353,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Neustar <campaign_neustar>
    Oracle Eloqua <campaign_oracle_eloqua>
    Pinterest <campaign_pinterest>
+   Roku Audience <campaign_roku_audience>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    SAP Emarsys <campaign_sap_emarsys>

@@ -272,6 +272,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_reddit_ads
 
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: campaign_roku_audience
+
    .. grid-item-card:: RR Donnelly
       :link-type: doc
       :link: campaign_rr_donnelly
@@ -407,6 +411,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    PowerReviews <campaign_powerreviews>
    Quad <campaign_quad>
    Reddit Ads <campaign_reddit_ads>
+   Roku Audience <campaign_roku_audience>
    RR Donnelly <campaign_rr_donnelly>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
