@@ -44,6 +44,14 @@ Use Amperity to build audience segments and send them to |destination-name| for 
 
 .. destination-viant-dsp-api-note-end
 
+.. destination-viant-dsp-beta-start
+
+.. admonition:: Beta
+
+   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-viant-dsp-beta-end
+
 
 .. _destination-viant-dsp-howitworks:
 
