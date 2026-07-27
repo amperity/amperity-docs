@@ -33,6 +33,14 @@ Send query results to Roku Audience
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
+.. sendto-roku-audience-beta-start
+
+.. admonition:: Beta
+
+   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+
+.. sendto-roku-audience-beta-end
+
 .. sendto-roku-audience-steps-to-send-start
 
 .. list-table::

@@ -13,6 +13,14 @@ Roku Audience
    :start-after: .. term-roku-audience-start
    :end-before: .. term-roku-audience-end
 
+.. destination-roku-audience-beta-start
+
+.. admonition:: Beta
+
+   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-roku-audience-beta-end
+
 
 Credentials
 ==================================================
