@@ -587,6 +587,8 @@ Manage segments and folders.
 
        **iq_get**
 
+       **iq_count**
+
        **iq_create**
 
        **iq_update**
