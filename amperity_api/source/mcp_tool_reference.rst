@@ -80,6 +80,34 @@ Manage which Amperity tenant the current session targets, and read session-level
      - **feedback_submit**
 
 
+.. _mcp-tool-users-access:
+
+Users and access
+==================================================
+
+Find and create global Amperity users, inspect policies, and manage a user's direct unscoped policy attachments in the current tenant.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Find and create users
+     - **user_list**
+
+       **user_create**
+
+   * - Inspect policies
+     - **policy_list**
+
+   * - Grant and revoke direct unscoped policies
+     - **user_grant_policy**
+
+       **user_revoke_policy**
+
+
 .. _mcp-tool-databases:
 
 Databases and tables
