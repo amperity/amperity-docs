@@ -104,6 +104,18 @@ Contact your Amperity representative for assistance with obtaining a refresh tok
 
 .. credential-roku-audience-find-refresh-token-end
 
+.. credential-roku-capi-capi-token-start
+
+A bearer token (JWT) that authorizes Amperity to send events to the Roku Conversions API.
+
+.. credential-roku-capi-capi-token-end
+
+.. credential-roku-capi-capi-token-find-start
+
+Generate the token in Roku Ads Manager under **Events > CAPI**. Generating a token requires the Admin or Org Admin role. The token does not expire but can be revoked; to rotate it, revoke and regenerate the token in Roku Ads Manager, and then update the credential in Amperity.
+
+.. credential-roku-capi-capi-token-find-end
+
 .. credential-steps-add-credential-start
 
 From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.

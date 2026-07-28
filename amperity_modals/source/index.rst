@@ -84,6 +84,7 @@ Site Index
    destination-quad
    destination-reddit-ads
    destination-roku-audience
+   destination-roku-capi-offline-events
    destination-rr-donnelly
    destination-s3
    destination-sailthru
