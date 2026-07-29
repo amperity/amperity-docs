@@ -5886,6 +5886,15 @@ Roku Audience is a CTV (connected TV) advertising platform that enables brands t
 
 .. term-roku-audience-end
 
+
+**Roku CAPI**
+
+.. term-roku-capi-start
+
+The Roku Conversions API (CAPI) lets your brand send conversion events — such as purchases, sign-ups, and trial starts — to Roku. Roku uses these events to optimize campaigns, build event-based custom audiences, and attribute conversions for return on ad spend (ROAS) measurement.
+
+.. term-roku-capi-end
+
 .. term-salesforce-commerce-cloud-start
 
 Salesforce Commerce Cloud​ is a multi-tenant, cloud-based commerce platform that enables brands to create intelligent, unified buying experiences across all channels.

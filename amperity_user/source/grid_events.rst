@@ -59,6 +59,10 @@ Events
       :link-type: doc
       :link: events_pinterest
 
+   .. grid-item-card:: Roku Conversions API
+      :link-type: doc
+      :link: events_roku_capi
+
    .. grid-item-card:: Snapchat
       :link-type: doc
       :link: events_snapchat
@@ -86,6 +90,7 @@ Events
    Google Analytics 4 <events_google_analytics>
    Meta Ads Manager <events_meta_ads_manager>
    Pinterest <events_pinterest>
+   Roku Conversions API <events_roku_capi>
    Snapchat <events_snapchat>
    The Trade Desk <events_the_trade_desk>
    TikTok Ads <events_tiktok_ads_manager>

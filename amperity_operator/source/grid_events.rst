@@ -50,6 +50,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_pinterest
 
+   .. grid-item-card:: Roku Conversions API
+      :link-type: doc
+      :link: events_roku_capi
+
    .. grid-item-card:: The Trade Desk
       :link-type: doc
       :link: events_the_trade_desk
@@ -71,5 +75,6 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Google Enhanced Conversions <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>
    Pinterest <events_pinterest>
+   Roku Conversions API <events_roku_capi>
    The Trade Desk <events_the_trade_desk>
    TikTok Ads <events_tiktok_ads>

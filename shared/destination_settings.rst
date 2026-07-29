@@ -2613,6 +2613,12 @@ The name of the audience list to create in Roku Ads Manager.
 
 .. setting-roku-audience-list-name-unique-end
 
+.. setting-roku-capi-event-group-id-start
+
+The Roku event group (online property) that receives the events. Find it in Roku Ads Manager under **Events**. A destination sends to a single event group.
+
+.. setting-roku-capi-event-group-id-end
+
 .. setting-sailthru-list-name-start
 
 The name of the list in |destination-name| managed by Amperity. Amperity creates the list if it does not exist.
