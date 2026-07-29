@@ -54,6 +54,10 @@ Amperity uses the `Bulk attribute endpoint <https://docs.attentive.com/reference
 
 .. campaign-attentive-sftp-and-api-end
 
+.. include:: ../../amperity_operator/source/destination_attentive_mobile_api.rst
+   :start-after: .. destination-attentive-mobile-api-async-start
+   :end-before: .. destination-attentive-mobile-api-async-end
+
 
 .. _campaign-attentive-api-get-details:
 

@@ -18,7 +18,7 @@ Viant DSP
 
 .. admonition:: Beta
 
-   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
 
 .. destination-viant-dsp-beta-end
 
