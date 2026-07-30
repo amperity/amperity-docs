@@ -104,6 +104,8 @@ Real-time API
 
 The `Real-time API <../api/endpoints_realtime.html>`__ enables your brand to stream customer events into Amperity and read back unified customer profiles, profile collections, and real-time segment membership through a collection of RESTful endpoints at the ``/prof`` base path. Use the Real-time API to support low-latency use cases such as recognizing returning customers and personalizing experiences at request time.
 
+To write the expressions that recognize events, shape event types, and define real-time segments, see :doc:`Expressions for real-time <expressions>`.
+
 .. api-realtime-end
 
 .. note:: The Real-time API is distinct from the :ref:`Profile API <api-profile>`. The Real-time API streams events and reads real-time profile collections at the ``/prof`` base path; the Profile API provides read-only access to published query results as indexes. They are different services.
@@ -1056,3 +1058,11 @@ You may view the settings for any configured endpoint.
 #. Under **Profile API**, select the elipses icon for an endpoint, and then select **View**.
 
 .. api-profile-action-view-steps-end
+
+
+.. toctree::
+   :caption: Amperity APIs
+   :maxdepth: 2
+   :hidden:
+
+   Expressions for real-time <expressions>
