@@ -108,7 +108,11 @@ Get details
           :class: no-scaled-link
      - **Request properties**
 
-          Your query must return **event_name**, **event_source**, **event_time**, and **email**. All other columns are optional. See :ref:`events-roku-capi-parameters` for the full list, and :ref:`events-roku-capi-event-types` for the allowed **event_name** and **event_source** values.
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-roku-capi-query-must-return-start
+             :end-before: .. setting-roku-capi-query-must-return-end
+
+          See :ref:`events-roku-capi-parameters` for the full list, and :ref:`events-roku-capi-event-types` for the allowed **event_name** and **event_source** values.
 
 .. events-roku-capi-get-details-table-end
 
@@ -295,7 +299,7 @@ Review the :ref:`events-roku-capi-parameters` section for the columns your query
 
 .. events-roku-capi-build-query-required-end
 
-A query that returns a collection of purchase events for use in |destination-name| is similar to:
+Bound the query to recent events so each orchestration sends new conversions instead of re-sending the full transaction history; choose a window that matches how often the orchestration runs. A query that returns a collection of recent purchase events for use in |destination-name| is similar to:
 
 .. code-block:: sql
    :linenos:
@@ -315,7 +319,8 @@ A query that returns a collection of purchase events for use in |destination-nam
      ,ut.order_id AS order_id
    FROM Unified_Transactions ut
    LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
-   WHERE c360.email IS NOT NULL
+   WHERE ut.order_datetime > (CURRENT_DATE - interval '7' day)
+   AND c360.email IS NOT NULL
 
 
 .. _events-roku-capi-event-types:
@@ -325,7 +330,7 @@ Supported event types and sources
 
 .. events-roku-capi-event-types-start
 
-**event_name** and **event_source** are required and must exactly match one of the values below. Rows with a missing or unrecognized **event_name** or **event_source** are not sent and are reported as failed.
+**event_name** and **event_source** are required and must exactly match one of the values below. The values are **case-sensitive**: **event_name** values are uppercase and **event_source** values are lowercase, so ``Purchase`` or ``Website`` are rejected. Rows with a missing or unrecognized **event_name** or **event_source** are not sent and are reported as failed.
 
 **Supported event_name values (27)**
 
@@ -350,9 +355,8 @@ Amperity validates each row before sending and drops rows that Roku would reject
 * **event_name**, **event_source**, or **event_time** is missing or unrecognized.
 * **email** is missing or is not a valid email address (email is the required identifier).
 * **event_time** is more than one hour in the future — usually a sign of a wrong column mapping or a milliseconds-versus-seconds mismatch.
-* No usable identifier remains after normalization.
 
-Optional identifiers that cannot be normalized — for example, an unparseable birthdate, or a non-US national-format phone number sent without a **country** — are dropped from that row individually and reported; the rest of the row is still sent.
+Optional fields that cannot be used — for example, an unparseable birthdate, a non-US national-format phone number sent without a **country**, or a non-numeric **value** — are dropped from that row individually and reported; the rest of the event is still sent.
 
 .. events-roku-capi-data-validation-end
 
@@ -366,7 +370,11 @@ Conversions API parameters
 
 The following table describes each column Amperity sends to |destination-name|. A query must return columns with the same name as listed in the "Amperity name" column; Amperity maps them to the Roku parameter names automatically.
 
-.. important:: A query must return **event_name**, **event_source**, **event_time**, and **email**. All other columns are optional.
+.. important::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-roku-capi-query-must-return-start
+      :end-before: .. setting-roku-capi-query-must-return-end
 
 .. list-table::
    :widths: 22 20 58
@@ -392,7 +400,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **event_time**
      - **Required**
 
-       When the event occurred. Accepts a UNIX epoch-seconds value, an |ext_iso_8601| timestamp, or a date/time column. Timestamps more than one hour in the future are rejected.
+       When the event occurred. Accepts a UNIX epoch-seconds value, a date- or time-typed column, or a string in full |ext_iso_8601| instant form with a UTC offset (for example, ``2026-07-10T12:00:00Z``). A date-only string such as ``2026-07-10``, or a space-separated timestamp such as ``2026-07-10 12:00:00``, is not accepted as a string — send those from a date- or time-typed column instead. Timestamps more than one hour in the future are rejected.
 
    * - **email**
      - **em**
