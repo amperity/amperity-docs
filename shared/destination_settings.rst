@@ -2619,6 +2619,12 @@ The Roku event group (online property) that receives the events. Find it in Roku
 
 .. setting-roku-capi-event-group-id-end
 
+.. setting-roku-capi-query-must-return-start
+
+A query must return **event_name**, **event_source**, **event_time**, and **email**. All other columns are optional.
+
+.. setting-roku-capi-query-must-return-end
+
 .. setting-sailthru-list-name-start
 
 The name of the list in |destination-name| managed by Amperity. Amperity creates the list if it does not exist.
