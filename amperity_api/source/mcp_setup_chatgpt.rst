@@ -50,7 +50,7 @@ Add the Amperity MCP server
 To add the Amperity MCP server to ChatGPT:
 
 #. Open ChatGPT and log in.
-#. Open **Settings**, select **Connectors**, and then choose **Create**.
+#. Open **Settings**, select **Apps**, and then choose **Create**.
 
    .. note:: A workplace administrator may need to allow using custom MCP connectors for **Business** or **Enterprise** plans. Contact your workplace administrator if the **Create** option is unavailable.
 
