@@ -17,7 +17,7 @@ Roku Audience
 
 .. admonition:: Beta
 
-   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
 
 .. destination-roku-audience-beta-end
 

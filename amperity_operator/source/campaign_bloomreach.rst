@@ -42,7 +42,7 @@ Use Amperity to send campaigns to |destination-name|. Build a campaign in Amperi
 
 .. campaign-bloomreach-api-note-start
 
-.. note:: This destination uses the `Bloomreach Engagement API <https://documentation.bloomreach.com/engagement/reference/>`__ |ext_link|.
+This destination uses the `Bloomreach Engagement API <https://documentation.bloomreach.com/engagement/reference/>`__ |ext_link|.
 
 .. campaign-bloomreach-api-note-end
 

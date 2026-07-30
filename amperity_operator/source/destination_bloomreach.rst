@@ -42,13 +42,13 @@ Use Amperity to manage customer profiles in |destination-name|. Build a query or
 
 .. destination-bloomreach-api-note-start
 
-.. note:: This destination uses the `Bloomreach Engagement API <https://documentation.bloomreach.com/engagement/reference/>`__ |ext_link|.
+This destination uses the `Bloomreach Engagement API <https://documentation.bloomreach.com/engagement/reference/>`__ |ext_link|.
 
 .. destination-bloomreach-api-note-end
 
 .. destination-bloomreach-import-replace-start
 
-.. note:: New imports replace existing imports in |destination-name| that have the same import name. Use a unique import name for each orchestration or campaign to avoid overwriting data unintentionally.
+.. important:: New imports replace existing imports in |destination-name| that have the same import name. Use a unique import name for each orchestration or campaign to avoid overwriting data unintentionally.
 
 .. destination-bloomreach-import-replace-end
 
@@ -68,7 +68,7 @@ Use Amperity to manage customer profiles in |destination-name|. Build a query or
 
 .. note:: |destination-name| processes imports asynchronously after Amperity sends the data. Amperity reports rows as succeeded once the import is triggered. There is no import status tracking. To confirm a send or troubleshoot missing customer data, check the import in the |destination-name| dashboard.
 
-.. note:: Attributes accumulate across all imports in a Bloomreach project. If a project exceeds 255 attributes, Bloomreach discards the over-limit import; Amperity does not track this cumulative total, so the failure appears only in the |destination-name| dashboard.
+.. warning:: Attributes accumulate across all imports in a Bloomreach project. If a project exceeds 255 attributes, Bloomreach discards the over-limit import; Amperity does not track this cumulative total, so the failure appears only in the |destination-name| dashboard.
 
 .. destination-bloomreach-async-end
 

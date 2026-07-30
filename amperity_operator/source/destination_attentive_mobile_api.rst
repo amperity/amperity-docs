@@ -60,6 +60,12 @@ Amperity uses the `Bulk attribute endpoint <https://docs.attentive.com/reference
 
 .. destination-attentive-sftp-and-api-end
 
+.. destination-attentive-mobile-api-async-start
+
+.. note:: |destination-name| processes attribute updates asynchronously after Amperity sends the data. Amperity reports rows as succeeded once |destination-name| accepts the request. There is no attribute update status tracking.
+
+.. destination-attentive-mobile-api-async-end
+
 
 .. _destination-attentive-api-get-details:
 

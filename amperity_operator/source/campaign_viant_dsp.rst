@@ -48,7 +48,7 @@ Use Amperity to build audience segments and send them to |destination-name| for 
 
 .. admonition:: Beta
 
-   |destination-name| is currently in beta. Contact your Amperity representative to learn more.
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
 
 .. campaign-viant-dsp-beta-end
 
