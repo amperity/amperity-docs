@@ -24,6 +24,7 @@ Amperity has the following APIs:
 * :ref:`Amperity API <api-amperity>`
 * :ref:`Profile API <api-profile>`
 * :ref:`Streaming API <api-streaming-ingest>`
+* :ref:`Real-time API <api-realtime>`
 
 .. api-overview-end
 
@@ -92,6 +93,88 @@ Streaming API
 The |api_streaming_ingest| is designed for streaming events and profile updates. It is a low latency, high throughput REST API, designed to accept billions of records per day.
 
 .. api-streaming-ingest-end
+
+
+.. _api-realtime:
+
+Real-time API
+==================================================
+
+.. api-realtime-start
+
+The `Real-time API <../api/endpoints_realtime.html>`__ enables your brand to stream customer events into Amperity and read back unified customer profiles, profile collections, and real-time segment membership through a collection of RESTful endpoints at the ``/prof`` base path. Use the Real-time API to support low-latency use cases such as recognizing returning customers and personalizing experiences at request time.
+
+.. api-realtime-end
+
+.. note:: The Real-time API is distinct from the :ref:`Profile API <api-profile>`. The Real-time API streams events and reads real-time profile collections at the ``/prof`` base path; the Profile API provides read-only access to published query results as indexes. They are different services.
+
+.. note:: The Real-time API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
+
+.. note:: Before creating a profile collection, an event stream, or a real-time segment, you must contact your Amperity representative to enable real-time product features.
+
+
+.. _api-realtime-permissions:
+
+Permissions and tenancy
+--------------------------------------------------
+
+.. api-realtime-permissions-start
+
+Requests to the Real-time API authenticate with an :ref:`Amperity access token <api-keys-access-tokens>` and must identify the tenant using the ``amperity-tenant`` header. Each endpoint requires specific permissions:
+
+* Sending events requires **profile-events:write** (or **streaming-ingest-api:write**).
+* Looking up or reading a profile requires **profile-collections:read** and **pii:read**.
+* Listing segment membership requires **real-time-segments:read** and **pii:read**.
+* Reading collection stats and history requires **profile-collections:read**.
+
+.. api-realtime-permissions-end
+
+
+.. _api-realtime-async:
+
+How events are processed
+--------------------------------------------------
+
+.. api-realtime-async-start
+
+The Real-time API separates writing events from reading profiles. Sending an event is asynchronous: Amperity accepts the event for processing and responds immediately, before the event has updated any profile. Reads--looking up a profile, getting a profile, and listing segment members--are synchronous and return the current profile state.
+
+When you send an event to ``POST /prof/events/{stream-id}``, the response depends on the mode configured for the event stream:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Stream mode
+     - Status
+     - Meaning
+   * - Active
+     - ``202 Accepted``
+     - The event was accepted and published for processing.
+   * - Drop
+     - ``204 No Content``
+     - The stream is configured to drop events; the event was accepted but is not processed.
+   * - Reject
+     - ``409 Conflict``
+     - The stream is not currently accepting events.
+
+Sending an event to a stream that does not exist for the tenant returns ``404 Not Found``. An event is rejected before processing if it is larger than 64 KB or is sent without a ``Content-Length`` header.
+
+.. api-realtime-async-end
+
+
+.. _api-realtime-pagination:
+
+Pagination
+--------------------------------------------------
+
+.. api-realtime-pagination-start
+
+Listing the segments a profile belongs to (``GET /prof/profiles/{collection-id}/{profile-id}/segments``) is paginated using the ``limit`` and ``next_token`` parameters.
+
+.. note:: Pagination for the Real-time API is still being verified. ``TODO(confirm: AI-2319 pagination verification; the segment-member listing does not currently accept pagination parameters)``
+
+.. api-realtime-pagination-end
 
 
 .. _api-authenticate:
