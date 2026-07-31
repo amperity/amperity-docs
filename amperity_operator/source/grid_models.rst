@@ -34,10 +34,6 @@ Amperity predictive modeling is based on your brand's customer profiles and beha
       :link-type: doc
       :link: add_predicted_models
 
-   .. grid-item-card:: Churn propensity
-      :link-type: doc
-      :link: model_churn_propensity
-
    .. grid-item-card:: Event propensity
       :link-type: doc
       :link: model_event_propensity
@@ -64,7 +60,6 @@ Amperity predictive modeling is based on your brand's customer profiles and beha
 
    About predictive models <models>
    Enable predictive models <add_predicted_models>
-   Churn propensity <model_churn_propensity>
    Event propensity <model_event_propensity>
    Predicted CLV <model_predicted_clv>
    Product affinity <model_product_affinity>

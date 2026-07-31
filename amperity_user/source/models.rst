@@ -42,7 +42,7 @@ Predictive models
 
    Amperity provides a set of predictive models.
 
-   Churn propensity predicts the likelihood of customer activity. Predicted CLV predicts the order value for purchases made within the next year. Product affinity predicts who is likely to purchase.
+   Predicted CLV predicts the order value for purchases made within the next year and each customer's likelihood to churn. Product affinity predicts who is likely to purchase.
 
    Open **Learning Lab** to learn more about how `predictive modeling <https://amperity.com/learning-lab/overview-of-predictive-modeling>`__ |ext_link| can help your brand. Registration is required.
 
@@ -122,9 +122,6 @@ The following predictive models are available:
    :padding: 0
    :class-row: surface
 
-   .. grid-item-card:: Churn propensity
-      :link: model_predicted_churn.html
-
    .. grid-item-card:: Event propensity
       :link: model_event_propensity.html
 
@@ -140,7 +137,6 @@ The following predictive models are available:
    :maxdepth: 2
    :hidden:
 
-   Churn propensity <model_predicted_churn>
    Event propensity <model_event_propensity>
    Predicted CLV <model_predicted_clv>
    Product affinity <model_predicted_product_affinity>

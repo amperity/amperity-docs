@@ -35,7 +35,6 @@ Available models
 
 The following out-of-the-box models are configurable directly within Amperity by a user who is assigned the **DataGrid Administrator** policy:
 
-* :ref:`Churn propensity <model-churn-propensity>`
 * :ref:`Event propensity (EPM) <model-event-propensity>`
 * :ref:`Predicted CLV <model-predicted-clv>`
 * :ref:`Product affinity <model-product-affinity>`
@@ -49,25 +48,6 @@ The following out-of-the-box models are configurable directly within Amperity by
    Review the list of fields that are used by :ref:`churn propensity, predicted CLV, and product affinity modeling <models-fields-used-by-all-models>` and by :ref:`event propensity modeling <models-fields-used-by-epm>` to determine what features may be required for :ref:`additional model accuracy <models-extend>`.
 
 .. models-list-end
-
-
-.. _model-churn-propensity:
-
-Churn propensity
---------------------------------------------------
-
-.. model-churn-propensity-about-start
-
-Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, use :doc:`churn propensity <model_churn_propensity>` scores to uncover each user's underlying purchase patterns and make predictions about their likelihood to re-engage with your brand, whether they are a daily, monthly, or seasonal shopper.
-
-* Identify customers who are likely to churn
-* Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that has a series of escalating win-back offers
-* Optimize suppression and spend
-
-By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
-
-.. model-churn-propensity-about-end
 
 
 .. _model-event-propensity:
@@ -95,9 +75,10 @@ Amperity models :doc:`predicted customer lifetime value (CLV) <model_predicted_c
 #. Number of orders
 #. Average order value
 
-You can use predicted CLV modeling to build high-value audiences that identify:
+You can use predicted CLV modeling to build high-value audiences and to power churn and retention campaigns. For example, identify:
 
 * Which customers have the highest predicted value?
+* Which customers are likely to churn, based on their predicted probability of transaction and lifecycle status?
 * Which customers will respond better to special offers and perks?
 * What are the best personalized experiences for your top customers, such as personalized rewards, offers, and content?
 * Which customers have individual price preferences?
@@ -266,7 +247,6 @@ Build a model
 
 Predictive models are configurable in Amperity:
 
-* :ref:`Build a churn propensity model <model-churn-propensity-configure>`
 * :ref:`Build a event propensity model <model-event-propensity-configure>`
 * :ref:`Build a predicted CLV model <model-predicted-clv-build>`
 * :ref:`Build a product affinity model <model-product-affinity-build>`
@@ -322,7 +302,6 @@ Add a model
 
 These are captured in the "Build a model" section for each of the five model-specific pages:
 
-#. :ref:`model-churn-propensity-configure`
 #. :ref:`model-event-propensity-configure`
 
 .. #. :ref:`model-predicted-clv-configure`

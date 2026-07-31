@@ -157,10 +157,11 @@ Use cases
 
 .. models-predicted-clv-use-cases-start
 
-The predicted CLV model helps you identify your highest value customers by year or by value tier:
+The predicted CLV model helps you identify your highest value customers and the customers who are most likely to churn:
 
 #. :ref:`How much will customers spend in the next year? <models-predicted-clv-use-cases-spend>`
 #. :ref:`Which customers are your most valuable customers? <models-predicted-clv-use-cases-most-valuable>`
+#. :ref:`Which customers are likely to churn? <models-predicted-clv-use-cases-churn>`
 
 .. models-predicted-clv-use-cases-end
 
@@ -193,3 +194,13 @@ Which customers are the most valuable?
 .. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-callouts-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-callouts-end
+
+
+.. _models-predicted-clv-use-cases-churn:
+
+Which customers are likely to churn?
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/model_predicted_clv.rst
+   :start-after: .. model-predicted-clv-use-cases-churn-start
+   :end-before: .. model-predicted-clv-use-cases-churn-end
