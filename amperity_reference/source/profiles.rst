@@ -28,7 +28,7 @@ Use the **Profiles** page to manage profile collections.
 * Create and manage profile collections
 * Associate profile collections with event streams
 * Define real-time segments, and then use them in journeys to activate individual customer profiles
-* Use the Profile API to look up customer profiles for programmatic real-time workflows
+* Use the :ref:`Real-time API <api-realtime>` to look up customer profiles for programmatic real-time workflows
 
 **Event streams**
 
