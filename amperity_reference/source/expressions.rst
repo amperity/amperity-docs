@@ -104,8 +104,6 @@ Working with time windows
 
 Time-windowed expressions--such as those used in real-time segments and aggregation attributes--take a ``unit`` argument. The valid values are ``SECONDS``, ``MINUTES``, and ``HOURS``.
 
-.. note:: ``TODO(confirm: UX2-357 -- the product does not currently list the valid unit values in its error message; confirm with the Real-time API team whether other units are supported.)``
-
 .. realtime-expressions-time-end
 
 
@@ -116,6 +114,6 @@ Beyond this subset
 
 .. realtime-expressions-more-start
 
-AEL includes many additional operators and functions--arithmetic, decimal precision, array operations, and more--that are beyond the subset needed for real-time configuration. ``TODO(confirm: link to the full AEL reference once published; owner: Real-time API team.)``
+AEL includes many additional operators and functions--arithmetic, decimal precision, array operations, and more--that are beyond the subset needed for real-time configuration.
 
 .. realtime-expressions-more-end

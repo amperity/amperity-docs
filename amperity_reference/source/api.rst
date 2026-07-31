@@ -114,6 +114,8 @@ To write the expressions that recognize events, shape event types, and define re
 
 .. note:: Before creating a profile collection, an event stream, or a real-time segment, you must contact your Amperity representative to enable real-time product features.
 
+.. note:: The Real-time API accepts up to 500 requests per second per tenant.
+
 
 .. _api-realtime-permissions:
 
@@ -172,9 +174,7 @@ Pagination
 
 .. api-realtime-pagination-start
 
-Listing the segments a profile belongs to (``GET /prof/profiles/{collection-id}/{profile-id}/segments``) is paginated using the ``limit`` and ``next_token`` parameters.
-
-.. note:: Pagination for the Real-time API is still being verified. ``TODO(confirm: AI-2319 pagination verification; the segment-member listing does not currently accept pagination parameters)``
+Listing the segments a profile belongs to (``GET /prof/profiles/{collection-id}/{profile-id}/segments``) is paginated using the ``limit`` and ``next_token`` query parameters.
 
 .. api-realtime-pagination-end
 
