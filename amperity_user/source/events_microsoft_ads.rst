@@ -48,7 +48,7 @@ Build a query
    :end-before: .. events-microsoft-ads-build-query-required-end
 
 
-.. _events-microsoft-ads-user-operation-modes:
+.. _events-microsoft-ads-operation-modes:
 
 Operation modes
 ==================================================
@@ -58,7 +58,7 @@ Operation modes
    :end-before: .. events-microsoft-ads-operation-modes-end
 
 
-.. _events-microsoft-ads-user-conversion-goals:
+.. _events-microsoft-ads-conversion-goals:
 
 Set up a conversion goal
 ==================================================
@@ -110,7 +110,7 @@ Data validation
    :end-before: .. events-microsoft-ads-data-validation-end
 
 
-.. _events-microsoft-ads-user-parameters:
+.. _events-microsoft-ads-parameters:
 
 Offline conversion fields
 ==================================================
