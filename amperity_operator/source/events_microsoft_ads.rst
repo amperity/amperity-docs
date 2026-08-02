@@ -319,6 +319,8 @@ Use a query to build a combination of data — typically from the **Unified Tran
 
 Review the :ref:`events-microsoft-ads-parameters` section for the columns your query must and may return, and the :ref:`events-microsoft-ads-operation-modes` section for how ``send-conversions`` and ``adjust-conversions`` queries differ.
 
+.. note:: |destination-name| does not deduplicate offline conversions. Bound your query to new conversions — or use a unique-count conversion goal — so the same conversion is not sent, and counted, more than once.
+
 .. events-microsoft-ads-build-query-required-end
 
 Bound the query to recent conversions — |destination-name| accepts conversions up to 90 days old — so each orchestration sends new conversions instead of re-sending history. A query that returns a collection of recent purchase conversions for use in |destination-name| is similar to:
