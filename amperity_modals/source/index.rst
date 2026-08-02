@@ -71,6 +71,7 @@ Site Index
    destination-meta-offline-events
    destination-microsoft-dataverse
    destination-microsoft-ads
+   destination-microsoft-ads-offline-events
    destination-moengage
    destination-neustar
    destination-oracle-data-cloud
