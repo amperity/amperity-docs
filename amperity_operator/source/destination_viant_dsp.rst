@@ -101,8 +101,6 @@ A |destination-name| destination works like this:
           :class: no-scaled-link
      - **NORMALIZE AND HASH IDENTIFIERS**
 
-       .. important:: |destination-name| `only accepts SHA256 hashed identifiers <https://docs.api.viantinc.com/reference/prepaing-your-user-data>`__ |ext_link| for email addresses, phone number and physical addresses.
-
        Amperity normalizes and hashes each value in the **identifier** column before sending it to |destination-name|.
 
        .. list-table::
@@ -237,8 +235,6 @@ Get details
           :align: center
           :class: no-scaled-link
      - A query or segment that returns an **identifier** column containing the identifier values to send to |destination-name|. The identifier type must match the **Identifier type** setting.
-
-       .. important:: |destination-name| `only accepts SHA256 hashed identifiers <https://docs.api.viantinc.com/reference/prepaing-your-user-data>`__ |ext_link| for email addresses, phone number and physical addresses.
 
 .. destination-viant-dsp-get-details-end
 

@@ -144,7 +144,7 @@ Get details
           :alt: Detail 4.
           :align: center
           :class: no-scaled-link
-     - A segment that returns an **identifier** column containing the identifier values to send to |destination-name|. The identifier type must match the **Identifier type** setting. See `Preparing your user data <https://docs.api.viantinc.com/reference/prepaing-your-user-data>`__ |ext_link| for formatting requirements by identifier type.
+     - A segment that returns an **identifier** column containing the identifier values to send to |destination-name|. The identifier type must match the **Identifier type** setting. Amperity normalizes and hashes identifier values automatically before sending them to |destination-name|.
 
 .. campaign-viant-dsp-get-details-end
 
