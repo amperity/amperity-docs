@@ -83,7 +83,7 @@ Site Index
    destination-pinterest-offline-events
    destination-power-reviews
    destination-quad
-   destination-reddit-ads
+   destination-reddit
    destination-roku-audience
    destination-roku-capi
    destination-rr-donnelly
