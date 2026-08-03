@@ -4320,6 +4320,15 @@ Microsoft Advertising is a pay-per-click advertising platform that displays ads 
 .. term-microsoft-ads-end
 
 
+**Microsoft Advertising offline conversions**
+
+.. term-microsoft-ads-offline-conversions-start
+
+Microsoft Advertising offline conversions let your brand send conversions that happen away from your website — such as in-store purchases, phone orders, or qualified leads — to Microsoft Advertising. Microsoft Advertising uses these conversions to measure campaign performance, build audiences, and optimize bidding toward the outcomes that matter to your business. Amperity identifies each conversion by a Microsoft click ID (**msclkid**) or a hashed email address or phone number.
+
+.. term-microsoft-ads-offline-conversions-end
+
+
 **Microsoft Dataverse**
 
 .. term-microsoft-dataverse-start

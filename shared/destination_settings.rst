@@ -2171,6 +2171,39 @@ The name of the list in Microsoft Advertising.
 .. setting-microsoft-advertising-list-name-end
 
 
+.. setting-microsoft-ads-offline-conversions-operation-mode-start
+
+Selects what the destination does each time it runs:
+
+* **send-conversions** uploads new offline conversions to Microsoft Advertising.
+* **adjust-conversions** restates or retracts offline conversions that were previously uploaded.
+
+A destination uses a single operation mode. To both upload and adjust conversions, configure a separate destination for each mode.
+
+.. setting-microsoft-ads-offline-conversions-operation-mode-end
+
+
+.. setting-microsoft-ads-offline-conversions-customer-account-id-start
+
+The Microsoft Advertising ad account that receives the offline conversions. This is the **aid** value in the Microsoft Advertising Campaigns page URL.
+
+.. setting-microsoft-ads-offline-conversions-customer-account-id-end
+
+
+.. setting-microsoft-ads-offline-conversions-customer-id-start
+
+The Microsoft Advertising manager account that contains the ad account. This is the **cid** value in the Microsoft Advertising Campaigns page URL.
+
+.. setting-microsoft-ads-offline-conversions-customer-id-end
+
+
+.. setting-microsoft-ads-offline-conversions-query-must-return-start
+
+A query must return **conversion_name** and **conversion_time**, plus at least one of **msclkid**, **email**, or **phone** to identify the conversion. All other columns are optional; **currency_code** is sent only when **conversion_value** is present. In **adjust-conversions** mode, a query must also return **adjustment_type** and **adjustment_time**; **Restate** adjustments also require **adjustment_value** and **adjustment_currency_code**.
+
+.. setting-microsoft-ads-offline-conversions-query-must-return-end
+
+
 
 
 .. vale off
