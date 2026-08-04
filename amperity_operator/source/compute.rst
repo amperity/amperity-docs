@@ -114,7 +114,7 @@ Before you connect Amperity to your Databricks workspace, verify the following.
 
 .. compute-databricks-prerequisites-warning-start
 
-.. important:: Bring your own compute is enabled by Amperity for your tenant. If the **Databricks** option does not appear under **Settings** > **Integrations**, contact `Amperity Support <https://support.amperity.com/>`__ |ext_link| to enable it.
+.. important:: Bring your own compute is enabled by Amperity for your tenant. If the **Databricks compute** section does not appear under **Settings** > **Integrations**, contact `Amperity Support <https://support.amperity.com/>`__ |ext_link| to enable it.
 
 .. compute-databricks-prerequisites-warning-end
 
@@ -220,12 +220,14 @@ Amperity provisions all of the Databricks resources that it needs automatically.
      - **Add the workspace in Amperity**
 
        #. In Amperity, go to **Settings** > **Integrations**.
-       #. In the **Databricks** section, click **Add workspace**.
+       #. In the **Databricks compute** section, click **Add workspace**.
        #. Enter the **Workspace URL**, **Account ID**, **Account access token**, **Workspace access token**, and -- on AWS -- the **Workspace ID**.
+       #. Click **Connect** to start provisioning.
 
-          .. note:: On Microsoft Azure, you may also provide an optional **Access Connector ID**, in the form ``/subscriptions/.../accessConnectors/...``, when the workspace uses an Azure managed identity for storage access.
-
-       #. Click to start provisioning.
+       .. TODO(docs): add a screenshot of the "Add Databricks workspace" dialog.
+          image:: ../../images/compute-databricks-add-workspace.png
+             :width: 600 px
+             :alt: The Add Databricks workspace dialog.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -246,6 +248,11 @@ Amperity provisions all of the Databricks resources that it needs automatically.
 
        Provisioning takes a few minutes. Leave the page open until it reports that it is complete.
 
+       .. TODO(docs): add a screenshot of the provisioning progress and status.
+          image:: ../../images/compute-databricks-provisioning-status.png
+             :width: 600 px
+             :alt: Provisioning progress for a Databricks workspace.
+
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step 5.
@@ -255,8 +262,14 @@ Amperity provisions all of the Databricks resources that it needs automatically.
 
        After provisioning completes, configure Amperity to run workloads on the connected workspace.
 
-       #. Open **Stitch** settings and select **Run on Databricks**, then select the integration you just created.
+       #. Open **Stitch**, then open **Stitch settings**.
+       #. Under **Databricks workspace**, select the workspace you connected. When only one workspace is configured, it is selected for you and the list is read-only.
        #. Run Stitch, build customer profiles, and run queries as usual. These workloads now run on your Databricks account.
+
+       .. TODO(docs): add a screenshot of the Databricks workspace setting in Stitch settings.
+          image:: ../../images/compute-databricks-stitch-workspace.png
+             :width: 600 px
+             :alt: The Databricks workspace setting in Stitch settings.
 
 .. compute-databricks-integration-steps-end
 
@@ -274,7 +287,14 @@ Use **Sync** to re-apply the provisioning pipeline to a connected workspace -- f
 * Re-applies grants for the existing service principal
 * Keeps the existing service principal and *does not* rotate its credentials
 
-To sync, open the workspace row under **Settings** > **Integrations** > **Databricks**, click **Sync**, and provide a current **Workspace access token** (and, on Azure, the optional **Access Connector ID**).
+To sync, open the actions menu on the workspace row under **Settings** > **Integrations** > **Databricks compute**, click **Sync**, and provide a current **Workspace access token** (and, on Azure, the optional **Azure access connector ID**, in the form ``/subscriptions/.../accessConnectors/...``, when the workspace uses an Azure managed identity for storage access).
+
+To rotate the service principal's credentials, remove the workspace with **Delete** and add it again; syncing does not rotate them.
+
+.. TODO(docs): add a screenshot of the workspace row and its Sync action.
+   image:: ../../images/compute-databricks-sync.png
+      :width: 600 px
+      :alt: The Sync action on a connected Databricks workspace.
 
 .. compute-databricks-sync-end
 
@@ -293,7 +313,7 @@ Debugging steps
    * - Symptom
      - Resolution
 
-   * - The **Databricks** option does not appear under **Settings** > **Integrations**.
+   * - The **Databricks compute** section does not appear under **Settings** > **Integrations**.
      - Bring your own compute is not yet enabled for your tenant. Contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
 
    * - Provisioning fails with an authorization or access-denied error.
