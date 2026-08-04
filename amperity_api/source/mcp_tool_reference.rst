@@ -613,6 +613,9 @@ Manage segments and folders.
 
        **context_documents_create**
 
+   * - Read the tenant's AmpAI system prompt
+     - **ai_system_prompt_get**
+
 
 .. _mcp-tool-labels:
 
