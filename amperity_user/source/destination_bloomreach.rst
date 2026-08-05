@@ -25,6 +25,14 @@ Send query results to Bloomreach
    :start-after: .. term-bloomreach-start
    :end-before: .. term-bloomreach-end
 
+.. sendto-bloomreach-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. sendto-bloomreach-beta-end
+
 .. include:: ../../amperity_operator/source/destination_bloomreach.rst
    :start-after: .. destination-bloomreach-api-note-start
    :end-before: .. destination-bloomreach-api-note-end

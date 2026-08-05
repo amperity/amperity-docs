@@ -14,6 +14,14 @@ Bloomreach
    :start-after: .. term-bloomreach-start
    :end-before: .. term-bloomreach-end
 
+.. destination-bloomreach-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-bloomreach-beta-end
+
 
 Credentials
 ==================================================

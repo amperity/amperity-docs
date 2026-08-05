@@ -34,6 +34,14 @@ Configure campaigns for Bloomreach
    :start-after: .. term-bloomreach-start
    :end-before: .. term-bloomreach-end
 
+.. campaign-bloomreach-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. campaign-bloomreach-beta-end
+
 .. campaign-bloomreach-start
 
 Use Amperity to send campaigns to |destination-name|. Build a campaign in Amperity to define the audience and attributes to send, then configure the destination to send customer profiles to |destination-name| for segmentation and personalization. Customer profiles are identified by a Bloomreach hard identifier such as email, cookie, Google Analytics ID, or external ID.
