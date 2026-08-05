@@ -58,7 +58,7 @@ The following capabilities continue to run on Amperity-managed compute:
 
 .. compute-what-runs-where-note-start
 
-.. note:: A tenant uses a single primary compute provider and a single SQL dialect; routing workloads across more than one compute provider is not supported. Bring your own compute is enabled for the full set of supported workloads, not selected on a per-workload basis.
+.. note:: Each workload runs against a single compute provider and a single SQL dialect; splitting one workload across providers is not supported. During public preview, workloads are enabled in stages -- Stitch is enabled separately from the other supported workloads -- so a tenant may run some workloads on your Databricks account and the rest on Amperity-managed compute. Amperity confirms which workloads are enabled for your tenant.
 
 .. compute-what-runs-where-note-end
 
@@ -134,17 +134,19 @@ Amperity expects **ANSI mode to be off** so that type resolution matches how Amp
 
 .. compute-databricks-ansi-mode-steps-start
 
-#. Check the current value:
+#. Check the current value on the SQL warehouse:
 
    .. code-block:: sql
 
       SET ANSI_MODE;
 
-#. If ANSI mode is on, set it off at the warehouse or account level:
+#. If ANSI mode is on, set it off:
 
    .. code-block:: sql
 
-      SET spark.sql.ansi.enabled = false;
+      SET ANSI_MODE = false;
+
+   ``ANSI_MODE`` can be set for the session with ``SET``, or for the warehouse in its configuration so that the setting persists. On a Databricks Runtime cluster the equivalent Spark configuration is ``spark.sql.ansi.enabled``.
 
 .. compute-databricks-ansi-mode-steps-end
 
@@ -325,8 +327,8 @@ Debugging steps
    * - A Databricks workload fails and Amperity shows a generic "Workload failed, see run output for details" message.
      - The detailed error is written to the Databricks run output. Open the corresponding run in your Databricks workspace -- the Stitch run name has the form ``st-<timestamp>-<random>`` -- to see the underlying error and stack trace.
 
-   * - A multipart table (for example, a CRT) fails to build or mount.
-     - Multipart tables are not supported on Databricks compute in this release; support is planned for a future release. Until then, avoid building multipart tables on a tenant that uses bring your own compute on Databricks.
+   * - A customer profile (database) build fails with an error that a multipart table is not supported.
+     - Customer profile generation on Databricks does not accept multipart input tables, such as a campaign recipient table (CRT). The error names the table; remove it from the database or contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
 
    * - A Stitch job fails partway through with an S3 ``403`` (access denied).
      - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
