@@ -92,6 +92,7 @@ Site Index
    destination-sailthru
    destination-salesforce
    destination-salesforce-marketing-cloud
+   destination-sendgrid
    destination-sfmc-sftp
    destination-sftp
    destination-smg

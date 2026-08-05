@@ -2942,6 +2942,12 @@ Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airshi
 
 **About**
 
+.. setting-sendgrid-list-name-start
+
+The name of the SendGrid list to which Amperity will send audience members. Amperity matches this to an existing list by exact name; if no list with that exact name exists, Amperity creates one. A different or changed name creates a new list rather than updating the existing one.
+
+.. setting-sendgrid-list-name-end
+
 .. setting-sftp-about-start
 
 Secure File Transfer Protocol (SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
