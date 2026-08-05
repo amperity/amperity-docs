@@ -6177,6 +6177,12 @@ Semi-structured data is not shaped as rows and columns, but still has elements t
 
 **separation key**, **sk**
 
+.. term-sendgrid-start
+
+**SendGrid** is Twilio's email platform. Marketers use it to manage contact lists and send email campaigns.
+
+.. term-sendgrid-end
+
 .. term-separation-key-start
 
 A separation key, or "sk", is for deterministic unmatching of records.
