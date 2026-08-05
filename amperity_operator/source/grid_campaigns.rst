@@ -296,6 +296,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_sap_emarsys
 
+   .. grid-item-card:: SendGrid
+      :link-type: doc
+      :link: campaign_sendgrid
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp
@@ -417,6 +421,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    Salesforce Sales Cloud <campaign_salesforce_sales_cloud>
    SAP Emarsys <campaign_sap_emarsys>
+   SendGrid <campaign_sendgrid>
    SFTP <campaign_sftp>
    SMG <campaign_smg>
    Snapchat <campaign_snapchat>
