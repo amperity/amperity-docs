@@ -922,6 +922,23 @@ The length of time in seconds, after which a customer is removed from this audie
 .. setting-amazon-ads-membership-duration-end
 
 
+**DSP Advertiser ID** (Amazon CAPI)
+
+.. setting-amazon-capi-dsp-advertiser-id-start
+
+The Amazon-Ads-AccountId for the Amazon DSP advertiser that receives these events (for example, "58xxxxxxxxxxxxxx80"). Find it in Amazon Ads under **Advertisers**. A destination sends events for a single DSP advertiser.
+
+.. setting-amazon-capi-dsp-advertiser-id-end
+
+**Query must return** (Amazon CAPI)
+
+.. setting-amazon-capi-query-must-return-start
+
+A query must return **event_name**, **conversion_type**, **event_source**, **event_time**, and **country_code**, plus at least one identifier column — **email**, **phone**, **maid**, or **match_id**. All other columns are optional.
+
+.. setting-amazon-capi-query-must-return-end
+
+
 
 
 
