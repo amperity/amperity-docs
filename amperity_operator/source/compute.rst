@@ -134,19 +134,27 @@ Amperity expects **ANSI mode to be off** so that type resolution matches how Amp
 
 .. compute-databricks-ansi-mode-steps-start
 
-#. Check the current value on the SQL warehouse:
+Set ANSI mode at the workspace level so that it applies to every SQL warehouse in the workspace, including the warehouse Amperity provisions. A session-level ``SET`` statement applies only to the session that runs it and does not carry over to the connections Amperity opens.
+
+#. Check the current value from the Databricks SQL editor:
 
    .. code-block:: sql
 
       SET ANSI_MODE;
 
-#. If ANSI mode is on, set it off:
+#. If ANSI mode is on, sign in to your Databricks workspace as a workspace administrator, click your username in the top bar, and select **Settings**.
 
-   .. code-block:: sql
+#. Click **Compute**, then click **Manage** next to **SQL warehouses and serverless compute**.
 
-      SET ANSI_MODE = false;
+#. In the **SQL Configuration Parameters** box, add the following on its own line, then save:
 
-   ``ANSI_MODE`` can be set for the session with ``SET``, or for the warehouse in its configuration so that the setting persists. On a Databricks Runtime cluster the equivalent Spark configuration is ``spark.sql.ansi.enabled``.
+   .. code-block:: text
+
+      ANSI_MODE false
+
+   Each parameter is a name and a value separated by a space, one per line. Saving restarts any running SQL warehouse in the workspace.
+
+#. Run ``SET ANSI_MODE;`` again to confirm that it now reports ``false``.
 
 .. compute-databricks-ansi-mode-steps-end
 
