@@ -116,6 +116,18 @@ Generate the token in Roku Ads Manager under **Events > CAPI**. Generating a tok
 
 .. credential-roku-capi-capi-token-find-end
 
+.. credential-sendgrid-api-key-start
+
+The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).
+
+.. credential-sendgrid-api-key-end
+
+.. credential-sendgrid-api-find-key-start
+
+Create the API key in SendGrid with the required scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).
+
+.. credential-sendgrid-api-find-key-end
+
 .. credential-steps-add-credential-start
 
 From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.
