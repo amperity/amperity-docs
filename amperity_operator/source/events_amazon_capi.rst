@@ -366,11 +366,11 @@ Amazon Ads serves the Conversion API from three regional hosts. Amperity routes 
    * - Far East
      - AU, JP, SG
 
-Provide **country_code** as an |ext_iso_31661alpha2| code (for example, ``US`` or ``GB`` — use ``GB`` for Great Britain, because ``UK`` is not a valid code). Amperity trims and uppercases the value before matching. An unrecognized or missing **country_code** defaults to North America.
+Provide **country_code** as an |ext_iso_31661alpha2| code (for example, ``US`` or ``GB`` — use ``GB`` for Great Britain, because ``UK`` is not a valid code). Amperity trims and uppercases the value before matching. A **country_code** that is present but not one of the recognized codes above defaults to North America. A row with no **country_code** at all is dropped rather than routed (see :ref:`events-amazon-capi-data-validation`).
 
 **DSP advertiser must be linked per region.** A DSP Advertiser ID is valid only in the Amazon Ads region(s) it is provisioned in. Before sending a region's events, Amperity confirms the configured **DSP Advertiser ID** is linked to a manager account in that region. If it is not, that region's events are not sent — they are reported as failed with an explanatory message — while events for the other regions are still delivered. Confirm in Amazon Ads that the DSP Advertiser ID is linked to a manager account in every region you send events to.
 
-**European consent default.** Amazon requires consent information on every event routed to the Europe host. When a Europe-routed event does not include **amzn_ad_storage** or **amzn_user_data**, Amperity sets both to **DENIED** so the event is accepted. Events routed to North America and Far East receive no default — consent is sent only when your query provides **consent_tcf**, **amzn_ad_storage**, or **amzn_user_data**.
+**Provide an explicit consent signal for EU customers.** Amazon requires consent information on every event routed to the Europe host, and your query should always provide **amzn_ad_storage**, **amzn_user_data**, or **consent_tcf** for EU-routed rows so consent reflects an actual decision rather than a fallback. When none is provided, Amperity defaults both **amzn_ad_storage** and **amzn_user_data** to **DENIED** so the event is still accepted by Amazon — but this default exists for API compliance, not as a substitute for your own consent determination. Events routed to North America and Far East receive no default — consent is sent only when your query provides **consent_tcf**, **amzn_ad_storage**, or **amzn_user_data**.
 
 .. note:: The European consent default applies to every country in Amazon's Europe routing group above, not only to countries in the European Union. To send an explicit consent signal, populate **amzn_ad_storage** and **amzn_user_data** (each ``GRANTED`` or ``DENIED``), or **consent_tcf** with an IAB TCF string.
 
@@ -447,7 +447,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **countryCode**
      - **Required**
 
-       The customer's |ext_iso_31661alpha2| country code. Determines which Amazon Ads region receives the event (see :ref:`events-amazon-capi-regions`). Amperity trims and uppercases the value; an unrecognized or missing value routes to North America.
+       The customer's |ext_iso_31661alpha2| country code. Determines which Amazon Ads region receives the event (see :ref:`events-amazon-capi-regions`). Amperity trims and uppercases the value; a value that is present but unrecognized routes to North America. A blank value is dropped (see :ref:`events-amazon-capi-data-validation`).
 
    * - **email**
      - **matchKeys** (EMAIL)
@@ -513,13 +513,13 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **consent.amazonConsent.amznAdStorage**
      - **Optional**
 
-       A consent signal for advertising storage. Must be ``GRANTED`` or ``DENIED``; other values are treated as absent. See :ref:`events-amazon-capi-regions` for the European default.
+       A consent signal for advertising storage. Must be ``GRANTED`` or ``DENIED``; other values are treated as absent. Required for EU-routed events to reflect the customer's actual consent choice; if omitted, Amperity defaults to ``DENIED`` so the event isn't rejected by Amazon (see :ref:`events-amazon-capi-regions`).
 
    * - **amzn_user_data**
      - **consent.amazonConsent.amznUserData**
      - **Optional**
 
-       A consent signal for user-data processing. Must be ``GRANTED`` or ``DENIED``; other values are treated as absent. See :ref:`events-amazon-capi-regions` for the European default.
+       A consent signal for user-data processing. Must be ``GRANTED`` or ``DENIED``; other values are treated as absent. Required for EU-routed events to reflect the customer's actual consent choice; if omitted, Amperity defaults to ``DENIED`` so the event isn't rejected by Amazon (see :ref:`events-amazon-capi-regions`).
 
    * - **limited_data_use**
      - **dataProcessingOptions**
