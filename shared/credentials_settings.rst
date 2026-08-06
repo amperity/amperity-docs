@@ -128,6 +128,12 @@ Create the API key in SendGrid with the required scopes: **Marketing > Contacts*
 
 .. credential-sendgrid-api-find-key-end
 
+.. credential-sevenrooms-find-credentials-start
+
+Request API credentials (a client ID and client secret) from SevenRooms. API access must be provisioned for your account before Amperity can pull data.
+
+.. credential-sevenrooms-find-credentials-end
+
 .. credential-steps-add-credential-start
 
 From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.

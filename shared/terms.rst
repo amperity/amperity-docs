@@ -6183,6 +6183,12 @@ Semi-structured data is not shaped as rows and columns, but still has elements t
 
 .. term-sendgrid-end
 
+.. term-sevenrooms-start
+
+**SevenRooms** is a guest experience and data platform for the hospitality industry. Restaurants, hotels, and other operators use it to manage guest profiles, reservations, and transactions.
+
+.. term-sevenrooms-end
+
 .. term-separation-key-start
 
 A separation key, or "sk", is for deterministic unmatching of records.
