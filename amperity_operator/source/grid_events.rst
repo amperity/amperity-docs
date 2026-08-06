@@ -30,6 +30,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Amazon Ads Conversion API
+      :link-type: doc
+      :link: events_amazon_capi
+
    .. grid-item-card:: Criteo
       :link-type: doc
       :link: events_criteo
@@ -74,6 +78,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    :maxdepth: 2
    :hidden:
 
+   Amazon Ads Conversion API <events_amazon_capi>
    Criteo <events_criteo>
    Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>

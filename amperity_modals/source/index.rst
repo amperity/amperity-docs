@@ -23,6 +23,7 @@ Site Index
    destination-adobe-campaign
    destination-adobe-target
    destination-amazon-ads
+   destination-amazon-capi
    destination-attentive
    destination-attentive-api
    destination-attentivemobile

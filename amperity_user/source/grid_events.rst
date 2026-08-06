@@ -31,6 +31,10 @@ Events
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Amazon Ads Conversion API
+      :link-type: doc
+      :link: events_amazon_capi
+
    .. grid-item-card:: Braze
       :link-type: ref
       :link: destination-braze-custom-attributes
@@ -89,6 +93,7 @@ Events
    :hidden:
 
    About events <events>
+   Amazon Ads Conversion API <events_amazon_capi>
    Criteo <events_criteo>
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>

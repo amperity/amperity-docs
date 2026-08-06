@@ -116,6 +116,18 @@ Generate the token in Roku Ads Manager under **Events > CAPI**. Generating a tok
 
 .. credential-roku-capi-capi-token-find-end
 
+.. credential-amazon-capi-refresh-token-start
+
+The OAuth2 (Login with Amazon) refresh token that authorizes Amperity to send conversion events to the Amazon Ads Conversion API.
+
+.. credential-amazon-capi-refresh-token-end
+
+.. credential-amazon-capi-refresh-token-find-start
+
+Obtain a refresh token by completing the Amazon Ads authorization flow (Login with Amazon) for an Amazon Ads account that has permission to submit conversion events. Contact your Amperity representative if you need help obtaining a refresh token.
+
+.. credential-amazon-capi-refresh-token-find-end
+
 .. credential-sendgrid-api-key-start
 
 The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).

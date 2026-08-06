@@ -34,6 +34,14 @@ Configure destinations for Bloomreach
    :start-after: .. term-bloomreach-start
    :end-before: .. term-bloomreach-end
 
+.. destination-bloomreach-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-bloomreach-beta-end
+
 .. destination-bloomreach-start
 
 Use Amperity to manage customer profiles in |destination-name|. Build a query or segment, and then send customer data to |destination-name| for segmentation, campaigns, and personalization. Customer profiles are identified by a Bloomreach hard identifier such as email, cookie, Google Analytics ID, or external ID.

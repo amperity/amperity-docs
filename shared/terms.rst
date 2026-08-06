@@ -328,6 +328,15 @@ Amazon Aurora is a relational database built for the cloud and compatible with M
 .. term-amazon-aurora-end
 
 
+**Amazon CAPI**
+
+.. term-amazon-capi-start
+
+The Amazon Ads Conversion API (CAPI) lets your brand send server-side conversion events — such as purchases, leads, and sign-ups — to Amazon Ads. Amazon uses these events to measure return on ad spend (ROAS) across online and offline channels, attribute offline conversions to Amazon DSP campaigns, and enrich audiences with first-party customer data.
+
+.. term-amazon-capi-end
+
+
 **Amazon Cloudfront**
 
 .. term-amazon-cloudfront-start
