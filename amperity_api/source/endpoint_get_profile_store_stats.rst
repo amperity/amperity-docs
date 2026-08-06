@@ -152,8 +152,8 @@ The **200** response returns statistics for the profile collection.
    :linenos:
 
    {
-     "total-profiles": 0,
-     "link-cardinality": {
+     "total_profiles": 0,
+     "link_cardinality": {
        "email": 0,
        "phone": 0
      }
@@ -178,10 +178,10 @@ A **200 OK** response contains the following parameters.
    * - Parameter
      - Description
 
-   * - **total-profiles**
+   * - **total_profiles**
      - The total number of profiles in the profile collection.
 
-   * - **link-cardinality**
+   * - **link_cardinality**
      - A map of keychain link type to the number of indexed link values for that type.
 
 .. endpoint-get-profile-store-stats-response-parameters-end
