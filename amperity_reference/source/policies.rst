@@ -1,4 +1,3 @@
-.. https://docs.amperity.com/reference/
 
 
 .. meta::
@@ -169,6 +168,7 @@ The following policy options are available:
 * :ref:`Allow API key administration <policies-api-key-administrator>`
 * :ref:`Allow Profile API administration <policies-profile-api-administrator>`
 * :ref:`Allow sandbox administration <policies-sandbox-administrator>`
+* :ref:`Allow inbound bridge credential rotation <policies-allow-inbound-bridge-credential-rotation>`
 * :ref:`Allow source data deletion <policies-allow-source-data-deletion>`
 * :ref:`Allow user administration <policies-allow-user-administration>`
 * :ref:`Audience monetization access <policies-audience-monetization-access>`
@@ -233,6 +233,18 @@ Allow source data deletion
 The **Allow source data deletion** policy option may be assigned to a **DataGrid Operator** to allow users assigned that policy the ability to delete domain table data from the **Sources** page.
 
 .. policies-sandbox-administrator-end
+
+
+.. _policies-allow-inbound-bridge-credential-rotation:
+
+Allow inbound bridge credential rotation
+--------------------------------------------------
+
+.. policies-allow-inbound-bridge-credential-rotation-start
+
+The **Allow inbound bridge credential rotation** policy option may be assigned to a **DataGrid Operator** to allow that user to upload a new credential file for an inbound bridge share from the **Sources** page.
+
+.. policies-allow-inbound-bridge-credential-rotation-end
 
 
 .. _policies-allow-user-administration:
@@ -457,6 +469,10 @@ The following sections describe the set of actions that may be assigned to users
       * - |policy-sandbox-allow-admin|
         - Optional.
         - This action is allowed when a **DataGrid Operator** or **DataGrid Administrator** is assigned the **Allow sandbox administration** add-on policy.
+
+      * - |fa-rotate-right|
+        - Optional.
+        - This action is allowed when a **DataGrid Operator** is assigned the **Allow inbound bridge credential rotation** add-on policy.
 
       * - |policy-sandbox-validation-required|
         - Validation required.
@@ -862,7 +878,7 @@ The following table lists the actions that are enabled within the **Sources** pa
    * - Upload credential
      -
      -
-     -
+     - |fa-rotate-right|
      - |policy|
 
    * - View bridges
