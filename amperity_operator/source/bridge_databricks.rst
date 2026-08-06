@@ -572,7 +572,7 @@ Configure an inbound bridge to connect Databricks with Amperity.
        #. Uploading the credentials as the second step when adding a bridge. Drop the file into the dialog box or browse to a location on your local machine.
        #. Choosing the **Upload credential** option from the **Actions** menu for a connection.
 
-       .. note:: The **Upload credential** option in the **Actions** menu is available to users assigned the **DataGrid Administrator** policy or to users assigned the **DataGrid Operator** policy with the :ref:`Allow inbound bridge credential rotation <policies-allow-inbound-bridge-credential-rotation>` add-on policy.
+       .. note:: The **Upload credential** option in the **Actions** menu is available to users assigned the **DataGrid Administrator** policy or to users assigned the **DataGrid Operator** policy with the `Allow inbound bridge credential rotation <https://docs.amperity.com/reference/policies.html#policies-allow-inbound-bridge-credential-rotation>`__ add-on policy.
 
        After the credential file is uploaded, click **Continue**.
 

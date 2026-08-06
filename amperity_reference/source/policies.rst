@@ -470,7 +470,7 @@ The following sections describe the set of actions that may be assigned to users
         - Optional.
         - This action is allowed when a **DataGrid Operator** or **DataGrid Administrator** is assigned the **Allow sandbox administration** add-on policy.
 
-     * - |fa-rotate-right|
+      * - |fa-rotate-right|
         - Optional.
         - This action is allowed when a **DataGrid Operator** is assigned the **Allow inbound bridge credential rotation** add-on policy.
 
