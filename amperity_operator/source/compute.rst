@@ -21,15 +21,26 @@ About compute
 
 Amperity runs data processing workloads -- such as Stitch, customer profile (database) generation, customer attribute (CDT) builds, queries, and segmentation -- on compute resources. By default, these workloads run on compute that is managed by Amperity.
 
-**Bring your own compute (BYOC)** allows your brand to run Amperity workloads on a data platform that is owned and managed by your brand, such as Databricks. Compute runs within your brand's account, against data that is stored in your brand's :ref:`storage location <storage-configure-location>`, while Amperity continues to manage the control plane: the user interface, workflow orchestration, and managed connectors.
+**Bring Your Own Compute (BYOC)** allows your brand to run Amperity workloads on a data platform that is owned and managed by your brand, such as Databricks. Compute runs within your brand's account, against data that is stored in your brand's :ref:`storage location <storage-configure-location>`, while Amperity continues to manage the control plane: the user interface, workflow orchestration, and managed connectors.
 
 .. compute-about-end
 
 .. compute-about-note-start
 
-.. note:: Bring your own compute and :ref:`bring your own storage <storage-configure-location>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
+.. note:: BYOC and :ref:`Bring Your Own Storage <storage-configure-location>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
 
 .. compute-about-note-end
+
+
+.. compute-about-related-start
+
+For more information, see :doc:`Amperity Bridge <bridge>`.
+
+.. TODO(docs): add a "Supported architectures" link here once a target topic exists.
+.. TODO(docs): add a "Networking requirements" link here once a target is confirmed
+   (candidate: reference/infrastructure.html#infrastructure-allowlists, "IP addresses for allowlists").
+
+.. compute-about-related-end
 
 
 .. _compute-what-runs-where:
@@ -39,7 +50,7 @@ What runs on your compute
 
 .. compute-what-runs-where-start
 
-When bring your own compute is enabled for Databricks, the following workloads run on your brand's Databricks account:
+When BYOC is enabled for Databricks, the following workloads run on your brand's Databricks account:
 
 * Source transformations -- customer attributes (CDTs) -- and domain tables
 * Stitch, which runs on an on-demand Spark cluster
@@ -70,7 +81,7 @@ Run Amperity workloads on your own Databricks
 
 .. compute-databricks-start
 
-.. note:: Running Amperity workloads on Databricks is in public preview. Functionality is added in phases, and bring your own compute is enabled for your tenant by Amperity.
+.. note:: Running Amperity workloads on Databricks is in public preview. Functionality is added in phases, and BYOC is enabled for your tenant by Amperity.
 
 Configure a tenant to run Amperity workloads on a Databricks workspace that is owned and managed by your brand. Amperity connects to your workspace using a service principal, provisions the `Unity Catalog <https://docs.databricks.com/aws/en/data-governance/unity-catalog/>`__ |ext_link| objects that it needs, and runs compute against data in your storage location.
 
@@ -96,7 +107,7 @@ Before you connect Amperity to your Databricks workspace, verify the following.
      - Description
 
    * - **Storage**
-     - Bring your own compute works with either Amperity-managed storage or :ref:`bring your own storage <storage-configure-location>`. Databricks is where compute happens; the source and destination for business data remain in the configured storage location. Brands that need both data residency and compute governance use bring your own storage and bring your own compute together.
+     - BYOC works with either Amperity-managed storage or :ref:`Bring Your Own Storage <storage-configure-location>`. Databricks is where compute happens; the source and destination for business data remain in the configured storage location. Brands that need both data residency and compute governance use Bring Your Own Storage and BYOC together.
 
    * - **Unity Catalog**
      - Your workspace must be enabled for `Unity Catalog <https://docs.databricks.com/aws/en/data-governance/unity-catalog/>`__ |ext_link|. Amperity creates a catalog for its workloads and does not require a default (managed) storage location to be set on the metastore.
@@ -114,7 +125,7 @@ Before you connect Amperity to your Databricks workspace, verify the following.
 
 .. compute-databricks-prerequisites-warning-start
 
-.. important:: Bring your own compute is enabled by Amperity for your tenant. If the **Databricks compute** section does not appear under **Settings** > **Integrations**, contact `Amperity Support <https://support.amperity.com/>`__ |ext_link| to enable it.
+.. important:: BYOC is enabled by Amperity for your tenant. If the **Databricks compute** section does not appear under **Settings** > **Integrations**, contact `Amperity Support <https://support.amperity.com/>`__ |ext_link| to enable it.
 
 .. compute-databricks-prerequisites-warning-end
 
@@ -309,44 +320,6 @@ To rotate the service principal's credentials, remove the workspace with **Delet
 .. compute-databricks-sync-end
 
 
-.. _compute-databricks-debugging:
-
-Debugging steps
---------------------------------------------------
-
-.. compute-databricks-debugging-start
-
-.. list-table::
-   :widths: 35 65
-   :header-rows: 1
-
-   * - Symptom
-     - Resolution
-
-   * - The **Databricks compute** section does not appear under **Settings** > **Integrations**.
-     - Bring your own compute is not yet enabled for your tenant. Contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
-
-   * - Provisioning fails with an authorization or access-denied error.
-     - The account or workspace access token expired. OAuth tokens last one hour -- generate fresh tokens (Step 2) and try again.
-
-   * - Provisioning fails while creating the catalog, with a cloud-storage "forbidden" or invalid-credential-trust-policy error.
-     - The IAM role trust policy that grants Databricks access to your storage is still propagating. Amperity retries automatically; if the error persists, re-run provisioning after a few minutes.
-
-   * - A Databricks workload fails and Amperity shows a generic "Workload failed, see run output for details" message.
-     - The detailed error is written to the Databricks run output. Open the corresponding run in your Databricks workspace -- the Stitch run name has the form ``st-<timestamp>-<random>`` -- to see the underlying error and stack trace.
-
-   * - A customer profile (database) build fails with an error that a multipart table is not supported.
-     - Customer profile generation on Databricks does not accept multipart input tables, such as a campaign recipient table (CRT). The error names the table; remove it from the database or contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
-
-   * - A Stitch job fails partway through with an S3 ``403`` (access denied).
-     - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
-
-   * - Stitch fails to start with an "insufficient free addresses in subnet" error.
-     - The workspace network does not have enough available IP addresses for the Spark cluster. Work with your cloud or Databricks administrator to add or migrate to a larger subnet or approved network configuration, then re-run.
-
-.. compute-databricks-debugging-end
-
-
 .. _compute-databricks-security:
 
 Security and access
@@ -354,7 +327,7 @@ Security and access
 
 .. compute-databricks-security-start
 
-Bring your own compute follows a least-privilege model and a shared responsibility model.
+BYOC follows a least-privilege model and a shared responsibility model.
 
 .. _compute-databricks-shared-responsibility:
 
@@ -392,94 +365,186 @@ Bring your own compute follows a least-privilege model and a shared responsibili
 .. compute-databricks-security-end
 
 
-.. _compute-databricks-manual:
-
-Set up Databricks resources manually
+Manual provisioning
 --------------------------------------------------
 
-.. compute-databricks-manual-start
+.. compute-manual-pointer-start
 
-Amperity provisions the resources in this section automatically through the integration wizard. The steps below describe the same resources for brands that prefer to create them by hand, or that need to review exactly what Amperity provisions. Run the SQL in a Unity Catalog-enabled SQL warehouse or notebook as a user with the required privileges.
+Amperity provisions the Databricks resources described here automatically during :ref:`integration <compute-databricks-integration>`. To provision them by hand, or to review exactly what Amperity creates, see :doc:`Manual provisioning <compute_manual_provisioning>`.
 
-Throughout, ``<tenant>`` is your Amperity tenant family identifier, ``<sp-application-id>`` is the application (client) ID of the service principal, and Amperity provides the exact IAM role ARNs, bucket or container URLs, and external IDs for your tenant. Use these names exactly -- Amperity's compute service expects this naming.
+.. compute-manual-pointer-end
 
-.. compute-databricks-manual-end
 
-.. compute-databricks-manual-steps-start
+.. _compute-databricks-debugging:
 
-#. **Create a service principal.** In the Databricks account console, create a service principal for Amperity compute and generate a client secret (OAuth). Note the application (client) ID and secret; the secret is shown only once. Assign the service principal to the target workspace with the ``USER`` role.
+Debugging steps
+--------------------------------------------------
 
-#. **Create storage credentials.** In the Databricks UI (**Catalog** > **External Data** > **Credentials**) or with the REST API, create two storage credentials:
+.. compute-databricks-debugging-start
 
-   * ``amperity_cred_<tenant>`` for your tenant storage location, referencing the Amperity-provided IAM role (AWS) or managed identity / service principal (Azure) for read/write access.
-   * ``amperity_artifact_cred_<tenant>`` for the Amperity artifact bucket, referencing the Amperity-provided artifact role.
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
 
-   Record the external ID that Databricks generates for each credential and provide it to Amperity so the IAM role trust policy can be updated.
+   * - Symptom
+     - Resolution
 
-#. **Create external locations.** In the Databricks UI (**Catalog** > **External Data** > **External Locations**) or with the REST API, create two external locations:
+   * - The **Databricks compute** section does not appear under **Settings** > **Integrations**.
+     - BYOC is not yet enabled for your tenant. Contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
 
-   * ``amperity_ext_<tenant>`` at your tenant storage URL, using ``amperity_cred_<tenant>`` (read/write).
-   * ``amperity_artifact_ext_<tenant>`` at the Amperity artifact URL, using ``amperity_artifact_cred_<tenant>``, set to **read-only**.
+   * - Provisioning fails with an authorization or access-denied error.
+     - The account or workspace access token expired. OAuth tokens last one hour -- generate fresh tokens (Step 2) and try again.
 
-#. **Create the compute catalog and schema.** Create a catalog with an explicit managed location, plus a default schema. The managed location avoids any dependency on a metastore default storage location.
+   * - Provisioning fails while creating the catalog, with a cloud-storage "forbidden" or invalid-credential-trust-policy error.
+     - The IAM role trust policy that grants Databricks access to your storage is still propagating. Amperity retries automatically; if the error persists, re-run provisioning after a few minutes.
 
-   .. code-block:: sql
+   * - A Databricks workload fails and Amperity shows a generic "Workload failed, see run output for details" message.
+     - The detailed error is written to the Databricks run output. Open the corresponding run in your Databricks workspace -- the Stitch run name has the form ``st-<timestamp>-<random>`` -- to see the underlying error and stack trace.
 
-      CREATE CATALOG IF NOT EXISTS `amperity_<tenant>`
-        MANAGED LOCATION '<tenant-storage-url>/databricks/amperity_<tenant>/'
-        COMMENT 'Catalog for Amperity compute';
+   * - A customer profile (database) build fails with an error that a multipart table is not supported.
+     - Customer profile generation on Databricks does not accept multipart input tables, such as a campaign recipient table (CRT). The error names the table; remove it from the database or contact `Amperity Support <https://support.amperity.com/>`__ |ext_link|.
 
-      CREATE SCHEMA IF NOT EXISTS `amperity_<tenant>`.`default`
-        COMMENT 'Default schema for Amperity compute';
+   * - A Stitch job fails partway through with an S3 ``403`` (access denied).
+     - This usually indicates a storage-credential propagation or token-expiry issue. Re-sync the workspace and re-run the job.
 
-#. **Create the artifact catalog, schema, and volume.** Amperity reads its bootstrap JAR from a read-only external volume in a shared internal catalog.
+   * - Stitch fails to start with an "insufficient free addresses in subnet" error.
+     - The workspace network does not have enough available IP addresses for the Spark cluster. Work with your cloud or Databricks administrator to add or migrate to a larger subnet or approved network configuration, then re-run.
 
-   .. code-block:: sql
+.. compute-databricks-debugging-end
 
-      CREATE CATALOG IF NOT EXISTS `_amperity_internal`
-        MANAGED LOCATION '<tenant-storage-url>/databricks/_amperity_internal/'
-        COMMENT 'Catalog for Amperity artifacts';
 
-      CREATE SCHEMA IF NOT EXISTS `_amperity_internal`.`default`;
+.. _compute-faq:
 
-      CREATE EXTERNAL VOLUME IF NOT EXISTS `_amperity_internal`.`default`.`artifacts`
-        LOCATION '<amperity-artifact-url>';
+FAQ
+==================================================
 
-#. **Create the cluster-logs volume.** Compute clusters write driver and executor logs to an external volume in your tenant catalog.
 
-   .. code-block:: sql
+.. _compute-faq-what-runs-where:
 
-      CREATE EXTERNAL VOLUME IF NOT EXISTS `amperity_<tenant>`.`default`.`cluster_logs`
-        LOCATION '<tenant-storage-url>/databricks/cluster_logs/';
+For Bring Your Own Compute, what runs where?
+--------------------------------------------------
 
-#. **Create the cluster policy and SQL warehouse.** Using the Databricks UI or REST API, create a cluster policy for Amperity Spark jobs (autoscaling, single-user mode, tagged with your tenant and stack) and a PRO SQL warehouse with serverless compute enabled. These cannot be created with SQL.
+.. compute-faq-what-runs-where-start
 
-#. **Grant the service principal access.** Scope the service principal to only the resources above.
+BYOC lets your brand run supported batch data jobs in your own approved environment, such as Databricks. Amperity continues to manage the application experience, workflow orchestration, real-time services, and activation workflows.
 
-   .. code-block:: sql
+.. image:: ../../images/byoc-what-runs-where.png
+   :width: 700 px
+   :alt: Three layers -- an Amperity-managed application and control layer, a customer-managed batch data plane (BYOC-supported), and Amperity-managed real-time and activation services.
+   :align: center
+   :class: no-scaled-link
 
-      -- Tenant data
-      GRANT READ FILES, WRITE FILES, CREATE EXTERNAL TABLE, CREATE EXTERNAL VOLUME
-        ON EXTERNAL LOCATION `amperity_ext_<tenant>` TO `<sp-application-id>`;
+In short:
 
-      GRANT USE CATALOG, CREATE SCHEMA, USE SCHEMA, CREATE TABLE, READ VOLUME, SELECT
-        ON CATALOG `amperity_<tenant>` TO `<sp-application-id>`;
+* Your environment runs supported batch data processing.
+* Amperity runs the application and service layers.
 
-      GRANT READ VOLUME, WRITE VOLUME
-        ON VOLUME `amperity_<tenant>`.`default`.`cluster_logs` TO `<sp-application-id>`;
+Under BYOC, the following supported batch data jobs run in your approved environment:
 
-      -- Artifacts (read-only)
-      GRANT READ FILES
-        ON EXTERNAL LOCATION `amperity_artifact_ext_<tenant>` TO `<sp-application-id>`;
+* Batch compute
+* Data processing
+* Queries
+* Table reads and writes
+* Stitch
+* Customer profile (database) generation
+* Segments
 
-      GRANT USE CATALOG, CREATE SCHEMA
-        ON CATALOG `_amperity_internal` TO `<sp-application-id>`;
+.. compute-faq-what-runs-where-end
 
-      GRANT USE SCHEMA, READ VOLUME
-        ON SCHEMA `_amperity_internal`.`default` TO `<sp-application-id>`;
 
-   Grant ``CAN_USE`` on the cluster policy and the SQL warehouse to the service principal using the Databricks UI or REST API.
+.. _compute-faq-batch-data-plane:
 
-#. **Register the workspace with Amperity.** Provide Amperity with the service principal application ID and secret, the workspace URL, and the storage-credential external IDs so Amperity can finish binding the integration.
+What is the batch data plane?
+--------------------------------------------------
 
-.. compute-databricks-manual-steps-end
+.. compute-faq-batch-data-plane-start
+
+The batch data plane is the part of the system that performs supported batch data work in your approved environment -- the part that BYOC supports. It covers the supported batch data jobs listed under :ref:`what runs where <compute-faq-what-runs-where>`.
+
+.. compute-faq-batch-data-plane-end
+
+
+.. _compute-faq-application-control-layer:
+
+What is the application and control layer?
+--------------------------------------------------
+
+.. compute-faq-application-control-layer-start
+
+The application and control layer is the part of Amperity that users interact with and that coordinates the overall product experience. It remains Amperity-managed and includes:
+
+* User interface
+* APIs
+* Authentication and permissions
+* Workflow orchestration
+* Monitoring and operations
+
+.. compute-faq-application-control-layer-end
+
+
+.. _compute-faq-real-time-activation:
+
+What are real-time and activation services?
+--------------------------------------------------
+
+.. compute-faq-real-time-activation-start
+
+Real-time and activation services are Amperity-managed services that support downstream customer engagement and delivery. They are not part of the BYOC-supported batch data plane, and include:
+
+* Real-time profiles
+* Activation
+* Campaigns and journeys
+* Destination delivery
+* Scheduling and triggers
+
+.. compute-faq-real-time-activation-end
+
+
+.. _compute-faq-move-application:
+
+Does Bring Your Own Compute move the Amperity application into my cloud?
+------------------------------------------------------------------------
+
+.. compute-faq-move-application-start
+
+No. BYOC does not move the full Amperity application stack into your environment. The :ref:`application and control layer <compute-faq-application-control-layer>` and the :ref:`real-time and activation services <compute-faq-real-time-activation>` remain Amperity-managed. BYOC moves only supported batch data jobs into your approved environment.
+
+.. compute-faq-move-application-end
+
+
+.. _compute-faq-support-real-time:
+
+Does Bring Your Own Compute support real-time and activations?
+--------------------------------------------------------------
+
+.. compute-faq-support-real-time-start
+
+No -- not as part of the BYOC-supported batch data plane. Real-time and activation services remain Amperity-managed. Segmentation can run in BYOC, but campaigns, activations, and real-time delivery still run through Amperity-managed services.
+
+.. compute-faq-support-real-time-end
+
+
+.. _compute-faq-in-practice:
+
+How does this work in practice?
+--------------------------------------------------
+
+.. compute-faq-in-practice-start
+
+Consider a segment that is used in a campaign:
+
+#. A marketer creates a segment in the Amperity UI.
+#. The underlying segment calculation runs in your BYOC environment.
+#. The segment is then used by Amperity-managed campaign, activation, or real-time services.
+
+You create the audience in Amperity, the batch data work can run in your environment, and Amperity manages the downstream activation experience.
+
+.. compute-faq-in-practice-end
+
+
+.. toctree::
+   :caption: Choose compute
+   :maxdepth: 2
+   :hidden:
+
+   Manual provisioning <compute_manual_provisioning>
