@@ -147,9 +147,9 @@ Create the identity, then grant access in the parent and sandbox independently::
    user_create(name="Avery Chen", email="avery@example.com", confirm=true)
    # => {"result": "ok", "user_id": "auth0|...", ...}
 
-   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-operator")
+   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-operator", confirm=true)
    tenant_use(tenant_name="customer-sb-analysis", confirm=true)
-   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-administrator")
+   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-administrator", confirm=true)
 
 Remove only the sandbox's direct access; the parent attachment is unchanged::
 
