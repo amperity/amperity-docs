@@ -27,14 +27,14 @@ Amperity runs data processing workloads -- such as Stitch, customer profile (dat
 
 .. compute-about-note-start
 
-.. note:: BYOC and :ref:`Bring Your Own Storage <storage-configure-location>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
+.. note:: BYOC and :ref:`Bring Your Own Storage (BYOS) <storage-configure-location>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
 
 .. compute-about-note-end
 
 
 .. compute-about-related-start
 
-For more information, see :doc:`Amperity Bridge <bridge>`.
+For more information about connections between Amperity and other data storage and compute environments, see :doc:`Amperity Bridge <bridge>`.
 
 .. TODO(docs): add a "Supported architectures" link here once a target topic exists.
 .. TODO(docs): add a "Networking requirements" link here once a target is confirmed
@@ -69,7 +69,7 @@ The following capabilities continue to run on Amperity-managed compute:
 
 .. compute-what-runs-where-note-start
 
-.. note:: Each workload runs against a single compute provider and a single SQL dialect; splitting one workload across providers is not supported. During public preview, workloads are enabled in stages -- Stitch is enabled separately from the other supported workloads -- so a tenant may run some workloads on your Databricks account and the rest on Amperity-managed compute. Amperity confirms which workloads are enabled for your tenant.
+.. note:: Each workload runs against a single compute provider and a single SQL dialect; splitting one workload across providers is not supported. During the current public preview period, workloads are enabled in stages -- Stitch is enabled separately from the other supported workloads -- so a tenant may run some workloads on your Databricks account and the rest on Amperity-managed compute. Amperity confirms which workloads are enabled for your tenant.
 
 .. compute-what-runs-where-note-end
 
@@ -358,7 +358,7 @@ BYOC follows a least-privilege model and a shared responsibility model.
 
 * **Credential management.** The service principal's OAuth secret is stored by Amperity in a secrets manager and is never returned after creation. Syncing a workspace does not rotate the credential. Review the `Databricks recommendations for service principals and tokens <https://docs.databricks.com/aws/en/admin/users-groups/service-principals>`__ |ext_link|, including token lifetimes and IP access lists.
 
-* **Audit logging.** Activity is logged in both systems. `Audit logging in Amperity <https://docs.amperity.com/reference/settings.html#about-activity-logs>`__ records user actions and workflow history; Databricks records `account and workspace audit events <https://docs.databricks.com/aws/en/admin/account-settings/audit-logs>`__ |ext_link| for activity performed by the service principal.
+* **Audit logging.** Activity is logged in both systems. `Activity logs in Amperity <https://docs.amperity.com/reference/settings.html#about-activity-logs>`__ records user actions and workflow history; Databricks records `account and workspace audit events <https://docs.databricks.com/aws/en/admin/account-settings/audit-logs>`__ |ext_link| for activity performed by the service principal.
 
 * **Do not embed secrets in configuration.** Do not place encryption keys, credentials, or other secrets in customer-attribute (CDT) definitions or query text, where they can appear in logs. Reference secrets by credential instead.
 
