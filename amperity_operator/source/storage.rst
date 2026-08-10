@@ -32,6 +32,12 @@ Amperity stores the following outputs in Amazon S3 storage or Azure Blob Storage
 * User audit logs
 * Conversations with Amp AI
 
+By default, this storage is provisioned automatically and managed by Amperity.
+
+**Bring Your Own Storage (BYOS)** allows your brand to store this data in an Amazon S3 bucket or Azure Blob Storage location that is owned and managed by your brand. Your data stays within your brand's :ref:`storage location <storage-configure-location>`, while Amperity continues to manage the control plane: the user interface, workflow orchestration, and managed connectors.
+
+.. note:: BYOS and :doc:`Bring Your Own Compute (BYOC) <compute>` are independent -- you can enable either one on its own. Brands that use both keep the storage *and* the processing of their data within infrastructure that they own and manage.
+
 .. storage-about-start
 
 .. storage-about-warning-start
