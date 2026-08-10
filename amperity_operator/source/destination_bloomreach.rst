@@ -54,31 +54,25 @@ This destination uses the `Bloomreach Engagement API <https://documentation.bloo
 
 .. destination-bloomreach-api-note-end
 
-.. destination-bloomreach-import-replace-start
+.. destination-bloomreach-membership-start
 
-.. important:: New imports replace existing imports in |destination-name| that have the same import name. Use a unique import name for each orchestration or campaign to avoid overwriting data unintentionally.
+.. important:: |destination-name| has no API for setting segment membership directly. Amperity records membership as ``segment-addition`` and ``segment-deletion`` events that carry the segment name. To act on this membership in |destination-name|--for example, to target it in a campaign--build a segmentation in your |destination-name| project over these events. Until that segmentation exists, the membership data is present in |destination-name| but is not yet usable as a segment.
 
-.. destination-bloomreach-import-replace-end
-
-.. destination-bloomreach-import-limit-start
-
-.. caution:: Bloomreach limits each project to 25 active import definitions. When the limit is reached, Amperity automatically deletes the oldest Amperity-created import to make room for the new one. If all 25 imports were created outside of Amperity, the send will fail with a message asking the user to delete unused imports in Bloomreach to free a slot.
-
-.. destination-bloomreach-import-limit-end
+.. destination-bloomreach-membership-end
 
 .. destination-bloomreach-attribute-limit-start
 
-.. caution:: Bloomreach allows at most 255 attributes per customer. The connector adds a segment-membership attribute to every customer, so a single orchestration or campaign can send at most 254 attributes. A send with more than 254 attributes fails with an error before any data is sent.
+.. caution:: |destination-name| allows at most 255 attributes per customer. An orchestration or campaign that sends more than 255 attributes fails with an error before any data is sent.
 
 .. destination-bloomreach-attribute-limit-end
 
-.. destination-bloomreach-async-start
+.. destination-bloomreach-reporting-start
 
-.. note:: |destination-name| processes imports asynchronously after Amperity sends the data. Amperity reports rows as succeeded once the import is triggered. There is no import status tracking. To confirm a send or troubleshoot missing customer data, check the import in the |destination-name| dashboard.
+.. note:: Amperity sends customer updates and segment membership changes to |destination-name| over the batch API and receives a result for each row in the same request. Rows that |destination-name| rejects are reported as failed, and the rejection reason is recorded as an error on the orchestration or campaign run.
 
-.. warning:: Attributes accumulate across all imports in a Bloomreach project. If a project exceeds 255 attributes, Bloomreach discards the over-limit import; Amperity does not track this cumulative total, so the failure appears only in the |destination-name| dashboard.
+.. warning:: Attributes accumulate across everything sent to a |destination-name| project over time. If the project's total number of distinct attributes would exceed |destination-name|'s limit of 255, |destination-name| rejects the over-limit writes and Amperity reports them as errors on the run.
 
-.. destination-bloomreach-async-end
+.. destination-bloomreach-reporting-end
 
 
 .. _destination-bloomreach-get-details:
@@ -145,14 +139,6 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
-
-       **Import name**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-import-name-start
-             :end-before: .. setting-bloomreach-import-name-end
 
        **Bloomreach identifier**
 
@@ -348,12 +334,6 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
-
-       **Import name**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-import-name-start
-             :end-before: .. setting-bloomreach-import-name-end
 
        **Bloomreach identifier**
 

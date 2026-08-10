@@ -80,12 +80,6 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Import name**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-bloomreach-import-name-start
-   :end-before: .. setting-bloomreach-import-name-end
-
 **Bloomreach identifier**
 
 .. include:: ../../shared/destination_settings.rst

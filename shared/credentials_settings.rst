@@ -32,7 +32,7 @@ The public API key ID for your Bloomreach Engagement project.
 
 .. credential-bloomreach-api-secret-start
 
-The private API secret for your Bloomreach Engagement project. The API key must have the "Imports > Allow to Create new Imports" permission enabled.
+The private API secret for your Bloomreach Engagement project. The API key's API group must permit customer updates and event tracking.
 
 .. credential-bloomreach-api-secret-end
 
