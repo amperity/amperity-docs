@@ -9,13 +9,6 @@
 
 .. TODO: Placeholder content for testing and validation.
 
-.. setting-bloomreach-import-name-start
-
-The name of the import definition that will be created in Bloomreach Engagement. Amperity manages import definitions with this name.
-
-.. setting-bloomreach-import-name-end
-
-
 .. setting-bloomreach-identity-column-start
 
 The Bloomreach hard identifier to use as the primary key. Options include **email**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
@@ -25,7 +18,7 @@ The Bloomreach hard identifier to use as the primary key. Options include **emai
 
 .. setting-bloomreach-segment-name-start
 
-A name for the segment being sent to Bloomreach. Every customer sent through this destination is tagged in Bloomreach with a boolean **Is <segment name> member?** attribute set to true.
+A name for the segment sent to Bloomreach. When a customer's membership changes, Amperity records a segment membership event in Bloomreach--``segment-addition`` when a customer enters the audience and ``segment-deletion`` when a customer leaves it--with this name stored as the event's ``segment_name`` property.
 
 .. setting-bloomreach-segment-name-end
 

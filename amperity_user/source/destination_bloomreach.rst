@@ -37,6 +37,10 @@ Send query results to Bloomreach
    :start-after: .. destination-bloomreach-api-note-start
    :end-before: .. destination-bloomreach-api-note-end
 
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-membership-start
+   :end-before: .. destination-bloomreach-membership-end
+
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
@@ -127,7 +131,7 @@ You can also use the Amperity ID as an external identifier:
 
 .. sendto-bloomreach-build-query-important-start
 
-.. important:: Your query results must include a column named to match the **Bloomreach identifier** selected for the destination (for example, a column named ``email`` when the identifier is **email**). If no column matches, the orchestration fails with an error before any data is sent. Rows with blank values in the identity column are skipped.
+.. important:: Your query results must include a column named to match the **Bloomreach identifier** selected for the destination (for example, a column named ``email`` when the identifier is **email**). If no column matches, the orchestration fails with an error before any data is sent. Rows with blank values in the identity column are skipped, counted as failed rows, and reported as an error on the run.
 
 .. sendto-bloomreach-build-query-important-end
 
@@ -166,5 +170,5 @@ Run orchestration
    :end-before: .. sendtos-run-orchestration-steps-end
 
 .. include:: ../../amperity_operator/source/destination_bloomreach.rst
-   :start-after: .. destination-bloomreach-async-start
-   :end-before: .. destination-bloomreach-async-end
+   :start-after: .. destination-bloomreach-reporting-start
+   :end-before: .. destination-bloomreach-reporting-end

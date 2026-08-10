@@ -39,6 +39,10 @@ Send audiences to Bloomreach
    :start-after: .. destination-bloomreach-api-note-start
    :end-before: .. destination-bloomreach-api-note-end
 
+.. include:: ../../amperity_operator/source/destination_bloomreach.rst
+   :start-after: .. destination-bloomreach-membership-start
+   :end-before: .. destination-bloomreach-membership-end
+
 .. include:: ../../shared/channels.rst
    :start-after: .. channels-overview-list-intro-start
    :end-before: .. channels-overview-list-intro-end
@@ -69,7 +73,7 @@ Build a segment
 
 .. channel-bloomreach-build-segment-important-start
 
-.. important:: The segment you build must include an attribute named to match the **Bloomreach identifier** selected for the destination, such as email, external ID, cookie, or Google Analytics ID. If no attribute matches, the campaign fails with an error before any data is sent. All other attributes in your segment are sent as customer properties to |destination-name|. Rows with blank values in the identity column are skipped.
+.. important:: The segment you build must include an attribute named to match the **Bloomreach identifier** selected for the destination, such as email, external ID, cookie, or Google Analytics ID. If no attribute matches, the campaign fails with an error before any data is sent. All other attributes in your segment are sent as customer properties to |destination-name|. Rows with blank values in the identity column are skipped, counted as failed rows, and reported as an error on the run.
 
 .. channel-bloomreach-build-segment-important-end
 
@@ -135,8 +139,8 @@ Add to a campaign
 .. channel-bloomreach-build-campaign-steps-end
 
 .. include:: ../../amperity_operator/source/destination_bloomreach.rst
-   :start-after: .. destination-bloomreach-async-start
-   :end-before: .. destination-bloomreach-async-end
+   :start-after: .. destination-bloomreach-reporting-start
+   :end-before: .. destination-bloomreach-reporting-end
 
 
 .. _channel-bloomreach-configure-default-attributes:

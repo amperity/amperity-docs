@@ -55,20 +55,16 @@ This destination uses the `Bloomreach Engagement API <https://documentation.bloo
 .. campaign-bloomreach-api-note-end
 
 .. include:: destination_bloomreach.rst
-   :start-after: .. destination-bloomreach-import-replace-start
-   :end-before: .. destination-bloomreach-import-replace-end
-
-.. include:: destination_bloomreach.rst
-   :start-after: .. destination-bloomreach-import-limit-start
-   :end-before: .. destination-bloomreach-import-limit-end
+   :start-after: .. destination-bloomreach-membership-start
+   :end-before: .. destination-bloomreach-membership-end
 
 .. include:: destination_bloomreach.rst
    :start-after: .. destination-bloomreach-attribute-limit-start
    :end-before: .. destination-bloomreach-attribute-limit-end
 
 .. include:: destination_bloomreach.rst
-   :start-after: .. destination-bloomreach-async-start
-   :end-before: .. destination-bloomreach-async-end
+   :start-after: .. destination-bloomreach-reporting-start
+   :end-before: .. destination-bloomreach-reporting-end
 
 
 .. _campaign-bloomreach-get-details:
@@ -135,14 +131,6 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
-
-       **Import name**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-import-name-start
-             :end-before: .. setting-bloomreach-import-name-end
 
        **Bloomreach identifier**
 
@@ -344,12 +332,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
-
-       **Import name**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-bloomreach-import-name-start
-             :end-before: .. setting-bloomreach-import-name-end
 
        **Bloomreach identifier**
 
