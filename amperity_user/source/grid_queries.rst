@@ -321,6 +321,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_sendgrid
 
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: destination_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: destination_sftp
@@ -596,6 +600,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
    SAP Emarsys <destination_sap_emarsys>
    SendGrid <destination_sendgrid>
+   SevenRooms <destination_sevenrooms>
    SFTP <destination_sftp>
    Snapchat <destination_snapchat>
    Tableau <destination_tableau>

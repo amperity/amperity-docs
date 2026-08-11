@@ -303,6 +303,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_sendgrid
 
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: campaign_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp
@@ -362,6 +366,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    SAP Emarsys <campaign_sap_emarsys>
    SendGrid <campaign_sendgrid>
+   SevenRooms <campaign_sevenrooms>
    SFTP <campaign_sftp>
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
