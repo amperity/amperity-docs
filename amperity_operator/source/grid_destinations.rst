@@ -366,6 +366,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_sendgrid
 
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: destination_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: destination_sftp
@@ -517,6 +521,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Salesforce Sales Cloud <destination_salesforce_sales_cloud>
    SAP Emarsys <destination_sap_emarsys>
    SendGrid <destination_sendgrid>
+   SevenRooms <destination_sevenrooms>
    SFTP <destination_sftp>
    SMG <destination_smg>
    Snapchat <destination_snapchat>
