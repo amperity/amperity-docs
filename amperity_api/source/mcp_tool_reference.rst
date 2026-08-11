@@ -111,33 +111,24 @@ attachment is the separate record that grants that identity access in one tenant
 
        **user_revoke_policy**
 
-       **user_revoke_all_policies**
-
 
 User lifecycle and access boundaries
 ------------------------------------
 
-``user_create`` creates or returns the exact global identity for an email. It does not
-grant access in the selected tenant. ``confirm=true`` is always required because the
-identity is global, even when the selected tenant is a sandbox.
+``user_list`` lists global identities visible from the selected tenant, and
+``policy_list`` lists policies assignable there. ``user_create`` creates a global
+identity for an email but does not grant tenant access. It runs only from the parent
+tenant and requires ``confirm=true``; sending an invitation also requires unrestricted
+safety mode.
 
-``user_delete`` takes the exact ``user_id`` returned by ``user_create`` and performs a
-hard global deletion. It must be called from the parent tenant context with
-``confirm=true``. It is not a sandbox-only removal: deleting the identity disables its
-access everywhere that uses that identity. Do not retry a result of ``unknown`` blindly;
-use its reconciliation state and inspect direct access separately.
+``user_grant_policy`` and ``user_revoke_policy`` add or remove one exact direct policy
+attachment in the selected tenant. They take the ``user_id`` and ``policy_id`` returned
+by the list or create tools. Revoking a direct policy does not remove access inherited
+from a group mapping.
 
-``user_revoke_policy`` removes one direct policy attachment. ``user_revoke_all_policies``
-removes all active direct attachments for that user in the selected tenant, including
-resource-group-scoped attachments (attachments limited to a named data resource group).
-It does not remove group-mapped access, which is access inherited from a group mapping,
-and it does not represent a user deactivation state. The platform currently has no
-separate reversible ``user_deactivate`` operation in this MCP surface.
-
-The bulk tool materializes the attachment list before changing anything and returns
-removed, already-absent, remaining, and unattempted IDs. ``partial`` means some known
-changes happened but access remains or a deterministic failure stopped the pass;
-``unknown`` means a response or final check could not establish the current state.
+``user_delete`` takes an exact ``user_id`` and performs a hard global deletion. It must
+be called from the parent tenant context with ``confirm=true``. It is not a sandbox-only
+removal, and it does not revoke tenant policy attachments first.
 
 Worked examples
 ---------------
@@ -151,30 +142,31 @@ Create the identity, then grant access in the parent and sandbox independently::
    tenant_use(tenant_name="customer-sb-analysis", confirm=true)
    user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-administrator", confirm=true)
 
-Remove only the sandbox's direct access; the parent attachment is unchanged::
+Remove only the sandbox's direct policy; the parent attachment is unchanged::
 
-   user_revoke_all_policies(user_id="auth0|...", confirm=true)
-   # => {"result": "ok", "scope": "selected_tenant", "changed": true, ...}
+   user_revoke_policy(
+     user_id="auth0|...",
+     policy_id="agp-datagrid-administrator",
+     confirm=true
+   )
+   # => {"result": "ok", "changed": true, ...}
 
-For a complete offboarding, run direct cleanup in each tenant first when possible, then
-delete the global identity from the parent context::
+Delete the global identity from the parent context::
 
    tenant_use(tenant_name="customer", confirm=true)
-   user_revoke_all_policies(user_id="auth0|...", confirm=true)
    user_delete(user_id="auth0|...", confirm=true)
    # => {"result": "ok", "scope": "global", "changed": true}
 
 Close cases:
 
-* ``user_revoke_all_policies`` returning ``changed=false`` means no active direct
-  attachment changed. It does not prove that group-mapped access is absent.
-* ``user_delete`` returning ``unknown`` is not a failure you should replay as a second
-  delete. The identity may already be gone while backend cleanup or event publication
-  remains unverified.
-* A ``partial`` bulk result is actionable: use ``remaining_attachment_ids`` to inspect
-  what still grants direct access. ``user_delete`` and direct-policy cleanup are separate
-  operations, so deleting the identity does not make a partial tenant cleanup result
-  disappear from the audit trail.
+* ``user_create`` creates the login identity but does not grant tenant access; call
+  ``user_grant_policy`` separately for each tenant that should be accessible.
+* ``user_revoke_policy`` removes one direct attachment only. Other direct policies and
+  group-mapped access are unchanged.
+* ``user_delete`` is global and irreversible. It does not detach policies first, so use
+  ``user_revoke_policy`` for reversible access removal.
+* Mutation tools use exact IDs, not a display name or email lookup. List first when the
+  identity or policy ID is not already known.
 
 
 .. _mcp-tool-databases:
