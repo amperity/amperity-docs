@@ -5711,7 +5711,7 @@ The record pair score correlates to the match category, which is a classifier ap
 
 .. term-record-pair-strength-start
 
-The record pair strength is the decimal portion of the score and ranks matches at a finer grain than the match category. A higher decimal reflects a stronger signal from the machine learning model, so a score of 4.58 is a stronger match than 4.55. When two record pairs receive the same score and cannot both merge (for example, because of a conflicting given name), Stitch resolves the tie deterministically by selecting the match with the lower alphanumeric cluster ID, so results stay stable across runs.
+A higher value reflects a stronger signal from the machine learning model, so a score of 4.58 is a stronger match than 4.55. When two record pairs receive the same score and cannot both merge (for example, because of a conflicting given name), Stitch resolves the tie deterministically by selecting the match with the lower alphanumeric cluster ID, so results stay stable across runs.
 
 .. term-record-pair-strength-end
 
