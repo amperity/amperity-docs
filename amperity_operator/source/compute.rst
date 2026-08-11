@@ -55,11 +55,11 @@ When BYOC is enabled for Databricks, the following workloads run on your brand's
 * Source transformations -- customer attributes (CDTs) -- and domain tables
 * Stitch, which runs on an on-demand Spark cluster
 * Customer profile (database) generation
-* Queries and segments
+* Queries and segments, including the audiences that power campaigns and journeys
 
 The following capabilities continue to run on Amperity-managed compute:
 
-* Activation, including campaigns and journeys, and workflow orchestration
+* Campaign and journey delivery (sending the computed audience to destinations) and workflow orchestration
 * Bridge and data ingest
 * Real-time profiles and the Profile API
 * Predictive models, AmpIQ, and the AI Assistant
