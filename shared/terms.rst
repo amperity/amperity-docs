@@ -5711,7 +5711,7 @@ The record pair score correlates to the match category, which is a classifier ap
 
 .. term-record-pair-strength-start
 
-The record pair strength represents the strength of the record pair score assigned by Stitch during identity resolution. It is a two digit number. For example: .31 is a lower strength and .93 is a higher strength.
+A higher value reflects a stronger signal from the machine learning model, so a score of 4.58 is a stronger match than 4.55. When two record pairs receive the same score and cannot both merge (for example, because of a conflicting given name), Stitch resolves the tie deterministically by selecting the match with the lower alphanumeric cluster ID, so results stay stable across runs.
 
 .. term-record-pair-strength-end
 
@@ -6022,7 +6022,7 @@ A saved query is a SQL statement that runs against source data before loading th
 
 .. term-score-start
 
-A score has a value from "0.0" to "5.0" that represents the combined score assigned to the record pair by Stitch. A score has two parts: the score is on the left side and the score's strength is on the right.
+A score has a value from "0.0" to "5.0" that represents the strength of the match Stitch assigns to a record pair during identity resolution. A higher score always indicates a stronger match. This holds across the entire range: a 3.0 match is one point stronger than a 2.0 match, just as a 3.1 match is one point stronger than a 2.1 match.
 
 .. term-score-end
 
