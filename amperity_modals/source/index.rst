@@ -34,6 +34,7 @@ Site Index
    destination-blue-core
    destination-braze
    destination-braze-cohorts
+   destination-braze-purchases
    destination-camelot-smm
    destination-cheetah-digital
    destination-cordial
