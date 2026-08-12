@@ -1215,6 +1215,14 @@ A query must return one row per purchase, including a column for the selected **
 
 .. setting-braze-purchases-query-must-return-end
 
+.. setting-braze-purchases-update-existing-only-start
+
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/purchase_object/>`__ |ext_link|. When this setting is not enabled, Braze creates a new user profile for a purchase that does not match an existing profile.
+
+When this setting is enabled, Braze accepts a purchase for a user it cannot match but does not record it: the row is reported as succeeded, no revenue is added, and nothing appears on a profile. Enable this option only when every user you send is already known to Braze.
+
+.. setting-braze-purchases-update-existing-only-end
+
 
 
 

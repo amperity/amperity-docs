@@ -36,7 +36,7 @@ Send purchase events to |destination-name| using the Braze REST API. Each row re
 
 .. events-braze-purchases-billing-start
 
-.. caution:: Braze records and bills for every purchase you send as a data point. Amperity sends each row in the query result on every run and does not de-duplicate purchases against previous runs. Bound your query to recent purchases and avoid re-sending rows you have already sent, or Braze counts the revenue more than once.
+.. caution:: Braze records and bills for every purchase you send as a data point. Amperity sends each row in the query result on every run and does not de-duplicate purchases against previous runs. Bound your query to recent purchases and avoid re-sending rows you have already sent, or Braze counts the revenue more than once. A row with a **quantity** greater than 100 is sent as more than one purchase object — for example, 250 becomes 100, 100, and 50 — and Braze bills each object as a separate data point.
 
 .. events-braze-purchases-billing-end
 
@@ -111,8 +111,8 @@ Get details
        **Update existing profiles only?**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-update-existing-profiles-start
-             :end-before: .. setting-braze-update-existing-profiles-end
+             :start-after: .. setting-braze-purchases-update-existing-only-start
+             :end-before: .. setting-braze-purchases-update-existing-only-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -285,8 +285,8 @@ Add destination
        **Update existing profiles only?**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-braze-update-existing-profiles-start
-             :end-before: .. setting-braze-update-existing-profiles-end
+             :start-after: .. setting-braze-purchases-update-existing-only-start
+             :end-before: .. setting-braze-purchases-update-existing-only-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -316,7 +316,7 @@ Build a query
 
 .. events-braze-purchases-build-query-start
 
-Use a query to build a combination of data — typically from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables — that returns one row per purchase to send to |destination-name|. Each row must include a column for the selected **User identifier** and columns for the purchase's **product_id**, **price**, **currency**, and **purchase_time**. A **quantity** column is optional.
+Use a query to build a combination of data — typically from the **Unified Itemized Transactions** and **Customer 360** tables — that returns one row per purchase to send to |destination-name|. Each row must include a column for the selected **User identifier** and columns for the purchase's **product_id**, **price**, **currency**, and **purchase_time**. A **quantity** column is optional.
 
 .. events-braze-purchases-build-query-end
 
@@ -334,17 +334,21 @@ Bound the query to recent purchases so each orchestration sends new purchases in
    SELECT
      c360.customer_id AS external_id
      ,uit.product_id AS product_id
-     ,(uit.item_revenue / uit.item_quantity) AS price
+     ,uit.unit_revenue AS price
      ,uit.item_quantity AS quantity
-     ,ut.currency AS currency
-     ,ut.order_datetime AS purchase_time
+     ,uit.currency AS currency
+     ,uit.order_datetime AS purchase_time
    FROM Unified_Itemized_Transactions uit
-   JOIN Unified_Transactions ut ON uit.order_id = ut.order_id
-   LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
-   WHERE ut.order_datetime > (CURRENT_DATE - interval '7' day)
-   AND c360.customer_id IS NOT NULL
+   JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
+   WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
+     AND COALESCE(uit.is_return, false) = false
+     AND COALESCE(uit.is_cancellation, false) = false
 
-.. note:: **price** is the price for a single unit. Braze computes revenue as **price** multiplied by **quantity**, so map a per-unit price rather than a line total. When your data has a line total, divide it by the quantity as shown above, or send **quantity** as 1 with the line total as **price**.
+.. note:: This example sends the per-unit **unit_revenue** column as **price**, because Braze computes revenue as **price** multiplied by **quantity** — map a per-unit price rather than a line total. When your data has only a line total, divide it by the quantity and guard against a zero or missing divisor, for example ``line_total / NULLIF(quantity, 0) AS price``, or send **quantity** as 1 with the line total as **price**.
+
+.. note:: The example filters out returns and cancellations so they are not sent as purchases and counted as revenue. A return can also carry a negative **unit_revenue**, which Amperity sends as a negative **price** (validation accepts it), so decide deliberately what to send.
+
+.. note:: Map **currency** to a three-character |ext_iso_4217| alphabetic code, such as ``USD``. Amperity checks each value against the ISO 4217 code list and drops rows whose currency is not on it, so a source column that stores a value like "dollar" or "US Dollar" fails every row.
 
 
 .. _events-braze-purchases-user-identifiers:
@@ -356,11 +360,11 @@ User identifiers
 
 The **User identifier** setting selects how Amperity matches each purchase to a Braze user profile. Choose the identifier your Braze profiles are keyed on — typically the same one the **Braze** connector uses to sync profile attributes — so that purchases land on the right profiles.
 
-* **external_id** — your own customer identifier. The query must return an **external_id** column.
 * **braze_id** — the Braze-assigned user ID. The query must return a **braze_id** column.
+* **external_id** — your own customer identifier. The query must return an **external_id** column.
 * **user_alias** — a Braze user alias, which is a name and label pair. The query must return both an **alias_name** and an **alias_label** column.
 
-A row that does not include the column or columns for the selected identifier is reported as failed. When none of the rows include those columns, the orchestration stops before sending.
+A row whose identifier value is empty is reported as failed. If the query does not return the column or columns for the selected identifier at all, the orchestration fails validation before sending anything.
 
 .. events-braze-purchases-user-identifiers-end
 
@@ -374,12 +378,12 @@ Data validation
 
 Amperity validates each row before sending and drops rows that Braze would reject, so that one invalid row does not cause the rest of a request to be rejected. Dropped rows are reported as failed with the reason. A row is dropped when:
 
-* it does not include the column or columns for the selected **User identifier**.
+* the value for the selected **User identifier** is empty (for **user_alias**, either **alias_name** or **alias_label** is empty).
 * **product_id** is missing or is longer than 255 characters.
 * **currency** is not a valid |ext_iso_4217| alphabetic currency code.
 * **price** is not a number.
 * **purchase_time** is missing or cannot be parsed as a date or timestamp.
-* **quantity** is present but is not a whole number, is less than 1, or is larger than 7,500 (the most units a single row can be split across purchase objects).
+* **quantity** is present but is not a whole number, is less than 1 (including 0), or is larger than 7,500 (the most units Amperity can split one row into).
 
 .. events-braze-purchases-data-validation-end
 
@@ -435,7 +439,7 @@ The following table describes each column Amperity sends to |destination-name| a
      - **time**
      - **Required**
 
-       When the purchase occurred. Accepts a date- or time-typed column, a full |ext_iso_8601| timestamp string, a date-only string, or an epoch-seconds value. The column is named **purchase_time** because **time** is a reserved word in many warehouses.
+       When the purchase occurred. Accepts a date- or time-typed column, a full |ext_iso_8601| timestamp string, a date-only string, or an epoch-seconds value. A string timestamp must include a UTC offset, such as "2026-07-20T10:00:00Z" — a warehouse form without one, such as "2026-07-20 10:00:00", is not accepted and the row is dropped. A date-only string, such as "2026-07-20", is treated as midnight UTC. The column is named **purchase_time** because **time** is a reserved word in many warehouses.
 
    * - **quantity**
      - **quantity**
@@ -511,7 +515,6 @@ Workflow actions
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
        * :ref:`events-braze-purchases-workflow-actions-invalid-credentials`
-       * :ref:`events-braze-purchases-workflow-actions-invalid-settings`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
@@ -528,7 +531,7 @@ Workflow actions
 
 .. events-braze-purchases-workflow-actions-end
 
-.. note:: If Braze rejects an entire request, the workflow reports the error with Braze's message — review the purchase field values returned by your query. If sends are rate limited, Amperity retries automatically; reduce the volume of purchases sent per orchestration if the limit persists.
+.. note:: Braze can accept a request and still reject individual purchases within it. Those rows are reported as failed with the message Braze returned for each, while the workflow itself succeeds — the state behind "the orchestration succeeded but some rows failed." Amperity lists up to 10 such errors per request, followed by a summary line naming how many more were dropped. If Braze rejects an entire request, the workflow reports the error with Braze's message for the whole request — review the purchase field values returned by your query. If sends are rate limited, Amperity retries automatically; reduce the volume of purchases sent per orchestration if the limit persists.
 
 
 .. _events-braze-purchases-workflow-actions-invalid-credentials:
@@ -536,27 +539,14 @@ Workflow actions
 Invalid credentials
 --------------------------------------------------
 
-.. include:: ../../shared/workflow-actions.rst
-   :start-after: .. workflow-actions-generic-invalid-credentials-start
-   :end-before: .. workflow-actions-generic-invalid-credentials-end
+.. events-braze-purchases-workflow-actions-invalid-credentials-start
 
+|destination-name| rejected the REST API key. Braze returns the same error for a REST API key that is not valid and for a key used against the wrong instance, so verify that the key is still active, has the **users.track** permission, and belongs to the same **Instance** the destination is configured for.
 
-.. _events-braze-purchases-workflow-actions-invalid-settings:
+.. events-braze-purchases-workflow-actions-invalid-credentials-end
 
-Invalid settings
---------------------------------------------------
+To resolve this error, verify the credentials and instance configured for this workflow in Amperity.
 
-.. events-braze-purchases-workflow-actions-invalid-settings-start
-
-The configuration for this workflow has a setting that |destination-name| was unable to accept. Braze returns the same error for a REST API key that is not valid and for a key used against the wrong instance, so verify that the **Instance** matches the instance the REST API key belongs to, and that the key has the **users.track** permission.
-
-.. events-braze-purchases-workflow-actions-invalid-settings-end
-
-.. events-braze-purchases-workflow-actions-invalid-settings-steps-start
-
-To resolve this error, verify the settings configured for this workflow in Amperity.
-
-#. Open the **Destinations** page and review the settings for the |destination-name| destination associated with this workflow. Verify that the **Instance** is correct and that the connected credential's REST API key belongs to that instance and has the **users.track** permission.
+#. Open the **Credentials** page and review the REST API key used with this workflow. Verify that it is still active and has the **users.track** permission.
+#. Open the **Destinations** page and verify that the **Instance** setting for the |destination-name| destination matches the instance the REST API key belongs to.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
-
-.. events-braze-purchases-workflow-actions-invalid-settings-steps-end

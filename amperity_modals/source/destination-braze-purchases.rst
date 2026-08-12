@@ -11,13 +11,11 @@ Braze Purchases
 
 Send purchase events to |destination-name| using the Braze REST API. Each row returned by your query is sent as a single Braze purchase object and is matched to a Braze user profile by the identifier you choose.
 
-.. events-braze-purchases-modal-beta-start
+.. caution:: Braze records and bills for every purchase you send as a data point. Amperity sends each row in the query result on every run and does not de-duplicate purchases against previous runs. Bound your query to recent purchases and avoid re-sending rows you have already sent, or Braze counts the revenue more than once.
 
 .. admonition:: Beta
 
    The Braze Purchases connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. events-braze-purchases-modal-beta-end
 
 
 Credentials
@@ -74,5 +72,5 @@ Settings
 **Update existing profiles only?**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-braze-update-existing-profiles-start
-   :end-before: .. setting-braze-update-existing-profiles-end
+   :start-after: .. setting-braze-purchases-update-existing-only-start
+   :end-before: .. setting-braze-purchases-update-existing-only-end
