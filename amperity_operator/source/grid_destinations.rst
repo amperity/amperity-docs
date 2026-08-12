@@ -166,6 +166,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_dynamic_yield
 
+   .. grid-item-card:: Dynamic Yield Customer Profiles
+      :link-type: doc
+      :link: destination_dynamic_yield_customer_profiles
+
    .. grid-item-card:: Dynamics 365 Marketing
       :link-type: doc
       :link: destination_dynamics_365_marketing
@@ -467,6 +471,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Dotdigital <destination_dotdigital>
    DV360 <destination_dv360>
    Dynamic Yield <destination_dynamic_yield>
+   Dynamic Yield Customer Profiles <destination_dynamic_yield_customer_profiles>
    Dynamics 365 Marketing <destination_dynamics_365_marketing>
    Epsilon Abacus <destination_epsilon_abacus>
    Epsilon Conversant <destination_epsilon_conversant>
