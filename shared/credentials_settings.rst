@@ -1820,6 +1820,70 @@ See SFTP.
 
 .. vale off
 
+**ORACLE OPERA (OUTBOUND)**
+
+.. vale on
+
+**Client ID**
+
+.. credential-oracle-opera-outbound-client-id-start
+
+OAuth client ID from the OHIP Developer Portal (**Environment > Gateways and Credentials**).
+
+.. credential-oracle-opera-outbound-client-id-end
+
+**Client Secret**
+
+.. credential-oracle-opera-outbound-client-secret-start
+
+OAuth client secret from the OHIP Developer Portal.
+
+.. credential-oracle-opera-outbound-client-secret-end
+
+**Application Key**
+
+.. credential-oracle-opera-outbound-app-key-start
+
+Application key for your OHIP application, from the OHIP Developer Portal (**Applications**). It is sent on every call and identifies the application to Oracle, so OHIP API usage is billed to your own OHIP subscription. Oracle requires a separate application per environment: a key registered against a different environment is rejected with a ``403``.
+
+.. credential-oracle-opera-outbound-app-key-end
+
+**Gateway URL**
+
+.. credential-oracle-opera-outbound-gateway-url-start
+
+The OHIP gateway base URL, for example ``https://<tenant>.hospitality-api.<region>.ocs.oraclecloud.com``.
+
+.. credential-oracle-opera-outbound-gateway-url-end
+
+**Enterprise ID**
+
+.. credential-oracle-opera-outbound-enterprise-id-start
+
+The enterprise ID for the OPERA Cloud environment. Required on the token request for OCIM environments.
+
+.. credential-oracle-opera-outbound-enterprise-id-end
+
+**Hotel ID**
+
+.. credential-oracle-opera-outbound-hotel-id-start
+
+The default ``x-hotelid`` for CRM calls, which is the property that profiles are written to.
+
+.. credential-oracle-opera-outbound-hotel-id-end
+
+**External System Code**
+
+.. credential-oracle-opera-outbound-external-system-code-start
+
+The code the property has configured for Amperity as an external system (in OPERA Cloud: **Administration > Interfaces > Business Events > External Systems**, linked to the property under **Toolbox > System Setup > External Databases**). The Amperity ID is stored on each OPERA profile under this code, which is how every run finds the guest again.
+
+.. credential-oracle-opera-outbound-external-system-code-end
+
+
+
+.. vale off
+
 **ORACLE RESPONSYS**
 
 **Hostname**
