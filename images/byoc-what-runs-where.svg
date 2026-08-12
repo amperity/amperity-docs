@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="854" viewBox="0 0 1400 854">
+<rect width="1400" height="854" fill="#FFFFFF"/>
+<text x="700.0" y="58.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#1B1240" text-anchor="middle">Amperity BYOC: What runs where</text>
+<text x="700.0" y="88.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="400" fill="#4B4560" text-anchor="middle">BYOC lets you run supported batch data workloads in your Databricks environment. You stay in control of your data</text>
+<text x="700.0" y="109.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="400" fill="#4B4560" text-anchor="middle">and compute. Amperity manages the application, real-time services, and activations.</text>
+<rect x="262.0" y="142.0" width="726.0" height="620.0" rx="10" fill="#F5F5F8" stroke="#E3E2EA" stroke-width="1"/>
+<rect x="272.0" y="152.0" width="706.0" height="164.0" rx="8" fill="#FFFFFF" stroke="#DDDCE6" stroke-width="1"/>
+<path d="M272 160a8 8 0 0 1 8-8h690a8 8 0 0 1 8 8v24H272z" fill="#4C2A85"/>
+<text x="625.0" y="173.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">Amperity-managed application &amp; control layer</text>
+<g transform="translate(344.00,205.00) scale(1.0833)" fill="none" stroke="#4C2A85" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="1.6"/><path d="M9 20.5h6M12 17v3.5"/></g>
+<text x="357.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">UI / Web</text>
+<text x="357.0" y="259.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Application</text>
+<g transform="translate(478.00,205.00) scale(1.0833)" fill="none" stroke="#4C2A85" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 7.5 3.5 12l5 4.5M15.5 7.5 20.5 12l-5 4.5M13.6 5.5l-3.2 13"/></g>
+<text x="491.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">APIs</text>
+<g transform="translate(612.00,205.00) scale(1.0833)" fill="none" stroke="#4C2A85" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="1.8"/><path d="M7.8 10.5V7.6a4.2 4.2 0 0 1 8.4 0v2.9"/><circle cx="12" cy="15.7" r="1.5"/></g>
+<text x="625.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Authentication</text>
+<text x="625.0" y="259.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">&amp; Permissions</text>
+<g transform="translate(746.00,205.00) scale(1.0833)" fill="none" stroke="#4C2A85" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.6"/><circle cx="19" cy="6" r="2.6"/><circle cx="12" cy="18.5" r="2.6"/><path d="M5 8.6v3.4h14V8.6M12 12v3.9"/></g>
+<text x="759.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Workflow</text>
+<text x="759.0" y="259.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Orchestration</text>
+<g transform="translate(880.00,205.00) scale(1.0833)" fill="none" stroke="#4C2A85" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="1.8"/><path d="M6 15.2l3.4-4.2 2.8 2.9 2.6-4.4 3.2 5.7"/></g>
+<text x="893.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Monitoring</text>
+<text x="893.0" y="259.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">&amp; Operations</text>
+<path d="M272 282h706v26a8 8 0 0 1-8 8H280a8 8 0 0 1-8-8z" fill="#F3EFFA"/>
+<text x="625.0" y="295.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#4B4560" text-anchor="middle">This is where users work in Amperity. All configuration, governance, and orchestration remain</text>
+<text x="625.0" y="310.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#4B4560" text-anchor="middle">Amperity-managed.</text>
+<circle cx="49" cy="208.0" r="15" fill="#F3EFFA"/>
+<g transform="translate(40.50,199.50) scale(0.7083)" fill="none" stroke="#4C2A85" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="1.6"/><path d="M9 20.5h6M12 17v3.5"/></g>
+<text x="74.0" y="204.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#4C2A85" text-anchor="start">Amperity-managed</text>
+<text x="74.0" y="220.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#4C2A85" text-anchor="start">application &amp; control layer</text>
+<text x="74.0" y="240.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">Not supported by BYOC</text>
+<text x="74.0" y="254.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">(Always managed by Amperity)</text>
+<rect x="272.0" y="338.0" width="706.0" height="190.0" rx="8" fill="#FFFFFF" stroke="#DDDCE6" stroke-width="1"/>
+<path d="M272 346a8 8 0 0 1 8-8h690a8 8 0 0 1 8 8v24H272z" fill="#0F766A"/>
+<text x="625.0" y="359.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">Customer-managed batch data plane (BYOC-supported)</text>
+<text x="625.0" y="396.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1B1240" text-anchor="middle">Supported batch data workloads run in your approved environment.</text>
+<g transform="translate(332.83,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="5" rx="1.3"/><rect x="3" y="10" width="18" height="5" rx="1.3"/><rect x="3" y="16.5" width="18" height="5" rx="1.3"/><path d="M6.2 6h.01M6.2 12.5h.01M6.2 19h.01"/></g>
+<text x="345.8" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Batch</text>
+<text x="345.8" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Compute</text>
+<g transform="translate(444.50,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.4"/><path d="M12 2.6v3.2M12 18.2v3.2M2.6 12h3.2M18.2 12h3.2M5.3 5.3l2.3 2.3M16.4 16.4l2.3 2.3M18.7 5.3l-2.3 2.3M7.6 16.4l-2.3 2.3"/></g>
+<text x="457.5" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Data</text>
+<text x="457.5" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Processing</text>
+<g transform="translate(556.17,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="5.6" rx="6.6" ry="2.7"/><path d="M3.4 5.6v6.2c0 1.5 3 2.7 6.6 2.7M3.4 11.8v5.2c0 1.5 3 2.7 6.6 2.7"/><circle cx="16.6" cy="15.4" r="4"/><path d="M19.6 18.5l2.4 2.5"/></g>
+<text x="569.2" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Query</text>
+<text x="569.2" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Execution</text>
+<g transform="translate(667.83,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="1.6"/><path d="M2.8 9.4h18.4M2.8 14.7h18.4M9.6 9.4V20M15.5 9.4V20"/></g>
+<text x="680.8" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Table</text>
+<text x="680.8" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Reads/Writes</text>
+<g transform="translate(779.50,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.6" cy="8.4" r="3.5"/><circle cx="15.4" cy="8.4" r="3.5"/><path d="M2.8 19.6c0-3.1 2.6-5 5.8-5M21.2 19.6c0-3.1-2.6-5-5.8-5M9.9 19.6h4.2"/></g>
+<text x="792.5" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Identity Resolution /</text>
+<text x="792.5" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Profile Generation</text>
+<g transform="translate(891.17,417.00) scale(1.0833)" fill="none" stroke="#0F766A" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l7.4 5.1"/><path d="M12 12 4.2 8.3"/></g>
+<text x="904.2" y="458.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Segment</text>
+<text x="904.2" y="471.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Calculations</text>
+<path d="M272 494h706v26a8 8 0 0 1-8 8H280a8 8 0 0 1-8-8z" fill="#ECF6F4"/>
+<text x="625.0" y="515.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#4B4560" text-anchor="middle">Runs in your Databricks environment</text>
+<circle cx="49" cy="407.0" r="15" fill="#ECF6F4"/>
+<g transform="translate(40.50,398.50) scale(0.7083)" fill="none" stroke="#0F766A" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="5" rx="1.3"/><rect x="3" y="10" width="18" height="5" rx="1.3"/><rect x="3" y="16.5" width="18" height="5" rx="1.3"/><path d="M6.2 6h.01M6.2 12.5h.01M6.2 19h.01"/></g>
+<text x="74.0" y="403.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0F766A" text-anchor="start">Customer-managed batch</text>
+<text x="74.0" y="419.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0F766A" text-anchor="start">data plane</text>
+<text x="74.0" y="435.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0F766A" text-anchor="start">(BYOC-supported)</text>
+<text x="74.0" y="455.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">Supported by BYOC</text>
+<text x="74.0" y="469.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">(Runs in your Databricks account)</text>
+<rect x="272.0" y="550.0" width="706.0" height="190.0" rx="8" fill="#FFFFFF" stroke="#DDDCE6" stroke-width="1"/>
+<path d="M272 558a8 8 0 0 1 8-8h690a8 8 0 0 1 8 8v24H272z" fill="#22509E"/>
+<text x="625.0" y="571.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">Amperity-managed real-time &amp; activation services</text>
+<text x="625.0" y="608.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1B1240" text-anchor="middle">Real-time and activation capabilities remain Amperity-managed.</text>
+<g transform="translate(344.00,629.00) scale(1.0833)" fill="none" stroke="#22509E" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2.5 4.6 13.6h6.1l-1.1 7.9 8.8-11.1h-6.1z"/></g>
+<text x="357.0" y="670.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Real-time</text>
+<text x="357.0" y="683.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Services</text>
+<g transform="translate(478.00,629.00) scale(1.0833)" fill="none" stroke="#22509E" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 3 2.8 10.4l7.2 2.8 2.8 7.2z"/><path d="M21.2 3 10 13.2"/></g>
+<text x="491.0" y="670.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Activation</text>
+<text x="491.0" y="683.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Orchestration</text>
+<g transform="translate(612.00,629.00) scale(1.0833)" fill="none" stroke="#22509E" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.4v5.2l12.4 5.1V4.3z"/><path d="M4 9.4H2.9v5.2H4M19.6 9.2a3 3 0 0 1 0 5.6M7.7 15.9v3.4c0 .9.8 1.6 1.7 1.6s1.7-.7 1.7-1.6v-1.9"/></g>
+<text x="625.0" y="670.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Campaign / Journey</text>
+<text x="625.0" y="683.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Management</text>
+<g transform="translate(746.00,629.00) scale(1.0833)" fill="none" stroke="#22509E" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10.6M7.6 9.6 12 14l4.4-4.4"/><path d="M3.4 15.2v3.9c0 1 .8 1.9 1.9 1.9h13.4c1 0 1.9-.9 1.9-1.9v-3.9"/></g>
+<text x="759.0" y="670.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Destination</text>
+<text x="759.0" y="683.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Delivery</text>
+<g transform="translate(880.00,629.00) scale(1.0833)" fill="none" stroke="#22509E" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 6.6V12l3.6 2.4"/></g>
+<text x="893.0" y="670.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">Scheduling</text>
+<text x="893.0" y="683.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="500" fill="#1B1240" text-anchor="middle">&amp; Triggers</text>
+<path d="M272 706h706v26a8 8 0 0 1-8 8H280a8 8 0 0 1-8-8z" fill="#EDF2FB"/>
+<text x="625.0" y="727.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#4B4560" text-anchor="middle">Delivers real-time responses and activates audiences to destinations.</text>
+<circle cx="49" cy="619.0" r="15" fill="#EDF2FB"/>
+<g transform="translate(40.50,610.50) scale(0.7083)" fill="none" stroke="#22509E" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2.5 4.6 13.6h6.1l-1.1 7.9 8.8-11.1h-6.1z"/></g>
+<text x="74.0" y="615.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#22509E" text-anchor="start">Amperity-managed real-time</text>
+<text x="74.0" y="631.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#22509E" text-anchor="start">&amp; activation services</text>
+<text x="74.0" y="651.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">Not supported by BYOC</text>
+<text x="74.0" y="665.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#6E6784" text-anchor="start">(Always managed by Amperity)</text>
+<text x="1014.0" y="154.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1B1240" text-anchor="start">How it works (example)</text>
+<circle cx="1025" cy="186" r="11" fill="#4C2A85"/>
+<text x="1025.0" y="190.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="1046.0" y="190.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">A marketer creates a segment in the Amperity UI</text>
+<text x="1046.0" y="206.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">(control layer).</text>
+<circle cx="1025" cy="234.5" r="11" fill="#0F766A"/>
+<text x="1025.0" y="238.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="1046.0" y="238.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">The segment calculation runs as a batch workload in</text>
+<text x="1046.0" y="255.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">your Databricks environment (BYOC data plane).</text>
+<circle cx="1025" cy="283.0" r="11" fill="#22509E"/>
+<text x="1025.0" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="1046.0" y="287.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">The audience is used in a campaign. Activations and</text>
+<text x="1046.0" y="303.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">real-time delivery are handled by Amperity-managed</text>
+<text x="1046.0" y="320.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">services.</text>
+<path d="M1025 197V286.0" stroke="#DAD8E4" stroke-width="1.4" stroke-dasharray="3 4"/>
+<text x="1014.0" y="354.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1B1240" text-anchor="start">Customer use cases</text>
+<circle cx="1026" cy="382.0" r="12" fill="#F4F4F8"/>
+<g transform="translate(1019.00,375.00) scale(0.5833)" fill="none" stroke="#0F766A" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10.5" rx="1.8"/><path d="M7.8 10.5V7.6a4.2 4.2 0 0 1 8.4 0v2.9"/><circle cx="12" cy="15.7" r="1.5"/></g>
+<text x="1048.0" y="381.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1B1240" text-anchor="start">Governance &amp; compliance</text>
+<text x="1048.0" y="397.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">Keep sensitive data and batch processing in your</text>
+<text x="1048.0" y="412.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">approved environment.</text>
+<circle cx="1026" cy="438.0" r="12" fill="#F4F4F8"/>
+<g transform="translate(1019.00,431.00) scale(0.5833)" fill="none" stroke="#4C2A85" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="5" rx="1.3"/><rect x="3" y="10" width="18" height="5" rx="1.3"/><rect x="3" y="16.5" width="18" height="5" rx="1.3"/><path d="M6.2 6h.01M6.2 12.5h.01M6.2 19h.01"/></g>
+<text x="1048.0" y="437.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1B1240" text-anchor="start">Platform alignment</text>
+<text x="1048.0" y="453.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">Leverage your existing Databricks</text>
+<text x="1048.0" y="468.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">investments.</text>
+<circle cx="1026" cy="494.0" r="12" fill="#F4F4F8"/>
+<g transform="translate(1019.00,487.00) scale(0.5833)" fill="none" stroke="#22509E" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2.5 4.6 13.6h6.1l-1.1 7.9 8.8-11.1h-6.1z"/></g>
+<text x="1048.0" y="493.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1B1240" text-anchor="start">Performance &amp; scale</text>
+<text x="1048.0" y="509.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">Run large batch workloads in your environment while</text>
+<text x="1048.0" y="524.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E6784" text-anchor="start">Amperity manages real-time and activations.</text>
+<rect x="34.0" y="758.0" width="1332.0" height="66.0" rx="8" fill="#FEF9EC" stroke="#F0DFAE" stroke-width="1"/>
+<g transform="translate(54,780.0) scale(0.92)" fill="none" stroke="#C98A0E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21.5h4M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.6.5 1 1.2 1 2h5.6c0-.8.4-1.5 1-2A6.5 6.5 0 0 0 12 2.5z"/></g>
+<text x="90.0" y="782.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1B1240" text-anchor="start">Key takeaway</text>
+<text x="90.0" y="800.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4B4560" text-anchor="start">BYOC gives you control of where supported batch data workloads run. You continue to use the Amperity UI and APIs, while Amperity manages the application, real-time services, and activations end-to-end.</text>
+</svg>

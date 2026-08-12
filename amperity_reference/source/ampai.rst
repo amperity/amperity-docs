@@ -136,8 +136,8 @@ Both custom prompts and context files are managed on the **Prompts** page. To op
 #. On the **AmpAI** page, click **Production prompts** to view the production prompt. 
 #. Click **Edit prompts** in the **Production prompt** window.
 
-* **Custom prompts** are short, always-on instructions that are injected into every AmpAI conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors.
-* **Company context** is a library of reference documents that the assistant searches only when a question involves business-specific knowledge. Use context files to provide richer background material such as brand guidelines, product catalogs, and business term definitions.
+* **Custom prompts** are short, always-on instructions that are injected into every AmpAI conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts are used by all **AmpAI** tools including the Customer Data Agent and other AI Assistants in the platform. They can also be read via MCP connection.
+* **Company context** is a library of reference documents that the assistant searches only when a question involves business-specific knowledge. Use context files to provide richer background material such as brand guidelines, product catalogs, and business term definitions. Context files are used by all **AmpAI** tools including the Customer Data Agent and other AI Assistants in the platform. They can also be read via MCP connection.
 
 The **Prompts** page uses a draft and production workflow:
 
@@ -158,13 +158,16 @@ Custom prompts
 
 .. ampai-custom-prompt-start
 
-Custom prompts are short, always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to all AmpAI tools, including the Customer Data Assistant and AI Assistants, and can be updated to include:
+Custom prompts are always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to **AmpAI**, other AI Assistants in the platform, and via MCP connection.
 
-* Customer definitions, such as defining how your brand interprets retention metrics
-* Priority tables and fields, such as specifying priority for default tables and fields that are used with loyalty-related queries
-* Exclusions, such as automatically excluding employees or outliers from analysis
-* Default customer identifiers
-* Fiscal calendar information
+Below are common examples of the types of data nuances prompts can account for:
+
+* **Customer definitions**: define how your brand breaks out new vs. repeat vs. reactivated customers.
+* **Priority tables and fields**: identify whether different tables should be used for different brands, loyalty programs, channel-specific marketing flags, and similar cases.
+* **Product catalog**: specify the level of granularity AI should use and identify products that should always be grouped together.
+* **Exclusions**: define criteria that should always be excluded from reporting, commonly employees or outliers.
+* **Calendar**: specify whether AI should default to the calendar year, a fiscal calendar, or something else.
+* **Revenue calculations**: identify default revenue fields, and specify which discount fields should be used when questions involve discount percentages or coupon codes.
 
 Set a custom prompt on the **Prompts** page: On the **AmpAI** page, click **Production prompts** and then **Edit prompts**.
 
@@ -665,6 +668,8 @@ Company context
 .. ampai-company-context-start
 
 Company context lets tenant administrators upload company-specific knowledge like business definitions, brand guidelines, product catalogs, and strategy documents, so that **AmpAI** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
+
+Context files are used by **AmpAI** and via **MCP** connection. Think of a context file as an overview that helps AI get to know the nuances of the business, including additional information about a brand or business and its goals.
 
 Context files are available across the following AmpAI tools: **Customer Data Assistant**, **Segments AI Assistant**, and **Journeys AI Assistant**.
 
