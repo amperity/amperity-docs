@@ -14,14 +14,6 @@ Viant DSP
    :start-after: .. term-viant-dsp-start
    :end-before: .. term-viant-dsp-end
 
-.. destination-viant-dsp-beta-start
-
-.. admonition:: Beta
-
-   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. destination-viant-dsp-beta-end
-
 
 Credentials
 ==================================================
