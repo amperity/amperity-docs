@@ -44,7 +44,7 @@ Configure destinations for Bloomreach
 
 .. destination-bloomreach-start
 
-Use Amperity to manage customer profiles in |destination-name|. Build a query or segment, and then send customer data to |destination-name| for segmentation, campaigns, and personalization. Customer profiles are identified by a Bloomreach hard identifier such as email, cookie, Google Analytics ID, or external ID.
+Use Amperity to manage customer profiles in |destination-name|. Build a query or segment, and then send customer data to |destination-name| for segmentation, campaigns, and personalization. Customer profiles are identified by a Bloomreach hard identifier such as email, cookie, Google Analytics ID, or external ID. If a matching customer profile does not already exist in |destination-name|, Amperity creates it.
 
 .. destination-bloomreach-end
 
@@ -56,21 +56,21 @@ This destination uses the `Bloomreach Engagement API <https://documentation.bloo
 
 .. destination-bloomreach-membership-start
 
-.. important:: |destination-name| has no API for setting segment membership directly. Amperity records membership as ``segment-addition`` and ``segment-deletion`` events that carry the segment name. To act on this membership in |destination-name|--for example, to target it in a campaign--build a segmentation in your |destination-name| project over these events. Until that segmentation exists, the membership data is present in |destination-name| but is not yet usable as a segment.
+.. important:: |destination-name| has no API for setting segment membership directly. Amperity records membership as ``segment-addition`` and ``segment-deletion`` events that carry the segment name. To act on this membership in |destination-name|--for example, to target it in a campaign--build a segmentation in your |destination-name| project over these segment-membership events. Until that segmentation exists, the membership data is present in |destination-name| but is not yet usable as a segment.
 
 .. destination-bloomreach-membership-end
 
 .. destination-bloomreach-attribute-limit-start
 
-.. caution:: |destination-name| allows at most 255 attributes per customer. An orchestration or campaign that sends more than 255 attributes fails with an error before any data is sent.
+.. caution:: |destination-name| allows a limited number of attributes per customer--255 by default, though this may vary based on your |destination-name| contract. An orchestration or campaign that sends more attributes than the limit fails with an error before any data is sent.
 
 .. destination-bloomreach-attribute-limit-end
 
 .. destination-bloomreach-reporting-start
 
-.. note:: Amperity sends customer updates and segment membership changes to |destination-name| over the batch API and receives a result for each row in the same request. Rows that |destination-name| rejects are reported as failed, and the rejection reason is recorded as an error on the orchestration or campaign run.
+.. note:: Amperity sends customer updates and segment membership changes to |destination-name| over the batch API and receives a result for each row in the same request. Rows that |destination-name| rejects are reported as failed, and the rejection reason is recorded as an error on the orchestration or campaign run in Amperity.
 
-.. warning:: Attributes accumulate across everything sent to a |destination-name| project over time. If the project's total number of distinct attributes would exceed |destination-name|'s limit of 255, |destination-name| rejects the over-limit writes and Amperity reports them as errors on the run.
+.. warning:: Attributes accumulate across everything sent to a |destination-name| project over time. If the project's total number of distinct attributes would exceed |destination-name|'s per-customer attribute limit (255 by default), |destination-name| rejects the over-limit writes and Amperity reports them as errors on the run.
 
 .. destination-bloomreach-reporting-end
 
@@ -353,9 +353,10 @@ Add destination
           :alt: Step five.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-business-users-start
-          :end-before: .. destinations-steps-business-users-end
+     - After configuring this destination users may use:
+
+       * Orchestrations to send query results
+       * Orchestrations and campaigns to send audiences
 
 
    * - .. image:: ../../images/steps-06.png
