@@ -492,8 +492,6 @@ AmpAI
 
 The following table shows which policies enable user actions within **AmpAI** features, including the AmpAI page, the Customer Data Agent, and the AI assistants embedded in the Journeys, Segments, and Queries editors.
 
-.. note:: The read-only variants of the Amp360 and AmpIQ policies--**Amp360 User - Read Only** and **AmpIQ User - Read Only**--explicitly deny access to AmpAI features. The authorization system applies deny statements first and a deny statement always overrides an allow statement. Assigning a read-only role alongside a full role that includes AmpAI access will deny access to AmpAI features.
-
 .. policies-allowed-actions-amp-ai-end
 
 .. policies-allowed-actions-amp-ai-table-start
