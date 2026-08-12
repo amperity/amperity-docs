@@ -88,14 +88,14 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**Campaign file settings**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. campaigns-steps-campaign-settings-start
-   :end-before: .. campaigns-steps-campaign-settings-end
-
 **Tag name**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-sevenrooms-tag-name-start
    :end-before: .. setting-sevenrooms-tag-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end
