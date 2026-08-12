@@ -36,6 +36,8 @@ The Dynamic Yield Customer Profiles connector sends |what-send| from Amperity in
 
 Each row in the query results is one customer profile. The column named by the **CUID field** setting is sent as the customer identifier; every other column is sent as a profile data field, using the column name and value as-is. |destination-name| requires every attribute to be sent on every update for a customer, so Amperity sends the complete query results on every run. There is no incremental sync.
 
+By default the connector upserts profiles, adding new customers and updating existing ones. A destination can instead be configured to delete profiles, removing each customer in the query results from the feed. Each destination performs a single operation for the entire run, set by the **Operation** setting.
+
 .. .. destination-dynamic-yield-customer-profiles-end
 
 .. destination-dynamic-yield-customer-profiles-api-note-start
@@ -114,6 +116,26 @@ Get details
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-dynamic-yield-customer-profiles-cuid-type-start
              :end-before: .. setting-dynamic-yield-customer-profiles-cuid-type-end
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: center
+          :class: no-scaled-link
+     - **Optional configuration settings**
+
+       **Data center**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-dynamic-yield-customer-profiles-data-center-start
+             :end-before: .. setting-dynamic-yield-customer-profiles-data-center-end
+
+       **Operation**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-dynamic-yield-customer-profiles-operation-start
+             :end-before: .. setting-dynamic-yield-customer-profiles-operation-end
 
 
 .. destination-dynamic-yield-customer-profiles-get-details-end
@@ -314,3 +336,21 @@ Add destination
           :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-dynamic-yield-customer-profiles-add-steps-end
+
+
+.. _destination-dynamic-yield-customer-profiles-validation:
+
+Data validation
+==================================================
+
+.. destination-dynamic-yield-customer-profiles-validation-start
+
+Amperity sends every row in the query results, except for rows it cannot build a valid request for. A row is skipped and reported as failed when any of the following is true:
+
+* The **CUID field** is empty for that row.
+* The **CUID type** is **he** (hashed email) but the value in the CUID field is not an email address (does not contain an "@"). The value is not hashed and the row is not sent.
+* The **Operation** is **upsert** and the row has no columns other than the CUID field, so there are no profile attributes to send.
+
+Skipped rows are reported in the destination's run details and do not stop the run. All other rows are sent.
+
+.. destination-dynamic-yield-customer-profiles-validation-end
