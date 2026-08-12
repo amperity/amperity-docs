@@ -76,6 +76,7 @@ Site Index
    destination-moengage
    destination-neustar
    destination-oracle-data-cloud
+   destination-oracle-opera-outbound
    destination-oracle-responsys
    destination-panda-printing
    destination-pebble-post
