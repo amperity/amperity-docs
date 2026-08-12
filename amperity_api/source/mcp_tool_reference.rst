@@ -80,6 +80,95 @@ Manage which Amperity tenant the current session targets, and read session-level
      - **feedback_submit**
 
 
+.. _mcp-tool-users-access:
+
+Users and access
+==================================================
+
+Manage global Amperity user identities and their tenant access. A *global identity* is the
+single login record shared across the parent tenant and its sandboxes; a tenant policy
+attachment is the separate record that grants that identity access in one tenant.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Find, create, and delete users
+     - **user_list**
+
+       **user_create**
+
+       **user_delete**
+
+   * - Inspect policies
+     - **policy_list**
+
+   * - Grant and revoke direct policies
+     - **user_grant_policy**
+
+       **user_revoke_policy**
+
+
+User lifecycle and access boundaries
+------------------------------------
+
+``user_list`` lists global identities visible from the selected tenant, and
+``policy_list`` lists policies assignable there. ``user_create`` creates a global
+identity for an email but does not grant tenant access. It runs only from the parent
+tenant and requires ``confirm=true``; sending an invitation also requires unrestricted
+safety mode.
+
+``user_grant_policy`` and ``user_revoke_policy`` add or remove one exact direct policy
+attachment in the selected tenant. They take the ``user_id`` and ``policy_id`` returned
+by the list or create tools. Revoking a direct policy does not remove access inherited
+from a group mapping.
+
+``user_delete`` takes an exact ``user_id`` and performs a hard global deletion. It must
+be called from the parent tenant context with ``confirm=true``. It is not a sandbox-only
+removal, and it does not revoke tenant policy attachments first.
+
+Worked examples
+---------------
+
+Create the identity, then grant access in the parent and sandbox independently::
+
+   user_create(name="Avery Chen", email="avery@example.com", confirm=true)
+   # => {"result": "ok", "user_id": "auth0|...", ...}
+
+   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-operator", confirm=true)
+   tenant_use(tenant_name="customer-sb-analysis", confirm=true)
+   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-administrator", confirm=true)
+
+Remove only the sandbox's direct policy; the parent attachment is unchanged::
+
+   user_revoke_policy(
+     user_id="auth0|...",
+     policy_id="agp-datagrid-administrator",
+     confirm=true
+   )
+   # => {"result": "ok", "changed": true, ...}
+
+Delete the global identity from the parent context::
+
+   tenant_use(tenant_name="customer", confirm=true)
+   user_delete(user_id="auth0|...", confirm=true)
+   # => {"result": "ok", "scope": "global", "changed": true}
+
+Close cases:
+
+* ``user_create`` creates the login identity but does not grant tenant access; call
+  ``user_grant_policy`` separately for each tenant that should be accessible.
+* ``user_revoke_policy`` removes one direct attachment only. Other direct policies and
+  group-mapped access are unchanged.
+* ``user_delete`` is global and irreversible. It does not detach policies first, so use
+  ``user_revoke_policy`` for reversible access removal.
+* Mutation tools use exact IDs, not a display name or email lookup. List first when the
+  identity or policy ID is not already known.
+
+
 .. _mcp-tool-databases:
 
 Databases and tables
