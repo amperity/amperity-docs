@@ -2862,6 +2862,35 @@ When enabled, empty fields in data sent from Amperity are converted to **NULL** 
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
+.. setting-dynamic-yield-customer-profiles-feed-key-start
+
+The feed's key, copied from the feed's settings in |destination-name|. Each User Data feed has its own key and is tied to a single customer's feed. The feed and its schema must already exist in |destination-name|; Amperity sends data to a feed but cannot create one.
+
+.. setting-dynamic-yield-customer-profiles-feed-key-end
+
+.. setting-dynamic-yield-customer-profiles-data-center-start
+
+The |destination-name| data center in which the account is provisioned, which determines the API base URL. Select **us** or **eu**. Defaults to **us**.
+
+.. setting-dynamic-yield-customer-profiles-data-center-end
+
+.. setting-dynamic-yield-customer-profiles-cuid-field-start
+
+The name of the column in the query results that holds the customer identifier (``cuid``) to send with every request. Every other column in the query results is sent to the feed as a data field, using the column name and value as-is.
+
+.. setting-dynamic-yield-customer-profiles-cuid-field-end
+
+.. setting-dynamic-yield-customer-profiles-cuid-type-start
+
+The identifier type that |destination-name| expects for ``cuid``, which must match how the feed itself is configured. Use **he** for a hashed email (Amperity hashes the value in the CUID field automatically, so the query results can carry a raw email address), **dyid** for Dynamic Yield's own user ID, or a custom type configured for the feed. When **he** is selected, a value that is not an email address (does not contain an "@") is skipped and reported, rather than hashed.
+
+.. setting-dynamic-yield-customer-profiles-cuid-type-end
+
+.. setting-dynamic-yield-customer-profiles-operation-start
+
+The operation applied to every row in the query results: **upsert** (the default) adds or updates each customer's profile in the feed, and **delete** removes each customer's profile from the feed. A destination performs a single operation for the entire run, not a mix. An upsert sends every column besides the CUID field as profile data; a delete sends only the identifier.
+
+.. setting-dynamic-yield-customer-profiles-operation-end
 
 
 
