@@ -568,7 +568,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
    .. code-block:: sql
       :linenos:
 
-      -- Predicted Attributes from Predicted_CLV_Attributes pa
+      -- Predicted Attributes from Predicted_365d_CLV_Attributes pa
       ,pa.predicted_probability_of_transaction_next_365d AS `predicted_probability_of_transaction_next_365d`
       ,pa.predicted_order_frequency_next_365d AS `predicted_order_frequency_next_365d`
       ,pa.predicted_average_order_revenue_next_365d AS `predicted_average_order_revenue_next_365d`
@@ -582,7 +582,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
 
    .. code-block:: sql
 
-      LEFT JOIN Predicted_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
+      LEFT JOIN Predicted_365d_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
 
 #. Click **Next**.
 #. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.
