@@ -334,7 +334,7 @@ For example:
        c.life_cycle
        ,p.predicted_customer_lifecycle_status
      ) AS life_cycle_final
-   FROM Predicted_CLV_Attributes AS p
+   FROM Predicted_365d_CLV_Attributes AS p
    LEFT JOIN overrides c ON p.amperity_id = c.amperity_id
 
 .. model-churn-propensity-customize-lifecycle-status-end

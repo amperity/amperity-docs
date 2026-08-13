@@ -210,6 +210,8 @@ Open the **Customer 360** page, and then select the **Predictive models** tab. T
 
 Click the **Add model** button and select **Predicted customer lifetime value (pCLV)**. In the **New model** dialog assign a name to the model and add a description.
 
+Enter a **Symbolic name**--an identifier used to name the model's :ref:`output table <model-predicted-clv-output-tables>` as **Predicted_<symbolic-name>_CLV_Attributes**. A symbolic name is required and must be unique per database. Because a database may have more than one predicted CLV model, a unique symbolic name prevents output table naming collisions. For example, a symbolic name of "365d" produces a table named **Predicted_365d_CLV_Attributes**.
+
 From the **Prediction horizon** dropdown select the number of days into the future for which predictions are made: **90 days**, **180 days**, or **365 days** (default).
 
 .. model-predicted-clv-build-create-version-end
@@ -595,7 +597,7 @@ Predicted CLV output tables
 
 .. model-predicted-clv-output-tables-start
 
-The **Predicted CLV Attributes** table has the output of predicted CLV modeling.
+The **Predicted CLV Attributes** table has the output of predicted CLV modeling. The table is named **Predicted_<symbolic-name>_CLV_Attributes**, using the :ref:`symbolic name <model-predicted-clv-build-create-version>` assigned to the model. For example, a model with a symbolic name of "365d" produces a table named **Predicted_365d_CLV_Attributes**. Because each predicted CLV model in a database uses a unique symbolic name, each model writes to its own output table.
 
 .. note:: Field names use "365d" as the default prediction horizon. If a predicted CLV model uses a different prediction horizon, such as "90 days" or "180 days", column names in the database table are not updated. The data in the table rows always matches the value for the lookback window.
 
