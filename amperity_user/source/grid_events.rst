@@ -39,6 +39,10 @@ Events
       :link-type: ref
       :link: destination-braze-custom-attributes
 
+   .. grid-item-card:: Braze Purchases
+      :link-type: doc
+      :link: events_braze_purchases
+
    .. grid-item-card:: Criteo
       :link-type: doc
       :link: events_criteo
@@ -94,6 +98,7 @@ Events
 
    About events <events>
    Amazon Ads Conversion API <events_amazon_capi>
+   Braze Purchases <events_braze_purchases>
    Criteo <events_criteo>
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>

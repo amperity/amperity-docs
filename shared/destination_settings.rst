@@ -1203,6 +1203,26 @@ Use the **Update existing profiles only?** option to `update only existing user 
 
 .. setting-braze-update-existing-profiles-end
 
+.. setting-braze-purchases-instance-start
+
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| where your account is provisioned. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "US-10", "EU-01", "EU-02", "AU-01", "ID-01", "JP-01", or "KR-01". This must be the same instance the REST API key belongs to.
+
+.. setting-braze-purchases-instance-end
+
+.. setting-braze-purchases-query-must-return-start
+
+A query must return one row per purchase, including a column for the selected **User identifier** and columns for **product_id**, **price**, **currency**, and **purchase_time**. A **quantity** column is optional.
+
+.. setting-braze-purchases-query-must-return-end
+
+.. setting-braze-purchases-update-existing-only-start
+
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/purchase_object/>`__ |ext_link|. When this setting is not enabled, Braze creates a new user profile for a purchase that does not match an existing profile.
+
+When this setting is enabled, Braze accepts a purchase for a user it cannot match but does not record it: the row is reported as succeeded, no revenue is added, and nothing appears on a profile. Enable this option only when every user you send is already known to Braze.
+
+.. setting-braze-purchases-update-existing-only-end
+
 
 
 

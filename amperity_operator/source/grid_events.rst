@@ -34,6 +34,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_amazon_capi
 
+   .. grid-item-card:: Braze Purchases
+      :link-type: doc
+      :link: events_braze_purchases
+
    .. grid-item-card:: Criteo
       :link-type: doc
       :link: events_criteo
@@ -79,6 +83,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    :hidden:
 
    Amazon Ads Conversion API <events_amazon_capi>
+   Braze Purchases <events_braze_purchases>
    Criteo <events_criteo>
    Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>

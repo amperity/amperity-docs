@@ -970,6 +970,18 @@ Required. The API key for your |destination-name| account.
 
 .. credential-braze-api-key-end
 
+.. credential-braze-purchases-api-key-start
+
+Required. The Braze REST API key for your |destination-name| account. The key must have the **users.track** permission.
+
+.. credential-braze-purchases-api-key-end
+
+.. credential-braze-purchases-api-find-key-start
+
+Create or find a REST API key in the Braze dashboard under **Settings > API Keys**. The key must include the **users.track** permission. A REST API key is scoped to a single Braze instance, so the key must belong to the same instance you configure for this destination.
+
+.. credential-braze-purchases-api-find-key-end
+
 
 
 
