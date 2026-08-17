@@ -222,6 +222,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_salesforce_sales_cloud
 
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: source_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: source_sftp
@@ -306,6 +310,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Salesforce Marketing Cloud <source_salesforce_marketing_cloud>
    Salesforce Pardot <source_salesforce_pardot>
    Salesforce Sales Cloud <source_salesforce_sales_cloud>
+   SevenRooms <source_sevenrooms>
    SFTP <source_sftp>
    SMG <source_smg>
    SoundCommerce <source_soundcommerce>

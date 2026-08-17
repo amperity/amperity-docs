@@ -2961,6 +2961,30 @@ The name of the SendGrid list to which Amperity will send audience members. Ampe
 
 .. setting-sendgrid-list-name-end
 
+.. setting-sevenrooms-base-url-start
+
+The base URL for the SevenRooms API, including the version path. For example: ``https://demo.sevenrooms.com/api-ext/2_2``. Your production base URL differs from the demo URL.
+
+.. setting-sevenrooms-base-url-end
+
+.. setting-sevenrooms-venue-group-id-start
+
+The venue group ID for your SevenRooms account. This scopes the guest profiles that Amperity tags to a single venue group.
+
+.. setting-sevenrooms-venue-group-id-end
+
+.. setting-sevenrooms-tag-group-start
+
+The SevenRooms client tag group that the audience tag belongs to. SevenRooms addresses a client tag as ``group:tag``; this setting is the group portion and is the same for every audience sent to this destination.
+
+.. setting-sevenrooms-tag-group-end
+
+.. setting-sevenrooms-tag-name-start
+
+The SevenRooms client tag that Amperity applies to audience members. This is the tag portion of the ``group:tag`` value and identifies the audience within SevenRooms. Changing the tag name or the tag group sends the entire audience again under the new tag.
+
+.. setting-sevenrooms-tag-name-end
+
 .. setting-sftp-about-start
 
 Secure File Transfer Protocol (SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.
