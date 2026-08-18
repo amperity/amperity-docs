@@ -2197,6 +2197,18 @@ The Salesforce security token associated with the username. This setting is not 
 
 .. credential-salesforce-sales-cloud-security-token-end
 
+.. credential-dynamic-yield-customer-profiles-api-key-start
+
+The |destination-name| API key that authenticates each request. Each API key is scoped to a single feed and must be generated with the **User Feed** ACL.
+
+.. credential-dynamic-yield-customer-profiles-api-key-end
+
+.. credential-dynamic-yield-customer-profiles-api-find-key-start
+
+Generate the API key in |destination-name| by navigating to **Settings > API Keys** and creating a key with the ACL set to **User Feed**. A key created with any other ACL type, or a client-side key, is rejected.
+
+.. credential-dynamic-yield-customer-profiles-api-find-key-end
+
 **Username and password**
 
 .. credential-salesforce-sales-cloud-username-and-password-start
