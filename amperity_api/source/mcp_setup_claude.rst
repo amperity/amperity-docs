@@ -55,11 +55,31 @@ Claude.ai is the canonical location to add remote MCP connectors. Once added, th
 #. Search for Amperity, and then select the Amperity connector.
 #. Click **Connect**.
 
-   If your organization has not enabled the Amperity connector, you will see a **Request** button instead. Follow up with your Claude admin to enable this connector for your team.
+   If your organization has not enabled the Amperity connector, you will see a **Request** button instead. Click **Request** to notify your Claude admin, and then wait for them to enable the connector for your organization.
 
 #. Sign in with your Amperity OAuth credentials.
 
 .. mcp-setup-claude-ai-end
+
+
+.. _mcp-setup-claude-ai-admin:
+
+Enable the connector for your organization
+--------------------------------------------------
+
+.. mcp-setup-claude-ai-admin-start
+
+For **Team** and **Enterprise** plans, an Owner must enable the Amperity connector before members can connect to it. Requests from members appear in the admin's Claude notifications.
+
+#. Open Claude.ai and log in as an Owner.
+#. Open **Settings**, and then select **Organization settings**.
+#. Select **Connectors**, and then click **Browse connectors**.
+#. Search for Amperity, and then select the Amperity connector.
+#. Enable the connector for your organization.
+
+   Members can now add the Amperity connector from the connector directory and sign in with their own Amperity OAuth credentials.
+
+.. mcp-setup-claude-ai-admin-end
 
 
 .. _mcp-setup-claude-code:
