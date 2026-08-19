@@ -71,20 +71,13 @@ Admin: enable the connector for your organization
 
 For **Team** and **Enterprise** plans, an Owner must enable the Amperity connector before members can connect to it.
 
-To enable the connector directly:
-
 #. Open Claude.ai and log in as an Owner.
 #. Open **Settings**, and then select **Organization settings**.
 #. Select **Connectors**, and then click **Browse connectors**.
 #. Search for Amperity, and then select the Amperity connector.
 #. Click **Enable**.
 
-To approve requests from members instead:
-
-#. Open Claude.ai and log in as an Owner.
-#. Open **Settings**, and then select **Organization settings**.
-#. Click **Review requests**, and then select the **Feature requests** tab.
-#. Find the Amperity row, and then click **Enable**.
+   If a member has already requested the connector, you can enable it from their request instead. On the **Organization settings** page, click **Review requests**, select the **Feature requests** tab, find the Amperity row, and then click **Enable**.
 
 Members can now add the Amperity connector from the connector directory and sign in with their own Amperity OAuth credentials.
 
