@@ -77,8 +77,6 @@ For **Team** and **Enterprise** plans, an Owner must enable the Amperity connect
 #. Search for Amperity, and then select the Amperity connector.
 #. Click **Enable**.
 
-   If a member has already requested the connector, you can enable it from their request instead. On the **Organization settings** page, click **Review requests**, select the **Feature requests** tab, find the Amperity row, and then click **Enable**.
-
 Members can now add the Amperity connector from the connector directory and sign in with their own Amperity OAuth credentials.
 
 .. mcp-setup-claude-ai-admin-end
