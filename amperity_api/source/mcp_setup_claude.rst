@@ -55,7 +55,7 @@ Claude.ai is the canonical location to add remote MCP connectors. Once added, th
 #. Search for Amperity, and then select the Amperity connector.
 #. Click **Connect**.
 
-   If your organization has not enabled the Amperity connector, you will see a **Request** button instead. Click **Request** to notify your Claude admin.
+   If your organization has not enabled the Amperity connector, you will see a **Request** button instead. Click **Request** to notify your Claude admin. See :ref:`mcp-setup-claude-ai-admin`.
 
 #. Sign in with your Amperity OAuth credentials.
 
@@ -64,20 +64,29 @@ Claude.ai is the canonical location to add remote MCP connectors. Once added, th
 
 .. _mcp-setup-claude-ai-admin:
 
-Enable the connector for your organization
+Admin: enable the connector for your organization
 --------------------------------------------------
 
 .. mcp-setup-claude-ai-admin-start
 
-For **Team** and **Enterprise** plans, an Owner must enable the Amperity connector before members can connect to it. Requests from members appear in the admin's Claude notifications.
+For **Team** and **Enterprise** plans, an Owner must enable the Amperity connector before members can connect to it.
+
+To enable the connector directly:
 
 #. Open Claude.ai and log in as an Owner.
 #. Open **Settings**, and then select **Organization settings**.
 #. Select **Connectors**, and then click **Browse connectors**.
 #. Search for Amperity, and then select the Amperity connector.
-#. Enable the connector for your organization.
+#. Click **Enable**.
 
-   Members can now add the Amperity connector from the connector directory and sign in with their own Amperity OAuth credentials.
+To approve requests from members instead:
+
+#. Open Claude.ai and log in as an Owner.
+#. Open **Settings**, and then select **Organization settings**.
+#. Click **Review requests**, and then select the **Feature requests** tab.
+#. Find the Amperity row, and then click **Enable**.
+
+Members can now add the Amperity connector from the connector directory and sign in with their own Amperity OAuth credentials.
 
 .. mcp-setup-claude-ai-admin-end
 
