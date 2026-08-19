@@ -758,8 +758,9 @@ C
 
 
 .. _c-campaign-recipients-table:
+.. _c-crt:
 
-**Campaign Recipients**
+**Campaign Recipients**, **CRT**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-campaign-recipients-table-start
       :end-before: .. term-campaign-recipients-table-end
@@ -906,9 +907,7 @@ C
       :start-after: .. term-cogs-start
       :end-before: .. term-cogs-end
 
-.. _c-crt:
-
-**combined requests table** 
+**combined requests table**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-combined-requests-start
       :end-before: .. term-combined-requests-end

@@ -1137,7 +1137,7 @@ A campaign may be one of the following types:
 
 .. term-campaign-recipients-table-start
 
-The **Campaign Recipients** table has a list of Amperity IDs associated with campaigns sent from Amperity, along with details about the campaign. These details include control and treatment groups, audience segments, destinations, and launch dates.
+The **Campaign Recipients** table (CRT) has a list of Amperity IDs associated with campaigns sent from Amperity, along with details about the campaign. These details include control and treatment groups, audience segments, destinations, and launch dates.
 
 .. term-campaign-recipients-table-end
 
