@@ -306,6 +306,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_oracle_eloqua
 
+   .. grid-item-card:: Oracle Opera (Outbound)
+      :link-type: doc
+      :link: destination_oracle_opera_outbound
+
    .. grid-item-card:: Oracle Responsys
       :link-type: doc
       :link: destination_oracle_responsys
@@ -510,6 +514,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Optimizely <destination_optimizely>
    Oracle Data Cloud <destination_oracle_data_cloud>
    Oracle Eloqua <destination_oracle_eloqua>
+   Oracle Opera (Outbound) <destination_oracle_opera_outbound>
    Oracle Responsys <destination_oracle_responsys>
    Panda Printing <destination_panda_printing>
    PebblePost <destination_pebblepost>
