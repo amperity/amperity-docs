@@ -229,8 +229,6 @@ Reauthorize Amperity
    :start-after: .. destinations-oauth-reauthorize-start
    :end-before: .. destinations-oauth-reauthorize-end
 
-.. note:: Amperity automatically renews the Pinterest refresh token when it is within 14 days of expiration. Manual reauthorization is only needed if the token is explicitly revoked or if automatic renewal fails.
-
 
 .. _destination-pinterest-add:
 
