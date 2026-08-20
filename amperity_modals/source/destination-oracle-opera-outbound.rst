@@ -37,12 +37,6 @@ Credentials
    :start-after: .. credential-oracle-opera-outbound-client-secret-start
    :end-before: .. credential-oracle-opera-outbound-client-secret-end
 
-**Application Key**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oracle-opera-outbound-app-key-start
-   :end-before: .. credential-oracle-opera-outbound-app-key-end
-
 **Gateway URL**
 
 .. include:: ../../shared/credentials_settings.rst

@@ -1840,14 +1840,6 @@ OAuth client secret from the OHIP Developer Portal.
 
 .. credential-oracle-opera-outbound-client-secret-end
 
-**Application Key**
-
-.. credential-oracle-opera-outbound-app-key-start
-
-Application key for your OHIP application, from the OHIP Developer Portal (**Applications**). It is sent on every call and identifies the application to Oracle, so OHIP API usage is billed to your own OHIP subscription. Oracle requires a separate application per environment: a key registered against a different environment is rejected with a ``403``.
-
-.. credential-oracle-opera-outbound-app-key-end
-
 **Gateway URL**
 
 .. credential-oracle-opera-outbound-gateway-url-start

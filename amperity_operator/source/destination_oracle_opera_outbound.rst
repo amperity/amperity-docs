@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Oracle OPERA
 .. |plugin-name| replace:: "Oracle Opera (Outbound)"
 .. |credential-type| replace:: "oracle-opera-outbound"
-.. |required-credentials| replace:: "Client ID", "Client Secret", "Application Key", "Gateway URL", "Enterprise ID", "Hotel ID", and "External System Code"
+.. |required-credentials| replace:: "Client ID", "Client Secret", "Gateway URL", "Enterprise ID", "Hotel ID", and "External System Code"
 .. |what-send| replace:: guest profiles
 .. |where-send| replace:: a property's |destination-name| profile database
 .. |filter-the-list| replace:: "opera"
@@ -40,7 +40,7 @@ Amperity sends only the guests whose mapped fields changed since the last run.
 
 The **Amperity ID** and **surname** fields are required; **given name**, **birth date**, **email**, and **phone** are optional. No other data is sent.
 
-.. .. destination-oracle-opera-outbound-end
+.. destination-oracle-opera-outbound-end
 
 .. destination-oracle-opera-outbound-api-note-start
 
@@ -89,7 +89,7 @@ Get details
 
        |checkmark-required| **Required**
 
-       All seven credential fields are required. No call can be made without the whole set.
+       All six credential fields are required. No call can be made without the whole set.
 
        **Client ID**
 
@@ -102,12 +102,6 @@ Get details
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
-
-       **Application Key**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-app-key-start
-             :end-before: .. credential-oracle-opera-outbound-app-key-end
 
        **Gateway URL**
 
@@ -207,7 +201,7 @@ Configure credentials
 
        |checkmark-required| **Required**
 
-       All seven credential fields are required.
+       All six credential fields are required.
 
        **Client ID**
 
@@ -220,12 +214,6 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
-
-       **Application Key**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-app-key-start
-             :end-before: .. credential-oracle-opera-outbound-app-key-end
 
        **Gateway URL**
 
