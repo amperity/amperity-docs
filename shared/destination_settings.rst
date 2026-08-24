@@ -2464,6 +2464,33 @@ This approach requires adding an empty shared list to |destination-name|, and th
 
 .. vale off
 
+**ORACLE OPERA (OUTBOUND)**
+
+.. vale on
+
+Settings unique to Oracle Opera (Outbound).
+
+**Profile type**
+
+.. setting-oracle-opera-outbound-profile-type-start
+
+The OPERA profile type to create or update. Most hospitality use cases use **Guest**. Options are **Guest**, **Contact**, **Company**, and **Agent**. The default is **Guest**.
+
+.. setting-oracle-opera-outbound-profile-type-end
+
+**Primary key**
+
+.. setting-oracle-opera-outbound-primary-key-start
+
+The field that identifies a guest across runs. The Amperity ID is stable, unlike a guest's OPERA attributes. Set to **external_id**.
+
+.. setting-oracle-opera-outbound-primary-key-end
+
+
+
+
+.. vale off
+
 **PANDA PRINTING**
 
 .. vale on
