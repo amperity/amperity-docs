@@ -311,6 +311,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_sftp
 
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: campaign_shopify_graphql
+
    .. grid-item-card:: Snapchat
       :link-type: doc
       :link: campaign_snapchat
@@ -368,6 +372,7 @@ Send campaigns to any of the following marketing applications and workflows.
    SendGrid <campaign_sendgrid>
    SevenRooms <campaign_sevenrooms>
    SFTP <campaign_sftp>
+   Shopify (GraphQL) <campaign_shopify_graphql>
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
    TikTok Ads <campaign_tiktok_ads>
