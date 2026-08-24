@@ -2386,7 +2386,7 @@ Required. A username with access to |where-send|. This username must have approp
 
 .. credential-shopify-access-token-start
 
-.. TODO: xxxxx
+The Admin API access token that authorizes Amperity to connect to your Shopify store. Sending an audience requires the ``write_customers`` access scope on the Shopify app; pulling data does not.
 
 .. credential-shopify-access-token-end
 
@@ -2394,9 +2394,15 @@ Required. A username with access to |where-send|. This username must have approp
 
 .. credential-shopify-shop-name-start
 
-.. TODO: xxxxx
+The name of your Shopify store. This identifies the store that Amperity connects to.
 
 .. credential-shopify-shop-name-end
+
+.. credential-shopify-find-credentials-start
+
+Generate an Admin API access token by creating and installing a custom app in your Shopify store's admin. Sending an audience requires the ``write_customers`` access scope on the app; pulling data requires read access to the data types that you select.
+
+.. credential-shopify-find-credentials-end
 
 
 
