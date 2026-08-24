@@ -158,7 +158,7 @@ Custom prompts
 
 .. ampai-custom-prompt-start
 
-Custom prompts are always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to **AmpAI**, other AI Assistants in the platform, and via MCP connection.
+Custom prompts are always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to all **AmpAI** interfaces, including Customer Data Assistant, other AI Assistants in the platform, and via MCP connection.
 
 Below are common examples of the types of data nuances prompts can account for:
 
