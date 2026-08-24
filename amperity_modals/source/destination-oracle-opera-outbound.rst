@@ -37,30 +37,6 @@ Credentials
    :start-after: .. credential-oracle-opera-outbound-client-secret-start
    :end-before: .. credential-oracle-opera-outbound-client-secret-end
 
-**Gateway URL**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oracle-opera-outbound-gateway-url-start
-   :end-before: .. credential-oracle-opera-outbound-gateway-url-end
-
-**Enterprise ID**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oracle-opera-outbound-enterprise-id-start
-   :end-before: .. credential-oracle-opera-outbound-enterprise-id-end
-
-**Hotel ID**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oracle-opera-outbound-hotel-id-start
-   :end-before: .. credential-oracle-opera-outbound-hotel-id-end
-
-**External System Code**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-oracle-opera-outbound-external-system-code-start
-   :end-before: .. credential-oracle-opera-outbound-external-system-code-end
-
 
 Settings
 ==================================================
@@ -80,6 +56,30 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
+
+**Gateway URL**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-oracle-opera-outbound-gateway-url-start
+   :end-before: .. setting-oracle-opera-outbound-gateway-url-end
+
+**Enterprise ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-oracle-opera-outbound-enterprise-id-start
+   :end-before: .. setting-oracle-opera-outbound-enterprise-id-end
+
+**Hotel ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-oracle-opera-outbound-hotel-id-start
+   :end-before: .. setting-oracle-opera-outbound-hotel-id-end
+
+**External System Code**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-oracle-opera-outbound-external-system-code-start
+   :end-before: .. setting-oracle-opera-outbound-external-system-code-end
 
 **Profile type**
 

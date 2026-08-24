@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Oracle OPERA
 .. |plugin-name| replace:: "Oracle Opera (Outbound)"
 .. |credential-type| replace:: "oracle-opera-outbound"
-.. |required-credentials| replace:: "Client ID", "Client Secret", "Gateway URL", "Enterprise ID", "Hotel ID", and "External System Code"
+.. |required-credentials| replace:: "Client ID" and "Client Secret"
 .. |what-send| replace:: guest profiles
 .. |where-send| replace:: a property's |destination-name| profile database
 .. |filter-the-list| replace:: "opera"
@@ -58,7 +58,7 @@ The **Amperity ID** and **surname** fields are required; **given name**, **birth
 
 .. destination-oracle-opera-outbound-prereq-start
 
-.. important:: Before Amperity can write any guest, the property must register Amperity as an external system and provide its code as the **External System Code** credential. In |destination-name| Cloud, create the entry under **Administration > Interfaces > Business Events > External Systems**, link it to the property under **Toolbox > System Setup > External Databases**, and confirm that it is active. Amperity verifies this once per run and stops before the first write when the code is missing or inactive. The external system code is the connector's only notion of guest identity.
+.. important:: Before Amperity can write any guest, the property must register Amperity as an external system and provide its code as the **External System Code** setting. In |destination-name| Cloud, create the entry under **Administration > Interfaces > Business Events > External Systems**, link it to the property under **Toolbox > System Setup > External Databases**, and confirm that it is active. Amperity verifies this once per run and stops before the first write when the code is missing or inactive. The external system code is the connector's only notion of guest identity.
 
 .. note:: |destination-name| adds a changed email or phone number alongside the value it already holds rather than replacing it, so a previous value can remain on the profile. Clearing a field in Amperity does not remove it from |destination-name|. This ensures Amperity never overwrites contact details that property staff entered directly in |destination-name|.
 
@@ -89,7 +89,7 @@ Get details
 
        |checkmark-required| **Required**
 
-       All six credential fields are required. No call can be made without the whole set.
+       Both credential fields are required. No call can be made without them.
 
        **Client ID**
 
@@ -103,30 +103,6 @@ Get details
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
 
-       **Gateway URL**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-gateway-url-start
-             :end-before: .. credential-oracle-opera-outbound-gateway-url-end
-
-       **Enterprise ID**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-enterprise-id-start
-             :end-before: .. credential-oracle-opera-outbound-enterprise-id-end
-
-       **Hotel ID**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-hotel-id-start
-             :end-before: .. credential-oracle-opera-outbound-hotel-id-end
-
-       **External System Code**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-external-system-code-start
-             :end-before: .. credential-oracle-opera-outbound-external-system-code-end
-
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -134,6 +110,30 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
+
+       **Gateway URL**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-gateway-url-start
+             :end-before: .. setting-oracle-opera-outbound-gateway-url-end
+
+       **Enterprise ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-enterprise-id-start
+             :end-before: .. setting-oracle-opera-outbound-enterprise-id-end
+
+       **Hotel ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-hotel-id-start
+             :end-before: .. setting-oracle-opera-outbound-hotel-id-end
+
+       **External System Code**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-external-system-code-start
+             :end-before: .. setting-oracle-opera-outbound-external-system-code-end
 
        **Profile type**
 
@@ -201,7 +201,7 @@ Configure credentials
 
        |checkmark-required| **Required**
 
-       All six credential fields are required.
+       Both credential fields are required.
 
        **Client ID**
 
@@ -214,30 +214,6 @@ Configure credentials
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
-
-       **Gateway URL**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-gateway-url-start
-             :end-before: .. credential-oracle-opera-outbound-gateway-url-end
-
-       **Enterprise ID**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-enterprise-id-start
-             :end-before: .. credential-oracle-opera-outbound-enterprise-id-end
-
-       **Hotel ID**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-hotel-id-start
-             :end-before: .. credential-oracle-opera-outbound-hotel-id-end
-
-       **External System Code**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oracle-opera-outbound-external-system-code-start
-             :end-before: .. credential-oracle-opera-outbound-external-system-code-end
 
 .. destination-oracle-opera-outbound-credentials-steps-end
 
@@ -323,6 +299,30 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
+
+       **Gateway URL**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-gateway-url-start
+             :end-before: .. setting-oracle-opera-outbound-gateway-url-end
+
+       **Enterprise ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-enterprise-id-start
+             :end-before: .. setting-oracle-opera-outbound-enterprise-id-end
+
+       **Hotel ID**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-hotel-id-start
+             :end-before: .. setting-oracle-opera-outbound-hotel-id-end
+
+       **External System Code**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-oracle-opera-outbound-external-system-code-start
+             :end-before: .. setting-oracle-opera-outbound-external-system-code-end
 
        **Profile type**
 

@@ -2470,6 +2470,38 @@ This approach requires adding an empty shared list to |destination-name|, and th
 
 Settings unique to Oracle Opera (Outbound).
 
+**Gateway URL**
+
+.. setting-oracle-opera-outbound-gateway-url-start
+
+The OHIP gateway base URL, for example ``https://<tenant>.hospitality-api.<region>.ocs.oraclecloud.com``.
+
+.. setting-oracle-opera-outbound-gateway-url-end
+
+**Enterprise ID**
+
+.. setting-oracle-opera-outbound-enterprise-id-start
+
+The enterprise ID for the OPERA Cloud environment. Required on the token request for OCIM environments.
+
+.. setting-oracle-opera-outbound-enterprise-id-end
+
+**Hotel ID**
+
+.. setting-oracle-opera-outbound-hotel-id-start
+
+The default ``x-hotelid`` for CRM calls, which is the property that profiles are written to.
+
+.. setting-oracle-opera-outbound-hotel-id-end
+
+**External System Code**
+
+.. setting-oracle-opera-outbound-external-system-code-start
+
+The code the property has configured for Amperity as an external system (in OPERA Cloud: **Administration > Interfaces > Business Events > External Systems**, linked to the property under **Toolbox > System Setup > External Databases**). The Amperity ID is stored on each OPERA profile under this code, which is how every run finds the guest again.
+
+.. setting-oracle-opera-outbound-external-system-code-end
+
 **Profile type**
 
 .. setting-oracle-opera-outbound-profile-type-start
