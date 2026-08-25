@@ -154,14 +154,12 @@ Review feed and domain table
 
 After running the |source-name| courier, a feed and domain table are created automatically for each data type that you selected. You may apply semantic tags to the fields in these tables and you may make a domain table available to Stitch, depending on your use case.
 
-The data types cover the following areas of your Shopify store:
+Each domain table's columns are the fields that Amperity reads for the corresponding Shopify object:
 
-* **Customers** -- customer records and their addresses, metafields, and tags.
-* **Orders** -- orders and their line items, refunded line items, tags, discount codes, and discount allocations.
-* **Products** -- products and their variants and tags.
-* **Locations** -- store locations.
-
-The columns in each domain table mirror the corresponding table from the REST-based Shopify source, with some differences in coverage between the two connectors. Contact your Amperity representative for details about specific columns.
+* **Customers** -- customer identity and contact details, email marketing consent, order and spend summary, and tags, along with each customer's addresses and metafields.
+* **Orders** -- order identity, financial and fulfillment status, monetary totals, currency, and timestamps, along with line items, refunded line items, tags, discount codes, and per-line discount allocations.
+* **Products** -- product identity, type, status, price range, inventory, and tags, along with each product's variants (price, inventory, weight, and options).
+* **Locations** -- store locations with their address details.
 
 .. source-shopify-graphql-review-data-end
 
