@@ -49,15 +49,21 @@ The server-side API key for your |destination-name| account.
 
 .. credential-iterable-api-key-end
 
-.. credential-criteo-offline-sales-api-key-start
+.. credential-criteo-offline-sales-account-id-start
 
-The Criteo Offline Sales ingestion API key for your |destination-name| account. Criteo uses this value to identify your traffic in its request logs.
+The Criteo Account ID that offline sales are reported against, provided by your Criteo Account Strategist and sent with every event. Criteo must enable this account for offline sales ingestion before it can receive transactions, and issues a separate sandbox account for testing. This value is not masked, so that you can read it back and confirm it matches the account your Criteo Account Strategist issued.
 
-.. credential-criteo-offline-sales-api-key-end
+.. credential-criteo-offline-sales-account-id-end
+
+.. credential-criteo-offline-sales-log-label-start
+
+A label that identifies your traffic in Criteo's request logs, agreed with your Criteo Account Strategist — for example, ``mybrand_offlinesales``. Criteo's onboarding materials may call this value the API key. It is not a secret and does not authenticate the request; Criteo uses it only to group and troubleshoot your calls.
+
+.. credential-criteo-offline-sales-log-label-end
 
 .. credential-criteo-offline-sales-find-credentials-start
 
-Your Criteo Account Strategist provides the API key when they enable your account for offline sales ingestion.
+Your Criteo Account Strategist provides the Account ID and the log label when they enable your account for offline sales ingestion.
 
 .. credential-criteo-offline-sales-find-credentials-end
 
