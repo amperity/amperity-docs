@@ -49,6 +49,18 @@ The server-side API key for your |destination-name| account.
 
 .. credential-iterable-api-key-end
 
+.. credential-criteo-offline-sales-api-key-start
+
+The Criteo Offline Sales ingestion API key for your |destination-name| account. Criteo uses this value to identify your traffic in its request logs.
+
+.. credential-criteo-offline-sales-api-key-end
+
+.. credential-criteo-offline-sales-find-credentials-start
+
+Your Criteo Account Strategist provides the API key when they enable your account for offline sales ingestion.
+
+.. credential-criteo-offline-sales-find-credentials-end
+
 .. credential-iterable-base-url-start
 
 The base URL for your |destination-name| data center. Use ``https://api.iterable.com`` for US accounts or ``https://api.eu.iterable.com`` for EU accounts.

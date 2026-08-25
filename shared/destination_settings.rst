@@ -1320,6 +1320,12 @@ The account ID for the account in |destination-name| to which Amperity sends aud
 
 .. setting-criteo-account-id-end
 
+.. setting-criteo-offline-sales-account-id-start
+
+The numeric Criteo Account ID that offline sales are reported against, provided by your Criteo Account Strategist. Criteo must enable this account for offline sales ingestion before it can receive transactions. This value is not masked so that you can read it back and confirm it matches the account your Criteo Account Strategist issued.
+
+.. setting-criteo-offline-sales-account-id-end
+
 **Audience segment description**
 
 .. setting-criteo-audience-segment-description-start
