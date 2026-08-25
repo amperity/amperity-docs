@@ -230,6 +230,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_sftp
 
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: source_shopify_graphql
+
    .. grid-item-card:: SMG
       :link-type: doc
       :link: source_smg
@@ -312,6 +316,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Salesforce Sales Cloud <source_salesforce_sales_cloud>
    SevenRooms <source_sevenrooms>
    SFTP <source_sftp>
+   Shopify (GraphQL) <source_shopify_graphql>
    SMG <source_smg>
    SoundCommerce <source_soundcommerce>
    Square <source_square>

@@ -99,6 +99,7 @@ Site Index
    destination-sevenrooms
    destination-sfmc-sftp
    destination-sftp
+   destination-shopify-graphql
    destination-smg
    destination-snapchat
    destination-snowflake

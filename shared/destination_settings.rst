@@ -3073,6 +3073,12 @@ The SevenRooms client tag that Amperity applies to audience members. This is the
 
 .. setting-sevenrooms-tag-name-end
 
+.. setting-shopify-graphql-audience-tag-start
+
+The Shopify customer tag that Amperity applies to audience members. Shopify customer tags are flat, so the tag is the whole audience identifier. Amperity applies this tag to customers who are in the audience and removes it from customers who leave the audience. Changing the tag name sends the entire audience again under the new tag.
+
+.. setting-shopify-graphql-audience-tag-end
+
 .. setting-sftp-about-start
 
 Secure File Transfer Protocol (SFTP) is a network protocol that provides file access, file transfer, and file management over any reliable data stream.

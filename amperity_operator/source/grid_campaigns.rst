@@ -308,6 +308,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_sftp
 
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: campaign_shopify_graphql
+
    .. grid-item-card:: SMG
       :link-type: doc
       :link: campaign_smg
@@ -428,6 +432,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    SendGrid <campaign_sendgrid>
    SevenRooms <campaign_sevenrooms>
    SFTP <campaign_sftp>
+   Shopify (GraphQL) <campaign_shopify_graphql>
    SMG <campaign_smg>
    Snapchat <campaign_snapchat>
    SoundCommerce <campaign_soundcommerce>

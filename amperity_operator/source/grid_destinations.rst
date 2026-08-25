@@ -382,6 +382,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_sftp
 
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: destination_shopify_graphql
+
    .. grid-item-card:: SMG
       :link-type: doc
       :link: destination_smg
@@ -533,6 +537,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    SendGrid <destination_sendgrid>
    SevenRooms <destination_sevenrooms>
    SFTP <destination_sftp>
+   Shopify (GraphQL) <destination_shopify_graphql>
    SMG <destination_smg>
    Snapchat <destination_snapchat>
    SoundCommerce <destination_soundcommerce>

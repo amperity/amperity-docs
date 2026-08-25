@@ -329,6 +329,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_sftp
 
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: destination_shopify_graphql
+
    .. grid-item-card:: Snapchat
       :link-type: doc
       :link: destination_snapchat
@@ -602,6 +606,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    SendGrid <destination_sendgrid>
    SevenRooms <destination_sevenrooms>
    SFTP <destination_sftp>
+   Shopify (GraphQL) <destination_shopify_graphql>
    Snapchat <destination_snapchat>
    Tableau <destination_tableau>
    The Trade Desk <destination_the_trade_desk>
