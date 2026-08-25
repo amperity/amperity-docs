@@ -39,6 +39,7 @@ Site Index
    destination-cheetah-digital
    destination-cordial
    destination-criteo
+   destination-criteo-offline-sales
    destination-criteo-retail-media
    destination-cross-country-computer
    destination-dotdigital
