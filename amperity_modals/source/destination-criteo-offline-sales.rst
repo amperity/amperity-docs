@@ -29,11 +29,17 @@ Credentials
    :start-after: .. credential-common-name-and-description-start
    :end-before: .. credential-common-name-and-description-end
 
-**API key**
+**Account ID**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-criteo-offline-sales-api-key-start
-   :end-before: .. credential-criteo-offline-sales-api-key-end
+   :start-after: .. credential-criteo-offline-sales-account-id-start
+   :end-before: .. credential-criteo-offline-sales-account-id-end
+
+**Log label**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-criteo-offline-sales-log-label-start
+   :end-before: .. credential-criteo-offline-sales-log-label-end
 
 
 Settings
@@ -54,9 +60,3 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
-
-**Account ID**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-criteo-offline-sales-account-id-start
-   :end-before: .. setting-criteo-offline-sales-account-id-end

@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Criteo
 .. |plugin-name| replace:: "Criteo Offline Sales"
 .. |credential-type| replace:: "criteo-offline-sales"
-.. |required-credentials| replace:: "API key"
+.. |required-credentials| replace:: "Criteo Account ID and log label"
 .. |what-send| replace:: offline sales
 .. |where-send| replace:: |destination-name|
 .. |hashed-fields| replace:: **email**
@@ -76,32 +76,25 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       **API key**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-criteo-offline-sales-api-key-start
-             :end-before: .. credential-criteo-offline-sales-api-key-end
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 2.
-          :align: center
-          :class: no-scaled-link
-     - **Criteo settings**
-
        **Account ID**
 
           |checkmark-required| **Required**
 
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-criteo-offline-sales-account-id-start
-             :end-before: .. setting-criteo-offline-sales-account-id-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-criteo-offline-sales-account-id-start
+             :end-before: .. credential-criteo-offline-sales-account-id-end
+
+       **Log label**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-criteo-offline-sales-log-label-start
+             :end-before: .. credential-criteo-offline-sales-log-label-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail 3.
+          :alt: Detail 2.
           :align: center
           :class: no-scaled-link
      - **Query results**
@@ -163,13 +156,21 @@ Configure credentials
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
-       **API key**
+       **Account ID**
 
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-criteo-offline-sales-api-key-start
-             :end-before: .. credential-criteo-offline-sales-api-key-end
+             :start-after: .. credential-criteo-offline-sales-account-id-start
+             :end-before: .. credential-criteo-offline-sales-account-id-end
+
+       **Log label**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-criteo-offline-sales-log-label-start
+             :end-before: .. credential-criteo-offline-sales-log-label-end
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-criteo-offline-sales-find-credentials-start
@@ -244,29 +245,12 @@ Add destination
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-settings-start
-          :end-before: .. destinations-steps-settings-end
-
-       **Account ID**
-
-          |checkmark-required| **Required**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-criteo-offline-sales-account-id-start
-             :end-before: .. setting-criteo-offline-sales-account-id-end
+          :start-after: .. destinations-steps-business-users-orchestration-only-start
+          :end-before: .. destinations-steps-business-users-orchestration-only-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step five.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-business-users-orchestration-only-start
-          :end-before: .. destinations-steps-business-users-orchestration-only-end
-
-   * - .. image:: ../../images/steps-06.png
-          :width: 60 px
-          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
@@ -517,7 +501,7 @@ Workflow actions
 
 .. events-criteo-offline-sales-workflow-actions-end
 
-.. note:: A submission that |destination-name| rejects, or that cannot be delivered, is reported as failed rows with |destination-name|'s own message or the delivery error. Because |destination-name| does not authenticate the API key or validate the account, a wrong API key or Account ID produces no error in Amperity — such problems surface only in |destination-name|'s reporting. See :ref:`events-criteo-offline-sales-get-details`.
+.. note:: A submission that |destination-name| rejects, or that cannot be delivered, is reported as failed rows with |destination-name|'s own message or the delivery error. The ingestion endpoint does not authenticate, and |destination-name| does not validate the account, so a wrong log label or Account ID produces no error in Amperity — such problems surface only in |destination-name|'s reporting. See :ref:`events-criteo-offline-sales-get-details`.
 
 
 .. _events-criteo-offline-sales-workflow-actions-invalid-credentials:
