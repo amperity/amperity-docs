@@ -11,7 +11,7 @@
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
-.. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **state**, **city**, **postal**, **country**, **birthdate**, **gender**, and **external_id**
+.. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **state**, **city**, **postal**, **country**, **birthdate**, **gender**, and **extern_id**
 
 .. meta::
     :description lang=en:
@@ -332,7 +332,7 @@ A query that returns a collection events for use in |destination-name| is simila
    :linenos:
 
    SELECT
-     c360.amperity_id AS external_id
+     c360.amperity_id AS extern_id
      ,c360.email AS email
      ,c360.phone AS phone
      ,c360.given_name AS given_name
@@ -354,7 +354,7 @@ A query that returns a collection events for use in |destination-name| is simila
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **extern_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
@@ -396,7 +396,7 @@ The following SQL shows how to send many event types stored in a table named **C
    :linenos:
 
    SELECT
-     c360.amperity_id AS external_id
+     c360.amperity_id AS extern_id
      ,c360.email AS email
      ,c360.phone AS phone
      ,events.order_id AS order_id
@@ -562,7 +562,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
              :linenos:
 
              SELECT
-               c360.amperity_id AS external_id
+               c360.amperity_id AS extern_id
                ,c360.email AS email
                ,c360.phone AS phone
                ,leads.lead_datetime AS timestamp
@@ -574,16 +574,16 @@ The fields are listed alphabetically, but may be returned by a query in any orde
              WHERE leads.lead_datetime > (CURRENT_DATE - interval '7' day)
 
 
-   * - **external_id**
+   * - **extern_id**
      - **Recommended**
 
-       The **amperity_id** field **MUST** be renamed to **external_id**.
+       The query column **MUST** be named **extern_id**. Amperity sends this value to Meta as **external_id** in the **user_data** object.
 
-       Add **external_id** to your query:
+       Add **extern_id** to your query:
 
        ::
 
-          ,c360.amperity_id AS external_id
+          ,c360.amperity_id AS extern_id
 
        .. note:: Amperity performs the same actions for the external ID when sending to the Conversions API as when sending to the Marketing API.
 
