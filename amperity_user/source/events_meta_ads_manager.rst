@@ -28,6 +28,10 @@ Send events to the Meta Conversions API
    :end-before: .. events-meta-ads-manager-overview-end
 
 .. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-inproduct-name-start
+   :end-before: .. events-meta-ads-manager-inproduct-name-end
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-capi-disambiguation-start
    :end-before: .. events-meta-ads-manager-capi-disambiguation-end
 

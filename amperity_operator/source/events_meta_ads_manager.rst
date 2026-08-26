@@ -37,6 +37,12 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. events-meta-ads-manager-overview-end
 
+.. events-meta-ads-manager-inproduct-name-start
+
+.. note:: In Amperity, this destination appears as **Meta Ads Offline Events** when you add a destination. It sends events using the Meta Conversions API and supports both offline and website conversions.
+
+.. events-meta-ads-manager-inproduct-name-end
+
 .. events-meta-ads-manager-capi-disambiguation-start
 
 .. seealso:: The Conversions API sends **conversion events** for measurement and attribution. It is a separate Meta product from **custom audiences**, which build **targeting audiences** using the Meta Marketing API. The two are configured separately and use different settings: a **Dataset ID** for the Conversions API, and an **Account ID** with a **custom audience name** for custom audiences. To build custom audiences for targeting, see :doc:`destination_meta_ads_manager`.
