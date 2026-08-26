@@ -296,7 +296,7 @@ Bound the query to recent transactions — within |destination-name|'s two-day a
      ,c360.email AS email
    FROM Unified_Itemized_Transactions uit
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
-   WHERE uit.order_datetime > (CURRENT_DATE - interval '2' day)
+   WHERE uit.order_datetime > (CURRENT_TIMESTAMP - interval '1' day)
    AND COALESCE(uit.is_return, false) = false
    AND COALESCE(uit.is_cancellation, false) = false
 
