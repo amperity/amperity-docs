@@ -931,6 +931,22 @@ A query must return **event_name**, **conversion_type**, **event_source**, **eve
 
 .. setting-amazon-capi-query-must-return-end
 
+**UET Tag ID** (Microsoft Ads Conversions API)
+
+.. setting-microsoft-ads-conversions-tag-id-start
+
+The Microsoft Advertising UET tag ID that receives these events. Amperity includes it in the Conversions API request path, and the API token configured for this destination must be authorized for this tag. Find it in the **UET** section of your Microsoft Advertising account. A destination sends events for a single UET tag.
+
+.. setting-microsoft-ads-conversions-tag-id-end
+
+**Query must return** (Microsoft Ads Conversions API)
+
+.. setting-microsoft-ads-conversions-query-must-return-start
+
+A query must return **event_name** and **event_time**, plus at least one identifier column — **anonymous_id**, **external_id**, **email**, **phone**, **msclkid**, **idfa**, or **gaid**. All other columns are optional.
+
+.. setting-microsoft-ads-conversions-query-must-return-end
+
 
 
 

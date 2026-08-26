@@ -128,6 +128,18 @@ Obtain a refresh token by completing the Amazon Ads authorization flow (Login wi
 
 .. credential-amazon-capi-refresh-token-find-end
 
+.. credential-microsoft-ads-conversions-api-token-start
+
+The API token that authorizes Amperity to send conversion events to the Microsoft Advertising Conversions API. This is a bearer token scoped to a single UET tag; it must be authorized for the **UET Tag ID** configured in this destination.
+
+.. credential-microsoft-ads-conversions-api-token-end
+
+.. credential-microsoft-ads-conversions-api-token-find-start
+
+Obtain the token in the Microsoft Advertising UI: open the **UET** section, edit the UET tag, select **Use Conversions API**, and copy the token. Contact your Amperity representative if you need help obtaining a token.
+
+.. credential-microsoft-ads-conversions-api-token-find-end
+
 .. credential-sendgrid-api-key-start
 
 The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).

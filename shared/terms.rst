@@ -4329,6 +4329,15 @@ Microsoft Advertising is a pay-per-click advertising platform that displays ads 
 .. term-microsoft-ads-end
 
 
+**Microsoft Advertising Conversions API**
+
+.. term-microsoft-ads-conversions-start
+
+The Microsoft Advertising Conversions API (CAPI) lets your brand send server-side conversion events — such as purchases, leads, sign-ups, and other actions that happen away from the browser — to Microsoft Advertising. Microsoft Advertising uses these events to attribute conversions to your campaigns, improve measurement accuracy, and build audiences for remarketing. Amperity identifies each event by a hashed email address or phone number, a Microsoft click ID (**msclkid**), or another customer identifier, and hashes email and phone values before sending them.
+
+.. term-microsoft-ads-conversions-end
+
+
 **Microsoft Advertising offline conversions**
 
 .. term-microsoft-ads-offline-conversions-start
