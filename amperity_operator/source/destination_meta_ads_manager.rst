@@ -39,9 +39,17 @@ This endpoint removes existing customers from an audience **without resetting yo
 
 .. destination-meta-ads-manager-end
 
+.. destination-meta-ads-manager-capi-disambiguation-start
+
+.. seealso:: Custom audiences build **targeting audiences** using the Meta Marketing API. To send **conversion events** for measurement and attribution (such as offline or website purchases), use the Meta Conversions API instead. See :doc:`events_meta_ads_manager`.
+
+.. destination-meta-ads-manager-capi-disambiguation-end
+
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. note:: Provide **raw** (unhashed) values for the fields that Amperity hashes. Amperity normalizes and applies SHA-256 hashing automatically before sending. Do not pre-hash these values; doing so results in double-hashing and prevents Meta from matching customers.
 
 .. note::
 

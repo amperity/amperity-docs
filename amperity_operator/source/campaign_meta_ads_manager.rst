@@ -38,6 +38,10 @@ This endpoint removes existing customers from an audience **without resetting yo
 
 .. campaign-meta-ads-manager-end
 
+.. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
+   :start-after: .. destination-meta-ads-manager-capi-disambiguation-start
+   :end-before: .. destination-meta-ads-manager-capi-disambiguation-end
+
 .. note::
 
    .. include:: ../../shared/destinations.rst

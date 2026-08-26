@@ -11,9 +11,11 @@ Meta Events
 
 .. TODO: Sync this with the updated events topics.
 
-Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+Send conversion events to |destination-name| using the Meta `Conversions API <https://developers.facebook.com/docs/marketing-api/conversions-api>`__ |ext_link| to measure and attribute the conversions that result from your advertising, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. Conversions may happen offline (such as a purchase in a physical store) or online (such as a purchase on a website).
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+The Conversions API is a separate Meta product from custom audiences (Meta Ads Manager), which build targeting audiences using the Meta Marketing API.
+
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the Conversions API.
 
 .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-window-start

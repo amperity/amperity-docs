@@ -11,7 +11,7 @@
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
 .. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
-.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, and **EXTERN_ID**
+.. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **state**, **city**, **postal**, **country**, **birthdate**, **gender**, and **external_id**
 
 .. meta::
     :description lang=en:
@@ -23,21 +23,27 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure events for Meta Ads Manager
+        Configure the Meta Conversions API
 
 ==================================================
-Configure events for Meta Ads Manager
+Configure the Meta Conversions API
 ==================================================
 
 .. TODO: Sync this with the updated events topics.
 
 .. events-meta-ads-manager-overview-start
 
-Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+Send conversion events to |destination-name| using the Meta `Conversions API <https://developers.facebook.com/docs/marketing-api/conversions-api>`__ |ext_link| to measure and attribute the conversions that result from your advertising, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. Conversions may happen offline (such as a purchase in a physical store) or online (such as a purchase on a website).
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the Conversions API.
 
 .. events-meta-ads-manager-overview-end
+
+.. events-meta-ads-manager-capi-disambiguation-start
+
+.. seealso:: The Conversions API sends **conversion events** for measurement and attribution. It is a separate Meta product from **custom audiences**, which build **targeting audiences** using the Meta Marketing API. The two are configured separately and use different settings: a **Dataset ID** for the Conversions API, and an **Account ID** with a **custom audience name** for custom audiences. To build custom audiences for targeting, see :doc:`destination_meta_ads_manager`.
+
+.. events-meta-ads-manager-capi-disambiguation-end
 
 .. events-meta-ads-manager-overview-window-start
 
@@ -56,6 +62,8 @@ Transaction events that occurred within the previous seven days *and* contain po
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. note:: Provide **raw** (unhashed) values for the fields that Amperity hashes. Amperity normalizes and applies SHA-256 hashing automatically before sending. Do not pre-hash these values; doing so results in double-hashing and prevents Meta from matching customers.
 
 .. _events-meta-ads-manager-get-details:
 

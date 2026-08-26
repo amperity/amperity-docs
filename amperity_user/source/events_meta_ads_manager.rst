@@ -19,15 +19,19 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to Meta Ads Manager
+        Send events to the Meta Conversions API
 
 ==================================================
-Send events to Meta Ads Manager
+Send events to the Meta Conversions API
 ==================================================
 
 .. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-start
    :end-before: .. events-meta-ads-manager-overview-end
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-capi-disambiguation-start
+   :end-before: .. events-meta-ads-manager-capi-disambiguation-end
 
 .. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-window-start
