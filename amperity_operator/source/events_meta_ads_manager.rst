@@ -7,19 +7,17 @@
 .. |required-credentials| replace:: "refresh token"
 .. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
-.. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
 .. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **state**, **city**, **postal**, **country**, **birthdate**, **gender**, and **extern_id**
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send events to Meta Ads Manager.
+        Configure Amperity to send conversion events to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send events to Meta Ads Manager.
+        Configure Amperity to send conversion events to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

@@ -3,19 +3,17 @@
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |what-send| replace:: events
-.. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
-.. |allow-for-what| replace:: audiences
+.. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
-.. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
 
 
 .. meta::
     :description lang=en:
-        Send events from Amperity to Meta Ads Manager.
+        Send conversion events from Amperity to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send events from Amperity to Meta Ads Manager.
+        Send conversion events from Amperity to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
