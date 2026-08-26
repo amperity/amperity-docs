@@ -63,6 +63,10 @@ Events
       :link-type: doc
       :link: events_meta_ads_manager
 
+   .. grid-item-card:: Microsoft Ads Conversions API
+      :link-type: doc
+      :link: events_microsoft_ads_conversions
+
    .. grid-item-card:: Microsoft Advertising offline conversions
       :link-type: doc
       :link: events_microsoft_ads
@@ -103,6 +107,7 @@ Events
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>
    Meta Ads Manager <events_meta_ads_manager>
+   Microsoft Ads Conversions API <events_microsoft_ads_conversions>
    Microsoft Advertising offline conversions <events_microsoft_ads>
    Pinterest <events_pinterest>
    Roku Conversions API <events_roku_capi>
