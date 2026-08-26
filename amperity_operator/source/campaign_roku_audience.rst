@@ -47,14 +47,6 @@ Each campaign send uploads the entire audience to |destination-name| as a single
 
 .. campaign-roku-audience-api-note-end
 
-.. campaign-roku-audience-beta-start
-
-.. admonition:: Beta
-
-   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. campaign-roku-audience-beta-end
-
 
 .. _campaign-roku-audience-get-details:
 
