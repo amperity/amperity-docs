@@ -297,6 +297,8 @@ Review the :ref:`events-microsoft-ads-conversions-parameters` section for the co
 
 .. note:: |destination-name| deduplicates events by **event_id**. If your query does not return **event_id**, Amperity generates a stable one from the event's name, time, transaction ID, and first identifier, so that retries of the same event do not create duplicate conversions.
 
+.. note:: For an event to be attributed to a conversion goal, its **event_name** must match the event action of a custom conversion goal configured in |destination-name|. Events are still accepted — and can contribute to audiences and measurement — when no matching goal exists, so confirm your goal setup in |destination-name| if accepted events are not appearing as conversions.
+
 .. events-microsoft-ads-conversions-build-query-required-end
 
 Bound the query to recent conversions — |destination-name| accepts events with an **event_time** within the last **7 days** — so each orchestration sends new events instead of re-sending history. A query that returns a collection of recent purchase events for use in |destination-name| is similar to:
