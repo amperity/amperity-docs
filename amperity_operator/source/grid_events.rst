@@ -50,7 +50,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_google_enhanced_conversions
 
-   .. grid-item-card:: Meta Ads Manager
+   .. grid-item-card:: Meta Conversions API
       :link-type: doc
       :link: events_meta_ads_manager
 
@@ -87,7 +87,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Criteo <events_criteo>
    Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>
-   Meta Ads Manager <events_meta_ads_manager>
+   Meta Conversions API <events_meta_ads_manager>
    Microsoft Advertising offline conversions <events_microsoft_ads>
    Pinterest <events_pinterest>
    Roku Conversions API <events_roku_capi>
