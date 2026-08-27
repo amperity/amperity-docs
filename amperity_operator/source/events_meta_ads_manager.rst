@@ -362,14 +362,11 @@ The query **MUST** contain the following fields: **email** or **phone** and **ti
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
-.. LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. Staged per Bel's
-   feedback (Slack CR2QFF327 / C0AKM7R9483). The email column typically resolves to the
-   master profile email (for example, c360.email), which reflects consent captured at the
-   profile level, not at the individual email-address level. Customers who require
-   email-level consent must shape the query to send only addresses consented at that level.
-   Draft to be finalized by Legal: "The email sent is the master profile email and is
-   consented at the profile level." When approved, convert this comment into a rendered
-   note near the email guidance.
+.. note:: The **email** sent is the master profile email and is consented at the profile level.
+
+.. TODO: above note is LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. The email column typically resolves to the
+   master profile email (for example, c360.email), which reflects consent captured at the profile level, not at the individual email-address level. Customers who require email-level consent must
+   shape the query to send only addresses consented at that level.
 
 .. tip::
 
@@ -462,7 +459,7 @@ When your query includes an **order_id** column, the connector groups all rows t
 For a Purchase event, the connector sends a single **value**, resolved in this order:
 
 #. If the query returns a **value** column, that value is used as-is. Provide **value** as an order-level total.
-#. Otherwise, if the query returns **price** and **quantity**, the connector uses **price** multiplied by **quantity**. Use this only for itemized data where **price** is a per-unit price.
+#. Otherwise, if the query returns **price** and **quantity**, the connector uses **price** multiplied by **quantity**, summed across the order's line items. Use this only for itemized data where **price** is a per-unit price.
 #. Otherwise, no **value** is sent.
 
 .. warning:: When events are grouped by **order_id**, the connector keeps a single **value** for the order--the largest **value** found among the order's rows--on the assumption that every row already carries the order total. If your **value** is a per-line-item amount, only the largest line is sent and the rest of the basket is dropped. Pre-aggregate **value** to the order total before sending.
