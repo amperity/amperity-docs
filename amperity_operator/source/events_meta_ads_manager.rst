@@ -362,6 +362,15 @@ The query **MUST** contain the following fields: **email** or **phone** and **ti
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
+.. LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. Staged per Bel's
+   feedback (Slack CR2QFF327 / C0AKM7R9483). The email column typically resolves to the
+   master profile email (for example, c360.email), which reflects consent captured at the
+   profile level, not at the individual email-address level. Customers who require
+   email-level consent must shape the query to send only addresses consented at that level.
+   Draft to be finalized by Legal: "The email sent is the master profile email and is
+   consented at the profile level." When approved, convert this comment into a rendered
+   note near the email guidance.
+
 .. tip::
 
    Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
