@@ -73,6 +73,16 @@ Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions
 
 .. events-meta-ads-manager-offline-events-parameters-end
 
+
+.. _events-meta-ads-manager-how-events-built:
+
+How the connector builds events
+==================================================
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-how-events-built-start
+   :end-before: .. events-meta-ads-manager-how-events-built-end
+
 .. important::
 
    .. include:: ../../shared/destination_settings.rst

@@ -431,6 +431,44 @@ Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions
 .. events-meta-ads-manager-offline-events-parameters-end
 
 
+.. _events-meta-ads-manager-how-events-built:
+
+How the connector builds events
+==================================================
+
+.. events-meta-ads-manager-how-events-built-start
+
+Before events are sent to |destination-name|, the connector transforms your query results. Understanding these transformations helps you shape a query that sends the values you expect.
+
+**Events are grouped by order**
+
+When your query includes an **order_id** column, the connector groups all rows that share an **order_id** (and **event_name**, when present) into a *single* event. Each line item in the order is listed in a **contents** array on that event, using the item's **product_id** and **quantity**. For example, a query that returns three rows for one order is sent as one event whose **contents** array lists three items--not as three events.
+
+.. note:: While **order_id** is in the query, events are always aggregated to the order. There is no way to send one event per line item without removing **order_id** from the query.
+
+   When your query does *not* include **order_id**, each row is sent as its own event.
+
+**The value sent for a purchase**
+
+For a Purchase event, the connector sends a single **value**, resolved in this order:
+
+#. If the query returns a **value** column, that value is used as-is. Provide **value** as an order-level total.
+#. Otherwise, if the query returns **price** and **quantity**, the connector uses **price** multiplied by **quantity**. Use this only for itemized data where **price** is a per-unit price.
+#. Otherwise, no **value** is sent.
+
+.. warning:: When events are grouped by **order_id**, the connector keeps a single **value** for the order--the largest **value** found among the order's rows--on the assumption that every row already carries the order total. If your **value** is a per-line-item amount, only the largest line is sent and the rest of the basket is dropped. Pre-aggregate **value** to the order total before sending.
+
+   Do not pass an order total in **price** alongside a **quantity**: the connector multiplies **price** by **quantity**, which inflates the amount reported to Meta. Use **value** for an already-computed total, and use **price** and **quantity** only when **price** is a per-unit price.
+
+**Purchases with no value are dropped**
+
+A Purchase event that resolves to no **value** is dropped before it is sent, rather than sent with a value of 0. Meta rejects a Purchase that has no value, and sending 0 instead would permanently record a zero-value conversion that cannot be removed and would distort conversion counts and value-based optimization. Dropped rows are reported as failures with an actionable message; the rest of the send is unaffected. Add a **WHERE** clause such as ``WHERE value > 0`` (or the equivalent for your revenue column) to exclude zero and negative values.
+
+.. note:: The **contents** array includes each item's **product_id** and **quantity** only. Item-level price is not currently included in **contents**.
+
+.. events-meta-ads-manager-how-events-built-end
+
+
 .. _events-meta-ads-manager-conversions:
 
 Conversions API parameters
@@ -610,11 +648,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,ut.order_id AS order_id
 
-       .. important:: The number of rows that results from the query may not be the same as the number of events that are uploaded to |destination-name|. This depends on the table from which the order ID is returned.
+       .. important:: When **order_id** is present, the connector groups all rows that share an **order_id** (and **event_name**, when present) into a single event, whether the order ID comes from the **Unified Itemized Transactions** or the **Unified Transactions** table. The line items in each order are listed in the event's **contents** array. As a result, the number of events sent to |destination-name| is the number of distinct orders (per **event_name**), not the number of query rows.
 
-          #. Transactions from the **Unified Itemized Transactions** table group items by order ID to ensure that individual events are combined to describe a complete transaction. |destination-name| processes each item as a unique conversion. For example, an order ID with three individual items is attributed by |destination-name| as three conversions.
-
-          #. Transactions from the **Unified Transactions** table are grouped by order ID. Each unique combination of **order_id** and **event_name** is sent to |destination-name| as a single conversion. If **event_name** column is not included all rows grouped by order ID are assigned the "Purchase" event type and each **order_id** produces one conversion.
+          If **event_name** is not included, all rows grouped by **order_id** are assigned the "Purchase" event type, and each **order_id** produces one event. See :ref:`How the connector builds events <events-meta-ads-manager-how-events-built>` for how each order's **value** is resolved.
 
    * - **phone**
      - See **email**.
