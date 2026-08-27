@@ -31,7 +31,7 @@ Configure the Meta Conversions API
 
 .. events-meta-ads-manager-overview-start
 
-Send conversion events to |destination-name| using the Meta `Conversions API <https://developers.facebook.com/docs/marketing-api/conversions-api>`__ |ext_link| to measure and attribute the conversions that result from your advertising, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. Conversions may happen offline (such as a purchase in a physical store) or online (such as a purchase on a website).
+Send conversion events to |destination-name| using the Meta `Conversions API <https://developers.facebook.com/docs/marketing-api/conversions-api>`__ |ext_link| to measure and attribute the conversions that result from your advertising, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. The Conversions API is an omni-channel events feed: conversions may happen offline (such as a purchase in a physical store) or online (such as a purchase on a website).
 
 Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the Conversions API.
 
@@ -39,7 +39,7 @@ Transaction events that occurred within the previous seven days *and* contain po
 
 .. events-meta-ads-manager-inproduct-name-start
 
-.. note:: In Amperity, this destination appears as **Meta Ads Offline Events** when you add a destination. It sends events using the Meta Conversions API and supports both offline and website conversions.
+.. note:: In Amperity, this destination appears as **Meta Ads Offline Events** when you add a destination. It sends events using the Meta Conversions API as an omni-channel events feed that supports both offline and website conversions.
 
 .. events-meta-ads-manager-inproduct-name-end
 
