@@ -47,6 +47,10 @@ Events
       :link-type: doc
       :link: events_criteo
 
+   .. grid-item-card:: Criteo Offline Sales
+      :link-type: doc
+      :link: events_criteo_offline_sales
+
    .. grid-item-card:: Google Enhanced Conversions
       :link-type: doc
       :link: events_google_enhanced_conversions
@@ -100,6 +104,7 @@ Events
    Amazon Ads Conversion API <events_amazon_capi>
    Braze Purchases <events_braze_purchases>
    Criteo <events_criteo>
+   Criteo Offline Sales <events_criteo_offline_sales>
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>
    Meta Ads Manager <events_meta_ads_manager>

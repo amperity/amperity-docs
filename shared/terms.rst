@@ -1636,6 +1636,15 @@ Send first-party audiences to your `Commerce Growth <https://www.criteo.com/plat
 .. term-criteo-end
 
 
+**Criteo Offline Sales**
+
+.. term-criteo-offline-sales-start
+
+Criteo Offline Sales lets your brand send in-store (offline) transactions to Criteo for retail media attribution and targeting. Criteo uses these transactions to attribute in-store sales back to the ads it served, and to inform ad targeting. Amperity sends one transaction line item per row, identifying each shopper by a hashed email address, a customer ID, or a retailer visitor ID.
+
+.. term-criteo-offline-sales-end
+
+
 **Criteo Retail Media**, **Criteo Retail Audience API**
 
 .. term-criteo-retail-media-start

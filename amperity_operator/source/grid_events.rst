@@ -42,6 +42,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_criteo
 
+   .. grid-item-card:: Criteo Offline Sales
+      :link-type: doc
+      :link: events_criteo_offline_sales
+
    .. grid-item-card:: Google Analytics 4
       :link-type: doc
       :link: events_google_analytics
@@ -85,6 +89,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Amazon Ads Conversion API <events_amazon_capi>
    Braze Purchases <events_braze_purchases>
    Criteo <events_criteo>
+   Criteo Offline Sales <events_criteo_offline_sales>
    Google Analytics 4 <events_google_analytics>
    Google Enhanced Conversions <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>
