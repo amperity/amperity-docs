@@ -94,6 +94,42 @@ When editing a custom SQL table, use **Format SQL** to reformat the SQL in the e
 .. assistant-learning-lab-end
 
 
+.. _assistant-regional-availability:
+
+Regional availability
+==================================================
+
+.. assistant-regional-availability-start
+
+The availability of each **AmpAI** assistant depends on the hosting region for your tenant. Tenant settings and user permissions may also affect access.
+
+For tenants hosted in Canada:
+
+.. list-table::
+   :widths: 35 30 35
+   :header-rows: 1
+
+   * - Assistant
+     - Availability
+     - Additional requirements
+   * - Amp Insights
+     - Available
+     - **AmpAI** enabled for the tenant and access to the **Amps** dashboard
+   * - Journeys AI Assistant
+     - Not available
+     - Not applicable
+   * - Queries AI Assistant
+     - Available
+     - **AmpAI** enabled for the tenant and access to the **Queries** page
+   * - Segments AI Assistant
+     - Not available
+     - Not applicable
+
+Canada currently deploys GPT-4.1 mini. When an available assistant requests a model that is not deployed in Canada, Amperity routes the request to GPT-4.1 mini.
+
+.. assistant-regional-availability-end
+
+
 .. _assistant-enable-disable:
 
 Enable or disable AmpAI assistants

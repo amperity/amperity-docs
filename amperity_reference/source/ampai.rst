@@ -92,6 +92,8 @@ A typical workflow might start with using the **Customer Data Assistant** to cre
 
 Learn more about :doc:`Customer Data Assistant <customer_data_assistant>` and :doc:`AI Assistants <assistant>`.
 
+Availability varies by region and tool. Review :ref:`Customer Data Assistant regional availability <customer-data-agent-regional-availability>` and :ref:`AI Assistant regional availability <assistant-regional-availability>`.
+
 .. ampai-tools-links-end
 
 .. _ampai-getting-good-results:
