@@ -33,7 +33,9 @@ Access Customer Data Assistant
 
 .. customer-data-agent-access-start
 
-The **Customer Data Assistant** is available to any user on a tenant with **AmpAI** enabled. Access the agent by clicking the **AmpAI** button in the UI sidebar.
+Your Amperity hosting region determines which experience is available from the **AmpAI** button. Tenant settings and user permissions may also affect access.
+
+If the **Customer Data Assistant** is available for your tenant, access it by clicking the **AmpAI** button in the UI sidebar.
 
 .. customer-data-agent-access-end
 
@@ -58,6 +60,54 @@ The **Customer Data Assistant** is available to any user on a tenant with **AmpA
    :ref:`Learn more about creating a custom prompt.<ampai-custom-prompt>`
 
 .. customer-data-agent-access-custom-prompt-tip-end
+
+
+.. _customer-data-agent-regional-availability:
+
+Regional availability
+==================================================
+
+.. customer-data-agent-regional-availability-start
+
+The experience available from the **AmpAI** button and the model used depend on the region and hosting platform for your Amperity tenant.
+
+.. list-table::
+   :widths: 20 20 35 25
+   :header-rows: 1
+
+   * - Region
+     - Hosting platform
+     - AmpAI experience
+     - Current model
+   * - United States
+     - Amazon AWS
+     - Customer Data Assistant
+     - GPT-5.4
+   * - United States
+     - Microsoft Azure
+     - Customer Data Assistant
+     - GPT-5.4
+   * - European Union
+     - Microsoft Azure
+     - Customer Data Assistant
+     - GPT-5.4
+   * - Canada
+     - Amazon AWS
+     - AmpGPT
+     - GPT-4.1 mini
+   * - Australia
+     - Amazon AWS
+     - AmpGPT
+     - GPT-4.1 mini
+
+The **Customer Data Assistant** requests GPT-5.4. If GPT-5.4 is not deployed in a region, Amperity routes the request to the first available model in its fallback sequence. Canada and Australia currently deploy GPT-4.1 mini only. Enabling the **Customer Data Assistant** in either region without an additional model deployment would therefore continue to use GPT-4.1 mini.
+
+The experiences also support different workflows. For example, consider the request: "Find high-value customers who have lapsed for 90 days, create a segment for them, and build a re-engagement journey."
+
+* The **Customer Data Assistant** can analyze the data, create and track a plan, produce a reviewable segment draft, save the segment after approval, and then draft the journey.
+* **AmpGPT** can analyze the data, generate and run SQL, retry SQL errors, and return a table or visualization. It cannot create, edit, search, or save segments; create journeys; or provide the plan, artifact, and approval workflow.
+
+.. customer-data-agent-regional-availability-end
 
 .. _customer-data-agent-canvas:
 
@@ -325,4 +375,3 @@ The **Customer Data Assistant** has capabilities that overlap with the existing 
 A typical workflow might start with the **Customer Data Assistant** to create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
 
 .. customer-data-agent-relationship-to-assistants-end
-
