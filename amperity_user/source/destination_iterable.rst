@@ -33,6 +33,14 @@ Send query results to Iterable
    :start-after: .. destinations-overview-list-intro-start
    :end-before: .. destinations-overview-list-intro-end
 
+.. sendto-iterable-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. sendto-iterable-beta-end
+
 #. :ref:`Build a query <sendto-iterable-build-query>`
 #. :ref:`Add orchestration <sendto-iterable-add-orchestration>`
 #. :ref:`Run orchestration <sendto-iterable-run-orchestration>`

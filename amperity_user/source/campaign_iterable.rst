@@ -43,6 +43,14 @@ Send audiences to Iterable
    :start-after: .. sendtos-ask-to-configure-campaigns-start
    :end-before: .. sendtos-ask-to-configure-campaigns-end
 
+.. channel-iterable-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. channel-iterable-beta-end
+
 
 .. _channel-iterable-build-segment:
 
