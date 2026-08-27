@@ -362,12 +362,6 @@ The query **MUST** contain the following fields: **email** or **phone** and **ti
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
-.. note:: The **email** sent is the master profile email and is consented at the profile level.
-
-.. TODO: above note is LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. The email column typically resolves to the
-   master profile email (for example, c360.email), which reflects consent captured at the profile level, not at the individual email-address level. Customers who require email-level consent must
-   shape the query to send only addresses consented at that level.
-
 .. tip::
 
    Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
@@ -593,6 +587,12 @@ The fields are listed alphabetically, but may be returned by a query in any orde
           ,c360.phone AS phone
 
        .. note:: Amperity performs the same actions for email addresses and phone numbers when sending to the Conversions API as when sending to the Marketing API.
+
+       .. note:: The **email** sent is the master profile email and is consented at the profile level.
+
+       .. TODO: above note is LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. The email column typically resolves to the
+          master profile email (for example, c360.email), which reflects consent captured at the profile level, not at the individual email-address level. Customers who require email-level consent must
+          shape the query to send only addresses consented at that level.
 
    * - **event_name**
      - **Optional**
