@@ -46,6 +46,7 @@ Site Index
    destination-dynamic-yield-customer-profiles
    destination-dynamics-365-marketing
    destination-dynamics
+   destination-eagle-eye
    destination-eloqua
    destination-emarsys
    destination-epsilon-abacus
