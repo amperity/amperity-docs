@@ -2251,6 +2251,31 @@ Generate the API key in |destination-name| by navigating to **Settings > API Key
 
 .. credential-dynamic-yield-customer-profiles-api-find-key-end
 
+.. credential-eagle-eye-client-id-start
+
+The Eagle Eye AIR API client ID, provisioned by your Eagle Eye account manager. It identifies your Amperity integration to Eagle Eye and is not a secret.
+
+.. credential-eagle-eye-client-id-end
+
+.. credential-eagle-eye-client-secret-start
+
+The Eagle Eye AIR API secret paired with the Client ID, provisioned by your Eagle Eye account manager. Amperity uses it to authenticate each request.
+
+.. credential-eagle-eye-client-secret-end
+
+.. credential-eagle-eye-api-url-start
+
+The Eagle Eye AIR Wallet API base URL for your region and environment. Select the URL that matches your Eagle Eye company unit:
+
+* ``https://wallet.uk.eagleeye.com/2.0/`` (United Kingdom)
+* ``https://wallet.sandbox.uk.eagleeye.com/2.0/`` (United Kingdom sandbox)
+* ``https://wallet.au.eagleeye.com/2.0/`` (Australia)
+* ``https://wallet.us2.eagleeye.com/2.0/`` (United States)
+
+Confirm the correct URL with your Eagle Eye account manager. Defaults to the Australia URL.
+
+.. credential-eagle-eye-api-url-end
+
 **Username and password**
 
 .. credential-salesforce-sales-cloud-username-and-password-start

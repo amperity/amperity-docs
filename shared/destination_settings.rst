@@ -2971,6 +2971,45 @@ The operation applied to every row in the query results: **upsert** (the default
 
 .. setting-dynamic-yield-customer-profiles-operation-end
 
+.. setting-eagle-eye-identity-type-start
+
+The name your Eagle Eye company unit uses for the loyalty identity carried in the ``identity_value`` column — for example ``CUSTOMER_ID`` or a loyalty card type. This is configured in Eagle Eye and differs by company unit, so confirm the exact name with your Eagle Eye account manager. Every wallet operation is addressed by this identity.
+
+.. setting-eagle-eye-identity-type-end
+
+.. setting-eagle-eye-default-wallet-type-start
+
+The Eagle Eye wallet type created for new wallets by the **create** operation. Defaults to **CONSUMER**, Eagle Eye's standard consumer wallet type. Change it only if your Eagle Eye company unit uses a different wallet type.
+
+.. setting-eagle-eye-default-wallet-type-end
+
+.. setting-eagle-eye-default-wallet-state-start
+
+The behavioral state applied to wallets created by the **create** operation. State values are configured per Eagle Eye company unit (for example ``EARNBURN``); a value your unit does not recognize is rejected. Leave this unset to let Eagle Eye apply your unit's default state — the safest choice unless your Eagle Eye account manager has confirmed the values your unit accepts.
+
+.. setting-eagle-eye-default-wallet-state-end
+
+.. setting-eagle-eye-operation-start
+
+The wallet operation performed for every row in the send. A send performs a single operation for the entire run:
+
+* **create** (the default) provisions a wallet for each person and attaches their loyalty identity, and sets the wallet's label from the ``friendly_name`` column when it is present. A person who already has a wallet is recovered rather than duplicated, so re-sending the same query results is safe.
+* **update** changes a wallet's friendly name, and requires the ``friendly_name`` column.
+* **state-change** changes a wallet's behavioral state, and requires the **Wallet state** setting below.
+* **suspend** temporarily halts a wallet's activity, and **activate** returns a suspended or inactive wallet to service.
+* **terminate** permanently closes a wallet. It is the path for consent-driven opt-out, cannot be undone, and Eagle Eye rejects any later change to a terminated wallet.
+* **delete** removes a wallet and is intended for cleaning up test data rather than for consent requests.
+
+Every operation other than **create** first looks up the person's existing wallet by their identity value; a person with no wallet yet is reported as a failed row and the run continues. You choose this operation when you configure the orchestration that sends to this destination.
+
+.. setting-eagle-eye-operation-end
+
+.. setting-eagle-eye-wallet-state-start
+
+The behavioral state applied by the **state-change** operation — for example ``EARNBURN`` or ``EARNONLY``. Required when the operation is **state-change**; Amperity stops the run with a message if it is missing. State values are configured per Eagle Eye company unit, so use only values your unit accepts. You choose this when you configure the orchestration that sends to this destination.
+
+.. setting-eagle-eye-wallet-state-end
+
 
 
 .. vale off

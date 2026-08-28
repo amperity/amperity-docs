@@ -2460,6 +2460,15 @@ Dynamics 365 Marketing helps you build personalized journeys for real-time and o
 .. term-dynamics-365-marketing-end
 
 
+**Eagle Eye**
+
+.. term-eagle-eye-start
+
+Eagle Eye is a loyalty and promotions platform. Its AIR platform manages loyalty wallets that track each customer's earning and spending activity in a loyalty program.
+
+.. term-eagle-eye-end
+
+
 **early repeat purchaser**, **early repeat purchasers**
 
 .. 
