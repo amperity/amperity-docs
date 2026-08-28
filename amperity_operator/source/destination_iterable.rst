@@ -46,6 +46,14 @@ Use Amperity to manage audience lists in |destination-name|. Build a query using
 
 .. destination-iterable-api-note-end
 
+.. destination-iterable-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-iterable-beta-end
+
 
 .. _destination-iterable-get-details:
 

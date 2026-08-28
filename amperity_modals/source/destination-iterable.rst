@@ -14,6 +14,14 @@ Iterable
    :start-after: .. term-iterable-start
    :end-before: .. term-iterable-end
 
+.. destination-iterable-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. destination-iterable-beta-end
+
 
 Credentials
 ==================================================

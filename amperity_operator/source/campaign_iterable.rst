@@ -40,6 +40,14 @@ Use Amperity to build campaigns that send audiences to |destination-name|. Confi
 
 .. campaign-iterable-end
 
+.. campaign-iterable-beta-start
+
+.. admonition:: Beta
+
+   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. campaign-iterable-beta-end
+
 
 .. _campaign-iterable-prerequisites:
 
