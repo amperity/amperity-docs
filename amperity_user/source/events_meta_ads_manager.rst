@@ -3,31 +3,37 @@
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |what-send| replace:: events
-.. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
-.. |allow-for-what| replace:: audiences
+.. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
-.. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
 
 
 .. meta::
     :description lang=en:
-        Send events from Amperity to Meta Ads Manager.
+        Send conversion events from Amperity to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Send events from Amperity to Meta Ads Manager.
+        Send conversion events from Amperity to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send events to Meta Ads Manager
+        Send events to the Meta Conversions API
 
 ==================================================
-Send events to Meta Ads Manager
+Send events to the Meta Conversions API
 ==================================================
 
 .. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-start
    :end-before: .. events-meta-ads-manager-overview-end
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-inproduct-name-start
+   :end-before: .. events-meta-ads-manager-inproduct-name-end
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-capi-disambiguation-start
+   :end-before: .. events-meta-ads-manager-capi-disambiguation-end
 
 .. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-window-start
@@ -66,6 +72,16 @@ Build a query
 Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` section for detailed information about the columns that should be returned by your query.
 
 .. events-meta-ads-manager-offline-events-parameters-end
+
+
+.. _events-meta-ads-manager-how-events-built:
+
+How the connector builds events
+==================================================
+
+.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
+   :start-after: .. events-meta-ads-manager-how-events-built-start
+   :end-before: .. events-meta-ads-manager-how-events-built-end
 
 .. important::
 

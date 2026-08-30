@@ -4311,6 +4311,15 @@ Meta Ads Manager is a unified ad creation tool that your brand can use to create
 .. term-meta-ads-manager-end
 
 
+**Meta Conversions API**
+
+.. term-meta-conversions-api-start
+
+The Meta Conversions API (CAPI) lets your brand send conversion events — such as purchases, leads, and sign-ups — to Meta from your server. Meta uses these events for measurement and attribution, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. It is a separate product from Meta custom audiences, which build targeting audiences.
+
+.. term-meta-conversions-api-end
+
+
 **metrics** concept, as exists for the Metrics tab
 
 .. term-metrics-start

@@ -63,7 +63,7 @@ Events
       :link-type: ref
       :link: destination-klaviyo-customer-profile-parameters
 
-   .. grid-item-card:: Meta Ads Manager
+   .. grid-item-card:: Meta Conversions API
       :link-type: doc
       :link: events_meta_ads_manager
 
@@ -107,7 +107,7 @@ Events
    Criteo Offline Sales <events_criteo_offline_sales>
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>
-   Meta Ads Manager <events_meta_ads_manager>
+   Meta Conversions API <events_meta_ads_manager>
    Microsoft Advertising offline conversions <events_microsoft_ads>
    Pinterest <events_pinterest>
    Roku Conversions API <events_roku_capi>

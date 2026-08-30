@@ -10,11 +10,11 @@
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send custom audiences and events from Amperity to Meta Ads Manager.
+        Use orchestrations to send custom audiences from Amperity to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send custom audiences and events from Amperity to Meta Ads Manager.
+        Use orchestrations to send custom audiences from Amperity to Meta Ads Manager.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -30,9 +30,11 @@ You can use queries and orchestrations to build custom audiences in |destination
 
 Use |destination_meta_ads_manager_custom_audiences| in |destination-name| to advertise to customers on Facebook, Instagram, and Messenger, along with using the Meta Audience Network to extend your advertising beyond Facebook and reach new audiences on apps and mobile devices, such as WhatsApp.
 
-You may configure Amperity to send |destination_meta_ads_manager_offline_events| to |destination-name|. Events should be a set of transaction events that occurred within the previous 7 days. Events sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link| are matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp and ca help your brand track offline conversions for your marketing campaigns.
-
 .. sendto-meta-ads-manager-howitworks-end
+
+.. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
+   :start-after: .. destination-meta-ads-manager-capi-disambiguation-start
+   :end-before: .. destination-meta-ads-manager-capi-disambiguation-end
 
 .. image:: ../../images/sendto-meta-ads-manager.png
    :width: 600 px
@@ -188,30 +190,10 @@ and then assign this query to a destination that sends results to |destination-n
 
 .. _sendto-meta-ads-manager-build-query-offline-events:
 
-Send events
+Send conversion events (Conversions API)
 --------------------------------------------------
 
-.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
-   :start-after: .. events-meta-ads-manager-overview-start
-   :end-before: .. events-meta-ads-manager-overview-end
-
-.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
-   :start-after: .. events-meta-ads-manager-overview-window-start
-   :end-before: .. events-meta-ads-manager-overview-window-end
-
-.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
-   :start-after: .. events-meta-ads-manager-allowfor-start
-   :end-before: .. events-meta-ads-manager-allowfor-end
-
-.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
-   :start-after: .. events-meta-ads-manager-offline-events-build-query-start
-   :end-before: .. events-meta-ads-manager-offline-events-build-query-end
-
-.. destination-meta-ads-manager-offline-events-parameters-start
-
-Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that should be returned by your query.
-
-.. destination-meta-ads-manager-offline-events-parameters-end
+To send conversion events (such as offline or website purchases) for measurement and attribution, use the Meta Conversions API. This is a separate workflow from custom audiences, with its own settings and query requirements. See :doc:`events_meta_ads_manager`.
 
 
 .. _sendto-meta-ads-manager-add-orchestration:
@@ -264,13 +246,3 @@ Facebook Marketing API keys
 .. include:: ../../amperity_operator/source/destination_meta_ads_manager.rst
    :start-after: .. destination-meta-ads-manager-api-keys-start
    :end-before: .. destination-meta-ads-manager-api-keys-end
-
-
-.. _destination-meta-ads-manager-conversion-api-parameters:
-
-Conversions API parameters
-==================================================
-
-.. include:: ../../amperity_operator/source/events_meta_ads_manager.rst
-   :start-after: .. events-meta-ads-manager-conversion-api-parameters-start
-   :end-before: .. events-meta-ads-manager-conversion-api-parameters-end

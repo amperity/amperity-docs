@@ -7,37 +7,47 @@
 .. |required-credentials| replace:: "refresh token"
 .. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
-.. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
 .. |allow-for-what| replace:: events
 .. |allow-for-duration| replace:: up to 24 hours
-.. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
-.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, and **EXTERN_ID**
+.. |hashed-fields| replace:: **email**, **phone**, **given_name**, **surname**, **state**, **city**, **postal**, **country**, **birthdate**, **gender**, and **extern_id**
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send events to Meta Ads Manager.
+        Configure Amperity to send conversion events to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send events to Meta Ads Manager.
+        Configure Amperity to send conversion events to Meta using the Conversions API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure events for Meta Ads Manager
+        Configure the Meta Conversions API
 
 ==================================================
-Configure events for Meta Ads Manager
+Configure the Meta Conversions API
 ==================================================
 
 .. TODO: Sync this with the updated events topics.
 
 .. events-meta-ads-manager-overview-start
 
-Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+Send conversion events to |destination-name| using the Meta `Conversions API <https://developers.facebook.com/docs/marketing-api/conversions-api>`__ |ext_link| to measure and attribute the conversions that result from your advertising, to optimize ad delivery, and to deduplicate server-side events against browser (Pixel) events. The Conversions API is an omni-channel events feed: conversions may happen offline (such as a purchase in a physical store) or online (such as a purchase on a website).
 
-Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the Conversions API.
 
 .. events-meta-ads-manager-overview-end
+
+.. events-meta-ads-manager-inproduct-name-start
+
+.. note:: In Amperity, this destination appears as **Meta Ads Offline Events** when you add a destination. It sends events using the Meta Conversions API as an omni-channel events feed that supports both offline and website conversions.
+
+.. events-meta-ads-manager-inproduct-name-end
+
+.. events-meta-ads-manager-capi-disambiguation-start
+
+.. seealso:: The Conversions API sends **conversion events** for measurement and attribution. It is a separate Meta product from **custom audiences**, which build **targeting audiences** using the Meta Marketing API. The two are configured separately and use different settings: a **Dataset ID** for the Conversions API, and an **Account ID** with a **custom audience name** for custom audiences. To build custom audiences for targeting, see :doc:`destination_meta_ads_manager`.
+
+.. events-meta-ads-manager-capi-disambiguation-end
 
 .. events-meta-ads-manager-overview-window-start
 
@@ -56,6 +66,8 @@ Transaction events that occurred within the previous seven days *and* contain po
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-sha-256-hashed-fields-start
    :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. note:: Provide **raw** (unhashed) values for the fields that Amperity hashes. Amperity normalizes and applies SHA-256 hashing automatically before sending. Do not pre-hash these values; doing so results in double-hashing and prevents Meta from matching customers.
 
 .. _events-meta-ads-manager-get-details:
 
@@ -324,7 +336,7 @@ A query that returns a collection events for use in |destination-name| is simila
    :linenos:
 
    SELECT
-     c360.amperity_id AS external_id
+     c360.amperity_id AS extern_id
      ,c360.email AS email
      ,c360.phone AS phone
      ,c360.given_name AS given_name
@@ -346,7 +358,7 @@ A query that returns a collection events for use in |destination-name| is simila
    LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
    WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
 
-The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
+The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **extern_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
 
 You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
 
@@ -388,7 +400,7 @@ The following SQL shows how to send many event types stored in a table named **C
    :linenos:
 
    SELECT
-     c360.amperity_id AS external_id
+     c360.amperity_id AS extern_id
      ,c360.email AS email
      ,c360.phone AS phone
      ,events.order_id AS order_id
@@ -417,6 +429,44 @@ The table from which many events are sourced must have values that map to values
 Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` section for detailed information about the columns returned by your query.
 
 .. events-meta-ads-manager-offline-events-parameters-end
+
+
+.. _events-meta-ads-manager-how-events-built:
+
+How the connector builds events
+==================================================
+
+.. events-meta-ads-manager-how-events-built-start
+
+Before events are sent to |destination-name|, the connector transforms your query results. Understanding these transformations helps you shape a query that sends the values you expect.
+
+**Events are grouped by order**
+
+When your query includes an **order_id** column, the connector groups all rows that share an **order_id** (and **event_name**, when present) into a *single* event. Each line item in the order is listed in a **contents** array on that event, using the item's **product_id** and **quantity**. For example, a query that returns three rows for one order is sent as one event whose **contents** array lists three items--not as three events.
+
+.. note:: While **order_id** is in the query, events are always aggregated to the order. There is no way to send one event per line item without removing **order_id** from the query.
+
+   When your query does *not* include **order_id**, each row is sent as its own event.
+
+**The value sent for a purchase**
+
+For a Purchase event, the connector sends a single **value**, resolved in this order:
+
+#. If the query returns a **value** column, that value is used as-is. Provide **value** as an order-level total.
+#. Otherwise, if the query returns **price** and **quantity**, the connector uses **price** multiplied by **quantity**, summed across the order's line items. Use this only for itemized data where **price** is a per-unit price.
+#. Otherwise, no **value** is sent.
+
+.. warning:: When events are grouped by **order_id**, the connector keeps a single **value** for the order--the largest **value** found among the order's rows--on the assumption that every row already carries the order total. If your **value** is a per-line-item amount, only the largest line is sent and the rest of the basket is dropped. Pre-aggregate **value** to the order total before sending.
+
+   Do not pass an order total in **price** alongside a **quantity**: the connector multiplies **price** by **quantity**, which inflates the amount reported to Meta. Use **value** for an already-computed total, and use **price** and **quantity** only when **price** is a per-unit price.
+
+**Purchases with no value are dropped**
+
+A Purchase event that resolves to no **value** is dropped before it is sent, rather than sent with a value of 0. Meta rejects a Purchase that has no value, and sending 0 instead would permanently record a zero-value conversion that cannot be removed and would distort conversion counts and value-based optimization. Dropped rows are reported as failures with an actionable message; the rest of the send is unaffected. Add a **WHERE** clause such as ``WHERE value > 0`` (or the equivalent for your revenue column) to exclude zero and negative values.
+
+.. note:: The **contents** array includes each item's **product_id** and **quantity** only. Item-level price is not currently included in **contents**.
+
+.. events-meta-ads-manager-how-events-built-end
 
 
 .. _events-meta-ads-manager-conversions:
@@ -538,6 +588,12 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. note:: Amperity performs the same actions for email addresses and phone numbers when sending to the Conversions API as when sending to the Marketing API.
 
+       .. note:: The **email** sent is the master profile email and is consented at the profile level.
+
+       .. TODO: above note is LEGAL-PENDING - DO NOT PUBLISH until Legal approves the wording. The email column typically resolves to the
+          master profile email (for example, c360.email), which reflects consent captured at the profile level, not at the individual email-address level. Customers who require email-level consent must
+          shape the query to send only addresses consented at that level.
+
    * - **event_name**
      - **Optional**
 
@@ -554,7 +610,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
              :linenos:
 
              SELECT
-               c360.amperity_id AS external_id
+               c360.amperity_id AS extern_id
                ,c360.email AS email
                ,c360.phone AS phone
                ,leads.lead_datetime AS timestamp
@@ -566,16 +622,16 @@ The fields are listed alphabetically, but may be returned by a query in any orde
              WHERE leads.lead_datetime > (CURRENT_DATE - interval '7' day)
 
 
-   * - **external_id**
+   * - **extern_id**
      - **Recommended**
 
-       The **amperity_id** field **MUST** be renamed to **external_id**.
+       The query column **MUST** be named **extern_id**. Amperity sends this value to Meta as **external_id** in the **user_data** object.
 
-       Add **external_id** to your query:
+       Add **extern_id** to your query:
 
        ::
 
-          ,c360.amperity_id AS external_id
+          ,c360.amperity_id AS extern_id
 
        .. note:: Amperity performs the same actions for the external ID when sending to the Conversions API as when sending to the Marketing API.
 
@@ -598,11 +654,9 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,ut.order_id AS order_id
 
-       .. important:: The number of rows that results from the query may not be the same as the number of events that are uploaded to |destination-name|. This depends on the table from which the order ID is returned.
+       .. important:: When **order_id** is present, the connector groups all rows that share an **order_id** (and **event_name**, when present) into a single event, whether the order ID comes from the **Unified Itemized Transactions** or the **Unified Transactions** table. The line items in each order are listed in the event's **contents** array. As a result, the number of events sent to |destination-name| is the number of distinct orders (per **event_name**), not the number of query rows.
 
-          #. Transactions from the **Unified Itemized Transactions** table group items by order ID to ensure that individual events are combined to describe a complete transaction. |destination-name| processes each item as a unique conversion. For example, an order ID with three individual items is attributed by |destination-name| as three conversions.
-
-          #. Transactions from the **Unified Transactions** table are grouped by order ID. Each unique combination of **order_id** and **event_name** is sent to |destination-name| as a single conversion. If **event_name** column is not included all rows grouped by order ID are assigned the "Purchase" event type and each **order_id** produces one conversion.
+          If **event_name** is not included, all rows grouped by **order_id** are assigned the "Purchase" event type, and each **order_id** produces one event. See :ref:`How the connector builds events <events-meta-ads-manager-how-events-built>` for how each order's **value** is resolved.
 
    * - **phone**
      - See **email**.
