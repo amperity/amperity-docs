@@ -47,14 +47,6 @@ Each sync uploads the entire audience to |destination-name| as a single file and
 
 .. destination-roku-audience-api-note-end
 
-.. destination-roku-audience-beta-start
-
-.. admonition:: Beta
-
-   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. destination-roku-audience-beta-end
-
 
 .. _destination-roku-audience-get-details:
 

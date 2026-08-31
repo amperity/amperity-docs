@@ -42,15 +42,6 @@ Send audiences to Roku Audience
    :start-after: .. sendtos-ask-to-configure-campaigns-start
    :end-before: .. sendtos-ask-to-configure-campaigns-end
 
-.. channel-roku-audience-beta-start
-
-.. admonition:: Beta
-
-   The |destination-name| connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. channel-roku-audience-beta-end
-
-
 .. _channel-roku-audience-build-segment:
 
 Build a segment
