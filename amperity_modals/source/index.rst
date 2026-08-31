@@ -33,7 +33,7 @@ Site Index
 
    destination-blue-core
    destination-braze
-   destination-braze-cohorts
+   destination-braze-cohort
    destination-braze-purchases
    destination-braze-rt-action-based
    destination-braze-rt-api-trigger
