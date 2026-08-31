@@ -35,6 +35,8 @@ Site Index
    destination-braze
    destination-braze-cohorts
    destination-braze-purchases
+   destination-braze-rt-action-based
+   destination-braze-rt-api-trigger
    destination-camelot-smm
    destination-cheetah-digital
    destination-cordial
@@ -99,6 +101,7 @@ Site Index
    destination-salesforce-marketing-cloud
    destination-sendgrid
    destination-sevenrooms
+   destination-sfmc-data-extension-row
    destination-sfmc-sftp
    destination-sftp
    destination-shopify-graphql
