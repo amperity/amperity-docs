@@ -569,6 +569,10 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_get**
 
+       **journey_create**
+
+       **journey_update**
+
        **journey_delete**
 
    * - Manage journey versions
@@ -587,8 +591,8 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_unschedule**
 
-   * - Read a journey's node schema
-     - **journey_get_node_schema**
+   * - Read the journey authoring reference
+     - **journey_get_authoring_reference**
 
 
 .. _mcp-tool-data-exports:
