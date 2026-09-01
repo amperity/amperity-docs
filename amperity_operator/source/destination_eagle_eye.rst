@@ -89,9 +89,9 @@ The **Wallet operation** setting selects what each row does, and a send performs
    * - **activate**
      - Returns a suspended or inactive wallet to service.
    * - **terminate**
-     - Permanently closes a wallet. This is the path for consent-driven opt-out. It cannot be undone, and Eagle Eye rejects any later change to a terminated wallet.
+     - Permanently closes a wallet. It cannot be undone, and Eagle Eye rejects any later change to a terminated wallet. It is the recommended operation for a consent-driven hard opt-out.
    * - **delete**
-     - Removes a wallet. Intended for cleaning up test data rather than for consent requests.
+     - A soft delete on Eagle Eye's side: removes the wallet from active use but does not erase it. Intended for cleaning up test data, not for consent or data-subject requests — use **terminate** for those.
 
 Every operation other than **create** first looks up the person's existing wallet by their identity value. A person with no wallet yet is reported as a failed row and the run continues.
 
@@ -170,7 +170,7 @@ Get details
              :start-after: .. setting-eagle-eye-default-wallet-type-start
              :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-       **Wallet state**
+       **Wallet state (new wallets)**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-default-wallet-state-start
@@ -192,7 +192,7 @@ Get details
              :start-after: .. setting-eagle-eye-operation-start
              :end-before: .. setting-eagle-eye-operation-end
 
-       **Wallet state**
+       **Wallet state (state change)**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-wallet-state-start
@@ -369,7 +369,7 @@ Add destination
              :start-after: .. setting-eagle-eye-default-wallet-type-start
              :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-       **Wallet state**
+       **Wallet state (new wallets)**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-default-wallet-state-start
@@ -410,6 +410,7 @@ Amperity performs the configured operation for every row in the query results, e
 * The operation is **update** and the ``friendly_name`` column is empty for that row.
 * The operation is anything other than **create** and Eagle Eye has no wallet for that row's identity value.
 * Eagle Eye rejects that row's wallet payload, or the row targets a wallet that has already been terminated.
+* Eagle Eye reports a conflict, or a locked wallet, for that row's operation.
 
 Failed rows are reported in the destination's run details. Some conditions stop the entire run instead of failing individual rows: an unknown wallet operation, or a **state-change** send with no **Wallet state** set (both caught before any data is sent), and a rejected credential or Eagle Eye being unavailable.
 

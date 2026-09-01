@@ -2253,7 +2253,7 @@ Generate the API key in |destination-name| by navigating to **Settings > API Key
 
 .. credential-eagle-eye-client-id-start
 
-The Eagle Eye AIR API client ID, provisioned by your Eagle Eye account manager. It identifies your Amperity integration to Eagle Eye and is not a secret.
+The Eagle Eye AIR API client ID, provisioned by your Eagle Eye account manager. It identifies your Amperity integration to Eagle Eye.
 
 .. credential-eagle-eye-client-id-end
 
@@ -2270,7 +2270,7 @@ The Eagle Eye AIR Wallet API base URL for your region and environment. Select th
 * ``https://wallet.uk.eagleeye.com/2.0/`` (United Kingdom)
 * ``https://wallet.sandbox.uk.eagleeye.com/2.0/`` (United Kingdom sandbox)
 * ``https://wallet.au.eagleeye.com/2.0/`` (Australia)
-* ``https://wallet.us2.eagleeye.com/2.0/`` (United States)
+* ``https://wallet.us2.eagleeye.com/2.0/`` (United States, US2)
 
 Confirm the correct URL with your Eagle Eye account manager. Defaults to the Australia URL.
 

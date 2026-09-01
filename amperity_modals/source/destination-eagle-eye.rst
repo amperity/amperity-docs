@@ -9,7 +9,7 @@
 Eagle Eye
 ==================================================
 
-Send |what-send| from Amperity into |where-send|, performing one wallet operation for each person on every run. The **Wallet operation** setting selects what each row does — create, update, state change, suspend, activate, terminate, or delete — and a send performs a single operation for the entire run.
+Send |what-send| from Amperity into |where-send|, performing one wallet operation for each person on every run. The **Wallet operation** setting selects what each row does — create, update, state-change, suspend, activate, terminate, or delete — and a send performs a single operation for the entire run.
 
 .. admonition:: Beta
 
@@ -75,7 +75,7 @@ Settings
    :start-after: .. setting-eagle-eye-default-wallet-type-start
    :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-**Wallet state**
+**Wallet state (new wallets)**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-eagle-eye-default-wallet-state-start
@@ -87,7 +87,7 @@ Settings
    :start-after: .. setting-eagle-eye-operation-start
    :end-before: .. setting-eagle-eye-operation-end
 
-**Wallet state**
+**Wallet state (state change)**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-eagle-eye-wallet-state-start
