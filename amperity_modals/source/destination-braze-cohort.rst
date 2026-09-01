@@ -25,11 +25,7 @@ Credentials
 
 **Client Data Import Key**
 
-The Data Import Key from your Braze dashboard. This key is found under **Partner Integrations > Technology Partners > Amperity**.
-
-**Instance**
-
-The Braze REST API instance identifier for your account (for example: "US-01", "US-02", "EU-01", or "JP-01"). This is in your Braze dashboard URL or account settings.
+Required. The Data Import Key from your Braze dashboard. This key is found under **Partner Integrations > Technology Partners > Amperity**.
 
 
 Settings
@@ -51,13 +47,17 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Cohort Name**
+**Instance**
 
-The name of the cohort to create or update in Braze. This name appears in the Braze dashboard under **Segments**.
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| where your account is provisioned. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "EU-01", "EU-02", "AU-01", "JP-01", "ID-01", or "KR-01".
 
-**User ID Field**
+**User identifier field**
 
-The name of the column in your query or segment results that has the Braze user identifier. Defaults to ``external_id``. If your Braze users are identified by email or a custom field, set this value to match the column name in your query results.
+Required. The field in the audience that supplies the Braze user identifier. This must be ``external_id``, which the audience is required to return.
+
+**List name** (Required at orchestration)
+
+Required. The name of the cohort to create or update in Braze, which appears in the Braze dashboard under **Segments**. This setting is configured on the orchestration or campaign rather than on the destination, so one destination can maintain a separate cohort for each audience you send.
 
 **Campaign file settings**
 
