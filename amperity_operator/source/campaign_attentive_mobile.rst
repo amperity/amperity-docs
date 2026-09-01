@@ -31,19 +31,15 @@
 Configure campaigns for Attentive (email or phone)
 ====================================================
 
-.. campaign-attentive-segments-start
+Use this topic to send a **campaign** to Attentive. To configure Attentive as a destination for sending **audiences**, see :doc:`Configure destinations for Attentive <destination_attentive_mobile>`.
 
-Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage audience segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
+.. include:: ../../amperity_operator/source/destination_attentive_mobile.rst
+   :start-after: .. destination-attentive-segments-start
+   :end-before: .. destination-attentive-segments-end
 
-.. campaign-attentive-segments-end
-
-.. campaign-attentive-sftp-and-api-start
-
-.. admonition:: Why are there two ways to send data to Attentive?
-
-   Amperity uses SFTP to manage audience segments and the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes. Use custom attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
-
-.. campaign-attentive-sftp-and-api-end
+.. include:: ../../amperity_operator/source/destination_attentive_mobile.rst
+   :start-after: .. destination-attentive-sftp-and-api-start
+   :end-before: .. destination-attentive-sftp-and-api-end
 
 .. note::
 
@@ -333,70 +329,17 @@ Add destination
 About filename templates
 --------------------------------------------------
 
-.. campaign-attentive-add-data-template-intro-start
+.. include:: ../../amperity_operator/source/destination_attentive_mobile.rst
+   :start-after: .. destination-attentive-add-data-template-intro-start
+   :end-before: .. destination-attentive-add-data-template-intro-end
 
-A filename template defines how the names of segments and campaigns appears in |destination-name|.
+.. include:: ../../amperity_operator/source/destination_attentive_mobile.rst
+   :start-after: .. destination-attentive-add-data-template-about-start
+   :end-before: .. destination-attentive-add-data-template-about-end
 
-.. campaign-attentive-add-data-template-intro-end
-
-.. campaign-attentive-add-data-template-about-start
-
-The following table shows how your segment name appears in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that is sent to |destination-name|.
-
-.. list-table::
-   :widths: 150 150 300
-   :header-rows: 1
-
-   * - Pattern
-     - Segment names
-     - Description
-
-   * - (empty)
-     - WinbackDressShirts
-
-       WinbackJeans
-
-       WinbackShoes
-     - An empty filename template setting is the equivalent of **{{ campaign_name }}{{ group_name }}**.
-
-   * - **campaign_name**
-     - Winback
-     - Use this pattern for campaigns that do not have more than one treatment group or sub-audiences. This uses the name of the campaign as the name of the segment in |destination-name|.
-
-       .. tip:: Use **{{ campaign_name }}** *instead of* **{{ list_name }}**.
-
-   * - **campaign_name + group_name**
-     - Winback_DressShirts
-
-       Winback_Jeans
-
-       Winback_Shoes
-     - Use this pattern for campaigns that have more than one treatment group and have sub-audiences.
-
-       You may use an underscore ( _ ) or a hyphen ( - ): **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
-
-       You may put them next to each other (without using an underscore or hyphen): **{{ campaign_name }}{{ group_name }}**.
-
-       You may switch the ordering: **{{ group_name }}_{{ campaign_name }}**.
-
-       .. tip:: Be sure to use descriptive names for campaigns *and* treatment groups and be careful to not use the default treatment group names when sending campaigns to |destination-name|.
-
-          This will ensure that downstream users in |destination-name| is able to understand what each segment is for and will not have to view default naming patterns like "Winback_Recipient1", "WinbackRecipient2", etc.
-   * - **group_name**
-     - DressShirts
-
-       Jeans
-
-       Shoes
-     - Use this pattern to only use the names of treatment groups as segment names in |destination-name|. This omits the name of the campaign *and* the name of the sub-audience from the segment name.
-
-.. campaign-attentive-add-data-template-about-end
-
-.. campaign-attentive-add-data-template-important-start
-
-.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings (campaigns and treatment groups) is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
-
-.. campaign-attentive-add-data-template-important-end
+.. include:: ../../amperity_operator/source/destination_attentive_mobile.rst
+   :start-after: .. destination-attentive-add-data-template-important-start
+   :end-before: .. destination-attentive-add-data-template-important-end
 
 
 

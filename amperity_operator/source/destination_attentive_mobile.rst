@@ -31,6 +31,8 @@
 Configure destinations for Attentive (email or phone)
 =====================================================
 
+Use this topic to configure Attentive as a destination for sending **audiences**. To send a **campaign** to Attentive, see :doc:`Configure campaigns for Attentive <campaign_attentive_mobile>`.
+
 .. destination-attentive-segments-start
 
 Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage audience segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
