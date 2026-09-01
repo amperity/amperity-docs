@@ -575,6 +575,15 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_delete**
 
+   * - Manage journey folders
+     - **journey_folder_list**
+
+       **journey_folder_get**
+
+       **journey_folder_upsert**
+
+       **journey_folder_delete**
+
    * - Manage journey versions
      - **journey_list_versions**
 
