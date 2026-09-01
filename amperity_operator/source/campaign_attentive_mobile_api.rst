@@ -3,8 +3,8 @@
 
 .. |destination-name| replace:: Attentive
 .. |destination-api| replace:: Custom Attributes API
-.. |plugin-name| replace:: "attentive-api"
-.. |credential-type| replace:: "Custom Attributes API"
+.. |plugin-name| replace:: "Attentive API"
+.. |credential-type| replace:: "attentive-api"
 .. |required-credentials| replace:: "API key"
 .. |audience-primary-key| replace:: "email" or "phone"
 .. |what-send| replace:: custom attributes
