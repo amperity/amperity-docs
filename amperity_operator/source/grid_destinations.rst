@@ -174,6 +174,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_dynamics_365_marketing
 
+   .. grid-item-card:: Eagle Eye
+      :link-type: doc
+      :link: destination_eagle_eye
+
    .. grid-item-card:: Epsilon Abacus
       :link-type: doc
       :link: destination_epsilon_abacus
@@ -485,6 +489,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Dynamic Yield <destination_dynamic_yield>
    Dynamic Yield Customer Profiles <destination_dynamic_yield_customer_profiles>
    Dynamics 365 Marketing <destination_dynamics_365_marketing>
+   Eagle Eye <destination_eagle_eye>
    Epsilon Abacus <destination_epsilon_abacus>
    Epsilon Conversant <destination_epsilon_conversant>
    Epsilon Targeting <destination_epsilon_targeting>
