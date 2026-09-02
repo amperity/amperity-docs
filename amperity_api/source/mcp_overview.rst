@@ -112,6 +112,7 @@ Connect a client
 
 Connect a client to the MCP server:
 
+* :doc:`Amazon Quick <mcp_setup_amazon_quick>`
 * :doc:`ChatGPT custom connectors <mcp_setup_chatgpt>`
 * :doc:`Claude.ai, Claude Desktop, and Claude Code <mcp_setup_claude>`
 * :doc:`Copilot Studio <mcp_setup_m365_copilot>`
