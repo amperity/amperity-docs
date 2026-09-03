@@ -40,21 +40,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create the build output directory:
-
-```shell
-mkdir -p build
-```
-
-Build only the contributing documentation:
-
-```shell
-make contributing
-```
-
 There is no separate unit-test suite. The Sphinx build is the repository's documentation check, and warnings are treated as errors. Run `make` to build every documentation collection before submitting a pull request when your change affects shared content or build behavior. If an unrelated collection fails, record that failure and confirm that the focused build passes.
 
-After building, start the local server:
+Build the contributing documentation and start the local server:
 
 ```shell
 make serve
