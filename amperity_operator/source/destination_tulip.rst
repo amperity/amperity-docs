@@ -40,7 +40,7 @@ Use the |destination-name| `File Importer <https://docs.tulip.com/integrating/fi
 
 .. important:: |destination-name| replaces the contents of its database with the data in the CSV file, including removing and adding column values depending on what is in the CSV file. To maintain the full record in |destination-name| send the full record each time.
 
-.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#file-naming-conventions>`__ |ext_link| for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#supported-csv-file-types>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/fileimporteroverview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
+.. note:: |destination-name| supports the following entities: stores, employees, categories, products, variants, prices, inventory, customers, and order history. Review the `file naming conventions <https://docs.tulip.com/integrating/file-importer/overview/#file-naming-conventions>`__ |ext_link| for each entity, `review the sample files <https://docs.tulip.com/integrating/file-importer/overview/#supported-csv-file-types>`__ |ext_link|, and make sure your output has the `correct file formatting <https://docs.tulip.com/integrating/file-importer/overview/#important-considerations-for-performance-and-formatting>`__ |ext_link|.
 
 .. destination-tulip-end
 
