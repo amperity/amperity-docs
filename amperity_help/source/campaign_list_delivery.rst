@@ -2,6 +2,6 @@
 
 .. tooltip-campaign-list-delivery-start
 
-List delivery begins at the specified date and time. The length of time required to complete list delivery varies by segment size and destination type. Ensure that your list delivery schedule allows for enough time for list delivery to complete before your campaign is scheduled to begin.
+Delivery duration varies by segment size and destination. Allow enough time for delivery to complete before your campaign starts.
 
 .. tooltip-campaign-list-delivery-end
