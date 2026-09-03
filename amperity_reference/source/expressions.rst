@@ -124,6 +124,9 @@ AEL includes many additional operators and functions--arithmetic, decimal precis
 .. Generated from the AEL operation catalog by amperity.attribute.docs.
    Do not edit by hand; run bin/generate-ael-reference in amperity/app.
 
+.. role:: type(emphasis)
+   :class: sig-param sd-font-italic
+
 .. _expressions-operations:
 
 AEL operations
@@ -136,17 +139,13 @@ Each operation below shows how it is written, the type of value it produces, the
 Behavior and errors
 --------------------------------------------------
 
-Parameters are required unless marked with an Optional or Repeatable badge.
-
-There is no global NULL rule; each operation documents its own NULL behavior.
-
-Date and time operations are evaluated in UTC.
-
-Value comparisons are case-sensitive, while field-name resolution is case-insensitive.
-
-Logical operators use two-valued logic: NOT NULL is true.
-
-When an expression fails at run time in the expression preview, it shows ``Evaluation error: ...``.
+- Parameters are required unless marked with an Optional or Repeatable badge.
+- There is no global NULL rule; each operation documents its own NULL behavior.
+- Date and time operations are evaluated in UTC.
+- Value comparisons are case-sensitive, while field-name resolution is case-insensitive.
+- Logical operators use two-valued logic: NOT NULL is true.
+- When an expression fails at run time, the expression preview shows an
+  ``Evaluation error: ...`` message.
 
 .. list-table::
    :widths: 25 75
@@ -199,10 +198,12 @@ Operations: :ref:`Equal <expressions-operation-equal>`, :ref:`Greater than <expr
 
 .. _expressions-operation-equal:
 
-*boolean* value **=** value
+Equal
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-equal-start
+
+:type:`boolean`: value **=** value
 
 Returns true if all operands are equal to each other.
 
@@ -217,10 +218,12 @@ Returns true if all operands are equal to each other.
 
 .. _expressions-operation-greater-than:
 
-*boolean* value **>** value
+Greater than
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-greater-than-start
+
+:type:`boolean`: value **>** value
 
 Returns true if each operand is greater than the operand that follows it.
 
@@ -239,10 +242,12 @@ Returns true if each operand is greater than the operand that follows it.
 
 .. _expressions-operation-greater-than-or-equal:
 
-*boolean* value **>=** value
+Greater than or equal
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-greater-than-or-equal-start
+
+:type:`boolean`: value **>=** value
 
 Returns true if each operand is greater than or equal to the operand that follows it.
 
@@ -261,10 +266,12 @@ Returns true if each operand is greater than or equal to the operand that follow
 
 .. _expressions-operation-less-than:
 
-*boolean* value **<** value
+Less than
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-less-than-start
+
+:type:`boolean`: value **<** value
 
 Returns true if each operand is less than the operand that follows it.
 
@@ -283,10 +290,12 @@ Returns true if each operand is less than the operand that follows it.
 
 .. _expressions-operation-less-than-or-equal:
 
-*boolean* value **<=** value
+Less than or equal
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-less-than-or-equal-start
+
+:type:`boolean`: value **<=** value
 
 Returns true if each operand is less than or equal to the operand that follows it.
 
@@ -305,10 +314,12 @@ Returns true if each operand is less than or equal to the operand that follows i
 
 .. _expressions-operation-not-equal:
 
-*boolean* value **!=** value
+Not equal
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-not-equal-start
+
+:type:`boolean`: value **!=** value
 
 Returns true if at least one operand is not equal to the others.
 
@@ -335,10 +346,12 @@ Operations: :ref:`And <expressions-operation-and>`, :ref:`Not <expressions-opera
 
 .. _expressions-operation-and:
 
-*boolean* value **AND** value **AND** ...
+And
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-and-start
+
+:type:`boolean`: value **AND** value **AND** ...
 
 Returns true if all operands are truthy. Short-circuits evaluation on the first falsey value.
 
@@ -356,10 +369,12 @@ Returns true if all operands are truthy. Short-circuits evaluation on the first 
 
 .. _expressions-operation-not:
 
-*boolean* **NOT** value
+Not
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-not-start
+
+:type:`boolean`: **NOT** value
 
 Returns true if the operand is falsey.
 
@@ -373,10 +388,12 @@ Returns true if the operand is falsey.
 
 .. _expressions-operation-or:
 
-*boolean* value **OR** value **OR** ...
+Or
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-or-start
+
+:type:`boolean`: value **OR** value **OR** ...
 
 Returns true if any operand is truthy. Short-circuits evaluation on the first truthy value.
 
@@ -406,10 +423,12 @@ Operations: :ref:`Is not null <expressions-operation-is-not-null>`, :ref:`Is nul
 
 .. _expressions-operation-is-not-null:
 
-*boolean* value **IS NOT NULL**
+Is not null
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-is-not-null-start
+
+:type:`boolean`: value **IS NOT NULL**
 
 Returns true if the operand is not null.
 
@@ -428,10 +447,12 @@ Returns true if the operand is not null.
 
 .. _expressions-operation-is-null:
 
-*boolean* value **IS NULL**
+Is null
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-is-null-start
+
+:type:`boolean`: value **IS NULL**
 
 Returns true if the operand is null.
 
@@ -462,10 +483,12 @@ Operations: :ref:`Case <expressions-operation-case>`, :ref:`Coalesce <expression
 
 .. _expressions-operation-case:
 
-*any* **case**\ (value, match, result, ...)
+Case
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-case-start
+
+:type:`any`: **case**\ (value, match, result, ...)
 
 Selects a result based on matching a test value against possible cases.
 
@@ -473,10 +496,10 @@ Selects a result based on matching a test value against possible cases.
    *Any*. The value to match against.
 
 **match**
-   *Any*, :bdg-muted:`Repeatable`. A candidate value.
+   *Any*. A candidate value. :bdg-muted:`Repeatable`
 
 **result**
-   *Any*, :bdg-muted:`Repeatable`. Result returned when the candidate matches.
+   *Any*. Result returned when the candidate matches. :bdg-muted:`Repeatable`
 
 .. note::
 
@@ -493,15 +516,17 @@ Selects a result based on matching a test value against possible cases.
 
 .. _expressions-operation-coalesce:
 
-*any* **coalesce**\ (value, value, ...)
+Coalesce
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-coalesce-start
 
+:type:`any`: **coalesce**\ (value, value, ...)
+
 Evaluates operands in order, returning the first non-NULL operand.
 
 **value**
-   *Any*, :bdg-muted:`Repeatable`. A value to consider.
+   *Any*. A value to consider. :bdg-muted:`Repeatable`
 
 .. note::
 
@@ -518,18 +543,20 @@ Evaluates operands in order, returning the first non-NULL operand.
 
 .. _expressions-operation-condition:
 
-*any* **cond**\ (predicate, result, ...)
+Condition
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-condition-start
 
+:type:`any`: **cond**\ (predicate, result, ...)
+
 Evaluates predicates in order, returning the result paired with the first true predicate.
 
 **predicate**
-   *Boolean*, :bdg-muted:`Repeatable`. A predicate to evaluate in order.
+   *Boolean*. A predicate to evaluate in order. :bdg-muted:`Repeatable`
 
 **result**
-   *Any*, :bdg-muted:`Repeatable`. Result returned when the predicate is true.
+   *Any*. Result returned when the predicate is true. :bdg-muted:`Repeatable`
 
 .. note::
 
@@ -546,10 +573,12 @@ Evaluates predicates in order, returning the result paired with the first true p
 
 .. _expressions-operation-if:
 
-*any* **if**\ (condition, then, else)
+If
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-if-start
+
+:type:`any`: **if**\ (condition, then, else)
 
 Returns the second operand if the first operand (condition) is true, otherwise returns the third operand. NULL conditions are treated as false.
 
@@ -589,10 +618,12 @@ Operations: :ref:`To boolean <expressions-operation-to-boolean>`, :ref:`To date 
 
 .. _expressions-operation-to-boolean:
 
-*boolean* **to_boolean**\ (value)
+To boolean
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-boolean-start
+
+:type:`boolean`: **to_boolean**\ (value)
 
 Coerces a value to boolean. Returns NULL if coercion is not possible.
 
@@ -614,10 +645,12 @@ Coerces a value to boolean. Returns NULL if coercion is not possible.
 
 .. _expressions-operation-to-date:
 
-*date* **to_date**\ (value, format)
+To date
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-date-start
+
+:type:`date`: **to_date**\ (value, format)
 
 Coerces a value to date. Returns NULL if coercion is not possible.
 
@@ -625,7 +658,7 @@ Coerces a value to date. Returns NULL if coercion is not possible.
    *Any*. The value to coerce.
 
 **format**
-   *String*, :bdg-muted:`Optional`. Optional date parse format.
+   *String*. Date parse format. :bdg-muted:`Optional`
 
 .. note::
 
@@ -642,10 +675,12 @@ Coerces a value to date. Returns NULL if coercion is not possible.
 
 .. _expressions-operation-to-decimal:
 
-*decimal* **to_decimal**\ (value, precision, scale)
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+To decimal
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-decimal-start
+
+:type:`decimal`: **to_decimal**\ (value, precision, scale)
 
 Coerces a value to big decimal, with precision 38 and scale 2 by default. The optional precision and scale parameters must be integer literals. Returns NULL if the coerced value is wider than the precision.
 
@@ -653,10 +688,10 @@ Coerces a value to big decimal, with precision 38 and scale 2 by default. The op
    *Any*. The value to coerce.
 
 **precision**
-   *Integer*, :bdg-muted:`Optional`. Optional decimal precision, 1 to 38. Must be a literal number.
+   *Integer*. Decimal precision, 1 to 38. Must be a literal number. :bdg-muted:`Optional`
 
 **scale**
-   *Integer*, :bdg-muted:`Optional`. Optional decimal scale, 0 to the precision. Must be a literal number.
+   *Integer*. Decimal scale, 0 to the precision. Must be a literal number. :bdg-muted:`Optional`
 
 .. code-block:: none
    :caption: Example
@@ -669,10 +704,12 @@ Coerces a value to big decimal, with precision 38 and scale 2 by default. The op
 
 .. _expressions-operation-to-float:
 
-*float* **to_float**\ (value)
+To float
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-float-start
+
+:type:`float`: **to_float**\ (value)
 
 Coerces a value to float. Returns NULL if coercion is not possible.
 
@@ -694,10 +731,12 @@ Coerces a value to float. Returns NULL if coercion is not possible.
 
 .. _expressions-operation-to-integer:
 
-*integer* **to_int**\ (value)
+To integer
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-integer-start
+
+:type:`integer`: **to_int**\ (value)
 
 Coerces a value to a 64-bit integer. Returns NULL if coercion is not possible.
 
@@ -719,10 +758,12 @@ Coerces a value to a 64-bit integer. Returns NULL if coercion is not possible.
 
 .. _expressions-operation-to-string:
 
-*string* **to_string**\ (value)
+To string
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-string-start
+
+:type:`string`: **to_string**\ (value)
 
 Converts a value to string. Returns NULL if the input is NULL.
 
@@ -744,10 +785,12 @@ Converts a value to string. Returns NULL if the input is NULL.
 
 .. _expressions-operation-to-timestamp:
 
-*datetime* **to_timestamp**\ (value, format)
+To timestamp
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-to-timestamp-start
+
+:type:`datetime`: **to_timestamp**\ (value, format)
 
 Coerces a value to timestamp. Returns NULL if coercion is not possible.
 
@@ -755,7 +798,7 @@ Coerces a value to timestamp. Returns NULL if coercion is not possible.
    *Any*. The value to coerce.
 
 **format**
-   *String*, :bdg-muted:`Optional`. Optional timestamp parse format.
+   *String*. Timestamp parse format. :bdg-muted:`Optional`
 
 .. note::
 
@@ -784,15 +827,17 @@ Operations: :ref:`Array <expressions-operation-array>`, :ref:`Array, struct, or 
 
 .. _expressions-operation-array:
 
-*array* **array**\ (value, value, ...)
+Array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-array-start
 
+:type:`array`: **array**\ (value, value, ...)
+
 Returns an array of operands in order. All operands must be of the same type.
 
 **value**
-   *Any*, :bdg-muted:`Repeatable`. An array element.
+   *Any*. An array element. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -805,10 +850,12 @@ Returns an array of operands in order. All operands must be of the same type.
 
 .. _expressions-operation-array-struct-or-map-lookup:
 
-*any* value[key]
+Array, struct, or map lookup
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-array-struct-or-map-lookup-start
+
+:type:`any`: value[key]
 
 Gets an integer offset from an array, a field from a struct, or an arbitrary key from a map.
 
@@ -827,10 +874,12 @@ Gets an integer offset from an array, a field from a struct, or an arbitrary key
 
 .. _expressions-operation-average-array:
 
-*number* **array_avg**\ (array)
+Average array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-average-array-start
+
+:type:`number`: **array_avg**\ (array)
 
 Returns the mean of the input array's non-NULL elements, which must be numeric. Returns NULL if the input is NULL, empty, or holds only NULLs, matching the ``average`` aggregation over zero records.
 
@@ -850,10 +899,12 @@ Also accepts the name **array_average**.
 
 .. _expressions-operation-count-by-value:
 
-*array* **array_counts**\ (array)
+Count by value
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-count-by-value-start
+
+:type:`array`: **array_counts**\ (array)
 
 Returns a frequency table for the input array: an array of structs with a ``value`` field holding each distinct non-NULL element and a ``count`` field holding how many times it occurs. Ordered by count descending, then by the natural sort order of the value, matching the ``mode`` aggregation's tie-break. NULL elements are not counted. Returns NULL if the input is NULL, and an empty array if the input is empty or holds only NULLs.
 
@@ -871,10 +922,12 @@ Returns a frequency table for the input array: an array of structs with a ``valu
 
 .. _expressions-operation-difference:
 
-*array* **difference**\ (source, remove)
+Difference
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-difference-start
+
+:type:`array`: **difference**\ (source, remove)
 
 Returns the elements of the first array that are not present in the second array, preserving the order and duplicates of the first array. A NULL second operand removes nothing, so ``difference(a, NULL)`` is ``a``. SparkSQL spells this ``array_except`` and removes duplicates; that spelling is not accepted here.
 
@@ -895,10 +948,12 @@ Returns the elements of the first array that are not present in the second array
 
 .. _expressions-operation-distinct:
 
-*array* **distinct**\ (array)
+Distinct
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-distinct-start
+
+:type:`array`: **distinct**\ (array)
 
 Returns the input array with duplicate elements removed, preserving the order of first occurrence.
 
@@ -916,17 +971,19 @@ Returns the input array with duplicate elements removed, preserving the order of
 
 .. _expressions-operation-filter:
 
-*array* **filter**\ (array, element -> predicate)
+Filter
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-filter-start
+
+:type:`array`: **filter**\ (array, element -> predicate)
 
 Filters an array using a function that takes one argument (which will be bound to each element in the array, in order) and returns a boolean. Returns an array containing only the elements for which the function returned true.
 
 **array**
    *Array*. The array to filter.
 
-**function**
+**element -> predicate**
    *Function*. A one-argument function whose argument is bound to each element in turn, and which returns a boolean.
 
 .. code-block:: none
@@ -940,10 +997,12 @@ Filters an array using a function that takes one argument (which will be bound t
 
 .. _expressions-operation-get-element:
 
-*any* **get**\ (array, index)
+Get element
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-get-element-start
+
+:type:`any`: **get**\ (array, index)
 
 Returns the element of the input array at the given (0-based) index. If the index points outside of the array boundaries, or if the index is negative, then this function returns NULL.
 
@@ -964,10 +1023,12 @@ Returns the element of the input array at the given (0-based) index. If the inde
 
 .. _expressions-operation-in:
 
-*boolean* value **IN** (array)
+In
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-in-start
+
+:type:`boolean`: value **IN** (array)
 
 Returns true if the value is one of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) > 0``, or ``size(array_intersect(a, b)) > 0`` when both sides are arrays in the record.
 
@@ -986,10 +1047,12 @@ Returns true if the value is one of the listed values. The right operand is a pa
 
 .. _expressions-operation-intersect-arrays:
 
-*array* **array_intersect**\ (source, keep)
+Intersect arrays
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-intersect-arrays-start
+
+:type:`array`: **array_intersect**\ (source, keep)
 
 Returns the elements present in both arrays, with duplicates removed, in the order they first appear in the first array. Returns NULL if either operand is NULL. Matches SparkSQL's ``array_intersect`` on all three points.
 
@@ -1010,18 +1073,20 @@ Returns the elements present in both arrays, with duplicates removed, in the ord
 
 .. _expressions-operation-map:
 
-*map* **map**\ (key, value, ...)
+Map
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-map-start
 
+:type:`map`: **map**\ (key, value, ...)
+
 Returns a map of the given key/value pairs. All keys and all values must be of the same type.
 
 **key**
-   *Any*, :bdg-muted:`Repeatable`. A map key.
+   *Any*. A map key. :bdg-muted:`Repeatable`
 
 **value**
-   *Any*, :bdg-muted:`Repeatable`. A map value.
+   *Any*. A map value. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1034,10 +1099,12 @@ Returns a map of the given key/value pairs. All keys and all values must be of t
 
 .. _expressions-operation-maximum-of-array:
 
-*any* **array_max**\ (array)
+Maximum of array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-maximum-of-array-start
+
+:type:`any`: **array_max**\ (array)
 
 Returns the largest of the input array's non-NULL elements. Unlike the scalar ``max``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
 
@@ -1055,10 +1122,12 @@ Returns the largest of the input array's non-NULL elements. Unlike the scalar ``
 
 .. _expressions-operation-minimum-of-array:
 
-*any* **array_min**\ (array)
+Minimum of array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-minimum-of-array-start
+
+:type:`any`: **array_min**\ (array)
 
 Returns the smallest of the input array's non-NULL elements. Unlike the scalar ``min``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
 
@@ -1076,10 +1145,12 @@ Returns the smallest of the input array's non-NULL elements. Unlike the scalar `
 
 .. _expressions-operation-most-common-element:
 
-*any* **array_mode**\ (array)
+Most common element
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-most-common-element-start
+
+:type:`any`: **array_mode**\ (array)
 
 Returns the most frequently occurring element of the input array, or NULL if the input is NULL or contains no non-NULL elements. NULL elements are not counted. Ties are broken by the natural sort order of the tied elements, matching the ``mode`` aggregation.
 
@@ -1097,18 +1168,20 @@ Returns the most frequently occurring element of the input array, or NULL if the
 
 .. _expressions-operation-named-struct:
 
-*struct* **named_struct**\ (key, value, ...)
+Named struct
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-named-struct-start
 
+:type:`struct`: **named_struct**\ (key, value, ...)
+
 Returns a struct with the given field names and values. Each name must be written as text, must be a valid field name, and may not be repeated.
 
 **key**
-   *String*, :bdg-muted:`Repeatable`. A struct field name, written directly as text. Letters, numbers, and underscores, with at least one letter or underscore, and unique within the struct.
+   *String*. A struct field name, written directly as text. Letters, numbers, and underscores, with at least one letter or underscore, and unique within the struct. :bdg-muted:`Repeatable`
 
 **value**
-   *Any*, :bdg-muted:`Repeatable`. A struct field value.
+   *Any*. A struct field value. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1121,10 +1194,12 @@ Returns a struct with the given field names and values. Each name must be writte
 
 .. _expressions-operation-not-in:
 
-*boolean* value **NOT IN** (array)
+Not in
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-not-in-start
+
+:type:`boolean`: value **NOT IN** (array)
 
 Returns true if the value is none of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) = 0``.
 
@@ -1143,10 +1218,12 @@ Returns true if the value is none of the listed values. The right operand is a p
 
 .. _expressions-operation-size:
 
-*integer* **size**\ (collection)
+Size
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-size-start
+
+:type:`integer`: **size**\ (collection)
 
 Returns the integer element count of the operand, or NULL if the operand is NULL.
 
@@ -1168,10 +1245,12 @@ Returns the integer element count of the operand, or NULL if the operand is NULL
 
 .. _expressions-operation-skip-first:
 
-*array* **skip**\ (array, offset)
+Skip first
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-skip-first-start
+
+:type:`array`: **skip**\ (array, offset)
 
 Returns the input array without its first ``offset`` elements. An ``offset`` at or past the end of the array returns an empty array. Returns NULL if either operand is NULL or if ``offset`` is negative. Compose with ``take`` for a window out of the middle: ``take(skip(arr, 1), 2)``.
 
@@ -1192,10 +1271,12 @@ Returns the input array without its first ``offset`` elements. An ``offset`` at 
 
 .. _expressions-operation-sort-array:
 
-*array* **array_sort**\ (array, comparator)
+Sort array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-sort-array-start
+
+:type:`array`: **array_sort**\ (array, comparator)
 
 Sorts the input array, ascending by default, placing NULL elements at the end and ordering NaN above every other float. A comparator sorts by any other order: it takes two elements and returns a negative number, zero, or a positive number as the first sorts before, with, or after the second, and returning NULL from it fails the expression. An array of structs has no default order, so it requires a comparator.
 
@@ -1203,7 +1284,7 @@ Sorts the input array, ascending by default, placing NULL elements at the end an
    *Array*. The array to sort.
 
 **comparator**
-   *Function*, :bdg-muted:`Optional`. Optional two-argument comparator function.
+   *Function*. A two-argument comparator function. :bdg-muted:`Optional`
 
 .. warning::
 
@@ -1220,10 +1301,12 @@ Sorts the input array, ascending by default, placing NULL elements at the end an
 
 .. _expressions-operation-struct-or-map-field:
 
-*any* value.key
+Struct or map field
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-struct-or-map-field-start
+
+:type:`any`: value.key
 
 Gets a field from a struct, or a string key from a map.
 
@@ -1238,10 +1321,12 @@ Gets a field from a struct, or a string key from a map.
 
 .. _expressions-operation-sum-array:
 
-*number* **array_sum**\ (array)
+Sum array
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-sum-array-start
+
+:type:`number`: **array_sum**\ (array)
 
 Returns the sum of the input array's non-NULL elements, which must be numeric. Returns 0 for an empty array or one holding only NULLs, matching the ``sum`` aggregation over zero records. Returns NULL if the input is NULL.
 
@@ -1259,10 +1344,12 @@ Returns the sum of the input array's non-NULL elements, which must be numeric. R
 
 .. _expressions-operation-take-first:
 
-*array* **take**\ (array, limit)
+Take first
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-take-first-start
+
+:type:`array`: **take**\ (array, limit)
 
 Returns the first ``limit`` elements of the input array. A ``limit`` longer than the array returns the whole array, and a ``limit`` of zero returns an empty array. Returns NULL if either operand is NULL or if ``limit`` is negative.
 
@@ -1283,17 +1370,19 @@ Returns the first ``limit`` elements of the input array. A ``limit`` longer than
 
 .. _expressions-operation-transform:
 
-*array* **transform**\ (array, element -> expression)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Transform
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-transform-start
+
+:type:`array`: **transform**\ (array, element -> expression)
 
 Transforms an array using a function that takes each element of the array, in order, and returns a new value. Returns an array of the values returned by the function. The function may take an optional second argument, which will be bound to the zero-based index of the element.
 
 **array**
    *Array*. The array to transform.
 
-**function**
+**element -> expression**
    *Function*. A function whose first argument is bound to each element in turn. An optional second argument is bound to that element's 0-based index: (element, index) -> expression.
 
 .. code-block:: none
@@ -1307,15 +1396,17 @@ Transforms an array using a function that takes each element of the array, in or
 
 .. _expressions-operation-union:
 
-*array* **union**\ (array, array, ...)
+Union
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-union-start
 
+:type:`array`: **union**\ (array, array, ...)
+
 Concatenates two or more arrays into a single array, preserving order and keeping duplicate elements. All operands must be arrays of primitive or flat-struct elements with a common element type. NULL operands are skipped rather than propagated, so ``union(a, NULL)`` is ``a``. SparkSQL spells this ``array_union`` and removes duplicates; that spelling is not accepted here.
 
 **array**
-   *Array*, :bdg-muted:`Repeatable`. An array to concatenate.
+   *Array*. An array to concatenate. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1328,18 +1419,20 @@ Concatenates two or more arrays into a single array, preserving order and keepin
 
 .. _expressions-operation-zip-arrays:
 
-*array* **array_zip**\ (name, array, name, array, ...)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Zip arrays
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-zip-arrays-start
+
+:type:`array`: **array_zip**\ (name, array, name, array, ...)
 
 Combines two or more arrays element-wise into an array of structs. Shorter arrays are padded with NULL, so the result length is that of the longest input, and the result is NULL if any input array is NULL -- both as in SparkSQL's ``arrays_zip``. Operands alternate between a field name and the array supplying that field's values, as in ``named_struct``: SparkSQL derives struct field names from the input column names, and an AEL operand is an expression with no name to derive.
 
 **name**
-   *String*, :bdg-muted:`Repeatable`. A struct field name, written directly as text.
+   *String*. A struct field name, written directly as text. :bdg-muted:`Repeatable`
 
 **array**
-   *Array*, :bdg-muted:`Repeatable`. The array supplying that field's values.
+   *Array*. The array supplying that field's values. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1364,15 +1457,17 @@ Operations: :ref:`Concatenate <expressions-operation-concatenate>`, :ref:`Concat
 
 .. _expressions-operation-concatenate:
 
-*string* **concat**\ (value, value, ...)
+Concatenate
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-concatenate-start
 
+:type:`string`: **concat**\ (value, value, ...)
+
 Concatenates operands together with no spaces/separator.
 
 **value**
-   *String*, :bdg-muted:`Repeatable`. A value to join.
+   *String*. A value to join. :bdg-muted:`Repeatable`
 
 .. warning::
 
@@ -1389,10 +1484,12 @@ Concatenates operands together with no spaces/separator.
 
 .. _expressions-operation-concatenate-with-separator:
 
-*string* **concat_ws**\ (separator, value, ...)
+Concatenate with separator
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-concatenate-with-separator-start
+
+:type:`string`: **concat_ws**\ (separator, value, ...)
 
 Concatenates operands together. The first operand should be a (possibly empty) separator string.
 
@@ -1400,7 +1497,7 @@ Concatenates operands together. The first operand should be a (possibly empty) s
    *String*. The separator placed between values.
 
 **value**
-   *String*, :bdg-muted:`Repeatable`. A value to join.
+   *String*. A value to join. :bdg-muted:`Repeatable`
 
 .. warning::
 
@@ -1417,10 +1514,12 @@ Concatenates operands together. The first operand should be a (possibly empty) s
 
 .. _expressions-operation-contains:
 
-*boolean* **contains**\ (string, substring)
+Contains
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-contains-start
+
+:type:`boolean`: **contains**\ (string, substring)
 
 Returns true if the first operand string contains the second operand string.
 
@@ -1445,10 +1544,12 @@ Returns true if the first operand string contains the second operand string.
 
 .. _expressions-operation-ends-with:
 
-*boolean* **endswith**\ (string, suffix)
+Ends with
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-ends-with-start
+
+:type:`boolean`: **endswith**\ (string, suffix)
 
 Returns true if the first operand string ends with the second operand string.
 
@@ -1473,10 +1574,12 @@ Returns true if the first operand string ends with the second operand string.
 
 .. _expressions-operation-lowercase:
 
-*string* **lower**\ (string)
+Lowercase
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-lowercase-start
+
+:type:`string`: **lower**\ (string)
 
 Converts the operand string to lower case.
 
@@ -1498,10 +1601,12 @@ Converts the operand string to lower case.
 
 .. _expressions-operation-replace:
 
-*string* **replace**\ (string, search, replacement)
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+Replace
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-replace-start
+
+:type:`string`: **replace**\ (string, search, replacement)
 
 Replaces all occurrences of the second operand string in the first operand string with the third operand string.
 
@@ -1512,7 +1617,7 @@ Replaces all occurrences of the second operand string in the first operand strin
    *String*. The substring to replace.
 
 **replacement**
-   *String*, :bdg-muted:`Optional`. The replacement substring.
+   *String*. The replacement substring. :bdg-muted:`Optional`
 
 .. warning::
 
@@ -1529,18 +1634,20 @@ Replaces all occurrences of the second operand string in the first operand strin
 
 .. _expressions-operation-sha-2-hash:
 
-*string* **sha2**\ (string, bits)
+SHA-2 hash
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-sha-2-hash-start
 
-Returns a checksum of SHA-2 family as a hex string of expr. SHA-224, SHA-256, SHA-384, and SHA-512 are supported. Bit length of 0 is equivalent to 256.
+:type:`string`: **sha2**\ (string, bits)
+
+Returns a SHA-2 checksum of the input string, as a hex string. SHA-224, SHA-256, SHA-384, and SHA-512 are supported. Bit length of 0 is equivalent to 256.
 
 **string**
    *String*. The string to hash.
 
 **bits**
-   *Integer*. Bit length: 224, 256, 384 or 512 (0 means 256).
+   *Integer*. Bit length: 224, 256, 384, or 512 (0 means 256).
 
 .. note::
 
@@ -1557,10 +1664,12 @@ Returns a checksum of SHA-2 family as a hex string of expr. SHA-224, SHA-256, SH
 
 .. _expressions-operation-split:
 
-*array* **split**\ (string, delimiter)
+Split
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-split-start
+
+:type:`array`: **split**\ (string, delimiter)
 
 Splits the first operand string on each literal occurrence of the second operand string, returning an array of strings. The delimiter is matched literally, not as a regular expression. Empty trailing elements are preserved, so the result length is stable for fixed-shape values. An empty delimiter splits the string into one element per code point, matching SparkSQL.
 
@@ -1581,10 +1690,12 @@ Splits the first operand string on each literal occurrence of the second operand
 
 .. _expressions-operation-starts-with:
 
-*boolean* **startswith**\ (string, prefix)
+Starts with
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-starts-with-start
+
+:type:`boolean`: **startswith**\ (string, prefix)
 
 Returns true if the first operand string starts with the second operand string.
 
@@ -1609,10 +1720,12 @@ Returns true if the first operand string starts with the second operand string.
 
 .. _expressions-operation-uppercase:
 
-*string* **upper**\ (string)
+Uppercase
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-uppercase-start
+
+:type:`string`: **upper**\ (string)
 
 Converts the operand string to upper case.
 
@@ -1646,10 +1759,12 @@ Operations: :ref:`Absolute value <expressions-operation-absolute-value>`, :ref:`
 
 .. _expressions-operation-absolute-value:
 
-*number* **abs**\ (number)
+Absolute value
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-absolute-value-start
+
+:type:`number`: **abs**\ (number)
 
 Returns the absolute value of the operand.
 
@@ -1671,10 +1786,12 @@ Returns the absolute value of the operand.
 
 .. _expressions-operation-add:
 
-*number* value **+** value **+** ...
+Add
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-add-start
+
+:type:`number`: value **+** value **+** ...
 
 Adds operands.
 
@@ -1693,10 +1810,12 @@ Adds operands.
 
 .. _expressions-operation-divide:
 
-*number* value **/** value **/** ...
+Divide
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-divide-start
+
+:type:`number`: value **/** value **/** ...
 
 Divides operands. Treats division by zero as a NULL result.
 
@@ -1715,15 +1834,17 @@ Divides operands. Treats division by zero as a NULL result.
 
 .. _expressions-operation-maximum:
 
-*number* **max**\ (value, value, ...)
+Maximum
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-maximum-start
 
+:type:`number`: **max**\ (value, value, ...)
+
 Returns the maximum value from operands, ignoring NULL values.
 
 **value**
-   *Number*, :bdg-muted:`Repeatable`. A value to compare.
+   *Number*. A value to compare. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1736,15 +1857,17 @@ Returns the maximum value from operands, ignoring NULL values.
 
 .. _expressions-operation-minimum:
 
-*number* **min**\ (value, value, ...)
+Minimum
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-minimum-start
 
+:type:`number`: **min**\ (value, value, ...)
+
 Returns the minimum value from operands, ignoring NULL values.
 
 **value**
-   *Number*, :bdg-muted:`Repeatable`. A value to compare.
+   *Number*. A value to compare. :bdg-muted:`Repeatable`
 
 .. code-block:: none
    :caption: Example
@@ -1757,10 +1880,12 @@ Returns the minimum value from operands, ignoring NULL values.
 
 .. _expressions-operation-modulus:
 
-*number* dividend **%** divisor
+Modulus
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-modulus-start
+
+:type:`number`: dividend **%** divisor
 
 Returns the modulus of the first operand divided by the second operand.
 
@@ -1781,10 +1906,12 @@ Also accepts the name **mod**.
 
 .. _expressions-operation-multiply:
 
-*number* value **\*** value **\*** ...
+Multiply
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-multiply-start
+
+:type:`number`: value **\*** value **\*** ...
 
 Multiplies operands.
 
@@ -1803,10 +1930,12 @@ Multiplies operands.
 
 .. _expressions-operation-subtract:
 
-*number* value **-** value **-** ...
+Subtract
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-subtract-start
+
+:type:`number`: value **-** value **-** ...
 
 Subtracts operands.
 
@@ -1837,10 +1966,12 @@ Operations: :ref:`Add days <expressions-operation-add-days>`, :ref:`Date differe
 
 .. _expressions-operation-add-days:
 
-*date* **date_add**\ (date, days)
+Add days
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-add-days-start
+
+:type:`date`: **date_add**\ (date, days)
 
 Adds the specified number of days to a date.
 
@@ -1865,10 +1996,12 @@ Adds the specified number of days to a date.
 
 .. _expressions-operation-date-difference:
 
-*integer* **date_diff**\ (start, end)
+Date difference
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-date-difference-start
+
+:type:`integer`: **date_diff**\ (start, end)
 
 Returns the absolute number of days between two dates.
 
@@ -1893,10 +2026,12 @@ Returns the absolute number of days between two dates.
 
 .. _expressions-operation-date-in-last:
 
-*boolean* **date_in_last**\ (days, date)
+Date in last
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-date-in-last-start
+
+:type:`boolean`: **date_in_last**\ (days, date)
 
 Returns true if the date falls within the past ``n`` days of today. A value of zero matches only today, a value of one also matches yesterday, and so on.
 
@@ -1924,10 +2059,12 @@ Returns true if the date falls within the past ``n`` days of today. A value of z
 
 .. _expressions-operation-date-in-next:
 
-*boolean* **date_in_next**\ (days, date)
+Date in next
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-date-in-next-start
+
+:type:`boolean`: **date_in_next**\ (days, date)
 
 Returns true if the date falls within the next ``n`` days from today. A value of zero matches only today, a value of one also matches tomorrow, and so on.
 
@@ -1955,10 +2092,12 @@ Returns true if the date falls within the next ``n`` days from today. A value of
 
 .. _expressions-operation-day-of-week:
 
-*integer* **day_of_week**\ (date)
+Day of week
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-day-of-week-start
+
+:type:`integer`: **day_of_week**\ (date)
 
 Returns the ISO day of week for the date, from 1 for Monday through 7 for Sunday.
 
@@ -1980,10 +2119,12 @@ Returns the ISO day of week for the date, from 1 for Monday through 7 for Sunday
 
 .. _expressions-operation-day-of-year:
 
-*integer* **day_of_year**\ (date)
+Day of year
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-day-of-year-start
+
+:type:`integer`: **day_of_year**\ (date)
 
 Returns the day of the year for the date, from 1 to 366.
 
@@ -2005,10 +2146,12 @@ Returns the day of the year for the date, from 1 to 366.
 
 .. _expressions-operation-subtract-days:
 
-*date* **date_sub**\ (date, days)
+Subtract days
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-subtract-days-start
+
+:type:`date`: **date_sub**\ (date, days)
 
 Subtracts the specified number of days from a date.
 
@@ -2033,20 +2176,22 @@ Subtracts the specified number of days from a date.
 
 .. _expressions-operation-timestamp-difference:
 
-*integer* **timestamp_diff**\ (unit, timestamp, timestamp)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp difference
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-timestamp-difference-start
+
+:type:`integer`: **timestamp_diff**\ (unit, start, end)
 
 Returns the whole number of units between two timestamps.
 
 **unit**
-   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
+   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes', or 'hours'.
 
-**timestamp**
+**start**
    *Datetime*. The first timestamp.
 
-**timestamp**
+**end**
    *Datetime*. The second timestamp.
 
 .. warning::
@@ -2054,7 +2199,7 @@ Returns the whole number of units between two timestamps.
    Throws an error if:
 
    - either timestamp is NULL
-   - the unit is not one of ``seconds``, ``minutes``, or ``hours``
+   - the unit is not one of 'seconds', 'minutes', or 'hours'
    - a timestamp has an unsupported type
 
 .. code-block:: none
@@ -2068,10 +2213,12 @@ Returns the whole number of units between two timestamps.
 
 .. _expressions-operation-timestamp-from-milliseconds:
 
-*datetime* **timestamp_from_millis**\ (millis)
+Timestamp from milliseconds
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-timestamp-from-milliseconds-start
+
+:type:`datetime`: **timestamp_from_millis**\ (millis)
 
 Coerces milliseconds since the Unix epoch (1970-01-01T00:00:00Z), given as a number, to a timestamp. Returns NULL for NULL, non-numeric, or out-of-range input.
 
@@ -2095,10 +2242,12 @@ For numeric epoch fields in event payloads (e.g. GA4 ``event_timestamp``) that `
 
 .. _expressions-operation-timestamp-in-last:
 
-*boolean* **timestamp_in_last**\ (n, unit, timestamp)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp in last
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-timestamp-in-last-start
+
+:type:`boolean`: **timestamp_in_last**\ (n, unit, timestamp)
 
 Returns true if the timestamp falls within the past ``n`` units of the current time.
 
@@ -2106,7 +2255,7 @@ Returns true if the timestamp falls within the past ``n`` units of the current t
    *Integer*. Size of the window.
 
 **unit**
-   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
+   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes', or 'hours'.
 
 **timestamp**
    *Datetime*. The timestamp to test.
@@ -2131,10 +2280,12 @@ Returns true if the timestamp falls within the past ``n`` units of the current t
 
 .. _expressions-operation-timestamp-in-next:
 
-*boolean* **timestamp_in_next**\ (n, unit, timestamp)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp in next
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-timestamp-in-next-start
+
+:type:`boolean`: **timestamp_in_next**\ (n, unit, timestamp)
 
 Returns true if the timestamp falls within the next ``n`` units from the current time.
 
@@ -2142,7 +2293,7 @@ Returns true if the timestamp falls within the next ``n`` units from the current
    *Integer*. Size of the window.
 
 **unit**
-   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
+   *String*. A quoted, case-insensitive string literal: 'seconds', 'minutes', or 'hours'.
 
 **timestamp**
    *Datetime*. The timestamp to test.
@@ -2167,10 +2318,12 @@ Returns true if the timestamp falls within the next ``n`` units from the current
 
 .. _expressions-operation-week-of-year:
 
-*integer* **week_of_year**\ (date)
+Week of year
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. expressions-operation-week-of-year-start
+
+:type:`integer`: **week_of_year**\ (date)
 
 Returns the ISO-8601 week of the week-based year for the date, from 1 to 53. Weeks start on Monday, and week 1 is the one containing the year's first Thursday.
 
