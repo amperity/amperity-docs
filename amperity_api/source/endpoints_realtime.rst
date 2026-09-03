@@ -19,7 +19,7 @@ Real-time API
 
 .. endpoints-realtime-about-start
 
-Use the Real-time API to stream customer events into Amperity and to look up unified customer profiles on demand. Send events, such as page views, purchases, and loyalty actions, to an event stream, then look up profiles by identity key, retrieve profiles by ID, query segment membership, and retrieve profile collection statistics. The Real-time API supports low-latency use cases such as personalization, decisioning, and in-session activation.
+Use the Real-time API to stream customer events into Amperity and to look up unified customer profiles on demand. Send events, such as page views, purchases, and loyalty actions, to an event stream, then look up profiles by identity key, retrieve profiles by ID, query a profile's segment membership, and list the profiles in a segment. The Real-time API supports low-latency use cases such as personalization, decisioning, and in-session activation.
 
 .. endpoints-realtime-about-end
 
@@ -118,30 +118,3 @@ Segments
       .. include:: ../../amperity_api/source/endpoint_get_profile_segments.rst
          :start-after: .. endpoint-get-profile-segments-start
          :end-before: .. endpoint-get-profile-segments-end
-
-
-.. _endpoints-realtime-profile-stores:
-
-Profile collections
-==================================================
-
-.. grid:: 1 1 1 1
-   :gutter: 2
-   :padding: 0
-   :class-container: surface
-
-   .. grid-item-card:: GET /collections/{collection-id}/stats
-      :link-type: doc
-      :link: endpoint_get_profile_store_stats
-
-      .. include:: ../../amperity_api/source/endpoint_get_profile_store_stats.rst
-         :start-after: .. endpoint-get-profile-store-stats-start
-         :end-before: .. endpoint-get-profile-store-stats-end
-
-   .. grid-item-card:: GET /collections/{collection-id}/history
-      :link-type: doc
-      :link: endpoint_get_profile_store_history
-
-      .. include:: ../../amperity_api/source/endpoint_get_profile_store_history.rst
-         :start-after: .. endpoint-get-profile-store-history-start
-         :end-before: .. endpoint-get-profile-store-history-end
