@@ -133,6 +133,23 @@ AEL operations
 
 Each operation below shows how it is written, the type of value it produces, the parameters it accepts, and an example.
 
+Behavior and errors
+--------------------------------------------------
+
+.. This generated section is the part to review with Sam for writer's voice.
+
+Parameters are required unless marked with an Optional or Repeatable badge.
+
+There is no global NULL rule; each operation documents its own NULL behavior.
+
+Date and time operations are evaluated in UTC.
+
+Value comparisons are case-sensitive, while field-name resolution is case-insensitive.
+
+Logical operators use two-valued logic: NOT NULL is true.
+
+When an expression fails at run time in the expression preview, it shows ``Evaluation error: ...``.
+
 .. list-table::
    :widths: 25 75
    :header-rows: 1
@@ -177,12 +194,7 @@ Comparison
 
 .. expressions-category-comparison-start
 
-* :ref:`Equal <expressions-operation-equal>`
-* :ref:`Greater than <expressions-operation-greater-than>`
-* :ref:`Greater than or equal <expressions-operation-greater-than-or-equal>`
-* :ref:`Less than <expressions-operation-less-than>`
-* :ref:`Less than or equal <expressions-operation-less-than-or-equal>`
-* :ref:`Not equal <expressions-operation-not-equal>`
+Operations: :ref:`Equal <expressions-operation-equal>`, :ref:`Greater than <expressions-operation-greater-than>`, :ref:`Greater than or equal <expressions-operation-greater-than-or-equal>`, :ref:`Less than <expressions-operation-less-than>`, :ref:`Less than or equal <expressions-operation-less-than-or-equal>`, :ref:`Not equal <expressions-operation-not-equal>`
 
 .. expressions-category-comparison-end
 
@@ -194,27 +206,13 @@ Equal
 
 .. expressions-operation-equal-start
 
-Written as **value = value**, with a result of type **boolean**.
-
-Returns true if all operands are equal to each other.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+Written as **value = value**, returning **boolean**. Returns true if all operands are equal to each other.
 
 .. code-block:: none
+   :caption: Example
 
-   loyalty_tier = 'GOLD'
+   1 = 1
+   # => true
 
 .. expressions-operation-equal-end
 
@@ -226,27 +224,16 @@ Greater than
 
 .. expressions-operation-greater-than-start
 
-Written as **value > value**, with a result of type **boolean**.
+Written as **value > value**, returning **boolean**. Returns true if each operand is greater than the operand that follows it.
 
-Returns true if each operand is greater than the operand that follows it.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+.. warning::
+   The operands are not comparable. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   total_amount > 100
+   3 > 2
+   # => true
 
 .. expressions-operation-greater-than-end
 
@@ -258,27 +245,16 @@ Greater than or equal
 
 .. expressions-operation-greater-than-or-equal-start
 
-Written as **value >= value**, with a result of type **boolean**.
+Written as **value >= value**, returning **boolean**. Returns true if each operand is greater than or equal to the operand that follows it.
 
-Returns true if each operand is greater than or equal to the operand that follows it.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+.. warning::
+   The operands are not comparable. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   total_amount >= 100
+   2 >= 2
+   # => true
 
 .. expressions-operation-greater-than-or-equal-end
 
@@ -290,27 +266,16 @@ Less than
 
 .. expressions-operation-less-than-start
 
-Written as **value < value**, with a result of type **boolean**.
+Written as **value < value**, returning **boolean**. Returns true if each operand is less than the operand that follows it.
 
-Returns true if each operand is less than the operand that follows it.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+.. warning::
+   The operands are not comparable. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   total_amount < 50
+   1 < 2
+   # => true
 
 .. expressions-operation-less-than-end
 
@@ -322,27 +287,16 @@ Less than or equal
 
 .. expressions-operation-less-than-or-equal-start
 
-Written as **value <= value**, with a result of type **boolean**.
+Written as **value <= value**, returning **boolean**. Returns true if each operand is less than or equal to the operand that follows it.
 
-Returns true if each operand is less than or equal to the operand that follows it.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+.. warning::
+   The operands are not comparable. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   item_count <= 3
+   2 <= 2
+   # => true
 
 .. expressions-operation-less-than-or-equal-end
 
@@ -354,27 +308,13 @@ Not equal
 
 .. expressions-operation-not-equal-start
 
-Written as **value != value**, with a result of type **boolean**.
-
-Returns true if at least one operand is not equal to the others.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to compare.
-
-**Example**
+Written as **value != value**, returning **boolean**. Returns true if at least one operand is not equal to the others.
 
 .. code-block:: none
+   :caption: Example
 
-   order_status != 'CANCELED'
+   1 != 2
+   # => true
 
 .. expressions-operation-not-equal-end
 
@@ -386,9 +326,7 @@ Logical
 
 .. expressions-category-logical-start
 
-* :ref:`And <expressions-operation-and>`
-* :ref:`Not <expressions-operation-not>`
-* :ref:`Or <expressions-operation-or>`
+Operations: :ref:`And <expressions-operation-and>`, :ref:`Not <expressions-operation-not>`, :ref:`Or <expressions-operation-or>`
 
 .. expressions-category-logical-end
 
@@ -400,25 +338,12 @@ And
 
 .. expressions-operation-and-start
 
-Written as **value AND value AND ...**, with a result of type **boolean**.
+Written as **value AND value AND ...**, returning **boolean**. Returns true if all operands are truthy. Short-circuits evaluation on the first falsey value.
 
-Returns true if all operands are truthy. Short-circuits evaluation on the first falsey value.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - boolean. Repeatable.
-
-       A value to test.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
    is_active AND has_subscription
 
@@ -432,27 +357,12 @@ Not
 
 .. expressions-operation-not-start
 
-Written as **NOT value**, with a result of type **boolean**.
-
-Returns true if the operand is falsey.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - boolean. Required.
-
-       A value to test.
-
-**Example**
+Written as **NOT value**, returning **boolean**. Returns true if the operand is falsey.
 
 .. code-block:: none
+   :caption: Example
 
-   NOT date_in_last(days_between_appointments, last_appointment_date)
+   NOT is_active
 
 .. expressions-operation-not-end
 
@@ -464,27 +374,14 @@ Or
 
 .. expressions-operation-or-start
 
-Written as **value OR value OR ...**, with a result of type **boolean**.
+Written as **value OR value OR ...**, returning **boolean**. Returns true if any operand is truthy. Short-circuits evaluation on the first truthy value.
 
-Returns true if any operand is truthy. Short-circuits evaluation on the first truthy value.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - boolean. Repeatable.
-
-       A value to test.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
-   has_browsed_product_l24h AND NOT (has_purchased_l24h OR has_activity_l2h)
+   has_browsed_product_l24h OR NOT (has_purchased_product_l24h OR has_activity_l2h)
 
 .. expressions-operation-or-end
 
@@ -496,8 +393,7 @@ Null
 
 .. expressions-category-null-start
 
-* :ref:`Is not null <expressions-operation-is-not-null>`
-* :ref:`Is null <expressions-operation-is-null>`
+Operations: :ref:`Is not null <expressions-operation-is-not-null>`, :ref:`Is null <expressions-operation-is-null>`
 
 .. expressions-category-null-end
 
@@ -509,27 +405,16 @@ Is not null
 
 .. expressions-operation-is-not-null-start
 
-Written as **value IS NOT NULL**, with a result of type **boolean**.
+Written as **value IS NOT NULL**, returning **boolean**. Returns true if the operand is not null.
 
-Returns true if the operand is not null.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to test.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   email IS NOT NULL
+   'email' IS NOT NULL
+   # => true
 
 .. expressions-operation-is-not-null-end
 
@@ -541,27 +426,16 @@ Is null
 
 .. expressions-operation-is-null-start
 
-Written as **value IS NULL**, with a result of type **boolean**.
+Written as **value IS NULL**, returning **boolean**. Returns true if the operand is null.
 
-Returns true if the operand is null.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to test.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   last_purchase_date IS NULL
+   NULL IS NULL
+   # => true
 
 .. expressions-operation-is-null-end
 
@@ -573,10 +447,7 @@ Conditional
 
 .. expressions-category-conditional-start
 
-* :ref:`Case <expressions-operation-case>`
-* :ref:`Coalesce <expressions-operation-coalesce>`
-* :ref:`Condition <expressions-operation-condition>`
-* :ref:`If <expressions-operation-if>`
+Operations: :ref:`Case <expressions-operation-case>`, :ref:`Coalesce <expressions-operation-coalesce>`, :ref:`Condition <expressions-operation-condition>`, :ref:`If <expressions-operation-if>`
 
 .. expressions-category-conditional-end
 
@@ -588,37 +459,24 @@ Case
 
 .. expressions-operation-case-start
 
-Written as **case(value, match, result, ...)**, with a result of type **any**.
+Written as **case(value, match, result, ...)**, returning **any**. Selects a result based on matching a test value against possible cases.
 
-Selects a result based on matching a test value against possible cases.
+**value**
+   Any. The value to match against.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**match**
+   Any, :bdg-muted:`Repeatable`. A candidate value.
 
-   * - Parameter
-     - Description
+**result**
+   Any, :bdg-muted:`Repeatable`. Result returned when the candidate matches.
 
-   * - **value**
-     - any. Required.
-
-       The value to match against.
-
-   * - **match**
-     - any. Repeatable.
-
-       A candidate value.
-
-   * - **result**
-     - any. Repeatable.
-
-       Result returned when the candidate matches.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
-   case(tier, 'GOLD', 0.2, 'SILVER', 0.1, 0.05)
+   case('GOLD', 'GOLD', 0.2, 'SILVER', 0.1, 0.05)
+   # => 0.2
 
 .. expressions-operation-case-end
 
@@ -630,27 +488,18 @@ Coalesce
 
 .. expressions-operation-coalesce-start
 
-Written as **coalesce(value, value, ...)**, with a result of type **any**.
+Written as **coalesce(value, value, ...)**, returning **any**. Evaluates operands in order, returning the first non-NULL operand.
 
-Evaluates operands in order, returning the first non-NULL operand.
+**value**
+   Any, :bdg-muted:`Repeatable`. A value to consider.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       A value to consider.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
-   coalesce(preferred_name, first_name, 'there')
+   coalesce(NULL, NULL, 'there')
+   # => 'there'
 
 .. expressions-operation-coalesce-end
 
@@ -662,32 +511,21 @@ Condition
 
 .. expressions-operation-condition-start
 
-Written as **cond(predicate, result, ...)**, with a result of type **any**.
+Written as **cond(predicate, result, ...)**, returning **any**. Evaluates predicates in order, returning the result paired with the first true predicate.
 
-Evaluates predicates in order, returning the result paired with the first true predicate.
+**predicate**
+   Boolean, :bdg-muted:`Repeatable`. A predicate to evaluate in order.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**result**
+   Any, :bdg-muted:`Repeatable`. Result returned when the predicate is true.
 
-   * - Parameter
-     - Description
-
-   * - **predicate**
-     - boolean. Repeatable.
-
-       A predicate to evaluate in order.
-
-   * - **result**
-     - any. Repeatable.
-
-       Result returned when the predicate is true.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
-   cond(tier = 'GOLD', 0.2, tier = 'SILVER', 0.1, 0.05)
+   cond('GOLD' = 'GOLD', 0.2, 'SILVER' = 'GOLD', 0.1, 0.05)
+   # => 0.2
 
 .. expressions-operation-condition-end
 
@@ -699,37 +537,24 @@ If
 
 .. expressions-operation-if-start
 
-Written as **if(condition, then, else)**, with a result of type **any**.
+Written as **if(condition, then, else)**, returning **any**. Returns the second operand if the first operand (condition) is true, otherwise returns the third operand. NULL conditions are treated as false.
 
-Returns the second operand if the first operand (condition) is true, otherwise returns the third operand. NULL conditions are treated as false.
+**condition**
+   Boolean. The condition to test.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**then**
+   Any. Result when the condition is true.
 
-   * - Parameter
-     - Description
+**else**
+   Any. Result when the condition is false.
 
-   * - **condition**
-     - boolean. Required.
-
-       The condition to test.
-
-   * - **then**
-     - any. Required.
-
-       Result when the condition is true.
-
-   * - **else**
-     - any. Required.
-
-       Result when the condition is false.
-
-**Example**
+.. note:: Operands after the selected branch are not evaluated.
 
 .. code-block:: none
+   :caption: Example
 
-   if(total_amount > 100, 'free', 'standard')
+   if(100 > 50, 'free', 'standard')
+   # => 'free'
 
 .. expressions-operation-if-end
 
@@ -741,13 +566,7 @@ Type conversion
 
 .. expressions-category-cast-start
 
-* :ref:`To boolean <expressions-operation-to-boolean>`
-* :ref:`To date <expressions-operation-to-date>`
-* :ref:`To decimal <expressions-operation-to-decimal>`
-* :ref:`To float <expressions-operation-to-float>`
-* :ref:`To integer <expressions-operation-to-integer>`
-* :ref:`To string <expressions-operation-to-string>`
-* :ref:`To timestamp <expressions-operation-to-timestamp>`
+Operations: :ref:`To boolean <expressions-operation-to-boolean>`, :ref:`To date <expressions-operation-to-date>`, :ref:`To decimal <expressions-operation-to-decimal>`, :ref:`To float <expressions-operation-to-float>`, :ref:`To integer <expressions-operation-to-integer>`, :ref:`To string <expressions-operation-to-string>`, :ref:`To timestamp <expressions-operation-to-timestamp>`
 
 .. expressions-category-cast-end
 
@@ -759,27 +578,19 @@ To boolean
 
 .. expressions-operation-to-boolean-start
 
-Written as **to_boolean(value)**, with a result of type **boolean**.
+Written as **to_boolean(value)**, returning **boolean**. Coerces a value to boolean. Returns NULL if coercion is not possible.
 
-Coerces a value to boolean. Returns NULL if coercion is not possible.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-**Example**
+.. warning::
+   The value has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   to_boolean(marketing_opt_in)
+   to_boolean('true')
+   # => true
 
 .. expressions-operation-to-boolean-end
 
@@ -791,32 +602,22 @@ To date
 
 .. expressions-operation-to-date-start
 
-Written as **to_date(value, format)**, with a result of type **date**.
+Written as **to_date(value, format)**, returning **date**. Coerces a value to date. Returns NULL if coercion is not possible.
 
-Coerces a value to date. Returns NULL if coercion is not possible.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**format**
+   String, :bdg-muted:`Optional`. Optional date parse format.
 
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-   * - **format**
-     - string. Optional.
-
-       Optional date parse format.
-
-**Example**
+.. note::
+   The format pattern is invalid. This operation returns NULL.
 
 .. code-block:: none
+   :caption: Example
 
-   to_date(order_date_text, 'yyyy-MM-dd')
+   to_date('2024-01-15', 'yyyy-MM-dd')
+   # => to_date('2024-01-15')
 
 .. expressions-operation-to-date-end
 
@@ -828,37 +629,22 @@ To decimal
 
 .. expressions-operation-to-decimal-start
 
-Written as **to_decimal(value, precision, scale)**, with a result of type **decimal**.
+Written as **to_decimal(value, precision, scale)**, returning **decimal**. Coerces a value to big decimal, with precision 38 and scale 2 by default. The optional precision and scale parameters must be integer literals. Returns NULL if the coerced value is wider than the precision.
 
-Coerces a value to big decimal, with precision 38 and scale 2 by default. The optional precision and scale parameters must be integer literals. Returns NULL if the coerced value is wider than the precision.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**precision**
+   Integer, :bdg-muted:`Optional`. Optional decimal precision, 1 to 38. Must be a literal number.
 
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-   * - **precision**
-     - integer. Optional.
-
-       Optional decimal precision, 1 to 38. Must be a literal number.
-
-   * - **scale**
-     - integer. Optional.
-
-       Optional decimal scale, 0 to the precision. Must be a literal number.
-
-**Example**
+**scale**
+   Integer, :bdg-muted:`Optional`. Optional decimal scale, 0 to the precision. Must be a literal number.
 
 .. code-block:: none
+   :caption: Example
 
-   to_decimal(list_price, 38, 2)
+   to_decimal('12.345', 10, 2)
+   # => to_decimal('12.35')
 
 .. expressions-operation-to-decimal-end
 
@@ -870,27 +656,19 @@ To float
 
 .. expressions-operation-to-float-start
 
-Written as **to_float(value)**, with a result of type **float**.
+Written as **to_float(value)**, returning **float**. Coerces a value to float. Returns NULL if coercion is not possible.
 
-Coerces a value to float. Returns NULL if coercion is not possible.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-**Example**
+.. warning::
+   The value has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   to_float(unit_price_text)
+   to_float('12.5')
+   # => 12.5
 
 .. expressions-operation-to-float-end
 
@@ -902,27 +680,19 @@ To integer
 
 .. expressions-operation-to-integer-start
 
-Written as **to_int(value)**, with a result of type **integer**.
+Written as **to_int(value)**, returning **integer**. Coerces a value to a 64-bit integer. Returns NULL if coercion is not possible.
 
-Coerces a value to a 64-bit integer. Returns NULL if coercion is not possible.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-**Example**
+.. warning::
+   The value has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   to_int(quantity_text)
+   to_int('12.9')
+   # => 12
 
 .. expressions-operation-to-integer-end
 
@@ -934,27 +704,19 @@ To string
 
 .. expressions-operation-to-string-start
 
-Written as **to_string(value)**, with a result of type **string**.
+Written as **to_string(value)**, returning **string**. Converts a value to string. Returns NULL if the input is NULL.
 
-Converts a value to string. Returns NULL if the input is NULL.
+**value**
+   Any. The value to convert.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to convert.
-
-**Example**
+.. warning::
+   The value has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   to_string(order_number)
+   to_string(123)
+   # => '123'
 
 .. expressions-operation-to-string-end
 
@@ -966,32 +728,22 @@ To timestamp
 
 .. expressions-operation-to-timestamp-start
 
-Written as **to_timestamp(value, format)**, with a result of type **datetime**.
+Written as **to_timestamp(value, format)**, returning **datetime**. Coerces a value to timestamp. Returns NULL if coercion is not possible.
 
-Coerces a value to timestamp. Returns NULL if coercion is not possible.
+**value**
+   Any. The value to coerce.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**format**
+   String, :bdg-muted:`Optional`. Optional timestamp parse format.
 
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to coerce.
-
-   * - **format**
-     - string. Optional.
-
-       Optional timestamp parse format.
-
-**Example**
+.. note::
+   The format pattern is invalid. This operation returns NULL.
 
 .. code-block:: none
+   :caption: Example
 
-   to_timestamp(checkout_at_text)
+   to_timestamp('2024-01-15T12:34:56Z')
+   # => to_timestamp('2024-01-15T12:34:56Z')
 
 .. expressions-operation-to-timestamp-end
 
@@ -1003,31 +755,7 @@ Collection
 
 .. expressions-category-collection-start
 
-* :ref:`Array <expressions-operation-array>`
-* :ref:`Array, struct, or map lookup <expressions-operation-array-struct-or-map-lookup>`
-* :ref:`Average array <expressions-operation-average-array>`
-* :ref:`Count by value <expressions-operation-count-by-value>`
-* :ref:`Difference <expressions-operation-difference>`
-* :ref:`Distinct <expressions-operation-distinct>`
-* :ref:`Filter <expressions-operation-filter>`
-* :ref:`Get element <expressions-operation-get-element>`
-* :ref:`In <expressions-operation-in>`
-* :ref:`Intersect arrays <expressions-operation-intersect-arrays>`
-* :ref:`Map <expressions-operation-map>`
-* :ref:`Maximum of array <expressions-operation-maximum-of-array>`
-* :ref:`Minimum of array <expressions-operation-minimum-of-array>`
-* :ref:`Most common element <expressions-operation-most-common-element>`
-* :ref:`Named struct <expressions-operation-named-struct>`
-* :ref:`Not in <expressions-operation-not-in>`
-* :ref:`Size <expressions-operation-size>`
-* :ref:`Skip first <expressions-operation-skip-first>`
-* :ref:`Sort array <expressions-operation-sort-array>`
-* :ref:`Struct or map field <expressions-operation-struct-or-map-field>`
-* :ref:`Sum array <expressions-operation-sum-array>`
-* :ref:`Take first <expressions-operation-take-first>`
-* :ref:`Transform <expressions-operation-transform>`
-* :ref:`Union <expressions-operation-union>`
-* :ref:`Zip arrays <expressions-operation-zip-arrays>`
+Operations: :ref:`Array <expressions-operation-array>`, :ref:`Array, struct, or map lookup <expressions-operation-array-struct-or-map-lookup>`, :ref:`Average array <expressions-operation-average-array>`, :ref:`Count by value <expressions-operation-count-by-value>`, :ref:`Difference <expressions-operation-difference>`, :ref:`Distinct <expressions-operation-distinct>`, :ref:`Filter <expressions-operation-filter>`, :ref:`Get element <expressions-operation-get-element>`, :ref:`In <expressions-operation-in>`, :ref:`Intersect arrays <expressions-operation-intersect-arrays>`, :ref:`Map <expressions-operation-map>`, :ref:`Maximum of array <expressions-operation-maximum-of-array>`, :ref:`Minimum of array <expressions-operation-minimum-of-array>`, :ref:`Most common element <expressions-operation-most-common-element>`, :ref:`Named struct <expressions-operation-named-struct>`, :ref:`Not in <expressions-operation-not-in>`, :ref:`Size <expressions-operation-size>`, :ref:`Skip first <expressions-operation-skip-first>`, :ref:`Sort array <expressions-operation-sort-array>`, :ref:`Struct or map field <expressions-operation-struct-or-map-field>`, :ref:`Sum array <expressions-operation-sum-array>`, :ref:`Take first <expressions-operation-take-first>`, :ref:`Transform <expressions-operation-transform>`, :ref:`Union <expressions-operation-union>`, :ref:`Zip arrays <expressions-operation-zip-arrays>`
 
 .. expressions-category-collection-end
 
@@ -1039,27 +767,16 @@ Array
 
 .. expressions-operation-array-start
 
-Written as **array(value, value, ...)**, with a result of type **array**.
+Written as **array(value, value, ...)**, returning **array**. Returns an array of operands in order. All operands must be of the same type.
 
-Returns an array of operands in order. All operands must be of the same type.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Repeatable.
-
-       An array element.
-
-**Example**
+**value**
+   Any, :bdg-muted:`Repeatable`. An array element.
 
 .. code-block:: none
+   :caption: Example
 
-   array(list_price, sale_price)
+   array(1, 2, 3)
+   # => array(1, 2, 3)
 
 .. expressions-operation-array-end
 
@@ -1071,32 +788,16 @@ Array, struct, or map lookup
 
 .. expressions-operation-array-struct-or-map-lookup-start
 
-Written as **value[key]**, with a result of type **any**.
+Written as **value[key]**, returning **any**. Gets an integer offset from an array, a field from a struct, or an arbitrary key from a map.
 
-Gets an integer offset from an array, a field from a struct, or an arbitrary key from a map.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       An array, struct, or map.
-
-   * - **key**
-     - any. Repeatable.
-
-       An index, field, or map key.
-
-**Example**
+.. note::
+   The index is negative or outside the array bounds. This operation returns NULL.
 
 .. code-block:: none
+   :caption: Example
 
-   product_skus[0]
+   array('sku')[0]
+   # => 'sku'
 
 .. expressions-operation-array-struct-or-map-lookup-end
 
@@ -1108,29 +809,18 @@ Average array
 
 .. expressions-operation-average-array-start
 
-Written as **array_avg(array)**, with a result of type **number**.
+Written as **array_avg(array)**, returning **number**. Returns the mean of the input array's non-NULL elements, which must be numeric. Returns NULL if the input is NULL, empty, or holds only NULLs, matching the ``average`` aggregation over zero records.
 
 Also accepts the name **array_average**.
 
-Returns the mean of the input array's non-NULL elements, which must be numeric. Returns NULL if the input is NULL, empty, or holds only NULLs, matching the ``average`` aggregation over zero records.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array of numbers to average. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array of numbers to average. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   array_avg(line_item_prices)
+   array_avg(array(1, 2, 4))
+   # => 2.3333333333333335
 
 .. expressions-operation-average-array-end
 
@@ -1142,27 +832,16 @@ Count by value
 
 .. expressions-operation-count-by-value-start
 
-Written as **array_counts(array)**, with a result of type **array**.
+Written as **array_counts(array)**, returning **array**. Returns a frequency table for the input array: an array of structs with a ``value`` field holding each distinct non-NULL element and a ``count`` field holding how many times it occurs. Ordered by count descending, then by the natural sort order of the value, matching the ``mode`` aggregation's tie-break. NULL elements are not counted. Returns NULL if the input is NULL, and an empty array if the input is empty or holds only NULLs.
 
-Returns a frequency table for the input array: an array of structs with a ``value`` field holding each distinct non-NULL element and a ``count`` field holding how many times it occurs. Ordered by count descending, then by the natural sort order of the value, matching the ``mode`` aggregation's tie-break. NULL elements are not counted. Returns NULL if the input is NULL, and an empty array if the input is empty or holds only NULLs.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to tally. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array to tally. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   take(array_counts(transform(session_bag_skus, x -> x.brand_code)), 3)
+   take(array_counts(array('wool', 'silk', 'wool')), 2)
+   # => array(map('value', 'wool', 'count', 2), map('value', 'silk', 'count', 1))
 
 .. expressions-operation-count-by-value-end
 
@@ -1174,32 +853,19 @@ Difference
 
 .. expressions-operation-difference-start
 
-Written as **difference(source, remove)**, with a result of type **array**.
+Written as **difference(source, remove)**, returning **array**. Returns the elements of the first array that are not present in the second array, preserving the order and duplicates of the first array. A NULL second operand removes nothing, so ``difference(a, NULL)`` is ``a``. SparkSQL spells this ``array_except`` and removes duplicates; that spelling is not accepted here.
 
-Returns the elements of the first array that are not present in the second array, preserving the order and duplicates of the first array. A NULL second operand removes nothing, so ``difference(a, NULL)`` is ``a``. SparkSQL spells this ``array_except`` and removes duplicates; that spelling is not accepted here.
+**source**
+   Array. The source array.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **source**
-     - array. Required.
-
-       The source array.
-
-   * - **remove**
-     - array. Required.
-
-       The array of elements to remove.
-
-**Example**
+**remove**
+   Array. The array of elements to remove.
 
 .. code-block:: none
+   :caption: Example
 
-   difference(browsed_skus, purchased_skus)
+   difference(array('spring', 'summer'), array('summer'))
+   # => array('spring')
 
 .. expressions-operation-difference-end
 
@@ -1211,27 +877,16 @@ Distinct
 
 .. expressions-operation-distinct-start
 
-Written as **distinct(array)**, with a result of type **array**.
+Written as **distinct(array)**, returning **array**. Returns the input array with duplicate elements removed, preserving the order of first occurrence.
 
-Returns the input array with duplicate elements removed, preserving the order of first occurrence.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to deduplicate.
-
-**Example**
+**array**
+   Array. The array to deduplicate.
 
 .. code-block:: none
+   :caption: Example
 
-   distinct(transform(session_bag_skus, x -> x.brand_code))
+   distinct(array('spring', 'spring', 'summer'))
+   # => array('spring', 'summer')
 
 .. expressions-operation-distinct-end
 
@@ -1243,32 +898,19 @@ Filter
 
 .. expressions-operation-filter-start
 
-Written as **filter(array, element -> predicate)**, with a result of type **array**.
+Written as **filter(array, element -> predicate)**, returning **array**. Filters an array using a function that takes one argument (which will be bound to each element in the array, in order) and returns a boolean. Returns an array containing only the elements for which the function returned true.
 
-Filters an array using a function that takes one argument (which will be bound to each element in the array, in order) and returns a boolean. Returns an array containing only the elements for which the function returned true.
+**array**
+   Array. The array to filter.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to filter.
-
-   * - **function**
-     - function. Required.
-
-       A one-argument function whose argument is bound to each element in turn, and which returns a boolean.
-
-**Example**
+**function**
+   Function. A one-argument function whose argument is bound to each element in turn, and which returns a boolean.
 
 .. code-block:: none
+   :caption: Example
 
-   filter(session_bag_skus, x -> x.brand_code = 'ON')
+   filter(array('ON', 'OFF'), x -> x = 'ON')
+   # => array('ON')
 
 .. expressions-operation-filter-end
 
@@ -1280,32 +922,19 @@ Get element
 
 .. expressions-operation-get-element-start
 
-Written as **get(array, index)**, with a result of type **any**.
+Written as **get(array, index)**, returning **any**. Returns the element of the input array at the given (0-based) index. If the index points outside of the array boundaries, or if the index is negative, then this function returns NULL.
 
-Returns the element of the input array at the given (0-based) index. If the index points outside of the array boundaries, or if the index is negative, then this function returns NULL.
+**array**
+   Array. The array to index into.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to index into.
-
-   * - **index**
-     - integer. Required.
-
-       The 0-based index.
-
-**Example**
+**index**
+   Integer. The 0-based index.
 
 .. code-block:: none
+   :caption: Example
 
-   get(product_skus, 0)
+   get(array('Merino', 'wool'), 0)
+   # => 'Merino'
 
 .. expressions-operation-get-element-end
 
@@ -1317,32 +946,16 @@ In
 
 .. expressions-operation-in-start
 
-Written as **value IN (array)**, with a result of type **boolean**.
+Written as **value IN (array)**, returning **boolean**. Returns true if the value is one of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) > 0``, or ``size(array_intersect(a, b)) > 0`` when both sides are arrays in the record.
 
-Returns true if the value is one of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) > 0``, or ``size(array_intersect(a, b)) > 0`` when both sides are arrays in the record.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to find.
-
-   * - **array**
-     - array. Required.
-
-       The values to search, written as a parenthesized list.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   loyalty_tier IN ('GOLD', 'PLATINUM')
+   'GOLD' IN ('GOLD', 'PLATINUM')
+   # => true
 
 .. expressions-operation-in-end
 
@@ -1354,32 +967,19 @@ Intersect arrays
 
 .. expressions-operation-intersect-arrays-start
 
-Written as **array_intersect(source, keep)**, with a result of type **array**.
+Written as **array_intersect(source, keep)**, returning **array**. Returns the elements present in both arrays, with duplicates removed, in the order they first appear in the first array. Returns NULL if either operand is NULL. Matches SparkSQL's ``array_intersect`` on all three points.
 
-Returns the elements present in both arrays, with duplicates removed, in the order they first appear in the first array. Returns NULL if either operand is NULL. Matches SparkSQL's ``array_intersect`` on all three points.
+**source**
+   Array. The source array.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **source**
-     - array. Required.
-
-       The source array.
-
-   * - **keep**
-     - array. Required.
-
-       The array of elements to keep.
-
-**Example**
+**keep**
+   Array. The array of elements to keep.
 
 .. code-block:: none
+   :caption: Example
 
-   array_intersect(transform(session_bag_skus, x -> x.brand_code), historical_brands)
+   array_intersect(array('a', 'b'), array('b', 'c'))
+   # => array('b')
 
 .. expressions-operation-intersect-arrays-end
 
@@ -1391,32 +991,19 @@ Map
 
 .. expressions-operation-map-start
 
-Written as **map(key, value, ...)**, with a result of type **map**.
+Written as **map(key, value, ...)**, returning **map**. Returns a map of the given key/value pairs. All keys and all values must be of the same type.
 
-Returns a map of the given key/value pairs. All keys and all values must be of the same type.
+**key**
+   Any, :bdg-muted:`Repeatable`. A map key.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **key**
-     - any. Repeatable.
-
-       A map key.
-
-   * - **value**
-     - any. Repeatable.
-
-       A map value.
-
-**Example**
+**value**
+   Any, :bdg-muted:`Repeatable`. A map value.
 
 .. code-block:: none
+   :caption: Example
 
-   map('sku', product_sku, 'brand', brand_code)
+   map('sku', 'ABC', 'brand', 'Wool')
+   # => map('sku', 'ABC', 'brand', 'Wool')
 
 .. expressions-operation-map-end
 
@@ -1428,27 +1015,16 @@ Maximum of array
 
 .. expressions-operation-maximum-of-array-start
 
-Written as **array_max(array)**, with a result of type **any**.
+Written as **array_max(array)**, returning **any**. Returns the largest of the input array's non-NULL elements. Unlike the scalar ``max``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
 
-Returns the largest of the input array's non-NULL elements. Unlike the scalar ``max``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to take the maximum of. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array to take the maximum of. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   array_max(line_item_prices)
+   array_max(array(1, 2, 3))
+   # => 3
 
 .. expressions-operation-maximum-of-array-end
 
@@ -1460,27 +1036,16 @@ Minimum of array
 
 .. expressions-operation-minimum-of-array-start
 
-Written as **array_min(array)**, with a result of type **any**.
+Written as **array_min(array)**, returning **any**. Returns the smallest of the input array's non-NULL elements. Unlike the scalar ``min``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
 
-Returns the smallest of the input array's non-NULL elements. Unlike the scalar ``min``, the elements need only be orderable, so arrays of strings, dates, and timestamps are supported. Returns NULL if the input is NULL, empty, or holds only NULLs.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to take the minimum of. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array to take the minimum of. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   array_min(line_item_prices)
+   array_min(array(1, 2, 3))
+   # => 1
 
 .. expressions-operation-minimum-of-array-end
 
@@ -1492,27 +1057,16 @@ Most common element
 
 .. expressions-operation-most-common-element-start
 
-Written as **array_mode(array)**, with a result of type **any**.
+Written as **array_mode(array)**, returning **any**. Returns the most frequently occurring element of the input array, or NULL if the input is NULL or contains no non-NULL elements. NULL elements are not counted. Ties are broken by the natural sort order of the tied elements, matching the ``mode`` aggregation.
 
-Returns the most frequently occurring element of the input array, or NULL if the input is NULL or contains no non-NULL elements. NULL elements are not counted. Ties are broken by the natural sort order of the tied elements, matching the ``mode`` aggregation.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to reduce. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array to reduce. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   array_mode(transform(session_bag_skus, x -> x.brand_code))
+   array_mode(array('wool', 'silk', 'wool'))
+   # => 'wool'
 
 .. expressions-operation-most-common-element-end
 
@@ -1524,32 +1078,19 @@ Named struct
 
 .. expressions-operation-named-struct-start
 
-Written as **named_struct(key, value, ...)**, with a result of type **struct**.
+Written as **named_struct(key, value, ...)**, returning **struct**. Returns a struct with the given field names and values. Each name must be written as text, must be a valid field name, and may not be repeated.
 
-Returns a struct with the given field names and values. Each name must be written as text, must be a valid field name, and may not be repeated.
+**key**
+   String, :bdg-muted:`Repeatable`. A struct field name, written directly as text. Letters, numbers, and underscores, with at least one letter or underscore, and unique within the struct.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **key**
-     - string. Repeatable.
-
-       A struct field name, written directly as text. Letters, numbers, and underscores, with at least one letter or underscore, and unique within the struct.
-
-   * - **value**
-     - any. Repeatable.
-
-       A struct field value.
-
-**Example**
+**value**
+   Any, :bdg-muted:`Repeatable`. A struct field value.
 
 .. code-block:: none
+   :caption: Example
 
-   named_struct('sku', product_sku, 'count', item_count)
+   named_struct('sku', 'ABC', 'count', 2)
+   # => map('sku', 'ABC', 'count', 2)
 
 .. expressions-operation-named-struct-end
 
@@ -1561,32 +1102,16 @@ Not in
 
 .. expressions-operation-not-in-start
 
-Written as **value NOT IN (array)**, with a result of type **boolean**.
+Written as **value NOT IN (array)**, returning **boolean**. Returns true if the value is none of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) = 0``.
 
-Returns true if the value is none of the listed values. The right operand is a parenthesized list written into the expression, not a field holding an array; to test membership of an array-valued field, use ``size(filter(field, x -> x = value)) = 0``.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       The value to find.
-
-   * - **array**
-     - array. Required.
-
-       The values to search, written as a parenthesized list.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   loyalty_tier NOT IN ('GOLD', 'PLATINUM')
+   'SILVER' NOT IN ('GOLD', 'PLATINUM')
+   # => true
 
 .. expressions-operation-not-in-end
 
@@ -1598,27 +1123,19 @@ Size
 
 .. expressions-operation-size-start
 
-Written as **size(collection)**, with a result of type **integer**.
+Written as **size(collection)**, returning **integer**. Returns the integer element count of the operand, or NULL if the operand is NULL.
 
-Returns the integer element count of the operand, or NULL if the operand is NULL.
+**collection**
+   Array. The collection to measure.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **collection**
-     - array. Required.
-
-       The collection to measure.
-
-**Example**
+.. warning::
+   The operand is not a collection. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   size(filter(session_bag_skus, x -> x.brand_code = 'ON')) > 0
+   size(array('Merino', 'wool'))
+   # => 2
 
 .. expressions-operation-size-end
 
@@ -1630,32 +1147,19 @@ Skip first
 
 .. expressions-operation-skip-first-start
 
-Written as **skip(array, offset)**, with a result of type **array**.
+Written as **skip(array, offset)**, returning **array**. Returns the input array without its first ``offset`` elements. An ``offset`` at or past the end of the array returns an empty array. Returns NULL if either operand is NULL or if ``offset`` is negative. Compose with ``take`` for a window out of the middle: ``take(skip(arr, 1), 2)``.
 
-Returns the input array without its first ``offset`` elements. An ``offset`` at or past the end of the array returns an empty array. Returns NULL if either operand is NULL or if ``offset`` is negative. Compose with ``take`` for a window out of the middle: ``take(skip(arr, 1), 2)``.
+**array**
+   Array. The array to skip into.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to skip into.
-
-   * - **offset**
-     - integer. Required.
-
-       How many leading elements to skip.
-
-**Example**
+**offset**
+   Integer. How many leading elements to skip.
 
 .. code-block:: none
+   :caption: Example
 
-   skip(browsed_skus, 1)
+   skip(array(1, 2, 3), 1)
+   # => array(2, 3)
 
 .. expressions-operation-skip-first-end
 
@@ -1667,32 +1171,22 @@ Sort array
 
 .. expressions-operation-sort-array-start
 
-Written as **array_sort(array, comparator)**, with a result of type **array**.
+Written as **array_sort(array, comparator)**, returning **array**. Sorts the input array, ascending by default, placing NULL elements at the end and ordering NaN above every other float. A comparator sorts by any other order: it takes two elements and returns a negative number, zero, or a positive number as the first sorts before, with, or after the second, and returning NULL from it fails the expression. An array of structs has no default order, so it requires a comparator.
 
-Sorts the input array, ascending by default, placing NULL elements at the end and ordering NaN above every other float. A comparator sorts by any other order: it takes two elements and returns a negative number, zero, or a positive number as the first sorts before, with, or after the second, and returning NULL from it fails the expression. An array of structs has no default order, so it requires a comparator.
+**array**
+   Array. The array to sort.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**comparator**
+   Function, :bdg-muted:`Optional`. Optional two-argument comparator function.
 
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to sort.
-
-   * - **comparator**
-     - function. Optional.
-
-       Optional two-argument comparator function.
-
-**Example**
+.. warning::
+   A comparator returns NULL. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   array_sort(line_item_prices)
+   array_sort(array(3, 1, 2))
+   # => array(1, 2, 3)
 
 .. expressions-operation-sort-array-end
 
@@ -1704,32 +1198,13 @@ Struct or map field
 
 .. expressions-operation-struct-or-map-field-start
 
-Written as **value.key**, with a result of type **any**.
-
-Gets a field from a struct, or a string key from a map.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - any. Required.
-
-       A struct or map.
-
-   * - **key**
-     - any. Repeatable.
-
-       A field or map key.
-
-**Example**
+Written as **value.key**, returning **any**. Gets a field from a struct, or a string key from a map.
 
 .. code-block:: none
+   :caption: Example
 
-   shipping.address.city
+   map('city', 'Seattle').city
+   # => 'Seattle'
 
 .. expressions-operation-struct-or-map-field-end
 
@@ -1741,27 +1216,16 @@ Sum array
 
 .. expressions-operation-sum-array-start
 
-Written as **array_sum(array)**, with a result of type **number**.
+Written as **array_sum(array)**, returning **number**. Returns the sum of the input array's non-NULL elements, which must be numeric. Returns 0 for an empty array or one holding only NULLs, matching the ``sum`` aggregation over zero records. Returns NULL if the input is NULL.
 
-Returns the sum of the input array's non-NULL elements, which must be numeric. Returns 0 for an empty array or one holding only NULLs, matching the ``sum`` aggregation over zero records. Returns NULL if the input is NULL.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array of numbers to add. For an array of structs, extract a field first with transform().
-
-**Example**
+**array**
+   Array. The array of numbers to add. For an array of structs, extract a field first with transform().
 
 .. code-block:: none
+   :caption: Example
 
-   array_sum(line_item_prices)
+   array_sum(array(1, 2, 3))
+   # => 6
 
 .. expressions-operation-sum-array-end
 
@@ -1773,32 +1237,19 @@ Take first
 
 .. expressions-operation-take-first-start
 
-Written as **take(array, limit)**, with a result of type **array**.
+Written as **take(array, limit)**, returning **array**. Returns the first ``limit`` elements of the input array. A ``limit`` longer than the array returns the whole array, and a ``limit`` of zero returns an empty array. Returns NULL if either operand is NULL or if ``limit`` is negative.
 
-Returns the first ``limit`` elements of the input array. A ``limit`` longer than the array returns the whole array, and a ``limit`` of zero returns an empty array. Returns NULL if either operand is NULL or if ``limit`` is negative.
+**array**
+   Array. The array to take from.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to take from.
-
-   * - **limit**
-     - integer. Required.
-
-       How many elements to take.
-
-**Example**
+**limit**
+   Integer. How many elements to take.
 
 .. code-block:: none
+   :caption: Example
 
-   take(distinct(browsed_skus), 5)
+   take(array(1, 2, 3), 2)
+   # => array(1, 2)
 
 .. expressions-operation-take-first-end
 
@@ -1810,32 +1261,19 @@ Transform
 
 .. expressions-operation-transform-start
 
-Written as **transform(array, element -> expression)**, with a result of type **array**.
+Written as **transform(array, element -> expression)**, returning **array**. Transforms an array using a function that takes each element of the array, in order, and returns a new value. Returns an array of the values returned by the function. The function may take an optional second argument, which will be bound to the zero-based index of the element.
 
-Transforms an array using a function that takes each element of the array, in order, and returns a new value. Returns an array of the values returned by the function. The function may take an optional second argument, which will be bound to the zero-based index of the element.
+**array**
+   Array. The array to transform.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Required.
-
-       The array to transform.
-
-   * - **function**
-     - function. Required.
-
-       A function whose first argument is bound to each element in turn. An optional second argument is bound to that element's 0-based index: (element, index) -> expression.
-
-**Example**
+**function**
+   Function. A function whose first argument is bound to each element in turn. An optional second argument is bound to that element's 0-based index: (element, index) -> expression.
 
 .. code-block:: none
+   :caption: Example
 
-   transform(session_bag_skus, x -> x.brand_code)
+   transform(array('wool', 'silk'), x -> upper(x))
+   # => array('WOOL', 'SILK')
 
 .. expressions-operation-transform-end
 
@@ -1847,27 +1285,16 @@ Union
 
 .. expressions-operation-union-start
 
-Written as **union(array, array, ...)**, with a result of type **array**.
+Written as **union(array, array, ...)**, returning **array**. Concatenates two or more arrays into a single array, preserving order and keeping duplicate elements. All operands must be arrays of primitive or flat-struct elements with a common element type. NULL operands are skipped rather than propagated, so ``union(a, NULL)`` is ``a``. SparkSQL spells this ``array_union`` and removes duplicates; that spelling is not accepted here.
 
-Concatenates two or more arrays into a single array, preserving order and keeping duplicate elements. All operands must be arrays of primitive or flat-struct elements with a common element type. NULL operands are skipped rather than propagated, so ``union(a, NULL)`` is ``a``. SparkSQL spells this ``array_union`` and removes duplicates; that spelling is not accepted here.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **array**
-     - array. Repeatable.
-
-       An array to concatenate.
-
-**Example**
+**array**
+   Array, :bdg-muted:`Repeatable`. An array to concatenate.
 
 .. code-block:: none
+   :caption: Example
 
-   union(spring_skus, summer_skus)
+   union(array('spring'), array('summer'))
+   # => array('spring', 'summer')
 
 .. expressions-operation-union-end
 
@@ -1879,32 +1306,19 @@ Zip arrays
 
 .. expressions-operation-zip-arrays-start
 
-Written as **array_zip(name, array, name, array, ...)**, with a result of type **array**.
+Written as **array_zip(name, array, name, array, ...)**, returning **array**. Combines two or more arrays element-wise into an array of structs. Shorter arrays are padded with NULL, so the result length is that of the longest input, and the result is NULL if any input array is NULL -- both as in SparkSQL's ``arrays_zip``. Operands alternate between a field name and the array supplying that field's values, as in ``named_struct``: SparkSQL derives struct field names from the input column names, and an AEL operand is an expression with no name to derive.
 
-Combines two or more arrays element-wise into an array of structs. Shorter arrays are padded with NULL, so the result length is that of the longest input, and the result is NULL if any input array is NULL -- both as in SparkSQL's ``arrays_zip``. Operands alternate between a field name and the array supplying that field's values, as in ``named_struct``: SparkSQL derives struct field names from the input column names, and an AEL operand is an expression with no name to derive.
+**name**
+   String, :bdg-muted:`Repeatable`. A struct field name, written directly as text.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **name**
-     - string. Repeatable.
-
-       A struct field name, written directly as text.
-
-   * - **array**
-     - array. Repeatable.
-
-       The array supplying that field's values.
-
-**Example**
+**array**
+   Array, :bdg-muted:`Repeatable`. The array supplying that field's values.
 
 .. code-block:: none
+   :caption: Example
 
-   array_zip('product_sku', product_sku, 'brand_code', product_brand)
+   array_zip('sku', array('A', 'B'), 'brand', array('Wool', 'Silk'))
+   # => array(map('sku', 'A', 'brand', 'Wool'), map('sku', 'B', 'brand', 'Silk'))
 
 .. expressions-operation-zip-arrays-end
 
@@ -1916,16 +1330,7 @@ Text
 
 .. expressions-category-string-start
 
-* :ref:`Concatenate <expressions-operation-concatenate>`
-* :ref:`Concatenate with separator <expressions-operation-concatenate-with-separator>`
-* :ref:`Contains <expressions-operation-contains>`
-* :ref:`Ends with <expressions-operation-ends-with>`
-* :ref:`Lowercase <expressions-operation-lowercase>`
-* :ref:`Replace <expressions-operation-replace>`
-* :ref:`SHA-2 hash <expressions-operation-sha-2-hash>`
-* :ref:`Split <expressions-operation-split>`
-* :ref:`Starts with <expressions-operation-starts-with>`
-* :ref:`Uppercase <expressions-operation-uppercase>`
+Operations: :ref:`Concatenate <expressions-operation-concatenate>`, :ref:`Concatenate with separator <expressions-operation-concatenate-with-separator>`, :ref:`Contains <expressions-operation-contains>`, :ref:`Ends with <expressions-operation-ends-with>`, :ref:`Lowercase <expressions-operation-lowercase>`, :ref:`Replace <expressions-operation-replace>`, :ref:`SHA-2 hash <expressions-operation-sha-2-hash>`, :ref:`Split <expressions-operation-split>`, :ref:`Starts with <expressions-operation-starts-with>`, :ref:`Uppercase <expressions-operation-uppercase>`
 
 .. expressions-category-string-end
 
@@ -1937,27 +1342,19 @@ Concatenate
 
 .. expressions-operation-concatenate-start
 
-Written as **concat(value, value, ...)**, with a result of type **string**.
+Written as **concat(value, value, ...)**, returning **string**. Concatenates operands together with no spaces/separator.
 
-Concatenates operands together with no spaces/separator.
+**value**
+   String, :bdg-muted:`Repeatable`. A value to join.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - string. Repeatable.
-
-       A value to join.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   concat(first_name, ' ', last_name)
+   concat('Merino', ' ', 'wool')
+   # => 'Merino wool'
 
 .. expressions-operation-concatenate-end
 
@@ -1969,32 +1366,22 @@ Concatenate with separator
 
 .. expressions-operation-concatenate-with-separator-start
 
-Written as **concat_ws(separator, value, ...)**, with a result of type **string**.
+Written as **concat_ws(separator, value, ...)**, returning **string**. Concatenates operands together. The first operand should be a (possibly empty) separator string.
 
-Concatenates operands together. The first operand should be a (possibly empty) separator string.
+**separator**
+   String. The separator placed between values.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**value**
+   String, :bdg-muted:`Repeatable`. A value to join.
 
-   * - Parameter
-     - Description
-
-   * - **separator**
-     - string. Required.
-
-       The separator placed between values.
-
-   * - **value**
-     - string. Repeatable.
-
-       A value to join.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   concat_ws(' ', first_name, last_name)
+   concat_ws('-', 'Merino', 'wool')
+   # => 'Merino-wool'
 
 .. expressions-operation-concatenate-with-separator-end
 
@@ -2006,32 +1393,22 @@ Contains
 
 .. expressions-operation-contains-start
 
-Written as **contains(string, substring)**, with a result of type **boolean**.
+Written as **contains(string, substring)**, returning **boolean**. Returns true if the first operand string contains the second operand string.
 
-Returns true if the first operand string contains the second operand string.
+**string**
+   String. The string to search.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**substring**
+   String. The substring to look for.
 
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to search.
-
-   * - **substring**
-     - string. Required.
-
-       The substring to look for.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   contains(product_name, 'Merino')
+   contains('Merino wool blend', 'Merino')
+   # => true
 
 .. expressions-operation-contains-end
 
@@ -2043,32 +1420,22 @@ Ends with
 
 .. expressions-operation-ends-with-start
 
-Written as **endswith(string, suffix)**, with a result of type **boolean**.
+Written as **endswith(string, suffix)**, returning **boolean**. Returns true if the first operand string ends with the second operand string.
 
-Returns true if the first operand string ends with the second operand string.
+**string**
+   String. The string to test.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**suffix**
+   String. The suffix to look for.
 
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to test.
-
-   * - **suffix**
-     - string. Required.
-
-       The suffix to look for.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   endswith(email, '@example.com')
+   endswith('receipt@example.com', '@example.com')
+   # => true
 
 .. expressions-operation-ends-with-end
 
@@ -2080,27 +1447,19 @@ Lowercase
 
 .. expressions-operation-lowercase-start
 
-Written as **lower(string)**, with a result of type **string**.
+Written as **lower(string)**, returning **string**. Converts the operand string to lower case.
 
-Converts the operand string to lower case.
+**string**
+   String. The string to convert.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to convert.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   lower(email)
+   lower('Merino')
+   # => 'merino'
 
 .. expressions-operation-lowercase-end
 
@@ -2112,37 +1471,25 @@ Replace
 
 .. expressions-operation-replace-start
 
-Written as **replace(string, search, replacement)**, with a result of type **string**.
+Written as **replace(string, search, replacement)**, returning **string**. Replaces all occurrences of the second operand string in the first operand string with the third operand string.
 
-Replaces all occurrences of the second operand string in the first operand string with the third operand string.
+**string**
+   String. The string to operate on.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**search**
+   String. The substring to replace.
 
-   * - Parameter
-     - Description
+**replacement**
+   String, :bdg-muted:`Optional`. The replacement substring.
 
-   * - **string**
-     - string. Required.
-
-       The string to operate on.
-
-   * - **search**
-     - string. Required.
-
-       The substring to replace.
-
-   * - **replacement**
-     - string. Optional.
-
-       The replacement substring.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   replace(phone, '-', '')
+   replace('555-1234', '-', '')
+   # => '5551234'
 
 .. expressions-operation-replace-end
 
@@ -2154,32 +1501,22 @@ SHA-2 hash
 
 .. expressions-operation-sha-2-hash-start
 
-Written as **sha2(string, bits)**, with a result of type **string**.
+Written as **sha2(string, bits)**, returning **string**. Returns a checksum of SHA-2 family as a hex string of expr. SHA-224, SHA-256, SHA-384, and SHA-512 are supported. Bit length of 0 is equivalent to 256.
 
-Returns a checksum of SHA-2 family as a hex string of expr. SHA-224, SHA-256, SHA-384, and SHA-512 are supported. Bit length of 0 is equivalent to 256.
+**string**
+   String. The string to hash.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**bits**
+   Integer. Bit length: 224, 256, 384 or 512 (0 means 256).
 
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to hash.
-
-   * - **bits**
-     - integer. Required.
-
-       Bit length: 224, 256, 384 or 512 (0 means 256).
-
-**Example**
+.. note::
+   The bit length is not 0, 224, 256, 384, or 512. This operation returns NULL.
 
 .. code-block:: none
+   :caption: Example
 
-   sha2(lower(email), 256)
+   sha2('abc', 256)
+   # => 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
 
 .. expressions-operation-sha-2-hash-end
 
@@ -2191,32 +1528,19 @@ Split
 
 .. expressions-operation-split-start
 
-Written as **split(string, delimiter)**, with a result of type **array**.
+Written as **split(string, delimiter)**, returning **array**. Splits the first operand string on each literal occurrence of the second operand string, returning an array of strings. The delimiter is matched literally, not as a regular expression. Empty trailing elements are preserved, so the result length is stable for fixed-shape values. An empty delimiter splits the string into one element per code point, matching SparkSQL.
 
-Splits the first operand string on each literal occurrence of the second operand string, returning an array of strings. The delimiter is matched literally, not as a regular expression. Empty trailing elements are preserved, so the result length is stable for fixed-shape values. An empty delimiter splits the string into one element per code point, matching SparkSQL.
+**string**
+   String. The string to split.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to split.
-
-   * - **delimiter**
-     - string. Required.
-
-       The literal delimiter to split on. An empty delimiter splits into single characters.
-
-**Example**
+**delimiter**
+   String. The literal delimiter to split on. An empty delimiter splits into single characters.
 
 .. code-block:: none
+   :caption: Example
 
-   split(item_id, '-')[0]
+   split('Merino wool', ' ')[0]
+   # => 'Merino'
 
 .. expressions-operation-split-end
 
@@ -2228,32 +1552,22 @@ Starts with
 
 .. expressions-operation-starts-with-start
 
-Written as **startswith(string, prefix)**, with a result of type **boolean**.
+Written as **startswith(string, prefix)**, returning **boolean**. Returns true if the first operand string starts with the second operand string.
 
-Returns true if the first operand string starts with the second operand string.
+**string**
+   String. The string to test.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**prefix**
+   String. The prefix to look for.
 
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to test.
-
-   * - **prefix**
-     - string. Required.
-
-       The prefix to look for.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   startswith(email, 'premium')
+   startswith('Merino wool blend', 'Merino')
+   # => true
 
 .. expressions-operation-starts-with-end
 
@@ -2265,27 +1579,19 @@ Uppercase
 
 .. expressions-operation-uppercase-start
 
-Written as **upper(string)**, with a result of type **string**.
+Written as **upper(string)**, returning **string**. Converts the operand string to upper case.
 
-Converts the operand string to upper case.
+**string**
+   String. The string to convert.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **string**
-     - string. Required.
-
-       The string to convert.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   upper(brand_code)
+   upper('wool')
+   # => 'WOOL'
 
 .. expressions-operation-uppercase-end
 
@@ -2297,14 +1603,7 @@ Numeric
 
 .. expressions-category-numeric-start
 
-* :ref:`Absolute value <expressions-operation-absolute-value>`
-* :ref:`Add <expressions-operation-add>`
-* :ref:`Divide <expressions-operation-divide>`
-* :ref:`Maximum <expressions-operation-maximum>`
-* :ref:`Minimum <expressions-operation-minimum>`
-* :ref:`Modulus <expressions-operation-modulus>`
-* :ref:`Multiply <expressions-operation-multiply>`
-* :ref:`Subtract <expressions-operation-subtract>`
+Operations: :ref:`Absolute value <expressions-operation-absolute-value>`, :ref:`Add <expressions-operation-add>`, :ref:`Divide <expressions-operation-divide>`, :ref:`Maximum <expressions-operation-maximum>`, :ref:`Minimum <expressions-operation-minimum>`, :ref:`Modulus <expressions-operation-modulus>`, :ref:`Multiply <expressions-operation-multiply>`, :ref:`Subtract <expressions-operation-subtract>`
 
 .. expressions-category-numeric-end
 
@@ -2316,27 +1615,19 @@ Absolute value
 
 .. expressions-operation-absolute-value-start
 
-Written as **abs(number)**, with a result of type **number**.
+Written as **abs(number)**, returning **number**. Returns the absolute value of the operand.
 
-Returns the absolute value of the operand.
+**number**
+   Number. The number whose absolute value to return.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **number**
-     - number. Required.
-
-       The value to take the absolute value of.
-
-**Example**
+.. warning::
+   The operand is NULL. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   abs(balance_change)
+   abs(-5)
+   # => 5
 
 .. expressions-operation-absolute-value-end
 
@@ -2348,27 +1639,16 @@ Add
 
 .. expressions-operation-add-start
 
-Written as **value + value + ...**, with a result of type **number**.
+Written as **value + value + ...**, returning **number**. Adds operands.
 
-Adds operands.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to add.
-
-**Example**
+.. warning::
+   The operands exceed the numeric range supported by the operation. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   subtotal + shipping_amount
+   1 + 2
+   # => 3
 
 .. expressions-operation-add-end
 
@@ -2380,27 +1660,16 @@ Divide
 
 .. expressions-operation-divide-start
 
-Written as **value / value / ...**, with a result of type **number**.
+Written as **value / value / ...**, returning **number**. Divides operands. Treats division by zero as a NULL result.
 
-Divides operands. Treats division by zero as a NULL result.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to divide.
-
-**Example**
+.. note::
+   A divisor is zero. This operation returns NULL.
 
 .. code-block:: none
+   :caption: Example
 
-   total_amount / item_count
+   6 / 2
+   # => 3.0
 
 .. expressions-operation-divide-end
 
@@ -2412,27 +1681,16 @@ Maximum
 
 .. expressions-operation-maximum-start
 
-Written as **max(value, value, ...)**, with a result of type **number**.
+Written as **max(value, value, ...)**, returning **number**. Returns the maximum value from operands, ignoring NULL values.
 
-Returns the maximum value from operands, ignoring NULL values.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to compare.
-
-**Example**
+**value**
+   Number, :bdg-muted:`Repeatable`. A value to compare.
 
 .. code-block:: none
+   :caption: Example
 
-   max(list_price, sale_price)
+   max(3, 1)
+   # => 3
 
 .. expressions-operation-maximum-end
 
@@ -2444,27 +1702,16 @@ Minimum
 
 .. expressions-operation-minimum-start
 
-Written as **min(value, value, ...)**, with a result of type **number**.
+Written as **min(value, value, ...)**, returning **number**. Returns the minimum value from operands, ignoring NULL values.
 
-Returns the minimum value from operands, ignoring NULL values.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to compare.
-
-**Example**
+**value**
+   Number, :bdg-muted:`Repeatable`. A value to compare.
 
 .. code-block:: none
+   :caption: Example
 
-   min(list_price, sale_price)
+   min(3, 1)
+   # => 1
 
 .. expressions-operation-minimum-end
 
@@ -2476,34 +1723,19 @@ Modulus
 
 .. expressions-operation-modulus-start
 
-Written as **dividend % divisor**, with a result of type **number**.
+Written as **dividend % divisor**, returning **number**. Returns the modulus of the first operand divided by the second operand.
 
 Also accepts the name **mod**.
 
-Returns the modulus of the first operand divided by the second operand.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **dividend**
-     - number. Required.
-
-       The number to divide.
-
-   * - **divisor**
-     - number. Required.
-
-       The number to divide by.
-
-**Example**
+.. warning::
+   Either operand is NULL. This operation throws at run time.
+   The divisor is zero. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   order_number % 10
+   10 % 3
+   # => 1
 
 .. expressions-operation-modulus-end
 
@@ -2515,27 +1747,16 @@ Multiply
 
 .. expressions-operation-multiply-start
 
-Written as **value * value * ...**, with a result of type **number**.
+Written as **value * value * ...**, returning **number**. Multiplies operands.
 
-Multiplies operands.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to multiply.
-
-**Example**
+.. warning::
+   The operands exceed the numeric range supported by the operation. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   price * quantity
+   3 * 4
+   # => 12
 
 .. expressions-operation-multiply-end
 
@@ -2547,27 +1768,16 @@ Subtract
 
 .. expressions-operation-subtract-start
 
-Written as **value - value - ...**, with a result of type **number**.
+Written as **value - value - ...**, returning **number**. Subtracts operands.
 
-Subtracts operands.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **value**
-     - number. Repeatable.
-
-       A value to subtract.
-
-**Example**
+.. warning::
+   The operands exceed the numeric range supported by the operation. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   total_amount - discount_amount
+   5 - 2
+   # => 3
 
 .. expressions-operation-subtract-end
 
@@ -2579,18 +1789,7 @@ Date & time
 
 .. expressions-category-date-start
 
-* :ref:`Add days <expressions-operation-add-days>`
-* :ref:`Date difference <expressions-operation-date-difference>`
-* :ref:`Date in last <expressions-operation-date-in-last>`
-* :ref:`Date in next <expressions-operation-date-in-next>`
-* :ref:`Day of week <expressions-operation-day-of-week>`
-* :ref:`Day of year <expressions-operation-day-of-year>`
-* :ref:`Subtract days <expressions-operation-subtract-days>`
-* :ref:`Timestamp difference <expressions-operation-timestamp-difference>`
-* :ref:`Timestamp from milliseconds <expressions-operation-timestamp-from-milliseconds>`
-* :ref:`Timestamp in last <expressions-operation-timestamp-in-last>`
-* :ref:`Timestamp in next <expressions-operation-timestamp-in-next>`
-* :ref:`Week of year <expressions-operation-week-of-year>`
+Operations: :ref:`Add days <expressions-operation-add-days>`, :ref:`Date difference <expressions-operation-date-difference>`, :ref:`Date in last <expressions-operation-date-in-last>`, :ref:`Date in next <expressions-operation-date-in-next>`, :ref:`Day of week <expressions-operation-day-of-week>`, :ref:`Day of year <expressions-operation-day-of-year>`, :ref:`Subtract days <expressions-operation-subtract-days>`, :ref:`Timestamp difference <expressions-operation-timestamp-difference>`, :ref:`Timestamp from milliseconds <expressions-operation-timestamp-from-milliseconds>`, :ref:`Timestamp in last <expressions-operation-timestamp-in-last>`, :ref:`Timestamp in next <expressions-operation-timestamp-in-next>`, :ref:`Week of year <expressions-operation-week-of-year>`
 
 .. expressions-category-date-end
 
@@ -2602,32 +1801,22 @@ Add days
 
 .. expressions-operation-add-days-start
 
-Written as **date_add(date, days)**, with a result of type **date**.
+Written as **date_add(date, days)**, returning **date**. Adds the specified number of days to a date.
 
-Adds the specified number of days to a date.
+**date**
+   Date. The starting date.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**days**
+   Integer. Number of days to add.
 
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The starting date.
-
-   * - **days**
-     - integer. Required.
-
-       Number of days to add.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   date_add(last_purchase_date, 30)
+   date_add(to_date('2024-01-15'), 30)
+   # => to_date('2024-02-14')
 
 .. expressions-operation-add-days-end
 
@@ -2639,32 +1828,23 @@ Date difference
 
 .. expressions-operation-date-difference-start
 
-Written as **date_diff(date, date)**, with a result of type **integer**.
+Written as **date_diff(start, end)**, returning **integer**. Returns the absolute number of days between two dates.
 
-Returns the absolute number of days between two dates.
+**start**
+   Date. The first date.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**end**
+   Date. The second date.
 
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The first date.
-
-   * - **date**
-     - date. Required.
-
-       The second date.
-
-**Example**
+.. warning::
+   Either date is NULL. This operation throws at run time.
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   date_diff(first_purchase_date, last_purchase_date)
+   date_diff(to_date('2024-01-15'), to_date('2024-01-18'))
+   # => 3
 
 .. expressions-operation-date-difference-end
 
@@ -2676,32 +1856,23 @@ Date in last
 
 .. expressions-operation-date-in-last-start
 
-Written as **date_in_last(days, date)**, with a result of type **boolean**.
+Written as **date_in_last(days, date)**, returning **boolean**. Returns true if the date falls within the past ``n`` days of today. A value of zero matches only today, a value of one also matches yesterday, and so on.
 
-Returns true if the date falls within the past ``n`` days of today. A value of zero matches only today, a value of one also matches yesterday, and so on.
+**days**
+   Integer. Number of days in the window.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**date**
+   Date. The date to test.
 
-   * - Parameter
-     - Description
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
-   * - **days**
-     - integer. Required.
-
-       Number of days in the window.
-
-   * - **date**
-     - date. Required.
-
-       The date to test.
-
-**Example**
+.. note:: Evaluated against the current time, so the result changes as time passes.
 
 .. code-block:: none
+   :caption: Example
 
-   date_in_last(30, last_purchase_date)
+   date_in_last(30, to_date('2024-01-15'))
 
 .. expressions-operation-date-in-last-end
 
@@ -2713,32 +1884,23 @@ Date in next
 
 .. expressions-operation-date-in-next-start
 
-Written as **date_in_next(days, date)**, with a result of type **boolean**.
+Written as **date_in_next(days, date)**, returning **boolean**. Returns true if the date falls within the next ``n`` days from today. A value of zero matches only today, a value of one also matches tomorrow, and so on.
 
-Returns true if the date falls within the next ``n`` days from today. A value of zero matches only today, a value of one also matches tomorrow, and so on.
+**days**
+   Integer. Number of days in the window.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**date**
+   Date. The date to test.
 
-   * - Parameter
-     - Description
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
-   * - **days**
-     - integer. Required.
-
-       Number of days in the window.
-
-   * - **date**
-     - date. Required.
-
-       The date to test.
-
-**Example**
+.. note:: Evaluated against the current time, so the result changes as time passes.
 
 .. code-block:: none
+   :caption: Example
 
-   date_in_next(7, subscription_renews_on)
+   date_in_next(7, to_date('2024-01-15'))
 
 .. expressions-operation-date-in-next-end
 
@@ -2750,27 +1912,19 @@ Day of week
 
 .. expressions-operation-day-of-week-start
 
-Written as **day_of_week(date)**, with a result of type **integer**.
+Written as **day_of_week(date)**, returning **integer**. Returns the ISO day of week for the date, from 1 for Monday through 7 for Sunday.
 
-Returns the ISO day of week for the date, from 1 for Monday through 7 for Sunday.
+**date**
+   Date. The date to evaluate.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The date to evaluate.
-
-**Example**
+.. warning::
+   The date has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   day_of_week(last_purchase_date) >= 6
+   day_of_week(to_date('2024-03-04')) >= 1
+   # => true
 
 .. expressions-operation-day-of-week-end
 
@@ -2782,27 +1936,19 @@ Day of year
 
 .. expressions-operation-day-of-year-start
 
-Written as **day_of_year(date)**, with a result of type **integer**.
+Written as **day_of_year(date)**, returning **integer**. Returns the day of the year for the date, from 1 to 366.
 
-Returns the day of the year for the date, from 1 to 366.
+**date**
+   Date. The date to evaluate.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The date to evaluate.
-
-**Example**
+.. warning::
+   The date has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   day_of_year(last_purchase_date)
+   day_of_year(to_date('2024-03-01'))
+   # => 61
 
 .. expressions-operation-day-of-year-end
 
@@ -2814,32 +1960,22 @@ Subtract days
 
 .. expressions-operation-subtract-days-start
 
-Written as **date_sub(date, days)**, with a result of type **date**.
+Written as **date_sub(date, days)**, returning **date**. Subtracts the specified number of days from a date.
 
-Subtracts the specified number of days from a date.
+**date**
+   Date. The starting date.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**days**
+   Integer. Number of days to subtract.
 
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The starting date.
-
-   * - **days**
-     - integer. Required.
-
-       Number of days to subtract.
-
-**Example**
+.. warning::
+   An operand has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   date_sub(subscription_renews_on, 7)
+   date_sub(to_date('2024-01-15'), 7)
+   # => to_date('2024-01-08')
 
 .. expressions-operation-subtract-days-end
 
@@ -2851,37 +1987,27 @@ Timestamp difference
 
 .. expressions-operation-timestamp-difference-start
 
-Written as **timestamp_diff(unit, timestamp, timestamp)**, with a result of type **integer**.
+Written as **timestamp_diff(unit, timestamp, timestamp)**, returning **integer**. Returns the whole number of units between two timestamps.
 
-Returns the whole number of units between two timestamps.
+**unit**
+   String. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**timestamp**
+   Datetime. The first timestamp.
 
-   * - Parameter
-     - Description
+**timestamp**
+   Datetime. The second timestamp.
 
-   * - **unit**
-     - string. Required.
-
-       A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
-
-   * - **timestamp**
-     - datetime. Required.
-
-       The first timestamp.
-
-   * - **timestamp**
-     - datetime. Required.
-
-       The second timestamp.
-
-**Example**
+.. warning::
+   Either timestamp is NULL. This operation throws at run time.
+   The unit is not 'seconds', 'minutes', or 'hours'. This operation throws at run time.
+   A timestamp has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   timestamp_diff('hours', cart_updated_at, checkout_at)
+   timestamp_diff('hours', to_timestamp('2024-01-15T00:00:00Z'), to_timestamp('2024-01-15T03:00:00Z'))
+   # => 3
 
 .. expressions-operation-timestamp-difference-end
 
@@ -2893,29 +2019,21 @@ Timestamp from milliseconds
 
 .. expressions-operation-timestamp-from-milliseconds-start
 
-Written as **timestamp_from_millis(millis)**, with a result of type **datetime**.
-
-Coerces milliseconds since the Unix epoch (1970-01-01T00:00:00Z), given as a number, to a timestamp. Returns NULL for NULL, non-numeric, or out-of-range input.
+Written as **timestamp_from_millis(millis)**, returning **datetime**. Coerces milliseconds since the Unix epoch (1970-01-01T00:00:00Z), given as a number, to a timestamp. Returns NULL for NULL, non-numeric, or out-of-range input.
 
 For numeric epoch fields in event payloads (e.g. GA4 ``event_timestamp``) that ``:to-timestamp`` cannot parse.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**millis**
+   Integer. Milliseconds since 1970-01-01T00:00:00Z.
 
-   * - Parameter
-     - Description
-
-   * - **millis**
-     - integer. Required.
-
-       Milliseconds since 1970-01-01T00:00:00Z.
-
-**Example**
+.. warning::
+   The value has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   timestamp_from_millis(event_timestamp)
+   timestamp_from_millis(0)
+   # => to_timestamp('1970-01-01T00:00:00Z')
 
 .. expressions-operation-timestamp-from-milliseconds-end
 
@@ -2927,37 +2045,27 @@ Timestamp in last
 
 .. expressions-operation-timestamp-in-last-start
 
-Written as **timestamp_in_last(n, unit, timestamp)**, with a result of type **boolean**.
+Written as **timestamp_in_last(n, unit, timestamp)**, returning **boolean**. Returns true if the timestamp falls within the past ``n`` units of the current time.
 
-Returns true if the timestamp falls within the past ``n`` units of the current time.
+**n**
+   Integer. Size of the window.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**unit**
+   String. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
 
-   * - Parameter
-     - Description
+**timestamp**
+   Datetime. The timestamp to test.
 
-   * - **n**
-     - integer. Required.
+.. warning::
+   The window size is zero. This operation returns NULL.
+   An operand has an unsupported type. This operation throws at run time.
 
-       Size of the window.
-
-   * - **unit**
-     - string. Required.
-
-       A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
-
-   * - **timestamp**
-     - datetime. Required.
-
-       The timestamp to test.
-
-**Example**
+.. note:: Evaluated against the current time, so the result changes as time passes.
 
 .. code-block:: none
+   :caption: Example
 
-   timestamp_in_last(2, 'hours', last_activity_timestamp)
+   timestamp_in_last(2, 'hours', to_timestamp('2024-01-15T00:00:00Z'))
 
 .. expressions-operation-timestamp-in-last-end
 
@@ -2969,37 +2077,27 @@ Timestamp in next
 
 .. expressions-operation-timestamp-in-next-start
 
-Written as **timestamp_in_next(n, unit, timestamp)**, with a result of type **boolean**.
+Written as **timestamp_in_next(n, unit, timestamp)**, returning **boolean**. Returns true if the timestamp falls within the next ``n`` units from the current time.
 
-Returns true if the timestamp falls within the next ``n`` units from the current time.
+**n**
+   Integer. Size of the window.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+**unit**
+   String. A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
 
-   * - Parameter
-     - Description
+**timestamp**
+   Datetime. The timestamp to test.
 
-   * - **n**
-     - integer. Required.
+.. warning::
+   The window size is zero. This operation returns NULL.
+   An operand has an unsupported type. This operation throws at run time.
 
-       Size of the window.
-
-   * - **unit**
-     - string. Required.
-
-       A quoted, case-insensitive string literal: 'seconds', 'minutes' or 'hours'.
-
-   * - **timestamp**
-     - datetime. Required.
-
-       The timestamp to test.
-
-**Example**
+.. note:: Evaluated against the current time, so the result changes as time passes.
 
 .. code-block:: none
+   :caption: Example
 
-   timestamp_in_next(2, 'hours', appointment_at)
+   timestamp_in_next(2, 'hours', to_timestamp('2024-01-15T00:00:00Z'))
 
 .. expressions-operation-timestamp-in-next-end
 
@@ -3011,27 +2109,19 @@ Week of year
 
 .. expressions-operation-week-of-year-start
 
-Written as **week_of_year(date)**, with a result of type **integer**.
+Written as **week_of_year(date)**, returning **integer**. Returns the ISO-8601 week of the week-based year for the date, from 1 to 53. Weeks start on Monday, and week 1 is the one containing the year's first Thursday.
 
-Returns the ISO-8601 week of the week-based year for the date, from 1 to 53. Weeks start on Monday, and week 1 is the one containing the year's first Thursday.
+**date**
+   Date. The date to evaluate.
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-
-   * - **date**
-     - date. Required.
-
-       The date to evaluate.
-
-**Example**
+.. warning::
+   The date has an unsupported type. This operation throws at run time.
 
 .. code-block:: none
+   :caption: Example
 
-   week_of_year(last_purchase_date)
+   week_of_year(to_date('2024-01-04'))
+   # => 1
 
 .. expressions-operation-week-of-year-end
 
