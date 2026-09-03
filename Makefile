@@ -5,6 +5,7 @@ BUILD_HELP_COMMAND = python3 -m sphinx -b text --jobs auto -W
 all: base user operator api reference guides amp360 ampiq datagrid contributing tooltips modals legacy legions training
 
 static:
+	mkdir -p $(BUILDDIR)
 	cp -vr downloads $(BUILDDIR)/
 
 base: static ## Build only the "/user" section
@@ -71,7 +72,7 @@ clean: ## Flush the entire build directory
 	# Cleaning out build directory...
 	@rm -rf $(BUILDDIR)
 
-serve: ## Start up a server on http://locahost:8080
+serve: contributing ## Start up a server on http://locahost:8080
 	serve -dir build
 	open http://localhost:8080
 
