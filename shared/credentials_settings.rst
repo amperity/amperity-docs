@@ -17,7 +17,7 @@ An API key that authorizes Amperity to send events to Attentive. Attentive gener
 
 .. credential-attentive-api-key-find-start
 
-Generate the key in the Attentive UI under **Settings > Integrations > Custom Integrations** by creating a new integration. The key must include the scopes required by the event types you plan to send: **ecommerce:write** for ``PRODUCT_VIEW``, ``ADD_TO_CART``, and ``PURCHASE`` events; **events:write** for ``CUSTOM_EVENT``; and **attributes:write** for ``CUSTOM_ATTRIBUTES``. If the key is revoked or regenerated in Attentive, update the credential in Amperity.
+Generate the key in the Attentive UI under **Settings > Integrations > Custom Integrations** by creating a new integration. Grant the key all three scopes — **ecommerce:write**, **events:write**, and **attributes:write** — so that one key works for any event type. If the key is revoked or regenerated in Attentive, update the credential in Amperity.
 
 .. credential-attentive-api-key-find-end
 

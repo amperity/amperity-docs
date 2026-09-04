@@ -336,35 +336,29 @@ Event types
 
 .. events-attentive-ecommerce-event-types-start
 
-The **Event Type** setting determines which Attentive endpoint a destination sends to. Each destination sends exactly one event type; to send more than one, configure a separate destination for each. The API key's scopes must cover the event types you send.
+The **Event Type** setting determines which Attentive endpoint a destination sends to. Each destination sends exactly one event type; to send more than one, configure a separate destination for each. The API key must have all three Attentive scopes — ``ecommerce:write``, ``events:write``, and ``attributes:write`` — so that one key works for any event type.
 
 .. list-table::
-   :widths: 24 40 36
+   :widths: 30 70
    :header-rows: 1
 
    * - Event Type
      - Description
-     - Required Attentive scope
 
    * - ``PRODUCT_VIEW``
      - A subscriber viewed a product. Sends one event per row.
-     - ``ecommerce:write``
 
    * - ``ADD_TO_CART``
      - A subscriber added a product to their cart. Sends one event per row.
-     - ``ecommerce:write``
 
    * - ``PURCHASE``
      - A subscriber completed a purchase. Line items that share an order are sent together as one event.
-     - ``ecommerce:write``
 
    * - ``CUSTOM_EVENT``
      - Any behavioral event — for example, "Order Shipped" — that triggers a pre-configured Attentive journey. Sends one event per row.
-     - ``events:write``
 
    * - ``CUSTOM_ATTRIBUTES``
      - Subscriber profile attributes — for example, loyalty tier or preferred category. Sends one update per row.
-     - ``attributes:write``
 
 .. note:: A ``CUSTOM_EVENT`` type must already exist in the Attentive UI before you send it. Rows sent for an event type that does not exist are rejected and skipped. With ``CUSTOM_ATTRIBUTES``, each attribute is locked to the data type Amperity first sends — for example, a value first sent as text cannot later be sent as a number — so plan attribute types before you enable a destination.
 
@@ -378,7 +372,7 @@ Source columns by event type
 
 .. events-attentive-ecommerce-source-columns-start
 
-The columns your query must return depend on the destination's **Event Type**. Column names are case-insensitive. Every event type requires at least one of **email** or **phone**; Amperity lowercases and trims **email** and normalizes **phone** to E.164 format.
+The columns your query must return depend on the destination's **Event Type**. Return each column with the exact lowercase name shown in the tables below: column names are matched exactly, so a column returned as ``EMAIL`` or ``Product_ID`` is not recognized. Mis-casing an identifier column (**email** or **phone**) causes the run to fail; mis-casing any other column causes every row to be skipped. Every event type requires at least one of **email** or **phone**; Amperity lowercases and trims the **email** value and normalizes the **phone** value to E.164 format.
 
 **PRODUCT_VIEW and ADD_TO_CART**
 
@@ -436,7 +430,7 @@ The columns your query must return depend on the destination's **Event Type**. C
 
 **PURCHASE**
 
-Purchase accepts every product view column above, plus the following. Return one row per line item; rows that share the same **order_id** and identifiers are grouped into a single purchase event.
+Purchase accepts every product view column above, plus the following. Return one row per line item; rows that share the same **order_id** and identifiers are grouped into a single purchase event. Order-level values — **order_id**, **sales_channel**, and **occurred_at** — are taken from the first row in each group, so return the same values on every line item of an order.
 
 .. list-table::
    :widths: 24 16 60
@@ -510,6 +504,8 @@ Purchase accepts every product view column above, plus the following. Return one
      - **properties**
      - **Required.** Every other column becomes a subscriber attribute; at least one is required. Restricted characters (``"'(){}[]\|,``) are stripped from attribute names.
 
+.. note:: ``CUSTOM_ATTRIBUTES`` has no timestamp field. Unlike the other event types, an **occurred_at** column is sent as a subscriber attribute named ``occurred_at`` rather than as an event time. Because an attribute's type locks to whatever Amperity first sends, avoid carrying **occurred_at** over from a ``PURCHASE`` or ``CUSTOM_EVENT`` query.
+
 .. events-attentive-ecommerce-source-columns-end
 
 
@@ -523,9 +519,11 @@ Data validation
 Amperity validates each row before sending, so that one invalid row does not stop the rest of the events. A row is skipped, and reported, when:
 
 * It has neither a valid **email** nor a phone number that can be normalized to E.164 — Attentive requires at least one identifier to match a subscriber.
-* For ``PRODUCT_VIEW``, ``ADD_TO_CART``, or ``PURCHASE``, it is missing **product_id** or **product_variant_id**.
+* For ``PRODUCT_VIEW`` or ``ADD_TO_CART``, it is missing **product_id** or **product_variant_id**.
 * For ``CUSTOM_EVENT``, no event type is resolved from either the **event_type_name** column or the **Custom Event Type Name** setting.
 * For ``CUSTOM_ATTRIBUTES``, it contains no attribute columns beyond the identifiers.
+
+``PURCHASE`` handles invalid line items differently: a line item missing **product_id** or **product_variant_id** is excluded from its order and the remaining line items are still sent, so the purchase is skipped only when no line item in the order is valid. Because those dropped line items are not reported individually, return complete product data for every line item to avoid sending an order whose total is quietly short.
 
 Optional values that cannot be used — a non-numeric or negative **price**, a zero or non-numeric **quantity**, or an unparseable **occurred_at** — are dropped from that row individually; the rest of the event is still sent.
 
@@ -625,7 +623,7 @@ Invalid credentials
 
 .. events-attentive-ecommerce-workflow-actions-invalid-credentials-start
 
-|destination-name| was unable to accept the API key configured for this workflow. The key may be incorrect or revoked, or it may be missing a scope required by the destination's event type — ``PRODUCT_VIEW``, ``ADD_TO_CART``, and ``PURCHASE`` require ``ecommerce:write``; ``CUSTOM_EVENT`` requires ``events:write``; ``CUSTOM_ATTRIBUTES`` requires ``attributes:write``.
+|destination-name| was unable to accept the API key configured for this workflow. The key may be incorrect or revoked, or it may be missing one of the required Attentive scopes — the key must have ``ecommerce:write``, ``events:write``, and ``attributes:write``.
 
 .. events-attentive-ecommerce-workflow-actions-invalid-credentials-end
 
@@ -633,7 +631,7 @@ Invalid credentials
 
 To resolve this error, verify the API key configured for this workflow in Amperity.
 
-#. In the Attentive UI, confirm the API key is active and has the scopes required by the event type this destination sends. Regenerate the key if necessary.
+#. In the Attentive UI, confirm the API key is active and has all three required scopes (**ecommerce:write**, **events:write**, and **attributes:write**). Regenerate the key if necessary.
 #. Open the **Destinations** page and update the credential associated with this workflow with a valid API key.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
