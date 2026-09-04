@@ -34,6 +34,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_amazon_capi
 
+   .. grid-item-card:: Attentive eCommerce & Conversion Events
+      :link-type: doc
+      :link: events_attentive_ecommerce
+
    .. grid-item-card:: Braze Purchases
       :link-type: doc
       :link: events_braze_purchases
@@ -91,6 +95,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    :hidden:
 
    Amazon Ads Conversion API <events_amazon_capi>
+   Attentive eCommerce & Conversion Events <events_attentive_ecommerce>
    Braze Purchases <events_braze_purchases>
    Criteo <events_criteo>
    Criteo Offline Sales <events_criteo_offline_sales>

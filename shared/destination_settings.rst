@@ -9,6 +9,24 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. setting-attentive-event-type-start
+
+The type of event this destination sends to Attentive. Select one of ``PRODUCT_VIEW``, ``ADD_TO_CART``, ``PURCHASE``, ``CUSTOM_EVENT``, or ``CUSTOM_ATTRIBUTES``. A destination sends a single event type; to send more than one, configure a separate destination for each.
+
+.. setting-attentive-event-type-end
+
+.. setting-attentive-custom-event-type-name-start
+
+Required when **Event Type** is ``CUSTOM_EVENT``. The name of the Attentive custom event type to send, exactly as it appears in the Attentive UI (case-sensitive). The event type must already exist in Attentive. Individual rows can override this value with an **event_type_name** column.
+
+.. setting-attentive-custom-event-type-name-end
+
+.. setting-attentive-query-must-return-start
+
+A query must return at least one of **email** or **phone**. The remaining columns a query returns depend on the destination's event type.
+
+.. setting-attentive-query-must-return-end
+
 .. setting-bloomreach-identity-column-start
 
 The Bloomreach hard identifier to use as the primary key. Options include **email**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.

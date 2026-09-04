@@ -9,6 +9,18 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. credential-attentive-api-key-start
+
+An API key that authorizes Amperity to send events to Attentive. Attentive generates the key as a bearer token, and Amperity adds it to each request automatically.
+
+.. credential-attentive-api-key-end
+
+.. credential-attentive-api-key-find-start
+
+Generate the key in the Attentive UI under **Settings > Integrations > Custom Integrations** by creating a new integration. Grant the key all three scopes — **ecommerce:write**, **events:write**, and **attributes:write** — so that one key works for any event type. If the key is revoked or regenerated in Attentive, update the credential in Amperity.
+
+.. credential-attentive-api-key-find-end
+
 .. credential-bloomreach-base-url-start
 
 The API base URL for your Bloomreach Engagement project.
