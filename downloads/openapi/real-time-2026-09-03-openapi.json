@@ -5,11 +5,12 @@
   ],
   "definitions": {
     "ErrorBody": {
-      "additionalProperties": false,
+      "additionalProperties": {},
       "description": "Error response.",
       "properties": {
         "error": {
-          "description": "Machine-readable error keyword."
+          "description": "Machine-readable error keyword.",
+          "type": "string"
         },
         "message": {
           "description": "Human-readable description of what went wrong.",
