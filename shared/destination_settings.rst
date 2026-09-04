@@ -2991,6 +2991,8 @@ The operation applied to every row in the query results: **upsert** (the default
 
 The name your Eagle Eye company unit uses for the loyalty identity carried in the ``identity_value`` column — for example ``CUSTOMER_ID`` or a loyalty card type. This is configured in Eagle Eye and differs by company unit, so confirm the exact name with your Eagle Eye account manager. Every wallet operation is addressed by this identity.
 
+This setting names the identity type only; it does not name the query column. The identity values themselves must travel in a column named ``identity_value`` in the query results.
+
 .. setting-eagle-eye-identity-type-end
 
 .. setting-eagle-eye-default-wallet-type-start
