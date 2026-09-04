@@ -513,3 +513,10 @@
   margin-top: 10px;
   margin-bottom: 1rem;
 }
+
+.yue .admonition.warning {
+  --color-1: var(--amber-surface);
+  --color-2: var(--amber-a3);
+  --color-3: var(--amber-9);
+  --color-4: var(--amber-11);
+}
