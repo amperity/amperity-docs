@@ -11,13 +11,13 @@
 
 .. setting-attentive-event-type-start
 
-The type of event this destination sends to Attentive: **product view**, **add to cart**, **purchase**, **custom event**, or **custom attributes**. A destination sends a single event type; to send more than one, configure a separate destination for each.
+The type of event this destination sends to Attentive. Select one of ``PRODUCT_VIEW``, ``ADD_TO_CART``, ``PURCHASE``, ``CUSTOM_EVENT``, or ``CUSTOM_ATTRIBUTES``. A destination sends a single event type; to send more than one, configure a separate destination for each.
 
 .. setting-attentive-event-type-end
 
 .. setting-attentive-custom-event-type-name-start
 
-Required when **Event type** is **custom event**. The name of the Attentive custom event type to send, exactly as it appears in the Attentive UI (case-sensitive). The event type must already exist in Attentive. Individual rows can override this value with an **event_type_name** column.
+Required when **Event Type** is ``CUSTOM_EVENT``. The name of the Attentive custom event type to send, exactly as it appears in the Attentive UI (case-sensitive). The event type must already exist in Attentive. Individual rows can override this value with an **event_type_name** column.
 
 .. setting-attentive-custom-event-type-name-end
 

@@ -9,7 +9,7 @@
 Attentive eCommerce & Conversion Events
 ==================================================
 
-Send |what-send| to |destination-name| to power SMS and email journey triggers, audience segmentation, and revenue attribution. Each destination sends a single event type: product view, add to cart, purchase, custom event, or custom attributes.
+Send |what-send| to |destination-name| to power SMS and email journey triggers, audience segmentation, and revenue attribution. Each destination sends a single event type: ``PRODUCT_VIEW``, ``ADD_TO_CART``, ``PURCHASE``, ``CUSTOM_EVENT``, or ``CUSTOM_ATTRIBUTES``.
 
 .. events-attentive-ecommerce-modal-beta-start
 
@@ -59,13 +59,13 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Event type**
+**Event Type**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-attentive-event-type-start
    :end-before: .. setting-attentive-event-type-end
 
-**Custom event type name**
+**Custom Event Type Name**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-attentive-custom-event-type-name-start
