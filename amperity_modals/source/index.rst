@@ -26,6 +26,7 @@ Site Index
    destination-amazon-capi
    destination-attentive
    destination-attentive-api
+   destination-attentive-ecommerce
    destination-attentivemobile
    destination-azure-blob
    destination-bazaar-voice
