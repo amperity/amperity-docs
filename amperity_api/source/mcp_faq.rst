@@ -281,3 +281,71 @@ Every tool the MCP server advertises is also tagged with the standard MCP behavi
 Many AI clients expose tool-level permission controls that read these annotations, which lets you approve or block individual tools--or restrict a connection to read-only tools--in the client itself. Using those controls is the recommended way to narrow the tool surface for a given user or agent, alongside the Amperity policies that determine what that user is authorized to do.
 
 .. mcp-faq-read-only-end
+
+
+.. _mcp-faq-connecting:
+
+Connecting a client
+==================================================
+
+.. mcp-faq-connecting-start
+
+.. mcp-faq-connecting-end
+
+
+.. _mcp-faq-unlisted-client:
+
+Can I connect a tool that has no setup page?
+--------------------------------------------------
+
+.. mcp-faq-unlisted-client-start
+
+Yes. Any client that implements the Model Context Protocol should be able to connect.
+
+The Amperity MCP server implements the protocol and its standard OAuth authorization flow rather than special-casing individual clients. A client that supports remote MCP servers over HTTP and signs in with OAuth 2.1 and PKCE can connect to **https://mcp.amperity.com**.
+
+Most clients need no manual configuration. The MCP server publishes standard OAuth metadata and supports dynamic client registration, so a client discovers the endpoints and registers itself as a public PKCE client without a client secret. Point the client at the server URL and sign in.
+
+Clients that cannot discover or register automatically need these values entered by hand:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - Setting
+     - Value
+
+   * - Server or resource URL
+     - ``https://mcp.amperity.com``
+
+   * - Authorization endpoint
+     - ``https://mcp.amperity.com/authorize``
+
+   * - Token endpoint
+     - ``https://mcp.amperity.com/oauth/token``
+
+   * - Registration endpoint
+     - ``https://mcp.amperity.com/oauth/register``
+
+   * - Client ID
+     - ``nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs``
+
+       This is Amperity's public MCP client ID. It is the same for every customer and is not a secret.
+
+   * - Client secret
+     - None. The MCP server is a public OAuth client that uses PKCE and does not issue a client secret. If a client requires the field to be non-empty, supply any placeholder value.
+
+   * - Grant types
+     - ``authorization_code``, ``refresh_token``
+
+   * - Scopes
+     - ``openid``, ``offline_access``
+
+   * - PKCE
+     - Required. The authorization endpoint rejects any request that does not use ``code_challenge_method=S256``.
+
+.. important:: Hosted clients complete the sign-in flow by redirecting to their own callback address, and that address must be on Amperity's redirect URI allowlist.
+
+   If a hosted tool's callback address has not been approved, the sign-in request is rejected. Contact Amperity to have the address reviewed and added.
+
+.. mcp-faq-unlisted-client-end
