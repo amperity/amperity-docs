@@ -23,7 +23,7 @@ Use the Real-time API to stream customer events into Amperity and to look up uni
 
 .. endpoints-realtime-about-end
 
-.. note:: The Real-time API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
+.. note:: The Real-time API accepts an ``api-version`` header. Send ``api-version: 2026-09-03`` to pin an integration to that version; every response returns the ``api-version`` that served it. A request that sends no header is served the latest version, which changes as new versions ship, so send the header from production integrations.
 
 .. note:: Before creating a profile collection, an event stream, or a real-time segment, you must contact your Amperity representative to enable real-time product features.
 
