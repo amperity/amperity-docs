@@ -58,6 +58,8 @@ The MCP server enables:
 
 * Configurable :doc:`safety modes <mcp_safety_modes>` for write operations.
 
+.. tip:: For answers to common questions about authentication, permissions, PII, and auditability, see the :doc:`MCP FAQ <mcp_faq>`.
+
 .. mcp-what-mcp-enables-end
 
 
@@ -72,7 +74,7 @@ The Amperity MCP server does not:
 
 * Bypass authorization to Amperity services.
 
-  .. important:: A user of the Amperity MCP server sees only the tenants and operations allowed by their credentials.
+  .. important:: A user of the Amperity MCP server sees only the tenants and operations allowed by their credentials. MCP tools call the same Amperity APIs as the Amperity user interface and inherit the same guardrails, which makes a user's MCP permissions a mirror of their permissions in the user interface. See the :doc:`MCP FAQ <mcp_faq>`.
 
 * Store conversation history. Per-token session state--selected tenant and safety mode--persists across requests within the same session.
 
