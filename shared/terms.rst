@@ -114,6 +114,15 @@ Acxiom collects, analyzes, and sells information about customers and businesses 
 .. term-acxiom-end
 
 
+**Attentive**
+
+.. term-attentive-ecommerce-start
+
+Attentive is an SMS and email marketing platform that brands use to run subscriber journeys, segment audiences, and personalize messaging. Send ecommerce and behavioral events to Attentive to trigger journey automations, build audience segments, and attribute revenue to campaigns.
+
+.. term-attentive-ecommerce-end
+
+
 **address**
 
 .. 
