@@ -20,7 +20,7 @@ MCP tool reference
 
 .. mcp-tool-reference-start
 
-The Amperity MCP server exposes tools across the Amperity surface. Tool names follow a **domain_action** convention, such as **tenant_list** or **database_create_table**.
+The Amperity MCP server exposes tools across the Amperity surface. Tool names follow a ``domain_action`` convention, such as ``tenant_list`` or ``database_create_table``.
 
 For the canonical list available to your account, send a **tools/list** request from your MCP client. Many clients do this automatically on connect. The list of tools returned by **tools/list** is the exact tool surface your account is authorized to call.
 
@@ -78,95 +78,6 @@ Manage which Amperity tenant the current session targets, and read session-level
 
    * - Submit feedback to the Amperity team
      - **feedback_submit**
-
-
-.. _mcp-tool-users-access:
-
-Users and access
-==================================================
-
-Manage global Amperity user identities and their tenant access. A *global identity* is the
-single login record shared across the parent tenant and its sandboxes; a tenant policy
-attachment is the separate record that grants that identity access in one tenant.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 60 40
-
-   * - Description
-     - Tools
-
-   * - Find, create, and delete users
-     - **user_list**
-
-       **user_create**
-
-       **user_delete**
-
-   * - Inspect policies
-     - **policy_list**
-
-   * - Grant and revoke direct policies
-     - **user_grant_policy**
-
-       **user_revoke_policy**
-
-
-User lifecycle and access boundaries
-------------------------------------
-
-``user_list`` lists global identities visible from the selected tenant, and
-``policy_list`` lists policies assignable there. ``user_create`` creates a global
-identity for an email but does not grant tenant access. It runs only from the parent
-tenant and requires ``confirm=true``; sending an invitation also requires unrestricted
-safety mode.
-
-``user_grant_policy`` and ``user_revoke_policy`` add or remove one exact direct policy
-attachment in the selected tenant. They take the ``user_id`` and ``policy_id`` returned
-by the list or create tools. Revoking a direct policy does not remove access inherited
-from a group mapping.
-
-``user_delete`` takes an exact ``user_id`` and performs a hard global deletion. It must
-be called from the parent tenant context with ``confirm=true``. It is not a sandbox-only
-removal, and it does not revoke tenant policy attachments first.
-
-Worked examples
----------------
-
-Create the identity, then grant access in the parent and sandbox independently::
-
-   user_create(name="Avery Chen", email="avery@example.com", confirm=true)
-   # => {"result": "ok", "user_id": "auth0|...", ...}
-
-   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-operator", confirm=true)
-   tenant_use(tenant_name="customer-sb-analysis", confirm=true)
-   user_grant_policy(user_id="auth0|...", policy_id="agp-datagrid-administrator", confirm=true)
-
-Remove only the sandbox's direct policy; the parent attachment is unchanged::
-
-   user_revoke_policy(
-     user_id="auth0|...",
-     policy_id="agp-datagrid-administrator",
-     confirm=true
-   )
-   # => {"result": "ok", "changed": true, ...}
-
-Delete the global identity from the parent context::
-
-   tenant_use(tenant_name="customer", confirm=true)
-   user_delete(user_id="auth0|...", confirm=true)
-   # => {"result": "ok", "scope": "global", "changed": true}
-
-Close cases:
-
-* ``user_create`` creates the login identity but does not grant tenant access; call
-  ``user_grant_policy`` separately for each tenant that should be accessible.
-* ``user_revoke_policy`` removes one direct attachment only. Other direct policies and
-  group-mapped access are unchanged.
-* ``user_delete`` is global and irreversible. It does not detach policies first, so use
-  ``user_revoke_policy`` for reversible access removal.
-* Mutation tools use exact IDs, not a display name or email lookup. List first when the
-  identity or policy ID is not already known.
 
 
 .. _mcp-tool-databases:
@@ -297,7 +208,18 @@ Author, run, and organize queries against Amperity data.
    * - Run ad hoc queries and inspect column statistics
      - **query_run**
 
+       **query_get_results**
+
        **query_get_column_stats**
+
+   * - Manage Pulse visualizations
+     - **pulse_viz_list**
+
+       **pulse_viz_get**
+
+       **pulse_viz_upsert**
+
+       **pulse_viz_delete**
 
    * - Organize queries into folders
      - **query_folder_list**
@@ -472,14 +394,10 @@ Configure data movement into and out of Amperity.
 
        **destination_delete**
 
-   * - Manage destination target templates
-     - **destination_list_target_templates**
+   * - Manage destination attribute sets
+     - **destination_create_attribute_set**
 
-       **destination_get_target_template**
-
-       **destination_create_target_template**
-
-       **destination_delete_target_template**
+       **destination_delete_attribute_set**
 
 
 .. _mcp-tool-orchestrations:
@@ -584,15 +502,6 @@ Manage campaigns, campaign folders, journeys, and audiences.
 
        **journey_folder_delete**
 
-   * - Manage journey versions
-     - **journey_list_versions**
-
-       **journey_get_version**
-
-       **journey_create_version**
-
-       **journey_update_version**
-
    * - Run, schedule, and unschedule journeys
      - **journey_run**
 
@@ -655,19 +564,22 @@ Configure and run prediction models.
 
        **prediction_delete_model**
 
-   * - Model configuration (versions)
-     - **prediction_list_model_configs**
+   * - Manage prediction variants
+     - **prediction_list_variants**
 
-       **prediction_get_model_config**
+       **prediction_get_variant**
 
-       **prediction_create_model_config**
+       **prediction_create_variant**
 
-       **prediction_delete_model_config**
+       **prediction_delete_variant**
 
-   * - Validate model configs
-     - **prediction_validate_model_config**
+   * - Validate and inspect prediction variants
+     - **prediction_validate_variant**
 
-       **prediction_get_model_config_validation_results**
+       **prediction_get_variant_metrics**
+
+   * - Run prediction models
+     - **prediction_run_model**
 
 
 .. _mcp-tool-segments:
@@ -685,28 +597,28 @@ Manage segments and folders.
      - Tools
 
    * - Manage segments
-     - **iq_list**
+     - **segment_list**
 
-       **iq_get**
+       **segment_get**
 
-       **iq_create**
+       **segment_create**
 
-       **iq_update**
+       **segment_update**
 
-       **iq_delete**
+       **segment_delete**
 
-       **iq_activate**
+       **segment_activate**
 
    * - Manage segments folders
-     - **iq_folder_list**
+     - **segment_folder_list**
 
-       **iq_folder_get**
+       **segment_folder_get**
 
-       **iq_folder_create**
+       **segment_folder_create**
 
-       **iq_folder_update**
+       **segment_folder_update**
 
-       **iq_folder_delete**
+       **segment_folder_delete**
 
    * - Manage company context documents
      - **context_documents_list**
