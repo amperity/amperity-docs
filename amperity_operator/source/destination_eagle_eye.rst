@@ -63,7 +63,7 @@ Two columns are sent, and the query that feeds the orchestration must produce th
 
 .. destination-eagle-eye-prereq-start
 
-.. important:: Eagle Eye provisions your API credentials and configures each company unit. Before you configure the destination, get the Client ID, Client secret, and regional API URL from your Eagle Eye account manager, and confirm the **Identity type** name your unit uses and the behavioral **state** values your unit accepts. A state value your unit does not recognize is rejected.
+.. important:: Eagle Eye provisions your API credentials and configures each company unit. Before you configure the destination, get the Client ID, Client secret, and regional API URL from your Eagle Eye account manager, and confirm the **Identity type** name your unit uses and the behavioral **state** values your unit accepts for wallets and for identities — these are separate value sets that need not overlap. A state value your unit does not recognize is rejected.
 
 .. note:: The Eagle Eye Wallet API has no bulk endpoint, so Amperity sends one request per person. Amperity paces requests at about five requests per second — an Amperity-side default, not a limit published by Eagle Eye — so a large send can take a long time (for example, a send of 100,000 people runs for several hours).
 
@@ -177,11 +177,17 @@ Get details
              :start-after: .. setting-eagle-eye-default-wallet-type-start
              :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-       **Wallet state (new wallets)**
+       **New wallet state**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-default-wallet-state-start
              :end-before: .. setting-eagle-eye-default-wallet-state-end
+
+       **New identity state**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-eagle-eye-default-identity-state-start
+             :end-before: .. setting-eagle-eye-default-identity-state-end
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -199,7 +205,7 @@ Get details
              :start-after: .. setting-eagle-eye-operation-start
              :end-before: .. setting-eagle-eye-operation-end
 
-       **Wallet state (state change)**
+       **Wallet state**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-wallet-state-start
@@ -376,11 +382,17 @@ Add destination
              :start-after: .. setting-eagle-eye-default-wallet-type-start
              :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-       **Wallet state (new wallets)**
+       **New wallet state**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-eagle-eye-default-wallet-state-start
              :end-before: .. setting-eagle-eye-default-wallet-state-end
+
+       **New identity state**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-eagle-eye-default-identity-state-start
+             :end-before: .. setting-eagle-eye-default-identity-state-end
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
