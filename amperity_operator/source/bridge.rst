@@ -62,6 +62,7 @@ Amperity Bridge supports connecting with the following applications:
 
 * :ref:`bridge-sync-data-with-databricks`
 * :ref:`bridge-sync-data-with-google-bigquery`
+* :ref:`bridge-sync-data-with-redshift`
 * :ref:`bridge-sync-data-with-snowflake`
 
 .. bridge-sync-data-with-end
@@ -93,6 +94,18 @@ Amperity Bridge for Google BigQuery
 Configure inbound and outbound shares in Amperity to enable :ref:`inbound <bridge-google-bigquery-sync-with-amperity>` and :ref:`outbound connections <bridge-google-bigquery-sync-with-google-bigquery>` connections between Amperity and Google BigQuery.
 
 .. bridge-sync-data-with-google-bigquery-end
+
+
+.. _bridge-sync-data-with-redshift:
+
+Amperity Bridge for Amazon Redshift
+--------------------------------------------------
+
+.. bridge-sync-data-with-redshift-start
+
+Configure an inbound bridge in Amperity to enable :ref:`inbound data access from Amazon Redshift <bridge-redshift-from-redshift>`. Outbound bridge coming soon.
+
+.. bridge-sync-data-with-redshift-end
 
 
 .. _bridge-sync-data-with-snowflake:
