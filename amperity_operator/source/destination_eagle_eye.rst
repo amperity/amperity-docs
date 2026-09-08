@@ -65,6 +65,8 @@ Two columns are sent, and the query that feeds the orchestration must produce th
 
 .. important:: Eagle Eye provisions your API credentials and configures each company unit. Before you configure the destination, get the Client ID, Client secret, and regional API URL from your Eagle Eye account manager, and confirm the **Identity type** name your unit uses and the behavioral **state** values your unit accepts for wallets and for identities — these are separate value sets that need not overlap. A state value your unit does not recognize is rejected.
 
+.. note:: Wallet state and identity state were previously a single setting. If you set a state value on this destination before they were separated, that value now applies to **New wallet state** only. If it is an identity-namespace value — and your create sends were failing as a result — move it to **New identity state**.
+
 .. note:: The Eagle Eye Wallet API has no bulk endpoint, so Amperity sends one request per person. Amperity paces requests at about five requests per second — an Amperity-side default, not a limit published by Eagle Eye — so a large send can take a long time (for example, a send of 100,000 people runs for several hours).
 
 .. destination-eagle-eye-prereq-end
