@@ -36,7 +36,14 @@ The Eagle Eye connector sends |what-send| from Amperity into |where-send|, perfo
 
 Each row in the query results is one wallet operation, addressed by the person's loyalty identity. There is no audience or list concept: Amperity does not keep a list in sync on the Eagle Eye side, it performs the configured operation for each person each time it runs. Amperity sends every row in the query results on each run; there is no incremental sync.
 
-Two columns are sent. The **identity_value** column (required) is the person's loyalty identity in Eagle Eye — a loyalty card number, email, or whatever identity type your company unit is configured for — and is the value every operation is addressed by. The **friendly_name** column (optional) is a human-readable label for the wallet: the create operation applies it to a new wallet when it is present, and the update operation exists to change it and requires it. Column names are matched without regard to capitalization, and values are sent to Eagle Eye as they appear in the query results.
+Two columns are sent, and the query that feeds the orchestration must produce them by name. The **identity_value** column (required) carries the person's loyalty identity in Eagle Eye — a loyalty card number, email, or whatever identity type your company unit is configured for — and is the value every operation is addressed by. The **friendly_name** column (optional) is a human-readable label for the wallet: the create operation applies it to a new wallet when it is present, and the update operation exists to change it and requires it. Column names are matched without regard to capitalization, and values are sent to Eagle Eye as they appear in the query results.
+
+.. important:: The connector reads the loyalty identity from a column named ``identity_value`` — not from the **Identity type** setting. These are two different things and are easy to confuse:
+
+   * The **Identity type** setting names the Eagle Eye identity *type* your company unit uses (for example ``CUSTOMER_ID``). You set it once on the destination.
+   * The ``identity_value`` column carries the identity *values*, one per row. The query results must include a column with this exact name (capitalization does not matter).
+
+   If your query outputs the values under a different column name, alias it to ``identity_value`` — for example ``SELECT loyalty_card_number AS identity_value``. A send whose query results have no ``identity_value`` column fails before any wallet is sent, with a message naming the missing column.
 
 .. destination-eagle-eye-end
 
@@ -412,6 +419,6 @@ Amperity performs the configured operation for every row in the query results, e
 * Eagle Eye rejects that row's wallet payload, or the row targets a wallet that has already been terminated.
 * Eagle Eye reports a conflict, or a locked wallet, for that row's operation.
 
-Failed rows are reported in the destination's run details. Some conditions stop the entire run instead of failing individual rows: an unknown wallet operation, or a **state-change** send with no **Wallet state** set (both caught before any data is sent), and a rejected credential or Eagle Eye being unavailable.
+Failed rows are reported in the destination's run details. Some conditions stop the entire run instead of failing individual rows: query results with no ``identity_value`` column (or no ``friendly_name`` column when the operation is **update**), an unknown wallet operation, or a **state-change** send with no **Wallet state** set (all caught before any data is sent), and a rejected credential or Eagle Eye being unavailable.
 
 .. destination-eagle-eye-validation-end
