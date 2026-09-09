@@ -61,6 +61,7 @@ Site Index
    destination-google-ads
    destination-google-analytics-offline-events
    destination-google-customer-match
+   destination-google-customer-match-gdm
    destination-google-enhanced-conversions
    destination-hubspot
    destination-infutor

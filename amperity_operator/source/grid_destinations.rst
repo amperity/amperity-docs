@@ -214,6 +214,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_google_customer_match
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: destination_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: destination_hubspot
@@ -499,6 +503,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Google BigQuery <destination_google_bigquery>
    Google Cloud Storage <destination_google_cloud_storage>
    Google Customer Match <destination_google_customer_match>
+   Google Customer Match (GDM) <destination_google_customer_match_gdm>
    HubSpot <destination_hubspot>
    Infutor <destination_infutor>
    Insider One <destination_insider_one>
