@@ -1685,6 +1685,48 @@ The Google advertising product to which Amperity sends audiences. May be one of 
 
 .. setting-google-customer-match-customer-product-end
 
+**Google Customer Match (GDM)**
+
+**Customer product**
+
+.. setting-google-customer-match-gdm-customer-product-start
+
+The type of Google product that owns the audience. Select one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
+
+.. setting-google-customer-match-gdm-customer-product-end
+
+**Customer ID**
+
+.. setting-google-customer-match-gdm-customer-id-start
+
+The Customer ID of the Google account that owns the audience. The Google account you connect must be able to administer this account and manage its Customer Match audiences.
+
+.. setting-google-customer-match-gdm-customer-id-end
+
+**Match identifier**
+
+.. setting-google-customer-match-gdm-match-identifier-start
+
+The dataset column Google matches members on. Select one of "email", "phone", or "mobile-id". A single identifier is used for every member of the audience, and it is also the key Amperity uses to track membership changes across runs, so it cannot be changed without recreating the audience.
+
+.. setting-google-customer-match-gdm-match-identifier-end
+
+**Audience name**
+
+.. setting-google-customer-match-gdm-audience-name-start
+
+The name of the Google audience to update. If no audience by that name exists on the account, Amperity creates one. Characters other than letters, numbers, underscores, dashes, and spaces are removed from the name.
+
+.. setting-google-customer-match-gdm-audience-name-end
+
+**Audience description**
+
+.. setting-google-customer-match-gdm-audience-description-start
+
+A description for the audience. Used only when Amperity creates the audience for the first time.
+
+.. setting-google-customer-match-gdm-audience-description-end
+
 **Membership duration**
 
 See common.
