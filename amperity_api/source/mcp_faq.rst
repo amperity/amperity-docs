@@ -178,6 +178,8 @@ Yes. Because MCP calls the same Amperity APIs as the user interface, actions tak
 
 Audit events and configuration versions additionally record how the action was initiated, so an action taken through MCP is distinguishable from the same action taken in the user interface. In Amperity, these entries are labeled **via Amperity MCP**.
 
+Separately from the activity log, Amperity captures operational telemetry for every tool call, including calls that fail or are denied: the tool name, the calling user, the arguments, the outcome, and a trace identifier that ties the call to the API requests it made. Sensitive argument values, such as query text and credentials, are omitted. Amperity uses this telemetry to support and troubleshoot the service; it is internal to Amperity and is not available for export. The activity log remains the customer-facing record.
+
 .. mcp-faq-audit-end
 
 
@@ -213,6 +215,8 @@ Does Amperity send my data to a model provider?
 No. The MCP server does not call any large language model. It returns tool results to the AI client that requested them, and nothing else.
 
 The model that processes those results is the one in the client you connect, under your own agreement with that provider. Choosing that client and confirming it is approved to handle your data is your organization's decision.
+
+.. note:: No tool response includes your access token, a stored plugin credential, or a system secret.
 
 .. note:: This is a different architecture from `AmpAI <https://docs.amperity.com/reference/ampai.html>`__, which is a first-party Amperity feature. For how AmpAI handles data, see the `AmpAI Privacy FAQ <https://docs.amperity.com/reference/ampai_privacy.html>`__.
 
@@ -254,6 +258,8 @@ What tools does the MCP server expose?
 
 The complete list is published in the :doc:`MCP tool reference <mcp_tool_reference>`, organized by domain. More than 200 tools are available, and the connected client can enumerate them at any time.
 
+That list is generated from the server's own tool registry, so the definition a client receives from **tools/list** is the definition the server enforces: arguments are validated against the tool's JSON Schema before the tool runs, and naming a tool that was not offered does not make it callable.
+
 Which tools a given user can successfully call depends on that user's permissions. The tool being listed does not mean the user is authorized to run it.
 
 Many AI clients also provide their own controls for enabling and disabling individual tools, which you can use to narrow the tool surface further for a given user or agent. See :ref:`Is the MCP server read-only? <mcp-faq-read-only>`.
@@ -281,6 +287,22 @@ Every tool the MCP server advertises is also tagged with the standard MCP behavi
 Many AI clients expose tool-level permission controls that read these annotations, which lets you approve or block individual tools--or restrict a connection to read-only tools--in the client itself. Using those controls is the recommended way to narrow the tool surface for a given user or agent, alongside the Amperity policies that determine what that user is authorized to do.
 
 .. mcp-faq-read-only-end
+
+
+.. _mcp-faq-tool-duration:
+
+How long can a tool call run?
+--------------------------------------------------
+
+.. mcp-faq-tool-duration-start
+
+A single tool call is bounded in time. By default, a call that has not completed within 120 seconds is cancelled and returns a timeout error rather than holding the connection open.
+
+Tools that accept a timeout argument, such as the query tools, may run longer: the value you request governs, and the call is bounded a little above it.
+
+Long-running work, such as running a database or an identity resolution job, is not held open by the call that starts it. One tool call starts the job and later calls report its status.
+
+.. mcp-faq-tool-duration-end
 
 
 .. _mcp-faq-connecting:
