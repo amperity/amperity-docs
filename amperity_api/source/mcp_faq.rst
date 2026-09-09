@@ -283,6 +283,28 @@ Many AI clients expose tool-level permission controls that read these annotation
 .. mcp-faq-read-only-end
 
 
+.. _mcp-faq-tool-validation:
+
+How are tool calls validated?
+--------------------------------------------------
+
+.. mcp-faq-tool-validation-start
+
+Every tool call is validated by the MCP server before it runs, against the same tool definition the server publishes.
+
+The tool surface is generated from the server's own registry, so the definition a client receives from **tools/list** is the definition the server enforces. There is no separately maintained manifest that could describe a tool differently from the way that tool behaves.
+
+Two checks run before a tool executes:
+
+#. **Argument validation.** Arguments are validated against the tool's JSON Schema, including required fields and enumerated values. A call that does not match the schema is rejected with an error and the tool never runs.
+
+#. **Tool availability.** The server confirms at dispatch time that the tool is one the caller may invoke. The Model Context Protocol does not oblige a server to reject calls to tools it did not advertise, so the advertised list is not treated as the boundary--naming a tool that was not offered does not make it callable.
+
+Authorization is enforced separately from both checks, by the platform, against the calling user's policies. See :ref:`Does the MCP server have its own permission model? <mcp-faq-permission-model>`.
+
+.. mcp-faq-tool-validation-end
+
+
 .. _mcp-faq-connecting:
 
 Connecting a client
