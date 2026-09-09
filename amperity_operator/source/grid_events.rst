@@ -54,6 +54,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_google_analytics
 
+   .. grid-item-card:: Google Campaign Manager 360
+      :link-type: doc
+      :link: events_google_cm360
+
    .. grid-item-card:: Google Enhanced Conversions
       :link-type: doc
       :link: events_google_enhanced_conversions
@@ -100,6 +104,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Criteo <events_criteo>
    Criteo Offline Sales <events_criteo_offline_sales>
    Google Analytics 4 <events_google_analytics>
+   Google Campaign Manager 360 <events_google_cm360>
    Google Enhanced Conversions <events_google_enhanced_conversions>
    Meta Ads Manager <events_meta_ads_manager>
    Microsoft Ads Conversions API <events_microsoft_ads_conversions>
