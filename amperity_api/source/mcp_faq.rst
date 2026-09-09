@@ -178,7 +178,7 @@ Yes. Because MCP calls the same Amperity APIs as the user interface, actions tak
 
 Audit events and configuration versions additionally record how the action was initiated, so an action taken through MCP is distinguishable from the same action taken in the user interface. In Amperity, these entries are labeled **via Amperity MCP**.
 
-.. note:: Activity logs record the action that was taken. Separately, Amperity captures operational telemetry for every tool call, including calls that fail or are denied: the tool name, the calling user, the arguments, the outcome, and a trace identifier that ties the call to the API requests it made. Amperity uses this telemetry to support and troubleshoot the service. Sensitive argument values, such as query text and credentials, are omitted. This telemetry is internal to Amperity and is not available for export; the activity log is the customer-facing record.
+Separately from the activity log, Amperity captures operational telemetry for every tool call, including calls that fail or are denied: the tool name, the calling user, the arguments, the outcome, and a trace identifier that ties the call to the API requests it made. Sensitive argument values, such as query text and credentials, are omitted. Amperity uses this telemetry to support and troubleshoot the service; it is internal to Amperity and is not available for export. The activity log remains the customer-facing record.
 
 .. mcp-faq-audit-end
 
