@@ -1673,6 +1673,27 @@ See Google Ads.
 
 See Google Ads.
 
+**Google CM360**
+
+**Floodlight configuration ID**
+
+.. setting-google-cm360-floodlight-config-id-start
+
+The numeric ID of the Campaign Manager 360 Floodlight configuration that receives the conversions. The Floodlight configuration is the account context that the conversions are attributed within. A destination sends to a single Floodlight configuration.
+
+.. setting-google-cm360-floodlight-config-id-end
+
+**Floodlight activity ID**
+
+.. setting-google-cm360-floodlight-activity-id-start
+
+The numeric ID of the Floodlight activity that the conversions are attributed to. Use the numeric activity ID, not the activity tag string. A tag string is not unique within an account and can point to more than one activity, which Amperity cannot resolve reliably.
+
+.. setting-google-cm360-floodlight-activity-id-end
+
+
+**Google Customer Match**
+
 **Customer ID**
 
 See Google Ads.
