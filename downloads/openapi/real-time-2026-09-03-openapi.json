@@ -186,6 +186,9 @@
           "application/json"
         ],
         "description": "Publishes a JSON event to the stream for real-time profile processing. The body must be a JSON object of at most 64 KiB and a Content-Length header is required. A 202 means the event was accepted for processing, not that it matched a profile.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_post_profile_store_events.html"
+        },
         "parameters": [
           {
             "description": "Identifier of the event stream.",
@@ -240,6 +243,9 @@
     "/lookup/{collection-id}/keychain": {
       "get": {
         "description": "Finds a profile by one or more identity keys passed as query parameters. Every query parameter is treated as a keychain key, so the enrich flag is named `_enrich` to keep it distinct. Keys are searched in the collection's configured priority order, then any unconfigured keys supplied; the first profile matched is returned. Prefer the POST form to keep identifiers out of URLs and access logs.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_store_lookup.html"
+        },
         "parameters": [
           {
             "description": "Join lookup-table values into the returned attributes.",
@@ -290,6 +296,9 @@
       },
       "post": {
         "description": "Identical to the GET form, with the identity keys carried in the request body so they do not appear in a URL.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_post_profile_store_lookup.html"
+        },
         "parameters": [
           {
             "description": "Identity keys to look a profile up by.",
@@ -344,6 +353,9 @@
     "/profiles/{collection-id}/{profile-id}": {
       "get": {
         "description": "Returns the real-time profile held for this Amperity ID, including its attributes and the keychain links it is reachable by.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_store_profile.html"
+        },
         "parameters": [
           {
             "description": "Join lookup-table values into the returned attributes.",
@@ -392,6 +404,9 @@
     "/profiles/{collection-id}/{profile-id}/segments": {
       "get": {
         "description": "Returns a paginated listing of this profile's real-time segment memberships, newest page first. Use `next_token` from a response to fetch the following page.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_segments.html"
+        },
         "parameters": [
           {
             "description": "Maximum number of results to return in one page.",
@@ -442,6 +457,9 @@
     "/segments/{segment-id}/profiles": {
       "get": {
         "description": "Returns a paginated listing of the segment's member profile ids. Use `next_token` from a response to fetch the following page.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_store_segment_profiles.html"
+        },
         "parameters": [
           {
             "description": "Maximum number of results to return in one page.",
