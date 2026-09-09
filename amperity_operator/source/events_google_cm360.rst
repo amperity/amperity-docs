@@ -341,6 +341,7 @@ Bound the query to recent conversions so each orchestration sends new conversion
 where:
 
 * **gclid** is the Google Click ID from your online events or ad-click data. The ``WHERE`` clause keeps only rows that have one, because a conversion without a **gclid** cannot be sent.
+* **conversion_timestamp** must be an |ext_iso_8601| instant with a UTC offset, such as ``2026-07-10T12:00:00Z``. Amperity sends it as returned by your query.
 * **conversion_value** is the value CM360 bids on. To bid on delivered value, such as a predicted lifetime value, send that value here in place of the order total.
 * **currency_code** is a valid |ext_iso_4217| currency code — for example, ``USD`` — that matches the currency of **conversion_value**.
 * **order_id** is the deduplication key. Send a stable value so that repeated sends of the same conversion are not double-counted.
@@ -390,7 +391,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **eventTimestamp**
      - **Required**
 
-       When the conversion happened. Send from a date- or time-typed column.
+       When the conversion happened. CM360 requires an |ext_iso_8601| instant with a UTC offset — for example, ``2026-07-10T12:00:00Z``. Amperity sends the value as returned by your query, so make sure the query returns it in this form.
 
    * - **conversion_value**
      - **conversionValue**
