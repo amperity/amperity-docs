@@ -264,8 +264,6 @@ Which tools a given user can successfully call depends on that user's permission
 
 Many AI clients also provide their own controls for enabling and disabling individual tools, which you can use to narrow the tool surface further for a given user or agent. See :ref:`Is the MCP server read-only? <mcp-faq-read-only>`.
 
-.. note:: A single tool call is bounded in time. By default, a call that has not completed within 120 seconds is cancelled and returns a timeout error rather than holding the connection open. Tools that accept a timeout argument, such as the query tools, may run longer: the value you request governs, and the call is bounded a little above it. Long-running work, such as running a database or an identity resolution job, is started by one tool call and followed with later status calls rather than held open by the original request.
-
 .. mcp-faq-tool-list-end
 
 
@@ -289,6 +287,22 @@ Every tool the MCP server advertises is also tagged with the standard MCP behavi
 Many AI clients expose tool-level permission controls that read these annotations, which lets you approve or block individual tools--or restrict a connection to read-only tools--in the client itself. Using those controls is the recommended way to narrow the tool surface for a given user or agent, alongside the Amperity policies that determine what that user is authorized to do.
 
 .. mcp-faq-read-only-end
+
+
+.. _mcp-faq-tool-duration:
+
+How long can a tool call run?
+--------------------------------------------------
+
+.. mcp-faq-tool-duration-start
+
+A single tool call is bounded in time. By default, a call that has not completed within 120 seconds is cancelled and returns a timeout error rather than holding the connection open.
+
+Tools that accept a timeout argument, such as the query tools, may run longer: the value you request governs, and the call is bounded a little above it.
+
+Long-running work, such as running a database or an identity resolution job, is not held open by the call that starts it. One tool call starts the job and later calls report its status.
+
+.. mcp-faq-tool-duration-end
 
 
 .. _mcp-faq-connecting:
