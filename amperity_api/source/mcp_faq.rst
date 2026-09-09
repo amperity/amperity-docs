@@ -254,6 +254,8 @@ What tools does the MCP server expose?
 
 The complete list is published in the :doc:`MCP tool reference <mcp_tool_reference>`, organized by domain. More than 200 tools are available, and the connected client can enumerate them at any time.
 
+That list is generated from the server's own tool registry, so the definition a client receives from **tools/list** is the definition the server enforces: arguments are validated against the tool's JSON Schema before the tool runs, and naming a tool that was not offered does not make it callable.
+
 Which tools a given user can successfully call depends on that user's permissions. The tool being listed does not mean the user is authorized to run it.
 
 Many AI clients also provide their own controls for enabling and disabling individual tools, which you can use to narrow the tool surface further for a given user or agent. See :ref:`Is the MCP server read-only? <mcp-faq-read-only>`.
@@ -281,28 +283,6 @@ Every tool the MCP server advertises is also tagged with the standard MCP behavi
 Many AI clients expose tool-level permission controls that read these annotations, which lets you approve or block individual tools--or restrict a connection to read-only tools--in the client itself. Using those controls is the recommended way to narrow the tool surface for a given user or agent, alongside the Amperity policies that determine what that user is authorized to do.
 
 .. mcp-faq-read-only-end
-
-
-.. _mcp-faq-tool-validation:
-
-How are tool calls validated?
---------------------------------------------------
-
-.. mcp-faq-tool-validation-start
-
-Every tool call is validated by the MCP server before it runs, against the same tool definition the server publishes.
-
-The tool surface is generated from the server's own registry, so the definition a client receives from **tools/list** is the definition the server enforces. There is no separately maintained manifest that could describe a tool differently from the way that tool behaves.
-
-Two checks run before a tool executes:
-
-#. **Argument validation.** Arguments are validated against the tool's JSON Schema, including required fields and enumerated values. A call that does not match the schema is rejected with an error and the tool never runs.
-
-#. **Tool availability.** The server confirms at dispatch time that the tool is one the caller may invoke. The Model Context Protocol does not oblige a server to reject calls to tools it did not advertise, so the advertised list is not treated as the boundary--naming a tool that was not offered does not make it callable.
-
-Authorization is enforced separately from both checks, by the platform, against the calling user's policies. See :ref:`Does the MCP server have its own permission model? <mcp-faq-permission-model>`.
-
-.. mcp-faq-tool-validation-end
 
 
 .. _mcp-faq-connecting:
