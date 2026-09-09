@@ -1691,7 +1691,7 @@ The Google advertising product to which Amperity sends audiences. May be one of 
 
 .. setting-google-customer-match-gdm-customer-product-start
 
-The type of Google product that owns the audience. Select one of "Google Ads", "Display Video Advertiser", or "Display Video Partner".
+The type of Google product that owns the audience. Select one of "Display Video Advertiser", "Display Video Partner", or "Google Ads".
 
 .. setting-google-customer-match-gdm-customer-product-end
 

@@ -49,6 +49,8 @@ Each member is matched to Google users on a single identifier that you choose wh
 
 A member whose chosen identifier is missing or cannot be used — a phone number that does not parse, for example — is dropped and reported as a failed row, so that one bad member does not fail the whole run.
 
+The query or segment sent to |destination-name| must return the column that matches the configured **Match identifier**. Amperity recognizes only the **email**, **phone**, and **mobile-id** columns, and rejects a dataset that contains any other column.
+
 .. note:: |destination-name| is a separate connector from Google Customer Match, which sends audiences over Google's older Audience Partner API. This connector uses Google's newer Data Manager platform and authenticates as your own Google account. Existing audiences are not shared between the two connectors.
 
 .. destination-google-customer-match-gdm-end
@@ -61,7 +63,7 @@ A member whose chosen identifier is missing or cannot be used — a phone number
 
 .. destination-google-customer-match-gdm-behavior-start
 
-.. important:: |destination-name| updates membership incrementally. Each run sends only the members who joined or left the audience since the last run: new members are added, and members who left are removed by name. Members already in the audience are left in place and reported as unchanged. Google's Data Manager platform has no way to empty and reload a list, so Amperity tracks membership changes itself.
+.. important:: |destination-name| updates membership incrementally. Each run sends only the members who joined or left the audience since the last run: new members are added, and members who left are removed individually by name. Members already in the audience are left in place and reported as unchanged. Amperity tracks these membership changes itself, so it never resends the full audience.
 
 .. caution:: A single identifier is sent per member — the **Match identifier** you configure applies to every member of the audience. Because that identifier is also how Amperity tracks membership, it cannot be changed without recreating the audience, and match rates are typically lower than a connector that sends several identifiers per person. Per-member consent signals are not sent, so a segment sent to |destination-name| must already exclude anyone who has denied ad personalization or ad user data.
 
