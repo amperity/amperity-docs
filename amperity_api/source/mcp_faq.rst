@@ -264,7 +264,7 @@ Which tools a given user can successfully call depends on that user's permission
 
 Many AI clients also provide their own controls for enabling and disabling individual tools, which you can use to narrow the tool surface further for a given user or agent. See :ref:`Is the MCP server read-only? <mcp-faq-read-only>`.
 
-.. note:: A single tool call is bounded in time. A call that has not completed within 120 seconds is cancelled and returns a timeout error rather than holding the connection open; a tool that takes its own timeout argument is given a budget slightly larger than the value requested, so the tool's own timeout is the one that applies. Long-running work, such as running a database or an identity resolution job, is started by one tool call and followed with later status calls rather than held open by the original request.
+.. note:: A single tool call is bounded in time. By default, a call that has not completed within 120 seconds is cancelled and returns a timeout error rather than holding the connection open. Tools that accept a timeout argument, such as the query tools, may run longer: the value you request governs, and the call is bounded a little above it. Long-running work, such as running a database or an identity resolution job, is started by one tool call and followed with later status calls rather than held open by the original request.
 
 .. mcp-faq-tool-list-end
 
