@@ -1,169 +1,166 @@
 {
-  "basePath": "/prof",
-  "consumes": [
-    "application/json"
-  ],
-  "definitions": {
-    "ErrorBody": {
-      "additionalProperties": {},
-      "description": "Error response.",
-      "properties": {
-        "error": {
-          "description": "Machine-readable error keyword.",
-          "type": "string"
-        },
-        "message": {
-          "description": "Human-readable description of what went wrong.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "KeychainLookup": {
-      "additionalProperties": false,
-      "description": "Identity keys to look a profile up by.",
-      "properties": {
-        "enrich": {
-          "description": "Join lookup-table values into the returned attributes.",
-          "type": "boolean"
-        },
-        "keys": {
-          "$ref": "#/definitions/KeychainLookupKeys"
-        }
-      },
-      "type": "object"
-    },
-    "KeychainLookupKeys": {
-      "additionalProperties": {
-        "type": "string"
-      },
-      "description": "Keychain keys mapped to the values to match.",
-      "type": "object"
-    },
-    "Profile": {
-      "additionalProperties": false,
-      "description": "A real-time customer profile.",
-      "properties": {
-        "attributes": {
-          "$ref": "#/definitions/ProfileAttributes"
-        },
-        "collection_id": {
-          "description": "Identifier of the profile collection.",
-          "type": "string",
-          "x-example": "apc-2RP8xZMbG"
-        },
-        "created_at": {
-          "description": "When the profile was first built.",
-          "format": "date-time",
-          "type": "string"
-        },
-        "links": {
-          "$ref": "#/definitions/ProfileLinks"
-        },
-        "profile_id": {
-          "description": "The profile's Amperity ID.",
-          "type": "string",
-          "x-example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
-        },
-        "ticked_at": {
-          "description": "When the profile was last evaluated.",
-          "format": "date-time",
-          "type": "string"
-        },
-        "updated_at": {
-          "description": "When the profile last changed.",
-          "format": "date-time",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "ProfileAttributes": {
-      "additionalProperties": {},
-      "description": "Attribute values held for this profile.",
-      "type": "object"
-    },
-    "ProfileLinks": {
-      "additionalProperties": {},
-      "description": "Keychain links this profile is reachable by.",
-      "type": "object"
-    },
-    "ProfileSegment": {
-      "additionalProperties": false,
-      "description": "A real-time segment a profile belongs to.",
-      "properties": {
-        "segment_id": {
-          "description": "Identifier of the real-time segment.",
-          "type": "string",
-          "x-example": "rts-3AV2oor45"
-        },
-        "segment_name": {
-          "description": "Name of the real-time segment.",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "ProfileSegmentsEnvelope": {
-      "additionalProperties": false,
-      "description": "Paginated list of a profile's real-time segment memberships.",
-      "properties": {
-        "data": {
-          "description": "Segments on this page.",
-          "items": {
-            "$ref": "#/definitions/ProfileSegment"
+  "components": {
+    "schemas": {
+      "ErrorBody": {
+        "additionalProperties": {},
+        "description": "Error response.",
+        "properties": {
+          "error": {
+            "description": "Machine-readable error keyword.",
+            "type": "string"
           },
-          "type": "array"
+          "message": {
+            "description": "Human-readable description of what went wrong.",
+            "type": "string"
+          }
         },
-        "next_token": {
-          "description": "Cursor from a previous response, to fetch the following page.",
-          "type": "string"
-        },
-        "total": {
-          "description": "Total segments the profile belongs to.",
-          "format": "int64",
-          "type": "integer"
-        }
+        "type": "object"
       },
-      "type": "object"
-    },
-    "SegmentMember": {
-      "additionalProperties": false,
-      "description": "A profile that is a member of the segment.",
-      "properties": {
-        "profile_id": {
-          "description": "The profile's Amperity ID.",
-          "type": "string",
-          "x-example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
-        }
-      },
-      "type": "object"
-    },
-    "SegmentMembersEnvelope": {
-      "additionalProperties": false,
-      "description": "Paginated list of a segment's member profiles.",
-      "properties": {
-        "data": {
-          "description": "Profiles on this page.",
-          "items": {
-            "$ref": "#/definitions/SegmentMember"
+      "KeychainLookup": {
+        "additionalProperties": false,
+        "description": "Identity keys to look a profile up by.",
+        "properties": {
+          "enrich": {
+            "description": "Join lookup-table values into the returned attributes.",
+            "type": "boolean"
           },
-          "type": "array"
+          "keys": {
+            "$ref": "#/components/schemas/KeychainLookupKeys"
+          }
         },
-        "next_token": {
-          "description": "Cursor from a previous response, to fetch the following page.",
+        "type": "object"
+      },
+      "KeychainLookupKeys": {
+        "additionalProperties": {
           "type": "string"
         },
-        "total": {
-          "description": "Total members of the segment.",
-          "format": "int64",
-          "type": "integer"
-        }
+        "description": "Keychain keys mapped to the values to match.",
+        "type": "object"
       },
-      "type": "object"
+      "Profile": {
+        "additionalProperties": false,
+        "description": "A real-time customer profile.",
+        "properties": {
+          "attributes": {
+            "$ref": "#/components/schemas/ProfileAttributes"
+          },
+          "collection_id": {
+            "description": "Identifier of the profile collection.",
+            "example": "apc-2RP8xZMbG",
+            "type": "string"
+          },
+          "created_at": {
+            "description": "When the profile was first built.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "links": {
+            "$ref": "#/components/schemas/ProfileLinks"
+          },
+          "profile_id": {
+            "description": "The profile's Amperity ID.",
+            "example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "type": "string"
+          },
+          "ticked_at": {
+            "description": "When the profile was last evaluated.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "updated_at": {
+            "description": "When the profile last changed.",
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "ProfileAttributes": {
+        "additionalProperties": {},
+        "description": "Attribute values held for this profile.",
+        "type": "object"
+      },
+      "ProfileLinks": {
+        "additionalProperties": {},
+        "description": "Keychain links this profile is reachable by.",
+        "type": "object"
+      },
+      "ProfileSegment": {
+        "additionalProperties": false,
+        "description": "A real-time segment a profile belongs to.",
+        "properties": {
+          "segment_id": {
+            "description": "Identifier of the real-time segment.",
+            "example": "rts-3AV2oor45",
+            "type": "string"
+          },
+          "segment_name": {
+            "description": "Name of the real-time segment.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "ProfileSegmentsEnvelope": {
+        "additionalProperties": false,
+        "description": "Paginated list of a profile's real-time segment memberships.",
+        "properties": {
+          "data": {
+            "description": "Segments on this page.",
+            "items": {
+              "$ref": "#/components/schemas/ProfileSegment"
+            },
+            "type": "array"
+          },
+          "next_token": {
+            "description": "Cursor from a previous response, to fetch the following page.",
+            "type": "string"
+          },
+          "total": {
+            "description": "Total segments the profile belongs to.",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "SegmentMember": {
+        "additionalProperties": false,
+        "description": "A profile that is a member of the segment.",
+        "properties": {
+          "profile_id": {
+            "description": "The profile's Amperity ID.",
+            "example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "SegmentMembersEnvelope": {
+        "additionalProperties": false,
+        "description": "Paginated list of a segment's member profiles.",
+        "properties": {
+          "data": {
+            "description": "Profiles on this page.",
+            "items": {
+              "$ref": "#/components/schemas/SegmentMember"
+            },
+            "type": "array"
+          },
+          "next_token": {
+            "description": "Cursor from a previous response, to fetch the following page.",
+            "type": "string"
+          },
+          "total": {
+            "description": "Total members of the segment.",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
     }
   },
-  "host": "app.amperity.com",
   "info": {
     "contact": {
       "email": "support@amperity.com",
@@ -179,12 +176,10 @@
       "url": "_static/logo-api.png"
     }
   },
+  "openapi": "3.0.3",
   "paths": {
     "/events/{stream-id}": {
       "post": {
-        "consumes": [
-          "application/json"
-        ],
         "description": "Publishes a JSON event to the stream for real-time profile processing. The body must be a JSON object of at most 64 KiB and a Content-Length header is required. A 202 means the event was accepted for processing, not that it matched a profile.",
         "externalDocs": {
           "url": "https://docs.amperity.com/api/endpoint_post_profile_store_events.html"
@@ -195,8 +190,10 @@
             "in": "path",
             "name": "stream-id",
             "required": true,
-            "type": "string",
-            "x-example": "esm-23ZvjfSSJ"
+            "schema": {
+              "example": "esm-23ZvjfSSJ",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -207,22 +204,34 @@
             "description": "The stream is configured to drop events; the event was discarded."
           },
           "400": {
-            "description": "The body was not a JSON object.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "The body was not a JSON object."
           },
           "404": {
-            "description": "No such stream for this tenant.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No such stream for this tenant."
           },
           "409": {
-            "description": "The stream is not accepting events.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "The stream is not accepting events."
           },
           "411": {
             "description": "A Content-Length header is required."
@@ -248,45 +257,63 @@
         },
         "parameters": [
           {
-            "description": "Join lookup-table values into the returned attributes.",
-            "in": "query",
-            "name": "_enrich",
-            "required": false,
-            "type": "boolean"
-          },
-          {
             "description": "Identifier of the profile collection.",
             "in": "path",
             "name": "collection-id",
             "required": true,
-            "type": "string",
-            "x-example": "apc-2RP8xZMbG"
+            "schema": {
+              "example": "apc-2RP8xZMbG",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Join lookup-table values into the returned attributes.",
+            "in": "query",
+            "name": "_enrich",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
           "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                }
+              }
+            },
             "description": "The first profile matched by the supplied keys.",
             "headers": {
               "Location": {
                 "description": "Canonical URL of the matched profile.",
-                "type": "string"
+                "schema": {
+                  "type": "string"
+                }
               }
-            },
-            "schema": {
-              "$ref": "#/definitions/Profile"
             }
           },
           "400": {
-            "description": "No keychain keys were supplied.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No keychain keys were supplied."
           },
           "404": {
-            "description": "No profile in the collection matched the supplied keys.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No profile in the collection matched the supplied keys."
           }
         },
         "summary": "Profile Lookup API",
@@ -301,47 +328,65 @@
         },
         "parameters": [
           {
-            "description": "Identity keys to look a profile up by.",
-            "in": "body",
-            "name": "KeychainLookup",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/KeychainLookup"
-            }
-          },
-          {
             "description": "Identifier of the profile collection.",
             "in": "path",
             "name": "collection-id",
             "required": true,
-            "type": "string",
-            "x-example": "apc-2RP8xZMbG"
+            "schema": {
+              "example": "apc-2RP8xZMbG",
+              "type": "string"
+            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KeychainLookup"
+              }
+            }
+          },
+          "description": "Identity keys to look a profile up by.",
+          "required": true
+        },
         "responses": {
           "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                }
+              }
+            },
             "description": "The first profile matched by the supplied keys.",
             "headers": {
               "Location": {
                 "description": "Canonical URL of the matched profile.",
-                "type": "string"
+                "schema": {
+                  "type": "string"
+                }
               }
-            },
-            "schema": {
-              "$ref": "#/definitions/Profile"
             }
           },
           "400": {
-            "description": "No keychain keys were supplied.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No keychain keys were supplied."
           },
           "404": {
-            "description": "No profile in the collection matched the supplied keys.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No profile in the collection matched the supplied keys."
           }
         },
         "summary": "Profile Lookup API",
@@ -358,41 +403,55 @@
         },
         "parameters": [
           {
-            "description": "Join lookup-table values into the returned attributes.",
-            "in": "query",
-            "name": "enrich",
-            "required": false,
-            "type": "boolean"
-          },
-          {
             "description": "Identifier of the profile collection.",
             "in": "path",
             "name": "collection-id",
             "required": true,
-            "type": "string",
-            "x-example": "apc-2RP8xZMbG"
+            "schema": {
+              "example": "apc-2RP8xZMbG",
+              "type": "string"
+            }
           },
           {
             "description": "The profile's Amperity ID.",
             "in": "path",
             "name": "profile-id",
             "required": true,
-            "type": "string",
-            "x-example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+            "schema": {
+              "example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Join lookup-table values into the returned attributes.",
+            "in": "query",
+            "name": "enrich",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "The requested profile.",
-            "schema": {
-              "$ref": "#/definitions/Profile"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                }
+              }
+            },
+            "description": "The requested profile."
           },
           "404": {
-            "description": "No profile in the collection with that id.",
-            "schema": {
-              "$ref": "#/definitions/ErrorBody"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorBody"
+                }
+              }
+            },
+            "description": "No profile in the collection with that id."
           }
         },
         "summary": "Profile API",
@@ -409,43 +468,55 @@
         },
         "parameters": [
           {
-            "description": "Maximum number of results to return in one page.",
-            "format": "int64",
-            "in": "query",
-            "name": "limit",
-            "required": false,
-            "type": "integer"
-          },
-          {
-            "description": "Cursor from a previous response, to fetch the following page.",
-            "in": "query",
-            "name": "next_token",
-            "required": false,
-            "type": "string"
-          },
-          {
             "description": "Identifier of the profile collection.",
             "in": "path",
             "name": "collection-id",
             "required": true,
-            "type": "string",
-            "x-example": "apc-2RP8xZMbG"
+            "schema": {
+              "example": "apc-2RP8xZMbG",
+              "type": "string"
+            }
           },
           {
             "description": "The profile's Amperity ID.",
             "in": "path",
             "name": "profile-id",
             "required": true,
-            "type": "string",
-            "x-example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+            "schema": {
+              "example": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Maximum number of results to return in one page.",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Cursor from a previous response, to fetch the following page.",
+            "in": "query",
+            "name": "next_token",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Segment memberships for the profile.",
-            "schema": {
-              "$ref": "#/definitions/ProfileSegmentsEnvelope"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSegmentsEnvelope"
+                }
+              }
+            },
+            "description": "Segment memberships for the profile."
           }
         },
         "summary": "Profile Segment API",
@@ -462,35 +533,45 @@
         },
         "parameters": [
           {
+            "description": "Identifier of the real-time segment.",
+            "in": "path",
+            "name": "segment-id",
+            "required": true,
+            "schema": {
+              "example": "rts-3AV2oor45",
+              "type": "string"
+            }
+          },
+          {
             "description": "Maximum number of results to return in one page.",
-            "format": "int64",
             "in": "query",
             "name": "limit",
             "required": false,
-            "type": "integer"
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
           },
           {
             "description": "Cursor from a previous response, to fetch the following page.",
             "in": "query",
             "name": "next_token",
             "required": false,
-            "type": "string"
-          },
-          {
-            "description": "Identifier of the real-time segment.",
-            "in": "path",
-            "name": "segment-id",
-            "required": true,
-            "type": "string",
-            "x-example": "rts-3AV2oor45"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Member profiles of the segment.",
-            "schema": {
-              "$ref": "#/definitions/SegmentMembersEnvelope"
-            }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentMembersEnvelope"
+                }
+              }
+            },
+            "description": "Member profiles of the segment."
           }
         },
         "summary": "Segment API",
@@ -500,11 +581,10 @@
       }
     }
   },
-  "produces": [
-    "application/json"
-  ],
-  "schemes": [
-    "https"
-  ],
-  "swagger": "2.0"
+  "servers": [
+    {
+      "description": "Amazon AWS",
+      "url": "https://app.amperity.com/prof"
+    }
+  ]
 }
