@@ -3021,9 +3021,15 @@ The Eagle Eye wallet type created for new wallets by the **create** operation. D
 
 .. setting-eagle-eye-default-wallet-state-start
 
-The behavioral state applied to each wallet created by the **create** operation and to the identity attached to it. State values are configured per Eagle Eye company unit and differ from unit to unit, so set this only to a value your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave it unset to let Eagle Eye apply your unit's default state — the safest choice.
+The Eagle Eye behavioral state applied to each new wallet by the **create** operation. It sets the wallet's state only; the loyalty identity attached to the wallet takes its state from the **New identity state** setting. Wallet states and identity states are separate value sets, each configured per Eagle Eye company unit, so set this only to a wallet-state value your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave it unset to let Eagle Eye apply your unit's default wallet state — the safest choice.
 
 .. setting-eagle-eye-default-wallet-state-end
+
+.. setting-eagle-eye-default-identity-state-start
+
+The Eagle Eye behavioral state applied to the loyalty identity attached to each new wallet by the **create** operation. Identity states are a separate set of values from wallet states, each configured per Eagle Eye company unit, so set this only to an identity-state value your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave it unset to let Eagle Eye apply your unit's default identity state — the safest choice.
+
+.. setting-eagle-eye-default-identity-state-end
 
 .. setting-eagle-eye-operation-start
 
@@ -3042,7 +3048,7 @@ Every operation other than **create** first looks up the person's existing walle
 
 .. setting-eagle-eye-wallet-state-start
 
-The behavioral state applied by the **state-change** operation. State values are configured per Eagle Eye company unit and differ from unit to unit, so use only a value your Eagle Eye account manager has confirmed for your unit. Required when the operation is **state-change**; Amperity stops the run with a message if it is missing. You choose this when you configure the orchestration that sends to this destination.
+The behavioral state applied to the wallet by the **state-change** operation. This value comes from the wallet-state set — the same set as **New wallet state**, not the identity set — because state-change patches the wallet. Wallet states and identity states are separate value sets, so use only a wallet-state value your Eagle Eye account manager has confirmed for your unit. Required when the operation is **state-change**; Amperity stops the run with a message if it is missing. You choose this when you configure the orchestration that sends to this destination.
 
 .. setting-eagle-eye-wallet-state-end
 

@@ -75,11 +75,17 @@ Settings
    :start-after: .. setting-eagle-eye-default-wallet-type-start
    :end-before: .. setting-eagle-eye-default-wallet-type-end
 
-**Wallet state (new wallets)**
+**New wallet state**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-eagle-eye-default-wallet-state-start
    :end-before: .. setting-eagle-eye-default-wallet-state-end
+
+**New identity state**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-eagle-eye-default-identity-state-start
+   :end-before: .. setting-eagle-eye-default-identity-state-end
 
 **Wallet operation**
 
@@ -87,7 +93,7 @@ Settings
    :start-after: .. setting-eagle-eye-operation-start
    :end-before: .. setting-eagle-eye-operation-end
 
-**Wallet state (state change)**
+**Wallet state**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-eagle-eye-wallet-state-start
