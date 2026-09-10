@@ -400,13 +400,15 @@ Data validation
 
 .. events-google-enhanced-conversions-gdm-data-validation-start
 
-Amperity validates the dataset and each row before sending. A dataset that maps neither **email** nor **phone** is rejected before the orchestration runs, because Google cannot match a conversion without an identifier.
+An orchestration is not checked against the connector's schema before it runs, so a query that returns the wrong columns is not caught up front — the orchestration runs and reports every row as failed. Make sure your query returns the columns |destination-name| requires, spelled exactly as Amperity reads them:
 
-During a send, a row is dropped and reported as failed when:
+* **conversion_timestamp** on every row.
+* At least one of **email** or **phone** on every row. A query that returns neither column fails every row, because Google cannot match a conversion without an identifier.
+* Optionally, **conversion_value** with **currency_code**, and **order_id**.
 
-* It has no usable **email** or **phone** value.
+Return these names in lower case — ``conversion_timestamp``, ``email``, ``phone``, ``conversion_value``, ``currency_code``, and ``order_id`` — and match them exactly. Column names are case-sensitive: a column returned as ``Email`` is not read as **email**, so every row is dropped as unmatched and no error is raised before the run.
 
-A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Column names are matched without regard to capitalization. Rows that Google rejects — for example, an unparseable timestamp — are reported as failed rows with Google's reason in the orchestration's error log.
+During a send, a row is dropped and reported as failed when it has no usable **email** or **phone** value. A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Rows that Google rejects — for example, an unparseable timestamp — are reported as failed rows with Google's reason in the orchestration's error log.
 
 .. events-google-enhanced-conversions-gdm-data-validation-end
 
