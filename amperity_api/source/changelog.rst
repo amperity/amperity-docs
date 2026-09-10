@@ -90,7 +90,5 @@ Real-time API: unstable
 * Add :doc:`endpoint_get_profile_store_profile` endpoint.
 * Add :doc:`endpoint_get_profile_store_segment_profiles` endpoint.
 * Add :doc:`endpoint_get_profile_segments` endpoint.
-* Add :doc:`endpoint_get_profile_store_stats` endpoint.
-* Add :doc:`endpoint_get_profile_store_history` endpoint.
 
 .. changelog-realtime-api-current-end
