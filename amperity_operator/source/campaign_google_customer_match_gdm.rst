@@ -161,7 +161,7 @@ Configure credentials
           :start-after: .. credential-steps-select-type-start
           :end-before: .. credential-steps-select-type-end
 
-       .. note:: Amperity provides two Google Customer Match connectors. Select |plugin-name| to sync audiences over Google's Data Manager platform. **Google Customer Match** is the separate connector that uses the older Audience Partner API.
+       .. note:: Amperity provides two Google Customer Match connectors. Select |plugin-name| to sync audiences over Google's Data Manager platform. **Google Customer Match** is the separate connector that uses an older Google API.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px

@@ -51,7 +51,7 @@ A member whose chosen identifier is missing or cannot be used — a phone number
 
 The query or segment sent to |destination-name| must return the column that matches the configured **Match identifier**. Amperity recognizes only the **email**, **phone**, and **mobile-id** columns, and rejects a dataset that contains any other column.
 
-.. note:: |destination-name| is a separate connector from Google Customer Match, which sends audiences over Google's older Audience Partner API. This connector uses Google's newer Data Manager platform and authenticates as your own Google account. Existing audiences are not shared between the two connectors.
+.. note:: |destination-name| is a separate connector from Google Customer Match, which sends audiences over an older Google API. This connector uses Google's newer Data Manager platform and authenticates as your own Google account. Existing audiences are not shared between the two connectors.
 
 .. destination-google-customer-match-gdm-end
 
@@ -206,7 +206,7 @@ Configure credentials
           :start-after: .. credential-steps-select-type-start
           :end-before: .. credential-steps-select-type-end
 
-       .. note:: Amperity provides two Google Customer Match connectors. Select |plugin-name| to sync audiences over Google's Data Manager platform. **Google Customer Match** is the separate connector that uses the older Audience Partner API.
+       .. note:: Amperity provides two Google Customer Match connectors. Select |plugin-name| to sync audiences over Google's Data Manager platform. **Google Customer Match** is the separate connector that uses an older Google API.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
