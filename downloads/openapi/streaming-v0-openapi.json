@@ -1,0 +1,157 @@
+{
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "description": "Authenticate using a JWT access token generated from the Amperity user interface, from an API key carrying the Streaming Ingest Write Access option. Include the token in the Authorization header of every request.",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "contact": {
+      "email": "support@amperity.com",
+      "name": "Amperity Support",
+      "url": "https://docs.amperity.com/"
+    },
+    "description": "The Streaming API is a tenant-specific API that supports real-time streaming of data from external systems to Amperity. It is designed for streaming events and profile updates: a low latency, high throughput REST API, designed to accept billions of records per day.\n\nData is sent to streams, one per feed. Order events might be sent to one stream while profile updates are sent to another. Amperity does not enforce any particular data schema; each data schema is a unique stream, so use many streams to support many schemas. A stream may only be one payload type: JSON, which converts streaming data to NDJSON and is recommended, or XML, which converts it to CBOR.\n\nRate limits are not shared between production and sandboxes. Each sandbox has its own rate limit.\n\n[Streaming API](https://docs.amperity.com/operator/api_streaming.html) covers the rest: generating an access token, configuring endpoints, and the couriers and feeds that load what you stream.",
+    "title": "Amperity Streaming API",
+    "version": "v0",
+    "x-logo": {
+      "altText": "Amperity Streaming API Docs",
+      "backgroundColor": "#000",
+      "url": "_static/logo-api.png"
+    }
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/data/{stream-id}": {
+      "post": {
+        "description": "Records one upload for asynchronous ingestion and returns 202 as soon as it is durably queued, so a 202 reports that Amperity accepted the upload rather than that it loaded. `Content-Type` selects the payload type, and a stream may only be one of them.",
+        "parameters": [
+          {
+            "description": "The ID for the tenant to which a request will be sent.",
+            "in": "header",
+            "name": "X-Amperity-Tenant",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "An ID for this upload, echoed back on the response. Supply a stable one to make a retry of the same body identifiable downstream; the API generates one when the request does not.",
+            "in": "header",
+            "name": "X-Request-Id",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The ID of the stream to send data to. A stream ID is prefixed with `is-`. A correctly formatted ID for a stream that is not configured is still accepted: this API does not check that the stream exists.",
+            "in": "path",
+            "name": "stream-id",
+            "required": true,
+            "schema": {
+              "example": "is-a1b2c3d4",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "One record, as a JSON object. A JSON array is rejected: send one object per request. Amperity does not enforce any particular schema, and converts a JSON body to NDJSON.",
+                "type": "object"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "description": "One or more records, as an XML document. Amperity converts an XML body to CBOR and does not parse it synchronously.",
+                "type": "string"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "description": "One or more records, as an XML document. Amperity converts an XML body to CBOR and does not parse it synchronously.",
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted.",
+            "headers": {
+              "X-Request-Id": {
+                "description": "The request ID the upload was recorded under, echoed from `X-Request-Id` when the request supplied one and generated otherwise.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request malformed: the stream ID is not a stream ID, the content type is not one this API accepts, the body is empty, or a JSON body is not a JSON object. XML bodies are not checked synchronously, so a 202 does not promise that an XML body parses downstream. Do not retry."
+          },
+          "401": {
+            "description": "Unauthorized: the access token could not be verified, or it is expired. Do not retry."
+          },
+          "403": {
+            "description": "The access token does not carry write access to this tenant's Streaming API. Do not retry."
+          },
+          "405": {
+            "description": "Method not allowed: a stream accepts POST only."
+          },
+          "411": {
+            "description": "No `Content-Length` header. A chunked request has no declared length, and this API needs one to reject an oversized body before reading it."
+          },
+          "413": {
+            "description": "Request too large: the body may not exceed 5 MB. Do not retry."
+          },
+          "429": {
+            "description": "Request throttled. Retry with exponential back off."
+          },
+          "500": {
+            "description": "Internal error. Retry with exponential back off."
+          },
+          "503": {
+            "description": "Service unavailable: the upload could not be recorded. Retry with exponential back off."
+          },
+          "504": {
+            "description": "Gateway timeout. Retry with exponential back off."
+          }
+        },
+        "summary": "Send data to a stream",
+        "tags": [
+          "Streams"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "Your Amperity tenant",
+      "url": "https://{tenant-id}.amperity.com/stream/v0",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "description": "Send data to a stream.",
+      "name": "Streams"
+    }
+  ]
+}
