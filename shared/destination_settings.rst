@@ -1725,6 +1725,40 @@ The Customer ID of the Google Ads account.
 
 .. setting-google-enhanced-conversions-customer-id-end
 
+**Google Enhanced Conversions (GDM)**
+
+**Google Ads customer ID**
+
+.. setting-google-enhanced-conversions-gdm-customer-id-start
+
+The Google Ads account that receives the conversions, entered as digits only.
+
+.. setting-google-enhanced-conversions-gdm-customer-id-end
+
+**Conversion action ID**
+
+.. setting-google-enhanced-conversions-gdm-conversion-action-id-start
+
+The numeric ID of the Google Ads conversion action the conversions are attributed to. Find this ID in the Google Ads interface. This connector matches on the numeric ID and does not look a conversion action up by name.
+
+.. setting-google-enhanced-conversions-gdm-conversion-action-id-end
+
+**Manager (MCC) customer ID**
+
+.. setting-google-enhanced-conversions-gdm-login-customer-id-start
+
+Optional. The Google Ads manager (MCC) account used to reach the account in **Google Ads customer ID**, entered as digits only. Set this only when the connected Google account reaches the receiving account through a manager account; leave it empty for a directly owned account. Sending it when it is not needed causes Google to reject the request.
+
+.. setting-google-enhanced-conversions-gdm-login-customer-id-end
+
+**Event source**
+
+.. setting-google-enhanced-conversions-gdm-event-source-start
+
+Where these conversions happen. Select one of **IN_STORE** (in-store purchases), **PHONE** (call-center or phone bookings), **APP** (in-app purchases), or **OTHER** (any other offline conversion). Because a destination targets a single conversion action, the event source is set once on the destination rather than per row. Web and message sources are not offered, because this connector sends offline conversions.
+
+.. setting-google-enhanced-conversions-gdm-event-source-end
+
 
 
 
