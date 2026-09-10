@@ -289,8 +289,8 @@ Add destination
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
+             :start-after: .. setting-google-customer-match-gdm-membership-duration-start
+             :end-before: .. setting-google-customer-match-gdm-membership-duration-end
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-membership-duration-frequency-start

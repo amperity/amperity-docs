@@ -49,11 +49,22 @@ Each member is matched to Google users on a single identifier that you choose wh
 
 A member whose chosen identifier is missing or cannot be used — a phone number that does not parse, for example — is dropped and reported as a failed row, so that one bad member does not fail the whole run.
 
-The query or segment sent to |destination-name| must return the column that matches the configured **Match identifier**. Amperity recognizes only the **email**, **phone**, and **mobile-id** columns, and rejects a dataset that contains any other column.
+The query or segment sent to |destination-name| must return the one column that matches the configured **Match identifier** — an **email**, **phone**, or **mobile-id** column — and only that column.
 
 .. note:: |destination-name| is a separate connector from Google Customer Match, which sends audiences over an older Google API. This connector uses Google's newer Data Manager platform and authenticates as your own Google account. Existing audiences are not shared between the two connectors.
 
 .. destination-google-customer-match-gdm-end
+
+.. destination-google-customer-match-gdm-data-shape-start
+
+The query behind a **Send to** orchestration is not checked against the connector's schema before it runs, so a query that returns the wrong column is not caught up front. Make sure the query returns:
+
+* Exactly one column, named for the configured **Match identifier** and spelled exactly as Amperity reads it: ``email``, ``phone``, or ``mobile-id``. Note that ``mobile-id`` is hyphenated, not ``mobile_id``.
+* No other columns. Any extra column is ignored, not rejected.
+
+That column is also the key Amperity uses to track audience membership, so it must stay fixed: changing the **Match identifier** after the audience exists means recreating the audience. A query that omits the configured column, or returns a different one, still runs — every member then fails to match, the audience is left unchanged, and the run reports every row as failed with no error raised beforehand.
+
+.. destination-google-customer-match-gdm-data-shape-end
 
 .. destination-google-customer-match-gdm-api-note-start
 
@@ -161,8 +172,8 @@ Get details
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
+             :start-after: .. setting-google-customer-match-gdm-membership-duration-start
+             :end-before: .. setting-google-customer-match-gdm-membership-duration-end
 
 .. destination-google-customer-match-gdm-get-details-end
 
@@ -334,8 +345,8 @@ Add destination
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
+             :start-after: .. setting-google-customer-match-gdm-membership-duration-start
+             :end-before: .. setting-google-customer-match-gdm-membership-duration-end
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-membership-duration-frequency-start

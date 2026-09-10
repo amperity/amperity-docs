@@ -1729,7 +1729,11 @@ A description for the audience. Used only when Amperity creates the audience for
 
 **Membership duration**
 
-See common.
+.. setting-google-customer-match-gdm-membership-duration-start
+
+The length of time |duration|, after which Google removes a customer from this audience. This value may be between |duration-value|. Used only when Amperity creates the audience for the first time; changing it afterward has no effect on an existing audience. To remove members, exclude them from the audience — Amperity removes departing members by name on the next run.
+
+.. setting-google-customer-match-gdm-membership-duration-end
 
 **Mobile app ID**
 

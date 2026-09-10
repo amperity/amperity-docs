@@ -80,7 +80,11 @@ Build query
 
 .. sendto-google-customer-match-gdm-build-query-start
 
-Build a query that returns the column matching the **Match identifier** configured on the destination: **email**, **phone**, or **mobile-id**. Return only that column — Amperity rejects a dataset that contains columns it does not recognize.
+Build a query that returns the column matching the **Match identifier** configured on the destination.
+
+.. include:: ../../amperity_operator/source/destination_google_customer_match_gdm.rst
+   :start-after: .. destination-google-customer-match-gdm-data-shape-start
+   :end-before: .. destination-google-customer-match-gdm-data-shape-end
 
 The following example returns email addresses for a destination whose match identifier is **email**:
 
