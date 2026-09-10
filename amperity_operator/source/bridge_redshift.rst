@@ -818,4 +818,6 @@ To Amazon Redshift
 
 .. bridge-redshift-to-redshift-start
 
+Coming soon.
+
 .. bridge-redshift-to-redshift-end
