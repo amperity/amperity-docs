@@ -91,6 +91,7 @@ Site Index
    destination-persado
    destination-pinterest
    destination-pinterest-offline-events
+   destination-posthog
    destination-power-reviews
    destination-quad
    destination-reddit
