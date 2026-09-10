@@ -1,0 +1,516 @@
+{
+  "components": {
+    "schemas": {
+      "Index": {
+        "additionalProperties": false,
+        "description": "An index item",
+        "properties": {
+          "created_at": {
+            "description": "Time when the index was created",
+            "type": "string"
+          },
+          "description": {
+            "description": "Description of the index",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier for the index",
+            "type": "string"
+          },
+          "name": {
+            "description": "Display name of the index",
+            "type": "string"
+          },
+          "updated_at": {
+            "description": "Time when the index was last updated",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description",
+          "created_at",
+          "updated_at"
+        ],
+        "type": "object"
+      },
+      "ListIndexesResponse": {
+        "additionalProperties": false,
+        "description": "Response containing a list of available indexes",
+        "properties": {
+          "data": {
+            "description": "The indexes on this page.",
+            "items": {
+              "$ref": "#/components/schemas/Index"
+            },
+            "type": "array"
+          },
+          "next_token": {
+            "description": "The next token to fetch additional data",
+            "type": "string"
+          },
+          "total": {
+            "description": "The total number of indexes that exist",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "type": "object"
+      },
+      "ListProfilesResponse": {
+        "additionalProperties": false,
+        "description": "Response containing a single profile matching the provided primary key",
+        "properties": {
+          "data": {
+            "description": "An array of profiles",
+            "items": {},
+            "type": "array"
+          },
+          "next_token": {
+            "description": "The next token to fetch additional data",
+            "type": "string"
+          }
+        },
+        "required": [
+          "data"
+        ],
+        "type": "object"
+      },
+      "ProfileResponse": {
+        "additionalProperties": false,
+        "description": "Response containing a single profile matching the provided primary key",
+        "properties": {
+          "attributes": {
+            "$ref": "#/components/schemas/ProfileResponseAttributes"
+          },
+          "id": {
+            "description": "The id of a given profile",
+            "type": "string"
+          },
+          "index_id": {
+            "description": "The id of the index",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "index_id",
+          "attributes"
+        ],
+        "type": "object"
+      },
+      "ProfileResponseAttributes": {
+        "additionalProperties": {},
+        "description": "A map of key-value profile attributes. The specific keys and values depend on the index configuration.",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "description": "Authenticate using a Bearer token generated from an Amperity API key. Include the token in the Authorization header of every request.",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "contact": {
+      "email": "support@amperity.com",
+      "name": "Amperity Support",
+      "url": "https://docs.amperity.com/"
+    },
+    "description": "Read the indexes available in your tenant and the customer profiles within them.",
+    "title": "Amperity Profile API",
+    "version": "2025-07-31",
+    "x-logo": {
+      "altText": "Amperity Profile API Docs",
+      "backgroundColor": "#000",
+      "url": "_static/logo-api.png"
+    }
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/indexes": {
+      "get": {
+        "description": "Return the profile indexes configured in your tenant.",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_index.html"
+        },
+        "parameters": [
+          {
+            "description": "The ID for the tenant to which a request will be sent.",
+            "in": "header",
+            "name": "Amperity-Tenant",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A supported version of the Amperity API.",
+            "in": "header",
+            "name": "Api-Version",
+            "required": true,
+            "schema": {
+              "example": "2025-07-31",
+              "type": "string"
+            }
+          },
+          {
+            "description": "The maximum number of items to return.",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Opaque cursor for fetching the next page of results.",
+            "in": "query",
+            "name": "next_token",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "If true, the total count of all matching records is included in the response.",
+            "in": "query",
+            "name": "with_total",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListIndexesResponse"
+                }
+              }
+            },
+            "description": "A list of indexes"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Authentication Required"
+          },
+          "403": {
+            "description": "Not Authorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "405": {
+            "description": "Method Not Allowed"
+          },
+          "500": {
+            "description": "Internal Error"
+          },
+          "503": {
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "List indexes",
+        "tags": [
+          "Indexes"
+        ]
+      }
+    },
+    "/indexes/{index-id}": {
+      "get": {
+        "description": "Retrieve profiles that match the specified filter criteria",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile_index_id.html"
+        },
+        "parameters": [
+          {
+            "description": "The ID for the tenant to which a request will be sent.",
+            "in": "header",
+            "name": "Amperity-Tenant",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A supported version of the Amperity API.",
+            "in": "header",
+            "name": "Api-Version",
+            "required": true,
+            "schema": {
+              "example": "2025-07-31",
+              "type": "string"
+            }
+          },
+          {
+            "description": "ID of the index to query",
+            "in": "path",
+            "name": "index-id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Index"
+                }
+              }
+            },
+            "description": "The requested index"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Authentication Required"
+          },
+          "403": {
+            "description": "Not Authorized"
+          },
+          "404": {
+            "description": "Index not found"
+          },
+          "405": {
+            "description": "Method Not Allowed"
+          },
+          "500": {
+            "description": "Internal Error"
+          },
+          "503": {
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "Get an index by id",
+        "tags": [
+          "Indexes"
+        ]
+      }
+    },
+    "/indexes/{index-id}/profiles": {
+      "get": {
+        "description": "Retrieve profiles that match the specified filter criteria",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profiles_list.html"
+        },
+        "parameters": [
+          {
+            "description": "The ID for the tenant to which a request will be sent.",
+            "in": "header",
+            "name": "Amperity-Tenant",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A supported version of the Amperity API.",
+            "in": "header",
+            "name": "Api-Version",
+            "required": true,
+            "schema": {
+              "example": "2025-07-31",
+              "type": "string"
+            }
+          },
+          {
+            "description": "ID of the index to query",
+            "in": "path",
+            "name": "index-id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The maximum number of items to return",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          {
+            "description": "Opaque cursor for fetching the next page of results.",
+            "in": "query",
+            "name": "next_token",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListProfilesResponse"
+                }
+              }
+            },
+            "description": ""
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Authentication Required"
+          },
+          "403": {
+            "description": "Not Authorized"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "405": {
+            "description": "Method Not Allowed"
+          },
+          "500": {
+            "description": "Internal Error"
+          },
+          "503": {
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "List profiles in an index",
+        "tags": [
+          "Profiles"
+        ]
+      }
+    },
+    "/indexes/{index-id}/profiles/{profile-id}": {
+      "get": {
+        "description": "Retrieve a specific profile by its ID",
+        "externalDocs": {
+          "url": "https://docs.amperity.com/api/endpoint_get_profile.html"
+        },
+        "parameters": [
+          {
+            "description": "The ID for the tenant to which a request will be sent.",
+            "in": "header",
+            "name": "Amperity-Tenant",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "A supported version of the Amperity API.",
+            "in": "header",
+            "name": "Api-Version",
+            "required": true,
+            "schema": {
+              "example": "2025-07-31",
+              "type": "string"
+            }
+          },
+          {
+            "description": "ID of the index to query",
+            "in": "path",
+            "name": "index-id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "ID of the profile to retrieve",
+            "in": "path",
+            "name": "profile-id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileResponse"
+                }
+              }
+            },
+            "description": "The requested profile"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Authentication Required"
+          },
+          "403": {
+            "description": "Not Authorized"
+          },
+          "404": {
+            "description": "Profile not found"
+          },
+          "405": {
+            "description": "Method Not Allowed"
+          },
+          "500": {
+            "description": "Internal Error"
+          },
+          "503": {
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "Get a profile by primary key",
+        "tags": [
+          "Profiles"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "servers": [
+    {
+      "description": "Amazon AWS",
+      "url": "https://app.amperity.com/api"
+    },
+    {
+      "description": "Microsoft Azure",
+      "url": "https://{tenant-id}.amperity.com/api",
+      "variables": {
+        "tenant-id": {
+          "default": "your-tenant-id",
+          "description": "Your Amperity tenant ID."
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "description": "Return information about profile indexes configured in your tenant.",
+      "name": "Indexes"
+    },
+    {
+      "description": "Return customer profiles from a profile index.",
+      "name": "Profiles"
+    }
+  ]
+}
