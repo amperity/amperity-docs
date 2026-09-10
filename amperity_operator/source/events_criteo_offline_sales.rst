@@ -267,7 +267,7 @@ Build a query
 
 .. events-criteo-offline-sales-build-query-start
 
-Use a query to build a combination of data — typically from the **Unified Itemized Transactions** and **Customer 360** tables — that returns one row per transaction line item to send to |destination-name|. Each row must include a transaction ID, a timestamp, a product ID, a price, a quantity, and at least one shopper identifier: a hashed email address, a customer ID, or a retailer visitor ID. You can also include a currency code and a store ID.
+Use a query to build a combination of data — typically from the **Unified Itemized Transactions** and **Customer 360** tables — that returns one row per transaction line item to send to |destination-name|. Each row must include a transaction ID, a timestamp, a product ID, a price, a quantity, and at least one shopper identifier: an email address, a customer ID, or a retailer visitor ID. You can also include a currency code and a store ID.
 
 .. events-criteo-offline-sales-build-query-end
 
@@ -278,6 +278,8 @@ Review the :ref:`events-criteo-offline-sales-parameters` section for the columns
 .. note:: |destination-name| attributes offline sales only within **two days** of the transaction. Amperity enforces this window and skips rows outside it — reported as failed with the reason — so late-arriving in-store data cannot be backfilled through this connector. Any delay between an in-store sale and it reaching Amperity reduces this window.
 
 .. note:: |destination-name| deduplicates transactions on their transaction ID, so re-sending a transaction does not count it twice. Bound your query to recent transactions so each orchestration sends new sales rather than re-sending history.
+
+.. note:: |destination-name| matches **product_id** against the product catalog feed your business sends them. A line item whose product is not in that feed is rejected by |destination-name| and reported only in its own logs, so Amperity reports the row as sent successfully. Confirm that the product identifier your query returns is the same one your catalog feed uses.
 
 .. events-criteo-offline-sales-build-query-required-end
 
@@ -334,8 +336,8 @@ Amperity validates each row before grouping it and drops rows that cannot be sen
 * **transaction_id** is empty.
 * **timestamp** is empty or cannot be read. A timestamp may be a full date and time, a date on its own (treated as midnight UTC), or an epoch second count.
 * **timestamp** is more than two days in the past, outside |destination-name|'s attribution window. |destination-name| would accept the row and then discard it downstream without reporting it, so Amperity skips it instead.
-* **price** is not a number.
-* **quantity** is not a whole number.
+* **price** is not a number, or is negative. A negative price is a refund line, which the offline sales format cannot express.
+* **quantity** is not a whole number, or is zero or less. A negative quantity is a return or exchange line, which |destination-name| rejects as an invalid quantity and reports only in its own logs.
 
 .. events-criteo-offline-sales-data-validation-end
 
@@ -373,19 +375,21 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **item.id**
      - **Required**
 
-       The product identifier for this line item, matching your product catalog.
+       The product identifier for this line item. This must be the same identifier used in the product catalog feed your business sends to |destination-name|.
+
+       Amperity cannot verify this value. |destination-name| rejects a line item whose product is not in that feed, reports the rejection only in its own logs, and returns success to Amperity, so the row is reported as sent. If a run reports no failed rows but sales are not attributed, check this value first.
 
    * - **price**
      - **item.price**
      - **Required**
 
-       The unit price for this line item. A non-numeric value is dropped.
+       The unit price for this line item. A value that is not a number, or that is negative, is dropped.
 
    * - **quantity**
      - **item.quantity**
      - **Required**
 
-       The number of units purchased for this line item. A non-whole-number value is dropped.
+       The number of units purchased for this line item. A value that is not a whole number greater than zero is dropped.
 
    * - **email**
      - **id.email**
