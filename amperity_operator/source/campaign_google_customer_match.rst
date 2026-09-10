@@ -32,6 +32,8 @@ Configure campaigns for Google Customer Match
 
 Use Google Customer Match to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
 
+.. note:: Amperity provides a newer :doc:`Google Customer Match (GDM) <campaign_google_customer_match_gdm>` connector that syncs audiences through Google's Data Manager API. Google recommends the Data Manager API for new Customer Match setups, so use the Google Customer Match (GDM) connector for new campaigns.
+
 .. campaign-google-customer-match-end
 
 .. include:: ../../amperity_operator/source/destination_google_ads.rst
