@@ -162,6 +162,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_google_customer_match
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: campaign_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
@@ -395,6 +399,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
    Google Customer Match <campaign_google_customer_match>
+   Google Customer Match (GDM) <campaign_google_customer_match_gdm>
    HubSpot <campaign_hubspot>
    Infutor <campaign_infutor>
    Iterable <campaign_iterable>

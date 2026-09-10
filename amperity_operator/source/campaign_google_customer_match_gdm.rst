@@ -1,51 +1,56 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Google Customer Match
-.. |plugin-name| replace:: "Google Customer Match"
-.. |credential-type| replace:: "google-customer-match"
+.. |destination-name| replace:: Google Customer Match (GDM)
+.. |destination-api| replace:: Google Data Manager API
+.. |plugin-name| replace:: "Google Customer Match (GDM)"
+.. |credential-type| replace:: "google-customer-match-gdm"
 .. |required-credentials| replace:: "refresh token"
 .. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
+.. |filter-the-list| replace:: "google"
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "540"
-.. |filter-the-list| replace:: "google"
 
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to Google Customer Match.
+        Configure Amperity to send campaigns to Google Customer Match (GDM).
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to Google Customer Match.
+        Configure Amperity to send campaigns to Google Customer Match (GDM).
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure campaigns for Google Customer Match
+        Configure campaigns for Google Customer Match (GDM)
 
-==================================================
-Configure campaigns for Google Customer Match
-==================================================
+======================================================================
+Configure campaigns for Google Customer Match (GDM)
+======================================================================
 
-.. campaign-google-customer-match-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-google-customer-match-gdm-start
+   :end-before: .. term-google-customer-match-gdm-end
 
-Use Google Customer Match to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
+.. include:: ../../amperity_operator/source/destination_google_customer_match_gdm.rst
+   :start-after: .. destination-google-customer-match-gdm-beta-start
+   :end-before: .. destination-google-customer-match-gdm-beta-end
 
-.. note:: Amperity provides a newer :doc:`Google Customer Match (GDM) <campaign_google_customer_match_gdm>` connector that syncs audiences through Google's Data Manager API. Google recommends the Data Manager API for new Customer Match setups, so use the Google Customer Match (GDM) connector for new campaigns.
+.. include:: ../../amperity_operator/source/destination_google_customer_match_gdm.rst
+   :start-after: .. destination-google-customer-match-gdm-start
+   :end-before: .. destination-google-customer-match-gdm-end
 
-.. campaign-google-customer-match-end
+.. include:: ../../amperity_operator/source/destination_google_customer_match_gdm.rst
+   :start-after: .. destination-google-customer-match-gdm-api-note-start
+   :end-before: .. destination-google-customer-match-gdm-api-note-end
 
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-end
-
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+.. include:: ../../amperity_operator/source/destination_google_customer_match_gdm.rst
+   :start-after: .. destination-google-customer-match-gdm-behavior-start
+   :end-before: .. destination-google-customer-match-gdm-behavior-end
 
 
-.. _campaign-google-customer-match-get-details:
+.. _campaign-google-customer-match-gdm-get-details:
 
 Get details
 ==================================================
@@ -54,7 +59,7 @@ Get details
    :start-after: .. setting-common-get-details-start
    :end-before: .. setting-common-get-details-end
 
-.. campaign-google-customer-match-get-details-table-start
+.. campaign-google-customer-match-gdm-get-details-table-start
 
 .. list-table::
    :widths: 10 90
@@ -69,12 +74,13 @@ Get details
 
        **Refresh token**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Customer Match" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
-
+          .. important:: Authentication for |destination-name| *must* be completed within Google, using the **Connect with Google** sign-in flow, before configuring Amperity to send |what-send| to |where-send|. During sign-in, approve access to Google's Data Manager service.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -85,32 +91,38 @@ Get details
 
        **Customer product**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-customer-match-customer-product-start
-             :end-before: .. setting-google-customer-match-customer-product-end
+             :start-after: .. setting-google-customer-match-gdm-customer-product-start
+             :end-before: .. setting-google-customer-match-gdm-customer-product-end
 
        **Customer ID**
 
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-customer-id-start
-             :end-before: .. setting-google-ads-customer-id-end
-
-       **Audience name** (Required at orchestration)
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-audience-name-start
-             :end-before: .. setting-google-ads-audience-name-end
+             :start-after: .. setting-google-customer-match-gdm-customer-id-start
+             :end-before: .. setting-google-customer-match-gdm-customer-id-end
 
-       **Upload key type**
+       **Match identifier**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-upload-key-type-start
-             :end-before: .. setting-google-ads-upload-key-type-end
+             :start-after: .. setting-google-customer-match-gdm-match-identifier-start
+             :end-before: .. setting-google-customer-match-gdm-match-identifier-end
 
-.. campaign-google-customer-match-get-details-end
+       **Audience name** (Required at campaign)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-gdm-audience-name-start
+             :end-before: .. setting-google-customer-match-gdm-audience-name-end
+
+.. campaign-google-customer-match-gdm-get-details-end
 
 
-.. _campaign-google-customer-match-credentials:
+.. _campaign-google-customer-match-gdm-credentials:
 
 Configure credentials
 ==================================================
@@ -123,9 +135,9 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Google Customer Match**
+**To configure credentials for Google Customer Match (GDM)**
 
-.. campaign-google-customer-match-credentials-steps-start
+.. campaign-google-customer-match-gdm-credentials-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -149,6 +161,8 @@ Configure credentials
           :start-after: .. credential-steps-select-type-start
           :end-before: .. credential-steps-select-type-end
 
+       .. note:: Amperity provides two Google Customer Match connectors. Select |plugin-name| to sync audiences over Google's Data Manager platform. **Google Customer Match** is the separate connector that uses an older Google API.
+
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
@@ -160,24 +174,16 @@ Configure credentials
 
        **Refresh token**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-.. campaign-google-customer-match-credentials-steps-end
+.. campaign-google-customer-match-gdm-credentials-steps-end
 
 
-.. _campaign-google-customer-match-reauthorize-amperity:
-
-Reauthorize Amperity
---------------------------------------------------
-
-.. include:: ../../shared/destinations.rst
-   :start-after: .. destinations-oauth-reauthorize-start
-   :end-before: .. destinations-oauth-reauthorize-end
-
-
-.. _campaign-google-customer-match-add:
+.. _campaign-google-customer-match-gdm-add:
 
 Add destination
 ==================================================
@@ -186,9 +192,9 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Google Customer Match**
+**To add a destination for Google Customer Match (GDM)**
 
-.. campaign-google-customer-match-add-steps-start
+.. campaign-google-customer-match-gdm-add-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -203,16 +209,9 @@ Add destination
           :start-after: .. campaigns-steps-add-destinations-start
           :end-before: .. campaigns-steps-add-destinations-end
 
-       .. image:: ../../images/mockup-destinations-add-01-select-destination-common.png
-          :width: 380 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
-
        .. include:: ../../shared/destination_settings.rst
           :start-after: .. campaigns-steps-add-destinations-select-start
           :end-before: .. campaigns-steps-add-destinations-select-end
-
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -228,7 +227,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-test-connection-start
              :end-before: .. campaigns-steps-test-connection-end
-
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -249,7 +247,6 @@ Add destination
              :start-after: .. setting-common-business-user-access-restrict-pii-start
              :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
@@ -262,56 +259,48 @@ Add destination
        **Customer product**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-customer-match-customer-product-start
-             :end-before: .. setting-google-customer-match-customer-product-end
+             :start-after: .. setting-google-customer-match-gdm-customer-product-start
+             :end-before: .. setting-google-customer-match-gdm-customer-product-end
 
        **Customer ID**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-customer-id-start
-             :end-before: .. setting-google-ads-customer-id-end
+             :start-after: .. setting-google-customer-match-gdm-customer-id-start
+             :end-before: .. setting-google-customer-match-gdm-customer-id-end
 
-       **Audience name** (Required at orchestration)
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-audience-name-start
-             :end-before: .. setting-google-ads-audience-name-end
-
-       **Audience description** (Required at orchestration)
+       **Match identifier**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-audience-description-start
-             :end-before: .. setting-google-ads-audience-description-end
+             :start-after: .. setting-google-customer-match-gdm-match-identifier-start
+             :end-before: .. setting-google-customer-match-gdm-match-identifier-end
+
+       **Audience name** (Required at campaign)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-gdm-audience-name-start
+             :end-before: .. setting-google-customer-match-gdm-audience-name-end
+
+       **Audience description**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-gdm-audience-description-start
+             :end-before: .. setting-google-customer-match-gdm-audience-description-end
 
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
+             :start-after: .. setting-google-customer-match-gdm-membership-duration-start
+             :end-before: .. setting-google-customer-match-gdm-membership-duration-end
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-membership-duration-frequency-start
              :end-before: .. setting-common-membership-duration-frequency-end
-
-       **Upload key type**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-upload-key-type-start
-             :end-before: .. setting-google-ads-upload-key-type-end
-
-       **Mobile app ID**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-google-ads-mobile-app-id-start
-             :end-before: .. setting-google-ads-mobile-app-id-end
-
 
        **Campaign file settings**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. campaigns-steps-campaign-settings-start
              :end-before: .. campaigns-steps-campaign-settings-end
-
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
@@ -322,7 +311,6 @@ Add destination
           :start-after: .. campaigns-steps-business-users-start
           :end-before: .. campaigns-steps-business-users-end
 
-
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step six.
@@ -332,4 +320,4 @@ Add destination
           :start-after: .. destinations-steps-validate-audience-start
           :end-before: .. destinations-steps-validate-audience-end
 
-.. campaign-google-customer-match-add-steps-end
+.. campaign-google-customer-match-gdm-add-steps-end

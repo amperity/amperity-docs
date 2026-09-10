@@ -235,6 +235,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_google_cloud_storage
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: campaign_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
@@ -353,6 +357,7 @@ Send campaigns to any of the following marketing applications and workflows.
    DV360 <campaign_dv360>
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
+   Google Customer Match (GDM) <campaign_google_customer_match_gdm>
    HubSpot <campaign_hubspot>
    Iterable <campaign_iterable>
    Klaviyo <campaign_klaviyo>
