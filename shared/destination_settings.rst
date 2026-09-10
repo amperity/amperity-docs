@@ -3770,3 +3770,77 @@ Settings unique to Zendesk.
 Required. The subdomain for your brand's Zendesk account. For example: "socktown" is the subdomain for "socktown.zendesk.com".
 
 .. setting-zendesk-subdomain-end
+
+
+.. setting-posthog-host-start
+
+Which PostHog deployment this destination sends to: **us** (the default) or **eu** for PostHog Cloud, or **self-hosted** for a customer-hosted PostHog instance. When this is set to **self-hosted**, the **Self-hosted URL** setting is required.
+
+.. setting-posthog-host-end
+
+.. setting-posthog-self-hosted-url-start
+
+The base URL of your self-hosted PostHog instance — for example ``https://posthog.example.com``. Required when **PostHog host** is **self-hosted**, and ignored otherwise. If **PostHog host** is **self-hosted** and this is left blank, the run fails.
+
+.. setting-posthog-self-hosted-url-end
+
+.. setting-posthog-identity-column-start
+
+The column in the query results that carries each row's identity: the PostHog ``distinct_id`` in person-properties and events modes, the group key in group-properties mode, or the person to delete in person-deletion mode. This is always ``identity_value`` — your query must return a column with that exact name.
+
+.. setting-posthog-identity-column-end
+
+.. setting-posthog-write-mode-start
+
+What each orchestration sends to PostHog. A destination performs one write mode per orchestration; to send more than one, configure a separate orchestration, with its own query, for each mode:
+
+* **person-properties** (the default) writes each row as properties on a PostHog person, using ``$set`` — or ``$set_once`` for columns named in **Set-once properties**.
+* **group-properties** writes each row as properties on a PostHog group, using the row's identity as the group key. Requires the **Group type** setting.
+* **events** captures each row as a PostHog event, taking the event name and event time from the columns named by **Event name column** and **Timestamp column**. Requires both settings.
+* **person-deletion** permanently deletes each row's person from PostHog, through the Persons API. Intended for honoring data-subject deletion requests.
+
+You choose the write mode when you configure the orchestration that sends to this destination.
+
+.. setting-posthog-write-mode-end
+
+.. setting-posthog-set-once-properties-start
+
+Applies to person-properties mode only. A comma-separated list of column names to write with PostHog's ``$set_once`` semantics — written once and never overwritten — instead of the default ``$set``, which overwrites on every run. Leave it blank to write every non-identity column with ``$set``. A name that is not a column in the query results, or the identity column itself, fails the run before any data is sent.
+
+.. setting-posthog-set-once-properties-end
+
+.. setting-posthog-hashed-properties-start
+
+Applies to person-properties and group-properties modes. A comma-separated list of column names to SHA-256 hash (trimmed and lowercased) before sending. Leave it blank to send every column as-is. PostHog stores properties as literal, queryable values, so hash a column only when your own policy requires it — a hashed value can no longer be searched or filtered in PostHog. A name that is not a column in the query results, or the identity column itself, fails the run before any data is sent.
+
+.. setting-posthog-hashed-properties-end
+
+.. setting-posthog-group-type-start
+
+Applies to group-properties mode only, and is required for it. The PostHog group type this orchestration writes — for example ``company``. PostHog allows up to five group types per project; a value beyond that limit is rejected by PostHog when the run sends.
+
+.. setting-posthog-group-type-end
+
+.. setting-posthog-event-name-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's PostHog event name. This column is used as the event name and is not also sent as an event property. If the named column is not in the query results, the run fails before any data is sent.
+
+.. setting-posthog-event-name-column-end
+
+.. setting-posthog-timestamp-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's event time, so events reflect when they actually happened rather than when they were sent. This column is used as the timestamp and is not also sent as an event property. If a row's value is empty, PostHog records that event at ingest time instead. If the named column is not in the query results, the run fails before any data is sent.
+
+.. setting-posthog-timestamp-column-end
+
+.. setting-posthog-delete-events-start
+
+Applies to person-deletion mode only. When enabled, PostHog also queues each deleted person's events for deletion. Off by default, which removes the person record without cascading to their events.
+
+.. setting-posthog-delete-events-end
+
+.. setting-posthog-delete-recordings-start
+
+Applies to person-deletion mode only. When enabled, PostHog also queues each deleted person's session recordings for deletion. Off by default.
+
+.. setting-posthog-delete-recordings-end
