@@ -354,10 +354,14 @@ Data validation
 
 .. events-google-cm360-data-validation-start
 
-Amperity validates each row before sending and drops rows that CM360 would reject, so that one invalid row does not stop the rest of the batch. Dropped rows are reported as failed with the reason. A row is dropped when:
+Amperity validates your data in two stages — it checks the dataset for the required columns before sending anything, and then it validates each row as it builds the batch. These two stages fail differently, and the difference matters when you debug an orchestration.
 
-* **gclid**, **conversion_timestamp**, **conversion_value**, or **currency_code** is missing.
-* **conversion_value** is not a number.
+**Before sending**, Amperity confirms that the query returns every required column: **gclid**, **conversion_timestamp**, **conversion_value**, and **currency_code**. If any required column is absent from the query results, the orchestration fails immediately without sending any conversions and reports ``Dataset validate failed. Please check the input field names and types match documented requirements``. Correct the query so that it returns every required column, and then run the orchestration again.
+
+**For each row**, Amperity then drops rows that CM360 would reject, so that one invalid row does not stop the rest of the batch. Dropped rows are reported as failed with the reason, and the remaining rows are sent. A row is dropped when:
+
+* a required column is present but empty in that row.
+* **conversion_value** is present but is not a number.
 
 Column names are matched without regard to capitalization.
 
