@@ -3155,6 +3155,15 @@ Google Cloud Functions is a serverless computing platform that runs code in resp
 .. term-google-cloud-storage-end
 
 
+**Google CM360**
+
+.. term-google-cm360-start
+
+`Google Campaign Manager 360 <https://support.google.com/campaignmanager>`__ |ext_link| (CM360) is an ad management platform for measuring and attributing advertising campaigns. Offline conversions are conversions that happen away from your website, such as an in-store purchase, that your brand sends back to CM360 tied to the Google ad click that led to them. Search Ads 360 uses the delivered value of these conversions — for example, a predicted lifetime value — to optimize bidding.
+
+.. term-google-cm360-end
+
+
 **Google Customer Match**
 
 .. vale off

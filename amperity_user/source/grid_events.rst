@@ -63,6 +63,10 @@ Events
       :link-type: doc
       :link: events_google_analytics
 
+   .. grid-item-card:: Google Campaign Manager 360
+      :link-type: doc
+      :link: events_google_cm360
+
    .. grid-item-card:: Klaviyo
       :link-type: ref
       :link: destination-klaviyo-customer-profile-parameters
@@ -116,6 +120,7 @@ Events
    Criteo Offline Sales <events_criteo_offline_sales>
    Google Ads <events_google_enhanced_conversions>
    Google Analytics 4 <events_google_analytics>
+   Google Campaign Manager 360 <events_google_cm360>
    Meta Ads Manager <events_meta_ads_manager>
    Microsoft Ads Conversions API <events_microsoft_ads_conversions>
    Microsoft Advertising offline conversions <events_microsoft_ads>

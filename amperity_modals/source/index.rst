@@ -60,6 +60,7 @@ Site Index
    destination-gcs
    destination-google-ads
    destination-google-analytics-offline-events
+   destination-google-cm360
    destination-google-customer-match
    destination-google-enhanced-conversions
    destination-hubspot
