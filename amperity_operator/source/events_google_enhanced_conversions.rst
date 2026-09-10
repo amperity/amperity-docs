@@ -33,7 +33,7 @@ Configure events for Google Enhanced Conversions
 
 .. events-google-enhanced-conversions-about-start
 
-.. note:: Amperity provides a newer :doc:`Google Enhanced Conversions (GDM) <events_google_enhanced_conversions_gdm>` connector that sends conversions over Google's Data Manager platform. Google closed this older upload path to new advertisers on 15 June 2026, so if you began uploading enhanced conversions after that date, use the Google Enhanced Conversions (GDM) connector instead.
+.. note:: Amperity provides a newer :doc:`Google Enhanced Conversions (GDM) <events_google_enhanced_conversions_gdm>` connector that uploads conversions through Google's Data Manager API. As of 15 June 2026, Google began moving offline conversion and enhanced-conversions uploads to the Data Manager API and blocking them in the Google Ads API that this connector uses, so new setups should use the Google Enhanced Conversions (GDM) connector.
 
 When a customer purchases something from your brand's website, you likely collect some first-party data from that customer to complete the transaction. For example, a physical address, an email address, a phone number, and a full name.
 

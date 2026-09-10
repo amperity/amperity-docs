@@ -55,7 +55,7 @@ Amperity sends conversions to Google Ads through the Google Data Manager API. Th
 
 .. events-google-enhanced-conversions-gdm-which-start
 
-.. important:: Amperity provides two Google Enhanced Conversions connectors, and both appear in the destination picker. Use **Google Enhanced Conversions (GDM)** — this connector — for new setups: it sends conversions over Google's Data Manager platform, which Google requires for advertisers who began uploading enhanced conversions after 15 June 2026. The separate **Google Enhanced Conversions** connector uses the older Google Ads API upload path. Connect and configure each one separately.
+.. important:: Amperity provides two Google Enhanced Conversions connectors, and both appear in the destination picker. Use **Google Enhanced Conversions (GDM)** — this connector — for new setups: it uploads conversions through Google's Data Manager API. As of 15 June 2026, Google began moving offline conversion and enhanced-conversions uploads to the Data Manager API and blocking them in the older Google Ads API that the separate **Google Enhanced Conversions** connector uses. Connect and configure each connector separately.
 
 .. events-google-enhanced-conversions-gdm-which-end
 
