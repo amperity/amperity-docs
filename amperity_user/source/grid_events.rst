@@ -59,6 +59,10 @@ Events
       :link-type: doc
       :link: events_google_enhanced_conversions
 
+   .. grid-item-card:: Google Enhanced Conversions (GDM)
+      :link-type: doc
+      :link: events_google_enhanced_conversions_gdm
+
    .. grid-item-card:: Google Analytics 4
       :link-type: doc
       :link: events_google_analytics
@@ -115,6 +119,7 @@ Events
    Criteo <events_criteo>
    Criteo Offline Sales <events_criteo_offline_sales>
    Google Ads <events_google_enhanced_conversions>
+   Google Enhanced Conversions (GDM) <events_google_enhanced_conversions_gdm>
    Google Analytics 4 <events_google_analytics>
    Meta Ads Manager <events_meta_ads_manager>
    Microsoft Ads Conversions API <events_microsoft_ads_conversions>
