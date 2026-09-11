@@ -7794,3 +7794,10 @@ Zendesk is a service-first customer relationship management (CRM) application. C
 A 4-5-4 calendar divides years into months using a 4 weeks--5 weeks--4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
+
+
+.. term-posthog-start
+
+PostHog is a product analytics platform. It captures product events and maintains person and group profiles that teams use to analyze and segment product usage.
+
+.. term-posthog-end
