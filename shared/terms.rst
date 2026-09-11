@@ -7789,6 +7789,6 @@ A 4-5-4 calendar divides years into months using a 4 weeks--5 weeks--4 weeks pat
 
 .. term-posthog-start
 
-PostHog is a product analytics platform. It captures product events and maintains person and group profiles that product teams use to analyze usage, build cohorts, and run experiments.
+PostHog is a product analytics platform. It captures product events and maintains person and group profiles that teams use to analyze and segment product usage.
 
 .. term-posthog-end

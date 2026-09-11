@@ -91,7 +91,7 @@ The **Write mode** setting selects what each row does, and an orchestration perf
 
 In person-properties and group-properties modes, you can SHA-256 hash specific columns before sending with the **Hashed properties** setting. PostHog stores properties as literal, queryable values, so hash a column only when your own policy requires it — a hashed value can no longer be searched or filtered in PostHog.
 
-.. caution:: In group-properties mode, PostHog also creates a person record for each group's key. Syncing a large number of groups therefore adds an equal number of person records to your PostHog project, and those records count toward your PostHog billing — for example, monthly tracked users. This is a property of how PostHog ingests group updates, not a setting Amperity can change.
+.. caution:: In group-properties mode, PostHog also creates a person record for each group's key. Syncing a large number of groups adds an equal number of synthetic person records to your PostHog project, alongside the people you actually track, which can inflate person counts and clutter the Persons list. This is a property of how PostHog ingests group updates, not a setting Amperity can change.
 
 .. caution:: person-deletion mode permanently removes each person from PostHog and cannot be undone. Restrict these orchestrations to the people you intend to delete.
 
