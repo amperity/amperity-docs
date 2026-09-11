@@ -40,6 +40,10 @@ Configure Amperity Bridge
       :link-type: doc
       :link: bridge_google_bigquery
 
+   .. grid-item-card:: Amperity Bridge for Amazon Redshift
+      :link-type: doc
+      :link: bridge_redshift
+
    .. grid-item-card:: Amperity Bridge for Snowflake
       :link-type: doc
       :link: bridge_snowflake
@@ -55,4 +59,5 @@ Configure Amperity Bridge
    About Amperity Bridge <bridge>
    Databricks <bridge_databricks>
    Google BigQuery <bridge_google_bigquery>
+   Amazon Redshift <bridge_redshift>
    Snowflake <bridge_snowflake>
