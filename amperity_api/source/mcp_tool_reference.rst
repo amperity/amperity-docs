@@ -79,6 +79,9 @@ Manage which Amperity tenant the current session targets, and read session-level
    * - Submit feedback to the Amperity team
      - **feedback_submit**
 
+   * - File an Amperity support ticket
+     - **support_ticket_create**
+
 
 .. _mcp-tool-databases:
 
