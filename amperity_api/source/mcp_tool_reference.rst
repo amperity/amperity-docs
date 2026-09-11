@@ -212,15 +212,6 @@ Author, run, and organize queries against Amperity data.
 
        **query_get_column_stats**
 
-   * - Manage Pulse visualizations
-     - **pulse_viz_list**
-
-       **pulse_viz_get**
-
-       **pulse_viz_upsert**
-
-       **pulse_viz_delete**
-
    * - Organize queries into folders
      - **query_folder_list**
 
@@ -231,6 +222,39 @@ Author, run, and organize queries against Amperity data.
        **query_folder_update**
 
        **query_folder_delete**
+
+
+.. _mcp-tool-signal:
+
+Signal dashboard
+==================================================
+
+Manage Signal boards — the dashboard's tabs — and the cards on them. Each card names its own database and table, and declares the measure, dimension, and filter it renders rather than carrying SQL.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Manage boards
+     - **signal_board_list**
+
+       **signal_board_get**
+
+       **signal_board_upsert**
+
+       **signal_board_delete**
+
+   * - Manage the cards on a board
+     - **signal_viz_list**
+
+       **signal_viz_get**
+
+       **signal_viz_upsert**
+
+       **signal_viz_delete**
 
 
 .. _mcp-tool-identity-resolution:
@@ -629,6 +653,73 @@ Manage segments and folders.
 
    * - Read the tenant's AmpAI system prompt
      - **ai_system_prompt_get**
+
+
+.. _mcp-tool-real-time:
+
+Real-time profiles and events
+==================================================
+
+Configure the real-time surface: event streams and their event types, profile collections and their attributes, and real-time segments.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Manage event streams
+     - **event_stream_list**
+
+       **event_stream_get**
+
+       **event_stream_upsert**
+
+       **event_stream_delete**
+
+   * - Inspect recent events on a stream
+     - **event_stream_get_recent_events**
+
+   * - Manage event types on a stream
+     - **event_type_list**
+
+       **event_type_get**
+
+       **event_type_upsert**
+
+       **event_type_delete**
+
+   * - Manage profile collections
+     - **profile_collection_list**
+
+       **profile_collection_get**
+
+       **profile_collection_upsert**
+
+       **profile_collection_delete**
+
+   * - Manage profile collection attributes
+     - **profile_collection_set_attribute**
+
+       **profile_collection_delete_attribute**
+
+   * - Recompute profiles
+     - **profile_collection_run**
+
+   * - Look up an individual's live profile and its segment membership (returns customer data; requires PII read permissions)
+     - **profile_lookup**
+
+       **profile_list_segments**
+
+   * - Manage real-time segments
+     - **real_time_segment_list**
+
+       **real_time_segment_get**
+
+       **real_time_segment_upsert**
+
+       **real_time_segment_delete**
 
 
 .. _mcp-tool-labels:
