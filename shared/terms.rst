@@ -3195,6 +3195,15 @@ Looker is an enterprise platform for business intelligence, data applications, a
 .. term-google-enhanced-conversions-end
 
 
+**Google Enhanced Conversions (GDM)**
+
+.. term-google-enhanced-conversions-gdm-start
+
+Google Enhanced Conversions (GDM) sends offline conversions from Amperity to a Google Ads conversion action, so Google Ads can measure and optimize on conversions that happen away from your website. Each conversion is matched to a Google user on a hashed email address or phone number, which suits in-store, call-centre, and in-app conversions where no ad-click identifier exists. The connector uses Google's Data Manager platform (GDM).
+
+.. term-google-enhanced-conversions-gdm-end
+
+
 **Google Play**
 
 .. term-google-play-start

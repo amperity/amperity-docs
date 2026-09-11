@@ -63,6 +63,7 @@ Site Index
    destination-google-cm360
    destination-google-customer-match
    destination-google-enhanced-conversions
+   destination-google-enhanced-conversions-gdm
    destination-hubspot
    destination-infutor
    destination-iterable

@@ -62,6 +62,10 @@ Set up measurement of events like in-store purchases or venue check-ins.
       :link-type: doc
       :link: events_google_enhanced_conversions
 
+   .. grid-item-card:: Google Enhanced Conversions (GDM)
+      :link-type: doc
+      :link: events_google_enhanced_conversions_gdm
+
    .. grid-item-card:: Meta Ads Manager
       :link-type: doc
       :link: events_meta_ads_manager
@@ -106,6 +110,7 @@ Set up measurement of events like in-store purchases or venue check-ins.
    Google Analytics 4 <events_google_analytics>
    Google Campaign Manager 360 <events_google_cm360>
    Google Enhanced Conversions <events_google_enhanced_conversions>
+   Google Enhanced Conversions (GDM) <events_google_enhanced_conversions_gdm>
    Meta Ads Manager <events_meta_ads_manager>
    Microsoft Ads Conversions API <events_microsoft_ads_conversions>
    Microsoft Advertising offline conversions <events_microsoft_ads>
