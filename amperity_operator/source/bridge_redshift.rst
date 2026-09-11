@@ -6,11 +6,11 @@
 
 .. meta::
     :description lang=en:
-        testtesttest
+        Amperity Bridge for Amazon Redshift uses an UNLOAD export pattern to bring approved Amazon Redshift tables and views into Amperity on a schedule.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        testtesttest
+        Amperity Bridge for Amazon Redshift uses an UNLOAD export pattern to bring approved Amazon Redshift tables and views into Amperity on a schedule.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -22,7 +22,72 @@ Connect Amperity Bridge to Amazon Redshift
 
 .. bridge-redshift-about-start
 
+Amperity Bridge for |destination-name| lets you use approved |destination-name| tables and views as the data surface for the data that you send to Amperity. Your team defines the schemas, tables, and views that Amperity may access, and Amperity ingests from those approved objects on a schedule, without requiring you to build or maintain a separate file export or feed pipeline.
+
 .. bridge-redshift-about-end
+
+.. bridge-redshift-early-access-start
+
+.. admonition:: Early access
+
+   Amperity Bridge for |destination-name| is available as an inbound-only connection, offered to select customers as part of early access. Outbound support--writing data from Amperity to |destination-name|--is :ref:`not currently available <bridge-redshift-to-redshift>`. Contact your Amperity representative to learn more.
+
+.. bridge-redshift-early-access-end
+
+.. bridge-redshift-sync-behavior-start
+
+.. important:: Amperity Bridge for |destination-name| performs full-table and full-view exports. Incremental synchronization is not currently supported.
+
+   Review the :ref:`limitations <bridge-redshift-limitations>` before you configure a bridge.
+
+.. bridge-redshift-sync-behavior-end
+
+
+.. _bridge-redshift-how-it-works:
+
+How it works
+==================================================
+
+.. bridge-redshift-how-it-works-start
+
+Amperity Bridge for Databricks, Google BigQuery, and Snowflake connects through each platform's native data-sharing protocol. Amperity Bridge for |destination-name| is different. It uses an **UNLOAD** export pattern:
+
+#. Amperity schedules and orchestrates the inbound bridge run.
+#. Amperity uses an approved, role-based access path to run a query against your |destination-name| using the |destination-name| Data API.
+#. |destination-name| unloads the result set of the configured table or view to the storage for your Amperity tenant.
+#. Amperity ingests the exported files into your Amperity source and domain tables.
+
+Because the compute for the export runs in your |destination-name|, you retain visibility into query history and workload impact, and you control what Amperity can query through standard |destination-name| grants.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Area
+     - Behavior
+
+   * - Query and export pattern
+     - Amperity runs an **UNLOAD** statement from your |destination-name| to the storage for your Amperity tenant.
+
+   * - Where compute runs
+     - The query and the export run on your |destination-name| compute, which means that they appear in your query history and in your billing.
+
+   * - Data surface
+     - The bridge reads from the |destination-name| tables and views that you approve. You determine which objects are exposed to Amperity.
+
+   * - Row and column selection
+     - The bridge uses ``SELECT *`` against the configured table or view. To expose a subset of rows or columns, create a view and expose that view instead of the base table.
+
+   * - Load behavior
+     - Full load. Each run expects the configured object to represent the complete data set that Amperity should load. Incremental synchronization is not currently supported.
+
+   * - Deployment models
+     - Both provisioned clusters and Serverless workgroups are supported.
+
+   * - Encryption
+     - Exported objects use server-side encryption with AES256.
+
+.. bridge-redshift-how-it-works-end
 
 
 .. _bridge-redshift-data-types:
@@ -355,76 +420,102 @@ Get details
 
 .. bridge-redshift-from-redshift-get-details-start
 
-Before you can create inbound sharing between |destination-name| and Amperity you need to collect the following information.
+Before you configure the bridge, gather the following from your AWS and |destination-name| environment.
 
 .. list-table::
-   :widths: 10 90
-   :header-rows: 0
+   :widths: 25 40 35
+   :header-rows: 1
 
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 1.
-          :align: center
-          :class: no-scaled-link
-     - The values that you need to write the IAM policies are specific to your tenant. Amperity shows them at the start of the bridge flow.
+   * - Category
+     - Information needed
+     - Why it matters
 
-       Open the **Sources** page. Under **Inbound shares** click **Add bridge**, choose **Amazon Redshift**, choose **Create new bridge**, and then give the bridge a name.
+   * - AWS and |destination-name| environment
+     - The AWS account ID; the cluster identifier or Serverless workgroup name; the database name; the region.
+     - Identifies the source environment and confirms the region and connectivity requirements.
 
-       The dialog box displays three copyable values.
+   * - Approved data objects
+     - The schema names; the table and view names; any column exclusions, row filters, or masking that is applied by a view.
+     - Defines exactly what data Amperity can access.
 
-       .. list-table::
-          :widths: 30 70
-          :header-rows: 1
+   * - Amazon S3 landing location
+     - Whether you are using Bring Your Own Storage (BYOS) or storage that is managed by Amperity.
+     - Determines where the **UNLOAD** output lands and who manages the access policy for that bucket.
 
-          * - Value
-            - Use it for
+   * - Schedule and volume
+     - The expected export cadence; the approximate table sizes and row counts.
+     - Supports performance planning and helps size your first sync.
 
-          * - **Amperity query role**
-            - The principal that your query role must trust.
-
-          * - **External ID**
-            - Your query role should allow only principals with this external ID to assume it.
-
-          * - **Amperity storage role**
-            - The role that your unload role is given permission to assume.
-
-       .. important:: Copy all three values before continuing.
-
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 2.
-          :align: center
-          :class: no-scaled-link
-     - Permission to create IAM roles in the AWS account that owns your |destination-name|, and permission to associate an IAM role with your cluster or workgroup.
-
-       Both the :ref:`query role <bridge-redshift-from-redshift-configure-redshift-query-role>` and the :ref:`unload role <bridge-redshift-from-redshift-configure-redshift-unload-role>` are created in that account.
-
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 3.
-          :align: center
-          :class: no-scaled-link
-     - Superuser access to |destination-name|, or ownership of the objects that you plan to sync.
-
-       Superuser access is required to :ref:`create the database user <bridge-redshift-from-redshift-configure-redshift-db-user>` on a provisioned cluster. :ref:`Granting database access <bridge-redshift-from-redshift-configure-redshift-grants>` requires a superuser or the owner of each object.
-
-
-   * - .. image:: ../../images/steps-arrow-off-black.png
-          :width: 60 px
-          :alt: Requirement 4.
-          :align: center
-          :class: no-scaled-link
-     - The details of your |destination-name| deployment, which are :ref:`entered in Amperity <bridge-redshift-from-redshift-add-bridge>` after the roles exist:
-
-       * Whether it is a provisioned cluster or a Serverless workgroup.
-       * The region in which it runs, such as "us-west-2".
-       * The cluster identifier, for a provisioned cluster, or the workgroup name, for a Serverless workgroup.
-       * A database within your |destination-name| to use as an entry point.
-       * The 12-digit AWS account ID that owns the two roles.
+   * - Operational owner
+     - Who owns IAM, |destination-name| grants, and troubleshooting on your side.
+     - Gives Amperity a contact for schema changes and incident triage.
 
 .. bridge-redshift-from-redshift-get-details-end
+
+
+.. _bridge-redshift-from-redshift-get-details-responsibilities:
+
+Configuration responsibilities
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. bridge-redshift-from-redshift-get-details-responsibilities-start
+
+Amperity Bridge for |destination-name| is self-service. Configuration is split between the values that Amperity provides and the resources that you create in your AWS account.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Amperity provides
+     - Your team configures
+
+   * - * The **Amperity query role**.
+       * The **External ID**.
+       * The **Amperity storage role**.
+
+       See :ref:`Values from Amperity <bridge-redshift-from-redshift-get-details-values>`.
+
+     - * The |destination-name| schemas, tables, and views that Amperity may access.
+       * The :ref:`query role <bridge-redshift-from-redshift-configure-redshift-query-role>`.
+       * The :ref:`unload role <bridge-redshift-from-redshift-configure-redshift-unload-role>`.
+       * The :ref:`database permissions and grants <bridge-redshift-from-redshift-configure-redshift-grants>`.
+       * The :ref:`database user <bridge-redshift-from-redshift-configure-redshift-db-user>`, for a provisioned cluster.
+
+.. bridge-redshift-from-redshift-get-details-responsibilities-end
+
+
+.. _bridge-redshift-from-redshift-get-details-values:
+
+Values from Amperity
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. bridge-redshift-from-redshift-get-details-values-start
+
+The values that you need to write the IAM policies are specific to your tenant. Amperity shows them at the start of the bridge flow.
+
+Open the **Sources** page. Under **Inbound shares** click **Add bridge**, choose **Amazon Redshift**, choose **Create new bridge**, and then give the bridge a name.
+
+The dialog box displays three copyable values.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Value
+     - Use it for
+
+   * - **Amperity query role**
+     - The principal that your query role must trust.
+
+   * - **External ID**
+     - Your query role should allow only principals with this external ID to assume it.
+
+   * - **Amperity storage role**
+     - The role that your unload role is given permission to assume.
+
+.. important:: Copy all three values before continuing.
+
+.. bridge-redshift-from-redshift-get-details-values-end
 
 
 .. _bridge-redshift-from-redshift-configure-redshift:
@@ -443,26 +534,22 @@ To configure |destination-name| to connect with Amperity you need to create the 
 
 .. _bridge-redshift-from-redshift-configure-redshift-db-user:
 
-Create the database user
-++++++++++++++++++++++++++++++++++++++++++++++++++
+Create the database user (provisioned cluster only)
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. bridge-redshift-from-redshift-configure-redshift-db-user-start
 
-This step applies only to provisioned clusters. Skip it for a Serverless workgroup, where the database identity is :ref:`derived from the query role <bridge-redshift-from-redshift-configure-redshift-grants>`.
+This step applies only if you are using a provisioned cluster. On a provisioned cluster the queries run as a named |destination-name| database user. Amperity does not create it, so create it now. The name that you choose goes into the :ref:`permission policy for the query role <bridge-redshift-from-redshift-configure-redshift-query-role>` in the next step.
 
-On a provisioned cluster the queries run as a named |destination-name| database user. Amperity does not create this user, so create it now. The name that you choose is used in the :ref:`permission policy for the query role <bridge-redshift-from-redshift-configure-redshift-query-role>` and is entered as the **Database user** when you :ref:`add the inbound bridge <bridge-redshift-from-redshift-add-bridge>`.
-
-Connect to your cluster as a superuser using the **Query editor v2** in the |destination-name| console, and then run:
+Connect to your cluster as a superuser through the **Query editor v2** in the |destination-name| console, and then run the following. Modify the name to what you want, but use all lowercase characters.
 
 .. code-block:: sql
 
    CREATE USER amperity PASSWORD DISABLE;
 
-You may use any name for this user. Use all lowercase characters.
+.. note:: You can set a real password by replacing **DISABLE** with the password that you want. Nothing about the integration changes. Amperity is never given the password and never uses it.
 
-.. note:: You may set a real password by replacing **DISABLE** with the password that you want. Nothing about the integration changes. Amperity is never given the password and never uses it.
-
-   A password would only allow someone to log in as this user directly, which is not required by the bridge. Amperity recommends using **DISABLE**.
+   A password would only let someone log in as this user directly, which is not needed for the bridge, which is why Amperity recommends **DISABLE**.
 
 .. bridge-redshift-from-redshift-configure-redshift-db-user-end
 
@@ -474,13 +561,13 @@ Create the query role
 
 .. bridge-redshift-from-redshift-configure-redshift-query-role-start
 
-In the AWS account that owns your |destination-name|, create an IAM role with a name that starts with "AmperityRedshiftBridge", such as "AmperityRedshiftBridgeQuery".
+In the AWS account that owns your |destination-name|, create an IAM role whose name starts with "AmperityRedshiftBridge", such as "AmperityRedshiftBridgeQuery".
 
 **Trust policy**
 
-Substitute the **Amperity query role** and **External ID** values that you copied when you :ref:`got the details <bridge-redshift-from-redshift-get-details>`.
+Substitute the **Amperity query role** and **External ID** that you copied from the :ref:`values that Amperity provides <bridge-redshift-from-redshift-get-details-values>`.
 
-.. important:: Trust the Amperity query role ARN exactly as it is given, rather than the entire Amperity account.
+.. important:: Trust the query role ARN exactly as it is given, rather than the whole Amperity account.
 
 .. code-block:: json
 
@@ -503,15 +590,9 @@ Substitute the **Amperity query role** and **External ID** values that you copie
      ]
    }
 
-**Permission policy for a Serverless workgroup**
+**Permission policy: Redshift Serverless**
 
-Attach this policy for a Serverless workgroup. Replace **<REGION>** with the region in which your |destination-name| runs and **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns it.
-
-**<WORKGROUP_UUID>** is the UUID for the workgroup, taken from its ARN, and not the name of the workgroup. Find it in the details for the workgroup in the |destination-name| console or by running:
-
-.. code-block:: bash
-
-   aws redshift-serverless get-workgroup --workgroup-name <WORKGROUP_NAME>
+Attach this policy for a Serverless workgroup. Replace **<REGION>** with the region that your |destination-name| runs in and **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns it. **<WORKGROUP_UUID>** is the workgroup's UUID from its ARN, and not its name.
 
 .. code-block:: json
 
@@ -542,9 +623,9 @@ Attach this policy for a Serverless workgroup. Replace **<REGION>** with the reg
      ]
    }
 
-**Permission policy for a provisioned cluster**
+**Permission policy: provisioned Redshift instance**
 
-Attach this policy instead for a provisioned cluster. Replace **<REGION>** with the region in which your |destination-name| runs and **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns it. **<CLUSTER_IDENTIFIER>** is the identifier for your cluster, **<DATABASE>** is the database that you connect through, and **<DB_USER>** is the :ref:`database user that you created <bridge-redshift-from-redshift-configure-redshift-db-user>`.
+Attach this policy instead for a provisioned cluster. Replace **<REGION>** with the region that your |destination-name| runs in and **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns it. **<CLUSTER_IDENTIFIER>** is your cluster's identifier, **<DATABASE>** is the database that you connect through, and **<DB_USER>** is the :ref:`database user that you created <bridge-redshift-from-redshift-configure-redshift-db-user>`.
 
 .. code-block:: json
 
@@ -579,7 +660,7 @@ Attach this policy instead for a provisioned cluster. Replace **<REGION>** with 
      ]
    }
 
-.. note:: **DescribeStatement** and **GetStatementResult** are keyed by statement ID rather than by a resource ARN, which is why AWS requires them to be applied to "*".
+.. note:: **DescribeStatement** and **GetStatementResult** are keyed by statement ID rather than by a resource ARN, which is why AWS requires them on "*".
 
 .. bridge-redshift-from-redshift-configure-redshift-query-role-end
 
@@ -591,11 +672,11 @@ Create the unload role
 
 .. bridge-redshift-from-redshift-configure-redshift-unload-role-start
 
-Create a second IAM role in the same AWS account. You may use any name for this role.
+Create a second IAM role in the same AWS account. You can name this anything you like.
 
 **Trust policy**
 
-Replace **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns your |destination-name|, which is the same account in which you are creating these roles.
+Attach this policy for this role. Replace **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns your |destination-name|, which is the same account that you are creating these roles in.
 
 .. code-block:: json
 
@@ -623,7 +704,7 @@ Replace **<YOUR_ACCOUNT_ID>** with the 12-digit AWS account that owns your |dest
 
 **Permission policy**
 
-Substitute the **Amperity storage role** value that you copied when you :ref:`got the details <bridge-redshift-from-redshift-get-details>`. This is the only permission that this role has. It holds no storage access of its own and reaches storage by chaining.
+Attach this policy for this role. Substitute the **Amperity storage role** that you copied from the :ref:`values that Amperity provides <bridge-redshift-from-redshift-get-details-values>`. This is the role's only permission. It holds no storage access of its own and reaches storage by chaining.
 
 .. code-block:: json
 
@@ -641,7 +722,7 @@ Substitute the **Amperity storage role** value that you copied when you :ref:`go
 
 **Attach the role to your Amazon Redshift**
 
-.. important:: This step is required. |destination-name| can use only IAM roles that are associated with it, which means a correctly written role that is not attached still fails when the **UNLOAD** statement runs.
+.. important:: This step is required. |destination-name| can only use IAM roles that are associated with it, so a correctly written role that is not attached still fails at **UNLOAD** time.
 
 Associate the unload role using the |destination-name| console:
 
@@ -658,7 +739,7 @@ Grant database access
 
 .. bridge-redshift-from-redshift-configure-redshift-grants-start
 
-IAM gets Amperity as far as the cluster. It grants no access to any data. Access to data is granted inside |destination-name|, to the database identity that the queries run as.
+IAM gets Amperity as far as the cluster. It grants no access to any data. That is granted inside |destination-name|, to the database identity that the queries run as.
 
 **Which identity to grant to**
 
@@ -670,44 +751,42 @@ IAM gets Amperity as far as the cluster. It grants no access to any data. Access
      - Identity
 
    * - Provisioned cluster
-     - The :ref:`database user that you created <bridge-redshift-from-redshift-configure-redshift-db-user>`, which is the same user that you enter as the **Database user** when you :ref:`add the inbound bridge <bridge-redshift-from-redshift-add-bridge>`.
+     - The :ref:`database user that you created <bridge-redshift-from-redshift-configure-redshift-db-user>`, which is the same one that you enter as the **Database user** when you :ref:`add the inbound bridge <bridge-redshift-from-redshift-add-bridge>`.
 
-   * - Serverless workgroup
+   * - Serverless
      - |destination-name| derives the identity from the query role that Amperity assumes and names it "IAMR:<QUERY_ROLE_NAME>".
 
 **Grant the reads**
 
-The statements are the same for both deployments. Only the grantee is different. Run them as a superuser or as the owner of the objects, once for each schema and once for each table that you intend to sync.
+The statements are the same for both deployments. Only the grantee differs. Run them as a superuser or as the owner of the objects, once per schema and once per table that you intend to sync.
 
-For a provisioned cluster the grantee is the database user.
+On a provisioned cluster the grantee is simply your database user.
 
 .. code-block:: sql
 
    GRANT USAGE ON SCHEMA <SCHEMA> TO <DB_USER>;
    GRANT SELECT ON <SCHEMA>.<TABLE_OR_VIEW> TO <DB_USER>;
 
-For a Serverless workgroup the name of the identity contains a colon, which is why |destination-name| requires it to be wrapped in double quotes.
+On Serverless the identity name contains a colon, which is why |destination-name| requires it in double quotes.
 
 .. code-block:: sql
 
    GRANT USAGE ON SCHEMA <SCHEMA> TO "IAMR:<QUERY_ROLE_NAME>";
    GRANT SELECT ON <SCHEMA>.<TABLE_OR_VIEW> TO "IAMR:<QUERY_ROLE_NAME>";
 
-Grant only what you want Amperity to see. Amperity can read exactly what this identity can read, and nothing more.
+Grant only what you want Amperity to see. Amperity can read exactly what this identity can read, and nothing more. If you want Amperity to have access to only a subset of the columns on a particular table, consider creating a view that exposes only those columns, and granting **SELECT** on the view instead of the table.
 
-.. tip:: To give Amperity access to only a subset of the columns in a table, create a view that exposes only those columns, and then grant **SELECT** on the view instead of on the table.
+.. important:: **External table access**
 
-.. important:: Permission management for external tables is less fine-grained than it is for standard internal tables.
+   If some of your |destination-name| tables are external tables rather than standard internal tables, be aware that permission management for external tables is less fine-grained. |destination-name| grants access to external tables, such as Amazon Redshift Spectrum or external schemas, at the schema level and not per table. This means that you will not be able to expose a single external table without granting access to the entire schema, which may be inconvenient.
 
-   |destination-name| grants access to external tables, such as those in Amazon Redshift Spectrum or in external schemas, at the schema level and not for each table. This means you cannot expose a single external table without granting access to the entire schema.
-
-   To keep exposure scoped, create a view that selects only the intended external table, and then grant Amperity **SELECT** on the view instead.
+   Workaround: create a view that selects only the intended external table, and then grant Amperity **SELECT** permission on the view instead, to keep exposure scoped.
 
 **How much to grant**
 
 Grant only the schemas and objects that you plan to sync. You do not have to open up every database on the cluster. Amperity lists the databases that this identity can read and skips the rest.
 
-You can widen the grants later. New grants are picked up the next time that Amperity reads your catalog.
+You can widen the grants later. New ones are picked up the next time that Amperity reads your catalog.
 
 .. bridge-redshift-from-redshift-configure-redshift-grants-end
 
@@ -736,11 +815,7 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
-
-       Choose **Amazon Redshift**, choose **Create new bridge**, and then give the bridge a name.
-
-       The dialog box displays the **Amperity query role**, **External ID**, and **Amperity storage role** values that are required by the :ref:`query role <bridge-redshift-from-redshift-configure-redshift-query-role>` and the :ref:`unload role <bridge-redshift-from-redshift-configure-redshift-unload-role>`. :ref:`Copy all three <bridge-redshift-from-redshift-get-details>` before continuing.
+     - In Amperity, go to **Sources** and add a new |destination-name| bridge.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -748,53 +823,7 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Enter the connection details.
-
-       .. list-table::
-          :widths: 30 20 50
-          :header-rows: 1
-
-          * - Field
-            - Applies to
-            - What to enter
-
-          * - **Deployment**
-            - Both
-            - Provisioned cluster or Serverless workgroup.
-
-          * - **Region**
-            - Both
-            - The region in which your |destination-name| runs, such as "us-west-2".
-
-          * - **Cluster identifier**
-            - Provisioned
-            - The identifier for the cluster.
-
-          * - **Workgroup name**
-            - Serverless
-            - The name of the workgroup, and not its UUID.
-
-          * - **Database**
-            - Both
-            - Any database in your |destination-name|. Amperity uses it as an entry point and discovers the other databases on the cluster through it.
-
-          * - **Database user**
-            - Provisioned
-            - The user that the query runs as. This user must exist and must hold **SELECT** on your tables.
-
-          * - **AWS account ID**
-            - Both
-            - The 12-digit account that owns the two roles.
-
-          * - **Query role ARN**
-            - Both
-            - The full ARN, such as "arn:aws:iam::123456789012:role/AmperityRedshiftBridgeQuery".
-
-          * - **Unload role name**
-            - Both
-            - The name of the role, and not an ARN.
-
-       When finished, click **Save and continue**. Amperity reads your catalog as soon as the connection is saved.
+     - Enter the Amperity Access Role ARN, your |destination-name| deployment details (cluster identifier or Serverless workgroup), database name, and region.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -802,13 +831,41 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Select the tables to sync.
+     - Test the connection. Amperity validates the role, external ID, and network path.
 
-       Amperity presents your catalog as a tree of database, schema, and object. Both tables and views may be selected. The **information_schema** and **pg_*** schemas that belong to |destination-name| are hidden.
 
-       .. note:: A database that your query role cannot read is skipped, rather than failing the entire listing. If a database that you expected is missing, review the :ref:`grants for the query identity <bridge-redshift-from-redshift-configure-redshift-grants>`.
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - Discover the approved schemas, tables, and views, and select the objects that you want to bring into Amperity.
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - Map each selected object to an Amperity source or domain table.
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - Save the bridge. Amperity schedules and runs the sync, and shows run status, runtime, and any errors on the bridge's detail page.
 
 .. bridge-redshift-from-redshift-add-bridge-steps-end
+
+.. bridge-redshift-from-redshift-add-bridge-after-start
+
+Once saved, the bridge runs alongside any other bridges or couriers that you already use. You do not need to migrate everything to Amperity Bridge for |destination-name| at once.
+
+.. tip:: Amperity recommends starting with one to three representative tables or views, including at least one higher-volume feed, to validate |destination-name| query runtime, **UNLOAD** duration, ingestion timing, and workload impact before expanding further.
+
+.. bridge-redshift-from-redshift-add-bridge-after-end
 
 
 .. _bridge-redshift-to-redshift:
@@ -820,4 +877,88 @@ To Amazon Redshift
 
 Coming soon.
 
+An outbound bridge--writing data from Amperity to |destination-name|--is not currently available. Amperity Bridge for |destination-name| supports inbound data into Amperity only.
+
+Contact your Amperity representative if outbound |destination-name| connectivity is required for your use case.
+
 .. bridge-redshift-to-redshift-end
+
+
+.. _bridge-redshift-limitations:
+
+Limitations
+==================================================
+
+.. bridge-redshift-limitations-start
+
+Amperity Bridge for |destination-name| has the following limitations.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Limitation
+     - Details
+
+   * - Full loads only
+     - Each configured table or view must represent the complete data set that Amperity should load during that run. Delta-only and incremental synchronization are not currently supported.
+
+   * - Schema changes require the bridge to be re-saved
+     - If columns are added, removed, or renamed on a table or view that is used by the bridge, syncs may fail until the bridge is reopened and saved again.
+
+       Row-level logic behind a view--such as filters, masking, or business logic--can be changed without affecting the bridge, as long as the exposed column schema stays the same.
+
+   * - ``SELECT *`` semantics
+     - The bridge reads the full result set of the configured object. To expose a subset of rows or columns, :ref:`create a view <bridge-redshift-from-redshift-configure-redshift-grants>` and point the bridge at that view.
+
+   * - Your compute is used
+     - The query and the **UNLOAD** statement run on your |destination-name| compute. Your team should monitor the workload and the associated |destination-name| costs.
+
+   * - Cross-region transfer costs may apply
+     - If your |destination-name| and the storage that is used by your Amperity tenant are in different AWS regions, AWS cross-region data transfer charges may apply.
+
+   * - Outbound is not available
+     - Amperity Bridge for |destination-name| supports :ref:`inbound data into Amperity only <bridge-redshift-to-redshift>`.
+
+.. bridge-redshift-limitations-end
+
+
+.. _bridge-redshift-faq:
+
+Frequently asked questions
+==================================================
+
+.. bridge-redshift-faq-start
+
+.. list-table::
+   :widths: 40 60
+   :header-rows: 1
+
+   * - Question
+     - Answer
+
+   * - Does the bridge support incremental loads?
+     - No. The bridge performs full loads and expects the configured table or view to represent the complete data set that Amperity should load during each run.
+
+   * - Can I change which rows are included without reconfiguring the bridge?
+     - Yes. You can update the row filters or the business logic behind an approved view without re-registering the bridge, as long as the exposed column schema does not change.
+
+   * - Can Amperity ingest directly from Amazon S3 instead of |destination-name|?
+     - Direct Amazon S3 ingestion may be available for some architectures. Amperity Bridge for |destination-name| is designed for the case where you want Amperity to read directly from approved |destination-name| tables and views, and to have |destination-name| perform the export.
+
+   * - Can I use this bridge alongside other bridges and ingestion methods?
+     - Yes. You can use Amperity Bridge for |destination-name| for selected feeds and continue to use other bridges or file-based ingestion for others.
+
+   * - Who pays for the |destination-name| compute?
+     - The query and the **UNLOAD** statement run on your |destination-name| compute, which means that your team should monitor and budget for that workload.
+
+   * - Does |destination-name| query history show what Amperity users query inside Amperity?
+     - No. It shows the export query that the bridge generates, which is a ``SELECT *`` against the approved table or view as part of the **UNLOAD** statement.
+
+   * - What encryption is used for exported files?
+     - Exported objects use server-side encryption with AES256.
+
+   * - Is an outbound bridge available?
+     - No. Amperity Bridge for |destination-name| supports inbound data into Amperity only. Contact your Amperity representative if outbound |destination-name| connectivity is required for your use case.
+
+.. bridge-redshift-faq-end
