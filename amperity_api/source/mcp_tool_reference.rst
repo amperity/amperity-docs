@@ -631,6 +631,73 @@ Manage segments and folders.
      - **ai_system_prompt_get**
 
 
+.. _mcp-tool-real-time:
+
+Real-time profiles and events
+==================================================
+
+Configure the real-time surface: event streams and their event types, profile collections and their attributes, and real-time segments.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Manage event streams
+     - **event_stream_list**
+
+       **event_stream_get**
+
+       **event_stream_upsert**
+
+       **event_stream_delete**
+
+   * - Inspect recent events on a stream
+     - **event_stream_get_recent_events**
+
+   * - Manage event types on a stream
+     - **event_type_list**
+
+       **event_type_get**
+
+       **event_type_upsert**
+
+       **event_type_delete**
+
+   * - Manage profile collections
+     - **profile_collection_list**
+
+       **profile_collection_get**
+
+       **profile_collection_upsert**
+
+       **profile_collection_delete**
+
+   * - Manage profile collection attributes
+     - **profile_collection_set_attribute**
+
+       **profile_collection_delete_attribute**
+
+   * - Recompute profiles
+     - **profile_collection_run**
+
+   * - Look up an individual's live profile and its segment membership (returns customer data; requires PII read permissions)
+     - **profile_lookup**
+
+       **profile_list_segments**
+
+   * - Manage real-time segments
+     - **real_time_segment_list**
+
+       **real_time_segment_get**
+
+       **real_time_segment_upsert**
+
+       **real_time_segment_delete**
+
+
 .. _mcp-tool-labels:
 
 Labels
