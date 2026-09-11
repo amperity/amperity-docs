@@ -455,8 +455,9 @@ Some conditions stop the entire run instead of failing individual rows, and are 
 * The write mode is **events** and the **Event name column** or **Timestamp column** is missing from the query results.
 * A required mode setting is not set — **Group type** in group-properties mode, or **Event name column** or **Timestamp column** in events mode.
 * **PostHog host** is **self-hosted** but no **Self-hosted URL** is set.
-* A single row's data is too large to send in one request.
 
 A run also stops when PostHog rejects the credentials — a missing, invalid, or insufficiently scoped key — or when the configured **PostHog host** or **Self-hosted URL** is not valid. Rate-limit responses and transient PostHog server errors are retried automatically with backoff; if they persist after retries, the affected rows are reported as failed.
+
+.. note:: If a single row carries more data than fits in one request, the run stops with an error. Unlike the conditions above, this is found while the query results are being sent — not before — so on a large send, some batches may already have reached PostHog before the run stops.
 
 .. destination-posthog-validation-end
