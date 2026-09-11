@@ -212,15 +212,6 @@ Author, run, and organize queries against Amperity data.
 
        **query_get_column_stats**
 
-   * - Manage Pulse visualizations
-     - **pulse_viz_list**
-
-       **pulse_viz_get**
-
-       **pulse_viz_upsert**
-
-       **pulse_viz_delete**
-
    * - Organize queries into folders
      - **query_folder_list**
 
@@ -231,6 +222,39 @@ Author, run, and organize queries against Amperity data.
        **query_folder_update**
 
        **query_folder_delete**
+
+
+.. _mcp-tool-signal:
+
+Signal dashboard
+==================================================
+
+Manage Signal boards — the dashboard's tabs — and the cards on them. Each card names its own database and table, and declares the measure, dimension, and filter it renders rather than carrying SQL.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 60 40
+
+   * - Description
+     - Tools
+
+   * - Manage boards
+     - **signal_board_list**
+
+       **signal_board_get**
+
+       **signal_board_upsert**
+
+       **signal_board_delete**
+
+   * - Manage the cards on a board
+     - **signal_viz_list**
+
+       **signal_viz_get**
+
+       **signal_viz_upsert**
+
+       **signal_viz_delete**
 
 
 .. _mcp-tool-identity-resolution:
