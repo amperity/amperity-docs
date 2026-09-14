@@ -25,7 +25,7 @@ Connect Microsoft's Copilot products to the Amperity MCP server and sign in with
 * :ref:`VS Code <mcp-setup-vscode>` -- GitHub Copilot in agent mode.
 * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>` -- the agent builder for Microsoft 365.
 
-.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code receives the full tool surface; Copilot Studio receives a curated subset of tools because it limits how many tools an agent can register. See :ref:`Tool surface <mcp-setup-vscode-surface>` and :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code receives the full tool surface. Copilot Studio receives a curated subset of tools, because it limits how many tools an agent can register--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-copilot-page-end
 
@@ -52,7 +52,7 @@ Requirements
 Connecting VS Code to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
-* GitHub Copilot, signed in with an account that has an active Copilot subscription. Agent mode is required; Copilot code completion alone cannot call MCP tools.
+* GitHub Copilot, signed in with an account that has an active Copilot subscription. Agent mode is required.
 
 .. mcp-setup-vscode-requirements-end
 
@@ -64,16 +64,13 @@ Add the Amperity MCP server
 
 .. mcp-setup-vscode-add-start
 
-Add the Amperity server to your MCP configuration file. Use the user-level file to make Amperity available in every workspace, or the workspace-level file to limit it to one project.
+Add the Amperity server to your user-level MCP configuration file, which makes Amperity available in every VS Code workspace.
 
 .. mcp-setup-vscode-add-end
 
 .. mcp-setup-vscode-add-steps-start
 
-#. Open the MCP configuration file.
-
-   * For all workspaces, open the **Command Palette**, and then run **MCP: Open User Configuration**.
-   * For a single workspace, create ``.vscode/mcp.json`` in the project folder.
+#. Open the **Command Palette** (**Ctrl+Shift+P** on Windows and Linux, **Cmd+Shift+P** on macOS), and then run **MCP: Open User Configuration**.
 
 #. Add the ``amperity`` server:
 
@@ -94,25 +91,7 @@ Add the Amperity server to your MCP configuration file. Use the user-level file 
 
 #. A browser window opens. Sign in with your Amperity credentials, and then select the tenant you want to work with.
 
-.. note:: VS Code discovers Amperity's OAuth settings automatically, so no client ID or secret is required.
-
 .. mcp-setup-vscode-add-steps-end
-
-
-.. _mcp-setup-vscode-surface:
-
-Tool surface
---------------------------------------------------
-
-.. mcp-setup-vscode-surface-start
-
-VS Code receives the full Amperity tool surface, which exposes more than 200 tools. Unlike Copilot Studio, VS Code does not cap the number of tools a server can register, so no curated subset is served. Instead, you choose which tools to send to the model.
-
-To narrow the surface, open a Copilot Chat session in agent mode, select the tools icon, and then clear the tools you do not need. Expand the **amperity** group to toggle Amperity tools individually. Selections apply to every chat session that uses the default agent.
-
-.. tip:: A smaller, well-chosen tool set usually produces better results than the full surface, because the model has fewer similar options to choose between.
-
-.. mcp-setup-vscode-surface-end
 
 
 .. _mcp-setup-vscode-interacting:
@@ -128,11 +107,7 @@ Open Copilot Chat, set the mode to **Agent**, and then ask about your Amperity t
 
    "Tell me about my Amperity tenant."
 
-Copilot calls the **tenant_info** tool and returns details about your current Amperity tenant. To work with a different tenant, ask Copilot to switch:
-
-.. code-block:: none
-
-   "Switch to the acme2 tenant."
+Copilot calls the **tenant_info** tool and returns details about your current Amperity tenant.
 
 .. tip:: If Copilot returns an authorization error, run **MCP: List Servers**, select **amperity**, and then select **Start** to reauthorize.
 
