@@ -20,7 +20,7 @@ Set up Microsoft Copilot
 
 .. mcp-setup-copilot-page-start
 
-Connect Microsoft's Copilot products to the Amperity MCP server and sign in with your Amperity credentials. This page covers two clients:
+Connect Microsoft's Copilot products to the Amperity MCP server and sign in with your Amperity credentials. This page covers three clients:
 
 * :ref:`VS Code <mcp-setup-vscode>` -- GitHub Copilot in agent mode.
 * :ref:`GitHub Copilot CLI <mcp-setup-copilot-cli>` -- the terminal agent.
