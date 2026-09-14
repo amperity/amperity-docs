@@ -20,12 +20,13 @@ Set up Microsoft Copilot
 
 .. mcp-setup-copilot-page-start
 
-Connect Microsoft's Copilot products to the Amperity MCP server and sign in with your Amperity credentials. This page covers two clients:
+Connect Microsoft's Copilot products to the Amperity MCP server and sign in with your Amperity credentials. This page covers three clients:
 
 * :ref:`VS Code <mcp-setup-vscode>` -- GitHub Copilot in agent mode.
+* :ref:`GitHub Copilot CLI <mcp-setup-copilot-cli>` -- the terminal agent.
 * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>` -- the agent builder for Microsoft 365.
 
-.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code receives the full tool surface. Copilot Studio receives a curated subset of tools, because it limits how many tools an agent can register--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code and GitHub Copilot CLI receive the full tool surface. Copilot Studio receives a curated subset of tools, because it limits how many tools an agent can register--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-copilot-page-end
 
@@ -89,7 +90,7 @@ Add the Amperity server to your user-level MCP configuration file, which makes A
 
 #. Open the **Command Palette**, run **MCP: List Servers**, select **amperity**, and then select **Start**.
 
-#. A browser window opens. Sign in with your Amperity credentials, and then select the tenant you want to work with.
+#. A browser window opens. Sign in with your Amperity credentials.
 
 .. mcp-setup-vscode-add-steps-end
 
@@ -109,9 +110,96 @@ Open Copilot Chat, set the mode to **Agent**, and then ask about your Amperity t
 
 Copilot calls the **tenant_info** tool and returns details about your current Amperity tenant.
 
-.. tip:: If Copilot returns an authorization error, run **MCP: List Servers**, select **amperity**, and then select **Start** to reauthorize.
-
 .. mcp-setup-vscode-interacting-end
+
+
+.. _mcp-setup-copilot-cli:
+
+GitHub Copilot CLI
+==================================================
+
+.. mcp-setup-copilot-cli-start
+
+Configure the Amperity MCP server in GitHub Copilot CLI, after which the Amperity tools are available to the agent in your terminal.
+
+.. mcp-setup-copilot-cli-end
+
+
+.. _mcp-setup-copilot-cli-requirements:
+
+Requirements
+--------------------------------------------------
+
+.. mcp-setup-copilot-cli-requirements-start
+
+Connecting GitHub Copilot CLI to the MCP server requires:
+
+* An active Amperity account with access to at least one tenant.
+* GitHub Copilot CLI installed, and a GitHub account with an active Copilot subscription.
+
+Install the CLI with npm:
+
+.. code-block:: none
+
+   npm install -g @github/copilot
+
+.. mcp-setup-copilot-cli-requirements-end
+
+
+.. _mcp-setup-copilot-cli-add:
+
+Add the Amperity MCP server
+--------------------------------------------------
+
+.. mcp-setup-copilot-cli-add-start
+
+Register Amperity as a remote MCP server, and then authorize it from an interactive session.
+
+.. mcp-setup-copilot-cli-add-end
+
+.. mcp-setup-copilot-cli-add-steps-start
+
+#. Add the server:
+
+   .. code-block:: none
+
+      copilot mcp add --transport http amperity https://mcp.amperity.com
+
+   This writes the server to your user configuration at ``~/.copilot/mcp-config.json``. Confirm it with ``copilot mcp list``.
+
+#. Start an interactive session:
+
+   .. code-block:: none
+
+      copilot
+
+#. Authorize the server:
+
+   .. code-block:: none
+
+      /mcp auth amperity
+
+#. A browser window opens. Sign in with your Amperity credentials. The browser confirms **Authorization Successful**; close it and return to the terminal.
+
+.. mcp-setup-copilot-cli-add-steps-end
+
+
+.. _mcp-setup-copilot-cli-interacting:
+
+Start interacting with Copilot CLI
+--------------------------------------------------
+
+.. mcp-setup-copilot-cli-interacting-start
+
+In an interactive session, ask about your Amperity tenant:
+
+.. code-block:: none
+
+   "Tell me about my Amperity tenant."
+
+Copilot calls the **tenant_info** tool and returns details about your current Amperity tenant.
+
+.. mcp-setup-copilot-cli-interacting-end
 
 
 .. _mcp-setup-copilot-studio-section:
