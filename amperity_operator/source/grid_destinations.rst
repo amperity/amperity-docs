@@ -334,6 +334,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_pinterest
 
+   .. grid-item-card:: PostHog
+      :link-type: doc
+      :link: destination_posthog
+
    .. grid-item-card:: PowerReviews
       :link-type: doc
       :link: destination_powerreviews
@@ -529,6 +533,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    PebblePost <destination_pebblepost>
    Persado <destination_persado>
    Pinterest <destination_pinterest>
+   PostHog <destination_posthog>
    PowerReviews <destination_powerreviews>
    Quad <destination_quad>
    Reddit Ads <destination_reddit_ads>

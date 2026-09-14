@@ -2887,3 +2887,18 @@ Required. Your brand's Zendesk API token.
 Required. The email address for the Zendesk API user.
 
 .. credential-zendesk-email-address-end
+
+
+.. credential-posthog-project-api-key-start
+
+The PostHog Project API Key, a write-only capture token that authenticates every property, group, and event write this connector sends. Copy it from **Project Settings > Project API Key** in PostHog.
+
+.. important:: Use the classic Project API Key, which starts with ``phc_`` — not a Project *Secret* API Key, which starts with ``phs_``. Both look valid, but a secret key is accepted by the connection test and then silently drops every record. After your first run, confirm records appear on PostHog's **Persons** page.
+
+.. credential-posthog-project-api-key-end
+
+.. credential-posthog-personal-api-key-start
+
+The PostHog Personal API Key, used to verify the connection and, in person-deletion mode, to delete people through PostHog's Persons API. Create it in PostHog under **Account Settings > Personal API Keys**. For person-deletion mode, the key must be scoped to allow person deletion (the ``person:write`` scope).
+
+.. credential-posthog-personal-api-key-end
