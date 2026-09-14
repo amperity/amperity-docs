@@ -259,6 +259,9 @@ Manage Signal boards — the dashboard's tabs — and the cards on them. Each ca
 
        **signal_viz_delete**
 
+   * - Read the Signal authoring reference
+     - **signal_get_authoring_reference**
+
 
 .. _mcp-tool-identity-resolution:
 
