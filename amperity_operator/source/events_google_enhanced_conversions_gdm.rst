@@ -417,7 +417,7 @@ Return these names in lower case — ``conversion_timestamp``, ``email``, ``phon
 
 During a send, a row is dropped and reported as failed when it has no usable **email** or **phone** value. A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Rows that Google rejects for a per-row reason are reported as failed rows with Google's reason in the orchestration's error log.
 
-Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string, and a **phone** or **order_id** returned as a number is read and sent as text.
+Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string.
 
 **A malformed conversion_timestamp is the exception to per-row handling.** Google validates the timestamp when it receives the batch and rejects the whole request rather than the offending row, so a timestamp in the wrong format fails every conversion in that batch. The orchestration then fails with ``Exceeded error limit of 100%`` and the error log carries Google's reason, ``Illegal timestamp format; timestamps must end with 'Z' or have a valid timezone offset``. If you see that, correct the format in the query and run the orchestration again.
 
