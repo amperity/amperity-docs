@@ -317,9 +317,7 @@ Microsoft Foundry
 
 .. mcp-setup-foundry-start
 
-Connect a Microsoft Foundry agent to the Amperity MCP server. Amperity is listed in the Foundry Tool Catalog, so you can find it by name rather than entering the server endpoint by hand.
-
-Foundry uses **OAuth identity passthrough**: each person who uses the agent signs in to Amperity themselves, and the agent acts with that person's own Amperity permissions.
+Connect a Microsoft Foundry agent to the Amperity MCP server. Amperity is listed in the `Foundry Tool Catalog <https://ai.azure.com/catalog/tools/amperity-mcp-server/version/1/apiCenter/registry-prod-bl/eastus>`_.
 
 .. mcp-setup-foundry-end
 
@@ -335,7 +333,7 @@ Connecting Foundry to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
 * A Foundry project with a model deployment.
-* The **Foundry User** role on the project to build the agent. People who only use the agent need the **Foundry Agent Consumer** role.
+* The **Foundry User** role on the project to build the agent.
 
 .. mcp-setup-foundry-requirements-end
 
@@ -368,7 +366,7 @@ Create a project connection that holds the Amperity endpoint and its OAuth setti
       * - **Client ID**
         - ``nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs``
       * - **Client secret**
-        - Leave empty. Amperity is a public OAuth client and issues no secret. If the field is required, enter any placeholder value.
+        - Enter ``placeholder``. Foundry requires this field, but Amperity is a public OAuth client and issues no secret, so the value is ignored.
       * - **Auth URL**
         - **https://mcp.amperity.com/authorize**
       * - **Token URL**
@@ -376,25 +374,21 @@ Create a project connection that holds the Amperity endpoint and its OAuth setti
       * - **Refresh URL**
         - **https://mcp.amperity.com/oauth/token**
       * - **Scopes**
-        - ``openid offline_access``, separated by a space
+        - ``openid offline_access``
 
 #. Select **Connect**, and then save the agent.
-
-.. important:: Select **Custom**, not **Managed**. **Managed** sends a Microsoft Entra token, which the Amperity MCP server does not accept. An agent configured that way fails with ``Missing required query parameter: audience``.
 
 .. mcp-setup-foundry-connect-steps-end
 
 
 .. _mcp-setup-foundry-tool-surface:
 
-Tool surface
+Tool surface limits
 --------------------------------------------------
 
 .. mcp-setup-foundry-tool-surface-start
 
-Foundry receives a curated subset of the Amperity tool surface rather than all of it.
-
-The subset still includes tools that change data, such as creating segments and campaigns. It is sized to fit a tool count limit; it is not a read-only boundary. Foundry requires approval for every tool call by default. Keep that default unless you have reviewed which tools the agent can reach.
+Foundry agents receive the same curated subset of tools as Copilot Studio. See :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-foundry-tool-surface-end
 
@@ -412,8 +406,6 @@ Open the agent in the playground and ask about your Amperity tenant:
 
    "Tell me about my Amperity tenant."
 
-The first time you use the tool, the agent returns a consent link. Open it, sign in with your Amperity credentials, and then close the window and return to the agent. Ask again, and the agent calls the **tenant_info** tool and returns details about your current Amperity tenant.
-
-.. tip:: The consent window sometimes reports that authentication failed even though it succeeded. Before retrying, ask the agent another question. If it answers, the sign-in worked.
+The agent calls the **tenant_info** tool and returns details about your current Amperity tenant.
 
 .. mcp-setup-foundry-interacting-end

@@ -115,10 +115,24 @@ Connect a client
 Connect a client to the MCP server:
 
 * :doc:`Amazon Quick <mcp_setup_amazon_quick>`
-* :doc:`ChatGPT custom connectors <mcp_setup_chatgpt>`
-* :doc:`Claude.ai, Claude Desktop, and Claude Code <mcp_setup_claude>`
-* :doc:`Gemini -- Antigravity and Gemini CLI <mcp_setup_gemini>`
-* :doc:`Microsoft -- VS Code, Copilot CLI, Copilot Studio, and Foundry <mcp_setup_m365_copilot>`
+* :doc:`ChatGPT <mcp_setup_chatgpt>`
+* :doc:`Claude <mcp_setup_claude>`
+
+  * :ref:`Claude.ai <mcp-setup-claude-ai>`
+  * :ref:`Claude Code <mcp-setup-claude-code>`
+
+* :doc:`Gemini <mcp_setup_gemini>`
+
+  * :ref:`Antigravity <mcp-setup-antigravity>`
+  * :ref:`Gemini CLI <mcp-setup-gemini-cli>`
+
+* :doc:`Microsoft <mcp_setup_m365_copilot>`
+
+  * :ref:`VS Code <mcp-setup-vscode>`
+  * :ref:`GitHub Copilot CLI <mcp-setup-copilot-cli>`
+  * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>`
+  * :ref:`Microsoft Foundry <mcp-setup-foundry>`
+
 * :doc:`Snowflake Cortex Agents <mcp_setup_snowflake_cortex>`
 
 .. mcp-connect-client-end
