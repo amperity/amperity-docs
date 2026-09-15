@@ -3177,6 +3177,15 @@ Google Customer Match uses first-party data that your customers have shared with
 .. vale on
 
 
+**Google Customer Match (GDM)**
+
+.. term-google-customer-match-gdm-start
+
+Google Customer Match (GDM) syncs an Amperity audience to a Google Customer Match user list, so you can target those customers across Google Search, Shopping, Gmail, YouTube, and Display. Members are matched to Google users on a hashed email address or phone number, or on a mobile advertising ID. The connector uses Google's Data Manager platform (GDM).
+
+.. term-google-customer-match-gdm-end
+
+
 **Looker** part of Google Cloud
 
 .. term-google-looker-start
