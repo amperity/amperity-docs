@@ -62,6 +62,8 @@ The query behind a **Send to** orchestration is not checked against the connecto
 * Exactly one column, named for the configured **Match identifier** and spelled exactly as Amperity reads it: ``email``, ``phone``, or ``mobile-id``. Note that ``mobile-id`` is hyphenated, not ``mobile_id``.
 * No other columns. Any extra column is ignored, not rejected.
 
+The column may be numeric. A **phone** column stored as a number is read and normalized the same as one stored as text, so it does not need to be cast in the query.
+
 That column is also the key Amperity uses to track audience membership, so it must stay fixed: changing the **Match identifier** after the audience exists means recreating the audience. A query that omits the configured column, or returns a different one, still runs — every member then fails to match, the audience is left unchanged, and the run reports every row as failed with no error raised beforehand.
 
 .. destination-google-customer-match-gdm-data-shape-end

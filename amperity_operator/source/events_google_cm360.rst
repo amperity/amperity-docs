@@ -341,7 +341,14 @@ Bound the query to recent conversions so each orchestration sends new conversion
 where:
 
 * **gclid** is the Google Click ID from your online events or ad-click data. The ``WHERE`` clause keeps only rows that have one, because a conversion without a **gclid** cannot be sent.
-* **conversion_timestamp** must be an |ext_iso_8601| instant with a UTC offset, such as ``2026-07-10T12:00:00Z``. Amperity sends it as returned by your query.
+* **conversion_timestamp** must be an |ext_iso_8601| instant that ends with ``Z`` or carries a UTC offset, such as ``2026-07-10T12:00:00Z``. Amperity sends it exactly as your query returns it and never reformats it. Click data exported from Google Analytics 4 or BigQuery stores the event time as epoch microseconds, such as ``1788902434937065``, which CM360 rejects. Convert it in the query:
+
+  .. code-block:: sql
+
+     to_iso8601(from_unixtime(CAST(bq.event_timestamp AS bigint) / 1000000, 'UTC')) AS conversion_timestamp
+
+  The ``'UTC'`` argument is required, not cosmetic. It makes ``from_unixtime`` return a timestamp with a time zone so that ``to_iso8601`` emits the trailing ``Z``. Without it the value carries no offset and CM360 rejects every conversion.
+
 * **conversion_value** is the value CM360 bids on. To bid on delivered value, such as a predicted lifetime value, send that value here in place of the order total.
 * **currency_code** is a valid |ext_iso_4217| currency code — for example, ``USD`` — that matches the currency of **conversion_value**.
 * **order_id** is the deduplication key. Send a stable value so that repeated sends of the same conversion are not double-counted.
@@ -363,7 +370,9 @@ Amperity validates your data in two stages — it checks the dataset for the req
 * a required column is present but empty in that row.
 * **conversion_value** is present but is not a number.
 
-Column names are matched without regard to capitalization.
+Column names are matched without regard to capitalization. Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string, and an **order_id** returned as a number is sent as text.
+
+**A malformed conversion_timestamp is the exception to per-row handling.** CM360 validates the timestamp when it receives the batch and rejects the whole request rather than the offending row, so a timestamp in the wrong format fails every conversion in that batch, not just one. The orchestration then fails with ``Exceeded error limit of 100%`` and the error log carries CM360's reason, ``Illegal timestamp format; timestamps must end with 'Z' or have a valid timezone offset``. If you see that, correct the format in the query and run the orchestration again.
 
 .. events-google-cm360-data-validation-end
 
@@ -395,13 +404,13 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **eventTimestamp**
      - **Required**
 
-       When the conversion happened. CM360 requires an |ext_iso_8601| instant with a UTC offset — for example, ``2026-07-10T12:00:00Z``. Amperity sends the value as returned by your query, so make sure the query returns it in this form.
+       When the conversion happened. CM360 requires an |ext_iso_8601| instant that ends with ``Z`` or carries a UTC offset — for example, ``2026-07-10T12:00:00Z``. Amperity sends the value as returned by your query and never reformats it, so the query must return it in this form. A value in any other form — an epoch timestamp, or a local time with no offset — causes CM360 to reject the entire batch rather than the single row.
 
    * - **conversion_value**
      - **conversionValue**
      - **Required**
 
-       The value of the conversion, as a number. Rows whose value cannot be read as a number are dropped. Send a predicted lifetime value here to have Search Ads 360 bid on delivered value.
+       The value of the conversion, as a number. It may be returned as a numeric column or as a string; rows whose value cannot be read as a number are dropped. Send a predicted lifetime value here to have Search Ads 360 bid on delivered value.
 
    * - **currency_code**
      - **currency**
@@ -413,7 +422,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **transactionId**
      - **Optional**
 
-       A deduplication key. When the same conversion is re-sent across repeated runs, CM360 collapses rows with the same order ID into one so the conversion is not counted twice.
+       A deduplication key. When the same conversion is re-sent across repeated runs, CM360 collapses rows with the same order ID into one so the conversion is not counted twice. It may be returned as a numeric column and is sent to CM360 as text. Without this column, repeated runs that overlap the same time window re-send the same conversions with no key for CM360 to collapse them on.
 
 .. events-google-cm360-parameters-end
 
@@ -512,7 +521,7 @@ Workflow actions
 
 .. events-google-cm360-workflow-actions-end
 
-.. note:: Connection problems are caught when the destination is saved: Amperity submits a single test conversion to CM360 in a validate-only mode that writes nothing. If the check fails, the connected Google account may not be authorized, or the **Floodlight configuration ID** or **Floodlight activity ID** may be wrong or belong to an account the connected account cannot reach. During an orchestration, CM360 reports per-conversion failures by reason — an invalid or duplicate click ID, a malformed timestamp, or an unrecognized currency — and Amperity records them as failed rows with CM360's own explanation in the error log.
+.. note:: Connection problems are caught when the destination is saved: Amperity submits a single test conversion to CM360 in a validate-only mode that writes nothing. If the check fails, the connected Google account may not be authorized, or the **Floodlight configuration ID** or **Floodlight activity ID** may be wrong or belong to an account the connected account cannot reach. During an orchestration, CM360 reports per-conversion failures by reason — an invalid or duplicate click ID, or an unrecognized currency — and Amperity records them as failed rows with CM360's own explanation in the error log. A malformed **conversion_timestamp** behaves differently: CM360 rejects the whole batch, so the run fails outright instead of reporting individual rows.
 
 
 .. _events-google-cm360-api-reference:

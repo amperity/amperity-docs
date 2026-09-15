@@ -387,7 +387,14 @@ Bound the query to recent conversions so each orchestration sends new conversion
 where:
 
 * **email** and **phone** are the match identifiers. The ``WHERE`` clause keeps only rows that have at least one, because a conversion with neither cannot be matched. Do not hash them in the query — Amperity hashes them automatically.
-* **conversion_timestamp** must be an |ext_iso_8601| instant with a UTC offset, such as ``2026-07-10T12:00:00Z``. Amperity sends it as returned by your query.
+* **conversion_timestamp** must be an |ext_iso_8601| instant that ends with ``Z`` or carries a UTC offset, such as ``2026-07-10T12:00:00Z``. Amperity sends it exactly as your query returns it and never reformats it. Event data exported from Google Analytics 4 or BigQuery stores the event time as epoch microseconds, such as ``1788902434937065``, which Google rejects. Convert it in the query:
+
+  .. code-block:: sql
+
+     to_iso8601(from_unixtime(CAST(bq.event_timestamp AS bigint) / 1000000, 'UTC')) AS conversion_timestamp
+
+  The ``'UTC'`` argument is required, not cosmetic. It makes ``from_unixtime`` return a timestamp with a time zone so that ``to_iso8601`` emits the trailing ``Z``. Without it the value carries no offset and Google rejects every conversion.
+
 * **conversion_value** is the value Google Ads bids on, and is sent only when **currency_code** is also present.
 * **currency_code** is a valid |ext_iso_4217| currency code — for example, ``USD``.
 * **order_id** is the deduplication key. Send a stable value so that repeated sends of the same conversion are not double-counted.
@@ -408,7 +415,11 @@ An orchestration is not checked against the connector's schema before it runs, s
 
 Return these names in lower case — ``conversion_timestamp``, ``email``, ``phone``, ``conversion_value``, ``currency_code``, and ``order_id`` — and match them exactly. Column names are case-sensitive: a column returned as ``Email`` is not read as **email**, so every row is dropped as unmatched and no error is raised before the run.
 
-During a send, a row is dropped and reported as failed when it has no usable **email** or **phone** value. A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Rows that Google rejects — for example, an unparseable timestamp — are reported as failed rows with Google's reason in the orchestration's error log.
+During a send, a row is dropped and reported as failed when it has no usable **email** or **phone** value. A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Rows that Google rejects for a per-row reason are reported as failed rows with Google's reason in the orchestration's error log.
+
+Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string, and a **phone** or **order_id** returned as a number is read and sent as text.
+
+**A malformed conversion_timestamp is the exception to per-row handling.** Google validates the timestamp when it receives the batch and rejects the whole request rather than the offending row, so a timestamp in the wrong format fails every conversion in that batch. The orchestration then fails with ``Exceeded error limit of 100%`` and the error log carries Google's reason, ``Illegal timestamp format; timestamps must end with 'Z' or have a valid timezone offset``. If you see that, correct the format in the query and run the orchestration again.
 
 .. events-google-enhanced-conversions-gdm-data-validation-end
 
@@ -434,7 +445,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **eventTimestamp**
      - **Required**
 
-       When the conversion happened, as an |ext_iso_8601| instant with a UTC offset — for example, ``2026-07-10T12:00:00Z``. Amperity sends the value as returned by your query.
+       When the conversion happened, as an |ext_iso_8601| instant that ends with ``Z`` or carries a UTC offset — for example, ``2026-07-10T12:00:00Z``. Amperity sends the value as returned by your query and never reformats it. A value in any other form — an epoch timestamp, or a local time with no offset — causes Google to reject the entire batch rather than the single row.
 
    * - **email**
      - **userData.userIdentifiers.emailAddress**
