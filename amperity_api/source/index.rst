@@ -111,8 +111,7 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    Set up ChatGPT <mcp_setup_chatgpt>
    Set up Claude <mcp_setup_claude>
    Set up Gemini <mcp_setup_gemini>
-   Set up Microsoft Copilot <mcp_setup_m365_copilot>
-   Set up Microsoft Foundry <mcp_setup_foundry>
+   Set up Microsoft Copilot and Foundry <mcp_setup_m365_copilot>
    Set up Snowflake Cortex <mcp_setup_snowflake_cortex>
    Safety modes <mcp_safety_modes>
    FAQ <mcp_faq>
