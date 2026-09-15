@@ -20,7 +20,7 @@ Set up ChatGPT
 
 .. mcp-setup-chatgpt-start
 
-Amperity is published in the ChatGPT plugin directory. Install the plugin, sign in with your Amperity credentials, and ChatGPT can work with your customer data.
+Amperity is published in the `ChatGPT plugin directory <https://chatgpt.com/plugins/plugin_asdk_app_6a908cd7176081919717ffa210436393?q=Amperity>`_. Install the plugin, sign in with your Amperity credentials, and ChatGPT can work with your customer data.
 
 .. mcp-setup-chatgpt-end
 
