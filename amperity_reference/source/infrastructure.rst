@@ -119,6 +119,7 @@ You can add Amperity services to allowlists that may be required by upstream sys
 Most connections are made directly to your Amperity tenant. Use one of the following Amperity IP addresses for an allowlist that is required by an upstream system. The specific IP address to use depends on the location in which your tenant is hosted:
 
 * On Amazon AWS use "52.42.237.53"
+* On Amazon AWS (Australia) use "13.55.234.14"
 * On Amazon AWS (Canada) use "3.98.199.97"
 * On Microsoft Azure use "104.46.106.84" for production and "20.81.91.210" for failover
 * On Microsoft Azure (EU) use "20.123.127.54"
@@ -132,7 +133,7 @@ Most connections are made directly to your Amperity tenant. Use one of the follo
 Some connections are made directly to the SFTP site that is included with your Amperity tenant. The specific IP address to use depends on the location in which your tenant is hosted:
 
 * On Amazon AWS use "52.11.51.214"
-* On Amazon AWS (Australia) use "3.44.64.64/29"
+* On Amazon AWS (Australia) use "3.106.90.65"
 * On Amazon AWS (Canada) use "52.60.229.171"
 * On Microsoft Azure use "20.36.236.80"
 * On Microsoft Azure (EU) use "51.104.139.110"
