@@ -3,30 +3,31 @@
 
 .. meta::
     :description lang=en:
-        Configure GitHub Copilot in VS Code or Copilot Studio to connect to the Amperity MCP server.
+        Configure GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure GitHub Copilot in VS Code or Copilot Studio to connect to the Amperity MCP server.
+        Configure GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Set up Microsoft Copilot
+        Set up Microsoft Copilot and Foundry
 
 
 ==================================================
-Set up Microsoft Copilot
+Set up Microsoft Copilot and Foundry
 ==================================================
 
 .. mcp-setup-copilot-page-start
 
-Connect Microsoft's Copilot products to the Amperity MCP server and sign in with your Amperity credentials. This page covers three clients:
+Connect Microsoft's agent products to the Amperity MCP server and sign in with your Amperity credentials. This page covers four clients:
 
 * :ref:`VS Code <mcp-setup-vscode>` -- GitHub Copilot in agent mode.
 * :ref:`GitHub Copilot CLI <mcp-setup-copilot-cli>` -- the terminal agent.
 * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>` -- the agent builder for Microsoft 365.
+* :ref:`Microsoft Foundry <mcp-setup-foundry>` -- Foundry Agent Service.
 
-.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code and GitHub Copilot CLI receive the full tool surface. Copilot Studio receives a curated subset of tools, because it limits how many tools an agent can register--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code and GitHub Copilot CLI receive the full tool surface. Copilot Studio and Microsoft Foundry receive a curated subset of tools--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-copilot-page-end
 
@@ -307,3 +308,104 @@ The agent calls the **tenant_info** tool and returns details about your current 
 .. tip:: If the agent returns an authorization error, sign out, and then reauthorize the connector.
 
 .. mcp-setup-copilot-interacting-end
+
+
+.. _mcp-setup-foundry:
+
+Microsoft Foundry
+==================================================
+
+.. mcp-setup-foundry-start
+
+Connect a Microsoft Foundry agent to the Amperity MCP server. Amperity is listed in the `Foundry Tool Catalog <https://ai.azure.com/catalog/tools/amperity-mcp-server/version/1/apiCenter/registry-prod-bl/eastus>`_.
+
+.. mcp-setup-foundry-end
+
+
+.. _mcp-setup-foundry-requirements:
+
+Requirements
+--------------------------------------------------
+
+.. mcp-setup-foundry-requirements-start
+
+Connecting Foundry to the MCP server requires:
+
+* An active Amperity account with access to at least one tenant.
+* A Foundry project with a model deployment.
+* The **Foundry User** role on the project to build the agent.
+
+.. mcp-setup-foundry-requirements-end
+
+
+.. _mcp-setup-foundry-connect:
+
+Connect the Amperity tool
+--------------------------------------------------
+
+.. mcp-setup-foundry-connect-start
+
+Create a project connection that holds the Amperity endpoint and its OAuth settings.
+
+.. mcp-setup-foundry-connect-end
+
+.. mcp-setup-foundry-connect-steps-start
+
+#. In the Foundry portal, open your agent and go to **Tools**.
+#. Select **Add**, open the **Catalog** tab, and then search for **Amperity**.
+#. Select the **Amperity** entry. The **Connect the Amperity tool** dialog opens with the server endpoint already filled in as **https://mcp.amperity.com/mcp**.
+#. Leave **Authentication** set to **OAuth Identity Passthrough**.
+#. Under **OAuth Provider**, select **Custom**, and then fill in the following fields:
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 30 70
+
+      * - Field
+        - Value
+      * - **Client ID**
+        - ``nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs``
+      * - **Client secret**
+        - Enter ``placeholder``. Foundry requires this field, but Amperity is a public OAuth client and issues no secret, so the value is ignored.
+      * - **Auth URL**
+        - **https://mcp.amperity.com/authorize**
+      * - **Token URL**
+        - **https://mcp.amperity.com/oauth/token**
+      * - **Refresh URL**
+        - **https://mcp.amperity.com/oauth/token**
+      * - **Scopes**
+        - ``openid offline_access``
+
+#. Select **Connect**, and then save the agent.
+
+.. mcp-setup-foundry-connect-steps-end
+
+
+.. _mcp-setup-foundry-tool-surface:
+
+Tool surface limits
+--------------------------------------------------
+
+.. mcp-setup-foundry-tool-surface-start
+
+Foundry agents receive the same curated subset of tools as Copilot Studio. See :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+
+.. mcp-setup-foundry-tool-surface-end
+
+
+.. _mcp-setup-foundry-interacting:
+
+Start interacting with your agent
+--------------------------------------------------
+
+.. mcp-setup-foundry-interacting-start
+
+Open the agent in the playground and ask about your Amperity tenant:
+
+.. code-block:: none
+
+   "Tell me about my Amperity tenant."
+
+The agent calls the **tenant_info** tool and returns details about your current Amperity tenant.
+
+.. mcp-setup-foundry-interacting-end
