@@ -61,35 +61,6 @@ To install the Amperity plugin:
 .. mcp-setup-chatgpt-add-end
 
 
-.. _mcp-setup-chatgpt-custom-connector:
-
-Add as a custom connector
-==================================================
-
-.. mcp-setup-chatgpt-custom-connector-start
-
-Workspaces that restrict the plugin directory can reach the same MCP server through a custom connector:
-
-#. Open **Settings**, select **Apps**, and then choose **Create**.
-#. Set the server URL:
-
-   .. code-block:: none
-
-      https://mcp.amperity.com
-
-#. Set the authentication type to **OAuth**, and then use the following OAuth client ID:
-
-   .. code-block:: none
-
-      nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs
-
-#. Save the connector. A browser tab opens. Sign in with your Amperity credentials.
-
-.. note:: A custom connector snapshots the tool list when it is published. If you are unable to access tools documented in the :doc:`tool reference </mcp_tool_reference>`, ask your workplace administrator to publish an updated version of the connector. The plugin directory listing is updated by Amperity and does not have this limitation.
-
-.. mcp-setup-chatgpt-custom-connector-end
-
-
 .. _mcp-setup-chatgpt-interacting:
 
 Start interacting with ChatGPT
