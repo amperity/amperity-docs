@@ -87,3 +87,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-mobile-app-id-start
    :end-before: .. setting-google-ads-mobile-app-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

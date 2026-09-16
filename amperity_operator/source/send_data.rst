@@ -1,0 +1,323 @@
+.. https://docs.amperity.com/operator/
+
+:orphan:
+
+.. meta::
+    :description lang=en:
+        An overview of sending data from Amperity to a variety of downstream destinations.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        An overview of sending data from Amperity to a variety of downstream destinations.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        General advice
+
+==================================================
+General advice for sending data
+==================================================
+
+.. send-data-to-amperity-start
+
+General advice and recommendations for sending data to Amperity.
+
+Sending data to Amperity is the combination of:
+
+#. Identifying a data source. It is important to define data sources to have predictable handoffs.
+#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that is used (cloud-based storage, SFTP, Fivetran, REST API, or Snowflake) to make that available.
+
+   .. important:: Even if you do not see a data source in various lists of data sources that are shown to be "available" (such as on the Amperity website or on various pages within the documentation site), this does not mean you cannot send data from that source. A significant percentage of data sources used by Amperity customers are enabled using cloud-based storage.
+
+#. Configuring Amperity to process that data.
+
+For a production environment, most data sources are configured to run once per 24-hour time period. This means that within that 24-hour time period, the data must be made available to Amperity for processing early enough within that 24-hour time period to allow Amperity to complete all downstream processing. Downstream processing includes:
+
+* Running Stitch for identity resolution
+* Refreshing all databases based on Stitch output
+* Processing all queries and segments that have downstream dependencies
+* Sending query results or audiences to all configured destinations and marketing channels
+
+.. note:: Preprocessing or filtering data before sending it to Amperity is typically not required, but sometimes business and security concerns requires it.
+
+.. send-data-to-amperity-end
+
+.. send-data-to-amperity-sections-start
+
+The following sections contain specific advice and recommendations:
+
+* :ref:`Character encoding <send-data-to-amperity-character-encoding>`
+* :ref:`Credentials and secrets <send-data-to-amperity-credentials-and-secrets>`
+* :ref:`File formats <send-data-to-amperity-file-format>`
+* :ref:`Pull data vs. push data <send-data-to-amperity-pull-vs-push>`
+* :ref:`Optimize Apache Spark <send-data-to-amperity-apache-spark>`
+* :ref:`Connection details <send-data-to-amperity-connection-details>`
+* :ref:`Date formats <send-data-to-amperity-date-formats>`
+* :ref:`IP allowlists <send-data-to-amperity-ip-allowlists>`
+* :ref:`Large datasets <send-data-to-amperity-large-datasets>`
+
+.. send-data-to-amperity-sections-end
+
+
+.. _send-data-to-amperity-character-encoding:
+
+Character encoding
+==================================================
+
+.. send-data-to-amperity-character-encoding-start
+
+Character encoding within files must be in `UTF-8 <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link| or `UTF-16 <https://en.wikipedia.org/wiki/UTF-16>`__ |ext_link|, including the use of valid escape characters for the provided file format.
+
+When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all later data rows.
+
+.. send-data-to-amperity-character-encoding-end
+
+
+.. _send-data-to-amperity-credentials-and-secrets:
+
+Credentials and Secrets
+==================================================
+
+.. send-data-to-amperity-credentials-and-secrets-start
+
+Amperity requires the ability to connect to, and then read data from the data source. The credentials that allow that connection and the ability to read that data are entered into the Amperity user interface while configuring a courier.
+
+These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using |ext_snappass| to complete the configuration.
+
+.. send-data-to-amperity-credentials-and-secrets-end
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-snappass-start
+   :end-before: .. term-snappass-end
+
+
+.. _send-data-to-amperity-file-format:
+
+File Formats
+==================================================
+
+.. send-data-to-amperity-file-format-start
+
+The following data formats are ranked in terms of preference:
+
+#. :ref:`Apache Parquet files <send-data-to-amperity-file-format-parquet>`
+#. :ref:`CSV files <send-data-to-amperity-file-format-csv>`
+#. :ref:`JSON files with simple nested data only <send-data-to-amperity-file-format-json>`
+#. :ref:`Other data formats <send-data-to-amperity-file-format-other>`
+
+.. send-data-to-amperity-file-format-end
+
+
+.. _send-data-to-amperity-file-format-parquet:
+
+Apache Parquet
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-apache-parquet-start
+   :end-before: .. term-apache-parquet-end
+
+
+.. _send-data-to-amperity-file-format-csv:
+
+CSV
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-csv-start
+   :end-before: .. term-csv-end
+
+.. send-data-to-amperity-file-format-csv-note-start
+
+.. note:: Other delimited-file formats--TSV and PSV--are supported. They follow the same recommendations as CSV files and may be considered interchangeable.
+
+.. send-data-to-amperity-file-format-csv-note-end
+
+
+.. _send-data-to-amperity-file-format-json:
+
+JSON
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-json-start
+   :end-before: .. term-json-end
+
+
+.. _send-data-to-amperity-file-format-other:
+
+Other data formats
+--------------------------------------------------
+
+.. send-data-to-amperity-file-format-other-start
+
+Amperity can ingest data from many types of data sources, such as:
+
+* Output from relational database management systems
+* |format_parquet| files along with non-Parquet files that are common to Apache Hadoop environments, such as |format_avro|
+* Legacy data outputs, such as |format_dat|
+* |format_psv| and |format_tsv| files
+* |format_ndjson|
+* |format_json| and |format_json_streaming|
+* Many REST APIs
+* Snowflake tables, including data sources that use Fivetran to send data
+* |format_cbor|
+
+.. send-data-to-amperity-file-format-other-end
+
+
+.. _send-data-to-amperity-file-format-troubleshoot:
+
+Troubleshoot file ingest errors
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/feeds.rst
+   :start-after: .. feed-troubleshoot-ingest-errors-start
+   :end-before: .. feed-troubleshoot-ingest-errors-end
+
+
+.. _send-data-to-amperity-pull-vs-push:
+
+Pull vs. Push
+==================================================
+
+.. send-data-to-amperity-pull-vs-push-start
+
+Data may be provided to Amperity in the following ways:
+
+#. Recommended. Amperity pulls data from a cloud-accessible storage location, such as |source_amazon_s3|, |source_azure_blob_storage|, |source_google_cloud_storage|, or any |source_sftp| site.
+
+   This location may be customer-managed (recommended) or Amperity-managed. For Amazon AWS, it is recommended to use cross-account role assumption. For Microsoft Azure, it is recommended to use Azure Data Share.
+   
+   Some data sources provide a REST API that may be used to provide data to Amperity, such as |source_campaign_monitor|.
+
+   Many data sources are eligible to use Fivetran as the interface that pulls data to Amperity, such as |source_hubspot| |source_klaviyo|, |source_kustomer|, |source_shopify|, |source_sailthru|, and |source_square|.
+#. The customer pushes data to Amperity via the |api_streaming_ingest|.
+
+   .. note:: This scenario should only be used for transactional or event-like data that would be streamed as it happens.
+
+Amperity strongly recommends and prefers data exchange to use customer-managed cloud storage locations. This is because many REST APIs are designed for smaller volumes or have record limits. An additional challenge is that many REST APIs are record oriented rather than change oriented. This can result in scenarios like deleted records not showing up in incremental pulls or sources that are missing discrete data on upstream merges.
+
+Systems that support change data capture (CDC) are often suitable, but those types of systems are uncommon. Even when systems do support all of these properties, upstream changes, such as normalizing a status column or changing a billing code, can cause updates to large percentages of records, which can be risky given the preference for 24-hour cadences for all workflows.
+
+Some REST APIs support bulk delivery, which can perform with the same type of reliability as cloud-accessible storage locations.
+
+A complete file-based delivery using cloud-accessible storage locations is the most reliable way to get very large data volumes to Amperity.
+
+.. send-data-to-amperity-pull-vs-push-end
+
+
+.. _send-data-to-amperity-push-data-to-amperity:
+
+Push Data to Amperity
+--------------------------------------------------
+
+.. send-data-to-amperity-push-data-to-amperity-start
+
+To push data to Amperity you may use the |api_streaming_ingest|.
+
+.. send-data-to-amperity-push-data-to-amperity-end
+
+
+.. _send-data-to-amperity-apache-spark:
+
+Apache Spark
+==================================================
+
+.. send-data-to-amperity-apache-spark-start
+
+Apache Spark prefers to load 1-10000 files with a 1-1000 MB size. Apache Spark parses one hundred 10 MB files faster than ten 100 MB files and much faster than one 10000 MB file. When loading large files to Amperity, as a general guideline to optimize the performance of Apache Spark, look to create situations where:
+
+* The number of individual files is below 3000.
+* The range of individual file sizes is below 100 MB.
+
+Put differently, Apache Spark parses three thousand 100 MB files faster than three hundred 1000 MB files and much faster than thirty 10000 MB files.
+
+.. send-data-to-amperity-apache-spark-end
+
+
+.. _send-data-to-amperity-connection-details:
+
+Connection Details
+==================================================
+
+.. send-data-to-amperity-connection-details-start
+
+The following collection details are needed for customer-owned Amazon S3, Azure Blob Storage, and SFTP locations.
+
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Location
+     - Details
+   * - Amazon S3
+     - Access key, secret key, and bucket name.
+   * - Azure Blob Storage
+     - Using shared access credentials, the name of the container, the blob prefix, and credential details.
+   * - SFTP
+     - Recommended. Host name, user name, and public key.
+
+       -or-
+
+       Host name, user name, and passphrase.
+
+.. send-data-to-amperity-connection-details-end
+
+
+.. _send-data-to-amperity-date-formats:
+
+Date Formats
+==================================================
+
+.. include:: ../../amperity_reference/source/format_common.rst
+   :start-after: .. format-common-pull-date-formats-start
+   :end-before: .. format-common-pull-date-formats-end
+
+
+.. _send-data-to-amperity-ip-allowlists:
+
+IP addresses for allowlists
+==================================================
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-end
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-important-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-important-end
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-warning-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-warning-end
+
+**When connecting to your Amperity tenant**
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
+
+**When connecting to the attached SFTP site**
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-sftp-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-sftp-end
+
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-tip-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-tip-end
+
+
+.. _send-data-to-amperity-large-datasets:
+
+Large Datasets
+==================================================
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-large-dataset-start
+   :end-before: .. term-large-dataset-end
+
+.. include:: ../../amperity_reference/source/format_common.rst
+   :start-after: .. format-common-pull-file-compression-large-datasets-start
+   :end-before: .. format-common-pull-file-compression-large-datasets-end

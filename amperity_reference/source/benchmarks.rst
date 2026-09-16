@@ -1,6 +1,6 @@
-.. 
-.. https://docs.amperity.com/datagrid/
-.. 
+.. https://docs.amperity.com/reference/
+
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -26,6 +26,10 @@ Use benchmarks to explore data quality, directly provide feedback to the quality
 
 .. stitch-benchmark-end
 
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-incremental-match-note-start
+   :end-before: .. stitch-benchmarks-incremental-match-note-end
+
 
 .. _stitch-benchmark-status:
 
@@ -39,7 +43,7 @@ Stitch benchmarks are available from the **Stitch** page in your Amperity tenant
 .. image:: ../../images/mockup-stitch-benchmarks-tab.png
    :width: 600 px
    :alt: The Stitch benchmark status page.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 The outcome of Stitch benchmark checks are grouped by color on the **Benchmarks** tab.
@@ -60,13 +64,15 @@ Benchmark checks
 
 .. stitch-benchmark-checks-start
 
-Stitch collects data that your brand has provided to Amperity, runs, and then outputs a series of tables that contain the results. There is no "ground truth" dataset for your brand against which Amperity can compare Amperity IDs to validate identity, which prevents using standard error metrics to evaluate the quality of Stitch output.
+Stitch collects data that your brand has provided to Amperity, runs, and then outputs a series of tables that contain the results.
+
+A "ground truth" dataset for your brand, against which Amperity can compare Amperity IDs to validate identity, does not exist and prevents using standard error metrics to evaluate the quality of Stitch output.
 
 A benchmark check is a heuristic that defines how often Amperity IDs are expected to meet a certain condition. For example, Amperity expects no more than 0.011% of your Amperity IDs to be associated with more than three given names.
 
 Each benchmark check measures the percentage of Amperity IDs meeting its respective condition and compares the result against the optimal range. A benchmark check result can fall into the optimal range, above the optimal range, or far above the optimal range (high).
 
-For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. Is is possible for an Amperity ID to be correclty associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, name changes, and so on. A higher than expected rate of Amperity IDs (generally) associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
+For example, it is expected that most, but not all, Amperity IDs should not have more than three given names. It is possible for an Amperity ID to be correctly associated with more than three given names for valid reasons such as differences in data capture, the presence of typos, use of nicknames, or name changes. A higher-than-expected rate of Amperity IDs associated with more than three given names may be an indicator that Stitch is clustering records together too aggressively.
 
 .. stitch-benchmark-checks-end
 
@@ -74,11 +80,11 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 
 .. important:: Stitch is complex and perfection of Stitch results should not be the goal. A benchmark score that falls outside of an optimal range might not be a bad score. A high benchmark score does not always need to be addressed, at least not right away.
 
-   The purpose of benchmark scores is to provide a visible and direct way of inspecting the quality of customer profiles that currently exist in your tenant.
+   The purpose of benchmark scores is to provide a visible and direct way of inspecting the quality of customer profiles that exist in your tenant.
 
    Use benchmark scores to:
 
-   #. Quickly assess the overall quality of customer profiles in your tenant.
+   #. Assess the overall quality of customer profiles in your tenant.
 
    #. Explore example Amperity IDs, especially for those benchmark checks that are high, to identify ways of changing the configuration of your tenant that can lead to overall improvements in benchmark scores.
 
@@ -102,7 +108,7 @@ For example, it is expected that most, but not all, Amperity IDs should not have
 Benchmark results
 ==================================================
 
-.. stitch-benchmark-results-optimal-start
+.. stitch-benchmark-results-start
 
 Amperity uses benchmark checks to provide insight into the quality of your Stitch results. Results fall into one of the following categories:
 
@@ -110,7 +116,7 @@ Amperity uses benchmark checks to provide insight into the quality of your Stitc
 * :ref:`Above optimal range <stitch-benchmark-results-above-optimal>`
 * :ref:`High <stitch-benchmark-results-high>`
 
-.. stitch-benchmark-results-optimal-end
+.. stitch-benchmark-results-end
 
 
 .. _stitch-benchmark-results-optimal:
@@ -122,12 +128,12 @@ Optimal
 
 Optimal results represent benchmark check results that fall within the expected range. These results can be "more optimal" and they can be "less optimal".
 
-For most tenants, most of the time, nothing needs to be done when benchmark checks are optimal. In some cases, it might be worth exploring if scores that fall on the edge of optimal scoring (and are close to falling outside the optimal range) can be improved.
+For most tenants, most of the time, nothing needs to be done when benchmark checks are optimal. In some cases, it might be worth exploring if scores that fall on the edge of optimal scoring and are close to falling outside the optimal range can be improved.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-optimal.png
    :width: 380 px
    :alt: Optimal score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. stitch-benchmark-results-optimal-end
@@ -140,7 +146,7 @@ Above optimal range
 
 .. stitch-benchmark-results-above-optimal-start
 
-Results that fall above the optimal ranges may be investigated, but it's often not necessary. Compare the history of the scores and determine if anything should be done to try to improve the benchmark results.
+Results that fall above the optimal ranges may be investigated, but it is often not necessary. Compare the history of the scores and determine if anything should be done to try to improve the benchmark results.
 
 Was new data made available to your tenant? Were any changes made to Stitch configuration? Both of these may be the cause of scores falling above the optimal range.
 
@@ -149,7 +155,7 @@ In many cases nothing needs to be done with benchmark checks that fall above the
 .. image:: ../../images/mockup-stitch-benchmarks-score-outside.png
    :width: 380 px
    :alt: Outside optinal range score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. stitch-benchmark-results-above-optimal-end
@@ -162,14 +168,14 @@ High
 
 .. stitch-benchmark-results-high-start
 
-High results do not need to be fixed, but they should be researched and investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
+High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
-Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
+Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Show recommendations**, and then review the list of options that are available to help improve this particular benchmark result.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-abnormal.png
    :width: 380 px
    :alt: Abnormal score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. important:: Use a sandbox to make configuration changes to Stitch, and then compare the benchmark results in the sandbox to the high benchmark results in production. Also compare other benchmark results to determine if changes affected the overall quality of benchmark results.
@@ -184,7 +190,7 @@ About benchmark cards
 
 .. stitch-benchmark-cards-start
 
-Each benchmark card contains a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
+Each benchmark card has a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
 
 .. stitch-benchmark-cards-end
 
@@ -203,7 +209,7 @@ Benchmark details show specific information about the condition, such as *The pe
 .. image:: ../../images/mockup-stitch-benchmarks-tab-details.png
    :width: 420 px
    :alt: Each benchmark shows score results.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 
@@ -221,7 +227,7 @@ Benchmark results are refreshed after every Stitch run. You can view the 5 previ
 .. image:: ../../images/mockup-stitch-benchmarks-tab-history.png
    :width: 420 px
    :alt: Each benchmark tracks a history of scores.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 
@@ -234,11 +240,11 @@ Interpretations
 
 Interpretations are provided by each benchmark check. They describe the result and provide an explanation of how to interpret it. For example:
 
-"This score is above the typical range for most brands. A large percentage indicates that different postal codes are appearing in the same cluster, which indicates overclustering."
+"This is above the expected range and may be an indication of overclustering. A large percentage indicates that different given names are appearing the same cluster, which indicates overclustering."
 
 or:
 
-"This score is far above the typical range for most brands. A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering."
+"This is far above the expected range and may be an indication of overclustering. A large percentage indicates that different postal codes are appearing the same cluster, which indicates overclustering."
 
 When a benchmark score is above the optimal range or high it is recommended to review and grade a set of 10 example clusters, after which the benchmark check will make a series of recommendations that can lead to improved benchmark results.
 
@@ -254,7 +260,7 @@ Grade and calibrate
 
 All benchmark checks include example Amperity IDs that can be reviewed and graded. You should periodically review and grade examples for benchmark checks with high results. This helps ensure that Stitch is always building the highest quality customer profiles and can lead to incremental improvements over time.
 
-Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. :ref:`Stitch configuration settings can be updated directly <stitch-benchmark-check-update-config>` in the benchmark check.
+Depending on the outcome of reviewing and grading benchmark check examples, a series of recommendations may be shown. Stitch configuration settings can be updated directly in the benchmark check.
 
 .. stitch-benchmark-cards-grade-and-calibrate-end
 
@@ -299,6 +305,26 @@ Changes should be made incrementally. You can review benchmark checks on a daily
 .. stitch-benchmark-check-update-config-end
 
 
+.. _stitch-benchmark-check-ignore:
+
+Ignore a benchmark
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-check-ignore-start
+   :end-before: .. stitch-benchmarks-check-ignore-end
+
+
+.. _stitch-benchmark-rule-based:
+
+Rule-based benchmarks
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-rule-based-start
+   :end-before: .. stitch-benchmarks-rule-based-end
+
+
 .. _stitch-benchmark-categories:
 
 Benchmark categories
@@ -325,7 +351,7 @@ Overclustering
 
 .. stitch-benchmark-category-overclustering-start
 
-Stitch benchmark checks for overclustering evaluate situations where records that likely belong to two or more individuals end up being assigned the same Amperity ID. This can occur when records with mostly different personally identifiable information (PII) are connected by a foreign key or by a small set of matching PII.
+Stitch benchmark checks for overclustering evaluate situations where records that likely belong to two or more individuals end up being assigned the same Amperity ID. This can occur when records with different personally identifiable information (PII) are connected by a foreign key or by a small set of matching PII.
 
 .. stitch-benchmark-category-overclustering-end
 
@@ -397,7 +423,7 @@ Shared names and emails
 
 The **Shared names and emails across Amperity IDs** benchmark computes the ratio of unique name and email address combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and email address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and email address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-emails-end
 
@@ -411,7 +437,7 @@ Shared names and phones
 
 The **Shared names and phones across Amperity IDs** benchmark computes the ratio of unique name and phone number combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and phone number combination is associated with multiple Amperity IDs more than often expected.
+A large ratio implies that a name and phone number combination is associated with many Amperity IDs more than often expected.
 
 .. stitch-benchmark-category-shared-names-and-phones-end
 
@@ -425,6 +451,6 @@ Shared names and addresses
 
 The **Shared names and addresses across Amperity IDs** benchmark computes the ratio of unique name and address (including street, city, state, and postal code) combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-addresses-end

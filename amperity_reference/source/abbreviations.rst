@@ -17,16 +17,24 @@
 Abbreviations, initialisms
 ==================================================
 
+.. vale off
+
 The following list combines industry-standard abbreviations and initialisms with others that are specific to |company_name|.
 
 .. list-table::
    :widths: 100 500
    :header-rows: 0
 
+   * - **1P**
+     - First-party data
    * - **2FA**
      - Two-factor Authentication
+   * - **3P**
+     - Third-party data
    * - **AAID**
      - Google Advertising ID
+   * - **ACS**
+     - Amazon Consent Signal
    * - **ACS**
      - Assertion Consumer Service
    * - **ACV**
@@ -37,12 +45,16 @@ The following list combines industry-standard abbreviations and initialisms with
      - Azure Data Lake Storage
    * - **ADW**
      - Amperity Data Warehouse
+   * - **AEL**
+     - Amperity expression language
    * - **ANSI**
      - American National Standards Institute
    * - **API**
      - Application Programming Interface
    * - **APP**
      - Australian Privacy Principles
+   * - **ARM**
+     - Azure Resource Manager
    * - **ARN**
      - Amazon Resource Name
    * - **ASCII**
@@ -73,6 +85,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Concise Binary Object Representation
    * - **CCPA**
      - California Consumer Privacy Act
+   * - **CDN**
+     - Content Delivery Network
    * - **CDC**
      - Customer Data Cloud
    * - **CDP**
@@ -99,6 +113,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Consumer Packaged Goods
    * - **CRM**
      - Customer Relationship Management
+   * - **CSAT**
+     - Customer Satisfaction Score
    * - **CSE**
      - Customer Success Engineering
    * - **CTE**
@@ -125,6 +141,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Data Subject Access Request
    * - **DSP**
      - Demand-side Platform
+   * - **DST**
+     - Daylight Savings Time
    * - **DTC**
      - Direct-to-Consumer
    * - **DW**, **DWH**
@@ -159,12 +177,20 @@ The following list combines industry-standard abbreviations and initialisms with
      - Google Cloud Platform
    * - **GDPR**
      - General Data Protection Regulation
+   * - **GMP**
+     - Growth Management Platform
    * - **GMT**
      - Greenwich Mean Time
+   * - **GPP**
+     - Global Privacy Protocol
    * - **HDFS**
      - Hadoop Distributed File System
    * - **HEM**
      - Hashed Email Address
+   * - **HMAC**
+     - Hash-based Message Authentication Code
+   * - **IAB**
+     - Interactive Advertising Bureau
    * - **IAM**
      - Identity Access Management
    * - **IDFA**
@@ -203,10 +229,14 @@ The following list combines industry-standard abbreviations and initialisms with
      - Mobile Directory Number
    * - **MFA**
      - Multi-factor Authentication
+   * - **MMM**
+     - Marketing Mix Modeling
    * - **MMS**
      - Multimedia Messaging Service
    * - **MSRP**
      - Manufacturer's Suggested Retail Price
+   * - **MTA**
+     - Multi-touch Attribution
    * - **MVP**
      - Minimal Viable Product
    * - **NBD**
@@ -221,6 +251,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Net Promoter System
    * - **ODBC**
      - Open Database Connectivity
+   * - **OHIP**
+     - Oracle Hospitality Integration Platform
    * - **OIDC**
      - OpenID Connect
    * - **ORC**
@@ -279,6 +311,10 @@ The following list combines industry-standard abbreviations and initialisms with
      - Shared Access Signature
    * - **SaaS**
      - Software-as-a-Service
+   * - **SFCC**
+     - Salesforce Commerce Cloud
+   * - **SFMC**
+     - Salesforce Marketing Cloud
    * - **SFTP**
      - Secure File Transfer Protocol
    * - **SHA**
@@ -293,26 +329,36 @@ The following list combines industry-standard abbreviations and initialisms with
      - Service Provider
    * - **SQL**
      - Structured Query Language
+   * - **SSH**
+     - Secure Shell
+   * - **SSJS**
+     - Server-side JavaScript
    * - **SSN**
      - Social Security Number
    * - **SSO**
      - Single Sign-On
    * - **SSP**
-     - Supply-side Platform
+     - Supply side Platform
    * - **TAA**
      - Trade Area Append
    * - **TAM**
      - Total Addressible Market
    * - **TAR**
      - Tape Archive
+   * - **TCF**
+     - European Transparency and Consent Framework
+   * - **TCP**
+     - Transmission Control Protocol
    * - **TLD**
      - Top-Level Domain
    * - **TSV**
      - Tab-Separated Values
+   * - **TTL**
+     - Time to Live
    * - **UI**
      - User Interface
-   * - **UID**
-     - Unified ID
+   * - **UID2**
+     - Unified ID 2.0
    * - **UPC**
      - Universal Product Code
    * - **UPT**
@@ -333,3 +379,7 @@ The following list combines industry-standard abbreviations and initialisms with
      - Yet Another Resource Manager
    * - **YCSB**
      - Yahoo! Cloud Serving Benchmark
+   * - **ZIP**
+     - Zone Improvement Plan
+
+.. vale on

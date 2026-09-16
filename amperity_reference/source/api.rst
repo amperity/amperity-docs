@@ -23,7 +23,8 @@ Amperity has the following APIs:
 
 * :ref:`Amperity API <api-amperity>`
 * :ref:`Profile API <api-profile>`
-* :ref:`Streaming Ingest API <api-streaming-ingest>`
+* :ref:`Streaming API <api-streaming-ingest>`
+* :ref:`Real-time API <api-realtime>`
 
 .. api-overview-end
 
@@ -35,13 +36,17 @@ Amperity API
 
 .. api-amperity-start
 
-The |amperity_api| enables programmatic access to your Amperity tenant through a collection of RESTful endpoints that support API-first use cases for integrations, applications, and custom workflows. Use Amperity API endpoints to streamline workflows, enhance marketing strategies, and unlock the value of your brand's customer data.
+The `Amperity API <../api/index.html>`__ enables programmatic access to your Amperity tenant through a collection of RESTful endpoints that support API-first use cases for integrations, applications, and custom workflows. Use Amperity API endpoints to streamline workflows, enhance marketing strategies, and unlock the value of your brand's customer data.
+
+
+.. _api-amperity-endpoints:
+
+Available Endpoints
+--------------------------------------------------
 
 .. include:: ../../shared/api_amperity.rst
    :start-after: .. term-http-methods-start
    :end-before: .. term-http-methods-end
-
-.. api-amperity-end
 
 
 .. _api-profile:
@@ -57,9 +62,7 @@ Profile API
 
 The |api_profile| is unique to your tenant. The endpoints that are enabled for your use cases do not exist until the results of queries that have been defined by your brand have been published to the Profile API as an index. A :ref:`set of actions are available <api-profile-actions>` for each endpoint that your brand enables when using the Profile API.
 
-.. warning:: The Profile API is currently in a closed beta. Ask your Amperity representative about potential use cases that are enabled by the Profile API and for information about how (and when) your brand can get access to the Profile API.
-
-.. api-profile-about-start
+.. api-profile-about-end
 
 .. api-keys-important-profile-api-start
 
@@ -78,7 +81,7 @@ The |api_profile| is unique to your tenant. The endpoints that are enabled for y
 
 .. _api-streaming-ingest:
 
-Streaming Ingest API
+Streaming API
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -90,6 +93,90 @@ Streaming Ingest API
 The |api_streaming_ingest| is designed for streaming events and profile updates. It is a low latency, high throughput REST API, designed to accept billions of records per day.
 
 .. api-streaming-ingest-end
+
+
+.. _api-realtime:
+
+Real-time API
+==================================================
+
+.. api-realtime-start
+
+The `Real-time API <../api/endpoints_realtime.html>`__ enables your brand to stream customer events into Amperity and read back unified customer profiles, profile collections, and real-time segment membership through a collection of RESTful endpoints at the ``/prof`` base path. Use the Real-time API to support low-latency use cases such as recognizing returning customers and personalizing experiences at request time.
+
+To write the expressions that recognize events, shape event types, and define real-time segments, see :doc:`Expressions for real-time <expressions>`.
+
+.. api-realtime-end
+
+.. note:: The Real-time API is distinct from the :ref:`Profile API <api-profile>`. The Real-time API streams events and reads real-time profile collections at the ``/prof`` base path; the Profile API provides read-only access to published query results as indexes. They are different services.
+
+.. note:: The Real-time API is an unstable API. Its endpoints do not require an ``api-version`` header, may change, and are offered without a guarantee of support or advance notice of breaking changes.
+
+.. note:: Before creating a profile collection, an event stream, or a real-time segment, you must contact your Amperity representative to enable real-time product features.
+
+.. note:: The Real-time API accepts up to 500 requests per second per tenant.
+
+
+.. _api-realtime-permissions:
+
+Permissions and tenancy
+--------------------------------------------------
+
+.. api-realtime-permissions-start
+
+Requests to the Real-time API authenticate with an :ref:`Amperity access token <api-keys-access-tokens>` and must identify the tenant using the ``amperity-tenant`` header. Each endpoint requires specific permissions:
+
+* Sending events requires **profile-events:write** (or **streaming-ingest-api:write**).
+* Looking up or reading a profile requires **profile-collections:read** and **pii:read**.
+* Listing segment membership requires **real-time-segments:read** and **pii:read**.
+* Reading collection stats and history requires **profile-collections:read**.
+
+.. api-realtime-permissions-end
+
+
+.. _api-realtime-async:
+
+How events are processed
+--------------------------------------------------
+
+.. api-realtime-async-start
+
+The Real-time API separates writing events from reading profiles. Sending an event is asynchronous: Amperity accepts the event for processing and responds immediately, before the event has updated any profile. Reads--looking up a profile, getting a profile, and listing segment members--are synchronous and return the current profile state.
+
+When you send an event to ``POST /prof/events/{stream-id}``, the response depends on the mode configured for the event stream:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Stream mode
+     - Status
+     - Meaning
+   * - Active
+     - ``202 Accepted``
+     - The event was accepted and published for processing.
+   * - Drop
+     - ``204 No Content``
+     - The stream is configured to drop events; the event was accepted but is not processed.
+   * - Reject
+     - ``409 Conflict``
+     - The stream is not currently accepting events.
+
+Sending an event to a stream that does not exist for the tenant returns ``404 Not Found``. An event is rejected before processing if it is larger than 64 KB or is sent without a ``Content-Length`` header.
+
+.. api-realtime-async-end
+
+
+.. _api-realtime-pagination:
+
+Pagination
+--------------------------------------------------
+
+.. api-realtime-pagination-start
+
+Listing the segments a profile belongs to (``GET /prof/profiles/{collection-id}/{profile-id}/segments``) is paginated using the ``limit`` and ``next_token`` query parameters.
+
+.. api-realtime-pagination-end
 
 
 .. _api-authenticate:
@@ -119,11 +206,15 @@ About Amperity API keys
 
 Amperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity.
 
-API keys are tenant-specific and are neither pulled nor promoted in the sandbox experience.
-
-Access to the Amperity API requires using |ext_jwt| access tokens that are signed by Amperity-managed API keys.
+Access to the Amperity API requires using `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| access tokens that are signed by Amperity-managed API keys.
 
 .. api-keys-end
+
+.. api-keys-sandboxes-start
+
+API keys are tenant-specific and are not pulled to a sandbox *or* promoted from a sandbox to production. API keys must be created in a sandbox to use an Amperity API endpoint, stream data using the Streaming API, or access Profile API indexes.
+
+.. api-keys-sandboxes-end
 
 .. api-keys-important-start
 
@@ -145,6 +236,7 @@ API keys are managed directly from the Amperity UI.
 
 * :ref:`Add API keys <api-keys-api-token-add>`
 * :ref:`Delete API keys <api-keys-api-token-delete>`
+* :ref:`Get OAuth credentials <api-keys-api-token-oauth>`
 * :ref:`Rotate API keys <api-keys-api-token-rotate>`
 
 .. api-keys-api-tokens-end
@@ -190,16 +282,16 @@ An API issuer token enables your downstream workflow to programmatically issue n
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **API Token Issuer** option, and then click **Save**.
 
@@ -229,16 +321,16 @@ An API key enables your downstream use cases to interact with the Amperity API.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **DataGrid Operator** option, and then click **Save**.
 
@@ -268,16 +360,16 @@ An API key enables your downstream use cases to read data from the Profile API.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **Profile API Data Access** option, and then click **Save**.
 
@@ -307,16 +399,16 @@ A write access token enables your upstream use cases to write data to the Stream
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - From the **Add API key** dialog, add the name for the API key, select the **Streaming Ingest Write Access** option, and then click **Save**.
 
@@ -336,7 +428,7 @@ Delete API keys
 
 .. api-keys-api-token-delete-start
 
-In situations where rotating an access key isn't enough, you can delete an API key.
+In situations where rotating an access key is not enough, you can delete an API key.
 
 **To delete API tokens**
 
@@ -346,18 +438,18 @@ In situations where rotating an access key isn't enough, you can delete an API k
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Delete".
+     - Under **API keys** find the index, and then from the **Actions** menu select **Delete**.
 
        .. image:: ../../images/api-keys-delete-access-token.png
           :width: 500 px
@@ -368,6 +460,88 @@ In situations where rotating an access key isn't enough, you can delete an API k
 .. api-keys-api-token-delete-end
 
 
+.. _api-keys-api-token-oauth:
+
+Get OAuth credentials
+--------------------------------------------------
+
+.. api-keys-api-token-oauth-start
+
+Every configured API token has an access token to enable using OAuth.
+
+.. api-keys-api-token-oauth-end
+
+**To get OAuth credentials for an API key**
+
+.. api-keys-api-token-oauth-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - Under **API keys** find the index, and then from the **Actions** menu select **Get OAuth credentials**.
+
+       The **OAuth credentials** dialog box opens and shows the following credential details:
+
+       #. Client ID.
+       #. Client secret.
+       #. Token endpoint.
+
+       Use these values to configure automated workflows to use OAuth when accessing the API for which this token allows access.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - Use the client ID and client secret to send an HTTP POST request to the token endpoint. This will return an access token.
+
+       **Example request details**
+
+       .. code-block:: none
+
+          POST /api/v0/oauth2/token HTTP/1.1
+          Host: acme.amperity.com
+          Content-Type: application/x-www-form-urlencoded
+          X-Amperity-Tenant: acme2
+
+          grant_type=client_credentials
+          &client_id=ClientId
+          &client_secret=ClientSecret
+
+       The 200 OK response will be similar to
+
+       .. code-block:: json
+
+          {
+            "access_token": "N88Du6L1xsmA5DRZrtxSGYmbHP",
+            "expires_in": 3600,
+            "token_type": "Bearer"
+          }
+
+       Where:
+
+       * ``access_token`` is an access token that can authenticate requests to the Amperity API. Use this access token in the HTTP Authorization header.
+       * ``expires_in`` is the amount of time, after which, the access token expires.
+       * ``token_type`` should always be set to "Bearer".
+
+.. api-keys-api-token-oauth-steps-end
+
+
 .. _api-keys-api-token-rotate:
 
 Rotate API keys
@@ -375,17 +549,15 @@ Rotate API keys
 
 .. api-keys-api-token-rotate-start
 
-You can rotate the internal secrets used by access tokens to ensure that previously-issued access tokens cannot authenticate to the Amperity API.
+You can rotate the internal secrets used by access tokens to ensure that previously issued access tokens cannot authenticate to the Amperity API.
 
-When an API key is rotated a new internal secret is generated, after which it becomes the active secret for that API key. The previously-issued access token is deposed, which allows the previous code to remain valid for a short period of time to allow for distribution of the new access token. A deposed access token will remain valid for 30 days, or may be explicitly dropped.
+When an API key is rotated a new internal secret is generated, after which it becomes the active secret for that API key. The previously issued access token is deposed, which allows the previous code to remain valid for a short period of time to allow for distribution of the new access token. A deposed access token will remain valid for 30 days, or may be explicitly dropped.
 
-If an access token already has a deposed token, that deposed token is dropped and the previously-issued access token will take its place as the deposed token.
+If an access token already has a deposed token, that deposed token is dropped and the previously issued access token takes its place as the deposed token.
 
-This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often (e.g. on every issue call), or they will be surprised when their existing tokens stop working suddenly.
+This process may be used to invalidate outstanding tokens issued without expiry times. Clients should be careful not to rotate too often, such as to not rotate on every issue call, or they will be surprised when their existing tokens stop working.
 
-.. note:: If you rotate your tokens too quickly you may run into issues where previously-issued access tokens are not deposed for a long enough time, which prevents newly-issued tokens from being distributed.
-
-API tokens can be rotated directly from Amperity.
+.. note:: If you rotate your tokens too often you may run into issues where previously issued access tokens are not deposed for a long enough time, which prevents newly issued tokens from being distributed.
 
 .. api-keys-api-token-rotate-end
 
@@ -400,24 +572,20 @@ API tokens can be rotated directly from Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Under **API keys** find the index, and then from the **Actions** menu select "Rotate API token".
+     - Under **API keys** find the index, and then from the **Actions** menu select **Generate token**.
 
-       .. image:: ../../images/api-keys-rotate-api-token.png
-          :width: 500 px
-          :alt: Rotate an API token.
-          :align: left
-          :class: no-scaled-link
+       Set the token expiration length. Enable the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
 .. api-keys-api-token-rotate-steps-end
 
@@ -429,7 +597,7 @@ About access tokens
 
 .. api-keys-access-tokens-start
 
-Amperity uses a |ext_jwt| for authentication to the Amperity API. These access tokens are issued from API keys which are authorized to perform certain actions with Amperity.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Amperity API. These access tokens are issued from API keys which are authorized to perform certain actions with Amperity.
 
 Because a JWT access token automatically expires, tokens should be refreshed on a regular basis.
 
@@ -439,7 +607,7 @@ Access tokens are managed directly from the Amperity UI.
 
 .. api-keys-access-tokens-list-start
 
-* :ref:`Generate access tokens <api-keys-access-tokens-generate>`
+* :ref:`Get tokens <api-keys-access-tokens-generate>`
 * :ref:`Refresh access tokens <api-keys-access-tokens-refresh>`
 
 .. api-keys-access-tokens-list-end
@@ -470,7 +638,7 @@ Generate access tokens
 
 .. api-keys-access-tokens-generate-start
 
-Access tokens that enable authentication to the Amperity API are managed directly from the **Users & Activity** page in Amperity.
+Access tokens that enable authentication to the Amperity API are managed directly from the **Settings** page in Amperity.
 
 **To generate access tokens**
 
@@ -480,18 +648,18 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
 
        .. image:: ../../images/api-keys-generate-access-token.png
           :width: 500 px
@@ -502,10 +670,10 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px
@@ -513,7 +681,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
+       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
        Click **Generate token**. The token is generated, and then is automatically copied to your clipboard.
 
@@ -523,7 +691,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who will have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 
@@ -542,19 +710,21 @@ Access tokens may be :ref:`refreshed directly (using an issuer token) <api-keys-
 
 .. _api-keys-access-tokens-refresh-api-issuer:
 
-using API issuer tokens
+Using API issuer tokens
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-api-issuer-start
 
 Use :ref:`API issuer tokens <api-keys-api-token-add-issuer>` to enable a downstream workflow to programmatically refresh access tokens. :ref:`Generate an access token for the issuer token <api-keys-access-tokens-generate>`, and then use the issuer token as part of the programmatic workflow.
 
+Find the token ID for the access token to be refreshed under **Settings**, **Security**, **API keys** in the ID column. API issuer tokens can refresh their own tokens. A fully automated token refresh workflow uses the refresh token's ID along with the access token's ID.
+
 .. api-keys-access-tokens-refresh-api-issuer-end
 
 
 .. _api-keys-access-tokens-refresh-curl:
 
-using cURL
+Using cURL
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-curl-start
@@ -568,14 +738,14 @@ To refresh an access token using cURL, submit a request similar to:
    -H "X-Amperity-Tenant: <tenant-name>" \
    -H "Authorization: Bearer <token-refresher token>" \
    https://<tenant-name>.amperity.com/api/v0/admin/api-keys/<api-key-id>/tokens \
-   -d '{"expires-at": "2020-06-16T00:24:16Z"}'
+   -d '{"expires-at": "2026-06-14T00:24:16Z"}'
 
 .. api-keys-access-tokens-refresh-curl-end
 
 
 .. _api-keys-access-tokens-refresh-http:
 
-using HTTP
+Using HTTP
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-http-start
@@ -585,19 +755,19 @@ To refresh an access token using HTTP, submit a request similar to:
 .. code-block:: none
 
    POST /api/v0/admin/api-keys/<api-key-id>/tokens HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
+   Host: <tenant-name>.amperity.com
    Content-Type: application/json
    X-Amperity-Tenant: <tenant-name>
    Authorization: Bearer <token-refresher token>
 
-   {"expires-at": "2020-06-16T00:24:16Z"}
+   {"expires-at": "2026-06-14T00:24:16Z"}
 
 .. api-keys-access-tokens-refresh-http-end
 
 
 .. _api-keys-access-tokens-refresh-postman:
 
-using Postman
+Using Postman
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-postman-start
@@ -613,12 +783,12 @@ Amperity provides complete details for refreshing an API token using a |ext_down
 
 .. _api-keys-access-tokens-refresh-generate-token:
 
-when generating an access token
+When generating an access token
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. api-keys-access-tokens-refresh-generate-token-start
 
-Use the **Rotate key secret** option to rotate an existing secret when :ref:`generating an access token <api-keys-access-tokens-generate>`. This will force all previously-provisioned tokens that are associated with the current API key to expire in 30 days.
+Use the **Rotate key secret** option to rotate an existing secret when :ref:`generating an access token <api-keys-access-tokens-generate>`. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
 
 .. api-keys-access-tokens-refresh-generate-token-end
 
@@ -630,9 +800,9 @@ Revoke access tokens
 
 .. api-keys-access-tokens-revoke-start
 
-You may revoke access tokens associated with an API key by opening the **Actions** menu for an API key, and then choosing **Revoke tokens**. There are two options:
+You may revoke access tokens associated with an API key by opening the **Actions** menu for an API key, and then choosing **Revoke tokens**. Do one of the following:
 
-#. Revoke all tokens that were issued prior to the last rotation.
+#. Revoke all tokens that were issued before the last rotation.
 #. Revoke all tokens immediately.
 
 The selected action cannot be undone.
@@ -649,24 +819,24 @@ The selected action cannot be undone.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Settings** page, and then select the **Security** tab.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to revoke tokens, and then from the **Actions** menu select "Revoke token".
+     - Under **API keys** find the API key for which you want to revoke tokens, and then from the **Actions** menu select **Revoke token**.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - From the **Revoke tokens** dialog, choose one of the following options:
 
@@ -676,15 +846,15 @@ The selected action cannot be undone.
           :align: left
           :class: no-scaled-link
 
-       Use **Revoke old tokens** to revoke only tokens that were created prior to the last rotation.
+       Use **Revoke old tokens** to revoke only tokens that were created before the last rotation.
 
        Use **Revoke all tokens** to immediately revoke all tokens.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Revoke tokens**, and then confirm that you want to revoke the selected tokens. This action cannot be undone.
 
@@ -717,9 +887,9 @@ Copy endpoint URL
 
 .. api-profile-action-copy-url-start
 
-Use this to get the full URL for your tenant, including the ID for the endpoint. Use this URL in the requests your brand makes to the profile API.
+Use this to get the full URL of your tenant, including the ID for the endpoint. Use this URL in the requests your brand makes to the profile API.
 
-.. important:: Each request to a profile API endpoint **MUST** have the correct URL for that endpoint. The URL for an endpoint is similar to:
+.. important:: Each request to a profile API endpoint **MUST** have the correct URL of that endpoint. The URL of an endpoint is similar to:
 
    ::
 
@@ -727,7 +897,7 @@ Use this to get the full URL for your tenant, including the ID for the endpoint.
 
 .. api-profile-action-copy-url-end
 
-**To copy the URL for an endpoint**
+**To copy the URL of an endpoint**
 
 .. api-profile-action-copy-url-steps-start
 
@@ -736,7 +906,7 @@ Use this to get the full URL for your tenant, including the ID for the endpoint.
 
    .. image:: ../../images/api-profile-endpoint-copy-url.png
       :width: 500 px
-      :alt: Copy the URL for an endpoint in the Amperity Profile API.
+      :alt: Copy the URL of an endpoint in the Amperity Profile API.
       :align: left
       :class: no-scaled-link
 
@@ -752,7 +922,7 @@ Copy index ID
 
 .. api-profile-action-copy-index-id-start
 
-The index ID is a unique identifier for an endpoint. To make a request to any Profile API endpoint you must include the index ID in the URL for the request.
+The index ID is a unique identifier for an endpoint. To make a request to any Profile API endpoint you must include the index ID in the URL of the request.
 
 ::
 
@@ -888,3 +1058,11 @@ You may view the settings for any configured endpoint.
 #. Under **Profile API**, select the elipses icon for an endpoint, and then select **View**.
 
 .. api-profile-action-view-steps-end
+
+
+.. toctree::
+   :caption: Amperity APIs
+   :maxdepth: 2
+   :hidden:
+
+   Expressions for real-time <expressions>

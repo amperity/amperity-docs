@@ -21,19 +21,29 @@ About Presto SQL
    :start-after: .. term-presto-sql-start
    :end-before: .. term-presto-sql-end
 
+.. sql-presto-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Presto SQL is the underlying SQL engine used by the SQL Segment Editor in the Queries and Segment tabs.
+
+   Open **Learning Lab** to learn more about `using window functions to summarize data <https://amperity.com/learning-lab/using-window-functions-to-summarize-data>`__ |ext_link|, `using row functions to standardize data <https://amperity.com/learning-lab/using-row-functions-to-standardize-data>`__ |ext_link|, and `grouping and joining data <https://amperity.com/learning-lab/grouping-and-joining-data>`__ |ext_link|. Registration is required.
+
+.. sql-presto-learning-lab-end
+
 
 .. _sql-presto-why-should-i-use-this:
 
-Why should I use this reference?
+Why should you use this reference?
 ==================================================
 
 .. sql-presto-why-should-i-use-this-start
 
-The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto SQL as the underlying SQL engine. Amperity segments are built almost exclusively by using the **SELECT** statement, along with the clauses, operators, expressions, and functions you would expect to be available.
+The **SQL Segment Editor** in the **Queries** and **Segment** tabs uses Presto SQL as the underlying SQL engine. Amperity segments are built almost exclusively by using the **SELECT** statement and window functions, along with the clauses, operators, expressions, and functions you would expect to be available.
 
 This reference is focused on how Presto SQL is used with Amperity and is not focused on anything that you would not expect to do from the **Queries** and **Segment** tabs in Amperity.
 
-Please refer to this reference first, and then to the official |ext_presto_sql| documentation.
+Refer to this reference first, and then to the official `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| documentation.
 
 .. sql-presto-why-should-i-use-this-end
 
@@ -47,12 +57,12 @@ Amazon AWS vs. Azure
 
 Amperity uses different versions of Presto SQL, depending on if the tenant runs in Amazon AWS or Microsoft Azure.
 
-* Tenants that run in Amazon AWS run |ext_presto_sql_aws|.
-* Tenants in Azure run Trino, version 346: |ext_presto_sql_azure_release_notes|, |ext_presto_sql_azure_reference_select| (for current version), |ext_presto_sql_azure_reference_functions| (for current version).
+* Tenants that run in Amazon AWS run `Athena engine version 3 <https://docs.aws.amazon.com/athena/latest/ug/engine-versions-reference-0003.html>`__ |ext_link|.
+* Tenants in Azure run Trino, version 451: `release notes <https://trino.io/docs/current/release/release-451.html>`__ |ext_link|, `SELECT statement reference <https://trino.io/docs/current/sql/select.html>`__ |ext_link| (for current version), `functions reference <https://trino.io/docs/current/functions.html>`__ |ext_link| (for current version).
 
 Amperity behaves the same on either platform when using Presto SQL to build segments from within the **Segments** tab, with the following exceptions:
 
-#. The way Presto SQL handles |ext_presto_sql_fixed_precision| was changed in Presto SQL version 0.198. A decimal without an explicit type specifier--for example, 1.2--is parsed as a ``DOUBLE`` on tenants that run in Amazon AWS and as a ``DECIMAL`` on tenants that run in Azure.
+#. The way Presto SQL handles `fixed precision rounding for a DECIMAL data type <https://prestodb.io/docs/current/language/types.html#fixed-precision>`__ |ext_link| was changed in Presto SQL version 0.198. A decimal without an explicit type specifier--for example, 1.2--is parsed as a ``DOUBLE`` on tenants that run in Amazon AWS and as a ``DECIMAL`` on tenants that run in Azure.
 
 .. sql-presto-aws-vs-azure-end
 
@@ -80,12 +90,12 @@ General
 
 * Use consistent and descriptive identifiers and names.
 * Make judicious use of white space and indentation to make code easier to read.
-* Store ISO-8601 compliant time and date information (YYYY-MM-DD HH:MM:SS.SSSSS).
+* Store ISO-8601 compliant time and date information: ``YYYY-MM-DD HH:MM:SS.SSSSS``.
 * Try to use only standard SQL functions instead of vendor-specific functions for reasons of portability.
 * Keep code succinct and devoid of redundant SQL, such as unnecessary quoting or parentheses or **WHERE** clauses that can otherwise be derived.
 * Include comments in SQL code where necessary.
 
-  You may use the C-language style slash and asterisk opening (``/*``) and closing (``*/``) pair of delimiters to enclose comments single- and multi-line comments, as long as comments are not nested.
+  You may use the C-language style slash and asterisk opening (``/*``) and closing (``*/``) pair of delimiters to enclose comments single and multi-line comments, as long as comments are not nested.
 
   You may precede single-line comments using ``--``.
 
@@ -100,8 +110,8 @@ General
 **Avoid**
 
 * Using reserved keyword names as identifiers.
-* CamelCase, with the exception of the table name. CamelCase is difficult to scan quickly.
-* Descriptive prefixes or |ext_hungarian_notation| such as ``sp_`` or ``tbl``.
+* CamelCase, with the exception of the table name. CamelCase is difficult to scan.
+* Descriptive prefixes or `Hungarian notation <https://en.wikipedia.org/wiki/Hungarian_notation>`__ |ext_link| such as ``sp_`` or ``tbl``.
 * Plurals. Use the more natural collective term where possible instead. For example staff instead of employees or people instead of individuals.
 * Quote identifiers. Use SQL92 double quotes for portability, if possible.
 * Object-oriented design principles with SQL or database structures.
@@ -119,6 +129,7 @@ Commas
 Commas are used as separators in SQL queries and are often added at the end of a line, like this:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id,
@@ -143,6 +154,7 @@ Adding the comma at the start of the row is recommended for two reasons:
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      amperity_id AS amperity_id
@@ -182,18 +194,19 @@ Formalisms
 
 .. sql-presto-style-guide-indentation-formalisms-start
 
-Make use of **BETWEEN** where possible instead of combining multiple statements with **AND**. Similarly use **IN()** instead of multiple OR clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
+Make use of **BETWEEN** where possible instead of combining many statements with **AND**. Similarly use **IN()** instead of many **OR** clauses. Where a value needs to be interpreted before leaving the database use the **CASE** expression. **CASE** expressions can be nested to form more complex logical structures. Avoid the use of **UNION** clauses and temporary tables where possible. If the schema can be optimized to remove the reliance on these features then it most likely should be.
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT CASE postcode
-     WHEN 'BN1' THEN 'Brighton'
-     WHEN 'EH1' THEN 'Edinburgh'
-     END AS 'city_uk'
-   FROM office_locations
-   WHERE country = 'United Kingdom'
-     AND opening_time BETWEEN 8 AND 9
-     AND postcode IN ('EH1', 'BN1', 'NN1', 'KW1')
+   SELECT CASE purchase_channel
+     WHEN 'online' THEN 'Digital'
+     WHEN 'in-store' THEN 'Retail'
+     WHEN 'phone' THEN 'Call Center'
+     END AS channel_group
+   FROM Unified_Transactions
+   WHERE order_datetime BETWEEN '2023-01-01' AND '2023-12-31'
+     AND purchase_channel IN ('online', 'in-store', 'phone', 'catalog')
 
 .. sql-presto-style-guide-indentation-formalisms-end
 
@@ -208,15 +221,17 @@ Joins
 Joins should be aligned with the **FROM** clause and grouped with a new line where necessary. Indenting the **ON** and **AND** statements in a **JOIN** is optional, but can make it easier to see individual joins when many are present.
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT r.last_name
-   FROM riders AS r
-   INNER JOIN bikes AS b
-     ON r.bike_vin_num = b.vin_num
-     AND b.engine_tally > 2
-   INNER JOIN crew AS c
-     ON r.crew_chief_last_name = c.last_name
-     AND c.chief = 'Y';
+   SELECT mc.given_name
+     ,mc.surname
+   FROM Merged_Customers AS mc
+   INNER JOIN Unified_Transactions AS ut
+     ON mc.amperity_id = ut.amperity_id
+     AND ut.order_revenue > 100
+   INNER JOIN Transaction_Attributes_Extended AS tae
+     ON mc.amperity_id = tae.amperity_id
+     AND tae.lifetime_order_frequency > 2
 
 .. sql-presto-style-guide-indentation-joins-end
 
@@ -228,21 +243,22 @@ Subqueries
 
 .. sql-presto-style-guide-indentation-subqueries-start
 
-Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner—this is especially true where you have nested subqueries.
+Subqueries should be aligned to the line above them, but then follow standard indentation patters from that location. Sometimes it will make sense to have the closing parenthesis on a new line at the same character position as its opening partner. This is especially true where you have nested subqueries.
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT r.last_name,
-     (SELECT MAX(YEAR(championship_date))
-     FROM champions AS c
-     WHERE c.last_name = r.last_name
-       AND c.confirmed = 'Y') AS `last_championship_year`
-   FROM riders AS r
-   WHERE r.last_name IN
-     (SELECT c.last_name
-     FROM champions AS c
-     WHERE YEAR(championship_date) > '2008'
-       AND c.confirmed = 'Y');
+   SELECT mc.surname,
+     (SELECT MAX(YEAR(ut.order_datetime))
+     FROM Unified_Transactions AS ut
+     WHERE ut.amperity_id = mc.amperity_id
+       AND ut.order_revenue > 0) AS last_purchase_year
+   FROM Merged_Customers AS mc
+   WHERE mc.amperity_id IN
+     (SELECT ut.amperity_id
+     FROM Unified_Transactions AS ut
+     WHERE YEAR(ut.order_datetime) > '2020'
+       AND ut.order_revenue > 0)
 
 .. sql-presto-style-guide-indentation-subqueries-end
 
@@ -254,7 +270,13 @@ Naming conventions
 
 .. sql-presto-style-guide-naming-conventions-start
 
-Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes—in practice this is 30 characters unless you are using multi-byte character set. Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names. Avoid the use of multiple consecutive underscores—these can be hard to read. Use underscores where you would naturally include a space in the name (first name becomes ``first_name``). Avoid abbreviations and if you have to use them make sure they are commonly understood.
+Ensure the name is unique and does not exist as a reserved keyword. Keep the length to a maximum of 30 bytes, which is 30 characters unless you are using multi-byte character set.
+
+Names must begin with a letter and may not end with an underscore. Only use letters, numbers, and underscores in names.
+
+Use underscores where you would include a space in the name. For example, "first name" becomes "first_name". Avoid the use of many consecutive underscores because they can be hard to read.
+
+Avoid abbreviations and if you have to use them make sure they are commonly understood.
 
 .. code-block:: sql
 
@@ -280,12 +302,12 @@ For columns::
 
 For tables::
 
-   SELECT column_name(s)
+   SELECT column_names
    FROM table_name AS alias_name;
 
 When using an alias:
 
-* Assign names that clearly relate to the column or table.
+* Assign names that relate to the column or table.
 
   .. important:: Do not use an alias when its name matches the original column name.
 
@@ -293,7 +315,7 @@ When using an alias:
 
   ..tip:: Include the **AS** keyword when aliasing columns in a **SELECT** statement.
 
-* For computed data -- **SUM()** or **AVG()** -- use the name you would give it were it a column defined in the schema.
+* For computed data--**SUM()** or **AVG()**--use the name you would give it were it a column defined in the schema.
 * Always wrap an aliased field name with single back ticks::
 
      `given_name`
@@ -302,6 +324,7 @@ When using an alias:
 The following example shows using aliases to add clarity to a **SELECT** statement that selects columns from more than one table. The "c360" alias refers to the ``Customer360`` table and the "el" alias refers to the ``Email_List`` table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT c360.email, c360.given_name, c360.surname, el.status
    FROM Customer360 c360
@@ -343,7 +366,7 @@ Example:
 
 When using correlations:
 
-* Assign names that clearly relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "mc".
+* Assign names that relate to the table. For example: a table named "Merged_Customers" should have a correlation name of "mc".
 * Always use the first letter of the table as the first letter of the correlation.
 * Append additional alphanumeric characters as necessary's to ensure unique correlation names.
 * Ensure that correlation names are used only within the same query.
@@ -373,13 +396,13 @@ The following suffixes represent patterns that should be applied to column names
    * - **_total**
      - The total or sum of a collection of values.
    * - **_num**
-     - Denotes the field contains any kind of number.
+     - Denotes the field has any kind of number.
    * - **_name**
      - Signifies a name such as ``first_name``.
    * - **_seq**
      - Contains a contiguous sequence of values.
    * - **_date**
-     - Denotes a column that contains the date of something.
+     - Denotes a column that has the date of something.
    * - **_tally**
      - A count.
    * - **_size**
@@ -409,10 +432,10 @@ NULL values
 
 .. sql-presto-style-guide-null-values-start
 
-Functions may fail when they encounter a **NULL** value and others may return **NULL** values if any of their arguments return **NULL** values.
+Functions may fail when they encounter a **NULL** value and other functions may return **NULL** values if any of their arguments return **NULL** values.
 
 * Use the **COALESCE()** function to convert to a zero-length string when using the **CONCAT()** and **SUM()** functions.
-* Use the **COALESCE()** function to to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
+* Use the **COALESCE()** function to identify math. For example, multiplication will return **NULL** if any field is **NULL**. For example, because ``1`` is the identity for multiplication, use ``COALESCE(myColumn, 1)``
 
 .. sql-presto-style-guide-null-values-end
 
@@ -427,6 +450,7 @@ Reserved words
 Always use uppercase for the reserved keywords like **SELECT** and **WHERE**. It is best to avoid the abbreviated keywords and use the full length ones where available (prefer **ABSOLUTE** to **ABS**). Do not use database server specific keywords where an ANSI SQL keyword already exists performing the same function. This helps to make code more portable.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT model_num
    FROM Phones AS p
@@ -566,17 +590,18 @@ Line spacing
 
 .. sql-presto-style-guide-whitespace-line-spacing-start
 
-Always include newlines/vertical space:
+Always include newlines and vertical space:
 
 * before **AND** or **OR**
 * after semicolons to separate queries for easier reading
 * after each keyword definition
-* before a comma when separating multiple columns into logical groups
+* before a comma when separating many columns into logical groups
 * to separate code into related sections, which helps to ease the readability of large chunks of code.
 
 Putting commas and conjunctions at the start of the line makes it easier to comment out a single line without disturbing the rest of the query
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      a.title
@@ -597,29 +622,24 @@ Spaces
 
 .. sql-presto-style-guide-whitespace-spaces-start
 
-Spaces should be used to line up the code so that the root keywords all start on the same character boundary, and also so that  This makes it easy to keep track of where you are in a query that may be multiple layers deep.
+Use spaces to line up code so that the root keywords all start on the same character boundary. This makes it easier to keep track of where you are in a complex query.
 
 .. code-block:: sql
+   :linenos:
 
-   (SELECT f.species_name
-     ,AVG(f.height) AS `average_height`
-     ,AVG(f.diameter) AS `average_diameter`
-   FROM flora AS f
-   WHERE f.species_name = 'Banksia'
-     OR f.species_name = 'Sheoak'
-     OR f.species_name = 'Wattle'
-   GROUP BY f.species_name, f.observation_date)
-
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'online'
+   GROUP BY uit.product_category)
    UNION ALL
-
-   (SELECT b.species_name
-     ,AVG(b.height) AS `average_height`
-     ,AVG(b.diameter) AS `average_diameter`
-   FROM botanic_garden_flora AS b
-   WHERE b.species_name = 'Banksia'
-     OR b.species_name = 'Sheoak'
-     OR b.species_name = 'Wattle'
-   GROUP BY b.species_name, b.observation_date)
+   (SELECT uit.product_category
+     ,SUM(uit.item_revenue) AS total_revenue
+     ,COUNT(DISTINCT uit.order_id) AS order_count
+   FROM Unified_Itemized_Transactions AS uit
+   WHERE uit.purchase_channel = 'in-store'
+   GROUP BY uit.product_category)
 
 Although not exhaustive always include spaces:
 
@@ -628,6 +648,7 @@ Although not exhaustive always include spaces:
 * surrounding apostrophes (``'``), but not within parentheses or with a trailing comma or semicolon.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      a.title
@@ -650,19 +671,19 @@ Example SELECT statement
 The following example shows selecting the Amperity ID, purchase date, and order ID, and then uses two window functions to rank by transaction totals, and then put in descending order to sort the most recent purchase date first:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-     t.Amperity_Id,
-     t.purchasedate,
-     t.orderid,
-     rank() OVER (PARTITION BY t.Amperity_Id
-                  ORDER BY t.transactiontotal DESC) AS rank,
-     t.transactiontotal,
-     sum(t.transactiontotal) OVER (PARTITION BY t.Amperity_Id
-                                   ORDER BY t.purchasedate) AS rolling_sum
-   FROM
-     TransactionsEcomm t
-   ORDER BY t.Amperity_Id, rank
+     ut.amperity_id,
+     ut.order_datetime,
+     ut.order_id,
+     RANK() OVER (PARTITION BY ut.amperity_id
+                  ORDER BY ut.order_revenue DESC) AS order_rank,
+     ut.order_revenue,
+     SUM(ut.order_revenue) OVER (PARTITION BY ut.amperity_id
+                                 ORDER BY ut.order_datetime) AS rolling_revenue
+   FROM Unified_Transactions AS ut
+   ORDER BY ut.amperity_id, order_rank
    LIMIT 100
 
 .. sql-presto-style-guide-example-query-end
@@ -685,16 +706,17 @@ The **WITH** clause defines a common table expression (CTE).
 
 .. sql-presto-with-clause-example-multiple-ctes-start
 
-The following example shows using multiple CTEs:
+The following example shows using many CTEs:
 
-.. code-block:: 
+.. code-block:: sql
+   :linenos:
 
    WITH new_in_21 AS (
      SELECT
        amperity_id
        ,one_and_done
      FROM Transaction_Attributes
-     WHERE YEAR(first_order_datetime) = 2021
+     WHERE YEAR(first_order_datetime) = 2025
    ),
 
    product_categories AS (
@@ -708,8 +730,12 @@ The following example shows using multiple CTEs:
 
    SELECT
      product_category
-     ,COUNT(distinct amperity_id) customer_count
-     ,1.0000*SUM(CASE when one_and_done THEN 1 ELSE 0 END) / COUNT(DISTINCT amperity_id) pct_one_done
+     ,COUNT(DISTINCT amperity_id) customer_count
+     ,1.0000*SUM(CASE
+       WHEN one_and_done
+       THEN 1
+       ELSE 0
+     END) / COUNT(DISTINCT amperity_id) pct_one_done
    FROM product_categories
    GROUP BY 1
    ORDER BY 3 DESC
@@ -733,20 +759,21 @@ The **SELECT** statement defines a set of data to be returned from a data table.
 A **SELECT** statement can be complex, depending on the type of query you need to make. For example, the following **SELECT** statement ranks transactions by Amperity ID and by largest dollar totals:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-     t.orderid,
-     t.Amperity_Id, 
-     t.transactiontotal,
-     rank() OVER (partition by t.Amperity_Id order BY t.transactiontotal DESC) AS rank
-   FROM
-     TransactionsEcomm t
-   ORDER BY t.Amperity_Id, rank asc 
+     t.orderid
+     ,t.amperity_id
+     ,t.transactiontotal
+     ,RANK() OVER (
+       PARTITION BY t.amperity_id
+       ORDER BY t.transactiontotal DESC
+     ) AS rank
+   FROM TransactionsEcomm t
+   ORDER BY t.amperity_id, rank ASC 
    LIMIT 100
 
-The rest of this topic describes the clauses, expressions, functions, and operators that are the most commonly used within the **SQL Segment Editor** in Amperity. More functionality than what is described in this topic is supported, as the segment editors use Presto SQL.
-
-.. important:: Not all of the functionality described in the official documentation for |ext_presto_sql| should be used in the **SQL Segment Editor**.
+.. important:: Not all of the functionality described in the official documentation for `Presto SQL <https://prestodb.io/docs/current/index.html>`__ |ext_link| should be used in the **SQL Segment Editor**.
 
 .. sql-presto-select-statement-about-end
 
@@ -775,10 +802,14 @@ EXISTS predicate
 The **EXISTS** predicate determines if a subquery returns any rows:
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT name
-   FROM nation
-   WHERE EXISTS (SELECT * FROM region WHERE region.regionkey = nation.regionkey)
+   SELECT mc.given_name, mc.surname
+   FROM Merged_Customers AS mc
+   WHERE EXISTS (
+     SELECT * FROM Unified_Transactions AS ut
+     WHERE ut.amperity_id = mc.amperity_id
+   )
 
 .. sql-presto-select-statement-subquery-predicate-exists-end
 
@@ -793,10 +824,11 @@ IN predicate
 The **IN** predicate determines if any values produced by the subquery are equal to the provided expression. The result of **IN** follows the standard rules for **NULL** values. The subquery must produce exactly one column:
 
 .. code-block:: sql
+   :linenos:
 
-   SELECT name
-   FROM nation
-   WHERE regionkey IN (SELECT regionkey FROM region)
+   SELECT mc.given_name, mc.surname
+   FROM Merged_Customers AS mc
+   WHERE mc.amperity_id IN (SELECT amperity_id FROM Unified_Transactions)
 
 .. sql-presto-select-statement-subquery-predicate-in-end
 
@@ -813,6 +845,7 @@ Use the **SELECT DISTINCT** statement instead of **SELECT** to return only disti
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -831,7 +864,7 @@ FROM clause
 
 .. sql-presto-from-clause-start
 
-The **FROM** clause specifies the name of the data table against which the SQL query will be run and is part of every **SELECT** statement.
+The **FROM** clause specifies the name of the data table against which the SQL query is run and is part of every **SELECT** statement.
 
 .. sql-presto-from-clause-end
 
@@ -846,6 +879,7 @@ TABLESAMPLE BERNOULLI clause
 Use the **TABLESAMPLE BERNOULLI** clause to return a random sample of records. Specify the size of the random sample within parentheses. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -856,6 +890,7 @@ will return a random sample of records from the **Customer 360** table at a 50% 
 The following example shows a segment for use with campaigns that samples all customers with the surname "Smith" who do not have the given name "Joe" at a 30% rate:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      "amperity_id"
@@ -893,25 +928,17 @@ LEFT JOIN clause
 
 The **LEFT JOIN** clause joins rows from two tables. For a **LEFT JOIN**, each row in the left table is joined with all matching rows from the right table. For rows with no match in the right table, the join is completed with **NULL** to represent column values.
 
-For example:
+For example, the **Merged Customers** table has rows of customer profile data, with each row unique by Amperity ID. Select the average order revenue from **Unified Transactions**, and then use a **LEFT JOIN** to include average sales revenue in the query results, unique by Amperity ID.
 
 .. code-block:: sql
 
-   SELECT * FROM (VALUES 1, 2) t("left") 
-     LEFT JOIN (VALUES 1, 1) u("right") 
-     ON t."left" = u."right";
-
-will return a table similar to:
-
-.. code-block:: mysql
-
-   -------- --------
-    left     right
-   -------- --------
-    1        1
-    1        1
-    2        NULL
-   -------- --------
+   SELECT
+     amperity_id
+     ,AVG(order_revenue) AS average_sales_revenue
+   FROM Unified_Treansactions AS ut
+   LEFT JOIN Merged_Customers AS mc ON ut.amperity_id = mc.amperity_id
+   GROUP BY amperity_id
+   ORDER BY average_sales_revenue DESC
 
 .. sql-presto-left-join-clause-end
 
@@ -936,6 +963,7 @@ The **WHERE** clause filters records, and then returns only records that match t
    **Do**
 
    .. code-block:: sql
+      :linenos:
 
       AND (c360.email IS NOT NULL OR c360.phone IS NOT NULL)
       AND (
@@ -965,7 +993,7 @@ AND operator
 
 .. sql-presto-statement-operator-and-start
 
-The **AND** operator is used to filter records based on more than one condition. The **AND** operator displays a record if all the conditions separated by **AND** are ``TRUE``.
+The **AND** operator is used to filter records based on more than one condition. The **AND** operator displays a record if all the conditions separated by **AND** are **TRUE**.
 
 .. sql-presto-statement-operator-and-end
 
@@ -977,7 +1005,7 @@ OR operator
 
 .. sql-presto-statement-operator-or-start
 
-The **AND** operator is used to filter records based on more than one condition. The **OR** operator displays a record if any of the conditions separated by **OR** is ``TRUE``.
+The **AND** operator is used to filter records based on more than one condition. The **OR** operator displays a record if any of the conditions separated by **OR** is **TRUE**.
 
 .. sql-presto-statement-operator-or-end
 
@@ -989,7 +1017,7 @@ NOT operator
 
 .. sql-presto-statement-operator-not-start
 
-The **NOT** operator displays a record if the condition(s) is ``NOT TRUE``.
+The **NOT** operator displays a record if the conditions is ``NOT TRUE``.
 
 .. sql-presto-statement-operator-not-end
 
@@ -1017,7 +1045,8 @@ Simple form
 
 The simple form searches each value expression from left to right until it finds one that equals expression:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    CASE expression
      WHEN value THEN result
@@ -1029,7 +1058,8 @@ The result for the matching value is returned.
 
 If no match is found, the result from the **ELSE** clause is returned if it exists, otherwise **NULL** is returned:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    SELECT a,
      CASE a
@@ -1051,6 +1081,7 @@ Searched form
 The searched form evaluates each boolean condition from left to right until one is true and returns the matching result:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN condition THEN result
@@ -1061,6 +1092,7 @@ The searched form evaluates each boolean condition from left to right until one 
 If no conditions are true, the result from the **ELSE** clause is returned if it exists, otherwise **NULL** is returned:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT a, b,
      CASE
@@ -1082,6 +1114,7 @@ Group states by time zones
 The following **CASE** expression groups states by North American time zone:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN state = 'HI' THEN 'Hawaii'
@@ -1094,7 +1127,7 @@ The following **CASE** expression groups states by North American time zone:
      WHEN state = 'GU' THEN 'Guam'
      WHEN state = 'VI' THEN 'US Virgin Islands'
      WHEN state = 'AS' THEN 'American Samoa'
-     ELSE '' END AS time_zone
+   ELSE '' END AS time_zone
 
 .. sql-presto-case-searched-example-group-states-by-timezone-end
 
@@ -1144,6 +1177,27 @@ When a **GROUP BY** clause is used in a **SELECT** statement all output expressi
 .. sql-presto-group-by-clause-end
 
 
+.. _sql-presto-group-by-example-average-order-revenue:
+
+Average order revenue grouped by Amperity ID
+--------------------------------------------------
+
+.. sql-presto-group-by-example-average-order-revenue-start
+
+The **Unified Transactions** table has rows of customer transactions data with each row assigned an Amperity ID. Select the average order revenue from **Unified Transactions**, group by Amperity ID, and then order by average sales revenue in descending order.
+
+.. code-block:: sql
+
+   SELECT
+     amperity_id
+     ,AVG(order_revenue) AS average_sales_revenue
+   FROM Unified_Treansactions AS
+   GROUP BY amperity_id
+   ORDER BY average_sales_revenue DESC
+
+.. sql-presto-group-by-example-average-order-revenue-end
+
+
 .. _sql-presto-group-by-cube:
 
 CUBE operator
@@ -1156,11 +1210,12 @@ The **CUBE** operator generates all possible groupings for the specified group o
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-      amperity_id
-      ,purchase_brand
-      ,SUM(order_revenue) AS total_order_revenue
+     amperity_id
+     ,purchase_brand
+     ,SUM(order_revenue) AS total_order_revenue
    FROM Unified_Transactions
    --WHERE amperity_id = '12345-abcde'
    GROUP BY CUBE(amperity_id, purchase_brand)
@@ -1196,6 +1251,7 @@ The **ROLLUP** operator generates all possible subtotals for the specified group
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -1234,6 +1290,7 @@ The **HAVING** clause sorts a result set by one or more output expressions. Use 
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(*)
@@ -1302,6 +1359,7 @@ For example, to compare two tables and find out which rows are in table B, but n
    Use a query similar to the following to verify that 0 rows is accurate:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT COUNT(*)
       FROM (
@@ -1319,7 +1377,7 @@ INTERSECT clause
 
 .. sql-presto-intersect-start
 
-Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries. 
+Use the **INTERSECT** clause to return only the rows that are in the result sets of both the first and the second queries.
 
 For example, to find all rows in both tables A and B:
 
@@ -1338,7 +1396,7 @@ UNION clause
 
 .. sql-presto-union-clause-start
 
-The **UNION** clause combines the the unique results of one query with the unique results of a second. For example:
+The **UNION** clause combines the unique results of one query with the unique results of a second. For example:
 
 ::
 
@@ -1362,7 +1420,7 @@ The **UNION** clause supports two arguments: **ALL** and **DISTINCT**. Use **UNI
 
 .. sql-presto-union-clause-tip-start
 
-.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` and/or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
+.. tip:: Use :ref:`GROUP BY CUBE <sql-presto-group-by-cube>` or :ref:`GROUP BY ROLLUP <sql-presto-group-by-rollup>` clauses for more efficient unions of records.
 
 .. sql-presto-union-clause-tip-end
 
@@ -1371,6 +1429,7 @@ The **UNION** clause supports two arguments: **ALL** and **DISTINCT**. Use **UNI
 For example, the following query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -1421,7 +1480,7 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 * Arrays are expanded into a single column.
 * Maps are expanded into two columns (key, value).
 
-**UNNEST** can also be used with multiple arguments, in which case they are expanded into multiple columns, with as many rows as the highest cardinality argument (the other columns are padded with **NULL** values).
+**UNNEST** can also be used with many arguments, in which case they are expanded into many columns, with as many rows as the highest cardinality argument (the other columns are padded with **NULL** values).
 
 **UNNEST** can optionally have a **WITH ORDINALITY** clause, in which case an additional ordinality column is added to the end. **UNNEST** is normally used with a **JOIN** and can reference columns from relations on the left side of the join.
 
@@ -1429,9 +1488,10 @@ The **UNNEST** clause expands an **ARRAY** or **MAP** into a relation.
 
 .. sql-presto-unnest-clause-example-expand-email-address-start
 
-Use the UNNEST clause in the SQL segment to expand phone and/or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
+Use the UNNEST clause in the SQL segment to expand phone numbers or email addresses so that the query looks at individual bad values. The following example shows using an **UNNEST** clause to expand email addresses that are part of a bad-values blocklist SQL query:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(v.value,'\+.*@','@') AS value
@@ -1473,6 +1533,7 @@ To return a table with one column and three rows:
 To return a table with two columns and three rows:
 
 .. code-block:: sql
+   :linenos:
 
    VALUES
      (1, 'a'),
@@ -1482,6 +1543,7 @@ To return a table with two columns and three rows:
 To return table with column ID and name:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * FROM (
      VALUES
@@ -1493,6 +1555,7 @@ To return table with column ID and name:
 To add a table with column ID and name:
 
 .. code-block:: sql
+   :linenos:
 
    CREATE TABLE example AS
    SELECT * FROM (
@@ -1523,8 +1586,8 @@ A window function has the following components:
 #. A list of columns that act as inputs to the window function.
 #. A window function that defines the operation to be performed by the window function. For example: **RANK()** or **SUM()**. This may be any of the ranking functions, value functions, or aggregate functions available in Presto SQL.
 #. **OVER()** defines the window frame, which represents a sliding window.
-#. **PARTITION BY** separates the input into different partitions; only rows in the specified partition will be considered by the window function
-#. **ORDER BY** determines the order in which the input will be processed by the window function.
+#. **PARTITION BY** separates the input into different partitions. Only rows in the specified partition will be considered by the window function
+#. **ORDER BY** determines the order in which the input is processed by the window function.
 
    .. tip:: Use **ROWS BETWEEN** to define any number of preceding and following rows, as related to the current row.
    
@@ -1548,15 +1611,45 @@ A window function has the following components:
 
 For example:
 
-.. code-block:: none
+.. code-block:: sql
+   :linenos:
 
    SELECT input_1, input_2, input_3,
-     window_function() OVER (PARTITION BY input_2
-                             ORDER BY input_3 DESC, _uuid_pk) AS rnk
+     window_function() OVER (
+       PARTITION BY input_2
+       ORDER BY input_3 DESC, _uuid_pk
+     ) AS rnk
    FROM table_name
    ORDER BY input_2, rnk
 
 .. sql-presto-window-functions-end
+
+
+.. _sql-presto-window-function-example-rank-customers-by-revenue:
+
+Rank customers by revenue
+--------------------------------------------------
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-start
+
+Find the total sales revenue by Amperity ID, and then rank them by sales revenue. Sales revenue is in the **Unified Transactions** table and customer information is in the **Merged Customers** table. The window function uses the :ref:`DENSE_RANK() <sql-presto-function-dense-rank>` function to rank by the sum of order revenue and in descending order. The query joins revenue and profiles using the Amperity ID in **Merged Customers**, groups by full name, and then orders by rank, which is the sum of order revenue.
+
+.. code-block:: sql
+
+   SELECT
+     ut.amperity_id
+     mc.full_name
+     SUM(ut.order_revenue) AS total_sales_revenue
+     DENSE_RANK() OVER (
+       ORDER BY SUM(ut.order_revenue) DESC
+     ) AS rank
+   FROM Unified_Transactions ut
+   LEFT JOIN Merged_Customers AS mc ON ut.amperity_id = mc.amperity_id
+   WHERE ut.amperity_id IS NOT NULL
+   GROUP BY ut.amperity_id, mc.full_name
+   ORDER BY rank
+
+.. sql-presto-window-function-example-rank-customers-by-revenue-end
 
 
 .. _sql-presto-window-function-example-rolling-seven-day-window:
@@ -1569,6 +1662,7 @@ Rolling 7-day window
 The following example shows a rolling seven day window for order revenue.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -1576,7 +1670,11 @@ The following example shows a rolling seven day window for order revenue.
      SELECT
        purchase_channel
        ,order_day
-       ,SUM(order_revenue) OVER (PARTITION BY purchase_channel ORDER BY order_day ROWS BETWEEN 6 preceding AND current row) rolling_7_day_revenue
+       ,SUM(order_revenue) OVER (
+         PARTITION BY purchase_channel
+         ORDER BY order_day
+         ROWS BETWEEN 6 preceding AND current row
+       ) rolling_7_day_revenue
      FROM (
        SELECT
          purchase_channel
@@ -1604,6 +1702,7 @@ Retention rate, previous year
 The following example shows how to use a rolling 1-year window to return the values necessary for calculating retention rate during the previous year.
 
 .. code-block:: sql
+   :linenos:
 
    WITH customers AS (
      SELECT DISTINCT amperity_id AS amperity_id
@@ -1651,7 +1750,7 @@ The **ORDER BY** clause sorts a result set by one or more output expressions.
 
 .. code-block:: none
 
-    ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
+   ORDER BY expression [ ASC | DESC ] [ NULLS { FIRST | LAST } ] [, ...]
 
 Each expression may be composed of output columns or it may be an ordinal number selecting an output column by position (starting at one). The **ORDER BY** clause is evaluated as the last step of a query after any **GROUP BY** or **HAVING** clause. The default null ordering is **NULLS LAST**, regardless of the ordering direction.
 
@@ -1823,9 +1922,9 @@ Examples of **ALL** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ALL (...)           Evaluates to ``TRUE`` when A is equal to all values.
-A <> ALL (...)          Evaluates to ``TRUE`` when A doesn't match any value.
-A < ALL (...)           Evaluates to ``TRUE`` when A is smaller than the smallest value.
+A = ALL (subquery)      Evaluates to **TRUE** when A is equal to all values.
+A <> ALL (subquery)     Evaluates to **TRUE** when A does not match any value.
+A < ALL (subquery)      Evaluates to **TRUE** when A is smaller than the smallest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-all-end
@@ -1855,11 +1954,11 @@ Examples of **ANY** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = ANY (...)           Evaluates to ``TRUE`` when A is equal to any of the values.
+A = ANY (subquery)      Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
-A <> ANY (...)          Evaluates to ``TRUE`` when A doesn't match one or more values.
-A < ANY (...)           Evaluates to ``TRUE`` when A is smaller than the biggest value.
+                        .. note:: This form is equivalent to A IN (subquery).
+A <> ANY (subquery)     Evaluates to **TRUE** when A does not match one or more values.
+A < ANY (subquery)      Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-any-end
@@ -1889,12 +1988,12 @@ Examples of **SOME** comparison operator combinations:
 ====================    ===========
 Expression              Meaning
 ====================    ===========
-A = SOME (...)          Evaluates to ``TRUE`` when A is equal to any of the values.
+A = SOME (subquery)     Evaluates to **TRUE** when A is equal to any of the values.
 
-                        .. note:: This form is equivalent to A IN (...).
+                        .. note:: This form is equivalent to A IN (subquery).
 
-A <> SOME (...)         Evaluates to ``TRUE`` when A doesn't match one or more values.
-A < SOME (...)          Evaluates to ``TRUE`` when A is smaller than the biggest value.
+A <> SOME (subquery)    Evaluates to **TRUE** when A does not match one or more values.
+A < SOME (subquery)     Evaluates to **TRUE** when A is smaller than the biggest value.
 ====================    ===========
 
 .. sql-presto-operator-comparison-some-end
@@ -1909,13 +2008,13 @@ IS NULL
 
 The **IS NULL** operator tests whether a value is **NULL**. This operator works for all data types.
 
-Using **NULL** with **IS NULL** evaluates to ``TRUE``:
+Using **NULL** with **IS NULL** evaluates to **TRUE**:
 
 .. code-block:: none
 
-   select NULL IS NULL;
+   SELECT NULL IS NULL;
 
-But any other constant does not evaluate to ``FALSE``:
+Any other constant does not evaluate to **FALSE**:
 
 .. code-block:: none
 
@@ -1933,13 +2032,13 @@ IS NOT NULL
 
 The **IS NULL** operator tests whether a value is not **NULL**. This operator works for all data types.
 
-Using **NULL** with **IS NOT NULL** evaluates to ``FALSE``:
+Using **NULL** with **IS NOT NULL** evaluates to **FALSE**:
 
 .. code-block:: none
 
-   select NULL IS NOT NULL;
+   SELECT NULL IS NOT NULL;
 
-But any other constant evaluates ``TRUE``:
+Any other constant evaluates **TRUE**:
 
 .. code-block:: none
 
@@ -1967,19 +2066,19 @@ Functions
 
 .. sql-presto-functions-start
 
-A function is a SQL statement that accepts input parameters, performs actions, and then returns results. This section highlights some useful functions for use when building segments in Amperity.
+A function is a SQL statement that accepts input parameters, performs actions, and then returns results.
 
 .. sql-presto-functions-end
 
 .. sql-presto-functions-note-start
 
-.. note:: This section highlights a very small subset of |ext_presto_sql_functions|, many of which can be useful depending on the type of query.
+.. note:: Amperity uses a subset of `the complete list of functions available in Presto SQL <https://prestodb.io/docs/current/functions.html>`__ |ext_link|, many of which can be useful depending on the type of query.
 
 .. sql-presto-functions-note-end
 
 .. sql-presto-functions-list-start
 
-The following list contains some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
+The following list has some of the most frequently used functions for building segments via the **SQL Segment Editor** (alphabetized):
 
 * :ref:`sql-presto-function-array-agg`
 * :ref:`sql-presto-function-array-join`
@@ -2050,6 +2149,7 @@ Aggregate order IDs
 The following SQL query uses the **ARRAY_JOIN()** and **ARRAY_AGG()** functions to aggregate an array of order IDs using a comma as the delimiter:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 3
 
    SELECT
@@ -2072,6 +2172,7 @@ Sort in chronological order
 The following SQL query uses the **ARRAY_AGG()** function to sort a list of products in chronological order:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      sub.amperity_id
@@ -2132,6 +2233,7 @@ Join order IDs
 The following SQL query uses the **ARRAY_JOIN()** and **ARRAY_AGG()** functions to aggregate an array of order IDs using a comma as the delimiter:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 3
 
    SELECT
@@ -2166,6 +2268,7 @@ Return mean
 The following example returns the mean.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      product_category
@@ -2190,6 +2293,22 @@ Use the **CAST(value AS type)** function to cast the value of ``value`` as ``typ
 .. sql-presto-function-cast-end
 
 
+.. _sql-presto-function-cast-example-convert-floats-to-decimals:
+
+Convert floating point values to decimals
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-start
+
+A floating point value often has more digits than needed, such as for prices, tax amounts, or item prices. Use the **CAST()** function and specify a precision of **(38,2)**. This will convert a value like "4.263256414" into "4.26".
+
+.. code-block:: sql
+
+   COALESCE(CAST(taxes AS decimal(38,2))), 0.00) AS unit_tax_amount
+
+.. sql-presto-function-cast-example-convert-floats-to-decimals-end
+
+
 .. _sql-presto-function-cast-example-cast-rfm-as-real:
 
 Cast RFM as REAL data type
@@ -2197,11 +2316,11 @@ Cast RFM as REAL data type
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-start
 
-The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the ``real`` data type (a floating-point, 32-bit inexact, variable-precision value).
+The following example shows using the **CAST()** function to cast the values of ``Recency``, ``Frequency``, and ``Monetary`` to the **REAL** data type, which is a floating-point, 32-bit inexact, variable-precision value.
 
 .. code-block:: sql
 
-   ,ROUND((CAST(Recency AS real) + CAST(Frequency AS real) + CAST(Monetary AS real)) / 3, 2) 
+   ,ROUND((CAST(Recency AS REAL) + CAST(Frequency AS REAL) + CAST(Monetary AS REAL)) / 3, 2) 
 
 .. sql-presto-function-cast-example-cast-rfm-as-real-end
 
@@ -2273,7 +2392,7 @@ Add leading apostrophe
 
 Some use cases for CSV files have a downstream dependency on Microsoft Excel. Excel automatically removes leading zeros and converts large numbers to scientific notation, such as 1.23E+15, to ensure that formulas and math operations work correctly.
 
-Long strings are output from Amperity in the form of the Amperity ID, customer keys, loyalty program IDs, product codes, and so on. Add a leading apostrophe (**'**) to these strings within the Amperity segment to ensure these string values are interpreted as text by Excel.
+Long strings are output from Amperity in the form of the Amperity ID, customer keys, loyalty program IDs, or product codes. Add a leading apostrophe (**'**) to these strings within the Amperity segment to ensure these string values are interpreted as text by Excel.
 
 Use the **CONCAT()** function to build a string with a leading character, and then use the **CHR()** function to apply Unicode codepoint ``39``, which is an apostrophe.
 
@@ -2293,9 +2412,92 @@ COALESCE()
 
 .. sql-presto-function-coalesce-start
 
-Use the **COALESCE(value1, value2[, ...])** function to return the first non-null value in the argument list. Arguments are only evaluated if necessary.
+Use the **COALESCE(value1, value2)** function to return the first non-null value in the argument list. Arguments are only evaluated if necessary.
 
 .. sql-presto-function-coalesce-end
+
+
+.. _sql-presto-function-coalesce-example-return-state-abbreviations:
+
+Standardize on two letter state abbreviations
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-start
+
+Data sets with values for states in the United States, along with the District of Columbia, can have two letter abbreviations or spelled out names. For example: "DC" or "District of Columbia".
+
+Build an associative array in a window function to map each of the spelled out names to a two letter abbreviation, and then use the **COALESCE()** function to standardize on the two letter abbreviations for all values:
+
+.. code-block:: sql
+
+   WITH state_mapping AS (
+     SELECT
+       *
+     FROM
+       (
+         VALUES
+           ('Alabama', 'AL'),
+           ('Alaska', 'AK'),
+           ('Arizona', 'AZ'),
+           ('Arkansas', 'AR'),
+           ('California', 'CA'),
+           ('Colordado', 'CO'),
+           ('Connecticut', 'CT'),
+           ('Delaware', 'DE'),
+           ('District of Columbia', 'DC'),
+           ('Florida', 'FL'),
+           ('Georgia', 'GA'),
+           ('Hawaii', 'HI'),
+           ('Idaho', 'ID'),
+           ('Illinois', 'IL'),
+           ('Indiana', 'IN'),
+           ('Iowa', 'IA'),
+           ('Kansas', 'KS'),
+           ('Kentucky', 'KY'),
+           ('Louisiana', 'LA'),
+           ('Maine', 'ME'),
+           ('Maryland', 'MD'),
+           ('Massachusetts', 'MA'),
+           ('Michigan', 'MI'),
+           ('Minnesota', 'MN'),
+           ('Mississippi', 'MS'),
+           ('Missouri', 'MO'),
+           ('Montana', 'NT'),
+           ('Nebraska', 'NB'),
+           ('Nevada', 'AL'),
+           ('New Hampshire', 'NH'),
+           ('New Jersey', 'NJ'),
+           ('New Mexico', 'NM'),
+           ('New York', 'NY'),
+           ('North Carolina', 'NC'),
+           ('North Dakota', 'ND'),
+           ('Ohio', 'OH'),
+           ('Oklahoma', 'OK'),
+           ('Oregon', 'OR'),
+           ('Pennsylvania', 'PA'),
+           ('Rhode Island', 'RI'),
+           ('South Carolina', 'SC'),
+           ('South Dakota', 'SD'),
+           ('Tennessee', 'TN'),
+           ('Texas', 'TX'),
+           ('Utah', 'UT'),
+           ('Vermont', 'VT'),
+           ('Virginia', 'VA'),
+           ('Washington', 'WA'),
+           ('West Virginia', 'WV'),
+           ('Wisconsin', 'WI'),
+           ('Wyoming', 'WY')
+       ) AS t (state_name, state_abbreviation)
+   )
+
+   SELECT
+     COALESCE(state_mapping.state_abbreviation, "state") AS state_two_letters
+   FROM Customer_Profiles cp
+   LEFT JOIN state_mapping ON cp."state" = state_mapping.state_name
+   OR cp."state" = state_mapping.state_abbreviation
+   WHERE "state" IS NOT NULL
+
+.. sql-presto-function-coalesce-example-return-state-abbreviations-end
 
 
 .. _sql-presto-function-concat:
@@ -2305,13 +2507,13 @@ CONCAT()
 
 .. sql-presto-function-concat-start
 
-Use the **CONCAT(array1, array2, ...)** function to concatenate a set of arrays into a single value that can be used elsewhere in a SQL query.
+Use the **CONCAT(array1, array2)** function to concatenate a set of arrays into a single value that can be used elsewhere in a SQL query.
 
 .. sql-presto-function-concat-end
 
 .. sql-presto-function-concat-note-about-null-start
 
-.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example, use:
+.. note:: The **CONCAT()** function will return **NULL** if the value of any field is **NULL**. Use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example, use:
 
    ::
 
@@ -2344,12 +2546,12 @@ Count customers by state
 The following example counts customers in the United States, and then also in California, Oregon, Washington, Alaska, and Hawaii who also belong to the loyalty program (which is indicated when ``loyalty_id`` is not **NULL**):
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      state
      ,COUNT(amperity_id) AS TotalCustomers
-   FROM
-     Customer360
+   FROM Customer360
    WHERE (UPPER("country") = 'US'
    AND UPPER("state") in ('AK', 'CA', 'HI', 'OR', 'WA')
    AND LOWER("loyalty_id") IS NOT NULL)
@@ -2380,6 +2582,7 @@ Birthdays, tomorrow
 The following example returns all users who have a birthday tomorrow:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -2453,6 +2656,7 @@ Calculate purchase day
 .. sql-presto-function-date-diff-example-calculate-purchase-decay-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,t.amperity_id
@@ -2489,10 +2693,10 @@ Specifier     Description
 ===========   ===========================
 %a            Abbreviated weekday name (Sun .. Sat)
 %b            Abbreviated month name (Jan .. Dec)
-%c            Month, numeric (1 .. 12); This specifier does not support 0 as a month or day.
-%d            Day of the month, numeric (01 .. 31); This specifier does not support 0 as a month or day.
-%e            Day of the month, numeric (1 .. 31); This specifier does not support 0 as a month or day.
-%f            Fraction of second (6 digits for printing: 000000 .. 999000; 1 - 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
+%c            Month, numeric (1 .. 12). This specifier does not support 0 as a month or day.
+%d            Day of the month, numeric (01 .. 31). This specifier does not support 0 as a month or day.
+%e            Day of the month, numeric (1 .. 31). This specifier does not support 0 as a month or day.
+%f            Fraction of second (6 digits for printing: 000000 .. 999000. 1 to 9 digits for parsing: 0 .. 999999999), truncated to milliseconds
 %H            Hour (00 .. 23)
 %h            Hour (01 .. 12)
 %I            Hour (01 .. 12)
@@ -2501,17 +2705,17 @@ Specifier     Description
 %k            Hour (0 .. 23)
 %l            Hour (1 .. 12)
 %M            Month name (January .. December)
-%m            Month, numeric (01 .. 12); This specifier does not support 0 as a month or day.
+%m            Month, numeric (01 .. 12). This specifier does not support 0 as a month or day.
 %p            AM or PM
 %r            Time, 12-hour (hh:mm:ss followed by AM or PM)
 %S            Seconds (00 .. 59)
 %s            Seconds (00 .. 59)
 %T            Time, 24-hour (hh:mm:ss)
-%v            Week (01 .. 53), where Monday is the first day of the week; used with %x
+%v            Week (01 .. 53), where Monday is the first day of the week. Used with %x
 %W            Weekday name (Sunday .. Saturday)
-%x            Year for the week, where Monday is the first day of the week, numeric, four digits; used with %v
+%x            Year for the week, where Monday is the first day of the week, numeric, four digits. Used with %v
 %Y            Year, numeric, four digits
-%y            Year, numeric (two digits); When parsing, two-digit year format assumes range 1970 to 2069, so "70" will result in year 1970 but "69" will produce 2069
+%y            Year, numeric (two digits). When parsing, two-digit year format assumes range 1970 to 2069, so "70" will result in year 1970 but "69" will produce 2069
 %%            A literal % character
 %x            x, for any x not listed above
 ===========   ===========================
@@ -2542,6 +2746,8 @@ DATE_TRUNC()
 
 Use the **DATE_TRUNC(unit, x)** function to return ``x`` truncated to one of the following ``unit`` values (shown in **bold**):
 
+.. vale off
+
 =========== ===========================
 Unit        Example Truncated Value
 =========== ===========================
@@ -2554,6 +2760,8 @@ Unit        Example Truncated Value
 **quarter** 2001-07-01 00:00:00.000
 **year**    **2001**-01-01 00:00:00.000
 =========== ===========================
+
+.. vale on
 
 .. sql-presto-function-date-trunc-end
 
@@ -2600,6 +2808,7 @@ One and dones, by year
 The following example shows using a common table expression to identify all one-and-done purchasers for a single calendar year:
 
 .. code-block:: sql
+   :linenos:
 
    WITH one_and_dones_2022 AS (
      SELECT
@@ -2610,8 +2819,7 @@ The following example shows using a common table expression to identify all one-
 
    SELECT
      COUNT(*) one_and_dones_2022
-   FROM
-     one_and_dones_2022
+   FROM one_and_dones_2022
 
 .. sql-presto-function-day-month-year-example-find-guests-who-canceled-end
 
@@ -2626,6 +2834,7 @@ Find guests who canceled last month
 The following example uses member, consumer, and confirmation IDs, along with the reservation confirmation number and the checkin date to return all customers who canceled their stay one month ago:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      g.amperity_id AS AMPERITY_ID
@@ -2652,6 +2861,7 @@ Find tomorrow's birthdays
 .. sql-presto-function-day-month-year-example-find-birthdays-tomorrow-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2676,7 +2886,7 @@ DENSE_RANK()
 
 Use the **DENSE_RANK()** function to compute the rank of a value in a group of values. **DENSE_RANK()** will assign the same rank to rows with the same value and will not create gaps in the ranked sequence.
 
-.. note:: The **DENSE_RANK()** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** will create gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
+.. note:: The **DENSE_RANK()** and **RANK()** functions both assign a rank to rows with the same value. The difference is that **RANK()** creates gaps in the sequence. The following example shows rows that are ranked in ascending order by column B:
 
    .. code-block:: mysql
 
@@ -2735,7 +2945,7 @@ GREATEST()
 
 .. sql-presto-function-greatest-start
 
-Use the **GREATEST(column_name, column_name, ...)** function to return the column with the greatest value among the values of all named columns.
+Use the **GREATEST(column_name, column_name)** function to return the column with the greatest value among the values of all named columns.
 
 .. sql-presto-function-greatest-end
 
@@ -2749,7 +2959,7 @@ IF()
 
 Use the **IF(condition,x)** function to evaluate and return true, NULL, or false.
 
-* Use **IF(condition,true_value)** to evaluate and return ``true_value`` when the ``condition`` is ``true``, otherwise return NULL.
+* Use **IF(condition,true_value)** to evaluate and return ``true_value`` when the ``condition`` is ``true``, otherwise return **NULL**.
 * Use **IF(condition,true_value, false_value)** to return ``true_value`` when the ``condition`` is ``true`` or return ``false_value`` when the ``condition`` is ``false``.
 
 .. sql-presto-function-if-end
@@ -2762,7 +2972,7 @@ LEAST()
 
 .. sql-presto-function-least-start
 
-Use the **LEAST(column_name, column_name, ...)** function to return the column with the lowest value among the values of all named columns.
+Use the **LEAST(column_name, column_name)** function to return the column with the lowest value among the values of all named columns.
 
 .. sql-presto-function-least-end
 
@@ -2775,6 +2985,7 @@ Find earliest dates
 .. sql-presto-function-least-example-find-earliest-dates-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -2834,6 +3045,7 @@ Collapse rows by Amperity ID
 The following SQL will collapse all rows with Amperity IDs in the **Unified Coalesced** table into a single row per Amperity ID:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id AS amperity_id
@@ -2856,7 +3068,7 @@ The following SQL will collapse all rows with Amperity IDs in the **Unified Coal
 .. _sql-presto-function-median:
 
 MEDIAN()
-++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------
 
 .. sql-presto-function-median-start
 
@@ -2887,6 +3099,7 @@ Replace NULL with 0
 Wrap the **MIN()** function to replace **NULL** values with ``0``:
 
 .. code-block:: sql
+   :linenos:
 
    MIN(CASE 
      WHEN field IS NULL THEN 0
@@ -2953,9 +3166,10 @@ Percentiles by 10
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return 10th percentiles.
+The following example shows how to return tenth percentiles.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      tier*.1 AS tier
@@ -2980,9 +3194,10 @@ Percentiles by 4
 
 .. sql-presto-function-ntile-example-percentiles-start
 
-The following example shows how to return the 25th, median, and 75th percentiles.
+The following example shows how to return the twenty-fifth, median, and seventy-fifth percentiles.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      tier*.25 tier
@@ -3034,6 +3249,7 @@ Percent rank of all purchases
 The following example shows how to return the percent rank of all purchases.
 
 .. code-block:: sql
+   :linenos:
 
    SELECT DISTINCT
      amperity_id
@@ -3080,19 +3296,20 @@ Rank by Amperity ID
 The following SQL query uses the **RANK()** function to find the largest transactions by Amperity ID, and then returns them in ascending order:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 6,9,12
 
    WITH ranked_transactions AS (
-   SELECT
-     t.orderid
-     ,t.amperity_id
-     ,t.transactiontotal
-     ,RANK() OVER (PARTITION BY t.amperity_id ORDER BY t.transactiontotal DESC) AS rank
-   FROM
-     TransactionsEcomm t
-   ORDER BY t.amperity_id, rank ASC
-   LIMIT 100
+     SELECT
+       t.orderid
+       ,t.amperity_id
+       ,t.transactiontotal
+       ,RANK() OVER (PARTITION BY t.amperity_id ORDER BY t.transactiontotal DESC) AS rank
+     FROM TransactionsEcomm t
+     ORDER BY t.amperity_id, rank ASC
+     LIMIT 100
    )
+
    SELECT * FROM ranked_transactions WHERE rank = 1
 
 .. sql-presto-function-rank-example-rank-by-amperity-id-end
@@ -3132,6 +3349,7 @@ Validate email addresses
 The following example shows using the **REGEXP_LIKE()** function within a **CASE** statement to return valid email addresses:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN REGEXP_LIKE(email, '^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$')
@@ -3152,6 +3370,7 @@ Validate phone numbers
 The following example shows using the **REGEXP_LIKE()** function within a **CASE** statement to return valid phone numbers:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN REGEXP_LIKE(phone, '^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$')
@@ -3198,6 +3417,7 @@ Remove spaces
 .. sql-presto-function-regexp-replace-example-remove-spaces-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(AddressLine1, '(\s*)([ ])', '')
@@ -3216,6 +3436,7 @@ Keep A-z, 0-9 from string
 .. sql-presto-function-regexp-replace-example-keep-az09-from-string-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      REGEXP_REPLACE(AddressLine1, '(\s*)([^a-zA-Z0-9])', '')
@@ -3234,6 +3455,7 @@ Keep alphabetical characters
 .. sql-presto-function-regexp-replace-example-keep-alphabetical-characters-start
 
 .. code-block:: sql
+   :linenos:
 
    ,REGEXP_REPLACE(LOWER(given_name), '[^a-zA-Z]+', '') AS given_name
    ,REGEXP_REPLACE(LOWER(surname), '[^a-zA-Z]+', '') AS surname
@@ -3292,6 +3514,7 @@ Clean up semantic values
 .. sql-presto-function-regexp-replace-example-clean-up-semantic-values-start
 
 .. code-block:: sql
+   :linenos:
 
    ,REGEXP_REPLACE(LOWER(phone), '[^0-9]+', '') AS phone
    ,REGEXP_REPLACE(LOWER(address), '[.]+', '') AS address
@@ -3311,6 +3534,8 @@ Formatting for Facebook Ads
 
 .. note:: Facebook Ads has specific requirements for data formatting and naming of certain fields. Destinations and campaigns configured for Facebook Ads automatically apply the correct formatting to fields that are required by Facebook Ads. This example shows the regular expression formatting for those fields.
 
+.. TODO: The following block should not be in a code-block.
+
 ::
 
    ,REGEXP_REPLACE(LOWER(given_name), '[.,\/#!$%\^&\*;:{}=\-_`~()@'\"+ ]', '') AS FN
@@ -3323,6 +3548,26 @@ Formatting for Facebook Ads
 .. sql-presto-function-regexp-replace-example-formatting-for-facebook-ads-end
 
 
+.. _sql-presto-function-regexp-replace-example-capitalize-first-letter:
+
+Capitalize the first character
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-regexp-replace-example-capitalize-first-letter-start
+
+Presto SQL does not have a function that is equivalent to the **INITCAP** function in Spark SQL. To format the first character in a string as uppercase and the rest of the string as lowercase, use the **REGEXP_REPLACE()** function.
+
+For example:
+
+.. code-block:: sql
+
+   REGEXP_REPLACE('new york', '(\p{L})(\p{L}*)', x -> UPPER(x[1]) || LOWER(x[2]))
+
+.. note:: The ``\p{L}`` matches any character in any language, such as with accent characters found in non-English languages.
+
+.. sql-presto-function-regexp-replace-example-capitalize-first-letter-end
+
+
 .. _sql-presto-function-replace:
 
 REPLACE()
@@ -3330,9 +3575,9 @@ REPLACE()
 
 .. sql-presto-function-replace-start
 
-Use the **REPLACE()** function to remove and/or replace all instances of ``search`` from ``string``. There are two variants:
+Use the **REPLACE()** function to remove or replace all instances of ``search`` from ``string``. Do one of the following:
 
-* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``, i.e. "replace string with nothing".
+* Use **REPLACE(string, search)** to remove all instances of ``search`` from ``string``.
 * Use **REPLACE(string, search, replace)** to replace all instances of ``search`` from ``string`` with ``replace``.
 
 .. sql-presto-function-replace-end
@@ -3419,12 +3664,41 @@ SUBSTR()
 
 .. sql-presto-function-substr-start
 
-Use the **SUBSTR()** function to return N characters in a string. There are two variants:
+Use the **SUBSTR()** or **SUBSTRING(string, start, length)** function to return N characters in a string. Do one of the following:
 
-* Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``; a negative starting position (``-1``) is relative to the end of ``string``.
-* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that contains the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``; a negative starting position (``-1``) is relative to the end of ``string``.
+* Use **SUBSTR(string, start)** to return ``string`` from the ``start`` position that is equal to the value of ``start``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
+* Use **SUBSTR(string, start, length)** to return ``string`` from the ``start`` position that has the number of characters specified by ``length``. A positive starting position (``1``) is relative to the start of ``string``. A negative starting position (``-1``) is relative to the end of ``string``.
 
 .. sql-presto-function-substr-end
+
+
+.. _sql-presto-function-substr-example-return-postal-codes:
+
+Standardize on five digit ZIP codes
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. sql-presto-function-substr-example-return-postal-codes-start
+
+Data sets with values for United States postal codes can have five digit ZIP codes and nine digit ZIP+4 codes. For example: "20102" or "20102-1234".
+
+Use the **SUBSTR()** function to standardize on five digit ZIP codes and return only the first five digits in a ZIP code value, and then drop any symbols or digits that exist after the first five digits:
+
+.. code-block:: sql
+
+   SELECT
+     SUBSTR("postal", 1, 5) AS zipcode
+   FROM Customer 360
+
+Validate the length of the postal code and that each digit in the value includes only numbers between zero and nine using :ref:`REGEX_LIKE <sql-presto-function-regexp-like>` function:
+
+.. code-block:: sql
+
+   SELECT
+     SUBSTR("postal", 1, 5) AS zipcode
+   FROM Customer 360
+   WHERE REGEXP_LIKE(SUBSTR("postal", 1, 5), '^[0-9]{5}$')
+
+.. sql-presto-function-substr-example-return-postal-codes-end
 
 
 .. _sql-presto-function-substr-example-return-two-characters:
@@ -3462,7 +3736,7 @@ Use the **SUM(x)** function to return the sum of all input values.
 
 .. sql-presto-function-sum-note-about-null-start
 
-.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string prior to concatenation. For example:
+.. note:: The **SUM()** function will return **NULL** if the value of any field is **NULL**. In some situations you must use the **COALESCE()** function to coalesce to a zero-length string before concatenation. For example:
 
    ::
 
@@ -3495,6 +3769,7 @@ Total revenue, descending order
 The following example uses the **SUM()** function to return total revenue, returns, and quantity, groups them, and then arranges the results in descending order:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      purchase_brand

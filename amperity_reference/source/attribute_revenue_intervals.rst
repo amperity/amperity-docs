@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
+        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
+        The total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations, at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Order revenue intervals
 
 .. attribute-order-revenue-intervals-start
 
-Order revenue is the total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and/or cancellations. Order revenue is available at the following intervals:
+Order revenue is the total amount of revenue for all items in a transaction after discounts are applied, ignoring returns and cancellations. Order revenue is available at the following intervals:
 
 * L30D Order Revenue (30 days)
 * L3M Order Revenue (3 months)
@@ -69,7 +69,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -102,7 +102,7 @@ The following table lists the operators that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual revenue amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual revenue amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -134,7 +134,7 @@ The following table lists the operators that are available to these attributes.
        Avoid using the **is not in list** condition when individual revenue amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "14.99", "59.99", and "127.22", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "14.99", "59.99", and "127.22", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

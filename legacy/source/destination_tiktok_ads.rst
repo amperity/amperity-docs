@@ -9,7 +9,7 @@
 .. |email-plus-send| replace:: additional identifier types
 .. |oauth-type| replace:: **:tiktok access**
 .. |settings-name| replace:: **TikTok Settings**
-.. |what-settings| replace:: advertiser ID, custom audience, and the user ID type; the EMAIL user ID type leads to the best match rates
+.. |what-settings| replace:: advertiser ID, custom audience, and the user ID type. The EMAIL user ID type leads to the best match rates
 .. |data-template-config-settings-list| replace:: advertiser ID, custom audience, and the user ID type settings were
 .. |data-template-config-settings-list-them-vs-it| replace:: them
 .. |sendto-link| replace:: |sendto_tiktok|
@@ -22,7 +22,11 @@
 Send data to TikTok Ads Manager
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_tiktok_ads.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_tiktok_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-tiktok-ads-start
@@ -30,7 +34,7 @@ Send data to TikTok Ads Manager
 
 .. destination-tiktok-ads-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -39,7 +43,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
@@ -47,30 +51,30 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Custom audiences
-          :align: left
+          :alt: Events
+          :align: center
           :class: no-scaled-link
-     - **Offline events**
+     - **Events**
 
-       :ref:`Offline events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for `offline events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
+       :ref:`Events <destination-tiktok-ads-offline-events>` help your brand track offline conversions from your marketing campaigns. Support for `events and parameters <https://business-api.tiktok.com/portal/docs?id=1758053486938113>`__ |ext_link| is part of the TikTok Events API.
 
-       .. tip:: Offline events must have occurred within the previous 28 days. The maximum attribution windows for
+       .. tip:: Events must have occurred within the previous 28 days. The maximum attribution windows for
 
           * Click-through attribution (CTA) is 28 days
           * View-through attribution (VTA) is 7 days
 
-          Offline events beyond these attribution windows are not matched to ads or displayed in reporting.
+          Events beyond these attribution windows are not matched to ads or displayed in reporting.
 
 .. destination-tiktok-ads-custom-audiences-and-offline-events-end
 
 .. destination-tiktok-ads-steps-to-send-start
 
-This topic describes the steps that are required to send custom audiences and offline events to |destination-name|:
+The following steps are required to send custom audiences and events to |destination-name|:
 
 #. :ref:`Get details <destination-tiktok-ads-get-details>`
 #. :ref:`Configure OAuth <destination-tiktok-ads-configure-oauth>`
 #. :ref:`Custom audiences <destination-tiktok-ads-custom-audiences>`
-#. :ref:`Offline events <destination-tiktok-ads-offline-events>`
+#. :ref:`Events <destination-tiktok-ads-offline-events>`
 
 .. destination-tiktok-ads-steps-to-send-end
 
@@ -91,47 +95,54 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The advertiser ID for your |destination-name| account.
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **TikTok Ads custom audiences only**
 
        The name of the custom audience to be managed by Amperity.
 
-       If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
+       If a custom audience already exists, the list of customers in that audience is updated to match the list sent from Amperity. If a custom audience does not exist, Amperity adds it. Amperity does not delete custom audiences.
 
-       .. important:: A custom audience name may contain up to 400 visible characters, after which the name will be truncated to blank characters followed by "...".
+       .. important:: A custom audience name may contain up to 400 visible characters, after which the name is truncated to blank characters followed by ``...``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - **TikTok Ads custom audiences only**
 
        The user ID type.
 
-       This value must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** by default for campaigns.
+       This value must be one of the following:
 
-       .. tip:: The **EMAIL** (email addresses) user ID type most often leads to the best match rates.
+       * **AAID** Google
+       * **EMAIL** Email addresses
+       * **IDFA** Apple
+       * **PHONE** Phone numbers
+
+       Amperity is configured to send **EMAIL** by default for campaigns.
+
+       .. tip:: The **EMAIL** user ID type most often leads to the best match rates.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
-     - **TikTok Ads offline events only**
+     - **TikTok Ads events only**
 
        The event set ID. (The event set must exist before you can send data to it from Amperity.)
 
@@ -139,15 +150,15 @@ Get details
 
        You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
 
-       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card. The event set ID is located under the name of the event set.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
-          :align: left
+          :alt: Detail five.
+          :align: center
           :class: no-scaled-link
-     - :ref:`Authorize Amperity to send data to the customer's TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>` for offline events.
+     - :ref:`Authorize Amperity to send data to the customer's TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>` for events.
 
        .. note:: Destinations for |destination-name| audience segments and offline profiles both use the same OAuth process, but may require different credentials and must be configured individually.
 
@@ -169,7 +180,7 @@ Configure OAuth
 
 .. destination-tiktok-ads-configure-oauth-important-start
 
-.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that will be used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
+.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that is used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
 
 .. destination-tiktok-ads-configure-oauth-important-end
 
@@ -181,8 +192,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -190,8 +201,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -199,8 +210,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -230,13 +241,13 @@ A custom audience must have at least 1000 members in |destination-name| before i
 
 .. destination-tiktok-ads-custom-audiences-end
 
-.. include:: ../../amperity_ampiq/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-one-time-delivery-start
    :end-before: .. channel-tiktok-ads-important-one-time-delivery-end
 
 .. destination-tiktok-ads-api-note-start
 
-.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map multiple advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
+.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map many advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -268,8 +279,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -281,13 +292,13 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| custom audiences" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| custom audiences" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -314,8 +325,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -327,9 +338,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
-       If a custom audience already exists, the list of customers in that audience will be updated to match the list sent from Amperity. If a custom audience does not exist, Amperity will add it. Amperity does not delete custom audiences.
+       If a custom audience already exists, the list of customers in that audience is updated to match the list sent from Amperity. If a custom audience does not exist, Amperity adds it. Amperity does not delete custom audiences.
 
        The user ID type must be one of the following: **AAID** (Google), **EMAIL** (email addresses), **IDFA** (Apple), or **PHONE** (phone numbers). Amperity is configured to send **EMAIL** by default for campaigns.
 
@@ -338,8 +349,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -352,8 +363,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -371,7 +382,7 @@ Add data template
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
-.. include:: ../../amperity_ampiq/source/destination_tiktok_ads.rst
+.. include:: ../../amperity_user/source/destination_tiktok_ads.rst
    :start-after: .. channel-tiktok-ads-important-one-time-delivery-start
    :end-before: .. channel-tiktok-ads-important-one-time-delivery-end
 
@@ -391,8 +402,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -409,8 +420,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -418,7 +429,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -433,8 +444,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -446,7 +457,7 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       .. important:: The EMAIL user ID type leads to the best match rates!
+       .. important:: The EMAIL user ID type leads to the best match rates.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-note-start
@@ -455,8 +466,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -477,14 +488,14 @@ Add data template
 
 .. _destination-tiktok-ads-offline-events:
 
-Offline events
+Events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-start
    :end-before: .. events-tiktok-ads-offline-events-end
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-allowfor-start
    :end-before: .. events-tiktok-ads-offline-events-allowfor-end
 
@@ -494,7 +505,7 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_tiktok_ads_manager.rst
+.. include:: ../../amperity_user/source/events_tiktok_ads_manager.rst
    :start-after: .. events-tiktok-ads-offline-events-build-query-start
    :end-before: .. events-tiktok-ads-offline-events-build-query-end
 
@@ -522,8 +533,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -535,13 +546,13 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -557,13 +568,13 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>`.
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your TikTok Ads Manager account <destination-tiktok-ads-configure-oauth>`.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -571,18 +582,18 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-tiktok-offline.png
           :width: 500 px
-          :alt: Settings for TikTok Ads offline events.
+          :alt: Settings for TikTok Ads events.
           :align: left
           :class: no-scaled-link
 
-       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the drop-down menu in the top right of |destination-name|.
+       The advertiser ID is a nineteen character string similar to "7654321098765432109". It is available from the dropdown menu in the top right of |destination-name|.
 
        The event source may be one of **web** or **offline**.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -595,8 +606,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -612,7 +623,7 @@ Add data template
 
 .. destination-tiktok-ads-offline-events-add-data-template-start
 
-Offline events must be sent using a query and orchestration. The data template associated with offline events should not be made available to the **Campaigns** editor.
+Events must be sent using a query and orchestration. The data template associated with events should not be made available to the **Campaigns** editor.
 
 .. destination-tiktok-ads-offline-events-add-data-template-end
 
@@ -626,8 +637,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -639,13 +650,13 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the data template and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the data template and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -653,7 +664,7 @@ Offline events must be sent using a query and orchestration. The data template a
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -664,8 +675,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -683,15 +694,15 @@ Offline events must be sent using a query and orchestration. The data template a
 
        You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the TikTok Ads user interface.
 
-       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       If the event set ID already exists, from the TikTok Ads user interface open **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card. The event set ID is located under the name of the event set.
 
        .. note:: If the event set ID is not specified in the data template it must be specified at orchestration.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -728,7 +739,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -748,7 +759,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -764,7 +775,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -790,7 +801,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -878,12 +889,12 @@ To resolve this error, verify that the business user is assigned to the **Operat
 
 .. _destination-tiktok-ads-offline-events-parameters:
 
-Offline events parameters
+Events parameters
 ==================================================
 
 .. destination-tiktok-ads-offline-events-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events.
+The following table describes each of the parameters that are required by |destination-name| for events.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -942,7 +953,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,event AS 'CompletePayment'
 
-       .. important:: The value for **event** must be one of the supported offline event types defined by |destination-name|. A partial list of event types---ones that are more likely to align to your Amperity use cases---is described in the following table.
+       .. important:: The value for **event** must be one of the supported offline event types defined by |destination-name|. A partial list of event types--ones that are more likely to align to your Amperity use cases--is described in the following table.
 
        The value for **event** must be one of the following:
 
@@ -970,7 +981,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **Subscribe**
          Use when the offline event is associated with a customer subscribing to something, such as your brand's loyalty program or notifications (email or SMS).
 
-       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use offline events within |destination-name|.
+       The value for **event** is used to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the event type that best associates how your brand wants to use events within |destination-name|.
 
 
    * - **event_channel**
@@ -986,11 +997,11 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        An event set ID is a nineteen character string similar to "7654321098765432109".
 
-       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set will have its own card; the event set ID is located under the name of the event set.
+       You can find the event set ID from the TikTok Ads user interface. Click **Assets**, then **Events**, and then from the **Offline** box select **Manage**. Each event set have its own card. The event set ID is located under the name of the event set.
 
 
    * - **event_source**
-     - The type of event to be uploaded to TikTok Ads Manager. May be one of “web” or "offline".
+     - The type of event to be uploaded to TikTok Ads Manager. May be one of "web" or "offline".
 
        Use "web" for events that took place on your website and were collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and are measured by an offline event set ID.
 

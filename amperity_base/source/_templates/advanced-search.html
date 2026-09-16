@@ -1,0 +1,1289 @@
+{% extends "layout.html" %}
+{%- block htmltitle -%}
+  <title>Advanced search</title>
+{% endblock %}
+{% block themestyles %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Outfit, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--sy-c-text);
+    background-color: var(--sy-c-background);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro p{
+    margin-top:1rem;
+    margin-bottom:1.25rem
+  }
+
+  .search-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  #filter-button {
+    padding: 6px 10px;
+    background: var(--sy-c-surface);
+    border: 0px solid var(--gray-a3);
+    color: var(--sy-c-text);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+  }
+
+  #filter-button:hover {
+    background-color: var(--accent-a3);
+  }
+
+  #search-input {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 0px solid var(--gray-a3);
+    background: var(--sy-c-surface);
+    color: var(--sy-c-text);
+    border-radius: 4px;
+  }
+
+  #search-input:focus {
+    outline: none;
+    border-color: var(--accent-9);
+  }
+
+  #filter-panel {
+    display: none;
+    background: var(--sy-c-surface);
+    border: 0px solid var(--gray-a3);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 0px;
+    border-radius: 4px;
+    max-height: 420px;
+    overflow-y: auto;
+  }
+
+  #filter-panel.active {
+    display: block;
+  }
+
+  .filter-section {
+    margin-bottom: 12px;
+  }
+
+  .filter-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .filter-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: .4em;
+    margin-bottom: .6em;
+    color: var(--sy-c-text);
+  }
+
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-option input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--accent-9);
+  }
+
+  .filter-option label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .filter-row label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .filter-row input[type="number"] {
+    width: 60px;
+    padding-top: 00px;
+    padding-bottom: 00px;
+    padding-left: 10px;
+    padding-right: 00px;
+    margin-left: 10px;
+    border: 0px solid var(--gray-a3);
+    background: var(--sy-c-background);
+    color: var(--sy-c-text);
+    border-radius: 3px;
+  }
+
+  .filter-row input[type="text"] {
+    width: 200px;
+    padding: 4px 10px;
+    margin-left: 10px;
+    border: 0px solid var(--gray-a3);
+    background: var(--sy-c-background);
+    color: var(--sy-c-text);
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+
+  .filter-row input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-9);
+  }
+
+  /* Grid layout for match options */
+  .match-options-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+
+  .match-option-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: -16px;
+  }
+
+  .match-option-cell .filter-option {
+    margin-bottom: 0;
+  }
+
+  .wildcard-container {
+    grid-column: span 2;
+    background: var(--sy-c-background);
+    padding: 12px;
+    border-radius: 4px;
+	width: 98%;
+  }
+
+  .wildcard-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .wildcard-options-list {
+    margin-top: 8px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .wildcard-option-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .wildcard-option-row .filter-option {
+    margin: 0;
+    min-width: 40px;
+  }
+
+  .wildcard-option-description {
+    font-size: 0.85rem;
+    color: var(--sy-c-text);
+    opacity: 0.7;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--gray-a3);
+    margin: 20px 0;
+  }
+
+  #search-results {
+    margin-top: 20px;
+  }
+
+  #search-summary {
+    font-size: 0.95rem;
+    color: var(--sy-c-text);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    opacity: 0.8;
+  }
+
+  .search-result {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--sy-c-surface);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .search-result:hover {
+    background: var(--accent-a3);
+  }
+
+  .search-result a {
+    color: var(--accent-9);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .search-result a:hover {
+    text-decoration: underline;
+  }
+
+  .search-result .context {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--sy-c-text);
+    opacity: 0.7;
+  }
+
+  .highlighted {
+    background-color: var(--accent-a4);
+    font-weight: 600;
+  }
+
+  .no-results {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--sy-c-text);
+    opacity: 0.6;
+  }
+</style>
+{% endblock %}
+{% block body %}
+<h1 class="headline">Advanced search</h1>
+
+<section>
+
+  <div class="intro">
+    <p>Advanced search provides additional filters for returning more precise search results.</p>
+
+    <p>Access <a class="advanced search filters" href="/reference/about_search.html#advanced-search"><span class="doc">advanced search filters</span></a> from the <strong>Filters</strong> menu.</p>
+
+    <p>Advanced search filter options include searching by topic collection or by location within topics, looking for exact matches or exact word order, setting the number of topics to return, excluding words, or allowing wildcards.</p>
+  </div>
+
+  <div class="search-wrapper">
+    <button id="filter-button">Filters</button>
+    <input type="text" id="search-input" placeholder="Search everything" autocomplete="off" />
+  </div>
+
+  <div id="filter-panel">
+    <div class="filter-section">
+      <h3>Topic collections</h3>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="coll-guides" checked />
+          <label for="coll-guides">Guided setup</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="coll-user" checked />
+          <label for="coll-user">User guides</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="coll-operator" checked />
+          <label for="coll-operator">Operators guide</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="coll-api" checked />
+          <label for="coll-api">Amperity API</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="coll-reference" checked />
+          <label for="coll-reference">Reference</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <h3>Search locations</h3>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="loc-page-titles" checked />
+          <label for="loc-page-titles">Topic titles</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="loc-section-headers" checked />
+          <label for="loc-section-headers">Section headers</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="loc-content" checked />
+          <label for="loc-content">Content matches</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="loc-glossary" checked />
+          <label for="loc-glossary">Glossary</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <h3>Match options</h3>
+      <div class="match-options-grid">
+        <!-- Row 1, Column 1 -->
+        <div class="match-option-cell">
+          <div class="filter-option">
+            <input type="checkbox" id="exact-match" />
+            <label for="exact-match">Exact matches only</label>
+          </div>
+        </div>
+
+        <!-- Row 1, Column 2 -->
+        <div class="match-option-cell">
+          <div class="filter-row">
+            <label for="max-results">Maximum topics to return:</label>
+            <input type="number" id="max-results" value="20" min="1" max="100" />
+          </div>
+        </div>
+
+        <!-- Row 2, Column 1 -->
+        <div class="match-option-cell">
+          <div class="filter-option">
+            <input type="checkbox" id="exact-order" />
+            <label for="exact-order">Exact order only</label>
+          </div>
+        </div>
+
+
+        <!-- Row 2, Column 2 -->
+        <div class="match-option-cell">
+          <div class="filter-row">
+            <label for="exclude-words">Exclude these words:</label>
+            <input type="text" id="exclude-words" placeholder="word1 word2 word3" />
+          </div>
+        </div>
+
+        <!-- Row 3, Columns 1-2 (spans both columns) -->
+        <div class="wildcard-container">
+          <div class="wildcard-header">
+            <div class="filter-option">
+              <input type="checkbox" id="allow-wildcards" />
+              <label for="allow-wildcards">Allow wildcards</label>
+            </div>
+          </div>
+          <div class="wildcard-options-list">
+            <div class="wildcard-option-row">
+              <div class="filter-option">
+                <input type="checkbox" id="wildcard-asterisk" disabled />
+                <label for="wildcard-asterisk">asterisk (*)</label>
+              </div>
+              <span class="wildcard-option-description">An asterisk (*) represents zero or more characters. "co*" returns "co", "cot", and "coat".</span>
+            </div>
+            <div class="wildcard-option-row">
+              <div class="filter-option">
+                <input type="checkbox" id="wildcard-question" disabled />
+                <label for="wildcard-question">question mark (?)</label>
+              </div>
+              <span class="wildcard-option-description">A question mark (?) represents a single character. "c?w" returns "caw" or "cow", but not "crow".</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="search-results">
+    <div id="search-summary"></div>
+    <div id="results-list"></div>
+  </div>
+
+  <script>
+        // Keyword to path mapping
+        const KEYWORD_MAPPING = {
+          "byoc": "/operator/compute.html",
+          "byos": "/operator/storage.html",
+          "crt": "/reference/glossary.html#c-campaign-recipients-table",
+          "itemized transaction semantics": "/reference/semantics.html#transactions",
+          "offline conversions": "/user/grid_events.html",
+          "punnch": "/reference/connected_systems.html",
+          "yotpo": "/reference/connected_systems.html"
+        };
+
+        // Synonym to full-term mapping
+        // If a user types a key, the search runs as if they typed the value instead
+        const SYNONYMS_MAPPING = {
+          "sfmc": "Salesforce Marketing Cloud",
+          "tae": "Transaction Attributes Extended",
+          "uit": "Unified Itemized Transactions",
+          "ut": "Unified Transactions"
+        };
+
+        // Search indexes cache
+        const searchIndexes = {
+            api: null,
+            guides: null,
+            operator: null,
+            reference: null,
+            user: null
+        };
+
+        // Load a search index for a specific collection
+        async function loadSearchIndex(collection) {
+            if (searchIndexes[collection]) {
+                return searchIndexes[collection];
+            }
+
+            try {
+                const url = `/${collection}/searchindex.js`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const text = await response.text();
+                
+                // Parse the Sphinx search index
+                // The file contains: Search.setIndex({...})
+                const match = text.match(/Search\.setIndex\s*\(\s*(\{[\s\S]*\})\s*\)/);
+                
+                if (!match || !match[1]) {
+                    throw new Error('Failed to find Search.setIndex in search index file');
+                }
+                
+                // Parse the extracted JSON
+                let indexData;
+                try {
+                    indexData = JSON.parse(match[1]);
+                } catch (parseError) {
+                    console.error('Failed to parse JSON:', parseError);
+                    throw new Error('Failed to parse search index JSON');
+                }
+                
+                searchIndexes[collection] = indexData;
+                console.log(`Loaded search index for collection: ${collection}`);
+                return indexData;
+            } catch (error) {
+                console.error(`Failed to load search index for ${collection}:`, error);
+                return null;
+            }
+        }
+
+        // Convert wildcard pattern to regex
+        function wildcardToRegex(pattern, useAsterisk, useQuestion) {
+            if (!useAsterisk && !useQuestion) {
+                return null;
+            }
+            
+            let regexPattern = pattern;
+            
+            // Escape special regex characters except * and ?
+            regexPattern = regexPattern.replace(/[.+^${}()|[\]\\]/g, '\\$&');
+            
+            // Convert wildcards to regex
+            if (useAsterisk) {
+                regexPattern = regexPattern.replace(/\*/g, '.*');
+            } else {
+                regexPattern = regexPattern.replace(/\*/g, '\\*');
+            }
+            
+            if (useQuestion) {
+                regexPattern = regexPattern.replace(/\?/g, '.');
+            } else {
+                regexPattern = regexPattern.replace(/\?/g, '\\?');
+            }
+            
+            return new RegExp(`^${regexPattern}$`, 'i');
+        }
+
+        // Check if a word matches the wildcard pattern
+        function matchesWildcard(word, pattern, useAsterisk, useQuestion) {
+            const regex = wildcardToRegex(pattern, useAsterisk, useQuestion);
+            if (!regex) return false;
+            return regex.test(word);
+        }
+
+        // Check if query matches a glossary term and fetch its definition
+        async function checkGlossaryMatch(query, searchGlossary) {
+            // Only check glossary if the filter is enabled
+            if (!searchGlossary) return null;
+            
+            try {
+                // Normalize the query to create a glossary ID
+                const normalizedQuery = query.toLowerCase().trim();
+                const firstLetter = normalizedQuery.charAt(0);
+                const glossaryId = firstLetter + '-' + normalizedQuery.replace(/\s+/g, '-');
+                
+                // Fetch the glossary page
+                const response = await fetch('/reference/glossary.html');
+                if (!response.ok) return null;
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Look for the glossary entry with the matching ID
+                const glossaryEntry = doc.querySelector(`#${glossaryId}`);
+                if (!glossaryEntry) return null;
+                
+                // Extract the term and definition
+                const dtElement = glossaryEntry.querySelector('dt strong');
+                const ddElement = glossaryEntry.querySelector('dd p');
+                
+                if (!dtElement || !ddElement) return null;
+                
+                const term = dtElement.textContent.trim();
+                const definition = ddElement.textContent.trim();
+                
+                return {
+                    term: term,
+                    definition: definition,
+                    url: `/reference/glossary.html#${glossaryId}`,
+                    glossaryId: glossaryId
+                };
+            } catch (error) {
+                console.error('Error checking glossary:', error);
+                return null;
+            }
+        }
+
+        // Perform search across all selected collections
+        async function performSearch() {
+            const rawQuery = document.getElementById('search-input').value.trim();
+            if (!rawQuery) {
+                document.getElementById('search-summary').textContent = '';
+                document.getElementById('results-list').innerHTML = '';
+                return;
+            }
+
+            // Check for synonym mapping and replace query if matched
+            const synonymKey = rawQuery.toLowerCase();
+            const query = SYNONYMS_MAPPING[synonymKey] || rawQuery;
+
+            // Check for keyword mapping first
+            const queryLowerForMapping = query.toLowerCase();
+            if (KEYWORD_MAPPING[queryLowerForMapping]) {
+                const mappedPath = KEYWORD_MAPPING[queryLowerForMapping];
+                
+                // Extract collection, docname, and optional anchor from the path
+                // Path format: /collection/docname.html or /collection/docname.html#anchor
+                const pathMatch = mappedPath.match(/^\/([^\/]+)\/(.+?)\.html(#.+)?$/);
+                
+                if (pathMatch) {
+                    const collection = pathMatch[1];
+                    const docname = pathMatch[2];
+                    const anchor = pathMatch[3] || ''; // Optional anchor (e.g., #transactions)
+                    
+                    // Load the search index to get the actual page title
+                    const index = await loadSearchIndex(collection);
+                    
+                    if (index) {
+                        const docnames = index.docnames || [];
+                        const titles = index.titles || [];
+                        const docIndex = docnames.indexOf(docname);
+                        
+                        let pageTitle = query; // Fallback to keyword if not found
+                        if (docIndex >= 0 && titles[docIndex]) {
+                            pageTitle = titles[docIndex];
+                        }
+                        
+                        // Build the URL with the anchor if present
+                        const finalUrl = `/` + collection + `/` + docname + `.html` + anchor;
+                        
+                        const keywordResult = [{
+                            title: pageTitle,
+                            url: finalUrl,
+                            context: 'Direct keyword match',
+                            collection: collection,
+                            score: 100,
+                            isHeader: false,
+                            isContent: false
+                        }];
+                        displayResults(keywordResult, query);
+                        return;
+                    }
+                }
+                
+                // Fallback if parsing fails - try to extract collection and get title
+                // Try to extract at least the collection from the path
+                const fallbackMatch = mappedPath.match(/^\/([^\/]+)\//);
+                let fallbackTitle = query; // Ultimate fallback to keyword
+                
+                if (fallbackMatch) {
+                    const collection = fallbackMatch[1];
+                    const index = await loadSearchIndex(collection);
+                    
+                    if (index) {
+                        // Try to find the docname in the path
+                        const docnameMatch = mappedPath.match(/\/([^\/]+)\.html/);
+                        if (docnameMatch) {
+                            const docname = docnameMatch[1];
+                            const docnames = index.docnames || [];
+                            const titles = index.titles || [];
+                            const docIndex = docnames.indexOf(docname);
+                            
+                            if (docIndex >= 0 && titles[docIndex]) {
+                                fallbackTitle = titles[docIndex];
+                            }
+                        }
+                    }
+                }
+                
+                const keywordResult = [{
+                    title: fallbackTitle,
+                    url: mappedPath,
+                    context: 'Direct keyword match',
+                    collection: 'reference',
+                    score: 100,
+                    isHeader: false,
+                    isContent: false
+                }];
+                displayResults(keywordResult, query);
+                return;
+            }
+
+            // Get filter values
+            const selectedCollections = [];
+            if (document.getElementById('coll-guides').checked) selectedCollections.push('guides');
+            if (document.getElementById('coll-user').checked) selectedCollections.push('user');
+            if (document.getElementById('coll-operator').checked) selectedCollections.push('operator');
+            if (document.getElementById('coll-api').checked) selectedCollections.push('api');
+            if (document.getElementById('coll-reference').checked) selectedCollections.push('reference');
+
+            const searchPageTitles = document.getElementById('loc-page-titles').checked;
+            const searchSectionHeaders = document.getElementById('loc-section-headers').checked;
+            const searchContent = document.getElementById('loc-content').checked;
+            const searchGlossary = document.getElementById('loc-glossary').checked;
+            
+            const exactMatch = document.getElementById('exact-match').checked;
+            const exactOrder = document.getElementById('exact-order').checked;
+            const excludeWords = document.getElementById('exclude-words').value.trim().toLowerCase().split(/\s+/).filter(w => w);
+            
+            const allowWildcards = document.getElementById('allow-wildcards').checked;
+            const useAsterisk = allowWildcards && document.getElementById('wildcard-asterisk').checked;
+            const useQuestion = allowWildcards && document.getElementById('wildcard-question').checked;
+            
+            const maxResults = parseInt(document.getElementById('max-results').value) || 25;
+
+            // Compile all results
+            let allResults = [];
+
+            for (const collection of selectedCollections) {
+                const index = await loadSearchIndex(collection);
+                if (!index) continue;
+
+                const collectionResults = searchInIndex(
+                    index, 
+                    query, 
+                    collection,
+                    searchPageTitles,
+                    searchSectionHeaders,
+                    searchContent,
+                    searchGlossary,
+                    exactMatch,
+                    exactOrder,
+                    excludeWords,
+                    allowWildcards,
+                    useAsterisk,
+                    useQuestion
+                );
+                allResults = allResults.concat(collectionResults);
+            }
+
+            // Sort by score (highest first) and limit results
+            allResults.sort((a, b) => b.score - a.score);
+            
+            // Deduplicate by URL
+            const uniqueResults = [];
+            const seenUrls = new Set();
+            for (const result of allResults) {
+                if (!seenUrls.has(result.url)) {
+                    seenUrls.add(result.url);
+                    uniqueResults.push(result);
+                }
+            }
+
+            const limitedResults = uniqueResults.slice(0, maxResults);
+
+            // Check if query matches a glossary term
+            const glossaryMatch = await checkGlossaryMatch(query, searchGlossary);
+            let finalResults = limitedResults;
+            
+            if (glossaryMatch) {
+                // Create a special glossary result
+                const glossaryResult = {
+                    title: glossaryMatch.term,
+                    url: glossaryMatch.url,
+                    context: glossaryMatch.definition,
+                    collection: 'reference',
+                    score: 150, // Higher than normal to appear first
+                    isHeader: false,
+                    isContent: false,
+                    isGlossary: true
+                };
+                
+                // Prepend glossary result and limit to maxResults
+                finalResults = [glossaryResult, ...limitedResults].slice(0, maxResults);
+            }
+
+            await displayResults(finalResults, query);
+        }
+
+        // Search in a single index
+        function searchInIndex(index, query, collection, searchPageTitles, searchSectionHeaders, searchContent, searchGlossary, exactMatch, exactOrder, excludeWords, allowWildcards, useAsterisk, useQuestion) {
+            const results = [];
+            const queryLower = query.toLowerCase();
+            const queryWords = queryLower.split(/\s+/).filter(w => w.length > 0);
+            
+            if (!index.docnames || !index.titles) return results;
+
+            // Helper function to check if text matches query with wildcards
+            function textMatchesQuery(text) {
+                const textLower = text.toLowerCase();
+                
+                if (exactMatch) {
+                    // Exact match with optional wildcards
+                    if (allowWildcards && (useAsterisk || useQuestion)) {
+                        const words = textLower.split(/\s+/);
+                        return words.some(word => matchesWildcard(word, queryLower, useAsterisk, useQuestion));
+                    } else {
+                        const regex = new RegExp(`\\b${escapeRegex(queryLower)}\\b`, 'i');
+                        return regex.test(textLower);
+                    }
+                } else if (exactOrder) {
+                    // Words must appear in order
+                    let lastIndex = -1;
+                    for (const word of queryWords) {
+                        const wordPattern = allowWildcards ? word : escapeRegex(word);
+                        let found = false;
+                        
+                        if (allowWildcards && (useAsterisk || useQuestion)) {
+                            const textWords = textLower.substring(lastIndex + 1).split(/\s+/);
+                            for (let i = 0; i < textWords.length; i++) {
+                                if (matchesWildcard(textWords[i], word, useAsterisk, useQuestion)) {
+                                    lastIndex = textLower.indexOf(textWords[i], lastIndex + 1);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        } else {
+                            const index = textLower.indexOf(word, lastIndex + 1);
+                            if (index > lastIndex) {
+                                lastIndex = index;
+                                found = true;
+                            }
+                        }
+                        
+                        if (!found) return false;
+                    }
+                    return true;
+                } else {
+                    // Any order match with wildcards - match if ANY word is found (OR logic)
+                    if (allowWildcards && (useAsterisk || useQuestion)) {
+                        const textWords = textLower.split(/\s+/);
+                        return queryWords.some(queryWord => 
+                            textWords.some(textWord => 
+                                matchesWildcard(textWord, queryWord, useAsterisk, useQuestion)
+                            )
+                        );
+                    } else {
+                        return queryWords.some(word => textLower.includes(word));
+                    }
+                }
+            }
+
+            // Helper function to check if text contains excluded words
+            function containsExcludedWords(text) {
+                if (excludeWords.length === 0) return false;
+                const textLower = text.toLowerCase();
+                return excludeWords.some(word => textLower.includes(word));
+            }
+
+            // Score a title match: bonuses for whole-word matches, penalty for embedded matches.
+            // "ampai" as a standalone token scores higher than "ampai" embedded inside "campaigns".
+            function scoreTitleMatch(titleLower) {
+                const titleTokens = titleLower.split(/[\s\-_/]+/);
+                let score = 100;
+
+                // Exact whole-title match
+                if (titleLower === queryLower) score += 60;
+
+                // All query words appear as standalone tokens in the title
+                const allStandalone = queryWords.every(qw =>
+                    titleTokens.some(token => token === qw)
+                );
+                if (allStandalone) score += 40;
+
+                // Any query word is only a substring of a longer token (e.g. "ampai" inside "campaigns")
+                const embeddedInToken = queryWords.some(qw =>
+                    titleTokens.some(token => token.includes(qw) && token !== qw)
+                );
+                if (embeddedInToken) score -= 30;
+
+                return score;
+            }
+
+            // Search through page titles
+            if (searchPageTitles) {
+                index.docnames.forEach((docname, docIndex) => {
+                    const title = index.titles[docIndex] || docname;
+
+                    if (textMatchesQuery(title) && !containsExcludedWords(title)) {
+                        results.push({
+                            title: title,
+                            url: `/${collection}/${docname}.html`,
+                            collection: collection,
+                            score: scoreTitleMatch(title.toLowerCase()),
+                            isHeader: false,
+                            isContent: false
+                        });
+                    }
+                });
+            }
+
+            // Search through section headers
+            if (searchSectionHeaders) {
+                const alltitles = index.alltitles || {};
+                Object.entries(alltitles).forEach(([headerTitle, locations]) => {
+
+                    if (textMatchesQuery(headerTitle) && !containsExcludedWords(headerTitle)) {
+                        if (Array.isArray(locations)) {
+                            locations.forEach(location => {
+                                if (Array.isArray(location) && location.length >= 2) {
+                                    const docIndex = location[0];
+                                    const anchor = location[1];
+                                    const docname = index.docnames[docIndex];
+                                    const pageTitle = index.titles[docIndex] || docname;
+
+                                    // Skip H1 headers
+                                    if (!anchor || anchor === '' || headerTitle === pageTitle) {
+                                        return;
+                                    }
+
+                                    let url = `/${collection}/${docname}.html`;
+                                    if (anchor) {
+                                        url += `#${anchor}`;
+                                    }
+
+                                    results.push({
+                                        title: headerTitle,
+                                        pageTitle: pageTitle,
+                                        url: url,
+                                        collection: collection,
+                                        score: Math.min(scoreTitleMatch(headerTitle.toLowerCase()), 90) - 50,
+                                        isHeader: true,
+                                        isContent: false
+                                    });
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+            // Search through content
+            if (searchContent) {
+                const terms = index.terms || {};
+                const matchingTerms = new Set();
+                
+                if (allowWildcards && (useAsterisk || useQuestion)) {
+                    // For wildcard search, check all terms
+                    Object.keys(terms).forEach(term => {
+                        if (queryWords.some(queryWord => matchesWildcard(term, queryWord, useAsterisk, useQuestion))) {
+                            matchingTerms.add(term);
+                        }
+                    });
+                } else {
+                    // Regular term search
+                    queryWords.forEach(word => {
+                        if (terms[word]) {
+                            matchingTerms.add(word);
+                        }
+                    });
+                }
+                
+                const docMatches = new Map();
+                
+                matchingTerms.forEach(term => {
+                    const termData = terms[term];
+                    let docIndices = [];
+                    
+                    if (Array.isArray(termData)) {
+                        docIndices = termData;
+                    } else if (typeof termData === 'object') {
+                        docIndices = Object.keys(termData).map(k => parseInt(k));
+                    }
+                    
+                    docIndices.forEach(docIndex => {
+                        if (typeof docIndex === 'number' && index.docnames[docIndex]) {
+                            if (!docMatches.has(docIndex)) {
+                                docMatches.set(docIndex, new Set());
+                            }
+                            docMatches.get(docIndex).add(term);
+                        }
+                    });
+                });
+                
+                docMatches.forEach((matchedTerms, docIndex) => {
+                    const docname = index.docnames[docIndex];
+                    const title = index.titles[docIndex] || docname;
+                    
+                    // Check if this content match should be excluded based on title
+                    if (containsExcludedWords(title)) {
+                        return;
+                    }
+                    
+                    // Check if any excluded words exist in this document's content
+                    if (excludeWords.length > 0) {
+                        const hasExcludedWord = excludeWords.some(excludedWord => {
+                            const excludedTermData = terms[excludedWord];
+                            if (!excludedTermData) return false;
+                            
+                            let docIndicesWithExcluded = [];
+                            if (Array.isArray(excludedTermData)) {
+                                docIndicesWithExcluded = excludedTermData;
+                            } else if (typeof excludedTermData === 'object') {
+                                docIndicesWithExcluded = Object.keys(excludedTermData).map(k => parseInt(k));
+                            }
+                            
+                            return docIndicesWithExcluded.includes(docIndex);
+                        });
+                        
+                        if (hasExcludedWord) {
+                            return;
+                        }
+                    }
+                    
+                    results.push({
+                        title: title,
+                        url: `/${collection}/${docname}.html`,
+                        collection: collection,
+                        score: 10,
+                        isHeader: false,
+                        isContent: true,
+                        needsSnippet: true,
+                        matchingTerms: Array.from(matchedTerms),
+                        exactMatch: exactMatch,
+                        exactOrder: exactOrder,
+                        queryWords: queryWords,
+                        query: query
+                    });
+                });
+            }
+
+            return results;
+        }
+
+        // Get content snippet for a URL
+        async function getContentSnippet(url, matchingTerms, isExactMatch, isExactOrder, queryWords, query) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) return null;
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Remove unwanted elements
+                doc.querySelectorAll('script, style, nav, header, footer, H1, .globaltoc, .localtoc, .headerlink, .sd-card').forEach(el => el.remove());
+                // Get main content text
+                const mainContent = doc.querySelector('main, article, .document, body');
+                if (!mainContent) return null;
+                
+                const fullText = mainContent.textContent.replace(/\s+/g, ' ').trim();
+                const words = fullText.split(' ');
+                
+                let matchIndex = -1;
+                
+                if (isExactMatch && query) {
+                    // For exact match, find the query with word boundaries
+                    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
+                    const match = fullText.match(regex);
+                    
+                    if (match) {
+                        // Count words up to the match position
+                        const textBefore = fullText.substring(0, match.index);
+                        matchIndex = textBefore.split(' ').length - 1;
+                        if (matchIndex < 0) matchIndex = 0;
+                    }
+                } else if (isExactOrder && queryWords) {
+                    // For exact order, find the first occurrence where all words appear in order
+                    for (let i = 0; i < words.length; i++) {
+                        const wordLower = words[i].toLowerCase().replace(/[^\w]/g, '');
+                        
+                        // Check if this is the start of the sequence
+                        if (wordLower === queryWords[0] || wordLower.includes(queryWords[0])) {
+                            // Check if all subsequent words appear in order
+                            let currentIndex = i;
+                            let foundAll = true;
+                            
+                            for (let j = 0; j < queryWords.length; j++) {
+                                let found = false;
+                                for (let k = currentIndex; k < words.length && k < currentIndex + 20; k++) {
+                                    const testWord = words[k].toLowerCase().replace(/[^\w]/g, '');
+                                    if (testWord === queryWords[j] || testWord.includes(queryWords[j])) {
+                                        currentIndex = k + 1;
+                                        found = true;
+                                        break;
+                                    }
+                                }
+                                if (!found) {
+                                    foundAll = false;
+                                    break;
+                                }
+                            }
+                            
+                            if (foundAll) {
+                                matchIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                } else {
+                    // Find first matching term (original fuzzy logic)
+                    for (let i = 0; i < words.length; i++) {
+                        const wordLower = words[i].toLowerCase().replace(/[^\w]/g, '');
+                        for (const term of matchingTerms) {
+                            if (wordLower === term || wordLower.includes(term)) {
+                                matchIndex = i;
+                                break;
+                            }
+                        }
+                        if (matchIndex >= 0) break;
+                    }
+                }
+                
+                if (matchIndex < 0) return null;
+                
+                // Extract context: 10 words before and 10 after
+                const start = Math.max(0, matchIndex - 10);
+                const end = Math.min(words.length, matchIndex + 11);
+                
+                let snippet = words.slice(start, end).join(' ');
+                if (start > 0) snippet = '...' + snippet;
+                if (end < words.length) snippet = snippet + '...';
+                
+                return snippet;
+            } catch (error) {
+                console.error('Error fetching snippet:', error);
+                return null;
+            }
+        }
+
+        // Display search results
+        async function displayResults(results, query) {
+            const summaryDiv = document.getElementById('search-summary');
+            const resultsDiv = document.getElementById('results-list');
+
+            if (results.length === 0) {
+                summaryDiv.textContent = query ? `No results found for "${query}"` : '';
+                resultsDiv.innerHTML = '<div class="no-results">No results to display. Try adjusting your search or filters.</div>';
+                return;
+            }
+            
+            // Map collection names to display names
+            const collectionNames = {
+                'api': 'Amperity API',
+                'guides': 'Guided setup',
+                'operator': 'Operators guide',
+                'reference': 'Reference',
+                'user': 'User guides'
+            };
+            
+            // Fetch snippets for content matches in parallel
+            const snippetPromises = results.map(async (result) => {
+                if (result.needsSnippet && result.matchingTerms) {
+                    const snippet = await getContentSnippet(
+                        result.url, 
+                        result.matchingTerms, 
+                        result.exactMatch || false,
+                        result.exactOrder || false,
+                        result.queryWords || [],
+                        result.query || query
+                    );
+                    return { ...result, snippet };
+                }
+                return result;
+            });
+            
+            const resultsWithSnippets = await Promise.all(snippetPromises);
+            
+            // Filter out content results where exact match or exact order failed
+            const filteredResults = resultsWithSnippets.filter(result => {
+                // Keep all non-content results (titles, headers, glossary)
+                if (!result.isContent) return true;
+                
+                // For content results with exact match or exact order enabled,
+                // filter out if snippet is null (validation failed)
+                if (result.exactMatch || result.exactOrder) {
+                    return result.snippet !== null;
+                }
+                
+                // For regular content searches, keep all results
+                return true;
+            });
+            
+            // Update summary with actual result count
+            if (filteredResults.length === 0) {
+                summaryDiv.textContent = query ? `No results found for "${query}"` : '';
+                resultsDiv.innerHTML = '<div class="no-results">No results to display. Try adjusting your search or filters.</div>';
+                return;
+            }
+            
+            summaryDiv.textContent = `Found ${filteredResults.length} result${filteredResults.length !== 1 ? 's' : ''} for "${query}"`;
+            
+            resultsDiv.innerHTML = filteredResults.map(result => {
+                const collectionName = collectionNames[result.collection] || result.collection;
+                let breadcrumb;
+                let matchType = '';
+                
+                if (result.isGlossary) {
+                    // For glossary matches: show the definition as the context
+                    breadcrumb = result.context; // This is the definition
+                    matchType = '';
+                } else if (result.isHeader) {
+                    // For headers: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.pageTitle}`;
+                    matchType = ' (section header)';
+                } else if (result.isContent) {
+                    // For content matches: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.title}`;
+                    matchType = ' (content match)';
+                } else {
+                    // For page titles: Docs > Collection > Page Title
+                    breadcrumb = `Docs > ${collectionName} > ${result.title}`;
+                    matchType = ' (page title)';
+                }
+                
+                // Add snippet for content matches (but not for glossary matches)
+                const snippetHtml = result.snippet && !result.isGlossary ? 
+                    `<div class="snippet">${highlightText(result.snippet, query)}</div>` : '';
+                
+                return `
+                    <div class="search-result">
+                        <a href="${result.url}">${highlightText(result.title, query)}</a>
+                        <div class="context">${breadcrumb}${matchType}</div>
+                        ${snippetHtml}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Highlight matching text
+        function highlightText(text, query) {
+            if (!query) return text;
+            
+            const queryWords = query.split(/\s+/);
+            let highlighted = text;
+            
+            queryWords.forEach(word => {
+                const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+                highlighted = highlighted.replace(regex, '<span class="highlighted">$1</span>');
+            });
+            
+            return highlighted;
+        }
+
+        // Escape special regex characters
+        function escapeRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // Event listeners
+        document.getElementById('filter-button').addEventListener('click', () => {
+            const panel = document.getElementById('filter-panel');
+            panel.classList.toggle('active');
+        });
+
+        document.getElementById('search-input').addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('input', () => {
+            // Auto-search as user types (with debounce would be better)
+            performSearch();
+        });
+
+        // Re-run search when filters change
+        document.querySelectorAll('#filter-panel input').forEach(input => {
+            input.addEventListener('change', () => {
+                const query = document.getElementById('search-input').value.trim();
+                if (query) {
+                    performSearch();
+                }
+            });
+        });
+
+        // Re-run search when exclude words input changes (with slight delay)
+        let excludeTimeout;
+        document.getElementById('exclude-words').addEventListener('input', () => {
+            clearTimeout(excludeTimeout);
+            excludeTimeout = setTimeout(() => {
+                const query = document.getElementById('search-input').value.trim();
+                if (query) {
+                    performSearch();
+                }
+            }, 300); // 300ms delay to avoid searching on every keystroke
+        });
+
+        // Wildcard checkbox logic
+        document.getElementById('allow-wildcards').addEventListener('change', (e) => {
+            const isEnabled = e.target.checked;
+            const asteriskCheckbox = document.getElementById('wildcard-asterisk');
+            const questionCheckbox = document.getElementById('wildcard-question');
+            
+            asteriskCheckbox.disabled = !isEnabled;
+            questionCheckbox.disabled = !isEnabled;
+            
+            if (!isEnabled) {
+                asteriskCheckbox.checked = false;
+                questionCheckbox.checked = false;
+            }
+            
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                performSearch();
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const q = params.get('q');
+            if (q) {
+                document.getElementById('search-input').value = q;
+                performSearch();
+            }
+        });
+  </script>
+</section>
+{% endblock %}

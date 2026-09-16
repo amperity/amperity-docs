@@ -1,17 +1,17 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: The Trade Desk 3rd Party
-.. |what-send| replace:: email addresses or UID2 tokens
+.. |destination-name| replace:: The Trade Desk 3P
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
 
 
-The Trade Desk 3rd Party
+The Trade Desk 3P
 ==================================================
 
-Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting.
+Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting using email addresses and phone numbers.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
@@ -92,3 +92,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-3p-segment-taxonomy-id-start
    :end-before: .. setting-the-trade-desk-3p-segment-taxonomy-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

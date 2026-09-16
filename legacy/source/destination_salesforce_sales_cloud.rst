@@ -17,7 +17,11 @@
 Send data to Salesforce Sales Cloud
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_salesforce_sales_cloud.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_sales_cloud.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-sales-cloud-start
@@ -58,38 +62,38 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and password of a Salesforce account configured for API access.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The |destination-name| security token that belongs to username. (The security token is not required if IP range policies are configured from the Salesforce admin console.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The scheme and host for a custom |destination-name| URL, if used by customer.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
-     - If Amperity will send data to a sandbox instance.
+     - If Amperity sends data to a sandbox instance.
 
 .. destination-salesforce-sales-cloud-get-details-end
 
 .. destination-salesforce-sales-cloud-get-details-account-info-start
 
-.. admonition:: How do I find |destination-name| account information?
+.. admonition:: How to find |destination-name| account information?
 
-   You can find all of this information by logging into your |destination-name| admin console and by viewing the URL for your instance of |destination-name|.
+   You can find all of this information by logging into your |destination-name| admin console and by viewing the URL of your instance of |destination-name|.
 
 .. destination-salesforce-sales-cloud-get-details-account-info-end
 
@@ -101,7 +105,7 @@ Build query
 
 .. destination-salesforce-sales-cloud-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to |destination-name|.
+You need to build a query that outputs fields that can be mapped to |destination-name|.
 
 .. destination-salesforce-sales-cloud-build-query-end
 
@@ -125,8 +129,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -145,8 +149,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -186,8 +190,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -208,21 +212,21 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Sandbox?**
-            - Optional. Select this option if the destination is a sandbox instance (and not a production instance).
+            - Optional. Select this option if the destination is a sandbox instance and not a production instance.
 
-              .. note:: A sandbox instance is ignored when a custom URL for |destination-name| logins is used.
+              .. note:: A sandbox instance is ignored when a custom URL of |destination-name| logins is used.
 
           * - **Custom URL?**
-            - Optional. The custom URL for |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``https://<hostname>`` or ``http://<hostname>``. The rest of the path is added automatically by Amperity.
+            - Optional. The custom URL of |destination-name| logins requires only the scheme (``http://`` or ``https://``) and hostname parts of the URL. For example: ``https://<hostname>`` or ``http://<hostname>``. The rest of the path is added automatically by Amperity.
 
           * - **Salesforce object**
-            - The name of the object in |destination-name| to which Amperity will send data.
+            - The name of the object in |destination-name| to which Amperity sends data.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -235,8 +239,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -264,8 +268,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -284,8 +288,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -294,7 +298,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -305,8 +309,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -325,28 +329,30 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
-     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL for Salesforce logins (if used), the name of the object in Salesforce to which Amperity will send data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if NULL values should be used when fields are empty.
+     - Under **Template Settings**, indicate if the destination is a sandbox instance, enter the custom URL of Salesforce logins (if used), the name of the object in Salesforce to which Amperity sends data, the type of operation to perform, the external ID field (which acts as the primary key in the Salesforce object and is used by Amperity to identify which objects require updates for "Upsert" operations), if data should be loaded in parallel, and if **NULL** values should be used when fields are empty.
 
-       The custom URL for Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
+       The custom URL of Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity.
 
-       .. note:: A sandbox instance is ignored when a custom URL for Salesforce logins is used.
+       .. note:: A sandbox instance is ignored when a custom URL of Salesforce logins is used.
 
-       The operation may be one of the following: "Insert", "Upsert" (recommended), "Update", or "Delete". Upsert operations will insert a new record *or* update an existing record, whereas insert and update operations insert or update (and not both).
+       The operation may be one of the following: "Insert", "Upsert", "Update", or "Delete".
 
-       The external ID should be set to **Amperity_ID__c**. (The **__c** identifies the field as a custom field in the Salesforce object.)
+       Upsert operations are recommended and insert a new record *or* update an existing record, whereas insert and update operations insert or update and not both.
 
-       When enabled, NULL values in data sent from Amperity will be ignored during "Upsert" operations. If a field from Amperity is NULL and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
+       The external ID should be set to **Amperity_ID__c**. The **__c** identifies the field as a custom field in the Salesforce object.
 
-       .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introducing failures due to locking. It's possible for more than one batch to attempt to obtain a lock on the same row, causing one (or both) batches to fail.
+       When enabled, **NULL** values in data sent from Amperity is ignored during "Upsert" operations. If a field from Amperity is **NULL** and there is a value in the corresponding Salesforce object, the value in the Salesforce object will be preserved.
+
+       .. caution:: Enabling parallelism may cause Salesforce to process batches in parallel. This *may* improve performance, but comes with the risk of introducing failures due to locking. It is possible for more than one batch to attempt to obtain a lock on the same row, causing one or both batches to fail.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

@@ -44,6 +44,12 @@ Credentials
    :start-after: .. credential-sftp-passphrase-start
    :end-before: .. credential-sftp-passphrase-end
 
+**Port**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-common-port-start
+   :end-before: .. credential-common-port-end
+
 
 Settings
 ==================================================
@@ -104,10 +110,6 @@ Settings
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-vibes-filename-template-pattern-start
-   :end-before: .. setting-vibes-filename-template-pattern-end
-
 **Line ending**
 
 .. include:: ../../shared/destination_settings.rst
@@ -152,8 +154,20 @@ Settings
    :start-after: .. setting-common-header-start
    :end-before: .. setting-common-header-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

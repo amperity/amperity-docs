@@ -25,7 +25,11 @@
 Send data to Meta Ads Manager
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_meta_ads_manager.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_meta_ads_manager.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-meta-ads-manager-start
@@ -33,7 +37,7 @@ Send data to Meta Ads Manager
 
 .. destination-meta-ads-manager-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -42,13 +46,13 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
        Send :ref:`custom audiences <destination-meta-ads-manager-custom-audiences>` to |destination-name| to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-       The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
+       The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link|, specifically the `Replace Users endpoint <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api>`__ |ext_link|, is used to send custom audiences.
 
        This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
@@ -60,16 +64,20 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Offline events
-          :align: left
+          :alt: Events
+          :align: center
           :class: no-scaled-link
-     - **Offline events**
+     - **Events**
 
-       .. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-overview-start
           :end-before: .. events-meta-ads-manager-overview-end
 
-       .. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+          :start-after: .. events-meta-ads-manager-overview-window-start
+          :end-before: .. events-meta-ads-manager-overview-window-end
+
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-allowfor-start
           :end-before: .. events-meta-ads-manager-allowfor-end
 
@@ -84,7 +92,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 #. :ref:`Get details <destination-meta-ads-manager-get-details>`
 #. :ref:`Authorize Amperity access to the customer's account <destination-meta-ads-manager-configure-oauth>`
 #. :ref:`Custom audiences <destination-meta-ads-manager-custom-audiences>`
-#. :ref:`Offline events <destination-meta-ads-manager-offline-events>`
+#. :ref:`Events <destination-meta-ads-manager-offline-events>`
 
 .. destination-meta-ads-manager-steps-to-send-end
 
@@ -119,7 +127,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use a query or segment to build a custom audience.
 
@@ -127,7 +135,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure the |destination-name| :ref:`destination <destination-meta-ads-manager-custom-audiences-add-destination>` and :ref:`data template <destination-meta-ads-manager-custom-audiences-add-data-template>`.
 
@@ -135,11 +143,11 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Send a test set of first-party data from Amperity, and then from within |destination-name| verify that this data is available from Meta Ads Manager.
 
-       .. important:: The :ref:`custom audience terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+       .. important:: The :ref:`custom audience terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
           |destination-name| uses OAuth to grant access to Amperity. You may need to :ref:`reauthorize OAuth <destination-meta-ads-manager-reauthorize-amperity>` if the token expires or is removed.
 
@@ -147,7 +155,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Build ads for that audience in Meta Ads Manager.
 
@@ -170,28 +178,28 @@ Audiences sent to Meta Ads Manager have access to Facebook, Messenger, Instagram
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-ads.svg
           :width: 140 px
           :alt: Facebook Ads
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure `a variety of ad placements across Facebook <https://www.facebook.com/business/help/407108559393196?id=369787570424415>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-instagram.svg
           :width: 140 px
           :alt: Instagram
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Instagram <https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-messenger.svg
           :width: 140 px
           :alt: Facebook Messenger
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Messenger <https://www.facebook.com/business/help/1420905584664062?id=274377816589261>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-whatsapp.svg
           :width: 140 px
           :alt: WhatsApp
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use `Audience Manager <https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an>`__ |ext_link| to reach users who are not on Facebook or Instagram, but are on mobile apps that are within the audience network. For example, creating ads that `open conversation threads in WhatsApp <https://www.facebook.com/business/help/447934475640650?id=371525583593535>`__ |ext_link|.
 
@@ -214,21 +222,21 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The account ID.
 
-       .. admonition:: How do I find Facebook Ads account information?
+       .. admonition:: How to find Facebook Ads account information?
 
-          You can find all of this information and perform all of the required steps from within |ext_facebook_find_account_id|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
+          You can find all of this information and perform all of the required steps from within `Facebook Business Manager <https://www.facebook.com/business/help/1492627900875762>`__ |ext_link|. Click **Business Settings**, then **Ad Accounts**, and then the Facebook Ads account name. The account ID is visible under **Details**.
 
-       .. note:: You may use the same credentials to send offline events.
+       .. note:: You may use the same credentials to send events.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The custom audience name and customer file source settings.
 
@@ -246,16 +254,16 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - Acccept the |ext_facebook_tos|.
+     - Acccept the `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link|.
 
        .. important:: :ref:`Terms of service <destination-meta-ads-manager-terms-of-service>` must be signed by each business user that is associated with your Facebook Ads account.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Facebook Ads account <destination-meta-ads-manager-configure-oauth>`. This requires activation in the Amperity |destination-name| account and approval in the customer's |destination-name| account.
 
@@ -265,15 +273,15 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail five.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - **Meta Ads Manager offline events only**
+     - **Meta Ads Manager events only**
 
-       |ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+       `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
-       A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send events from Amperity.
 
-       A :ref:`query that defines the set of offline events <destination-meta-ads-manager-offline-events-build-query>` to be sent to |destination-name|.
+       A :ref:`query that defines the set of events <destination-meta-ads-manager-offline-events-build-query>` to be sent to |destination-name|.
 
 .. destination-meta-ads-manager-get-details-end
 
@@ -285,7 +293,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -296,7 +304,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -325,8 +333,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -334,8 +342,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -343,8 +351,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -370,7 +378,7 @@ Custom audiences
 
 Send custom audiences to help find people who already know about or have engaged with your brand. Use custom audiences for re-marketing, finding potential repeat customers, and finding lookalike audiences that can be activated from Facebook, Facebook Messenger, Instagram, and WhatsApp.
 
-The |ext_facebook_marketing_api|, specifically the |ext_facebook_marketing_api_replace_users|, is used to send custom audiences.
+The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link|, specifically the `Replace Users endpoint <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#replace-api>`__ |ext_link|, is used to send custom audiences.
 
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
@@ -400,8 +408,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -420,8 +428,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -454,8 +462,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -488,8 +496,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -502,8 +510,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -537,8 +545,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -557,8 +565,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -566,7 +574,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -581,8 +589,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -601,8 +609,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -623,14 +631,14 @@ Add data template
 
 .. _destination-meta-ads-manager-offline-events:
 
-Offline events
+Events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-overview-start
    :end-before: .. events-meta-ads-manager-overview-end
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-allowfor-start
    :end-before: .. events-meta-ads-manager-allowfor-end
 
@@ -640,13 +648,13 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_meta_ads_manager.rst
+.. include:: ../../amperity_user/source/events_meta_ads_manager.rst
    :start-after: .. events-meta-ads-manager-offline-events-build-query-start
    :end-before: .. events-meta-ads-manager-offline-events-build-query-end
 
 .. destination-meta-ads-manager-offline-events-parameters-start
 
-Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that must be (or may be) returned by your query.
+Review the :ref:`Conversions API parameters <destination-meta-ads-manager-conversion-api-parameters>` section for detailed information about the columns that returned by your query.
 
 .. destination-meta-ads-manager-offline-events-parameters-end
 
@@ -674,8 +682,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -687,13 +695,13 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the destination and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -709,15 +717,15 @@ Add destination
           :start-after: .. destinations-add-new-or-select-existing-start
           :end-before: .. destinations-add-new-or-select-existing-end
 
-       |destination-name| requires using OAuth to :ref:`authorize Amperity to send offline events to your Meta Ads Manager account <destination-meta-ads-manager-configure-oauth>`.
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your Meta Ads Manager account <destination-meta-ads-manager-configure-oauth>`.
 
-       .. note:: You may use the same credentials to send both custom audiences and offline events to |destination-name|.
+       .. note:: You may use the same credentials to send both custom audiences and events to |destination-name|.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -725,18 +733,18 @@ Add destination
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-meta-ads-offline.png
           :width: 500 px
-          :alt: Settings for Meta Ads Manager offline events.
+          :alt: Settings for Meta Ads Manager events.
           :align: left
           :class: no-scaled-link
 
-       |ext_facebook_dataset| from different sources---such as from websites, mobile apps, physical store locations or business chats--–from one location.
+       `Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| different sources from one location, such as from websites, mobile apps, physical store locations or business chats.
 
-       A |ext_facebook_dataset_create| in |destination-name| to support sending send offline events from Amperity.
+       A `dataset ID must be configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| to support sending send events from Amperity.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -749,8 +757,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -766,7 +774,7 @@ Add data template
 
 .. destination-meta-ads-manager-offline-events-add-data-template-start
 
-Offline events must be sent using a query and orchestration. The data template associated with offline events should not be made available to the **Campaigns** editor.
+Events must be sent using a query and orchestration. The data template associated with events should not be made available to the **Campaigns** editor.
 
 .. destination-meta-ads-manager-offline-events-add-data-template-end
 
@@ -780,8 +788,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -793,13 +801,13 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the data template and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the data template and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -807,7 +815,7 @@ Offline events must be sent using a query and orchestration. The data template a
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
 
@@ -818,8 +826,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -836,8 +844,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -874,7 +882,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -893,7 +901,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -908,7 +916,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -939,7 +947,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -1071,14 +1079,14 @@ Must agree to Facebook terms
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-start
 
-The |ext_facebook_tos| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to Facebook Ads.
 
 When the business user has not agreed to Facebook terms, an error similar to the following is shown:
 
 ::
 
    Permissions error: To create or edit an audience with an uploaded customer list,
-   please agree to the Custom Audience terms at
+ agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-end
@@ -1122,7 +1130,7 @@ Security challenge
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| will issue a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account or business account associated with this workflow.
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-end
 
@@ -1143,7 +1151,7 @@ Facebook Marketing API keys
 
 .. destination-meta-ads-manager-api-keys-start
 
-The following Amperity columns should be mapped to the corresponding |ext_facebook_marketing_api| keys when they are present in query data:
+The following Amperity columns should be mapped to the corresponding `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences>`__ |ext_link| keys when they are present in query data:
 
 .. list-table::
    :widths: 130 130 340
@@ -1166,8 +1174,8 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
      - **PHONE**
@@ -1177,16 +1185,16 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
 
        * Trims leading and trailing whitespace
        * Removes symbols, letters, and any leading zeros
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Gender**
      - **GEN**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Converts to m and f
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Birth Date**
      - **BIRTH**
@@ -1196,67 +1204,67 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
 
    * - **Birth Year**
      - **DOBY**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
 
    * - **Birth Month**
      - **DOBM**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBM with a format of **01** to **12**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBM with a format of **01** to **12**.
 
    * - **Birth Day**
      - **DOBD**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBD with a format of **01** to **31**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBD with a format of **01** to **31**.
 
    * - **Last Name**
      - **LN**
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Name**
      - **FN**
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Initial**
      - **FI**
-     - .. warning:: Do not pass this column. The connector will use the first character of the normalized first name.
+     - .. warning:: Do not pass this column. The connector uses the first character of the normalized first name.
    * - **US States**
      - **ST**
-     - A two-character |ext_ansi_abbreviation_code| for US states.
+     - A two-character `ANSI abbreviation code <https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations>`__ |ext_link| for US states.
 
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **City**
      - **CT**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
-   * - **Zip Code**
+       * Hashes data as one-way SHA-256
+   * - **ZIP Code**
      - **ZIP**
      - Use only the first five digits for the United States. Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
 
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Removes whitespace from lower-case for United Kingdom
+       * Converts to lowercase
+       * Removes whitespace from lowercase for United Kingdom
        * Trims to five digits for United States
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **Country Code**
      - **COUNTRY**
      - A two-letter country code in |ext_iso_31661alpha2| format.
@@ -1264,16 +1272,16 @@ The following Amperity columns should be mapped to the corresponding |ext_facebo
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
 .. destination-meta-ads-manager-api-keys-end
 
@@ -1285,7 +1293,7 @@ Conversions API parameters
 
 .. destination-meta-ads-manager-conversion-api-parameters-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with offline events that are returned by the query and sent to |destination-name|.
+The following table describes each of the parameters that are required by |destination-name| for events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with events that are returned by the query and sent to |destination-name|.
 
 The fields are listed alphabetically, but may be returned by a query in any order.
 
@@ -1299,7 +1307,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **action_source**
      - **Optional**
 
-       Action sources group offline events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
+       Action sources group events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
 
        Add **action_source** to your query and then set a value:
 
@@ -1348,7 +1356,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
        **website**
          Use when the offline conversion was made on a website.
 
-         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|; missing or empty values are filtered from the results.
+         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
 
          * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
 
@@ -1365,7 +1373,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **currency**
      - **Required**
 
-       A value for **currency** is required by the Conversions API for offline events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
+       A value for **currency** is required by the Conversions API for events. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
 
        Add **currency** to your query, and then set a value:
 
@@ -1375,10 +1383,10 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
        .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
 
-   * - **email** *and/or* **phone**
+   * - **email** or **phone**
      - **Required**
 
-       You must send an email address *or* a phone number to |destination-name|; you may configure the query to send both.
+       You must send an email address *or* a phone number to |destination-name|. You may configure the query to send both.
 
        Add at least one of **email** or **phone** to your query:
 
@@ -1425,7 +1433,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
 
           ,uit.order_id AS order_id
 
-       .. important:: The number of rows that results from the query will not be the same as the number of events that are uploaded to |destination-name|.
+       .. important:: The number of rows that results from the query is not the same as the number of events that are uploaded to |destination-name|.
 
           This is because transactions within the query are grouped by **Order ID** as the data is sent to |destination-name|.
 
@@ -1488,7 +1496,7 @@ The fields are listed alphabetically, but may be returned by a query in any orde
    * - **timestamp**
      - **Required**
 
-       A Unix timestamp (in seconds) that indicates when the offline event occurred.
+       A Unix timestamp in seconds that indicates when the offline event occurred.
 
        .. note:: When viewing parameters in the |destination-name| user interface, **timestamp** is shown as **event_time**.
 

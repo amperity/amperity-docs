@@ -55,7 +55,7 @@ Available operators
 
 The following table lists the operators that are available to discount percent attributes.
 
-.. note:: Discount percent attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Discount percent attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -86,7 +86,7 @@ The following table lists the operators that are available to discount percent a
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual discount percents are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual discount percents are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -118,7 +118,7 @@ The following table lists the operators that are available to discount percent a
        Avoid using the **is not in list** condition when individual profit amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as ".10", ".20", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as ".10", ".20", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

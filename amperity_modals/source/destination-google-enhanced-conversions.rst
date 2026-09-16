@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Google Enhanced Conversions
-.. |what-send| replace:: offline events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 
 
@@ -60,3 +60,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-enhanced-conversions-customer-id-start
    :end-before: .. setting-google-enhanced-conversions-customer-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

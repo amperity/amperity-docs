@@ -12,9 +12,9 @@ Oracle Eloqua
 
 |destination-name| is an automation platform for email and SMS marketing. Use the Oracle Eloqua REST API to manage audiences in |destination-name|.
 
-Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
+Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a defined relationship to the campaign or program that is managed from |destination-name|.
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
+Amperity adds and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
 
 
 Credentials
@@ -80,3 +80,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-oracle-eloqua-audience-primary-key-start
    :end-before: .. setting-oracle-eloqua-audience-primary-key-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

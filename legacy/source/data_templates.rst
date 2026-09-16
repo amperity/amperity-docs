@@ -21,7 +21,7 @@ About data templates
    :start-after: .. term-data-template-start
    :end-before: .. term-data-template-end
 
-.. TODO: Data templates will be removed from the product during an upcoming redesign for the destinations page. It's likely some of the descriptions/settings will persist in the new UX.
+.. TODO: Data templates will be removed from the product during an upcoming redesign for the destinations page. It is likely some of the descriptions/settings will persist in the new UX.
 
 
 .. _data-templates-campaigns:
@@ -86,7 +86,7 @@ Campaign names
 
 .. data-templates-campaigns-campaign-name-start
 
-Use the ``{{ campaign_name }}`` variable to define where the name of the campaign is added to the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ campaign_name }}`` variable to define where the name of the campaign is added to the filename for a campaign, as it is received by the downstream system.
 
 Use this variable by itself to use the campaign name as the filename. For example, when the filename template is set to ``{{ campaign_name }}`` and the name of the campaign is ``acme_subscriber_bogo_20220815_1`` the filename will be ``acme_subscriber_bogo_20220815_1``.
 
@@ -102,7 +102,7 @@ Treatment group names
 
 .. data-templates-campaigns-group-name-start
 
-Use the ``{{ group_name }}`` variable to define where the name of a treatment group is added to the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ group_name }}`` variable to define where the name of a treatment group is added to the filename for a campaign, as it is received by the downstream system.
 
 Use this variable by itself to use the treatment group name as the filename. For example, when the filename template is set to ``{{ group_name }}`` and the name of the treatment group is ``Group1_bogo_20220815_1`` the filename will be ``Group1_bogo_20220815_1``.
 
@@ -118,13 +118,13 @@ List names
 
 .. data-templates-campaigns-list-name-start
 
-Use the ``{{ list_name }}`` variable to use the name of the campaign as the filename for a campaign, as it will be received by the downstream system.
+Use the ``{{ list_name }}`` variable to use the name of the campaign as the filename for a campaign, as it is received by the downstream system.
 
 .. data-templates-campaigns-list-name-end
 
 .. data-templates-campaigns-list-name-caution-start
 
-.. caution:: You should avoid using this campaign template with one-time or recurring campaigns and instead use ``{{ campaign_name }}`` (with or without a timestamp).
+.. caution:: You should avoid using this campaign template with one-time or recurring campaigns and instead use ``{{ campaign_name }}`` with or without a timestamp.
 
 .. data-templates-campaigns-list-name-caution-end
 
@@ -136,7 +136,7 @@ Campaign examples
 
 .. data-templates-campaigns-examples-start
 
-The following examples show various campaign template configurations for a campaign named "ACME Churn" and three treatment groups named "Facebook", "Google", and "Bing" that are configured to send the campaign to Meta Ads Manager, Google Ads, and Microsoft Ads.
+The following examples show various campaign template configurations for a campaign named "Socktown Churn" and three treatment groups named "Facebook", "Google", and "Bing" that are configured to send the campaign to Meta Ads Manager, Google Ads, and Microsoft Ads.
 
 **campaign name, group name, datestamp**
 
@@ -146,9 +146,9 @@ The following examples show various campaign template configurations for a campa
 
 would send three campaigns with names similar to:
 
-* ACME_Churn_Bing_2022-06-15.csv (sent to Microsoft Ads)
-* ACME_Churn_Facebook_2022-06-15.csv (sent to Meta Ads Manager)
-* ACME_Churn_Google_2022-06-15.csv (sent to Google Ads)
+* Socktown_Churn_Bing_2022-06-15.csv sent to Microsoft Ads
+* Socktown_Churn_Facebook_2022-06-15.csv sent to Meta Ads Manager
+* Socktown_Churn_Google_2022-06-15.csv sent to Google Ads
 
 
 **group name, datestamp**
@@ -159,9 +159,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* Bing_2022-06-15.csv (sent to Microsoft Ads)
-* Facebook_2022-06-15.csv (sent to Meta Ads Manager)
-* Google_2022-06-15.csv (sent to Google Ads)
+* Bing_2022-06-15.csv sent to Microsoft Ads
+* Facebook_2022-06-15.csv sent to Meta Ads Manager
+* Google_2022-06-15.csv sent to Google Ads
 
 
 **campaign name, datestamp**
@@ -172,9 +172,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* ACME_Churn_2022-06-15.csv (sent to Microsoft Ads)
-* ACME_Churn_2022-06-15.csv (sent to Meta Ads Manager)
-* ACME_Churn_2022-06-15.csv (sent to Google Ads)
+* Socktown_Churn_2022-06-15.csv sent to Microsoft Ads
+* Socktown_Churn_2022-06-15.csv sent to Meta Ads Manager
+* Socktown_Churn_2022-06-15.csv sent to Google Ads
 
 
 **campaign name, no datestamp**
@@ -185,9 +185,9 @@ would send three campaigns with names similar to:
 
 would send three campaigns with names similar to:
 
-* ACME_Churn.csv (sent to Microsoft Ads)
-* ACME_Churn.csv (sent to Meta Ads Manager)
-* ACME_Churn.csv (sent to Google Ads)
+* Socktown_Churn.csv sent to Microsoft Ads
+* Socktown_Churn.csv sent to Meta Ads Manager
+* Socktown_Churn.csv sent to Google Ads
 
 .. data-templates-campaigns-examples-end
 
@@ -232,7 +232,7 @@ Most file-based destinations share common settings:
 
 .. data-templates-files-common-done-start
 
-Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and will be the last file added by Amperity.
+Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and is the last file added by Amperity.
 
 .. data-templates-files-common-done-end
 
@@ -271,7 +271,7 @@ Escape characters
 
 .. data-templates-files-common-escape-character-start
 
-If an escape character is not specified and quote mode is set to “None” this may result in unescaped, unquoted files. When an escape character is not specified, you should select a non-“None” option.
+If an escape character is not specified and quote mode is set to "None" this may result in unescaped, unquoted files. When an escape character is not specified, you should select a non-"None" option.
 
 .. data-templates-files-common-escape-character-end
 
@@ -302,7 +302,7 @@ Custom delimiters
 
 .. data-templates-files-common-formats-delimiters-start
 
-Some formats will accept a custom delimiter. From the **File format** drop-down, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
+Some formats accepts a custom delimiter. From the **File format** dropdown, select "Custom delimiter" and then in the **Delimiter** box type a single character to use as a custom delimiter.
 
 .. data-templates-files-common-formats-delimiters-end
 
@@ -363,6 +363,8 @@ Use a filter to shift a timezone, and then format it as a string. The following 
 Tokens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. vale off
+
 .. data-templates-files-common-template-tokens-start
 
 Use a token to specify how to apply a datetime to a file. The following tokens are available:
@@ -377,6 +379,8 @@ Use a token to specify how to apply a datetime to a file. The following tokens a
      - Use the ``now`` token to apply a datetime to a file that is current *at the time* a file is written.
 
 .. data-templates-files-common-template-tokens-end
+
+.. vale on
 
 
 .. _data-templates-files-common-template-examples:
@@ -408,7 +412,7 @@ Header rows
 
 .. data-templates-files-common-header-rows-start
 
-Files, such as CSV, PSV, or TSV, may (or may not) require header rows, which define the headers for that data set. Configure the settings to match if header rows are required by the downstream workflow.
+Files, such as CSV, PSV, or TSV, often require header rows, which define the headers for each column in the data set. Configure settings to match if header rows are required by the downstream workflow.
 
 .. data-templates-files-common-header-rows-end
 
@@ -515,7 +519,7 @@ API templates
 
 .. data-templates-api-start
 
-A data template for a destination that uses an API will vary, depending on the type of destination and other configuration details. Data templates that are associated with APIs include |destination_hubspot|, |destination_klaviyo|, |destination_sailthru|, |destination_zendesk|, |destination_meta_ads_manager|, |destination_google_ads|, |destination_campaign_monitor|, |destination_microsoft_dynamics|, and |destination_salesforce_marketing_cloud|.
+A data template for a destination that uses an API varies, depending on the type of destination and other configuration details. Data templates that are associated with APIs include |destination_hubspot|, |destination_klaviyo|, |destination_sailthru|, |destination_zendesk|, |destination_meta_ads_manager|, |destination_google_ads|, |destination_campaign_monitor|, |destination_microsoft_dynamics|, and |destination_salesforce_marketing_cloud|.
 
 .. data-templates-api-end
 
@@ -527,7 +531,7 @@ Snowflake templates
 
 .. data-templates-snowflake-start
 
-A data template for a destination that uses Snowflake must specify the location of the tables to which Amperity will write data, and then the action that will be performed against those tables.
+A data template for a destination that uses Snowflake must specify the location of the tables to which Amperity writes data, and then the action that will be performed against those tables.
 
 .. data-templates-snowflake-end
 
@@ -607,7 +611,7 @@ Truncate
 
 .. data-templates-snowflake-table-action-truncate-start
 
-Use the **Truncate table** option when the contents of the table should be emptied prior to loading data.
+Use the **Truncate table** option when the contents of the table should be emptied before loading data.
 
 .. data-templates-snowflake-table-action-truncate-end
 
@@ -625,7 +629,7 @@ How-tos
 
 .. data-templates-howtos-start
 
-This section describes tasks related to managing data templates in Amperity:
+Tasks related to managing data templates in Amperity:
 
 * :ref:`data-templates-add`
 * :ref:`data-templates-allow-to-send-queries`
@@ -741,7 +745,7 @@ Delete data template
 
 .. data-templates-delete-start
 
-Use the **Delete Settings** option to remove a data template from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this data template prior to deleting it.
+Use the **Delete Settings** option to remove a data template from Amperity. Verify that both upstream and downstream processes no longer depend on this data template before deleting it.
 
 .. data-templates-delete-end
 
@@ -784,7 +788,7 @@ Enable success file
 
 .. data-templates-enable-success-file-start
 
-Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and will be the last file added by Amperity.
+Amperity may be configured to include a "success file" to indicate when an orchestration has finished sending data. A success file has a ``.DONE`` file extension and is the last file added by Amperity.
 
 .. data-templates-enable-success-file-end
 
@@ -810,16 +814,16 @@ Amperity may be configured to include a "success file" to indicate when an orche
 Map to external schemas
 --------------------------------------------------
 
-.. warning:: This section applies **ONLY** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
+.. warning:: Applies **only** to the |destination_meta_ads_manager| and |destination_google_ads| destinations.
 
 .. data-templates-map-to-external-schemas-start
 
 Data mappings support two options:
 
-* Use **Visual and SQL queries** to allow mapping for this template to apply to queries created by the visual **Query Editor** and/or the **SQL Query Editor**.
+* Use **Visual and SQL queries** to allow mapping for this template to apply to queries created by the visual **Query Editor** or the **SQL Query Editor**.
 * Use **SQL queries only** to limit mapping for this template to apply only queries created by the **SQL Query Editor**.
 
-If the destination does not require Amperity fields to be mapped, leave the value ``NULL``. Otherwise, replace with a data mapping structure that maps fields to the required naming pattern.
+If the destination does not require Amperity fields to be mapped, leave the value **NULL**. Otherwise, replace with a data mapping structure that maps fields to the required naming pattern.
 
 .. data-templates-map-to-external-schemas-end
 
@@ -828,7 +832,7 @@ If the destination does not require Amperity fields to be mapped, leave the valu
 .. data-templates-map-to-external-schemas-steps-start
 
 #. From the **Destinations** page, open the menu in the same row as the data template to be edited, and then select **Edit Settings**.
-#. Identify the external schema to which Amperity data will be mapped.
+#. Identify the external schema to which Amperity data is mapped.
 #. As part of adding or editing a data template from within the **Data Template** dialog box, under **Data Mappings**, define the data mappings that are required to map Amperity fields with fields in the external schema.
 #. Click **Save**.
 

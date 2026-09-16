@@ -13,14 +13,13 @@
     :content class=swiftype name=title data-type=string:
         GET /campaigns
 
-
 ==================================================
 GET /campaign-drafts
 ==================================================
 
 .. endpoint-get-campaign-drafts-list-start
 
-Use the **/campaign-drafts** endpoint to return a list of draft campaigns from your tenant. You may restrict the list of draft campaigns to those associated with a specific data template.
+Use the **GET /campaign-drafts** endpoint to return a list of draft campaigns from your tenant. You may restrict the list of draft campaigns to those associated with a specific data template.
 
 .. endpoint-get-campaign-drafts-list-end
 
@@ -29,18 +28,6 @@ Use the **/campaign-drafts** endpoint to return a list of draft campaigns from y
 .. important:: This endpoint is only available from the **unstable** version of the Amperity API.
 
 .. endpoint-get-campaign-drafts-list-unstable-end
-
-
-.. _endpoint-get-campaign-drafts-list-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-campaigns-drafts.png
-   :width: 440 px
-   :alt: GET /campaigns-drafts
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-campaign-drafts-list-prerequisites:
@@ -56,20 +43,32 @@ Prerequisites
 .. endpoint-get-campaign-drafts-list-prerequisites-end
 
 
-.. _endpoint-get-campaign-drafts-list-base-url:
+.. _endpoint-get-campaign-drafts-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-campaign-drafts-list-base-url-start
+.. endpoint-get-campaign-drafts-list-request-url-start
 
-All requests made to the **/campaign-drafts** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /campaign-drafts** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant-id}.amperity.com/api/campaign-drafts/
+.. code-block:: rest
 
-.. endpoint-get-campaign-drafts-list-base-url-end
+   https://app.amperity.com/api/campaign-drafts
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/campaign-drafts
+
+.. endpoint-get-campaign-drafts-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-campaign-drafts-list-rate-limit:
@@ -77,11 +76,13 @@ All requests made to the **/campaign-drafts** endpoint should be directed to the
 Rate limit
 ==================================================
 
-A rate limit is the number of requests that may be made to the Amperity API in a given time period.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-start
+   :end-before: .. rate-limits-end
 
-The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.
-
-Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-campaign-drafts-list-request:
@@ -91,20 +92,20 @@ Requests
 
 .. endpoint-get-campaign-drafts-list-request-start
 
-A request to the **/campaign-drafts** endpoint is similar to:
+A request to the **GET /campaign-drafts** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/campaign-drafts \
+          'https://app.amperity.com/api/campaign-drafts \
           ?limit=12 \
-          ?with_total=true \
-          ?destination_data_template_id=ptg-1abcAB4C2' \
-        --header 'amperity-tenant: tenant' \
+          &with_total=true \
+          &destination_data_template_id=ptg-1abcAB4C2' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: unstable' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-campaign-drafts-list-request-end
 
@@ -116,7 +117,7 @@ Request parameters
 
 .. endpoint-get-campaign-drafts-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **/campaign-drafts** endpoint.
+The following table describes the parameters that may be used with the **GET /campaign-drafts** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -178,87 +179,78 @@ Request examples
 
 .. endpoint-get-campaign-drafts-list-request-examples-start
 
-The following examples show how to send requests to the **/campaign-drafts** endpoint.
+The following examples show how to send requests to the **GET /campaign-drafts** endpoint.
 
 .. endpoint-get-campaign-drafts-list-request-examples-end
 
+.. endpoint-get-campaign-drafts-list-request-examples-tabs-start
 
-.. _endpoint-get-campaign-drafts-list-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-campaign-drafts-list-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /campaign-drafts** endpoint.
 
-The following example shows how to use cURL to send a request to the **/campaign-drafts** endpoint.
+      .. code-block:: rest
 
-.. code-block:: rest
+         curl --request GET \
+                'https://app.amperity.com/api/campaign-drafts \
+                ?limit=12 \
+                &with_total=true \
+                &destination_data_template_id=ptg-1abcAB4C2' \
+              --header 'amperity-tenant: {tenant-id}' \
+              --header 'api-version: unstable' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/campaign-drafts \
-          ?limit=12 \
-          &with_total=true \
-          &destination_data_template_id=ptg-1abcAB4C2' \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: unstable' \
-        --header 'Authorization: Bearer token'
+      This example is formatted for readability in a narrow page layout.
 
-(This example is formatted for readability in a narrow page layout.)
+   .. tab-item:: Python
 
-.. endpoint-get-campaign-drafts-list-request-example-curl-end
+      The following example shows how to use Python to send a request to the **GET /campaign-drafts** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
 
+      .. code-block:: python
+         :linenos:
 
-.. _endpoint-get-campaign-drafts-list-request-python:
+         import requests
+         import json
+         import csv
 
-Python
-++++++++++++++++++++++++++++++++++++++++++++++++++
+         # URL for Draft campaigns endpoint
+         url = "https://app.amperity.com/api/campaign-drafts"
 
-.. endpoint-get-campaign-drafts-list-request-python-start
+         # Required headers
+         headers = {
+           'accept': 'application/json',
+           'authorization': 'Bearer {token}', # add token here
+           'amperity-tenant': '{tenant-id}',
+           'api-version': 'version'
+         }
 
-The following example shows how to use Python to send a request to the **/campaign-drafts** endpoint. This example converts the JSON response into a CSV file named "campaigns.csv".
+         # Query parameter for data template IDs
+         payload = {
+           # 'destination_data_template_id': ''
+         }
 
-.. code-block:: python
+         # Get the response from the Draft campaigns endpoint
+         response = requests.request("GET", url, headers=headers, params=payload)
+         response_json = response.json()
 
-   import requests
-   import json
-   import csv
+         # Extract headers from the first data entry
+         headers = list(response_json["data"][0].keys())
 
-   # URL for Draft campaigns endpoint
-   url = "https://tenant-name.amperity.com/api/campaign-drafts"
+         # Specify the output CSV file path
+         csv_file_path = "campaigns.csv"
 
-   # Required headers
-   headers = {
-     'accept': 'application/json',
-     'authorization': 'Bearer token', # add token here
-     'amperity-tenant': 'tenant-name',
-     'api-version': 'version'
-   }
+         # Write data to a CSV file
+         with open(csv_file_path, mode='w', newline='') as file:
+           writer = csv.DictWriter(file, fieldnames=headers)
+           writer.writeheader()
+           for entry in response_json["data"]:
+             writer.writerow(entry)
 
-   # Query parameter for data template IDs
-   payload = {
-     # 'destination_data_template_id': ''
-   }
+         print("CSV file generated successfully.")
 
-   # Get the response from the Draft campaigns endpoint
-   response = requests.request("GET", url, headers=headers, params=payload)
-   response_json = response.json()
-
-   # Extract headers from the first data entry
-   headers = list(response_json["data"][0].keys())
-
-   # Specify the output CSV file path
-   csv_file_path = "campaigns.csv"
-
-   # Write data to a CSV file
-   with open(csv_file_path, mode='w', newline='') as file:
-     writer = csv.DictWriter(file, fieldnames=headers)
-     writer.writeheader()
-     for entry in response_json["data"]:
-       writer.writerow(entry)
-
-   print("CSV file generated successfully.")
-
-.. endpoint-get-campaign-drafts-list-request-python-end
+.. endpoint-get-campaign-drafts-list-request-examples-tabs-end
 
 
 .. _endpoint-get-campaign-drafts-list-unstable-responses:
@@ -268,7 +260,7 @@ Responses
 
 .. endpoint-get-campaign-drafts-list-unstable-responses-start
 
-A response from the **/campaign-drafts** endpoint will match an `HTTP status code <https://docs.amperity.com/api/responses.html>`__. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /campaign-drafts** endpoint will match an `HTTP status code <https://docs.amperity.com/api/responses.html>`__. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-campaign-drafts-list-unstable-responses-end
 
@@ -283,6 +275,7 @@ A response from the **/campaign-drafts** endpoint will match an `HTTP status cod
 The **200** response returns a set of draft campaigns.
 
 .. code-block:: json
+   :linenos:
 
    {
      "total": 0,
@@ -291,12 +284,12 @@ The **200** response returns a set of draft campaigns.
        {
          "id": "ab-1CDEfGHI",
          "name": "Holiday Campaign",
-         "deliver_at": "2024-04-22T20:30:00Z"
+         "deliver_at": "2026-04-22T20:30:00Z"
        },
        {
          "id": "cd-2FGHiJKL",
          "name": "Returning Customers",
-         "deliver_at": "2024-04-23T21:00:00Z"
+         "deliver_at": "2026-04-23T21:00:00Z"
        }
      ]
    }
@@ -311,7 +304,7 @@ Response parameters
 
 .. endpoint-get-campaign-drafts-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -324,7 +317,7 @@ A **200 OK** response contains the following parameters.
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
        **deliver_at**
-          The date and time at which the campaign was delivered (or will be delivered). Dates and times are in |ext_iso_8601| format and in UTC.
+          The date and time at which the campaign was delivered or will be delivered. Dates and times are in |ext_iso_8601| format and in UTC.
 
        **id**
           The Amperity internal identifier for the campaign.
@@ -333,7 +326,7 @@ A **200 OK** response contains the following parameters.
           The name of the campaign.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

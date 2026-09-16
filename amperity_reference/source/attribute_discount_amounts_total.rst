@@ -25,6 +25,6 @@ Total discount amount
 
 .. note:: Total discount amount is not a default attribute in Amperity, but you may configure your tenant to support it.
 
-   You can extend your customer 360 database to include this attribute using SQL within a domain table (and then apply a custom semantic tag like **txn-total-discount-amount**) or within your customer 360 database.
+   You can extend your customer 360 database to include this attribute using SQL within a domain table, and then apply a custom semantic tag like **txn-total-discount-amount** or within your customer 360 database.
 
 .. attribute-discount-amounts-total-end

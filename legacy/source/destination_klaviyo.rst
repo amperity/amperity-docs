@@ -20,7 +20,11 @@
 Send data to Klaviyo
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_klaviyo.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_klaviyo.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-klaviyo-start
@@ -28,7 +32,7 @@ Send data to Klaviyo
 
 .. destination-klaviyo-start
 
-Use Amperity to manage audience lists in Klaviyo. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to Klaviyo. The audience list will be updated to match the query.
+Use Amperity to manage audience lists in Klaviyo. Build a query using the **email** field, with optional additional customer profile fields, and then send the results of that query to Klaviyo. The audience list is updated to match the query.
 
 .. destination-klaviyo-end
 
@@ -46,9 +50,9 @@ Use Amperity to manage audience lists in Klaviyo. Build a query using the **emai
 
 .. destination-klaviyo-csv-note-start
 
-   If you don't want to wait to load customer profiles, you may instead use the `SFTP import tool <https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool>`__ |ext_link| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
+   If you do not want to wait to load customer profiles, you may instead use the `SFTP import tool <https://developers.klaviyo.com/en/docs/use_klaviyos_sftp_import_tool>`__ |ext_link| process. This approach is efficient and quick. It uses the :doc:`built-in SFTP connector in Amperity <destination_sftp>` and is capable of importing large sets of customer profiles.
 
-   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one (or more) of the following fields: "Email", "PhoneNumber", and/or "ExternalID". When these fields are present in the CSV file they must have those exact names.
+   The CSV file that is imported to |destination-name| has specific requirements on formatting and must include one or more of the following fields: "Email", "PhoneNumber", or "ExternalID". When these fields are present in the CSV file they must have those exact names.
 
 .. destination-klaviyo-csv-note-end
 
@@ -81,7 +85,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A private API key.
 
@@ -91,18 +95,18 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The list name to which the Klaviyo connector will write. This can be the name of an existing list or a new list.
+     - The list name to which the Klaviyo connector writes. This can be the name of an existing list or a new list.
 
-       .. note:: |destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+       .. note:: |destination-name| supports up to 1000 lists or segments in your account at any given time.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A query that outputs the fields that must be mapped to the Klaviyo audience.
 
@@ -110,7 +114,7 @@ Get details
 
 .. destination-klaviyo-get-details-account-info-start
 
-.. admonition:: How do I find Klaviyo account, private API key, and audience information?
+.. admonition:: How to find Klaviyo account, private API key, and audience information?
 
    You can find all of this information after you log into Klaviyo.
 
@@ -139,8 +143,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -159,8 +163,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -195,8 +199,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -211,8 +215,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -225,8 +229,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -254,8 +258,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -274,8 +278,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -283,7 +287,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -298,8 +302,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -318,10 +322,10 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
-     - Configure how Amperity will send data to |destination-name|.
+     - Configure how Amperity sends data to |destination-name|.
 
        **For campaigns**
 
@@ -329,7 +333,7 @@ Add data template
 
        **List Name** This is the name of the audience list in |destination-name|. If the audience list does not exist, this is the name of the audience list that will be created by Amperity.
 
-       .. note:: By default, Amperity will manage audience lists using only **email**.
+       .. note:: By default, Amperity manages audience lists using only **email**.
 
        **For orchestrations**
 
@@ -342,15 +346,15 @@ Add data template
 
        **List Name** This is the name of the audience list in |destination-name|. If the audience list does not exist, this is the name of the audience list that will be created by Amperity.
 
-       **Use full profile to update list** This option allows queries to send additional customer profile fields as part of the audience list, after which they will be visible in |destination-name| from the **Customer Properties** section within individual profiles for members of that audience list.
+       **Use full profile to update list** This option allows queries to send additional customer profile fields as part of the audience list, after which they is visible in |destination-name| from the **Customer Properties** section within individual profiles for members of that audience list.
 
-       .. note:: By default, Amperity will manage audience lists using only **email**.
+       .. note:: By default, Amperity manages audience lists using only **email**.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -387,7 +391,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -406,7 +410,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -421,7 +425,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -446,7 +450,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -482,16 +486,16 @@ Maximum number of lists exceeded
 
 .. destination-klaviyo-workflow-actions-maximum-lists-start
 
-|destination-name| supports up to 1000 lists and/or segments in your account at any given time.
+|destination-name| supports up to 1000 lists or segments in your account at any given time.
 
 .. destination-klaviyo-workflow-actions-maximum-lists-end
 
 .. destination-klaviyo-workflow-actions-maximum-lists-steps-start
 
-To resolve this error, verify the number of lists and/or segments associated with your |destination-name| account.
+To resolve this error, verify the number of lists or segments associated with your |destination-name| account.
 
-#. Log into |destination-name| and verify the number of lists and/or segments that are associated with your |destination-name| account.
-#. Remove unused lists and/or segments.
+#. Log into |destination-name| and verify the number of lists or segments that are associated with your |destination-name| account.
+#. Remove unused lists or segments.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-klaviyo-workflow-actions-maximum-lists-steps-start
@@ -504,7 +508,7 @@ Customer profile parameters
 
 .. destination-klaviyo-customer-profile-parameters-start
 
-The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties (as key/value pairs) to represent offline events.
+The following table describes the parameters that may be sent to |destination-name|. Use the **properties** field to define a series of custom properties as key-value pairs to represent events.
 
 Amperity uses the `Update Profile <https://developers.klaviyo.com/en/reference/update_profile>`__ |ext_link| endpoint in the Klaviyo API to send customer profile attributes to |destination-name|.
 
@@ -642,7 +646,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **properties**
      - **Optional**
 
-       A series of custom properties represented as key/value pairs for additional data that your brand wants to associate with this customer profile.
+       A series of custom properties represented as key-value pairs for additional data that your brand wants to associate with this customer profile.
 
        For example, a store ID or the name (or SKU) of the most recent product purchase associated with this customer profile.
 
@@ -658,7 +662,7 @@ The list of customer profile parameters supported by |destination-name| are desc
    * - **timezone**
      - **Optional**
 
-       The name of a timezome. |destination-name| recommends using the name of a timezone in the |ext_iana_timezone|.
+       The name of a timezome. |destination-name| recommends using the name of a timezone in the `IANA Time Zone Database <https://www.iana.org/time-zones>`__ |ext_link|.
 
 
    * - **title**

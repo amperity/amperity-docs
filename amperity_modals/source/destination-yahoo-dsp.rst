@@ -55,7 +55,7 @@ Settings
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :end-before: .. setting-yahoo-dsp-segment-name-end
 
 **Membership duration**
 
@@ -66,3 +66,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-membership-duration-frequency-start
    :end-before: .. setting-common-membership-duration-frequency-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

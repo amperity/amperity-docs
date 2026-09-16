@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        File format: JSON
+        JSON files
 
 ==================================================
-File format: JSON
+JSON files
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -23,7 +23,7 @@ File format: JSON
 
 .. format-json-streaming-ingest-start
 
-.. note:: This topic is about standalone JSON files. JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
+.. note:: JSON data that is sent to the |api_streaming_ingest| is converted to :doc:`NDJSON format <format_ndjson>`.
 
 .. format-json-streaming-ingest-end
 
@@ -37,10 +37,9 @@ Pull JSON files
 
 To pull JSON files to Amperity:
 
-#. Select a :ref:`filedrop data source <format-ndjson-pull-data-sources>`.
-#. Use an :ref:`ingest query <format-ndjson-pull-ingest-queries>` to select fields from the JSON file to pull to Amperity.
-#. Configure a courier for :ref:`the location and name of the JSON file <format-ndjson-pull-couriers-load-settings>`, and then for :ref:`the name of an ingest query <format-ndjson-pull-couriers-load-operations>`.
-#. Define a :ref:`feed to associate the fields that were selected from the JSON file with semantic tags <format-ndjson-pull-feed>` for customer profiles and interactions, as necessary.
+#. Select a :ref:`filedrop data source <format-json-pull-data-sources>`.
+#. Configure a courier for :ref:`the location and name of the JSON file <format-json-pull-couriers>`.
+#. Define a :ref:`feed to associate the fields in the JSON file with semantic tags <format-json-pull-feed>` for customer profiles and interactions, as necessary.
 
 .. format-json-pull-end
 
@@ -52,7 +51,7 @@ Data sources
 
 .. format-json-pull-data-sources-start
 
-Pull JSON files to Amperity using any filedrop data source:
+Pull JSON files to Amperity using any one of the following data sources:
 
 * |source_sftp_any|
 * |source_amazon_s3|
@@ -70,11 +69,9 @@ Recommendations
 
 .. format-json-pull-data-sources-recommendations-start
 
-.. TODO: See .. sources-filedrop-file-format-json-start
-
 When using JSON files, it is recommend to:
 
-* Do use simple nested data structures; do not use nested array data structures
+* Do use simple nested data structures. Do not use nested array data structures
 
   **DO**
 
@@ -103,32 +100,31 @@ When using JSON files, it is recommend to:
         :start-after: .. formats-json-rfc-8259-start
         :end-before: .. formats-json-rfc-8259-end
 
-* Compress files prior to encryption using ZIP, GZIP, and/or TAR
-* Encrypt files using PGP; compression will not reduce the size of an encrypted file
+* Compress files before encryption using ZIP, GZIP, or TAR
+* Encrypt files using PGP. Compression will not reduce the size of an encrypted file
 
 .. format-json-pull-data-sources-recommendations-end
 
 
-.. _format-json-pull-ingest-queries:
+.. _format-json-pull-load-data:
 
-Ingest queries
+Load data
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-ingest-query-start
-   :end-before: .. term-ingest-query-end
+.. format-json-pull-load-data-start
 
-.. format-json-pull-ingest-queries-start
+Use a feed to associate fields in the JSON file with semantic tags and a courier to pull the JSON file from its upstream data source.
 
-Use :doc:`Spark SQL <sql_spark>` to :doc:`define an ingest query <ingest_queries>` for the JSON file. Use a **SELECT** statement to specify which fields should be pulled to Amperity. Apply transforms to those fields as necessary.
+* :ref:`Couriers <format-json-pull-couriers>`
+* :ref:`Feeds <format-json-pull-feed>`
 
-.. format-json-pull-ingest-queries-end
+.. format-json-pull-load-data-end
 
 
 .. _format-json-pull-couriers:
 
 Couriers
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
@@ -136,77 +132,48 @@ Couriers
 
 .. format-json-pull-couriers-start
 
-A courier must specify the location of the JSON file, and then define how that file is to be pulled to Amperity. This is done using a combination of configuration blocks:
+A courier must specify the location of the JSON file, and then define how that file is to be pulled to Amperity.
 
-#. :ref:`Load settings <format-json-pull-couriers-load-settings>`
-#. :ref:`Load operations <format-json-pull-couriers-load-operations>`
+#. :ref:`File settings <format-json-pull-couriers-file-settings>`
+#. :ref:`Feed selection <format-json-pull-couriers-feed-selection>`
 
 .. format-json-pull-couriers-end
 
 
-.. _format-json-pull-couriers-load-settings:
+.. _format-json-pull-couriers-file-settings:
 
-Load settings
-++++++++++++++++++++++++++++++++++++++++++++++++++
+File settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-json-pull-couriers-load-settings-start
+.. format-json-pull-couriers-file-settings-start
 
-Use courier load settings to specify the path to the JSON file, a file tag (which can be the same as the name of the JSON file), and the ``"application/json"`` content type.
+Use the **File settings** section of the courier configuration page to specify the path to the JSON file and to define formatting within the file.
 
-.. format-json-pull-couriers-load-settings-end
-
-.. format-json-pull-couriers-load-settings-block-start
-
-.. code-block:: none
-
-   {
-     "object/type": "file",
-     "object/file-pattern": "'path/to/file'-YYYY-MM-dd'.json'",
-     "object/land-as": {
-        "file/tag": "FILE_NAME",
-        "file/content-type": "application/json"
-     }
-   },
-
-.. format-json-pull-couriers-load-settings-block-end
+.. format-json-pull-couriers-file-settings-start
 
 
-.. _format-json-pull-couriers-load-operations:
+.. _format-json-pull-couriers-feed-selection:
 
-Load operations
-++++++++++++++++++++++++++++++++++++++++++++++++++
+Feed selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. format-json-pull-couriers-load-operations-start
+.. format-json-pull-couriers-feed-selection-start
 
-Use courier load operations to associate a feed ID to the courier, apply the same file tag as the one used for load settings, and the name of the ingest query.
+Use the **Feed selection** section of the courier configuration page to identify the feed for which this courier pulls data, and then files are loaded.
 
-.. format-json-pull-couriers-load-operations-end
+From the **Load type** dropdown select one of:
 
-.. format-json-pull-couriers-load-operations-block-start
+* **Load** Use this option to load data to the associated domain table.
+* **Spark** Use this option to load data when the JSON file has complex types, such as nested objects and arrays.
+* **Truncate and load** Use this option to delete all rows in the associated domain table, and then load data.
 
-.. code-block:: none
-
-   {
-     "FEED_ID": [
-       {
-         "type": "spark-sql",
-         "spark-sql-files": [
-           {
-             "file": "FILE_NAME"
-           }
-         ],
-         "spark-sql-query": "INGEST_QUERY_NAME"
-       }
-     ]
-   }
-
-.. format-json-pull-couriers-load-operations-block-end
+.. format-json-pull-couriers-feed-selection-end
 
 
 .. _format-json-pull-feed:
 
 Feeds
---------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-feed-start
@@ -214,13 +181,13 @@ Feeds
 
 .. format-json-pull-feeds-start
 
-Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand how field relationships should be understood when those values are present across your data sources.
+Apply :ref:`profile (PII) semantics <semantics-profile>` to customer records and :ref:`transaction <semantics-itemized-transactions>`, and product catalog semantics to interaction records. Use :ref:`blocking key (bk), foreign key (fk), and separation key (sk) <semantics-keys>` semantic tags to define how Amperity should understand values that exist across data sources.
 
 .. format-json-pull-feeds-end
 
 .. format-json-pull-feeds-important-start
 
-.. important:: A feed will use the first record in a JSON file to determine its schema in the **Feed Editor**. If records contain optional fields and those records are *not the first record* you must add those fields to the feed definition manually.
+.. important:: A feed uses the first record in a JSON file to determine its schema in the **Feed Editor**. If records contain optional fields and those records are *not the first record* you must add those fields to the feed definition manually.
 
 .. format-json-pull-feeds-important-end
 
@@ -232,7 +199,7 @@ Send JSON files
 
 .. format-json-destination-links-start
 
-Amperity can send JSON files to downstream workflows using any filedrop destination:
+Amperity can send JSON files to downstream workflows using any of the following destinations:
 
 * |destination_sftp_any|
 * |destination_amazon_s3|

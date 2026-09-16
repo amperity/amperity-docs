@@ -23,12 +23,22 @@ Product affinity model
 
 .. model-product-affinity-about-start
 
-Amperity models product affinity for any product taxonomy that contains between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+Amperity models product affinity for any product taxonomy that has between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
 
 * Historical data to identify customers who have purchased a product in the past and are likely to do so again.
 * Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.
 
 .. model-product-affinity-about-end
+
+.. model-product-affinity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Product affinity predicts which customers are most likely to purchase from specific product categories.
+
+   Open **Learning Lab** to learn more about `predicted affinity <https://amperity.com/learning-lab/predicted-affinity>`__ |ext_link|. Registration is required.
+
+.. model-product-affinity-learning-lab-end
 
 
 .. _model-product-affinity-use-cases:
@@ -38,7 +48,7 @@ Use cases
 
 .. model-product-affinity-use-cases-start
 
-The product affinity model enables support for marketing campaigns that benefit from knowing a customer's preferences across product categories, including:
+Product affinity modeling enables support for marketing campaigns that benefit from knowing a customer's preferences across product categories, including:
 
 #. :ref:`Recommended audience sizes <model-product-affinity-use-cases-recommended-audiences>`
 #. :ref:`Ranking customers by affinity <model-product-affinity-use-cases-customer-ranking>`
@@ -76,7 +86,7 @@ Audience sizes are inclusive of all smaller audience sizes.
 
 Recommended audience sizes identify customers who are most likely to purchase. Use recommended audience sizes to:
 
-* More effectively engage with customers for product-specific sends, such as clearance sale and new arrival announcements
+* Engage with customers for product-specific sends, such as clearance sale and new arrival announcements
 * Define more valuable campaigns to grow revenue for specific product categories
 * Drive up conversion rates
 * Drive down opt-outs
@@ -95,13 +105,21 @@ Attributes for recommended audience sizes are available from the **Predicted Aff
    * - Attribute Name
      - Description
    * - **Audience Size Small**
-     - A small audience is predicted to incude ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
-   * - **Audience Size Medium**
-     - A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
-   * - **Audience Size Large**
-     - A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-small-start
+          :end-before: .. term-audience-size-small-end
 
-Combine these attributes with the **Product Attribute** attribute to build audiences for a specific product category, class, or brand.
+       .. tip:: A small audience size helps prevent wasted spend and reduces opt-outs.
+   * - **Audience Size Medium**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-medium-start
+          :end-before: .. term-audience-size-medium-end
+   * - **Audience Size Large**
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-large-start
+          :end-before: .. term-audience-size-large-end
+
+Combine audience size attributes with product attributes to build audiences for a specific product categories, classes, or brands. Access these attributes directly from the **Segment Editor**.
 
 .. model-product-affinity-use-cases-recommended-audiences-attributes-end
 
@@ -131,6 +149,6 @@ Customer ranking identifies the top N customers who are most likely to purchase.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-start
 
-The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X will provide the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand.
+The **Ranking** attribute in the **Predicted Affinity** table ranks customer scores by product. A rank that is less than or equal to X provides the top N customers with an affinity for this product. Combine this attribute with the **Product Attribute** attribute to build customer rankings for a specific product category, class, or brand.
 
 .. model-product-affinity-use-cases-customer-ranking-attribute-end

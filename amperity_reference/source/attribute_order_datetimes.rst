@@ -78,7 +78,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **datetime** data type. All **datetime** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -104,12 +104,12 @@ The following table lists the operators that are available to these attributes.
 
        Returns dates that exist within a defined start and end date.
 
-       For example, all orders made during a holiday shopping window, all orders made during a calendar year, and so on. Combine these attributes and condition with channels, brands, and purchase locations to build more specific audiences.
+       For example, all orders made during a holiday shopping window or all orders made during a calendar year. Combine these attributes and condition with channels, brands, and purchase locations to build more specific audiences.
 
    * - **is not between**
      - Returns order dates that exist outside of a defined start and end date.
 
-       For example, if you choose August 10, 2022 and August 12, 2022 as your start and end dates, all orders before August 10. 2022 and all orders after August 12, 2022 will be returned.
+       For example, if you choose August 10, 2022 and August 12, 2022 as your start and end dates, all orders before August 10. 2022 and all orders after August 12, 2022 is returned.
 
    * - **is not NULL**
      - Returns customer records that have a value.
@@ -118,14 +118,14 @@ The following table lists the operators that are available to these attributes.
      - Returns customer records that do not have a value.
 
    * - **is on or after**
-     - Returns all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window.
+     - Returns all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
-       For example, use "today - 90 days" to return orders that have been made during the previous 90 days.
+       For example, use ``today - 90 days`` to return orders that have been made during the previous 90 days.
 
    * - **is on or before**
-     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window.
+     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
-       For example, use "today - 1080 days" to return orders that were made 3 (or more) years ago.
+       For example, use ``today - 1080 days`` to return orders that were made 3 or more years ago.
 
 .. attribute-order-datetimes-conditions-end
 
@@ -135,12 +135,12 @@ The following table lists the operators that are available to these attributes.
 About relative dates
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end

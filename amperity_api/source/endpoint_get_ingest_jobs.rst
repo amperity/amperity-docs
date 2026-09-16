@@ -11,8 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        GET /campaigns
-
+        GET /ingest/jobs
 
 ==================================================
 GET /ingest/jobs
@@ -20,21 +19,9 @@ GET /ingest/jobs
 
 .. endpoint-get-ingest-jobs-start
 
-Use the **/ingest/jobs** endpoint to return a list of jobs from your tenant that occurred within the previous 7 days.
+Use the **GET /ingest/jobs** endpoint to return a list of jobs from your tenant that occurred within the previous 7 days.
 
 .. endpoint-get-ingest-jobs-end
-
-
-.. _endpoint-get-ingest-jobs-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-ingest-jobs.png
-   :width: 440 px
-   :alt: GET /ingest/jobs
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-ingest-jobs-prerequisites:
@@ -50,20 +37,32 @@ Prerequisites
 .. endpoint-get-ingest-jobs-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-base-url:
+.. _endpoint-get-ingest-jobs-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-base-url-start
+.. endpoint-get-ingest-jobs-request-url-start
 
-All requests made to the **/ingest/jobs** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /ingest/jobs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/ingest/jobs
+
+**Microsoft Azure**
 
 .. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/ingest/jobs
 
-.. endpoint-get-ingest-jobs-base-url-end
+.. endpoint-get-ingest-jobs-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-ingest-jobs-rate-limit:
@@ -75,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-ingest-jobs-request:
 
@@ -83,19 +86,19 @@ Requests
 
 .. endpoint-get-ingest-jobs-request-start
 
-A request to the **/ingest/jobs** endpoint is similar to:
+A request to the **GET /ingest/jobs** endpoint is similar to:
 
 ::
 
    curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs" \
-          ?created_from=2024-10-01 \
-          ?created_to=2024-10-07' \
-        --header 'amperity-tenant: tenant' \
+          'https://app.amperity.com/api/ingest/jobs \
+          ?created_from=2026-10-01 \
+          &created_to=2026-10-07' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-ingest-jobs-request-end
 
@@ -107,7 +110,7 @@ Request parameters
 
 .. endpoint-get-ingest-jobs-request-parameters-start
 
-The following table describes the parameters that may be used with the **ingest/jobs** endpoint.
+The following table describes the parameters that may be used with the **GET /ingest/jobs** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -126,21 +129,21 @@ The following table describes the parameters that may be used with the **ingest/
    * - **created_from**
      - Datetime. Required.
 
-       A timestamp that defines the start (inclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_to** request parameter.
+       A timestamp that defines the start (inclusive) of a 7-day time window in which one or more ingest jobs started. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **ingest/jobs** endpoint.)
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
 
    * - **created_to**
      - Datetime. Required.
 
-       A timestamp that defines the end (exclusive) of a 7-day time window in which one (or more) ingest jobs started. See the **created_from** request parameter.
+       A timestamp that defines the end (exclusive) of a 7-day time window in which one or more ingest jobs started. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only ingest jobs that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **ingest/jobs** endpoint.)
+       .. important:: Only ingest jobs that have a **started_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_ingest_jobs_id` endpoint.
 
    * - **with_total**
      - Boolean. Optional.
@@ -159,33 +162,31 @@ Request examples
 
 .. endpoint-get-ingest-jobs-request-examples-start
 
-The following examples show how to send requests to the **/ingest/jobs{id}** endpoint.
+The following examples show how to send requests to the **GET /ingest/jobs** endpoint.
 
 .. endpoint-get-ingest-jobs-request-examples-end
 
+.. endpoint-get-ingest-jobs-request-examples-tabs-start
 
-.. _endpoint-get-ingest-jobs-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-ingest-jobs-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /ingest/jobs** endpoint.
 
-The following example shows how to use cURL to send a request to the **ingest/jobs{id}** endpoint.
+      .. code-block:: rest
 
-::
+         curl --request GET \
+                'https://app.amperity.com/api/ingest/jobs \
+                ?created_from=2026-10-01 \
+                &created_to=2026-10-07' \
+               --header 'amperity-tenant: {tenant-id}' \
+               --header 'api-version: 2024-04-01' \
+               --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs" \
-          ?created_from=2024-10-01 \
-          ?created_to=2024-10-07' \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      This example is formatted for readability in a narrow page layout.
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-get-ingest-jobs-request-example-curl-end
+.. endpoint-get-ingest-jobs-request-examples-tabs-end
 
 
 .. _endpoint-get-ingest-jobs-responses:
@@ -195,7 +196,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-responses-start
 
-A response from the **/injest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-responses-end
 
@@ -210,6 +211,7 @@ A response from the **/injest/jobs** endpoint will match an :doc:`HTTP status co
 The **200** response returns a set of records, files, and feeds that were ingested during the specified range, similar to the following response example, but with a response section for each record, file, and feed.
 
 .. code-block:: json
+   :linenos:
 
    {
      "total": 0,
@@ -223,9 +225,9 @@ The **200** response returns a set of records, files, and feeds that were ingest
              "read": 1000,
              "rejected": 200,
              "updated": 200,
-             "started_at": "2024-06-01T04:02:54.433Z",
+             "started_at": "2026-06-01T04:02:54.433Z",
              "state": "succeeded",
-             "ended_at": "2024-06-01T04:02:57.433Z",
+             "ended_at": "2026-06-01T04:02:57.433Z",
              "files": [
                {
                  "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
@@ -254,7 +256,7 @@ Response parameters
 
 .. endpoint-get-ingest-jobs-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -279,9 +281,9 @@ A **200 OK** response contains the following parameters.
             "read" : 1000,
             "rejected" : 200,
             "updated" : 200,
-            "started_at" : "2024-06-01T04:02:54.433Z",
+            "started_at" : "2026-06-01T04:02:54.433Z",
             "state" : "succeeded",
-            "ended_at" : "2024-06-01T04:02:57.433Z",
+            "ended_at" : "2026-06-01T04:02:57.433Z",
             "files" : [ {
               "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
               "name" : "part0.avro",
@@ -358,6 +360,6 @@ A **200 OK** response contains the following parameters.
      - The Amperity internal identifier for the workflow that ran this job.
 
    * - **next_token**
-     - The **next_token** parameter is included in the response, but is not available for use with the **ingest/jobs** endpoint. The **ingest/jobs** endpoint only returns a list of ingest jobs that occurred within the previous 7 days.
+     - The **next_token** parameter is included in the response, but is not available for use with the **GET /ingest/jobs** endpoint. The **GET /ingest/jobs** endpoint only returns a list of ingest jobs that occurred within the previous 7 days.
 
 .. endpoint-get-ingest-jobs-response-parameters-end

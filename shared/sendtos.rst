@@ -3,15 +3,33 @@
 ..
 
 
+.. vale off
 
 **TEMPLATE SECTIONS FOR SENDTOS**
 
+.. vale on
+
+Used in /user/destination and /user/events topics.
 
 .. sendtos-ask-to-configure-start
 
-.. note:: |destination-name| must be enabled before you can configure an orchestration to send query results.
+.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destination cannot be selected for orchestrations ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 .. sendtos-ask-to-configure-end
+
+
+Used in /user/campaigns topics.
+
+.. sendtos-ask-to-configure-campaigns-start
+
+.. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destination cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+
+.. sendtos-ask-to-configure-campaigns-end
+
 
 
 .. sendtos-ask-to-configure-webhook-start
@@ -21,9 +39,28 @@
 .. sendtos-ask-to-configure-webhook-end
 
 
+.. vale off
+
+**MARKETER CONFIG CALLOUT**
+
+.. vale on
+
+.. destination-ask-to-config-start
+
+.. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
+
+   If this destination cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+
+.. destination-ask-to-config-emd
+
+
+.. vale off
+
 **BUILD QUERY**
 
-.. This section is for any destination that defaults to just email-only.
+.. vale on
+
+.. For any destination that defaults to just email-only.
 
 
 .. sendtos-build-query-email-only-start
@@ -31,10 +68,10 @@
 The default audience list in |destination-name| requires only an email address. This requires a simple ``SELECT`` statement that returns only the Amperity ID and its associated email address:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
-     ,amperity_id AS "Amperity ID"
-     ,email AS "Email"
+     email AS email
    FROM Customer360
 
 .. sendtos-build-query-email-only-end
@@ -47,16 +84,20 @@ The default audience list in |destination-name| requires only an email address. 
 .. sendtos-build-query-webhook-lambda-note-end
 
 
+.. vale off
+
 **ADD ORCHESTRATION**
+
+.. vale on
 
 .. sendtos-add-orchestration-generic-start
 
-#. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Query**.
-#. From the **Object** drop-down, select the query for which results will be sent to |destination-name|.
-#. From the **Destination** drop-down, select a destination that is configured for sending data to |destination-name|.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then click the **Add orchestration** button. This opens the **Add orchestration** dialog box.
+#. From the **Object type** dropdown, select **Query**.
+#. From the **Object** dropdown, select the query for which results is sent to |destination-name|.
+#. From the **Destination** dropdown, select a destination that is configured for sending data to |destination-name|.
 #. Verify all settings.
-#. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
+#. Set the workflow to **Manual**. You can change this to automatic later, after verifying the end-to-end workflow.
 #. Click **Save**.
 
 .. sendtos-add-orchestration-generic-end
@@ -64,13 +105,13 @@ The default audience list in |destination-name| requires only an email address. 
 
 .. sendtos-add-orchestration-snowflake-start
 
-#. From the **Destinations** tab, click **Add Orchestration**. This opens the **Add Orchestration** dialog box.
-#. From the **Object Type** drop-down, select **Database Export** or **Query**.
-#. From the **Object** drop-down, select the object to be exported to Snowflake.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then click the **Add orchestration** button. This opens the **Add orchestration** dialog box.
+#. From the **Object type** dropdown, select **Query**.
+#. From the **Object** dropdown, select the object to be exported to Snowflake.
 
    .. note:: This name will also be the name of the orchestration.
-#. From the **Destination** drop-down, select the name of the destination that is configured to send data to Snowflake.
-#. From the **Data Template** drop-down, select the data template that maps a database export or query to a table in Snowflake.
+#. From the **Destination** dropdown, select the name of the destination that is configured to send data to Snowflake.
+#. From the **Data template** dropdown, select the data template that maps a database export or query to a table in Snowflake.
 #. Verify the **Snowflake Location** has the correct namespace, including the appended Amperity table name. This should be a period-delimited list of the Snowflake database name, the Snowflake schema name, and the Snowflake table name:
 
    ::
@@ -86,14 +127,18 @@ The default audience list in |destination-name| requires only an email address. 
       AMPERITY.CUSTOMER_360.TABLE_NAME
 
 #. Verify the option to use for managing the table in Snowflake.
-#. Set the workflow to **Manual**. (You can change this to automatic later, after verifying the end-to-end workflow.)
+#. Set the workflow to **Manual**. You can change this to automatic later, after verifying the end-to-end workflow.
 #. Click **Save**.
 
 .. sendtos-add-orchestration-snowflake-end
 
 
 
+.. vale off
+
 **RUN ORCHESTRATION**
+
+.. vale on
 
 .. sendtos-run-orchestration-start
 
@@ -103,8 +148,8 @@ Run the orchestration manually to validate that it works.
 
 .. sendtos-run-orchestration-steps-start
 
-#. From the **Destinations** tab, under **Orchestrations**, open the |fa-kebab| menu for the |destination-name| orchestration, and then select **Run**.
-#. The **Status** column for the orchestration will update to say "Waiting to start...", after which the notifications pane will update to include a notification that shows the current status.
+#. Open the **Activations** page, select the **Orchestrations** tab, and then open the |fa-kebab| menu for the |destination-name| orchestration. Select **Run**.
+#. The **Status** column for the orchestration updates to say "Waiting to start", after which the notifications pane updates to include a notification that shows the current status.
 #. When the orchestration has run successfully, the status is updated to "Completed".
 
 .. sendtos-run-orchestration-steps-end

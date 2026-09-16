@@ -1,17 +1,17 @@
 .. /downloads/markdown/
 
 
-.. |destination-name| replace:: The Trade Desk Offline Events
-.. |what-send| replace:: offline events
+.. |destination-name| replace:: The Trade Desk Events
+.. |what-send| replace:: events
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
 
 
-The Trade Desk Offline Events
+The Trade Desk Events
 ==================================================
 
-Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting.
+Send offline measurement data to The Trade Desk, and then use that data for attribution and targeting using email addresses and phone numbers.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
@@ -75,8 +75,26 @@ Settings
    :start-after: .. setting-the-trade-desk-membership-duration-example-start
    :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
+**Offline Data Provider ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-offline-data-provider-id-start
+   :end-before: .. setting-the-trade-desk-offline-data-provider-id-end
+
+**Merchant ID**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-the-trade-desk-offline-merchant-id-start
+   :end-before: .. setting-the-trade-desk-offline-merchant-id-end
+
 **Tracking tag name**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-offline-tracking-tag-name-start
    :end-before: .. setting-the-trade-desk-offline-tracking-tag-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

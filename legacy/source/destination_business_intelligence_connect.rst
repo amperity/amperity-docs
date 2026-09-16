@@ -63,7 +63,7 @@ Provision the warehouse
 
 .. destination-bic-request-to-enable-provision-start
 
-Your Amperity support team will provision the following:
+Your Amperity support team provisions the following:
 
 #. A dedicated data warehouse in Snowflake that is configured to run in the same cloud platform as your tenant.
 
@@ -110,9 +110,9 @@ Connection details
 
 .. destination-bic-request-to-enable-connection-details-start
 
-Allow the Amperity support team a few days to complete the provisioning process. When finished, the support team will share the following connection details with you via SnapPass:
+Allow the Amperity support team a few days to complete the provisioning process. When finished, the support team will share the following connection details with you via |ext_snappass|:
 
-#. The URL for the data warehouse.
+#. The URL of the data warehouse.
 #. The **Account Name**, **Region ID**, **Database name**, **Schema name**, and **Staging path**.
 #. A JDBC connection string.
 #. An ODBC connection string.
@@ -140,7 +140,7 @@ Customers can track their utilization against their free tier hours by requestin
 
    Discuss plans for heavy use of BI tools with your Amperity account team.
 
-   Compute service time is calculated in minute increments and is based on the running time of the customer's data warehouse. The warehouse is started when a query is first run. As queries are submitted, the data warehouse continues to run. Five minutes after all queries have completed, the data warehouse will stop running and service hours will stop accumulating.
+   Compute service time is calculated in minute increments and is based on the running time of the customer's data warehouse. The warehouse is started when a query is first run. As queries are submitted, the data warehouse continues to run. Five minutes after all queries have completed, the data warehouse stops running and service hours stops accumulating.
 
 .. destination-bic-request-to-enable-service-hours-end
 
@@ -251,7 +251,7 @@ A service account is a static username and password that may be provisioned for 
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-start
 
-A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative will send to you your service account username and password via SnapPass, along with the URL for your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
+A set of service accounts are defined for any tenant that chooses to enable |bic|. Your Amperity representative sends to you your service account username and password via |ext_snappass|, along with the URL of your instance of |bic|. Credentials for a read-only service account and a read-write service account may be provided. You may use these service accounts to log into |bic|.
 
 .. destination-bic-send-to-data-warehouse-service-accounts-defined-end
 
@@ -259,7 +259,7 @@ A set of service accounts are defined for any tenant that chooses to enable |bic
 
 .. destination-bic-send-to-data-warehouse-service-accounts-steps-start
 
-#. Enter the URL for your instance of |bic| into your web browser.
+#. Enter the URL of your instance of |bic| into your web browser.
 #. On the login screen, enter the username and password for your service account. For example:
 
    .. image:: ../../images/bi-connect-login-screen.png
@@ -297,15 +297,9 @@ Export databases and tables
 
 .. destination-snowflake-aws-database-export-start
 
-Database tables (or even entire databases) can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
+Database tables, or even entire databases, can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
 
 .. destination-snowflake-aws-database-export-end
-
-**To add a database export for Snowflake**
-
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-steps-start
-   :end-before: .. data-exports-add-steps-end
 
 
 .. _destination-bic-send-to-data-warehouse-queries:
@@ -339,14 +333,14 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "BI Connect" and "This sends data to the BI Connect data warehouse".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "aws-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "aws-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket.
 #. Under **Snowflake Settings**, enter the Snowflake account name, Amazon AWS region ID, Snowflake stage name, and Snowflake data warehouse name.
 
-   The **Account Name** is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+   The **Account Name** is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
    The **Region ID** is the region ID in Amazon AWS. For example: "us-west-2".
 
@@ -378,14 +372,14 @@ The following steps describe how to configure a destination for |bic| when it is
 
 #. From the **Destinations** page, click **Add Destination**. This opens the **Add Destination** dialog box.
 #. Enter the name of the destination and a description. For example: "Snowflake" and "This sends data to Snowflake".
-#. From the **Plugin** drop-down, select **Snowflake**.
-#. From the **Credential Type** drop-down, select a credential type: "azure-snowflake".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
+#. From the **Plugin** dropdown, select **Snowflake**.
+#. From the **Credential Type** dropdown, select a credential type: "azure-snowflake".
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
 #. Enter the username and password. This is the service account username and password.
 #. Add the Azure Blob Storage account name and shared access signature for the AZURE_ROLE with permission to access Azure Bob Storage.
 #. Under **Snowflake Settings**, enter the Snowflake account name, the region identifier, Snowflake stage name, and Snowflake data warehouse name.
 
-   The **Account Name** is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+   The **Account Name** is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
    The **Region ID** is the region ID in Azure. For example: "west-us-2".
 
@@ -419,8 +413,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -439,8 +433,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -449,7 +443,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -464,8 +458,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -474,8 +468,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Under **Template Settings**, specify the **Snowflake Location**. This is a period-delimited list of the Snowflake database name, the Snowflake schema name, and the Snowflake table name:
 
@@ -496,8 +490,8 @@ Add data template
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -561,7 +555,7 @@ Connect BI tools
 
 .. destination-bic-connect-to-bi-tools-important-start
 
-.. important:: Please refer to the documentation for individual BI tools for troubleshooting connectivity issues with |bic| and to Snowflake documentation for troubleshooting connectivity issues related to the Snowflake ODBC or JDBC drivers.
+.. important:: Refer to the documentation for individual BI tools for troubleshooting connectivity issues with |bic| and to Snowflake documentation for troubleshooting connectivity issues related to the Snowflake ODBC or JDBC drivers.
 
 .. destination-bic-connect-to-bi-tools-important-end
 
@@ -577,7 +571,7 @@ Amazon QuickSight
 
 .. destination-bic-connect-to-amazon-quicksight-start
 
-Configure Amazon QuickSight to connect to the |bic| data warehouse as a |ext_aws_quicksight_vpc|.
+Configure Amazon QuickSight to connect to the |bic| data warehouse as a `VPC data source <https://docs.aws.amazon.com/quicksight/latest/user/vpc-connection-supported-data-sources.html>`__ |ext_link|.
 
 .. destination-bic-connect-to-amazon-quicksight-end
 
@@ -593,7 +587,7 @@ Domo
 
 .. destination-bic-connect-to-domo-start
 
-Configure Domo to connect to the |bic| data warehouse using the |ext_domo_snowflake| or the |ext_domo_snowflake_oauth|.
+Configure Domo to connect to the |bic| data warehouse using the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360042931814-Snowflake-Connector>`__ |ext_link| or the `Snowflake connector <https://domohelp.domo.com/hc/en-us/articles/360061552054-Snowflake-OAuth-Connector>`__ |ext_link|.
 
 .. destination-bic-connect-to-domo-end
 
@@ -609,13 +603,13 @@ JDBC driver
 
 .. destination-bic-connect-other-jdbc-start
 
-Download the |ext_snowflake_jdbc| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or `Sisense <https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm>`__ |ext_link| to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link| to connect BI tools such as Databricks, SAP Business Objects, `SQL Workbench <https://www.sql-workbench.eu/>`__ |ext_link|, or `Sisense <https://documentation.sisense.com/latest/managing-data/connectors/snowflake-online.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-jdbc-end
 
 .. destination-bic-connect-other-jdbc-externalbrowser-start
 
-.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL for the |bic| data warehouse:
+.. important:: BI tools that use the JDBC driver must set the **Authenticator** setting to **externalbrowser** as `a requirement for browser-based SSO <https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use.html#setting-up-browser-based-sso>`__ |ext_link|. The location in which this setting is configured varies, depending on the BI tool. For example, SQL Workbench appends this setting to the URL of the |bic| data warehouse:
 
    ::
 
@@ -643,8 +637,8 @@ Databricks
 
 .. destination-bic-connect-other-jdbc-databricks-steps-start
 
-#. Download and install the |ext_snowflake_jdbc|.
-#. Configure Databricks to |ext_databricks_from_jdbc| to |bic|.
+#. Download and install the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|.
+#. Configure Databricks to `use the JDBC driver to connect <https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html>`__ |ext_link| to |bic|.
 #. Enter the following information:
 
    .. list-table::
@@ -656,9 +650,9 @@ Databricks
       * - **Driver**
         - The Snowflake JDBC driver.
       * - **URL**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
 
-          This must start with ``jdbc:snowflake://``, be followed by the URL for the data warehouse, and then appended with ``?authenticator=externalbrowser``.
+          This must start with ``jdbc:snowflake://``, be followed by the URL of the data warehouse, and then appended with ``?authenticator=externalbrowser``.
 
           For example: 
 
@@ -689,7 +683,7 @@ SQL Workbench
 
 .. destination-bic-connect-other-jdbc-sql-workbench-steps-start
 
-#. Download and install the |ext_snowflake_jdbc|.
+#. Download and install the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|.
 #. In SQL Workbench, choose **File**, **Connect Window**, and then **Create a New Connection Profile**. This opens the **Connection Profile** pane.
 #. Enter the following information:
 
@@ -702,9 +696,9 @@ SQL Workbench
       * - **Driver**
         - The Snowflake JDBC driver.
       * - **URL**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
 
-          This must start with ``jdbc:snowflake://``, be followed by the URL for the data warehouse, and then appended with ``?authenticator=externalbrowser``.
+          This must start with ``jdbc:snowflake://``, be followed by the URL of the data warehouse, and then appended with ``?authenticator=externalbrowser``.
 
           For example: 
 
@@ -717,7 +711,7 @@ SQL Workbench
       * - **Password**
         - The password for your Amperity username. Leave this blank.
 
-#. Click **OK**. Your browser will open.
+#. Click **OK**. Your browser opens.
 
    If you are already logged into Amperity, you will see a message in your browser that confirms you are authenticated to the |bic| data warehouse. Navigate back to SQL Workbench.
 
@@ -739,7 +733,7 @@ Looker
 
 .. destination-bic-connect-to-looker-start
 
-Configure |ext_google_looker_snowflake| to the |bic| data warehouse.
+Configure `Looker to connect directly <https://docs.looker.com/setup-and-management/connecting-to-db>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-looker-end
 
@@ -755,7 +749,7 @@ Microsoft PowerBI
 
 .. destination-bic-connect-to-microsoft-powerbi-start
 
-Download the |ext_snowflake_odbc|, and then connect Microsoft |ext_microsoft_power_bi_desktop_to_snowflake| to the |bic| data warehouse.
+Download the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link|, and then connect Microsoft `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-to-microsoft-powerbi-end
 
@@ -771,7 +765,7 @@ ODBC driver
 
 .. destination-bic-connect-other-odbc-start
 
-Download the |ext_snowflake_odbc| to connect BI tools such as `Adobe Campaign <https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en>`__ |ext_link|, Microsoft PowerBI, SAP Business Objects, Tableau, or `TIBCO Spotfire <https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
+Download the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link| to connect BI tools such as `Adobe Campaign <https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/accessing-external-database/configure-fda/config-databases/configure-fda-snowflake.html?lang=en>`__ |ext_link|, Microsoft PowerBI, SAP Business Objects, Tableau, or `TIBCO Spotfire <https://docs.tibco.com/pub/sfire-analyst/11.3.0/doc/html/en-US/TIB_sfire-analyst_UsersGuide/connectors/snowflake/snowflake_accessing_data_from_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
 
 .. destination-bic-connect-other-odbc-end
 
@@ -793,7 +787,7 @@ Oracle Business Analytics
 
 .. destination-bic-connect-to-oracle-business-analytics-start
 
-Use |ext_oracle_analytics_desktop_snowflake| to connect directly to the |bic| data warehouse.
+Use `Oracle Analytics Desktop <https://docs.oracle.com/en/middleware/bi/analytics-desktop/bidvd/connect-snowflake-data-warehouse.html>`__ |ext_link| to connect directly to the |bic| data warehouse.
 
 .. destination-bic-connect-to-oracle-business-analytics-end
 
@@ -825,7 +819,7 @@ SAP Business Objects
 
 .. destination-bic-connect-to-sap-business-objects-start
 
-Download the |ext_snowflake_jdbc|, and then configure `SAP Business Objects <https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/>`__ |ext_link| to connect to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|, and then configure `SAP Business Objects <https://blogs.sap.com/2018/11/20/how-to-set-up-sap-businessobjects-with-snowflake-using-jdbc/>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sap-business-objects-end
 
@@ -841,7 +835,7 @@ SAS Cloud Analytic Services
 
 .. destination-bic-connect-to-sas-start
 
-Download the |ext_snowflake_jdbc|, and then configure `SAS Cloud Analytics Services <https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm>`__ |ext_link| to connect to the |bic| data warehouse.
+Download the `Snowflake JDBC driver <https://docs.snowflake.com/en/user-guide/jdbc.html>`__ |ext_link|, and then configure `SAS Cloud Analytics Services <https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/casref/n1ldk5vubre9oen10bdqoqkfc1y7.htm>`__ |ext_link| to connect to the |bic| data warehouse.
 
 .. destination-bic-connect-to-sas-end
 
@@ -865,7 +859,7 @@ Tableau Desktop
 
 .. destination-bic-connect-other-odbc-tableau-steps-start
 
-#. Download and install the |ext_snowflake_odbc|, and then `connect Tableau <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
+#. Download and install the `Snowflake ODBC driver <https://docs.snowflake.com/en/user-guide/odbc.html>`__ |ext_link|, and then `connect Tableau <https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm>`__ |ext_link| to the |bic| data warehouse.
 #. Log in to Tableau. Select the **Connect** menu option, then **To A Server**, then **More..**, and then **Snowflake**. This opens the **Snowflake** configuration page.
 #. Select the **General** tab, and then enter the following information:
 
@@ -876,7 +870,7 @@ Tableau Desktop
       * - Setting
         - Description
       * - **Server**
-        - The URL for the |bic| data warehouse.
+        - The URL of the |bic| data warehouse.
       * - **Role**
         - The role that is assigned to this user. Leave this blank.
       * - **Authentication**
@@ -887,7 +881,7 @@ Tableau Desktop
         - The password for your Amperity username. Leave this blank.
 
 #. Select the **Advanced** tab, and then set **Custom Driver Parameters** to "authenticator=externalbrowser".
-#. Click **Sign In**. Your browser will open.
+#. Click **Sign In**. Your browser opens.
 
    If you are already logged into Amperity, you will see a message in your browser that confirms you are authenticated to the |bic| data warehouse. Navigate back to Tableau.
 

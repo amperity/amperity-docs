@@ -52,7 +52,7 @@ Amperity provides a set of attributes that predict customer lifetime value (CLV)
       #. Predicted order frequency represents the number of orders a customer is predicted to make *if they return to make another purchase* during the next 365 days.
       #. :doc:`Predicted average order revenue <attribute_predicted_average_order_revenue>` represents the average value of each order a customer is predicted to make *if they return to make another purchase* during the next 365 days.
 
-#. :doc:`Predicted value tiers <attribute_predicted_value_tier>` group customers by pCLV: Platinum (top 1%),  Gold (top 1%-5%),  Silver (top 5%-10%),  Bronze (top 10%-25%),  Medium (top 25%-50%), and Low (bottom 50%).
+#. :doc:`Predicted value tiers <attribute_predicted_value_tier>` group customers by pCLV: Platinum (top 1%), Gold (top 1%-5%), Silver (top 5%-10%), Bronze (top 10%-25%), Medium (top 25%-50%), and Low (bottom 50%).
 
 Use a combination of predicted CLV attributes to identify high-value audiences for use with campaigns that focus on winning repeat customers, such as churn prevention, winback, and one-time buyer campaigns.
 
@@ -95,7 +95,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -125,7 +125,7 @@ The following table lists the operators that are available to this attribute.
 
        Returns frequencies that are greater than or equal to the specified frequency.
 
-       Use this condition to find customers who are predicted to purchase from your brand during the next year. For example, to find customers who are predicted to make 3 (or more) purchases:
+       Use this condition to find customers who are predicted to purchase from your brand during the next year. For example, to find customers who are predicted to make 3 or more purchases:
 
        .. code-block:: none
 
@@ -134,7 +134,7 @@ The following table lists the operators that are available to this attribute.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual frequencies are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual frequencies are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -166,7 +166,7 @@ The following table lists the operators that are available to this attribute.
        Avoid using the **is not in list** condition when individual frequencies are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as ".50", "59.99", and "100.0", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as ".50", "59.99", and "100.0", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

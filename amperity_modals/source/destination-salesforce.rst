@@ -102,3 +102,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
    :end-before: .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

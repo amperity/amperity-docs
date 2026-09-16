@@ -54,7 +54,7 @@ Each of these attributes provides a score that is independent of other predicted
       #. :doc:`Predicted order frequency <attribute_predicted_order_frequency>` represents the number of orders a customer is predicted to make *if they return to make another purchase* during the next 365 days.
       #. :doc:`Predicted average order revenue <attribute_predicted_average_order_revenue>` represents the average value of each order a customer is predicted to make *if they return to make another purchase* during the next 365 days.
 
-#. Predicted value tiers group customers by pCLV: Platinum (top 1%),  Gold (top 1%-5%),  Silver (top 5%-10%),  Bronze (top 10%-25%),  Medium (top 25%-50%), and Low (bottom 50%).
+#. Predicted value tiers group customers by pCLV: Platinum (top 1%), Gold (top 1%-5%), Silver (top 5%-10%), Bronze (top 10%-25%), Medium (top 25%-50%), and Low (bottom 50%).
 
 .. attribute-predicted-value-tier-about-clv-end
 
@@ -95,7 +95,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -104,7 +104,7 @@ The following table lists the operators that are available to this attribute.
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**

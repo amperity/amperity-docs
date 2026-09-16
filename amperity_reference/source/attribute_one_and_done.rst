@@ -19,7 +19,7 @@ One and done?
 
 .. TODO: The following sections are the first paragraph and the "One and Done attribute" sections from the onetime_buyers topic. Keep these synchronized.
 
-.. include:: ../../amperity_ampiq/source/onetime_buyers.rst
+.. include:: ../../amperity_user/source/onetime_buyers.rst
    :start-after: .. onetime-buyers-about-start
    :end-before: .. onetime-buyers-about-end
 
@@ -51,7 +51,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **Boolean** data type. All **Boolean** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65

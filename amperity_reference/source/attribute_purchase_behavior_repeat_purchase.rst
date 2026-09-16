@@ -27,7 +27,7 @@ Repeat purchase
    :align: left
    :class: no-scaled-link
 
-.. important:: **Repeat purchase** identifies a repeat purchase by comparing purchases within the chosen date range to all purchases. For example, a customer who first purchased 2 years ago, and then purchased again last month would be returned by a relative date range "today - 1 month". A customer who first purchased 10 years ago, and then purchased again last month would also be returned. As well as a customer who first purchased 2 months ago, and then purchased again last month.
+.. important:: **Repeat purchase** identifies a repeat purchase by comparing purchases within the chosen date range to all purchases. For example, a customer who first purchased 2 years ago, and then purchased again last month would be returned by a relative date range ``today - 1 month``. A customer who first purchased 10 years ago, and then purchased again last month would also be returned. As well as a customer who first purchased 2 months ago, and then purchased again last month.
 
 After you specify a date range you may apply filters to associate repeat orders to specific products, brands, channels, and stores. For example, return all customers who made a repeat purchase of shoes from your ACME Footwear brand.
 
@@ -43,7 +43,7 @@ How this attribute works
 
 **Repeat purchase** represents a common approach people use when they build segments: find customers who have purchased more than one time within a time window, and then associate those customers to specific products and brands.
 
-**Repeat purchase** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Repeat purchase** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -109,7 +109,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
       INNER JOIN first_order_datetime
       ON distinct_order_datetime
 
-   (Note that "first_order_datetime" and "distinct_order_datetime" names do not represent the real names of the CTEs that are joined; these names identify the two sources that are joined together as part of the steps within the SQL that identify your repeat customers.)
+   (Note that "first_order_datetime" and "distinct_order_datetime" names do not represent the real names of the CTEs that are joined. These names identify the two sources that are joined together as part of the steps within the SQL that identify your repeat customers.)
 
    Returns and cancellations are then filtered out automatically, like this:
 
@@ -146,7 +146,7 @@ Add to segments
 
 .. attribute-purchase-behavior-repeat-purchase-segments-start
 
-You can add the **Repeat purchase** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Repeat purchase**.
+You can add the **Repeat purchase** behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **Repeat purchase**.
 
 .. image:: ../../images/attributes-picker-purchase-behavior-repeat-purchase.png
    :width: 540 px
@@ -154,7 +154,7 @@ You can add the **Repeat purchase** purchase behavior to a segment from the **Se
    :align: left
    :class: no-scaled-link
 
-After the **Repeat purchase** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
+After the **Repeat purchase** behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
 .. attribute-purchase-behavior-repeat-purchase-segments-end
 
@@ -164,13 +164,13 @@ After the **Repeat purchase** purchase behavior attribute has been added, select
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 

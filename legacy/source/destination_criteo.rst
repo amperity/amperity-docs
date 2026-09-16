@@ -23,7 +23,11 @@
 Send data to Criteo Audience API
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_criteo.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_criteo.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-criteo-start
@@ -31,13 +35,13 @@ Send data to Criteo Audience API
 
 .. destination-criteo-api-note-start
 
-.. note:: This destination uses the |ext_criteo_api|.
+.. note:: This destination uses the `Criteo API <https://developers.criteo.com/marketing-solutions/docs>`__ |ext_link|.
 
 .. destination-criteo-api-note-end
 
 .. destination-criteo-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -46,7 +50,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
@@ -55,7 +59,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Transactions data**
 
@@ -93,14 +97,14 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The advertiser ID.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Criteo account <destination-criteo-configure-oauth>`.
 
@@ -112,11 +116,11 @@ Get details
 Send transactions data
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_criteo.rst
+.. include:: ../../amperity_user/source/events_criteo.rst
    :start-after: .. events-criteo-overview-start
    :end-before: .. events-criteo-overview-end
 
-.. include:: ../../amperity_ampiq/source/events_criteo.rst
+.. include:: ../../amperity_user/source/events_criteo.rst
    :start-after: .. events-criteo-build-query-start
    :end-before: .. events-criteo-build-query-end
 
@@ -136,9 +140,9 @@ Configure OAuth
 
 .. destination-criteo-configure-oauth-must-select-portfolios-start
 
-.. important:: When configuring OAuth for |destination-name| you must |ext_criteo_portfolio| to which access will be granted.
+.. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-   Criteo will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, |ext_criteo_oauth_consent|, and then reconfigure OAuth using the newly-generated link.
+   Criteo will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly generated link.
 
 .. destination-criteo-configure-oauth-must-select-portfolios-end
 
@@ -150,8 +154,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -159,8 +163,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -168,8 +172,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -215,8 +219,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -235,8 +239,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -269,8 +273,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -291,12 +295,12 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Advertiser ID**
-            - The unique ID for the advertiser account in |destination-name| to which Amperity will send audiences.
+            - The unique ID for the advertiser account in |destination-name| to which Amperity sends audiences.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -309,8 +313,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -344,8 +348,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -364,8 +368,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -373,7 +377,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -388,8 +392,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -408,8 +412,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

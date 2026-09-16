@@ -17,7 +17,11 @@
 Send data to Microsoft Dataverse
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_microsoft_dataverse.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_microsoft_dataverse.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-dataverse-start
@@ -81,18 +85,22 @@ Amperity can be configured to send |what-send| to |destination-name|.
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Microsoft Azure must be configured for your Power Apps application, after which your Power Apps application must be :ref:`added to the Microsoft Power Platform <destination-microsoft-dataverse-application>`.
 
-       You will need to provide your Azure tenant ID, Azure client ID, and your Azure client secret.
+       You need to provide your Azure tenant ID, Azure client ID, and your Azure client secret.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The environment region, environment name, and logical table name for your Power Apps application. For example: "crm" (region), "acme" (name), and "abc123_acme" (table name).
+     - The environment region, environment name, and logical table name for your Power Apps application. For example:
+
+       * **Environment region** "crm"
+       * **Environment name** "socktown"
+       * **Logical table name** "abc123_socktown"
 
 .. destination-microsoft-dataverse-get-details-end
 
@@ -115,7 +123,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 #. Log in to your Microsoft Azure account.
 #. Open **Azure Active Directory**, and then **App Registrations**.
 #. Click **New Registration**, and then enter the name for your application. Leave all other settings as the default, and then click **Register**.
-#. The application overview page contains the following IDs:
+#. The application overview page has the following IDs:
 
    **Application (client) ID**
 
@@ -134,9 +142,9 @@ To send data to |destination-name|, you need to configure an application in Micr
 
 .. destination-microsoft-dataverse-application-power-steps-start
 
-#. Open the |ext_microsoft_power_platform_console|, click **Environments**, and then click on your environment.
+#. Open the `Microsoft Power Platform console <https://admin.powerplatform.microsoft.com/>`__ |ext_link|, click **Environments**, and then click on your environment.
 #. Click **Settings**, then **Users and permissions**, and then **Application users**.
-#. Click **New app user**, and then select the application you just created, your business unit, and then under **Security roles** click the **Edit** button.
+#. Click **New app user**, and then select the application you created, your business unit, and then under **Security roles** click the **Edit** button.
 #. Select the following settings:
 
    **Service Reader**
@@ -168,8 +176,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -188,8 +196,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -228,8 +236,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -257,8 +265,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -271,8 +279,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -300,8 +308,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -320,8 +328,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -330,7 +338,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -341,8 +349,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -361,19 +369,19 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Under **Template Settings**, verify all template settings and make any required updates.
 
-       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector will write data. For example: "abc123_customers".
+       * **Dataverse Table Logical Name** The table name in Microsoft Dataverse. This is the table to which the connector writes data. For example: "abc123_customers".
 
        .. important:: Select **Truncate?** to truncate the table before loading data.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

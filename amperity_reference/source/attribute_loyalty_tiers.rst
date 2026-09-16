@@ -19,21 +19,9 @@ Loyalty tiers
 
 .. attribute-loyalty-tiers-overview-start
 
-Loyalty programs help brands increase customer loyalty and provide incentives for customers to continue to interact with brands. Loyalty tiers exist within loyalty programs to incentivize customers to interact more with a brand. For example, a loyalty program may provide customers incentives to buy more products to move up to the next loyalty tier.
+Loyalty tiers exist within loyalty programs to incentivize customers to interact more with a brand. For example, a loyalty program may provide customers incentives to buy more products to move up to the next loyalty tier.
 
 .. attribute-loyalty-tiers-overview-end
-
-.. attribute-loyalty-tiers-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-tiers-links-end
 
 
 .. _attribute-loyalty-tiers-attributes:
@@ -98,7 +86,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -107,7 +95,7 @@ The following table lists the operators that are available to these attributes.
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that match a string of characters.

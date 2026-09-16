@@ -83,3 +83,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-adobe-marketo-list-name-first-audience-start
    :end-before: .. setting-adobe-marketo-list-name-first-audience-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

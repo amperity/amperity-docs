@@ -3,15 +3,15 @@
 
 .. meta::
     :description lang=en:
-        Databases built against unified customer profiles help your brand better understand your customers.
+        Databases built from unified customer profiles help your brand better understand your customers.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Databases built against unified customer profiles help your brand better understand your customers.
+        Databases built from unified customer profiles help your brand better understand your customers.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Databases
+        About databases
 
 ==================================================
 About databases
@@ -29,9 +29,19 @@ The **Customer 360** page provides:
 
 * Visibility into the data that is behind your brand's customer profiles and interactions along with access to the **Data Explorer**, from which you can explore your brand's unified customer data
 * Access to building and managing databases
-* Visibility into what comprises your brand's set of standard core tables---building blocks for all of your brand's databases---and access to building and managing custom core tables
+* Visibility into what comprises your brand's set of standard core tables--building blocks for all of your brand's databases--and access to building and managing custom core tables
 
 .. databases-customer-360-page-end
+
+.. databases-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Build databases from unified customer profiles to help your brand better understand your customers.
+
+   Open **Learning Lab** to learn more about `multi-database implementation best practices <https://amperity.com/learning-lab/multi-database-implementation-best-practices>`__ |ext_link|. Registration is required.
+
+.. databases-learning-lab-end
 
 
 .. _databases-profiles:
@@ -61,7 +71,7 @@ The **Profiles** tab shows the date on which the primary customer 360 database w
 
 .. databases-profiles-context-start
 
-Each customer profile is a collection of common attributes (first name, last name, email, phone, etc.), transaction attributes (first purchase, last purchase, total purchases, etc.), and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
+Each customer profile is a collection of common attributes, transaction attributes, and other custom values that are unique to each customer's data set. These details are summarized on the **Customer 360** page under **Customer Profile**.
 
 .. databases-profiles-context-end
 
@@ -153,7 +163,7 @@ PII profile attributes commonly available as part of the customer profile includ
 
 .. note:: The profile attribute names that are shown in the profile attributes section are the same strings that were entered as friendly names when creating the **Customer 360** database table in the primary customer 360 database.
 
-   These strings will default to the same as the field name if not specified as friendly names, including lower-case strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
+   These strings will default to the same as the field name if not specified as friendly names, including lowercase strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
 
 .. databases-profiles-about-attributes-note-end
 
@@ -179,7 +189,7 @@ Open the **Customer 360** table, and then select the icon to show for the custom
 
 #. Open the **Customer 360** table in the database editor.
 #. Click **Next**.
-#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the |ext_font_awesome| website.
+#. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.
 
    .. include:: ../../shared/databases.rst
       :start-after: .. databases-font-awesome-picker-useany-start
@@ -198,7 +208,7 @@ Databases
 
 .. databases-database-start
 
-Use the **Databases** tab on the **Customer 360** page to define any number of individual databases. Each database will have its own collection of tables and attributes. Some databases may be configured as "customer 360" databases, and then others may be configured as a "Stitch QA" database or a custom database to support any of your brand's use cases.
+Use the **Databases** tab on the **Customer 360** page to define any number of individual databases. Each database have its own collection of tables and attributes. Some databases may be configured as "customer 360" databases, and then others may be configured as a "Stitch QA" database or a custom database to support any of your brand's use cases.
 
 .. databases-database-end
 
@@ -216,9 +226,9 @@ Flexible merge rules
 
 .. databases-flexible-merge-rules-start
 
-Some customer data platforms require using an inflexible merge rule across multiple fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to multiple databases.
+Some customer data platforms require using an inflexible merge rule across many fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to many databases.
 
-Amperity combines the use of flexible merge rules with a patented system that allows multiple databases to exist within the same tenant. This ensures that:
+Amperity combines the use of flexible merge rules with a patented system that allows many databases to exist within the same tenant. This ensures that:
 
 #. Merge rules are 100% configurable
 #. Each field can have its own merge rule
@@ -233,7 +243,7 @@ For example, data sources from call centers, online transactions, and email plat
    :align: left
    :class: no-scaled-link
 
-After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support multiple customer 360 databases.
+After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support many customer 360 databases.
 
 * Your operations teams can combine prioritizing the most common values for each customer with deterministic matching
 * Your email marketing team can combine prioritizing customer profile values from your email platform with probabilistic matching
@@ -269,9 +279,9 @@ Customer 360 database
 
 .. databases-database-type-c360-start
 
-A customer 360 database contains customer profiles that are tied to all of their interactions with your company or brand. You may configure Amperity to support multiple customer 360 databases.
+A customer 360 database has customer profiles that are tied to all of their interactions with your company or brand. You may configure Amperity to support many customer 360 databases.
 
-For example: a customer 360 database that contains all customer profiles and all interactions, and then a customer 360 database for each specific brand in your company's brand portfolio.
+For example: a customer 360 database that has all customer profiles and all interactions, and then a customer 360 database for each specific brand in your company's brand portfolio.
 
 .. note:: A customer 360 database has specific requirements on tables that must be included within that database.
 
@@ -319,13 +329,13 @@ Multiple customer 360 databases
 
 .. databases-database-type-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each database will contain its own set of standard tables, and then each may be configured to have its own combination of standard core tables and/or domain tables that are added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each database has its own set of standard tables, and then each may be configured to have its own combination of standard core tables or domain tables that are added as passthrough tables.
 
 .. databases-database-type-multiple-end
 
 .. image:: ../../images/use-cases-c360-multiple-alt.png
    :width: 600 px
-   :alt: Customer 360 tab, multiple databases, alternate
+   :alt: Customer 360 tab, many databases, alternate
    :align: left
    :class: no-scaled-link
 
@@ -337,7 +347,7 @@ Passthrough database
 
 .. databases-database-type-passthrough-start
 
-A passthrough database contains *all* stitched domain tables and *all* non-stitched domain tables passed through into a standalone database.
+A passthrough database has *all* stitched domain tables and *all* non-stitched domain tables passed through into a standalone database.
 
 .. databases-database-type-passthrough-end
 
@@ -349,9 +359,9 @@ Stitch QA database
 
 .. databases-database-type-stitchqa-start
 
-A Stitch QA database contains a series of Amperity-generated tables that can be used to validate the Amperity ID assignment to customer profiles.
+A Stitch QA database has a series of Amperity-generated tables that can be used to validate the Amperity ID assignment to customer profiles.
 
-Use the Stitch QA database template to quickly build a Stitch QA database for your tenant.
+Use the Stitch QA database template to build a Stitch QA database for your tenant.
 
 .. databases-database-type-stitchqa-end
 
@@ -395,7 +405,7 @@ Passthrough
 
 .. databases-database-table-type-passthrough-start
 
-A passthrough table allows a domain table to be used within the Amperity database layer. A passthrough will use a stitched domain table when it is available.
+A passthrough table allows a domain table to be used within the Amperity database layer. A passthrough uses a stitched domain table when it is available.
 
 .. databases-database-table-type-passthrough-end
 
@@ -479,7 +489,7 @@ Core tables
 
 .. databases-core-table-list-start
 
-There are two types of core tables:
+Core tables have the following types:
 
 #. :ref:`Standard core tables <databases-core-table-type-standard>`
 #. :ref:`Custom core tables <databases-core-table-type-custom>`
@@ -524,14 +534,14 @@ Standard core tables belong to one of the following broad categories:
           :start-after: .. term-unified-tables-start
           :end-before: .. term-unified-tables-end
 
-       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and/or custom domain tables in the **Sources** tab.
+       The collection of unified tables that is generated within your tenant depends on the types of semantic tags that were applied to feeds and custom domain tables in the **Sources** tab.
 
    * - **Stitch QA tables**
      - .. include:: ../../shared/terms.rst
           :start-after: .. term-stitch-qa-tables-start
           :end-before: .. term-stitch-qa-tables-end
 
-       Some Stitch QA tables are required by databases that are configured as customer 360 databases; most are only available from databases that are configured as a Stitch QA database.
+       Some Stitch QA tables are required by databases that are configured as customer 360 databases. Most are only available from databases that are configured as a Stitch QA database.
 
 .. databases-core-table-type-standard-end
 
@@ -582,7 +592,7 @@ Real-time tables contain the data that is streamed to Amperity. Real-time tables
 
 .. databases-realtime-howtos-start
 
-This section describes tasks related to managing real-time tables in Amperity:
+Tasks related to managing real-time tables in Amperity:
 
 * :ref:`databases-realtime-howtos-add`
 * :ref:`databases-realtime-howtos-delete`
@@ -615,11 +625,11 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
 #. In the **Create real-time table** dialog, do the following:
 
-   Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+   Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table or the use case.
 
-   Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that will be associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
+   Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that is associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
 
-   .. note:: The schema for every real-time table contains two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
+   .. note:: The schema for every real-time table has two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
 
    Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
@@ -634,7 +644,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
 #. In the **Create real-time table** dialog, continue:
 
-   Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the drop-down list.
+   Select the streaming endpoint that will stream data to the real-time table. The streaming endpoint must already exist and be available from the dropdown list.
 
    Select the databases for which this real-time table will be available from the **Queries** page.
 
@@ -661,7 +671,7 @@ Delete real-time table
 
 .. databases-realtime-howtos-delete-start
 
-Use the **Delete** option to remove a real-time table from Amperity. This should be done carefully. Verify that both upstream and downstream processes are not relying on the real-time table before you delete it.
+Use the **Delete** option to remove a real-time table from Amperity. Verify that both upstream and downstream processes are not relying on the real-time table before you delete it.
 
 
 .. databases-realtime-howtos-delete-end
@@ -686,7 +696,7 @@ Edit real-time table name
 
 Use the **Edit** option to rename a real-time table.
 
-.. important:: You cannot change the schema or data format for a real-time table. To change the schema or data format, create a new real-time table, and then align that table to the data format and/or schema, and then associate that table with the correct streaming endpoint.
+.. important:: You cannot change the schema or data format for a real-time table. To change the schema or data format, create a new real-time table, and then align that table to the data format and schema, and then associate that table with the correct streaming endpoint.
 
 .. databases-realtime-howtos-edit-end
 
@@ -725,10 +735,6 @@ You cannot update the schema for a real-time table. Instead, create a new real-t
 .. databases-realtime-howtos-update-schema-end
 
 
-
-
-
-
 .. _databases-database-howtos-databasese:
 
 How-tos
@@ -736,7 +742,7 @@ How-tos
 
 .. databases-databases-howtos-databasese-start
 
-This section describes tasks related to building and managing databases in Amperity.
+Tasks related to building and managing databases in Amperity.
 
 .. databases-databases-howtos-databasese-end
 
@@ -817,7 +823,7 @@ Add custom core table
 
 .. databases-core-howtos-add-custom-start
 
-You may add custom core tables using Spark SQL and the **Custom Core Table** SQL editor. Start with a SELECT statement, and then use a series of LEFT JOINs to reference core tables and/or domain tables. Use a sandbox to validate any workflows that will depend on the custom core table.
+You may add custom core tables using Spark SQL and the **Custom Core Table** SQL editor. Start with a SELECT statement, and then use a series of LEFT JOINs to reference core tables or domain tables. Use a sandbox to validate any workflows that will depend on the custom core table.
 
 .. databases-core-howtos-add-custom-end
 
@@ -841,7 +847,7 @@ Add databases
 
 .. databases-database-howto-add-databases-start
 
-Amperity supports a wide variety of database types, including customer 360- and quality-focused databases your brand can build from templates, to help your brand (or brands) better understand your customers.
+Amperity supports a wide variety of database types, including customer 360 and quality focused databases your brand can build from templates, to help your brand (or brands) better understand your customers.
 
 .. databases-database-howto-add-databases-end
 
@@ -866,7 +872,7 @@ Add customer 360 database
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Customer 360", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Customer 360", and set the permissions that determine which users is able to access this database, and then click **Create**.
 
    .. important:: A |add_customer_360_database| requires additional configuration after the database is created.
 
@@ -882,7 +888,7 @@ Add empty database
 
 Add an empty database for use cases that do not require customer 360 profiles or Stitch QA validation activities. Start with an empty database, and then add tables.
 
-For example, after creating the empty database use the passthrough functionality to add one (or more) domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables and/or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
+For example, after creating the empty database use the passthrough functionality to add one or more domain tables, and then use Spark SQL to build custom database tables against a subset of standard core tables or stitched domain tables to build a series of tables that support a series of non-marketing use cases.
 
 .. databases-database-howto-add-database-empty-end
 
@@ -892,7 +898,7 @@ For example, after creating the empty database use the passthrough functionality
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "None", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "None", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to add tables to the empty database.
 
 .. databases-database-howto-add-database-empty-steps-end
@@ -919,7 +925,7 @@ Stitched domain tables have an added column for the Amperity ID and replace the 
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to extend the passthrough database with custom SQL tables.
 
 .. databases-database-howto-add-database-passthrough-steps-end
@@ -936,7 +942,7 @@ Add Stitch QA database
 
 .. databases-database-howto-add-database-stitchqa-context-start
 
-A Stitch QA database loaded from a template will contain a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
+A Stitch QA database loaded from a template has a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
 
 .. databases-database-howto-add-database-stitchqa-context-end
 
@@ -946,7 +952,7 @@ A Stitch QA database loaded from a template will contain a list of pre-loaded SQ
 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Click **Create Database**.
-#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users will be able to access this database, and then click **Create**.
+#. Give the database a name, set the value for **Template** to "Passthrough", and set the permissions that determine which users is able to access this database, and then click **Create**.
 #. Use the **Database Editor** to extend the passthrough database with custom SQL tables.
 
 .. databases-database-howto-add-database-stitchqa-steps-end
@@ -991,9 +997,9 @@ Some use cases require a database table to have different information in a datab
 
    .. important:: The table name must be the same as the original standard database table.
 #. Set **Build Mode** to "Custom SQL".
-#. Add SQL using Spark SQL, a **SELECT** statement that references one (or more) standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
+#. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 
-   .. important:: The custom definition must refer to the original table, i.e. “must refer to the table that is being overridden”. In some cases, this requires using a placeholder reference. For example:
+   .. important:: The custom definition must refer to the original table, that is "must refer to the table that is being overridden". In some cases, this requires using a placeholder reference. For example:
 
       .. code-block:: sql
 
@@ -1009,7 +1015,7 @@ Some use cases require a database table to have different information in a datab
 
    For example, the **Unified Itemized Transactions** table requires a product ID. The **product_id** column is created by applying the **product-id** semantic tag to itemized interactions records.
 
-   However, in some cases another table contains the preferred product ID. The following example shows how to override the standard **Unified Itemized Transactions** table and to join more complete product ID information, such as what may be in the **Unified Product Catalog** table:
+   However, in some cases another table has the preferred product ID. The following example shows how to override the standard **Unified Itemized Transactions** table and to join more complete product ID information, such as what may be in the **Unified Product Catalog** table:
 
       .. code-block:: sql
 
@@ -1018,10 +1024,9 @@ Some use cases require a database table to have different information in a datab
            ,upc.product_category AS `product_category`
            ,upc.product_description AS `product_description`
            ,upc.product_subcategory AS `product_subcategory`
-         FROM
-           Unified_Itemized_Transactions uit
-           LEFT JOIN Unified_Product_Catalog upc
-           ON uit.product_id = upc.product_id
+         FROM Unified_Itemized_Transactions uit
+         LEFT JOIN Unified_Product_Catalog upc
+         ON uit.product_id = upc.product_id
 
 #. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
 #. Verify the configuration settings for the table, including semantic tags, field descriptions, and availablility to the **Segment Editor**.
@@ -1041,7 +1046,7 @@ Add custom SQL table
 
 .. databases-database-howto-add-table-custom-tip-start
 
-.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, "CCUST" associates a unique ID in a table to the Amperity ID:
+.. tip:: You can associate the Amperity ID to a unique ID in a custom SQL table. For example, ``CCUST`` associates a unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 
@@ -1073,10 +1078,9 @@ Add custom SQL table
 
    .. note:: Click the **Apply SQL template** to select a SQL template as a starting point for the custom SQL table.
 
-      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
+      Templates are provided for all standard tables (**Customer 360**, **Merged Customers**, **Transaction Attributes Extended**, **Unified Transactions**, and **Customer Attributes**) along with additional templates for use with multibrand databases and tables that support use cases like joining transaction attributes to the **Customer 360** table, merged households, and customer lifecycle events.
 
-#. Add SQL using Spark SQL, a **SELECT** statement that references one (or more) standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
-#. Click **Validate** to verify that the SQL query runs correctly and returns the desired results. Adjust the query as necessary. When finished, click **Next**.
+#. Add SQL using Spark SQL, a **SELECT** statement that references one or more standard core tables, database tables, or passed-through domain tables using a series of functions, operators, and clauses.
 #. Verify the configuration settings for the table, including semantic tags, field descriptions, and availablility to the **Segment Editor**.
 #. Click **Save** to add the table to the database.
 
@@ -1196,7 +1200,36 @@ Choose currency symbol
 
 .. databases-database-howto-choose-currency-start
 
-The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list: Australian Dollar (AUD, |u-dollar|), Canadian Dollar (CAD, |u-dollar|), United States Dollar (USD, |u-dollar|), Mexican Peso (MXN, |u-peso|), British Pound (GBP, |u-pound|), Euro (EUR, |u-euro|), Indian Rupee (INR, |u-rupee|), and Japanese Yen (JPY, |u-yen|).
+The currency symbol to show for metrics and segment insights is configurable. The following currency symbols are in the dropdown list:
+
+.. list-table::
+   :widths: 50 25 25
+   :header-rows: 0
+
+   * - **Australian Dollar**
+     - AUD
+     - |u-dollar|
+   * - **Canadian Dollar**
+     - CAD
+     - |u-dollar|
+   * - **United States Dollar**
+     - USD
+     - |u-dollar|
+   * - **Mexican Peso**
+     - MXN
+     - |u-peso|
+   * - **British Pound**
+     - GBP
+     - |u-pound|
+   * - **Euro**
+     - EUR
+     - |u-euro|
+   * - **Indian Rupee**
+     - INR
+     - |u-rupee|
+   * - **Japanese Yen**
+     - JPY
+     - |u-yen|
 
 .. tip:: You may configure custom currency symbols, for example South Korean Won (KRW, |u-won|).
 
@@ -1210,7 +1243,7 @@ The currency symbol to show for metrics and segment insights is configurable. Th
 #. Select a database and open it in **Edit** mode.
 #. In the right-side navigation pane, under **Currency**, select the currency symbol to show for metrics and segment insights for this database.
 
-   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the drop-down list.
+   .. tip:: Choose "Custom symbol" to apply a currency symbol that is not in the dropdown list.
 
       For example, to use South Korean Won (KRW) as the currency symbol, choose "Custom symbol", and then enter "|u-won|" in the **Custom currency symbol** field.
 
@@ -1246,7 +1279,7 @@ Allow only admins
 
 .. databases-database-howto-configure-permission-admin-start
 
-A database that is configured for **Admin only** access restricts access to the database (and tables within the database) to only users who are assigned the **DataGrid Administrator** or **DataGrid Operator** policies.
+A database that is configured for **Admin only** access restricts access to the database and tables within the database to only users who are assigned the **DataGrid Administrator** or **DataGrid Operator** policies.
 
 .. databases-database-howto-configure-permission-admin-end
 
@@ -1269,7 +1302,7 @@ Allow resource group
 
 .. databases-database-howto-configure-permission-resource-group-start
 
-A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :ref:`resource group <settings-security-resource-groups>` that is configured in Amperity.
+A database that is configured for **Standard** access may restrict access to a datbase to only users who belong to a :doc:`resource group <resource_groups>` that is configured in Amperity.
 
 .. databases-database-howto-configure-permission-resource-group-end
 
@@ -1290,13 +1323,13 @@ A database that is configured for **Standard** access may restrict access to a d
 Allow everyone
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../amperity_reference/source/settings.rst
+.. include:: ../../amperity_reference/source/resource_groups.rst
    :start-after: .. settings-security-resource-groups-all-start
    :end-before: .. settings-security-resource-groups-all-end
 
 .. databases-database-howto-configure-permission-everyone-start
 
-A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the the **Standard** radio button.
+A database that is configured for **Standard** access may allow access to everyone. When resource groups are configured in Amperity, choose the "No resource group" option from the dropdown. When resource groups are not configured, choose the **Standard** radio button.
 
 .. databases-database-howto-configure-permission-everyone-end
 
@@ -1319,7 +1352,7 @@ Configure pick-lists
 
 .. databases-database-howto-pick-list-start
 
-A pick-list is a pre-generated list of available options for a column and is presented as a drop-down list in the visual **Query Editor**. A pick-list is configured when building tables in the **Customer 360** page.
+A pick-list is a pre-generated list of available options for a column and is presented as a dropdown list in the visual **Query Editor**. A pick-list is configured when building tables in the **Customer 360** page.
 
 .. databases-database-howto-pick-list-end
 
@@ -1340,7 +1373,7 @@ Define custom values and frequencies
 
 A pick-list may be configured with custom values, where each item in the pick-list is specified on its own line.
 
-.. caution:: Using custom values in a pick-list is uncommon. It is generally best to use automatically generated values.
+.. caution:: Using custom values in a pick-list is uncommon. It is best to use automatically generated values.
 
 .. databases-database-howto-pick-list-define-custom-end
 
@@ -1351,8 +1384,8 @@ A pick-list may be configured with custom values, where each item in the pick-li
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select a sort order.
 #. Select the **Custom** method for the pick-list, and then enter each custom value on a new line. For example:
 
@@ -1386,7 +1419,7 @@ A pick-list may be deleted. This will disable any selection options in the visua
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. De-select the checkbox in the **Pick-list** column in the row for which a picklist is to be deleted.
+#. De-select the checkbox in the **Pick list** column in the row for which a picklist is to be deleted.
 #. Click **Save**.
 
 .. databases-database-howto-pick-list-delete-steps-end
@@ -1410,7 +1443,7 @@ Many pick-lists remain static over time, but if the data inputs change, you may 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Make your changes.
 #. Click **Save**.
 
@@ -1438,8 +1471,8 @@ A alphabetical sort order is best for strings, such as for columns with values f
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Alphabetical** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1468,8 +1501,8 @@ A natural sort order is best for alphanumeric lists, such as for columns with sc
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Natural** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1497,8 +1530,8 @@ A most frequent sort order is best for columns with a smaller selection of frequ
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Most Frequent** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1558,7 +1591,7 @@ Delete database
 
 .. databases-database-howto-delete-database-start
 
-A database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process will fail. If an upstream process cannot find the database, that process will fail.
+A database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process fails. If an upstream process cannot find the database, that process fails.
 
 .. databases-database-howto-delete-database-end
 
@@ -1580,7 +1613,7 @@ Delete database table
 
 .. databases-database-howto-delete-table-start
 
-A table in a database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the table is required by a downstream process, such as a query, the process will fail. If an upstream process cannot find the table or the schema does not match, that process will fail.
+A table in a database may be deleted. This should not be done without considering the upstream and downstream effects of those changes. If the table is required by a downstream process, such as a query, the process fails. If an upstream process cannot find the table or the schema does not match, that process fails.
 
 .. databases-database-howto-delete-table-end
 
@@ -1684,7 +1717,7 @@ Edit database
 
 .. databases-database-howto-edit-database-start
 
-A database may be edited. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process will fail. If an upstream process cannot find the database, that process will fail.
+A database may be edited. This should not be done without considering the upstream and downstream effects of those changes. If the database is required by a downstream process, that process fails. If an upstream process cannot find the database, that process fails.
 
 .. databases-database-howto-edit-database-end
 
@@ -1707,7 +1740,7 @@ Edit database table
 
 .. databases-database-howto-edit-table-start
 
-Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, pick-lists, and so on may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process will fail.
+Tables in a database may be edited. This should not be done without considering the upstream and downstream effects of those changes. Changes may have unintended consequences: semantics, column names, or pick-lists, may not be immediately available to a downstream process, which may cause that downstream process to fail. If an upstream process cannot find the table or the schema does not match, that process fails.
 
 .. databases-database-howto-edit-table-end
 
@@ -1730,19 +1763,23 @@ Enable table versioning
 
 .. databases-database-howto-enable-table-versioning-start
 
-A version is created for all tables every time the customer 360 database is run, regardless of database run type (express, normal, or full). The **amperity_version** column is added to all versioned tables. The typical frequency at which the customer 360 database is run is "once per day", but this is not always the case.
+A version is created for a table configured for table versioning each time the customer 360 database is run, regardless of database run type (express, normal, or full) and whether or not updates to data in the table occurred. The **amperity_version** column is appended to each versioned table.
 
 .. databases-database-howto-enable-table-versioning-end
 
 .. databases-database-howto-enable-table-versioning-important-start
 
-.. important:: The maximum number of versions is 10. A version must have been created within the last 14 days.
+.. important:: The maximum number of versions is 10. A version must have been created within the last 14 days. The frequency at which the customer 360 database is run will affect the total number of versions. For example:
+
+   * If the customer 360 database runs once per day, over a 14 days there will be a rolling count of 10 versions.
+   * If the customer 360 database runs every other day, the maximum number of versions will be 7.
+   * If the customer 360 database runs twice per day, the maximum number of versions will be 10, but all created within the last 7 days.
 
 .. databases-database-howto-enable-table-versioning-important-end
 
 .. databases-database-howto-enable-table-versioning-caution-start
 
-.. caution:: Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table.
+.. caution:: Changes to columns within a table that is enabled for table versioning changes the schema and will cause incompatible versions to be dropped. To avoid this, add columns to the end of the table *or* :ref:`enforce static table schemas <databases-database-howto-enforce-static-schemas>`.
 
 .. databases-database-howto-enable-table-versioning-caution-end
 
@@ -1750,12 +1787,14 @@ A version is created for all tables every time the customer 360 database is run,
 
 .. databases-database-howto-enable-table-versioning-steps-start
 
-#. From the **Database Table** editor, under **Advanced Settings**, expand **Version history**.
+#. From the **Customer 360** page open a database.
+#. From the **Database Table** editor, select a table.
+#. In the **Settings** pane for the selected table, under **Advanced Settings**, expand **Version history**.
 #. Select **Enable table version history**.
 
    .. note:: Version history allows queries to be made against older versions of this table. Adding or removing columns within the table will cause incompatible versions to be dropped.
 
-      |attribute-recommended| Enforce static table schemas when using table versioning. This will help avoid schema changes that cause incompatible versions to be dropped.
+      |attribute-recommended| Enforce static table schemas when using table versioning to ensure versions are not dropped from the table's version history.
 
 #. Click **Save**.
 
@@ -1769,23 +1808,32 @@ Enforce static table schemas
 
 .. databases-database-howto-enforce-static-schemas-start
 
-To prevent tables from being updated automatically you can enforce a static schema for the database table. When enabled, a user cannot save, activate, or run a database table when there is inconsistency between the database table's current schema and its upstream dependency.
-
-For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table will also be updated.
-
-To resolve this inconsistency, do one of the following:
-
-#. Disable static schema enforcement for the custom database table.
-#. Update the schema in the custom database table to match the updated schema in the custom domain table.
-#. Update the schema in the custom domain table to match the schema required the custom database table.
+To prevent table schemas from being updated automatically you can enforce a static schema for the database table. When enabled, a user cannot save, activate, or run a database table when there is inconsistency between the database table's current schema and its upstream dependency.
 
 .. databases-database-howto-enforce-static-schemas-end
+
+.. databases-database-howto-enforce-static-schemas-example-start
+
+.. admonition:: Example for static schema enforcement
+
+   For example, a custom domain table with three fields is used to build a custom database table using ``SELECT * FROM Custom_Domain_Table``. With this pattern, if the custom domain table is updated to have four fields the custom database table is not updated when static table schemas are enforced.
+
+   To resolve this inconsistency, do one of the following:
+
+   #. Disable static schema enforcement for the custom database table.
+   #. Update the schema in the custom database table to match the updated schema in the custom domain table.
+   #. Update the schema in the custom domain table to match the schema required by the custom database table.
+   #. Enable static schema enforcement for the custom domain table.
+
+.. databases-database-howto-enforce-static-schemas-example-end
 
 **To enforce a static table schema**
 
 .. databases-database-howto-enforce-static-schemas-steps-start
 
-#. From the **Database Table** editor, under **Advanced Settings**, expand **Table Schema**.
+#. From the **Customer 360** page open a database.
+#. From the **Database Table** editor, select a table.
+#. In the **Settings** pane for the selected table, under **Advanced Settings**, expand **Table Schema**.
 #. Select **Enforce static schema**.
 
    .. note:: A table's schema cannot be changed when this option is enabled.
@@ -1793,7 +1841,6 @@ To resolve this inconsistency, do one of the following:
 #. Click **Save**.
 
 .. databases-database-howto-enforce-static-schemas-steps-end
-
 
 
 .. _databases-database-howto-explore:
@@ -1920,8 +1967,8 @@ The **Examples** view in the **Data Explorer** shows actual data for a randomly 
 Use cardinality and uniqueness to help guide the creation of well-behaved JOIN operations when authoring SQL queries.
 
 * Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a **JOIN** operation will run more slowly and is less likely to return the desired results.
-* Empty fields (i.e. **NULL** values) are counted as duplicates, i.e. "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
+* Empty fields, including **NULL** values, are counted as duplicates, that is "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. databases-database-howto-explore-example-data-context-end
 
@@ -1981,7 +2028,7 @@ Export database
 
 .. databases-database-howto-export-database-start
 
-A database may be configured to :ref:`export one (or more) tables (or even the entire database) <data-exports-add>` from Amperity. Each database export must be assigned a unique name, and then is :ref:`configured to select one (or more) tables <data-exports-add-tables>` to be included in the export. A database export must be :ref:`associated with a configured destination and must be added to an orchestration <data-exports-add-to-orchestration>`.
+A database may be configured to :ref:`export one or more tables (or even the entire database) <data-exports-add>` from Amperity. Each database export must be assigned a unique name, and then is :ref:`configured to select one or more tables <data-exports-add-tables>` to be included in the export. A database export must be :ref:`associated with a configured destination and must be added to an orchestration <data-exports-add-to-orchestration>`.
 
 .. databases-database-howto-export-database-end
 
@@ -1996,6 +2043,60 @@ Export database table
 The process for exporting tables is the same as :ref:`exporting databases <databases-database-howto-export-database>`.
 
 .. databases-database-howto-export-table-end
+
+
+.. _databases-database-howto-format-sql:
+
+Format SQL
+--------------------------------------------------
+
+.. databases-database-howto-format-sql-start
+
+AmpAI can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
+
+* **Standard format** Reformats the SQL using default style rules.
+* **Custom format** Opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
+
+.. databases-database-howto-format-sql-end
+
+**To format SQL in a custom table**
+
+.. databases-database-howto-format-sql-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a custom SQL table.
+#. In the toolbar, click **Format SQL**.
+#. Choose **Standard format** to apply default formatting, or choose **Custom format** to enter specific formatting instructions.
+#. Click **Save**.
+
+.. databases-database-howto-format-sql-steps-end
+
+
+.. _databases-database-howto-generate-field-descriptions:
+
+Generate field descriptions
+--------------------------------------------------
+
+.. databases-database-howto-generate-field-descriptions-start
+
+AmpAI can generate descriptions for database table fields that do not already have one. Click **Generate field descriptions** in the **Description** settings group on the right side of the table editor. When the table is defined by a SQL query, AmpAI uses the upstream schema to improve the accuracy of the generated descriptions. This may take a few minutes depending on the number of fields.
+
+.. note:: The **Generate field descriptions** link is disabled when all fields already have descriptions.
+
+.. databases-database-howto-generate-field-descriptions-end
+
+**To generate field descriptions**
+
+.. databases-database-howto-generate-field-descriptions-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a table, and then click **Next** to move to the second step in the table editor.
+#. In the **Description** settings group, click **Generate field descriptions**.
+#. After the descriptions are generated, click **Save**.
+
+.. databases-database-howto-generate-field-descriptions-steps-end
 
 
 .. _databases-database-howto-hide-table:
@@ -2032,7 +2133,7 @@ Mark columns as PII
 
 .. databases-database-howto-mark-columns-as-pii-start
 
-Columns that contain PII---names (first, last, and full), addresses, phone numbers, email addresses, birthdates, gender, and other profile details---should be marked for all database tables.
+Columns that contain PII--names (first, last, and full), addresses, phone numbers, email addresses, birthdates, gender, and other profile details--should be marked for all database tables.
 
 .. databases-database-howto-mark-columns-as-pii-end
 
@@ -2049,10 +2150,10 @@ Columns that contain PII---names (first, last, and full), addresses, phone numbe
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. For each field that contains PII, verify that the box in the **PII** column is selected.
+#. For each field that has PII, verify that the box in the **PII** column is selected.
 
    Amperity automatically selects the **PII** checkbox for columns that were tagged with profile (PII) semantics. Verify that all columns associated with PII have the checkbox selected in the **PII** column.
-#. Activate the table. Restricted access to PII will be updated the next time this database table is refreshed.
+#. Activate the table. Restricted access to PII is updated the next time this database table is refreshed.
 
 .. databases-database-howto-mark-columns-as-pii-steps-end
 
@@ -2090,7 +2191,7 @@ Express refresh
 
 An express refresh will only update database tables and custom domain tables with new domain data or table definitions. This is the fastest option and is the recommended option for testing incremental changes.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. databases-database-howto-run-express-end
 
@@ -2102,7 +2203,7 @@ An express refresh will only update database tables and custom domain tables wit
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Express**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-express-steps-end
@@ -2115,9 +2216,9 @@ Full refresh
 
 .. databases-database-howto-run-full-start
 
-A full refresh will update all tables, including custom domain tables. This is the slowest option and is best used for estimating runtime performance.
+A full refresh updates all tables, including custom domain tables. This is the slowest option and is best used for estimating runtime performance.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. databases-database-howto-run-full-end
 
@@ -2129,7 +2230,7 @@ A full refresh will update all tables, including custom domain tables. This is t
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Full Refresh**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-full-steps-end
@@ -2144,7 +2245,7 @@ Normal refresh
 
 Any table with new data, new table definitions, or time-dependent clauses will be refreshed. A normal refresh is the default option.
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs if any of those custom domain tables are configured for Stitch. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 Time-dependent clauses include any query that uses the :ref:`CURRENT_DATE() <sql-spark-function-current-date>`, :ref:`CURRENT_TIMESTAMP() <sql-spark-function-current-timestamp>`, :ref:`UNIX_TIMESTAMP() <sql-spark-function-unix-timestamp>`, or :ref:`RAND() <sql-spark-function-rand>` functions.
 
@@ -2158,7 +2259,7 @@ Time-dependent clauses include any query that uses the :ref:`CURRENT_DATE() <sql
 #. Open the menu for the database you want to run.
 #. Select **Run**. The **Run <Database>** dialog box opens.
 #. Under **Run Options**, select **Normal**.
-#. Under **Databases to Run**, select one (or more) databases to be run.
+#. Under **Databases to Run**, select one or more databases to be run.
 #. Click **Run**.
 
 .. databases-database-howto-run-normal-steps-end
@@ -2181,7 +2282,7 @@ Run tables sequentially in the selected databases to do the following:
 * Optimize resource capacity. 
 * Review individual table run times to identify issues. 
 
-.. note:: When you run a database in this mode, the duration of the database run may increase substantially.
+.. note:: When you run a database in this mode, the duration of the database run may increase.
 
 .. databases-database-howto-run-sequentially-end
 
@@ -2242,7 +2343,7 @@ Set validation rules
 
 A field in a database table may be flagged as required, as unique, or as both required *and* unique. These flags are validated by Amperity. When the validation conditions are not met a warning is raised.
 
-Use flags to help ensure that data within Amperity remains healthy and to help ensure that downstream workflows are built on top of the correct data. Database field semantics are preceded by a **db/** in the drop-down menu for semantics in the **Database Editor**.
+Use flags to help ensure that data within Amperity remains healthy and to help ensure that downstream workflows are built on top of the correct data. Database field semantics are preceded by a **db/** in the dropdown menu for semantics in the **Database Editor**.
 
 .. databases-database-howto-set-validation-rules-end
 
@@ -2268,12 +2369,12 @@ Use flags to help ensure that data within Amperity remains healthy and to help e
       * - columnName
         - columnName
       * - **db/unique**
-        - A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with NULL values are ignored by validation, but all other values, including zero-length strings, must pass.
+        - A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with **NULL** values are ignored by validation, but all other values, including zero-length strings, must pass.
 
           For a field that is unique, apply the **db/unique** semantic tag.
 
       * - **db/required**
-        - A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-NULL value, but does not require values to be unique. NULL values will cause an error during validation. All other values, including zero-length strings, will pass validation.
+        - A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-**NULL** value, but does not require values to be unique. **NULL** values will cause an error during validation. All other values, including zero-length strings, will pass validation.
 
           For a field that is required, apply the **db/required** semantic tag.
 
@@ -2306,7 +2407,7 @@ In addition to the primary customer 360 database, the **Customer 360** page may 
 
 .. databases-database-howto-view-all-databases-other-start
 
-Other databases may be created to support any desired use case. Each database has a specific schema (i.e. collection of tables and attributes). This is called a data model. The data model and individual database tables Amperity provides should make data easy to understand and explore for its specific use case and client.
+Other databases may be created to support any desired use case. Each database has a specific schema, which is a collection of tables and attributes. This is called a data model. The data model and individual database tables Amperity provides should make data easy to understand and explore for its specific use case and client.
 
 .. databases-database-howto-view-all-databases-other-end
 
@@ -2387,7 +2488,7 @@ Notifications for databases that run in the **Customer 360** page appear after A
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. databases-database-howto-view-recent-activity-context-end
 

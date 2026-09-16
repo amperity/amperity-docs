@@ -33,12 +33,22 @@ Amperity models churn propensity for each customer's unique purchase history. So
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Support a churn prevention campaign that has a series of escalating win-back offers
 * Optimize suppression and spend
 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
 
 .. model-churn-propensity-about-end
+
+.. model-churn-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Churn propensity determines the likelihood that a customer will be active based on their purchase history.
+
+   Open **Learning Lab** to learn more about `predicted churn <https://amperity.com/learning-lab/predicted-churn>`__ |ext_link|. Registration is required.
+
+.. model-churn-propensity-learning-lab-end
 
 
 .. _model-churn-propensity-use-cases:
@@ -78,13 +88,13 @@ Attributes that predict a customer's future purchase behavior are available from
 
    * - Attribute Name
      - Description
-   * - **Predicted Average Order Revenue Next 365d**
+   * - **Predicted Average Order Revenue Next 365 Days**
      - A customer's predicted average order revenue over the next 365 days.
-   * - **Predicted CLV Next 365d**
+   * - **Predicted CLV Next 365 Days**
      - The total predicted spend for a customer over the next 365 days.
-   * - **Predicted Order Frequency Next 365d**
+   * - **Predicted Order Frequency Next 365 Days**
      - A customer's predicted number of orders over the next 365 days.
-   * - **Predicted Probability of Transaction Next 365d**
+   * - **Predicted Probability of Transaction Next 365 Days**
      - The probability that a customer will purchase again in the next 365 days.
 
 Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns.
@@ -121,7 +131,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        By grouping repeat customers into these tiers, you can:
 
-       * Focus on retaining and nurturing customers who contribute significantly to revenue.
+       * Focus on retaining and nurturing customers who contribute to revenue.
        * Develop targeted campaigns that address the specific needs and preferences of different customer segments.
        * Proactively address the concerns of customers who may be considering churning.
 
@@ -150,7 +160,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        * Identify and focus on customers who are predicted to generate the most revenue over their lifetime.
        * Develop targeted campaigns and offers that cater to the specific needs and preferences of different customer segments.
-       * Allocate resources more effectively by focusing on acquiring customers with high pCLV potential.
+       * Allocate resources by focusing on acquiring customers with high pCLV potential.
        * Implement strategies to retain and nurture high-value customers, maximizing their lifetime value.
 
 By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time.

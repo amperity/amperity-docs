@@ -23,7 +23,11 @@
 Send data to Microsoft Advertising
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_microsoft_ads.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_microsoft_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-ads-start
@@ -31,10 +35,10 @@ Send data to Microsoft Advertising
 
 .. destination-microsoft-ads-about-start
 
-Use the |ext_microsoft_ads_api_customer_list| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
+Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
 * Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk)
-* |ext_microsoft_audience_network|
+* `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
 * Microsoft News
 * Microsoft Edge
 * Outlook.com
@@ -45,7 +49,7 @@ Use the |ext_microsoft_ads_api_customer_list| to push customer data to the |dest
 
 .. destination-microsoft-ads-api-note-start
 
-.. note:: This destination uses the |ext_bing_ads_api|.
+.. note:: This destination uses the `Bing Ads API <https://docs.microsoft.com/en-us/advertising/guides/?view=bingads-13>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -85,11 +89,11 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The |destination-name| customer and account IDs.
 
-       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+       .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL of the **Campaigns** page has two key-value pairs, one for the customer ID and the other for the account ID.
 
           The URL is similar to:
 
@@ -105,15 +109,15 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The name of the list to be managed in |destination-name|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Microsoft Ads account <destination-microsoft-ads-configure-oauth>`.
 
@@ -141,8 +145,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -150,8 +154,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -159,8 +163,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -200,8 +204,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -220,8 +224,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -254,8 +258,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -281,7 +285,7 @@ Add destination
           * - **Customer ID**
             - Your customer ID within |destination-name|.
 
-              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+              .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL of the **Campaigns** page has two key-value pairs, one for the customer ID and the other for the account ID.
 
                  The URL is similar to:
 
@@ -298,8 +302,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -312,8 +316,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -347,8 +351,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -367,8 +371,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -376,7 +380,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -391,8 +395,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -411,8 +415,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -449,7 +453,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -468,7 +472,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -483,7 +487,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -511,7 +515,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -595,11 +599,11 @@ Must accept terms and conditions
 
 .. destination-microsoft-ads-workflow-actions-must-accept-terms-start
 
-You must accept the |ext_microsoft_ads_customer_match_terms| before you can use the |ext_microsoft_ads_api_customer_list|. You must select the **I accept** option from within the |destination-name| web application.
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
 
-To resolve this error, you must agree to the |ext_microsoft_ads_customer_match_terms|.
+To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 
-#. Log in to the |destination-name| web application, and then agree to the |ext_microsoft_ads_customer_match_terms|.
+#. Log in to the |destination-name| web application, and then agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-microsoft-ads-workflow-actions-must-accept-terms-end
@@ -612,12 +616,12 @@ Not authorized
 
 .. destination-microsoft-ads-workflow-actions-not-authorized-start
 
-Amperity must have access to the correct combination of |ext_microsoft_ads_get_ids| in |destination-name|. 
+Amperity must have access to the correct combination of `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| in |destination-name|. 
 
 To resolve this error, verify the account and customer IDs in |destination-name|, and then update the destination associated with this workflow for the correct values.
 
 #. Open the **Destinations** page, and then open the destination that is used with this workflow. Review the **Account ID** and **Customer ID** fields that are configured in Amperity.
-#. Log in to the |destination-name| web application, and then find the |ext_microsoft_ads_get_ids| that are associated with your user account.
+#. Log in to the |destination-name| web application, and then find the `account and customer IDs <https://learn.microsoft.com/en-us/advertising/guides/get-started>`__ |ext_link| that are associated with your user account.
 #. Compare the **Account ID** and **Customer ID** fields configured in Amperity to the account and customer IDs that exist in |destination-name|. Update the configuration for this destination in Amperity as required.
 
    .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
@@ -633,14 +637,14 @@ Two-step authentication required
 
 .. destination-microsoft-ads-workflow-actions-mfa-required-start
 
-|destination-name| requires |ext_microsoft_ads_two_step_verification| to be enabled before Amperity can send data.
+|destination-name| requires `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| to be enabled before Amperity can send data.
 
-.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request wasn't made by the identity owner. For example: a login attempt from a device that is not trusted.
+.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request was not made by the identity owner. For example: a login attempt from a device that is not trusted.
 
 To resolve this error, ensure that multi-factor authentication is enabled for your |destination-name| account.
 
 #. Log in to the |destination-name| web application.
-#. Verify that |ext_microsoft_ads_two_step_verification| is enabled for your |destination-name| account.
+#. Verify that `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| is enabled for your |destination-name| account.
 
    .. note:: This may require :ref:`creating a new credential <destination-microsoft-ads-workflow-actions-invalid-credentials>` for this destination.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.

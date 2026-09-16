@@ -13,7 +13,11 @@
 Send data to Microsoft Power BI
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_power_bi.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_power_bi.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-powerbi-start
@@ -61,40 +65,40 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Send CSV data to an :doc:`Azure Blob Storage <destination_azure_blob_storage>` container from Amperity.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_csv_to_synapse| to Azure Synapse Analytics.
+     - `Load CSV data from Azure Blob Storage <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=sql-pool>`__ |ext_link| to Azure Synapse Analytics.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_connect_synapse| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/tutorial-connect-power-bi-desktop>`__ |ext_link| to an Azure Synapse Analytics workspac, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 
@@ -130,40 +134,40 @@ The steps required to configure Amperity to send data that is accessible to Powe
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Send CSV data to :doc:`Google Cloud Storage <destination_google_cloud_storage>` from Amperity.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - |ext_google_bigquery_transfer_from_cloud_storage| to Google BigQuery.
+     - `Transfer data from Cloud Storage <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer>`__ |ext_link| to Google BigQuery.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - |ext_microsoft_power_bi_load_bigquery|, and then access the data sent from Amperity.
+     - `Connect Microsoft Power BI to Google BigQuery <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-bigquery>`__ |ext_link|, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 
@@ -181,9 +185,11 @@ Connect to Snowflake
 
 .. destination-powerbi-connect-to-snowflake-start
 
-Amperity can be configured to share data (tables and/or entire databases) directly with Snowflake. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
+Amperity can be configured to share data usng tables or databases) directly with Snowflake. Microsoft Power BI can be configured to connect to a Snowflake data warehouse and use that data as a data source.
 
-Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant. (This is, currently, run as a Snowflake data warehouse that is accessible to only your Amperity tenant.) Microsoft Power BI is configured to connect directly to the Amperity Data Warehouse. Or you may send data directly to Snowflake by configuring the Snowflake destination to send data to your Snowflake tenant.
+Amperity offers additional services that allow Amperity to run as the Amperity Data Warehouse, which is synchronized to your Amperity tenant, and run as a Snowflake data warehouse that is accessible to only your Amperity tenant.
+
+Microsoft Power BI is configured to connect directly to the Amperity Data Warehouse. Or you may send data directly to Snowflake by configuring the Snowflake destination to send data to your Snowflake tenant.
 
 .. destination-powerbi-connect-to-snowflake-end
 
@@ -199,44 +205,44 @@ The steps required to configure Amperity to send data that is accessible to Micr
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Configure Snowflake objects for the correct database, tables, roles, and users. (Refer to the :ref:`Amazon S3 <destination-snowflake-aws-configure-objects>` or :ref:`Azure <destination-snowflake-azure-configure-objects>` tutorial, as appropriate for your tenant.)
 
-       .. note:: Snowflake can be configured to run in Amazon AWS or Azure. When using the Amazon Data Warehouse you will use the same cloud platform as your Amperity tenant. When using your own instance of Snowflake, you should use the same Amazon S3 bucket or Azure Blob Storage container that is included with your tenant when configuring Snowflake for data sharing, but then connect Microsoft Power BI directly to your own instance of Snowflake.
+       .. note:: Snowflake can be configured to run in Amazon AWS or Azure. When using the Amazon Data Warehouse you use the same cloud platform as your Amperity tenant. When using your own instance of Snowflake, you should use the same Amazon S3 bucket or Azure Blob Storage container that is included with your tenant when configuring Snowflake for data sharing, but then connect Microsoft Power BI directly to your own instance of Snowflake.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Send data to Snowflake from Amperity. (Refer to the :doc:`Amazon S3 <destination_snowflake_aws>` or :doc:`Azure <destination_snowflake_azure>` tutorial, as appropriate for your tenant.)
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the |ext_microsoft_power_bi_desktop_to_snowflake| or from the |ext_microsoft_power_bi_service_to_snowflake|.
+     - Connect Microsoft Power BI to Snowflake, and then access the data sent from Amperity. This connection may be from the `Power BI Desktop <https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-snowflake>`__ |ext_link| or from the `Power BI Service <https://docs.microsoft.com/en-us/power-bi/connect-data/service-connect-snowflake>`__ |ext_link|.
 
-       .. note:: The URL for the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a SnapPass link. Request this information from your Amperity representative prior to attempting to connect Microsoft Power BI to Snowflake.
+       .. note:: The URL of the Snowflake data warehouse, the Snowflake username, the password, and the name of the Snowflake data warehouse are sent to the Microsoft Power BI user within a |ext_snappass| link. Request this information from your Amperity representative before attempting to connect Microsoft Power BI to Snowflake.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Microsoft Power BI.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 

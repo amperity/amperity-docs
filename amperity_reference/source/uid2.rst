@@ -52,26 +52,26 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Image panel 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Before you can configure Amperity to act as a UID2 Operator for your brand you must do the following:
 
        #. :ref:`Request access to UID2 <uid2-prerequisite-get-access>`.
        #. :ref:`Agree to the UID2 participation policy <uid2-prerequisite-participate>`.
-       #. :ref:`Get an API key <uid2-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 operator for your brand.
+       #. :ref:`Get an API key <uid2-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 Operator for your brand.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 operator for your brand.
+     - After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 Operator for your brand.
 
        #. :ref:`Add your brand's credentials for UID2 to Amperity <uid2-configure-amperity-add-credentials>`.
        #. :ref:`Enable UID2 <uid2-configure-amperity-enable-uid2>`.
        #. :ref:`Add the UID2 table <uid2-configure-amperity-add-uid2-table>` to your brand's database.
 
-       Use custom database tables, queries, and/or segments to configure Amperity to support your brand's use cases for UID2.
+       Use custom database tables, queries, and segments to configure Amperity to support your brand's use cases for UID2.
 
 
        .. admonition:: How does Amperity maintain UID2 tokens?
@@ -80,7 +80,7 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/buckets <https://unifiedid.com/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All UID2 tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/map <https://unifiedid.com/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
+          #. Amperity sends an API request to Unified ID 2.0 using the `POST /identity/map <https://unifiedid.com/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request has a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the UID2 token), and a salt bucket ID.
 
@@ -90,13 +90,13 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Image panel 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Build workflows against the **UID2** table to support your brand's :ref:`UID2 workflows <uid2-workflows>`.
 
        Use custom database tables, queries, and segments in Amperity to build audiences of UID2 tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in Unified ID 2.0, such as The Trade Desk.
 
-       DSPs can receive UID2s from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+       DSPs can receive UID2s from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. uid2-howitworks-table-end
 
@@ -112,7 +112,7 @@ Before your brand can configure Amperity to generate UID2 tokens you must do the
 
 #. :ref:`Get access to UID2 <uid2-prerequisite-get-access>`.
 #. Agree to :ref:`a UID2 participation policy <uid2-prerequisite-participate>`, which is a legal requirement for UID2 sharing.
-#. :ref:`Get an API key <uid2-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 operator for your brand.
+#. :ref:`Get an API key <uid2-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the UID2 API and act as a UID2 Operator for your brand.
 
 .. uid2-prerequisites-end
 
@@ -168,7 +168,7 @@ Configure Amperity
 
 .. uid2-configure-amperity-start
 
-After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 operator for your brand.
+After your brand has adopted UID2 as part of your identity strategy you can configure Amperity to act as a UID2 Operator for your brand.
 
 #. :ref:`Add your brand's Mapper credentials for UID2 to Amperity <uid2-configure-amperity-add-credentials>`.
 #. :ref:`Enable UID2 <uid2-configure-amperity-enable-uid2>`.
@@ -194,7 +194,7 @@ Add your brand's Mapper credentials for UID2 to Amperity. Open the **Settings** 
    :align: left
    :class: no-scaled-link
 
-Choose the **UID2** plugin. Provide a name and description for the credential that ensures users within your tenant know it's related to UID2. Add the API key and the client secret for your brand's **Mapper** participant credentials.
+Choose the **UID2** plugin. Provide a name and description for the credential that ensures users within your tenant know it is related to UID2. Add the API key and the client secret for your brand's **Mapper** participant credentials.
 
 .. uid2-configure-amperity-add-credentials-end
 
@@ -206,7 +206,7 @@ Enable UID2 token generation
 
 .. uid2-configure-amperity-enable-uid2-start
 
-UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 Generation** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** drop-down.
+UID2 token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 and EUID Configuration** dialog box. Select the **Enable UID2 generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-uid2.png
    :width: 460 px
@@ -237,6 +237,26 @@ Add the **UID2** table to any database as a passthrough table. The **UID2** tabl
    :end-before: .. data-tables-uid2-table-end
 
 
+.. _uid2-configure-amperity-add-uid2-history-table:
+
+Add UID2 History table to database
+--------------------------------------------------
+
+.. uid2-configure-amperity-add-uid2-history-table-start
+
+Add the **UID2 History** table to any database as a passthrough table. The **UID2 History** table is a core table that records every version of a customer's UID2 token over time. A new row is appended each time a customer's UID2 token is refreshed due to salt bucket rotation.
+
+.. uid2-configure-amperity-add-uid2-history-table-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-uid2-history-table-about-start
+   :end-before: .. data-tables-uid2-history-table-about-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-uid2-history-table-start
+   :end-before: .. data-tables-uid2-history-table-end
+
+
 .. _uid2-workflows:
 
 About UID2 workflows
@@ -246,7 +266,7 @@ About UID2 workflows
 
 Use custom database tables, queries, and segments in Amperity to build audiences of UID2 tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in Unified ID 2.0, such as The Trade Desk.
 
-DSPs can receive UID2s from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+DSPs can receive UID2s from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. list-table::
    :widths: 10 90
@@ -255,7 +275,7 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Advertisers and UID2
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Advertising with UID2 enables the use of use `first-party data <https://unifiedid.com/docs/overviews/overview-advertisers#workflow-for-advertisers>`__ |ext_link| to build omnichannel campaigns across devices using a single identifier. Using UID2 as part of your advertising strategy will help your brand:
 
@@ -269,7 +289,7 @@ DSPs can receive UID2s from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Data providers and UID2
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Data providers can use UID2 to enable the use of `third-party data <https://unifiedid.com/docs/overviews/overview-data-providers#workflow-for-data-providers>`__ |ext_link|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
 

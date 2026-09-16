@@ -56,7 +56,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -87,7 +87,7 @@ The following table lists the operators that are available to this attribute.
 
        Returns customer records with values that are less than or equal to the specified ranking, including the specified ranking.
 
-       .. tip:: A rank that is less than or equal to X will provide the top N customers with an affinity for a product.
+       .. tip:: A rank that is less than or equal to X provides the top N customers with an affinity for a product.
 
    * - **is not**
      - Returns customer records with values that do not match the specified ranking.

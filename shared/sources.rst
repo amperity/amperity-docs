@@ -7,65 +7,29 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-
-**Example entities list**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-intro-start
-   :end-before: .. sources-add-courier-entities-list-intro-end
-
-.. source-xxxxx-add-courier-entities-list-start
-
-For example:
-
-::
-
-   [
-     {
-       "object/type": "file",
-       "object/file-pattern": "'/path/to/customer-record.csv'",
-       "object/land-as": {
-         "file/header-rows": 1,
-         "file/tag": "customer-record-files",
-         "file/content-type": "text/csv"
-       }
-     }
-   ]
-
-.. source-xxxxx-add-courier-entities-list-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-note-start
-   :end-before: .. sources-add-courier-entities-list-note-end
-
-**To add a courier**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-sftp-start
-   :end-before: .. sources-add-courier-sftp-end
-
-
-
-
-
+.. vale off
 
 ADD THIS TO END OF GET DETAILS FOR ALL SOURCES AND CLEAN UP GET DETAILS
 
-
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
-
+.. vale on
 
 
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
+
+
+.. vale off
 
 **TEMPLATE SECTIONS FOR DATA SOURCES**
 
-This topic contains the templated sections for all of the "Pull from xxxxx" topics in /datagrid/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
+The templated sections for all of the "Pull from xxxxx" topics in /operator/. You must use these templated sections. Use the beginning of the topic to introduce anything that is source-specific. You cannot add source-specific content within the templated sections outside of providing the variables for "source name", "feed name", and "example filename". The "domain table name" is a concatenation of "source name" + "feed name".
 
-In certain cases, a source topic will require *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
+In certain cases, a source topic requires *some* customization within the templated sections. See the Salesforce Sales Cloud topic, **Run courier manually** section for how to do this.
+
+.. vale on
 
 .. sources-overview-list-intro-start
 
-This topic describes the steps that are required to pull |what-pull| to Amperity from |source-name|:
+The steps that are required to pull |what-pull| to Amperity from |source-name|:
 
 .. sources-overview-list-intro-end
 
@@ -74,12 +38,16 @@ This topic describes the steps that are required to pull |what-pull| to Amperity
 
 **Get details**
 
+.. vale off
 
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 
 Fivetran couriers share some common details: 1) request to enable, 2) access to Snowflake, 3) the introduction, 4) note about Fivetran, 5) important about not storing data with 3, 4, and 5 tucked into consistent locations. The steps in-between 1) and 2) are custom to each topic.
+
+.. vale on
+
 
 .. sources-get-details-fivetran-overview-start
 
@@ -103,7 +71,7 @@ Amperity can pull data from |source-name| by using Fivetran as the interface to 
 
 A request to Amperity support to enable |source-name| as a data source for your tenant.
 
-.. important:: Please allow for up to 24 hours after making the request for the |source-name| connection to be enabled.
+.. important:: Allow for up to 24 hours after making the request for the |source-name| connection to be enabled.
 
 .. sources-get-details-fivetran-request-to-enable-end
 
@@ -111,10 +79,12 @@ A request to Amperity support to enable |source-name| as a data source for your 
 
 Access to the instance of Snowflake that stores the |source-name| data tables that were pulled by Fivetran.
 
-.. important:: The amount of time required to complete the initial population of data from |source-name| to Snowflake can vary, depending on the amount of data. Please allow for up 72 hours for this process to complete as a general guideline.
+.. important:: The amount of time required to complete the initial population of data from |source-name| to Snowflake can vary, depending on the amount of data. Allow for up 72 hours for this process to complete as a general guideline.
 
 .. sources-get-details-fivetran-access-to-snowflake-start
 
+
+.. vale off
 
 FIVETRAN COURIERS
 FIVETRAN COURIERS
@@ -124,6 +94,8 @@ FIVETRAN COURIERS
 **Configure OAuth**
 
 USE THIS FOR ALL SOURCES THAT ALLOW OAUTH
+
+.. vale on
 
 .. sources-oauth-configure-start
 
@@ -136,96 +108,19 @@ USE THIS FOR ALL SOURCES THAT ALLOW OAUTH
 
 
 
-**Filedrop requirements**
-
-TODO: Consolidate the "requirements" into the Get Details sections, as much as possible.
-
-.. sources-filedrop-requirements-start
-
-Amperity must connect to, and then pull data from |source-name|. Configure the courier that will pull data to Amperity with credentials--username and passphrase--that have permission to read data from |source-name|.
-
-.. sources-filedrop-requirements-end
-
-.. sources-filedrop-requirements-use-snappass-start
-
-.. tip:: Use SnapPass to share credentials between individuals who are responsible for configuring this courier.
-
-.. sources-filedrop-requirements-use-snappass-end
-
-
 
 
 **Add courier**
 
-
-
-THERE ARE STEPS FOR SFTP ... maybe can consolidate for SFTP/Azure/S3/GCP
-THERE ARE STEPS FOR APIs << these might be unique or at least have unique settings
-THERE ARE STEPS FOR SNOWFLAKE << these are repetitive except potentially the S3 vs. Azure
-THERE ARE STEPS FOR FIVETRAN? << these should be repetitive? "To add a courier for table objects" << these are Snowflakey, but should be their own pattern
-THERE ARE SNOWFLAKES? << Many :(
-THERE IS AN OAUTH vs. NOT-OAUTH STEPS ALSO variance with specific credentials steps, already created
-
-
-
-
-
-
-
-
-
-SFTP COURIERS
-SFTP COURIERS
-SFTP COURIERS
-
-This section applies ONLY to data sources that use SFTP.
-
-.. sources-add-courier-entities-list-intro-sftp-only-start
-
-An entites list defines the list of files to be pulled to Amperity, along with any file-specific details (such as file name, file type, if header rows are required, and so on).
-
-.. sources-add-courier-entities-list-intro-sftp-only-end
-
-.. sources-add-courier-entities-list-note-sftp-only-start
-
-.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier will fail if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
-
-.. sources-add-courier-entities-list-note-sftp-only-end
-
-This section has an introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. This section applies to SFTP connectors only.
-
-.. sources-add-courier-sftp-only-start
-
-#. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
-
-   This automatically selects |credential-type| as the **Credential Type**. Add the hostname for the location from which data is pulled. For example: |sftp-hostname|.
-#. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** page.
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** dialog box. Enter a name for the credential (typically "|source-name|"), and then enter the username and password required to access this location.
-#. Under **Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-
-   .. note:: If the file is contained within a ZIP archive, you may need to specify the fully qualified filename within the ZIP archive. For example, to import a file named "items.csv" you may need to specify "export\items.csv".
-#. Under **Settings** set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
-
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the feed is configured and activated you can edit the courier, and then update the feed ID with the correct identifier.
-
-   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings will fail.
-#. Click **Save**.
-
-.. sources-add-courier-sftp-only-end
-
-SFTP COURIERS
-SFTP COURIERS
-SFTP COURIERS
-
-
+.. vale off
 
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 
-This section applies ONLY to data sources that use Fivetran.
+Applies ONLY to data sources that use Fivetran.
+
+.. vale on
 
 .. sources-add-courier-fivetran-consolidate-start
 
@@ -249,7 +144,7 @@ A stage defines the location of objects that are available within Snowflake.
 
 .. sources-add-courier-fivetran-load-operation-start
 
-Load operations associate each table in the list of tables to a feed. (The initial setup for this courier will use an incorrect feed ID -- ``df-xxxxxx``.)
+Load operations associate each table in the list of tables to a feed. (The initial setup for this courier uses an incorrect feed ID, such as ``df-xxxxxx``.)
 
 .. sources-add-courier-fivetran-load-operation-end
 
@@ -271,7 +166,7 @@ Load operations associate each table in the list of tables to a feed. (The initi
       ]
 
 #. Enter the name of the Snowflake stage.
-#. Optional. Use a query to select specific columns from a Snowflake table prior to pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+#. Optional. Use a query to select specific columns from a Snowflake table before pulling those results to Amperity. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, or periods. For example: "Query_name.12-345a".
 
    Use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query to run against a table that is to be pulled to Amperity.
 
@@ -286,16 +181,18 @@ Load operations associate each table in the list of tables to a feed. (The initi
            }
 #. For each table to be sent to Amperity, define the load operations using the feed ID for the feed that is associated with that table.
 
-   Set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
+   Set the load operations to a string that is incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to ``{}`` or are not set to an obviously incorrect string the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to ``{}`` or are not set to an incorrect string the validation test for the courier configuration settings fails.
 
 #. Click **Save**.
 
 .. sources-add-courier-fivetran-end
 
+.. vale off
+
 FIVETRAN COURIERS
 FIVETRAN COURIERS
 FIVETRAN COURIERS
@@ -306,13 +203,15 @@ AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 
-This section applies ONLY to data sources that use AMAZON S3.
+Applies ONLY to data sources that use AMAZON S3.
+
+.. vale on
 
 .. TODO: Sync the example entities list intros to be generic for all file-based couriers.
 
 .. sources-add-courier-entities-list-intro-s3-generic-start
 
-An entites list defines the list of files to be pulled to Amperity, along with any file-specific details (such as file name, file type, if header rows are required, and so on).
+An entites list defines the list of files to be pulled to Amperity, along with any file-specific details, such as file name, file type, or if header rows are required.
 
 .. sources-add-courier-entities-list-intro-s3-generic-end
 
@@ -324,32 +223,34 @@ An entites list defines the list of files to be pulled to Amperity, along with a
 
 .. sources-add-courier-entities-list-note-s3-generic-start
 
-.. note:: You may configure files as required (``"object/optional": false``) or optional (``"object/optional": true``.) A courier will fail if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
+.. note:: You may configure files as required using ``"object/optional": false`` or as optional using ``"object/optional": true``. A courier fails if a required file is not available or, if all files in the fileset are optional, at least one of those files is not available.
 
 .. sources-add-courier-entities-list-note-s3-generic-end
 
-This section has an introduction to entities lists and a note about required/optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. This section applies to SFTP connectors only.
+An introduction to entities lists and a note about required or optional file behaviors. In-between you show an example of an entities list that is appropriate for each SFTP data source. All data sources share the same add couriers steps. Applies to SFTP connectors only.
 
 .. sources-add-courier-s3-generic-start
 
 #. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
+#. Find, and then click the row that has |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** drop-down, select **Create a new credential**. This opens the **Create New Credential** page.
+#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
 #. Enter a name for the credential and add the configuration settings. Click **Save**.
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-#. Under **Amazon S3 Settings** set the load operations to a string that is obviously incorrect, such as ``df-xxxxxx``. (You may also set the load operation to empty: ``{}``.)
+#. Under **Amazon S3 Settings** set the load operations to a string that is incorrect, such as ``df-xxxxxx``. You may also set the load operation to empty: ``{}``.
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to ``{}`` the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. sources-add-courier-s3-generic-end
 
+.. vale off
+
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
 AMAZON S3 COURIERS
@@ -361,14 +262,16 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 
-This section applies ONLY to data sources that use APIs and automatically handle the feed creation.
+Applies ONLY to data sources that use APIs and automatically handle the feed creation.
+
+.. vale on
 
 .. TODO: Currently hooked into Zendesk, Sailthru, and Listrak. Not hooked into Google Analytics. Requires the credential-fields, settings-details, and box-names replacements.
 
 .. sources-add-courier-api-automatic-start
 
 #. From the **Sources** tab, click **Add Courier**. The **Select integration** page opens.
-#. Find, and then click the row that contains |plugin-name|. The **Add Courier** page opens.
+#. Find, and then click the row that has |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the name of the courier. For example: "|source-name|".
@@ -388,6 +291,8 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. sources-add-courier-review-feed-and-domain-table-end
 
+.. vale off
+
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 API COURIERS THAT AUTOMATICALLY BUILD FEEDS
@@ -399,7 +304,9 @@ API COURIERS THAT AUTOMATICALLY BUILD FEEDS
 
 **Get sample files**
 
-This section has three possible introductions: one for files, another for Snowflake, and another for Fivetran. Fivetran does not have a howto.
+Three possible introductions: one for files, another for Snowflake, and another for Fivetran. Fivetran does not have a howto.
+
+.. vale on
 
 .. sources-get-sample-files-start
 
@@ -411,7 +318,7 @@ Every |source-name| file that is pulled to Amperity must be configured as a feed
 
 Run the |source-name| courier to pull sample files to Amperity for each of the tables configured in the load operation. Use these sample files to configure a feed for each |source-name| table to be loaded to Amperity.
 
-.. important:: The courier run will fail, but this process will successfully return a list of files, one for each table that was defined in the courier load operation. Use these files to define the feed schema.
+.. important:: The courier run fails, but this process will successfully return a list of files, one for each table that was defined in the courier load operation. Use these files to define the feed schema.
 
 .. sources-get-sample-files-fivetran-end
 
@@ -427,7 +334,7 @@ A sample CSV file may be output from Snowflake, and then uploaded to Amperity wh
 #. Select **Load data from a specific day**, and then select today's date.
 #. Click **Run**.
 
-   .. important:: The courier run will fail, but this process will successfully return a list of files from |source-name|.
+   .. important:: The courier run fails, but this process will successfully return a list of files from |source-name|.
 
    These files will be available for selection as an existing source from the **Add Feed** dialog box.
 #. Wait for the notification for this courier run to return an error similar to:
@@ -460,11 +367,15 @@ A sample CSV file may be output from Snowflake, and then uploaded to Amperity wh
 
 **Add feeds**
 
-This section starts with the glossary term for feeds, then has a note. There are three styles for notes: one for files, one for Fivetran, and one for Snowflake. Slighly different. Then there are two styles for steps: one for Snowflake and another for everything else.
+.. vale off
+
+Start with the glossary term for feeds, then has a note. There are three styles for notes: one for files, one for Fivetran, and one for Snowflake. Slighly different. Then there are two styles for steps: one for Snowflake and another for everything else.
+
+.. vale on
 
 .. sources-add-feed-note-file-start
 
-.. note:: A feed must be added for *each* file that is pulled from |source-name|, including all files that contain customer records and interaction records, along with any other files that will be used to support downstream workflows.
+.. note:: A feed must be added for *each* file that is pulled from |source-name|, including all files that contain customer records and interaction records, along with any other files that is used to support downstream workflows.
 
 .. sources-add-feed-note-file-end
 
@@ -474,7 +385,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 .. sources-add-feed-note-fivetran-start
 
-.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that will be used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
+.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that is used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
 
 .. sources-add-feed-note-fivetran-end
 
@@ -484,7 +395,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 .. sources-add-feed-note-snowflake-start
 
-.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that will be used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
+.. note:: A feed must be added for *each* table that is pulled from |source-name|, including all tables that contain customer records and interaction records, along with any other tables that is used to support downstream workflows. Use the CSV files that were pulled to Amperity to define the schema for each feed.
 
 .. sources-add-feed-note-snowflake-end
 
@@ -500,7 +411,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 #. Under **Sample File**, select **Select existing file**, and then choose from the list of files. For example: "|example-filename|".
 
-   .. tip:: The list of files that is available from this drop-down menu is sorted from newest to oldest.
+   .. tip:: The list of files that is available from this dropdown menu is sorted from newest to oldest.
 #. Select **Load sample file on feed activation**.
 #. Click **Continue**. This opens the **Feed Editor** page.
 #. Select the primary key.
@@ -534,7 +445,7 @@ This section starts with the glossary term for feeds, then has a note. There are
 
 **Add load operations**
 
-The introduction to this section is literally the same for all data sources and uses the "source name" variable. This section has a custom section that shows an example load operation, which is positioned after the introduction and before the how-to.
+The introduction is literally the same for all data sources and uses the "source name" variable. A custom section that shows an example load operation, which is positioned after the introduction and before the how-to.
 
 .. sources-add-load-operation-start
 
@@ -544,28 +455,32 @@ After the feeds are activated and domain tables are available, add the load oper
 
 **Example for example load operations**
 
+.. vale off
+
 There are two example intros, one for files and one for Fivetran.
+
+.. vale on
 
 .. sources-add-load-operation-example-intro-start
 
-Load operations must specify each file that will be pulled to Amperity from |source-name|.
+Load operations must specify each file that is pulled to Amperity from |source-name|.
 
 .. sources-add-load-operation-example-intro-end
 
 .. sources-add-load-operation-example-intro-fivetran-start
 
-Load operations must specify each table that will be pulled to Amperity from |source-name|.
+Load operations must specify each table that is pulled to Amperity from |source-name|.
 
 .. sources-add-load-operation-example-intro-fivetran-end
 
 .. 
 .. each source has its own example operation that should go in this spot
-.. do not pull this section to the file; each of these is unique
+.. do not pull it to the file. Each of these is unique
 .. 
 
 .. source-xxxxx-add-load-operations-example-start
 
-Load operations must specify each file that will be pulled to Amperity from |source-name|. For example:
+Load operations must specify each file that is pulled to Amperity from |source-name|. For example:
 
 ::
 
@@ -604,7 +519,7 @@ Load operations must specify each file that will be pulled to Amperity from |sou
 
 **Run courier manually**
 
-This section is literally the same for all data sources.
+The same for all data sources.
 
 .. sources-run-courier-start
 
@@ -661,8 +576,8 @@ Run the courier again. This time, because the load operations are present and th
          :start-after: .. courier-groups-timezones-downstream-start
          :end-before: .. courier-groups-timezones-downstream-end
 
-#. Add at least one courier to the courier group. Select the name of the courier from the **Courier** drop-down. Click **+ Add Courier** to add more couriers.
-#. Click **Add a courier group constraint**, and then select a courier group from the drop-down list.
+#. Add at least one courier to the courier group. Select the name of the courier from the **Courier** dropdown. Click **+ Add Courier** to add more couriers.
+#. Click **Add a courier group constraint**, and then select a courier group from the dropdown list.
 
    .. include:: ../../amperity_reference/source/courier_groups.rst
       :start-after: .. courier-groups-schedule-wait-time-start
@@ -681,13 +596,12 @@ Run the courier again. This time, because the load operations are present and th
 
 
 
-
+.. vale off
 
 SOURCES
-SOURCES
-SOURCES
 
-.. TODO: This is the sections for the templated content for adding sources in /datagrid/. These sections allow for bespoke steps, usually as Step 3, but may have more if they are more complicated. Try to keep the bespoke content within Step 3 as much as possible for consistency.
+
+.. TODO: This is the sections for the templated content for adding sources in /operator/. These sections allow for bespoke steps, as Step 3, but may have more if they are more complicated. Try to keep the bespoke content within Step 3 as much as possible for consistency.
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
 
@@ -695,13 +609,17 @@ STEP 1
 STEP 1
 STEP 1
 
+.. vale on
+
 .. sources-add-source-start
 
 Open the **Sources** page to configure a destination for |source-name|. Click the **Add courier** button to open the **Add courier** dialog box.
 
 .. sources-add-source-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
+
+.. vale off
 
 IMPORTANT: The next paragraph after the image is located in the /shared/credentials.rst topic because they are IDENTICAL.
 
@@ -714,6 +632,8 @@ STEP 4
 STEP 4
 STEP 4
 
+.. vale on
+
 .. sources-run-the-courier-start
 
 From the **Sources** tab, open the |fa-kebab| menu for the courier, and then select **Run**. The **Run Courier** dialog box opens.
@@ -722,16 +642,303 @@ Select a time period to be run, and then click **Run**.
 
 .. sources-run-the-courier-end
 
+.. vale off
+
 STEP 5
 STEP 5
 STEP 5
 
-.. TODO: The following is for couriers that use a checkbox to select one (or more) tables to bring to Amperity, such as Adobe Commerce, Shopify, et al.
+.. TODO: The following is for couriers that use a checkbox to select one or more tables to bring to Amperity, such as Adobe Commerce, Shopify, et al.
+
+.. vale on
 
 .. sources-verify-feeds-and-domain-tables-start
 
-After running the |source-name| courier it will create a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name| and that any semantic tags for customer profiles and transactions are applied correctly for your tenant.
+After running the |source-name| courier it creates a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name| and that any semantic tags for customer profiles and transactions are applied correctly for your tenant.
 
 Select a time period to be run, and then click **Run**.
 
 .. sources-verify-feeds-and-domain-tables-end
+
+
+
+
+
+.. vale off
+
+
+
+**REVAMPED SOURCES**
+
+
+**STEP 00**
+
+.. vale on
+
+.. sources-steps-00-intro-start
+
+Add a data source that pulls data from |source-name|.
+
+Configure Amperity to pull one or more files, and then for each file review the settings, define the schema, activate the courier, and then run a manual workflow. Review the data that is added to the domain table.
+
+.. sources-steps-00-intro-end
+
+
+.. vale off
+
+**STEP 01**
+
+.. vale on
+
+.. sources-steps-01-open-dialog-start
+
+Open the **Sources** page to configure |source-name|.
+
+Click the **Add courier** button to open the **Add courier** dialog box.
+
+.. sources-steps-01-open-dialog-end
+
+<image in-between>
+
+.. sources-steps-01-select-source-start
+
+Select |source-name|. Do one of the following:
+
+#. Click the row in which |source-name| is located. Sources are listed alphabetically.
+#. Search for |source-name|. Start typing |filter-the-list|. The list will filter to show only matching sources.
+
+.. sources-steps-01-select-source-end
+
+
+.. vale off
+
+**STEP 02**
+
+(shared in from credentials)
+
+
+
+**STEP 03**
+
+.. vale on
+
+.. sources-steps-03-select-file-start
+
+Select the file that is pulled to Amperity, either by browsing into storage and selecting it or by providing a filename pattern.
+
+.. sources-steps-03-select-file-end
+
+<image in-between>
+
+.. sources-steps-03-browse-start
+
+Click **Browse** to open the **File browser**. Select the file that is pulled to Amperity, and then click **Accept**.
+
+Use a filename pattern to define files that will be loaded on a recurring basis, but have small changes to the filename over time, such as having a datestamp appended to the filename.
+
+.. sources-steps-03-browse-end
+
+.. sources-steps-03-browse-note-start
+
+.. note:: For a new data source, this file is *also* used as the sample file that is used to define the schema. For an existing data source, this file must match the schema that has already been defined.
+
+.. sources-steps-03-browse-note-end
+
+<image in-between>
+
+.. sources-steps-03-pgp-start
+
+Use the **PGP credential** setting to specify the credentials to use for an encrypted file.
+
+.. sources-steps-03-pgp-end
+
+
+
+.. vale off
+
+**STEP 04**
+
+.. vale on
+
+.. sources-steps-04-review-start
+
+Review the file.
+
+.. sources-steps-04-review-end
+
+<image in-between>
+
+.. sources-steps-04-review-contents-start
+
+The contents of the file may be viewed as a table and in the raw format. Switch between these views using the **Table** and **Raw** buttons, and then click **Refresh** to view the file in that format.
+
+.. sources-steps-04-review-contents-end
+
+.. sources-steps-04-review-pgp-start
+
+.. note:: PGP encrypted files can be previewed. Apache Parquet PGP encrypted files must be less than 500 MB to be previewed.
+
+.. sources-steps-04-review-pgp-end
+
+.. sources-steps-04-review-formatting-details-start
+
+Amperity will infer formatting details, and then add these details to a series of settings located along the left side of the file view. File settings include:
+
+* Delimiter
+* Compression
+* Escape character
+* Quote character
+* Header row
+
+Review the file, and then update these settings, if necessary.
+
+.. sources-steps-04-review-formatting-details-end
+
+.. sources-steps-04-file-types-start
+
+.. note:: Amperity supports the following file types: |format_avro|, |format_parquet|, |format_csv|, DSV, |format_json|, |format_ndjson|, |format_psv|, |format_tsv|, and |format_xml|.
+
+   Refer to those reference pages for details about each of the individual file formats.
+
+   Files that contain nested JSON (or "complex JSON") or XML may require using the legacy courier configuration.
+
+.. sources-steps-04-file-types-end
+
+
+
+.. vale off
+
+**STEP 05**
+
+.. vale on
+
+.. sources-steps-05-feed-options-start
+
+Each file that is loaded to Amperity must have a defined schema, after which the data in the file is loaded into a domain table ready for use with workflows within Amperity.
+
+.. sources-steps-05-feed-options-end
+
+**New feed**
+
+.. sources-steps-05-feed-new-start
+
+To use a new data source, choose the **Create new feed** option, select an existing source from the **Source** dropdown *or* type the name of a new data source, and then enter the name of the feed.
+
+.. image:: ../../images/mockup-sources-add-04-feed-new.png
+   :width: 380 px
+   :alt: Add 
+   :align: left
+   :class: no-scaled-link
+
+After you choose a load type and save the courier configuration, you will configure the feed using the data within the sample file.
+
+.. sources-steps-05-feed-new-end
+
+**Existing feed**
+
+.. sources-steps-05-feed-existing-start
+
+To use an existing feed, choose the **Use existing feed** option to use an existing schema.
+
+.. image:: ../../images/mockup-sources-add-04-feed-existing.png
+   :width: 380 px
+   :alt: Add 
+   :align: left
+   :class: no-scaled-link
+
+This option requires this file to match all of the feed-specific settings, such as incoming field names, field types, and primary keys. The data within the file may be different
+
+.. sources-steps-05-feed-existing-end
+
+**Pull data**
+
+.. sources-steps-05-load-types-start
+
+Define how Amperity will pull data from |source-name| and how it is loaded to a domain table.
+
+.. sources-steps-05-load-types-end
+
+<image in-between>
+
+**Load type: Upsert**
+
+.. sources-steps-05-load-type-upsert-start
+
+Use the **Upsert** option to use the selected file update existing records and insert records that do not exist.
+
+.. sources-steps-05-load-type-upsert-end
+
+**Load type: Truncate and upsert**
+
+.. sources-steps-05-load-type-truncate-start
+
+Use the **Truncate and upsert** option to delete all records in the existing table, and then insert records.
+
+.. sources-steps-05-load-type-truncate-end
+
+**Note**
+
+.. sources-steps-05-load-types-note-start
+
+.. note:: When a file is loaded to a domain table using an existing file, the file that is loaded *must* have the same schema as the existing feed. The data in the file may be new.
+
+.. sources-steps-05-load-types-note-end
+
+
+
+.. vale off
+
+**STEP 06**
+
+.. vale on
+
+.. sources-steps-06-feed-editor-start
+
+Use the feed editor to do all of the following:
+
+* Set the primary key
+* Choose the field that best presents when the data in the table was last updated. If there is not an obvious choice, use the "Generate an updated field" option.
+* For each field in the incoming data, validate the field name and semantic tag columns in the feed. Make any necessary adjustments.
+* For tables that contain customer records, enable the "Make available to Stitch" to ensure the values in this data source are used for identity resolution.
+
+When finished, click **Activate**.
+
+.. sources-steps-06-feed-editor-end
+
+
+.. vale off
+
+**STEP 07**
+
+.. vale on
+
+.. sources-steps-07-courier-start
+
+Find the courier related to the feed that was just activated, and then run it manually.
+
+On the **Sources** page, under **Couriers**, find the courier you want to run and then select **Run** from the actions menu.
+
+.. sources-steps-07-courier-end
+
+<image in-between>
+
+.. sources-steps-07-calendar-start
+
+Select a date from the calendar picker that is before today, but after the date on which the file was added to the |source-name| file system.
+
+.. sources-steps-07-calendar-end
+
+<image in-between>
+
+.. sources-steps-07-run-start
+
+Leave the load options unselected, and then click **Run**.
+
+After the courier has run successfully, inspect the domain table that has the data that was loaded to Amperity. After you have verified that the data is correct, you may do any of the following:
+
+* If the data has customer records, edit the feed and make that data available to Stitch.
+* If the data should be loaded to Amperity on a regular basis, add the courier to a courier group that runs on the desired schedule.
+* If the data will be a foundation for custom domain tables, use Spark SQL to build out that customization.
+
+.. sources-steps-07-run-end
+

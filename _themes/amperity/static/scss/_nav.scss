@@ -1,6 +1,6 @@
 // Nav Styling
 $nav-links: $amperity-brand-white;
-$nav-links-hover: lighten($amperity-brand-yellow, 0%);
+$nav-links-hover: lighten($amperity-brand-white, 0%);
 $nav-breakpoint: 1060px;
 $nav-border: 3px solid lighten($amperity-brand-white, 0%);
 
@@ -111,7 +111,7 @@ nav.nav-main {
   -webkit-padding-start: 10px;
   a {
     display: inline-block;
-    color: inherit;
+    color: $amperity-brand-white;
     transition: all 0.4s ease;
   }
   li {
@@ -120,7 +120,7 @@ nav.nav-main {
   }
   a:hover,
   .is-active a {
-    color: $nav-links-hover;
+    color: $amperity-brand-ice;
   }
 }
 
@@ -166,11 +166,11 @@ nav.nav-main {
       padding-bottom: 3px;
       border-bottom: 2px solid transparent;
       &:hover {
-        border-bottom: 2px solid $nav-links-hover; 
+        border-bottom: 2px solid $amperity-brand-ice; 
       }
     }
     &.is-active a {
-      border-bottom: 2px solid $nav-links-hover; 
+      border-bottom: 2px solid $amperity-brand-ice; 
     }
   }
 }
@@ -204,7 +204,7 @@ nav.nav-main {
   }
   a:hover,
   .is-active a {
-    color: $amperity-brand-slate;
+    color: $amperity-brand-white;
   }
 }
 

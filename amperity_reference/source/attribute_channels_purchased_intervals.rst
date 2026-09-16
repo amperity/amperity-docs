@@ -24,7 +24,7 @@ Purchased channel intervals
 
 .. attribute-channel-purchased-intervals-about-start
 
-Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during during the specified time period.
+Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during the specified time period.
 
 .. attribute-channel-purchased-intervals-about-end
 
@@ -61,7 +61,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65

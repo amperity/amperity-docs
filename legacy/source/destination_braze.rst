@@ -18,7 +18,11 @@
 Send data to Braze
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/datagrid/destination_braze.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_braze.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-braze-start
@@ -49,9 +53,18 @@ Amperity can send :ref:`customer profile and custom attributes <destination-braz
 About custom attributes
 ==================================================
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. destination-braze-ampiq-and-amp360-shared-intro-start
+
+Attributes in |destination-name| describe your customers.
+
+* :ref:`Profile attributes <destination-braze-profile-attributes>` describe who your customers are. For example: names, birthdates, email addresses, and phone numbers.
+* :ref:`Custom attributes <destination-braze-custom-attributes>` describe how your customers have interacted with your brand. For example: purchase histories, loyalty status, and value tiers.
+
+.. destination-braze-ampiq-and-amp360-shared-intro-end
+
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attributes-about-start
+   :end-before: .. braze-attributes-about-end
 
 
 .. _destination-braze-profile-attributes:
@@ -59,21 +72,25 @@ About custom attributes
 Customer profiles
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-ampiq-and-amp360-shared-intro-start
-   :end-before: .. destination-braze-ampiq-and-amp360-shared-intro-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-about-start
+   :end-before: .. braze-customer-profiles-about-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-admonition-consent-status-start
-   :end-before: .. destination-braze-profile-attributes-admonition-consent-status-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-admonition-start
+   :end-before: .. braze-customer-profiles-admonition-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-table-start
-   :end-before: .. destination-braze-profile-attributes-table-end
+.. include:: ../../amperity_operator/source/campaign_braze.rst
+   :start-after: .. campaign-braze-profile-attributes-start
+   :end-before: .. campaign-braze-profile-attributes-end
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-profile-attributes-note-start
-   :end-before: .. destination-braze-profile-attributes-note-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-start
+   :end-before: .. braze-customer-profiles-common-attributes-end
+
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-customer-profiles-common-attributes-note-start
+   :end-before: .. braze-customer-profiles-common-attributes-note-end
 
 
 .. _destination-braze-custom-attributes:
@@ -81,9 +98,9 @@ Customer profiles
 Custom attributes
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-custom-attributes-start
-   :end-before: .. destination-braze-custom-attributes-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-custom-attributes-start
+   :end-before: .. braze-custom-attributes-end
 
 
 .. _destination-braze-data-points:
@@ -91,15 +108,13 @@ Custom attributes
 About data points
 --------------------------------------------------
 
-.. include:: ../../amperity_amp360/source/destination_braze.rst
-   :start-after: .. destination-braze-data-points-start
-   :end-before: .. destination-braze-data-points-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-data-points-start
+   :end-before: .. braze-data-points-end
 
-.. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
-
-.. important:: `Connected Content <https://docs.amperity.com/datagrid/api_profile.html#braze-connected-content>`__ does not write data to user profiles, which means you can use Connected Content to dynamically populate values into messages without consuming data points.
-
-.. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
+.. include:: ../../amperity_operator/source/campaign_braze.rst
+   :start-after: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-start
+   :end-before: .. profile-api-usecase-braze-connected-content-does-not-use-data-points-end
 
 
 .. _destination-braze-attribute-updates:
@@ -107,50 +122,13 @@ About data points
 Audience profile updates
 --------------------------------------------------
 
-.. destination-braze-attribute-updates-overview-start
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-start
+   :end-before: .. braze-attribute-updates-end
 
-Profile attributes, such as **email**, **birthdate**, **address**, and **phone**, contain stable values. Most customers remain at the same address and have the same phone number for years. An individual customer's birthdate never changes. When customer profile attributes do change your brand will always want to update any downstream audience profiles.
-
-Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be carefully evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use case(s).
-
-.. destination-braze-attribute-updates-overview-end
-
-.. destination-braze-attribute-updates-admonition-start
-
-.. admonition:: What types of attributes have values that change frequently?
-
-   The following types of attributes contain values that change frequently:
-
-   .. list-table::
-      :widths: 35 65
-      :header-rows: 0
-
-      * - **Relative date values**
-        - Attributes with relative date values typically contain a rolling value that is updated daily.
-
-          For example, the **Transaction Attributes Extended** table contains an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
-
-          Using **Days Since Latest Order** as an attribute within customer profiles ensures that every customer profile associated with a customer who did not purchase during the previous X days will get an updated profile.
-
-          For relative date values, consider building a custom attribute that converts the ranges into a list of values. For example, you can assign a single value to represent a range of values. Less than 30 days is "green", less than 90 days is "yellow", and less than 365 days is "red". Include the custom attribute to capture the range of days as an indicator instead of the specific relative value.
-
-      * - **High-precision values**
-        - High-precision values are found in attributes that contain floating points, decimals, and percentages.
-
-          These types of values---1.09413481, 345.47 or .34---often change slightly, but in a way that offers little value to the downstream business use case.
-
-          For example, predictive attributes are refreshed daily. Predicted CLV during the next 365 days might be $345.37 on one day and $348.75 a few days later.
-
-          Instead of using predicted CLV in an audience profile, consider using predicted lifecycle status (active, at risk, etc.) or predicted value tier (gold, bronze, etc.), both of which are less likely to change because they represent a range of predicted behaviors instead of a specific predicted value.
-
-      * - **Calculated attribute values**
-        - Many attributes are calculated by Amperity, including all time period rollups.
-
-          For example, the **Transaction Attributes Extended** table contains an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
-
-          Instead of using the time period rollup attributes directly you can build a custom attribute to define thresholds or to return a yes or no. For example, instead of using the specific revenue amount for **L6M Order Revenue** you could build a custom attribute that returns true when the value for **L6M Order Revenue** is greater than $500.
-
-.. destination-braze-attribute-updates-admonition-end
+.. include:: ../../shared/braze.rst
+   :start-after: .. braze-attribute-updates-admonition-start
+   :end-before: .. braze-attribute-updates-admonition-end
 
 
 .. _destination-braze-table:
@@ -160,7 +138,7 @@ Customer attributes table
 
 .. destination-braze-table-start
 
-Build a table that contains all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and should contain the list of `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that will be maintained.
+Build a table that has all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and should contain the list of `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that is maintained.
 
 **To add a Braze customer attributes table**
 
@@ -172,8 +150,8 @@ Build a table that contains all of the attributes in |destination-name| that you
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open your customer 360 database and add a table named "Braze Customer Attributes".
 
@@ -235,8 +213,8 @@ Build a table that contains all of the attributes in |destination-name| that you
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Validate the table, and then click **Next**.
 
@@ -261,7 +239,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
@@ -279,7 +257,7 @@ Get details
                :align: left
                :class: no-scaled-link
 
-         The API key that you will use to configure Amperity credentials is available from the **Identifier** column on the **Rest API Key** page and is similar to: "a1bc2345-678d-9012-e3fg-hi34jk5l6789".
+         The API key that you use to configure Amperity credentials is available from the **Identifier** column on the **Rest API Key** page and is similar to: ``a1bc2345-678d-9012-e3fg-hi34jk5l6789``.
 
          .. image:: ../../images/destination-braze-rest-api-identifier.png
             :width: 500 px
@@ -289,9 +267,9 @@ Get details
 
        * The `REST API endpoint <https://www.braze.com/docs/api/basics#endpoints>`__ |ext_link| from which your instance of |destination-name| is available.
 
-         For example, if your URL for |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+         For example, if your URL of |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
 
-       * A list of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and/or `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that may be sent to |destination-name| from Amperity.
+       * A list of `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| or `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that may be sent to |destination-name| from Amperity.
 
 .. destination-braze-get-details-end
 
@@ -315,8 +293,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -335,8 +313,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -376,8 +354,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -393,16 +371,16 @@ Add destination
 
        Select the user identifier. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
 
-       To update audience profiles only when one (or more) values change, enable the **Only send updated audience profiles** option.
+       To update audience profiles only when one or more values change, enable the **Only send updated audience profiles** option.
 
-       .. note:: Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one (or more) values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
+       .. note:: Use the **Only send updated audience profiles** option to configure Amperity to :ref:`update audience profiles <destination-braze-attribute-updates>` only when one or more values within a profile have changed. An update to an individual value in an audience profile requires updating the entire audience profile.
 
           For use cases that require sending attributes that have values that are expected to change frequently, consider using additional queries to orchestrate specific sets of attributes at defined intervals so that your brand can maintain these values independently of your customer profiles.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -415,8 +393,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -444,8 +422,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -464,8 +442,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -473,7 +451,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -484,8 +462,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -504,8 +482,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -542,7 +520,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -561,7 +539,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -576,7 +554,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -602,7 +580,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -638,7 +616,7 @@ Missing required field
 
 .. destination-braze-workflow-actions-missing-required-field-start
 
-A unique identifier must be provided to |destination-name|. There are two options:
+A unique identifier must be provided to |destination-name|. Do one of the following:
 
 #. Recommended. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
 #. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.

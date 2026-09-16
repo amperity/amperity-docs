@@ -9,10 +9,10 @@ Site index
 .. Hide the TOC from this file.
 
 .. toctree::
+   :caption: DESTINATIONS
+   :maxdepth: 3
    :hidden:
 
-   configure_stitch
-   data_templates
    destination_active_campaign
    destination_acxiom
    destination_adobe_aep
@@ -67,12 +67,30 @@ Site index
    destination_snowflake_azure
    destination_the_trade_desk
    destination_tiktok_ads
-   destination_walmart_dsp
    destination_vibes
    destination_yahoo_dsp
    destination_zendesk
+
+.. toctree::
+   :caption: SOURCES
+   :maxdepth: 3
+   :hidden:
+
    source_amazon_s3
-   source_shopify
+   source_klaviyo_fivetran
+   source_shopify_api
+   source_shopify_fivetran
    source_snowflake_aws.rst
    source_snowflake_azure.rst
-   start_here
+
+.. toctree::
+   :caption: OTHER TOPICS
+   :maxdepth: 3
+   :hidden:
+
+   api_profile
+   configure_stitch
+   couriers
+   data_templates
+   format_dat
+   ingest_queries

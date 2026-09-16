@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -19,7 +20,7 @@ How-tos
 
 .. segments-how-tos-start
 
-This section describes tasks related to building segments in Amperity:
+Tasks related to building segments in Amperity:
 
 .. segments-how-tos-end
 
@@ -34,13 +35,15 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-segment-database-source`
 * :ref:`segments-change-date`
-* :ref:`segments-choose-andor-start`
+* :ref:`segments-choose-activation-id`
+* :ref:`segments-choose-andor`
 * :ref:`segments-compare`
 * :ref:`segments-select-segment-comparison-chart`
 * :ref:`segments-copy-column`
 * :ref:`segments-copy-segment-id`
 * :ref:`segments-copy-sql-query`
 * :ref:`segments-create-campaign`
+* :ref:`segments-custom-segment-metrics`
 * :ref:`segments-create-customer-list`
 * :ref:`segments-create-sql-segment-in-folder`
 * :ref:`segments-customize-charts`
@@ -51,8 +54,10 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-edit-segment-editor`
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
+* :ref:`segments-filter`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
+* :ref:`segments-manage-tracked-segments`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
 * :ref:`segments-rerun-segment`
@@ -62,6 +67,7 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-set-default-charts`
 * :ref:`segments-configure-segments`
 * :ref:`segments-show-columns`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-switch-sql-segment`
 * :ref:`segments-use-relative-dates`
 * :ref:`segments-view-segment`
@@ -71,9 +77,6 @@ This section describes tasks related to building segments in Amperity:
 * :ref:`segments-view-sql`
 
 .. segments-howtos-list-end
-
-
-
 
 
 .. _segments-add-attribute-from-table:
@@ -256,7 +259,7 @@ Change database source
 
 You can change the database that a segment retrieves data from.
  
-.. note:: Changing the database for a segment will remove all the segment conditions and the resulting customer lists. It will also change any campaign that uses this segment.
+.. note:: Changing the database for a segment removes all the segment conditions and the resulting customer lists. It will also change any campaign that uses this segment.
 
 .. segments-change-database-source-end
 
@@ -294,12 +297,44 @@ You can change the date range for all the insight details charts.
 .. segments-change-date-steps-end
 
 
-.. _segments-choose-andor-start:
+.. _segments-choose-activation-id:
 
-Choose AND/OR from toggle
+Choose activation ID
 ==================================================
 
-.. segments-choose-andor-start
+.. segments-choose-activation-id-start
+
+You can configure a segment to use any activation ID that is configured in your tenant.
+
+Tables and lists are limited to only those that contain a field that matches the selected activation ID.
+
+For example, if the activation ID is "email_id" then only tables with a field named **email_id** will be available for use with segments or campaigns.
+
+The language that is used within the **Segment Editor** is updated to match the friendly, singular, and plural names of the selected activation ID.
+
+For example, the "Include customers with ALL of the following" statement is updated to "Include email addresses with ALL of the following" when the plural name is "email addresses".
+
+Segment insights are updated to only show the count for records that match the selected activation ID and the language is updatedf.
+
+.. segments-choose-activation-id-end
+
+**To choose an activation ID**
+
+.. segments-choose-activation-id-steps-start
+
+#. Create a segment.
+#. In the **Segment Editor** select an activation ID from the **Activation ID** dropdown. The language in the **Segment Editor** is updated to match the configured activation ID.
+#. Build the rest of the segment as you would normally, and then click **Save**.
+
+.. segments-choose-activation-id-steps-end
+
+
+.. _segments-choose-andor:
+
+Choose AND or OR from toggle
+==================================================
+
+.. segments-choose-andor
 
 When you add a condition, select either **AND** or **OR**  on the toggle for the conditional operator.
 
@@ -325,7 +360,7 @@ You can compare segment by the following:
 
 .. segments-compare-add-steps-start
 
-#. From the **Breakdown** tab click the down arrow in the **Compare by:** field.
+#. From the **Breakdown** tab click the down arrow in the **Compare by** field.
 #. Select one of the following options from the list:
 
    * **% of Purchasers**
@@ -443,11 +478,80 @@ You can access the campaign editor from the **Segments** page.
 .. segments-create-campaign-steps-start
 
 #. From the **Segments** page, select a segment.
-#. Click **Actions** (upper-right corner) and then click **Create campaign**.
+#. Click **Actions**, and then click **Create campaign**.
 
-The Segments editor opens.
+The Segment Editor opens.
 
 .. segments-create-campaign-steps-end
+
+
+.. _segments-custom-segment-metrics:
+
+Custom segment metrics
+==================================================
+
+.. segments-custom-segment-metrics-start
+
+You can define custom segment metrics for a given segment in the **Summary** tab:
+
+* :ref:`Set custom segment metrics <segments-set-custom-segment-metrics>`
+* :ref:`Manage custom segment metrics <segments-manage-custom-segment-metrics>`
+
+.. segments-custom-segment-metrics-end
+
+.. _segments-set-custom-segment-metrics:
+
+Set custom segment metrics
+--------------------------------------------------
+
+.. segments-set-custom-segment-metrics-start
+
+You can set custom segment metrics for a given segment in the **Summary** tab.
+
+.. segments-set-custom-segment-metrics-end
+
+**To set custom segment metrics**
+
+.. segments-set-custom-segment-metrics-steps-start
+
+#. From the **Summary** tab, click **Add** button at the bottom of the page. This opens the **Custom chart** dialog box.
+
+   .. note:: The **Add** button will not appear if there is already the maximum of ten custom segment metrics. 
+   
+#. Set the metric title.
+#. Use the "Type" dropdown menu to select the type of metric, either **Bar chart** or **Number**.
+   
+   For a **Bar chart**, click **Add attribute** and use the dropdown menus to select first the source table and then the attribute.
+   
+   For a **Number**, click **Add attribute** and use the dropdown menus to select first the source table and then the attribute.
+   You must also use the dropdown menus to select a **calculation type** (sum, average, maximum, etc.) and a **number format** (integer, dollar amount, percentage, etc). You may optionally name the units being counted.
+#. Once you have set all required fields, click **Confirm**.
+
+.. segments-set-custom-segment-metrics-steps-start
+
+.. _segments-manage-custom-segment-metrics:
+
+Manage custom segment metrics
+--------------------------------------------------
+
+.. segments-manage-custom-segment-metrics-start
+
+You can manage custom segment metrics for a given segment in the **Summary** tab.
+
+.. segments-manage-custom-segment-metrics-end
+
+**To manage custom segment metrics**
+
+.. segments-manage-custom-segment-metrics-steps-start
+
+Click the |fa-kebab| icon on a custom segment metric tile to access options:
+
+* **View SQL** to view, but not edit, the SQL behind the query
+* **View** to open the **Custom chart** dialog box, where you can click **Edit** to adjust the parameters 
+* **Edit** to go directly to editing the paramters
+* **Delete** to delete the custom segment metric
+
+.. segments-manage-custom-segment-metrics-steps-end
 
 
 .. _segments-create-customer-list:
@@ -591,7 +695,7 @@ You can customize insights charts on the **Breakdown** tab.
 .. segments-customize-charts-start
 
 #. From the **Breakdown** tab, in the **Attributes breakdown** section, click **Customize**.
-#. On the **Customize breakdown charts** window, you can select up to 6 customer attributes, behavioral attributes, and default attributes. You can also uncheck default attributes that you don't want to use.
+#. On the **Customize breakdown charts** window, you can select up to 6 customer attributes, behavioral attributes, and default attributes. You can also uncheck default attributes that you do not want to use.
 #. Once done updating the insights charts, click **Apply**.
 
 The default charts are available to all users of the **Breakdown** tab.
@@ -648,6 +752,9 @@ You can download segment results as a CSV file. The CSV format is supported by m
 
 .. segments-download-steps-end
 
+.. include:: ../../amperity_reference/source/format_csv.rst
+   :start-after: .. format-csv-destination-note-start
+   :end-before: .. format-csv-destination-note-end
 
 .. _segments-duplicate-segment:
 
@@ -709,7 +816,7 @@ You can edit a segment from the **Segment Editor**.
 
 .. segments-edit-segments-editor-steps-start
 
-#. From the **Segment Editor**, click **Actions** (upper-right corner).
+#. From the **Segment Editor**, click **Actions**.
 #. Click **Edit**.
 #. Make your changes and then click **Save**.
 
@@ -754,7 +861,7 @@ You can explore a copy of a saved segment on the **Summary** tab.
 .. segments-explore-copy-steps-start
 
 #. From the **Summary** tab, click **Explore a Copy**.
-#. From the **Segments Editor**, you can do one of the following:
+#. From the **Segment Editor**, you can do one of the following:
 
    Explore the saved segment attribute details
 
@@ -762,6 +869,41 @@ You can explore a copy of a saved segment on the **Summary** tab.
 #. When done, either click **Save As** to copy the saved segment, *or* click **View** to view the segment insights on the **Summary** tab, *or* click **Cancel**.
 
 .. segments-explore-copy-steps-end
+
+.. _segments-filter:
+
+Filter segments
+==================================================
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. segments-filter-start
+
+You can filter the list of segments that appear on the **Segments** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only segments associated with that database.
+* By created by. Select any combination of users who created segments.
+* By last edited by. Select any combination of users who most recently edited segments.
+* By label. Select one or more labels to filter segments by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
+
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
+
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
+
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When many labels are selected, segments matching any selected labels will be shown.
+
+.. segments-filter-end
 
 
 .. _segments-format-segment:
@@ -784,6 +926,27 @@ You can format a segment from the **Segments** page.
 #. Click the **Format** button.
 
 .. segments-edit-segments-steps-end
+
+
+.. _segments-manage-tracked-segments:
+
+Manage tracked segments
+==================================================
+
+.. segments-manage-tracked-segments-start
+
+A tracked segment appears as a metrics card on the **Segments** page. The metrics card shows a snapshot of the segment's results and is updated daily. Enable up to fifteen tracked segments.
+
+.. segments-manage-tracked-segments-end
+
+**To enable tracked segments**
+
+.. segments-compare-add-steps-start
+
+#. From the **Segments** page, open a segment for editing.
+#. Open the **Insights** pane and select **Enable segment tracking**.
+
+.. segments-compare-add-steps-end
 
 
 .. _segments-create-new-segment-from-overlap:
@@ -838,7 +1001,7 @@ Add folders
 
 .. segments-add-folder-start
 
-Folders may be expanded (or collapsed) to view (and hide) the list of segments and subfolders contained within.
+Folders may be expanded (or collapsed) to view and hide the list of segments and subfolders contained within.
 
 .. segments-add-folder-end
 
@@ -881,7 +1044,7 @@ Move segment
 
 .. segments-list-move-segment-start
 
-Use the **Move** option to move around and organize the list of folders and segments. Folders may be expanded (or collapsed) to view (and hide) the list of segments and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and segments. Folders may be expanded (or collapsed) to view and hide the list of segments and subfolders contained within.
 
 .. segments-list-move-segment-end
 
@@ -930,15 +1093,15 @@ Bulk delete segments
 
 .. segments-bulk-delete-segments-start
 
-You can delete multiple segments from the **Segments** page.
+You can delete many segments from the **Segments** page.
 
 .. segments-bulk-delete-segments-end
 
-**To delete multiple segments**
+**To delete many segments**
 
 .. segments-bulk-delete-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Delete**.
 #. On the **Bulk Delete** window, click **Delete <#> Items**.
 
@@ -952,15 +1115,15 @@ Bulk move segments
 
 .. segments-bulk-move-segments-start
 
-You can move multiple segments to a folder from the **Segments** page.
+You can move many segments to a folder from the **Segments** page.
 
 .. segments-bulk-move-segments-end
 
-**To move multiple segments to a folder**
+**To move many segments to a folder**
 
 .. segments-bulk-move-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Move**.
 #. On the **Bulk Move** window, select a folder.
 #. Click **Move**.
@@ -989,7 +1152,7 @@ You can rename a segment from the **Segments** page.
 #. Click **Save**.
 
 
-#. From the **Segment** page, click **Actions** (upper-right corner).
+#. From the **Segment** page, click **Actions**.
 #. Click **Rename**.
 #. Enter a name and then click **Save**.
 
@@ -1063,12 +1226,12 @@ You can build a segment against any database that is visible from the **Customer
 
 .. _segments-select-multi-values:
 
-Select multiple values
+Select many values
 ==================================================
 
 .. segments-select-multiple-values-start
 
-You can select multiple values from the **Segment Editor**.
+You can select many values from the **Segment Editor**.
 
 .. segments-select-multiple-values-end
 
@@ -1096,7 +1259,7 @@ Set default charts
 
 .. segments-set-default-charts-start
 
-You can set and default charts from the **Segment Editor**.
+You can set default charts from the **Segment Editor**.
 
 .. segments-set-default-charts-end
 
@@ -1129,8 +1292,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - From the **Segments** page, under **Recommended segments**, click **Configure**.
 
@@ -1142,7 +1305,7 @@ Up to five segments may be configured to show in the list of recommended segment
 
        This opens the **Configure recommended segments** dialog box.
 
-       For each recommended segment, use the drop-down list to choose a segment
+       For each recommended segment, use the dropdown list to choose a segment
 
        .. image:: ../../images/mockup-segments-recommended-select.png
           :width: 380 px
@@ -1160,8 +1323,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Up to five recommended segments may be configured.
 
@@ -1173,8 +1336,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - When your tenant has more than one database, you can select the list of recommended segments for *each database*.
 
@@ -1184,7 +1347,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." drop-down.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for" dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px
@@ -1217,6 +1380,29 @@ You can view columns that are in the segment results from the **Customers** page
 #. Click **Refresh** to update the segment results to show the configured set of columns.
 
 .. segments-show-columns-steps-end
+
+
+.. _segments-show-summary-statistics:
+
+Show summary statistics
+==================================================
+
+.. segments-hide-summary-statistics-start
+
+You can choose which summary statistics appear on the **Summary** tab.
+
+.. segments-hide-summary-statistics-end
+
+**To hide or display summary statistics**
+
+.. segments-hide-summary-statistics-steps-start
+
+#. From the **Summary** tab, click **Actions**.
+#. Select **Summary settings**.
+#. In the **Configure view** dialog box, use the checkboxes to hide or display summary statistics.
+#. Click **Save**.
+
+.. segments-hide-summary-statistics-steps-end
 
 
 .. _segments-switch-sql-segment:
@@ -1257,7 +1443,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 .. segments-use-relative-dates-steps-start
 
 #. From the **Segment Editor**, click **Add condition**, and then choose an attribute with a date or datetime value.
-#. Select the **Use relative dates** option, and then specify the relative date (or dates) that match the condition you selected. For example: “30 days ago”.
+#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: "30 days ago". A relative date is always in Coordinated Universal Time (UTC).
 #. Click **Refresh** to validate the segment.
 #. Click **Save As**.
 
@@ -1305,7 +1491,7 @@ You can view information on the edit history for a segment from the **Segments**
 #. From the **Segments** page, open the menu for a segment.
 #. Click **Version History**.
 
-The **Segment history** window appears with informations about who edited the segment, the date(s) when the segment was edited, and the description(s) of what was edited.
+The **Segment history** window appears with informations about who edited the segment, the dates when the segment was edited, and the descriptions of what was edited.
 
 .. segments-view-edit-history-steps-end
 
@@ -1326,7 +1512,7 @@ You can view matching records from a table from the **Customers** page on the **
 .. segments-view-matching-records-steps-start
 
 #. From the **Segments** page, on the **Customers** page, expand the **Show [x] columns from [table]** link.
-#. Click in the **Show matching records from:** field.
+#. Click in the **Show matching records from** field.
 #. In the list that appears, select a table.
 
 .. segments-view-matching-records-steps-end
@@ -1378,7 +1564,7 @@ For attribute charts
 
 You can view the SQL query that calculates the statistics in the segment attribute charts.
 
-.. note:: You can't edit the query.
+.. note:: You cannot edit the query.
 
 .. segments-view-SQL-attribute-charts-end
 
@@ -1387,7 +1573,7 @@ You can view the SQL query that calculates the statistics in the segment attribu
 .. segments-view-SQL-attribute-charts-steps-start
 
 #. From the **Segments** page, select a segment and then click the **Breakdown** tab.
-#. Open the menu for a customer or behavioral attributes chart. 
+#. Open the menu for a customer or behavioral attributes chart.
 #. Select **View SQL**. The query that calculates the values in the tree is shown.
 
 .. segments-view-SQL-attribute-charts-steps-end
@@ -1402,7 +1588,7 @@ For revenue tree
 
 You can view the SQL query that calculates the statistics in the segment revenue tree.
 
-.. note:: You can't edit the query.
+.. note:: You cannot edit the query.
 
 .. segments-view-SQL-revenue-tree-end
 
@@ -1424,7 +1610,7 @@ For statistics
 
 .. segments-view-segment-stats-SQL-start
 
-You can view the SQL for segment statistics on the **Segments** page in the **Summary** and **Breakdown** tabs. 
+You can view the SQL for segment statistics on the **Segments** page in the **Summary** and **Breakdown** tabs.
 
 .. segments-view-segment-stats-SQL-end
 

@@ -82,3 +82,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dataverse-truncate-table-start
    :end-before: .. setting-microsoft-dataverse-truncate-table-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

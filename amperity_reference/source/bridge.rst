@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Bridge allows users to share data between Amperity and a data lakehouse using industry-standard data formats.
+        Amperity Bridge allows users to connect Amperity with data warehouses using industry-standard data formats.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -30,7 +30,7 @@ Advantages of Amperity Bridge include:
 
 * **Zero copy** Control access to shared tables without replicating data across platforms. Build pipelines faster and consolidate your brand's storage costs into a single location.
 
-* **Scalable processing** Enrich massive volumes of data quickly. Data is not moved or transformed from where it resides. Model customer data directly in the data lakehouse or model it in Amperity.
+* **Scalable processing** Enrich massive volumes of data. Data is not moved or transformed from where it resides. Model customer data directly in the data lakehouse or model it in Amperity.
 
 * **Live data** View customer data at rest in a data lakehouse or in Amperity through a shared catalog. Explore and query data without waiting for refreshes or updates.
 
@@ -40,69 +40,71 @@ Advantages of Amperity Bridge include:
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be configured for inbound and outbound shares to give you access to shared tables without replication.
 
-      * - .. image:: ../../images/learning-lab-bridge.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be quickly configured for inbound and outbound shares to give your brand access to shared tables without replication.
-
-          Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
-
-          Open **Learning Lab** to learn more about how `Amperity Bridge <https://learn.amperity.com/amperity-bridge-and-data-warehouses>`__ |ext_link| works. Registration is required.
+   Open **Learning Lab** to learn more about `data warehouses <https://amperity.com/learning-lab/data-warehouses>`__ |ext_link| and how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
 
 .. bridge-learning-lab-end
 
 
-.. _bridge-sync:
+.. _bridge-connect:
 
-Sync data with ...
+Connect with
 ==================================================
 
-.. bridge-sync-start
+.. bridge-connect-start
 
-Configure Amperity Bridge to sync data with the following cloud databases:
+Configure Amperity Bridge to connect with the following cloud data warehouses:
 
-* :ref:`bridge-sync-databricks`
-* :ref:`bridge-sync-snowflake`
+* :ref:`bridge-connect-databricks`
+* :ref:`bridge-connect-google-bigquery`
+* :ref:`bridge-connect-snowflake`
 
-.. bridge-sync-end
+.. bridge-connect-end
 
 
-.. _bridge-sync-databricks:
+.. _bridge-connect-databricks:
 
-Databricks
+Amperity Bridge for Databricks
 --------------------------------------------------
 
-.. bridge-sync-databricks-start
+.. bridge-connect-databricks-start
 
-Configure inbound and outbound shares in Amperity to enable `bi-directional syncing of data tables between Amperity and Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html>`__. 
+Configure inbound and outbound shares in Amperity to enable `bi-directional connections of data tables between Amperity and Databricks <../operator/bridge_databricks.html>`__.
 
-.. bridge-sync-databricks-end
+.. bridge-connect-databricks-end
 
-.. admonition:: About Delta Sharing
+.. admonition:: About OpenSharing
 
    .. include:: ../../shared/terms.rst
-      :start-after: .. term-delta-sharing-start
-      :end-before: .. term-delta-sharing-end
+      :start-after: .. term-opensharing-start
+      :end-before: .. term-opensharing-end
 
 
-.. _bridge-sync-snowflake:
+.. _bridge-connect-google-bigquery:
 
-Snowflake
+Amperity Bridge for Google BigQuery
 --------------------------------------------------
 
-.. bridge-sync-snowflake-start
+.. bridge-connect-google-bigquery-start
 
-Snowflake Bridge is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
+Configure inbound and outbound shares in Amperity to enable `inbound and outbound connections of data tables between Amperity and Google BigQuery <../operator/bridge_google_bigquery.html>`__.
 
-.. bridge-sync-snowflake-end
+.. bridge-connect-google-bigquery-end
 
-.. include:: ../../amperity_datagrid/source/bridge_snowflake.rst
+
+.. _bridge-connect-snowflake:
+
+Amperity Bridge for Snowflake
+--------------------------------------------------
+
+.. bridge-connect-snowflake-start
+
+Amperity Bridge for Snowflake is a first-class integration that leverages secure data sharing to enable `bi-directional data access between Amperity and Snowflake <../operator/bridge_snowflake.html>`__ without copying data or scheduling ETL workloads.
+
+.. bridge-connect-snowflake-end
+
+.. include:: ../../amperity_operator/source/bridge_snowflake.rst
    :start-after: .. bridge-snowflake-what-is-data-sharing-start
    :end-before: .. bridge-snowflake-what-is-data-sharing-end
 
@@ -114,7 +116,7 @@ How-tos
 
 .. bridge-howtos-start
 
-This section describes individual tasks that are related to managing bridges:
+Individual tasks that are related to managing a bridge:
 
 * :ref:`bridge-howto-add-inbound`
 * :ref:`bridge-howto-add-outbound`
@@ -122,6 +124,7 @@ This section describes individual tasks that are related to managing bridges:
 * :ref:`bridge-howto-delete`
 * :ref:`bridge-howto-download-credentials`
 * :ref:`bridge-howto-rename`
+* :ref:`bridge-howto-rotate-credentials`
 * :ref:`bridge-howto-sync`
 * :ref:`bridge-howto-upload-credentials`
 
@@ -135,10 +138,11 @@ Add inbound bridge
 
 .. bridge-howto-add-inbound-start
 
-The steps for adding an inbound bridge depend on the location from which data will be synced to Amperity:
+The steps for adding an inbound bridge depend on the location from which data will be connected to Amperity:
 
-* `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#from-databricks>`__
-* `Snowflake <https://docs.amperity.com/datagrid/bridge_snowflake.html#from-snowflake>`__
+* `Amperity Bridge for Databricks <../operator/bridge_databricks.html#from-databricks>`__
+* `Amperity Bridge for Google BigQuery <../operator/bridge_google_bigquery.html#from-google-bigquery>`__
+* `Amperity Bridge for Snowflake <../operator/bridge_snowflake.html#from-snowflake>`__
 
 .. bridge-howto-add-inbound-end
 
@@ -150,17 +154,18 @@ Add outbound bridge
 
 .. bridge-howto-add-outbound-start
 
-The steps for adding an outbound bridge depend on the location to which data will be synced from Amperity:
+The steps for adding an outbound bridge depend on the location to which data will be conencted:
 
-* `Databricks <https://docs.amperity.com/datagrid/bridge_databricks.html#to-databricks>`__
-* `Databricks <https://docs.amperity.com/datagrid/bridge_snowflake.html#to-snowflake>`__
+* `Amperity Bridge for Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__
+* `Amperity Bridge for Google BigQuery <https://docs.amperity.com/operator/bridge_google_bigquery.html#to-snowflake>`__
+* `Amperity Bridge for Snowflake <https://docs.amperity.com/operator/bridge_snowflake.html#to-snowflake>`__
 
 .. bridge-howto-add-outbound-end
 
 
 .. _bridge-howto-add-scheduled-workflow:
 
-Add bridge to scheduled workflow
+Add a bridge to a scheduled workflow
 --------------------------------------------------
 
 .. include:: ../../amperity_reference/source/courier_groups.rst
@@ -207,7 +212,9 @@ Download credentials
 
 .. bridge-howto-download-credentials-start
 
-To sync data from Amperity with a data lakehouse you may need to configure credentials for Amperity within the data lakehouse. You can download these credentials from the Amperity user interface.
+To connect Amperity with a data warehouse you may need to configure credentials for Amperity within the data warehouse. You can download these credentials from the Amperity user interface.
+
+.. important:: Credentials can only be downloaded once. Store the credentials file securely after downloading. If the file is lost or compromised, you must generate new credentials.
 
 .. bridge-howto-download-credentials-end
 
@@ -220,6 +227,34 @@ To sync data from Amperity with a data lakehouse you may need to configure crede
 #. From the **Destinations** page, under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credentials**.
 
 .. bridge-howto-download-credentials-steps-end
+
+
+.. _bridge-howto-rotate-credentials:
+
+Rotate credentials
+--------------------------------------------------
+
+.. bridge-howto-rotate-credentials-start
+
+Rotating credentials generates a new credential file for an outbound bridge. The previous credentials remain active until their configured expiration date, which allows time to update the data warehouse connection before the old credentials expire.
+
+Rotate credentials when a credential file may have been compromised, when credentials are approaching expiration, or as part of a regular security practice.
+
+.. bridge-howto-rotate-credentials-end
+
+**To rotate credentials for an outbound bridge**
+
+.. bridge-howto-rotate-credentials-steps-start
+
+#. Open the **Destinations** page.
+
+#. Under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credential**.
+
+#. Download the new credential file and store it securely.
+
+#. Update the data warehouse connection to use the new credential before the previous credentials expire.
+
+.. bridge-howto-rotate-credentials-steps-end
 
 
 .. _bridge-howto-rename:
@@ -259,6 +294,12 @@ A sync that is not configured to run as part of a scheduled workflow may be sync
 
 .. bridge-howto-sync-end
 
+.. bridge-howto-sync-datatypes-start
+
+.. important:: If an upstream data type changes, edit the bridge in Amperity, accept the changes, and then save and sync the bridge.
+
+.. bridge-howto-sync-datatypes-end
+
 **To sync a bridge**
 
 .. bridge-howto-sync-steps-start
@@ -281,7 +322,7 @@ Upload credentials
 
 .. bridge-howto-upload-credentials-start
 
-To sync data to Amperity from a data lakehouse you may need to configure credentials for the data lakehouse within Amperity. You can upload these credentials directly from the Amperity user interface.
+To sync data to Amperity from a data warehouse you may need to configure credentials for the data warehouse within Amperity. You can upload these credentials directly from the Amperity user interface.
 
 .. bridge-howto-upload-credentials-end
 

@@ -46,7 +46,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -79,7 +79,7 @@ The following table lists the operators that are available to this attribute.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual canceled order revenue amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual canceled order revenue amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**

@@ -1,0 +1,182 @@
+<div class="accent-color-picker">
+
+  <button style="--color: var(--teal-9)" title="anvil">
+    <span aria-label="anvil"></span>
+  </button>
+
+  <button style="--color: var(--cyan-9)" title="pebble">
+    <span aria-label="pebble"></span>
+  </button>
+
+  <button style="--color: var(--gray-9)" title="cloud">
+    <span aria-label="cloud"></span>
+  </button>
+
+  <button style="--color: var(--plum-9)" title="deepest pink">
+    <span aria-label="deepest pink"></span>
+  </button>
+
+  <button style="--color: var(--pink-9)" title="deep pink">
+    <span aria-label="deep pink"></span>
+  </button>
+
+  <button style="--color: var(--crimson-9)" title="saturated pink">
+    <span aria-label="saturated pink"></span>
+  </button>
+
+  <button style="--color: var(--purple-9)" title="midnight">
+    <span aria-label="midnight"></span>
+  </button>
+
+  <button style="--color: var(--violet-9)" title="dusk">
+    <span aria-label="dusk"></span>
+  </button>
+
+  <button style="--color: var(--iris-9)" title="lagoon">
+    <span aria-label="lagoon"></span>
+  </button>
+
+  <button style="--color: var(--indigo-9)" title="ocean">
+    <span aria-label="ocean"></span>
+  </button>
+
+  <button style="--color: var(--blue-9)" title="prime teal">
+    <span aria-label="prime teal"></span>
+  </button>
+
+  <button style="--color: var(--sky-9)" title="ice">
+    <span aria-label="ice"></span>
+  </button>
+
+  <button style="--color: var(--mint-9)" title="ice light">
+    <span aria-label="ice light"></span>
+  </button>
+
+  <button style="--color: var(--jade-9)" title="deep green">
+    <span aria-label="deep green"></span>
+  </button>
+
+  <button style="--color: var(--lime-9)" title="heat map green">
+    <span aria-label="heat map green"></span>
+  </button>
+
+  <button style="--color: var(--green-9)" title="green tint">
+    <span aria-label="green tint"></span>
+  </button>
+
+  <button style="--color: var(--grass-9)" title="prime green">
+    <span aria-label="prime green"></span>
+  </button>
+
+  <button style="--color: var(--ruby-9)" title="deep red">
+    <span aria-label="deep red"></span>
+  </button>
+
+  <button style="--color: var(--tomato-9)" title="red ally">
+    <span aria-label="red ally"></span>
+  </button>
+
+  <button style="--color: var(--red-9)" title="saturated red light">
+    <span aria-label="saturated red light"></span>
+  </button>
+
+  <button style="--color: var(--brown-9)" title="deep orange">
+    <span aria-label="deep orange"></span>
+  </button>
+
+  <button style="--color: var(--orange-9)" title="prime orange">
+    <span aria-label="prime orange"></span>
+  </button>
+
+  <button style="--color: var(--bronze-9)" title="gold">
+    <span aria-label="gold"></span>
+  </button>
+
+  <button style="--color: var(--gold-9)" title="moss">
+    <span aria-label="moss"></span>
+  </button>
+
+  <button style="--color: var(--yellow-9)" title="amp yellow">
+    <span aria-label="amp yellow"></span>
+  </button>
+
+  <button style="--color: var(--amber-9)" title="butternut">
+    <span aria-label="butternut"></span>
+  </button>
+
+</div>
+
+<style>
+  .accent-color-picker {
+    display: flex;
+    gap: 0.125rem;
+    flex-wrap: wrap;
+  }
+
+  .accent-color-picker button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+  }
+
+  .accent-color-picker span {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background-color: var(--color);
+    border-radius: 100%;
+  }
+
+  .accent-color-picker button.active {
+    border-color: var(--color);
+  }
+
+  .accent-color-picker button:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.accent-color-picker button');
+
+    function updateCodeBlock (color) {
+      const el = document.querySelector('#codecell0 .p + .s2');
+      if (el) {
+        el.textContent = '"' + color + '"';
+      }
+    }
+
+    function updateActiveButton (color) {
+      buttons.forEach(function(button) {
+        if (button.getAttribute('title') === color) {
+          button.classList.add('active')
+        } else {
+          button.classList.remove('active')
+        }
+      })
+    }
+
+    const accent = sessionStorage.getItem('accent-color');
+    if (accent) {
+      setTimeout(function() {
+        updateCodeBlock(accent);
+        updateActiveButton(accent);
+      });
+    }
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function () {
+        const accent = button.getAttribute('title');
+        document.documentElement.setAttribute('data-accent-color', accent);
+        updateCodeBlock(accent);
+        updateActiveButton(accent);
+        sessionStorage.setItem('accent-color', accent);
+      });
+    });
+  });
+</script>

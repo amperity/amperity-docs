@@ -11,7 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        About European Union ID (EUID)
+        European Union ID (EUID)
 
 ==================================================
 About European Union ID (EUID)
@@ -52,26 +52,26 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Image panel 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Before you can configure Amperity to act as a EUID Operator for your brand you must do the following:
 
        #. :ref:`Request access to EUID <euid-prerequisite-get-access>`.
        #. :ref:`Agree to the EUID participation policy <euid-prerequisite-participate>`.
-       #. :ref:`Get an API key <euid-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID operator for your brand.
+       #. :ref:`Get an API key <euid-prerequisite-get-credentials>` for the **Mapper** participant type. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID Operator for your brand.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Image panel 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID operator for your brand.
+     - After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID Operator for your brand.
 
        #. :ref:`Add your brand's credentials for EUID to Amperity <euid-configure-amperity-add-credentials>`.
        #. :ref:`Enable EUID <euid-configure-amperity-enable-euid>`.
        #. :ref:`Add the EUID table <euid-configure-amperity-add-euid-table>` to your brand's database.
 
-       Use custom database tables, queries, and/or segments to configure Amperity to support your brand's use cases for EUID.
+       Use custom database tables, queries, and segments to configure Amperity to support your brand's use cases for EUID.
 
 
        .. admonition:: How does Amperity maintain EUID tokens?
@@ -80,7 +80,7 @@ The following sections describe at a high level the series of steps that are req
 
           #. Amperity sends an API request to EUID using the `POST /identity/buckets <https://euid.eu/docs/endpoints/post-identity-buckets>`__ |ext_link| endpoint to identify salt buckets that have expired. All EUID tokens associated with an expired salt bucket are refreshed.
 
-          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request contains a list of email addresses that are pulled from the **Unified Coalesced** table.
+          #. Amperity sends an API request to EUID using the `POST /identity/map <https://euid.eu/docs/endpoints/post-identity-map>`__ |ext_link| endpoint. This request has a list of email addresses that are pulled from the **Unified Coalesced** table. Amperity normalizes each email address by trimming whitespace and converting all characters to lowercase before sending it to the API.
 
              The **POST /identity/map** endpoint responds with three values: a hashed email address, an advertising ID (the EUID token), and a salt bucket ID.
 
@@ -90,13 +90,13 @@ The following sections describe at a high level the series of steps that are req
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Image panel 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Build workflows against the **EUID** table to support your brand's :ref:`EUID workflows <euid-workflows>`.
 
        Use custom database tables, queries, and segments in Amperity to build audiences of EUID tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in EUID, such as The Trade Desk.
 
-       DSPs can receive EUIDs from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+       DSPs can receive EUIDs from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. euid-howitworks-table-end
 
@@ -112,7 +112,7 @@ Before your brand can configure Amperity to generate EUID tokens you must do the
 
 #. :ref:`Get access to EUID <euid-prerequisite-get-access>`.
 #. Agree to :ref:`a EUID participation policy <euid-prerequisite-participate>`, which is a legal requirement for EUID sharing.
-#. :ref:`Get an API key <euid-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID operator for your brand.
+#. :ref:`Get an API key <euid-prerequisite-get-credentials>`. Use the credentials for this API key to allow Amperity to access endpoints in the EUID API and act as a EUID Operator for your brand.
 
 .. euid-prerequisites-end
 
@@ -168,7 +168,7 @@ Configure Amperity
 
 .. euid-configure-amperity-start
 
-After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID operator for your brand.
+After your brand has adopted EUID as part of your identity strategy you can configure Amperity to act as a EUID Operator for your brand.
 
 #. :ref:`Add your brand's Mapper credentials for EUID to Amperity <euid-configure-amperity-add-credentials>`.
 #. :ref:`Enable EUID <euid-configure-amperity-enable-euid>`.
@@ -194,7 +194,7 @@ Add your brand's Mapper credentials for EUID to Amperity. Open the **Settings** 
    :align: left
    :class: no-scaled-link
 
-Choose the **EUID** plugin. Provide a name and description for the credential that ensures users within your tenant know it's related to EUID. Add the API key and the client secret for your brand's **Mapper** participant credentials.
+Choose the **EUID** plugin. Provide a name and description for the credential that ensures users within your tenant know it is related to EUID. Add the API key and the client secret for your brand's **Mapper** participant credentials.
 
 .. euid-configure-amperity-add-credentials-end
 
@@ -206,7 +206,7 @@ Enable EUID token generation
 
 .. euid-configure-amperity-enable-euid-start
 
-EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **EUID Generation** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** drop-down.
+EUID token generation is enabled from the **Customer 360** page. Click the **UID2** link to open the **UID2 and EUID Configuration** dialog box. Select the **Enable EUID generation** checkbox, and then choose your brand's **Mapper** credentials from the **Select credentials** dropdown.
 
 .. image:: ../../images/mockup-databases-enable-euid.png
    :width: 460 px
@@ -237,6 +237,26 @@ Add the **EUID** table to any database as a passthrough table. The **EUID** tabl
    :end-before: .. data-tables-euid-table-end
 
 
+.. _euid-configure-amperity-add-euid-history-table:
+
+Add EUID History table to database
+--------------------------------------------------
+
+.. euid-configure-amperity-add-euid-history-table-start
+
+Add the **EUID History** table to any database as a passthrough table. The **EUID History** table is a core table that records every version of a customer's EUID token over time. A new row is appended each time a customer's EUID token is refreshed due to salt bucket rotation.
+
+.. euid-configure-amperity-add-euid-history-table-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-euid-history-table-about-start
+   :end-before: .. data-tables-euid-history-table-about-end
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-euid-history-table-start
+   :end-before: .. data-tables-euid-history-table-end
+
+
 .. _euid-workflows:
 
 About EUID workflows
@@ -246,7 +266,7 @@ About EUID workflows
 
 Use custom database tables, queries, and segments in Amperity to build audiences of EUID tokens that support your brand's advertising strategies. Send these audiences to demand-side platforms (DSPs) that participate in EUID, such as The Trade Desk.
 
-DSPs can receive EUIDs from advertisers as first- and/or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
+DSPs can receive EUIDs from advertisers as first- or third-party data. Advertisers buy impressions across a range of publisher sites. DSPs help advertisers decide which ad impressions to purchase and how much to bid on them.
 
 .. list-table::
    :widths: 10 90
@@ -255,7 +275,7 @@ DSPs can receive EUIDs from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Advertisers and EUID
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Advertising with EUID enables the use of use `first-party data <https://euid.eu/docs/overviews/overview-advertisers>`__ |ext_link| to build omnichannel campaigns across devices using a single identifier. Using EUID as part of your advertising strategy will help your brand:
 
@@ -269,7 +289,7 @@ DSPs can receive EUIDs from advertisers as first- and/or third-party data. Adver
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Data providers and EUID
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Data providers can use EUID to enable the use of `third-party data <https://euid.eu/docs/overviews/overview-data-providers>`__ |ext_link|. This approach to advertising can reduce identity fragmentation and connect third-party data to a more durable, omnichannel, cross-device identifier.
 

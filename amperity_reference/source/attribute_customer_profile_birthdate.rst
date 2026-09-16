@@ -46,7 +46,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Date data type. All Date data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **date** data type. All **date** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -82,10 +82,10 @@ The following table lists the operators that are available to this attribute.
      - Returns customer records that do not have a value.
 
    * - **is on or after**
-     - Return all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. 
+     - Return all dates that occur on or after the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
    * - **is on or before**
-     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. 
+     - Return all dates that occur on or before the selected calendar date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
 .. attribute-customer-profile-birthdate-conditions-end
 
@@ -95,12 +95,12 @@ The following table lists the operators that are available to this attribute.
 About relative dates
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end

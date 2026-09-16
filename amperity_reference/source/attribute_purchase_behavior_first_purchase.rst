@@ -41,7 +41,7 @@ How this attribute works
 
 **First purchase** represents a common approach people use when they build segments: find all of my customers who made their first purchase in the past N days, months, or years, and then associate that list of customers to your products and brands.
 
-**First purchase** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**First purchase** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -74,7 +74,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
    ::
 
       WHERE order_rank = 1
-      AND order_datetime < DATE_TRUNC('day', CURRENT_TIMESTAMP - interval '12' month)
+      AND order_datetime > DATE_TRUNC('day', CURRENT_TIMESTAMP - interval '12' month)
 
    In this example, only transactions that occurred within the previous 12 months *and* are a customer's first purchase are returned.
 
@@ -98,13 +98,17 @@ With this attribute, you can focus less on SQL and more on finding answers that 
    ::
 
       SELECT
-        amperity_id
+        unique_id
         ,order_datetime
-        product_category = 'shirt'
-        product_subcategory = 'blue'
-        purchase_channel = 'online'
-        ,RANK() OVER (PARTITION BY amperity_id ORDER BY order_datetime, order_id) AS order_rank
-      FROM Unified_Itemized_Transactions
+        ,product_category
+        ,product_subcategory
+        ,purchase_channel
+        ,RANK() OVER (PARTITION BY unique_id ORDER BY order_datetime, order_id) AS order_rank
+      FROM Transactions
+      WHERE product_category = 'shirt'
+      AND product_subcategory = 'blue'
+      AND purchase_channel = 'online'
+
 
    Why are these attributes added to the WHERE statement *and* the SELECT statement? They are added to the SELECT statement to ensure that the correct ranking is applied to products, purchases, and stores *before* you apply product, purchase, and store filters to your segment.
 
@@ -126,7 +130,7 @@ Add to segments
 
 .. attribute-purchase-behavior-first-purchase-segments-start
 
-You can add the **First purchase** purchase behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **First purchase**.
+You can add the **First purchase** behavior to a segment from the **Segment Editor**. Click **Add condition**, choose **Purchase behaviors**, and then select **First purchase**.
 
 .. image:: ../../images/attributes-picker-purchase-behavior-first-purchase.png
    :width: 540 px
@@ -134,7 +138,7 @@ You can add the **First purchase** purchase behavior to a segment from the **Seg
    :align: left
    :class: no-scaled-link
 
-After the **First purchase** purchase behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
+After the **First purchase** behavior attribute has been added, select an operator, and then finish defining the conditions for how this attribute should be applied to the segment.
 
 .. attribute-purchase-behavior-first-purchase-segments-end
 
@@ -144,13 +148,13 @@ After the **First purchase** purchase behavior attribute has been added, select 
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 
@@ -210,6 +214,6 @@ Filter attributes
 
 .. attribute-purchase-behavior-first-purchase-filter-attributes-start
 
-A filter attribute is a standard column that is output by Amperity and is available from the **Unified Itemized Transactions** table. When a filter attribute is associated with a purchase behavior attribute, you may use them to filter the results by specific items in your product catalog, such as by brand, by channel, by store, or by specific details about the items in your product catalog, such as color, SKU, and so on. The list of filter attributes that will be available for product catalogs depends on their availability within your **Unified Itemized Transactions** table.
+A filter attribute is a standard column that is output by Amperity and is available from the **Unified Itemized Transactions** table. When a filter attribute is associated with a purchase behavior attribute, you may use them to filter the results by specific items in your product catalog, such as by brand, by channel, by store, or by specific details about the items in your product catalog, such as color or SKU. The list of filter attributes that will be available for product catalogs depends on their availability within your **Unified Itemized Transactions** table.
 
 .. attribute-purchase-behavior-first-purchase-filter-attributes-end

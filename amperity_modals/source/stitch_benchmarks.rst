@@ -4,9 +4,13 @@
 Stitch benchmarking
 ==================================================
 
-This topic contains content groupings for cards that explain Stitch benchmarks.
+.. vale off
 
-Each H1 in this topic is the title of a card. The **xxxx-desc** is the visible description for that card and the **xxxxx-more** is the "show more" content.
+Content groupings for cards that explain Stitch benchmarks.
+
+Each H1 is the title of a card. The **xxxx-desc** is the visible description for that card and the **xxxxx-more** is the "show more" content.
+
+.. vale on
 
 
 Size of largest cluster
@@ -30,7 +34,7 @@ Shared name and phone
 
 **shared-name-phone-more**
 
-   A large ratio indicates that a unique name and phone combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and phone combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 
@@ -65,7 +69,7 @@ Many NULL records
 
 **many-null-records-desc**
 
-   The percentage of stitched records that contain sparse data, which occurs when email addresses, physical addresses, and phone numbers have NULL values.
+   The percentage of stitched records that contain sparse data, which occurs when email addresses, physical addresses, and phone numbers have **NULL** values.
 
 **many-null-records-more**
 
@@ -82,7 +86,7 @@ Shared name and email address
 
 **shared-name-email-more**
 
-   A large ratio indicates that a unique name and email address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and email address combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 
@@ -95,7 +99,7 @@ Shared name and physical address
 
 **shared-name-address-more**
 
-   A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and physical address combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 

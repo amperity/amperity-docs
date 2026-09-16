@@ -11,11 +11,11 @@
 
 For repeat customers, groupings include the following tiers:
 
-* Active (likelihood to purchase is greater than 60%)
-* Cooling down (likelihood to purchase is between than 50% and 60%)
-* At risk (likelihood to purchase is between than 35% and 50%)
-* Highly at risk (likelihood to purchase is between than 20% and 35%)
-* Lost (likelihood to purchase is less than 20%)
+* **Active** Likelihood to purchase is greater than 60%.
+* **Cooling down** Likelihood to purchase is between than 50% and 60%.
+* **At risk** Likelihood to purchase is between than 35% and 50%.
+* **Highly at risk** Likelihood to purchase is between than 20% and 35%.
+* **Lost** Likelihood to purchase is less than 20%.
 
 .. models-churn-propensitity-tiers-repeat-end
 
@@ -23,10 +23,10 @@ For repeat customers, groupings include the following tiers:
 
 For one-time buyers, groupings include the following tiers:
 
-* Active (purchased within 60 days)
-* Cooling down (purchased 60-120 days ago)
-* At risk (purchased 120-180 days ago)
-* Highly at risk (purchased 180-240 days ago)
-* Lost (purchased 240+ days ago)
+* **Active** Purchased within 60 days.
+* **Cooling down** Purchased 60-120 days ago.
+* **At risk** Purchased 120-180 days ago.
+* **Highly at risk** Purchased 180-240 days ago.
+* **Lost** Purchased 240+ days ago.
 
 .. models-churn-propensitity-tiers-onetime-end

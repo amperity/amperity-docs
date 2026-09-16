@@ -1,0 +1,455 @@
+.. https://docs.amperity.com/operator/
+
+
+.. meta::
+    :description lang=en:
+        Amperity predictive modeling is built from your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Amperity predictive modeling is built from your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Predictive models
+
+==================================================
+About predictive models
+==================================================
+
+.. models-start
+
+Amperity predictive modeling is based on your brand's customer profiles and behavioral history to give you insights into customer purchasing behavior. Amperity combs through hundreds of features to yield a state of the art adaptive ensemble model. Amperity layers on a rigorous MLOps infrastructure to monitor prediction accuracy and stability.
+
+.. models-end
+
+.. TODO: For more information on our models for churn and customer lifetime value, see https://link.springer.com/article/10.1007/s11129-023-09272-x.
+
+
+.. _models-list:
+
+Available models
+==================================================
+
+.. models-list-start
+
+The following out-of-the-box models are configurable directly within Amperity by a user who is assigned the **DataGrid Administrator** policy:
+
+* :ref:`Churn propensity <model-churn-propensity>`
+* :ref:`Event propensity (EPM) <model-event-propensity>`
+* :ref:`Predicted CLV <model-predicted-clv>`
+* :ref:`Product affinity <model-product-affinity>`
+
+.. tip:: When building models there is a tradeoff between speed and accuracy.
+
+   When optimizing for speed the default models are often accurate enough with the default set of input fields. Your brand can revisit the inputs at a later point in time.
+
+   When optimizing for accuracy you should include all possible fields that are relevant for modeling, including required and optional fields in **Unified Transactions**. This may require using SQL to extend the table to support these additional features.
+
+   Review the list of fields that are used by :ref:`churn propensity, predicted CLV, and product affinity modeling <models-fields-used-by-all-models>` and by :ref:`event propensity modeling <models-fields-used-by-epm>` to determine what features may be required for :ref:`additional model accuracy <models-extend>`.
+
+.. models-list-end
+
+
+.. _model-churn-propensity:
+
+Churn propensity
+--------------------------------------------------
+
+.. model-churn-propensity-about-start
+
+Every customer has a unique purchase history. Instead of relying on hard-coded RFM analyses, use :doc:`churn propensity <model_churn_propensity>` scores to uncover each user's underlying purchase patterns and make predictions about their likelihood to re-engage with your brand, whether they are a daily, monthly, or seasonal shopper.
+
+* Identify customers who are likely to churn
+* Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
+* Support a churn prevention campaign that has a series of escalating win-back offers
+* Optimize suppression and spend
+
+By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
+
+.. model-churn-propensity-about-end
+
+
+.. _model-event-propensity:
+
+Event propensity
+--------------------------------------------------
+
+.. model-event-propensity-about-start
+
+Use :doc:`event propensity <model_event_propensity>` modeling to associate individual customers to specific events that, depending on the type of event, are most likely to lead to engagement with your brand. Customers are grouped by audience size and by ranking.
+
+.. model-event-propensity-about-end
+
+
+.. _model-predicted-clv:
+
+Predicted CLV
+--------------------------------------------------
+
+.. model-predicted-clv-about-start
+
+Amperity models :doc:`predicted customer lifetime value (CLV) <model_predicted_clv>` by fitting observed spend against hundreds of behavioral and demographic inputs in a patented approach, and then predicts for each customer their:
+
+#. Probability of purchase
+#. Number of orders
+#. Average order value
+
+You can use predicted CLV modeling to build high-value audiences that identify:
+
+* Which customers have the highest predicted value?
+* Which customers will respond better to special offers and perks?
+* What are the best personalized experiences for your top customers, such as personalized rewards, offers, and content?
+* Which customers have individual price preferences?
+
+.. model-predicted-clv-about-end
+
+
+.. _model-product-affinity:
+
+Product affinity
+--------------------------------------------------
+
+.. model-product-affinity-about-start
+
+Amperity models :doc:`product affinity <model_product_affinity>` for any product taxonomy that has between 20 and 2000 unique values, such as brand, category, subcategory, color, size, season, and style. Product affinity modeling analyzes:
+
+* Historical data to identify customers who have purchased a product in the past and are likely to do so again.
+* Lookalike audiences to identify customers who have not purchased a product, but are likely to buy because they are similar to customers who have purchased.
+
+.. model-product-affinity-about-end
+
+
+.. _models-fields-used-by-all-models:
+
+Fields used by all models (except EPM)
+==================================================
+
+.. models-fields-used-by-all-models-start
+
+The churn, pCLV, and affinity models start with a set of fields from the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables from the database in which the model is built. EPM uses fields from **Merged Customers**, as well as the custom input tables selected during configuration.
+
+The churn and pCLV models support custom input tables for transactions and transaction items. These tables should have the same field names as **Unified Transactions** and **Unified Itemized Transactions**, but can have custom logic, such as filtering or aliasing, depending on the data your brand wants to use to model churn and pCLV.
+
+You may customize predictive models, such as excluding certain types of customers and adding custom features that support your brand's use cases. Customer exlusions are based off of the **Customer Attributes** table, and custom features are based off of additional fields that may exist on **Unified Itemized Transactions**.
+
+.. models-fields-used-by-all-models-end
+
+.. models-fields-used-by-all-models-table-start
+
+The following fields are automatically included in all predictive models:
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Table
+     - Fields
+   * - **Merged Customers**
+     - Predictive models always use the following fields in the **Merged Customers** table:
+
+       * **Amperity ID**
+       * **Birthdate**
+       * **City**
+       * **Email**
+       * **Gender**
+       * **Given name**
+       * **Phone**
+       * **Postal**
+       * **State**
+       * **Surname**
+
+   * - **Unified Transactions**
+     - Predictive models always use the following fields in the **Unified Transactions** table:
+
+       * **Amperity ID**
+       * **Order datetime**
+       * **Order ID**
+       * **Order quantity**
+       * **Order revenue**
+
+       The following fields, when they are available in the **Unified Transactions** table, will also be used:
+
+       * **Order cancelled quantity**
+       * **Order cancelled revenue**
+       * **Order discount amount**
+
+         If your tenant does not have order-level discount data, define order-level discounts to equal the sum of item-level discount amounts. This will ensure that predictive modeling is able to incorporate signals for discount shoppers.
+
+       * **Order returned quantity**
+       * **Order returned revenue**
+       * **Purchase brand**
+       * **Purchase channel**
+       * **Store ID**
+
+   * - **Unified Itemized Transactions**
+     - Predictive models always use the following fields in the **Unified Itemized Transactions** table:
+
+       * **Amperity ID**
+       * **Is return**
+       * **Item quantity**
+       * **Item revenue**
+       * **Order datetime**
+       * **Order ID**
+       * **Product ID**
+
+.. models-fields-used-by-all-models-table-end
+
+
+.. _models-fields-used-by-epm:
+
+Fields used by event propensity
+==================================================
+
+.. models-fields-used-by-epm-start
+
+Event propensity models are highly configurable. The only table used by default is **Merged Customers**; every other input is an event table that you select during model setup. Unlike churn propensity, predicted CLV, and product affinity, event propensity does not require the **Unified Transactions** or **Unified Itemized Transactions** tables.
+
+Each model predicts a single **target event**, such as a loyalty signup, a credit card signup, or a repeat booking. The target event table must have one row per event occurrence and must contain an **amperity_id** field and a date (or datetime) field.
+
+Each model predicts the target event for one of two **prediction audiences**:
+
+* **Repeat event**: the likelihood that a customer who has *already* performed the event will perform it again (for example, repeat bookings).
+* **One-time event**: the likelihood that a customer who has *never* performed the event will perform it for the first time (for example, loyalty signups).
+
+**Input events** provide the behavioral signal that the model learns from. Each input event table must have one row per event occurrence, must contain an **amperity_id** field and a date (or datetime) field, and must represent a single type of event. Use one table per event type. At least one input event is required for one-time-event models and is recommended for repeat-event models. Input events that include revenue data (for example, transactions or bookings) are especially valuable, and adding more input events generally improves predictions.
+
+For each input event you may also configure:
+
+* A **revenue field**: a numeric field that captures the revenue generated by the event.
+* A **realization date**: for events where revenue is generated at one point in time but realized at another--such as a hotel booking (generation) versus the hotel stay (realization)--the date on which the revenue is realized. Supply both the event date and the realization date to the model.
+* **Properties**: string fields that the model uses as categorical features (for example, brand, channel, or tier). Properties are optional, but can improve accuracy when they capture meaningful behavioral variation.
+
+.. models-fields-used-by-epm-end
+
+
+.. _models-extend:
+
+Extending models
+==================================================
+
+.. models-extend-start
+
+You can build predictive models from the **Customer 360** page. Each database that has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may have any number of pCLV, product affinity, and event propensity models.
+
+.. warning:: Even if your brand wants to use a custom transactions or transactions item table for churn and pCLV modeling, you must have tables named **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** in your database due to automated back-end validations.
+
+Each predictive model allows for additional fields to be added to support your brand's use cases. Do one of the following:
+
+#. **Optimize for implementation speed**
+
+   If your brand wants to optimize for implementation speed the default fields, along with any required extensions, are accurate enough to start with.
+
+   You can revisit a model that was optimized for implementation speed at a later time, and then make changes to extend them for model accuracy later.
+
+#. :bdg-success:`Recommended` **Optimize for model accuracy**
+
+   If your brand wants to optimize for model accuracy you should plan to extend each model as much as possible.
+
+   This includes adding fields and features to the model configuration, and also ensuring that the database tables that contain those fields and features are available within the database in which the model is built.
+
+   Add all possible fields that are relevant for modeling, including all optional fields that are available from the **Unified Itemized Transactions** table.
+
+   Ensure that the **Customer Attributes** table has all possible exceptions that your brand may want to use.
+
+   Ensure that custom features your brand wants to use in predictive models are populated, have a small percentage of **NULL** values, and have reliable values that do not change much day-to-day)
+
+.. models-extend-end
+
+
+.. _models-build:
+
+Build a model
+==================================================
+
+.. models-build-start
+
+Predictive models are configurable in Amperity:
+
+* :ref:`Build a churn propensity model <model-churn-propensity-configure>`
+* :ref:`Build a event propensity model <model-event-propensity-configure>`
+* :ref:`Build a predicted CLV model <model-predicted-clv-build>`
+* :ref:`Build a product affinity model <model-product-affinity-build>`
+
+.. models-build-end
+
+
+.. _models-howtos:
+
+How-tos
+==================================================
+
+.. models-howtos-start
+
+Individual tasks for building predictive models:
+
+* :ref:`models-howtows-activate`
+* :ref:`models-howtows-add`
+* :ref:`models-howtows-delete`
+* :ref:`models-howtows-edit`
+* :ref:`models-howtows-pause`
+* :ref:`models-howtows-promote-from-sandbox`
+* :ref:`models-howtows-schedule`
+* :ref:`models-howtows-view-jobs`
+* :ref:`models-howtows-view-model-configuration`
+* :ref:`models-howtows-view-model-versions`
+
+.. models-howtos-end
+
+
+.. _models-howtows-activate:
+
+Activate a model
+--------------------------------------------------
+
+.. models-howtows-activate-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
+#. This opens the page for selected model in edit mode.
+#. Press **Activate** at top right-hand-side of the model configuration page
+#. Select a courier group. The model runs at the same frequency as the courier group.
+
+.. models-howtows-activate-steps-end
+
+
+.. _models-howtows-add:
+
+Add a model
+--------------------------------------------------
+
+.. models-howtows-add-steps-start
+
+These are captured in the "Build a model" section for each of the five model-specific pages:
+
+#. :ref:`model-churn-propensity-configure`
+#. :ref:`model-event-propensity-configure`
+
+.. #. :ref:`model-predicted-clv-configure`
+.. #. :ref:`model-product-affinity-configure`
+
+.. models-howtows-add-steps-end
+
+
+.. _models-howtows-delete:
+
+Delete a model
+--------------------------------------------------
+
+.. models-howtows-delete-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to delete, from the |fa-kebab| menu, select **Delete**. Confirm by clicking **Delete**.
+
+.. models-howtows-delete-steps-end
+
+
+.. _models-howtows-edit:
+
+Edit a model
+--------------------------------------------------
+
+.. models-howtows-edit-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to edit, from the |fa-kebab| menu, select **Edit**.
+#. This opens page for selected model in edit mode.
+
+.. models-howtows-edit-steps-end
+
+
+.. _models-howtows-pause:
+
+Pause a model
+--------------------------------------------------
+
+.. models-howtows-pause-steps-start
+
+A paused model will not run as part of a courier group workflow, even if that workflow is scheduled. You may activate a paused workflow without redefining the schedule if a schedule exists.
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to pause, from the |fa-kebab| menu, select **Pause**. Confirm that you want to pause the model by clicking **Pause**.
+
+.. models-howtows-pause-steps-end
+
+
+.. _models-howtows-promote-from-sandbox:
+
+Promote from a sandbox
+--------------------------------------------------
+
+.. models-howtows-promote-from-sandbox-steps-start
+
+The following steps are needed to prepare a model for sandbox promotion.
+
+#. Create a sandbox.
+#. Run the databases in which your brand intends to activate models.
+#. :ref:`Add models <models-howtows-add>`.
+#. Start model validations from the lower left-hand-side of the page. When complete, confirm that validation metrics are passing.
+#. :ref:`Start the training jobs <models-howtows-view-jobs>`.
+#. :ref:`When the training jobs are complete, start inference jobs <models-howtows-view-jobs>`.
+#. When the inference job is complete, re-run the database to populate the predictive data asset.
+#. :ref:`Activate the model <models-howtows-activate>`.
+#. Promote the sandbox.
+
+.. models-howtows-promote-from-sandbox-steps-end
+
+
+.. _models-howtows-schedule:
+
+Schedule a model
+--------------------------------------------------
+
+.. models-howtows-schedule-steps-start
+
+A model must be associated with a scheduled courier group workflow.
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to schedule, from the |fa-kebab| menu, select **Schedule workflow**. This opens the **Model schedule** dialog.
+#. The **Training job cadence** is the frequency at which additional data is made available to the model to improve accuracy. The default is every two weeks.
+#. The **Inference job cadence** is the frequency at which predictions are generated. The default is daily.
+#. Click **Save**.
+
+.. models-howtows-schedule-steps-end
+
+
+.. _models-howtows-view-jobs:
+
+View jobs
+--------------------------------------------------
+
+.. models-howtows-view-jobs-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to schedule, from the |fa-kebab| menu, select **Jobs**. This opens the **Jobs** page.
+#. You can run the full predictive workflow or individual jobs by type.
+#. The results for each job are shown on the right side, including past run dates, run status, and the number of records in the results.
+
+.. models-howtows-view-jobs-steps-end
+
+
+.. _models-howtows-view-model-configuration:
+
+View model configuration
+--------------------------------------------------
+
+.. models-howtows-view-model-configuration-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to schedule, from the |fa-kebab| menu, select **View**. This opens the page for selected model.
+
+.. models-howtows-view-model-configuration-steps-end
+
+
+.. _models-howtows-view-model-versions:
+
+View model versions
+--------------------------------------------------
+
+.. models-howtows-view-model-versions-steps-start
+
+#. From the **Customer 360** page, select the **Predictive models** tab. This opens the **Predictive models** page.
+#. In the row with the model you want to schedule, from the |fa-kebab| menu, select **View**. This opens the page for selected model.
+#. A dropdown menu at top of the page lists the current configuration as the default. Earlier configurations are available from the same dropdown.
+
+.. models-howtows-view-model-versions-steps-end
