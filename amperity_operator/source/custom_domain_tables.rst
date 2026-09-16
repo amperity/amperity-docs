@@ -125,7 +125,7 @@ Hash PII data that has been resent to Amperity
 
 .. _custom-domain-tables-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst

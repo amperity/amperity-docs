@@ -27,7 +27,7 @@ Repeat purchase
    :align: left
    :class: no-scaled-link
 
-.. important:: **Repeat purchase** identifies a repeat purchase by comparing purchases within the chosen date range to all purchases. For example, a customer who first purchased 2 years ago, and then purchased again last month would be returned by a relative date range "today - 1 month". A customer who first purchased 10 years ago, and then purchased again last month would also be returned. As well as a customer who first purchased 2 months ago, and then purchased again last month.
+.. important:: **Repeat purchase** identifies a repeat purchase by comparing purchases within the chosen date range to all purchases. For example, a customer who first purchased 2 years ago, and then purchased again last month would be returned by a relative date range ``today - 1 month``. A customer who first purchased 10 years ago, and then purchased again last month would also be returned. As well as a customer who first purchased 2 months ago, and then purchased again last month.
 
 After you specify a date range you may apply filters to associate repeat orders to specific products, brands, channels, and stores. For example, return all customers who made a repeat purchase of shoes from your ACME Footwear brand.
 
@@ -164,13 +164,13 @@ After the **Repeat purchase** behavior attribute has been added, select an opera
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 

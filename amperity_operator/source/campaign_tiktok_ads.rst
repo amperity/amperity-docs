@@ -51,7 +51,7 @@ Custom audiences help find people who already know about or have engaged with yo
 
 .. campaign-tiktok-ads-api-note-start
 
-.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map multiple advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
+.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map many advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -415,9 +415,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-tiktok-ads-workflow-actions-advertiser-not-found`
-       * :ref:`destination-tiktok-ads-workflow-actions-invalid-credentials`
-       * :ref:`destination-tiktok-ads-workflow-actions-missing-advertiser-permissions`
+       * :ref:`campaign-tiktok-ads-workflow-actions-advertiser-not-found`
+       * :ref:`campaign-tiktok-ads-workflow-actions-invalid-credentials`
+       * :ref:`campaign-tiktok-ads-workflow-actions-missing-advertiser-permissions`
 
 
    * - .. image:: ../../images/steps-04.png

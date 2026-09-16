@@ -35,13 +35,26 @@ Configure destinations for DV360
    :start-after: .. term-dv360-start
    :end-before: .. term-dv360-end
 
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-end
+.. admonition:: What is Display & Video 360?
 
-.. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
-   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+   `Display & Video 360 <https://marketingplatform.google.com/about/display-video-360/>`__ |ext_link|
+   (DV360) is Google's demand-side platform (DSP) for programmatic advertising. It enables brands
+   and agencies to plan, buy, and measure digital media across display, video, TV, and audio
+   channels--including YouTube and web placements--through a single platform.
+
+   DV360 supports two account types:
+
+   * **Display Video Advertiser** An individual brand or business that runs programmatic
+     campaigns directly within DV360.
+   * **Display Video Partner** An agency, trading desk, or large advertiser that manages
+     programmatic campaigns across many advertiser accounts under a single partner account.
+
+   Use Amperity to build high-value audience segments from first-party data, and then send those
+   segments to DV360 to activate them in programmatic advertising campaigns.
+
+.. note:: DV360 audiences are configured through the **Google Customer Match** plugin. For the
+   **Customer product**, select **Display Video Advertiser** or **Display Video Partner**, depending
+   on your DV360 account type. Then enter that account's ID as the **Customer ID**.
 
 .. destination-dv360-api-note-start
 
@@ -82,7 +95,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -134,6 +147,12 @@ Get details
           :class: no-scaled-link
      - **Required configuration settings**
 
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
+
        **Customer ID**
 
           .. include:: ../../shared/destination_settings.rst
@@ -182,17 +201,17 @@ Get details
 Configure credentials
 ==================================================
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-configure-first-start
-   :end-before: .. credential-configure-first-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-snappass-start
-   :end-before: .. credential-snappass-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-intro-start
+   :end-before: .. destinations-oauth-intro-end
 
-**To configure credentials for Google Ads**
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google before configuring OAuth in Amperity.
 
-.. destination-dv360-credentials-steps-start
+**To configure OAuth for DV360**
 
 .. list-table::
    :widths: 10 90
@@ -203,35 +222,31 @@ Configure credentials
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-add-credential-start
-          :end-before: .. credential-steps-add-credential-end
+     - Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
+
+       Select |plugin-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select **Create a new credential**.
+
+       This opens the **Create New Credential** dialog box.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-2-start
+          :end-before: .. destinations-oauth-configure-step-2-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-settings-intro-start
-          :end-before: .. credential-steps-settings-intro-end
+     - Open the **Destinations** tab and click **Add Destination**. The **Add Destination** dialog box opens.
 
-       **Refresh token**
+       Select |plugin-name| from the **Plugin** dropdown, and then from the **Credential** dropdown, select the credential that is authorized to access |destination-name|.
 
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
-
-.. destination-dv360-credentials-steps-end
+       .. note:: The value for the **Refresh Token** setting is updated automatically after you select the credential.
 
 
 .. _destination-dv360-reauthorize-amperity:
@@ -253,7 +268,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Google Ads**
+**To add a destination for Display & Video 360**
 
 .. destination-dv360-add-steps-start
 
@@ -276,9 +291,10 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. destinations-steps-add-destinations-select-start
-          :end-before: .. destinations-steps-add-destinations-select-end
+       To configure a destination for |destination-name|, do one of the following:
+
+       #. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+       #. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -325,6 +341,12 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
+
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
 
        **Customer ID**
 
@@ -418,7 +440,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -432,7 +454,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Number**
@@ -450,7 +472,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **First Name**
@@ -459,7 +481,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **ZIP Code**
@@ -467,7 +489,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -488,7 +510,7 @@ European Union user consent
 
 .. destination-dv360-api-matching-eu-consent-start
 
-The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
+The Google Audience Partner API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
 .. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and to adhere to the European Union (EU) user consent policy.
 
@@ -521,7 +543,7 @@ Mobile Device ID Matching
 
 .. destination-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -535,7 +557,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. destination-dv360-api-matching-mobile-list-end

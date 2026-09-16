@@ -81,7 +81,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Ads" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Google Ads" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -631,7 +631,7 @@ Contact Info Matching
 
 .. campaign-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -645,7 +645,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Number**
@@ -663,7 +663,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **First Name**
@@ -672,7 +672,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **ZIP Code**
@@ -680,7 +680,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -734,7 +734,7 @@ Mobile Device ID Matching
 
 .. campaign-google-ads-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -748,7 +748,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. campaign-google-ads-api-matching-mobile-list-end
@@ -761,7 +761,7 @@ User ID Matching
 
 .. campaign-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

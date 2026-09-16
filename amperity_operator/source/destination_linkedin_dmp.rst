@@ -11,6 +11,8 @@
 .. |filter-the-list| replace:: "link"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **email**
+
 
 .. meta::
     :description lang=en:
@@ -45,13 +47,19 @@ This connector automates uploading data into the |destination-name| as a CSV fil
 The CSV file may contain the following contact information fields:
 
 * **email**
+* **firstname**
+* **lastname**
 * **title**
-* **employeecountry**
-* **company**
+* **country**
+* **employeecompany**
 
-The CSV file must have between 300 and 300,000 contacts.
+Either **email** or both **firstname** and **lastname** must be included. Country values are automatically normalized to ISO 3166-1 alpha-2 country codes before sending. If a raw email address is detected in any non-email field, it is automatically removed before sending. The CSV file must have between 300 and 300,000 contacts.
 
 .. destination-linkedin-dmp-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-linkedin-dmp-api-note-start
 
@@ -505,7 +513,7 @@ Invalid fields
 
 .. destination-linkedin-dmp-workflow-actions-invalid-fields-start
 
-To resolve this error, verify that the list you want to upload contains only allowed fields.
+To resolve this error, verify that the list you want to upload has only allowed fields.
 
 #. Open the **Activations** page and locate the segment used with this workflow.
 #. Confirm that fields included are only 1) **email** or 2) **firstname** and **lastname**.

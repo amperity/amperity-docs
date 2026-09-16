@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-ingest-jobs-id-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-id-base-url:
+.. _endpoint-get-ingest-jobs-id-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-id-base-url-start
+.. endpoint-get-ingest-jobs-id-request-url-start
 
-Direct all requests to the **GET /ingest/jobs/{id}** endpoint to the following base URL:
+Direct all requests to the **GET /ingest/jobs/{id}** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/ingest/jobs/{id}
+
+**Microsoft Azure**
 
 .. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/ingest/jobs/{id}
 
-.. endpoint-get-ingest-jobs-id-base-url-end
+.. endpoint-get-ingest-jobs-id-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-ingest-jobs-id-rate-limit:
@@ -61,6 +73,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-ingest-jobs-id-request:
@@ -76,7 +92,7 @@ A request to the **GET /ingest/jobs/{id}** endpoint is similar to:
 
    curl --request GET \
           'https://app.amperity.com/api/ingest/jobs/{id}' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -141,8 +157,8 @@ The following examples show how to send requests to the **GET /ingest/jobs/{id}*
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/ingest/jobs/{id}' \
-              --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/ingest/jobs/{id}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
@@ -158,7 +174,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-id-responses-start
 
-A response from the **GET /ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-id-responses-end
 
@@ -184,9 +200,9 @@ The **200** response returns a set of jobs.
           "read": 1000,
           "rejected": 200,
           "updated": 200,
-          "started_at": "2024-06-01T04:02:54.433Z",
+          "started_at": "2026-06-01T04:02:54.433Z",
           "state": "succeeded",
-          "ended_at": "2024-06-01T04:02:57.433Z",
+          "ended_at": "2026-06-01T04:02:57.433Z",
           "files": [
             {
               "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
@@ -213,7 +229,7 @@ Response parameters
 
 .. endpoint-get-ingest-jobs-id-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -242,9 +258,9 @@ A **200 OK** response contains the following parameters.
               "read": 1000,
               "rejected": 200,
               "updated": 200,
-              "started_at": "2024-06-01T04:02:54.433Z",
+              "started_at": "2026-06-01T04:02:54.433Z",
               "state": "succeeded",
-              "ended_at": "2024-06-01T04:02:57.433Z",
+              "ended_at": "2026-06-01T04:02:57.433Z",
               "files": [
                 {
                   "file_id": "cb-20240618-71992-SF3Uz/part0.avro",

@@ -14,12 +14,12 @@
 
 
 ==================================================
-Send segments to Dynamics 365 Marketing
+Send data to Dynamics 365 Marketing
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dynamics_365_marketing.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dynamics_365_marketing.html>`__ |ext_link|.
 
 .. vale on
 
@@ -29,7 +29,7 @@ Send segments to Dynamics 365 Marketing
 
 .. destination-dynamics-365-marketing-context-start
 
-Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts -- all contacts, by demographic, by behavior, by firmographic, or by other considerations -- to narrow your segments down to the right audience for your marketing campaign.
+Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts--all contacts, by demographic, by behavior, by firmographic, or by other considerations--to narrow your segments down to the right audience for your marketing campaign.
 
 .. destination-dynamics-365-marketing-context-end
 

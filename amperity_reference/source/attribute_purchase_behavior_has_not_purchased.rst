@@ -91,7 +91,7 @@ The SQL for **Has Not Purchased** works like this. It uses order ID from the **U
      ,COUNT(DISTINCT order_id) AS purchase_count
    FROM Unified_Itemized_Transactions
 
-and finds all of the distinct orders that were made by all customers -- the "purchase count" -- and groups them by Amperity ID for all orders that match the date range:
+and finds all of the distinct orders that were made by all customers--the "purchase count"--and groups them by Amperity ID for all orders that match the date range:
 
 ::
 
@@ -112,7 +112,7 @@ You may then filter this list of customers more by applying any of the product, 
    AND product_category = 'wool'
    AND purchase_channel = 'online'
 
-This will return a list of customers from the **Unified Itemized Transactions** table who purchased wool socks in all styles from your website.
+This will return a list of customers from the **Unified Itemized Transactions** table who purchased wool in all styles from your website.
 
 This list of customers from the **Unified Itemized Transactions** table is then compared to the list of customers in your **Merged Customers** table. What is the **Merged Customers** table? It is the table in which *all* of your customers are located and is the foundation of your customer 360 database.
 
@@ -226,13 +226,13 @@ After the **Has not purchased** purchase behavior attribute has been added, sele
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 
@@ -272,15 +272,15 @@ The following table lists the operators that are available to this attribute.
    * - **not between**
      - Returns a list of customers who have not made a purchase outside the dates that define the specified time window.
 
-       For example, if you want to find customers who only purchased school supplies in the two weeks prior to the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window is returned.
+       For example, if you want to find customers who only purchased school supplies in the two weeks before the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window is returned.
 
    * - **not on**
+     - Returns a list of customers who have not purchased on the specified date.
+
+   * - **on**
      - |attribute-stop| **Less useful**
 
        Returns a list of customers who made a purchase on the specified date.
-
-   * - **on**
-     - Returns a list of customers who have not purchased on the specified date.
 
 .. attribute-purchase-behavior-has-not-purchased-conditions-end
 

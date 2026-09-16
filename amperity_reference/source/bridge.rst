@@ -42,9 +42,7 @@ Advantages of Amperity Bridge include:
 
    Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be configured for inbound and outbound shares to give you access to shared tables without replication.
 
-   Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
-
-   Open **Learning Lab** to learn more about how `Amperity Bridge <https://learn.amperity.com/amperity-bridge-and-data-warehouses>`__ |ext_link| works. Registration is required.
+   Open **Learning Lab** to learn more about `data warehouses <https://amperity.com/learning-lab/data-warehouses>`__ |ext_link| and how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
 
 .. bridge-learning-lab-end
 
@@ -76,11 +74,11 @@ Configure inbound and outbound shares in Amperity to enable `bi-directional conn
 
 .. bridge-connect-databricks-end
 
-.. admonition:: About Delta Sharing
+.. admonition:: About OpenSharing
 
    .. include:: ../../shared/terms.rst
-      :start-after: .. term-delta-sharing-start
-      :end-before: .. term-delta-sharing-end
+      :start-after: .. term-opensharing-start
+      :end-before: .. term-opensharing-end
 
 
 .. _bridge-connect-google-bigquery:
@@ -126,6 +124,7 @@ Individual tasks that are related to managing a bridge:
 * :ref:`bridge-howto-delete`
 * :ref:`bridge-howto-download-credentials`
 * :ref:`bridge-howto-rename`
+* :ref:`bridge-howto-rotate-credentials`
 * :ref:`bridge-howto-sync`
 * :ref:`bridge-howto-upload-credentials`
 
@@ -215,6 +214,8 @@ Download credentials
 
 To connect Amperity with a data warehouse you may need to configure credentials for Amperity within the data warehouse. You can download these credentials from the Amperity user interface.
 
+.. important:: Credentials can only be downloaded once. Store the credentials file securely after downloading. If the file is lost or compromised, you must generate new credentials.
+
 .. bridge-howto-download-credentials-end
 
 **To download credentials for a bridge**
@@ -226,6 +227,34 @@ To connect Amperity with a data warehouse you may need to configure credentials 
 #. From the **Destinations** page, under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credentials**.
 
 .. bridge-howto-download-credentials-steps-end
+
+
+.. _bridge-howto-rotate-credentials:
+
+Rotate credentials
+--------------------------------------------------
+
+.. bridge-howto-rotate-credentials-start
+
+Rotating credentials generates a new credential file for an outbound bridge. The previous credentials remain active until their configured expiration date, which allows time to update the data warehouse connection before the old credentials expire.
+
+Rotate credentials when a credential file may have been compromised, when credentials are approaching expiration, or as part of a regular security practice.
+
+.. bridge-howto-rotate-credentials-end
+
+**To rotate credentials for an outbound bridge**
+
+.. bridge-howto-rotate-credentials-steps-start
+
+#. Open the **Destinations** page.
+
+#. Under **Outbound share**, select a bridge, and then from the ellipses menu, click **Download credential**.
+
+#. Download the new credential file and store it securely.
+
+#. Update the data warehouse connection to use the new credential before the previous credentials expire.
+
+.. bridge-howto-rotate-credentials-steps-end
 
 
 .. _bridge-howto-rename:

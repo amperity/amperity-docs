@@ -60,7 +60,7 @@ Use a combination of predicted CLV attributes to identify high-value audiences f
 For example:
 
 #. Start with predicted probability of transaction to identify customers with a higher likelihood of return.
-#. Add predicted order frequency to identify which of those customers are more likely to order multiple times.
+#. Add predicted order frequency to identify which of those customers are more likely to order many times.
 #. Add predicted average order value to identify customers who are most likely to spend, on average, at least $100 per order.
 
 .. attribute-predicted-transactions-about-clv-example-end
@@ -93,7 +93,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65

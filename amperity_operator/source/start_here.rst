@@ -35,7 +35,7 @@ Amperity runs at scale on your choice of Amazon AWS or Microsoft Azure.
 
 * 100+ integration options to handle any type of data.
 * Pull unlimited amounts of structured and semi-structured raw data to Amperity from any source without the need for schema planning or pre-shaping data.
-* Use multiple databases, SQL database querying, and the Amperity data explorer to manage your workflows and data transformation options.
+* Use many databases, SQL database querying, and the Amperity data explorer to manage your workflows and data transformation options.
 * Send data shaped for any destination in any format, such as sending full databases to analytics environments, segments to campaign tools, or attributes to personalization engines.
 * Use the sandbox environment to safely make changes with zero downtime to the production environment, including data sources, data models, and workflows.
 * Rely on security features, such as SOC2 certification, SSO integration, PII obfuscation, user actions auditing, and more, to keep your data safe.
@@ -82,7 +82,7 @@ The following sections provide an overview of configuring Amperity.
 
 .. start-here-configure-tip-start
 
-.. tip:: Some information about your configuration must be shared with Amperity, such as a username and passcode required to authenticate and access to various cloud storage services or REST APIs. This information, when it must be shared with an Amperity representative, should be shared using SnapPass.
+.. tip:: Some information about your configuration must be shared with Amperity, such as a username and passcode required to authenticate and access to various cloud storage services or REST APIs. This information, when it must be shared with an Amperity representative, should be shared using |ext_snappass|.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-snappass-start
@@ -147,7 +147,7 @@ The process of pulling data to Amperity is managed from the **Sources** page in 
 
 .. start-here-pull-data-to-amperity-components-start
 
-The **Sources** page contains the following components:
+The **Sources** page has the following components:
 
 * Saved queries reshape data after pulling it to Amperity and before making it available to a feed.
 * Feeds define the schema for each individual data source.
@@ -277,7 +277,7 @@ The process of sending data from Amperity is managed from the **Destinations** p
 
 .. start-here-send-data-from-amperity-components-start
 
-The **Destinations** page contains the following components:
+The **Destinations** page has the following components:
 
 * Destinations, which define how data is sent from Amperity and the location to which it is sent
 * Data templates, which map fields in the customer 360 database to the fields that are required by the downstream workflow
@@ -318,22 +318,21 @@ The left-side navigation has sections for the following activities:
 Included SFTP site
 --------------------------------------------------
 
-.. start-here-tenant-sftp-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-start
+   :end-before: .. about-tenant-sftp-end
 
-Every Amperity tenant includes an SFTP site with a hostname of ``<tenant>.sftp.amperity.com``. For example, if your company name is **ACME**, then your tenant's SFTP hostname is ``acme.sftp.amperity.com``. The hostname is always all lowercase.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-australia-start
+   :end-before: .. about-tenant-sftp-australia-end
 
-.. note:: The SFTP site is provisioned by an Amperity administrator *after* the initial tenant creation. As such, the SFTP site is not immediately available, but this is not a long process. When the SFTP site is ready, Amperity uses SnapPass to send you the connection details. If you wish to use RSA key-based authentication, please provide the public key to your Amperity administrator when requesting SFTP access.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-older-tenants-start
+   :end-before: .. about-tenant-sftp-older-tenants-end
 
-Once this site is provisioned, you may configure the SFTP site as an SFTP source or an SFTP destination to support any desired workflow. External customer processes can be configured to connect to the site using SFTP, after which they can add data to or pick up data from the site to support any external workflow.
-
-.. include:: ../../shared/file-formats.rst
-   :start-after: .. formats-sftp-data-retention-start
-   :end-before: .. formats-sftp-data-retention-end
-
-.. important:: The hostname for the SFTP site is always ``<tenant-name>.sftp.amperity.com``. Some older tenants may still be using the legacy address ``sftp.amperity.com``, if so, please contact your Amperity administrator about migrating.
-
-.. start-here-tenant-sftp-end
-
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. about-tenant-sftp-provisioned-start
+   :end-before: .. about-tenant-sftp-provisioned-end
 
 .. _start-here-log-in-amperity:
 
@@ -342,7 +341,7 @@ Log in to Amperity
 
 .. start-here-log-in-amperity-start
 
-You must provide your credentials to Amperity in order to log in.
+You must provide your credentials to Amperity to log in.
 
 .. start-here-log-in-amperity-end
 
@@ -364,10 +363,6 @@ You must provide your credentials to Amperity in order to log in.
 Supported browsers
 --------------------------------------------------
 
-.. start-here-tenant-browsers-start
-
-Amperity works best with Google Chrome and works fine with Chromium-based browsers, such as Brave.
-
-Amperity is not supported from Firefox, Safari, Internet Explorer, or from mobile and tablet devices.
-
-.. start-here-tenant-browsers-end
+.. include:: ../../amperity_reference/source/system_requirements.rst
+   :start-after: .. system-requirements-browsers-start
+   :end-before: .. system-requirements-browsers-end

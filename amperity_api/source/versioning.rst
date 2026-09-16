@@ -104,14 +104,14 @@ A version identifier is a string that identifies a :ref:`supported version <vers
 
 .. versioning-version-identifier-request-header-example-start
 
-In the following example, replace "{tenant-id}" with your tenant name, "{endpoint}" with the name and path of the Amperity API endpoint, "{access-token}" with your Amperity API access token, and "{version}" with the version of the Amperity API to which the request will be made:
+In the following example, replace "{tenant}" with your tenant name, "{endpoint}" with the name and path of the Amperity API endpoint, "{access-token}" with your Amperity API access token, and "{version}" with the version of the Amperity API to which the request will be made:
 
 ::
 
    curl -request GET \
-        -url "https://{tenant-id}.amperity.com/api/{endpoint}/" \
+        -url "https://{tenant}.amperity.com/api/{endpoint}/" \
         -H "Authorization: Bearer ${access-token}" \
-        -H "Amperity-Tenant: {tenant-id}" \
+        -H "Amperity-Tenant: {tenant}" \
         -H "Content-Type: application/json" \
         -H "api-version: {version}"
 
@@ -167,7 +167,7 @@ Amperity APIs evolve and change over time. To warn developers of upcoming deprec
 * `Deprecation Header <https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header>`__. When **true** a deprecation will occur at the date indicated in the header.
 * `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature stops working and return a 4xx response at the date indicated in the header.
 
-Deprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date. For example:
+Deprecation and Sunset headers will be added at least 6 months before a deprecation. A deprecation date will be at least 3 months before a sunset date. For example:
 
 ::
 

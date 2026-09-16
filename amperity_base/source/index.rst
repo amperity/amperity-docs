@@ -29,9 +29,9 @@ Type or enter "/" on your keyboard to search the docs site.
 
 .. docs-updates-start
 
-.. admonition:: Product updates
+.. admonition:: Release notes
 
-   Open the `product updates <reference/updates.html>`__ page to find out about what is new and what has changed.
+   Open the `release notes <reference/release_notes.html>`__ page to find out about what is new and what has changed.
 
 .. docs-updates-end
 

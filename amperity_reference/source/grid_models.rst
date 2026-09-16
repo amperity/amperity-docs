@@ -23,6 +23,16 @@ Use customer profiles and interaction histories to get insights and predict futu
 
 .. grid-models-about-end
 
+.. grid-models-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predictive models forecast customer behavior using customer profiles and behavioral history.
+
+   Open **Learning Lab** to learn more about `training predictive models <https://amperity.com/learning-lab/training-predictive-models>`__ |ext_link|. Registration is required.
+
+.. grid-models-learning-lab-end
+
 .. grid-models-grid-start
 
 .. grid:: 1 1 2 2

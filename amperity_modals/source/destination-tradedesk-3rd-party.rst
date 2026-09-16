@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: The Trade Desk 3P
-.. |what-send| replace:: email addresses or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -11,7 +11,7 @@
 The Trade Desk 3P
 ==================================================
 
-Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting.
+Monetize your brand's ID-based audiences by making them available to advertisers for more granular targeting using email addresses and phone numbers.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 

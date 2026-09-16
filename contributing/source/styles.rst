@@ -63,6 +63,6 @@ For example:
 
   Spell out "Conversions API" and append "events" for context. Do not abbreviate "Conversions API" in documentation even if casual marketing conversations substitute "CAPI" for any events story.
 
-  .. important:: Each destination may have its own specific terminology for events. For example, TikTok Ads Manager uses the "Events API for events".
+  .. important:: Each destination may have its own specific terminology for events. For example, TikTok Ads Manager uses the "Events API" for offline and web events sent via the TikTok Ads Events connector.
 
 .. style-guide-capitalization-external-end

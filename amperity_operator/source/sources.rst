@@ -150,6 +150,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_koupon_media
 
+   .. grid-item-card:: Kustomer
+      :link-type: doc
+      :link: source_kustomer
+
    .. grid-item-card:: Listrak
       :link-type: doc
       :link: source_listrak
@@ -208,7 +212,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
 
    .. grid-item-card:: Salesforce Marketing Cloud
       :link-type: doc
-      :link: destination_salesforce_marketing_cloud
+      :link: source_salesforce_marketing_cloud
 
    .. grid-item-card:: Salesforce Pardot
       :link-type: doc
@@ -218,13 +222,17 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_salesforce_sales_cloud
 
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: source_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: source_sftp
 
-   .. grid-item-card:: Shopify
+   .. grid-item-card:: Shopify (GraphQL)
       :link-type: doc
-      :link: source_smg
+      :link: source_shopify_graphql
 
    .. grid-item-card:: SMG
       :link-type: doc
@@ -306,8 +314,9 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Salesforce Marketing Cloud <source_salesforce_marketing_cloud>
    Salesforce Pardot <source_salesforce_pardot>
    Salesforce Sales Cloud <source_salesforce_sales_cloud>
+   SevenRooms <source_sevenrooms>
    SFTP <source_sftp>
-   Shopify <source_shopify>
+   Shopify (GraphQL) <source_shopify_graphql>
    SMG <source_smg>
    SoundCommerce <source_soundcommerce>
    Square <source_square>

@@ -33,13 +33,23 @@ Predicted CLV
       :start-after: .. term-clv-start
       :end-before: .. term-clv-end
 
-   CLV is an important historical measurement that applies to individual customers and also to groups of customers that fit various segment profiles. For example, a customer who buys a pair of $40 pants every year for five years has a CLV of $200. A segment that contains thousands of customers who buy pants might have a CLV of $200,000.
+   CLV is an important historical measurement that applies to individual customers and also to groups of customers that fit various segment profiles. For example, a customer who buys a pair of $40 pants every year for five years has a CLV of $200. A segment that has thousands of customers who buy pants might have a CLV of $200,000.
 
-   CLV can be more complex to measure when a company has millions of customers, multiple brands, storefronts and websites and applications, and hundreds or even thousands of individual product items.
+   CLV can be more complex to measure when a company has millions of customers, many brands, storefronts and websites and applications, and hundreds or even thousands of individual product items.
 
    How do your brand measure how valuable customers is in the future? With Amperity your brand can use predictive modeling to identify which customers are more likely or less likely to purchase within the next calendar year.
 
 .. customer-lifetime-value-about-end
+
+.. model-predicted-clv-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predicted CLV forecasts the total value of purchases a customer will make in the next 365 days.
+
+   Open **Learning Lab** to learn more about `predicted high value <https://amperity.com/learning-lab/predicted-high-value>`__ |ext_link|. Registration is required.
+
+.. model-predicted-clv-learning-lab-end
 
 
 About predicted CLV (pCLV)

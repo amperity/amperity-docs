@@ -39,6 +39,16 @@ The visual **Query Editor** is a user interface within the **Queries** page that
 
 .. queries-howitworks-end
 
+.. queries-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Queries page to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link|. Registration is required.
+
+.. queries-learning-lab-end
+
 .. queries-howitworks-callouts-start
 
 .. list-table::
@@ -127,7 +137,7 @@ The visual **Query Editor** is a user interface within the **Queries** page that
           :class: no-scaled-link
      - Give your query a name a clear and understandable name. The name field is located in the upper left corner of the SQL **Query Editor**.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have many brands or have many regions.
 
           Some examples:
 

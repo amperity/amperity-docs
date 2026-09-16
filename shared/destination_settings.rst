@@ -9,6 +9,55 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. setting-attentive-event-type-start
+
+The type of event this destination sends to Attentive. Select one of ``PRODUCT_VIEW``, ``ADD_TO_CART``, ``PURCHASE``, ``CUSTOM_EVENT``, or ``CUSTOM_ATTRIBUTES``. A destination sends a single event type; to send more than one, configure a separate destination for each.
+
+.. setting-attentive-event-type-end
+
+.. setting-attentive-custom-event-type-name-start
+
+Required when **Event Type** is ``CUSTOM_EVENT``. The name of the Attentive custom event type to send, exactly as it appears in the Attentive UI (case-sensitive). The event type must already exist in Attentive. Individual rows can override this value with an **event_type_name** column.
+
+.. setting-attentive-custom-event-type-name-end
+
+.. setting-attentive-query-must-return-start
+
+A query must return at least one of **email** or **phone**. The remaining columns a query returns depend on the destination's event type.
+
+.. setting-attentive-query-must-return-end
+
+.. setting-bloomreach-identity-column-start
+
+The Bloomreach hard identifier to use as the primary key. Options include **email**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
+
+.. setting-bloomreach-identity-column-end
+
+
+.. setting-bloomreach-segment-name-start
+
+A name for the segment sent to Bloomreach. When a customer's membership changes, Amperity records a segment membership event in Bloomreach--``segment-addition`` when a customer enters the audience and ``segment-deletion`` when a customer leaves it--with this name stored as the event's ``segment_name`` property.
+
+.. setting-bloomreach-segment-name-end
+
+.. setting-iterable-user-identifier-start
+
+The field used to identify users in |destination-name|. Select **email** for email-based projects or **userId** for user ID-based projects.
+
+.. setting-iterable-user-identifier-end
+
+.. setting-iterable-audience-name-start
+
+The name of the list in |destination-name| to which the audience will be sent. The list will be created if it does not already exist.
+
+.. setting-iterable-audience-name-end
+
+.. setting-iterable-update-existing-only-start
+
+When enabled, only existing user profiles in |destination-name| will be updated. When disabled, new user profiles will be created if they do not already exist. Behavior varies by |destination-name| project type; in hybrid projects, new users may be created even when this setting is enabled.
+
+.. setting-iterable-update-existing-only-end
+
 .. setting-lorem-ipsum-long-start
 
 Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -85,13 +134,13 @@ Select the credential for |destination-name| from the **Credential** dropdown, a
 
 .. destinations-steps-test-connection-start
 
-If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
+Amperity validates the connection when the destination is saved. If the connection cannot be validated, an error is shown and the destination is not saved.
 
 .. destinations-steps-test-connection-end
 
 .. campaigns-steps-test-connection-start
 
-If there are any issues with destination connectivity, an error message will display in the destination setup dialog. If the destination saves successfully, the connection is ready for use. 
+Amperity validates the connection when the destination is saved. If the connection cannot be validated, an error is shown and the destination is not saved.
 
 .. campaigns-steps-test-connection-end
 
@@ -172,7 +221,7 @@ After configuring this destination users may send campaigns to |destination-name
 
 .. destinations-steps-validate-audience-start
 
-Test the connection with |destination-name| by using an audience with a very small membership. For example: 10 or 100 members or the minimum audience size recommended by |destination-name|. Send the test audience to |destination-name| and verify the audience is correct in |destination-name|. Make adjustments if necessary. Only send full audiences after validation is complete.
+Validate the audience with |destination-name| by using a sample audience with a very small membership. For example: 10 or 100 members or the minimum audience size recommended by |destination-name|. Send the sample audience to |destination-name| and verify the sample audience is correct in |destination-name|. Make adjustments if necessary. Only send full audiences after validation is complete.
 
 .. destinations-steps-validate-audience-end
 
@@ -423,6 +472,7 @@ The PGP public key that Amperity uses to encrypt files.
 
 .. setting-common-pgp-public-key-end
 
+
 **Quote mode**
 
 Applies to: Amazon S3, Azure Blob Storage, Google Cloud Storage, and SFTP.
@@ -486,16 +536,35 @@ Use the **Column name** setting to specify the name of the row number column in 
 
 .. setting-common-sandbox-recommendation-start
 
-Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a test audience, and then verify the results in |destination-name|. After verifying the end-to-end workflow, push the destination from the sandbox to production.
+Use a sandbox to configure a destination for |destination-name|. Before promoting your changes, send a sample audience, and then verify the results in |destination-name|. After verifying the end-to-end workflow, push the destination from the sandbox to production.
 
 .. setting-common-sandbox-recommendation-end
+
+**SHA-256 hashing (caution)**
+
+Only for destinations where SHA-256 hashing is applied automatically to the list of hashed-fields defined in the token at the top of the file. Applies to: Amazon Ads, Google Ads, Google Customer Match, Google Enhanced Conversions, LinkedIn DMP, Meta Ads Manager, Microsoft Ads, Pinterest, Snapchat, and TikTok Ads Manager destinations and events.
+
+.. setting-common-sha-256-hashed-fields-start
+
+.. caution:: The values for |hashed-fields| sent to |destination-name| are SHA-256 hashed automatically by Amperity before sending. Do not use the **TO_HEX()** function with the |hashed-fields| fields for queries that return results for |destination-name|.
+
+.. setting-common-sha-256-hashed-fields-end
+
+
+.. used with Criteo, Microsoft Ads, and Pinterest destinations.
+
+.. setting-common-invalid-emails-filtered-start
+
+.. note:: Invalid email addresses are automatically filtered out before data is sent to |destination-name|. The count of removed rows is reported in the workflow run log.
+
+.. setting-common-invalid-emails-filtered-end
 
 
 **Split outputs**
 
 .. setting-common-split-outputs-start
 
-Split delimiter-separated output--CSV, PSV, TSV, or files with custom delimiters--into multiple files to ensure downstream file limits are not exceeded.
+Split delimiter-separated output--CSV, PSV, TSV, or files with custom delimiters--into many files to ensure downstream file limits are not exceeded.
 
 Choose "Rows" and set "Rows limit" to a value between "50000" and "10000000". This is the maximum number of rows for split output files.
 
@@ -580,7 +649,7 @@ You must log into |destination-name| as a member of the specified user group to 
 
 .. setting-active-campaign-list-name-start
 
-The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| managed by Amperity.
+The name of an `email list <https://help.activecampaign.com/hc/en-us/articles/360000030559-How-to-create-a-list-in-ActiveCampaign>`__ |ext_link| in |destination-name| managed by Amperity. If a list with this name does not exist, Amperity creates it automatically and associates it with the specified group.
 
 .. setting-active-campaign-list-name-end
 
@@ -697,7 +766,7 @@ Amperity does not keep smart lists and does not remove users from the |destinati
 
 .. setting-adobe-marketo-list-name-limitations-start
 
-|destination-name| API has the following limitations:
+|destination-name| API `has the following limitations <https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/marketo-integration-best-practices#>`__ |ext_link|:
 
 * Subscriptions can make up to 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
 * API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
@@ -706,7 +775,7 @@ You may experience these rate limits when sending large audience lists.
 
 It is possible for |destination-name| to have many audience lists with duplicate names. If the |destination-name| API returns more than one audience list, Amperity updates the first audience list in that list.
 
-.. setting-adobe-marketo-list-name-limitations-start
+.. setting-adobe-marketo-list-name-limitations-end
 
 **Program name**
 
@@ -718,6 +787,38 @@ The name of the program in which the audience list managed by Amperity is locate
 
 
 
+
+.. vale off
+
+**ADOBE TARGET**
+
+.. vale on
+
+Settings unique to Adobe Target.
+
+**Identifier type**
+
+.. setting-adobe-target-identifier-start
+
+The identifier type for individual profiles in the |destination-name| profile store. The first column in the dataset sent to |destination-name| must have a header that matches the name of the selected identifier type.
+
+.. setting-adobe-target-identifier-end
+
+**thirdPartyId** (identifier type)
+
+.. setting-adobe-target-identifier-thirdpartyid-start
+
+The **thirdPartyId** is a persistent identifier that uniquely identifies visitors to a website, mobile app, social media platform, and other cross-channel locations to which your customers log in. For example, a loyalty ID, a membership number, a web account ID, or some other identifier that is not personally identifiable information (PII) or sensitive information. Every call made to the |destination-name| profile store must use the **thirdPartyId**.
+
+.. setting-adobe-target-identifier-thirdpartyid-end
+
+**pcId** (identifier type)
+
+.. setting-adobe-target-identifier-pcid-start
+
+The **pcId** is an internal identifier generated automatically by |destination-name|. It is tied to the visitor's browser **mboxPC** cookie and is the source of truth for profile storage on a single device, single browser, or other cookie location. A single visitor can have many **pcId** identifiers.
+
+.. setting-adobe-target-identifier-pcid-end
 
 
 .. vale off
@@ -760,7 +861,7 @@ A description of the audience managed by Amperity.
 
 .. setting-amazon-ads-audience-description-start
 
-The name of the audience managed by Amperity. Amperity creates a new audience if an audience in |destination-name| does not match exactly the name of the one sent from Amperity.
+The name of the audience managed by Amperity. Amperity creates a new audience if an audience in Amazon Ads does not match exactly the name of the one sent from Amperity.
 
 .. setting-amazon-ads-audience-description-end
 
@@ -768,13 +869,101 @@ The name of the audience managed by Amperity. Amperity creates a new audience if
 
 .. setting-amazon-ads-dsp-advertiser-start
 
-The name of the DSP advertiser within |destination-name|.
+The name of the DSP advertiser within Amazon Ads.
 
 .. setting-amazon-ads-dsp-advertiser-end
 
+**Enable consent signals**
+
+.. setting-amazon-ads-enable-consent-signals-start
+
+Amazon Ads requires explicit consent signals for customers in the United Kingdom (UK) and European Economic Area (EEA). Select this option to send consent signals to Amazon Ads.
+
+.. setting-amazon-ads-enable-consent-signals-end
+
+.. setting-amazon-ads-enable-consent-signals-about-start
+
+A valid consent signal and the country code in which the customer granted `consent must be provided <https://advertising.amazon.co.uk/help/GE2Q65JXRZA8D4KJ>`__ |ext_link| when sending personal information to Amazon Ads in the United Kingdom and European Economic Area (EEA).
+
+.. setting-amazon-ads-enable-consent-signals-about-end
+
+.. setting-amazon-ads-enable-consent-signals-tcf-start
+
+A consent signal for the Interactive Advertising Bureau (IAB) European Transparency and Consent Framework (TCF).
+
+.. setting-amazon-ads-enable-consent-signals-tcf-end
+
+.. setting-amazon-ads-enable-consent-signals-gpp-start
+
+A consent signal for the Global Privacy Protocol (GPP).
+
+.. setting-amazon-ads-enable-consent-signals-gpp-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-start
+
+**amzn_user_data** and **amzn_ad_storage** Consent signals for Amazon Consent Signal (ACS).
+
+.. setting-amazon-ads-enable-consent-signals-amzn-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-user-start
+
+The **amzn_user_data** column indicates when a customer consents to Amazon processing personal data, such as an advertising identifier, for advertising purposes. Possible values are "GRANTED" or "DENIED". Rows without a valid "GRANTED" or "DENIED" value omit this consent signal.
+
+.. setting-amazon-ads-enable-consent-signals-amzn-user-end
+
+.. setting-amazon-ads-enable-consent-signals-amzn-ads-start
+
+The **amzn_ad_storage** column indicates when a customer consents to Amazon reading or writing advertising cookies or similar technologies on a user's device. Possible values are "GRANTED" or "DENIED". Rows without a valid "GRANTED" or "DENIED" value omit this consent signal.
+
+.. setting-amazon-ads-enable-consent-signals-amzn-ads-end
+
+.. setting-amazon-ads-enable-consent-signals-cc-start
+
+Country code is inferred from the **country** field in the customer's profile.
+
+.. setting-amazon-ads-enable-consent-signals-cc-end
+
+
 **Membership duration**
 
-Days. See common.
+.. setting-amazon-ads-membership-duration-start
+
+The length of time in seconds, after which a customer is removed from this audience. This value may be between "604,800" - "34,300,800".
+
+.. setting-amazon-ads-membership-duration-end
+
+
+**DSP Advertiser ID** (Amazon CAPI)
+
+.. setting-amazon-capi-dsp-advertiser-id-start
+
+The Amazon-Ads-AccountId for the Amazon DSP advertiser that receives these events (for example, "58xxxxxxxxxxxxxx80"). Find it in Amazon Ads under **Advertisers**. A destination sends events for a single DSP advertiser.
+
+.. setting-amazon-capi-dsp-advertiser-id-end
+
+**Query must return** (Amazon CAPI)
+
+.. setting-amazon-capi-query-must-return-start
+
+A query must return **event_name**, **conversion_type**, **event_source**, **event_time**, and **country_code**, plus at least one identifier column — **email**, **phone**, **maid**, or **match_id**. All other columns are optional.
+
+.. setting-amazon-capi-query-must-return-end
+
+**UET Tag ID** (Microsoft Ads Conversions API)
+
+.. setting-microsoft-ads-conversions-tag-id-start
+
+The Microsoft Advertising UET tag ID that receives these events. Amperity includes it in the Conversions API request path, and the API token configured for this destination must be authorized for this tag. Find it in the **UET** section of your Microsoft Advertising account. A destination sends events for a single UET tag.
+
+.. setting-microsoft-ads-conversions-tag-id-end
+
+**Query must return** (Microsoft Ads Conversions API)
+
+.. setting-microsoft-ads-conversions-query-must-return-start
+
+A query must return **event_name** and **event_time**, plus at least one identifier column — **anonymous_id**, **external_id**, **email**, **phone**, **msclkid**, **idfa**, or **gaid**. All other columns are optional.
+
+.. setting-microsoft-ads-conversions-query-must-return-end
 
 
 
@@ -1010,13 +1199,17 @@ Settings unique to Braze.
 
 .. setting-braze-instance-start
 
-Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| for your account. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", or "EU-02".
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| for your account. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "EU-01", "EU-02", or "JP-01".
 
 .. setting-braze-instance-end
 
 .. setting-braze-instance-example-start
 
-For example, if your URL of |destination-name| is ``https://dashboard-03.braze.com``, the REST API endpoint is ``https://rest.iad-03.braze.com``, and the instance is "US-03".
+The instance identifier determines the REST API endpoint URL:
+
+* **US** instances (US-01 through US-08) use ``https://rest.iad-NN.braze.com``. For example, "US-03" maps to ``https://rest.iad-03.braze.com``.
+* **EU** instances (EU-01, EU-02) use ``https://rest.fra-NN.braze.eu``. For example, "EU-01" maps to ``https://rest.fra-01.braze.eu``.
+* **JP** instances (JP-01) use ``https://rest.jp-NN.braze.com``. For example, "JP-01" maps to ``https://rest.jp-01.braze.com``.
 
 .. setting-braze-instance-example-end
 
@@ -1024,13 +1217,15 @@ For example, if your URL of |destination-name| is ``https://dashboard-03.braze.c
 
 .. setting-braze-user-identifier-start
 
-The identifier to use for matching users in |destination-name|. May be "external_id" or "braze_id".
+The identifier to use for matching users in |destination-name|. May be "external_id", "braze_id", or "user_alias".
 
 .. setting-braze-user-identifier-end
 
 .. setting-braze-user-identifier-about-start
 
-The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers.
+The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link| is a unique identifier for your customers, such as the Amperity ID. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link| is a unique identifier for existing |destination-name| customers. The `user_alias <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link| identifies users by an alias; when selected, the dataset must include **alias_name** and **alias_label** fields.
+
+.. important:: The Braze API requires exactly one identifier type per request. A request that has more than one of ``external_id``, ``braze_id``, or ``user_alias`` will be rejected by the Braze API, and the orchestration will fail. Ensure that your dataset has only the identifier that matches the **User identifier** setting.
 
 .. setting-braze-user-identifier-about-end
 
@@ -1038,9 +1233,29 @@ The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_
 
 .. setting-braze-update-existing-profiles-start
 
-Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled a new user profile is created when a profile with a matching ``external_id`` value does not already exist.
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/user_attributes_object#update-existing-profiles-only>`__ |ext_link|. When this setting is not enabled, a new user profile is created when a matching profile does not already exist.
 
 .. setting-braze-update-existing-profiles-end
+
+.. setting-braze-purchases-instance-start
+
+Required. Select the `Braze instance <https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances>`__ |ext_link| where your account is provisioned. May be one of "US-01", "US-02", "US-03", "US-04", "US-05", "US-06", "US-07", "US-08", "US-10", "EU-01", "EU-02", "AU-01", "ID-01", "JP-01", or "KR-01". This must be the same instance the REST API key belongs to.
+
+.. setting-braze-purchases-instance-end
+
+.. setting-braze-purchases-query-must-return-start
+
+A query must return one row per purchase, including a column for the selected **User identifier** and columns for **product_id**, **price**, **currency**, and **purchase_time**. A **quantity** column is optional.
+
+.. setting-braze-purchases-query-must-return-end
+
+.. setting-braze-purchases-update-existing-only-start
+
+Use the **Update existing profiles only?** option to `update only existing user profiles in Braze <https://www.braze.com/docs/api/objects_filters/purchase_object/>`__ |ext_link|. When this setting is not enabled, Braze creates a new user profile for a purchase that does not match an existing profile.
+
+When this setting is enabled, Braze accepts a purchase for a user it cannot match but does not record it: the row is reported as succeeded, no revenue is added, and nothing appears on a profile. Enable this option only when every user you send is already known to Braze.
+
+.. setting-braze-purchases-update-existing-only-end
 
 
 
@@ -1074,7 +1289,7 @@ See common.
 
 .. setting-cordial-list-name-start
 
-The name of the list in |destination-name| managed by Amperity. Amperity creates the list when it does not exist.
+The name of the list in |destination-name| managed by Amperity. Amperity creates the list when it does not exist. List names are automatically normalized before sending: uppercase letters are converted to lowercase and non-alphanumeric characters, such as spaces and hyphens, are replaced with underscores.
 
 .. setting-cordial-list-name-end
 
@@ -1082,7 +1297,9 @@ The name of the list in |destination-name| managed by Amperity. Amperity creates
 
 .. setting-cordial-subscription-status-start
 
-Enable "Do not set subscription status automatically" to prevent subscriptions when "channels.email.subscribeStatus" is not set.
+By default, new contacts added to a list without a **channels.email.subscribeStatus** value are automatically assigned the **subscribed** status. Existing contacts retain their current status in all cases.
+
+Enable **Do not set subscription status automatically** to prevent new contacts from being auto-subscribed. When enabled, contacts without a **channels.email.subscribeStatus** value are added to the list without a subscription status assigned.
 
 .. setting-cordial-subscription-status-end
 
@@ -1165,7 +1382,7 @@ For offsite campaigns must be one of the following identifiers:
 * Use "IdentityLink" to build audience segments using LiveRamp identity graph data.
 * Use "UserIdentifier" to build audience segments using a unique identifier provided by your brand. The user identifier may be one of the following: "IDFA", "AAID", "LiveRamp ID", or "Criteo Cookie ID".
 
-For onsite display campaigns choose the "CustomerID" identifier.
+For onsite display campaigns choose the "CustomerId" identifier.
 
 .. setting-criteo-identifier-type-end
 
@@ -1311,7 +1528,7 @@ A description of the audience managed by Amperity.
 
 .. setting-google-ads-audience-name-start
 
-The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist. Audience names may only contain letters, numbers, underscores, dashes, and spaces. Any other characters are automatically removed.
 
 .. setting-google-ads-audience-name-end
 
@@ -1329,7 +1546,7 @@ See common.
 
 .. setting-google-ads-membership-duration-start
 
-Set this value to "10000" for unlimited audience membership.
+The number of days a user remains in the audience. Must be an integer between 0 and 540. Set to 540 for the maximum duration allowed by |destination-name|.
 
 .. setting-google-ads-membership-duration-end
 
@@ -1345,10 +1562,25 @@ When the value of "Upload key type" is "Mobile ID", the mobile ID for the iOS or
 
 .. setting-google-ads-upload-key-type-start
 
-The key to use for audience matching in |destination-name|. May be one of "Contact Info" or "Mobile ID".
+The key to use for audience matching in |destination-name|. May be one of "Contact Info", "Mobile ID", or "User Id". The upload key type cannot be changed after an audience is created. To use a different key type, create a new audience.
 
 .. setting-google-ads-upload-key-type-end
 
+
+
+.. vale off
+
+**GOOGLE ANALYTICS 4 (GA4)** (destination)
+
+.. vale on
+
+Settings unique to Google Analytics 4 (GA4).
+
+.. setting-google-analytics-xxxxx-start
+
+.. TODO: Currently: None.
+
+.. setting-google-analytics-xxxxx-end
 
 
 
@@ -1397,7 +1629,7 @@ See Common.
 
 .. setting-google-cloud-storage-object-prefix-start
 
-Required. The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
+The prefix for the name of the `cloud storage object <https://cloud.google.com/storage/docs/objects>`__ |ext_link| for your instance of |destination-name|.
 
 .. setting-google-cloud-storage-object-prefix-end
 
@@ -1441,6 +1673,27 @@ See Google Ads.
 
 See Google Ads.
 
+**Google CM360**
+
+**Floodlight configuration ID**
+
+.. setting-google-cm360-floodlight-config-id-start
+
+The numeric ID of the Campaign Manager 360 Floodlight configuration that receives the conversions. The Floodlight configuration is the account context that the conversions are attributed within. A destination sends to a single Floodlight configuration.
+
+.. setting-google-cm360-floodlight-config-id-end
+
+**Floodlight activity ID**
+
+.. setting-google-cm360-floodlight-activity-id-start
+
+The numeric ID of the Floodlight activity that the conversions are attributed to. Use the numeric activity ID, not the activity tag string. A tag string is not unique within an account and can point to more than one activity, which Amperity cannot resolve reliably.
+
+.. setting-google-cm360-floodlight-activity-id-end
+
+
+**Google Customer Match**
+
 **Customer ID**
 
 See Google Ads.
@@ -1453,9 +1706,55 @@ The Google advertising product to which Amperity sends audiences. May be one of 
 
 .. setting-google-customer-match-customer-product-end
 
+**Google Customer Match (GDM)**
+
+**Customer product**
+
+.. setting-google-customer-match-gdm-customer-product-start
+
+The type of Google product that owns the audience. Select one of "Display Video Advertiser", "Display Video Partner", or "Google Ads".
+
+.. setting-google-customer-match-gdm-customer-product-end
+
+**Customer ID**
+
+.. setting-google-customer-match-gdm-customer-id-start
+
+The Customer ID of the Google account that owns the audience. The Google account you connect must be able to administer this account and manage its Customer Match audiences.
+
+.. setting-google-customer-match-gdm-customer-id-end
+
+**Match identifier**
+
+.. setting-google-customer-match-gdm-match-identifier-start
+
+The dataset column Google matches members on. Select one of "email", "phone", or "mobile-id". A single identifier is used for every member of the audience, and it is also the key Amperity uses to track membership changes across runs, so it cannot be changed without recreating the audience.
+
+.. setting-google-customer-match-gdm-match-identifier-end
+
+**Audience name**
+
+.. setting-google-customer-match-gdm-audience-name-start
+
+The name of the Google audience to update. If no audience by that name exists on the account, Amperity creates one. Characters other than letters, numbers, underscores, dashes, and spaces are removed from the name.
+
+.. setting-google-customer-match-gdm-audience-name-end
+
+**Audience description**
+
+.. setting-google-customer-match-gdm-audience-description-start
+
+A description for the audience. Used only when Amperity creates the audience for the first time.
+
+.. setting-google-customer-match-gdm-audience-description-end
+
 **Membership duration**
 
-See common.
+.. setting-google-customer-match-gdm-membership-duration-start
+
+The length of time |duration|, after which Google removes a customer from this audience. This value may be between |duration-value|. Used only when Amperity creates the audience for the first time; changing it afterward has no effect on an existing audience. To remove members, exclude them from the audience — Amperity removes departing members by name on the next run.
+
+.. setting-google-customer-match-gdm-membership-duration-end
 
 **Mobile app ID**
 
@@ -1481,7 +1780,7 @@ Settings unique to Google Enhanced Conversions.
 
 .. setting-google-enhanced-conversions-action-name-start
 
-The name of the conversion action.
+The name of the conversion action. Amperity creates the conversion action if it does not already exist.
 
 .. setting-google-enhanced-conversions-action-name-end
 
@@ -1489,9 +1788,43 @@ The name of the conversion action.
 
 .. setting-google-enhanced-conversions-customer-id-start
 
-The Customer ID of the Google Enhanced Conversions account.
+The Customer ID of the Google Ads account.
 
 .. setting-google-enhanced-conversions-customer-id-end
+
+**Google Enhanced Conversions (GDM)**
+
+**Google Ads customer ID**
+
+.. setting-google-enhanced-conversions-gdm-customer-id-start
+
+The Google Ads account that receives the conversions, entered as digits only.
+
+.. setting-google-enhanced-conversions-gdm-customer-id-end
+
+**Conversion action ID**
+
+.. setting-google-enhanced-conversions-gdm-conversion-action-id-start
+
+The numeric ID of the Google Ads conversion action the conversions are attributed to. Find this ID in the Google Ads interface. This connector matches on the numeric ID and does not look a conversion action up by name.
+
+.. setting-google-enhanced-conversions-gdm-conversion-action-id-end
+
+**Manager (MCC) customer ID**
+
+.. setting-google-enhanced-conversions-gdm-login-customer-id-start
+
+Optional. The Google Ads manager (MCC) account used to reach the account in **Google Ads customer ID**, entered as digits only. Set this only when the connected Google account reaches the receiving account through a manager account; leave it empty for a directly owned account. Sending it when it is not needed causes Google to reject the request.
+
+.. setting-google-enhanced-conversions-gdm-login-customer-id-end
+
+**Event source**
+
+.. setting-google-enhanced-conversions-gdm-event-source-start
+
+Where these conversions happen. Select one of **IN_STORE** (in-store purchases), **PHONE** (call-center or phone bookings), **APP** (in-app purchases), or **OTHER** (any other offline conversion). Because a destination targets a single conversion action, the event source is set once on the destination rather than per row. Web and message sources are not offered, because this connector sends offline conversions.
+
+.. setting-google-enhanced-conversions-gdm-event-source-end
 
 
 
@@ -1516,6 +1849,16 @@ See common settings.
 Attributes sent to |destination-name| with values for a specific day, month, and year `must be in UTC and formatted as ISO 8601 strings or as EPOCH-timestamps in milliseconds <https://developers.hubspot.com/docs/guides/api/crm/properties>`__ |ext_link|.
 
 .. setting-hubspot-dates-and-datetimes-end
+
+
+**Create new contacts?**
+
+.. setting-hubspot-create-contacts-start
+
+Select **Create new contacts?** to create contacts in |destination-name| when they do not already exist. Existing contacts are updated when this setting is unselected.
+
+.. setting-hubspot-create-contacts-end
+
 
 **List name**
 
@@ -1566,6 +1909,34 @@ Use public key encryption to encrypt data that has PII before using SFTP to send
 
 .. setting-infutor-public-key-end
 
+
+
+
+.. vale off
+
+**INSIDER ONE**
+
+.. vale on
+
+**Attribute name**
+
+.. vale off
+
+.. setting-insider-one-attribute-name-start
+
+The |destination-name| user attribute used to match audience members. Must be one of **email**, **phone_number**, or **uuid**, and must match the attribute name configured on the **Default Attributes** page in |destination-name|.
+
+.. setting-insider-one-attribute-name-end
+
+**Segment name**
+
+.. vale off
+
+.. setting-insider-one-segment-name-start
+
+The name of the first-party segment to create in |destination-name|. Segment names must be unique across the |destination-name| account and cannot exceed 40 characters.
+
+.. setting-insider-one-segment-name-end
 
 
 
@@ -1652,7 +2023,7 @@ The account ID for your |destination-name| account.
 
 .. setting-linkedin-dmp-identifier-type-start
 
-The name of the identifier type must be one of the following: 1) **email** 2) **firstname** and **lastname**. Including any other fields will return an error. Map the output of query results and segments before sending to LinkedIn.
+The identifier type determines how |destination-name| matches contacts. Either **email** alone or both **firstname** and **lastname** together must be included. The optional fields **title**, **country**, and **employeecompany** may also be included. Any field not in this set of six will return an error.
 
 .. setting-linkedin-dmp-identifier-type-end
 
@@ -1708,7 +2079,7 @@ The name of the email list in |destination-name| and managed by Amperity.
 
 .. setting-listrak-segment-name-start
 
-The name of a segment in |destination-name| managed by Amperity.
+The name of the segmentation field in |destination-name| that Amperity creates if it does not already exist. Contacts in your list can be segmented based on this field in |destination-name|.
 
 .. setting-listrak-segment-name-end
 
@@ -1751,7 +2122,7 @@ See common settings. This one defaults to "phone".
 
    To avoid sending unsubscribed customers, apply filters to remove any customers who have unsubscribed from receiving SMS messages before sending audiences to |destination-name| using campaigns, journeys, or orchestrations.
 
-   Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, and **postal code**. Additional attributes may be sent when a matching custom segmentation field exists in |destination-name|.
+   Amperity updates the contact attributes of SMS audiences in Listrak, including **phone** (required), **email**, **first name**, **last name**, **birthdate**, **postal code**, and opt status. Additional attributes may be sent when a matching custom profile field exists in |destination-name|.
 
    Talk with your Amperity representative about the |destination-name| connector before configuring it in your tenant.
 
@@ -1781,7 +2152,7 @@ The SMS list ID is available from the |destination-name| user interface. Open th
 
 .. setting-listrak-sms-enable-segmentation-start
 
-Select **Include attributes that match custom profile fields** to have Amperity synchronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|. Custom attributes must match the name of the custom profile field in Listrak and must be a supported Listrak data.
+Custom attributes that match custom profile fields defined in |destination-name| are automatically synchronized.
 
 .. setting-listrak-sms-enable-segmentation-end
 
@@ -1840,7 +2211,7 @@ The audience ID to which Amperity writes data. This is sometimes referred to as 
 
 .. setting-mailchimp-list-name-start
 
-The name of the list that by Amperity in |destination-name|.
+The name of the list in |destination-name| managed by Amperity.
 
 .. setting-mailchimp-list-name-end
 
@@ -1848,7 +2219,7 @@ The name of the list that by Amperity in |destination-name|.
 
 .. setting-mailchimp-tag-name-start
 
-A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to apply to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, it applies to all audience members added by Amperity.
+A `Mailchimp tag <https://mailchimp.com/help/getting-started-tags/>`__ |ext_link| to apply to all audience list members. For example: "Added by Amperity". If this tag does not exist in Mailchimp, Amperity creates it and applies it to all audience members added by Amperity.
 
 .. setting-mailchimp-tag-name-end
 
@@ -1875,7 +2246,7 @@ The account ID for your |destination-name| account.
 
 .. setting-meta-ads-manager-custom-audience-name-start
 
-The name of the custom audience in |destination-name|. The name of a custom audience should not include the word "treatment".
+The name of the custom audience in |destination-name|. Amperity creates the audience if it does not already exist. If more than one audience exists with the same name, Amperity returns an error. The name of a custom audience should not include the word "treatment".
 
 .. setting-meta-ads-manager-custom-audience-name-end
 
@@ -1907,9 +2278,11 @@ Settings unique to Meta Ads Manager: Events.
 
 .. setting-meta-ads-manager-dataset-id-start
 
-`Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources--such as from websites, mobile apps, physical store locations or business chats--from one location.
+`Datasets connect and manage event data <https://www.facebook.com/business/help/750785952855662?id=490360542427371>`__ |ext_link| from different sources, such as from websites, mobile apps, physical store locations or business chats, from one location.
 
 A `dataset ID configured <https://www.facebook.com/business/help/5818684664831465?id=490360542427371>`__ |ext_link| in |destination-name| supports sending send events from Amperity.
+
+.. note:: The dataset must be configured as a consolidated dataset in |destination-name|, which unifies pixel and offline conversion data in one location. Amperity will return an error if the dataset ID is not a consolidated dataset.
 
 .. setting-meta-ads-manager-dataset-id-end
 
@@ -1963,6 +2336,39 @@ The name of the list in Microsoft Advertising.
 .. setting-microsoft-advertising-list-name-end
 
 
+.. setting-microsoft-ads-offline-conversions-operation-mode-start
+
+Selects what the destination does each time it runs:
+
+* **send-conversions** uploads new offline conversions to Microsoft Advertising.
+* **adjust-conversions** restates or retracts offline conversions that were previously uploaded.
+
+A destination uses a single operation mode. To both upload and adjust conversions, configure a separate destination for each mode.
+
+.. setting-microsoft-ads-offline-conversions-operation-mode-end
+
+
+.. setting-microsoft-ads-offline-conversions-customer-account-id-start
+
+The Microsoft Advertising ad account that receives the offline conversions. This is the **aid** value in the Microsoft Advertising Campaigns page URL.
+
+.. setting-microsoft-ads-offline-conversions-customer-account-id-end
+
+
+.. setting-microsoft-ads-offline-conversions-customer-id-start
+
+The Microsoft Advertising manager account that contains the ad account. This is the **cid** value in the Microsoft Advertising Campaigns page URL.
+
+.. setting-microsoft-ads-offline-conversions-customer-id-end
+
+
+.. setting-microsoft-ads-offline-conversions-query-must-return-start
+
+A query must return **conversion_name** and **conversion_time**, plus at least one of **msclkid**, **email**, or **phone** to identify the conversion. All other columns are optional; **currency_code** is sent only when **conversion_value** is present. In **adjust-conversions** mode, a query must also return **adjustment_type** and **adjustment_time**; **Restate** adjustments also require **adjustment_value** and **adjustment_currency_code**.
+
+.. setting-microsoft-ads-offline-conversions-query-must-return-end
+
+
 
 
 .. vale off
@@ -1977,7 +2383,7 @@ Settings unique to Microsoft Dataverse.
 
 .. setting-microsoft-dataverse-table-logical-name-start
 
-The table name in |destination-name|. This is the table to which the connector writes data. For example: "abc123_customers".
+The logical name for the table in |destination-name| to which the connector writes data. For example: "abc123_customers".
 
 .. setting-microsoft-dataverse-table-logical-name-end
 
@@ -2193,6 +2599,65 @@ This approach requires adding an empty shared list to |destination-name|, and th
 
 .. vale off
 
+**ORACLE OPERA (OUTBOUND)**
+
+.. vale on
+
+Settings unique to Oracle Opera (Outbound).
+
+**Gateway URL**
+
+.. setting-oracle-opera-outbound-gateway-url-start
+
+The OHIP gateway base URL, for example ``https://<tenant>.hospitality-api.<region>.ocs.oraclecloud.com``.
+
+.. setting-oracle-opera-outbound-gateway-url-end
+
+**Enterprise ID**
+
+.. setting-oracle-opera-outbound-enterprise-id-start
+
+The enterprise ID for the OPERA Cloud environment. Required on the token request for OCIM environments.
+
+.. setting-oracle-opera-outbound-enterprise-id-end
+
+**Hotel ID**
+
+.. setting-oracle-opera-outbound-hotel-id-start
+
+The default ``x-hotelid`` for CRM calls, which is the property that profiles are written to.
+
+.. setting-oracle-opera-outbound-hotel-id-end
+
+**External System Code**
+
+.. setting-oracle-opera-outbound-external-system-code-start
+
+The code the property has configured for Amperity as an external system (in OPERA Cloud: **Administration > Interfaces > Business Events > External Systems**, linked to the property under **Toolbox > System Setup > External Databases**). The Amperity ID is stored on each OPERA profile under this code, which is how every run finds the guest again.
+
+.. setting-oracle-opera-outbound-external-system-code-end
+
+**Profile type**
+
+.. setting-oracle-opera-outbound-profile-type-start
+
+The OPERA profile type to create or update. Most hospitality use cases use **Guest**. Options are **Guest**, **Contact**, **Company**, and **Agent**. The default is **Guest**.
+
+.. setting-oracle-opera-outbound-profile-type-end
+
+**Primary key**
+
+.. setting-oracle-opera-outbound-primary-key-start
+
+The field that identifies a guest across runs. The Amperity ID is stable, unlike a guest's OPERA attributes. Set to **external_id**.
+
+.. setting-oracle-opera-outbound-primary-key-end
+
+
+
+
+.. vale off
+
 **PANDA PRINTING**
 
 .. vale on
@@ -2243,6 +2708,12 @@ Your brand's |destination-name| advertising account ID.
 
 .. setting-pinterest-ad-account-id-end
 
+.. setting-pinterest-ad-account-id-about-start
+
+The account identifier is a numeric value with up to 18 digits. You can find your ad account ID in the URL for |destination-name| Ads Manager after logging in or by navigating to the **Ad Account Overview** page in |destination-name| Ads Manager.
+
+.. setting-pinterest-ad-account-id-about-end
+
 **Audience primary key**
 
 See common settings.
@@ -2257,6 +2728,50 @@ The list name to which Amperity sends a list of SHA-256 hashed email addresses. 
 
 
 
+
+
+.. vale off
+
+**PINTEREST EVENTS**
+
+.. vale on
+
+Settings unique to Pinterest.
+
+**Ad account ID**
+
+See Pinterest.
+
+.. setting-pinterest-events-test-mode-false-start
+
+Set this value to "false" before running this destination in production.
+
+.. setting-pinterest-events-test-mode-false-end
+
+**Query requirements** (not a setting)
+
+.. setting-pinterest-events-query-must-return-start
+
+A query must return the following parameters: **currency**, **email**, **timestamp**, and **value**. When **value** cannot be returned, both **price** and **quantity** must be returned.
+
+.. setting-pinterest-events-query-must-return-end
+
+.. setting-pinterest-events-query-should-return-start
+
+The query should return the following parameters to `improve return on ad spend (ROAS) and cost per acquisition (CPA) reporting performance <https://help.pinterest.com/en/business/article/conversion-insights>`__ |ext_link| within |destination-name|: **currency**, **extern_id**, **given_name**, **surname**, and **phone**.
+
+.. setting-pinterest-events-query-should-return-end
+
+.. setting-pinterest-events-query-automatic-return-start
+
+Amperity adds the following parameters and applies values automatically:
+
+* **action_source** is automatically set to **offline**
+* **event_id** is an automatically generated SHA-256 hash of **order_id**, **event_name**, and **timestamp**
+* **event_name** is automatically set to **checkout**
+* **partner_name** is automatically set to **ss-amperity**
+
+.. setting-pinterest-events-query-automatic-return-end
 
 
 
@@ -2295,6 +2810,31 @@ See SFTP.
 
 
 
+.. vale off
+
+**REDDIT ADS**
+
+.. vale on
+
+**Ad account ID**
+
+.. setting-reddit-ads-ad-account-id-start
+
+The Reddit Ads account ID. This value follows the format ``a2_xxxxxxxxx`` and is available in Reddit Ads Manager under account settings.
+
+.. setting-reddit-ads-ad-account-id-end
+
+**List name**
+
+.. setting-reddit-ads-list-name-start
+
+Optional. The name of the custom audience in Reddit Ads. When provided, this name is used as-is. When omitted, the audience name defaults to "Amperity - " followed by the segment name.
+
+.. setting-reddit-ads-list-name-end
+
+
+
+
 
 .. vale off
 
@@ -2302,13 +2842,45 @@ See SFTP.
 
 .. vale on
 
-Settings unique to Sailthru by Marigold Engage.
+Settings unique to Sailthru by Zeta Engage.
 
 **Audience primary key**
 
 See common settings.
 
 **List name**
+
+.. setting-roku-audience-account-uid-start
+
+The Roku Ads account UID that owns the audience. This is a unique identifier for your Roku Ads account (for example: ``Pxxxxxxxxxxxx``).
+
+.. setting-roku-audience-account-uid-end
+
+.. setting-roku-audience-list-name-start
+
+The name of the audience list to create in Roku Ads Manager.
+
+.. setting-roku-audience-list-name-end
+
+.. setting-roku-audience-list-name-unique-start
+
+.. important:: Roku requires unique audience names. Each sync must use a different list name. If an audience with the specified name already exists in your Roku Ads account, the sync will fail.
+
+   Roku's Ads API does not support updating or deleting existing audiences, so each sync creates a new audience.
+
+.. setting-roku-audience-list-name-unique-end
+
+.. setting-roku-capi-event-group-id-start
+
+The Roku event group (online property) that receives the events. Find it in Roku Ads Manager under **Events**. A destination sends to a single event group.
+
+.. setting-roku-capi-event-group-id-end
+
+.. setting-roku-capi-query-must-return-start
+
+A query must return **event_name**, **event_source**, **event_time**, and **email**. All other columns are optional.
+
+.. setting-roku-capi-query-must-return-end
 
 .. setting-sailthru-list-name-start
 
@@ -2334,7 +2906,7 @@ Note: There is an SFTP-based connector also.
 
 .. setting-salesforce-marketing-cloud-account-id-start
 
-The account ID for the business unit in |destination-name|.
+The account ID for the business unit in |destination-name|, also known as the member ID.
 
 .. setting-salesforce-marketing-cloud-account-id-end
 
@@ -2385,17 +2957,23 @@ For orchestrations, assign a name to the data extension.
 
 .. setting-salesforce-marketing-cloud-folder-name-start
 
-The directory within the |destination-name| SFTP site from which the Marketing Cloud SOAP API finds CSV files.
+The name of the folder in |destination-name| where data extensions are created. If not specified, defaults to "Amperity API".
 
 .. setting-salesforce-marketing-cloud-folder-name-end
+
+**Folder type**
+
+.. setting-salesforce-marketing-cloud-folder-type-start
+
+Select the folder in which the Data Extension is created. Use "Data Extensions" for standard destinations within a single business unit. Use "Shared Data Extensions" when the Data Extension must be accessible across multiple business units.
+
+.. setting-salesforce-marketing-cloud-folder-type-end
 
 **Primary key**
 
 .. setting-salesforce-marketing-cloud-primary-key-start
 
-Set to one of the following: "subscriber_key" or "email".
-
-Use "subscriber_key" when a field maps directly to the subscriber key in |destination-name|, otherwise use "email".
+The column from your data that serves as the unique identifier for records in the data extension. Set to **subscriber_key** when a field maps directly to the subscriber key in |destination-name|. Otherwise, use one of the email variants: **email**, **emailaddress**, or **email_address**.
 
 .. setting-salesforce-marketing-cloud-primary-key-end
 
@@ -2403,13 +2981,13 @@ Use "subscriber_key" when a field maps directly to the subscriber key in |destin
 
 .. setting-salesforce-marketing-cloud-subscriber-field-start
 
-Recommended. The subscriber key for |destination-name|.
+Required. The field in |destination-name| used to identify subscribers. Set to "Subscriber Key" to match subscribers on their subscriber key, or "Email Address" to match on email.
 
 .. setting-salesforce-marketing-cloud-subscriber-field-end
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-start
 
-A subscriber key is the "primary key" for the destination. Choose the |destination-name| subscriber key or choose email.
+The primary key and subscriber field must align: use **subscriber_key** with "Subscriber Key", or an email variant with "Email Address".
 
 .. setting-salesforce-marketing-cloud-subscriber-field-important-end
 
@@ -2464,7 +3042,7 @@ Configure the external ID as "Amperity_ID__c". The "__c" identifies the field as
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-start
 
-When enabled, "Upsert" operations ignore **NULL** values in data sent from Amperity. If a field has a **NULL** value and there is a value in the corresponding Salesforce object, the operation keeps the value in the Salesforce object.
+When enabled, batches of data are loaded in parallel. Parallelism may improve performance, but can cause lock contention for highly overlapping data. When disabled, batches are loaded serially.
 
 .. setting-salesforce-sales-cloud-load-data-in-parallel-end
 
@@ -2494,10 +3072,86 @@ The name of the object, or audience list, in Salesforce Sales Cloud to which Amp
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
 
-Enable to use **NULL** values when fields are empty.
+When enabled, empty fields in data sent from Amperity are converted to **NULL** values. For "Upsert" operations, if a field is empty and the corresponding Salesforce object already has a value, that existing value is cleared. When disabled, empty fields are ignored and existing Salesforce values are preserved.
 
 .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
 
+.. setting-dynamic-yield-customer-profiles-feed-key-start
+
+The feed's key, copied from the feed's settings in |destination-name|. Each User Data feed has its own key and is tied to a single customer's feed. The feed and its schema must already exist in |destination-name|; Amperity sends data to a feed but cannot create one.
+
+.. setting-dynamic-yield-customer-profiles-feed-key-end
+
+.. setting-dynamic-yield-customer-profiles-data-center-start
+
+The |destination-name| data center in which the account is provisioned, which determines the API base URL. Select **us** or **eu**. Defaults to **us**.
+
+.. setting-dynamic-yield-customer-profiles-data-center-end
+
+.. setting-dynamic-yield-customer-profiles-cuid-field-start
+
+The name of the column in the query results that holds the customer identifier (``cuid``) to send with every request. Every other column in the query results is sent to the feed as a data field, using the column name and value as-is.
+
+.. setting-dynamic-yield-customer-profiles-cuid-field-end
+
+.. setting-dynamic-yield-customer-profiles-cuid-type-start
+
+The identifier type that |destination-name| expects for ``cuid``, which must match how the feed itself is configured. Use **he** for a hashed email (Amperity hashes the value in the CUID field automatically, so the query results can carry a raw email address), **dyid** for Dynamic Yield's own user ID, or a custom type configured for the feed. When **he** is selected, a value that is not an email address (does not contain an "@") is skipped and reported, rather than hashed.
+
+.. setting-dynamic-yield-customer-profiles-cuid-type-end
+
+.. setting-dynamic-yield-customer-profiles-operation-start
+
+The operation applied to every row in the query results: **upsert** (the default) adds or updates each customer's profile in the feed, and **delete** removes each customer's profile from the feed. A destination performs a single operation for the entire run, not a mix. An upsert sends every column besides the CUID field as profile data; a delete sends only the identifier.
+
+.. setting-dynamic-yield-customer-profiles-operation-end
+
+.. setting-eagle-eye-identity-type-start
+
+The name your Eagle Eye company unit uses for the loyalty identity carried in the ``identity_value`` column — for example ``CUSTOMER_ID`` or a loyalty card type. This is configured in Eagle Eye and differs by company unit, so confirm the exact name with your Eagle Eye account manager. Every wallet operation is addressed by this identity.
+
+This setting names the identity type only; it does not name the query column. The identity values themselves must travel in a column named ``identity_value`` in the query results.
+
+.. setting-eagle-eye-identity-type-end
+
+.. setting-eagle-eye-default-wallet-type-start
+
+The Eagle Eye wallet type created for new wallets by the **create** operation. Defaults to **CONSUMER**, Eagle Eye's standard consumer wallet type. Change it only if your Eagle Eye company unit uses a different wallet type.
+
+.. setting-eagle-eye-default-wallet-type-end
+
+.. setting-eagle-eye-default-wallet-state-start
+
+The Eagle Eye behavioral state applied to each new wallet by the **create** operation. It sets the wallet's state only; the loyalty identity attached to the wallet takes its state from the **New identity state** setting. Wallet states and identity states are separate value sets, each configured per Eagle Eye company unit, so set this only to a wallet-state value your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave it unset to let Eagle Eye apply your unit's default wallet state — the safest choice.
+
+.. setting-eagle-eye-default-wallet-state-end
+
+.. setting-eagle-eye-default-identity-state-start
+
+The Eagle Eye behavioral state applied to the loyalty identity attached to each new wallet by the **create** operation. Identity states are a separate set of values from wallet states, each configured per Eagle Eye company unit, so set this only to an identity-state value your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave it unset to let Eagle Eye apply your unit's default identity state — the safest choice.
+
+.. setting-eagle-eye-default-identity-state-end
+
+.. setting-eagle-eye-operation-start
+
+The wallet operation performed for every row in the send. A send performs a single operation for the entire run:
+
+* **create** (the default) provisions a wallet for each person and attaches their loyalty identity, and sets the wallet's label from the ``friendly_name`` column when it is present. A person who already has a wallet is recovered rather than duplicated, so re-sending the same query results is safe.
+* **update** changes a wallet's friendly name, and requires the ``friendly_name`` column.
+* **state-change** changes a wallet's behavioral state, and requires the **Wallet state** setting below.
+* **suspend** temporarily halts a wallet's activity, and **activate** returns a suspended or inactive wallet to service.
+* **terminate** permanently closes a wallet — it cannot be undone, and Eagle Eye rejects any later change to a terminated wallet. It is the recommended operation for a consent-driven hard opt-out.
+* **delete** is a soft delete on Eagle Eye's side: it removes the wallet from active use but does not erase it. Intended for cleaning up test data, not for consent or data-subject requests — use **terminate** for those.
+
+Every operation other than **create** first looks up the person's existing wallet by their identity value; a person with no wallet yet is reported as a failed row and the run continues. You choose this operation when you configure the orchestration that sends to this destination.
+
+.. setting-eagle-eye-operation-end
+
+.. setting-eagle-eye-wallet-state-start
+
+The behavioral state applied to the wallet by the **state-change** operation. This value comes from the wallet-state set — the same set as **New wallet state**, not the identity set — because state-change patches the wallet. Wallet states and identity states are separate value sets, so use only a wallet-state value your Eagle Eye account manager has confirmed for your unit. Required when the operation is **state-change**; Amperity stops the run with a message if it is missing. You choose this when you configure the orchestration that sends to this destination.
+
+.. setting-eagle-eye-wallet-state-end
 
 
 
@@ -2516,6 +3170,15 @@ Settings unique to SAP Emarsys.
 The contact identifier for contact lists managed by this destination. Possible values: "email" or "phone".
 
 .. setting-sap-emarsys-contact-identifier-end
+
+**Create new contact**
+
+.. setting-sap-emarsys-create-contact-start
+
+Enable to create contacts when they do not exist in |destination-name|. Disable to prevent creating new contacts.
+
+.. setting-sap-emarsys-create-contact-end
+
 
 **Does the list exist?**
 
@@ -2561,6 +3224,42 @@ Applies to: Acxiom, Adobe AEP, Adobe Campaign, Adobe Customer Attributes, Airshi
 .. vale on
 
 **About**
+
+.. setting-sendgrid-list-name-start
+
+The name of the SendGrid list to which Amperity will send audience members. Amperity matches this to an existing list by exact name; if no list with that exact name exists, Amperity creates one. A different or changed name creates a new list rather than updating the existing one.
+
+.. setting-sendgrid-list-name-end
+
+.. setting-sevenrooms-base-url-start
+
+The base URL for the SevenRooms API, including the version path. For example: ``https://demo.sevenrooms.com/api-ext/2_2``. Your production base URL differs from the demo URL.
+
+.. setting-sevenrooms-base-url-end
+
+.. setting-sevenrooms-venue-group-id-start
+
+The venue group ID for your SevenRooms account. This scopes the guest profiles that Amperity tags to a single venue group.
+
+.. setting-sevenrooms-venue-group-id-end
+
+.. setting-sevenrooms-tag-group-start
+
+The SevenRooms client tag group that the audience tag belongs to. SevenRooms addresses a client tag as ``group:tag``; this setting is the group portion and is the same for every audience sent to this destination.
+
+.. setting-sevenrooms-tag-group-end
+
+.. setting-sevenrooms-tag-name-start
+
+The SevenRooms client tag that Amperity applies to audience members. This is the tag portion of the ``group:tag`` value and identifies the audience within SevenRooms. Changing the tag name or the tag group sends the entire audience again under the new tag.
+
+.. setting-sevenrooms-tag-name-end
+
+.. setting-shopify-graphql-audience-tag-start
+
+The Shopify customer tag that Amperity applies to audience members. Shopify customer tags are flat, so the tag is the whole audience identifier. Amperity applies this tag to customers who are in the audience and removes it from customers who leave the audience. Changing the tag name sends the entire audience again under the new tag.
+
+.. setting-shopify-graphql-audience-tag-end
 
 .. setting-sftp-about-start
 
@@ -2792,7 +3491,7 @@ See common.
 
 .. setting-the-trade-desk-membership-duration-minmax-start
 
-The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
+The default value is "90". The maximum value is "180". Set to "0" to remove all audience members from the segment.
 
 .. setting-the-trade-desk-membership-duration-minmax-end
 
@@ -2801,7 +3500,7 @@ The minimum value should be "7" because |destination-name| uses the previous sev
 
 .. setting-the-trade-desk-membership-duration-example-start
 
-The membership duration is in days. Adjust the membership duration value to be greater than or equal to than the frequency at which your brand sends campaigns or orchestrations from Amperity.
+The membership duration is in days. Adjust the membership duration value to be greater than or equal to the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
 For example: if your brand sends a campaign to |destination-name| every 30 days, then set membership duration to "30". If your brand sends a campaign every 14 days, then set membership duration to "14".
 
@@ -2832,7 +3531,7 @@ Your brand must have a UID 2.0 agreement in-place with The Trade Desk before con
 
 .. vale off
 
-**THE TRADE DESK: 3P MARKETPLACE**
+**THE TRADE DESK: 3P MARKETPLACE**, **Audience Monetization**
 
 .. vale on
 
@@ -2842,6 +3541,22 @@ Settings unique to The Trade Desk: 3P Marketplace.
 
 See common.
 
+**Buyable**
+
+.. setting-the-trade-desk-3p-buyable-start
+
+When enabled, the segment is visible and available to buyers in |destination-name|. Enabled by default.
+
+.. setting-the-trade-desk-3p-buyable-end
+
+**Display name**
+
+.. setting-the-trade-desk-3p-display-name-start
+
+The display name for the segment in |destination-name|. This name determines the relationships between the segments in the taxonomy.
+
+.. setting-the-trade-desk-3p-display-name-end
+
 **Segment taxonomy ID**
 
 .. setting-the-trade-desk-3p-segment-taxonomy-id-start
@@ -2850,6 +3565,21 @@ The taxonomy ID for a monetized segment in The Trade Desk.
 
 .. setting-the-trade-desk-3p-segment-taxonomy-id-end
 
+**Segment type**
+
+.. setting-the-trade-desk-3p-segment-type-start
+
+The type of segment. Set to **syndicated** for segments that are available across all advertisers in |destination-name|, or **custom** for segments that are available only to specific advertisers.
+
+.. setting-the-trade-desk-3p-segment-type-end
+
+**Best practices for rate caps and percentages of media costs**
+
+.. setting-the-trade-desk-marketplace-best-practices-start
+
+Talk to your The Trade Desk representative for `more information about defining percentage of media costs and effective rate caps <https://assets.thetradedesk.com/assets/documents/Onboarding-Guide-Audience-Data-Providers.pdf>`__ |ext_link| for your audiences. 
+
+.. setting-the-trade-desk-marketplace-best-practices-end
 
 
 
@@ -2932,7 +3662,7 @@ The advertiser ID for your |destination-name| account. This is a nineteen charac
 
 .. setting-tiktok-ads-manager-custom-audience-name-start
 
-The name of the audience in |destination-name| managed by Amperity. Amperity creates the audience if it does not exist.
+The name of the audience in |destination-name| managed by Amperity. If an audience with this name already exists, Amperity will reuse it rather than create a duplicate. If the audience does not exist, Amperity will create it.
 
 .. setting-tiktok-ads-manager-custom-audience-name-end
 
@@ -2942,7 +3672,16 @@ The name of the audience in |destination-name| managed by Amperity. Amperity cre
 
 The user ID type. This value must be one of the following: "AAID" (Google), "EMAIL" (email addresses), "IDFA" (Apple), or "PHONE" (phone numbers). "EMAIL" and "PHONE" are the default values for campaigns.
 
+**EMAIL**, **PHONE**, and **AAID** values are SHA-256 hashed automatically by Amperity before sending. **IDFA** values (Apple advertising IDs) are sent without hashing.
+
 .. setting-tiktok-ads-manager-user-id-type-end
+
+
+.. destination-tiktok-ads-email-normalization-start
+
+.. note:: Before hashing, Amperity normalizes email addresses sent to |destination-name|: converts to lowercase, removes dots (.) from the local part, and removes plus-sign suffixes (+tag). For example, ``John.Doe+promo@example.com`` becomes ``johndoe@example.com`` before hashing. This normalization improves match rates by standardizing email formats.
+
+.. destination-tiktok-ads-email-normalization-end
 
 
 
@@ -2967,45 +3706,90 @@ The advertiser ID for the TikTok Ads account.
 
 .. setting-tiktok-ads-manager-offline-auto-tracking-start
 
-Select **Auto tracking** to use this event set for add tracking and attribution.
+Select **Auto tracking** to use this event set for ad tracking and attribution.
 
 .. setting-tiktok-ads-manager-offline-auto-tracking-end
 
-**Event set ID**
+**Event source ID**
 
 .. setting-tiktok-ads-manager-offline-event-set-id-start
 
-The event set ID is a nineteen character string similar to "7654321098765432109".
+The event source ID is a nineteen character string similar to "7654321098765432109". For offline events, use the **Offline ID** of the targeted offline event set in the TikTok Event Manager Dashboard. For web events, use the **Pixel ID** of the targeted web event source in the TikTok Event Manager Dashboard.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-end
 
 .. setting-tiktok-ads-manager-offline-event-set-id-context-start
 
-The event set must exist before you can send data to it from Amperity. You can `create an event set ID <https://business-api.tiktok.com/portal/docs?id=1771101027431425>`__ |ext_link| from the |destination-name| user interface.
+The event source must exist before you can send data to it from Amperity. You can configure event sources from the |destination-name| user interface.
 
-Add an event set ID if it does not exist.
-
-Open the TikTok Ads Manager user interface. Choose **Assets**, then **Events**, and then from the **Offline** box select **Manage**.
-
-Each event set has its own card. The event set ID is located under the name of the event set.
+Open the TikTok Ads Manager user interface. Choose **Assets**, then **Events**. For offline events, select **Manage** from the **Offline** box; the Offline ID is located under the name of each event set. For web events, select **Manage** from the **Web** box; the Pixel ID is located under the name of each pixel.
 
 .. setting-tiktok-ads-manager-offline-event-set-id-context-end
-
-**Event set name**
-
-.. setting-tiktok-ads-manager-offline-event-set-name-start
-
-The name of the events set in TikTok Ads Manager.
-
-.. setting-tiktok-ads-manager-offline-event-set-name-end
 
 **Event source**
 
 .. setting-tiktok-ads-manager-offline-event-source-start
 
-The event uploaded to TikTok Ads Manager. May be one of "web" or "offline". Use "web" for events that took place on your website and collected using the `payload helper <https://business-api.tiktok.com/portal/docs?id=1807346079965186>`__ |ext_link|. Use "offline" for events that took place in a physical store and measured by an offline event set ID.
+The type of event to be sent to TikTok Ads Manager. Select "offline" for events that took place in a physical store. Select "web" for events that took place on your website.
 
 .. setting-tiktok-ads-manager-offline-event-source-end
+
+**Fixed event name**
+
+.. setting-tiktok-ads-manager-events-fixed-event-name-start
+
+When the dataset does not include an **event** column, the connector uses this value to populate the event field across all requests in the batch. Either include an **event** column in the query or configure this setting. One of the two is required.
+
+.. setting-tiktok-ads-manager-events-fixed-event-name-end
+
+**Limited data use**
+
+.. setting-tiktok-ads-manager-events-limited-data-use-start
+
+When enabled, signals TikTok to apply limited data processing for web events in applicable U.S. states, supporting compliance with state-level privacy opt-out requirements. Has no effect on offline events.
+
+.. setting-tiktok-ads-manager-events-limited-data-use-end
+
+
+
+
+.. vale off
+
+**VIANT DSP**
+
+.. vale on
+
+**Account ID**
+
+.. setting-viant-dsp-account-id-start
+
+The Viant account ID. Required when Amperity creates a new audience segment. The account ID is available from your Viant account representative.
+
+.. setting-viant-dsp-account-id-end
+
+**Advertiser ID**
+
+.. setting-viant-dsp-advertiser-id-start
+
+The Viant advertiser ID. Required when Amperity creates a new audience segment. The advertiser ID is available in Viant DSP under **Settings** > **Advertisers**.
+
+.. setting-viant-dsp-advertiser-id-end
+
+**Audience name**
+
+.. setting-viant-dsp-audience-name-start
+
+The name of the audience segment in Viant DSP. If the segment does not exist, Amperity creates it automatically using the configured account ID and advertiser ID.
+
+.. setting-viant-dsp-audience-name-end
+
+**Identifier type**
+
+.. setting-viant-dsp-identifier-type-start
+
+The type of identifier in the audience data. Options: **Email**, **Phone Number**, **IP**, **Cookie**, **Mobile ID**. This value must match the data type of the Viant audience segment. The segment data type cannot be changed after the segment is created.
+
+.. setting-viant-dsp-identifier-type-end
 
 
 
@@ -3067,7 +3851,7 @@ Days. See common.
 
 The name of the segment in |destination-name|. This can be the name of an existing segment or a new segment within the |destination-name| taxonomy. Segments are available in |destination-name| from "Audiences". Open the "Partner" audiences, and then choose "Amperity".
 
-.. setting-yahoo-dsp-segment-name-start
+.. setting-yahoo-dsp-segment-name-end
 
 
 
@@ -3087,3 +3871,77 @@ Settings unique to Zendesk.
 Required. The subdomain for your brand's Zendesk account. For example: "socktown" is the subdomain for "socktown.zendesk.com".
 
 .. setting-zendesk-subdomain-end
+
+
+.. setting-posthog-host-start
+
+Which PostHog deployment this destination sends to: **us** (the default) or **eu** for PostHog Cloud, or **self-hosted** for a customer-hosted PostHog instance. When this is set to **self-hosted**, the **Self-hosted URL** setting is required.
+
+.. setting-posthog-host-end
+
+.. setting-posthog-self-hosted-url-start
+
+The base URL of your self-hosted PostHog instance — for example ``https://posthog.example.com``. Required when **PostHog host** is **self-hosted**, and ignored otherwise. If **PostHog host** is **self-hosted** and this is left blank, the run fails.
+
+.. setting-posthog-self-hosted-url-end
+
+.. setting-posthog-identity-column-start
+
+The column in the query results that carries each row's identity: the PostHog ``distinct_id`` in person-properties and events modes, the group key in group-properties mode, or the person to delete in person-deletion mode. This is always ``identity_value`` — your query must return a column with that exact name.
+
+.. setting-posthog-identity-column-end
+
+.. setting-posthog-write-mode-start
+
+What each orchestration sends to PostHog. A destination performs one write mode per orchestration; to send more than one, configure a separate orchestration, with its own query, for each mode:
+
+* **person-properties** (the default) writes each row as properties on a PostHog person, using ``$set`` — or ``$set_once`` for columns named in **Set-once properties**.
+* **group-properties** writes each row as properties on a PostHog group, using the row's identity as the group key. Requires the **Group type** setting.
+* **events** captures each row as a PostHog event, taking the event name and event time from the columns named by **Event name column** and **Timestamp column**. Requires both settings.
+* **person-deletion** permanently deletes each row's person from PostHog, through the Persons API. Intended for honoring data-subject deletion requests.
+
+You choose the write mode when you configure the orchestration that sends to this destination.
+
+.. setting-posthog-write-mode-end
+
+.. setting-posthog-set-once-properties-start
+
+Applies to person-properties mode only. A comma-separated list of column names to write with PostHog's ``$set_once`` semantics — written once and never overwritten — instead of the default ``$set``, which overwrites on every run. Leave it blank to write every non-identity column with ``$set``. A name that is not a column in the query results, or the identity column itself, fails the run before any data is sent.
+
+.. setting-posthog-set-once-properties-end
+
+.. setting-posthog-hashed-properties-start
+
+Applies to person-properties and group-properties modes. A comma-separated list of column names to SHA-256 hash (trimmed and lowercased) before sending. Leave it blank to send every column as-is. PostHog stores properties as literal, queryable values, so hash a column only when your own policy requires it — a hashed value can no longer be searched or filtered in PostHog. A name that is not a column in the query results, or the identity column itself, fails the run before any data is sent.
+
+.. setting-posthog-hashed-properties-end
+
+.. setting-posthog-group-type-start
+
+Applies to group-properties mode only, and is required for it. The PostHog group type this orchestration writes — for example ``company``. PostHog allows up to five group types per project; a value beyond that limit is rejected by PostHog when the run sends.
+
+.. setting-posthog-group-type-end
+
+.. setting-posthog-event-name-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's PostHog event name. This column is used as the event name and is not also sent as an event property. If the named column is not in the query results, the run fails before any data is sent.
+
+.. setting-posthog-event-name-column-end
+
+.. setting-posthog-timestamp-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's event time, so events reflect when they actually happened rather than when they were sent. This column is used as the timestamp and is not also sent as an event property. If a row's value is empty, PostHog records that event at ingest time instead. If the named column is not in the query results, the run fails before any data is sent.
+
+.. setting-posthog-timestamp-column-end
+
+.. setting-posthog-delete-events-start
+
+Applies to person-deletion mode only. When enabled, PostHog also queues each deleted person's events for deletion. Off by default, which removes the person record without cascading to their events.
+
+.. setting-posthog-delete-events-end
+
+.. setting-posthog-delete-recordings-start
+
+Applies to person-deletion mode only. When enabled, PostHog also queues each deleted person's session recordings for deletion. Off by default.
+
+.. setting-posthog-delete-recordings-end

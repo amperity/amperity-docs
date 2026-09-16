@@ -55,7 +55,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :align: center
           :class: no-scaled-link
 
-     - To identify which customers have made their first purchase within the previous 30 days, choose the **Amperity ID** and **First Order Datetime** attributes from the **Transaction Attributes Extended** table. Set the condition for **Amperity ID** to "is not NULL" and the condition for **First Order Datetime** to "is after", and then configure a relative date range of "now - 30 days":
+     - To identify which customers have made their first purchase within the previous 30 days, choose the **Amperity ID** and **First Order Datetime** attributes from the **Transaction Attributes Extended** table. Set the condition for **Amperity ID** to "is not NULL" and the condition for **First Order Datetime** to "is after", and then configure a relative date range of ``now - 30 days``:
 
        .. image:: ../../images/attribute-first-order-datetime-last-30-days-visual-query.png
           :width: 540 px
@@ -63,6 +63,7 @@ The following sections describe using the visual **Query Editor** to build a que
           :align: left
           :class: no-scaled-link
 
+       A relative date is always in Coordinated Universal Time (UTC).
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
@@ -101,6 +102,6 @@ The following sections describe using the visual **Query Editor** to build a que
 
        Click the **Activate** button in the top right corner of the visual **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build queries that are brand- or region-specific.
 
 .. usecase-customers-new-website-customers-callouts-end

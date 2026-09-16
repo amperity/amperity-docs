@@ -7,7 +7,7 @@
 .. |example-filename| replace:: filename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |credential-type| replace:: **bluecore**
-.. |sftp-hostname| replace:: **triggermail.exavault.com**
+.. |sftp-hostname| replace:: **files.bluecore.com** or **triggermail.exavault.com**
 .. |what-pull| replace:: audience exports
 .. |filter-the-list| replace:: "blu"
 
@@ -86,7 +86,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - The host public key if encryption is configured.
+     - The optional host public key for SSH host validation.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -100,7 +100,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail five.
           :align: center
           :class: no-scaled-link
-     - The public key to use for PGP encryption.
+     - A PGP key for decrypting files sent from |source-name|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

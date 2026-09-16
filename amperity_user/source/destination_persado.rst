@@ -214,7 +214,7 @@ The marketing engagement data schema supports the following fields:
 
        #. Converts the characters to lower case
        #. Removes the **+** character, along with any characters between the **+** and the **@** symbol
-       #. Uses the VARCHAR data type
+       #. Uses the **VARCHAR** data type
 
    * - **Opened_Timestamp**
      - The timestamp at which the customer opened the email. For example: "1614080616D".
@@ -258,7 +258,7 @@ The segment data schema supports the following fields:
           :start-after: .. term-birthdate-start
           :end-before: .. term-birthdate-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **closest_mik_distance**
      - 
@@ -271,14 +271,14 @@ The segment data schema supports the following fields:
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **Hashed_Email**
      - The MD5 hash of the normalized email address. A normalized email address:
 
        #. Converts the characters to lower case
        #. Removes the **+** character, along with any characters between the **+** and the **@** symbol
-       #. Uses the VARCHAR data type
+       #. Uses the **VARCHAR** data type
 
    * - **loyalty**
      - Associated with the **children_count**, **registration_source**, and **profile_compl_flag** columns.
@@ -300,7 +300,7 @@ The segment data schema supports the following fields:
           :start-after: .. term-state-start
           :end-before: .. term-state-end
 
-       .. caution:: This field contains PII data.
+       .. caution:: This field has PII data.
 
    * - **wedding_dt**
      - 

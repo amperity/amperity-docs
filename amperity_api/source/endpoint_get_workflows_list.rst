@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-workflows-list-prerequisites-end
 
 
-.. _endpoint-get-workflows-list-base-url:
+.. _endpoint-get-workflows-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-workflows-list-base-url-start
+.. endpoint-get-workflows-list-request-url-start
 
-Direct all requests to the **GET /workflow/runs** endpoint to the following base URL:
+Direct all requests to the **GET /workflow/runs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/workflow/runs
+
+**Microsoft Azure**
+
+.. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/workflow/runs
 
-.. endpoint-get-workflows-list-base-url-end
+.. endpoint-get-workflows-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-workflows-list-rate-limit:
@@ -61,6 +73,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-workflows-list-request:
@@ -75,10 +91,10 @@ A request to the **GET /workflow/runs** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
+          'https://app.amperity.com/api/workflow/runs \
           ?limit=12 \
           &with_total=true' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -224,10 +240,10 @@ The following examples show how to send requests to the **GET /workflow/runs** e
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/workflow/runs \
+                'https://app.amperity.com/api/workflow/runs \
                 ?limit=12 \
                 ?with_total=true' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
@@ -243,7 +259,7 @@ Responses
 
 .. endpoint-get-workflows-list-responses-start
 
-A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-list-responses-end
 
@@ -270,14 +286,14 @@ The **200** response returns a list of workflows.
                    or by loading data to the table.",
        },
      "id": "wf-20240603-12345-MNabc",
-     "ended_at": "2024-02-10T17:29:32.687Z",
+     "ended_at": "2026-02-10T17:29:32.687Z",
      "name": "Loyalty Membership",
      "principal_name": "Justin Scott",
      "principal_id": "google-apps|justin.scott@socktown.com",
      "type": "amperity.orchestration.orchestration/run",
      "principal_email": "justin.scott@socktown.com",
      "state": "canceled",
-     "created_at": "2024-02-10T17:29:22.454Z",
+     "created_at": "2026-02-10T17:29:22.454Z",
      "tenant": "socktown",
    }
 
@@ -291,7 +307,7 @@ Response parameters
 
 .. endpoint-get-workflows-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -364,7 +380,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

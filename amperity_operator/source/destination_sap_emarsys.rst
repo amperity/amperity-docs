@@ -5,7 +5,7 @@
 .. |destination-api| replace:: Emarsys API
 .. |plugin-name| replace:: "emarsys"
 .. |credential-type| replace:: "emarsys"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "client ID" and "client secret"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: contact lists
 .. |where-send| replace:: |destination-name|
@@ -40,10 +40,14 @@ Use contact lists in |destination-name| as an alternative to segments when selec
 
 You can configure Amperity to maintain contact lists in |destination-name| using the |destination-api|. Amperity updates the contact list in |destination-name| to match the audience sent from Amperity. Amperity:
 
-#. Adds contact lists when they don't exist in |destination-name|.
+#. Adds contact lists when they do not exist in |destination-name|.
 #. Updates contact attributes and profile information for contacts already in a contact list to match what is sent from Amperity.
-#. Adds contacts to a contact list when they don't exist in |destination-name|.
-#. Removes contacts from a contact list when they don't exist in the audience sent from Amperity.
+#. Adds contacts to a contact list when they do not exist in |destination-name|.
+#. Removes contacts from a contact list when they do not exist in the audience sent from Amperity.
+
+   Contacts that exist in the contact list before Amperity is configured to manage a contact list are never removed from the contact list.
+
+.. note:: If a dataset only includes phone nubmers or email addresses Amperity will update the contact list without modifying attributes.
 
 .. destination-sap-emarsys-configure-end
 
@@ -351,6 +355,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-sap-emarsys-contact-identifier-start
              :end-before: .. setting-sap-emarsys-contact-identifier-end
+
+       **Create contact?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-sap-emarsys-create-contact-start
+             :end-before: .. setting-sap-emarsys-create-contact-end
 
 
    * - .. image:: ../../images/steps-05.png

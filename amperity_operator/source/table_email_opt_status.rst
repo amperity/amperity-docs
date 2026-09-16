@@ -27,7 +27,7 @@ Email Opt Status table
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an email.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an email.
 
 .. table-email-opt-status-add-important-end
 
@@ -53,7 +53,7 @@ The **Email Opt Status** table is a recommended table for the customer 360 datab
 
 .. table-email-opt-status-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Email Opt Status".
 #. Set the build mode to **Passthrough**.

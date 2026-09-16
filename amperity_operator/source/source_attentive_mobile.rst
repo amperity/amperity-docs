@@ -116,7 +116,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - The host public key if encryption is configured.
+     - The optional host public key for SSH host validation.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -130,7 +130,7 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail five.
           :align: center
           :class: no-scaled-link
-     - The public key to use for PGP encryption.
+     - A PGP key for decrypting files sent from |source-name|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -152,9 +152,9 @@ The |source-name| data source requires the following configuration details:
           :alt: Detail seven.
           :align: center
           :class: no-scaled-link
-     - Conversions data pulled from |source-name| has a field named **message_text** that contains the lines of an SMS message using **\n** to separate each line of the message.
+     - Conversions data pulled from |source-name| has a field named **message_text** that has the lines of an SMS message using **\n** to separate each line of the message.
 
-       Remove the **\n** prior to pulling this data to Amperity.
+       Remove the **\n** before pulling this data to Amperity.
 
        For example:
 

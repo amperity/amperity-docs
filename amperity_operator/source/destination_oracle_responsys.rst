@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Oracle Responsys
 .. |plugin-name| replace:: "Oracle Responsys"
 .. |credential-type| replace:: "oracle-responsys"
-.. |required-credentials| replace:: "username", "hostname", and "passphrase"
+.. |required-credentials| replace:: "username", "hostname", "private key", and "passphrase"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
 .. |sftp-hostname| replace:: "files.responsys.net" or "files.dc2.responsys.net"
@@ -164,11 +164,17 @@ Configure credentials
 
        **Passphrase**
 
-          |checkmark-required| **Required**
-
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-sftp-passphrase-start
              :end-before: .. credential-sftp-passphrase-end
+
+       **Private key**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-sftp-private-key-start
+             :end-before: .. credential-sftp-private-key-end
 
        **Username**
 

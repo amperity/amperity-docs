@@ -61,7 +61,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 .. _term-datasheet:
 
 **data sheet** vs. **datasheet**
-   Use **datasheet** as a single word to describe a deliverable that contains technical information for customers about an |company_name| product or scenario.
+   Use **datasheet** as a single word to describe a deliverable that has technical information for customers about an |company_name| product or scenario.
 
 
 .. _term-datasource:
@@ -157,6 +157,15 @@ Use terminology correctly within Amperity documentation and the user interface.
 
 .. vale on
 
+.. vale off
+
+.. _term-realtime:
+
+**real-time**
+   Use the hyphenated **real-time** rather than the portmanteau **realtime**. With a hyphen it looks like a serious technical term; without a hyphen it looks like a marketing buzzword. 
+
+.. vale on
+
 
 .. _term-replica:
 
@@ -187,7 +196,7 @@ Use terminology correctly within Amperity documentation and the user interface.
 
    Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.
 
-   Any other use of stitch should have a lower-case "s" and may follow any other standard use cases.
+   Any other use of stitch should have a lowercase "s" and may follow any other standard use cases.
 
 
 .. _term-web-ui:

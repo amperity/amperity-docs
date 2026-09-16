@@ -21,8 +21,8 @@ Pull events from Braze Currents
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-braze-start
-   :end-before: .. term-braze-end
+   :start-after: .. term-braze-currents-start
+   :end-before: .. term-braze-currents-end
 
 
 .. _source-braze-about-currents:

@@ -464,8 +464,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-adobe-campaign-workflow-actions-invalid-credentials`
-       * :ref:`destination-adobe-campaign-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-adobe-campaign-workflow-actions-invalid-credentials`
+       * :ref:`campaign-adobe-campaign-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png

@@ -179,6 +179,6 @@ Log in to Amperity
 Supported browsers
 --------------------------------------------------
 
-.. include:: ../../amperity_operator/source/start_here.rst
-   :start-after: .. start-here-tenant-browsers-start
-   :end-before: .. start-here-tenant-browsers-end
+.. include:: ../../amperity_reference/source/system_requirements.rst
+   :start-after: .. system-requirements-browsers-start
+   :end-before: .. system-requirements-browsers-end

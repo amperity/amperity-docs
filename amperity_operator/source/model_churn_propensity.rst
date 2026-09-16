@@ -33,7 +33,7 @@ Amperity models churn propensity for each customer's unique purchase history. So
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Support a churn prevention campaign that has a series of escalating win-back offers
 * Optimize suppression and spend
 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
@@ -165,15 +165,15 @@ Build a churn propensity model
 
 .. model-churn-propensity-configure-start
 
-You can build a churn propensity model from the **Customer 360** page. Each database that is a "customer 360" database and contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
+You can build a churn propensity model from the **Customer 360** page. Each database that is a "customer 360" database and has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
 
 .. model-churn-propensity-configure-end
 
 .. important:: 
 
    .. include:: ../../amperity_operator/source/models.rst
-      :start-after: .. models-fields-used-by-all-models-start
-      :end-before: .. models-fields-used-by-all-models-end
+      :start-after: .. models-fields-used-by-all-models-table-start
+      :end-before: .. models-fields-used-by-all-models-table-end
 
 **To build a churn propensity model**
 
@@ -188,7 +188,7 @@ You can build a churn propensity model from the **Customer 360** page. Each data
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Open the **Customer 360** page, select a database, and then open the bottom--|fa-kebab|--menu and select **Predictive models**. This opens the **Predictive models page**.
+     - Open the **Customer 360** page, and then select the **Predictive models** tab. This opens the **Predictive models** page.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
@@ -204,11 +204,11 @@ You can build a churn propensity model from the **Customer 360** page. Each data
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2020 or you may choose a relative date like "today - 4 years".
+     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2020 or you may choose a relative date like ``today - 4 years``.
 
-       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer. 
+       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer.
 
-       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same.
+       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same. A relative date is always in Coordinated Universal Time (UTC).
 
        .. note:: A relative date is determined at the time a model is run, where "now" is the date on which the model is run. The time window should be at least 3 years, but may be 4 or 5, depending on how much data is available to the model in Amperity.
 
@@ -334,7 +334,7 @@ For example:
        c.life_cycle
        ,p.predicted_customer_lifecycle_status
      ) AS life_cycle_final
-   FROM Predicted_CLV_Attributes AS p
+   FROM Predicted_365d_CLV_Attributes AS p
    LEFT JOIN overrides c ON p.amperity_id = c.amperity_id
 
 .. model-churn-propensity-customize-lifecycle-status-end

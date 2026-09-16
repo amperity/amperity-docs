@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        Amounts before discounts are applied.
+        Amounts after discounts are applied.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amounts before discounts are applied.
+        Amounts after discounts are applied.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Subtotals
 
 .. attribute-subtotals-start
 
-Subtotals represents amounts before discounts are applied.
+Subtotals represents item, order, and unit amounts after discounts are applied.
 
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-item-subtotal-start
@@ -58,7 +58,7 @@ Available operators
 
 The following table lists the operators that are available to subtotal attributes.
 
-.. note:: Subtotal attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Subtotal attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65

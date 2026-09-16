@@ -46,7 +46,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -66,7 +66,7 @@ The following table lists the operators that are available to this attribute.
 
           A churn prevention campaign must measure the time that has elapsed since a customer's most recent order and the current date.
 
-          Use the **in between** operator along with relative date ranges to associate customers to specific stages within your churn prevention campaign.
+          Use the **in between** operator along with relative date ranges to associate customers to specific stages within your churn prevention campaign. A relative date is always in Coordinated Universal Time (UTC).
 
           For example: if your churn prevention campaign has stages at 14 days and 1 month after the customer's most recent purchase, add the following criteria to the 14-day segment:
 

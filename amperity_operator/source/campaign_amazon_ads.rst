@@ -44,7 +44,7 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. campaign-amazon-ads-ask-start
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+.. warning:: Ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
 
 .. campaign-amazon-ads-ask-end
 
@@ -130,7 +130,7 @@ Get details
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that has any of the following attributes:
 
        .. code-block:: sql
           :linenos:
@@ -181,6 +181,50 @@ Get details
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
        All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
+
+       Use one of the following fields to send customer consent signals to |destination-name|.
+
+       **tcf**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
+
+       **gpp**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-gpp-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-gpp-end
+
+
+       **amzn_user_data**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-user-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-user-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-ads-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-ads-end
+
+       .. note:: The country code is inferred from the **country** field in the customer profile.
+
+       Consent signals are prioritized:
+
+       #. **tcf**
+       #. **gpp**
+       #. **amzn_user_data** and **amzn_ad_storage**
 
 .. campaign-amazon-ads-get-details-table-end
 
@@ -484,9 +528,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-amazon-ads-workflow-actions-invalid-advertiser-id`
-       * :ref:`destination-amazon-ads-workflow-actions-invalid-credentials`
-       * :ref:`destination-amazon-ads-workflow-actions-missing-required-field`
+       * :ref:`campaign-amazon-ads-workflow-actions-invalid-advertiser-id`
+       * :ref:`campaign-amazon-ads-workflow-actions-invalid-credentials`
+       * :ref:`campaign-amazon-ads-workflow-actions-missing-required-field`
 
 
    * - .. image:: ../../images/steps-04.png
@@ -518,7 +562,7 @@ Invalid advertiser account ID
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID, such as when an advertiser account ID has been deleted, Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. campaign-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

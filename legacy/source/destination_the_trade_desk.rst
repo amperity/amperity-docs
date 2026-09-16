@@ -20,12 +20,12 @@
 
 
 ==================================================
-Configure campaigns for The Trade Desk
+Send data to The Trade Desk
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ |ext_link|.
 
 .. vale on
 
@@ -62,7 +62,7 @@ Your brand can send custom audiences and events to |destination-name|:
 
        Amperity can manage :ref:`custom audiences <destination-the-trade-desk-custom-audiences>` for |destination-name| demand-side platform, from which your brand can reach those audiences throughout their entire digital journey and across every channel and device, including:
 
-       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events, such as Major League Baseball, in-store advertising at WalMart, and more.
+       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events, such as Major League Baseball, and more.
        * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
        * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 
@@ -924,7 +924,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
    * - **timestamp**
      - **Required**
 
-       A field in a database table that contains the date and time at which the offline event occurred.
+       A field in a database table that has the date and time at which the offline event occurred.
 
        For retail-focused events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
 

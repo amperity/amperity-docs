@@ -6,7 +6,7 @@ import shibuya
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
 project = "Amperity Docs"
-#copyright = "Copyright &copy; 2025, Amperity"
+#copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
 #version = shibuya.shibuya_version
@@ -65,6 +65,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
+    "advanced_search": "advanced-search.html",
     "destinations": "destinations.html",
     "sources": "sources.html",
 }

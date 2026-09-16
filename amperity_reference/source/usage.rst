@@ -41,7 +41,7 @@ Activations
 
 .. usage-activations-start
 
-The **Activations** section in the **Usage** dashboard contains the following :ref:`time period-based <usage-time-period>` metrics:
+The **Activations** section in the **Usage** dashboard has the following :ref:`time period-based <usage-time-period>` metrics:
 
 **Queries executed**
    Shows the number of queries in the **Queries** tab have been run during the selected time period. This number is compared to the number of queries that were run during the previous time period.
@@ -88,7 +88,7 @@ Customer profiles
 
 .. usage-customer-profiles-start
 
-The **Profiles** section in the **Usage** dashboard contains the following metrics and graphs that describe the composition of customer profiles within your tenant:
+The **Profiles** section in the **Usage** dashboard has the following metrics and graphs that describe the composition of customer profiles within your tenant:
 
 **Total profiles**
    Shows the total count of all profiles to which an Amperity ID is assigned after Stitch is run.
@@ -117,7 +117,7 @@ Sources
 
 .. usage-sources-start
 
-The **Sources** section in the **Usage** dashboard contains the following metrics and graphs that describe source utilization:
+The **Sources** section in the **Usage** dashboard has the following metrics and graphs that describe source utilization:
 
 **Sources configured**
    Shows the number of feeds configured in your tenant.

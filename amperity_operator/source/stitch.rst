@@ -64,6 +64,54 @@ Click the **Run** button on the **Stitch** page to manually start a Stitch run.
    :end-before: .. stitch-run-important-end
 
 
+.. _stitch-run-types:
+
+Run types
+--------------------------------------------------
+
+.. stitch-run-types-start
+
+A Stitch workflow runs out-of-date source transforms and automatic databases using a :ref:`normal <stitch-run-type-normal>`, :ref:`force refresh <stitch-run-type-force-refresh>`, or :ref:`incremental match <stitch-run-type-incremental-match>` run type.
+
+.. stitch-run-types-end
+
+
+.. _stitch-run-type-normal:
+
+Normal
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. stitch-run-type-normal-start
+
+A normal Stitch run reevaluates all profiles when source tables have updates or after changes to Stitch configuration. Profiles may be split or merged. Records with PII may be reassigned to different profiles.
+
+.. stitch-run-type-normal-end
+
+
+.. _stitch-run-type-force-refresh:
+
+Force refresh
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. stitch-run-type-force-refresh-start
+
+A force refresh Stitch run reevaluates all profiles. Profiles may be split or merged. Records with PII may be reassigned to different profiles.
+
+.. stitch-run-type-force-refresh-end
+
+
+.. _stitch-run-type-incremental-match:
+
+Incremental match
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. stitch-run-type-incremental-match-start
+
+An incremental Stitch run does not reevaluate existing profiles and only attaches new records to existing profiles *or* creates new profiles. Profiles are not split or merged. PII is not reassigned.
+
+.. stitch-run-type-incremental-match-end
+
+
 .. _stitch-configure:
 
 Configure Stitch

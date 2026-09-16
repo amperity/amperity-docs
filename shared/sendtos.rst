@@ -9,21 +9,24 @@
 
 .. vale on
 
+Used in /user/destination and /user/events topics.
 
 .. sendtos-ask-to-configure-start
 
 .. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+   If this destination cannot be selected for orchestrations ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 .. sendtos-ask-to-configure-end
 
+
+Used in /user/campaigns topics.
 
 .. sendtos-ask-to-configure-campaigns-start
 
 .. caution:: This destination is available for sending campaign audiences to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
+   If this destination cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending campaign audiences to |destination-name|.
 
 .. sendtos-ask-to-configure-campaigns-end
 
@@ -46,7 +49,7 @@
 
 .. caution:: This destination is available for sending query results to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
 
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
+   If this destination cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending query results to |destination-name|.
 
 .. destination-ask-to-config-emd
 

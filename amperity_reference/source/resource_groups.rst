@@ -121,7 +121,7 @@ Multi-brand tenants
 
 Use a combination of custom resource groups to define how teams in your organization can interact with brand databases in Amperity, where each custom resource represents a brand.
 
-For example, a tenant with multiple brands, a global analytics team, multiple brand-specific teams, and multiple databases can:
+For example, a tenant with many brands, a global analytics team, many brand-specific teams, and many databases can:
 
 #. Configure a policy for the global analytics team and assign the policy to the "All resource groups" resource group.
 #. Define a custom resource group for the owners of brand A, and then configure these owners with a policy that is assigned to the brand A resource group.

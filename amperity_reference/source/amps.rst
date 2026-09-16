@@ -19,7 +19,15 @@ About Amps consumption
 
 .. amps-consumption-start
 
-Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`.
+Consumption is measured in Amps and Storage (TB). Amps consumption is measured across your entire production and sandbox environments. Actions such as running workflows and querying data will consume Amps. Amps consumption is assigned to the day on which consumption started. Monitor your Amps and Storage (TB) consumption in the :ref:`amps-review-consumption-dashboard`. 
+
+You can also use :ref:`Amp Insights <amp-insights>` to ask natural language questions about your usage.
+
+.. image:: ../../images/ampai-amp-insights.png
+   :width: 420 px
+   :alt: Amp Insights chat interface
+   :align: left
+   :class: no-scaled-link
 
 .. amps-consumption-end
 
@@ -29,6 +37,16 @@ Consumption is measured in Amps and Storage (TB). Amps consumption is measured a
 
 .. amps-sandboxes-end
 
+.. amps-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Amps are a normalized unit that measure total consumption across categories and features within the Amperity platform.
+
+   Open **Learning Lab** to learn more about `what are Amps <https://amperity.com/learning-lab/what-are-amps>`__ |ext_link|. Registration is required.
+
+.. amps-learning-lab-end
+
 
 .. _amps-consumption-overview:
 
@@ -37,8 +55,7 @@ Consumption overview
 
 .. amps-review-consumption-start
 
-Consumption is measured in Amps and Storage (TB).
-Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
+Consumption is measured in Amps and Storage (TB). Amps measure the amount of compute resources that are used within the Amperity platform, such as running workflows or sending campaigns.
 
 The storage that is required to support those compute resources is measured in terabytes (TB).
 
@@ -111,13 +128,13 @@ Storage consumption
 
 .. amps-review-consumption-storage-start
 
-The rate at which source tables consume Amps is a combination of how much data is being loaded to Amperity and the file type for that data. For example, a large CSV file consumes more Amps than an Apache Parquet file when both tables contain similar record counts.
+Storage does not consume any Amps. Instead, storage is measured separately, in Terabytes (TBs). Most customers spend less than 5% of their total consumption on Storage. 
 
-More data--more rows, more fields, more complete data--will drive Amps consumption. Source tables that are transformed in Amperity prior to Stitch will consume Amps based on the complexity of Spark SQL that is used to perform the transformation.
+Similarly to Amps, Storage consumption is attributable to the product feature where that data is stored. Additionally, all storage can be attributable to the environment (production and individual sandboxes) where it is stored. 
 
-Storage is typically stable after the implementation period has completed. Storage (by itself) typically consumes Amps at a lower rate when compared to running workflows and processing data.
+Creating and using short lived sandboxes typically does not consume a high level of additional storage as these sandboxes are able to reuse some of the same storage as Production. However, if sandboxes are not deleted after they are used, then their storage can accumulate and even become the majority of the storage consumption. If you have high storage consumption, review which of your sandboxes are no longer necessary and can be deleted.
 
-.. note:: Storage is not a significant driver of Amps consumption and should be a small percentage (<5%) of overall Amps consumption.
+.. note:: Storage does not consume any Amps and is metered separately in TBs. Typically, storage is less than 5% of total consumption.
 
 .. important:: A sandbox is a replica of your production environment. It starts as an exact duplicate of the configuration of your production tenant at the time it is created. It starts with access to the same data that is stored in your production tenant. If new data is ingested into the sandbox, added storage increases your Amps consumption.
 
@@ -126,10 +143,10 @@ Storage is typically stable after the implementation period has completed. Stora
 
 .. _amps-review-consumption-dashboard:
 
-Consumption dashboard
+Amps dashboard
 --------------------------------------------------
 
-.. amps-review-consumption-dashboard-start
+.. amps-review-amps-dashboard-start
 
 The Amps consumption dashboard shows your brand's total Amps and storage (TB) consumption across configurable time periods along with a breakdown of Amps consumption by category and by feature.
 
@@ -138,7 +155,19 @@ You can access the **Amps** dashboard from the |fa-kebab| menu that is located i
 .. note:: The dashboard may exclude up to 24 hours of data, to allow time for data processing and validation.
 
 
-.. amps-review-consumption-dashboard-end
+.. amps-review-amps-dashboard-end
+
+
+.. _amp-insights:
+
+Amp Insights
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Use **Amp Insights** to ask natural language questions and understand your Amps usage and consumption.
+
+.. include:: ../../amperity_reference/source/assistant.rst
+   :start-after: .. amp-insights-examples-list-start
+   :end-before: .. amp-insights-examples-list-end
 
 
 .. _amps-review-consumption-dashboard-summary:
@@ -213,7 +242,7 @@ By category
 
 .. amps-review-consumption-dashboard-category-start
 
-Consumption breakdown by category shows which category--Sources, Stitch, Databases, Analytics, or Activation--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which category--**Sources**, **Stitch**, **Databases**, **Analytics**, or **Activation**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. image:: ../../images/amps-consumption-category-view.png
    :width: 600 px
@@ -231,7 +260,7 @@ By feature
 
 .. amps-review-consumption-dashboard-feature-start
 
-Consumption breakdown by category shows which feature--BI Connect, Bridge, Campaigns, Databases, Ingest, Orchestrations, Predictive modeling, Profile API, Segmentation, Source Tables, Source Transforms, or Stitch--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
+Consumption breakdown by category shows which feature--**BI Connect**, **Bridge**, **Campaigns**, **Databases**, **Ingest**, **Orchestrations**, **Predictive modeling**, **Profile API**, **Segmentation**, **Source tables**, **Source transforms**, or **Stitch**--has changed the most between the current and previous time periods, along with the distribution of Amps consumption within the current time period.
 
 .. amps-review-consumption-dashboard-feature-end
 
@@ -249,7 +278,7 @@ Consumption categories
 
 .. amps-consumption-categories-start
 
-Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, Databases, Analytics, and Activation--and is further broken down into product features.
+Amps and storage (TB) consumption is tracked in 5 categories--**Sources**, **Stitch**, **Databases**, **Analytics**, and **Activation**--and is further broken down into product features.
 
 .. list-table::
    :widths: 30 70
@@ -259,22 +288,22 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
      - Feature areas
 
    * - **Activation**
-     - Building audiences for campaigns
+     - Campaign audience building
 
-       Building audiences for journeys
+       Data sent to cloud storage
 
-       Building audiences for orchestrations
+       Data sent to managed connectors
 
-       Sending data to cloud storage
+       Journey audience building
 
-       Sending data to managed connectors
+       Orchestration audience building
 
        Profile API
 
    * - **Analytics**
      - BI Connect
 
-       Predictive modeling
+       Predictive
 
        Queries
 
@@ -286,7 +315,7 @@ Amps and storage (TB) consumption is tracked in 5 categories--Sources, Stitch, D
      - Databases
 
    * - **Sources**
-     - Amperity Bridge
+     - Bridge
 
        Ingest
 
@@ -367,7 +396,7 @@ Amps consumption for the **Ingest** feature is determined by:
 
   Time affects Amps consumption more than volume or frequency because large file formats take longer to load than partitioned files of the same size.
 
-* The use of ingest queries that preprocess data prior to ingest
+* The use of ingest queries that preprocess data before ingest
 
 Storage for the **Ingest** feature is determined by:
 * The volume of data that is loaded to Amperity
@@ -838,6 +867,8 @@ You should review your Amps consumption on a regular basis to ensure that your b
 
 .. amps-reduce-end
 
+.. tip:: Use :ref:`Amp Insights <amp-insights>` to quickly investigate consumption patterns, such as identifying what caused a spike or which campaigns consume the most Amps.
+
 
 .. _amps-reduce-category:
 
@@ -876,7 +907,7 @@ Analytics
 
 To reduce Amps consumption for the **Analytics** category:
 
-* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Please ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
+* Predictive modeling can have a high Amps consumption rate, especially on days where the models are being trained against your customer data profiles. Ask your Amperity representative for assistance with adjusting compute resourcing for predictive modeling.
 
 .. amps-reduce-category-analytics-end
 
@@ -898,7 +929,7 @@ To reduce Amps consumption for the **Databases** category:
 
 * Duplication in joins can result in higher Amps consumption, as later operations must process a larger amount of data. Check for uniqueness in joining keys, and consider aggregating before joining to prevent duplication. 
 
-* Review compute settings. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
+* Review compute settings. Ask your Amperity representative for assistance with adjusting compute resourcing for the **Databases** category.
 
 .. amps-reduce-category-databases-end
 
@@ -942,7 +973,7 @@ To reduce Amps consumption for the **Stitch** category:
 
 * Review all of the foreign keys (FKs) that are applied to all source tables that are made available to Stitch. Poorly configured foreign keys (FKs) can lead to higher frequencies of interconnected records, which may increase the duration of the Stitch run and lead to higher Amps consumption. Consider adding automated bad-value detection for foreign keys.
 
-* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Please ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
+* As your brand adds more records Amps consumption will change. More complete records typically consume more Amps than sparse records. Depending on the type of data added, it may be helpful to adjust the compute resourcing. Ask your Amperity representative for assistance with adjusting compute resourcing for the **Stitch** category.
 
 .. amps-reduce-category-stitch-end
 
@@ -954,7 +985,7 @@ Adjust compute settings
 
 .. amps-reduce-adjust-compute-start
 
-Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes increases the rate at which Amps are consumed per hour. This rate varies by feature and may be affected by other configurations within your tenant. Please ask Amperity Support for assistance with questions before adjusting compute resources.
+Compute settings control the amount of compute resources, such as CPU and memory, that are available to a category. Increasing compute resource sizes increases the rate at which Amps are consumed per hour. This rate varies by feature and may be affected by other configurations within your tenant. Ask Amperity Support for assistance with questions before adjusting compute resources.
 
 You can adjust the compute settings for your tenant for the following categories:
 
@@ -970,6 +1001,6 @@ Compute settings for each category may be adjusted to one of XS (smallest), S, M
 
 Fine-tuning compute resource sizes is a balance between speed and cost. For well-distributed jobs, increasing compute resources might reduce runtime while consuming Amps at the same rate. For inefficient SQL operations, increasing compute resources may increase Amps consumption, without significant runtime reduction. All changes to compute resources should be made in a sandbox and fully tested before promoting them to your production tenant.
 
-.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Please ask your Amperity representative for assistance with any questions around adjusting compute resources.
+.. important:: Only a **Datagrid Administrator** can modify compute resource sizes. Ask your Amperity representative for assistance with any questions around adjusting compute resources.
 
 .. amps-reduce-adjust-compute-end

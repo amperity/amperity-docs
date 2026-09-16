@@ -72,9 +72,9 @@ The following example uses **Has Purchased** to return a list of customers who h
 .. purchase-behavior-has-purchased-example-watch-end
 
 
-.. _purchase-behavior-has-purchased-conditions:
+.. _purchase-behavior-has-purchased-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_has_purchased.rst

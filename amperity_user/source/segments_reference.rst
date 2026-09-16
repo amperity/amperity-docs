@@ -26,6 +26,16 @@ About segments
    :start-after: .. channels-build-segment-start
    :end-before: .. channels-build-segment-end
 
+.. segments-reference-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Segment Editor to build audiences for your campaigns.
+
+   Open **Learning Lab** to learn more about `creating segments <https://amperity.com/learning-lab/creating-segments>`__ |ext_link|, `segment insights <https://amperity.com/learning-lab/segment-insights>`__ |ext_link|, and `creating segments from segment insights <https://amperity.com/learning-lab/creating-segments-from-segment-insights>`__ |ext_link|. Registration is required.
+
+.. segments-reference-learning-lab-end
+
 
 .. _segments-reference-page:
 
@@ -181,11 +191,11 @@ Follow this sequence when building a segment:
 Segment names
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-names-start
    :end-before: .. segments-editor-names-end
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-names-important-start
    :end-before: .. segments-editor-names-important-end
 
@@ -211,11 +221,11 @@ Activation IDs
 Inclusions and exclusions
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-inclusions-start
    :end-before: .. segments-editor-inclusions-end
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-exclusions-start
    :end-before: .. segments-editor-exclusions-end
 
@@ -225,7 +235,7 @@ Inclusions and exclusions
 Attributes
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-condition-attributes-start
    :end-before: .. segments-editor-condition-attributes-end
 
@@ -241,7 +251,7 @@ Attributes
 Customer lists
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-customer-lists-start
    :end-before: .. segments-editor-customer-lists-end
 
@@ -301,11 +311,11 @@ For example:
 
 .. segments-reference-segment-insights-end
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-insights-categories-start
    :end-before: .. segments-editor-insights-categories-end
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-insights-note-start
    :end-before: .. segments-editor-insights-note-end
 
@@ -315,7 +325,7 @@ For example:
 AND vs. OR
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-intro-start
    :end-before: .. segments-editor-and-vs-or-intro-end
 
@@ -325,7 +335,7 @@ AND vs. OR
 How AND and OR work
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-start
    :end-before: .. segments-editor-and-vs-or-end
 
@@ -335,7 +345,7 @@ How AND and OR work
 Databases and tables
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-databases-and-tables-start
    :end-before: .. segments-editor-databases-and-tables-end
 
@@ -345,16 +355,16 @@ Databases and tables
 SQL editor
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-sql-start
    :end-before: .. segments-editor-sql-end
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-sql-requirements-start
    :end-before: .. segments-editor-sql-requirements-end
 
 **Example SQL segment**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-sql-example-start
    :end-before: .. segments-editor-sql-example-end

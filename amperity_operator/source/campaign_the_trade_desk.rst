@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: "The Trade Desk"
 .. |credential-type| replace:: "tradedesk"
 .. |required-credentials| replace:: "advertiser ID" and "advertiser secret"
-.. |what-send| replace:: email addresses, EUID, or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -38,7 +38,7 @@ Configure campaigns for The Trade Desk
 
 Amperity can manage audiences within |destination-name| demand-side platform, from which your brand can reach those audiences throughout their entire digital journey and across every channel and device, including:
 
-* Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events like Major League Baseball, in-store advertising at WalMart, and more.
+* Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events like Major League Baseball, and more.
 * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
 * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 

@@ -45,20 +45,32 @@ Each request to an endpoint in the Amperity API must be authenticated.
 .. endpoint-get-audit-events-list-prerequisites-end
 
 
-.. _endpoint-get-audit-events-list-base-url:
+.. _endpoint-get-audit-events-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-audit-events-list-base-url-start
+.. endpoint-get-audit-events-list-request-url-start
 
-Direct all requests to the **GET /audit-events** endpoint to the following base URL:
+Direct all requests to the **GET /audit-events** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant-id}.amperity.com/api/audit-events/
+.. code-block:: rest
 
-.. endpoint-get-audit-events-list-base-url-end
+   https://app.amperity.com/api/audit-events
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/audit-events
+
+.. endpoint-get-audit-events-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-audit-events-list-rate-limit:
@@ -69,6 +81,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-audit-events-list-request-body:
@@ -83,12 +99,12 @@ A request to the **GET /audit-events** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/audit-events \
+          'https://app.amperity.com/api/audit-events \
           ?limit=10 \
-          ?with_total=true \
-          ?happened_from=2024-04-01 \
-          ?happened_tod=2024-04-10' \
-        --header 'amperity-tenant: {tenant}' \
+          &with_total=true \
+          &happened_from=2026-04-01 \
+          &happened_to=2026-04-10' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -121,18 +137,18 @@ The following table describes the parameters that may be used with the **GET /au
        .. note:: You may use the **api-version** request header instead of the **api-version** request parameter.
 
 
-   * - **happened_end**
+   * - **happened_to**
      - String. Optional.
 
-       The end date (exclusive) that defines the end of the time range for which audit events are returned. For example: "2024-03-01T11:11:11Z".
+       The end date (exclusive) that defines the end of the time range for which audit events are returned. For example: "2026-03-01T11:11:11Z".
 
        The values for the end date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
 
-   * - **happened_start**
+   * - **happened_from**
      - String. Optional.
 
-       The start date (inclusive) that defines the beginning of the time range for which audit events are returned. For example: "2024-04-01T11:11:11Z".
+       The start date (inclusive) that defines the beginning of the time range for which audit events are returned. For example: "2026-04-01T11:11:11Z".
 
        The start date must be a string, should be in |ext_iso_8601| format, and should be in UTC.
 
@@ -187,12 +203,12 @@ The following examples show how to send requests to the **GET /audit-events** en
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/audit-events \
+                'https://app.amperity.com/api/audit-events \
                 ?limit=10 \
                 &with_total=true \
-                &happened_from=2024-04-01 \
-                &happened_to=2024-04-10' \
-              --header 'amperity-tenant: {tenant}' \
+                &happened_from=2026-04-01 \
+                &happened_to=2026-04-10' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: 2024-04-01' \
               --header 'Authorization: Bearer {token}'
 
@@ -210,13 +226,13 @@ The following examples show how to send requests to the **GET /audit-events** en
          import csv
 
          # URL for Audit Events endpoint
-         url = "https://tenant-name.amperity.com/api/audit-events"
+         url = "https://app.amperity.com/api/audit-events"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}'
+           'amperity-tenant': '{tenant-id}'
          }
 
          # Query parameters for time ranges
@@ -254,7 +270,7 @@ Responses
 
 .. endpoint-get-audit-events-list-responses-start
 
-A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /audit-events** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-audit-events-list-responses-end
 
@@ -276,7 +292,7 @@ A successful request made to the **GET /audit-events** endpoint will return a re
        {
          "event_id": "ae-Ab1cDeFg",
          "event_type": ":amperity.alert.audience/created",
-         "happened_at": "2024-04-09T17:21:06.747Z",
+         "happened_at": "2026-04-09T17:21:06.747Z",
          "principal_email": "example@amperity.com",
          "principal_id": "google-apps|amperity@amperity.com",
          "principal_name": "Socktown User",
@@ -284,8 +300,8 @@ A successful request made to the **GET /audit-events** endpoint will return a re
          "object_name": "Socktown Returning Customers",
          "origin_ip": "111.11.111.1",
          "session_id": "Ab1cDeFgHijkLMN2Op3QrStUvWxYZ0123",
-         "tenant": "acme-sb",
-         "tenant_family": "acme",
+         "tenant": "socktown-sb",
+         "tenant_family": "socktown",
          "user_agent": "Mac OS X 4.5.6"
        }
      ],
@@ -303,7 +319,7 @@ Response parameters
 
 .. endpoint-get-audit-events-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. endpoint-get-audit-events-list-response-parameters-start
 
@@ -324,7 +340,7 @@ A **200 OK** response contains the following parameters.
           The :ref:`type of event <endpoint-get-audit-events-list-common-event-types>`. For example: ``"event_type": ":amperity.alert.audience/created"``.
 
        **happened_at**
-          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2024-04-09T17:21:06.747Z"``.
+          The date and time at which the action occurred. Dates and times are in |ext_iso_8601| format and in UTC. For example: ``"happened_at": "2026-04-09T17:21:06.747Z"``.
 
        **principal_email**
           The email address for the user who initiated the action. For example: ``"principal_email": "user@socktown.com"``.
@@ -357,7 +373,7 @@ A **200 OK** response contains the following parameters.
           The user agent string of the client that initiated the action. For example: ``"user_agent": "Mac OS X 4.5.6"`` or ``"user_agent": "Chrome 1.2.3"``.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

@@ -53,7 +53,7 @@ Use segments to build high-value audiences for retargeting and lookalike modelin
 
 .. channel-tiktok-ads-where-are-my-audiences-start
 
-You can access your audiences from within TikTok Ads Manager by clicking **Assets**, and then **Audiences**. From the **Audiences** page you can select an audience, click **Create Audience**, and then create a lookalike audience *or* you can select multiple audiences, and then click **Create Ad Group**, after which you can launch your TikTok campaign.
+You can access your audiences from within TikTok Ads Manager by clicking **Assets**, and then **Audiences**. From the **Audiences** page you can select an audience, click **Create Audience**, and then create a lookalike audience *or* you can select many audiences, and then click **Create Ad Group**, after which you can launch your TikTok campaign.
 
 .. channel-tiktok-ads-where-are-my-audiences-end
 

@@ -5,11 +5,11 @@
 
 .. meta::
     :description lang=en:
-        Amperity Bridge for Databricks is a first-class integration that uses Delta Sharing to enable bi-directional data access between Amperity and Databricks.
+        Amperity Bridge for Databricks is a first-class integration that uses OpenSharing to enable bi-directional data access between Amperity and Databricks.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Amperity Bridge for Databricks is a first-class integration that uses Delta Sharing to enable bi-directional data access between Amperity and Databricks.
+        Amperity Bridge for Databricks is a first-class integration that uses OpenSharing to enable bi-directional data access between Amperity and Databricks.
 
 .. meta::
     :content class=swiftype name=title data-type=string:

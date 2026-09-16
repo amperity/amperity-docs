@@ -45,7 +45,7 @@ Add table
 
 .. table-email-engagement-attributes-add-start
 
-The **Email Engagement Attributes** table is a table that contains one email address for each Amperity ID. This table may be used to apply email engagement data to campaigns. The **Email Engagement Attributes** table is built from a SQL template, is customized for your tenant, and then applies a series of **email-attribute** semantic tags to the fields in the table.
+The **Email Engagement Attributes** table is a table that has one email address for each Amperity ID. This table may be used to apply email engagement data to campaigns. The **Email Engagement Attributes** table is built from a SQL template, is customized for your tenant, and then applies a series of **email-attribute** semantic tags to the fields in the table.
 
 .. table-email-engagement-attributes-add-end
 
@@ -53,7 +53,7 @@ The **Email Engagement Attributes** table is a table that contains one email add
 
 .. table-email-engagement-attributes-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Email Engagement Attributes".
 #. Set the build mode to **SQL**.

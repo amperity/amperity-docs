@@ -33,7 +33,7 @@ Fivetran is a third-party application that collects data from a wide variety of 
    Amperity uses Fivetran to enable a wide variety of data sources. This is for many reasons.
 
    #. Customers may choose to centralize their data on Snowflake, regardless of the built-in sources that Amperity offers.
-   #. Customers may require data sources that are not built-in to Amperity, but are availble from Fivetran.
+   #. Customers may require data sources that are not built-in to Amperity, but are available from Fivetran.
 
 .. source-fivetran-why-end
 
@@ -86,9 +86,8 @@ A Fivetran-enabled data source works like this:
    * :doc:`Google Analytics <source_google_analytics>` (pull directly using a REST API)
    * :doc:`Google Cloud Storage <source_google_cloud_storage>` (pull any file from cloud-based storage)
    * :doc:`Heap <source_heap>` (pull directly using an Amazon S3-based workflow)
-   * :doc:`Klaviyo <source_klaviyo>` (pull directly using a REST API)
    * :doc:`Optimizely <source_optimizely>` (pull directly using an Amazon S3-based workflow)
-   * :doc:`Sailthru by Marigold <source_sailthru>` (pull directly using a REST API)
+   * :doc:`Sailthru by Zeta <source_sailthru>` (pull directly using a REST API)
    * :doc:`Salesforce Marketing Cloud <source_salesforce_marketing_cloud>`
    * :doc:`SFTP <source_sftp>` (pull data from any SFTP site)
 
@@ -112,7 +111,7 @@ This group of topics describes the specific steps that are required for those da
 
 .. source-fivetran-sources-important-start
 
-.. caution:: The documentation for how to configure each Fivetran-enabled data source is availble from Fivetran. Please use link in the "Fivetran Docs" column in the table below to open that page and to learn more about how to configure that data source for Fivetran.
+.. caution:: The documentation for how to configure each Fivetran-enabled data source is available from Fivetran. Use link in the "Fivetran Docs" column in the table below to open that page and to learn more about how to configure that data source for Fivetran.
 
    All of the configuration requirements and steps for each Fivetran-enabled data source are found on the page for that data source within Fivetran documentation. Use the link in the table below to open that data source's page within the |fivetran_documentation| site.
 
@@ -799,7 +798,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
      - |fivetran_magento_mysql|
 
        |fivetran_magento_mysql_amazon_rds|
-     - Magento is an ecommerce platform which provides online merchants with a flexible shopping cart system, and customization of their online store. Magento is also known as Adobe Commerce.
+     - Magento is an e-commerce platform which provides online merchants with a flexible shopping cart system, and customization of their online store. Magento is also known as Adobe Commerce.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-mailchimp.svg
           :figclass: light-only
@@ -1122,7 +1121,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_recharge|
-     - Recharge is a recurring billing and subscriptions service for ecommerce stores that use Shopify.
+     - Recharge is a recurring billing and subscriptions service for e-commerce stores that use Shopify.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-recurly.svg
           :figclass: light-only
@@ -1308,7 +1307,7 @@ The following table is a list of Fivetran-enabled data sources. You must first c
           :width: 140 px
           :align: left
      - |fivetran_spree_commerce_mysql|
-     - Spree Commerce is an API-driven ecommerce framework.
+     - Spree Commerce is an API-driven e-commerce framework.
 
    * - .. figure:: ../../amperity_base/source/_static/connector-sql-server.svg
           :figclass: light-only

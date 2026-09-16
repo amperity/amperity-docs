@@ -100,6 +100,10 @@ Click any of the following cards to open a page about that table.
       :link-type: doc
       :link: table_fiscal_calendar
 
+   .. grid-item-card:: Identity Graph
+      :link-type: doc
+      :link: table_identity_graph
+
    .. grid-item-card:: Merged Customers
       :link-type: doc
       :link: table_merged_customers
@@ -212,6 +216,7 @@ Click any of the following cards to open a page about that table.
    Email Opt Status <table_email_opt_status>
    Event Propensity <table_event_propensity>
    Fiscal Calendar <table_fiscal_calendar>
+   Identity Graph <table_identity_graph>
    Merged Customers <table_merged_customers>
    Merged Households <table_merged_households>
    PII <table_pii>

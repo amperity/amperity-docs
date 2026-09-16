@@ -7,7 +7,7 @@
 .. |required-credentials| replace:: "username", "hostname", and "passphrase"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
-.. |sftp-hostname| replace:: "sftp.monetate.com"
+.. |sftp-hostname| replace:: "sftp.monetate.net"
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "mone"

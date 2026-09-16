@@ -97,7 +97,7 @@ Components
       :link-type: doc
       :link: activations
 
-   .. grid-item-card:: |fa-sparkles| Ai Assistant
+   .. grid-item-card:: |fa-sparkles| AI Assistants
       :link-type: doc
       :link: assistant
 
@@ -116,6 +116,10 @@ Components
    .. grid-item-card:: |fa-square-plus| Attribute types
       :link-type: doc
       :link: grid_attributes
+
+   .. grid-item-card:: |fa-money-bills| Audience monetization
+      :link-type: doc
+      :link: monetize
 
    .. grid-item-card:: |fa-badge-check| Campaigns
       :link-type: doc
@@ -136,6 +140,10 @@ Components
    .. grid-item-card:: |fa-line-columns| Couriers
       :link-type: doc
       :link: couriers
+
+   .. grid-item-card:: |fa-sparkles| Customer Data Assistant
+      :link-type: doc
+      :link: customer_data_assistant
 
    .. grid-item-card:: |fa-chart-line| Dashboards
       :link-type: doc
@@ -181,6 +189,10 @@ Components
       :link-type: doc
       :link: file_uploads
 
+   .. grid-item-card:: |fa-circle-up| Home page
+      :link-type: doc
+      :link: home
+
    .. grid-item-card:: |fa-sitemap| Journeys
       :link-type: doc
       :link: journeys
@@ -192,6 +204,10 @@ Components
    .. grid-item-card:: |fa-send-backward| Orchestrations
       :link-type: doc
       :link: orchestrations
+
+   .. grid-item-card:: |fa-chart-line| Paid Media Measurement
+      :link-type: doc
+      :link: paid_media_measurement
 
    .. grid-item-card:: |fa-user-shield| Policies
       :link-type: doc
@@ -217,6 +233,10 @@ Components
       :link-type: doc
       :link: notifications
 
+   .. grid-item-card:: |fa-sparkles| Recommended Actions
+      :link-type: doc
+      :link: recommended_actions
+
    .. grid-item-card:: |fa-object-group| Resource groups
       :link-type: doc
       :link: resource_groups
@@ -231,7 +251,7 @@ Components
 
    .. grid-item-card:: |fa-browser| Segment Editor
       :link-type: doc
-      :link: segments_editor
+      :link: segment_editor
 
    .. grid-item-card:: |fa-tags| Semantics
       :link-type: doc
@@ -276,7 +296,7 @@ Components
 
    Start here <start_here>
    Connected systems <connected_systems>
-   Product updates <updates>
+   Release notes <release_notes>
 
 
 
@@ -305,24 +325,28 @@ Components
    AmpAI <ampai>
    APIs <api>
    Attribute types <grid_attributes>
+   Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
+   Customer Data Assistant <customer_data_assistant>
    Dashboards <grid_dashboards>
    Data exports <data_exports>
    Destinations <page_destinations>
    File formats <grid_formats>
+   Home <home>
+   Paid Media Measurement <paid_media_measurement>
    Predictive models <grid_models>
    Presto SQL <sql_presto>
    Profiles <profiles>
    Queries <queries>
    Recent activity <notifications>
+   Recommended Actions <recommended_actions>
    Sandboxes <sandboxes>
    Settings <settings>
    Segments <segments>
-   Segments Editor <segments_editor>
+   Segment Editor <segment_editor>
    Single sign-on (SSO) <sso>
    Spark SQL <sql_spark>
-   Stitch <page_stitch>
    Workflows <workflows>
 
 
@@ -335,7 +359,8 @@ Components
    Glossary <glossary>
    Abbreviations <abbreviations>
    Naming conventions <naming>
-   Quick start <start>
+   Guided setup <start>
+   System requirements <system_requirements>
 
 
 
@@ -344,7 +369,7 @@ Components
    :hidden:
 
    Help Center <https://help.amperity.com>
-   Learning Lab <https://learn.amperity.com>
+   Learning Lab <https://amperity.com/learning-lab>
    System Status <https://status.amperity.com>
    Amperity.com <https://www.amperity.com>
-
+   

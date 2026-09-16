@@ -162,6 +162,12 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
+.. note::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-adobe-marketo-list-name-limitations-start
+      :end-before: .. setting-adobe-marketo-list-name-limitations-end
+
 **To add a destination for Adobe Marketo**
 
 .. destination-adobe-marketo-add-steps-start

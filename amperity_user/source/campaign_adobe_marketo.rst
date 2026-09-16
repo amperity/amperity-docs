@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Adobe Marketo
 .. |what-send| replace:: static audience lists
 .. |what-enable| replace:: email (required), along with any combination of first name, last name, phone, and company
-.. |attributes-sent| replace:: |destination-name| requires email addresses. You may also select any combination of phone number, first name, last name, and country attributes.
+.. |attributes-sent| replace:: |destination-name| requires email addresses. You may also select any combination of phone number, first name, last name, and company attributes.
 
 
 .. meta::
@@ -85,7 +85,15 @@ Add to a campaign
    :start-after: .. channels-build-campaign-start
    :end-before: .. channels-build-campaign-end
 
+.. note::
+
+   .. include:: ../../shared/destination_settings.rst
+      :start-after: .. setting-adobe-marketo-list-name-limitations-start
+      :end-before: .. setting-adobe-marketo-list-name-limitations-end
+
 **To add Adobe Marketo to a campaign**
+
+.. channel-adobe-marketo-build-campaign-table-start
 
 .. list-table::
    :widths: 10 90
@@ -140,8 +148,7 @@ Add to a campaign
           :start-after: .. channels-build-campaign-steps-edit-attributes-note-start
           :end-before: .. channels-build-campaign-steps-edit-attributes-note-end
 
-
-
+.. channel-adobe-marketo-build-campaign-table-end
 
 
 .. _channel-adobe-marketo-configure-default-attributes:

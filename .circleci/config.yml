@@ -20,7 +20,7 @@ jobs:
           command: pip install sphinx-copybutton
       - run:
           name: Install Sphinx-mermaid plugin
-          command: pip install sphinxcontrib-mermaid
+          command: pip install sphinxcontrib-mermaid==1.2.3
       - run:
           name: What is here?
           command: |

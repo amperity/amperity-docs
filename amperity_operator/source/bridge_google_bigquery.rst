@@ -41,6 +41,56 @@ Amperity Bridge for Google BigQuery is a first-class integration that enables bi
 .. bridge-google-bigquery-switch-to-bridge-end
 
 
+.. _bridge-google-bigquery-quotas-and-system-limits:
+
+Quotas and system limits
+==================================================
+
+.. bridge-google-bigquery-quotas-and-system-limits-start
+
+Google Cloud restricts Google Cloud resources for a Google Cloud project. These restrictions take two forms: quotas and system limits.
+
+.. bridge-google-bigquery-quotas-and-system-limits-end
+
+
+.. _bridge-google-bigquery-quotas-and-system-limits-quotas:
+
+Quotas
+--------------------------------------------------
+
+.. bridge-google-bigquery-quotas-and-system-limits-quotas-start
+
+Quotas apply to `services within Google Cloud <https://docs.cloud.google.com/docs/quotas/overview>`__ |ext_link|, including to the consumption of services within the Google Cloud project configured for bi-directional access with Amperity Bridge. When quotas are exceeded Google Cloud blocks access to the project and the task that exceeded quotas fails. 
+
+Daily quotas are replenished at regular intervals. If access to |destination-name| `runs out of quota <https://docs.cloud.google.com/docs/quotas/overview#running_out>`__ |ext_link|:
+
+#. Reconfigure the size of the dataset to work within the quota restraints.
+#. Wait for a rate quota time period to reset.
+#. `Request a quota adjustment <https://docs.cloud.google.com/docs/quotas/overview#about_increase_requests>`__ |ext_link|.
+
+.. bridge-google-bigquery-quotas-and-system-limits-quotas-end
+
+
+.. _bridge-google-bigquery-quotas-and-system-limits-system:
+
+System limits
+--------------------------------------------------
+
+.. bridge-google-bigquery-quotas-and-system-limits-system-start
+
+System limits apply globally and cannot be changed.
+
+The **BigQuery Omni maximum query result size** defines the system limit for sharing data with Google BigQuery: ``20GiB`` uncompressed.
+
+.. caution: The maximum result size is 20 GiB logical bytes when querying Microsoft Azure or Amazon AWS data.
+
+Any object larger than 20 GiB cannot be transferred to Google BigQuery.
+
+Objects larger than 20 GiB must use :doc:`Amazon S3 <destination_amazon_s3>` or :doc:`Azure Blob Storage <destination_azure_blob_storage>` because of `system limitations with Google BigQuery <https://docs.cloud.google.com/bigquery/docs/omni-introduction#limitations>`__ |ext_link|.
+
+.. bridge-google-bigquery-quotas-and-system-limits-system-end
+
+
 .. _bridge-google-bigquery-data-types:
 
 Data types
@@ -55,6 +105,8 @@ Most `Google BigQuery data types <https://cloud.google.com/bigquery/docs/referen
    :end-before: .. bridge-howto-sync-datatypes-end
 
 .. note:: **BYTES** and **RANGE** data types are unsupported.
+
+.. note:: The **_PARTITIONTIME** and **_PARTITIONDATE** partition pseudo-columns present in ingestion-time partitioned tables are automatically excluded during sync. These columns have no backing storage and are not available as queryable data.
 
 The following table describes how Google BigQuery data types map to Amperity data types.
 
@@ -120,7 +172,24 @@ The following table describes how Google BigQuery data types map to Amperity dat
 
        Variable-length binary data.
 
-     - .. warning:: The Google BigQuery **BYTES** data type is unsupported. Exclude fields with **BYTES** data types from tables before sharing them with Amperity.
+     - Tables with binary columns can be shared with Amperity. Use a custom domain table to:
+
+       * Decrypt encrypted binary columns
+       * Coerce binary columns to a supported Amperity data type
+
+       For example:
+
+       .. code-block:: sql
+
+          SELECT
+            customer_id
+            ,first_name
+            ,last_name
+            ,CAST(AES_DECRYPT(email_encrypted, '0123456789abcdef') AS STRING) AS email
+            ,CAST(AES_DECRYPT(phone_encrypted, '0123456789abcdef') AS STRING) AS phone
+          FROM encrypted_table
+
+       .. note:: Tables with binary columns cannot be made available to Stitch. Binary columns must be encrypted and coerced to a supported Amperity data type before making tables available to Stitch.
 
 
    * - `BYTEINT <https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#numeric_types>`__ |ext_link|
@@ -152,7 +221,7 @@ The following table describes how Google BigQuery data types map to Amperity dat
 
        A Gregorian date and time, as they might be displayed on a watch, independent of time zone.
 
-     - **Datetime**
+     - **String**
 
        ISO-8601 compliant date and time values, such as a purchase or transaction, the time at which data was last updated, or a campaign launch date. For example:
 
@@ -443,15 +512,18 @@ Before you can create inbound sharing between |source-name| and Amperity you nee
 
        #. **Subscriber**
 
-          Amperity generates an account identifier to use for activating sharing in |source-name|. Copy this value and use it to configure permissions to the data exchange. Add a principal using this value and assign it to the `Analytics Hub Subscriber <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscriber-role>`__ |ext_link| role.
+          Upon creating the bridge, Amperity automatically generates an account identifier to use for activating sharing in |source-name|. Use service account name to configure permissions to the data exchange.
+
+          .. note:: You can find the service account name from the Amperity user interface. From the **Settings** page, select the **Integrations** tab. Under **Google BigQuery**, in the row for a configured bridge, open the |fa-kebab| menu and select **Copy ID**.
+
+          Add a principal using this value and assign it to the `Analytics Hub Subscriber <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscriber-role>`__ |ext_link| role.
 
           The account identifier generated by Amperity is similar to:
 
           ::
 
-             amperity-bridge-<bridge-id>@ \
+             amperity-bridge-<id>@ \
              amperity.iam.gserviceaccount.com
-
 
 .. bridge-google-bigquery-sync-amperity-get-details-end
 
@@ -481,7 +553,7 @@ Create data exchange
 
 A `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#console>`__ |ext_link| in |destination-name| is private by default. Only users and groups that have access to the data exchange can view or subscribe to data listings within the data exchange.
 
-`Create a data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#create-exchange>`__ |ext_link| in |destination-name| and then allow Amperity access to that data exchange.
+`Create a data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges#create-exchange>`__ |ext_link| in |destination-name|, add datasets to the data exchange, and then allow Amperity access to that data exchange. Only datasets added to the data exchange to which Amperity is allowed access are visible to Amperity.
 
 .. bridge-google-bigquery-sync-amperity-configure-bigquery-exchange-end
 
@@ -776,6 +848,8 @@ To Google BigQuery
 
 .. bridge-google-bigquery-sync-with-google-bigquery-start
 
+`BigQuery sharing <https://docs.cloud.google.com/bigquery/docs/analytics-hub-introduction>`__ |ext_link| is a data exchange platform for sharing data and insights across organizational boundaries. `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| is a service that moves data from Amazon S3 or Azure Blob Storage into `BigQuery tables <https://docs.cloud.google.com/bigquery/docs/tables-intro#standard-tables>`__ |ext_link|.
+
 A connection between Amperity and Google BigQuery requires configuration steps to be made in both Amperity and Google BigQuery.
 
 .. bridge-google-bigquery-sync-with-google-bigquery-end
@@ -786,17 +860,9 @@ A connection between Amperity and Google BigQuery requires configuration steps t
 
 .. bridge-google-bigquery-sync-sandbox-end
 
-.. bridge-google-bigquery-must-be-colocated-start
-
-.. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that contains the tables you're querying.
-
-   The data center in which Amazon S3 or Azure Blob Storage is located **must be** colocated with a `compatible Google data center <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
-
-.. bridge-google-bigquery-must-be-colocated-end
-
 .. bridge-google-bigquery-sync-with-google-bigquery-links-start
 
-#. :ref:`Verify subscriber details <bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers>`
+#. :ref:`Verify subscriber details <bridge-google-bigquery-sync-with-google-bigquery-prerequisites>`
 #. :ref:`Add bridge <bridge-google-bigquery-sync-with-google-bigquery-add-bridge>`
 #. :ref:`Select tables to share <bridge-google-bigquery-sync-with-google-bigquery-select-tables>`
 #. :ref:`Configure recipients <bridge-google-bigquery-sync-with-google-bigquery-recipients>`
@@ -806,26 +872,54 @@ A connection between Amperity and Google BigQuery requires configuration steps t
 .. bridge-google-bigquery-sync-with-databricks-links-end
 
 
-.. _bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers:
+.. _bridge-google-bigquery-sync-with-google-bigquery-prerequisites:
 
-Verify subscriber details
+Get details
 --------------------------------------------------
 
-.. bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers-start
+.. bridge-google-bigquery-sync-with-google-bigquery-prerequisites-start
 
-Verify that `IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| are configured in Google BigQuery.
+Before you can create outbound sharing between Amperity and |destination-name| review the following details.
 
-IAM principals must be authorized to the following roles:
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-* `Google BigQuery User <https://cloud.google.com/bigquery/docs/access-control#bigquery.user>`__ |ext_link|
-* `Analytics Hub Subscription Owner <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 1.
+          :align: center
+          :class: no-scaled-link
+     - **Data center location**
 
-IAM principals must have the following permissions:
+       The data center in which Amazon S3 or Azure Blob Storage is located **must be** colocated with a `compatible Google data center <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
 
-* View and subscribe to the `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#grant-role-data-exchange>`__ |ext_link|
-* View and subscribe to the `listing <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|
+       .. important:: Amperity uses `BigQuery Omni <https://docs.cloud.google.com/bigquery/docs/omni-introduction>`__ |ext_link| to export data from Amazon S3 or Azure Blob Storage to the Google BigQuery ecosystem. BigQuery Omni processes queries in the same location as the dataset that has the tables you are querying.
 
-.. bridge-google-bigquery-sync-with-google-bigquery-verify-subscribers-end
+          Your Amperity tenant *or* :doc:`configured storage <storage>` location **must be** colocated in a `BigQuery Omni supported region <https://docs.cloud.google.com/bigquery/docs/locations#omni-loc>`__ |ext_link|.
+
+
+   * - .. image:: ../../images/steps-arrow-off-black.png
+          :width: 60 px
+          :alt: Requirement 2.
+          :align: center
+          :class: no-scaled-link
+     - **IAM configuration**
+
+       Verify that `IAM principals <https://cloud.google.com/iam/docs/principals-overview>`__ |ext_link| are configured in Google BigQuery.
+
+       IAM principals must be authorized to the following roles:
+
+       * `Google BigQuery User <https://cloud.google.com/bigquery/docs/access-control#bigquery.user>`__ |ext_link|
+       * `Analytics Hub Subscription Owner <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|. The **Analytics Hub Subscription Owner** is granted `full control over the subscription, including updating and deleting <https://docs.cloud.google.com/bigquery/docs/access-control#analyticshub.subscriptionOwner>`__ |ext_link|.
+
+       IAM principals must have the following permissions:
+
+       * View and subscribe to the `data exchange <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#grant-role-data-exchange>`__ |ext_link|
+       * View and subscribe to the `listing <https://cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscription-owner-role>`__ |ext_link|
+
+
+.. bridge-google-bigquery-sync-with-google-bigquery-prerequisites-end
 
 
 .. _bridge-google-bigquery-sync-with-google-bigquery-add-bridge:

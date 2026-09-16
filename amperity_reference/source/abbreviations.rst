@@ -25,10 +25,16 @@ The following list combines industry-standard abbreviations and initialisms with
    :widths: 100 500
    :header-rows: 0
 
+   * - **1P**
+     - First-party data
    * - **2FA**
      - Two-factor Authentication
+   * - **3P**
+     - Third-party data
    * - **AAID**
      - Google Advertising ID
+   * - **ACS**
+     - Amazon Consent Signal
    * - **ACS**
      - Assertion Consumer Service
    * - **ACV**
@@ -39,6 +45,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Azure Data Lake Storage
    * - **ADW**
      - Amperity Data Warehouse
+   * - **AEL**
+     - Amperity expression language
    * - **ANSI**
      - American National Standards Institute
    * - **API**
@@ -77,6 +85,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Concise Binary Object Representation
    * - **CCPA**
      - California Consumer Privacy Act
+   * - **CDN**
+     - Content Delivery Network
    * - **CDC**
      - Customer Data Cloud
    * - **CDP**
@@ -103,6 +113,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Consumer Packaged Goods
    * - **CRM**
      - Customer Relationship Management
+   * - **CSAT**
+     - Customer Satisfaction Score
    * - **CSE**
      - Customer Success Engineering
    * - **CTE**
@@ -165,12 +177,20 @@ The following list combines industry-standard abbreviations and initialisms with
      - Google Cloud Platform
    * - **GDPR**
      - General Data Protection Regulation
+   * - **GMP**
+     - Growth Management Platform
    * - **GMT**
      - Greenwich Mean Time
+   * - **GPP**
+     - Global Privacy Protocol
    * - **HDFS**
      - Hadoop Distributed File System
    * - **HEM**
      - Hashed Email Address
+   * - **HMAC**
+     - Hash-based Message Authentication Code
+   * - **IAB**
+     - Interactive Advertising Bureau
    * - **IAM**
      - Identity Access Management
    * - **IDFA**
@@ -231,6 +251,8 @@ The following list combines industry-standard abbreviations and initialisms with
      - Net Promoter System
    * - **ODBC**
      - Open Database Connectivity
+   * - **OHIP**
+     - Oracle Hospitality Integration Platform
    * - **OIDC**
      - OpenID Connect
    * - **ORC**
@@ -289,6 +311,10 @@ The following list combines industry-standard abbreviations and initialisms with
      - Shared Access Signature
    * - **SaaS**
      - Software-as-a-Service
+   * - **SFCC**
+     - Salesforce Commerce Cloud
+   * - **SFMC**
+     - Salesforce Marketing Cloud
    * - **SFTP**
      - Secure File Transfer Protocol
    * - **SHA**
@@ -303,6 +329,10 @@ The following list combines industry-standard abbreviations and initialisms with
      - Service Provider
    * - **SQL**
      - Structured Query Language
+   * - **SSH**
+     - Secure Shell
+   * - **SSJS**
+     - Server-side JavaScript
    * - **SSN**
      - Social Security Number
    * - **SSO**
@@ -315,10 +345,16 @@ The following list combines industry-standard abbreviations and initialisms with
      - Total Addressible Market
    * - **TAR**
      - Tape Archive
+   * - **TCF**
+     - European Transparency and Consent Framework
+   * - **TCP**
+     - Transmission Control Protocol
    * - **TLD**
      - Top-Level Domain
    * - **TSV**
      - Tab-Separated Values
+   * - **TTL**
+     - Time to Live
    * - **UI**
      - User Interface
    * - **UID2**

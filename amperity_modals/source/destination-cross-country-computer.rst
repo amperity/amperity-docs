@@ -44,6 +44,12 @@ Credentials
    :start-after: .. credential-sftp-passphrase-start
    :end-before: .. credential-sftp-passphrase-end
 
+**Port**
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-common-port-start
+   :end-before: .. credential-common-port-end
+
 
 Settings
 ==================================================
@@ -103,10 +109,6 @@ Settings
 .. include:: ../../shared/terms.rst
    :start-after: .. term-filename-template-start
    :end-before: .. term-filename-template-end
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-vibes-filename-template-pattern-start
-   :end-before: .. setting-vibes-filename-template-pattern-end
 
 **Line ending**
 

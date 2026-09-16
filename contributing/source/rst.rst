@@ -335,7 +335,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
       :avatar: _static/amperity_circle.png
       :avatar-link: https://docs.amperity.com/reference/start.html
       :avatar-outline: muted
-      :author: Identity resolution agent
+      :author: Identity Resolution Assistant
       :date: |today|
       :read-time: 10 min read. ~1 hour to complete
       :class-container: sd-p-2 sd-outline-muted sd-rounded-1
@@ -346,7 +346,7 @@ Add article information to the top of a topic when it is appropriate, such as fo
    :avatar: _static/amperity_circle.png
    :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Identity resolution agent
+   :author: Identity Resolution Assistant
    :date: |today|
    :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
@@ -415,7 +415,7 @@ Card carousel
 
 .. rst-card-carousel-start
 
-.. caution:: This formatting option is unused. Please ask the Amperity docs team before using it.
+.. caution:: This formatting option is unused. Ask the Amperity docs team before using it.
 
 Use the ``.. card-carousel::`` directive to create a horizontal scrolling set of cards. Set an integer value between 1 and 4 to configure the number of visible cards on the page.
 
@@ -1654,83 +1654,84 @@ Assign ``salt`` as the name of the code block for code blocks with YAML that emb
 
 .. admonition:: Why salt?
 
-   Using ``salt`` seems like an odd way to specify a code block that contains both Jinja and YAML.
+   Using ``salt`` seems like an odd way to specify a code block that has both Jinja and YAML.
 
    SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states. The ``salt`` lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.
 
 .. rst-code-language-yaml-with-jinja-end
 
 
-.. _rst-code-with-sidebar:
+..
+   .. _rst-code-with-sidebar:
 
-Code block with sidebar
-==================================================
+   Code block with sidebar
+   ==================================================
 
-.. rst-code-with-sidebar-start
+   .. rst-code-with-sidebar-start
 
-Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just is not wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
+   Code blocks can be configured to have a sidebar on the right side. In general do not use sidebars with code samples. The width of the topic just is not wide enough in most cases. This formatting option should be used sparingly and only if it improves understanding technical content.
 
-.. sidebar:: A sidebar caption.
+   .. sidebar:: A sidebar caption.
 
-   Some sidebar content.
+      Some sidebar content.
 
-   * A list
-   * Is OK.
+      * A list
+      * Is OK.
 
-   More content.
+      More content.
 
-   The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
+      The diagram is from `Chuck Data <https://github.com/amperity/chuck-data>`__ |ext_link|.
 
-.. code-block:: none
-   :caption: Welcome to Chuck Data
+   .. code-block:: none
+      :caption: Welcome to Chuck Data
 
-                               .:::::::::                    
-                             -----------=++                  
-                           -***::::--::----:*#=              
-                         .**- %%%+:::+:---::#@@@             
-                        .:*+:.%++++==+:::==+#-+@             
-                        :#-.:===============*#%%             
-                      -:%:  .@@-        :@@=                 
-                    :-:+=:-: ==%    +++. ==%    +#*          
-                      ::::=+=      +++++-     .+++           
-                    :--::+++++++@@@%   +@@@++++++%:...       
-                   :+#*::=++++=@@@@@@ @@@@@@*+++%%%%-        
-                  :::::#::=*#+=-@@@.. ..-@@-++*#%@           
-                  ..:=*:::=*%%%*----@@@*---+#%%%%            
-                   +=::::--+%%%%###++++++##%%%%%@            
-                 :+::::::=++#%%%%%%%%%%%%%%%%#*+@            
-                #:::::::-++++%%%%%%@@@@@@%%%%*++%@           
-              .=-:::::::-++++*%%%@@@@@@@@@%%+++++@           
-              -*::::::::--=+++#%%@@@@@@@@@%#==+++@           
-             =+::------::--=++--#%%@@@@@@%%-++++%@           
-            *=:::---=+++-::--=+::+%%@@@%#+:=+++*%            
-            *=::---=++++++-::-    .%%%%:    =+#@             
-            *=::---=+++++#%#=    :+@@@@#-    =-              
-            *=::----=++++#%%%%  @@@@@@@@@@  --.              
-            **-:::----===:*%%@@@@@@@@@@@@@%-=*=              
-          ++-*+:::-------:*%%@@@@@@@@@@@@#--+#=              
-      :==--:::=#::::::::::*%%%@@@@@@@@%%*=--++-              
-     ==----::::-*:::::::::*%%%%@@@@@@%#-:::--                
-    #-::::::*#=   :        -%%%%%%%%%                        
-    :------          ......:-------  .........               
+                                  .:::::::::
+                                -----------=++
+                              -***::::--::----:*#=
+                            .**- %%%+:::+:---::#@@@
+                           .:*+:.%++++==+:::==+#-+@
+                           :#-.:===============*#%%
+                         -:%:  .@@-        :@@=
+                       :-:+=:-: ==%    +++. ==%    +#*
+                         ::::=+=      +++++-     .+++
+                       :--::+++++++@@@%   +@@@++++++%:...
+                      :+#*::=++++=@@@@@@ @@@@@@*+++%%%%-
+                     :::::#::=*#+=-@@@.. ..-@@-++*#%@
+                     ..:=*:::=*%%%*----@@@*---+#%%%%
+                      +=::::--+%%%%###++++++##%%%%%@
+                    :+::::::=++#%%%%%%%%%%%%%%%%#*+@
+                   #:::::::-++++%%%%%%@@@@@@%%%%*++%@
+                 .=-:::::::-++++*%%%@@@@@@@@@%%+++++@
+                 -*::::::::--=+++#%%@@@@@@@@@%#==+++@
+                =+::------::--=++--#%%@@@@@@%%-++++%@
+               *=:::---=+++-::--=+::+%%@@@%#+:=+++*%
+               *=::---=++++++-::-    .%%%%:    =+#@
+               *=::---=+++++#%#=    :+@@@@#-    =-
+               *=::----=++++#%%%%  @@@@@@@@@@  --.
+               **-:::----===:*%%@@@@@@@@@@@@@%-=*=
+             ++-*+:::-------:*%%@@@@@@@@@@@@#--+#=
+         :==--:::=#::::::::::*%%%@@@@@@@@%%*=--++-
+        ==----::::-*:::::::::*%%%%@@@@@@%#-:::--
+       #-::::::*#=   :        -%%%%%%%%%
+       :------          ......:-------  .........
 
-      ________  ___  ___  ___  ___  ________  ___  __
-     |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \
-     \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_
-      \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
-       \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \
-        \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\
-         \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__|
+         ________  ___  ___  ___  ___  ________  ___  __
+        |\   ____\|\  \|\  \|\  \|\  \|\   ____\|\  \|\  \
+        \ \  \___|\ \  \\\  \ \  \\\  \ \  \___|\ \  \/  /|_
+         \ \  \    \ \   __  \ \  \\\  \ \  \    \ \   ___  \
+          \ \  \____\ \  \ \  \ \  \\\  \ \  \____\ \  \\ \  \
+           \ \_______\ \__\ \__\ \_______\ \_______\ \__\\ \__\
+            \|_______|\|__|\|__|\|_______|\|_______|\|__| \|__|
 
-       ________  ________  _________  ________               
-      |\   ___ \|\   __  \|\___   ___\\   __  \
-      \ \  \_|\ \ \  \|\  \|___ \  \_\ \  \|\  \             
-       \ \  \ \\ \ \   __  \   \ \  \ \ \   __  \
-        \ \  \_\\ \ \  \ \  \   \ \  \ \ \  \ \  \           
-         \ \_______\ \__\ \__\   \ \__\ \ \__\ \__\
-          \|_______|\|__|\|__|    \|__|  \|__|\|__|          
+          ________  ________  _________  ________
+         |\   ___ \|\   __  \|\___   ___\\   __  \
+         \ \  \_|\ \ \  \|\  \|___ \  \_\ \  \|\  \
+          \ \  \ \\ \ \   __  \   \ \  \ \ \   __  \
+           \ \  \_\\ \ \  \ \  \   \ \  \ \ \  \ \  \
+            \ \_______\ \__\ \__\   \ \__\ \ \__\ \__\
+             \|_______|\|__|\|__|    \|__|  \|__|\|__|
 
-.. rst-code-with-sidebar-end
+   .. rst-code-with-sidebar-end
 
 
 .. _rst-dropdowns:
@@ -2489,17 +2490,17 @@ Add images to the documentation using the ``.. images::`` directive.
 
    .. code-block:: rst
 
-      .. image:: ../../amperity_base/source/_static/card-chuck-data.png
+      .. image:: ../../images/ampai-assist.png
          :width: 400 px
-         :alt: Chuck Data
+         :alt: AI Assistant
          :align: left
          :class: no-scaled-link
 
 **For this**
 
-.. image:: ../../amperity_base/source/_static/card-chuck-data.png
+.. image:: ../../images/ampai-assist.png
    :width: 400 px
-   :alt: Chuck Data
+   :alt: AI Assistant
    :align: left
    :class: no-scaled-link
 
@@ -2539,34 +2540,34 @@ The ``/shared`` directory in Amperity docs has a collection of files that contai
    destinations_settings.rst
    terms.rst
 
-Inside these topics are reusable paragraphs. ``terms.rst`` contains **ALL** of the glossary terms used across **ALL** Amperity documentation. From ``terms.rst`` they are shared into the `glossary <https://docs.amperity.com/reference/glossary.html>`__ and also into any other topic that needs that term.
+Inside these topics are reusable paragraphs. ``terms.rst`` has **ALL** of the glossary terms used across **ALL** Amperity documentation. From ``terms.rst`` they are shared into the `glossary <https://docs.amperity.com/reference/glossary.html>`__ and also into any other topic that needs that term.
 
 For example:
 
 .. code-block:: none
 
-   **Moveable Ink**
+   **Movable Ink**
 
    .. term-moveable-ink-start
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
    .. term-moveable-ink-end
 
-Moveable Ink is an entry in the ``terms.rst`` file. The title of the term--**Moveable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
+Movable Ink is an entry in the ``terms.rst`` file. The title of the term--**Movable Ink**--is followed by :ref:`section references <rst-section-references>` that surround a paragraph.
 
-The glossary term for Moveable Ink is:
+The glossary term for Movable Ink is:
 
 .. code-block:: none
 
-   Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+   Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 The section references are:
 
 #. ".. term-moveable-ink-start"
 #. ".. term-moveable-ink-end"
 
-To include the glossary term for Moveable Ink into a topic, such as into the Amperity glossary or into topics that `mention Moveable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
+To include the glossary term for Movable Ink into a topic, such as into the Amperity glossary or into topics that `mention Movable Ink <https://docs.amperity.com/operator/destination_moveable_ink>`__, use the ``.. include::`` directive.
 
 .. code-block:: none
 
@@ -2604,7 +2605,7 @@ To include the glossary term for Moveable Ink into a topic, such as into the Amp
 
       .. _m-moveable-ink:
 
-      **Moveable Ink**
+      **Movable Ink**
          .. include:: ../../shared/terms.rst
             :start-after: .. term-moveable-ink-start
             :end-before: .. term-moveable-ink-end
@@ -3080,10 +3081,10 @@ A cross-site link is a link to a page in Amperity docs that is not in the same d
 
 .. code-block:: none
 
-   `string <URL>`__
+   `string <../relative/path/to/page.html#anchor-references-are-ok>`__
 
 * Replace "string" with text.
-* Replace "URL" with the full URL. For example: ``https://docs.amperity.com/`` or ``https://docs.amperity.com/reference/sso.html#use-cases``.
+* Replace "../relative/path/to/page.html" with the relative URL. For example: ``../reference/sso.html`` or ``../reference/sso.html#use-cases``.
 * Be sure to append the double underscores.
 * Do not add ``|ext_link|`` to the end because the reader will not leave the Amperity docs site.
 
@@ -3091,11 +3092,18 @@ A cross-site link is a link to a page in Amperity docs that is not in the same d
 
 .. code-block:: none
 
-   `Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+   `Use cases for single sign-on (SSO) <../reference/sso.html#use-cases>`__
 
 **For this**
 
-`Use cases for single sign-on (SSO) <https://docs.amperity.com/reference/sso.html#use-cases>`__
+`Use cases for single sign-on (SSO) <../reference/sso.html#use-cases>`__
+
+.. important:: Internal links defined by relative paths omit the ``target="_blank"`` property from the link.
+
+   * Internal links with relative paths will open in the same browser tab.
+   * Internal links with full HTTPS path will open in a new browser tab like :ref:`external links <rst-links-external>`.
+
+   This behavior is managed by the "remove target from internal links" Javascript in ``/_templates/partials/extra-head.html``.
 
 .. rst-links-cross-site-end
 
@@ -3232,7 +3240,34 @@ Definition lists
 
 A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase.
 
+.. tip:: Add a row in-between the list item and the description to generate a vertical bar styled to the left of the description in the HTML output.
+
 **Do this**
+
+.. code-block:: none
+
+   .. code-block:: rst
+
+      **list_item_one**
+
+         The description must be indented three spaces.
+
+      **list_item_two**
+
+         The description must be indented three spaces.
+
+**For this**
+
+**list_item_one**
+
+   The description must be indented three spaces.
+
+**list_item_two**
+
+   The description must be indented three spaces.
+
+
+**Or this**
 
 .. code-block:: none
 
@@ -3767,7 +3802,7 @@ Top
 
 .. rst-navigation-top-start
 
-The top navigation contains the following clickable elements, from left to right:
+The top navigation has the following clickable elements, from left to right:
 
 * A site logo that links to the root of the docs site.
 * Menus for Guides, APIs, Connections, and Reference.
@@ -4097,7 +4132,7 @@ CSV table
 
 .. rst-tables-csv-start
 
-Use a CSV file that contains tabular information to build a table. For example, a CSV file that contains:
+Use a CSV file that has tabular information to build a table. For example, a CSV file that has:
 
 .. code-block:: rst
 
@@ -4661,7 +4696,7 @@ The topic location is a string added to the top of each file as a comment. All t
 
    .. https://docs.amperity.com/contributing/
 
-This string helps a technical writer know which collection a topic is in when they are editing multiple files across collections in the same text editor.
+This string helps a technical writer know which collection a topic is in when they are editing many files across collections in the same text editor.
 
 .. rst-topic-location-end
 

@@ -53,6 +53,12 @@ Use this data to show customer support representatives information related to pr
 
 .. destination-zendesk-note-end
 
+.. destination-zendesk-note-verified-start
+
+.. note:: Amperity automatically sets all user records to verified when they are sent to |destination-name|. This prevents |destination-name| from sending verification emails to users whose records are created or updated by Amperity.
+
+.. destination-zendesk-note-verified-end
+
 
 .. _destination-zendesk-get-details:
 
@@ -119,7 +125,9 @@ Get details
 
        .. important:: Fields must exist in |destination-name| and should follow a "user_fields.[field_name]" naming pattern, where "field_name" is the name of the field that is sent to |destination-name| from Amperity.
 
-       The **name**, **email** or **external_id** fields must be included.
+       The **name** field and either the **email** or **external_id** field must be included.
+
+       .. note:: Records that are missing required fields are not sent to |destination-name|. Each invalid record is reported as a failure in the workflow.
 
        Values for states should be 2 uppercase letters only.
 
@@ -421,7 +429,7 @@ Authorization error
 
 A 403 response means that Amperity is not able to access the Zendesk Users API. When a 403 response is received from Zendesk, a workflow action named "Authorization Error" is generated.
 
-Amperity uses two configuration settings -- |credential-details| -- to build a credentials string that is added to the request authorization header. The format for the credentials string is:
+Amperity uses two configuration settings--|credential-details|--to build a credentials string that is added to the request authorization header. The format for the credentials string is:
 
 ::
 

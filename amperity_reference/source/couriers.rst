@@ -38,6 +38,16 @@ What a courier needs:
 
 .. couriers-what-they-do-end
 
+.. couriers-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Couriers bring data from external systems to Amperity, supporting a variety of data sources and file formats.
+
+   Open **Learning Lab** to learn more about `adding a new source courier in Quick Start <https://amperity.com/learning-lab/adding-a-new-source-courier-in-quick-start>`__ |ext_link| and `creating an S3 courier <https://amperity.com/learning-lab/creating-an-s3-courier>`__ |ext_link|. Registration is required.
+
+.. couriers-learning-lab-end
+
 
 .. _couriers-files:
 
@@ -195,9 +205,9 @@ for single files
    :end-before: .. format-common-send-input-examples-single-end
 
 
-.. _couriers-load-settings-input-example-multiple:
+.. _couriers-load-settings-input-example-many:
 
-for multiple files
+for many files
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/format_common.rst
@@ -364,7 +374,7 @@ Truncate, then load file
 
 .. couriers-load-operation-type-truncate-then-load-start
 
-You can empty the contents of a table prior to loading a data file to a domain table as a load operation.
+You can empty the contents of a table before loading a data file to a domain table as a load operation.
 
 .. note:: A truncate operation is always run first, regardless of where it is specified within the load operation.
 
@@ -410,7 +420,7 @@ Use the **Add Courier** button to add a courier to Amperity. A courier should be
 
 .. couriers-add-context-start
 
-For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but multiple feeds associated with a single courier are run sequentially.
+For smaller data sources, a courier may be associated with more than one feed. For larger data sources, a courier should be associated with a single feed. This is, in part, because couriers are run in parallel, but many feeds associated with a single courier are run sequentially.
 
 For example: if Snowflake is configured to send six tables to Amperity via six feeds, but all running as part of the same courier, table one must finish before table two, which must finish before table three. Whereas if each table is configured with its own courier, all six tables could start processing at the same time.
 
@@ -418,7 +428,7 @@ A courier configured from the Amperity UI must be configured to use one of the e
 
 Some of these plugins have more than one option for credentials.
 
-Use SnapPass to securely share configuration data with your Amperity representative.
+Use |ext_snappass| to securely share configuration data with your Amperity representative.
 
 .. couriers-add-context-end
 
@@ -617,7 +627,7 @@ A courier can be configured to load data from a specific day.
 #. Select a calendar date.
 #. To prevent downstream processing, select **Ingest only**.
 
-   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
+   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that has PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
 .. couriers-run-for-specific-day-steps-end
@@ -645,7 +655,7 @@ A courier can be configured to load all data from a specified time period.
    .. important:: The start of the selected date range is inclusive, whereas the end of the selected date range is exclusive.
 #. To prevent downstream processing, select **Ingest only**.
 
-   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that contains PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
+   .. warning:: When a data source is changed, and then loaded using the **Ingest only** option, downstream processes are not started automatically. Data that has PII must be stitched. Databases that contain interaction records must be regenerated so that attributes and predictions are recalculated.
 #. Click **Run**.
 
 .. couriers-run-for-time-period-steps-end

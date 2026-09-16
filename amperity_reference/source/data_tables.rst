@@ -100,9 +100,9 @@ The data tables diagram has four groups of tables:
        Stitch QA activities rely on a series of tables: :ref:`data-tables-unified-coalesced`, :ref:`data-tables-unified-scores`, :ref:`data-tables-detailed-examples`, :ref:`data-tables-unified-preprocessed-raw`, :ref:`data-tables-unified-changes-clusters`, and :ref:`data-tables-unified-changes-pks`. These tables are the basis for the |stitch_qa| process. The use of any specific table will vary from tenant to tenant. Together they provide visibility into how Amperity grouped (or did not group) individual customer records to a single Amperity ID.
 
    * - **Predictive models**
-     - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table contains one row per Amperity ID, whereas the :ref:`data-tables-affinity` table contains many rows per Amperity ID.
+     - Predictive modeling tables are the results of the configuration and tuning of Amperity for predictive analytics. These tables rely on the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables for predictions, but there is not a 1-to-1 or 1-to-many relationship between those three tables and predictive modeling tables. The :ref:`data-tables-predicted-clv-attributes` table has one row per Amperity ID, whereas the :ref:`data-tables-affinity` table has many rows per Amperity ID.
 
-       The :ref:`data-tables-campaign-recipients` table contains a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
+       The :ref:`data-tables-campaign-recipients` table has a history of all campaigns that have been sent from Amperity. This table is updated on a recurring basis and may be used like any other table in your customer 360 database.
 
 .. data-tables-data-model-table-types-end
 
@@ -181,7 +181,7 @@ Activation States
 
 .. data-tables-campaign-recipients-summary-about-start
 
-**Activation States** tables cannot be accessed from a sandbox, a query, or a database table. **Activation States** tables are only accessible as a condition from the **Segments Editor**.
+**Activation States** tables cannot be accessed from a sandbox, a query, or a database table. **Activation States** tables are only accessible as a condition from the **Segment Editor**.
 
 .. data-tables-campaign-recipients-summary-about-end
 
@@ -335,7 +335,7 @@ All Opted-In Emails
 
 .. data-tables-all-opted-in-emails-context-start
 
-The **All Opted-In Emails** table contains the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used to the **Segment Editor**, though it should be made available to the **Segment Editor**. Choose the **email** attribute from the **All Opted In Emails** table from the **Edit Attributes** menu. This ensures that the **email** attribute in this table is available to campaigns. 
+The **All Opted-In Emails** table has the same columns as the **Email Opt Status** table. Unlike the **Email Opt Status** table, the **All Opted-In Emails** table should *not* be used in the **Segment Editor**.
 
 .. data-tables-all-opted-in-emails-context-end
 
@@ -1037,12 +1037,12 @@ The **Email Engagement Attributes** table has the following columns:
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1142,6 +1142,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-email-start
           :end-before: .. email-events-email-end
+
+   * - **Email Click Rate Lifetime**
+     - Integer
+     - The click rate for all email messages.
+
    * - **Email Clicks Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1152,6 +1157,11 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-clicks-x-months-start
           :end-before: .. email-events-clicks-x-months-end
+
+   * - **Email Clicks Lifetime**
+     - Integer
+     - The number of all email clicks for all email messages.
+
    * - **Email Opens Last X Day**
      - Integer
      - .. include:: ../../shared/email-events.rst
@@ -1162,13 +1172,22 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-opens-x-months-start
           :end-before: .. email-events-opens-x-months-end
+
+   * - **Email Open Rate Lifetime**
+     - Integer
+     - The open rate for all email messages.
+
+   * - **Email Opens Lifetime**
+     - Integer
+     - The number of all email opens for all email messages.
+
    * - **Engagement Frequency Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-frequency-15-months-start
           :end-before: .. email-events-engagement-frequency-15-months-end
    * - **Engagement Status Last 15 Months**
-     - Varchar
+     - String
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-engagement-status-15-months-start
           :end-before: .. email-events-engagement-status-15-months-end
@@ -1217,16 +1236,10 @@ The **Email Engagement Summary** table has the following columns:
      - .. include:: ../../shared/email-events.rst
           :start-after: .. email-events-most-recent-send-start
           :end-before: .. email-events-most-recent-send-end
-   * - **Purchase Before Signup**
-     - Boolean
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-purchase-before-signup-start
-          :end-before: .. email-events-purchase-before-signup-end
-   * - **Signup To Purchase Days**
+
+   * - **Most Recent Email Open Or Click Datetime**
      - Integer
-     - .. include:: ../../shared/email-events.rst
-          :start-after: .. email-events-signup-to-purchase-days-start
-          :end-before: .. email-events-signup-to-purchase-days-end
+     - The date and time of the most recent email open or click.
 
 .. data-tables-email-engagement-summary-table-end
 
@@ -1242,7 +1255,7 @@ EUID
 
 .. data-tables-euid-start
 
-The **EUID** table contains the results of EUID token generation when enabled for your tenant.
+The **EUID** table has the results of EUID token generation when enabled for your tenant.
 
 .. data-tables-euid-end
 
@@ -1288,6 +1301,49 @@ The **EUID** table has the following columns:
      - The raw EUID value for the customer. This value, when encrypted, may be used as a EUID token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-euid-table-end
+
+.. vale on
+
+
+.. data-tables-euid-history-table-about-start
+
+The **EUID History** table has the following columns:
+
+.. data-tables-euid-history-table-about-end
+
+.. vale off
+
+.. data-tables-euid-history-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - The salt bucket ID associated with this version of the EUID token.
+
+   * - **Created At**
+     - Datetime
+     - The timestamp at which this version of the EUID token was recorded.
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+   * - **EUID**
+     - String
+     - The raw EUID token value at the time this record was written.
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address used when generating the EUID token.
+
+.. data-tables-euid-history-table-end
 
 .. vale on
 
@@ -1341,37 +1397,37 @@ The **Event Propensity** table has the following columns:
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
 
-       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+       A large audience is predicted to include ~90% of customers who are likely to perform the target event.
    * - **Audience Size Medium**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
 
-       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+       A medium audience is predicted to include ~70% of customers who are likely to perform the target event.
    * - **Audience Size Small**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+       A small audience is predicted to include ~50% of customers who are likely to perform the target event.
+
+       Use a small audience size to help prevent wasted spend and to reduce opt-outs.
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-ranking-events-start
+          :end-before: .. term-ranking-events-end
 
    * - **Score**
      - Float
-     - The strength of a customers's propensity for this event, shown as an uncalibrated probability.
+     - The strength of a customer's propensity for this event, shown as an uncalibrated probability between 0 and 1.
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
+       .. tip:: **Ranking** is derived directly from the score--customers are ranked in descending order of score--so a higher score corresponds to a higher ranking. Because the score is uncalibrated, target customers using **Ranking** and audience size rather than the raw score.
 
           Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with higher propensity.
 
-   * - **Target Value**
-     - Integer
-     - 
-
-   * - **Revenue Event Days Since Last Event**
-     - Integer
-     - 
+   * - **Target Event Name**
+     - String
+     - The name of the target event used with an event propensity model.
 
 .. data-tables-event-propensity-table-end
 
@@ -1671,7 +1727,7 @@ The **Merged Customers** table has the following columns:
 
 .. admonition:: Additional columns in the Merged Customers table
 
-   The **Merged Customers** table contains additional columns that help you understand how and why customer profile values are present in the **Merged Customers** table.
+   The **Merged Customers** table has additional columns that help you understand how and why customer profile values are present in the **Merged Customers** table.
 
    These column names start with one of **Name**, **Address**, **Email**, **Phone**, **Birthday**, or **Gender**, and then are grouped as described in the following table. For example: **Name Completion**, **Name Datasource**, **Name PK**, **Name Priority**, and **Name Update DT**.
 
@@ -1745,7 +1801,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the email campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an email.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving email messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an email.
 
 .. data-tables-optin-status-email-not-source-of-truth-end
 
@@ -1753,7 +1809,7 @@ This table is generated when **email-opt/** semantic tags are applied to data so
 
 .. note:: The **Email Opt Status** table represents every email address for which you have provided customer consent data to Amperity. There should be only one consent status by combination of email address, brand, region, or email program.
 
-   If you have multiple brands, regions or email programs, it is possible for the same email address to have more than one customer consent status.
+   If you have many brands, regions or email programs, it is possible for the same email address to have more than one customer consent status.
 
    If a brand, region, or email program does not exist, there should be only one customer consent status for each unique email address.
 
@@ -1834,7 +1890,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the SMS campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an SMS message.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an SMS message.
 
 .. data-tables-optin-status-sms-not-source-of-truth-end
 
@@ -1842,7 +1898,7 @@ This table is generated when **sms-opt/** semantic tags are applied to data sour
 
 .. note:: The **SMS Opt Status** table represents every phone number for which you have provided customer consent data to Amperity. There should be only one consent status by combination of phone number, brand, region, or SMS program.
 
-   If you have multiple brands, regions or SMS programs, it is possible for the same phone number to have more than one customer consent status.
+   If you have many brands, regions or SMS programs, it is possible for the same phone number to have more than one customer consent status.
 
    If a brand, region, or SMS program does not exist, there should be only one customer consent status for each unique phone number.
 
@@ -1919,7 +1975,7 @@ Predicted Affinity
 
 .. data-tables-affinity-table-about-start
 
-An **Affinity** table has the following columns:
+A **Predicted Affinity** table has the following columns:
 
 .. data-tables-affinity-table-about-end
 
@@ -1947,32 +2003,44 @@ An **Affinity** table has the following columns:
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is large.
 
-       A large audience is predicted to include ~90% of future purchasers, while also including a high number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-large-start
+          :end-before: .. term-audience-size-large-end
    * - **Audience Size Medium**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is medium.
 
-       A medium audience is predicted to include ~70% of future purchasers, though it may also include a moderate number of non-purchasers.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-medium-start
+          :end-before: .. term-audience-size-medium-end
    * - **Audience Size Small**
      - Boolean
      - A flag that indicates the recommended audience size. When this value is ``True`` the recommended audience size is small.
 
-       A small audience is predicted to include ~50% of future purchasers, while including the fewest non-purchasers. Use a small audience size to help prevent wasted spend and reduce opt-outs.
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-audience-size-small-start
+          :end-before: .. term-audience-size-small-end
    * - **Product Attribute**
      - String
-     - The field against which product affinity is measured. For example: a category, a class, or a brand.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-product-affinity-attribute-start
+          :end-before: .. term-product-affinity-attribute-end
 
    * - **Ranking**
      - Integer
-     - A ranking of customers by their score for this product. A rank that is less than or equal to X provides the top N customers with an affinity for this product.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-ranking-affinity-start
+          :end-before: .. term-ranking-affinity-end
 
    * - **Score**
      - Float
-     - The strength of a customers's affinity for this product, shown as an uncalibrated probability.
+     - .. include:: ../../shared/terms.rst
+          :start-after: .. term-product-affinity-score-start
+          :end-before: .. term-product-affinity-score-end
 
-       .. tip:: The score is used internally by Amperity, does not directly correlate to ranking or audience size, and should not be used in segments.
+       .. caution:: A customer score should only be used in relation to other customer scores for the same product attribute value. A customer score should not be used in absolute terms. A score does not directly correlate to ranking or audience sizes and should not be used in segments.
 
-          Sort results by **Ranking**, and then compare those results to audience sizes. Higher rankings within smaller audience sizes correlate with stronger affinity.
+       .. important:: Use audience size attributes *or* ranking when building segments for product affinity instead of customer scores.
 
 .. data-tables-affinity-table-end
 
@@ -2018,6 +2086,14 @@ The **Predicted CLV Attributes** table has the following columns:
           :start-after: .. term-amperity-id-format-start
           :end-before: .. term-amperity-id-format-end
 
+   * - **Days Since Last Order**
+     - Integer
+     - The number of days elapsed since the customer's last order.
+
+   * - **Historical Order Frequency Lifetime**
+     - Integer
+     - The total number of historical orders a customer has made.
+
    * - **Predicted Average Order Revenue Next 365D**
      - Decimal
      - The predicted average order revenue over the next 365 days.
@@ -2028,7 +2104,7 @@ The **Predicted CLV Attributes** table has the following columns:
 
    * - **Predicted Customer Lifecycle Status**
      - String
-     - A probabilistic grouping of a customer's likelihood to purchase again.
+     - A probabilistic grouping of a customer's likelihood for future transactions.
 
        .. include:: ../../shared/models.rst
           :start-after: .. models-churn-propensitity-tiers-repeat-start
@@ -2069,7 +2145,7 @@ Stitch BadValues
 
 .. data-tables-stitch-bad-values-start
 
-The **Stitch BadValues** table contains all of the values that were added to the bad-values blocklist.
+The **Stitch BadValues** table has all of the values that were added to the bad-values blocklist.
 
 .. data-tables-stitch-bad-values-end
 
@@ -2131,6 +2207,12 @@ Stitch Blocking Keys
 .. include:: ../../shared/terms.rst
    :start-after: .. term-stitch-blocking-keys-table-start
    :end-before: .. term-stitch-blocking-keys-table-end
+
+.. data-tables-stitch-blocking-keys-table-about-start
+
+.. note:: The combination of **BK**, **datasource**, **PK**, and **strategy** forms the primary key. No values should be **NULL**.
+
+.. data-tables-stitch-blocking-keys-table-about-end
 
 .. data-tables-stitch-blocking-keys-table-about-start
 
@@ -2659,7 +2741,7 @@ Customer orders
 
 .. data-tables-transaction-attributes-extended-customer-orders-start
 
-Each record contains a subset of order data from a customers first, second, and latest order. Each set of attributes is prefixed by first, second, or latest, depending on the order data that is being summarized.
+Each record has a subset of order data from a customers first, second, and latest order. Each set of attributes is prefixed by first, second, or latest, depending on the order data that is being summarized.
 
 .. data-tables-transaction-attributes-extended-customer-orders-end
 
@@ -2747,7 +2829,7 @@ Date differences
 
 .. data-tables-transaction-attributes-extended-date-differences-start
 
-Each record contains three attributes that specify the number of days between certain events.
+Each record has three attributes that specify the number of days between certain events.
 
 .. data-tables-transaction-attributes-extended-date-differences-end
 
@@ -2792,7 +2874,7 @@ Time period rollups
 
 .. data-tables-transaction-attributes-extended-period-rollups-start
 
-Each record contains time period rollups of the customer's transaction history. The time periods used are lifetime, L12M (the 12 months of transaction history starting 12 months ago), LY12M (the 12 months of transaction history starting 24 months ago), and L30D (the last 30 days).
+Each record has time period rollups of the customer's transaction history. The time periods used are lifetime, L12M (the 12 months of transaction history starting 12 months ago), LY12M (the 12 months of transaction history starting 24 months ago), and L30D (the last 30 days).
 
 .. data-tables-transaction-attributes-extended-period-rollups-end
 
@@ -3189,7 +3271,7 @@ UID2
 
 .. data-tables-uid2-start
 
-The **UID2** table contains the results of UID2 token generation when enabled for your tenant.
+The **UID2** table has the results of UID2 token generation when enabled for your tenant.
 
 .. data-tables-uid2-end
 
@@ -3235,6 +3317,49 @@ The **UID2** table has the following columns:
      - The raw UID2 value for the customer. This value, when encrypted, may be used as a UID2 token. This value is returned in the response from the **POST /identity/map** endpoint.
 
 .. data-tables-uid2-table-end
+
+.. vale on
+
+
+.. data-tables-uid2-history-table-about-start
+
+The **UID2 History** table has the following columns:
+
+.. data-tables-uid2-history-table-about-end
+
+.. vale off
+
+.. data-tables-uid2-history-table-start
+
+.. list-table::
+   :widths: 200 100 300
+   :header-rows: 1
+
+   * - Column name
+     - Data type
+     - Description
+
+   * - **Bucket ID**
+     - String
+     - The salt bucket ID associated with this version of the UID2 token.
+
+   * - **Created At**
+     - Datetime
+     - The timestamp at which this version of the UID2 token was recorded.
+
+   * - **Email**
+     - String
+     - The email address for the customer. Amperity gets this value from the **email** field in the **Unified Coalesced** table.
+
+   * - **Normalized Email**
+     - String
+     - The normalized email address used when generating the UID2 token.
+
+   * - **UID2**
+     - String
+     - The raw UID2 token value at the time this record was written.
+
+.. data-tables-uid2-history-table-end
 
 .. vale on
 
@@ -4539,7 +4664,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        This field is often the primary key and associated with the **pk** semantic tag.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
+       .. note:: For data that has itemized transactions, where a single transaction includes more than one of the same item, the order ID appears more than once.
 
        .. note::
 
@@ -4602,7 +4727,7 @@ The **Unified Itemized Transactions** table has the following columns:
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       .. note:: For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
+       .. note:: For data that has itemized transactions, where a single transaction includes more than one of the same product, the product ID appears more than once.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 
@@ -5420,7 +5545,7 @@ The **Unified Product Catalog** table has the following columns:
      - String
      - The ID for the material used for a product or item.
    * - **Product MSRP**
-     - String
+     - Decimal
      - The manufacturer's suggested retail price (MSRP) for a product or item.
 
        .. include:: ../../shared/terms.rst
@@ -5679,7 +5804,7 @@ The **Unified Transactions** table has the following columns:
           :start-after: .. term-fiscal-calendar-start
           :end-before: .. term-fiscal-calendar-end
 
-       The SQL template for the **Unified Transaction** table contains a series of fields for use with fiscal calendars. For example:
+       The SQL template for the **Unified Transaction** table has a series of fields for use with fiscal calendars. For example:
 
        * **Fiscal Year**
        * **Fiscal Quarter**
@@ -5826,7 +5951,7 @@ The **Unified Transactions** table has the following columns:
        This column is the primary key and must be associated with the **PK** semantic tag. Each unique order ID must:
 
        * Appear only once in the **Unified Transactions**.
-       * Match an order ID in the **Unified Itemized Transactions** table. This order ID might be associated to multiple items within a single transactions.
+       * Match an order ID in the **Unified Itemized Transactions** table. This order ID might be associated to many items within a single transactions.
 
        .. note::
 

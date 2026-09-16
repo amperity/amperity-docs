@@ -9,6 +9,88 @@
 
 .. TODO: Placeholder content for testing and validation.
 
+.. credential-attentive-api-key-start
+
+An API key that authorizes Amperity to send events to Attentive. Attentive generates the key as a bearer token, and Amperity adds it to each request automatically.
+
+.. credential-attentive-api-key-end
+
+.. credential-attentive-api-key-find-start
+
+Generate the key in the Attentive UI under **Settings > Integrations > Custom Integrations** by creating a new integration. Grant the key all three scopes — **ecommerce:write**, **events:write**, and **attributes:write** — so that one key works for any event type. If the key is revoked or regenerated in Attentive, update the credential in Amperity.
+
+.. credential-attentive-api-key-find-end
+
+.. credential-bloomreach-base-url-start
+
+The API base URL for your Bloomreach Engagement project.
+
+.. credential-bloomreach-base-url-end
+
+
+.. credential-bloomreach-project-token-start
+
+The project token for your Bloomreach Engagement project.
+
+.. credential-bloomreach-project-token-end
+
+
+.. credential-bloomreach-api-key-id-start
+
+The public API key ID for your Bloomreach Engagement project.
+
+.. credential-bloomreach-api-key-id-end
+
+
+.. credential-bloomreach-api-secret-start
+
+The private API secret for your Bloomreach Engagement project. The API key's API group must permit customer updates and event tracking.
+
+.. credential-bloomreach-api-secret-end
+
+
+.. credential-bloomreach-find-credentials-start
+
+You can find the API base URL and project token in your Bloomreach Engagement project settings. The API key ID and API secret are available in the API access section of your project settings.
+
+.. credential-bloomreach-find-credentials-end
+
+.. credential-iterable-api-key-start
+
+The server-side API key for your |destination-name| account.
+
+.. credential-iterable-api-key-end
+
+.. credential-criteo-offline-sales-account-id-start
+
+The Criteo Account ID that offline sales are reported against, provided by your Criteo Account Strategist and sent with every event. Criteo must enable this account for offline sales ingestion before it can receive transactions, and issues a separate sandbox account for testing. This value is not masked, so that you can read it back and confirm it matches the account your Criteo Account Strategist issued.
+
+.. credential-criteo-offline-sales-account-id-end
+
+.. credential-criteo-offline-sales-log-label-start
+
+A label that identifies your traffic in Criteo's request logs, agreed with your Criteo Account Strategist — for example, ``mybrand_offlinesales``. Criteo's onboarding materials may call this value the API key. It is not a secret and does not authenticate the request; Criteo uses it only to group and troubleshoot your calls.
+
+.. credential-criteo-offline-sales-log-label-end
+
+.. credential-criteo-offline-sales-find-credentials-start
+
+Your Criteo Account Strategist provides the Account ID and the log label when they enable your account for offline sales ingestion.
+
+.. credential-criteo-offline-sales-find-credentials-end
+
+.. credential-iterable-base-url-start
+
+The base URL for your |destination-name| data center. Use ``https://api.iterable.com`` for US accounts or ``https://api.eu.iterable.com`` for EU accounts.
+
+.. credential-iterable-base-url-end
+
+.. credential-iterable-api-find-key-start
+
+You can find the API key in |destination-name| by navigating to **Integrations > API Keys** after logging in to your account.
+
+.. credential-iterable-api-find-key-end
+
 .. credential-lorem-ipsum-long-start
 
 Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -40,6 +122,84 @@ All the steps that all credentials follow. Custom information belongs in specifi
 
 **Step 01**
 
+.. credential-roku-audience-refresh-token-start
+
+The OAuth2 refresh token used to authenticate with the Roku Ads API.
+
+.. credential-roku-audience-refresh-token-end
+
+.. credential-roku-audience-find-refresh-token-start
+
+Contact your Amperity representative for assistance with obtaining a refresh token for your Roku Ads account.
+
+.. credential-roku-audience-find-refresh-token-end
+
+.. credential-roku-capi-capi-token-start
+
+A bearer token (JWT) that authorizes Amperity to send events to the Roku Conversions API.
+
+.. credential-roku-capi-capi-token-end
+
+.. credential-roku-capi-capi-token-find-start
+
+Generate the token in Roku Ads Manager under **Events > CAPI**. Generating a token requires the Admin or Org Admin role. The token does not expire but can be revoked; to rotate it, revoke and regenerate the token in Roku Ads Manager, and then update the credential in Amperity.
+
+.. credential-roku-capi-capi-token-find-end
+
+.. credential-amazon-capi-refresh-token-start
+
+The OAuth2 (Login with Amazon) refresh token that authorizes Amperity to send conversion events to the Amazon Ads Conversion API.
+
+.. credential-amazon-capi-refresh-token-end
+
+.. credential-amazon-capi-refresh-token-find-start
+
+Obtain a refresh token by completing the Amazon Ads authorization flow (Login with Amazon) for an Amazon Ads account that has permission to submit conversion events. Contact your Amperity representative if you need help obtaining a refresh token.
+
+.. credential-amazon-capi-refresh-token-find-end
+
+.. credential-microsoft-ads-conversions-api-token-start
+
+The API token that authorizes Amperity to send conversion events to the Microsoft Advertising Conversions API. This is a bearer token scoped to a single UET tag; it must be authorized for the **UET Tag ID** configured in this destination.
+
+.. credential-microsoft-ads-conversions-api-token-end
+
+.. credential-microsoft-ads-conversions-api-token-find-start
+
+Obtain the token in the Microsoft Advertising UI: open the **UET** section, edit the UET tag, select **Use Conversions API**, and copy the token. Contact your Amperity representative if you need help obtaining a token.
+
+.. credential-microsoft-ads-conversions-api-token-find-end
+
+.. credential-sendgrid-api-key-start
+
+The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).
+
+.. credential-sendgrid-api-key-end
+
+.. credential-sendgrid-api-find-key-start
+
+Create the API key in SendGrid with the required scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).
+
+.. credential-sendgrid-api-find-key-end
+
+.. credential-sevenrooms-find-credentials-start
+
+Request API credentials (a client ID and client secret) from SevenRooms. API access must be provisioned for your account before Amperity can connect to SevenRooms.
+
+.. credential-sevenrooms-find-credentials-end
+
+.. credential-sevenrooms-client-id-start
+
+The Client ID for your SevenRooms API credential.
+
+.. credential-sevenrooms-client-id-end
+
+.. credential-sevenrooms-client-secret-start
+
+The Client Secret for your SevenRooms API credential.
+
+.. credential-sevenrooms-client-secret-end
+
 .. credential-steps-add-credential-start
 
 From the **Settings** page, select the **Credentials** tab, and then click the **Add credential** button.
@@ -60,7 +220,7 @@ Assign the credential a name and description that ensures other users of Amperit
 
 .. vale off
 
-Notes: When a source or destination supports more than one credential type, use the "multiple" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
+Notes: When a source or destination supports more than one credential type, use the "many" inclusion block, and then add "From the **Credential type** dropdown, select **credential-name**." See the Amazon S3 destination topic for an example.
 
 .. vale on
 
@@ -136,6 +296,18 @@ The name and description for a credential.
 
 .. credential-common-name-and-description-end
 
+
+**Port**
+
+Applies to: most SFTP sources and destinations.
+
+.. credential-common-port-start
+
+The Transmission Control Protocol (TCP) port to use for Secure Shell (SSH) transfers. Default value: "22".
+
+.. credential-common-port-end
+
+
 .. vale off
 
 **SnapPass callout**
@@ -144,7 +316,7 @@ The name and description for a credential.
 
 .. credential-snappass-start
 
-An individual with access to |destination-name| should use SnapPass to securely share |required-credentials| details with the individual who configures Amperity.
+An individual with access to |destination-name| should use |ext_snappass| to securely share |required-credentials| details with the individual who configures Amperity.
 
 .. credential-snappass-end
 
@@ -322,18 +494,6 @@ Custom services within |destination-name| give the `client ID and secret <https:
 
 .. credential-adobe-marketo-access-token-end
 
-**API limits**
-
-.. credential-adobe-marketo-api-limits-start
-
-You may experience rate limits when sending large audience lists to the Adobe Marketo API.
-
-* Subscriptions can make up to 50,000 API calls per day. This resets daily at 12:00 AM, Central Standard Time.
-
-* API access is rate limited to 100 calls per 20 seconds, with up to 10 concurrent API calls.
-
-.. credential-adobe-market-api-limits-end
-
 **Client ID**
 
 .. credential-adobe-marketo-client-id-start
@@ -353,6 +513,33 @@ See client ID.
 The `subdomain <https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/web-personalization/getting-started/add-subdomains-in-account-settings>`__ |ext_link| in |destination-name| in which Amperity manages audiences.
 
 .. credential-adobe-marketo-subdomain-end
+
+
+
+
+.. vale off
+
+**ADOBE TARGET**
+
+.. vale on
+
+The following settings are unique to Adobe Target.
+
+**Authentication token**
+
+.. credential-adobe-target-authentication-token-start
+
+The authentication token is created from the |destination-name| `user interface <https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/profile-api-settings>`__ |ext_link| *or* from the `Adobe Target Admin API <https://developer.adobe.com/target/administer/admin-api/#tag/Authentication/operation/requestAuthorizationToken>`__ |ext_link|.
+
+.. credential-adobe-target-authentication-token-end
+
+**Client code**
+
+.. credential-adobe-target-client-code-start
+
+The name of the |destination-name| client. The client code is located in the URL for your instance of |destination-name|. For example, "socktown" is the client code in the ``socktown.tt.omtrdc.net`` URL.
+
+.. credential-adobe-target-client-code-end
 
 
 
@@ -631,6 +818,34 @@ The API key for your |destination-name| account.
 
 .. credential-attentive-api-key-end
 
+.. credential-attentive-api-key-scopes-start
+
+The API key must be associated with a custom app that has the following permissions:
+
+* **Custom Attributes**: All
+* **Subscribers**: All
+
+If these permissions are not set, any workflow that sends data to |destination-name| will fail with a 403 error.
+
+.. credential-attentive-api-key-scopes-end
+
+.. credential-attentive-api-key-update-permissions-start
+
+To update permissions for Amperity as an existing custom app in |destination-name|:
+
+#. Sign in to the Attentive dashboard.
+#. In the sidebar, click **Marketplace**.
+#. Open the **Built by you** tab.
+#. Select the custom app named "Amperity".
+
+   .. important:: Do not select "Amperity CAPI," "Amperity Events," or any similarly named app.
+
+#. Under **Permissions**, set **Custom Attributes** and **Subscribers** to **All**, then click **Save**.
+
+See `Create and manage custom apps <https://docs.attentive.com/docs/create-and-manage-custom-apps>`__ |ext_link| in the Attentive documentation for more information.
+
+.. credential-attentive-api-key-update-permissions-end
+
 .. vale off
 
 **Hostname** SFTP
@@ -815,6 +1030,18 @@ Required. The API key for your |destination-name| account.
 
 .. credential-braze-api-key-end
 
+.. credential-braze-purchases-api-key-start
+
+Required. The Braze REST API key for your |destination-name| account. The key must have the **users.track** permission.
+
+.. credential-braze-purchases-api-key-end
+
+.. credential-braze-purchases-api-find-key-start
+
+Create or find a REST API key in the Braze dashboard under **Settings > API Keys**. The key must include the **users.track** permission. A REST API key is scoped to a single Braze instance, so the key must belong to the same instance you configure for this destination.
+
+.. credential-braze-purchases-api-find-key-end
+
 
 
 
@@ -863,40 +1090,9 @@ Required. The API key for your |destination-name| account.
 
 .. credential-cordial-api-url-start
 
-Required. The API URL of your |destination-name| account. May be one of the following: ``https://api.cordial.io/`` or ``https://api.usw2.cordial.io/``.
+Required. The API URL of your |destination-name| account. May be one of the following: ``https://api.cordial.io/``, ``https://api.use1.cordial.io/``, or ``https://api.usw2.cordial.io/``.
 
 .. credential-cordial-api-url-end
-
-**IAM access key**
-
-.. credential-cordial-iam-access-key-start
-
-Required. The IAM access key is one part of two that allows Amperity to authenticate to an Amazon S3 bucket. The value for this part of the access key is the access key ID. For example: "AKIAIOSFODNN7EXAMPLE".
-
-.. credential-cordial-iam-access-key-end
-
-**IAM secret key**
-
-.. vale off
-
-.. credential-cordial-iam-secret-key-start
-
-Requried. The IAM secret key is one part of two that allows Amperity to authenticate to an Amazon S3 bucket. The value for this part of the access key is the secret access key. For example: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY".
-
-.. credential-cordial-iam-secret-key-end
-
-.. vale on
-
-
-**S3 bucket name**
-
-.. credential-cordial-s3-bucket-name-start
-
-Required. The name of the Amazon S3 bucket.
-
-.. credential-cordial-s3-bucket-name-end
-
-
 
 
 
@@ -1071,7 +1267,7 @@ See OAuth common.
 
 .. vale off
 
-**GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4**
+**GOOGLE ANALYTICS** / **GOOGLE ANALYTICS 4** (source)
 
 .. vale on
 
@@ -1080,6 +1276,52 @@ See OAuth common.
 See "OAuth common flows".
 
 
+
+
+
+.. vale off
+
+**GOOGLE ANALYTICS 4 (GA4)** (destination)
+
+.. vale on
+
+Settings unique to Google Analytics 4 (GA4).
+
+**API secret**
+
+.. credential-google-analytics-api-secret-start
+
+The API secret generated from the Google Analytics admin console for your brand's instance of the `Measurement Protocol API <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=firebase>`__ |ext_link|.
+
+.. credential-google-analytics-api-secret-end
+
+.. credential-google-analytics-api-secret-howto-start
+
+To create an API secret for the Measurement Protocol API log in to Google Analytics. Expand **Data collection** and choose **Data streams**. Choose the data stream to which you want to send purchase events. Click **Measurement Protocol API secrets**, and then click **Create**. Copy the secret and use that value to configure the destination for |destination-name| in Amperity.
+
+.. credential-google-analytics-api-secret-howto-end
+
+**Measurement ID**
+
+.. credential-google-analytics-measurement-id-start
+
+The `measurement ID <https://support.google.com/analytics/answer/12270356?hl=en>`__ |ext_link| associated with your Google Analytics account. All measurement IDs start with "G-" and are followed by a combination of letters and numbers. For example: "G-ABC1DE2FG3".
+
+.. credential-google-analytics-measurement-id-end
+
+.. credential-google-analytics-measurement-id-howto-start
+
+To find the measurement ID log in to Google Analytics. Expand **Data collection** and choose **Data streams**. Select the data stream to which you want to send purchase events. The measurement ID is available under **Stream details**. Copy the measurement ID and use that value to configure the destination for |destination-name| in Amperity.
+
+.. credential-google-analytics-measurement-id-howto-end
+
+**Validate settings**
+
+.. credential-google-analytics-verify-credential-start
+
+|destination-name| only `validates purchase events <https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=firebase#payload_validation_info>`__ |ext_link|. |destination-name| does not validate the measurement ID *or* the API secret associated with the payload. Verify that you have configured the correct measurement ID *and* added the correct API secret for the measurement ID.
+
+.. credential-google-analytics-verify-credential-end
 
 
 
@@ -1181,6 +1423,34 @@ See SFTP.
 
 
 
+.. vale off
+
+**INSIDER ONE**
+
+.. vale on
+
+**API token**
+
+.. vale off
+
+.. setting-insider-one-api-token-start
+
+The |destination-name| API authentication token. To find this value log in to |destination-name| and navigate to **InOne**, **InOne Settings**, and then **Integration Settings**.
+
+.. setting-insider-one-api-token-end
+
+**Partner name**
+
+.. vale off
+
+.. setting-insider-one-partner-name-start
+
+The |destination-name| partner name. This value must be lowercase. To find this value log in to |destination-name| and navigate to **InOne**, **InOne Settings**, and then **Account Preferences**.
+
+.. setting-insider-one-partner-name-end
+
+
+
 
 .. vale off
 
@@ -1227,8 +1497,35 @@ The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#priva
 
 .. credential-klaviyo-api-key-scopes-end
 
+.. credential-klaviyo-api-key-source-scopes-start
+
+The `private API key <https://developers.klaviyo.com/en/docs/authenticate_#private-key-authentication>`__ |ext_link| used for authentication must have the following scopes added:
+
+* **events:read**
+* **lists:read**
+* **metrics:read**
+* **profiles:read**
+* **segments:read**
+
+.. credential-klaviyo-api-key-source-scopes-end
 
 
+**OAuth**
+
+.. credential-klaviyo-oauth-start
+
+Klaviyo supports using OAuth to authorize Amperity to send data to |destination-name|. When the OAuth credential type is selected, a refresh token is generated by the OAuth process and authorizes Amperity to send data to |destination-name|. The value for the refresh token is automatically updated.
+
+.. credential-klaviyo-oauth-end
+
+.. credential-klaviyo-oauth-about-start
+
+Klaviyo supports the following credential types:
+
+#. **API key** -- Use a private API key for authentication.
+#. **OAuth** -- Use OAuth to authorize Amperity to send data to |destination-name|.
+
+.. credential-klaviyo-oauth-about-end
 
 
 .. vale off
@@ -1595,6 +1892,30 @@ See SFTP.
 
 .. vale off
 
+**ORACLE OPERA (OUTBOUND)**
+
+.. vale on
+
+**Client ID**
+
+.. credential-oracle-opera-outbound-client-id-start
+
+OAuth client ID from the OHIP Developer Portal (**Environment > Gateways and Credentials**).
+
+.. credential-oracle-opera-outbound-client-id-end
+
+**Client Secret**
+
+.. credential-oracle-opera-outbound-client-secret-start
+
+OAuth client secret from the OHIP Developer Portal.
+
+.. credential-oracle-opera-outbound-client-secret-end
+
+
+
+.. vale off
+
 **ORACLE RESPONSYS**
 
 **Hostname**
@@ -1698,6 +2019,33 @@ See OAuth common.
 
 
 
+.. vale off
+
+**PINTEREST EVENTS**
+
+.. vale on
+
+.. credential-pinterest-events-conversion-access-token-start
+
+A Bearer token generated from `Pinterest Ads Manager <https://ads.pinterest.com/>`__ |ext_link|.
+
+.. credential-pinterest-events-conversion-access-token-end
+
+.. credential-pinterest-events-conversion-access-token-find-start
+
+Log in to |destination-name| Ads Manager, select **Ad Account Overview**, **Conversions**, **Conversions API**, and then **Set up API**. Select **Conversion access token** and then click **Generate new token**. Copy the token, and then use it to configure the **Conversion access token** credential setting in Amperity.
+
+.. credential-pinterest-events-conversion-access-token-find-end
+
+.. credential-pinterest-events-conversion-access-token-owner-or-admin-start
+
+.. important:: The user account that generates the access token `must be the Owner of the ads account or be assigned the Admin, Analyst, Audience, or Campaign role <https://help.pinterest.com/en/business/article/business-manager-access-roles-and-permissions>`__ |ext_link| in |destination-name|.
+
+.. credential-pinterest-events-conversion-access-token-owner-or-admin-end
+
+
+
+
 
 .. vale off
 
@@ -1765,6 +2113,23 @@ See SFTP.
 
 
 
+.. vale off
+
+**REDDIT ADS**
+
+.. vale on
+
+**Refresh token**
+
+.. credential-reddit-ads-refresh-token-start
+
+The OAuth2 refresh token for the Reddit Ads account. This token is issued by Reddit during the OAuth2 authorization flow and should be treated as a secret.
+
+.. credential-reddit-ads-refresh-token-end
+
+
+
+
 
 
 .. vale off
@@ -1781,7 +2146,7 @@ The API key for your |destination-name| account.
 
 .. credential-sailthru-api-key-end
 
-**Secret**
+**API secret**
 
 .. credential-sailthru-secret-start
 
@@ -1823,7 +2188,7 @@ You can find the API key and secret after you log in to |destination-name| and a
 
 .. credential-salesforce-marketing-cloud-api-client-secret-start
 
-The client ID and client secret for your brand's instance of the Marketing Cloud SOAP API.
+The client ID and client secret for your brand's instance of the Marketing Cloud REST API.
 
 .. credential-salesforce-marketing-cloud-api-client-secret-end
 
@@ -1831,7 +2196,7 @@ The client ID and client secret for your brand's instance of the Marketing Cloud
 
 .. credential-salesforce-marketing-cloud-api-subdomain-start
 
-The authentication subdomain for your brand's instance of the Marketing Cloud SOAP API.
+The authentication subdomain for your brand's instance of the Marketing Cloud REST API.
 
 .. credential-salesforce-marketing-cloud-api-subdomain-end
 
@@ -1897,6 +2262,43 @@ See SFTP.
 The Salesforce security token associated with the username. This setting is not required when configuring IP range policies from the Salesforce administrator console.
 
 .. credential-salesforce-sales-cloud-security-token-end
+
+.. credential-dynamic-yield-customer-profiles-api-key-start
+
+The |destination-name| API key that authenticates each request. Each API key is scoped to a single feed and must be generated with the **User Feed** ACL.
+
+.. credential-dynamic-yield-customer-profiles-api-key-end
+
+.. credential-dynamic-yield-customer-profiles-api-find-key-start
+
+Generate the API key in |destination-name| by navigating to **Settings > API Keys** and creating a key with the ACL set to **User Feed**. A key created with any other ACL type, or a client-side key, is rejected.
+
+.. credential-dynamic-yield-customer-profiles-api-find-key-end
+
+.. credential-eagle-eye-client-id-start
+
+The Eagle Eye AIR API client ID, provisioned by your Eagle Eye account manager. It identifies your Amperity integration to Eagle Eye.
+
+.. credential-eagle-eye-client-id-end
+
+.. credential-eagle-eye-client-secret-start
+
+The Eagle Eye AIR API secret paired with the Client ID, provisioned by your Eagle Eye account manager. Amperity uses it to authenticate each request.
+
+.. credential-eagle-eye-client-secret-end
+
+.. credential-eagle-eye-api-url-start
+
+The Eagle Eye AIR Wallet API base URL for your region and environment. Select the URL that matches your Eagle Eye company unit:
+
+* ``https://wallet.uk.eagleeye.com/2.0/`` (United Kingdom)
+* ``https://wallet.sandbox.uk.eagleeye.com/2.0/`` (United Kingdom sandbox)
+* ``https://wallet.au.eagleeye.com/2.0/`` (Australia)
+* ``https://wallet.us2.eagleeye.com/2.0/`` (United States, US2)
+
+Confirm the correct URL with your Eagle Eye account manager. Defaults to the Australia URL.
+
+.. credential-eagle-eye-api-url-end
 
 **Username and password**
 
@@ -1968,7 +2370,7 @@ Required. The host name for |where-send|. For example: |sftp-hostname|.
 
 .. credential-sftp-passphrase-start
 
-The passphrase associated with the username.
+Required. The passphrase associated with the username.
 
 .. credential-sftp-passphrase-end
 
@@ -1976,7 +2378,7 @@ The passphrase associated with the username.
 
 .. credential-sftp-port-start
 
-The port number required by |where-send|. Use this setting only when the SFTP site uses a non-default port value.
+The port number for |where-send|. Use this setting only when the SFTP site uses a non-default port value.
 
 .. credential-sftp-port-end
 
@@ -1984,7 +2386,7 @@ The port number required by |where-send|. Use this setting only when the SFTP si
 
 .. credential-sftp-private-key-start
 
-A private key for encrypting files sent to |where-send|.
+A private key for SSH authentication to |where-send|.
 
 .. credential-sftp-private-key-end
 
@@ -2002,7 +2404,7 @@ This setting is required by the "private-key" credential type.
 
 .. credential-sftp-username-start
 
-Required. A username with access to |where-send|. This username must have permission to write data to the remote folder to which Amperity sends data.
+Required. A username with access to |where-send|. This username must have appropriate permissions for the configured remote folder.
 
 .. credential-sftp-username-end
 
@@ -2019,7 +2421,7 @@ Required. A username with access to |where-send|. This username must have permis
 
 .. credential-shopify-access-token-start
 
-.. TODO: xxxxx
+The Admin API access token that authorizes Amperity to connect to your Shopify store. Sending an audience requires the ``write_customers`` access scope on the Shopify app; pulling data does not.
 
 .. credential-shopify-access-token-end
 
@@ -2027,9 +2429,15 @@ Required. A username with access to |where-send|. This username must have permis
 
 .. credential-shopify-shop-name-start
 
-.. TODO: xxxxx
+The name of your Shopify store. This identifies the store that Amperity connects to.
 
 .. credential-shopify-shop-name-end
+
+.. credential-shopify-find-credentials-start
+
+Generate an Admin API access token by creating and installing a custom app in your Shopify store's admin. Sending an audience requires the ``write_customers`` access scope on the app; pulling data requires read access to the data types that you select.
+
+.. credential-shopify-find-credentials-end
 
 
 
@@ -2168,11 +2576,11 @@ Required. The IAM secret key, along with the access key, that allows Amperity to
 
 .. vale on
 
-.. credential-snowflake-account-name-start
+.. credential-snowflake-azure-account-name-start
 
 The account name for Microsoft Azure Blob Storage.
 
-.. credential-snowflake-account-name-end
+.. credential-snowflake-azure-account-name-end
 
 **Shared access signature**
 
@@ -2217,7 +2625,7 @@ See SFTP.
 
 .. credential-the-trade-desk-advertiser-id-start
 
-The advertiser ID for your account with |destination-name|.
+The advertiser ID for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-id-end
 
@@ -2225,7 +2633,7 @@ The advertiser ID for your account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-start
 
-The advertiser secret for your account with |destination-name|.
+The advertiser secret for an account with |destination-name|.
 
 .. credential-the-trade-desk-advertiser-secret-end
 
@@ -2271,6 +2679,78 @@ The provider ID for your account with The Trade Desk. Ask your The Trade Desk re
 
 .. credential-the-trade-desk-provider-id-end
 
+
+
+
+.. vale off
+
+**THE TRADE DESK: DATA MARKETPLACE**
+
+.. vale on
+
+**Advertiser ID**
+
+.. credential-the-trade-desk-marketplace-advertiser-id-start
+
+The advertiser ID for an account with |destination-name|.
+
+.. credential-the-trade-desk-marketplace-advertiser-id-end
+
+**Brand ID**
+
+.. credential-the-trade-desk-marketplace-brand-id-start
+
+An ID that, when used in conjunction with the provider ID, identifies a brand's segments and data within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-brand-id-end
+
+**Partner ID**
+
+.. credential-the-trade-desk-marketplace-partner-id-start
+
+The partner ID for an account with |destination-name|.
+
+.. credential-the-trade-desk-marketplace-partner-id-end
+
+**Provider ID**
+
+.. credential-the-trade-desk-marketplace-provider-id-start
+
+The provider ID for accessing a brand's segments and data within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-provider-id-end
+
+**Provider secret**
+
+.. credential-the-trade-desk-marketplace-provider-secret-start
+
+A key for accessing endpoints in The Trade Desk Platform API that require signature header authentication.
+
+.. credential-the-trade-desk-marketplace-provider-secret-end
+
+**Platform API token**
+
+.. credential-the-trade-desk-marketplace-platform-api-token-start
+
+A long-lived token that allows access to The Trade Desk Platform API.
+
+.. credential-the-trade-desk-marketplace-platform-api-token-end
+
+**UID2 Key**
+
+.. credential-the-trade-desk-marketplace-uid2-key-start
+
+An API key used for UID2 enrichment within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-uid2-key-end
+
+**UID2 Secret**
+
+.. credential-the-trade-desk-marketplace-uid2-secret-start
+
+A client secret used for UID2 enrichment within |destination-name|.
+
+.. credential-the-trade-desk-marketplace-uid2-secret-end
 
 
 
@@ -2349,6 +2829,23 @@ See SFTP.
 
 .. vale off
 
+**VIANT DSP**
+
+.. vale on
+
+**Refresh token**
+
+.. credential-viant-dsp-refresh-token-start
+
+The OAuth2 refresh token for the Viant Advertiser account. This token is issued by Viant during the OAuth2 authorization flow and should be treated as a secret.
+
+.. credential-viant-dsp-refresh-token-end
+
+
+
+
+.. vale off
+
 **YAHOO DSP**
 
 .. vale on
@@ -2359,7 +2856,7 @@ See SFTP.
 
 .. credential-yahoo-dsp-mdm-id-start
 
-Required. The "Site MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
+Required. The "Seat MDM ID" is the value of your brand's Master Data Management (MDM) ID in |destination-name|. This is a unique advertiser ID that assigns your brand a specific location within the |destination-name| taxonomy.
 
 .. credential-yahoo-dsp-mdm-id-end
 
@@ -2390,3 +2887,18 @@ Required. Your brand's Zendesk API token.
 Required. The email address for the Zendesk API user.
 
 .. credential-zendesk-email-address-end
+
+
+.. credential-posthog-project-api-key-start
+
+The PostHog Project API Key, a write-only capture token that authenticates every property, group, and event write this connector sends. Copy it from **Project Settings > Project API Key** in PostHog.
+
+.. important:: Use the classic Project API Key, which starts with ``phc_`` — not a Project *Secret* API Key, which starts with ``phs_``. Both look valid, but a secret key is accepted by the connection test and then silently drops every record. After your first run, confirm records appear on PostHog's **Persons** page.
+
+.. credential-posthog-project-api-key-end
+
+.. credential-posthog-personal-api-key-start
+
+The PostHog Personal API Key, used to verify the connection and, in person-deletion mode, to delete people through PostHog's Persons API. Create it in PostHog under **Account Settings > Personal API Keys**. For person-deletion mode, the key must be scoped to allow person deletion (the ``person:write`` scope).
+
+.. credential-posthog-personal-api-key-end

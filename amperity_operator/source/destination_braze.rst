@@ -130,7 +130,7 @@ Customer attributes table
 
 .. destination-braze-table-start
 
-Build a table that contains all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and should contain the list of `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that is maintained.
+Build a table that has all of the attributes in |destination-name| that your brand wants to manage from Amperity. The columns in this table must be correctly mapped to requirements for `user profile fields <https://www.braze.com/docs/api/objects_filters/user_attributes_object#braze-user-profile-fields>`__ |ext_link| and should contain the list of `custom attributes <https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/>`__ |ext_link| that is maintained.
 
 **To add a Braze customer attributes table**
 
@@ -243,7 +243,11 @@ Get details
 
        .. admonition:: Create the Braze API key
 
-          Open the `Developer Console <https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys>`__ |ext_link|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**: "users.track", "users.export.segment", and "segments.list".
+          Open the `Developer Console <https://www.braze.com/docs/api/basics#creating-and-managing-rest-api-keys>`__ |ext_link|. Under **REST API Key**, click **+ Create New API Key**, and then set the following permissions under **User Data**:
+
+          * "users.track"
+          * "users.export.segment"
+          * "segments.list"
 
           Save the API key.
 
@@ -251,7 +255,7 @@ Get details
 
           .. image:: ../../images/destination-braze-rest-api-endpoints.png
              :width: 500 px
-             :alt: The endpoints that are required for an Amperity-to-Braze workflow.
+             :alt: The endpoints that are required for a Braze workflow.
              :align: left
              :class: no-scaled-link
 
@@ -563,6 +567,7 @@ Workflow actions
 
        * :ref:`destination-braze-workflow-actions-invalid-credentials`
        * :ref:`destination-braze-workflow-actions-missing-required-field`
+       * :ref:`destination-braze-workflow-actions-conflicting-identifiers`
        * :ref:`destination-braze-workflow-actions-status-401`
 
 
@@ -609,6 +614,7 @@ A unique identifier must be provided to |destination-name|. Do one of the follow
 
 #. Recommended. The `external_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-external-id>`__ |ext_link|, which is a unique identifier for your customers. This may be the Amperity ID or it may be some other unique identifier.
 #. The `braze_id <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#importing-with-braze-id>`__ |ext_link|, which is a unique identifier for existing |destination-name| customers and may be available when |destination-name| is also a data source for your tenant.
+#. The `user_alias <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link|, which identifies users by an alias. When selected, the dataset must include fields named **alias_name** and **alias_label**.
 
 .. destination-braze-workflow-actions-missing-required-field-end
 
@@ -616,10 +622,10 @@ A unique identifier must be provided to |destination-name|. Do one of the follow
 
 .. destination-braze-workflow-actions-missing-required-field-campaigns-steps-start
 
-To resolve this error, verify that "external_id" or "braze_id" are included in the list of attributes that are being sent to |destination-name|.
+To resolve this error, verify that "external_id", "braze_id", or "user_alias" (with "alias_name" and "alias_label") are included in the list of attributes that are being sent to |destination-name|.
 
 #. Open the **Campaigns** page, and then open the segment used with this workflow.
-#. Verify that "external_id" or "braze_id" is included in the list of attributes for each treatment group that sends audiences to |destination-name|. Update the list of attributes for each treatment group if required.
+#. Verify that "external_id", "braze_id", or "user_alias" (with "alias_name" and "alias_label") is included in the list of attributes for each treatment group that sends audiences to |destination-name|. Update the list of attributes for each treatment group if required.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-braze-workflow-actions-missing-required-field-campaigns-steps-start
@@ -628,13 +634,27 @@ To resolve this error, verify that "external_id" or "braze_id" are included in t
 
 .. destination-braze-workflow-actions-missing-required-field-orchestrations-steps-start
 
-To resolve this error, verify that "external_id" or "braze_id" are included in the query results.
+To resolve this error, verify that "external_id", "braze_id", or "user_alias" (with "alias_name" and "alias_label") are included in the query results.
 
 #. Open the **Queries** page, and then open the query used with this workflow.
-#. Verify that "external_id" or "braze_id" is included in the query results. Update the query if required.
+#. Verify that "external_id", "braze_id", or "user_alias" (with "alias_name" and "alias_label") is included in the query results. Update the query if required.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-braze-workflow-actions-missing-required-field-orchestrations-steps-start
+
+
+.. _destination-braze-workflow-actions-conflicting-identifiers:
+
+Conflicting user identifiers
+--------------------------------------------------
+
+.. destination-braze-workflow-actions-conflicting-identifiers-start
+
+The Braze API requires exactly one identifier type per request. If a request has more than one of ``external_id``, ``braze_id``, or ``user_alias``, the Braze API will reject the request and the orchestration will fail.
+
+To resolve this error, verify that your query results or campaign attributes contain only the identifier field that matches the **User identifier** setting configured for this destination. Remove any additional identifier fields from the dataset.
+
+.. destination-braze-workflow-actions-conflicting-identifiers-end
 
 
 .. _destination-braze-workflow-actions-status-401:

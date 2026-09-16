@@ -108,7 +108,7 @@ The following sections describe how you can use the visual **Query Editor** to b
           :class: no-scaled-link
      - Give your query a name a clear and understandable name. The name field is located in the upper left corner of the visual **Query Editor**.
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Add details like "historical", "daily", or "test" as appropriate. Be sure to include the brand name and the region name if you have many brands or have many regions.
 
           Some examples:
 
@@ -133,7 +133,7 @@ The following sections describe how you can use the visual **Query Editor** to b
 AND vs. OR
 ==================================================
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-intro-start
    :end-before: .. segments-editor-and-vs-or-intro-end
 
@@ -143,6 +143,6 @@ AND vs. OR
 How AND vs. OR works
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-and-vs-or-start
    :end-before: .. segments-editor-and-vs-or-end

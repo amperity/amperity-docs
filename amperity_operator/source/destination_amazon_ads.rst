@@ -8,8 +8,9 @@
 .. |what-send| replace:: audiences
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in seconds)
-.. |duration-value| replace:: "0" - "34,300,800"
+.. |duration-value| replace:: "604,800" - "34,300,800"
 .. |filter-the-list| replace:: "amaz"
+.. |hashed-fields| replace:: **email**, **phone**, and **address**
 
 
 .. meta::
@@ -42,9 +43,13 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. destination-amazon-ads-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 .. destination-amazon-ads-ask-start
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+.. warning:: Ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
 
 .. destination-amazon-ads-ask-end
 
@@ -124,13 +129,21 @@ Get details
 
              If an Amazon Marketing Cloud instance is configured, Amperity attempts to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
+       **Membership duration**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-membership-duration-start
+             :end-before: .. setting-amazon-ads-membership-duration-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that has any of the following attributes:
 
        .. code-block:: sql
 
@@ -176,9 +189,61 @@ Get details
 
            If both **extern_id** and **amperity_id** are provided, only **extern_id** is used.
 
+       Rows with a missing or unrecognizable **country** value are filtered out before sending. The count of removed rows is reported in the workflow run log.
+
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
        All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
+
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail four.
+          :align: center
+          :class: no-scaled-link
+     - **Enable consent signals**
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-end
+
+       .. include:: ../../shared/destination_settings.rst
+          :start-after: .. setting-amazon-ads-enable-consent-signals-about-start
+          :end-before: .. setting-amazon-ads-enable-consent-signals-about-end
+
+       Use one of the following fields to send customer consent signals to |destination-name|.
+
+       **tcf**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-tcf-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-tcf-end
+
+       **gpp**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-gpp-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-gpp-end
+
+
+       **amzn_user_data** and **amzn_ad_storage**
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-user-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-user-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amazon-ads-enable-consent-signals-amzn-ads-start
+             :end-before: .. setting-amazon-ads-enable-consent-signals-amzn-ads-end
+
+       .. note:: The country code is inferred from the **country** field in the customer profile.
+
+       Consent signals are prioritized:
+
+       #. **tcf**
+       #. **gpp**
+       #. **amzn_user_data** and **amzn_ad_storage**
 
 .. destination-amazon-ads-get-details-table-end
 
@@ -374,14 +439,8 @@ Add destination
        **Membership duration**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-start
-             :end-before: .. setting-common-membership-duration-end
-
-          (A membership duration of "34,300,800 is equivalent to "9528" hours or "397" days.)
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-common-membership-duration-frequency-start
-             :end-before: .. setting-common-membership-duration-frequency-end
+             :start-after: .. setting-amazon-ads-membership-duration-start
+             :end-before: .. setting-amazon-ads-membership-duration-end
 
 
    * - .. image:: ../../images/steps-05.png
@@ -510,7 +569,7 @@ Invalid advertiser account ID
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID, such as when an advertiser account ID has been deleted, Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

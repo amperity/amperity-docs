@@ -43,20 +43,32 @@ Prerequisites
 .. endpoint-get-profiles-list-prerequisites-end
 
 
-.. _endpoint-get-profiles-list-base-url:
+.. _endpoint-get-profiles-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-profiles-list-base-url-start
+.. endpoint-get-profiles-list-request-url-start
 
-Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the following base URL:
+Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant-id}.amperity.com/api/indexes/
+.. code-block:: rest
 
-.. endpoint-get-profiles-list-base-url-end
+   https://app.amperity.com/api/indexes/{id}/profiles
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes/{id}/profiles
+
+.. endpoint-get-profiles-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-profiles-list-rate-limit:
@@ -67,6 +79,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-profile-start
+   :end-before: .. rate-limits-profile-end
 
 
 .. _endpoint-get-profiles-list-request:
@@ -81,11 +97,11 @@ A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes/{id}/profiles \
+          'https://app.amperity.com/api/indexes/{id}/profiles \
           ?limit=100 \
           &with_total=true \
           &filter[<attribute>]=<value>' \
-        --header 'amperity-tenant: {tenant}' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
@@ -188,11 +204,11 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes/{id}/profiles \
+                'https://app.amperity.com/api/indexes/{id}/profiles \
                 ?limit=100 \
                 &with_total=true \
                 &filter[<attribute>]=<value>' \
-                --header 'amperity-tenant: {tenant}' \
+                --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
@@ -210,13 +226,13 @@ The following examples show how to send requests to the **GET /indexes/{id}/prof
          import csv
 
          # URL for Campaigns endpoint
-         url = "https://tenant-name.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
+         url = "https://app.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}',
+           'amperity-tenant': '{tenant-id}',
            'api-version': '{version}'
          }
 
@@ -249,7 +265,7 @@ Responses
 
 .. endpoint-get-profiles-list-responses-start
 
-A response from the **GET /indexes/{id}/profiles** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /indexes/{id}/profiles** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-profiles-list-responses-end
 
@@ -267,20 +283,18 @@ The **200** response returns a set of customer profile indexes.
    :linenos:
 
    {
-     "total": 0,
+     "total": 2,
      "next_token": "ABCa1bcdDEe2f3G",
      "data": [
        {
          "id": "cl-abc123",
-         "name": "Loyalty Members",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+         "index_id": "index-ID",
+         "attributes": "attributes"
        },
        {
-         "id": "cl-def456",
-         "name": "Online Shoppers",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+         "id": "cl-abc123",
+         "index_id": "index-ID",
+         "attributes": "attributes"
        },
      ]
    }
@@ -295,7 +309,7 @@ Response parameters
 
 .. endpoint-get-profiles-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -307,26 +321,21 @@ A **200 OK** response contains the following parameters.
    * - **data**
      - A JSON array of values for the current page of results. The array of values includes the following properties:
 
-       **created_at**
-          The date and time on which the profile index was created. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
-
        **id**
           The Amperity internal identifier for the campaign.
 
-         "id": "cl-def456",
-         "name": "Online Shoppers",
-         "created_at": "2025-04-25T20:30:00Z"
-         "updated_at": "2025-07-26T20:30:00Z"
+       **index_id**
+          The ID for the profile index.
 
-       **name**
-          The name of the campaign.
+       **attributes**
+          A list of attributes for the profile index.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 
-   * - **updated_at**
-     -    The date and time on which the profile index was updated. The date and time must be in `RFC3339 format <https://www.rfc-editor.org/rfc/rfc3339>`__ |ext_link|.
+   * - **total**
+     - The total count of all results.
 
 .. endpoint-get-profiles-list-response-parameters-end

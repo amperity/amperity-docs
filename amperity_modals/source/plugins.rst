@@ -70,6 +70,13 @@ A list of plugins for sources, destinations, campaigns, and journeys.
       :end-before: .. term-adobe-marketo-end
 
 
+**adobe-target**
+
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adobe-target-start
+      :end-before: .. term-adobe-target-end
+
+
 **adroll**
 
    .. include:: ../../shared/terms.rst
@@ -786,7 +793,7 @@ A list of plugins for sources, destinations, campaigns, and journeys.
 
 **tiktok-offline-events**
 
-   Send events to TikTok Ads Manager to help your brand track offline conversions that result from your marketing campaigns.
+   Send events to TikTok Ads Manager to help your brand track offline and web conversions that result from your marketing campaigns.
 
 
 **toast**

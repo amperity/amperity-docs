@@ -37,11 +37,11 @@ Use the recent activity pane to learn more about the state of workflows running 
 
 Review the following sections:
 
-#. The first section describes :ref:`notification types <notifications-types>` -- :ref:`Running <notifications-type-running>`, :ref:`Completed <notifications-type-completed>`, :ref:`Warnings <notifications-type-warnings>`, and :ref:`Error <notifications-type-errors>` -- and describes what you should expect from each notification type as they appear in the recent activity pane.
+#. The first section describes :ref:`notification types <notifications-types>`--:ref:`Running <notifications-type-running>`, :ref:`Completed <notifications-type-completed>`, :ref:`Warnings <notifications-type-warnings>`, and :ref:`Error <notifications-type-errors>`--and describes what you should expect from each notification type as they appear in the recent activity pane.
 
    :ref:`Fields are shown in notifications <notifications-fields>`, such as links to validation reports and workflows, job, trace, IDs for use with troubleshooting, and status indicators, such as the amount of time a workflow ran.
 
-#. The second section describes the notifications that appear within individual pages in the Amperity user interface. These sections are listed alphabetically by page: :ref:`Campaign <notifications-campaigns>`, :ref:`Database <notifications-databases>`, :ref:`Orchestrations <notifications-orchestrations>`, :ref:`Queries <notifications-queries>`, :ref:`Sources <notifications-sources>`, :ref:`Stitch reports <notifications-stitch-reports>`, and :ref:`Stitch runs <notifications-stitch-runs>`.
+#. The second section describes the notifications that appear within individual pages in the Amperity user interface. These sections are listed alphabetically by page: :ref:`Campaign <notifications-campaigns>`, :ref:`Database <notifications-databases>`, :ref:`Journeys <notifications-journeys>`, :ref:`Orchestrations <notifications-orchestrations>`, :ref:`Queries <notifications-queries>`, :ref:`Sources <notifications-sources>`, :ref:`Stitch reports <notifications-stitch-reports>`, and :ref:`Stitch runs <notifications-stitch-runs>`.
 
 #. A list of how-tos that are available to workflows, including :ref:`resolving workflow errors <notifications-resolve-workflow-errors>`.
 
@@ -68,9 +68,9 @@ All notifications within the recent activity pane fall into one of the following
 
 .. important:: Notifications fall into general behaviors, but all notifications within your tenant are specific to your tenant and reflect how your tenant is configured. The names of data sources, feeds, couriers, tables, databases, queries, orchestrations, destinations, and campaigns appears in the notifications.
 
-   If there is an error, such as a processing error related to a specific column within a custom table, the notification contains the names you chose for the custom table and also for the columns within that table.
+   If there is an error, such as a processing error related to a specific column within a custom table, the notification has the names you chose for the custom table and also for the columns within that table.
 
-   If you are unable to resolve a warning or an error using workflow actions, please contact Amperity support.
+   If you are unable to resolve a warning or an error using workflow actions, contact Amperity support.
 
 .. notifications-types-important-end
 
@@ -82,7 +82,7 @@ Running
 
 .. notifications-type-status-start
 
-A running notification -- indicated by the |notification-running| icon -- is shown when a workflow is running, but has not finished every step in the workflow.
+A running notification--indicated by the |notification-running| icon--is shown when a workflow is running, but has not finished every step in the workflow.
 
 .. notifications-type-status-end
 
@@ -118,7 +118,7 @@ A completed notification--indicated by the |notification-complete| icon--is show
 
 .. notifications-type-completed-context-start
 
-For example, a notification for a workflow that has completed successfully contains links to:
+For example, a notification for a workflow that has completed successfully has links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated
@@ -153,7 +153,7 @@ For example, a notification for a workflow that has detected an issue shows the 
    Unique validation failed for database "Customer 360" table
    "Unified_Transactions" column "order_id"
 
-and then contains links to:
+and then has links to:
 
 * A **Validation Report**
 * A **View Details** modal that shows how long it took for each table to be updated
@@ -183,7 +183,7 @@ An error notification--indicated by the |notification-error| icon--is shown when
 
 .. notifications-type-errors-context-start
 
-For example, a notification for a workflow that contains an error shows the error icon |notification-error| and the workflow stops.
+For example, a notification for a workflow that has an error shows the error icon |notification-error| and the workflow stops.
 
 A message is shown that describes the error, such as:
 
@@ -205,7 +205,7 @@ A message is shown that describes the error, such as:
 
    Select the radio button for the workflow action that you determine to be the best way to resolve this error, after which the workflow will perform that action.
    
-.. tip:: If you are unable to resolve an error, please contact your Amperity representative.
+.. tip:: If you are unable to resolve an error, contact your Amperity representative.
 
 .. notifications-type-errors-context-end
 
@@ -389,6 +389,52 @@ The following is a list of status notifications that appear within a notificatio
 * Completed in
 
 .. notifications-databases-common-warnings-end
+
+
+.. _notifications-journeys:
+
+Journeys
+==================================================
+
+.. notifications-journeys-overview-start
+
+You can find information about notifications--per status--found on the **Journeys** page listed below.
+
+.. notifications-journeys-overview-end
+
+**Common error notifications**
+
+.. notifications-journeys-errors-start
+
+Journey error notifications are most often related to:
+
+#. Finding travelers to enter the journey
+#. Running a journey node
+#. Sending a journey activation to a destination
+
+If you see a journey error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+
+.. notifications-journeys-errors-end
+
+**Common status notifications**
+
+.. notifications-journeys-other-start
+
+The following is a list of status notifications that appear within a notification as it is running or after it has completed:
+
+* Starting journey
+* Finding travelers to enter journey
+* Running node
+* Sending to destination
+* Completing journey
+* Recording traveler visits in the travel log
+* Sending travel log to destination
+* Cleaning up
+* Journey finished
+* Journey canceled
+* Completed in
+
+.. notifications-journeys-other-end
 
 
 .. _notifications-orchestrations:
@@ -649,7 +695,7 @@ The following is a list of status notifications that appear within a notificatio
 * Loading data
 * Running custom domain tables
 * Processing Stitch request
-* Stitch skipped - no work to do
+* Stitch skipped
 * Spark job submitted
 * Starting Stitch job
 * Stitch started

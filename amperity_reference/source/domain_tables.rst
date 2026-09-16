@@ -55,7 +55,7 @@ Column types
        * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
        * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
 
-       .. important:: Some fields that store datetime values are set to the string data type.
+       .. important:: Some fields that store datetime values are set to the **string** data type.
 
    * - **decimal**
      - A fixed point number, such as for prices or message sizes. (The number of characters in the decimal value is configurable during feed setup.). For example:
@@ -217,7 +217,7 @@ Combine day, month, year as birthdate
 
 .. domain-tables-custom-sql-use-case-combine-birthdate-start
 
-Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined in order to use the **birthdate** semantic tag.
+Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined to use the **birthdate** semantic tag.
 
 The following example shows an ``IF`` statement within a ``SELECT`` statement that finds the values in day, month, and year fields, and then combines them into a field that captures the birthdate value as ``DD/MM/YYYY``:
 
@@ -297,7 +297,7 @@ Hash PII data that has been resent to Amperity
 
 .. _domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst
@@ -378,8 +378,8 @@ Added columns
 Amperity adds the following columns to all domain tables. The added columns start with underscores (``_``) and are used by Amperity during Stitch processing.
 
 #. The **_pk** column is an identifier that is generated based on the all of the columns in the feed that were associated to the primary key.
-#. The **_uuid_pk** column contains a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
-#. The **_updated** column contains details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
+#. The **_uuid_pk** column has a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
+#. The **_updated** column has details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
 
    Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files and days in the same load.
 
@@ -468,7 +468,7 @@ A custom domain table is table that is created from a Spark SQL query built from
 Feeds load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
 
 * Enabling privacy rights workflows to help remove data based on individual requests from customers, as required by CCPA and GDPR.
-* Applying semantic tags to data that contains :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
+* Applying semantic tags to data that has :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
 * Supporting workflows that |data_first_party_raw_clickstream|.
 
 .. domain-tables-custom-add-end
@@ -679,7 +679,7 @@ Delete domain table
 
 .. domain-tables-delete-start
 
-Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table prior to deleting it. This action will *not* delete the feeds associated with the domain table.
+Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table before deleting it. This action will *not* delete the feeds associated with the domain table.
 
 .. domain-tables-delete-end
 
@@ -731,7 +731,7 @@ You can delete all records in a domain table that are older than a date.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Older than a set date".
 
-   Select a field in the domain table with a datetime data type, and then select a date. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select a date. You may use relative dates. A relative date is always in Coordinated Universal Time (UTC).
 
 #. Click **Preview deletion**, and then review the list of records that are returned.
 #. Click **Delete records**. In the **Remove records** dialog box, confirm that you want to delete the list of records by clicking **Remove records**.
@@ -757,7 +757,7 @@ You can delete all records in a domain table that exist between two dates.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Within a set timeframe".
 
-   Select a field in the domain table with a datetime data type, and then select the start and end dates for the timeframe. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select the start and end dates for the timeframe. You may use relative dates.
 
    .. note:: End dates are exclusive.
 
@@ -774,7 +774,7 @@ With a matching value
 
 .. domain-tables-delete-records-value-start
 
-You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address ``"email is like ``amperity.com``"`` or records that match a specific email address ``"email is "john@amperity.com"``.
+You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address or records that match a specific email address.
 
 .. domain-tables-delete-records-value-end
 
@@ -917,6 +917,42 @@ A custom domain table must have a primary key. The field to which the PK semanti
    When a single field does not contain unique values you must concatenate two or more fields with values that are stable over time into a single field. Use the concatenated field as the primary key. Hash the value for the concatenated primary key when any of input fields contain personally identifiable information (PII), such as an email address or phone number.
 
 .. domain-tables-find-primary-key-steps-end
+
+
+.. _domain-tables-make-available-to-stitch:
+
+Make available to Stitch
+--------------------------------------------------
+
+.. domain-tables-make-available-to-stitch-start
+
+A custom domain table with semantic tags applied to records that contain PII data should be made available to Stitch. A custom domain table that is made available to Stitch is used by Stitch for customer identity resolution.
+
+Custom domain table data is made available to Stitch in two steps:
+
+#. Selecting the **Make this table available for Stitch** option when configuring a custom domain table.
+
+   When selected, the name of the custom domain table is added to a list of feeds and custom domain tables available for selection in Stitch configuration settings.
+#. The custom domain tables must be selected on the **Stitched tables** tab in the **Stitch settings** dialog.
+
+.. domain-tables-make-available-to-stitch-end
+
+.. domain-tables-make-available-to-stitch-tip-start
+
+.. tip:: Only tables that contain PII data should be made available to Stitch. Tables that are later associated with Amperity IDs, but do not contain PII data, such as those that contain transactions, should use a foreign key to associate those records with an Amperity ID.
+
+.. domain-tables-make-available-to-stitch-tip-end
+
+**To make data available to Stitch**
+
+.. domain-tables-make-available-to-stitch-steps-start
+
+#. From the **Sources** page, open the menu for a custom domain table, and then select **Edit**. The **Custom Domain Table** editor page opens.
+#. Click **Next**.
+#. Under **Settings** select **Make this table available for Stitch**.
+#. Click **Activate**.
+
+.. domain-tables-make-available-to-stitch-steps-end
 
 
 .. _domain-tables-publish-to-queries:

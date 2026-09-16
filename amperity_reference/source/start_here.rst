@@ -58,7 +58,7 @@ Custom data models help your brand
 
 * Reduce the amount of code that is required to prepare data and resolve customer identity
 * Start with out-of-the-box tables and attributes that can be customized
-* Build an accurate customer 360 that contains high-value attributes that describe your customers
+* Build an accurate customer 360 that has high-value attributes that describe your customers
 * Use accurate customer profiles for marketing, analytics, customer service, and data management workflows
 
 .. start-here-custom-data-models-end

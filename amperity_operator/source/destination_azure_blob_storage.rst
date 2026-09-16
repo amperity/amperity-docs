@@ -61,10 +61,6 @@ Get details
 
        #. The name of the |destination-name| container. A blob prefix is sometimes required.
 
-       #. .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-google-cloud-storage-bucket-name-must-match-start
-             :end-before: .. credential-google-cloud-storage-bucket-name-must-match-end
-
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px

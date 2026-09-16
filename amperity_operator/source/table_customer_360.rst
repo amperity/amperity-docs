@@ -34,7 +34,7 @@ The **Customer 360** table is the most important table in the customer 360 datab
 Attributes vary tenant-to-tenant, but typically include:
 
 * Profile information, such as names, addresses, email, and phone
-* Interactions by channel, such as ecommerce, point of sale, and loyalty
+* Interactions by channel, such as e-commerce, point of sale, and loyalty
 * Insights, such as total lifetime value, transaction frequency, and recency
 * Predictions, such as next best purchase, next best action, and churn prediction
 
@@ -50,7 +50,7 @@ Attributes vary tenant-to-tenant, but typically include:
 
 .. table-customer360-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Customer_360".
 #. Set the build mode to **SQL**.
@@ -91,7 +91,7 @@ Add SHA-256 hashed columns
 
 You can add SHA-256 hashed PII columns to your **Customer 360** table to enable their use from within campaigns.
 
-For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file contains SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that contains the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
+For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file has SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that has the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
 
 Add hashed PII columns to the **Customer 360** table using the |sql_spark_function_sha2| function:
 

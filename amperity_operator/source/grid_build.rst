@@ -34,6 +34,10 @@ Configure your Amperity tenant for all of your use cases.
       :link-type: doc
       :link: storage
 
+   .. grid-item-card:: Choose compute
+      :link-type: doc
+      :link: compute
+
    .. grid-item-card:: Add customer data
       :link-type: doc
       :link: add_customer_data
@@ -63,6 +67,7 @@ Configure your Amperity tenant for all of your use cases.
    :hidden:
 
    Choose storage <storage>
+   Choose compute <compute>
    Add customer data <add_customer_data>
    Run Stitch <stitch>
    Review benchmarks <benchmarks>

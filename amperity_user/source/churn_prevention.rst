@@ -144,7 +144,7 @@ Test the campaign
 
 .. churn-prevention-howto-test-start
 
-Testing and measuring the performance of a churn prevention campaign can be a challenge. A sophisticated marketing campaign is run across multiple channels: email, direct mail, display advertising, Facebook, etc. and likely identifies many types of sub-audiences within a larger group of customers.
+Testing and measuring the performance of a churn prevention campaign can be a challenge. A sophisticated marketing campaign is run across many channels: email, direct mail, display advertising, Facebook, etc. and likely identifies many types of sub-audiences within a larger group of customers.
 
 To get there, start with a simple campaign using only customers that are *cooling down*, and then divide them randomly into three groups:
 
@@ -238,7 +238,7 @@ Amperity provides a series of predictive attributes for predicted customer lifet
 
 A churn prevention campaign starts with predicted customer lifetime value, the value tiers customers are predicted to fall into, and their lifecycle status.
 
-Use the individual components of pCLV -- predicted average order revenue, predicted order frequency, and probability of transaction -- to fine-tune your understanding of your customers, and then get more precise about where they fit within the various stages of your churn prevention campaigns.
+Use the individual components of pCLV--predicted average order revenue, predicted order frequency, and probability of transaction--to fine-tune your understanding of your customers, and then get more precise about where they fit within the various stages of your churn prevention campaigns.
 
 Use non-predictive attributes to find historical measurements, such as the number of days since a customer has last ordered.
 

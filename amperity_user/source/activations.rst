@@ -134,7 +134,7 @@ The following examples show how to filter a configured campaign by activation ac
 * :ref:`Not in campaign? <activations-activity-campaigns-example-campaign>`
 * :ref:`Include control group <activations-activity-campaigns-example-subaudience>`
 
-You can use multiple activation activity filters and can combine activation activity filters with purchase behaviors, attributes, and customer lists to build more complex segments.
+You can use many activation activity filters and can combine activation activity filters with purchase behaviors, attributes, and customer lists to build more complex segments.
 
 .. activations-activity-campaigns-examples-end
 
@@ -296,7 +296,7 @@ The following examples show how to filter a configured journey by activation act
 * :ref:`Not in journey? <activations-activity-journeys-example-notin>`
 * :ref:`Passed through node within 30 days <activations-activity-journeys-example-node-passthrough>`
 
-You can use multiple activation activity filters and can combine activation activity filters with purchase behaviors, attributes, and customer lists to build more complex segments.
+You can use many activation activity filters and can combine activation activity filters with purchase behaviors, attributes, and customer lists to build more complex segments.
 
 .. activations-activity-journeys-examples-end
 

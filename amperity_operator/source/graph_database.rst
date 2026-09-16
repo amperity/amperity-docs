@@ -29,9 +29,7 @@ A graph database is a collection of vertices and edges:
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-vertex-start
      :end-before: .. term-vertex-end
-* .. include:: ../../shared/terms.rst
-     :start-after: .. term-edge-start
-     :end-before: .. term-edge-end
+* An edge is the relationship between two vertices in a graph database. Each edge has a type and must start with one vertex and end with another.
 
 .. graph-database-end
 

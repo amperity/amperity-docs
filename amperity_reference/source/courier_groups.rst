@@ -23,9 +23,11 @@ About courier groups
 
 .. courier-groups-context-start
 
-A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit. Couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
+A courier group, also known as a scheduled workflow, is configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit. Couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
 
 For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
+
+A bridge sync should be in a dedicated courier group.
 
 .. courier-groups-context-end
 
@@ -39,7 +41,7 @@ For each courier with required files, Amperity determines if those files have up
 
 What a courier group does:
 
-#. Logically organizes a list of couriers and bridges into a group that shares the same schedule and workflow.
+#. Logically organizes a list of couriers into a group that shares the same schedule and workflow.
 #. Allows for each courier to be assigned schedule variance via wait times and offsets.
 #. Enables both automatic and ad hoc runs.
 #. Polls each data source associated with a courier in the group to determine if data is ready to be pulled to Amperity.
@@ -329,6 +331,36 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 .. courier-groups-schedules-end
 
+.. courier-groups-schedules-examples-start
+
+**Example cron schedules**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **0 17 * * ***
+     - Daily at 17:00 UTC
+
+   * - **0 17 * * 1,3**
+     - Monday and Wednesday at 17:00 UTC
+
+   * - **0 17 * * 1-5**
+     - Weekly on Monday through Friday at 17:00 UTC
+
+   * - **0 17 * * 0**
+     - Weekly on Sunday at 17:00 UTC
+
+   * - **0 22 * * 0**
+     - Weekly on Sunday at 22:00 UTC
+
+   * - **30 15 * * 1,2,5**
+     - Monday, Tuesday, and Friday 15:30 PM UTC
+
+.. courier-groups-schedules-examples-end
+
 .. courier-groups-schedules-note-start
 
 .. note:: Scheduling a courier group is optional. When a courier group is not assigned a schedule, it may be run manually on an ad hoc basis.
@@ -377,8 +409,8 @@ The time zones that are available for selection in Amperity are modeled after th
 
    (GMT-08:00) Pacific Time
    (GMT-07:00) Mountain Time
-   (GMT-08:00) Central Time
-   (GMT-09:00) Eastern Time
+   (GMT-06:00) Central Time
+   (GMT-05:00) Eastern Time
 
 .. courier-groups-timezones-about-end
 
@@ -421,7 +453,7 @@ Bridge syncs
 
 .. courier-groups-bridge-syncs-start
 
-Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication.
+Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication. A bridge sync should be in a dedicated courier group.
 
 .. courier-groups-bridge-syncs-end
 
@@ -584,7 +616,7 @@ Activate courier group
 
 .. courier-groups-howto-activate-start
 
-An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
+An activated courier group is run automatically on a defined schedule. All couriers configured for the courier group run as a unit refresh domain table data. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
 
 .. courier-groups-howto-activate-end
 
@@ -606,7 +638,9 @@ Add bridge to workflow
 
 .. courier-groups-howto-add-bridge-start
 
-Any inbound share that has been configured and activated in your tenant may be added as a bridge within a courier group.
+Any inbound share configured and activated in your tenant may be added as a bridge to a scheduled workflow.
+
+.. important:: Add a bridge to a dedicated courier group that runs independently of other scheduled workflows. Assign offsets to courier groups to ensure a scheduled workflow with a bridge sync starts after or ends before other scheduled workflows.
 
 .. courier-groups-howto-add-bridge-end
 
@@ -915,7 +949,7 @@ Delete courier group
 
 .. courier-groups-howto-delete-start
 
-Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group prior to deleting it.
+Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group before deleting it.
 
 .. important:: This action will *not* delete couriers that are associated with the courier group.
 

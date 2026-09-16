@@ -12,6 +12,7 @@
 .. |filter-the-list| replace:: "pin"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -36,9 +37,17 @@ Configure destinations for Pinterest
 
 .. destination-pinterest-about-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
+
 .. destination-pinterest-configure-start
 
-You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses prior to sending them to |destination-name|.)
+You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses before sending them to |destination-name|.)
 
 .. destination-pinterest-configure-end
 
@@ -46,13 +55,13 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
+Amperity creates the customer list if it does not already exist, and then adds email addresses to that customer list. Amperity updates the customer list incrementally if it already exists, adding email addresses for new audience members and removing email addresses for members who have left the audience. If more than one customer list exists with the same name Amperity uses the most recent customer list.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
 When a customer list is not associated with an audience in |destination-name|, Amperity creates an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
 
-.. note:: A customer list must contain at least 100 email addresses that are associated with a |destination-name| account before it can be associated with an audience.
+.. note:: A customer list must have at least 100 email addresses associated with a |destination-name| account before a list is associated with an audience.
 
 .. destination-pinterest-shared-end
 
@@ -121,6 +130,11 @@ Get details
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-pinterest-ad-account-id-start
              :end-before: .. setting-pinterest-ad-account-id-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-pinterest-ad-account-id-about-start
+             :end-before: .. setting-pinterest-ad-account-id-about-end
+
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
@@ -339,3 +353,153 @@ Add destination
           :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-pinterest-add-steps-end
+
+
+.. _destination-pinterest-workflow-actions:
+
+Workflow actions
+==================================================
+
+.. include:: ../../shared/workflow-actions.rst
+   :start-after: .. workflow-actions-common-table-intro-start
+   :end-before: .. workflow-actions-common-table-intro-end
+
+.. destination-pinterest-workflow-actions-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-a-start
+          :end-before: .. workflow-actions-common-table-section-one-a-end
+
+       .. image:: ../../images/mockup-destinations-tab-workflow-error.png
+          :width: 500 px
+          :alt: Review a notifications error.
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-one-b-start
+          :end-before: .. workflow-actions-common-table-section-one-b-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-two-start
+          :end-before: .. workflow-actions-common-table-section-two-end
+
+       .. image:: ../../images/mockups-workflow-failed.png
+          :width: 500 px
+          :alt: The workflow tab, showing a workflow with errors.
+          :align: left
+          :class: no-scaled-link
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-a-start
+          :end-before: .. workflow-actions-common-table-section-three-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-three-b-start
+          :end-before: .. workflow-actions-common-table-section-three-b-end
+
+       Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
+
+       * :ref:`destination-pinterest-workflow-actions-not-enough-records`
+       * :ref:`destination-pinterest-workflow-actions-authorization-error`
+       * :ref:`destination-pinterest-workflow-actions-insufficient-permissions`
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-a-start
+          :end-before: .. workflow-actions-common-table-section-four-a-end
+
+       .. include:: ../../shared/workflow-actions.rst
+          :start-after: .. workflow-actions-common-table-section-four-b-start
+          :end-before: .. workflow-actions-common-table-section-four-b-end
+
+.. destination-pinterest-workflow-actions-end
+
+
+.. _destination-pinterest-workflow-actions-not-enough-records:
+
+Not enough records
+--------------------------------------------------
+
+.. destination-pinterest-workflow-actions-not-enough-records-start
+
+|destination-name| requires a customer list to contain a minimum of 100 records before the list can be associated with an audience.
+
+.. destination-pinterest-workflow-actions-not-enough-records-end
+
+.. destination-pinterest-workflow-actions-not-enough-records-steps-start
+
+To resolve this error, update the query or segment associated with this workflow to return at least 100 rows.
+
+#. Open the **Queries** page and review the query associated with this workflow. Edit the query to return at least 100 rows, or select a different query to send.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-pinterest-workflow-actions-not-enough-records-steps-end
+
+
+.. _destination-pinterest-workflow-actions-authorization-error:
+
+Authorization error
+--------------------------------------------------
+
+.. destination-pinterest-workflow-actions-authorization-error-start
+
+Amperity is unable to connect to |destination-name|. This is most often caused by a change to the credentials used to authorize Amperity with |destination-name|, such as an expired or revoked refresh token.
+
+.. destination-pinterest-workflow-actions-authorization-error-end
+
+.. destination-pinterest-workflow-actions-authorization-error-steps-start
+
+To resolve this error, reauthorize Amperity with |destination-name|.
+
+#. Open the **Credentials** page.
+#. Review the credentials used with this workflow. If the refresh token has expired or been revoked, generate a new one and update the credential in Amperity.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-pinterest-workflow-actions-authorization-error-steps-end
+
+
+.. _destination-pinterest-workflow-actions-insufficient-permissions:
+
+Insufficient permissions
+--------------------------------------------------
+
+.. destination-pinterest-workflow-actions-insufficient-permissions-start
+
+The |destination-name| user who authorized Amperity may no longer have access to all of the customer lists associated with the ad account. This can occur when permissions for that user are changed in |destination-name| after the initial authorization.
+
+.. destination-pinterest-workflow-actions-insufficient-permissions-end
+
+.. destination-pinterest-workflow-actions-insufficient-permissions-steps-start
+
+To resolve this error, verify that the |destination-name| user who authorized Amperity has the required permissions.
+
+#. Log into |destination-name| and verify that the authorizing user has access to all customer lists associated with the ad account configured in this workflow.
+#. If permissions have changed, update them in |destination-name| or reauthorize Amperity using a user with the correct permissions.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-pinterest-workflow-actions-insufficient-permissions-steps-end

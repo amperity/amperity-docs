@@ -31,7 +31,7 @@ The following tables are standard output of Amperity. These tables and the attri
 * :ref:`Unified Itemized Transactions <standard-output-unified-itemized-transactions>`
 * :ref:`Unified Transactions <standard-output-unified-transactions>`
 
-All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
+All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attributes it is organized alphabetically by attribute name.
 
 .. standard-output-overview-end
 
@@ -197,7 +197,7 @@ Customer Attributes
 
 .. standard-output-customer-attributes-start
 
-The **Customer Attributes** table contains the following columns:
+The **Customer Attributes** table has the following columns:
 
 .. standard-output-customer-attributes-end
 
@@ -263,7 +263,7 @@ The **Customer Attributes** table contains the following columns:
 
    * - **Customer Classifications**
      - String
-     - A string that contains all of the classifications for a customer. For example: "is_reseller, is_outlier" or "is_test_account". A value of " " (an empty space) indicates that all classifications are false.
+     - A string that has all of the classifications for a customer. For example: "is_reseller, is_outlier" or "is_test_account". A value of " " (an empty space) indicates that all classifications are false.
 
    * - **Customer Type**
      - String

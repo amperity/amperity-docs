@@ -192,9 +192,9 @@ Get details
        #. Apply **Read** and **Write** permissions to the data extension.
        #. Apply **Read**, **Write**, and **Execute** permissions for Automations.
 
-       .. important:: Each installed package is configured to have access to one business unit *or* multiple business units, depending on the desired workflow.
+       .. important:: Each installed package is configured to have access to one business unit *or* many business units, depending on the desired workflow.
 
-          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to multiple business units, you must configure a data template for each business unit.
+          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to many business units, you must configure a data template for each business unit.
 
           Amperity cannot send data to a shared business unit in |destination-name|.
 
@@ -476,6 +476,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-salesforce-marketing-cloud-folder-name-start
              :end-before: .. setting-salesforce-marketing-cloud-folder-name-end
+
+       **Folder type**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-salesforce-marketing-cloud-folder-type-start
+             :end-before: .. setting-salesforce-marketing-cloud-folder-type-end
 
        **Primary key**
 
@@ -782,7 +788,7 @@ Use the |destination-name| subscriber key or use email addresses. One of these o
 To resolve this error, you must configure the primary key.
 
 #. Open the Amperity **Credentials** page in a new tab.
-#. For a query, open the **Queries** page, and then update the query to return the field -- **subscriber_key** or **email** -- that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
+#. For a query, open the **Queries** page, and then update the query to return the field--**subscriber_key** or **email**--that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
 
    For a campaign, open the **Campaigns** page, and then update the campaign and ensure the primary key is in the list of attributes that are sent to |destination-name|. Activate the campaign.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.

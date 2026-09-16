@@ -23,7 +23,7 @@ Unified Loyalty table
 
 .. table-unified-loyalty-note-multiple-loyalty-ids-start
 
-.. note:: An Amperity ID may be associated with multiple loyalty programs or may be associated with multiple accounts within the same loyalty program.
+.. note:: An Amperity ID may be associated with many loyalty programs or may be associated with many accounts within the same loyalty program.
 
 .. table-unified-loyalty-note-multiple-loyalty-ids-end
 
@@ -47,7 +47,7 @@ The **Unified Loyalty** table is an optional table for the customer 360 database
 
 .. table-unified-loyalty-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified Loyalty".
 #. Set the build mode to **Passthrough**.

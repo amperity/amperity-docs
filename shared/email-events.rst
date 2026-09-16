@@ -37,7 +37,7 @@ The number of times a link in an email was clicked from within the email events 
 
 .. email-events-clicks-x-days-start
 
-The number of email clicks in the last 1, 3, 5, 7, or 14 days.
+The number of email clicks in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-clicks-x-days-end
 
@@ -69,8 +69,9 @@ A classification that measures engagement frequency click rates for email addres
 
 * **Non-recipient** Zero received emails.
 * **New** Fewer than five received emails.
-* **Active** Engaging with received emails.
-* **Inactive** Not engaging with received emails.
+* **Low** Modeled open rate is in the lower third.
+* **Medium** Modeled open rate is in the middle third.
+* **High** Modeled open rate is in the upper third.
 
 .. important:: Send rates must be available.
 
@@ -83,9 +84,8 @@ A classification that measures click rates for email addresses that have receive
 
 * **Non-recipient** Zero received emails.
 * **New** Fewer than five received emails.
-* **Low** Modeled open rate is in the lower third.
-* **Medium** Modeled open rate is in the middle third.
-* **High** Modeled open rate is in the upper third.
+* **Active** Engaging with received emails.
+* **Inactive** Not engaging with received emails.
 
 .. important:: Send rates must be available.
 
@@ -171,7 +171,7 @@ The number of all email opens from within the email events data that is provided
 
 .. email-events-opens-x-days-start
 
-The number of email opens in the last 1, 3, 5, 7, or 14 days.
+The number of email opens in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-opens-x-days-end
 

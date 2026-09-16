@@ -83,6 +83,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send data from Amperity using the Marketo API.
 
+   * - **Adobe Target**
+     - 
+     - |system-yes|
+     - Send profile properties to the Adobe Target profile store using the Bulk Profile Update API.
+
    * - **AdRoll**
      - |system-yes|
      - 
@@ -277,7 +282,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Campaign Manager using Fivetran.
 
-   * - **Cheetah Digital by Marigold**
+   * - **Cheetah Digital by Zeta**
      - |system-yes|
      - |system-yes|
      - Pull data to and send data from Amperity using SFTP.
@@ -350,11 +355,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - |system-yes|
      - Send static segments to Dynamics 365 Marketing using the Segmentation API.
-
-   * - **Emarsys**
-     - |system-yes|
-     - 
-     - Pull data to Amperity using SFTP.
 
    * - **Epsilon Abacus**
      - |system-yes|
@@ -510,6 +510,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Intercom using Fivetran.
 
+   * - **Insider One**
+     - 
+     - |system-yes|
+     - Send user and events data to Insider One using Amperity Bridge for Snowflake.
+
    * - **Iterable**
      - |system-yes|
      - 
@@ -518,7 +523,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Kibo**
      - |system-yes|
      - |system-yes|
-     - Send data to and from Amperity using SFTP. Previously known as Monetate.
+     - See Monetate.
 
    * - **Klaviyo**
      - |system-yes|
@@ -555,7 +560,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Pull email and SMS events data to Amperity.
 
-       Send email lists and SMS profiles to Listrak.
+       Send email and SMS lists to Listrak. Send only profile updates for SMS lists.
 
    * - **LiveRamp**
      - |system-yes|
@@ -645,6 +650,13 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send data to MoEngage from Amperity using a REST API.
 
+   * - **Monetate**
+     - |system-yes|
+     - |system-yes|
+     - Send personalization data to and from Amperity using SFTP.
+
+       Previously known as Kibo.
+
    * - **MongoDB**
      - |system-yes|
      - 
@@ -663,7 +675,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
    * - **Optimizely**
      - |system-yes|
      - |system-yes|
-     - Pull enriched events export data from Optimizely using Amazon S3. (This must be converted from Apache Parquet format to CSV prior to loading it to Amperity.) Send Apache Parquet format from Amperity to Optimizely.
+     - Pull enriched events export data from Optimizely using Amazon S3. (This must be converted from Apache Parquet format to CSV before loading it to Amperity.) Send Apache Parquet format from Amperity to Optimizely.
 
    * - **Oracle Data Cloud**
      - |system-yes|
@@ -754,6 +766,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
        Send audiences using the Pinterest API. Use SFTP to send product catalog data to Pinterest to generate Pins for your product catalog.
 
+       Send offline conversion events to the **Send conversions** endpoint in the Pinterest API.
+
+
    * - **PostgreSQL Database**
      - |system-yes|
      - 
@@ -811,7 +826,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - 
      - Pull data to Amperity from Sage Interact using Fivetran.
 
-   * - **Sailthru by Marigold**
+   * - **Sailthru by Zeta**
      - |system-yes|
      - |system-yes|
      - Pull data to Amperity from Sailthru using Amazon S3.
@@ -856,9 +871,11 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - Pull data to Amperity from SAP Concur using Fivetran.
 
    * - **SAP Emarsys**
-     - 
      - |system-yes|
-     - Maintain contact lists using the SAP Emarsys REST API.
+     - |system-yes|
+     - Pull data to Amperity using SFTP.
+
+       Maintain contact lists using the SAP Emarsys REST API.
 
    * - **SAP ERP (S/4 HANA)**
      - |system-yes|
@@ -888,9 +905,9 @@ Amperity can read data from and write data to a wide variety of systems. The fol
        Send Apache Parquet, CSV, and TSV files using SFTP.
 
    * - **Shopify**
-     - |system-yes|
      - 
-     - Pull customer, order, product, and transaction data to Amperity using Fivetran.
+     - 
+     - Pull customer, order, product, and transaction data to Amperity.
 
    * - **Service Management Group (SMG)**
      - |system-yes|
@@ -959,14 +976,14 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Send UID2 and EUID identifiers to The Trade Desk for paid media advertising.
 
+       Send audiences to The Trade Desk data marketplace for monetization.
+
    * - **TikTok Ads**
      - 
      - |system-yes|
      - Pull data to Amperity from TikTok Ads using Fivetran.
 
-       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send events to track offline conversions from your marketing campaigns.
-
-       Send events to track offline conversions from your marketing campaigns.
+       Send first-party data to TikTok Ads Manager to build high-value audiences for retargeting and lookalike modeling. Send events to track offline and web conversions from your marketing campaigns.
 
    * - **Toast**
      - |system-yes|
@@ -1002,11 +1019,6 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - |system-yes|
      - Pull data to and send data from Amperity using SFTP.
-
-   * - **Walmart Connect**
-     - 
-     - |system-yes|
-     - Use The Trade Desk API to send audiences to the Walmart demand-side platform and reach Walmart customers online and in-store.
 
    * - **Webhook (destination)**
      - 

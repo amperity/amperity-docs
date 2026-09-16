@@ -103,7 +103,7 @@ A `recipient list <https://developer-platform.vibes.com/docs/recipient-list-impo
 
    .. important:: The mobile directory number for phone numbers in the USA may use the 10-digit MDN format.
 
-      The MDN for international numbers must be in E.164 format, which is a plus symbol ( + ) followed by the country code and phone number without spaces. For example: "+12205551234".
+      The MDN for international numbers must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link| format, which is a plus symbol ( + ) followed by the country code and phone number without spaces. For example: "+12205551234".
 
 The unique ID acts as the row identifier and rows may include additional columns that act as message variables.
 

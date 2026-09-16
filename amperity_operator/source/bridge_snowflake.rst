@@ -58,6 +58,8 @@ Most `Snowflake data types <https://docs.snowflake.com/en/sql-reference/intro-su
 
 .. warning:: Complex types--arrays, objects, and maps--must have defined schemas.
 
+.. note:: Snowflake field names shared with Amperity Bridge must use consistent casing. A field name must contain only uppercase letters, digits, and underscores (A to Z, 0 to 9, _) or only lowercase letters, digits, and underscores (a to z, 0 to 9, _). Mixed-case field names are not supported. Fields that do not meet this requirement are flagged as unsupported in the Bridge configuration and cannot be synced.
+
 The following table describes how Snowflake data types map to Amperity data types.
 
 .. list-table::
@@ -75,11 +77,11 @@ The following table describes how Snowflake data types map to Amperity data type
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **ARRAY** into fully structured data before sharing it with Amperity Bridge.
 
-     - **Array**
+     - **String**
 
        An ordered list of zero or more elements of non-array values by field name and value.
 
-       Fields within an **Array** must contain values for data types supported by Amperity.
+       Fields within a **String** must contain values for data types supported by Amperity.
 
        .. note:: Only fully structured **ARRAY** data types are supported.
 
@@ -88,7 +90,24 @@ The following table describes how Snowflake data types map to Amperity data type
 
        Synonymous with `VARBINARY <https://docs.snowflake.com/en/sql-reference/data-types-text#varbinary>`__ |ext_link|.
 
-     - .. warning:: The Snowflake **BINARY** data type is unsupported. Exclude fields with **BINARY** data types from tables before sharing them with Amperity.
+     - Tables with binary columns can be shared with Amperity. Use a custom domain table to:
+
+       * Decrypt encrypted binary columns
+       * Coerce binary columns to a supported Amperity data type
+
+       For example:
+
+       .. code-block:: sql
+
+          SELECT
+            customer_id
+            ,first_name
+            ,last_name
+            ,CAST(AES_DECRYPT(email_encrypted, '0123456789abcdef') AS STRING) AS email
+            ,CAST(AES_DECRYPT(phone_encrypted, '0123456789abcdef') AS STRING) AS phone
+          FROM encrypted_table
+
+       .. note:: Tables with binary columns cannot be made available to Stitch. Binary columns must be encrypted and coerced to a supported Amperity data type before making tables available to Stitch.
 
 
    * - `BOOLEAN <https://docs.snowflake.com/en/sql-reference/data-types-logical#boolean>`__ |ext_link|
@@ -215,7 +234,7 @@ The following table describes how Snowflake data types map to Amperity data type
 
           Use `data type coversion <https://docs.snowflake.com/en/sql-reference/data-type-conversion>`__ |ext_link| to cast or coerce data in a semi-structured **OBJECT** into fully structured data before sharing it with Amperity Bridge.
 
-     - **Struct**
+     - **String**
 
        A container of ordered fields by name and type.
 
@@ -345,7 +364,7 @@ Before you can create inbound sharing between Snowflake and Amperity you need to
 
           Open the account selector and browse to the account for which Amperity Bridge will be configured. Hover over the account name to view additional details, and then copy the account identifier.
 
-          The copied identifier contains both organization and account name in the format `organization-name.account-name`.
+          The copied identifier has both organization and account name in the format `organization-name.account-name`.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
@@ -449,26 +468,42 @@ Amperity account locator IDs
 
 Snowflake must be configured for the correct `account locator IDs <https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-2-account-locator-in-a-region>`__ |ext_link| used by Amperity. Account locator IDs are specific to the stack in which your Amperity tenant is provisioned *and* the `region ID <https://docs.snowflake.com/en/user-guide/admin-account-identifier#region-ids>`__ |ext_link| in which your Snowflake account resides.
 
+.. note:: Outbound queries run faster when your Snowflake account and Amperity tenant storage are hosted in the same region. Outbound queries run slower when your Snowflake account and Amperity tenant storage are hosted in different regions.
+
+   For example, if your Amperity tenant storage is hosted on azure_eastus2 and you host your Snowflake account on azure_westus2, queries will be slower than if both were hosted on azure_eastus2. 
+
 .. list-table::
-   :widths: 33 33 34
+   :widths: 28 44 28
    :header-rows: 1
 
    * - Amperity stack
-     - Snowflake region
+     - Customer's Snowflake region
      - Account locator
 
    * - aws-prod
      - aws_us_east_1
      - MVB61607
+
    * - aws-prod
      - aws_us_east_2
      - BL95184
+
+   * - aws-prod
+     - gcp_us_central1
+     - DH09217
+
    * - aws-prod
      - gcp_us_east4
      - YU29648
+
    * - aws-prod
      - aws_us_west_2
      - GUB98973
+
+   * - aws-prod
+     - azure_eastus2
+     - JTA41525
+
    * - aws-prod
      - azure_westus2
      - PZ39828
@@ -477,33 +512,47 @@ Snowflake must be configured for the correct `account locator IDs <https://docs.
      - aws_us_west_2
      - EXB14788
 
+   * - aws-prod-cc1
+     - aws_ca_central_1
+     - QN44389
+
    * - az-prod
      - azure_centralus
-     - MC75461
+     - TN88732
+
    * - az-prod
      - azure_eastus2
      - DSA38111
+
    * - az-prod
      - aws_us_west_2
      - BCB42530
+
+   * - az-prod
+     - azure_westus2
+     - BO18496
+
    * - az-prod
      - azure_australiaeast
      - MD18696
+
    * - az-prod
      - azure_westeurope
      - RN08588
 
    * - az-prod
-     - azure_australiaeast
-     - MD18696
+     - aws_us_east_1
+     - EIC61379
+
    * - az-prod-en1
      - azure_australiaeast
      - TD45616
+
    * - az-prod-en1
      - azure_westeurope
      - KV75952
 
-.. important:: If the account ID / region ID pair does not exist in your stack please contact Amperity Support.
+.. important:: If the account ID / region ID pair does not exist in your stack contact Amperity Support.
 
 .. bridge-snowflake-sync-amperity-configure-snowflake-account-locator-end
 
@@ -588,7 +637,7 @@ Configure an inbound bridge to connect Snowflake with Amperity.
           :alt: Step four.
           :align: center
           :class: no-scaled-link
-     - Use the **Select tables** dialog box to select any combination of schemas and tables to be connected to Amperity.
+     - Use the **Select tables** dialog box to select any combination of schemas, tables, and views to be connected to Amperity.
 
        .. image:: ../../images/bridge-select-databases-and-tables.png
           :width: 500 px
@@ -596,7 +645,9 @@ Configure an inbound bridge to connect Snowflake with Amperity.
           :align: left
           :class: no-scaled-link
 
-       If you select a schema, all tables in that schema will be connected. Any new tables added later need to be manually added to the connection. 
+       Within each schema, tables and views are listed in separate **Tables** and **Views** sub-folders.
+
+       If you select a schema, all tables and views in that schema will be connected. Any new tables or views added later need to be manually added to the connection.
 
        When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
@@ -689,7 +740,7 @@ Before you can create outbound sharing between Snowflake and Amperity you need t
 
           Open the account selector and browse to the account for which Amperity Bridge will be configured. Hover over the account name to view additional details, and then copy the account identifier.
 
-          The copied identifier contains both organization and account name in the format `organization-name.account-name`.
+          The copied identifier has both organization and account name in the format `organization-name.account-name`.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png

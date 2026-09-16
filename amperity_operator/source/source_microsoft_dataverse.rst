@@ -78,9 +78,9 @@ Add data source and feed
    :start-after: .. sources-steps-00-intro-start
    :end-before: .. sources-steps-00-intro-end
 
-**To add a data source for an Amazon S3 bucket**
+**To add a data source for Microsoft Dataverse**
 
-.. source-azure-blob-storage-add-data-source-steps-start
+.. source-microsoft-dataverse-add-data-source-steps-start
 
 .. list-table::
    :widths: 10 90
@@ -115,76 +115,34 @@ Add data source and feed
              :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
              :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
-          .. image:: ../../images/mockup-credentials-add-02-credential-status-azure-blob-storage.png
-             :width: 380 px
-             :alt: Add 
-             :align: left
-             :class: no-scaled-link
-
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-03-select-file-start
-          :end-before: .. sources-steps-03-select-file-end
+     - **Power Apps Environment Region**
 
-       .. image:: ../../images/mockup-sources-add-03-file-settings.png
-          :width: 380 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
+          |checkmark-required| **Required**
 
-       .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-03-browse-start
-          :end-before: .. sources-steps-03-browse-end
+          The region in which your Power Apps data center is located. For example: "crm".
 
-       .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-03-browse-note-start
-          :end-before: .. sources-steps-03-browse-note-end
+       **Power Apps Environment Name**
 
-       .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
-          :width: 500 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
+          |checkmark-required| **Required**
 
-       .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-03-pgp-start
-          :end-before: .. sources-steps-03-pgp-end
+          The unique name for your Power Apps environment. For example: "acme".
 
-       .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
-          :width: 500 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
+       **Dataverse Table Logical Name**
+
+          |checkmark-required| **Required**
+
+          The logical name for the Dataverse table from which Amperity pulls data. For example: "abc123_customer".
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: center
-          :class: no-scaled-link
-     - .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-04-review-start
-          :end-before: .. sources-steps-04-review-end
-
-       .. image:: ../../images/mockup-sources-add-03-file-formatting.png
-          :width: 380 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/sources.rst
-          :start-after: .. sources-steps-04-review-contents-start
-          :end-before: .. sources-steps-04-review-contents-end
-
-
-   * - .. image:: ../../images/steps-05.png
-          :width: 60 px
-          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
@@ -212,12 +170,6 @@ Add data source and feed
           :start-after: .. sources-steps-05-load-types-start
           :end-before: .. sources-steps-05-load-types-end
 
-       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
-          :width: 380 px
-          :alt: Add 
-          :align: left
-          :class: no-scaled-link
-
        .. include:: ../../shared/sources.rst
           :start-after: .. sources-steps-05-load-type-upsert-start
           :end-before: .. sources-steps-05-load-type-upsert-end
@@ -231,9 +183,9 @@ Add data source and feed
           :end-before: .. sources-steps-05-load-types-note-end
 
 
-   * - .. image:: ../../images/steps-06.png
+   * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step six.
+          :alt: Step five.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
@@ -241,9 +193,9 @@ Add data source and feed
           :end-before: .. sources-steps-06-feed-editor-end
 
 
-   * - .. image:: ../../images/steps-07.png
+   * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step seven.
+          :alt: Step six.
           :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
@@ -252,7 +204,7 @@ Add data source and feed
 
        .. image:: ../../images/mockup-courier-add-07-menu-run.png
           :width: 380 px
-          :alt: Add 
+          :alt: Add
           :align: left
           :class: no-scaled-link
 
@@ -262,7 +214,7 @@ Add data source and feed
 
        .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
           :width: 380 px
-          :alt: Add 
+          :alt: Add
           :align: left
           :class: no-scaled-link
 
@@ -270,4 +222,4 @@ Add data source and feed
           :start-after: .. sources-steps-07-run-start
           :end-before: .. sources-steps-07-run-end
 
-.. source-azure-blob-storage-add-data-source-steps-end
+.. source-microsoft-dataverse-add-data-source-steps-end

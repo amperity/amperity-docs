@@ -91,7 +91,7 @@ The following table tells Stitch which nicknames *should not* be associated with
 
    If you add a nickname for a canonical name that does not exist, a new row is added. For example, if "Daniel" does not exist in your nicknames list, row 8 adds "Daniel" and add a nickname for "Danny".
 
-   If a nickname is added *and* removed, Amperity will ignore the remove request and keep the nickname in the list.
+   If a nickname is added *and* removed, Amperity will ignore the add request and remove the nickname from the list.
 
 .. stitch-nicknames-about-pairs-note-end
 
@@ -103,7 +103,7 @@ Upload CSV file
 
 .. stitch-nicknames-semantic-tags-start
 
-You may upload a file to Amperity that contains a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
+You may upload a file to Amperity that has a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
 
 .. code-block:: none
 

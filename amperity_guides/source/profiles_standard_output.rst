@@ -22,31 +22,31 @@ Standard output
 
 The following tables are standard output of Amperity when using guided setup. These tables and the attributes within them are always available to the **Segment Editor**:
 
-* :ref:`Customer Profiles <standard-output-customer-profiles>`
+* :ref:`Customer 360 <standard-output-customer-360>`
 * :ref:`Identity Graph <standard-output-identity-graph>`
 * :ref:`Merged Customers <standard-output-merged-customers>`
 * :ref:`Unified Coalesced <standard-output-unified-coalesced>`
 * :ref:`Unified Scores <standard-output-unified-scores>`
 
-All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attribues it is organized alphabetically by attribute name.
+All of the attributes that are available in standard output as a single topic. It is organized alphabetically by table, and then within each table attributes it is organized alphabetically by attribute name.
 
 .. standard-output-overview-end
 
 
-.. _standard-output-customer-profiles:
+.. _standard-output-customer-360:
 
-Customer Profiles
+Customer 360
 ==================================================
 
-.. standard-output-customer-profiles-start
+.. standard-output-customer-360-start
 
-Customer Profiles attributes present a unified view of your customers across all points of engagement, including attributes that cross systems.
+Customer 360 attributes present a unified view of your customers across all points of engagement, including attributes that cross systems.
 
-The following attributes are available from the **Customer Profiles** table.
+The following attributes are available from the **Customer 360** table.
 
-.. standard-output-customer-profiles-end
+.. standard-output-customer-360-end
 
-.. standard-output-customer-profiles-table-start
+.. standard-output-customer-360-table-start
 
 .. list-table::
    :widths: 30 70
@@ -95,7 +95,7 @@ The following attributes are available from the **Customer Profiles** table.
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-.. standard-output-customer-profiles-table-end
+.. standard-output-customer-360-table-end
 
 
 .. _standard-output-identity-graph:
@@ -103,42 +103,21 @@ The following attributes are available from the **Customer Profiles** table.
 Identity Graph
 ==================================================
 
-.. standard-output-identity-graph-start
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-identity-graph-start
+   :end-before: .. term-identity-graph-end
 
-The **Identity Graph** table compiles rows in the **Unified Coalesced** table into a graph that maps each data source, along with the primary key for that data source and any customer keys, to the Amperity ID.
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-about-start
+   :end-before: .. table-identity-graph-about-end
 
-The **Identity Graph** table contains the following columns:
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-reference-start
+   :end-before: .. table-identity-graph-reference-end
 
-.. standard-output-identity-graph-end
-
-.. standard-output-identity-graph-table-start
-
-.. list-table::
-   :widths: 200 100 300
-   :header-rows: 1
-
-   * - Column Name
-     - Data type
-     - Description
-   * - **Amperity ID**
-     - String
-     - .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-column-start
-          :end-before: .. term-amperity-id-column-end
-
-       .. include:: ../../shared/terms.rst
-          :start-after: .. term-amperity-id-format-start
-          :end-before: .. term-amperity-id-format-end
-
-   * - **Datasource**
-     - String
-     - The name of the source data table.
-
-   * - **Customer Key**
-     - String
-     - The primary key and all customer keys from a data source coalesced into a single value.
-
-.. standard-output-identity-graph-table-end
+.. include:: ../../amperity_operator/source/table_identity_graph.rst
+   :start-after: .. table-identity-graph-reference-columns-start
+   :end-before: .. table-identity-graph-reference-columns-end
 
 
 .. _standard-output-merged-customers:

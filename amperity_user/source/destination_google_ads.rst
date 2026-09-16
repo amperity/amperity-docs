@@ -5,6 +5,7 @@
 .. |what-send| replace:: customer data
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, **zip**, **mobile_id**, and **user_id**
 
 
 .. meta::
@@ -72,6 +73,10 @@ You need to build a query that outputs fields that can be mapped to :ref:`Google
 #. :ref:`Advertiser-generated and assigned user ID matching <sendto-google-ads-api-matching-user>`.
 
 .. sendto-google-ads-build-query-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. sendto-google-ads-build-query-note-start
 
@@ -204,5 +209,5 @@ User ID Matching
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/destination_google_ads.rst
-   :start-after: .. destination-google-ads-api-matching-mobile-list-start
-   :end-before: .. destination-google-ads-api-matching-mobile-list-end
+   :start-after: .. destination-google-ads-api-matching-user-start
+   :end-before: .. destination-google-ads-api-matching-user-end

@@ -52,7 +52,7 @@ This is an example paragraph that shows how to use snippets to include content i
 
 .. term-active-campaign-start
 
-ActiveCampaign is an automation platform for ecommerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
+ActiveCampaign is an automation platform for e-commerce, business-to-consumer, and business-to-business that helps you use email and SMS marketing to reach, nurture, convert, and grow your customer base.
 
 .. term-active-campaign-end
 
@@ -114,6 +114,15 @@ Acxiom collects, analyzes, and sells information about customers and businesses 
 .. term-acxiom-end
 
 
+**Attentive**
+
+.. term-attentive-ecommerce-start
+
+Attentive is an SMS and email marketing platform that brands use to run subscriber journeys, segment audiences, and personalize messaging. Send ecommerce and behavioral events to Attentive to trigger journey automations, build audience segments, and attribute revenue to campaigns.
+
+.. term-attentive-ecommerce-end
+
+
 **address**
 
 .. 
@@ -145,6 +154,15 @@ The address connected with the location of a unique Amperity ID. For example: 12
 Ad suppression is an approach to marketing that intentionally limits or prevents the display of advertisements to certain users or in specific contexts. For example: preventing users from seeing an ad too often, removing users from an audience when they are not relevant, or ensuring compliance with advertising guidelines or regulatory policies.
 
 .. term-ad-suppression-end
+
+
+**adaptive identity**
+
+.. term-adaptive-identity-start
+
+Adaptive identity is the process of building an identity graph that forms the foundation of customer profiles and defines a keychain of identifiers. Activate customer profiles for marketing campaigns and journeys. Integrate these profiles with other operational systems. Identity recognition uses a keychain to associate real-time events to known customer profiles.
+
+.. term-adaptive-identity-end
 
 
 **address-based householding**
@@ -220,7 +238,7 @@ Adobe Customer Attributes is a part of Adobe Experience Cloud. Upload visitor in
 
 .. term-adobe-commerce-start
 
-Adobe Commerce is a digital commerce and order management platform for building multichannel ecommerce experiences on a single platform. Adobe Commerce uses MySQL for database management.
+Adobe Commerce is a digital commerce and order management platform for building multichannel e-commerce experiences on a single platform. Adobe Commerce uses MySQL for database management.
 
 .. term-adobe-commerce-end
 
@@ -241,6 +259,15 @@ Adobe Experience Platform is a part of Adobe Experience Cloud that transforms da
 Adobe Marketo is marketing automation software that streamlines, automates, and measures marketing tasks and workflows.
 
 .. term-adobe-marketo-end
+
+
+**Adobe Target**
+
+.. term-adobe-target-start
+
+Adobe Target is a set of tools for personalizing and optimizing customer experiences across digital channels, including websites, mobile apps, and social media platforms.
+
+.. term-adobe-target-end
 
 
 **AdRoll**
@@ -310,6 +337,15 @@ Amazon Aurora is a relational database built for the cloud and compatible with M
 .. term-amazon-aurora-end
 
 
+**Amazon CAPI**
+
+.. term-amazon-capi-start
+
+The Amazon Ads Conversion API (CAPI) lets your brand send server-side conversion events — such as purchases, leads, and sign-ups — to Amazon Ads. Amazon uses these events to measure return on ad spend (ROAS) across online and offline channels, attribute offline conversions to Amazon DSP campaigns, and enrich audiences with first-party customer data.
+
+.. term-amazon-capi-end
+
+
 **Amazon Cloudfront**
 
 .. term-amazon-cloudfront-start
@@ -368,7 +404,7 @@ Amazon Marketing Cloud (AMC) is a secure, privacy-safe, and cloud-based clean ro
 
 .. term-amazon-quicksight-start
 
-Amazon QuickSight is a cloud-based, self-service BI tool for creating and publishing interactive dashboards for retail, ecommerce, manufacturing, and more.
+Amazon QuickSight is a cloud-based, self-service BI tool for creating and publishing interactive dashboards for retail, e-commerce, manufacturing, and more.
 
 .. term-amazon-quicksight-end
 
@@ -477,7 +513,7 @@ Do not use.
 
 .. term-amperity-id-start
 
-An Amperity ID is a patented unique identifier assigned to clusters of customer profiles. A single Amperity ID represents a single individual.
+An Amperity ID is a unique identifier assigned to a cluster of records within an identity graph. Each Amperity ID represents all of the records within a customer profile.
 
 .. term-amperity-id-end
 
@@ -656,6 +692,15 @@ An audience is a list of customers who match the attributes, filters, and condit
 .. term-audience-end
 
 
+**audience monetization**
+
+.. term-audience-monetization-start
+
+Audience monetization generates revenue by packaging first-party data as audience products and making those audiences available in a data marketplace. Advertisers can pay to use these audiences in their marketing campaigns.
+
+.. term-audience-monetization-end
+
+
 **audience sizes**
 
 .. term-audience-sizes-start
@@ -666,19 +711,19 @@ Audience sizes represent the total number of customers that are necessary for a 
 
 .. term-audience-size-large-start
 
-A large audience represents the percentage of the total audience required to capture 90% of total purchases 30 days ago.
+A large audience size is predicted to include ~90% of future purchasers and to include a high number of non-purchasers.
 
 .. term-audience-size-large-end
 
 .. term-audience-size-medium-start
 
-A medium audience represents the percentage of the total audience required to capture 70% of total purchases 30 days ago.
+A medium audience size is predicted to include ~70% of future purchasers and to include a moderate number of non-purchasers.
 
 .. term-audience-size-medium-end
 
 .. term-audience-size-small-start
 
-A small audience represents the percentage of the total audience required to capture 50% of total purchases 30 days ago.
+A small audience size is predicted to include ~50% of future purchasers and to include the fewest number of non-purchasers.
 
 .. term-audience-size-small-end
 
@@ -822,7 +867,7 @@ Azure Synapse Analytics is a limitless analytics service and data warehouse. Azu
 
 .. term-bad-values-blocklist-start
 
-A bad-values blocklist has known values that appear often in data. The Stitch process should exclude values from the bad-values blocklist.
+A bad-values blocklist has known values that appear often in data. The Stitch process excludes values defined by the bad-values blocklist when building an identity graph.
 
 .. term-bad-values-blocklist-end
 
@@ -834,6 +879,15 @@ A bad-values blocklist has known values that appear often in data. The Stitch pr
 Bazaarvoice allows retailers to manage user-generated content on their website.
 
 .. term-bazaarvoice-end
+
+
+**beta-geometric distribution**
+
+.. term-beta-geometric-distribution-start
+
+A `beta-geometric distribution <https://en.wikipedia.org/wiki/Beta_distribution>`__ |ext_link| is a statistical calibration layer for predictive affinity modeling that estimates the probability that a customer will purchase within the next 30 days based on purchase recency and purchase frequency.
+
+.. term-beta-geometric-distribution-end
 
 
 **BigCommerce**
@@ -887,7 +941,7 @@ A block is a group of records that match the characteristics defined by the bloc
 
 .. term-blocking-start
 
-Blocking is a process that uses rules to divide massive datasets into smaller blocks. Smaller and offer higher probabilities of discovering matching records.
+Blocking is a technique that groups records into smaller high probability groups before scoring.
 
 .. term-blocking-end
 
@@ -926,6 +980,12 @@ Bluecore is a marketing technology company that intelligently connects casual sh
 
 
 **blv_address**
+
+.. term-bloomreach-start
+
+Bloomreach Engagement (formerly Exponea) is a customer data and marketing automation platform. Use Bloomreach Engagement to create personalized customer experiences across multiple channels.
+
+.. term-bloomreach-end
 
 .. term-blv-address-start
 
@@ -1006,6 +1066,16 @@ Braze is a leading marketing automation platform for creating custom experiences
 .. term-braze-end
 
 
+
+**Braze Currents**
+
+.. term-braze-currents-start
+
+Braze Currents is a real-time data streaming tool that exports events data from the Braze platform. Use Braze Currents to stream message engagement and customer behavior events to Amperity.
+
+.. term-braze-currents-end
+
+
 **Brightloom**
 
 .. term-brightloom-start
@@ -1076,7 +1146,7 @@ A campaign may be one of the following types:
 
 .. term-campaign-recipients-table-start
 
-The **Campaign Recipients** table has a list of Amperity IDs associated with campaigns sent from Amperity, along with details about the campaign. These details include control and treatment groups, audience segments, destinations, and launch dates.
+The **Campaign Recipients** table (CRT) has a list of Amperity IDs associated with campaigns sent from Amperity, along with details about the campaign. These details include control and treatment groups, audience segments, destinations, and launch dates.
 
 .. term-campaign-recipients-table-end
 
@@ -1123,7 +1193,7 @@ A channel interaction is data about customer purchases, such as online, point-of
 
 .. term-cheetah-digital-start
 
-Cheetah Digital by Marigold is a customer engagement platform that helps marketers deliver personalized experiences, create effective cross-channel messaging, and increase customer loyalty.
+Cheetah Digital by Zeta is a customer engagement platform that helps marketers deliver personalized experiences, create effective cross-channel messaging, and increase customer loyalty.
 
 .. term-cheetah-digital-end
 
@@ -1205,6 +1275,15 @@ The Command Line for Amperity (CLAMP) is the command-line interface to Amperity 
 .. term-clamp-deprecated-end
 
 
+**client ID** (GA4)
+
+.. term-client-id-ga4-start
+
+A |destination-name| **client_id** is a pseudonymous identifier created by a first-party cookie stored on a user's device or browser when they visit a website with a |destination-name| tracking code. For example: ``GA1.1.489876543.1234567890``.
+
+.. term-client-id-ga4-end
+
+
 **clienteling**
 
 .. term-clienteling-start
@@ -1214,11 +1293,20 @@ Clienteling is `a technique used by retail sales associates to establish long-te
 .. term-clienteling-end
 
 
+**Cluster FKs** (table)
+
+.. term-cluster-fks-table-start
+
+The **Cluster FKs** table shows how individual records were assigned to clusters in an identity graph.
+
+.. term-cluster-fks-table-end
+
+
 **cluster graph**
 
 .. term-cluster-graph-start
 
-A cluster graph is one of the outcomes of the Stitch process. It is a visual representation of every pairwise connection in a cluster of records.
+A cluster graph a visual representation of every pairwise connection in a cluster of records within an identity graph.
 
 .. term-cluster-graph-end
 
@@ -1227,7 +1315,7 @@ A cluster graph is one of the outcomes of the Stitch process. It is a visual rep
 
 .. term-cluster-transition-start
 
-A cluster transition occurs when records move from one cluster to another during the Stitch process.
+A cluster transition occurs when records move from one cluster to another during identity resolution.
 
 .. term-cluster-transition-end
 
@@ -1236,7 +1324,7 @@ A cluster transition occurs when records move from one cluster to another during
 
 .. term-clustering-start
 
-Clustering is the process of deciding which records to include in a customer profile. A matching threshold defines the lowest threshold at which two records match, and then included in a cluster. Lower quality matches are a transitive connection. Distinct customer profiles emerge as a cluster of record pairs.
+Clustering is the process of grouping customer records into a customer profile during identity resolution. Distinct customer profiles emerge as connected record pairs.
 
 .. term-clustering-end
 
@@ -1346,7 +1434,7 @@ The **Compliance Overview Report** passthrough table has a row for each request.
 
 .. term-component-id-start
 
-An identifier that represents a set of records that are transitively connected with a score above threshold as an outcome of blocking and initial scoring. Records that share a component ID, but have different Amperity IDs, are split during hierarchical comparison.
+An identifier that represents a set of records that are transitively connected. Records that share a component ID, but have different Amperity IDs, are split during identity resolution.
 
 .. term-component-id-end
 
@@ -1365,7 +1453,7 @@ An identifier that represents a set of records that are transitively connected w
 
 .. term-cbor-start
 
-|format_cbor| is a binary data serialization format based on JSON. Like JSON it allows the transmission of data objects that contain name-value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human-readability.
+|format_cbor| is a binary data serialization format based on the JSON data model. Like JSON it allows the transmission of data objects that contain name-value pairs, but in a more concise manner. This increases processing and transfer speeds at the cost of human-readability.
 
 .. term-cbor-end
 
@@ -1390,6 +1478,16 @@ A connected TV (CTV), is a physical device that a customer uses to watch and str
 Consumer packaged goods are items that require routine replacement or replenishment, such as food, beverages, clothes, personal items, and household products, on a daily basis.
 
 .. term-cpg-end
+
+
+**contextual identity**
+
+.. term-contextual-identity-start
+
+Contextual identity allows identity graphs to exist for any use case. For example, an identity graph for loyalty programs, an identity graph for marketing and activations, and an identity graph for operations.
+
+.. term-contextual-identity-end
+
 
 
 **control group**
@@ -1441,7 +1539,7 @@ Core dna is a service that offers integrated digital solutions for content, comm
 
 .. term-core-tables-start
 
-Core tables represent a normalized foundation for data built from the results of the Amperity identity resolution process. Use individual core tables with any database your brand builds within Amperity.
+Core tables normalize the foundation for databases built from the results of the Amperity identity resolution process. Use any core table with any database.
 
 .. term-core-tables-end
 
@@ -1538,20 +1636,29 @@ Apply the **create-dt** semantic tag to columns that identify the creation date 
 .. term-create-dt-end
 
 
-**Criteo**
+**Criteo**, **Criteo Audience API**
 
 .. term-criteo-start
 
-Criteo is a commerce media platform that helps marketers and media owners manage and scale campaigns. Send audiences to Criteo, and then advertise to customers across paid media, including connected TV (CTV), banner ads, and video ads.
+Send first-party audiences to your `Commerce Growth <https://www.criteo.com/platform/commerce-growth/>`__ |ext_link| seat at Criteo. Connect with relevant audiences actively in-market for products and services, retain customers with personalized ads and seamless omnichannel experiences that drive repeat purchases and long-term value, and personalize advertising to visitors who leave your website without making a purchase.
 
 .. term-criteo-end
 
 
-**Criteo Retail Media**
+**Criteo Offline Sales**
+
+.. term-criteo-offline-sales-start
+
+Criteo Offline Sales lets your brand send in-store (offline) transactions to Criteo for retail media attribution and targeting. Criteo uses these transactions to attribute in-store sales back to the ads it served, and to inform ad targeting. Amperity sends one transaction line item per row, identifying each shopper by a hashed email address, a customer ID, or a retailer visitor ID.
+
+.. term-criteo-offline-sales-end
+
+
+**Criteo Retail Media**, **Criteo Retail Audience API**
 
 .. term-criteo-retail-media-start
 
-Criteo Retail Media allows marketers to build audiences using their own first-party data, and then monetize those audiences by allowing other brands to use them for their own marketing campaigns.
+Send first-party audiences to your `Commerce Yield <https://www.criteo.com/platform/commerce-yield/>`__ |ext_link| seat at Criteo. Monetize onsite inventory to help brands reach more shoppers, build awareness and engagement, and increase conversions across channels.
 
 .. term-criteo-retail-media-end
 
@@ -1624,7 +1731,7 @@ A `comma-separated values (CSV) <https://en.wikipedia.org/wiki/Comma-separated_v
 
 .. term-currency-start
 
-Currency represents the currency used to pay for an item. For example: dollar.
+Currency represents the currency used to pay for an item. The value should be a three character alphabetic `ISO 4217 currency code <https://en.wikipedia.org/wiki/ISO_4217>`__ |ext_link|, such as "USD" (United States dollar), "JPY" (Japanese Yen), "GBP" (Great Britain pound), or "EUR" (Euro).
 
 .. term-currency-end
 
@@ -1654,22 +1761,6 @@ A custom domain table is a domain table that defines its schema using Spark SQL.
 A customer is a known individual with a core set of associated personally identifiable properties, such as their given name, surname, birthdate, mailing address, email address, and phone number.
 
 .. term-customer-end
-
-
-**Customer Attributes**
-
-.. term-customer-attributes-table-start
-
-The **Customer Attributes** table has a series of columns that identify attributes about individuals. For example:
-
-* Is an individual contactable?
-* Is there a marketable email address?
-* Is the physical address known?
-* Is there a phone number?
-* Are they are an employee, reseller, or a test account?
-* What is the individual's revenue relationship with the brand?
-
-.. term-customer-attributes-table-end
 
 
 **customer 360 database**
@@ -1706,6 +1797,31 @@ The **Customer 360** page is the interface to view and manage all databases, inc
 The **Customer 360** table is the unified view of the customer across all points of engagement, including attributes that cross systems. This table does not exist by default. Each row represents a complete record for a unique individual, including their Amperity ID, merged PII data, and summary attributes.
 
 .. term-customer360-table-end
+
+
+**Customer Attributes**
+
+.. term-customer-attributes-table-start
+
+The **Customer Attributes** table has a series of columns that identify attributes about individuals. For example:
+
+* Is an individual contactable?
+* Is there a marketable email address?
+* Is the physical address known?
+* Is there a phone number?
+* Are they are an employee, reseller, or a test account?
+* What is the individual's revenue relationship with the brand?
+
+.. term-customer-attributes-table-end
+
+
+**Customer Data Platform (CDP)**
+
+.. term-customer-data-platform-start
+
+A customer data platform (CDP) finds matching values in customer data and builds customer profiles. Many CDPs match on exact values, such as email addresses and phone numbers. Amperity builds accurate customer profiles by using adaptive identity resolution to find transitive connections other CDPs miss.
+
+.. term-customer-data-platform-end
 
 
 **customer data table**
@@ -1814,7 +1930,7 @@ A customer profile is a collection of attributes connected to a single unique in
 
 .. term-customer-record-start
 
-A customer profile is a row in a customer data table that has information about the customer. Who they are, where they live, and how much they spend. For example, a email list table has names, email addresses, or phone numbers.
+A customer record is a row in a customer data table that has information about the customer. Who they are, where they live, and how much they spend. For example, a email list table has names, email addresses, or phone numbers.
 
 .. term-customer-record-end
 
@@ -1876,7 +1992,7 @@ The **Data Explorer** offers a detailed way to navigate through data tables in A
 
 .. term-data-lineage-start
 
-Data lineage is a graph visualization that shows the connections between data in your tenant. The graph visualization is refreshed each time a user loads the **Data lineage** page.
+Data lineage is a graph visualization that shows how all of the data within your tenant connects. The graph visualization is refreshed each time a user loads the **Data lineage** page.
 
 .. term-data-lineage-end
 
@@ -2023,38 +2139,11 @@ Days since latest order measures the number of days that have elapsed since a cu
 .. term-days-since-last-order-end
 
 
-**Delighted**
-
-.. term-delighted-start
-
-Delighted creates and sends customer experience surveys, tracks and analyzes feedback, and then helps you take action.
-
-.. term-delighted-end
-
-
-**Delta Lake**
-
-.. term-delta-lake-start
-
-Delta Lake is an open source format that involves a metadata layer on top of columnar files in cloud storage using the Apache Parquet file format.
-
-.. term-delta-lake-end
-
-
-**Delta Sharing**
-
-.. term-delta-sharing-start
-
-`Delta Sharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for secure sharing of live data between organizations. Delta Sharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system regardless of computing platform.
-
-.. term-delta-sharing-end
-
-
 **deduplication**
 
 .. term-deduplication-start
 
-Deduplication is an output of the Stitch process that identifies the total number of unique individuals within a customer dataset.
+Deduplication is an output of identity resolution that identifies the total number of unique individuals within a identity graph.
 
 .. term-deduplication-end
 
@@ -2063,7 +2152,7 @@ Deduplication is an output of the Stitch process that identifies the total numbe
 
 .. term-deduplication-rate-start
 
-The deduplication rate represents the total number of unique individuals within a customer dataset. This rate measures the difference between the total number of original identifiers in customer data and the total number of Amperity IDs assigned to unique individuals.
+A deduplication rate represents the total number of unique individuals within an identity graph. This rate measures the difference between the total number of identifiers in source data and the total number of Amperity IDs assigned to unique customer profiles.
 
 .. term-deduplication-rate-end
 
@@ -2084,6 +2173,24 @@ A delete confirmation sent from Amperity to confirm completion of a request to d
 A delete user record request. This is a written request that asks to delete data related to a specific user record from Amperity data tables.
 
 .. term-delete-user-record-request-end
+
+
+**Delighted**
+
+.. term-delighted-start
+
+Delighted creates and sends customer experience surveys, tracks and analyzes feedback, and then helps you take action.
+
+.. term-delighted-end
+
+
+**Delta Lake**
+
+.. term-delta-lake-start
+
+Delta Lake is an open source format that involves a metadata layer on top of columnar files in cloud storage using the Apache Parquet file format.
+
+.. term-delta-lake-end
 
 
 **derived semantic**
@@ -2143,9 +2250,18 @@ The **Detailed Examples** table has detailed examples of Stitch results. Use the
 
 .. term-deterministic-start
 
-Deterministic is identity resolution that uses rules-based matching to generate exact matches. The results rank predictability over accuracy. For example: processing that connects a person with their payments.
+Deterministic record matching uses rules that define exact matching for customer keys and semantic tags. Records that do not match exactly to a rule are not scored.
 
 .. term-deterministic-end
+
+
+**deterministic connection**
+
+.. term-deterministic-connection-start
+
+Deterministic record matching uses rules that define exact matching for customer keys and semantic tags. Records that do not match exactly to a rule are not scored.
+
+.. term-deterministic-connection-end
 
 
 **digital channel**
@@ -2353,6 +2469,15 @@ Dynamics 365 Marketing helps you build personalized journeys for real-time and o
 .. term-dynamics-365-marketing-end
 
 
+**Eagle Eye**
+
+.. term-eagle-eye-start
+
+Eagle Eye is a loyalty and promotions platform. Its AIR platform manages loyalty wallets that track each customer's earning and spending activity in a loyalty program.
+
+.. term-eagle-eye-end
+
+
 **early repeat purchaser**, **early repeat purchasers**
 
 .. 
@@ -2361,7 +2486,7 @@ Dynamics 365 Marketing helps you build personalized journeys for real-time and o
 
 .. term-early-repeat-purchasers-start
 
-Early repeat purchasers represent the percentage of first-time buyers who returned to make a second purchase within 90 days.
+Early repeat purchasers represent the percentage of first-time buyers who returned to make a second purchase within 12 weeks, or 84 days.
 
 .. term-early-repeat-purchasers-end
 
@@ -2371,7 +2496,7 @@ Early repeat purchasers represent the percentage of first-time buyers who return
 
 .. term-early-repeat-purchaser-start
 
-Early repeat purchaser is a flag that indicates if a customer made a repeat purchase within the previous 90 days.
+Early repeat purchaser is a Boolean flag that indicates if a customer made a repeat purchase within 12 weeks, or 84 days.
 
 .. term-early-repeat-purchaser-end
 
@@ -2380,7 +2505,7 @@ Early repeat purchaser is a flag that indicates if a customer made a repeat purc
 
 .. term-early-repeat-rate-start
 
-Early repeat rate is a measure of one-time to two-time buyer conversion based on second purchases made within the previous 90 days.
+Early repeat rate is a measure of one-time to two-time buyer conversion based on second purchases made within 12 weeks, or 84 days.
 
 .. term-early-repeat-rate-end
 
@@ -2389,7 +2514,7 @@ Early repeat rate is a measure of one-time to two-time buyer conversion based on
 
 .. term-edge-start
 
-An edge is the relationship between two vertices in a graph database. Each edge has a type and must start with one vertex and end with another.
+An edge is the relationship between two records in an identity graph. Each edge is scored as a deterministic or probabilistic match or by a transitive connection.
 
 .. term-edge-end
 
@@ -2546,19 +2671,12 @@ An escape character is specific to a data format and allows certain character se
 
 .. term-event-propensity-start
 
-Event propensity is a predictive model that finds the likelihood that a customer performs a revenue-generating event within the next 30 days.
+Event propensity is a predictive model that finds the likelihood that a customer performs a target event within the next 30 days.
 
 .. term-event-propensity-end
 
 
 **Event Propensity** table
-
-
-.. term-event-propensity-table-start
-
-An **Event Propensity** table associates individual customers to the events that, depending on the event, are most likely to lead to engagement with your brand.
-
-.. term-event-propensity-table-end)
 
 
 .. term-event-propensity-table-start
@@ -2759,7 +2877,7 @@ First order total items represents the number of items purchased in a customer's
 
 .. term-first-party-data-start
 
-Customers share first-party data with a company or a brand, often directly. For example: filling out a registration card, completing an online form, requesting an emailed receipt, using a mobile app, or responding to email and SMS messaging.
+First-party data, also known as 1P data, is data collected directly from customers, including website and app interactions, purchase histories and order details, signups and registrations, and customer feedback.
 
 .. term-first-party-data-end
 
@@ -2804,7 +2922,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-fk-start
 
-The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace. For example: **fk-customer**, **fk-interaction**, **fk-audience**, or **fk-brand**.
+The **fk-[namespace]** semantic tag identifies a field as a foreign key. A foreign key semantic tag *must* use a namespace and "namespace" is a string of characters. For example: **fk-customer-id**, **fk-interaction**, **fk-audience**, **fk-loyalty-id**, or **fk-brand**.
 
 .. term-fk-end
 
@@ -2813,7 +2931,7 @@ The **fk-[namespace]** semantic tag identifies a field as a foreign key. A forei
 
 .. term-foreign-key-start
 
-A foreign key is a column in a data table that acts as primary key and is often used for deterministic matching of records. A record pair assigns an exact match score--5.0--when foreign keys contain the same values during pairwise comparison.
+A foreign key is a semantic tag applied to columns in source data tables. A foreign key references the primary key in other source tables. Configure identity resolution to separate records when foreign keys do not match *or* cluster records when foreign keys match.
 
 .. term-foreign-key-end
 
@@ -2917,7 +3035,7 @@ The `General Data Protection Regulation (GDPR) <https://en.wikipedia.org/wiki/Ge
 
 .. term-generational-suffix-start
 
-The suffix that identifies to which family generation a customer profile belongs. For example: Jr., Sr. II, and III.
+The suffix that identifies to which family generation a customer record belongs. For example: Jr., Sr. II, and III.
 
 .. term-generational-suffix-end
 
@@ -2978,7 +3096,7 @@ The Google advertising ID (Google AAID) is a device identifier for advertisers t
 
 .. term-google-analytics-start
 
-Google Analytics is an events-based and session-based analytics service that collects data from websites and apps. Google Analytics 4 properties support privacy controls, such as cookieless measurement, and is directly on websites and apps to help your brand better understand the customer journey.
+Google Analytics is an events-based and session-based analytics service that collects data from websites and apps. Google Analytics 4 properties support privacy controls, such as cookieless measurement, to help your brand better understand the customer journey.
 
 .. term-google-analytics-end
 
@@ -3037,6 +3155,15 @@ Google Cloud Functions is a serverless computing platform that runs code in resp
 .. term-google-cloud-storage-end
 
 
+**Google CM360**
+
+.. term-google-cm360-start
+
+`Google Campaign Manager 360 <https://support.google.com/campaignmanager>`__ |ext_link| (CM360) is an ad management platform for measuring and attributing advertising campaigns. Offline conversions are conversions that happen away from your website, such as an in-store purchase, that your brand sends back to CM360 tied to the Google ad click that led to them. Search Ads 360 uses the delivered value of these conversions — for example, a predicted lifetime value — to optimize bidding.
+
+.. term-google-cm360-end
+
+
 **Google Customer Match**
 
 .. vale off
@@ -3048,6 +3175,15 @@ Google Customer Match uses first-party data that your customers have shared with
 .. term-google-customer-match-end
 
 .. vale on
+
+
+**Google Customer Match (GDM)**
+
+.. term-google-customer-match-gdm-start
+
+Google Customer Match (GDM) syncs an Amperity audience to a Google Customer Match user list, so you can target those customers across Google Search, Shopping, Gmail, YouTube, and Display. Members are matched to Google users on a hashed email address or phone number, or on a mobile advertising ID. The connector uses Google's Data Manager platform (GDM).
+
+.. term-google-customer-match-gdm-end
 
 
 **Looker** part of Google Cloud
@@ -3066,6 +3202,15 @@ Looker is an enterprise platform for business intelligence, data applications, a
 `Google Enhanced Conversions <https://support.google.com/google-ads/answer/9888656?hl=en>`__ |ext_link| improves the accuracy of conversion measurement by sending hashed first-party conversion data to Google using one-way SHA-256 hashing of first-party customer data.
 
 .. term-google-enhanced-conversions-end
+
+
+**Google Enhanced Conversions (GDM)**
+
+.. term-google-enhanced-conversions-gdm-start
+
+Google Enhanced Conversions (GDM) sends offline conversions from Amperity to a Google Ads conversion action, so Google Ads can measure and optimize on conversions that happen away from your website. Each conversion is matched to a Google user on a hashed email address or phone number, which suits in-store, call-centre, and in-app conversions where no ad-click identifier exists. The connector uses Google's Data Manager platform (GDM).
+
+.. term-google-enhanced-conversions-gdm-end
 
 
 **Google Play**
@@ -3181,7 +3326,7 @@ Heap is a digital insights platform that helps you understand how and why custom
 
 .. term-hierarchical-comparison-start
 
-Hierarchical comparison is a step in the Stitch process that occurs after pairwise scoring. This step examines each group of records to identify edge cases. For example, married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
+Hierarchical comparison is a step during identity resolution that occurs after scoring. Hierarchical comparison examines each group of records and tries to identify potential conflicts. For example, married couples with overlapping profile (PII) data or children with the same name as a parent who live at the same address.
 
 .. term-hierarchical-comparison-end
 
@@ -3190,7 +3335,7 @@ Hierarchical comparison is a step in the Stitch process that occurs after pairwi
 
 .. term-high-cardinality-profile-attribute-start
 
-A high cardinality profile attribute has a large number of distinct values. For example, phone numbers, email addresses, and postal codes. High-cardinality profile attributes with an exact or close match are useful during identity resolution.
+A high cardinality attribute has a large number of distinct values. For example, phone numbers, email addresses, and postal codes. High cardinality attributes are useful during identity resolution.
 
 .. term-high-cardinality-profile-attribute-end
 
@@ -3227,6 +3372,15 @@ HubSpot is a CRM platform built around dedicated hubs for marketing, sales, serv
 .. term-hubspot-end
 
 
+**hyperparameters**
+
+.. term-hyperparameters-start
+
+`Hyperparameters <https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)>`__ |ext_link| are external configuration variables set manually before a training process begins to control how a model learns. Hyperparameters define a model's architecture, optimize algorithm behavior, and help prevent overfitting. 
+
+.. term-hyperparameters-end
+
+
 **Identifier for Advertisers (IDFA)**
 
 .. term-idfa-start
@@ -3240,7 +3394,7 @@ The Identifier for Advertisers (IDFA) is a random device identifier that tracks 
 
 .. term-identity-graph-start
 
-An identity graph is a database that links rows of data to individual customers, including personally identifiable information (PII), transaction histories, shopping preferences, loyalty accounts, and other data about customers your brand collects. This identity graph is the foundation of unified customer profiles and provides the necessary links for activating marketing campaigns and journeys, as well as integrating with operational systems.
+An identity graph is the foundation for unified customer profiles. Each customer profile represents a unique customer. Records are connected using a combination of deterministic, probabilistic, and transitive matching. A keychain of identifiers links records in each profile back to source data.
 
 .. term-identity-graph-end
 
@@ -3254,11 +3408,20 @@ An identity provider (IDP) is system that creates, maintains, and manages identi
 .. term-identity-provider-end
 
 
+**identity recognition**
+
+.. term-identity-recognition-start
+
+Identity recognition relies only on whatever is known about a customer at an exact moment to try to associate that information to a known customer profile.
+
+.. term-identity-recognition-end
+
+
 **identity resolution**
 
 .. term-identity-resolution-start
 
-Identity resolution is the process of connecting and matching different data points across many devices and channels to form a unified view of a single customer. This allows brands to connect the dots between fragmented data to form a complete picture of an actual person.
+Identity resolution is the process of connecting and matching data points that exist in many sources to build a unified view of a single customer.
 
 .. term-identity-resolution-end
 
@@ -3306,6 +3469,15 @@ An ingest query is a SQL statement that runs against data before loading data to
 .. warning:: Do not use this as a glossary term.
 
 .. term-ingest-service-end
+
+
+**Insider One**
+
+.. term-insider-one-start
+
+Insider One is a growth management platform (GMP) for marketers. Personalize user experiences across web, app, web push, email, and SMS. Use advanced segmentation, behavioral insights, product recommendations and active communication widgets to boost customer engagement and conversions.
+
+.. term-insider-one-end
 
 
 **Instagram**
@@ -3448,7 +3620,7 @@ The total revenue for all units of an item, after applying discounts. For return
 
 .. term-item-subtotal-start
 
-An item subtotal is the amount for an item, before applying discounts.
+An item subtotal is the amount for an item, after applying discounts.
 
 .. term-item-subtotal-end
 
@@ -3489,6 +3661,21 @@ Iterable enables brands to create, execute and optimize campaigns across email, 
 .. term-iterable-end
 
 
+**Japs-Olson**
+
+.. term-iterable-start
+
+Iterable is a cross-channel marketing platform that enables personalized customer experiences through email, push notifications, SMS, and in-app messaging.
+
+.. term-iterable-end
+
+.. term-japs-olson-start
+
+`Japs-Olson <https://japsolson.com/>`__ |ext_link| is a direct mail partner that offers complete services for print, envelope, and direct mail, along with response and data optimization strategies that maximize response rates from print and in-house mailing services.
+
+.. term-japs-olson-end
+
+
 **Java Database Connectivity (JDBC)**
 
 .. term-jdbc-start
@@ -3524,6 +3711,7 @@ A journey is an automated sequence for connecting with customers across channels
 
 .. term-journey-end
 
+
 **journey folder**
 
 .. term-journey-folder-start
@@ -3531,6 +3719,15 @@ A journey is an automated sequence for connecting with customers across channels
 A folder helps you organize the list of journeys on the **Journeys** page. You may add up to four levels of subfolders.
 
 .. term-journey-folder-end
+
+
+**journey measurement**
+
+.. term-journey-measurement-start
+
+Journeys measurement provides insight into performance by tracking milestones, measuring goal achievement, and calculating incremental lift on test versus control splits. Use journey goals and exit measurement to understand which paths drive the most conversions.
+
+.. term-journey-measurement-end
 
 
 **journey node: Activate**
@@ -3589,7 +3786,6 @@ A percent split node splits a journey into branching paths, where each path appl
 
 .. vale on
 
-
 **journey node: Start**
 
 .. term-journey-node-start-start
@@ -3624,6 +3820,17 @@ JavaScript Object Notation (JSON) is language-independent data format that is si
 A JSON Web Token (JWT) is a compact, URL-safe means of representing claims transferred between two parties.
 
 .. term-jwt-end
+
+
+**keychain**
+
+.. TODO: By "key identifiers" does "key" imply separation key, foreign key, customer key? Or just "important identifiers" whatever they may be?
+
+.. term-keychain-start
+
+A keychain maps key identifiers in customer data to the Amperity ID for a specific identity graph.
+
+.. term-keychain-end
 
 
 **Kibo**
@@ -4050,7 +4257,7 @@ A matchback is a process where a mail file--associated with a purchase credit--m
 
 .. term-match-category-start
 
-A match category is a classifier that applies to an individual record-pair within a cluster of record-pairs. The match category is the result of this classification.
+A match category is applied to individual record-pair comparisons discovered by deterministic and probabilistic matching strategies during identity resolution.
 
 .. list-table::
    :widths: 140 360
@@ -4059,15 +4266,15 @@ A match category is a classifier that applies to an individual record-pair withi
    * - Match Category
      - Description
    * - **Exact**
-     - Amperity has the highest confidence that these records represent the same person because all profile data exactly matches.
+     - Amperity has the highest confidence. Records represent the same person because all profile data exactly matches.
    * - **Excellent**
-     - Amperity has near perfect confidence that these records belong to the same person, despite select types of profile data not matching.
+     - Amperity has near perfect confidence that records belong to the same person, despite some profile data not matching.
    * - **High**
-     - Using deductive reasoning, Amperity has high confidence that these records match, despite some profile data not matching.
+     - Amperity has high confidence that records match, despite some profile data not matching.
    * - **Moderate**
-     - Amperity has moderate confidence that these records match, due to weak or fuzzy matches between unique customer attributes, such as email, phone, or address.
+     - Amperity has moderate confidence that records match, due to weak or fuzzy matches between unique customer attributes, such as email, phone, or address.
    * - **Weak**
-     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, ZIP code.
+     - Amperity lacks confidence, but if asked to guess, Amperity would assert these records do belong to the same individual, because they match on non-unique customer attributes, such as name, state, or ZIP code.
    * - **Non-match**
      - Amperity has high confidence that these records do NOT match, because core profile data is in conflict.
 
@@ -4089,7 +4296,7 @@ Match rate is the number of records sent from Amperity that matched with records
 
 .. term-match-type-start
 
-The score assigned to matched records. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected. Records assigned a "scored_transitive" value are transitively connected.
+The score assigned to matched records is the match type. Possible values: "scored", "scored_transitive", and "trivial_duplicate". Records assigned a "scored" value are directly connected by deterministic or probabilistic matching. Records assigned a "scored_transitive" value are transitively connected.
 
 .. term-match-type-end
 
@@ -4174,6 +4381,24 @@ The **Metrics** page shows individual metrics as a card. Each card provides an o
 Microsoft Advertising is a pay-per-click advertising platform that displays ads based on keywords in a user's search query.
 
 .. term-microsoft-ads-end
+
+
+**Microsoft Advertising Conversions API**
+
+.. term-microsoft-ads-conversions-start
+
+The Microsoft Advertising Conversions API (CAPI) lets your brand send server-side conversion events — such as purchases, leads, sign-ups, and other actions that happen away from the browser — to Microsoft Advertising. Microsoft Advertising uses these events to attribute conversions to your campaigns, improve measurement accuracy, and build audiences for remarketing. Amperity identifies each event by a hashed email address or phone number, a Microsoft click ID (**msclkid**), or another customer identifier, and hashes email and phone values before sending them.
+
+.. term-microsoft-ads-conversions-end
+
+
+**Microsoft Advertising offline conversions**
+
+.. term-microsoft-ads-offline-conversions-start
+
+Microsoft Advertising offline conversions let your brand send conversions that happen away from your website — such as in-store purchases, phone orders, or qualified leads — to Microsoft Advertising. Microsoft Advertising uses these conversions to measure campaign performance, build audiences, and optimize bidding toward the outcomes that matter to your business. Amperity identifies each conversion by a Microsoft click ID (**msclkid**) or a hashed email address or phone number.
+
+.. term-microsoft-ads-offline-conversions-end
 
 
 **Microsoft Dataverse**
@@ -4268,11 +4493,11 @@ Monetate offers solutions for customer segmentation and targeting, campaign test
 .. term-mosaic-usa-end
 
 
-**Moveable Ink**
+**Movable Ink**
 
 .. term-moveable-ink-start
 
-Moveable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
+Movable Ink helps marketers design dynamic creatives for personalized content experiences that combine business logic with access to real-time customer profiles.
 
 .. term-moveable-ink-end
 
@@ -4394,6 +4619,15 @@ A nickname is a variation of a customer's given name that should not affect merg
 .. term-nicknames-end
 
 
+**No matching model**
+
+.. term-no-matching-model-start
+
+Records are matched only on clustering rules. All records unable to match on a clustering rule are not included in a cluster.
+
+.. term-no-matching-model-end
+
+
 **notifications** recent activity
 
 .. term-notifications-start
@@ -4479,7 +4713,7 @@ One and done is a flag that indicates if a customer has made only one purchase.
 
 .. term-onetrust-start
 
-OneTrust is a privacy, security, and third-party risk technology platform that helps companies meet compliance goals related to privacy and security laws, such as CCPA, GDPR, and ISO27001.
+OneTrust is a consent and preference management platform that tracks customer opt-in and opt-out status across email, SMS, and other marketing channels and helps companies meet compliance goals related to privacy and security laws, such as CCPA, GDPR, and ISO27001.
 
 .. term-onetrust-end
 
@@ -4491,6 +4725,15 @@ OneTrust is a privacy, security, and third-party risk technology platform that h
 Open Database Connectivity (ODBC) uses a driver-based system to define how any client may access any database.
 
 .. term-odbc-end
+
+
+**OpenSharing**
+
+.. term-opensharing-start
+
+`OpenSharing <https://delta.io/sharing/>`__ |ext_link| is an open protocol for secure sharing of live data between organizations, hosted by the Linux Foundation. OpenSharing is an evolution of Delta Sharing, extending the protocol for use with AI agents. OpenSharing generates temporary credentials that allow access to individual data files in cloud storage without copying data to another system regardless of computing platform.
+
+.. term-opensharing-end
 
 
 **Optimizely**
@@ -4722,7 +4965,7 @@ The order shipping amount is the total cost of shipping all items in the same tr
 
 .. term-order-subtotal-start
 
-An order subtotal is the amount for an order, before applying discounts.
+An order subtotal is the amount for an order, after applying discounts.
 
 .. term-order-subtotal-end
 
@@ -4785,7 +5028,7 @@ A paid channel allows a brand to target advertising using demographics, keywords
 
 .. term-pairwise-comparison-start
 
-A pairwise comparison is a process that compares, and then scores all possible connections between all records in a group of records.
+Pairwise comparison is a process that compares all possible connections between all records, and then applies scores to build an identity graph.
 
 .. term-pairwise-comparison-end
 
@@ -4794,7 +5037,7 @@ A pairwise comparison is a process that compares, and then scores all possible c
 
 .. term-pairwise-connection-start
 
-A pairwise connection is a pair of matching records within a block that have an initial score above threshold. All pairwise connections that score above threshold represent a single, unique individual.
+A pairwise connection is a pair of matching records assigned a score high enough to belong to the same customer profile.
 
 .. term-pairwise-connection-end
 
@@ -4803,9 +5046,9 @@ A pairwise connection is a pair of matching records within a block that have an 
 
 .. term-pairwise-connection-score-start
 
-Every pairwise connection has a score with two parts separated by a period.
+A pairwise connection has a score with two parts separated by a period.
 
-The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied by Amperity to individual record pairs. The record pair score corresponds to the classification:
+The first part--the record pair score--correlates to the match category, which is a machine learning classifier applied during identity resolution to individual record pairs:
 
 * 5 for exact matches
 * 4 for excellent matches
@@ -4814,7 +5057,7 @@ The first part--the record pair score--correlates to the match category, which i
 * 1 for weak matches
 * 0 for non-matches
 
-Stitch uses the second part--the record pair strength--to show the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
+Identity resolution uses the second part--the record pair strength--to show the quality of the record pair score. This value appears in the Stitch report as a two decimal number. A record pair strength by itself is not a direct indicator of the quality of a pairwise connection score.
 
 .. term-pairwise-connection-score-end
 
@@ -4950,7 +5193,7 @@ A PII semantic assigns consistency to customer data to ensure that PII data is m
 
 .. term-pii-table-start
 
-A PII table collects fields from the **Unified Coalesced** table that contain PII data and standardizes PII values. Build queries against any combination of PII data to build audiences using the visual **Segment Editor**.
+A PII table collects customer profile data from the **Unified Coalesced** table and standardizes PII values. Build queries against any combination of PII data to create audiences using the visual **Segment Editor**.
 
 .. term-pii-table-end
 
@@ -5140,26 +5383,40 @@ A primary key is a column in a data table that uniquely identifies each row the 
 .. term-primary-key-end
 
 
+**probabilistic connection**
+
+.. term-probabilistic-connection-start
+
+Probabilistic record matching uses rules that define approximate matching for customer keys and semantic tags. Records that approximately match are evaluated by Stitch and scored.
+
+.. term-probabilistic-connection-end
+
+
 **product affinity**
 
 .. term-product-affinity-start
 
-Product affinity is a predictive model that identifies which customers are likely to purchase by using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a ranked list of customers with three recommended audience sizes.
+Product affinity is a predictive model that identifies which customers are likely to purchase next using a combination of historical purchase data and lookalike audiences. The predicted affinity model outputs a database table with a ranked list of customers by product affinity and three recommended audience sizes.
 
 .. term-product-affinity-end
 
 
-**product recommendations**
+**product affinity attribute**
 
-.. 
-.. Not in glossary
-.. 
+.. term-product-affinity-attribute-start
 
-.. term-product-recommendations-start
+The field against which product affinity is measured. For example: a category, a subcategory, or a brand. Values must have at least 100 purchases during the previous 30 days *and* at least 250 purchases during the previous 365 days to be included in product affinity model output.
 
-Product recommendations identify customers who have purchased, and then associates other products to their purchase history.
+.. term-product-affinity-attribute-end
 
-.. term-product-recommendations-end
+
+**product affinity score**
+
+.. term-product-affinity-score-start
+
+The strength of a customers's affinity for this product, shown as an uncalibrated probability between 0 and 1 that combines product-specific affinity with general likelihood to purchase. A higher score represents a stronger predicted affinity.
+
+.. term-product-affinity-score-end
 
 
 **product base ID**
@@ -5218,6 +5475,15 @@ The Profile API enables your brand to access customer profiles using a collectio
 The **Allow Profile API administration** policy option allows full access to the Profile API, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
 
 .. term-profile-api-administrator-policy-end
+
+
+**Pseudonymous identifier**
+
+.. term-pseudonymous-identifier-start
+
+A pseudonymous identifier is a temporary, non-personally identifiable code that substitutes for a real user's identity for tracking user behavior on websites or apps without revealing personally identifiable information (PII).
+
+.. term-pseudonymous-identifier-end
 
 
 **PSV**, **pipe-separated values**
@@ -5361,11 +5627,38 @@ RaceRoster is event management software for races.
 .. term-raceroster-end
 
 
+**random forest classifier**
+
+.. term-random-forest-classifier-start
+
+A `random forest classifier <https://en.wikipedia.org/wiki/Random_forest>`__ |ext_link| is an ensemble learning method for predictive affinity modeling. It learns historical purchase patterns, and then predicts the probability of customer purchases by product within a prediction window.
+
+.. term-random-forest-classifier-end
+
+
+**ranking** (product affinity modeling)
+
+.. term-ranking-affinity-start
+
+A product attribute's rank for this customer, where 1 equals the highest product affinity.
+
+.. term-ranking-affinity-end
+
+
+**ranking** (event propensity modeling)
+
+.. term-ranking-events-start
+
+A ranking of customers by score for this event. A rank that is less than or equal to X provides the top N customers with an propensity for this event.
+
+.. term-ranking-events-end
+
+
 **raw data**
 
 .. term-raw-data-start
 
-Amperity loads data in raw form preserving the original schema as well as identifiers from all systems. Examples of identifiers include loyalty numbers, ecommerce IDs, cookies, or any other identifier mapped to a customer.
+Amperity loads data in raw form preserving the original schema as well as identifiers from all systems. Examples of identifiers include loyalty numbers, e-commerce IDs, cookies, or any other identifier mapped to a customer.
 
 .. term-raw-data-end
 
@@ -5431,16 +5724,23 @@ A **Recommendation** table associates individual customers to a preferred catego
 
 .. term-recommended-audience-size-start
 
-A recommended audience is a feature of Amperity that answers the following question: "Which audience size grows revenue over the next 30 days?" Amperity provides three answers to this question, in the form of recommended audience sizes: small, medium, and large. A small audience captures 50% of an audience, a medium audience captures 70%, and a large audience captures 90% of purchases for that audience over the next 30 days.
+A recommended audience is a feature of product affinity modeling that answers the following question: "Which audience size grows revenue over the next 30 days?" Product affinity modeling answers this question with small, medium, and large recommended audience sizes. A recommended audience predicts future purchasers over the next 30 days.
 
 .. term-recommended-audience-size-end
+
+
+.. term-recommended-audience-size-events-start
+
+A recommended audience is a feature of event propensity modeling that answers the following question: "Which audience size best captures the customers who are most likely to perform the target event over the next 30 days?" Event propensity modeling answers this question with small, medium, and large recommended audience sizes.
+
+.. term-recommended-audience-size-events-end
 
 
 **record count**
 
 .. term-record-count-start
 
-Record count is the total number of records, or rows, within a given dataset. This could include a source feed or Amperity table, or, it could describe the number of records that result from a probabilistic or deterministic connection between two Amperity tables.
+Record count is the total number of records, or rows, within a given dataset. This could include a source feed or Amperity table, or, it could describe the number of records that result from a deterministic, probabilistic, or transitive connection that exists in rows across two source tables.
 
 .. term-record-count-end
 
@@ -5449,7 +5749,7 @@ Record count is the total number of records, or rows, within a given dataset. Th
 
 .. term-record-pair-start
 
-The Stitch process takes customer tables, extracts the customer profiles and compares pairs of records together using over 40 different machine learning models. Each record pair score represents the strength of the match.
+Identity resolution analyzes source tables, extracts customer profiles and interactions, and then compares pairs of records using machine learning models to build an identity graph. Each record pair is scored and all records connected using deterministic, probabilistic, or transitive matches represent a unique customer profile.
 
 .. term-record-pair-end
 
@@ -5474,7 +5774,7 @@ The record pair score correlates to the match category, which is a classifier ap
 
 .. term-record-pair-strength-start
 
-The record pair strength represents the strength of the record pair score. It is a two digit number. For example: .31 is a lower strength and .93 is a higher strength.
+A higher value reflects a stronger signal from the machine learning model, so a score of 4.58 is a stronger match than 4.55. When two record pairs receive the same score and cannot both merge (for example, because of a conflicting given name), Stitch resolves the tie deterministically by selecting the match with the lower alphanumeric cluster ID, so results stay stable across runs.
 
 .. term-record-pair-strength-end
 
@@ -5537,7 +5837,7 @@ A recurring campaign automatically sends an updated or refreshed audience with a
 
 .. term-reddit-ads-start
 
-Reddit is home to unique communities, engaged conversations, and the best memes. Reddit Ads allows brands to find their community on Reddit, and then engage with your customers within `the 100K+ active communities on Reddit <https://www.redditforbusiness.com/>`__ |ext_link| using targeted ads and promoted posts.
+Reddit Ads connects brands to more than 490 million weekly visitors across the 100K+ active communities on Reddit. Reddit users come to the platform with specific research intent, looking for product information and peer recommendations from communities organized around shared interests and expertise. Ninety percent of Reddit users trust the platform to learn about new products and brands, making it a high-intent environment for ad targeting.
 
 .. term-reddit-ads-end
 
@@ -5654,12 +5954,27 @@ RR Donnelly provides marketing and business communications, commercial printing,
 
 .. term-sailthru-start
 
-Sailthru by Marigold is a cross-channel marketing platform built to deliver personalized experiences for consumers across email, web, and mobile channels.
+Sailthru by Zeta is a cross-channel marketing platform built to deliver personalized experiences for consumers across email, web, and mobile channels.
  
 .. term-sailthru-end
 
 
 **Salesforce Commerce Cloud**
+
+.. term-roku-audience-start
+
+Roku Audience is a CTV (connected TV) advertising platform that enables brands to target custom audiences through Roku Ads Manager. Send first-party customer data to Roku for household-based ad targeting across Roku streaming devices.
+
+.. term-roku-audience-end
+
+
+**Roku CAPI**
+
+.. term-roku-capi-start
+
+The Roku Conversions API (CAPI) lets your brand send conversion events — such as purchases, sign-ups, and trial starts — to Roku. Roku uses these events to optimize campaigns, build event-based custom audiences, and attribute conversions for return on ad spend (ROAS) measurement.
+
+.. term-roku-capi-end
 
 .. term-salesforce-commerce-cloud-start
 
@@ -5770,7 +6085,7 @@ A saved query is a SQL statement that runs against source data before loading th
 
 .. term-score-start
 
-A score has a value from "0.0" to "5.0" that represents the combined score assigned to the record pair by Stitch. A score has two parts: the score is on the left side and the score's strength is on the right.
+A score has a value from "0.0" to "5.0" that represents the strength of the match Stitch assigns to a record pair during identity resolution. A higher score always indicates a stronger match. This holds across the entire range: a 3.0 match is one point stronger than a 2.0 match, just as a 3.1 match is one point stronger than a 2.1 match.
 
 .. term-score-end
 
@@ -5909,7 +6224,7 @@ A semantic is a way to apply a common understanding to individual points of data
 
 .. term-semantic-tag-start
 
-A semantic tag standardizes profile (PII), transaction, and other important customer details across all columns in all data tables.
+A semantic tag is a label that standardizes personally identifiable information (PII), transaction, and other important customer profile details across all columns in all source data tables.
 
 .. term-semantic-tag-end
 
@@ -5934,14 +6249,21 @@ Semi-structured data is not shaped as rows and columns, but still has elements t
 
 **separation key**, **sk**
 
+.. term-sendgrid-start
+
+**SendGrid** is Twilio's email platform. Marketers use it to manage contact lists and send email campaigns.
+
+.. term-sendgrid-end
+
+.. term-sevenrooms-start
+
+**SevenRooms** is a guest experience and data platform for the hospitality industry. Restaurants, hotels, and other operators use it to manage guest profiles, reservations, and transactions.
+
+.. term-sevenrooms-end
+
 .. term-separation-key-start
 
 A separation key, or "sk", is for deterministic unmatching of records.
-
-Unmatched
-unmatched
-Unmatching
-unmatching
 
 .. term-separation-key-end
 
@@ -5995,7 +6317,7 @@ A shared dataset represents all databases and database tables configured for out
 
 .. term-shopify-start
 
-Shopify is an ecommerce platform for online stores and retail point-of-sale systems that consolidates shopping, payments, marketing, shipping, and customer engagement tools into a single unified experience.
+Shopify is an e-commerce platform for online stores and retail point-of-sale systems that consolidates shopping, payments, marketing, shipping, and customer engagement tools into a single unified experience.
 
 .. term-shopify-end
 
@@ -6099,7 +6421,7 @@ Snapchat is a social media platform for accessing pictures and messages for a sh
 
 .. term-snappass-start
 
-SnapPass allows sharing secrets in a secure, ephemeral way. Input a single or multi-line secret, define how long someone has to view the secret, and then generate a single-use URL. Share the URL to share the secret.
+|ext_snappass| allows sharing secrets in a secure, ephemeral way. Input a single or multi-line secret, define how long someone has to view the secret, and then generate a single-use URL. Share the URL to share the secret.
 
 .. term-snappass-end
 
@@ -6192,7 +6514,7 @@ Spark SQL is a high performance SQL query engine used by Amperity to ingest data
 
 .. term-sparse-customer-record-start
 
-A sparse customer profile is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store ZIP codes associated with the transaction.
+A sparse customer record is an incomplete set of personally identifiable information (PII) that can still identify a unique individual when compared against rich sets of PII data. For example, a dataset with sparse customer profiles may only contain last names, the last 4 digits of credit cards, and store ZIP codes associated with the transaction.
 
 .. term-sparse-customer-record-end
 
@@ -6341,7 +6663,7 @@ A stay identifies rooms, preferences, brands, and other information about hotel 
 
 .. term-stitch-start
 
-Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch outputs a unified collection of data that assigns a unique identifier to each unique customer profile.
+Stitch uses patented algorithms to process massive volumes of data and discovers the hidden connections in your customer profiles that identify unique individuals. Stitch analyzes customer data, applies the rules you define, and then builds an identity graph with accurate and actionable customer profiles. Each customer profile is assigned an Amperity ID.
 
 .. term-stitch-end
 
@@ -6350,7 +6672,7 @@ Stitch uses patented algorithms to process massive volumes of data and discovers
 
 .. term-stitch-tab-start
 
-The **Stitch** page shows detailed results of the Stitch process, which takes customer data, extracts customer profiles, and then compares record pairs using over 40 different machine learning models. Each score represents the strength of the match. Amperity creates clusters of records based on the connection between pairs, and then gives each cluster a unique Amperity ID.
+The **Stitch** page shows detailed results of identity resolution, which analyzes customer data, applies the rules you define, and then builds an identity graph with accurate and actionable customer profiles. Each customer profile is assigned an Amperity ID.
 
 .. term-stitch-tab-end
 
@@ -6359,7 +6681,7 @@ The **Stitch** page shows detailed results of the Stitch process, which takes cu
 
 .. term-stitch-blocking-keys-table-start
 
-The **Stitch Blocking Keys** table has all blocking keys used during the Stitch process.
+The **Stitch Blocking Keys** table has all blocking keys used during identity resolution.
 
 .. term-stitch-blocking-keys-table-end
 
@@ -6368,18 +6690,9 @@ The **Stitch Blocking Keys** table has all blocking keys used during the Stitch 
 
 .. term-stitch-blocklistvalues-table-start
 
-The **Stitch BlocklistValues** table is a passthrough table for values identified by the bad-values blocklist, and then excluded from the Stitch process.
+The **Stitch BlocklistValues** table is a passthrough table for values identified by the bad-values blocklist, and then excluded from identity resolution.
 
 .. term-stitch-blocklistvalues-table-end
-
-
-**Stitch Scores**
-
-.. term-stitch-scores-table-start
-
-The **Stitch Scores** table has all scores generated by Stitch, including scores that are not associated with an Amperity ID. Use this table to help understand why records are not associated with an Amperity ID.
-
-.. term-stitch-scores-table-end
 
 
 **Stitch labels**
@@ -6388,8 +6701,8 @@ The **Stitch Scores** table has all scores generated by Stitch, including scores
 
 Stitch labels identify when
 
-* A single customer profile is incorrectly merged together, or overclustered.
-* Two customer profiles are incorrectly split apart, or underclustered.
+* A single customer profile is incorrectly merged together, or overclustered, during identity resolution.
+* Two customer profiles are incorrectly split apart, or underclustered, during identity resolution.
 
 .. term-stitch-labels-end
 
@@ -6398,7 +6711,7 @@ Stitch labels identify when
 
 .. term-stitch-qa-start
 
-Stitch QA is a process that monitors the quality of Stitch results. Stitch QA has two parts: a database and a set of queries. Analyze the results to identify values for labeling, blocklisting, or to discover ways to tune the Stitch process to better match your tenant's dataset.
+Stitch QA is a manual process for monitoring the quality of Stitch results. Stitch QA has two parts: a database and a collection of queries. Analyze query results to identify values for labeling and blocklisting, or to discover ways to tune the Stitch process to better match your tenant's dataset.
 
 .. term-stitch-qa-end
 
@@ -6416,9 +6729,36 @@ Stitch generates a series of Stitch QA. Use these tables in a dedicated database
 
 .. term-stitched-record-start
 
-A stitched record is a unique output of the Stitch process that associates the Amperity ID to a customer.
+A stitched record is a unique output of identity resolution that associates the Amperity ID to customer records in source tables.
 
 .. term-stitched-record-end
+
+
+**Stitch rules**
+
+.. term-stitch-rules-start
+
+Stitch rules define criteria for when records are separated or clustered during identity resolution.
+
+.. term-stitch-rules-end
+
+
+**Stitch Scores**
+
+.. term-stitch-scores-table-start
+
+The **Stitch Scores** table has all scores assigned by Stitch during identity resolution, including scores that are not associated with an Amperity ID. Use this table to help understand why records are not associated with an Amperity ID.
+
+.. term-stitch-scores-table-end
+
+
+**Stitch Summary** (tab)
+
+.. term-stitch-summary-tab-start
+
+The **Summary** tab on the **Stitch** page shows the results of identity resolution and how it adapts and changes over time.
+
+.. term-stitch-summary-tab-end
 
 
 **stitched table**
@@ -6497,7 +6837,7 @@ The sum of itemized revenue for the original order, not including returns or can
 
 .. term-supersized-cluster-start
 
-A supersized cluster is a cluster of records with more than 64 matching records. A supersized cluster does not typically represent a unique individual and is not worthy of further analysis.
+A supersized cluster is a set of records in an identity graph with more than 64 matches. A supersized cluster does not represent a unique individual and is not worthy of further analysis.
 
 .. term-supersized-cluster-end
 
@@ -6611,11 +6951,20 @@ The Trade Desk is a platform for wide internet advertising and enables the use o
 .. term-thetradedesk-end
 
 
+**The Trade Desk Data Marketplace**
+
+.. term-thetradedesk-marketplace-start
+
+The Trade Desk Data Marketplace allows advertisers to purchase access to your brand's audiences, and then use those audiences for their advertising campaigns.
+
+.. term-thetradedesk-marketplace-end
+
+
 **third-party data**
 
 .. term-third-party-data-start
 
-Third-party data is a broad category that includes, but is not limited to, data collected by an entity, and then sold or distributed to companies that want to leverage that data. The usefulness of third-party data is often restricted by a combination of lower data quality, privacy laws, and general commercial interest.
+Third-party data, also known as 3P data, is data indirectly collected from customers and is often acquired from external sources, such as data brokers, aggregators, or other organizations that specialize in collecting and selling data. Third-party data has a range of demographics, behaviors, and preferences, depending on the external source.
 
 .. important:: Amperity **does not** sell third-party data or mark it up in any way.
 
@@ -6626,7 +6975,7 @@ Third-party data is a broad category that includes, but is not limited to, data 
 
 .. term-thirstie-start
 
-Thirstie is an ecommerce platform for liquor brands.
+Thirstie is an e-commerce platform for liquor brands.
 
 .. term-thirstie-end
 
@@ -6751,7 +7100,7 @@ Marketers use purchase activities to gather information about how customers inte
 
 .. term-transitive-connection-start
 
-A transitive connection exists between individual records when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2, record 3 matches record 2, neither records 1 or 3 match to each other, but they have a transitive connection because both match record 2.
+A transitive connection exists when any two records share a strong match to an intermediate record, but do not have a strong match to each other. For example: record 1 matches record 2, record 3 matches record 2, and records 1 and 3 do not match. A transitive connection exists between records 1 and 3 because both records match record 2.
 
 .. term-transitive-connection-end
 
@@ -6806,19 +7155,19 @@ Trino is a distributed SQL query engine designed to efficiently query large amou
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of records that share enough matching PII to identify a single unique individual. Stitch identifies trivial duplicates early in the identity resolution process. Stitch uses only one of the records identified as trivial duplicates.
+A trivial duplicate is a record within a set of records that share enough matching PII where only one record is necessary to identity a customer profile within an identity graph. Stitch identifies trivial duplicates early in the identity resolution process, and then uses only one of the records identified as a trivial duplicate.
 
 .. term-trivial-duplicate-end
 
 .. term-trivial-duplicate-qualified-start
 
-A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 or greater and group together.
+A qualified trivial duplicate is a set of records with enough matching PII to group together.
 
 .. term-trivial-duplicate-qualified-end
 
 .. term-trivial-duplicate-unqualified-start
 
-An unqualified trivial duplicate is a set of records that do not have enough matching PII to score 3.0 or greater and cannot group together.
+An unqualified trivial duplicate is a set of records that do not have enough matching PII and cannot group together.
 
 .. term-trivial-duplicate-unqualified-end
 
@@ -6914,7 +7263,7 @@ The **Unified Changes** table has a 30-day rolling history of every change that 
 
 .. term-unified-changes-clusters-table-start
 
-The **Unified Changes Clusters** table has a history of changes to cluster graphs, relative to the previous Stitch run.
+The **Unified Changes Clusters** table has a history of changes to cluster graphs, relative to the previous identity graph.
 
 .. term-unified-changes-clusters-table-end
 
@@ -6923,7 +7272,7 @@ The **Unified Changes Clusters** table has a history of changes to cluster graph
 
 .. term-unified-changes-pks-table-start
 
-The **Unified Changes PKS** table has a history of changes to primary keys, relative to the previous Stitch run.
+The **Unified Changes PKS** table has a history of changes to primary keys, relative to the previous identity graph.
 
 .. term-unified-changes-pks-table-end
 
@@ -7023,9 +7372,15 @@ The **Unified Paid Media** table builds customer profiles that contain all known
 
 .. term-unified-preprocessed-raw-table-start
 
-The **Unified Preprocessed Raw** table is an output of Stitch. Use this table during Stitch QA to view data exactly as Stitch uses it after preprocessing and blocklisting. This table has one row for each trivial duplicate. Semantic values represent pre-processing values. Stitch removes bad values and replaces them with **NULL**.
+The **Unified Preprocessed Raw** table is an output of Stitch with rows of preprocessed values from every source table with Amperity IDs, including trivial duplicates. Bad values are removed and replaced with **NULL**.
 
 .. term-unified-preprocessed-raw-table-end
+
+.. term-unified-preprocessed-raw-table-context-start
+
+Use the **Unified Preprocessed Raw** table during Stitch QA processes to view the same raw data Stitch used to build the identity graph.
+
+.. term-unified-preprocessed-raw-table-context-end
 
 
 **Unified Product Catalog**
@@ -7053,7 +7408,7 @@ The **Unified Product Catalog** table has a row for every item in your product c
 
 .. term-unified-scores-table-start
 
-The **Unified Scores** table records all pairwise comparison scores and match categories for all groups of records. For each group of records, records all pairwise scores that are present between records within that group.
+The **Unified Scores** table records scoring for all pairwise comparisons and match categories for all scorable record pairs within an identity graph.
 
 .. term-unified-scores-table-end
 
@@ -7149,7 +7504,7 @@ The total revenue for a single unit of an item **or** the total revenue for a si
 
 .. term-unit-subtotal-start
 
-A unit subtotal is the amount for a single unit of one item, before applying discounts.
+A unit subtotal is the amount for a single unit of one item, after applying discounts.
 
 .. term-unit-subtotal-end
 
@@ -7264,6 +7619,15 @@ A vertex is a data item in a graph database. A vertex is sometimes referred to a
 Vibes offers a variety of mobile marketing products and services, such as text message marketing (SMS or MMS), mobile wallet marketing, push notifications, and mobile web experiences.
 
 .. term-vibes-end
+
+
+**Viant DSP**
+
+.. term-viant-dsp-start
+
+Viant DSP is a demand-side platform (DSP) that enables programmatic advertising campaigns across display, video, connected TV (CTV), audio, and native channels. Viant uses household-level identity that is linked to real people and real households to deliver and measure advertising that reaches specific customers across devices and channels. Audience segments built in Viant DSP can target customers using hashed emails, phone numbers, IP addresses, mobile device IDs, or cookie IDs.
+
+.. term-viant-dsp-end
 
 
 **view_freshness**
@@ -7419,6 +7783,15 @@ YouTube is an online video platform on which your brand can run in-stream, bumpe
 .. term-youtube-end
 
 
+**Zapier**
+
+.. term-zapier-start
+
+Zapier is a no-code automation platform that connects more than 8,000 apps through trigger-and-action workflows called Zaps. Use Zapier to route data between applications without writing custom integration code.
+
+.. term-zapier-end
+
+
 **Zendesk**
 
 .. term-zendesk-start
@@ -7439,3 +7812,10 @@ Zendesk is a service-first customer relationship management (CRM) application. C
 A 4-5-4 calendar divides years into months using a 4 weeks--5 weeks--4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
+
+
+.. term-posthog-start
+
+PostHog is a product analytics platform. It captures product events and maintains person and group profiles that teams use to analyze and segment product usage.
+
+.. term-posthog-end

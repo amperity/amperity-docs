@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
+
 
 .. meta::
     :description lang=en:
@@ -86,6 +88,58 @@ After you have selected the list of tables to include in Stitch results, return 
 .. note:: Only tables with the **Make available to Stitch** setting enabled in the **Feed Editor** are available for selection from the **Stitched tables** tab in the **Stitch settings** dialog box.
 
 .. stitch-run-select-tables-note-end
+
+
+.. _stitch-run-types:
+
+About Stitch run types
+--------------------------------------------------
+
+.. stitch-run-types-start
+
+A Stitch workflow runs out-of-date source transforms and automatic databases. A Stitch workflow has the following options for reevaluating customer profiles:
+
+* :ref:`stitch-run-type-force-refresh`
+* :ref:`stitch-run-type-incremental-match`
+* :ref:`stitch-run-type-normal`
+
+.. stitch-run-types-end
+
+
+.. _stitch-run-type-force-refresh:
+
+Force refresh
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-force-refresh-start
+   :end-before: .. stitch-run-type-force-refresh-end
+
+
+.. _stitch-run-type-incremental-match:
+
+Incremental matching
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-incremental-match-start
+   :end-before: .. stitch-run-type-incremental-match-end
+
+.. stitch-run-type-incremental-match-note-start
+
+.. note:: Stitch benchmarks are unavailable when Stitch runs using the incremental matching run type.
+
+.. stitch-run-type-incremental-match-note-end
+
+
+.. _stitch-run-type-normal:
+
+Normal
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-normal-start
+   :end-before: .. stitch-run-type-normal-end
 
 
 .. _stitch-run-about:
@@ -236,7 +290,7 @@ The **Semantics** link at the top of the **Stitch** page opens a dialog box that
 .. stitch-explore-semantics-steps-start
 
 #. From the **Stitch** tab, click the **Semantics** link. This opens the **Stitch Tools** dialog box.
-#. Each table that contains stitched records is listed in the dialog box.
+#. Each table that has stitched records is listed in the dialog box.
 #. For each table, a list of semantic names, their types, and the fields to which they are associated is listed.
 #. When finished, click **Close**.
 
@@ -307,12 +361,6 @@ How is this possible?
 The overall deduplication rate (32.5%) represents the total number of records relative to the number of Amperity IDs. There can be a low deduplication rate on individual tables, but high connectivity between tables.
 
 An UpSet plot chart has a row for each table. In this case, the row for table 1 shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
-
-.. image:: ../../images/deduplication-rate.png
-   :width: 600 px
-   :alt: Deduplication rates for customer records.
-   :align: left
-   :class: no-scaled-link
 
 Next compare the overlap between customer records 1 and 3 by hovering over customer record 1. The hover box shows there are more than 69k records shared between tables 1 and 3. This is a significant amount of overlap between two tables and is the primary contributor to the 32.5% overall deduplication rate.
 
@@ -440,12 +488,6 @@ You can view metrics for changes to records and Amperity IDs that may have occur
 
 .. stitch-explore-stitch-metrics-end
 
-.. image:: ../../images/mockup-stitch-tab-metrics.png
-   :width: 600 px
-   :alt: The Stitch Metrics dialog box.
-   :align: left
-   :class: no-scaled-link
-
 .. stitch-explore-stitch-metrics-context-start
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
@@ -454,7 +496,7 @@ This dialog box identifies the tenant, the time at which the job started, the ID
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 
-The table contains a row for each data source that was made available to this Stitch run, along with columns for each row that show:
+The table has a row for each data source that was made available to this Stitch run, along with columns for each row that show:
 
 * The number of Amperity IDs in the current Stitch run.
 * The number of Amperity IDs in the previous Stitch run.

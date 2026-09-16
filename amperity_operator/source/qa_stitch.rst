@@ -88,7 +88,7 @@ The Stitch QA database is preconfigured with the following tables:
 
 .. qa-stitch-enable-steps-add-database-tables-uc-and-upr-start
 
-.. tip:: The **Unified Coalesced** and **Unified Preprocessed Raw** tables are frequently used together during Stitch QA because many investigation patterns will compare the values in one table to the values in the other.
+.. tip:: The **Unified Coalesced** and **Unified Preprocessed Raw** tables are often used together during Stitch QA because many investigation patterns will compare the values in one table to the values in the other.
 
 .. qa-stitch-enable-steps-add-database-tables-uc-and-upr-end
 
@@ -395,10 +395,10 @@ Run the :doc:`foreign key validation <stitch_qa_fk_validation>` query and compar
 
 .. important:: The foreign key validation query is a series of small **SELECT** statements that can help focus on and narrow-down specific use cases for validating foreign keys. Use this query to:
 
-   #. Look for :ref:`name IDs with multiple Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
+   #. Look for :ref:`name IDs with many Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
    #. Look for :ref:`name IDs with different Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-different-amperity-ids>`.
    #. Inspect :ref:`name IDs across tables <stitch-qa-query-fk-validation-inspect-name-ids>`.
-   #. Check for :ref:`foreign keys with multiple Amperity IDs <stitch-qa-query-fk-validation-multiple-amperity-ids>` across tables.
+   #. Check for :ref:`foreign keys with many Amperity IDs <stitch-qa-query-fk-validation-multiple-amperity-ids>` across tables.
    #. Check for :ref:`foreign keys with different Amperity IDs <stitch-qa-query-fk-validation-different-amperity-ids>` across tables.
    #. Inspect :ref:`foreign keys across tables <stitch-qa-query-fk-validation-inspect-between-tables>`.
 
@@ -522,7 +522,7 @@ This approach can help records survive blocking by ensuring groups of records ar
 
 #. Use a combination of the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables to review and compare the data that is associated with these records to help understand why groups of records were matched or why certain records were assigned to a cluster.
 
-   .. tip:: The **Unified Coalesced** table contains two useful columns that help identify trivial duplicates: **rep_ds** and **rep_pk**.
+   .. tip:: The **Unified Coalesced** table has two useful columns that help identify trivial duplicates: **rep_ds** and **rep_pk**.
 
       * **rep_pk** is an identifier that represents the first grouping of records done by Stitch. This grouping is based on identical semantic patterns.
       * **rep_ds** is the datasource that is associated with the **rep_pk** column.
@@ -635,7 +635,7 @@ Record pairs and scores
 
 The quality of record pairs and their associated pairwise comparison scores should be investigated, starting with low-scoring record pairs in each cluster. At the start of the Stitch QA process it is not uncommon for low-scoring record pairs in a cluster to fall below threshold for pairwise comparison scoring.
 
-Each cluster of records contains high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
+Each cluster of records has high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
 
 Each cluster with low-scoring record pairs should be investigated to confirm if those pairs were accurately clustered and to determine if transitive connections to other high-scoring record pairs do exist.
 
@@ -675,7 +675,7 @@ You should periodically review at a high level cluster sizes and source cluster 
 #. Run the :doc:`cluster size distribution <stitch_qa_cluster_size_distribution>` query to identify if distinct entities are clustered together, if :ref:`clusters are supersized <qa-stitch-look-for-supersized-clusters>`, or for other :ref:`indicators of overclustering <qa-stitch-look-for-overclustering>`.
 #. Run the :doc:`source cluster distribution <stitch_qa_source_cluster_distribution>` query to return a breakdown of record-to-cluster size distribution by datasource.
 #. Run the :doc:`connections across sources <stitch_qa_connections_across_sources>` query to return a count of clusters that are comprised of records across various combinations of datasources.
-#. Run the :doc:`combined statistics <stitch_qa_combined_statistics>` query to return an overview of Stitch statistics that contains the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
+#. Run the :doc:`combined statistics <stitch_qa_combined_statistics>` query to return an overview of Stitch statistics that has the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
 #. Run the :doc:`separated statistics <stitch_qa_separated_statistics>` query to return an overview of Stitch statistics, separated by dedupe keys and tables.
 
 .. qa-stitch-look-for-review-cluster-details-end
@@ -694,7 +694,7 @@ Be sure to apply semantic tags consistently across data sources, in particular f
 
 .. table-unified-preprocessed-raw-use-with-qa-stitch-tags-keys-start
 
-Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
+Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less often used profile semantic tags is applied to a new data source.
 
 Open the table in the **Database Explorer** and verify that all rows in the table that are associated with a semantic tag or a foreign key have a checkmark in the left column. Rows without a checkmark will not make the associated **FIELD** available to the **Queries** page. If rows do not have a checkmark, edit the table and apply the checkmark, save the table, activate the Stitch QA database, and then run the database to refresh the table.
 
@@ -722,7 +722,7 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 
    Look for inconsistencies in the results of semantic tagging and, if discovered, edit them to apply consistent tagging patterns, rerun Stitch, and then re-review the results.
 
-#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and post office boxes, or for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
+#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and post office boxes, or for semantic tagging issues that may arise when using many, ordinal, or namespaced semantics.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
@@ -745,7 +745,7 @@ Supersized clusters
 
 .. configure-stitch-advanced-configuration-supersized-clusters-example-start
 
-A supersized cluster is created when multiple transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
+A supersized cluster is created when many transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
 
 #. Mary Johnson, maryjohnson @gmail.com, 50 1st Avenue, New York, NY, with 50 connected records.
 #. Jeffrey Johnson, jeffjohnson @gmail.com, 50 1st Avenue, New York, NY, with 25 connected records.

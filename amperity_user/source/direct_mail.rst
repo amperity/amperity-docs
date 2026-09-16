@@ -49,7 +49,7 @@ Use householding to support a wide variety of householding use cases, such as:
 Householding table
 ==================================================
 
-Use the |householding| table to build customer profiles by household, and then use segments and queries to build audiences by household using all of the attributes in your customer 360 database.
+Use the `Merged Households <https://docs.amperity.com/operator/table_merged_households.html>`__ table to build customer profiles by household, and then use segments and queries to build audiences by household using all of the attributes in your customer 360 database.
 
 
 .. _direct-mail-build-audience:
@@ -139,7 +139,7 @@ Align to campaign objectives
 
 After you have associated your customers to their lifecycle status and value tier, align the audience to your overall marketing objectives for your direct mail campaign, such as what types of discount preferences, promo codes, or offers you want to use.
 
-After determining which customer groups to market to, apply additional segments to align campaigns with your overall marketing goals. For example, you may want to focus on customers who opted in to receive emails. With the ability to add multiple segments, you can determine which groups are more inclined to make a purchase.
+After determining which customer groups to market to, apply additional segments to align campaigns with your overall marketing goals. For example, you may want to focus on customers who opted in to receive emails. With the ability to add many segments, you can determine which groups are more inclined to make a purchase.
 
 .. direct-mail-align-to-objectives-end
 
@@ -194,6 +194,16 @@ Cross Country Computer
 .. include:: ../../shared/terms.rst
    :start-after: .. term-ccc-start
    :end-before: .. term-ccc-end
+
+
+.. _direct-mail-sendto-channel-japs-olson:
+
+Japs-Olson
+--------------------------------------------------
+
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-japs-olson-start
+   :end-before: .. term-japs-olson-end
 
 
 .. _direct-mail-sendto-channel-pebblepost:

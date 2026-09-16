@@ -29,7 +29,7 @@
 
 #. From the **Campaigns** tab, click **Create Campaign**. This opens the **New Campaign** page.
 #. Give your segment a name.
-#. Select a table that contains the attributes you want to use, and then use the dropdowns, picklists, conditions, and values to define the attribute profile.
+#. Select a table that has the attributes you want to use, and then use the dropdowns, picklists, conditions, and values to define the attribute profile.
 
    .. note:: The **Customer 360** table is the default. For many segments it is the only table you need.
 #. When more than one attribute is present within an attribute group use **AND** or **OR** to filter values on more than one condition.
@@ -39,7 +39,7 @@
 
    Using **AND** or **OR** between each attribute group is required.
 
-#. For each attribute group that is added to the segment, select the database table that contains the attributes, and then select attributes.
+#. For each attribute group that is added to the segment, select the database table that has the attributes, and then select attributes.
 
    .. tip:: Any table that is listed in the lower right may be used to build the attribute profile. Open the **Data Explorer** to learn more about the individual attributes within these tables.
 

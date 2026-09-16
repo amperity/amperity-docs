@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The total number of orders that a customer has made at defined intervals, such as 30 days, 3 months, or 12 months.
+        The count of distinct order IDs a customer has made at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The total number of orders that a customer has made at defined intervals, such as 30 days, 3 months, or 12 months.
+        The count of distinct order IDs a customer has made at defined intervals, such as 30 days, 3 months, or 12 months.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,7 +24,7 @@ Order frequency intervals
 
 .. attribute-order-frequency-intervals-start
 
-Order frequency is the total number of orders that a customer has made during the specified interval. Order frequencies are available at the following intervals:
+Order frequency is the count of distinct order IDs a customer has made at defined intervals, such as:
 
 * L30D Order Frequency (30 days)
 * L3M Order Frequency (3 months)
@@ -55,7 +55,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have an Integer data type. All Integer data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -79,7 +79,7 @@ The following table lists the operators that are available to these attributes.
    * - **is greater than or equal to**
      - Returns customer records with values that are greater than or equal to the specified order frequency, including the order frequency.
 
-       .. tip:: Use the **Lifetime Order Frequency with the **is greater than or equal to** condition to identify unique customers who have made at least one purchase. Set the value of the **is greater than or equal to** operator to the number of purchases you want to be the minimum lifetime order frequency for this segment.
+       .. tip:: Use the **Lifetime Order Frequency** attribute with the **is greater than or equal to** condition to identify unique customers who have made at least one purchase. Set the value of the **is greater than or equal to** operator to the number of purchases you want to be the minimum lifetime order frequency for this segment.
 
    * - **is in list**
      - Returns customer records with values that match the order frequency that are specified in a list.

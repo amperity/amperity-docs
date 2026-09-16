@@ -3,7 +3,7 @@
 
 .. |destination-name| replace:: LiveRamp
 .. |file-format| replace:: CSV, TSV, or PSV
-.. |sftp-hostname| replace:: "sftp.liveramp.com"
+.. |sftp-hostname| replace:: "files.liveramp.com", "sftp-au.liverampapac.com", or "sftp.liveramp.com"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV, TSV, or PSV files
 .. |where-send| replace:: |destination-name|
