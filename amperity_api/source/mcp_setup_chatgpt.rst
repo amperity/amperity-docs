@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Configure ChatGPT custom connectors to connect to the Amperity MCP server.
+        Install the Amperity plugin in ChatGPT to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure ChatGPT custom connectors to connect to the Amperity MCP server.
+        Install the Amperity plugin in ChatGPT to connect to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,7 +20,7 @@ Set up ChatGPT
 
 .. mcp-setup-chatgpt-start
 
-Connect ChatGPT to the Amperity MCP server by adding it as a custom connector. ChatGPT custom connectors require a ChatGPT plan that supports remote MCP servers.
+Amperity is published in the `ChatGPT plugin directory <https://chatgpt.com/plugins/plugin_asdk_app_6a908cd7176081919717ffa210436393>`_. Install the plugin, sign in with your Amperity credentials, and ChatGPT can work with your customer data.
 
 .. mcp-setup-chatgpt-end
 
@@ -35,38 +35,28 @@ Requirements
 Connecting ChatGPT to the MCP server requires:
 
 * An active Amperity account with access to at least one tenant.
-* Access to ChatGPT with a plan that supports custom MCP connectors.
+* Access to ChatGPT with a plan that supports plugins.
 
 .. mcp-setup-chatgpt-requirements-end
 
 
 .. _mcp-setup-chatgpt-add:
 
-Add the Amperity MCP server
+Install the Amperity plugin
 ==================================================
 
 .. mcp-setup-chatgpt-add-start
 
-To add the Amperity MCP server to ChatGPT:
+To install the Amperity plugin:
 
 #. Open ChatGPT and log in.
-#. Open **Settings**, select **Apps**, and then choose **Create**.
+#. Select **Plugins** from the sidebar, and then search for "Amperity".
 
-   .. note:: A workplace administrator may need to allow using custom MCP connectors for **Business** or **Enterprise** plans. Contact your workplace administrator if the **Create** option is unavailable.
+   .. note:: A workplace administrator may need to allow plugins for **Business** or **Enterprise** plans. Contact your workplace administrator if the Amperity plugin is unavailable.
 
-#. Set the server URL:
-
-   .. code-block:: none
-
-      https://mcp.amperity.com
-
-#. Set the authentication type to **OAuth**, and then use the following OAuth client ID:
-
-   .. code-block:: none
-
-      nwbd0MGCyh1VysmYQM05UoDXIuVPdGEs
-#. Save the connector. A browser tab opens. Sign in with your Amperity OAuth credentials.
-#. Enable the Amperity connector for any chat session.
+#. Select **Amperity**, and then select **Install plugin**.
+#. A browser tab opens. Sign in with your Amperity credentials.
+#. Enable the plugin in a chat with an **@** mention, or by selecting **+** and then **More**.
 
 .. mcp-setup-chatgpt-add-end
 
@@ -78,16 +68,14 @@ Start interacting with ChatGPT
 
 .. mcp-setup-chatgpt-interacting-start
 
-In a ChatGPT session with the Amperity connector enabled, ask:
+In a chat with the Amperity plugin enabled, ask:
 
 .. code-block:: none
 
    "Tell me about my Amperity tenant."
 
-ChatGPT calls the **tenant_info** tool and return details about your current Amperity tenant.
+ChatGPT calls the **tenant_info** tool and returns details about your current Amperity tenant.
 
 .. note:: Write operations in ChatGPT require a manual-confirm prompt in the chat the first time they are called.
-
-.. note:: ChatGPT snapshots the tool list when an MCP connector is published. If you are unable to access tools documented in the :doc:`tool reference </mcp_tool_reference>`, the connector may need to be updated. Contact your workplace administrator to review and publish an updated version of the connector.
 
 .. mcp-setup-chatgpt-interacting-end
