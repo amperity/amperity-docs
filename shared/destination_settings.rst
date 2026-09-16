@@ -1748,6 +1748,24 @@ A description for the audience. Used only when Amperity creates the audience for
 
 .. setting-google-customer-match-gdm-audience-description-end
 
+.. setting-openai-ads-audiences-match-identifier-start
+
+The dataset column OpenAI matches members on. Select one of "email", "phone", "email_sha256", or "phone_number_sha256". Raw **email** and **phone** values are normalized and SHA-256 hashed before sending; the **email_sha256** and **phone_number_sha256** columns are sent as supplied. A single identifier is used for every member of the audience, and it is also the key Amperity uses to track membership changes across runs, so it cannot be changed without recreating the audience.
+
+.. setting-openai-ads-audiences-match-identifier-end
+
+.. setting-openai-ads-audiences-list-name-start
+
+The name of the OpenAI custom audience to create or update. If no audience by that name exists on the account, Amperity creates one. Must be at least 3 characters.
+
+.. setting-openai-ads-audiences-list-name-end
+
+.. setting-openai-ads-audiences-list-name-archived-start
+
+.. note:: OpenAI audiences cannot be deleted, and archiving is permanent. If the audience with this name was archived in OpenAI Ads Manager, it cannot be reused — enter a new list name and Amperity creates a fresh audience.
+
+.. setting-openai-ads-audiences-list-name-archived-end
+
 **Membership duration**
 
 .. setting-google-customer-match-gdm-membership-duration-start

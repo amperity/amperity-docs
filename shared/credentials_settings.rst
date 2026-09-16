@@ -21,6 +21,18 @@ Generate the key in the Attentive UI under **Settings > Integrations > Custom In
 
 .. credential-attentive-api-key-find-end
 
+.. credential-openai-ads-audiences-api-key-start
+
+An API key that authorizes Amperity to manage custom audiences for a single OpenAI ad account. OpenAI generates the key as a bearer token, and Amperity adds it to each request automatically.
+
+.. credential-openai-ads-audiences-api-key-end
+
+.. credential-openai-ads-audiences-find-api-key-start
+
+Issue the key from the **Settings** tab of `OpenAI Ads Manager <https://ads.openai.com>`__ |ext_link|. Each key is scoped to one ad account, and the key itself identifies the account, so no account ID is required. Grant the key Ads Management API access (the default for keys created from the Settings tab). If the key is revoked or regenerated, update the credential in Amperity.
+
+.. credential-openai-ads-audiences-find-api-key-end
+
 .. credential-bloomreach-base-url-start
 
 The API base URL for your Bloomreach Engagement project.
