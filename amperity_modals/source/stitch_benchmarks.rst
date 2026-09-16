@@ -34,7 +34,7 @@ Shared name and phone
 
 **shared-name-phone-more**
 
-   A large ratio indicates that a unique name and phone combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and phone combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 
@@ -86,7 +86,7 @@ Shared name and email address
 
 **shared-name-email-more**
 
-   A large ratio indicates that a unique name and email address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and email address combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 
@@ -99,7 +99,7 @@ Shared name and physical address
 
 **shared-name-address-more**
 
-   A large ratio indicates that a unique name and physical address combination appears in multiple clusters, which indicates underclustering. Review the clusters for accuracy.
+   A large ratio indicates that a unique name and physical address combination appears in many clusters, which indicates underclustering. Review the clusters for accuracy.
 
 
 

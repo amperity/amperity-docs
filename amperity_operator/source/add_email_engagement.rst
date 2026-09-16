@@ -53,11 +53,11 @@ Raw email events
 
 Raw email events data is captured by email service providers when users interact with emails, such as opens, clicks, opt-ins, opt-outs, sends, unsubscribes, and conversions.
 
-A custom domain table is often necessary to :ref:`filter and reshape raw email events data <add-email-engagement-example-custom-domain-table>` prior to applying :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags.
+A custom domain table is often necessary to :ref:`filter and reshape raw email events data <add-email-engagement-example-custom-domain-table>` before applying :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags.
 
 Raw email events data is available from most email service providers, though the specific data points that are available may vary from provider to provider.
 
-Salesforce Marketing Cloud, Oracle Repsonsys, Mailchimp, Campaign Monitor, Bluecore, Klaviyo, Adobe Marketo, Adobe Campaign, Sailthru, Listrak, SendGrid, and HubSpot are all data sources that can provide usable raw email events data to Amperity.
+Salesforce Marketing Cloud, Oracle Repsonsys, Mailchimp, Campaign Monitor, Bluecore, Klaviyo, Adobe Marketo, Adobe Campaign, Sailthru, Listrak, SendGrid, and HubSpot are all data sources that can send usable raw email events data to Amperity.
 
 .. add-email-engagement-data-source-raw-end
 
@@ -77,7 +77,7 @@ Summarized email events
 
 Summarized email events data is subset of raw email events data that is scoped to support a specific set of email engagement data.
 
-Email events data should be summarized prior to sending that data to Amperity. In some use cases, you may use a custom domain table to do the summarization prior to applying semantic tags, and then apply the :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags.
+Email events data should be summarized before sending that data to Amperity. In some use cases, you may use a custom domain table to do the summarization before applying semantic tags, and then apply the :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags.
 
 Examples of summarized email events data include:
 
@@ -106,7 +106,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
 #. Use :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags when raw email events data is sent directly to Amperity.
 
-#. Use :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags when email events data is summarized prior to sending it to Amperity.
+#. Use :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags when email events data is summarized before sending it to Amperity.
 
 .. semantics-email-end
 
@@ -121,7 +121,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
 .. semantics-email-tip-start
 
-.. tip:: If the email service provider does not provide email addresses alongside sends and clicks data, look for a table from that email service provider that provides a list of contacts that may include email addresses along with a unique ID that can be used to link events data.
+.. tip:: If the email service provider does not send email addresses alongside sends and clicks data, look for a table from that email service provider that sends a list of contacts that may include email addresses along with a unique ID that can be used to link events data.
 
 .. semantics-email-tip-end
 

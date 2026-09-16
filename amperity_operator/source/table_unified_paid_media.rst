@@ -443,7 +443,7 @@ Column reference
 
 .. table-unified-paid-media-reference-start
 
-The **Unified Paid Media** table only contains field associated with customer profile semantic tags (names, physical addresses, phone numbers, email addresses, birthdates, and gender) along with the Amperity ID.
+The **Unified Paid Media** table only has field associated with customer profile semantic tags (names, physical addresses, phone numbers, email addresses, birthdates, and gender) along with the Amperity ID.
 
 .. list-table::
    :widths: 30 15 55

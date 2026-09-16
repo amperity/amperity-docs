@@ -25,6 +25,14 @@ Your highest-value customers are often members of your brand's loyalty program. 
 
 .. loyalty-programs-about-end
 
+.. loyalty-programs-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Open **Learning Lab** to learn more about `implementing loyalty <https://amperity.com/learning-lab/implementing-loyalty>`__ |ext_link|. Registration is required.
+
+.. loyalty-programs-learning-lab-end
+
 .. loyalty-programs-about-grid-start
 
 .. grid:: 1 1 2 2

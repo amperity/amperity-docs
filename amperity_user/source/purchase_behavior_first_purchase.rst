@@ -62,9 +62,9 @@ Use first purchase in a segment
    :end-before: .. attribute-purchase-behavior-first-purchase-segments-end
 
 
-.. _purchase-behavior-first-purchase-conditions:
+.. _purchase-behavior-first-purchase-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_first_purchase.rst

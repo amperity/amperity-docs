@@ -23,9 +23,9 @@ Amperity provides the right set of data to support your brand's paid media adver
 
 #. **Merged Customers** vs. **Unified Paid Media**
 
-   The |table_merged_customers| table contains each of your customers' best profiles, such as their best email address, best phone number, and best physical address.
+   The |table_merged_customers| table has each of your customers' best profiles, such as their best email address, best phone number, and best physical address.
 
-   The |table_unified_paid_media| table contains all your customer's known profile data, including all known email addresses, all known phone numbers, and all known physical addresses.
+   The |table_unified_paid_media| table has all your customer's known profile data, including all known email addresses, all known phone numbers, and all known physical addresses.
 
    You may configure campaigns to use **Merged Customers**, **Unified Paid Media**, or both, depending on your downstream use cases.
 
@@ -53,8 +53,8 @@ Amperity provides the right set of data to support your brand's paid media adver
 
 Amperity supports paid media advertising from two tables, both of which contain customer profile data:
 
-* The **Merged Customers** table contains your customers' best profiles, such as their best email address, best phone number, and best physical address.
-* The **Unified Paid Media** table contains your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
+* The **Merged Customers** table has your customers' best profiles, such as their best email address, best phone number, and best physical address.
+* The **Unified Paid Media** table has your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
 
 Your brand can send data from one or both of these tables to any paid media advertising application. You can configure the |campaign_default_attributes| for each data set from the **Campaigns** page.
 

@@ -8,7 +8,7 @@
 .. |required-credentials| replace:: "username", "hostname", and "passphrase"
 .. |what-send| replace:: CSV files with email addresses **OR** phone numbers, but not both,
 .. |where-send| replace:: |destination-name|
-.. |sftp-hostname| replace:: "ftp5.attentivemobile.com"
+.. |sftp-hostname| replace:: "sftp.attentivemobile.com"
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "att"
@@ -31,6 +31,8 @@
 Configure destinations for Attentive (email or phone)
 =====================================================
 
+Use this topic to configure Attentive as a destination for sending **audiences**. To send a **campaign** to Attentive, see :doc:`Configure campaigns for Attentive <campaign_attentive_mobile>`.
+
 .. destination-attentive-segments-start
 
 Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage audience segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
@@ -41,7 +43,7 @@ Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/p
 
 .. admonition:: Why are there two ways to send data to Attentive?
 
-   Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+   Amperity uses SFTP to manage audience segments and the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes. Use custom attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
 .. destination-attentive-sftp-and-api-end
 

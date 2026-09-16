@@ -726,7 +726,7 @@ Assign field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities.
+Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in many data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -809,7 +809,7 @@ Skip field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
+Field priority is only necessary when a custom PII semantic is tagged in many data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -1050,7 +1050,7 @@ Multiple phone numbers
 
 .. table-merged-customers-extend-pii-semantic-phone-start
 
-The following example shows how to extend the **Merged Customers** table to support multiple phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags creates two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
+The following example shows how to extend the **Merged Customers** table to support many phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags creates two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
 
 .. table-merged-customers-extend-pii-semantic-phone-end
 

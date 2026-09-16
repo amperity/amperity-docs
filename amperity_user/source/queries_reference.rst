@@ -22,6 +22,16 @@ Build queries
    :start-after: .. term-query-start
    :end-before: .. term-query-end
 
+.. queries-reference-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Queries page to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link|. Registration is required.
+
+.. queries-reference-learning-lab-end
+
 
 .. _queries-tab:
 
@@ -95,7 +105,7 @@ About Presto SQL
 
 .. queries-editor-presto-sql-start
 
-Amperity queries are built using Presto SQL to define a **SELECT** statement. Please refer to the |sql_presto| reference.
+Amperity queries are built using Presto SQL to define a **SELECT** statement. Refer to the |sql_presto| reference.
 
 .. queries-editor-presto-sql-end
 
@@ -1399,7 +1409,7 @@ Revenue opportunity, many groups
 
 .. queries-example-revenue-opportunity-many-groups-start
 
-Use the following example to size revenue opportunity for multiple groups, such as moving from "one-and-done" to "repeat purchaser". This query is most effective when run against the **Transaction Attributes Extended** table, but may be useful when run against other tables. Customize the **WITH** statement to define a list of fields to be used for comparing movements between groups. Customize the main **SELECT** statement to define the time periods for which this movement will be measured.
+Use the following example to size revenue opportunity for many groups, such as moving from "one-and-done" to "repeat purchaser". This query is most effective when run against the **Transaction Attributes Extended** table, but may be useful when run against other tables. Customize the **WITH** statement to define a list of fields to be used for comparing movements between groups. Customize the main **SELECT** statement to define the time periods for which this movement will be measured.
 
 .. code-block:: sql
    :linenos:
@@ -1424,7 +1434,7 @@ Use the following example to size revenue opportunity for multiple groups, such 
      ,AVG(l12m_order_frequency) AS avg_l12m_orders
      ,SUM(l12m_order_revenue) AS total_l12m_revenue
    FROM customers cust
-   INNER_JOIN Transaction_Attributes_Extended tae
+   INNER JOIN Transaction_Attributes_Extended tae
    ON cust.amperity_id=tae.amperity_id
    GROUP BY 1
 

@@ -44,6 +44,12 @@ Configure campaigns for Criteo Retail Media
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
 
+.. campaign-criteo-retail-media-incremental-updates-start
+
+.. note:: |destination-name| uses `incremental audience updates <https://developers.criteo.com/retail-media/v2025.10/docs/audience-segment-endpoints#addremove-identifiers-in-contact-list-audience-segment>`__ |ext_link|. Each send applies to the audience segment only the changes since the previous send. New contacts are added. Removed contacts are deleted.
+
+.. campaign-criteo-retail-media-incremental-updates-end
+
 
 .. _campaign-criteo-retail-media-get-details:
 
@@ -137,7 +143,7 @@ Configure credentials
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo before configuring OAuth in Amperity.
 
 **To configure OAuth**
 

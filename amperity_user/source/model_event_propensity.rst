@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Determine the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+        Determine the likelihood that a customer will perform a target event within the next 30 days.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Determine the likelihood that a customer will perform a revenue-generating event within the next 30 days.
+        Determine the likelihood that a customer will perform a target event within the next 30 days.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,6 +20,16 @@ Event propensity
 .. include:: ../../shared/terms.rst
    :start-after: .. term-event-propensity-start
    :end-before: .. term-event-propensity-end
+
+.. model-event-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Event propensity determines the likelihood that a customer will perform a target event within the next 30 days.
+
+   Open **Learning Lab** to learn more about `predicted average order revenue <https://amperity.com/learning-lab/predicted-average-order-revenue>`__ |ext_link|. Registration is required.
+
+.. model-event-propensity-learning-lab-end
 
 
 .. _model-event-propensity-use-cases:
@@ -38,8 +48,8 @@ Recommended audience sizes
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-recommended-audience-size-start
-   :end-before: .. term-recommended-audience-size-end
+   :start-after: .. term-recommended-audience-size-events-start
+   :end-before: .. term-recommended-audience-size-events-end
 
 .. include:: ../../amperity_reference/source/model_event_propensity.rst
    :start-after: .. model-event-propensity-use-cases-recommended-audiences-about-start

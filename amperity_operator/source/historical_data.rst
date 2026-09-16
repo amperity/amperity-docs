@@ -40,7 +40,7 @@ The customer 360 database is a collection of tables. For example:
 * Unified Itemized Transactions
 * Unified Transactions
 
-The customer 360 database also contains passthrough tables that bring domain tables to the customer 360 database. For example:
+The customer 360 database also has passthrough tables that bring domain tables to the customer 360 database. For example:
 
 * Domain_Table_A
 * Domain_Table_B
@@ -48,7 +48,7 @@ The customer 360 database also contains passthrough tables that bring domain tab
 
 These tables are visible from the **Customer 360** page, the **Data Explorer**, and the **Queries** page.
 
-For each table with versioning enabled a table is created with the same name with **_versioned** appended. This table has the version history for the table. A table named **amperity_table_versions** is created that contains a record of all versioned tables.
+For each table with versioning enabled a table is created with the same name with **_versioned** appended. This table has the version history for the table. A table named **amperity_table_versions** is created that has a record of all versioned tables.
 
 For example:
 
@@ -56,7 +56,8 @@ For example:
 * **Unified_Coalesced_versioned**
 * **Unified_Customer_versioned**
 * **Merged_Customers_versioned**
-* **Unified_Scores_versioned**
+* **Unified Itemized Transactions**
+* **Unified Transactions**
 * **Domain_Table_A_versioned**
 * **Domain_Table_B_versioned**
 * **Domain_Table_C_versioned**
@@ -105,12 +106,12 @@ Static schemas
 
 .. _historical-data-access-datetime:
 
-Return versions by datetime
+Return versions by date
 ==================================================
 
 .. historical-data-access-datetime-start
 
-Use **datetime** to return a version that is on a specific date. For example:
+Use **created_at** to return a version that is on a specific date. For example:
 
 .. code-block:: sql
    :linenos:
@@ -119,7 +120,7 @@ Use **datetime** to return a version that is on a specific date. For example:
    FROM table_a_versioned AS a
    JOIN amperity_table_versions AS v 
    ON v.version = a.amperity_version 
-   WHERE v.datetime = 20250402
+   WHERE v.created_at = DATE '2025-04-02'
 
 .. historical-data-access-datetime-end
 
@@ -179,7 +180,7 @@ Build a delta that identifies which records are new or updated since the previou
       FROM amperity_table_versions
       where offset = 0
 
-   .. tip:: Version identifiers are unique to a database. If deltas are required for multiple databases, use a latest version query for each database.
+   .. tip:: Version identifiers are unique to a database. If deltas are required for many databases, use a latest version query for each database.
 
 #. Use an orchestration to send the results of the "Latest_Version" query to a storage location, such as an Amazon S3 bucket. Automate this workflow to run at the same time as orchestrations that send deltas.
 
@@ -261,7 +262,7 @@ For example:
      WHERE v.offset = 5) AS v
    ON v.version = a.amperity_version
 
-.. note:: This approach is less reliable than :ref:`using a delta <historical-data-send-only-updated-records>` because it is more likely to contain multiple record updates even if it is unlikely to miss sending any incremental records.
+.. note:: This approach is less reliable than :ref:`using a delta <historical-data-send-only-updated-records>` because it is more likely to contain many record updates even if it is unlikely to miss sending any incremental records.
 
    The downstream workflow **must** allow upserts.
 
@@ -311,17 +312,17 @@ The list of available versioned tables is similar to:
     Table_B             qdv-20250402-1234-abcd   0        2025-04-02T12:58:54.000Z
     Table_C             qdv-20250402-1234-abcd   0        2025-04-02T12:58:54.000Z
     ...
-    Customer360         qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Coalesced   qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Customer    qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Merged_Customers    qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Unified_Scores      qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_A             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_B             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
-    Table_C             qdv-20250402-1234-abcd   1        2025-04-01T08:18:23.000Z
+    Customer360         qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Coalesced   qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Customer    qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Merged_Customers    qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Unified_Scores      qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_A             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_B             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
+    Table_C             qdv-20250402-1234-egfh   1        2025-04-01T08:18:23.000Z
     ...
-    Customer360         qdv-20200402-1234-abcd   2        2025-03-31T10:34:33.000Z
-    Unified_Coalesced   qdv-20200402-1234-abcd   2        2025-03-31T10:34:33.000Z
+    Customer360         qdv-20200402-1234-ijkl   2        2025-03-31T10:34:33.000Z
+    Unified_Coalesced   qdv-20200402-1234-ijkl   2        2025-03-31T10:34:33.000Z
     ...
    ------------------- ------------------------ -------- --------------------------
 

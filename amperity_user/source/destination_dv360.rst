@@ -99,6 +99,28 @@ You need to build a query that outputs fields that can be mapped to :ref:`Google
 
 .. destination-dv360-build-query-example-end
 
+.. note:: For customers in the European Union (EU) or European Economic Area (EEA), add consent columns to the query:
+
+   .. code-block:: sql
+
+      SELECT
+        Email AS email,
+        concat('+',regexp_replace(Phone, '(\s*)([^a-zA-Z0-9])', '')) AS phone,
+        LastName AS lastname,
+        FirstName AS firstname,
+        PostalCode AS zip,
+        'US' AS country,
+        'GRANTED' AS ad-personalization,
+        'GRANTED' AS ad-user-data
+      FROM Customer360
+      WHERE
+        email IS NOT NULL AND
+        Phone IS NOT NULL AND
+        FirstName IS NOT NULL AND
+        LastName IS NOT NULL AND
+        PostalCode IS NOT NULL
+      LIMIT 1000
+
 .. important::
 
    .. include:: ../../shared/destination_settings.rst

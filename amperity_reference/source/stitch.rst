@@ -40,14 +40,13 @@ Framework to Unify Data in Industrial Applications <https://docs.amperity.com/do
 
 .. stitch-entity-matching-end
 
-
 .. stitch-learning-lab-start
 
 .. admonition:: Amperity Learning Lab
 
-   Learn more about how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
+   Stitch evaluates all of your brand's data to discover hidden connections in customer records and identify unique customers.
 
-   Open **Learning Lab** to learn more about `How Stitch Works <https://learn.amperity.com/how-stitch-works-1>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about `how Stitch works <https://amperity.com/learning-lab/how-stitch-works>`__ |ext_link|. Registration is required.
 
 .. stitch-learning-lab-end
 
@@ -387,7 +386,7 @@ Blocking
 
 .. stitch-blocking-block-example-start
 
-Blocks are created by comparing all records against all blocking strategies. When a record contains values that match a blocking strategy these values are combined into a single string value, also referred to as a blocking key.
+Blocks are created by comparing all records against all blocking strategies. When a record has values that match a blocking strategy these values are combined into a single string value, also referred to as a blocking key.
 
 For example, a blocking strategy that matches:
 
@@ -430,7 +429,7 @@ The blocking process starts with no matches between records.
 
 .. image:: ../../images/howitworks-stitch-blocking-01-potential.png
    :width: 600 px
-   :alt: The start of the blocking process contains zero matching records.
+   :alt: The start of the blocking process has zero matching records.
    :align: left
    :class: no-scaled-link
 
@@ -730,7 +729,7 @@ A group of eight records shows how pairwise comparisons work. A line between rec
 
 .. image:: ../../images/howitworks-stitch-pairwise-01-potential.png
    :width: 600 px
-   :alt: The start of the pairwise comparison process contains zero connections.
+   :alt: The start of the pairwise comparison process has zero connections.
    :align: left
    :class: no-scaled-link
 

@@ -130,7 +130,7 @@ Pinterest
 
 .. events-pinterest-start
 
-Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that contains offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
+Pinterest is a visual discovery engine on which your brand can engage with your customers. Upload a CSV file that has offline conversions to Pinterest Ads Manager, after which Pinterest Ads Manager will match campaigns to these conversions so your brand can review total conversions in Pinterest Ads Manager as they relate to all active campaigns.
 
 :doc:`Send events <events_pinterest>` to Pinterest at least once a month and send conversion data within 30 days of each conversion occurrence to Pinterest Ads Manager.
 
@@ -146,7 +146,7 @@ Snapchat
 
 Snapchat is a social media platform for accessing pictures and messages for a short time. Snapchat provides a self-serve platform from which brands can manage ads and advertising campaigns.
 
-:doc:`Send events <events_snapchat>` to Snapchat as a CSV file that contains `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
+:doc:`Send events <events_snapchat>` to Snapchat as a CSV file that has `offline conversions <https://businesshelp.snapchat.com/s/article/upload-offline-events>`__ |ext_link| *and* meets `events file requirements <https://businesshelp.snapchat.com/s/article/event-file-requirements?language=en_US>`__ |ext_link| to Snapchat.
 
 .. events-snapchat-end
 
@@ -174,10 +174,10 @@ TikTok Ads Manager
 
 TikTok is the world's leading destination for short-form mobile videos. TikTok's mission is to capture and present the world's creativity, knowledge, and moments that matter in everyday life. Send audiences to TikTok Ads Manager directly from Amperity.
 
-Send :doc:`events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline conversions that result from your marketing campaigns. Support for events is part of the TikTok Events API.
+Send :doc:`events to TikTok Ads Manager <events_tiktok_ads_manager>` to help your brand track offline and web conversions that result from your marketing campaigns. Support for events is part of the TikTok Events API.
 
 For example: When did a customer purchase? What did a customer purchase? Was it from a store or a website? How many items were purchased? Was there more than one purchase? What was the total revenue for each purchase?
 
-When events are shared with TikTok, they can better inform measurement systems by providing insights into offline customer actions such as in-store purchases, offline subscriptions, purchases and more.
+When events are shared with TikTok, they can better inform measurement systems by providing insights into customer actions such as in-store purchases, website conversions, subscriptions, and more.
 
 .. events-tiktok-ads-manager-end

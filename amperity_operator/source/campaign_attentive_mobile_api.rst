@@ -3,8 +3,8 @@
 
 .. |destination-name| replace:: Attentive
 .. |destination-api| replace:: Custom Attributes API
-.. |plugin-name| replace:: "attentive-api"
-.. |credential-type| replace:: "Custom Attributes API"
+.. |plugin-name| replace:: "Attentive API"
+.. |credential-type| replace:: "attentive-api"
 .. |required-credentials| replace:: "API key"
 .. |audience-primary-key| replace:: "email" or "phone"
 .. |what-send| replace:: custom attributes
@@ -34,7 +34,7 @@ Configure campaigns for Attentive (attributes)
 
 |destination-name| is your source of truth for your customers' subscription status, while Amperity is your source of truth for profile attributes that describe those customers.
 
-Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
+Amperity uses the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
 .. campaign-attentive-mobile-api-attributes-end
 
@@ -53,6 +53,10 @@ Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/t
    Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
 .. campaign-attentive-sftp-and-api-end
+
+.. include:: ../../amperity_operator/source/destination_attentive_mobile_api.rst
+   :start-after: .. destination-attentive-mobile-api-async-start
+   :end-before: .. destination-attentive-mobile-api-async-end
 
 
 .. _campaign-attentive-api-get-details:
@@ -85,6 +89,14 @@ Get details
              :start-after: .. credential-attentive-api-key-start
              :end-before: .. credential-attentive-api-key-end
 
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-scopes-start
+             :end-before: .. credential-attentive-api-key-scopes-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-update-permissions-start
+             :end-before: .. credential-attentive-api-key-update-permissions-end
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
@@ -103,15 +115,6 @@ Get details
              .. include:: ../../shared/destination_settings.rst
                 :start-after: .. setting-attentive-primary-identifier-context-start
                 :end-before: .. setting-attentive-primary-identifier-context-end
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 3.
-          :align: center
-          :class: no-scaled-link
-     - **Sign-up units**
-
-       The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
 .. campaign-attentive-api-get-details-end
 
@@ -260,8 +263,8 @@ Add destination
        **Primary identifier**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-active-campaign-verbose-logging-start
-             :end-before: .. setting-active-campaign-verbose-logging-end
+             :start-after: .. setting-attentive-primary-identifier-start
+             :end-before: .. setting-attentive-primary-identifier-end
 
           .. important:: 
 

@@ -22,12 +22,12 @@
 
 
 ==================================================
-Configure campaigns for Meta Ads Manager
+Send data to Meta Ads Manager
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_meta_ads_manager.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_meta_ads_manager.html>`__ |ext_link|.
 
 .. vale on
 
@@ -72,6 +72,10 @@ Your brand can send custom audiences and events to |destination-name|:
        .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-overview-start
           :end-before: .. events-meta-ads-manager-overview-end
+
+       .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
+          :start-after: .. events-meta-ads-manager-overview-window-start
+          :end-before: .. events-meta-ads-manager-overview-window-end
 
        .. include:: ../../amperity_user/source/events_meta_ads_manager.rst
           :start-after: .. events-meta-ads-manager-allowfor-start
@@ -300,7 +304,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -1082,7 +1086,7 @@ When the business user has not agreed to Facebook terms, an error similar to the
 ::
 
    Permissions error: To create or edit an audience with an uploaded customer list,
-   please agree to the Custom Audience terms at
+ agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-end
@@ -1170,7 +1174,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
@@ -1188,7 +1192,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Converts to m and f
        * Hashes data as one-way SHA-256
 
@@ -1215,7 +1219,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -1224,7 +1228,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
        * Hashes data as one-way SHA-256
@@ -1238,7 +1242,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
@@ -1247,7 +1251,7 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation, special characters, and whitespace
        * Hashes data as one-way SHA-256
    * - **ZIP Code**
@@ -1257,8 +1261,8 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Removes whitespace from lower-case for United Kingdom
+       * Converts to lowercase
+       * Removes whitespace from lowercase for United Kingdom
        * Trims to five digits for United States
        * Hashes data as one-way SHA-256
    * - **Country Code**
@@ -1268,14 +1272,14 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
        * Hashes data as one-way SHA-256
 

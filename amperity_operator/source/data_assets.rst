@@ -70,7 +70,7 @@ All opted-in email addresses
 
 .. data-asset-customer-consent-all-opted-email-start
 
-The **All Opted In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
+The **All Opted-In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
 
 .. data-asset-customer-consent-all-opted-email-end
 
@@ -182,7 +182,7 @@ Fiscal calendars
 
 .. data-asset-fiscal-calendars-start
 
-You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that contains your brand's complete fiscal calendar:
+You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that has your brand's complete fiscal calendar:
 
 * :ref:`data-asset-fiscal-calendar-nrf`
 * :ref:`data-asset-fiscal-calendar-extended`
@@ -197,7 +197,7 @@ NRF calendar
 
 .. data-asset-fiscal-calendar-nrf-start
 
-The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
+The NRF calendars data asset has a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
 
 .. data-asset-fiscal-calendar-nrf-end
 
@@ -410,16 +410,16 @@ Address standardization
 
 .. data-asset-address-standardization-start
 
-Address standardization is a data asset that contains a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
+Address standardization is a data asset that has a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
 
 .. data-asset-address-standardization-end
 
 .. data-asset-address-standardization-prerequisites-start
 
-The address standardization data asset is available from an Amazon S3 bucket named **Amperity Data Assets** or from Amperity Bridge.
+The address standardization data asset is available from Amperity Bridge, or, alternatively, from an Amazon S3 bucket named **Amperity Data Assets**. For most current use cases, Amperity Bridge is the preferred approach.
 
-#. Configure Amperity Bridge. Choose the **Reference data** option, and then select the **address_standardization_conversion** table.
-#. To use the Amazon S3 bucket as the source for address standardization, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
+* Configure Amperity Bridge. Choose the **Reference data** option, and then select the **address_standardization_conversion** table.
+* To use the Amazon S3 bucket as the source for address standardization, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
 
 .. data-asset-address-standardization-prerequisites-end
 
@@ -462,7 +462,7 @@ Use the gender name ratios data asset to use :doc:`gender prediction <predict_ge
 
 .. data-asset-gender-name-ratios-start
 
-The **gender_name_ratios.csv** file contains a list of baby names from the past ~130 years, along with their associated gender.
+The **gender_name_ratios.csv** file has a list of baby names from the past ~130 years, along with their associated gender.
 
 The source of the data in the **gender_name_ratios.csv** file is from United States Social Security Administration records for `popularity and frequency of baby names <https://www.ssa.gov/oact/babynames/limits.html>`__ |ext_link|. These records were used to generate the **gender_name_ratios.csv** file, which is similar to:
 
@@ -504,7 +504,7 @@ You can add predicted gender to your customer 360 database in two ways, dependin
 
    Edit the **Merged Customers** table and extend the table for predicted gender.
 
-Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
+Use a common table expression (CTE) to pull data from the domain table that has predicted gender data ("Predictions_Gender"):
 
 .. code-block:: sql
    :linenos:

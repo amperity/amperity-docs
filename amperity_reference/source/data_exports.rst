@@ -71,7 +71,7 @@ How-tos
    #. Open the menu for a data export, and then select **Edit**.
    #. From the **Entities** list, select one or more database tables to add to the data export.
 
-      For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
+      For a single table, click the table. For many tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
    #. Click **Activate**.
 
@@ -102,7 +102,7 @@ How-tos
 .. dropdown:: Delete data export
    :icon: code
 
-   Use the **Delete** option to remove a data export from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
+   Use the **Delete** option to remove a data export from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration before deleting it. This action will *not* delete the data template or destination associated with the orchestration.
 
    **To delete a data export**
 
@@ -142,7 +142,7 @@ How-tos
    #. From the **Databases** dropdown menu, pick another database.
    #. From the **Entities** list, select one or more database tables to add to the data export.
 
-      For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
+      For a single table, click the table. For many tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
    #. Click **Activate**.
 
@@ -162,7 +162,7 @@ How-tos
    #. Open the menu for a data export, and then select **Edit**.
    #. From the **Entities** list, select one or more database tables to remove from the data export.
 
-      For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
+      For a single table, click the table. For many tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
    #. Click **Activate**.
 

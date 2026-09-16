@@ -84,6 +84,8 @@ The following sections describe the steps you will follow when creating a sandbo
           :align: left
           :class: no-scaled-link
 
+       .. note:: The name of a sandbox may have up to 64 characters. The description for a sandbox may have up to 512 characters.
+
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px

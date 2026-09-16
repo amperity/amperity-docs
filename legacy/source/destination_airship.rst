@@ -18,12 +18,12 @@
 
 
 ==================================================
-Configure campaigns for Airship
+Send data to Airship
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_airship.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_airship.html>`__ |ext_link|.
 
 .. vale on
 
@@ -68,7 +68,7 @@ Get details
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - The username, passphrase, and hostname for the SFTP site.
+     - The username, private key, and hostname for the SFTP site.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

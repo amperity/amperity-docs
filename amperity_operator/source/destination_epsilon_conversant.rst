@@ -101,6 +101,20 @@ Get details
              :start-after: .. setting-common-optional-settings-start
              :end-before: .. setting-common-optional-settings-end
 
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: center
+          :class: no-scaled-link
+     - **Required data fields**
+
+       Query results sent to |destination-name| must include the following fields:
+
+       * **CustomerKey** — The customer's email address.
+       * **EmailAddress** — The customer's email address.
+       * **CampaignCode** — The campaign code.
+       * **RegionAssignment** — The customer's region.
+
 .. destination-epsilon-conversant-get-details-table-end
 
 

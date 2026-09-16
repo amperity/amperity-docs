@@ -31,6 +31,16 @@ Churn propensity
    :start-after: .. model-churn-propensity-about-start
    :end-before: .. model-churn-propensity-about-end
 
+.. model-churn-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Churn propensity determines the likelihood of whether a customer will be active based on their purchase history.
+
+   Open **Learning Lab** to learn more about `predicted churn <https://amperity.com/learning-lab/predicted-churn>`__ |ext_link|. Registration is required.
+
+.. model-churn-propensity-learning-lab-end
+
 
 .. _models-churn-propensity-use-cases:
 

@@ -13,6 +13,7 @@
 .. |filter-the-list| replace:: "google"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, **zip**, **mobile_id**, and **user_id**
 
 .. meta::
     :description lang=en:
@@ -66,6 +67,9 @@ Configure destinations for Google Ads
 
 .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-google-ads-api-note-start
 
@@ -106,7 +110,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Ads" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Google Ads" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -650,7 +654,9 @@ Contact Info Matching
 
 .. destination-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+
+.. note:: **firstname**, **lastname**, **zip**, and **country** must all be present or all be absent. If any one of these four fields is included, all four are required. Rows missing any of the four are filtered out. You can match using only **email** or only **phone** without including the name and address fields.
 
 .. list-table::
    :widths: 130 130 340
@@ -664,7 +670,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Number**
@@ -682,7 +688,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **First Name**
@@ -691,7 +697,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **ZIP Code**
@@ -699,7 +705,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -753,7 +759,7 @@ Mobile Device ID Matching
 
 .. destination-google-ads-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -767,7 +773,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. destination-google-ads-api-matching-mobile-list-end
@@ -780,7 +786,7 @@ User ID Matching
 
 .. destination-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

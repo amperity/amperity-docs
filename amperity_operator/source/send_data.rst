@@ -68,7 +68,7 @@ Character encoding
 
 Character encoding within files must be in `UTF-8 <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link| or `UTF-16 <https://en.wikipedia.org/wiki/UTF-16>`__ |ext_link|, including the use of valid escape characters for the provided file format.
 
-When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all subsequent data rows.
+When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all later data rows.
 
 .. send-data-to-amperity-character-encoding-end
 
@@ -82,7 +82,7 @@ Credentials and Secrets
 
 Amperity requires the ability to connect to, and then read data from the data source. The credentials that allow that connection and the ability to read that data are entered into the Amperity user interface while configuring a courier.
 
-These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using SnapPass to complete the configuration.
+These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using |ext_snappass| to complete the configuration.
 
 .. send-data-to-amperity-credentials-and-secrets-end
 
@@ -280,63 +280,33 @@ Date Formats
 IP addresses for allowlists
 ==================================================
 
-.. send-data-to-amperity-ip-allowlists-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-end
 
-You can add Amperity services to allowlists that may be required by upstream systems. The IP address that should be added to the allowlist for the upstream system depends on the service to which that upstream system connects.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-important-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-important-end
 
-.. send-data-to-amperity-ip-allowlists-end
-
-.. send-data-to-amperity-ip-allowlists-important-start
-
-.. important:: Amperity does not maintain allowlists for connections that are made to Amperity services from upstream systems.
-
-.. send-data-to-amperity-ip-allowlists-important-end
-
-.. send-data-to-amperity-ip-allowlists-warning-start
-
-.. warning:: Using an IP allowlist is not recommended. Many issues can arise when an IP address is on an allowlist within Amazon AWS or Microsoft Azure because both services use their own internal networks for routing.
-
-   * Amazon AWS recommends against using allowlists on the SourceIP condition because it `denies access to AWS services that make calls on your behalf <https://aws.amazon.com/premiumsupport/knowledge-center/iam-restrict-calls-ip-addresses/>`__ |ext_link|
-   * Microsoft Azure suggests that using IP allowlists for shared access signature (SAS) tokens is only recommended for use with IP addresses that are located outside of Microsoft Azure.
-
-.. send-data-to-amperity-ip-allowlists-warning-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-warning-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-warning-end
 
 **When connecting to your Amperity tenant**
 
-.. send-data-to-amperity-ip-allowlists-amperity-start
-
-Most connections are made directly to your Amperity tenant. Use one of the following Amperity IP addresses for an allowlist that is required by an upstream system. The specific IP address to use depends on the location in which your tenant is hosted:
-
-* On Amazon AWS use "52.42.237.53"
-* On Amazon AWS (Canada) use "3.98.199.97"
-* On Microsoft Azure use "104.46.106.84" and "20.81.91.210"
-* On Microsoft Azure (EU) use "20.123.127.54"
-
-.. send-data-to-amperity-ip-allowlists-amperity-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
 
 **When connecting to the attached SFTP site**
 
-.. send-data-to-amperity-ip-allowlists-sftp-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-sftp-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-sftp-end
 
-Some connections are made directly to the SFTP site that is included with your Amperity tenant. The specific IP address to use depends on the location in which your tenant is hosted:
-
-* On Amazon AWS use "52.11.51.214"
-* On Amazon AWS (Canada) use "52.60.229.171"
-* On Microsoft Azure use "20.36.236.80"
-* On Microsoft Azure (EU) use "51.104.139.110"
-
-.. send-data-to-amperity-ip-allowlists-sftp-end
-
-.. send-data-to-amperity-ip-allowlists-tip-start
-
-.. tip:: Alternatives to using an allowlist include: 
-
-   #. Cross-account roles within Amazon AWS, which requires using an Amazon Resource Name (ARN) for the role with cross-account access.
-   #. Using Azure Data Share.
-
-   Discuss these options with your Amperity representative prior to making a decision to allowlist IP addresses.
-
-.. send-data-to-amperity-ip-allowlists-tip-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-tip-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-tip-end
 
 
 .. _send-data-to-amperity-large-datasets:

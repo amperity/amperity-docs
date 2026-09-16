@@ -35,8 +35,8 @@ Credentials
 **Port**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-port-start
-   :end-before: .. credential-sftp-port-end
+   :start-after: .. credential-airship-port-start
+   :end-before: .. credential-airship-port-end
 
 **Username**
 

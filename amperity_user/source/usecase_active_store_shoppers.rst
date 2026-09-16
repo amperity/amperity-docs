@@ -59,13 +59,15 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify customers have purchased from your brand within the past year, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is on or after" operator, enable the **Use relative dates** checkbox, and then enter "today - 1 year":
+     - To identify customers have purchased from your brand within the past year, choose the **Latest Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is on or after" operator, enable the **Use relative dates** checkbox, and then enter ``today - 1 year``:
 
        .. image:: ../../images/usecase-active-store-shopper-order-datetime.png
           :width: 540 px
           :alt: Find customers who frequently shop at a store.
           :align: left
           :class: no-scaled-link
+
+       A relative date is always in Coordinated Universal Time (UTC).
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to see how many customers are in your segment, how much they spent in the past year, how many are active, and how many of them could belong to a future campaign.
 
@@ -107,7 +109,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
      - Add a third attribute to your segment.
 
-       To find customers who have made multiple purchases within the past year, choose the **L12M Order Frequency** attribute from the **Transaction Attributes Extended** table, select the "is greater than or equal to" operator, and then set the minimum number of orders. For example, for at least five orders in the past year enter "5":
+       To find customers who have made many purchases within the past year, choose the **L12M Order Frequency** attribute from the **Transaction Attributes Extended** table, select the "is greater than or equal to" operator, and then set the minimum number of orders. For example, for at least five orders in the past year enter "5":
 
        .. image:: ../../images/usecase-active-store-shopper-at-least-five-orders.png
           :width: 540 px
@@ -133,7 +135,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-06.png

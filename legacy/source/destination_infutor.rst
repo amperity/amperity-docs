@@ -24,7 +24,7 @@ Send data to Infutor
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_infutor.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_infutor.html>`__ |ext_link|.
 
 .. vale on
 
@@ -88,7 +88,7 @@ Get details
           :class: no-scaled-link
      - |destination-name| has the following additional requirements:
 
-       #. Data that contains PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
+       #. Data that has PII must be encrypted using public key encryption before it is transmitted to |destination-name| using SFTP.
        #. If an escape character is not specified *and* quote mode is set to "None" (as required by Infutor) this may result in unescaped, unquoted files.
        #. Quotations must be removed from files.
 

@@ -23,7 +23,7 @@ Amazon S3
 
 .. identity-resolution-data-from-amazon-s3-start
 
-Amperity can pull data in a wide variety of file types, file formats, and file sizes from |source-name|, which is the most commonly-used data source across all Amperity tenants.
+Amperity can pull data in a wide variety of file types, file formats, and file sizes from |source-name|, which is the most commonly used data source across all Amperity tenants.
 
 .. identity-resolution-data-from-amazon-s3-end
 
@@ -33,7 +33,7 @@ Amperity can pull data in a wide variety of file types, file formats, and file s
 
 .. identity-resolution-data-from-amazon-s3-prerequisites-start
 
-**To add a data source for an Amazon S3 buckete**
+**To add a data source for an Amazon S3 bucket**
 
 .. source-amazon-s3-add-bridge-steps-start
 

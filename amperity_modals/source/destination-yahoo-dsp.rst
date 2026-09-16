@@ -55,7 +55,7 @@ Settings
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :end-before: .. setting-yahoo-dsp-segment-name-end
 
 **Membership duration**
 

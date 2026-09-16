@@ -95,7 +95,7 @@ Source table precedence
 
 Source table precedence can also be defined for data sources that contain semantic tags that are not grouped by profile attribute. Precedence determines which tables are more likely to contain high quality customer profile data, as determined by your brand.
 
-The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* contains fields to which profile semantic tags have been applied.
+The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* has fields to which profile semantic tags have been applied.
 
 .. merge-policy-source-precedence-end
 

@@ -37,20 +37,32 @@ Prerequisites
 .. endpoint-get-ingest-jobs-prerequisites-end
 
 
-.. _endpoint-get-ingest-jobs-base-url:
+.. _endpoint-get-ingest-jobs-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-ingest-jobs-base-url-start
+.. endpoint-get-ingest-jobs-request-url-start
 
-Direct all requests to the **GET /ingest/jobs** endpoint to the following base URL:
+Direct all requests to the **GET /ingest/jobs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/ingest/jobs
+
+**Microsoft Azure**
 
 .. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/ingest/jobs
 
-.. endpoint-get-ingest-jobs-base-url-end
+.. endpoint-get-ingest-jobs-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-ingest-jobs-rate-limit:
@@ -61,6 +73,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-ingest-jobs-request:
@@ -75,10 +91,10 @@ A request to the **GET /ingest/jobs** endpoint is similar to:
 ::
 
    curl --request GET \
-          'https://tenant.amperity.com/api/ingest/jobs \
-          ?created_from=2024-10-01 \
-          ?created_to=2024-10-07' \
-        --header 'amperity-tenant: {tenant}' \
+          'https://app.amperity.com/api/ingest/jobs \
+          ?created_from=2026-10-01 \
+          &created_to=2026-10-07' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
         --header 'Authorization: Bearer {token}'
 
@@ -161,10 +177,10 @@ The following examples show how to send requests to the **GET /ingest/jobs** end
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/ingest/jobs \
-                ?created_from=2024-10-01 \
-                ?created_to=2024-10-07' \
-               --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/ingest/jobs \
+                ?created_from=2026-10-01 \
+                &created_to=2026-10-07' \
+               --header 'amperity-tenant: {tenant-id}' \
                --header 'api-version: 2024-04-01' \
                --header 'Authorization: Bearer {token}'
 
@@ -180,7 +196,7 @@ Responses
 
 .. endpoint-get-ingest-jobs-responses-start
 
-A response from the **GET /ingest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /ingest/jobs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-ingest-jobs-responses-end
 
@@ -209,9 +225,9 @@ The **200** response returns a set of records, files, and feeds that were ingest
              "read": 1000,
              "rejected": 200,
              "updated": 200,
-             "started_at": "2024-06-01T04:02:54.433Z",
+             "started_at": "2026-06-01T04:02:54.433Z",
              "state": "succeeded",
-             "ended_at": "2024-06-01T04:02:57.433Z",
+             "ended_at": "2026-06-01T04:02:57.433Z",
              "files": [
                {
                  "file_id": "cb-20240618-71992-SF3Uz/part0.avro",
@@ -240,7 +256,7 @@ Response parameters
 
 .. endpoint-get-ingest-jobs-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -265,9 +281,9 @@ A **200 OK** response contains the following parameters.
             "read" : 1000,
             "rejected" : 200,
             "updated" : 200,
-            "started_at" : "2024-06-01T04:02:54.433Z",
+            "started_at" : "2026-06-01T04:02:54.433Z",
             "state" : "succeeded",
-            "ended_at" : "2024-06-01T04:02:57.433Z",
+            "ended_at" : "2026-06-01T04:02:57.433Z",
             "files" : [ {
               "file_id" : "cb-20240618-71992-SF3Uz/part0.avro",
               "name" : "part0.avro",

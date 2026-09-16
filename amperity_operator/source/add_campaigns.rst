@@ -33,7 +33,7 @@ Amperity provides a set of features--the **Campaigns** page, segment insights, a
    #. :doc:`Customer profiles <add_customer_data>`, which contain profile and PII data for individual customers.
    #. :doc:`Transactions <add_transactions>`, which contain transactions, itemized transactions, and product catalogs that, when compared to customer records, identify how your customers interacted with your brands.
 
-   Please refer to those topics for more information about how to configure customer records and interaction records as data sources for use with segments and campaigns.
+   Refer to those topics for more information about how to configure customer records and interaction records as data sources for use with segments and campaigns.
 
 .. add-campaigns-important-end
 
@@ -87,7 +87,7 @@ Verify each of the following items to ensure that Amperity is ready for enableme
 
 #. Stitch output includes the following tables specific to interactions records: **Transaction Attributes Extended**, **Unified Itemized Transactions**, and **Unified Transactions**.
 
-#. The customer 360 database contains passthrough tables for **Transaction Attributes Extended**.
+#. The customer 360 database has passthrough tables for **Transaction Attributes Extended**.
 
    .. tip:: Add passthrough tables in the customer 360 database for each table that was defined in the **Sources** page using domain SQL.
 
@@ -133,7 +133,7 @@ Amperity has the following requirements for segments and campaigns:
 
 .. add-campaigns-data-requirements-caution-for-predictive-modeling-start
 
-.. caution:: If you are planning to use predictive modeling, please review the :ref:`data requirements for predictive modeling <add-predicted-models-data-requirements>`.
+.. caution:: If you are planning to use predictive modeling, review the :ref:`data requirements for predictive modeling <add-predicted-models-data-requirements>`.
 
 .. add-campaigns-data-requirements-caution-for-predictive-modeling-end
 
@@ -474,9 +474,9 @@ Additional data should be made available to Amperity beyond what is provided to 
 
 The following types of data are recommended to be made available to Amperity as additional data sources:
 
-#. Product information that contains details about categories, subcategories, and departments.
+#. Product information that has details about categories, subcategories, and departments.
 
-#. Channel information that contains details about purchases (in-store and online), channel types (digital, direct, and organic), social engagement (Facebook, Twitter, Pinterest, etc.), and first-party data (Google Analytics and Adobe Analytics).
+#. Channel information that has details about purchases (in-store and online), channel types (digital, direct, and organic), social engagement (Facebook, Twitter, Pinterest, etc.), and first-party data (Google Analytics and Adobe Analytics).
 
 #. Specific demographics data, such as age, state, country, and gender. This type of data may already available from customer records that have made available to Amperity.
 

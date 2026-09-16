@@ -26,7 +26,7 @@ Predictive models
 
 .. note:: Predictive models require at least four years of historical data (five years or more is recommended). You should have at least 100,000 customer transactions on an annual basis, with at least a 10% retention rate.
 
-   The following tables must be configured in your customer 360 database prior to running predictive models:
+   The following tables must be configured in your customer 360 database before running predictive models:
 
    #. **Customer 360**
    #. **Merged Customers**
@@ -44,7 +44,7 @@ Predictive models
 
    Churn propensity predicts the likelihood of customer activity. Predicted CLV predicts the order value for purchases made within the next year. Product affinity predicts who is likely to purchase.
 
-   Open **Learning Lab** to learn more about how `predictive modeling <https://learn.amperity.com/predictive-course>`__ |ext_link| can help your brand. Registration is required.
+   Open **Learning Lab** to learn more about how `predictive modeling <https://amperity.com/learning-lab/overview-of-predictive-modeling>`__ |ext_link| can help your brand. Registration is required.
 
 .. models-learning-lab-end
 

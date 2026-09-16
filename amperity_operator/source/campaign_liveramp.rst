@@ -5,9 +5,9 @@
 .. |plugin-name| replace:: "LiveRamp"
 .. |credential-type| replace:: "liveramp"
 .. |required-credentials| replace:: "username", "hostname", and "passphrase"
-.. |what-send| replace:: CSV files
+.. |what-send| replace:: CSV, PSV, or TSV files
 .. |where-send| replace:: |destination-name|
-.. |sftp-hostname| replace:: "sftp.liveramp.com"
+.. |sftp-hostname| replace:: **files.liveramp.com**, **sftp-au.liverampapac.com**, or **sftp.liveramp.com**
 .. |remote-folder| replace:: "/folder"
 .. |sftp-port| replace:: "22"
 .. |filter-the-list| replace:: "live"
@@ -126,7 +126,7 @@ Get details
           :alt: Detail 3.
           :align: center
           :class: no-scaled-link
-     - **LiveRamp file prefer`file limitations <https://docs.liveramp.com/connect/en/liveramp-data-restrictions.html>`__ |ext_link|ences**
+     - **LiveRamp file preferences**
 
        Sending data to |destination-name| should follow recommendations for `uploading data <https://docs.liveramp.com/connect/en/uploading-data.html>`__ |ext_link|.
 

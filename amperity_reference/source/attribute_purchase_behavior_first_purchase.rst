@@ -74,7 +74,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
    ::
 
       WHERE order_rank = 1
-      AND order_datetime < DATE_TRUNC('day', CURRENT_TIMESTAMP - interval '12' month)
+      AND order_datetime > DATE_TRUNC('day', CURRENT_TIMESTAMP - interval '12' month)
 
    In this example, only transactions that occurred within the previous 12 months *and* are a customer's first purchase are returned.
 
@@ -98,13 +98,17 @@ With this attribute, you can focus less on SQL and more on finding answers that 
    ::
 
       SELECT
-        amperity_id
+        unique_id
         ,order_datetime
-        product_category = 'shirt'
-        product_subcategory = 'blue'
-        purchase_channel = 'online'
-        ,RANK() OVER (PARTITION BY amperity_id ORDER BY order_datetime, order_id) AS order_rank
-      FROM Unified_Itemized_Transactions
+        ,product_category
+        ,product_subcategory
+        ,purchase_channel
+        ,RANK() OVER (PARTITION BY unique_id ORDER BY order_datetime, order_id) AS order_rank
+      FROM Transactions
+      WHERE product_category = 'shirt'
+      AND product_subcategory = 'blue'
+      AND purchase_channel = 'online'
+
 
    Why are these attributes added to the WHERE statement *and* the SELECT statement? They are added to the SELECT statement to ensure that the correct ranking is applied to products, purchases, and stores *before* you apply product, purchase, and store filters to your segment.
 

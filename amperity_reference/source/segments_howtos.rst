@@ -54,8 +54,10 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-edit-segment-editor`
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
+* :ref:`segments-filter`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
+* :ref:`segments-manage-tracked-segments`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
 * :ref:`segments-rerun-segment`
@@ -75,9 +77,6 @@ Tasks related to building segments in Amperity:
 * :ref:`segments-view-sql`
 
 .. segments-howtos-list-end
-
-
-
 
 
 .. _segments-add-attribute-from-table:
@@ -361,7 +360,7 @@ You can compare segment by the following:
 
 .. segments-compare-add-steps-start
 
-#. From the **Breakdown** tab click the down arrow in the **Compare by:** field.
+#. From the **Breakdown** tab click the down arrow in the **Compare by** field.
 #. Select one of the following options from the list:
 
    * **% of Purchasers**
@@ -871,6 +870,41 @@ You can explore a copy of a saved segment on the **Summary** tab.
 
 .. segments-explore-copy-steps-end
 
+.. _segments-filter:
+
+Filter segments
+==================================================
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. segments-filter-start
+
+You can filter the list of segments that appear on the **Segments** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only segments associated with that database.
+* By created by. Select any combination of users who created segments.
+* By last edited by. Select any combination of users who most recently edited segments.
+* By label. Select one or more labels to filter segments by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
+
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
+
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
+
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When many labels are selected, segments matching any selected labels will be shown.
+
+.. segments-filter-end
+
 
 .. _segments-format-segment:
 
@@ -892,6 +926,27 @@ You can format a segment from the **Segments** page.
 #. Click the **Format** button.
 
 .. segments-edit-segments-steps-end
+
+
+.. _segments-manage-tracked-segments:
+
+Manage tracked segments
+==================================================
+
+.. segments-manage-tracked-segments-start
+
+A tracked segment appears as a metrics card on the **Segments** page. The metrics card shows a snapshot of the segment's results and is updated daily. Enable up to fifteen tracked segments.
+
+.. segments-manage-tracked-segments-end
+
+**To enable tracked segments**
+
+.. segments-compare-add-steps-start
+
+#. From the **Segments** page, open a segment for editing.
+#. Open the **Insights** pane and select **Enable segment tracking**.
+
+.. segments-compare-add-steps-end
 
 
 .. _segments-create-new-segment-from-overlap:
@@ -1038,15 +1093,15 @@ Bulk delete segments
 
 .. segments-bulk-delete-segments-start
 
-You can delete multiple segments from the **Segments** page.
+You can delete many segments from the **Segments** page.
 
 .. segments-bulk-delete-segments-end
 
-**To delete multiple segments**
+**To delete many segments**
 
 .. segments-bulk-delete-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Delete**.
 #. On the **Bulk Delete** window, click **Delete <#> Items**.
 
@@ -1060,15 +1115,15 @@ Bulk move segments
 
 .. segments-bulk-move-segments-start
 
-You can move multiple segments to a folder from the **Segments** page.
+You can move many segments to a folder from the **Segments** page.
 
 .. segments-bulk-move-segments-end
 
-**To move multiple segments to a folder**
+**To move many segments to a folder**
 
 .. segments-bulk-move-segments-steps-start
 
-#. From the **Segments** page, select multiple segments.
+#. From the **Segments** page, select many segments.
 #. On the bottom of the **Segments** page, click **Move**.
 #. On the **Bulk Move** window, select a folder.
 #. Click **Move**.
@@ -1171,12 +1226,12 @@ You can build a segment against any database that is visible from the **Customer
 
 .. _segments-select-multi-values:
 
-Select multiple values
+Select many values
 ==================================================
 
 .. segments-select-multiple-values-start
 
-You can select multiple values from the **Segment Editor**.
+You can select many values from the **Segment Editor**.
 
 .. segments-select-multiple-values-end
 
@@ -1388,7 +1443,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 .. segments-use-relative-dates-steps-start
 
 #. From the **Segment Editor**, click **Add condition**, and then choose an attribute with a date or datetime value.
-#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: "30 days ago".
+#. Select the **Use relative dates** option, and then specify the relative dates that match the condition you selected. For example: "30 days ago". A relative date is always in Coordinated Universal Time (UTC).
 #. Click **Refresh** to validate the segment.
 #. Click **Save As**.
 
@@ -1457,7 +1512,7 @@ You can view matching records from a table from the **Customers** page on the **
 .. segments-view-matching-records-steps-start
 
 #. From the **Segments** page, on the **Customers** page, expand the **Show [x] columns from [table]** link.
-#. Click in the **Show matching records from:** field.
+#. Click in the **Show matching records from** field.
 #. In the list that appears, select a table.
 
 .. segments-view-matching-records-steps-end

@@ -18,12 +18,12 @@
 
 
 ==================================================
-Configure campaigns for Amazon Ads
+Send data to Amazon Ads
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ |ext_link|.
 
 .. vale on
 
@@ -31,7 +31,7 @@ Configure campaigns for Amazon Ads
    :start-after: .. term-amazon-ads-start
    :end-before: .. term-amazon-ads-end
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+.. warning:: Ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
 
 .. destination-amazon-ads-start
 
@@ -114,7 +114,7 @@ Get details
           :alt: Detail three.
           :align: center
           :class: no-scaled-link
-     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that has any of the following attributes:
 
        .. code-block:: sql
 
@@ -577,7 +577,7 @@ Invalid advertiser account ID
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID, such as when an advertiser account ID has been deleted, Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-end
 

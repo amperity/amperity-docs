@@ -29,7 +29,7 @@ About sandboxes
 
    Each sandbox tracks changes, provides validation workflows and audit tools that do not need to be configured or customized, and automates monitoring and alerts for changes in the sandbox.
 
-   Open **Learning Lab** to learn more about how `sandboxes <https://learn.amperity.com/sandboxes-course>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `sandboxes <https://amperity.com/learning-lab/sandboxes>`__ |ext_link| work. Registration is required.
 
 .. sandboxes-learning-lab-end
 
@@ -56,7 +56,7 @@ Allow sandbox administration
    #. View details for all sandboxes
    #. Access any sandbox
    #. Promote changes from a sandbox to production.
-   #. Delete a sandbox from the **Users and Activity** page *or* by selecting the **Promote and delete sandbox** option while promoting changes from a sandbox.
+   #. Delete a sandbox from the **Sandboxes** tab on the **Settings** page *or* by selecting the **Promote and delete sandbox** option while promoting changes from a sandbox.
 
 .. sandboxes-policy-allow-sandbox-administration-important-end
 
@@ -195,9 +195,18 @@ Some objects are not copied to a sandbox:
 
    Versioned table histories are not copied to a sandbox.
 
-   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database contains data.
+   A sandbox is a copy of your production tenant. A database in a sandbox must be run before tables in that database has data.
 
    The initial database run in the sandbox is different from the database run in your production tenant and, as such, starts a new version history for each table in the sandbox.
+
+
+#. **Amperity Bridge shares**
+
+   Configured shares are not copied to a sandbox.
+
+   You can configure outbound shares in a sandbox, and then share data with Databricks, Snowflake, and Google BigQuery.
+
+   Always use unique share names in a sandbox. This ensures the fully qualified reference in Databricks, Snowflake, or Google BigQuery is different and sending data from the sandbox will not overwrite data sent from production.
 
 .. sandboxes-not-copied-end
 
@@ -428,6 +437,8 @@ Sandboxes are created from the **Sandboxes** tab on the **Settings** page.
       :align: left
       :class: no-scaled-link
 
+   .. note:: The name of a sandbox may have up to 64 characters. The description for a sandbox may have up to 512 characters.
+
 #. Click **Create** to generate the sandbox for your tenant.
 
 .. sandboxes-howto-add-sandbox-steps-end
@@ -490,7 +501,7 @@ Open a sandbox
 
 .. sandboxes-howto-open-sandbox-start
 
-A sandbox is accessible from the **Users and Activity** page *or* from the dropdown menu in the top-right of your tenant.
+A sandbox is accessible from the **Sandboxes** tab on the **Settings** page *or* from the dropdown menu in the top-right of your tenant.
 
 .. sandboxes-howto-open-sandbox-end
 
@@ -646,7 +657,7 @@ Changes that are promoted to production from a sandbox may be restored to a prev
 
 #. In many situations you can use a sandbox workflow to restore the state of production, especially when a sandbox was used to make small, iterative changes. First create a sandbox, and then make changes in that sandbox that returns your tenant to its previous state.
 
-#. In situations where this cannot be done using a sandbox workflow, please ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
+#. In situations where this cannot be done using a sandbox workflow, ask for assistance from your Amperity representative or the `Amperity Support <https://docs.amperity.com/support/index.html>`__ pages.
 
    .. important:: If your tenant is restored to a previous version, all changes that were made to your tenant *after* that version will be lost. This includes changes made in production *and* changes that may have been promoted from other sandbox workflows.
 

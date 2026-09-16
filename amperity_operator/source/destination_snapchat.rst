@@ -9,6 +9,7 @@
 .. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "snap"
+.. |hashed-fields| replace:: **email**, **phone**, and **mobile_id**
 
 
 .. meta::
@@ -33,11 +34,21 @@ Send email addresses, mobile advertiser IDs, or phone numbers to |destination-na
 
 .. destination-snapchat-about-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 .. destination-snapchat-api-note-start
 
 .. note:: This destination uses the `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link| component within the `Snapchat Marketing API <https://marketingapi.snapchat.com/docs/>`__ |ext_link| to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| as a list of email addresses, mobile advertiser IDs, or phone numbers.
 
 .. destination-snapchat-api-note-end
+
+.. destination-snapchat-replace-behavior-start
+
+.. caution:: Each send to |destination-name| replaces the audience completely. Amperity removes all existing members before adding the users in the current send. Members not included in the current send are removed from the audience.
+
+.. destination-snapchat-replace-behavior-end
 
 .. _destination-snapchat-get-details:
 

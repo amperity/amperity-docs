@@ -7,6 +7,7 @@
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 .. |attributes-sent| replace:: |destination-name| requires email addresses. Amperity applies SHA-256 hashing to email addresses automatically.
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -55,6 +56,10 @@ Build a query that returns a list of email addresses. Use additional filters in 
 
 .. sendto-pinterest-build-query-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 .. destination-pinterest-build-segment-tip-start
 
 .. tip:: Be sure to exclude the following from query results:
@@ -69,21 +74,13 @@ Build a query that returns a list of email addresses. Use additional filters in 
 
 .. sendto-pinterest-build-query-example-start
 
-The following query returns a list of hashed email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
+The following query returns a list of email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
 
 .. code-block:: sql
    :linenos:
 
    SELECT
-     TO_HEX(
-       SHA256(
-         TO_UTF8(
-           UPPER(
-             TRIM(email)
-           )
-         )
-       )
-     ) AS email
+     LOWER(TRIM(email)) AS email
    FROM Merged_Customers mc
    INNER JOIN Customer_Attributes ca
    ON mc.amperity_id = ca.amperity_id
@@ -91,10 +88,12 @@ The following query returns a list of hashed email addresses for customers who a
    ON mc.amperity_id = tae.amperity_id
    WHERE (
      LOWER(mc.email) IS NOT NULL
-     AND pin.contactable_pinterest = TRUE
+     AND ca.contactable_pinterest = TRUE
      AND tae.L12M_order_frequency >= 4
      AND tae.L12M_order_revenue >= 400
    )
+
+.. note:: The **contactable_pinterest** field represents an extension to the **Customer Attributes** table that captures if customers have given consent to receiving email communication related to your brand's presence on |destination-name|.
 
 .. sendto-pinterest-build-query-example-end
 

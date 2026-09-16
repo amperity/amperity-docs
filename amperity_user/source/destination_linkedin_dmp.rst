@@ -5,6 +5,7 @@
 .. |what-send| replace:: audiences
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -69,20 +70,26 @@ Build query
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 **Example**
 
 .. sendto-linkedin-dmp-build-query-example-start
 
-You may include additional audience details for title, country, and company.
+Either **email** or both **firstname** and **lastname** are required. You may include additional audience details for title, country, and company.
 
 .. code-block:: sql
    :linenos:
 
-   SELECT 
+   SELECT
      email AS email
+     ,given_name AS firstname
+     ,surname AS lastname
      ,title AS title
-     ,country AS employeecountry
-     ,company AS company
+     ,country AS country
+     ,company AS employeecompany
    FROM Merged_Customers
    WHERE email IS NOT NULL
 

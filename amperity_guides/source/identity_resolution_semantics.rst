@@ -26,6 +26,8 @@ Validate profile semantics
 To validate semantic tags open the **Identity resolution** page in **Quick start**. On the **Identity tables** card, do one of the following:
 
 #. Click **AmpAI select** to have the **AmpAI Assistant** determine which tables contain the best data for identity resolution, which fields in each data source are the optimal primary key, and which customer profile semantic tags to apply to fields in each data source.
+
+   .. note:: When AmpAI assigns a **birthdate** semantic tag to a field, it checks whether the values in that field are stored in a recognizable date format. Values in uncommon formats, such as large numbers or non-standard text, are converted automatically. Your source data does not need to be reformatted before loading.
 #. Click **Manually select** on the **Identity your fields** card to apply semantic tags, including custom semantic tags, without using the **AmpAI Assistant**.
 
    .. image:: ../../images/mockup-guided-idres-semantic-tags.png

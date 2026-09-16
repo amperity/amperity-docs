@@ -207,10 +207,6 @@ Use high-quality audiences to find new customers across paid media platforms.
       :link-type: doc
       :link: campaign_meta_ads_manager
 
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: campaign_walmart_dsp
-
    .. grid-item-card:: Yahoo DSP
       :link-type: doc
       :link: campaign_yahoo_dsp

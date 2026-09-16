@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Cheetah Digital by Marigold
+.. |destination-name| replace:: Cheetah Digital by Zeta
 .. |plugin-name| replace:: SFTP
 .. |credential-type| replace:: "passphrase"
 .. |required-credentials| replace:: "username" and "passphrase"
@@ -15,18 +15,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Cheetah Digital by Marigold.
+        Configure Amperity to send data to Cheetah Digital by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Cheetah Digital by Marigold.
+        Configure Amperity to send data to Cheetah Digital by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for Cheetah Digital by Marigold
+        Configure destinations for Cheetah Digital by Zeta
 
 ======================================================
-Configure destinations for Cheetah Digital by Marigold
+Configure destinations for Cheetah Digital by Zeta
 ======================================================
 
 .. include:: ../../shared/terms.rst
@@ -74,9 +74,11 @@ Get details
           :alt: Detail 2.
           :align: center
           :class: no-scaled-link
-     - For an **FTP Profile**: a username and password is required, along with the remote folder to which Amperity sends data.
+     - **FTP Profile**
 
-       .. note:: The hostname for the SFTP server in |destination-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |destination-name| username, separated by " - " (space, hyphen, space). For example: "sftp://acme - justinc".
+       A username and password is required, along with the remote folder to which Amperity sends data.
+
+       .. note:: The hostname for the SFTP server in |destination-name| is a combination of two values: the FTP URL, as configured for the **FTP Profile** and your |destination-name| username, separated by `` - `` (space, hyphen, space). For example: ``sftp://acme - justinc``.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

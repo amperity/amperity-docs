@@ -33,7 +33,7 @@ Add transaction QA queries
 
 Use transactions QA queries to validate the quality of interaction records in the customer 360 database.
 
-The recommended way to add transactions QA queries to your tenant is to use the "Transactions QA" query template. You can do this after you have added the customer 360 database and it contains the required tables.
+The recommended way to add transactions QA queries to your tenant is to use the "Transactions QA" query template. You can do this after you have added the customer 360 database and it has the required tables.
 
 .. database-interactions-transactions-query-qa-end
 
@@ -123,7 +123,7 @@ Prioritize Amperity IDs
 
 .. qa-transaction-prioritize-amperity-id-start
 
-If multiple Amperity IDs exist for interaction records after the Stitch process or after the use of foreign keys, use SQL to ensure that only one Amperity ID is associated to each interaction record.
+If many Amperity IDs exist for interaction records after the Stitch process or after the use of foreign keys, use SQL to ensure that only one Amperity ID is associated to each interaction record.
 
 .. qa-transaction-prioritize-amperity-id-end
 

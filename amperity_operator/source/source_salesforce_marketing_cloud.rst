@@ -55,7 +55,7 @@ Get details
 
 #. The username.
 #. The passphrase.
-#. The host public key if encryption is configured.
+#. The optional host public key for SSH host validation.
 #. The hostname.
 #. The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
 

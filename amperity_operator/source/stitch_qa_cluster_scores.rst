@@ -75,7 +75,7 @@ Configure query
       AND uc1.pk = us.pk1
       AND uc2.pk = us.pk2
 
-#. To run the query for multiple Amperity IDs, update the query to input a list of IDs, and then replace each **amp_id** with an Amperity ID:
+#. To run the query for many Amperity IDs, update the query to input a list of IDs, and then replace each **amp_id** with an Amperity ID:
 
    .. code-block:: sql
       :linenos:

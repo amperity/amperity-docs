@@ -6,7 +6,7 @@ import shibuya
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
 project = "Amperity API"
-#copyright = "Copyright &copy; 2025, Amperity"
+#copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
 #version = shibuya.shibuya_version
@@ -28,7 +28,7 @@ extensions = [
     "sphinxcontrib.youtube",
     "sphinx_new_tab_link",
 ]
-todo_include_todos = True
+todo_include_todos = False
 #jupyter_sphinx_thebelab_config = {
 #    'requestKernel': True,
 #}
@@ -69,6 +69,7 @@ html_show_sourcelink = False
 html_additional_pages = {
     'openapi': 'openapi.html',
     'openapi-unstable': 'openapi-unstable.html',
+    'openapi-profile-v2': 'openapi-profile-v2.html',
 }
 
 

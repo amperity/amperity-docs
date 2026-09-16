@@ -9,18 +9,18 @@
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send SMS profiles to Listrak SMS.
+        Use orchestrations to manage lists in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send SMS profiles to Listrak SMS.
+        Use orchestrations to manage lists in Listrak SMS.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Listrak SMS
+        Manage lists in Listrak SMS
 
 ==================================================
-Send query results to Listrak SMS
+Manage lists in Listrak SMS
 ==================================================
 
 .. include:: ../../amperity_operator/source/destination_listrak_sms.rst
@@ -97,9 +97,9 @@ An SMS profile in |destination-name| requires only a phone number, but may inclu
      ,co.PostalCode AS "Postal Code"
      ,co.Birthdate AS "Birthday"
      ,co.LoyaltyTier AS "Loyalty"
+     ,NOT so.is_sms_opted_in AS "optedOut"
    FROM Customer360 co
    LEFT JOIN SMS_Opt_Status so ON co.amperity_id = so.amperity_id
-   WHERE is_sms_opted_in = true
 
 .. sendto-listrak-sms-build-query-end
 

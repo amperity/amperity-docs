@@ -33,6 +33,16 @@ The **Customer 360** page provides:
 
 .. databases-customer-360-page-end
 
+.. databases-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Build databases from unified customer profiles to help your brand better understand your customers.
+
+   Open **Learning Lab** to learn more about `multi-database implementation best practices <https://amperity.com/learning-lab/multi-database-implementation-best-practices>`__ |ext_link|. Registration is required.
+
+.. databases-learning-lab-end
+
 
 .. _databases-profiles:
 
@@ -153,7 +163,7 @@ PII profile attributes commonly available as part of the customer profile includ
 
 .. note:: The profile attribute names that are shown in the profile attributes section are the same strings that were entered as friendly names when creating the **Customer 360** database table in the primary customer 360 database.
 
-   These strings will default to the same as the field name if not specified as friendly names, including lower-case strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
+   These strings will default to the same as the field name if not specified as friendly names, including lowercase strings and underscores. The list of profile attributes will also depend on the SQL query that is used to create the **Merged Customers** table.
 
 .. databases-profiles-about-attributes-note-end
 
@@ -216,9 +226,9 @@ Flexible merge rules
 
 .. databases-flexible-merge-rules-start
 
-Some customer data platforms require using an inflexible merge rule across multiple fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to multiple databases.
+Some customer data platforms require using an inflexible merge rule across many fields, which results in lower quality data across your customer 360 profile. This problem is magnified when that inflexible merge rule must also be applied to many databases.
 
-Amperity combines the use of flexible merge rules with a patented system that allows multiple databases to exist within the same tenant. This ensures that:
+Amperity combines the use of flexible merge rules with a patented system that allows many databases to exist within the same tenant. This ensures that:
 
 #. Merge rules are 100% configurable
 #. Each field can have its own merge rule
@@ -233,7 +243,7 @@ For example, data sources from call centers, online transactions, and email plat
    :align: left
    :class: no-scaled-link
 
-After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support multiple customer 360 databases.
+After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support many customer 360 databases.
 
 * Your operations teams can combine prioritizing the most common values for each customer with deterministic matching
 * Your email marketing team can combine prioritizing customer profile values from your email platform with probabilistic matching
@@ -269,9 +279,9 @@ Customer 360 database
 
 .. databases-database-type-c360-start
 
-A customer 360 database contains customer profiles that are tied to all of their interactions with your company or brand. You may configure Amperity to support multiple customer 360 databases.
+A customer 360 database has customer profiles that are tied to all of their interactions with your company or brand. You may configure Amperity to support many customer 360 databases.
 
-For example: a customer 360 database that contains all customer profiles and all interactions, and then a customer 360 database for each specific brand in your company's brand portfolio.
+For example: a customer 360 database that has all customer profiles and all interactions, and then a customer 360 database for each specific brand in your company's brand portfolio.
 
 .. note:: A customer 360 database has specific requirements on tables that must be included within that database.
 
@@ -319,13 +329,13 @@ Multiple customer 360 databases
 
 .. databases-database-type-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each database contains its own set of standard tables, and then each may be configured to have its own combination of standard core tables or domain tables that are added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each database has its own set of standard tables, and then each may be configured to have its own combination of standard core tables or domain tables that are added as passthrough tables.
 
 .. databases-database-type-multiple-end
 
 .. image:: ../../images/use-cases-c360-multiple-alt.png
    :width: 600 px
-   :alt: Customer 360 tab, multiple databases, alternate
+   :alt: Customer 360 tab, many databases, alternate
    :align: left
    :class: no-scaled-link
 
@@ -337,7 +347,7 @@ Passthrough database
 
 .. databases-database-type-passthrough-start
 
-A passthrough database contains *all* stitched domain tables and *all* non-stitched domain tables passed through into a standalone database.
+A passthrough database has *all* stitched domain tables and *all* non-stitched domain tables passed through into a standalone database.
 
 .. databases-database-type-passthrough-end
 
@@ -349,7 +359,7 @@ Stitch QA database
 
 .. databases-database-type-stitchqa-start
 
-A Stitch QA database contains a series of Amperity-generated tables that can be used to validate the Amperity ID assignment to customer profiles.
+A Stitch QA database has a series of Amperity-generated tables that can be used to validate the Amperity ID assignment to customer profiles.
 
 Use the Stitch QA database template to build a Stitch QA database for your tenant.
 
@@ -619,7 +629,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    Define the schema for the real-time table. Each field in the schema must exist in the list of fields that are streamed to Amperity by the streaming endpoint that is associated with this table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. Refer to the feed associated with the streamed endpoint to 
 
-   .. note:: The schema for every real-time table contains two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
+   .. note:: The schema for every real-time table has two additional fields: **received_at** (the time at which data arrived at the streaming endpoint) and **written_at** (the time at which data was written to the real-time table).
 
    Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
@@ -932,7 +942,7 @@ Add Stitch QA database
 
 .. databases-database-howto-add-database-stitchqa-context-start
 
-A Stitch QA database loaded from a template contains a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
+A Stitch QA database loaded from a template has a list of pre-loaded SQL queries that may be used to help validate the quality of Stitch output.
 
 .. databases-database-howto-add-database-stitchqa-context-end
 
@@ -1005,7 +1015,7 @@ Some use cases require a database table to have different information in a datab
 
    For example, the **Unified Itemized Transactions** table requires a product ID. The **product_id** column is created by applying the **product-id** semantic tag to itemized interactions records.
 
-   However, in some cases another table contains the preferred product ID. The following example shows how to override the standard **Unified Itemized Transactions** table and to join more complete product ID information, such as what may be in the **Unified Product Catalog** table:
+   However, in some cases another table has the preferred product ID. The following example shows how to override the standard **Unified Itemized Transactions** table and to join more complete product ID information, such as what may be in the **Unified Product Catalog** table:
 
       .. code-block:: sql
 
@@ -1374,8 +1384,8 @@ A pick-list may be configured with custom values, where each item in the pick-li
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select a sort order.
 #. Select the **Custom** method for the pick-list, and then enter each custom value on a new line. For example:
 
@@ -1409,7 +1419,7 @@ A pick-list may be deleted. This will disable any selection options in the visua
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. De-select the checkbox in the **Pick-list** column in the row for which a picklist is to be deleted.
+#. De-select the checkbox in the **Pick list** column in the row for which a picklist is to be deleted.
 #. Click **Save**.
 
 .. databases-database-howto-pick-list-delete-steps-end
@@ -1433,7 +1443,7 @@ Many pick-lists remain static over time, but if the data inputs change, you may 
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Make your changes.
 #. Click **Save**.
 
@@ -1461,8 +1471,8 @@ A alphabetical sort order is best for strings, such as for columns with values f
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Alphabetical** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1491,8 +1501,8 @@ A natural sort order is best for alphanumeric lists, such as for columns with sc
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Natural** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -1520,8 +1530,8 @@ A most frequent sort order is best for columns with a smaller selection of frequ
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. Select the checkbox in the **Pick-list** column in the row for which a picklist is to be created.
-#. Click the **Setup** link next to the checkbox. This opens the **Configure Pick-List** dialog box.
+#. Select the checkbox in the **Pick list** column in the row for which a picklist is to be created.
+#. Click the **Setup** link next to the checkbox. This opens the **Configure pick list** dialog box.
 #. Select the **Most Frequent** sort order.
 #. Select the method with which pick-list values are applied. In nearly all situations, you should use pick-list values that are generated **Automatically**.
 #. Click **Save**.
@@ -2035,6 +2045,60 @@ The process for exporting tables is the same as :ref:`exporting databases <datab
 .. databases-database-howto-export-table-end
 
 
+.. _databases-database-howto-format-sql:
+
+Format SQL
+--------------------------------------------------
+
+.. databases-database-howto-format-sql-start
+
+AmpAI can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
+
+* **Standard format** Reformats the SQL using default style rules.
+* **Custom format** Opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
+
+.. databases-database-howto-format-sql-end
+
+**To format SQL in a custom table**
+
+.. databases-database-howto-format-sql-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a custom SQL table.
+#. In the toolbar, click **Format SQL**.
+#. Choose **Standard format** to apply default formatting, or choose **Custom format** to enter specific formatting instructions.
+#. Click **Save**.
+
+.. databases-database-howto-format-sql-steps-end
+
+
+.. _databases-database-howto-generate-field-descriptions:
+
+Generate field descriptions
+--------------------------------------------------
+
+.. databases-database-howto-generate-field-descriptions-start
+
+AmpAI can generate descriptions for database table fields that do not already have one. Click **Generate field descriptions** in the **Description** settings group on the right side of the table editor. When the table is defined by a SQL query, AmpAI uses the upstream schema to improve the accuracy of the generated descriptions. This may take a few minutes depending on the number of fields.
+
+.. note:: The **Generate field descriptions** link is disabled when all fields already have descriptions.
+
+.. databases-database-howto-generate-field-descriptions-end
+
+**To generate field descriptions**
+
+.. databases-database-howto-generate-field-descriptions-steps-start
+
+#. From the **Customer 360** page, open the **Databases** tab.
+#. Open a database in **Edit** mode.
+#. Open a table, and then click **Next** to move to the second step in the table editor.
+#. In the **Description** settings group, click **Generate field descriptions**.
+#. After the descriptions are generated, click **Save**.
+
+.. databases-database-howto-generate-field-descriptions-steps-end
+
+
 .. _databases-database-howto-hide-table:
 
 Hide database table
@@ -2086,7 +2150,7 @@ Columns that contain PII--names (first, last, and full), addresses, phone number
 #. From the **Customer 360** page, open the **Databases** tab.
 #. Open a database in **Edit** mode.
 #. Open a table, and then click **Next** to move to the second step in the table editor.
-#. For each field that contains PII, verify that the box in the **PII** column is selected.
+#. For each field that has PII, verify that the box in the **PII** column is selected.
 
    Amperity automatically selects the **PII** checkbox for columns that were tagged with profile (PII) semantics. Verify that all columns associated with PII have the checkbox selected in the **PII** column.
 #. Activate the table. Restricted access to PII is updated the next time this database table is refreshed.

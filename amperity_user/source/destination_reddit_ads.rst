@@ -3,6 +3,7 @@
 
 .. |destination-name| replace:: Reddit Ads
 .. |plugin-name| replace:: SFTP
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -27,13 +28,13 @@ Send audiences to Reddit Ads
 
 .. destination-reddit-ads-about-start
 
-You can send audience lists to |destination-name| using a CSV file that contains hashed email addresses and is sent to cloud storage or SFTP, after which you can upload the CSV file to |destination-name| through the |destination-name| Manager.
+You can send audience lists to |destination-name| using a CSV file that has hashed email addresses and is sent to cloud storage or SFTP, after which you can upload the CSV file to |destination-name| through the |destination-name| Manager.
 
 An audience list should contain hashed email addresses. Upload the audience list to |destination-name|, and then used it for :ref:`audience targeting in Reddit Ads <destination-reddit-ads-audience-targeting>`. Do one of the following:
 
 * :ref:`Use a query to return a list of hashed email addresses <destination-reddit-ads-audience-targeting-query>`, download the results of that query, and then upload it to |destination-name|.
 
-* :ref:`Add a hashed email column to your customer 360 database <destination-reddit-ads-audience-targeting-database>`, and then send a file that contains those hashed email address to a location from which they can be uploaded to |destination-name|.
+* :ref:`Add a hashed email column to your customer 360 database <destination-reddit-ads-audience-targeting-database>`, and then send a file that has those hashed email address to a location from which they can be uploaded to |destination-name|.
 
 .. destination-reddit-ads-about-end
 
@@ -69,10 +70,13 @@ Query results
 
 .. destination-reddit-ads-audience-targeting-query-start
 
-The following example describes the steps required to send an audience from Amperity to |destination-name| using a query that returns a list of hashed email addresses.
+The following example describes the steps required to send an audience from Amperity to |destination-name| using a query that returns a list of email addresses.
 
 .. note:: This example uses attributes from Amperity standard output to build a list of customers who are active and who have recently purchased products from your brand.
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. list-table::
    :widths: 10 90
@@ -99,23 +103,15 @@ The following example describes the steps required to send an audience from Ampe
           :align: center
           :class: no-scaled-link
 
-     - Build a query that returns a list of hashed email addresses that are contactable by your brand. Use additional filters to scope your audience for your use cases and goals for marketing to your customers within |destination-name|.
+     - Build a query that returns a list of email addresses that are contactable by your brand. Use additional filters to scope your audience for your use cases and goals for marketing to your customers within |destination-name|.
 
-       For example, the following query returns a list of hashed email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
+       For example, the following query returns a list of email addresses for customers who are engaged with your brand, have opted in to receiving email communication, have made at least 4 purchases within the previous year, and have spent at least $400.
 
        .. code-block:: sql
           :linenos:
 
           SELECT
-            TO_HEX(
-              SHA256(
-                TO_UTF8(
-                  UPPER(
-                    TRIM(email)
-                  )
-                )
-              )
-            ) AS email
+            LOWER(TRIM(email)) AS email
           FROM Merged_Customers mc
           INNER JOIN Customer_Attributes ca
             ON mc.amperity_id = ca.amperity_id
@@ -156,7 +152,7 @@ The following example describes the steps required to send an audience from Ampe
 
        Click the **Activate** button in the top right corner of the **Query Editor**. 
 
-       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build queries that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your queries when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build queries that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png
@@ -198,7 +194,7 @@ The following example describes the steps required to add a column to your custo
           :align: center
           :class: no-scaled-link
 
-     - .. important:: This step must be done by a user who is assigned the **DataGrid Operator** policy and is required to enable the use of an attribute that contains a hashed email address within a campaign.
+     - .. important:: This step must be done by a user who is assigned the **DataGrid Operator** policy and is required to enable the use of an attribute that has a hashed email address within a campaign.
 
        On the **Customer 360** page, open your customer 360 database in edit mode. Add the following line of SQL to your **Customer 360** table:
 
@@ -244,7 +240,7 @@ The following example describes the steps required to add a column to your custo
           :align: center
           :class: no-scaled-link
 
-     - Configure a one-time campaign to use the hashed email address segment as its starting audience, and then set the control group to 0%. Select your destination -- SFTP or cloud storage -- and then open the **Edit Attributes** page.
+     - Configure a one-time campaign to use the hashed email address segment as its starting audience, and then set the control group to 0%. Select your destination--SFTP or cloud storage--and then open the **Edit Attributes** page.
 
        Choose the **Hashed Email** attribute from the **Customer 360** table.
 

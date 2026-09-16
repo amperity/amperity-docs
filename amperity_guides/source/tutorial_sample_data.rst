@@ -11,17 +11,17 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Identity resolution agent
+        Identity Resolution Assistant
 
 ==================================================
-Identity resolution agent
+Identity Resolution Assistant
 ==================================================
 
 .. article-info::
    :avatar: _static/amperity_circle.png
    :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Identity resolution agent
+   :author: Identity Resolution Assistant
    :date: |today|
    :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
@@ -49,18 +49,18 @@ By the end of this guide you will know how to do the following:
 
 .. _start-data-model:
 
-Identity resolution agent data model
+Identity Resolution Assistant data model
 ==================================================
 
 .. start-data-model-start
 
-The following diagram shows the data model for the sample data that is part of the identity resolution agent. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
+The following diagram shows the data model for the sample data that is part of the Identity Resolution Assistant. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
 
 .. start-data-model-end
 
 .. image:: ../../images/quickstart_sample_erd.png
    :width: 600 px
-   :alt: The sample data model for Amperity identity resolution agent.
+   :alt: The sample data model for Amperity Identity Resolution Assistant.
    :align: left
    :class: no-scaled-link
 
@@ -82,9 +82,9 @@ To follow along with this guide you need:
 
 #. Access to an Amperity account.
 #. Approximately ~1 hour of time to complete all of the steps within the guide.
-#. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data with customer profiles.
+#. Source data. Amperity has a set of sample data that can be used to complete the steps in this guide. You may provide your own data with customer profiles.
 
-   .. note:: Amperity sample data contains ~10 million customer records.
+   .. note:: Amperity sample data has ~10 million customer records.
 
 .. start-prerequisites-end
 
@@ -101,7 +101,7 @@ To connect Amperity to data sources, do the following:
 #. Log in to `Amperity <https://app.amperity.com>`__.
 #. Open the **Quick start** page. This is located in the left-side menu at the top.
 #. Under **Identity resolution** click **Add datasource**.
-#. Select one of the following options: **More sources ...**, and then choose **Sample data**.
+#. Select one of the following options: **More sources**, and then choose **Sample data**.
 
    This opens a page that will walk you through steps for connecting to Amperity to sample customer profiles.
 
@@ -190,7 +190,7 @@ Semantic tags are applied to fields in incoming data sources to indicate the typ
 
 The semantic tag tells Amperity how to treat the data, regardless of how the data is formatted, named, or originally stored.
 
-For example, a field named **evar_15** contains email addresses. This field should have the **email** semantic tag applied to it. This tag tells Amperity that the contents of the **evar_15** field are
+For example, a field named **evar_15** has email addresses. This field should have the **email** semantic tag applied to it. This tag tells Amperity that the contents of the **evar_15** field are
 
 * Email addresses
 * Personally identifiable information (PII)
@@ -276,7 +276,7 @@ After applying semantic tags to all source tables that require them, you are rea
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - The identity resolution agent will refresh to show high-level results of identity resolution similar to:
+     - The Identity Resolution Assistant will refresh to show high-level results of identity resolution similar to:
 
        .. image:: ../../images/quick-start-identity-resolution-results.png
           :width: 320 px
@@ -292,7 +292,7 @@ After applying semantic tags to all source tables that require them, you are rea
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - The **Summary** tab shows a comparison of domain tables and the record pairs identified both within each data source and across all data sources. This is presented as an UpSet Plot chart with links to the underlying data sources.
+     - The **Summary** tab shows a comparison of domain tables and the record pairs identified both within each data source and across all data sources. This is presented as an UpSet plot chart with links to the underlying data sources.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -366,9 +366,9 @@ Create database
 
        * **Customer Profiles**. A standardized table with the most complete set of customer profile data that is built from merge rules with a single row for each unique Amperity ID.
        * **Identity Graph**. A linking table for Amperity IDs, data sources, customer keys, and primary keys.
-       * **Merged Customers**. A standardized table that contains configurable merge rules.
-       * **Unified Coalesced**. A standardized table that contains all original data used to build the identity graph.
-       * **Unified Scores**. A standardized table that contains the edges of the identity graph with confidence scores for each linked record.
+       * **Merged Customers**. A standardized table that has configurable merge rules.
+       * **Unified Coalesced**. A standardized table that has all original data used to build the identity graph.
+       * **Unified Scores**. A standardized table that has the edges of the identity graph with confidence scores for each linked record.
 
        Click **Activate**. This will return you to the **Customer 360** page.
 
@@ -434,7 +434,7 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
           :class: no-scaled-link
      - Source table precedence can also be defined for data sources that contain semantic tags that are not grouped by profile attribute. Precedence determines which tables are more likely to contain high quality customer profile data, as determined by your brand.
 
-       The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* contains fields to which profile semantic tags have been applied.
+       The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* has fields to which profile semantic tags have been applied.
 
        To configure source table precedence, open the **Profile Builder**. Under **Source table precedence**, use the |fa-drag| icon to move the list of tables into the desired order, and then click **Save**.
 

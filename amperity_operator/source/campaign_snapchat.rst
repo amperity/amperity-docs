@@ -368,7 +368,7 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-snapchat-workflow-actions-invalid-credentials`
+       * :ref:`campaign-snapchat-workflow-actions-invalid-credentials`
 
 
    * - .. image:: ../../images/steps-04.png

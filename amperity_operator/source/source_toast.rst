@@ -145,11 +145,11 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
        #. Click **Create function**, and then select **Author from scratch**.
        #. Configure the following:
 
-          **Function name**: "toast-orders-processor"
+          **Function name** "toast-orders-processor"
 
-          **Runtime**: Python 3.11 or Python 3.12
+          **Runtime** Python 3.11 or Python 3.12
 
-          **Execution role**: Use the custom role created in step 2.
+          **Execution role** Use the custom role created in step 2.
 
        #. Click **Create function**.
 
@@ -260,9 +260,9 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
        #. In the Lambda function console, go to the **Configuration** tab.
        #. Click **General configuration**, then **Edit**, and then set the following:
 
-          **Timeout**: 5 minutes, or 300 seconds.
+          **Timeout** 5 minutes, or 300 seconds.
 
-          **Memory**: 512 MB. Adjust this value based on your Toast orders data volume.
+          **Memory** 512 MB. Adjust this value based on your Toast orders data volume.
 
        #. Click **Save**.
 
@@ -277,23 +277,23 @@ Configure Amazon AWS for a AWS Lambda function, Amazon S3 storage, and logging.
        #. Go to the `Amazon EventBridge Console <https://console.aws.amazon.com/events/>`__ |ext_link|.
        #. Click **Rules**, then **Create rule**, and then set the following:
 
-          **Name**: "toast-orders-weekly-trigger"
+          **Name** "toast-orders-weekly-trigger"
 
-          **Description**: "Triggers Toast orders processing every Monday at 4:00 AM UTC"
+          **Description** "Triggers Toast orders processing every Monday at 4:00 AM UTC"
 
-          **Rule type**: Schedule
+          **Rule type** Schedule
 
-          **Schedule pattern**: Cron expression
+          **Schedule pattern** Cron expression
 
-          **Cron expression**: ``0 4 ? * MON *``, which is "every Monday at 4:00 AM UTC".
+          **Cron expression** ``0 4 ? * MON *``, which is "every Monday at 4:00 AM UTC".
 
        #. Click **Next**, and then select the target:
 
-          **Target type**: AWS service
+          **Target type** AWS service
 
-          **Select a target**: Lambda function
+          **Select a target** Lambda function
 
-          **Function**: Select the "toast-orders-processor" function
+          **Function** Select the "toast-orders-processor" function
 
        #. Click **Next**, then **Next**, and then **Create rule**.
 

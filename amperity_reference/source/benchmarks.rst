@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -24,6 +25,10 @@ Stitch benchmarks are heuristic scores that define the expectations for the qual
 Use benchmarks to explore data quality, directly provide feedback to the quality of Stitch results, and to explore configuration changes that can help improve the quality of customer profiles in your tenant.
 
 .. stitch-benchmark-end
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-incremental-match-note-start
+   :end-before: .. stitch-benchmarks-incremental-match-note-end
 
 
 .. _stitch-benchmark-status:
@@ -165,7 +170,7 @@ High
 
 High results do not need to be fixed, but they should be investigated. In many cases, high results indicate that improvements to the quality of Stitch results can be made.
 
-Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Next steps**, and then review the list of options that are available to help improve this particular benchmark result.
+Review and grade the results for benchmark checks with high results by assigning thumbs up or thumbs down to the sample set of records, after which you should click **Show recommendations**, and then review the list of options that are available to help improve this particular benchmark result.
 
 .. image:: ../../images/mockup-stitch-benchmarks-score-abnormal.png
    :width: 380 px
@@ -185,7 +190,7 @@ About benchmark cards
 
 .. stitch-benchmark-cards-start
 
-Each benchmark card contains a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
+Each benchmark card has a condition summary, such as *Amperity IDs with many given names*, result ("0.125%"), outcome (**Optimal**, **Above optimal**, or **High**), along with a visualization that shows how the benchmark result compares to the optimal range.
 
 .. stitch-benchmark-cards-end
 
@@ -300,6 +305,26 @@ Changes should be made incrementally. You can review benchmark checks on a daily
 .. stitch-benchmark-check-update-config-end
 
 
+.. _stitch-benchmark-check-ignore:
+
+Ignore a benchmark
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-check-ignore-start
+   :end-before: .. stitch-benchmarks-check-ignore-end
+
+
+.. _stitch-benchmark-rule-based:
+
+Rule-based benchmarks
+---------------------------------------------------
+
+.. include:: ../../amperity_reference/source/stitch_benchmarks.rst
+   :start-after: .. stitch-benchmarks-rule-based-start
+   :end-before: .. stitch-benchmarks-rule-based-end
+
+
 .. _stitch-benchmark-categories:
 
 Benchmark categories
@@ -398,7 +423,7 @@ Shared names and emails
 
 The **Shared names and emails across Amperity IDs** benchmark computes the ratio of unique name and email address combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and email address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and email address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-emails-end
 
@@ -412,7 +437,7 @@ Shared names and phones
 
 The **Shared names and phones across Amperity IDs** benchmark computes the ratio of unique name and phone number combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and phone number combination is associated with multiple Amperity IDs more than often expected.
+A large ratio implies that a name and phone number combination is associated with many Amperity IDs more than often expected.
 
 .. stitch-benchmark-category-shared-names-and-phones-end
 
@@ -426,6 +451,6 @@ Shared names and addresses
 
 The **Shared names and addresses across Amperity IDs** benchmark computes the ratio of unique name and address (including street, city, state, and postal code) combinations that appear in more than one Amperity ID cluster to those that appear in just one Amperity ID.
 
-A large ratio implies that a name and address combination is associated with multiple Amperity IDs more often than expected.
+A large ratio implies that a name and address combination is associated with many Amperity IDs more often than expected.
 
 .. stitch-benchmark-category-shared-names-and-addresses-end

@@ -199,6 +199,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_azure_blob_storage
 
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: campaign_bloomreach
+
    .. grid-item-card:: Braze
       :link-type: doc
       :link: campaign_braze
@@ -231,9 +235,17 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_google_cloud_storage
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: campaign_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
+
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: campaign_iterable
 
    .. grid-item-card:: Klaviyo
       :link-type: doc
@@ -243,9 +255,13 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_listrak
 
-   .. grid-item-card:: Listrak SMS
+   .. grid-item-card:: Listrak SMS--Lists
       :link-type: doc
       :link: campaign_listrak_sms
+
+   .. grid-item-card:: Listrak SMS--Profiles
+      :link-type: doc
+      :link: campaign_listrak_sms_profile
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -271,6 +287,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_pinterest
 
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: campaign_roku_audience
+
    .. grid-item-card:: Sailthru
       :link-type: doc
       :link: campaign_sailthru
@@ -283,9 +303,21 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_sap_emarsys
 
+   .. grid-item-card:: SendGrid
+      :link-type: doc
+      :link: campaign_sendgrid
+
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: campaign_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp
+
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: campaign_shopify_graphql
 
    .. grid-item-card:: Snapchat
       :link-type: doc
@@ -298,10 +330,6 @@ Send campaigns to any of the following marketing applications and workflows.
    .. grid-item-card:: TikTok Ads
       :link-type: doc
       :link: campaign_tiktok_ads
-
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: campaign_walmart_dsp
 
    .. grid-item-card:: Yahoo DSP
       :link-type: doc
@@ -320,6 +348,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Amazon S3 <campaign_amazon_s3>
    Attentive <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
+   Bloomreach <campaign_bloomreach>
    Braze <campaign_braze>
    Cheetah Digital <campaign_cheetah_digital>
    Cordial <campaign_cordial>
@@ -328,22 +357,28 @@ Send campaigns to any of the following marketing applications and workflows.
    DV360 <campaign_dv360>
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
+   Google Customer Match (GDM) <campaign_google_customer_match_gdm>
    HubSpot <campaign_hubspot>
+   Iterable <campaign_iterable>
    Klaviyo <campaign_klaviyo>
    Listrak Email <campaign_listrak>
-   Listrak SMS <campaign_listrak_sms>
+   Listrak SMS - Lists <campaign_listrak_sms>
+   Listrak SMS - Profiles <campaign_listrak_sms_profile>
    LiveRamp <campaign_liveramp>
    Meta Ads Manager <campaign_meta_ads_manager>
    Microsoft Ads <campaign_microsoft_ads>
    Neustar <campaign_neustar>
    Oracle Eloqua <campaign_oracle_eloqua>
    Pinterest <campaign_pinterest>
+   Roku Audience <campaign_roku_audience>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    SAP Emarsys <campaign_sap_emarsys>
+   SendGrid <campaign_sendgrid>
+   SevenRooms <campaign_sevenrooms>
    SFTP <campaign_sftp>
+   Shopify (GraphQL) <campaign_shopify_graphql>
    Snapchat <campaign_snapchat>
    The Trade Desk <campaign_the_trade_desk>
    TikTok Ads <campaign_tiktok_ads>
-   Walmart DSP <campaign_walmart_dsp>
    Yahoo DSP <campaign_yahoo_dsp>

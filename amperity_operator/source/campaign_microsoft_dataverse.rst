@@ -158,7 +158,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 #. Log in to your Microsoft Azure account.
 #. Open **Azure Active Directory**, and then **App Registrations**.
 #. Click **New Registration**, and then enter the name for your application. Leave all other settings as the default, and then click **Register**.
-#. The application overview page contains the following IDs:
+#. The application overview page has the following IDs:
 
    **Application (client) ID**
 
@@ -179,7 +179,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 
 #. Open the `Microsoft Power Platform console <https://admin.powerplatform.microsoft.com/>`__ |ext_link|, click **Environments**, and then click on your environment.
 #. Click **Settings**, then **Users and permissions**, and then **Application users**.
-#. Click **New app user**, and then select the application you just created, your business unit, and then under **Security roles** click the **Edit** button.
+#. Click **New app user**, and then select the application you created, your business unit, and then under **Security roles** click the **Edit** button.
 #. Select the following settings:
 
    **Service Reader**

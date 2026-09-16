@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: Listrak SMS
-.. |plugin-name| replace:: "Listrak SMS"
+.. |plugin-name| replace:: "Listrak SMS--List management"
 .. |credential-type| replace:: "listrak-sms"
 .. |required-credentials| replace:: "refresh token"
 .. |audience-primary-key| replace:: "phone"
@@ -13,25 +13,31 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send SMS profiles to Listrak.
+        Configure destinations for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send SMS profiles to Listrak.
+        Configure destinations for Listrak SMS list management.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destinations for Listrak SMS
+        Configure destinations for Listrak SMS list management
 
-==================================================
-Configure destinations for Listrak SMS
-==================================================
+======================================================
+Configure destinations for Listrak SMS list management
+======================================================
 
 .. destination-listrak-sms-about-start
 
 |destination-name| is an automation platform for audience activation through mobile messaging campaigns and personalized SMS marketing.
 
 .. destination-listrak-sms-about-end
+
+.. destination-listrak-sms-about-list-management-start
+
+.. important:: This destination creates, deletes, subscribes, or unsubscribes contacts in |destination-name|. To only update profiles that already exist in |destination-name| use the :doc:`Listrak SMS--Profile updates <destination_listrak_sms_profile>` destination.
+
+.. destination-listrak-sms-about-list-management-end
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-sms-optin-start
@@ -138,7 +144,7 @@ A |destination-name| destination works like this:
 
        When attributes for existing audience members change, Amperity will update the profile to match the updated attributes. For example, a custom attribute for "Most recent purchase" has an existing value of "Socktown 5-pack ankle" and Amperity updates the attribute to "Socktown 5-pack mid-calf".
 
-       Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, and **postal_code**) and custom fields are updated for all customers. Amperity does not change an audience member's opt status.
+       Amperity uses the `Start a Contact Update Import <https://api.listrak.com/sms#operation/Contact_PostImportFileResource>`__ |ext_link| endpoint to update an audience member's information by **{phoneNumber}**. All system fields (**phone**, **email**, **first_name**, **last_name**, **birthdate**, **postal_code**, and **optedOut**) and custom fields are updated for all customers. When opt status is not included in the audience, contacts are treated as opted in by default.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -349,7 +355,7 @@ Use system attributes to personalize messages, such as adding a first name to an
 
 **Custom attributes**
 
-Enable the **Include attributes that match custom profile fields** field to sychronize all profile attributes in Amperity that match custom profile fields defined in |destination-name|.
+Custom attributes that match custom profile fields defined in |destination-name| are automatically synchronized.
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
@@ -535,16 +541,6 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
-
-       **Include attributes that match custom profile fields**
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-end
-
-          .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-listrak-sms-enable-segmentation-caveat-start
-             :end-before: .. setting-listrak-sms-enable-segmentation-caveat-end
 
 
    * - .. image:: ../../images/steps-05.png

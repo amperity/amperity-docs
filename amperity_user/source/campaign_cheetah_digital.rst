@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Cheetah Digital by Marigold
+.. |destination-name| replace:: Cheetah Digital by Zeta
 .. |what-send| replace:: customer profiles
 .. |what-enable| replace:: **email** and **phone**
 .. |attributes-sent| replace:: You must select the set of attributes that are sent to |destination-name|. Review your downstream requirements, open the **Edits attributes** page, and then select the attributes you want to send to |destination-name| for this campaign.
@@ -20,7 +20,7 @@
         Send audiences to Cheetah Digital
 
 ==================================================
-Send audiences to Cheetah Digital by Marigold
+Send audiences to Cheetah Digital by Zeta
 ==================================================
 
 .. include:: ../../shared/terms.rst

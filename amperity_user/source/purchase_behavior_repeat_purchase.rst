@@ -52,9 +52,9 @@ Use repeat purchase in a segment
    :end-before: .. attribute-purchase-behavior-repeat-purchase-segments-end
 
 
-.. _purchase-behavior-repeat-purchase-conditions:
+.. _purchase-behavior-repeat-purchase-operators:
 
-Available conditions
+Available operators
 ==================================================
 
 .. include:: ../../amperity_reference/source/attribute_purchase_behavior_repeat_purchase.rst

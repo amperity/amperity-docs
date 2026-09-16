@@ -105,6 +105,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_adobe_marketo
 
+   .. grid-item-card:: Adobe Target
+      :link-type: doc
+      :link: destination_adobe_target
+
    .. grid-item-card:: Airship
       :link-type: doc
       :link: destination_airship
@@ -144,6 +148,10 @@ Send query results to downstream workflows and to support all of your brand's ma
    .. grid-item-card:: Bluecore
       :link-type: doc
       :link: destination_bluecore
+
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: destination_bloomreach
 
    .. grid-item-card:: Braze
       :link-type: doc
@@ -189,6 +197,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_google_cloud_storage
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: destination_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: destination_hubspot
@@ -196,6 +208,10 @@ Send query results to downstream workflows and to support all of your brand's ma
    .. grid-item-card:: Infutor
       :link-type: doc
       :link: destination_infutor
+
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: destination_iterable
 
    .. grid-item-card:: Klaviyo
       :link-type: doc
@@ -213,9 +229,13 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_listrak
 
-   .. grid-item-card:: Listrak SMS
+   .. grid-item-card:: Listrak SMS--Lists
       :link-type: doc
       :link: destination_listrak_sms
+
+   .. grid-item-card:: Listrak SMS--Profiles
+      :link-type: doc
+      :link: destination_listrak_sms_profile
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -285,6 +305,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_reddit_ads
 
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: destination_roku_audience
+
    .. grid-item-card:: Sailthru
       :link-type: doc
       :link: destination_sailthru
@@ -297,9 +321,21 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_sap_emarsys
 
+   .. grid-item-card:: SendGrid
+      :link-type: doc
+      :link: destination_sendgrid
+
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: destination_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: destination_sftp
+
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: destination_shopify_graphql
 
    .. grid-item-card:: Snapchat
       :link-type: doc
@@ -519,6 +555,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Adobe Customer Attributes <destination_adobe_customer_attributes>
    Adobe Experience Platform <destination_adobe_aep>
    Adobe Marketo <destination_adobe_marketo>
+   Adobe Target <destination_adobe_target>
    Airship <destination_airship>
    Amazon Pinpoint <destination_amazon_pinpoint>
    Amazon Redshift <destination_amazon_redshift>
@@ -528,6 +565,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Azure Blob Storage <destination_azure_blob_storage>
    BazaarVoice <destination_bazaarvoice>
    Bluecore <destination_bluecore>
+   Bloomreach <destination_bloomreach>
    Braze <destination_braze>
    Cheetah Digital <destination_cheetah_digital>
    Cordial <destination_cordial>
@@ -539,13 +577,16 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Experian <destination_experian>
    Google Ads <destination_google_ads>
    Google Cloud Storage <destination_google_cloud_storage>
+   Google Customer Match (GDM) <destination_google_customer_match_gdm>
    HubSpot <destination_hubspot>
    Infutor <destination_infutor>
+   Iterable <destination_iterable>
    Klaviyo <destination_klaviyo>
    Koupon Media <destination_koupon_media>
    LinkedIn DMP <destination_linkedin_dmp>
    Listrak Email <destination_listrak>
-   Listrak SMS <destination_listrak_sms>
+   Listrak SMS - Lists <destination_listrak_sms>
+   Listrak SMS - Profiles <destination_listrak_sms_profile>
    LiveRamp <destination_liveramp>
    Mailchimp <destination_mailchimp>
    Meta Ads Manager <destination_meta_ads_manager>
@@ -563,10 +604,14 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Pinterest <destination_pinterest>
    PowerReviews <destination_powerreviews>
    Reddit Ads <destination_reddit_ads>
+   Roku Audience <destination_roku_audience>
    Sailthru <destination_sailthru>
    Salesforce Marketing Cloud <destination_salesforce_marketing_cloud>
    SAP Emarsys <destination_sap_emarsys>
+   SendGrid <destination_sendgrid>
+   SevenRooms <destination_sevenrooms>
    SFTP <destination_sftp>
+   Shopify (GraphQL) <destination_shopify_graphql>
    Snapchat <destination_snapchat>
    Tableau <destination_tableau>
    The Trade Desk <destination_the_trade_desk>

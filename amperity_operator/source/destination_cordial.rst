@@ -41,7 +41,9 @@ Use Amperity to manage contacts--attributes and list membership--in |destination
 * `Contact Imports <https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports>`__ |ext_link| to import contacts to |destination-name|, and then associate contacts to the account list.
 * `Jobs <https://support.cordial.com/hc/en-us/articles/204570807-Jobs>`__ |ext_link| to monitor the import job for completion.
 
-Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+Build a query or segment that has the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+
+.. note:: Custom attribute names are automatically normalized before sending: uppercase letters are converted to lowercase and non-alphanumeric characters, such as spaces and hyphens, are replaced with underscores. For example, **First Name** becomes **first_name**.
 
 .. destination-cordial-end
 
@@ -127,12 +129,12 @@ Get details
 
        ::
 
-           GET /accountcontractattributes
-           POST /accountcontractattributes
+           GET /accountcontactattributes
+           POST /accountcontactattributes
 
            GET /accountlists
            POST /accountlists
-           PUT /accountlists/{key}/clear
+           PUT /accountlists/{id}/clear
 
            POST /contactimports
 

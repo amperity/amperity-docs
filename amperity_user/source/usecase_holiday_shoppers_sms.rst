@@ -26,7 +26,7 @@ SMS can help your customers stay engaged with your brand during holiday seasons.
 
 .. usecase-holiday-shoppers-sms-howitworks-start
 
-The following sections describe using the **Segment Editor** to build a segment that contains customers who have purchased during previous holiday seasons. A holiday shopper is defined as a "customer who has historically purchased from your brand in close proximity to a holiday". Popular holiday windows include Valentine's Day, Easter, Halloween, Thanksgiving, and Christmas. A holiday shopper list should also be filtered to include only customers who have opted-in to being sent SMS messages from your brand.
+The following sections describe using the **Segment Editor** to build a segment that has customers who have purchased during previous holiday seasons. A holiday shopper is defined as a "customer who has historically purchased from your brand in close proximity to a holiday". Popular holiday windows include Valentine's Day, Easter, Halloween, Thanksgiving, and Christmas. A holiday shopper list should also be filtered to include only customers who have opted-in to being sent SMS messages from your brand.
 
 .. usecase-holiday-shoppers-sms-howitworks-end
 
@@ -99,7 +99,7 @@ The following sections describe using the **Segment Editor** to build a segment 
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to refresh segment insights to view updated values for the combination of customers who have made a purchase between November 1 and December 31 *and* who have opted in to SMS.
 
-       .. tip:: For companies with multiple brands or are in multiple regions, you may use attributes that apply additional filters for brands, regions, or products within your product catalog.
+       .. tip:: For companies with many brands or are in many regions, you may use attributes that apply additional filters for brands, regions, or products within your product catalog.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -107,7 +107,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :alt: Find customers who have opted in to receive text messages.
           :align: center
           :class: no-scaled-link
-     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Holiday Shoppers - SMS"
+     - You are done. Click the **Save As** button in the top right corner of the **Segment Editor**. Give your segment a name that describes the purpose and audience type for the segment. For example: "Holiday Shoppers SMS"
 
        .. image:: ../../images/usecases-dialog-save-holiday-shoppers-sms.png
           :width: 440 px

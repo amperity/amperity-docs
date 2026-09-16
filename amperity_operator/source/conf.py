@@ -6,7 +6,7 @@ import shibuya
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
 project = "Operators Guide"
-#copyright = "Copyright &copy; 2025, Amperity"
+#copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
 #version = shibuya.shibuya_version
@@ -29,6 +29,61 @@ extensions = [
     "sphinx_new_tab_link",
 ]
 todo_include_todos = True
+
+# ---------------------------------------------------------------------------
+# Mermaid (sphinxcontrib.mermaid)
+# ---------------------------------------------------------------------------
+
+# Render diagrams as inline SVG (no PDF/LaTeX support needed).
+mermaid_output_format = "raw"
+
+# Allow pan and zoom on diagrams via D3.
+mermaid_d3_zoom = True
+
+# Pin the mermaid.js version for build reproducibility.
+mermaid_version = "11.4.0"
+
+# Initialize Mermaid with the neutral (greyscale) theme and sequence diagram
+# layout tuned for this docs collection. Font family matches Shibuya's system
+# font stack; font size matches paragraph text (1rem / 16px).
+mermaid_init_js = """
+mermaid.initialize({
+    startOnLoad: true,
+    theme: 'neutral',
+    fontFamily: '"Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue", sans-serif',
+    fontSize: 16,
+    sequence: {
+        // Outer margins around the whole diagram
+        diagramMarginX: 20,
+        diagramMarginY: 10,
+        // Horizontal spacing between participant columns
+        actorMargin: 60,
+        // Participant box dimensions
+        width: 150,
+        height: 60,
+        // Padding inside and around boxes
+        boxMargin: 10,
+        boxTextMargin: 5,
+        // Space around note boxes
+        noteMargin: 10,
+        // Vertical space between messages
+        messageMargin: 35,
+        // Horizontal alignment of message labels ('center', 'left', 'right')
+        messageAlign: 'center',
+        // Repeat participant boxes at the bottom of the diagram
+        mirrorActors: false,
+        // Scale diagram to container width (max-width controlled via CSS)
+        useMaxWidth: true,
+        // Use right-angle (orthogonal) arrows instead of curved
+        rightAngles: false,
+        // Prefix each message with a sequence number
+        showSequenceNumbers: false,
+        // Wrap long message labels
+        wrap: true,
+        wrapPadding: 10,
+    },
+});
+"""
 #jupyter_sphinx_thebelab_config = {
 #    'requestKernel': True,
 #}

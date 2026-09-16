@@ -23,8 +23,7 @@ Some values in source data tables should be excluded from unified customer profi
 
 Open the **Identity resolution** page in **Quick start**. On the **Data exclusions** card, do one of the following:
 
-#. Click **AmpAI select** to have the **AmpAI Assistant** determine which types of values are converted to a **NULL** value and are excluded from customer profiles.
-#. Click **Manually select** to define the exclusions yourself.
+#. Click **Manually select** or **Edit** to define data exclusions.
 
    .. image:: ../../images/mockup-guided-idres-exclude-data.png
       :width: 280 px

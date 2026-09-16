@@ -30,7 +30,7 @@ You can exclude these customers from your paid media campaigns--and preserve a p
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-start
 
-The following sections describe using the **Segment Editor** to build a segment that contains only your brand's lowest-value customers.
+The following sections describe using the **Segment Editor** to build a segment that has only your brand's lowest-value customers.
 
 .. usecase-reduce-paid-media-ad-spend-howitworks-end
 

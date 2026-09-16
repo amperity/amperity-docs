@@ -23,6 +23,14 @@ Configure Amperity to send campaigns to any marketing workflow.
 
 .. campaigns-about-end
 
+.. campaigns-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Open **Learning Lab** to learn more about `creating destinations for campaigns and journeys <https://amperity.com/learning-lab/creating-destinations-for-campaigns-and-journeys>`__ |ext_link|. Registration is required.
+
+.. campaigns-learning-lab-end
+
 .. campaigns-about-grid-start
 
 .. grid:: 1 1 2 2
@@ -81,6 +89,10 @@ Configure Amperity to send campaigns to any marketing workflow.
    .. grid-item-card:: BazaarVoice
       :link-type: doc
       :link: campaign_bazaarvoice
+
+   .. grid-item-card:: Bloomreach
+      :link-type: doc
+      :link: campaign_bloomreach
 
    .. grid-item-card:: Bluecore
       :link-type: doc
@@ -150,6 +162,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_google_customer_match
 
+   .. grid-item-card:: Google Customer Match (GDM)
+      :link-type: doc
+      :link: campaign_google_customer_match_gdm
+
    .. grid-item-card:: HubSpot
       :link-type: doc
       :link: campaign_hubspot
@@ -157,6 +173,12 @@ Configure Amperity to send campaigns to any marketing workflow.
    .. grid-item-card:: Infutor
       :link-type: doc
       :link: campaign_infutor
+
+   .. grid-item-card:: Iterable
+      :link-type: doc
+      :link: campaign_iterable
+
+
 
    .. grid-item-card:: Klaviyo
       :link-type: doc
@@ -170,9 +192,13 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_listrak
 
-   .. grid-item-card:: Listrak SMS
+   .. grid-item-card:: Listrak SMS--Lists
       :link-type: doc
       :link: campaign_listrak_sms
+
+   .. grid-item-card:: Listrak SMS--Profiles
+      :link-type: doc
+      :link: campaign_listrak_sms_profile
 
    .. grid-item-card:: LiveRamp
       :link-type: doc
@@ -246,6 +272,14 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_quad
 
+   .. grid-item-card:: Reddit Ads
+      :link-type: doc
+      :link: campaign_reddit_ads
+
+   .. grid-item-card:: Roku Audience
+      :link-type: doc
+      :link: campaign_roku_audience
+
    .. grid-item-card:: RR Donnelly
       :link-type: doc
       :link: campaign_rr_donnelly
@@ -266,9 +300,21 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_sap_emarsys
 
+   .. grid-item-card:: SendGrid
+      :link-type: doc
+      :link: campaign_sendgrid
+
+   .. grid-item-card:: SevenRooms
+      :link-type: doc
+      :link: campaign_sevenrooms
+
    .. grid-item-card:: SFTP
       :link-type: doc
       :link: campaign_sftp
+
+   .. grid-item-card:: Shopify (GraphQL)
+      :link-type: doc
+      :link: campaign_shopify_graphql
 
    .. grid-item-card:: SMG
       :link-type: doc
@@ -294,13 +340,17 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_tiktok_ads
 
+   .. grid-item-card:: Tulip
+      :link-type: doc
+      :link: campaign_tulip
+
+   .. grid-item-card:: Viant DSP
+      :link-type: doc
+      :link: campaign_viant_dsp
+
    .. grid-item-card:: Vibes
       :link-type: doc
       :link: campaign_vibes
-
-   .. grid-item-card:: Walmart DSP
-      :link-type: doc
-      :link: campaign_walmart_dsp
 
    .. grid-item-card:: Yahoo DSP
       :link-type: doc
@@ -331,6 +381,8 @@ Configure Amperity to send campaigns to any marketing workflow.
    Attentive (Audiences) <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
    BazaarVoice <campaign_bazaarvoice>
+   Bloomreach <campaign_bloomreach>
+
    Bluecore <campaign_bluecore>
    Braze <campaign_braze>
    Camelot SMM <campaign_camelot_smm>
@@ -347,12 +399,15 @@ Configure Amperity to send campaigns to any marketing workflow.
    Google Ads <campaign_google_ads>
    Google Cloud Storage <campaign_google_cloud_storage>
    Google Customer Match <campaign_google_customer_match>
+   Google Customer Match (GDM) <campaign_google_customer_match_gdm>
    HubSpot <campaign_hubspot>
    Infutor <campaign_infutor>
+   Iterable <campaign_iterable>
    Klaviyo <campaign_klaviyo>
    LinkedIn DMP <campaign_linkedin_dmp>
    Listrak Email <campaign_listrak>
-   Listrak SMS <campaign_listrak_sms>
+   Listrak SMS - Lists <campaign_listrak_sms>
+   Listrak SMS - Profiles <campaign_listrak_sms_profile>
    LiveRamp <campaign_liveramp>
    Mailchimp <campaign_mailchimp>
    Meta Ads Manager <campaign_meta_ads_manager>
@@ -372,19 +427,25 @@ Configure Amperity to send campaigns to any marketing workflow.
    Pinterest <campaign_pinterest>
    PowerReviews <campaign_powerreviews>
    Quad <campaign_quad>
+   Reddit Ads <campaign_reddit_ads>
+   Roku Audience <campaign_roku_audience>
    RR Donnelly <campaign_rr_donnelly>
    Sailthru <campaign_sailthru>
    Salesforce Marketing Cloud <campaign_salesforce_marketing_cloud>
    Salesforce Sales Cloud <campaign_salesforce_sales_cloud>
    SAP Emarsys <campaign_sap_emarsys>
+   SendGrid <campaign_sendgrid>
+   SevenRooms <campaign_sevenrooms>
    SFTP <campaign_sftp>
+   Shopify (GraphQL) <campaign_shopify_graphql>
    SMG <campaign_smg>
    Snapchat <campaign_snapchat>
    SoundCommerce <campaign_soundcommerce>
    The Trade Desk <campaign_the_trade_desk>
    The Trade Desk 3P<campaign_the_trade_desk_3p>
    TikTok Ads Manager <campaign_tiktok_ads>
+   Tulip <campaign_tulip>
+   Viant DSP <campaign_viant_dsp>
    Vibes <campaign_vibes>
-   Walmart DSP <campaign_walmart_dsp>
    Yahoo DSP <campaign_yahoo_dsp>
    Zendesk <campaign_zendesk>

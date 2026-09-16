@@ -73,9 +73,9 @@ The Streaming API has the following rate limits.
        Requests to the Streaming API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
 
    * - **Payload size**
-     - The maximum payload size may not exceed 5 MB.
+     - The maximum payload size may not exceed 1 MB.
 
-       Attempts to post more than 5 MB fails with an HTTP 413 Payload Too Large status code.
+       Attempts to post more than 1 MB fails with an HTTP 413 Payload Too Large status code.
 
 .. streaming-ingest-rate-limits-end
 
@@ -251,13 +251,11 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-A data stream is generated for you by Amperity on request. Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ or send email to support@amperity.com to request a new data stream.
-
-Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint.
+Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint with the value of **Host** set to the :ref:`base URL <streaming-ingest-rest-api-base-url>`.
 
 .. streaming-ingest-rest-api-stream-schema-important-start
 
-.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have multiple data schemas on a single stream, instead use multiple streams to support multiple schemas.
+.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have many data schemas on a single stream, instead use many streams to support many schemas.
 
 .. streaming-ingest-rest-api-stream-schema-important-end
 
@@ -274,28 +272,32 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
 .. streaming-ingest-rest-api-configure-streams-postman-end
 
 
-.. _streaming-ingest-rest-api-send-json-using-http:
+.. _streaming-ingest-rest-api-base-url:
 
-Send JSON using HTTP
+Base URL of Streaming API endpoints
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-json-using-http-start
+.. streaming-ingest-rest-api-base-url-start
 
-To send JSON data to a stream using HTTP, submit a request similar to:
+The hostname for the Streaming API is:
 
 .. code-block:: none
 
-   POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/json
-   X-Amperity-Tenant: <tenant-name>
-   Authorization: Bearer <Streaming Ingest JWT token>
-   Content-Length: 32164
+   https://{tenant-id}.amperity.com/
 
-   {"field1": "value1",
-    "field2": "value2"}
+Streams are located at:
 
-.. streaming-ingest-rest-api-send-json-using-http-end
+.. code-block:: none
+
+   /stream/v0/data/<stream-id>
+
+and the base URL is:
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>
+
+.. streaming-ingest-rest-api-base-url-end
 
 
 .. _streaming-ingest-rest-api-send-json-using-curl:
@@ -311,9 +313,9 @@ To send JSON data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/json" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    ' {"field1": "value1",
       "field2": "value2"}'
@@ -321,36 +323,61 @@ To send JSON data to a stream using cURL, submit a request similar to:
 .. streaming-ingest-rest-api-send-json-using-curl-end
 
 
-.. _streaming-ingest-rest-api-send-xml-using-http:
+.. _streaming-ingest-rest-api-send-json-using-http:
 
-Send XML using HTTP
+Send JSON using HTTP
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-xml-using-http-start
+.. streaming-ingest-rest-api-send-json-using-http-start
 
-To send XML data to a stream using HTTP, submit a request similar to:
+To send JSON data to a stream using HTTP, submit a request similar to:
 
 .. code-block:: none
 
    POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/xml
-   X-Amperity-Tenant: <tenant-name>
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/json
+   X-Amperity-Tenant: {tenant-id}
    Authorization: Bearer <Streaming Ingest JWT token>
    Content-Length: 32164
 
-    <records>
-    <record>
-    <field1>value1</field1>
-    ...
-    </record>
-    <record>
-    <field1>value2</field1>
-    ... t
-    </record>
-    </records>
+   {"field1": "value1",
+    "field2": "value2"}
 
-.. streaming-ingest-rest-api-send-xml-using-http-end
+.. streaming-ingest-rest-api-send-json-using-http-end
+
+
+.. _streaming-ingest-rest-api-send-json-using-python:
+
+Send JSON using Python
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-json-using-python-start 
+
+To send JSON data to a stream using Python, submit a request similar to:
+
+.. code-block:: python
+
+   import requests
+
+   url = "https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>"
+
+   headers = {
+     "Content-Type": "application/json",
+     "X-Amperity-Tenant": "{tenant-id}",
+     "Authorization": "Bearer <Streaming Ingest JWT token>"
+   }
+
+   payload = {
+     "field1": "value1",
+     "field2": "value2"
+   }
+
+   response = requests.post(url, headers=headers, json=payload)
+
+   print(response.status_code)
+
+.. streaming-ingest-rest-api-send-json-using-python-end
 
 
 .. _streaming-ingest-rest-api-send-xml-using-curl:
@@ -366,9 +393,9 @@ To send XML data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/xml" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    '<records>
     <record>
@@ -381,6 +408,38 @@ To send XML data to a stream using cURL, submit a request similar to:
    '
 
 .. streaming-ingest-rest-api-send-xml-using-curl-end
+
+
+.. _streaming-ingest-rest-api-send-xml-using-http:
+
+Send XML using HTTP
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-xml-using-http-start
+
+To send XML data to a stream using HTTP, submit a request similar to:
+
+.. code-block:: none
+
+   POST /stream/v0/data/<stream-id> HTTP/1.1
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/xml
+   X-Amperity-Tenant: {tenant-id}
+   Authorization: Bearer <Streaming Ingest JWT token>
+   Content-Length: 32164
+
+    <records>
+    <record>
+    <field1>value1</field1>
+    ...
+    </record>
+    <record>
+    <field1>value2</field1>
+    ...
+    </record>
+    </records>
+
+.. streaming-ingest-rest-api-send-xml-using-http-end
 
 
 .. _streaming-ingest-rest-api-http-status-codes:
@@ -473,7 +532,7 @@ Simple JSON data is batched together into NDJSON files that can be loaded direct
   {'field1': 'value1',
    'field2': 'value2'}
 
-NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-simple-end
 
@@ -493,7 +552,7 @@ Nested JSON data requires a saved query to parse the nested values, after which 
    'field2': {'nested-field1': 'nested-value1',
               'nested-field2': 'nested-value2'}}
 
-Nested NDJSON data is loaded to Amperity using the NDJSON file format. Define an |format_ndjson_ingest_query| to flatten the data into a tabular format, configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+Nested JSON data is loaded to Amperity using the NDJSON file format. Define an ingest query to flatten the data into a tabular format, configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-nested-end
 
@@ -518,7 +577,7 @@ To load streamed XML data that has been converted to CBOR format into Amperity, 
    #. Define a SQL query that shapes the data.
    #. Create a sample file, and then use it to add a feed, below.
 
-XML data sent to the Streaming API is loaded to Amperity using the CBOR file format. Define an |format_cbor_ingest_query|, configure courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+XML data sent to the Streaming API is loaded to Amperity using the CBOR file format. Define an ingest query, configure courier `load settings and operations <../reference/format_cbor.html#couriers>`__, and then `define a feed <../reference/format_cbor.html#feeds>`__.
 
 .. streaming-ingest-rest-api-stream-load-cbor-end
 
@@ -564,19 +623,19 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 #. Enter the name of the courier. For example: "|source-name|".
-#. A courier that pulls data that was streamed to Amperity by the Streaming API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming API".
+#. A courier that pulls data that was streamed to Amperity by the Streaming API does not require a credential even though the configuration steps will ask you to add a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming API".
 
 #. Under **Streaming Ingest Settings**, add the Streaming Ingest endpoint ID which is available from the **Stream ID** column in the **Sources** page.
 
-   Specify the **File format**, which can be |format_xml|, |format_ndjson|, or |format_json|. If you are sending JSON data, Amperity will batch your data into |format_ndjson| so select that if you are sending JSON data.
+   Specify the **File format**, which can be `XML <../reference/format_xml.html>`__, `NDJSON <reference/format_ndjson.html>`__, or `JSON <reference/format_json.html>`__.
 
    Set the **File tag** to **streaming**. Set this within the file tag in load operations and the file tag text box.
 
    Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
 
-#. Set the load operations to a string that is incorrect, such as **df-PLACEHOLDER**. You may also set the load operation to empty: "{}".
+#. Set the load operations to a string that is wrong, such as **df-PLACEHOLDER**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use a wrong string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
    .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 

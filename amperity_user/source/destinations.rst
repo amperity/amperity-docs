@@ -32,7 +32,7 @@ This is part three of a series of topics that describes how this works.
 
 .. destinations-howitworks-start
 
-Destinations are the locations to which you sends the lists of customers that are associated with each treatment group within a sub-audience. You may send these lists to any destination that is configured for your tenant. You may send the same list to multiple destinations.
+Destinations are the locations to which you sends the lists of customers that are associated with each treatment group within a sub-audience. You may send these lists to any destination that is configured for your tenant. You may send the same list to many destinations.
 
 .. destinations-howitworks-end
 
@@ -131,7 +131,7 @@ Destinations are the locations to which you sends the lists of customers that ar
 
        Enable the checkbox next to the **phone** attribute, and then leave the rest of the settings as they are. Why are both **email** and **phone** optional? Attentive requires that you send only one of those values and the value that you should select is the one that your organization is using within Attentive to build customer journeys and support your marketing campaigns.
 
-       .. tip:: You should use the **Merged Customers** table for sending customer PII data from Amperity. The **Merged Customers** table is your best source table and contains the most accurate set of customer PII. Your **Customer 360** table is built from the **Merged Customers** table.
+       .. tip:: You should use the **Merged Customers** table for sending customer PII data from Amperity. The **Merged Customers** table is your best source table and has the most accurate set of customer PII. Your **Customer 360** table is built from the **Merged Customers** table.
 
 
    * - .. image:: ../../images/steps-06.png

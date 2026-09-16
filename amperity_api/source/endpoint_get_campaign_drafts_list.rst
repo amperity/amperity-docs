@@ -43,20 +43,32 @@ Prerequisites
 .. endpoint-get-campaign-drafts-list-prerequisites-end
 
 
-.. _endpoint-get-campaign-drafts-list-base-url:
+.. _endpoint-get-campaign-drafts-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-campaign-drafts-list-base-url-start
+.. endpoint-get-campaign-drafts-list-request-url-start
 
-Direct all requests to the **GET /campaign-drafts** endpoint to the following base URL:
+Direct all requests to the **GET /campaign-drafts** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant-id}.amperity.com/api/campaign-drafts/
+.. code-block:: rest
 
-.. endpoint-get-campaign-drafts-list-base-url-end
+   https://app.amperity.com/api/campaign-drafts
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/campaign-drafts
+
+.. endpoint-get-campaign-drafts-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-campaign-drafts-list-rate-limit:
@@ -64,11 +76,13 @@ Direct all requests to the **GET /campaign-drafts** endpoint to the following ba
 Rate limit
 ==================================================
 
-A rate limit is the number of requests that may be made to the Amperity API in a given time period.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-start
+   :end-before: .. rate-limits-end
 
-The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.
-
-Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
 
 
 .. _endpoint-get-campaign-drafts-list-request:
@@ -83,11 +97,11 @@ A request to the **GET /campaign-drafts** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/campaign-drafts \
+          'https://app.amperity.com/api/campaign-drafts \
           ?limit=12 \
-          ?with_total=true \
-          ?destination_data_template_id=ptg-1abcAB4C2' \
-        --header 'amperity-tenant: {tenant}' \
+          &with_total=true \
+          &destination_data_template_id=ptg-1abcAB4C2' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: unstable' \
         --header 'Authorization: Bearer {token}'
 
@@ -180,11 +194,11 @@ The following examples show how to send requests to the **GET /campaign-drafts**
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/campaign-drafts \
+                'https://app.amperity.com/api/campaign-drafts \
                 ?limit=12 \
                 &with_total=true \
                 &destination_data_template_id=ptg-1abcAB4C2' \
-              --header 'amperity-tenant: {tenant}' \
+              --header 'amperity-tenant: {tenant-id}' \
               --header 'api-version: unstable' \
               --header 'Authorization: Bearer {token}'
 
@@ -202,13 +216,13 @@ The following examples show how to send requests to the **GET /campaign-drafts**
          import csv
 
          # URL for Draft campaigns endpoint
-         url = "https://tenant-name.amperity.com/api/campaign-drafts"
+         url = "https://app.amperity.com/api/campaign-drafts"
 
          # Required headers
          headers = {
            'accept': 'application/json',
            'authorization': 'Bearer {token}', # add token here
-           'amperity-tenant': '{tenant}',
+           'amperity-tenant': '{tenant-id}',
            'api-version': 'version'
          }
 
@@ -246,7 +260,7 @@ Responses
 
 .. endpoint-get-campaign-drafts-list-unstable-responses-start
 
-A response from the **GET /campaign-drafts** endpoint will match an `HTTP status code <https://docs.amperity.com/api/responses.html>`__. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /campaign-drafts** endpoint will match an `HTTP status code <https://docs.amperity.com/api/responses.html>`__. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-campaign-drafts-list-unstable-responses-end
 
@@ -270,12 +284,12 @@ The **200** response returns a set of draft campaigns.
        {
          "id": "ab-1CDEfGHI",
          "name": "Holiday Campaign",
-         "deliver_at": "2024-04-22T20:30:00Z"
+         "deliver_at": "2026-04-22T20:30:00Z"
        },
        {
          "id": "cd-2FGHiJKL",
          "name": "Returning Customers",
-         "deliver_at": "2024-04-23T21:00:00Z"
+         "deliver_at": "2026-04-23T21:00:00Z"
        }
      ]
    }
@@ -290,7 +304,7 @@ Response parameters
 
 .. endpoint-get-campaign-drafts-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -312,7 +326,7 @@ A **200 OK** response contains the following parameters.
           The name of the campaign.
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 

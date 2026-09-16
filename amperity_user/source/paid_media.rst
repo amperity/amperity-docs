@@ -95,7 +95,7 @@ Audience expansion
 
 Finding new customers is critical to the successful growth of your brand.
 
-Use Amperity to build high quality seed audiences that contain your most valuable customers. Filter that audience using attributes and PII in your customer 360 -- demographics, interests, product preferences, product affinities, purchase histories -- to define a seed audience that your brand can use with lookalike campaigns.
+Use Amperity to build high quality seed audiences that contain your most valuable customers. Filter that audience using attributes and PII in your customer 360--demographics, interests, product preferences, product affinities, purchase histories--to define a seed audience that your brand can use with lookalike campaigns.
 
 Use seed audiences to grow your customer base and find new customers who are similar to the high-value customers your brand already has.
 
@@ -116,12 +116,12 @@ Lifecycle marketing
 
 .. paid-media-activation-scenario-lifecycle-marketing-start
 
-Amplify lifecycle marketing campaigns -- churn prevention, VIP cultivation, one-time buyers -- with more detailed audiences. For example, build audiences for:
+Amplify lifecycle marketing campaigns--churn prevention, VIP cultivation, one-time buyers--with more detailed audiences. For example, build audiences for:
 
 * Highest value VIPs
 * Customers who are *almost* VIPs
 * Customers who have opted out and were, at one point high-value customers, but have churned
-* Customers who are at every stage -- active, at risk, churned, etc. -- to build out complex churn prevention and one-time buyer campaigns
+* Customers who are at every stage, such as active, at risk, or churned, to build out complex churn prevention and one-time buyer campaigns
 
 .. note:: Lifecycle marketing campaigns are often highly complex with many stages and subtle differences that define how your brand wants to interact with customers who are at specific stages within the campaign.
 
@@ -229,9 +229,9 @@ Amperity builds unified customer profiles that are designed to support strong ma
    :align: left
    :class: no-scaled-link
 
-The **Merged Customers** table contains your brand's best customer profiles, including each customer's best email address, best phone number, best physical address, or best name. When your brand uses this table to send audiences to downstream marketing applications, one record is sent for each customer.
+The **Merged Customers** table has your brand's best customer profiles, including each customer's best email address, best phone number, best physical address, or best name. When your brand uses this table to send audiences to downstream marketing applications, one record is sent for each customer.
 
-The **Unified Paid Media** table contains all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation or different email address to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
+The **Unified Paid Media** table has all known profile data for each of your brand's customers. For example, some customers have a primary email address they use for personal communication, but then use a variation or different email address to sign up on social media. This variation may not be that customer's "best" email address for your brand's marketing campaigns, but it might be right email address for matching with that customer on Facebook or TikTok or Pinterest.
 
 .. admonition:: Match rates vs. matched customers
 
@@ -259,8 +259,8 @@ What type of profile to send?
 
 Amperity supports paid media advertising from two tables, both of which contain customer profile data:
 
-* The **Merged Customers** table contains your customers' best profiles, such as their best email address, best phone number, and best physical address.
-* The **Unified Paid Media** table contains your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
+* The **Merged Customers** table has your customers' best profiles, such as their best email address, best phone number, and best physical address.
+* The **Unified Paid Media** table has your customers complete profile, including all known email addresses, all known phone numbers, and all known physical addresses.
 
 Your brand can send data from one or both of these tables to any paid media advertising application. You can configure the default attributes for each data set from the **Campaigns** page.
 
@@ -277,7 +277,7 @@ Use your best profile
 
 .. paid-media-what-table-best-profile-start
 
-Use the **Merged Customers** table when your goal is to get the highest match rate for an advertising campaign. The **Merged Customers** table contains each customer's best profile, such as their best email address, best phone number, and best physical address, and sending your best profile leads to the highest match rates.
+Use the **Merged Customers** table when your goal is to get the highest match rate for an advertising campaign. The **Merged Customers** table has each customer's best profile, such as their best email address, best phone number, and best physical address, and sending your best profile leads to the highest match rates.
 
 .. paid-media-what-table-best-profile-end
 
@@ -299,9 +299,9 @@ Use the **Unified Paid Media** table when your goal is to maximize the total num
 
 Typical scenarios where **Unified Paid Media** often performs better than **Merged Customers** include:
 
-* Acquisition and prospecting campaigns that rely on multiple identifiers (email, phone, postal).
+* Acquisition and prospecting campaigns that rely on many identifiers (email, phone, postal).
 * Reactivation campaigns where customers may have changed their primary email or phone.
-* Channels and destinations that can accept multiple identifiers per person.
+* Channels and destinations that can accept many identifiers per person.
 
 Because **Unified Paid Media** sends all known profile data for each customer, your brand may see a lower overall match rate percentage but a higher number of matched customer profiles. The :ref:`match rates vs. matched customers example above <paid-media-about-match-rates>` illustrates how this tradeoff works in practice.
 
@@ -324,7 +324,7 @@ The most reliable way to decide which table to use is to run an A/B test:
 
 #. Build a broad audience in Amperity.
 #. Send that audience once from **Merged Customers** and once from **Unified Paid Media**.
-#. After the destination finishes matching, typically within 24–48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
+#. After the destination finishes matching, typically within 24 to 48 hours, compare the number of matched customers and downstream performance. This requires someone with access to the downstream platform to provide the number of customers matched.
 #. Choose the table that best aligns to your campaign objective.
 
 .. paid-media-what-table-ab-test-end
@@ -456,11 +456,11 @@ Paid media indicators can help measure audience quality and attribution. These i
 Did your customers click on a link and make a purchase after clicking on that link? You can measure attribution using metrics like:
 
 * Cost per acquisition (CPA)
-* Cost acquisition cost (CAC)
 * Cost per click (CPC)
 * Cost per thousand (CPM)
 * Click-through rate
 * Conversion rate
+* Customer acquisition cost (CAC)
 * Revenue
 * Return on ad spend (ROAS)
 

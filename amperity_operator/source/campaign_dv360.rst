@@ -82,7 +82,7 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -133,6 +133,12 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
+
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
 
        **Customer ID**
 
@@ -276,9 +282,10 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. campaigns-steps-add-destinations-select-start
-          :end-before: .. campaigns-steps-add-destinations-select-end
+       To configure a campaign for |destination-name|, do one of the following:
+
+       #. Click the row in which |plugin-name| is located. Destinations list alphabetically and you can scroll up and down the list.
+       #. Search for |plugin-name|. Start typing |filter-the-list|. The list filters to show only matching destinations. Select |plugin-name|.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -325,6 +332,12 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
+
+       **Customer product**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-google-customer-match-customer-product-start
+             :end-before: .. setting-google-customer-match-customer-product-end
 
        **Customer ID**
 
@@ -423,7 +436,7 @@ Contact Info Matching
 
 .. campaign-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -437,7 +450,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **Phone Number**
@@ -455,7 +468,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **First Name**
@@ -464,7 +477,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **ZIP Code**
@@ -472,7 +485,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -526,7 +539,7 @@ Mobile Device ID Matching
 
 .. campaign-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -540,7 +553,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. campaign-dv360-api-matching-mobile-list-end

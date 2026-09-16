@@ -92,9 +92,11 @@ The following table describes the default `user profile fields <https://www.braz
 
 .. braze-customer-profiles-common-attributes-note-start
 
-.. note:: Default user profile fields also exist for **alias_name**, **alias_label**, **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
+.. note:: Default user profile fields also exist for **current_location**, **date_of_first_session**, **date_of_last_session**, **email_open_tracking_disabled**, **email_click_tracking_disabled**, **email_subscribe**, **facebook**, **language**, **marked_email_as_spam_at**, **push_subscribe**, **push_tokens**, **subscription_groups**, **time_zone**, and **twitter**.
 
    These fields are not commonly sent to |destination-name| from Amperity, but if your brand chooses to update these user profile fields from Amperity, be sure to use the exact name of the default field name, send the correct value or values, and to use lowercase.
+
+   The **User identifier** setting may be set to ``external_id``, ``braze_id``, or ``user_alias``. When ``user_alias`` is selected, the dataset must include fields named **alias_name** and **alias_label**. These fields are automatically packed into a nested ``user_alias`` object before being sent to the Braze API. For more information about user aliases, see `User aliases <https://www.braze.com/docs/user_guide/data/unification/user_data/user_profile_lifecycle/#user-aliases>`__ |ext_link|.
 
 .. braze-customer-profiles-common-attributes-note-end
 
@@ -152,6 +154,8 @@ Profile attributes, such as **email**, **birthdate**, **address**, and **phone**
 
 Behavioral attributes, both historical and predicted, are more likely to contain values that change frequently. Behavioral attributes should be evaluated before including them within audience profiles. This will help ensure that updates related to behavioral attributes are adding value to your brand's downstream business use cases.
 
+The Braze API limits the ``/users/track`` endpoint to `75 attribute objects per request <https://www.braze.com/docs/api/endpoints/user_data/post_user_track/>`__ |ext_link|.
+
 .. braze-attribute-updates-end
 
 .. braze-attribute-updates-admonition-start
@@ -165,9 +169,9 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       :header-rows: 0
 
       * - **Relative date values**
-        - Attributes with relative date values typically contain a rolling value that is updated daily.
+        - Attributes with relative date values typically contain a rolling value that is updated daily. A relative date is always in Coordinated Universal Time (UTC).
 
-          For example, the **Transaction Attributes Extended** table contains an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
+          For example, the **Transaction Attributes Extended** table has an attribute named **Days Since Latest Order**. This is a useful attribute that counts the number of days that have elapsed since an individual customer last placed an order with your brand. Today that value might be "10" and tomorrow, if that customer has not purchased, will be "11".
 
           Using **Days Since Latest Order** as an attribute within customer profiles ensures that every customer profile associated with a customer who did not purchase during the previous X days will get an updated profile.
 
@@ -185,7 +189,7 @@ Behavioral attributes, both historical and predicted, are more likely to contain
       * - **Calculated attribute values**
         - Many attributes are calculated by Amperity, including all time period rollups.
 
-          For example, the **Transaction Attributes Extended** table contains an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
+          For example, the **Transaction Attributes Extended** table has an attribute named **L6M Order Revenue**. This attribute returns the order revenue for each customer over a rolling 6-month timeframe. This attribute is refreshed on a daily basis and the value is updated each time a customer makes a purchase.
 
           Instead of using the time period rollup attributes directly you can build a custom attribute to define thresholds or to return a yes or no. For example, instead of using the specific revenue amount for **L6M Order Revenue** you could build a custom attribute that returns true when the value for **L6M Order Revenue** is greater than $500.
 

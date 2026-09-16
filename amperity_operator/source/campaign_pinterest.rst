@@ -38,7 +38,7 @@ Configure campaigns for Pinterest
 
 .. campaign-pinterest-configure-start
 
-You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses prior to sending them to |destination-name|.)
+You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses before sending them to |destination-name|.)
 
 .. campaign-pinterest-configure-end
 
@@ -46,7 +46,7 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
+Amperity creates the customer list if it does not already exist, and then adds email addresses to that customer list. Amperity updates the customer list incrementally if it already exists, adding email addresses for new audience members and removing email addresses for members who have left the audience.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
@@ -214,6 +214,8 @@ Reauthorize Amperity
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-oauth-reauthorize-start
    :end-before: .. destinations-oauth-reauthorize-end
+
+.. note:: Amperity automatically renews the Pinterest refresh token when it is within 14 days of expiration. Manual reauthorization is only needed if the token is explicitly revoked or if automatic renewal fails.
 
 
 .. _campaign-pinterest-add:

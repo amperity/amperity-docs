@@ -485,8 +485,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-bazaarvoice-workflow-actions-invalid-credentials`
-       * :ref:`destination-bazaarvoice-workflow-actions-sftp-unavailable`
+       * :ref:`campaign-bazaarvoice-workflow-actions-invalid-credentials`
+       * :ref:`campaign-bazaarvoice-workflow-actions-sftp-unavailable`
 
 
    * - .. image:: ../../images/steps-04.png

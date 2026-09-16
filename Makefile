@@ -1,10 +1,11 @@
 BUILDDIR = build
-BUILD_COMMAND = python3.9 -m sphinx -b html --jobs auto -W
-BUILD_HELP_COMMAND = python3.9 -m sphinx -b text --jobs auto -W
+BUILD_COMMAND = python3 -m sphinx -b html --jobs auto -W
+BUILD_HELP_COMMAND = python3 -m sphinx -b text --jobs auto -W
 
-all: base user operator api reference guides amp360 ampiq contributing tooltips modals legacy
+all: base user operator api reference guides amp360 ampiq datagrid contributing tooltips modals legacy legions training
 
 static:
+	mkdir -p $(BUILDDIR)
 	cp -vr downloads $(BUILDDIR)/
 
 base: static ## Build only the "/user" section
@@ -39,6 +40,10 @@ ampiq: static ## Build only the "/ampiq" section
 	# Building redirects for AmpIQ pages...
 	$(BUILD_COMMAND) amperity_ampiq/source $(BUILDDIR)/ampiq
 
+datagrid: static ## Build only the "/datagrid" section
+	# Building redirects for Datagrid pages...
+	$(BUILD_COMMAND) amperity_datagrid/source $(BUILDDIR)/datagrid
+
 contributing: static ## Build only the "/contributing" section
 	# Building redirects for Contributing pages...
 	$(BUILD_COMMAND) contributing/source $(BUILDDIR)/contributing
@@ -55,18 +60,25 @@ legacy: static ## Build only the "/legacy" section
 	# Building Legacy pages...
 	$(BUILD_COMMAND) legacy/source $(BUILDDIR)/legacy
 
+legions: static ## Build only the "/legions" section
+	# Building Legions pages...
+	$(BUILD_COMMAND) legions/source $(BUILDDIR)/legions
+
+training: static ## Build only the "/training" section
+	# Building Training pages...
+	$(BUILD_COMMAND) amperity_training/source $(BUILDDIR)/training
+
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
 	@rm -rf $(BUILDDIR)
 
-serve: ## Start up a server on http://locahost:8080
-	serve -dir build
-	open http://localhost:8080
+serve: contributing ## Start up a server on http://localhost:8080
+	# Serving docs on http://localhost:8080 ...
+	python3 -m http.server --directory $(BUILDDIR) --bind localhost 8080
 
 dependencies: ## Install all the required dependencies. You must have Homebrew installed first
 	brew install python
 	pip3 install -r requirements.txt
-	brew install serve
 
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \

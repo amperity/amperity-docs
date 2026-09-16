@@ -3,6 +3,7 @@
 
 .. |destination-name| replace:: Snapchat
 .. |what-send| replace:: email addresses, phone numbers, and mobile advertiser IDs
+.. |hashed-fields| replace:: **email**, **phone**, and **mobile_id**
 
 
 .. meta::
@@ -43,6 +44,10 @@ Send query results to Snapchat
    :start-after: .. sendtos-ask-to-configure-start
    :end-before: .. sendtos-ask-to-configure-end
 
+.. include:: ../../amperity_operator/source/destination_snapchat.rst
+   :start-after: .. destination-snapchat-replace-behavior-start
+   :end-before: .. destination-snapchat-replace-behavior-end
+
 
 .. _sendto-snapchat-build-query:
 
@@ -53,12 +58,16 @@ Build query
    :start-after: .. sendtos-build-query-email-only-start
    :end-before: .. sendtos-build-query-email-only-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 .. sendto-snapchat-build-query-note-start
 
 .. admonition:: Notes about sending data to Snapchat
 
    #. |destination-name| allows the following fields: **email**, **mobile_id**, and **phone**.
-   #. You may send only one of only one **email**, **mobile_id**, or **phone**. 
+   #. You may send any combination of **email**, **mobile_id**, or **phone**. 
    #. Amperity ensure that fields are mapped correctly to the schema types required by Snapchat.
    #. Amperity applies SHA-256 hashing automatically.
    #. Audience targeting in |destination-name| requires at least 1000 unique customers. Be sure your audience includes at least 1000 unique customers.
@@ -109,7 +118,7 @@ The following example shows how to send results using a mobile advertising ID:
    FROM MobileID_Table
    WHERE mobile_id_field IS NOT NULL
 
-.. note:: **mobile_id_field** represents a field in Amperity that contains the mobile advertising ID and **MobileID_Table** represents the table in which that field is located.
+.. note:: **mobile_id_field** represents a field in Amperity that has the mobile advertising ID and **MobileID_Table** represents the table in which that field is located.
 
 .. sendto-snapchat-build-query-madid-end
 
@@ -175,7 +184,7 @@ Snapchat schema types
 
 The following Amperity columns may be mapped to the corresponding schema type to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| using `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link|.
 
-.. note:: A row that contains a **NULL** value is automatically filtered out and is shown in the error logs.
+.. note:: A row that has a **NULL** value is automatically filtered out and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -190,7 +199,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as one-way SHA-256
 
    * - **mobile_id**
@@ -198,7 +207,7 @@ The following Amperity columns may be mapped to the corresponding schema type to
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
        * Hashes data as one-way SHA-256
 

@@ -1,24 +1,24 @@
 .. https://docs.amperity.com/user/
 
 
-.. |destination-name| replace:: Cheetah Digital by Marigold
+.. |destination-name| replace:: Cheetah Digital by Zeta
 .. |what-send| replace:: customer profiles
 
 
 .. meta::
     :description lang=en:
-        Use orchestrations to send query results from Amperity to Cheetah Digital by Marigold.
+        Use orchestrations to send query results from Amperity to Cheetah Digital by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use orchestrations to send query results from Amperity to Cheetah Digital by Marigold.
+        Use orchestrations to send query results from Amperity to Cheetah Digital by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Send query results to Cheetah Digital by Marigold
+        Send query results to Cheetah Digital by Zeta
 
 ==================================================
-Send query results to Cheetah Digital by Marigold
+Send query results to Cheetah Digital by Zeta
 ==================================================
 
 .. include:: ../../shared/terms.rst

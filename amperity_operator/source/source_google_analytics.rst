@@ -12,18 +12,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to pull GA4 property reports from Google Analytics.
+        Configure Amperity to pull GA4 property reports from Google Analytics 4.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to pull GA4 property reports from Google Analytics.
+        Configure Amperity to pull GA4 property reports from Google Analytics 4.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pull GA4 property reports from Google Analytics
+        Pull GA4 property reports from Google Analytics 4
 
 ==================================================
-Pull from Google Analytics
+Pull from Google Analytics 4
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -123,7 +123,7 @@ Review feed and domain table
 
 .. source-google-analytics-review-data-start
 
-After creating the |source-name| courier it creates a source named |source-name| and a feed named |feed-name| that contains the fields that Amperity pulls from the configured Google Analytics 4 property.
+After creating the |source-name| courier it creates a source named |source-name| and a feed named |feed-name| that has the fields that Amperity pulls from the configured Google Analytics 4 property.
 
 .. source-google-analytics-review-data-end
 

@@ -28,7 +28,7 @@ You can find customers who made their first purchase from your website within th
 
 .. usecase-customers-new-website-customers-howitworks-start
 
-The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across multiple channels.
+The following sections describe using the **Segment Editor** to build a segment that finds customers with a high lifetime value who have purchased across many channels.
 
 .. usecase-customers-new-website-customers-howitworks-end
 
@@ -61,13 +61,15 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: center
           :class: no-scaled-link
 
-     - To identify which customers have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then configure the dates to be between "now - 30 days":
+     - To identify which customers have made their first purchase within the previous 30 days, choose the **First Order Datetime** attribute from the **Transaction Attributes Extended** table, select the "is after" operator, enable the **Use relative dates** option, and then configure the dates to be between ``now - 30 days``:
 
        .. image:: ../../images/attribute-first-order-datetime-last-30-days.png
           :width: 540 px
           :alt: Find customers whose first purchase was within the last 30 days.
           :align: left
           :class: no-scaled-link
+
+       A relative date is always in Coordinated Universal Time (UTC).
 
        Click the **Refresh** button located on the right side of the **Segment Editor** to see how many customers are in your segment, how much they spent in the past year, how many are active, and how many of them could belong to a future campaign.
 
@@ -106,7 +108,7 @@ The following sections describe using the **Segment Editor** to build a segment 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have multiple brands or have multiple regions and want to build segments that are brand- or region-specific.
+       .. tip:: Use good naming patterns to ensure that you can always find your segments when you need them. Be sure to include the brand name and the region name if you have many brands or have many regions and want to build segments that are brand- or region-specific.
 
 
    * - .. image:: ../../images/steps-05.png

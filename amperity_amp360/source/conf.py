@@ -18,22 +18,6 @@ import sys, os
 sys.path.append(os.path.abspath('../../_ext'))
 
 
-# might be needed for Canny, if yes, should be here
-# import jwt
-# 
-# canny_private_key = 'bd4601a9-32d6-8632-ac89-cd091e213c0b'
-# 
-# def create_canny_token(user):
-#   user_data = {
-#     'avatarURL': user.avatar_url, # optional but preferred
-#     'email': user.email,
-#     'id': user.id,
-#     'name': user.name,
-#   }
-#   return jwt.encode(user_data, canny_private_key, algorithm='HS256')
-# 
-
-
 # -- General configuration -----------------------------------------------------
 
 

@@ -31,6 +31,16 @@ Enable predictive models
 
 .. add-predicted-models-caution-end
 
+.. add-predicted-models-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predictive models forecast customer behavior using customer profiles and behavioral history.
+
+   Open **Learning Lab** to learn more about `training predictive models <https://amperity.com/learning-lab/training-predictive-models>`__ |ext_link|. Registration is required.
+
+.. add-predicted-models-learning-lab-end
+
 
 .. _add-predicted-models-workflow-start:
 
@@ -65,7 +75,7 @@ What components of predictive models are visible within Amperity?
      - Feeds that define the data model for predictive modeling tables within Amperity:
 
        * **PCLV**
-       * **PCLV - Changes**
+       * **PCLV Changes**
        * **Predicted Affinity ProductAttribute**
        * **Predicted Affinity Audience ProductAttribute**
 
@@ -79,7 +89,7 @@ What components of predictive models are visible within Amperity?
        Couriers to pull the results of predictive modeling to Amperity on a daily basis:
 
        * **PCLV** (including **PCLV Changes** and **PCLV Metadata**)
-       * **PCLV - Validation**
+       * **PCLV Validation**
        * **Predicted Affinity**
        * **Predicted Affinity Audience**
 
@@ -124,7 +134,7 @@ Data requirements
 
 Predictive models have :ref:`the same requirements as segments and campaigns <add-campaigns-data-requirements>`, along with the following additional requirements:
 
-#. Data sources must provide at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
+#. Data sources must have at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
 #. A defined product catalog with 20-2000 distinct values is required to support recommended audience sizes for product affinity.
 
    .. important:: SKU-level recommendations are not supported.
@@ -374,7 +384,7 @@ After you have configured Amperity for the recommended patterns and workflows fo
 
 .. add-predicted-models-request-to-enable-important-start
 
-.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has multiple brands. To fit predictions for each brand:
+.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has many brands. To fit predictions for each brand:
 
    #. A customer must purchase predictive models for each individual brand.
    #. The tenant must be configured to support brand-specific databases, with a database for each brand with dedicated **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables.
@@ -488,7 +498,7 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
 
 #. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling. The **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
 
-   .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
+   .. important:: Product affinity modeling requires the field that defines product categories--**product-category** in the **Unified Product Catalog** table--to contain between 20 and 2000 unique values.
 
 #. A list of custom attributes may be defined. These must be available as columns in the **Customer 360** database and must be added to the **Unified Itemized Transactions** table.
 
@@ -558,7 +568,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
    .. code-block:: sql
       :linenos:
 
-      -- Predicted Attributes from Predicted_CLV_Attributes pa
+      -- Predicted Attributes from Predicted_365d_CLV_Attributes pa
       ,pa.predicted_probability_of_transaction_next_365d AS `predicted_probability_of_transaction_next_365d`
       ,pa.predicted_order_frequency_next_365d AS `predicted_order_frequency_next_365d`
       ,pa.predicted_average_order_revenue_next_365d AS `predicted_average_order_revenue_next_365d`
@@ -572,7 +582,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
 
    .. code-block:: sql
 
-      LEFT JOIN Predicted_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
+      LEFT JOIN Predicted_365d_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
 
 #. Click **Next**.
 #. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.

@@ -1,11 +1,11 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Sailthru by Marigold
+.. |destination-name| replace:: Sailthru by Zeta
 .. |destination-api| replace:: Sailthru API
 .. |plugin-name| replace:: "Sailthru"
 .. |credential-type| replace:: "sailthru"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "API key" and "API secret"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
@@ -16,18 +16,18 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to Sailthru by Marigold.
+        Configure Amperity to send campaigns to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to Sailthru by Marigold.
+        Configure Amperity to send campaigns to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure campaigns for Sailthru by Marigold
+        Configure campaigns for Sailthru by Zeta
 
 ==================================================
-Configure campaigns for Sailthru by Marigold
+Configure campaigns for Sailthru by Zeta
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -346,7 +346,7 @@ The following SQL query shows how to return results that map to |destination-nam
      ,state AS postal_state
    FROM Customer360
 
-.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
+.. note:: |destination-name| field names are case sensitive and cannot be all numbers, cannot start with a number, and cannot consist entirely of special characters. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
 
 .. campaign-sailthru-extended-profile-attributes-end
 

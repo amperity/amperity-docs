@@ -34,7 +34,7 @@ About the Segments AI Assistant
 
 .. segments-ai-assistant-start
 
-The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor** that lets you use natural language to generate and refine segments.
+The :doc:`Segments AI Assistant <assistant>` is a generative AI feature within the **Segment Editor**. Use it to generate and refine segments with natural language.
 
 .. segments-ai-assistant-end
 
@@ -57,7 +57,7 @@ A good segment name is clear and concise, is not longer than necessary, uses pat
 
    Be sure to follow good naming patterns to ensure that downstream users can always find your segments when they need them. Add details like "historical", "daily", or "test" as appropriate.
 
-   Be sure to include the brand name or the region name if you have multiple brands or have multiple regions.
+   Be sure to include the brand name or the region name if you have many brands or have many regions.
 
    Some examples:
 
@@ -103,7 +103,7 @@ Exclusions
 
 .. segments-editor-exclusions-start
 
-Exclusions define conditions that determine which customers is notlong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
+Exclusions define conditions that determine which customers do not belong to an audience. When a customer matches the criteria defined for an exclusion, that customer will be excluded from the audience.
 
 .. image:: ../../images/mockup-segments-exclusions.png
    :width: 480 px
@@ -163,7 +163,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       In this example, there is only one condition. The audience that is returned contains only customers who have an email address.
+       In this example, there is only one condition. The audience that is returned has only customers who have an email address.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -180,7 +180,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       In this example, the audience that is returned -- shown as the darker color -- is smaller because only a subset of customers for whom you have email addresses have opted in to receiving email messages from your brand.
+       In this example, the audience that is returned--shown as the darker color--is smaller because only a subset of customers for whom you have email addresses have opted in to receiving email messages from your brand.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -210,7 +210,7 @@ The following examples describe how AND and OR conditions work.
 
        This audience has two groups of attributes: email addresses **OR** phone numbers **AND** opt-in status for email addresses **OR** phone numbers.
 
-       The first group of attributes -- email addresses *or* phone numbers, as shown in the darker color -- should make your audience larger. Few data sets have a matching set of email addresses and phone numbers across all customers.
+       The first group of attributes--email addresses *or* phone numbers, as shown in the darker color--should make your audience larger. Few data sets have a matching set of email addresses and phone numbers across all customers.
 
        .. image:: ../../images/segments-and-vs-or-howitworks-3.png
           :width: 600 px
@@ -218,7 +218,7 @@ The following examples describe how AND and OR conditions work.
           :align: left
           :class: no-scaled-link
 
-       The second group of attributes -- opt-in status for email addresses *or* phone numbers, as shown in the lighter color -- should also be larger as a group than by themselves. You should expect the number of customers who have opted in to receive email or SMS communications to be smaller than the number of customers who have provided email addresses or phone numbers to your brand.
+       The second group of attributes--opt-in status for email addresses *or* phone numbers, as shown in the lighter color--should also be larger as a group than by themselves. You should expect the number of customers who have opted in to receive email or SMS communications to be smaller than the number of customers who have provided email addresses or phone numbers to your brand.
 
        These two groups are in-between an **AND** condition within your segment: email address *or* phone *and* opt-in status for email address *or* phone.
 
@@ -639,7 +639,7 @@ The following operators are available to all attributes with the **string** data
 
    * - Operator
      - Description
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**
@@ -673,7 +673,7 @@ NULL and NOT NULL values
 
 .. segments-editor-null-not-null-start
 
-A field with a **NULL** value is a field with a value that is empty. A **NULL** value is different than a value of zero, a blank value, or a value that contains only spaces. 
+A field with a **NULL** value is a field with a value that is empty. A **NULL** value is different than a value of zero, a blank value, or a value that has only spaces. 
 
 An attribute can only have a **NULL** value if it remained empty after the record was created. With **NULL**, you can insert a new record or update a record without adding a value to this field and the field will be saved with a **NULL** value.
 
@@ -697,7 +697,7 @@ Relative dates
 
 .. segments-editor-relative-dates-start
 
-A relative date is determined at the time a segment is run, where **today** is the day on which the segment is run. For example: **yesterday**, **30 days ago**, **14 days ago**, or **1 year ago**. The list of relative date values includes a series of common ranges, but you may also type in a more specific range, such as **2 months ago** or **5 days ago**.
+A relative date is determined at the time a segment is run, where **today** is the day on which the segment is run. A relative date is always in Coordinated Universal Time (UTC). For example: **yesterday**, **30 days ago**, **14 days ago**, or **1 year ago**. The list of relative date values includes a series of common ranges, but you may also type in a more specific range, such as **2 months ago** or **5 days ago**.
 
 .. segments-editor-relative-dates-end
 
@@ -752,7 +752,7 @@ A relative date is determined at the time a segment is run, where **today** is t
 
        For example, if the current day is "Thursday 01 / 12 / 2023" then **1 year ago** is "Wednesday 01 / 12 / 2022".
 
-.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, or **Revenue/Purchaser** by changing the option in the **Compare by:** field.
+.. tip:: You can compare segments by **% of Purchasers**, **% of Revenue**, or **Revenue/Purchaser** by changing the option in the **Compare by** field.
 
 .. segments-editor-relative-date-values-end
 
@@ -779,7 +779,7 @@ Segment insights include the following categories:
 
 .. segments-editor-insights-note-start
 
-.. note:: Segment insights are available when your customer 360 database contains certain tables.
+.. note:: Segment insights are available when your customer 360 database has certain tables.
 
    * **Unique Customers**, **1-year Active Customers**, and **1-year Segment Revenue** require access to the **Transaction Attributes Extended** and **Customer 360** tables.
    * **Reachable Customers** requires access to the **Customer Attributes** table.

@@ -3,8 +3,8 @@
 
 .. |destination-name| replace:: The Trade Desk
 .. |what-send| replace:: events
-.. |what-enable| replace:: **email**
-.. |attributes-sent| replace:: |destination-name| requires only email addresses. There are no optional fields.
+.. |what-enable| replace:: **email** or **phone**
+.. |attributes-sent| replace:: |destination-name| requires an email address or phone number. There are no optional fields.
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
 
@@ -35,9 +35,9 @@ Send events to The Trade Desk
 
 .. events-the-trade-desk-overview-end
 
-.. caution:: This destination is available for sending events to |destination-name| after it is configured by a Datagrid Operator or your Amperity representative.
-
-   If this destintion cannot be selected from the campaigns editor or activations canvas ask your Datagrid Operator or Amperity representative to configure a destination for sending events to |destination-name|.
+.. include:: ../../shared/sendtos.rst
+   :start-after: .. sendtos-ask-to-configure-start
+   :end-before: .. sendtos-ask-to-configure-end
 
 
 .. _events-the-trade-desk-build-segment:
@@ -75,7 +75,9 @@ A query that returns a collection offline event is similar to:
    WHERE uit.order_datetime > (CURRENT_DATE - interval '25' day)
    GROUP BY amperity_id
 
-The query **MUST** contain the following fields: **email** and **timestamp**.
+The query **MUST** contain **timestamp** and at least one of **email** or **phone**.
+
+.. tip:: You may use **phone** as an alternative to **email**. When both are present in the same row, Amperity generates a separate event for each identifier.
 
 .. tip:: You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand. For example:
 

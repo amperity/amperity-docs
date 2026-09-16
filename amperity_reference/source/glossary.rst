@@ -34,7 +34,7 @@ A
       :end-before: .. term-activation-states-tables-end
 
 
-.. _a-active-campaign:
+.. _a-activecampaign:
 
 **ActiveCampaign**
    .. include:: ../../shared/terms.rst
@@ -80,6 +80,14 @@ A
    .. include:: ../../shared/terms.rst
       :start-after: .. term-ad-suppression-start
       :end-before: .. term-ad-suppression-end
+
+
+.. _a-adaptive-identity:
+
+**adaptive identity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adaptive-identity-start
+      :end-before: .. term-adaptive-identity-end
 
 
 .. _a-address:
@@ -174,6 +182,14 @@ A
       :end-before: .. term-adobe-marketo-end
 
 
+.. _a-adobe-target:
+
+**Adobe Target**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-adobe-target-start
+      :end-before: .. term-adobe-target-end
+
+
 .. _a-adroll:
 
 **AdRoll**
@@ -208,7 +224,7 @@ A
 
 .. _a-all-opted-in-emails:
 
-**All Opted In Emails**
+**All Opted-In Emails**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-all-opted-in-emails-table-start
       :end-before: .. term-all-opted-in-emails-table-end
@@ -400,6 +416,14 @@ A
       :end-before: .. term-audience-end
 
 
+.. _a-audience-monetization:
+
+**audience monetization**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-audience-monetization-start
+      :end-before: .. term-audience-monetization-end
+
+
 .. _a-audience-sizes:
 
 **audience sizes**
@@ -572,6 +596,14 @@ B
       :end-before: .. term-bazaarvoice-end
 
 
+.. _b-beta-geometric-distribution:
+
+**beta-geometric distribution**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-beta-geometric-distribution-start
+      :end-before: .. term-beta-geometric-distribution-end
+
+
 .. _b-bigcommerce:
 
 **BigCommerce**
@@ -656,6 +688,14 @@ B
       :end-before: .. term-braze-end
 
 
+.. _b-braze-currents:
+
+**Braze Currents**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-braze-currents-start
+      :end-before: .. term-braze-currents-end
+
+
 .. _b-brightloom:
 
 **Brightloom**
@@ -718,8 +758,9 @@ C
 
 
 .. _c-campaign-recipients-table:
+.. _c-crt:
 
-**Campaign Recipients**
+**Campaign Recipients**, **CRT**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-campaign-recipients-table-start
       :end-before: .. term-campaign-recipients-table-end
@@ -727,7 +768,7 @@ C
 
 .. _c-campaigns-tab:
 
-**Campaigns tab**
+**Campaigns page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-campaigns-tab-start
       :end-before: .. term-campaigns-tab-end
@@ -759,7 +800,7 @@ C
 
 .. _c-cheetah-digital:
 
-**Cheetah Digital by Marigold**
+**Cheetah Digital by Zeta**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-cheetah-digital-start
       :end-before: .. term-cheetah-digital-end
@@ -866,9 +907,7 @@ C
       :start-after: .. term-cogs-start
       :end-before: .. term-cogs-end
 
-.. _c-crt:
-
-**combined requests table** 
+**combined requests table**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-combined-requests-start
       :end-before: .. term-combined-requests-end
@@ -981,6 +1020,14 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-cpg-start
       :end-before: .. term-cpg-end
+
+
+.. _c-contextual-identity:
+
+**contextual identity**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-contextual-identity-start
+      :end-before: .. term-contextual-identity-end
 
 
 .. _c-control-group:
@@ -1142,7 +1189,7 @@ C
 
 .. _c-custom-domain-table:
 
-**custom domain table**
+**custom domain table**, **CDT**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-custom-domain-table-start
       :end-before: .. term-custom-domain-table-end
@@ -1199,6 +1246,14 @@ C
    .. include:: ../../shared/terms.rst
       :start-after: .. term-customer-attributes-table-start
       :end-before: .. term-customer-attributes-table-end
+
+
+.. _c-customer-data-platform:
+
+**Customer Data Platform (CDP)**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-customer-data-platform-start
+      :end-before: .. term-customer-data-platform-end
 
 
 .. _c-customer-data-table:
@@ -1409,14 +1464,6 @@ D
       :end-before: .. term-delta-lake-end
 
 
-.. _d-delta-sharing:
-
-**Delta Sharing**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-delta-sharing-start
-      :end-before: .. term-delta-sharing-end
-
-
 .. _d-demandware:
 
 **Demandware**
@@ -1449,7 +1496,7 @@ D
 
 .. _d-destinations-tab:
 
-**Destinations tab**
+**Destinations page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-destinations-tab-start
       :end-before: .. term-destinations-tab-end
@@ -1469,12 +1516,12 @@ D
       :end-before: .. term-detailed-examples-table-end
 
 
-.. _d-deterministic:
+.. _d-deterministic-connection:
 
-**deterministic**
+**deterministic connection**
    .. include:: ../../shared/terms.rst
-      :start-after: .. term-deterministic-start
-      :end-before: .. term-deterministic-end
+      :start-after: .. term-deterministic-connection-start
+      :end-before: .. term-deterministic-connection-end
 
 
 .. _d-digital-channel:
@@ -1728,14 +1775,26 @@ E
       :start-after: .. term-epsilon-start
       :end-before: .. term-epsilon-end
 
+
+.. _e-epsilon-abacus:
+
+**Epsilon Abacus**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-abacus-start
       :end-before: .. term-epsilon-abacus-end
 
+
+.. _e-epsilon-conversant:
+
+**Epsilon Conversant**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-conversant-start
       :end-before: .. term-epsilon-conversant-end
 
+
+.. _e-epsilon-targeting:
+
+**Epsilon Targeting**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-epsilon-targeting-start
       :end-before: .. term-epsilon-targeting-end
@@ -2177,6 +2236,14 @@ H
       :end-before: .. term-hubspot-end
 
 
+.. _h-hyperparameters:
+
+**hyperparameters**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-hyperparameters-start
+      :end-before: .. term-hyperparameters-end
+
+
 .. _glossary-i:
 
 I
@@ -2205,6 +2272,14 @@ I
    .. include:: ../../shared/terms.rst
       :start-after: .. term-identity-provider-start
       :end-before: .. term-identity-provider-end
+
+
+.. _i-identity-recognition:
+
+**identity resolution**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-identity-recognition-start
+      :end-before: .. term-identity-recognition-end
 
 
 .. _i-identity-resolution:
@@ -2237,6 +2312,14 @@ I
    .. include:: ../../shared/terms.rst
       :start-after: .. term-infutor-start
       :end-before: .. term-infutor-end
+
+
+.. _i-insider-one:
+
+**Insider One**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-insider-one-start
+      :end-before: .. term-insider-one-end
 
 
 .. _i-interaction-record:
@@ -2356,6 +2439,13 @@ I
 J
 ==================================================
 
+.. _j-japs-olson:
+
+**Japs-Olson**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-japs-olson-start
+      :end-before: .. term-japs-olson-end
+
 
 .. _j-jdbc:
 
@@ -2417,6 +2507,14 @@ J
 
 K
 ==================================================
+
+
+.. _k-keychain:
+
+**keychain**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-keychain-start
+      :end-before: .. term-keychain-end
 
 
 .. _k-kibo:
@@ -2699,14 +2797,14 @@ M
 
 **Magento**, **Adobe Magento**
    See :ref:`Adobe Commerce <a-adobe-commerce>`.
-   
-   
+
+
 .. _m-matchback:
 
 **matchback**
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-matchback-start
-         :end-before: .. term-matchback-end
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-matchback-start
+      :end-before: .. term-matchback-end
 
 
 .. _m-mailchimp:
@@ -2811,7 +2909,7 @@ M
 
 .. _m-metrics-tab:
 
-**Metrics tab**
+**Metrics page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-metrics-tab-start
       :end-before: .. term-metrics-tab-end
@@ -2881,7 +2979,7 @@ M
 
 .. _m-moveable-ink:
 
-**Moveable Ink**
+**Movable Ink**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-moveable-ink-start
       :end-before: .. term-moveable-ink-end
@@ -2897,7 +2995,7 @@ M
 
 .. _m-multi-brand:
 
-**multi-brand**
+**multibrand**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-brand-start
       :end-before: .. term-multi-brand-end
@@ -2937,7 +3035,7 @@ M
 
 .. _m-multi-touch-attribution:
 
-**Multi-touch-attribution**
+**Multi-touch attribution**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-multi-touch-attribution-start
       :end-before: .. term-multi-touch-attribution-end
@@ -3075,6 +3173,14 @@ O
    .. include:: ../../shared/terms.rst
       :start-after: .. term-one-and-done-start
       :end-before: .. term-one-and-done-end
+
+
+.. _o-opensharing:
+
+**OpenSharing**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-opensharing-start
+      :end-before: .. term-opensharing-end
 
 
 .. _o-oracle-business-analytics:
@@ -3580,6 +3686,14 @@ P
       :end-before: .. term-primary-key-end
 
 
+.. _p-probabilistic-connection:
+
+**probabilistic connection**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-probabilistic-connection-start
+      :end-before: .. term-probabilistic-connection-end
+
+
 .. _p-product-affinity:
 
 **product affinity**
@@ -3626,6 +3740,14 @@ P
    .. include:: ../../shared/terms.rst
       :start-after: .. term-profile-api-start
       :end-before: .. term-profile-api-end
+
+
+.. _p-pseudonymous-identifier:
+
+**Pseudonymous identifier**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-pseudonymous-identifier-start
+      :end-before: .. term-pseudonymous-identifier-end
 
 
 .. _p-psv:
@@ -3745,6 +3867,14 @@ Q
 
 R
 ==================================================
+
+
+.. _r-random-forest-classifier:
+
+**random forest classifier**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-random-forest-classifier-start
+      :end-before: .. term-random-forest-classifier-end
 
 
 .. _r-raw-data:
@@ -3895,7 +4025,7 @@ R
       :end-before: .. term-reddit-ads-end
 
 
-.. _r-request_datasource:
+.. _r-request-datasource:
 
 **request datasource**
    .. include:: ../../shared/terms.rst
@@ -3903,7 +4033,7 @@ R
       :end-before: .. term-request-datasource-end
 
 
-.. _r-request_strategy:
+.. _r-request-strategy:
 
 **request strategy**
    .. include:: ../../shared/terms.rst
@@ -3911,7 +4041,7 @@ R
       :end-before: .. term-request-strategy-end
 
 
-.. _r-request_type:
+.. _r-request-type:
 
 **request type**
    .. include:: ../../shared/terms.rst
@@ -3973,7 +4103,7 @@ S
 
 .. _s-sailthru:
 
-**Sailthru by Marigold**
+**Sailthru by Zeta**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-sailthru-start
       :end-before: .. term-sailthru-end
@@ -4337,7 +4467,7 @@ S
 
 .. _s-sources-tab:
 
-**Sources tab**
+**Sources page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-sources-tab-start
       :end-before: .. term-sources-tab-end
@@ -4479,7 +4609,7 @@ S
 
 .. _s-stitch-blocking-keys:
 
-**Stitch_Blocking_Keys**
+**Stitch Blocking Keys**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-blocking-keys-table-start
       :end-before: .. term-stitch-blocking-keys-table-end
@@ -4487,15 +4617,23 @@ S
 
 .. _s-stitch-blocklistvalues:
 
-**Stitch_BlocklistValues**
+**Stitch BlocklistValues**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-blocklistvalues-table-start
       :end-before: .. term-stitch-blocklistvalues-table-end
 
 
+.. _s-stitch-rules:
+
+**Stitch rules**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-stitch-rules-start
+      :end-before: .. term-stitch-rules-end
+
+
 .. _s-stitch-scores:
 
-**Stitch_Scores**
+**Stitch Scores**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-scores-table-start
       :end-before: .. term-stitch-scores-table-end
@@ -4503,7 +4641,7 @@ S
 
 .. _s-stitch-tab:
 
-**Stitch tab**
+**Stitch page**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-tab-start
       :end-before: .. term-stitch-tab-end
@@ -4535,7 +4673,7 @@ S
 
 .. _s-stitch-labels:
 
-**stitch-labels**
+**Stitch labels**
    .. include:: ../../shared/terms.rst
       :start-after: .. term-stitch-labels-start
       :end-before: .. term-stitch-labels-end

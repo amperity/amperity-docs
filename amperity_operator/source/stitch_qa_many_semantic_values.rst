@@ -65,7 +65,7 @@ Configure query
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-#. You can run this query against multiple semantics. For example, **email**:
+#. You can run this query against many semantics. For example, **email**:
 
    .. code-block:: sql
       :linenos:
@@ -82,7 +82,7 @@ Configure query
 
    Run for other semantics, as necessary.
 
-#. You can run this query against multiple semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
+#. You can run this query against many semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
 
    .. code-block:: sql
       :linenos:

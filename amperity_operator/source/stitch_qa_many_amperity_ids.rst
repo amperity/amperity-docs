@@ -65,7 +65,7 @@ Configure query
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-#. Run the query three times, once each for the following semantics: **email**, **phone**, and **address**. Update the highlighted lines prior to running the query.
+#. Run the query three times, once each for the following semantics: **email**, **phone**, and **address**. Update the highlighted lines before running the query.
 
    For **email**:
 
@@ -114,7 +114,7 @@ Configure query
 
    Run for other semantics, as necessary.
 
-#. If you need to run the query against multiple semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
+#. If you need to run the query against many semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
 
    .. code-block:: sql
       :linenos:
@@ -173,7 +173,7 @@ Configure query
 
    Replace **email** with the correct semantic and **value** with one of the values retured by the other **SELECT** statements in this query.
 
-   .. tip:: You can create a separate query that contains only this **SELECT** statement instead of commenting out the **SELECT** statements in this query that find a single semantic or a combination of semantics.
+   .. tip:: You can create a separate query that has only this **SELECT** statement instead of commenting out the **SELECT** statements in this query that find a single semantic or a combination of semantics.
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
 

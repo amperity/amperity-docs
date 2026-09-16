@@ -41,7 +41,7 @@ Use Amperity to manage contacts--attributes and list membership--in |destination
 * `Contact Imports <https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports>`__ |ext_link| to import contacts to |destination-name|, and then associate contacts to the account list.
 * `Jobs <https://support.cordial.com/hc/en-us/articles/204570807-Jobs>`__ |ext_link| to monitor the import job for completion.
 
-Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+Build a query or segment that has the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
 
 .. campaign-cordial-end
 
@@ -127,8 +127,8 @@ Get details
 
        ::
 
-           GET /accountcontractattributes
-           POST /accountcontractattributes
+           GET /accountcontactattributes
+           POST /accountcontactattributes
 
            GET /accountlists
            POST /accountlists
@@ -402,9 +402,9 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-cordial-workflow-actions-invalid-credentials`
-       * :ref:`destination-cordial-workflow-actions-required-attributes-missing`
-       * :ref:`destination-cordial-workflow-actions-unique-list-name-required`
+       * :ref:`campaign-cordial-workflow-actions-invalid-credentials`
+       * :ref:`campaign-cordial-workflow-actions-required-attributes-missing`
+       * :ref:`campaign-cordial-workflow-actions-unique-list-name-required`
 
 
    * - .. image:: ../../images/steps-04.png

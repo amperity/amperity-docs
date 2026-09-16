@@ -36,6 +36,16 @@ The **Destinations** page shows the status of every orchestration and orchestrat
 
 .. orchestrations-view-end
 
+.. orchestrations-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Orchestrations send query results to any downstream workflow through configured destinations.
+
+   Open **Learning Lab** to learn more about `creating destinations for orchestrations <https://amperity.com/learning-lab/creating-destinations-for-orchestrations>`__ |ext_link|. Registration is required.
+
+.. orchestrations-learning-lab-end
+
 
 .. _orchestrations-howtos:
 
@@ -148,7 +158,7 @@ Delete orchestration
 
 .. orchestrations-delete-start
 
-Use the **Delete** option to remove an orchestration from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration prior to deleting it. This action will *not* delete the data template or destination associated with the orchestration.
+Use the **Delete** option to remove an orchestration from Amperity. Verify that both upstream and downstream processes no longer depend on this orchestration before deleting it. This action will *not* delete the data template or destination associated with the orchestration.
 
 .. orchestrations-delete-end
 
@@ -191,7 +201,7 @@ Run orchestration
 
 .. orchestrations-run-start
 
-Amperity sends the results to any number of downstream workflows via orchestrations. An orchestration contains query data or a database export, a schedule, data templates, and a destination that is configured with the credentials Amperity needs to be able to write data.
+Amperity sends the results to any number of downstream workflows via orchestrations. An orchestration has query data or a database export, a schedule, data templates, and a destination that is configured with the credentials Amperity needs to be able to write data.
 
 .. orchestrations-run-end
 

@@ -19,12 +19,12 @@
 
 
 ==================================================
-Configure campaigns for Adobe Campaign
+Send data to Adobe Campaign
 ==================================================
 
 .. vale off
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_adobe_campaign.html>`__ |ext_link|.
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_adobe_campaign.html>`__ |ext_link|.
 
 .. vale on
 
@@ -72,7 +72,7 @@ Get details
           :alt: Detail two.
           :align: center
           :class: no-scaled-link
-     - The username and passphrase.
+     - The username and private key.
 
 
    * - .. image:: ../../images/steps-check-off-black.png

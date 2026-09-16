@@ -21,6 +21,16 @@ About queries
    :start-after: .. term-query-start
    :end-before: .. term-query-end
 
+.. queries-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Queries page to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link| and how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work. Registration is required.
+
+.. queries-learning-lab-end
+
 
 .. _queries-ai-assistant:
 
@@ -223,7 +233,7 @@ Completion
 
 .. queries-data-explorer-full-screen-completion-tip-start
 
-.. tip:: Ensure that prior to filtering a column that it actually contains data that can match the search criteria.
+.. tip:: Ensure that before filtering a column that it actually has data that can match the search criteria.
 
 .. queries-data-explorer-full-screen-completion-tip-end
 
@@ -332,7 +342,7 @@ About Presto SQL
 
 .. queries-editor-presto-sql-start
 
-Amperity queries are built using Presto SQL to define a **SELECT** statement. Please refer to the :doc:`sql_presto`.
+Amperity queries are built using Presto SQL to define a **SELECT** statement. Refer to the :doc:`sql_presto`.
 
 .. queries-editor-presto-sql-end
 
@@ -392,6 +402,7 @@ Tasks related to building queries in Amperity:
 * :ref:`queries-edit`
 * :ref:`queries-enable-performance-mode`
 * :ref:`queries-enable-alerts`
+* :ref:`queries-filter`
 * :ref:`queries-format-sql`
 * :ref:`queries-open`
 * :ref:`queries-organize`
@@ -415,6 +426,7 @@ Tasks related to building queries in Amperity:
 * :ref:`queries-view-details`
 
 .. queries-howtos-list-end
+
 
 
 .. _queries-add-comment-to-query:
@@ -731,7 +743,7 @@ Delete query
 
 .. queries-delete-start
 
-Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query prior to deleting it.
+Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query before deleting it.
 
 .. queries-delete-end
 
@@ -895,7 +907,7 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. Alert levels include:
+Alerts are sent when the record count in the query output has errors that exceed the configured threshold. Alert levels include:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
 
@@ -934,10 +946,44 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
 
 .. admonition:: Amperity Learning Lab
 
-   Open **Learning Lab** to learn more about how `query alerts <https://learn.amperity.com/query-alerts>`__ |ext_link| work. Registration is required.
+   Open **Learning Lab** to learn more about how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work.
 
 .. queries-enable-alerts-learning-lab-end
 
+.. _queries-filter:
+
+Filter queries
+--------------------------------------------------
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. queries-filter-start
+
+You can filter the list of queries that appear on the **Queries** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only queries associated with that database.
+* By created by. Select any combination of users who created queries.
+* By last edited by. Select any combination of users who most recently edited queries.
+* By label. Select one or more labels to filter queries by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
+
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
+
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
+
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When many labels are selected, queries matching any selected labels will be shown.
+
+.. queries-filter-end
 
 .. _queries-format-sql:
 
@@ -1039,7 +1085,7 @@ Bulk delete
 
 .. queries-bulk-delete-start
 
-Bulk delete multiple queries on the **Queries** page.
+Bulk delete many queries on the **Queries** page.
 
 .. queries-bulk-delete-end
 
@@ -1060,7 +1106,7 @@ Bulk move
 
 .. queries-bulk-move-start
 
-Bulk move multiple queries on the **Queries** page.
+Bulk move many queries on the **Queries** page.
 
 .. queries-bulk-move-end
 
@@ -1194,7 +1240,7 @@ Rename query
 
 .. queries-rename-start
 
-Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query prior to renaming it.
+Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query before renaming it.
 
 .. queries-rename-end
 

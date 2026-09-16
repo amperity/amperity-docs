@@ -25,7 +25,7 @@ Profile API
 
 .. admonition:: Amperity Learning Lab
 
-   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://learn.amperity.com/query-for-profile-information-via-the-api>`__ |ext_link|. Registration is required.
+   Open **Learning Lab** to learn more about how your brand can use the `Profile API <https://amperity.com/learning-lab/query-for-profile-information-via-the-api>`__ |ext_link|. Registration is required.
 
 .. api-profile-learning-lab-end
 
@@ -68,8 +68,8 @@ The Profile API has the following endpoints:
 
 * :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes>`
 * :ref:`GET /indexes/{id} <profile-api-howitworks-endpoints-get-indexes-id>`
-* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles>`
-* :ref:`GET /indexes <profile-api-howitworks-endpoints-get-indexes-id-profiles-id>`
+* :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>`
+* :ref:`GET /indexes/{id}/profiles/{id} <profile-api-howitworks-endpoints-get-indexes-id-profiles-id>`
 
 .. profile-api-howitworks-endpoints-end
 
@@ -96,11 +96,11 @@ GET /indexes
    :start-after: .. endpoint-get-profile-index-start
    :end-before: .. endpoint-get-profile-index-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile_index.rst
-   :start-after: .. endpoint-get-profile-index-base-url-start
-   :end-before: .. endpoint-get-profile-index-base-url-end
+   :start-after: .. endpoint-get-profile-index-request-url-start
+   :end-before: .. endpoint-get-profile-index-request-url-end
 
 **cURL example**
 
@@ -134,11 +134,11 @@ GET /indexes/{id}
    :start-after: .. endpoint-get-profile-index-id-start
    :end-before: .. endpoint-get-profile-index-id-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile_index_id.rst
-   :start-after: .. endpoint-get-profile-index-id-base-url-start
-   :end-before: .. endpoint-get-profile-index-id-base-url-end
+   :start-after: .. endpoint-get-profile-index-id-request-url-start
+   :end-before: .. endpoint-get-profile-index-id-request-url-end
 
 **cURL example**
 
@@ -176,11 +176,11 @@ GET /indexes/{id}/profiles
    :start-after: .. endpoint-get-profiles-list-maximum-filters-start
    :end-before: .. endpoint-get-profiles-list-maximum-filters-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
-   :start-after: .. endpoint-get-profiles-list-base-url-start
-   :end-before: .. endpoint-get-profiles-list-base-url-end
+   :start-after: .. endpoint-get-profiles-list-request-url-start
+   :end-before: .. endpoint-get-profiles-list-request-url-end
 
 **cURL example**
 
@@ -214,11 +214,11 @@ GET /indexes/{id}/profiles/{id}
    :start-after: .. endpoint-get-profile-start
    :end-before: .. endpoint-get-profile-end
 
-**Base URL**
+**Request URL**
 
 .. include:: ../../amperity_api/source/endpoint_get_profile.rst
-   :start-after: .. endpoint-get-profile-base-url-start
-   :end-before: .. endpoint-get-profile-base-url-end
+   :start-after: .. endpoint-get-profile-request-url-start
+   :end-before: .. endpoint-get-profile-request-url-end
 
 **cURL example**
 
@@ -269,7 +269,7 @@ Queries
 
 .. profile-api-howitworks-queries-start
 
-Each index is associated with a single query. The query must have a field that contains a unique identifier and at least one other field that can be returned by the request to the Profile API endpoint.
+Each index is associated with a single query. The query must have a field that has a unique identifier and at least one other field that can be returned by the request to the Profile API endpoint.
 
 .. include:: ../../amperity_api/source/endpoint_get_profiles_list.rst
    :start-after: .. endpoint-get-profiles-list-maximum-filters-start
@@ -325,7 +325,7 @@ Filter fields
 
 .. profile-api-howitworks-filter-fields-start
 
-Filter fields allow requests to the **GET /indexes/{id}/profiles** endpoint to be filtered on each field that is included in the request. Use filter fields to support use cases with multiple matching fields, such as "Get all profiles associated with a reservation ID".
+Filter fields allow requests to the **GET /indexes/{id}/profiles** endpoint to be filtered on each field that is included in the request. Use filter fields to support use cases with many matching fields, such as "Get all profiles associated with a reservation ID".
 
 Filter fields must be defined in the query and the name of the filter field is the same as the name of the field in the query.
 
@@ -386,7 +386,7 @@ The index ID is available from:
 
 .. tip:: You can copy the URL of the :ref:`GET /indexes/{id}/profiles <profile-api-howitworks-endpoints-get-indexes-id-profiles>` endpoint from the **Profile API** tab on the **Destinations** page. From the |fa-kebab| menu for an endpoint, select **Copy URL**.
 
-   The copied URL contains the correct values for the selected endpoint's **{tenant}** and **{index-id}** request parameters.
+   The copied URL has the correct values for the selected endpoint's **{tenant}** and **{index-id}** request parameters.
 
 .. profile-api-howitworks-index-ids-tip-end
 
@@ -472,7 +472,7 @@ Build a query
 
 .. profile-api-enable-build-query-start
 
-Build a query that contains the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to define an index.
+Build a query that has the attributes you need to enable your downstream workflows. You can use any aspect of your unified customer profiles to define an index.
 
 .. profile-api-enable-build-query-end
 
@@ -625,7 +625,7 @@ Validate the endpoint
 
 .. profile-api-enable-validate-endpoint-start
 
-After the index has generated, validate the endpoint to verify that it is in the list of indexes, and then contains the data that is required by your workflow.
+After the index has generated, validate the endpoint to verify that it is in the list of indexes, and then has the data that is required by your workflow.
 
 The most direct way to validate the endpoints is to use cURL commands to access the Profile API endpoints.
 
@@ -641,9 +641,9 @@ Build into use cases
 
 .. profile-api-enable-build-usecase-start
 
-After you have verified that a specific endpoint is accessible and that it contains the data you expect it to contain, you can start building that endpoint into your workflows. See the :ref:`list of use cases <profile-api-usecases>` for some ideas as starting points.
+After you have verified that a specific endpoint is accessible and that it has the data you expect it to contain, you can start building that endpoint into your workflows. See the :ref:`list of use cases <profile-api-usecases>` for some ideas as starting points.
 
-The Amperity Profile API can be accessed using cURL, Postman, or any other mechanism that can access a REST API and provide the access token that is required by the request.
+The Amperity Profile API is accessed using cURL, Postman, or any other mechanism that can access a REST API with the access token that is required by the request.
 
 .. profile-api-enable-build-usecase-end
 
@@ -682,7 +682,7 @@ As the number of rows and filter fields increase, the performance of that index 
 
 The size of the index has a greater effect on the length of time required to build or refresh an index than the response times for requests that are made to that index.
 
-.. note:: Response times were measured using traffic across multiple endpoints simultaneously from US-East to US-West. Use these response times as an indicator for the types of response times you will see for your tenant's use of Profile API endpoints.
+.. note:: Response times were measured using traffic across many endpoints simultaneously from US-East to US-West. Use these response times as an indicator for the types of response times you will see for your tenant's use of Profile API endpoints.
 
 .. profile-api-response-times-start
 
@@ -1331,7 +1331,7 @@ The following sections describe some ways to use the Profile API:
 * :ref:`Braze Connected Content <profile-api-usecase-braze>`
 * :ref:`Hashed email profiles <profile-api-usecase-hashed-email-address-profiles>`
 * :ref:`Loyalty profiles <profile-api-usecase-loyalty-profiles>`
-* :ref:`Moveable Ink Studio <profile-api-usecase-moveable-ink-studio>`
+* :ref:`Movable Ink Studio <profile-api-usecase-moveable-ink-studio>`
 * :ref:`Server-side JavaScript in Salesforce Marketing Cloud <profile-api-usecase-ssjs-ssmc>`
 * :ref:`Wireless access points <profile-api-usecase-hashed-email-address-profiles-wireless>`
 
@@ -1395,7 +1395,7 @@ Braze uses a feature called Connected Content to define reusable blocks of messa
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - Build an index that contains the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles.
+     - Build an index that has the list default user profile attributes, and then extend the profile to include more details from Amperity unified customer profiles.
 
 
    * - .. image:: ../../images/steps-02.png
@@ -1553,8 +1553,8 @@ You can use hashed email addresses to associate unified customer profiles to the
 
 This use case uses a combination of Profile API endpoints:
 
-#. An endpoint that contains a unified customer profile that :ref:`uses a hashed email address <profile-api-usecase-hashed-email-address-profiles>` as the lookup key.
-#. An endpoint that contains wireless access points unique identifiers as the lookup key. For example, this endpoint could be built using a query similar to:
+#. An endpoint that has a unified customer profile that :ref:`uses a hashed email address <profile-api-usecase-hashed-email-address-profiles>` as the lookup key.
+#. An endpoint that has wireless access points unique identifiers as the lookup key. For example, this endpoint could be built using a query similar to:
 
    .. code-block:: sql
 
@@ -1566,7 +1566,7 @@ This use case uses a combination of Profile API endpoints:
 
 For example: A customer logs into the secure wireless that is offered by your hotel or resort using their email address.
 
-A hashed version of that email address is built, and then is used as the lookup key for the endpoint in your Profile API that contains the hashed email profile. The unique ID for the wireless access point is used to look up the hotel or resort.
+A hashed version of that email address is built, and then is used as the lookup key for the endpoint in your Profile API that has the hashed email profile. The unique ID for the wireless access point is used to look up the hotel or resort.
 
 Use the Profile API to update the welcome screen. For example:
 
@@ -1649,7 +1649,7 @@ This message could be extended to include promos or offers or any type of additi
 
 .. _profile-api-usecase-moveable-ink-studio:
 
-Moveable Ink Studio
+Movable Ink Studio
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/destination_moveableink.rst

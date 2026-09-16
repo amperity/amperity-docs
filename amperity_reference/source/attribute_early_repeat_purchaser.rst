@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        What percentage of first-time buyers returned to make a second purchase within 90 days?
+        What percentage of first-time buyers returned to make a second purchase within 12 weeks, or 84 days?
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        What percentage of first-time buyers returned to make a second purchase within 90 days?
+        What percentage of first-time buyers returned to make a second purchase within 12 weeks, or 84 days?
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -23,13 +23,13 @@ Early repeat purchaser
 
 .. attribute-early-repeat-purchaser-start
 
-Use the **Early Repeat Purchaser** attribute to build segments that support campaigns that turn one-time buyers into repeat customers. Compare your one-time buyers with early repeat purchasers. Move customers who have made a repeat purchase within 90 days out of your one-time buyer campaign and into other campaigns.
+Use the **Early Repeat Purchaser** attribute to build segments that support campaigns that turn one-time buyers into repeat customers. Compare your one-time buyers with early repeat purchasers. Move customers who have made a repeat purchase within 12 weeks, or 84 days, out of your one-time buyer campaign and into other campaigns.
 
 .. attribute-early-repeat-purchaser-end
 
 .. attribute-early-repeat-purchaser-tip-start
 
-.. tip:: A one-time buyer could, in theory, make their elusive second purchase 60 days or 600 days after their first purchase. For early repeat purchaser to be a useful metric you cannot wait 600 days. Amperity defaults to 90 days. Many customers choose to use a shorter time window.
+.. tip:: A one-time buyer could, in theory, make their elusive second purchase 60 days or 600 days after their first purchase. For early repeat purchaser to be a useful metric you cannot wait 600 days. Amperity defaults to 12 weeks, or 84 days. Many customers choose to use a shorter time window.
 
    To use a shorter time window, update the **Transaction Attributes Extended** table for your preferred value. For example, to use 60 days as the definition for an early repeat purchaser, change the current value to **60**:
 
@@ -76,7 +76,7 @@ The following table lists the operators that are available to this attribute.
    * - **is false**
      - |attribute-recommended| **More useful**
 
-       Filters your segment to contain customers who have not made a second purchase within the timeframe that defines an early repeat purchaser. By default this timeframe is "within 90 days".
+       Filters your segment to contain customers who have not made a second purchase within the timeframe that defines an early repeat purchaser. By default this timeframe is "within 12 weeks, or 84 days".
 
    * - **is not NULL**
      - Returns customer records that have a value.
@@ -87,6 +87,6 @@ The following table lists the operators that are available to this attribute.
    * - **is true**
      - |attribute-recommended| **More useful**
 
-       Filters your segment to contain customers who have made a second purchase within the timeframe that defines an early repeat purchaser. By default this timeframe is "within 90 days".
+       Filters your segment to contain customers who have made a second purchase within the timeframe that defines an early repeat purchaser. By default this timeframe is "within 12 weeks, or 84 days".
 
 .. attribute-early-repeat-purchaser-conditions-end

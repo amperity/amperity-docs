@@ -44,6 +44,16 @@ After the token passes validation, the request will look up any access policies 
    :end-before: .. api-keys-important-end
 
 
+.. _authentication-sandboxes:
+
+Authentication for sandboxes
+==================================================
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-sandboxes-start
+   :end-before: .. api-keys-sandboxes-end
+
+
 .. _authentication-api-keys:
 
 API keys

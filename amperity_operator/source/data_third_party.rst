@@ -72,13 +72,13 @@ Trade area append (TAA)
 
 .. data-third-party-trade-area-append-start
 
-Customers use TAA to better understand the customers they know the least about. For example, a customer may have a rich set of data that contains PII and transaction data about their most loyal customers alongside decreasingly rich sets of data for customers who engage less frequently, belong to fewer loyalty programs, and participate in fewer channels. It is not unusual for 80% of a customer's data set to benefit from using some form of TAA to improve data quality.
+Customers use TAA to better understand the customers they know the least about. For example, a customer may have a rich set of data that has PII and transaction data about their most loyal customers alongside decreasingly rich sets of data for customers who engage less often, belong to fewer loyalty programs, and participate in fewer channels. It is not unusual for 80% of a customer's data set to benefit from using some form of TAA to improve data quality.
 
 .. data-third-party-trade-area-append-end
 
 .. data-third-party-trade-area-append-context-start
 
-Amperity can ingest a data source with sparse PII, such as point-of-sale credit card transactions that only capture first name, last name, a credit card token or hash, and information about the store at which the transaction occurred, and then match this to a third-party prospect file. The third-party prospect file contains rich PII, and by using TAA to match sparse PII to rich PII, the customer has a more complete understanding of who those customers are, which brands they prefer, and can better determine which types of engagements with those customers will be successful.
+Amperity can ingest a data source with sparse PII, such as point-of-sale credit card transactions that only capture first name, last name, a credit card token or hash, and information about the store at which the transaction occurred, and then match this to a third-party prospect file. The third-party prospect file has rich PII, and by using TAA to match sparse PII to rich PII, the customer has a more complete understanding of who those customers are, which brands they prefer, and can better determine which types of engagements with those customers will be successful.
 
 .. data-third-party-trade-area-append-context-end
 
@@ -176,7 +176,7 @@ Update addresses (NCOA)
 
 .. data-third-party-update-addresses-start
 
-Amperity can help identify customers that have multiple sets of contact information across multiple sets of data. NCOA data contains data about the history of address changes that can be acquired from USPS or NationalChangeOfAddress.com or from third party data providers like Acxiom.
+Amperity can help identify customers that have many sets of contact information across many sets of data. NCOA data has data about the history of address changes that can be acquired from USPS or NationalChangeOfAddress.com or from third party data providers like Acxiom.
 
 .. warning:: NCOA data can only be used for direct-mail use cases.
 
@@ -186,7 +186,7 @@ In this scenario:
 #. Amperity ingests this data as first-party customer data.
 #. Amperity runs identity resolution across this data, and then creates customer profiles.
 #. Amperity sends the results to the NCOA data provider, including the Amperity ID associated with each unique customer. These results must include the first name, last name, and address of the customer in a format that matches the format for the NCOA provider.
-#. The NCOA provider sends back to Amperity data that contains the latest first name, last name, address of the customer, and their Amperity ID.
+#. The NCOA provider sends back to Amperity data that has the latest first name, last name, address of the customer, and their Amperity ID.
 #. Amperity ingests the updated data and semantically tags the updated address as an "updated address". The resulting customer profiles contain the original and updated addresses both tied to each unique customer in the data results.
 
 .. data-third-party-update-addresses-end
@@ -203,7 +203,7 @@ Match anonymous visitors
 
 .. data-third-party-match-anonymous-visitors-start
 
-Anonymous visitors can be matched to known customers by using a combination of IP addresses and device information, though it is possible for the same customer to browse a website using multiple devices and multiple IP addresses.
+Anonymous visitors can be matched to known customers by using a combination of IP addresses and device information, though it is possible for the same customer to browse a website using many devices and many IP addresses.
 
 It is difficult to personalize a website experience while an anonymous visitor is browsing a website, even when that visitor can be associated to a known customer. Some degree of personalization can be provided to those customers as follow-up items, such as sending an abandoned browse or abandoned cart email.
 
@@ -237,7 +237,7 @@ Identify sparse customer records
 
 .. data-third-party-identify-sparse-records-start
 
-A brand with a large brick-and-mortar presence likely has sparse customer data associated with purchases made by customers in physical stores. A common scenario for identifying consumers from sparse customer records is to associate the sparse data with better data that contains more PII, including email addresses, physical addresses, income, gender, age, or profession.
+A brand with a large brick-and-mortar presence likely has sparse customer data associated with purchases made by customers in physical stores. A common scenario for identifying consumers from sparse customer records is to associate the sparse data with better data that has more PII, including email addresses, physical addresses, income, gender, age, or profession.
 
 .. note:: Third-party data providers often use more PII than last name and the last 4 digits of a credit card to match a brand's record to a customer file. The approaches varies depending on the provider.
 

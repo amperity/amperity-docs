@@ -29,7 +29,7 @@ Basics
    * - **Ctrl + a**
      - Move to the beginning of a line.
    * - **Ctrl + c**
-     - Stop the execution of the current command. Useful if you've typed something that takes a while to complete, but need to stop the command.
+     - Stop the execution of the current command. Useful if you have typed something that takes a while to complete, but need to stop the command.
    * - **Ctrl + e**
      - Move to the end of a line.
    * - **Ctrl + r**

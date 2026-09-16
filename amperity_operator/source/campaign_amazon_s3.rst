@@ -345,6 +345,12 @@ Both parts are required to authenticate requests to Amazon AWS resources.
              :start-after: .. credential-amazon-s3-iam-role-arn-start
              :end-before: .. credential-amazon-s3-iam-role-arn-end
 
+       **External ID**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-amazon-s3-external-id-start
+             :end-before: .. credential-amazon-s3-external-id-end
+
        **Amazon S3 bucket name**
 
           |checkmark-required| **Required**
@@ -648,8 +654,8 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`destination-amazon-s3-workflow-actions-invalid-bucket-name`
-       * :ref:`destination-amazon-s3-workflow-actions-invalid-credentials`
+       * :ref:`campaign-amazon-s3-workflow-actions-invalid-bucket-name`
+       * :ref:`campaign-amazon-s3-workflow-actions-invalid-credentials`
 
 
    * - .. image:: ../../images/steps-04.png

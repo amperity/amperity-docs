@@ -41,20 +41,32 @@ Prerequisites
 .. endpoint-get-profile-index-id-prerequisites-end
 
 
-.. _endpoint-get-profile-index-id-base-url:
+.. _endpoint-get-profile-index-id-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-profile-index-id-base-url-start
+.. endpoint-get-profile-index-id-request-url-start
 
-Direct all requests to the **GET /indexes/{id}** endpoint to the following base URL:
+Direct all requests to the **GET /indexes/{id}** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
 
-   https://{tenant-id}.amperity.com/api/indexes/
+.. code-block:: rest
 
-.. endpoint-get-profile-index-id-base-url-end
+   https://app.amperity.com/api/indexes/{id}
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes/{id}
+
+.. endpoint-get-profile-index-id-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-profile-index-id-rate-limit:
@@ -65,6 +77,10 @@ Rate limit
 .. include:: ../../amperity_api/source/rate_limits.rst
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-profile-start
+   :end-before: .. rate-limits-profile-end
 
 
 .. _endpoint-get-profile-index-id-request:
@@ -79,9 +95,8 @@ A request to the **GET /indexes/{id}** endpoint is similar to:
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/indexes \
-          ?index-id={id} \
-        --header 'amperity-tenant: {tenant}' \
+          'https://app.amperity.com/api/indexes/{id} \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2025-07-31' \
         --header 'Authorization: Bearer {token}'
 
@@ -137,9 +152,8 @@ The following examples show how to send requests to the **GET /indexes/{id}** en
       .. code-block:: rest
 
          curl --request GET \
-                'https://tenant.amperity.com/api/indexes/ \
-                ?index-id={id} \
-                --header 'amperity-tenant: {tenant}' \
+                'https://app.amperity.com/api/indexes/{id} \
+                --header 'amperity-tenant: {tenant-id}' \
                 --header 'api-version: 2025-07-31' \
                 --header 'Authorization: Bearer {token}'
 
@@ -155,7 +169,7 @@ Responses
 
 .. endpoint-get-profile-index-id-responses-start
 
-A response from the **GET /indexes/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response contains the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /indexes/{id}** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-profile-index-id-responses-end
 
@@ -203,7 +217,7 @@ Response parameters
 
 .. endpoint-get-profile-index-id-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65

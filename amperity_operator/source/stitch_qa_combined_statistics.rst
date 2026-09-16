@@ -20,7 +20,7 @@ Statistics -- combined
 
 .. stitch-qa-query-combined-statistics-start
 
-Use this query to return an overview of Stitch statistics that contains the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
+Use this query to return an overview of Stitch statistics that has the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
 
 .. stitch-qa-query-combined-statistics-end
 

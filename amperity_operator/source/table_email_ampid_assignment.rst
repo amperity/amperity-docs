@@ -25,7 +25,7 @@ The **Email AmpID Assignment** table narrows the many-to-many relationships betw
 
 .. table-email-ampid-assignment-note-start
 
-.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with multiple email addresses *or* prevent email addresses from being associated with multiple Amperity IDs.
+.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with many email addresses *or* prevent email addresses from being associated with many Amperity IDs.
 
    This table enforces a one-to-one relationship for use in the **Merged Customers** table.
 
@@ -109,7 +109,7 @@ The following block shows the default list of attributes used for ranking Amperi
        ,MAX(pclv.predicted_clv_next_365d) AS predicted_clv_next_365d
      FROM email_universe univ
      LEFT JOIN Transaction_Attributes_Extended tae ON tae.amperity_id = univ.amperity_id
-     LEFT JOIN Predicted_CLV_Attributes pclv ON pclv.amperity_id = univ.amperity_id
+     LEFT JOIN Predicted_365d_CLV_Attributes pclv ON pclv.amperity_id = univ.amperity_id
      GROUP BY univ.amperity_id, univ.email, univ.update_dt
    )
 
@@ -145,7 +145,7 @@ The following block shows the default list of attributes used for ranking Amperi
 
    .. code-block:: sql
 
-      LEFT JOIN Predicted_CLV_Attributes pclv
+      LEFT JOIN Predicted_365d_CLV_Attributes pclv
       ON pclv.amperity_id = univ.amperity_id
 
    .. note:: You may include other predicted modeling tables.
