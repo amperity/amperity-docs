@@ -4,12 +4,15 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR LOYALTY EVENTS**
 
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 
+.. vale on
 
 .. loyalty-id-start
 
@@ -190,14 +193,14 @@ The unique ID for a reservation that is associated with a redemption or accrual 
 
 .. loyalty-event-tier-end-datetime-start
 
-The date and time at which the current loyalty tier ends (or ended).
+The date and time at which the current loyalty tier ends or ended.
 
 .. loyalty-event-tier-end-datetime-end
 
 
 .. loyalty-event-tier-start-datetime-start
 
-The date and time at which the current loyalty tier starts (or started).
+The date and time at which the current loyalty tier starts or started.
 
 .. loyalty-event-tier-start-datetime-end
 
@@ -239,7 +242,7 @@ The lifetime reward balance associated with the loyalty ID.
 
 .. loyalty-next-tier-start
 
-The name of the next loyalty tier to which, pending points accumulation, a customer will belong.
+The name of the next loyalty tier to which, pending points accumulation, a customer belong.
 
 .. loyalty-next-tier-end
 
@@ -272,6 +275,10 @@ The amount of money a customer must spend to move to the next loyalty tier.
 .. loyalty-spend-to-next-tier-end
 
 
+.. vale off
+
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on

@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/api/
-..
+
 
 .. meta::
     :description lang=en:
@@ -14,28 +13,15 @@
     :content class=swiftype name=title data-type=string:
         GET /workflow/runs
 
-
 ==================================================
 GET /workflow/runs
 ==================================================
 
 .. endpoint-get-workflows-list-start
 
-Use the **/workflow/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
+Use the **GET /workflow/runs** endpoint to return a list of workflows that exist within the date range defined in the request.
 
 .. endpoint-get-workflows-list-end
-
-
-.. _endpoint-get-workflows-list-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-request-get-workflow-runs-list.png
-   :width: 440 px
-   :alt: GET /workflow/runs/
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-get-workflows-list-prerequisites:
@@ -51,20 +37,32 @@ Prerequisites
 .. endpoint-get-workflows-list-prerequisites-end
 
 
-.. _endpoint-get-workflows-list-base-url:
+.. _endpoint-get-workflows-list-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-get-workflows-list-base-url-start
+.. endpoint-get-workflows-list-request-url-start
 
-All requests made to the **/workflow/runs** endpoint should be directed to the following base URL:
+Direct all requests to the **GET /workflow/runs** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
 
-::
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/workflow/runs
+
+**Microsoft Azure**
+
+.. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/workflow/runs
 
-.. endpoint-get-workflows-list-base-url-end
+.. endpoint-get-workflows-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-get-workflows-list-rate-limit:
@@ -76,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-get-workflows-list-request:
 
@@ -84,19 +86,19 @@ Requests
 
 .. endpoint-get-workflows-list-request-start
 
-A request to the **/workflow/runs** endpoint is similar to:
+A request to the **GET /workflow/runs** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
+          'https://app.amperity.com/api/workflow/runs \
           ?limit=12 \
-          &with_total=true \
-        --header 'amperity-tenant: tenant' \
+          &with_total=true' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-get-workflows-list-request-end
 
@@ -108,7 +110,7 @@ Request parameters
 
 .. endpoint-get-workflows-list-request-parameters-start
 
-The following table describes the parameters that may be used with the **/workflow/runs** endpoint.
+The following table describes the parameters that may be used with the **GET /workflow/runs** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -129,41 +131,41 @@ The following table describes the parameters that may be used with the **/workfl
    * - **created_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one (or more) workflows started to run. See the **created_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window in which one or more workflows started to run. See the **created_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **created_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one (or more) workflows started to run. See the **created_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window in which one or more workflows started to run. See the **created_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **created_at** value that falls within this time window will be returned. (See the **created_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **created_at** value that falls within this time window is returned. See the **created_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_from**
      - Datetime. Optional.
 
-       A timestamp that defines the start (inclusive) of the time window in which one (or more) workflows stopped running. See the **ended_to** request parameter.
+       A timestamp that defines the start (inclusive) of the time window in which one or more workflows stopped running. See the **ended_to** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **ended_to**
      - Datetime. Optional.
 
-       A timestamp that defines the end (exclusive) of the time window in which one (or more) workflows stopped running. See the **ended_from** request parameter.
+       A timestamp that defines the end (exclusive) of the time window in which one or more workflows stopped running. See the **ended_from** request parameter.
 
        This timestamp may be a partial timestamp, such as YYYY-MM-DD. The timestamp must be in |ext_iso_8601| format and is in Coordinated Universal Time (UTC).
 
-       .. important:: Only workflows that have a **ended_at** value that falls within this time window will be returned. (See the **ended_at** response property for the **workflow/runs/{id}** endpoint.)
+       .. important:: Only workflows that have a **ended_at** value that falls within this time window is returned. See the **ended_at** response property for the :doc:`endpoint_get_workflows_fetch` endpoint.
 
 
    * - **limit**
@@ -203,7 +205,7 @@ The following table describes the parameters that may be used with the **/workfl
 
        Return a list of workflows that only match the specified workflow type.
 
-       .. tip:: Use this endpoint to return a list of workflows (and workflow types), and then use a value from the **type** response parameter to make a new request that filters by that workflow type value.
+       .. tip:: Use this endpoint to return a list of workflows and workflow types, and then use a value from the **type** response parameter to make a new request that filters by that workflow type value.
 
 
    * - **with_total**
@@ -223,33 +225,31 @@ Request examples
 
 .. endpoint-get-workflows-list-request-examples-start
 
-The following examples show how to send requests to the **/workflow/runs** endpoint.
+The following examples show how to send requests to the **GET /workflow/runs** endpoint.
 
 .. endpoint-get-workflows-list-request-examples-end
 
+.. endpoint-get-workflows-list-request-examples-tabs-start
 
-.. _endpoint-get-workflows-list-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-get-workflows-list-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **GET /workflow/runs** endpoint.
 
-The following example shows how to use cURL to send a request to the **/workflow/runs** endpoint.
+      .. code-block:: rest
 
-.. code-block:: rest
+         curl --request GET \
+                'https://app.amperity.com/api/workflow/runs \
+                ?limit=12 \
+                ?with_total=true' \
+              --header 'amperity-tenant: {tenant-id}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs \
-          ?limit=12 \
-          ?with_total=true \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      This example is formatted for readability in a narrow page layout.
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-get-workflows-list-request-example-curl-end
+.. endpoint-get-workflows-list-request-examples-tabs-end
 
 
 .. _endpoint-get-workflows-list-responses:
@@ -259,7 +259,7 @@ Responses
 
 .. endpoint-get-workflows-list-responses-start
 
-A response from the **/workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **GET /workflow/runs** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-get-workflows-list-responses-end
 
@@ -274,6 +274,7 @@ A response from the **/workflow/runs** endpoint will match an :doc:`HTTP status 
 The **200** response returns a list of workflows.
 
 .. code-block:: json
+   :linenos:
 
    {
      "error": {
@@ -285,14 +286,14 @@ The **200** response returns a list of workflows.
                    or by loading data to the table.",
        },
      "id": "wf-20240603-12345-MNabc",
-     "ended_at": "2024-02-10T17:29:32.687Z",
+     "ended_at": "2026-02-10T17:29:32.687Z",
      "name": "Loyalty Membership",
      "principal_name": "Justin Scott",
      "principal_id": "google-apps|justin.scott@socktown.com",
      "type": "amperity.orchestration.orchestration/run",
      "principal_email": "justin.scott@socktown.com",
      "state": "canceled",
-     "created_at": "2024-02-10T17:29:22.454Z",
+     "created_at": "2026-02-10T17:29:22.454Z",
      "tenant": "socktown",
    }
 
@@ -306,7 +307,7 @@ Response parameters
 
 .. endpoint-get-workflows-list-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -318,7 +319,7 @@ A **200 OK** response contains the following parameters.
    * - **created_at**
      - The date and time at which a workflow task started.
 
-       .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Started** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
           **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
@@ -347,11 +348,11 @@ A **200 OK** response contains the following parameters.
        **attribution**
           The source of the error. May be attributed to **customer** or **platform**.
 
-          * **customer** indicates the source of the error is one (or more) configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
-          * **platform** indicates there is an issue with components and/or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
+          * **customer** indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
+          * **platform** indicates there is an issue with components or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
 
        **data**
-          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a NULL value.
+          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a **NULL** value.
 
        **message**
           The error message.
@@ -362,14 +363,14 @@ A **200 OK** response contains the following parameters.
    * - **ended_at**
      - The date and time at which a workflow task ended.
 
-       .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
           **Duration**, as shown in the **Task Details** dialog, is the amount of time that occurred between **created_at** and **ended_at**.
 
    * - **id**
      - The unique identifier for the workflow.
 
-       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+       .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
 
    * - **name**
@@ -379,7 +380,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **next_token**
-     - The cursor value to use in a subsequent request to return the next page of results.
+     - The cursor value to use in the next request to return the next page of results.
 
        .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
 
@@ -415,7 +416,7 @@ A **200 OK** response contains the following parameters.
 
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation
@@ -443,6 +444,4 @@ A **200 OK** response contains the following parameters.
 
        .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
 
-
 .. endpoint-get-workflows-list-response-parameters-end
-

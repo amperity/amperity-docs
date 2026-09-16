@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Criteo
 .. |audience-primary-key| replace:: "email"
@@ -55,7 +54,7 @@ Settings
    :start-after: .. setting-criteo-advertiser-id-start
    :end-before: .. setting-criteo-advertiser-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-criteo-audience-name-start
@@ -66,3 +65,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

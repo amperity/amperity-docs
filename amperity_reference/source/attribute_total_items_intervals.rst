@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: total items interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "total items"
 
 
 .. meta::
@@ -44,29 +47,27 @@ Total items are available at the following intervals:
 Use in segments
 ==================================================
 
-.. attribute-total-items-intervals-segment-start
-
-You can access total items intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a total items interval attribute, apply a condition, and then specify a value.
-
-.. attribute-total-items-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-total-items-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-total-items-intervals-conditions-start
 
-The following table lists the conditions that are available to total item interval attributes.
+The following table lists the operators that are available to total item interval attributes.
 
-.. note:: Total item interval attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Total item interval attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the specified number of items in the interval.
@@ -76,21 +77,21 @@ The following table lists the conditions that are available to total item interv
 
        Returns customer records with values that are between the specified number of items in the interval.
 
-       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items will be returned.
+       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items is returned.
 
    * - **is greater than**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that are greater than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is greater than** is set to 10, then customer records with 11 (or more) total items will be returned.
+       For example: if **is greater than** is set to 10, then customer records with 11 or more total items is returned.
 
    * - **is greater than or equal to**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that are greater than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is greater than or equal to** is set to 10, then customer records with 10 (or more) total items will be returned.
+       For example: if **is greater than or equal to** is set to 10, then customer records with 10 or more total items is returned.
 
    * - **is in list**
      - Returns customer records with values that match the number of items in the interval that are specified in a list.
@@ -98,12 +99,12 @@ The following table lists the conditions that are available to total item interv
    * - **is less than**
      - Returns customer records with values that are less than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items will be returned.
+       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items is returned.
 
    * - **is less than or equal to**
      - Returns customer records with values that are less than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items will be returned.
+       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items is returned.
 
    * - **is not**
      - |attribute-stop| **Less useful**
@@ -115,7 +116,7 @@ The following table lists the conditions that are available to total item interv
 
        Returns customer records with values that are not between the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items will be returned.
+       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items is returned.
 
    * - **is not in list**
      - |attribute-stop| **Less useful**

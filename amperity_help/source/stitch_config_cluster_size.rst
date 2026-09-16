@@ -1,7 +1,7 @@
-.. no title; include these back into datagrid/configure_stitch
+.. no title. include these back into datagrid/configure_stitch
 
-.. tooltip-stitch-config-supersized-clusters-start
+.. tooltip-stitch-config-graph-partitions-start
 
-A supersized cluster is a cluster of records that is discovered during the Stitch process that has more than 64 matching records. A supersized cluster does not typically represent a unique individual and is not worthy of further analysis. You may configure the threshold at which Stitch will discover a supersized cluster.
+A supersized cluster is a group of records that is discovered during the Stitch process that has more than 500 matching records. Stitch will partition supersized clusters into separate graph partitions.
 
-.. tooltip-stitch-config-supersized-clusters-end
+.. tooltip-stitch-config-graph-partitions-end

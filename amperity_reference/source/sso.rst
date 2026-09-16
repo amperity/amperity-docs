@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -27,7 +25,7 @@ Amperity supports the use of single sign-on (SSO) to manage the users who can ac
 
 #. Using any IdP that supports Security Assertion Markup Language (SAML), an open standard for exchanging authentication and authorization data between a service provider and an IdP. For example: Azure Active Directory, Auth0, Google G-suite, Okta, OneLogin, and `Ping Identity <https://docs.pingidentity.com/>`__ |ext_link|.
 
-#. Simplified user management. Define groups in your IdP, and then map those groups to user policies in Amperity. Manage user access to Amperity by adding users to (or removing users from) these groups.
+#. Simplified user management. Define groups in your IdP, and then map those groups to user policies in Amperity. Manage user access to Amperity by adding users to or removing users from these groups.
 
 .. sso-about-end
 
@@ -50,7 +48,7 @@ How SSO works (with Amperity)
 
 .. sso-howitworks-start
 
-The following diagram steps through how SSO works with Amperity. This example uses Auth0 as the IdP; each supported IdP follows the same workflow. 
+The following diagram steps through how SSO works with Amperity. This example uses Auth0 as the IdP. Each supported IdP follows the same workflow. 
 
 .. sso-howitworks-end
 
@@ -62,9 +60,9 @@ The following diagram steps through how SSO works with Amperity. This example us
 
 .. sso-howitworks-context-start
 
-#. A user accesses Amperity (https://app.amperity.com) from a supported web browser.
+#. A user accesses Amperity--``https://app.amperity.com``--from a supported web browser.
 #. Amperity displays the login page.
-#. The user enters their email address, Amperity identifies your tenant, after which Amperity redirects to the sign-in URL for your IdP.
+#. The user enters their email address, Amperity identifies your tenant, after which Amperity redirects to the sign-in URL of your IdP.
 
    Amperity uses the domain in the email address to which IdP the login is redirected. For example, Amperity uses Auth0. Any user with an ``amperity.com`` email address is redirected to Auth0 for authentication and authorization.
 
@@ -87,15 +85,15 @@ Use cases
 The following use cases can be managed directly from your IdP after SSO is enabled for your tenant:
 
 **A user joins your organization**
-   When a user joins your organization you should add them to the group (or groups) in your IdP that are configured for Amperity, after which that user can log in to Amperity using their email address.
+   When a user joins your organization you should add them to the groups in your IdP that are configured for Amperity, after which that user can log in to Amperity using their email address.
 
 **A user leaves your organization**
-   When a user leaves your organization you should disable them or remove them from the group (or groups) in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login.
+   When a user leaves your organization you should disable them or remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity fails during login.
 
    .. note:: Failed login attempts are recorded in Amperity application audit logs.
 
 **A user changes roles and should no longer have access to Amperity**
-   When a user changes roles within your organization you should remove them from the group (or groups) in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity will fail during login and they will be shown a message stating that they no longer have access to Amperity.
+   When a user changes roles within your organization you should remove them from the groups in your IdP that are configured for Amperity, after which any attempt by that user to access Amperity fails during login and they is shown a message stating that they no longer have access to Amperity.
 
 .. sso-use-cases-end
 
@@ -117,7 +115,7 @@ Amperity recommends enabling SSO for your tenant. The process for enabling SSO r
 
 .. sso-request-to-enable-context-start
 
-To enable SSO for your tenant, make a request through your Amperity support representative. The process for configuring SSO will require some participation from members of your team, such as someone from security, support, and/or IT operations, depending on how your IdP is managed within your organization.
+To enable SSO for your tenant, make a request through your Amperity support representative. The process for configuring SSO requires some participation from members of your team, such as someone from security, support, and IT operations, depending on how your IdP is managed within your organization.
 
 .. important:: This process requires ongoing communication between members of your organization and the Amperity Support team.
 
@@ -133,8 +131,8 @@ Exchange of metadata
 
 A series of back-and-forth steps, also referred to as an "exchange of metadata", is required to configure the service provider (Amperity) and the IdP for the correct settings that enable SSO for your tenant:
 
-#. :ref:`Send URL for IdP metadata <sso-exchange-idp-metadata>`
-#. :ref:`Send URL for Amperity metadata <sso-exchange-amperity-metadata>`
+#. :ref:`Send URL of IdP metadata <sso-exchange-idp-metadata>`
+#. :ref:`Send URL of Amperity metadata <sso-exchange-amperity-metadata>`
 #. :ref:`Configure claim keys <sso-exchange-claim-keys>`
 #. :ref:`Send domain names and claim keys to Amperity <sso-exchange-domains-and-claim-keys>`
 #. :ref:`Establish trust <sso-exchange-establish-trust>`
@@ -144,16 +142,16 @@ A series of back-and-forth steps, also referred to as an "exchange of metadata",
 
 .. _sso-exchange-idp-metadata:
 
-Send URL for IdP metadata
+Send URL of IdP metadata
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sso-exchange-idp-metadata-start
 
-Send the URL for your IdP metadata to Amperity support. The Amperity support team will pull the following configuration details:
+Send the URL of your IdP metadata to Amperity support. The Amperity support team will pull the following configuration details:
 
 * The sign-in URL to which Amperity will redirect a user for authentication.
 * The sign-out URL to which Amperity will redirect a user who signs out.
-* The public X509 key that will allow signed SAML responses.
+* The public X509 key that allows signed SAML responses.
 
 The Amperity Support team will configure these details within your Amperity tenant.
 
@@ -162,19 +160,19 @@ The Amperity Support team will configure these details within your Amperity tena
 
 .. _sso-exchange-amperity-metadata:
 
-Send URL for Amperity metadata
+Send URL of Amperity metadata
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. sso-exchange-amperity-metadata-start
 
-After your Amperity Support team has configured the metadata for your IdP they will send to you the URL for Amperity service provider metadata.
+After your Amperity Support team has configured the metadata for your IdP they sends to you the URL of Amperity service provider metadata.
 
 .. important:: The specific configuration details for your IdP may vary.
 
 The most common configuration details for this step include:
 
 * The entity ID for the service provider.
-* The URL for the Assertion Consumer Service (ACS).
+* The URL of the Assertion Consumer Service (ACS).
 * The X509 signing key
 
 Work with the Amperity Support team to identify additional configuration details, if necessary.
@@ -207,12 +205,12 @@ The following claim keys must be configured in your IdP:
    The user's last name. This claim key **must contain only** the user's last name.
 
 **A user's email address**
-   The email address that is used to log into Amperity (and to your IdP). Amperity does not have a specific requirement for this claim key.
+   The email address that is used to log into Amperity and to your IdP. Amperity does not have a specific requirement for this claim key.
 
    The most common claim key is "emailaddress".
 
 **An assigned security group**
-   The name of the group (or groups) to which a user belongs. Each group in your IdP is mapped to a policy in Amperity. This will control what access the user has in Amperity through the security group assignment. Amperity recommends filtering the groups sent to Amperity to Amperity-specific groups.
+   The name of the groups to which a user belongs. Each group in your IdP is mapped to a policy in Amperity. This will control what access the user has in Amperity through the security group assignment. Amperity recommends filtering the groups sent to Amperity to Amperity-specific groups.
 
    The most common claim key is "groups".
 
@@ -226,7 +224,7 @@ Domain names and claim keys
 
 .. sso-exchange-domains-and-claim-keys-start
 
-After claim keys are configured in your IdP, the domain names that will be used to identify when to redirect users to your IdP, along with the claim keys, must be provided to Amperity.
+After claim keys are configured in your IdP, the domain names that is used to identify when to redirect users to your IdP, along with the claim keys, must be provided to Amperity.
 
 #. The set of domain names to be associated with your tenant. This is often a single domain name, such as ``acme.com``, but may be more than one. For example: ``acme.com`` and ``consultant.acme.com`` could be associated to your tenant.
 
@@ -275,7 +273,7 @@ Review the following sections to learn more about each policy:
 
 .. sso-map-groups-to-policies-context-start
 
-Add groups to your IdP that map to each of the policies in Amperity that you plan to use, and then add users to each group. Discuss with your Amperity Support team and/or representative if you have questions about mapping groups to policies.
+Add groups to your IdP that map to each of the policies in Amperity that you plan to use, and then add users to each group. Discuss with your Amperity Support representative if you have questions about mapping groups to policies.
 
 .. tip:: Use Amperity-specific prefixes for the group names in your IdP, such as **Amperity_Operators** or **Amperity_Users** to help identify the mapping.
 
@@ -295,6 +293,6 @@ The last step in the process for enabling SSO for your tenant is to verity that 
 
 This is most often done during a scheduled 30-minute meeting with your Amperity Support team, during which the configuration is tested and validated. You should plan to test at least one user for each group in your IdP that is mapped to a policy in Amperity.
 
-At the end of this meeting your organization can decide if additional configuration and validation is necessary and/or can determine the date at which SSO is enabled for your tenant.
+At the end of this meeting your organization can decide if additional configuration and validation is necessary or can determine the date at which SSO is enabled for your tenant.
 
 .. sso-validate-config-end

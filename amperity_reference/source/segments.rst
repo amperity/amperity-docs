@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -23,6 +21,16 @@ About segments
    :start-after: .. term-segment-start
    :end-before: .. term-segment-end
 
+.. segments-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Segment Editor to build audiences for your campaigns.
+
+   Open **Learning Lab** to learn more about `creating segments <https://amperity.com/learning-lab/creating-segments>`__ |ext_link|, `segment insights <https://amperity.com/learning-lab/segment-insights>`__ |ext_link|, and `creating segments from segment insights <https://amperity.com/learning-lab/creating-segments-from-segment-insights>`__ |ext_link|. Registration is required.
+
+.. segments-learning-lab-end
+
 .. _segments-page:
 
 About the Segments page
@@ -42,9 +50,9 @@ About the Segments page
 
 You can view a list of active segments along with recommended segments highlighted across the top of the page.
 
-Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of drop-downs and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you're ready to use it in marketing campaigns.
+Click **Create Segment** to open the **Segment Editor**. Build your segment using a series of dropdowns and picklists. Refresh **Segment insights** to see how many customers match and to see how much value they bring to your brand. Activate the segment when you are ready to use it in marketing campaigns.
 
-You can reorder the list of segments alphabetically by **Name**  and **Status**. Or, you can reorder the date **Last updated**. Quickly view which campaigns a segment is activated under **Used in**.
+You can reorder the list of segments alphabetically by **Name**  and **Status**. Or, you can reorder the date **Last updated**. View which campaigns a segment is activated under **Used in**.
 
 .. segments-page-end
 
@@ -78,7 +86,7 @@ Recommended segments
 
 .. segments-recommended-start
 
-The **Segments** page contains a list of active segments along with recommended segments highlighted across the top of the page.
+The **Segments** page has a list of active segments along with recommended segments highlighted across the top of the page.
 
 .. segments-recommended-end
 
@@ -94,8 +102,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - From the **Segments** page, under **Recommended segments**, click **Configure**.
 
@@ -107,7 +115,7 @@ Up to five segments may be configured to show in the list of recommended segment
 
        This opens the **Configure recommended segments** dialog box.
 
-       For each recommended segment, use the drop-down list to choose a segment
+       For each recommended segment, use the dropdown list to choose a segment
 
        .. image:: ../../images/mockup-segments-recommended-select.png
           :width: 380 px
@@ -125,8 +133,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Up to five recommended segments may be configured.
 
@@ -138,8 +146,8 @@ Up to five segments may be configured to show in the list of recommended segment
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - When your tenant has more than one database, you can select the list of recommended segments for *each database*.
 
@@ -149,7 +157,7 @@ Up to five segments may be configured to show in the list of recommended segment
           :align: left
           :class: no-scaled-link
 
-       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for ..." drop-down.
+       From the **Segments** page, you can switch between the lists of recommended segments by choosing a database from the "Showing segments for" dropdown.
 
        .. image:: ../../images/mockup-segments-recommended-choose-database.png
           :width: 420 px
@@ -202,7 +210,7 @@ Use the information on the **Summary** tab to help determine the best way to ini
 
 .. segments-summary-details-start
 
-Each **Summary** tab contains the following details:
+Each **Summary** tab has the following details:
 
 #. The number of unique customers.
 #. The number of customers who have been active within the last year.
@@ -215,21 +223,48 @@ Each **Summary** tab contains the following details:
       :align: left
       :class: no-scaled-link
 
-   The revenue tree shows the following segment insights:
+   The revenue tree is built as a series of calculations from fields in the **Transactions Attributes Extended** table. The revenue tree has the following segment insights:
 
-   * Net revenue
-   * Customers
-   * Revenue per customer
-   * Orders per customer
-   * Average order value
-   * Units per transaction
-   * Average unit revenue
+
+   * **Net revenue**
+
+     Net revenue is the sum of all order revenue in the past year.
+
+
+   * **Customers**
+
+     All customers, unique by Amperity ID, in the past year.
+
+
+   * **Revenue per customer**
+
+     Revenue per customer is net revenue divided by customers.
+
+
+   * **Orders per customer**
+
+     Orders per customer is order frequency divided by customers.
+
+
+   * **Average order value**
+
+     Average order value is net revenue divided by order frequency.
+
+
+   * **Units per transaction**
+
+     Units per transaction is the quantity of purchased items divided by order frequency.
+
+
+   * **Average unit revenue**
+
+     Average unit revenue is net revenue divided by the quanity of purchased items.
 
    .. note:: Historical revenue represents the sum of order revenue for all customers who made at least one purchase during the previous year.
 
    .. tip:: You can view the SQL query for each summary statistic by opening the menu and choosing **View SQL**. 
 
-.. segments-overview-details-end
+.. segments-summary-details-end
 
 **Summary tab tasks**
 
@@ -237,11 +272,43 @@ Each **Summary** tab contains the following details:
 
 * :ref:`segments-bulk-delete-segments`
 * :ref:`segments-bulk-move-segment`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-view-SQL-revenue-tree`
 * :ref:`segments-view-segment-stats-SQL`
 * :ref:`segments-explore-copy`
 
 .. segments-summary-howtos-end
+
+.. _segments-howitworks-custom-segment-metrics:
+
+Custom segment metrics
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. custom-segment-metrics-summary-start
+
+Use custom segment metrics to visualize the metrics that are most meaningful to your business, based on attributes in your databases or profiles. Select and manage custom segment metrics from the **Summary** tab.
+
+You can set a maximum of ten custom segment metrics for any segment. 
+
+.. note:: Custom segment metrics apply to a pairing of a **Database** and an **Activation ID**, displayed at the top of the **Summary** tab. All other segments with the same pairing will have the same custom segment metrics.
+
+.. TODO Add image
+
+Use the following formats to define a custom segment metric:
+
+* **Bar chart**, for visualizing distribution among different categories of an attribute. For example: gender, purchase channel, product preference, etc. 
+* **Number**, for visualizing a single stat. For example: loyalty points, household size, total purchases, etc. 
+
+.. custom-segment-metrics-summary-end
+
+**Custom segment metrics tasks**
+
+.. custom-segment-metrics-howtos-start
+
+* :ref:`segments-set-custom-segment-metrics`
+* :ref:`segments-manage-custom-segment-metrics`
+
+.. custom-segment-metrics-howtos-end
 
 
 .. _segments-howitworks-segment-breakdown:
@@ -251,14 +318,14 @@ Breakdown tab
 
 .. segments-breakdown-details-start
 
-The **Breakdown** tab contains insight charts for customer behaviors and customer attributes. You can ask questions to analyze customer demographics and identify target market segments:
+The **Breakdown** tab has insight charts for customer behaviors and customer attributes. You can ask questions to analyze customer demographics and identify target market segments:
 
 * What is the distribution of customers across categories?
 * What are potential customer groups for my marketing efforts?
 
 These charts have a configurable date range and the displayed attributes charts are customizable. To customize the breakdown charts displayed on the **Breakdown** tab, click the **Customize** link, select up to six charts on the **Customize Breakdown Charts** window, and then click **Apply**.
 
-.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by:** drop-down menu.
+.. note:: Compare by % of Purchasers, % of Revenue, or Revenue/Purchaser in the breakdown charts by selecting one of these options from the **Compare by** dropdown menu.
 
 .. tip:: You can expand a breakdown chart by clicking the icon and then clicking **Expand**.
 
@@ -275,7 +342,6 @@ These charts have a configurable date range and the displayed attributes charts 
 .. segments-breakdown-howtos-start
 
 * :ref:`segments-change-comparison-dates`
-* :ref:`segments-change-date`
 * :ref:`segments-change-date`
 * :ref:`segments-compare`
 * :ref:`segments-customize-charts`
@@ -294,7 +360,7 @@ Compare tab
 
 The **Compare** tab shows how two or more segment statistics compare. You can ask questions that compare key metrics and identify shared audiences to identify new opportunities to reach customers. 
 
-* What is the overlap if I compare multiple segments? 
+* What is the overlap if I compare many segments? 
 * How do metrics like active customers, revenue, average revenue per customer, average units per order, and average order value compare across segments?
 
 .. note:: Up to five total segments can be compared together. 
@@ -342,7 +408,7 @@ The **Customers** tab shows the all data for all of the customers in this segmen
 * Depending on your company's PII restrictions, age group and birthday.
 * Other categories that are identified in your Customer 360 table.
 
-.. tip:: You can customize the columns to display in order to only focus on certain attributes. You can also download the segment as a CSV file.
+.. tip:: You can customize the columns to display to only focus on certain attributes. You can also download the segment as a CSV file.
 
 .. segments-customers-end
 
@@ -371,7 +437,7 @@ How-tos
 
 .. segments-how-tos-start
 
-This section describes all tasks related to building segments in Amperity:
+Tasks related to building segments in Amperity:
 
 .. segments-how-tos-end
 
@@ -386,7 +452,7 @@ This section describes all tasks related to building segments in Amperity:
 * :ref:`segments-change-comparison-dates`
 * :ref:`segments-segment-database-source`
 * :ref:`segments-change-date`
-* :ref:`segments-choose-andor-start`
+* :ref:`segments-choose-andor`
 * :ref:`segments-compare`
 * :ref:`segments-select-segment-comparison-chart`
 * :ref:`segments-copy-column`
@@ -403,8 +469,10 @@ This section describes all tasks related to building segments in Amperity:
 * :ref:`segments-edit-segment-editor`
 * :ref:`segments-expand-graph`
 * :ref:`segments-explore-copy`
+* :ref:`segments-filter`
 * :ref:`segments-format-segment`
 * :ref:`segments-create-new-segment-from-overlap`
+* :ref:`segments-manage-tracked-segments`
 * :ref:`segments-organize-segments`
 * :ref:`segments-rename-segment`
 * :ref:`segments-rerun-segment`
@@ -414,6 +482,7 @@ This section describes all tasks related to building segments in Amperity:
 * :ref:`segments-set-default-charts`
 * :ref:`segments-configure-segments`
 * :ref:`segments-show-columns`
+* :ref:`segments-show-summary-statistics`
 * :ref:`segments-switch-sql-segment`
 * :ref:`segments-use-relative-dates`
 * :ref:`segments-view-segment`

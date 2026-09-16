@@ -1,29 +1,20 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Listrak
-.. |audience-primary-key| replace:: "email" or "phone"
-.. |what-send| replace:: email and phone lists
+.. |audience-primary-key| replace:: "email" 
+.. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
 
 
 Listrak
 ==================================================
 
-|destination-name| is an automation platform for email and SMS marketing. Use the ActiveCampaign REST API to manage audiences in |destination-name|.
+|destination-name| is an automation platform for email marketing. Use the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| to manage audiences in |destination-name|.
 
-Amperity can manage email and SMS lists in |destination-name|. You can send email and SMS lists to |destination-name| using any of the following processes:
+Amperity can manage email lists in |destination-name| using this destination.
 
-* The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
-* The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
-* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items; see `Customers <https://www.listrak.com/product-team/customer-schema>`__ |ext_link|, `Products <https://www.listrak.com/product-team/product-schema>`__ |ext_link|, `Orders <https://www.listrak.com/product-team/order-schema>`__ |ext_link|, and `Order items <https://www.listrak.com/product-team/order-items-schema>`__ |ext_link| for more information.
-
-Additional attributes may be appended using any of these processes.
-
-Amperity automatically adds a field attribute to all contact lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
-
-Work with your |destination-name| representatives to determine which of these sets will be useful for your workflows within |destination-name|, and then verify that attributes sent from Amperity are mapped correctly to the appropriate data schema within |destination-name|.
+Amperity automatically adds a field attribute to all email lists that are sent to |destination-name|. This field is located inside a field group named "Amperity Message Attributes" within |destination-name|.
 
 
 Credentials
@@ -40,12 +31,6 @@ Credentials
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-listrak-email-client-id-secret-start
    :end-before: .. credential-listrak-email-client-id-secret-end
-
-**SMS client ID and client secret**
-
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-listrak-sms-client-secret-start
-   :end-before: .. credential-listrak-sms-client-secret-end
 
 **Note**
 
@@ -75,14 +60,30 @@ Settings
 
 **List name**
 
-(Applies to Email **and** SMS lists.)
-
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-list-name-start
    :end-before: .. setting-listrak-list-name-end
 
-**Segment name**
+**Audience primary key**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-audience-primary-key-start
+   :end-before: .. setting-common-audience-primary-key-end
+
+**Field group**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-listrak-field-group-start
+   :end-before: .. setting-listrak-field-group-end
+
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-listrak-segment-name-start
    :end-before: .. setting-listrak-segment-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

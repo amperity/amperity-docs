@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -56,7 +54,7 @@ Each of these attributes provides a score that is independent of other predicted
       #. :doc:`Predicted order frequency <attribute_predicted_order_frequency>` represents the number of orders a customer is predicted to make *if they return to make another purchase* during the next 365 days.
       #. :doc:`Predicted average order revenue <attribute_predicted_average_order_revenue>` represents the average value of each order a customer is predicted to make *if they return to make another purchase* during the next 365 days.
 
-#. Predicted value tiers group customers by pCLV: Platinum (top 1%),  Gold (top 1%-5%),  Silver (top 5%-10%),  Bronze (top 10%-25%),  Medium (top 25%-50%), and Low (bottom 50%).
+#. Predicted value tiers group customers by pCLV: Platinum (top 1%), Gold (top 1%-5%), Silver (top 5%-10%), Bronze (top 10%-25%), Medium (top 25%-50%), and Low (bottom 50%).
 
 .. attribute-predicted-value-tier-about-clv-end
 
@@ -70,20 +68,6 @@ For example:
 .. attribute-predicted-value-tier-about-clv-example-end
 
 
-.. _attribute-predicted-value-tier-examples:
-
-Examples
-==================================================
-
-.. attribute-predicted-value-tier-examples-start
-
-The following topics contain examples of using predicted value tiers:
-
-* |usecase_customers_high_value_new|
-
-.. attribute-predicted-value-tier-examples-end
-
-
 .. _attribute-predicted-value-tier-segment:
 
 Use in segments
@@ -91,27 +75,9 @@ Use in segments
 
 .. attribute-predicted-value-tier-segment-start
 
-To find predicted value tiers, start with the **Predicted Customer Lifetime Value Tier** attribute in the **Predicted CLV Attributes** table, and then set its condition to **is in list**. After the attribute appears in your segment, set the list values to include all of the value tiers you want to use in your segment.
+To find predicted value tiers, start with the **Predicted Customer Lifetime Value Tier** attribute in the **Predicted CLV Attributes** table, and then set its condition to **is in list**. After the attribute appears in your segment, set the list values to include all of the value tiers you want to use in your segment. For example, choose the **is in list** attribute, and then set predicted lifetime value tier to **Platinum**, **Gold**, and **Silver**.
 
 .. attribute-predicted-value-tier-segment-end
-
-.. image:: ../../images/attribute-predicted-value-tier.png
-   :width: 600 px
-   :alt: Choose the predicted customer lifetime value tier attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-value-tier-segment-list-options-start
-
-Choose the **is in list** attribute, and then set predicted lifetime value tier to **Platinum**, **Gold**, and **Silver**:
-
-.. attribute-predicted-value-tier-segment-list-options-end
-
-.. image:: ../../images/attribute-predicted-value-tier-is-in-list.png
-   :width: 600 px
-   :alt: The is in list condition for predicted value tier.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-value-tier-modeling-enabled-note-start
 
@@ -122,23 +88,23 @@ Choose the **is in list** attribute, and then set predicted lifetime value tier 
 
 .. _attribute-predicted-value-tier-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-value-tier-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**
@@ -163,3 +129,16 @@ The following table lists the conditions that are available to this attribute.
      - Returns customer records that start with the specified characters.
 
 .. attribute-predicted-value-tier-conditions-end
+
+.. _attribute-predicted-value-tier-examples:
+
+Examples
+==================================================
+
+.. attribute-predicted-value-tier-examples-start
+
+The following topics contain examples of using predicted value tiers:
+
+* |usecase_customers_high_value_new|
+
+.. attribute-predicted-value-tier-examples-end

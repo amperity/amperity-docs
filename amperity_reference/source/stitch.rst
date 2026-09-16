@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -31,34 +29,24 @@ How Stitch works
 
 .. stitch-how-it-works-start
 
-Amperity uses a `series of patented innovations <https://amperity.com/patents>`__ to ensure that identity resolution against your customer data is accurate and that the output of the Stitch process represents a true unified view of your customers.
+Amperity uses a `series of patented innovations <https://amperity.com/patents>`__ to ensure that identity resolution against your customer data is accurate and that the output of the Stitch process represents a unified view of your customers.
 
 .. stitch-how-it-works-end
 
 .. stitch-entity-matching-start
 
-This topic is an introduction to how Stitch works. Read `Entity Matching in the Wild: a Consistent and Versatile
+Read `Entity Matching in the Wild: a Consistent and Versatile
 Framework to Unify Data in Industrial Applications <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__ for a detailed explanation of how Amperity provides a consistent, reliable, and stable customer ID.
 
 .. stitch-entity-matching-end
-
 
 .. stitch-learning-lab-start
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Stitch evaluates all of your brand's data to discover hidden connections in customer records and identify unique customers.
 
-      * - .. image:: ../../images/learning-lab-stitch-howitworks.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Learn more about how Stitch evaluates all of your brand's data to discover the hidden connections in your customer records that correctly identify all of your unique customers.
-
-          Open **Learning Lab** to learn more about |ext_learning_lab_stitch_howitworks|. Registration is required.
+   Open **Learning Lab** to learn more about `how Stitch works <https://amperity.com/learning-lab/how-stitch-works>`__ |ext_link|. Registration is required.
 
 .. stitch-learning-lab-end
 
@@ -102,7 +90,7 @@ Semantic tags
 
 .. admonition:: Extract, load, transform (ELT)
 
-   An important benefit of semantic tagging is that raw data can be provided directly to Amperity, which avoids a traditional (and more expensive) extract, transform, and load (ETL) process. Amperity can extract, load, and then transform raw data from any number of large datasets.
+   An important benefit of semantic tagging is that raw data can be provided directly to Amperity, which avoids a traditional and more expensive extract, transform, and load (ETL) process. Amperity can extract, load, and then transform raw data from any number of large datasets.
 
 .. stitch-semantic-noetl-end
 
@@ -128,7 +116,7 @@ Semantic tags
 
 .. feeds-semantic-tagging-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -136,7 +124,6 @@ Semantic tagging works like this:
 #. A field in the customer's system named "lname" stores the same individual's last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
-#. And so on.
 
 For those semantic tags, the feed should apply semantic tags like this:
 
@@ -154,12 +141,10 @@ For those semantic tags, the feed should apply semantic tags like this:
      - phone
    * - date
      - birthdate
-   * - ...
-     - ...
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically-tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
 
-Amperity has built-in semantic tags for personally-identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
+Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 .. feeds-semantic-tagging-end
 
@@ -189,7 +174,7 @@ Addresses
 
 .. stitch-preprocess-data-address-start
 
-Amperity preprocesses addresses by converting common abbreviations to complete words, removing periods and commas (``.``, ``,``), and converting all characters to UPPERCASE.
+Amperity preprocesses addresses by converting common abbreviations to complete words, removing periods and commas--``.`` and ``,``--and converting all characters to UPPERCASE.
 
 .. list-table::
    :widths: 300 300
@@ -228,7 +213,7 @@ Phone numbers
 
 .. stitch-preprocess-data-phone-start
 
-Amperity preprocesses phone numbers by removing parentheses, hyphens, and spaces, consolidating every phone number to a numeric string.
+Amperity preprocesses phone numbers by removing parentheses, hyphens, and spaces, consolidating every phone number to a numeric string. Stitch uses the last 10 digits of a phone number for identity resolution.
 
 .. list-table::
    :widths: 300 300
@@ -257,7 +242,7 @@ Email addresses
 
 Amperity preprocesses email addresses by ensuring that only the local username and domain are present, separated by ``@``, and converted to UPPERCASE.
 
-.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, ``reservation@``, and so on. When an email address matches one of these patterns, that value is preprocessed to ``NULL``.
+.. important:: All email addresses are validated against a common list of local username patterns that typically indicate junk email addresses, such as ``test@``, ``no@``, or ``reservation@``. When an email address matches one of these patterns, that value is preprocessed to **NULL**.
 
 .. list-table::
    :widths: 300 300
@@ -284,7 +269,7 @@ Union of tables
 
 .. stitch-union-of-tables-start
 
-All records from all tables that contain customer profile data are merged into a single virtual table that aligns all of the data that is associated with all defined semantic types.
+All records from all tables that contain customer profile data are merged into a single virtual table that aligns all of the data that is associated with all defined semantic groups.
 
 .. stitch-union-of-tables-end
 
@@ -304,7 +289,9 @@ It is OK if each row does not contain a value for each column. The alignment its
 
 .. stitch-union-of-tables-table-start
 
-The following example shows a couple rows from a few tables, the aligned (and preprocessed) semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
+The following example shows a couple rows from a few tables, the aligned and preprocessed semantic values, and no values when the data source did not provide it. Imagine this for all of your customer data, hundreds of millions of records, hundreds of millions of rows, with fields in the virtual table that span your complete set of customer data.
+
+.. vale off
 
 .. list-table::
    :widths: 100 100 100 100 100 100
@@ -359,6 +346,8 @@ The following example shows a couple rows from a few tables, the aligned (and pr
      - 
      - B-23456-b
 
+.. vale on
+
 .. stitch-union-of-tables-table-end
 
 
@@ -373,7 +362,13 @@ Blocking
 
 .. stitch-blocking-note-start
 
-.. note:: Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance. An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated). Individual blocking keys may be conservative or generous. The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
+.. note:: Blocking is a non-trivial step for record linking in the Stitch process. 
+
+   * An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated. This can affect system performance.
+   * An overly conservative blocking strategy may result in a low recall rate, which means too few pairs being evaluated.
+   * Individual blocking keys may be conservative or generous.
+
+   The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
 
 .. stitch-blocking-note-end
 
@@ -391,7 +386,7 @@ Blocking
 
 .. stitch-blocking-block-example-start
 
-Blocks are created by comparing all records against all blocking strategies. When a record contains values that match a blocking strategy these values are combined into a single string value, also referred to as a blocking key.
+Blocks are created by comparing all records against all blocking strategies. When a record has values that match a blocking strategy these values are combined into a single string value, also referred to as a blocking key.
 
 For example, a blocking strategy that matches:
 
@@ -434,13 +429,13 @@ The blocking process starts with no matches between records.
 
 .. image:: ../../images/howitworks-stitch-blocking-01-potential.png
    :width: 600 px
-   :alt: The start of the blocking process contains zero matching records.
+   :alt: The start of the blocking process has zero matching records.
    :align: left
    :class: no-scaled-link
 
 .. stitch-blocking-potential-diagram-context-start
 
-Each of these individual dots represents an individual record that can potentially match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
+Each of these individual dots represents an individual record that can match other records. In the following diagrams, dots are highlighted and lines are added between them to indicate that at least one blocking key match has been discovered by Stitch.
 
 .. stitch-blocking-potential-diagram-context-end
 
@@ -475,7 +470,7 @@ This example shows an important blocking strategy that groups values associated 
 
 .. _stitch-blocking-strategy-example-postal:
 
-Given name, surname, zip code
+Given name, surname, ZIP code
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. stitch-blocking-strategy-example-postal-start
@@ -556,7 +551,7 @@ When finished, the blocking process has unioned all of the matching blocking key
 
 .. stitch-blocking-complete-context-start
 
-These groups of records will be scored, first as an initial scoring pass that quickly filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
+These groups of records will be scored, first as an initial scoring pass that filters out matching pairs that score below threshold, and then as a detailed pass that compares a record in a group to all of the other records in that group.
 
 .. stitch-blocking-complete-context-end
 
@@ -583,7 +578,7 @@ The following example shows several matching pairs scoring below threshold, usin
 
 .. image:: ../../images/howitworks-stitch-scoring-01-initial.png
    :width: 600 px
-   :alt: Matching pairs discovered during blocking are quickly scored.
+   :alt: Matching pairs discovered during blocking are scored.
    :align: left
    :class: no-scaled-link
 
@@ -631,7 +626,7 @@ Pairwise comparison
 
 .. stitch-pairwise-comparison-single-block-intro-start
 
-Let's walk through the process of pairwise scoring using a single block of records:
+An example of pairwise scoring using a single block of records:
 
 .. stitch-pairwise-comparison-single-block-intro-end
 
@@ -670,11 +665,13 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
 
 .. stitch-pairwise-comparison-score-types-end
 
+.. vale off
+
 .. stitch-pairwise-comparison-important-start
 
 .. important:: Records are scored based on a number of features, including:
 
-   * String matching patterns. such as Levenshtein and Jaro–Winkler distances, and Jaccard similarity
+   * String matching patterns, such as Levenshtein and Jaro-Winkler distances, and Jaccard similarity
    * Commonality statistics that focus on name distributions
    * Name matching, including for nicknames, combined with addresses and phone numbers
    * Lookup tables
@@ -701,11 +698,11 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
       * - **Email addresses**
         - * Do the usernames match exactly?
           * Are there common *or* uncommon usernames that match, despite having different domains?
-          * Does one side of the email address (username *or* domain) have an exact match and the other side have an approximate match?
+          * Does one side of the email address--username *or* domain--have an exact match and the other side have an approximate match?
 
       * - **Physical locations**
         - * How closely do the addresses match?
-          * Do the addresses have the same zip code or city?
+          * Do the addresses have the same ZIP code or city?
           * Are there any obvious conflicts?
           * Are the addresses unlike each other?
 
@@ -713,6 +710,8 @@ By default, only record pairs with a pairwise comparison score of exact, excelle
         - * Do the phone numbers match exactly?
 
 .. stitch-pairwise-comparison-important-end
+
+.. vale on
 
 
 .. _stitch-pairwise-comparison-potential:
@@ -722,15 +721,15 @@ Potential connections
 
 .. stitch-pairwise-comparison-potential-start
 
-The pairwise comparison process goes beyond initial scoring to compare (and then score) all of the possible connections between all of the records that belong to the same group.
+The pairwise comparison process goes beyond initial scoring to compare and then score all of the possible connections between all of the records that belong to the same group.
 
-This section uses a group of eight records to show how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
+A group of eight records shows how pairwise comparisons work. A line between records will indicate the threshold for the comparison that was discovered.
 
 .. stitch-pairwise-comparison-potential-end
 
 .. image:: ../../images/howitworks-stitch-pairwise-01-potential.png
    :width: 600 px
-   :alt: The start of the pairwise comparison process contains zero connections.
+   :alt: The start of the pairwise comparison process has zero connections.
    :align: left
    :class: no-scaled-link
 
@@ -808,7 +807,7 @@ A high match score is applied to records that, even with some profile data not m
 
 .. stitch-pairwise-comparison-high-diagram-context-start
 
-This example shows a high match between two records. The last names and zip codes are exact matches. The first names do not match, but do share a common nickname. The email addresses do not match, but are identical before the ``@`` symbol.
+This example shows a high match between two records. The last names and ZIP codes are exact matches. The first names do not match, but do share a common nickname. The email addresses do not match, but are identical before the ``@`` symbol.
 
 .. stitch-pairwise-comparison-high-diagram-context-end
 
@@ -844,7 +843,7 @@ Weak matches
 
 .. stitch-pairwise-comparison-weak-start
 
-A weak match score is applied to records that match on non-unique customer attributes, such as name, state, and zip code, but cannot be easily associated with the same unique individual.
+A weak match score is applied to records that match on non-unique customer attributes, such as name, state, and ZIP code, but cannot be easily associated with the same unique individual.
 
 .. stitch-pairwise-comparison-weak-end
 
@@ -904,7 +903,7 @@ After pairwise comparisons are completed and scored, the connections that scored
 
 .. stitch-pairwise-comparison-all-diagram-context-start
 
-This example shows all of the pairwise comparisons that scored above threshold (exact, excellent, and high). (The score at which record pairs fall below threshold is configurable. Moderate is the default threshold at which record pairs are dropped.)
+This example shows all of the pairwise comparisons that scored above threshold (exact, excellent, and high). The score at which record pairs fall below threshold is configurable. Moderate is the default threshold at which record pairs are dropped.
 
 .. stitch-pairwise-comparison-all-diagram-context-end
 
@@ -920,7 +919,7 @@ Hierarchical comparison
 
 .. stitch-hierarchical-comparison-start
 
-A hierarchical comparison that identifies enough conflicting data will allow Amperity to assert that a group of records should be split into two (or more) groups of records.
+A hierarchical comparison that identifies enough conflicting data allows Amperity to assert that a group of records should be split into two or more groups of records.
 
 .. stitch-hierarchical-comparison-end
 
@@ -944,7 +943,7 @@ Stable ID assignment
 
 .. term-amperity-id-start
 
-An Amperity ID is a `patented unique identifier <https://amperity.com/company/patents>`__ that is `assigned to clusters of customer records <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__. A single Amperity ID represents a single individual. Unlike other systems, the Amperity ID is reassessed every day for the most comprehensive view of your customers.
+An Amperity ID is a `patented unique identifier <https://amperity.com/patents>`__ that is `assigned to clusters of customer records <https://docs.amperity.com/downloads/pdf/fusion-sigmod-2020.pdf>`__. A single Amperity ID represents a single individual. Unlike other systems, the Amperity ID is reassessed every day for the most comprehensive view of your customers.
 
 .. term-amperity-id-end
 
@@ -974,7 +973,7 @@ This example shows three unique clusters of records, each of which were assigned
 
 .. stitch-stable-ids-jitter-start
 
-.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are really two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results will show jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
+.. note:: In some cases, the Amperity ID that is assigned to a cluster does change. This is referred to as jitter and it occurs when new data forces the reassignment of the Amperity ID. For example, a single cluster of records for a customer named Frank Janson. Amperity is provided new data that allows Stitch to identify that there are two Frank Jansons. One is Frank Janson Sr. and the other is Frank Janson Jr. Stitch results shows jitter when the Amperity ID assignment is updated to reflect the correct association of customer records.
 
 .. stitch-stable-ids-jitter-ends
 

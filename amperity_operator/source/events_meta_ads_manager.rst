@@ -1,0 +1,690 @@
+.. https://docs.amperity.com/operator/
+
+
+.. |destination-name| replace:: Meta Ads Manager
+.. |plugin-name| replace:: "Facebook"
+.. |credential-type| replace:: "facebook"
+.. |required-credentials| replace:: "refresh token"
+.. |what-send| replace:: events
+.. |where-send| replace:: |destination-name|
+.. |what-enable| replace:: **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE**
+.. |allow-for-what| replace:: events
+.. |allow-for-duration| replace:: up to 24 hours
+.. |attributes-sent| replace:: |destination-name| requires the **EXTERN_ID**, **EMAIL**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, **MADID**, and **PHONE** attributes. The **MADID** (mobile advertising ID) attribute is optional.
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, **GEN**, and **EXTERN_ID**
+
+.. meta::
+    :description lang=en:
+        Configure Amperity to send events to Meta Ads Manager.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Configure Amperity to send events to Meta Ads Manager.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Configure events for Meta Ads Manager
+
+==================================================
+Configure events for Meta Ads Manager
+==================================================
+
+.. TODO: Sync this with the updated events topics.
+
+.. events-meta-ads-manager-overview-start
+
+Send events to |destination-name| to help your brand track offline conversions that result from your marketing campaigns. Events may be matched with audiences in Facebook, Facebook Messenger, Instagram, and WhatsApp.
+
+Transaction events that occurred within the previous seven days *and* contain positive values for product quantity may be sent to |destination-name| using the `Conversions API for events <https://developers.facebook.com/docs/marketing-api/conversions-api/offline-events>`__ |ext_link|.
+
+.. events-meta-ads-manager-overview-end
+
+.. events-meta-ads-manager-overview-window-start
+
+.. important:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
+
+.. events-meta-ads-manager-overview-window-end
+
+.. events-meta-ads-manager-allowfor-start
+
+.. note:: Events are not immediately available in |destination-name|. Allow for |allow-for-duration| after the point at which Amperity has finished sending |allow-for-what| for them to be available.
+
+   Events that are sent to |destination-name| can be accessed from `Meta Events Manager <https://www.facebook.com/business/help/898185560232180?id=565900110447546>`__ |ext_link|.
+
+.. events-meta-ads-manager-allowfor-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. _events-meta-ads-manager-get-details:
+
+Get details
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-get-details-start
+   :end-before: .. setting-common-get-details-end
+
+.. events-meta-ads-manager-get-details-table-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 1.
+          :align: center
+          :class: no-scaled-link
+     - **Credential settings**
+
+       **Refresh token**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 2.
+          :align: center
+          :class: no-scaled-link
+     - **Meta Ads Manager settings**
+
+       **Dataset ID**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-meta-ads-manager-dataset-id-start
+             :end-before: .. setting-meta-ads-manager-dataset-id-end
+
+
+.. events-meta-ads-manager-get-details-table-end
+
+
+.. _events-meta-ads-manager-credentials:
+
+Configure credentials
+==================================================
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-configure-first-start
+   :end-before: .. credential-configure-first-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-snappass-start
+   :end-before: .. credential-snappass-end
+
+**To configure credentials for Meta Ads Manager events**
+
+.. events-meta-ads-manager-credentials-steps-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-add-credential-start
+          :end-before: .. credential-steps-add-credential-end
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-select-type-start
+          :end-before: .. credential-steps-select-type-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials_settings.rst
+          :start-after: .. credential-steps-settings-intro-start
+          :end-before: .. credential-steps-settings-intro-end
+
+       **Refresh token**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oauth-refresh-token-start
+             :end-before: .. credential-oauth-refresh-token-end
+
+.. events-meta-ads-manager-credentials-steps-end
+
+
+.. _events-meta-ads-manager-reauthorize-amperity:
+
+Reauthorize Amperity
+--------------------------------------------------
+
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-reauthorize-start
+   :end-before: .. destinations-oauth-reauthorize-end
+
+
+.. _events-meta-ads-manager-terms-of-service:
+
+Terms of service
+--------------------------------------------------
+
+.. TODO: Sync this with the updated events topics.
+
+.. events-meta-ads-manager-terms-of-service-start
+
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
+
+.. events-meta-ads-manager-terms-of-service-end
+
+.. events-meta-ads-manager-terms-of-service-error-start
+
+The permissions error is similar to:
+
+::
+
+   Permissions error: To create or edit an audience with an uploaded
+   customer list, agree to the Custom Audience terms at
+   https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
+
+To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
+
+.. events-meta-ads-manager-terms-of-service-error-end
+
+
+.. _events-meta-ads-manager-offline-events-add-destination:
+
+Add destination
+==================================================
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sandbox-recommendation-start
+   :end-before: .. setting-common-sandbox-recommendation-end
+
+**To add a destination**
+
+.. events-meta-ads-manager-offline-events-add-destination-start
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-add-destination-start
+          :end-before: .. destinations-add-destination-end
+
+       Enter the name of the destination and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-add-credentials-start
+          :end-before: .. destinations-add-credentials-end
+
+       .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-add-new-or-select-existing-start
+          :end-before: .. destinations-add-new-or-select-existing-end
+
+       |destination-name| requires using OAuth to :ref:`authorize Amperity to send events to your Meta Ads Manager account <events-meta-ads-manager-credentials>`.
+
+       .. note:: You may use the same credentials to send both custom audiences and events to |destination-name|.
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-name-and-description-start
+          :end-before: .. destinations-steps-name-and-description-end
+
+       .. admonition:: Configure business user access
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-allow-start
+             :end-before: .. setting-common-business-user-access-allow-end
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-business-user-access-restrict-pii-start
+             :end-before: .. setting-common-business-user-access-restrict-pii-end
+
+
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-settings-start
+          :end-before: .. destinations-steps-settings-end
+
+       **Dataset ID**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-meta-ads-manager-dataset-id-start
+             :end-before: .. setting-meta-ads-manager-dataset-id-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-business-users-orchestration-only-start
+          :end-before: .. destinations-steps-business-users-orchestration-only-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
+.. events-meta-ads-manager-offline-events-add-destination-end
+
+
+.. _events-meta-ads-manager-build-segment:
+
+Build a query
+==================================================
+
+.. events-meta-ads-manager-offline-events-build-query-start
+
+Use a query to build a combination of data from the **Unified Itemized Transactions**, **Unified Transactions**, and **Customer 360** tables to represent the set of events that your brand wants to use within |destination-name|.
+
+A query that returns a collection events for use in |destination-name| is similar to:
+
+.. code-block:: sql
+   :linenos:
+
+   SELECT
+     c360.amperity_id AS external_id
+     ,c360.email AS email
+     ,c360.phone AS phone
+     ,c360.given_name AS given_name
+     ,c360.surname AS surname
+     ,c360.birthdate AS birthdate
+     ,c360.gender AS gender
+     ,c360.city AS city
+     ,c360.state AS state
+     ,c360.postal AS postal
+     ,c360.country AS country
+     ,uit.order_id AS order_id
+     ,uit.item_quantity AS quantity
+     ,uit.product_id AS product_id
+     ,uit.order_datetime AS timestamp
+     ,CAST(uit.item_revenue / uit.item_quantity AS DOUBLE) AS price
+     ,'USD' AS currency
+     ,'physical_store' AS action_source 
+   FROM Unified_Itemized_Transactions uit
+   LEFT JOIN Customer_360 c360 ON uit.amperity_id = c360.amperity_id
+   WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
+
+The query **MUST** contain the following fields: **email** or **phone** and **timestamp**. For Purchase events (or when **event_name** is not specified), the query must also contain **currency** and either **quantity** and **price**, or **value**. The fields **external_id** and **order_id** are recommended. When **action_source** is not specified the default value is "physical_store".
+
+You may include any of the following customer profile fields to help improve match rates in |destination-name|: **given_name**, **surname**, **birthdate**, **gender**, **city**, **state**, **postal**, and **country**.
+
+.. tip::
+
+   Extend the **WHERE** clause to filter query results by purchase channel, purchase brand, purchase quantity, and to remove items that were returned or canceled.
+
+   For example:
+
+   .. code-block:: sql
+      :linenos:
+
+      WHERE uit.order_datetime > (CURRENT_DATE - interval '7' day)
+      AND uit.purchase_channel = 'channel'
+      AND uit.purchase_brand = "ACME Essentials"
+      AND uit.item_quantity > 0
+      AND (c360.email IS NOT NULL OR c360.phone IS NOT NULL)
+      AND (
+          (is_cancellation IS NULL)
+          OR (NOT is_cancellation)
+      )
+      AND (
+          (is_return IS NULL)
+          OR (NOT is_return)
+      )
+
+.. events-meta-ads-manager-offline-events-build-query-end
+
+**Multiple event types in the same query**
+
+.. events-meta-ads-manager-offline-events-build-query-variations-start
+
+Events parameters can vary depending on the type of event. For example, website purchases capture more events data than in-store purchases. To send consolidated events data to |destination-name| create a database table to store the consolidated events and map the values in that table to the values required by |destination-name| :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` or to **NULL** values.
+
+The following SQL shows how to send many event types stored in a table named **Customer Events**:
+
+.. code-block:: sql
+   :emphasize-lines: 6
+   :linenos:
+
+   SELECT
+     c360.amperity_id AS external_id
+     ,c360.email AS email
+     ,c360.phone AS phone
+     ,events.order_id AS order_id
+     ,events.event_datetime AS timestamp
+     ,events.event_type AS event_name
+     ,events.channel AS action_source 
+     ,events.revenue AS value
+     ,'USD' AS currency
+     ,events.user_agent AS client_user_agent
+     ,events.event_uuid AS event_id
+     ,events.page_url AS event_source_url
+     ,events.client_ip AS client_ip_address
+   FROM Customer_Events events
+   LEFT JOIN Customer_360 c360 ON events.amperity_id = c360.amperity_id
+   WHERE events.event_datetime > (CURRENT_DATE - interval '7' day)
+
+The table from which many events are sourced must have values that map to values required by the Conversions API:
+
+#. Line 8 sets the value of **action_source** to the value of the **channel** field in the **Customer Events** table. In this example the values in the **channel** field are **physical_store** or **website**.
+#. Lines 11-14 are events that only apply to **website** events in the **Customer Events** table. When **action_source** is **physical_store** the values for **user_agent**, **event_uuid**, **page_url**, and **client_ip** in the **Customer Events** table are **NULL**.
+
+.. events-meta-ads-manager-offline-events-build-query-variations-end
+
+.. events-meta-ads-manager-offline-events-parameters-start
+
+Review the :ref:`Conversions API parameters <events-meta-ads-manager-conversions>` section for detailed information about the columns returned by your query.
+
+.. events-meta-ads-manager-offline-events-parameters-end
+
+
+.. _events-meta-ads-manager-conversions:
+
+Conversions API parameters
+==================================================
+
+.. events-meta-ads-manager-conversion-api-parameters-start
+
+The following table describes each of the parameters that are required by |destination-name| for events. The final row lists the optional fields your brand may include to extend the customer profile information that is associated with events that are returned by the query and sent to |destination-name|.
+
+The fields are listed alphabetically, but may be returned by a query in any order.
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Field name
+     - Description
+
+   * - **action_source**
+     - **Optional**
+
+       Action sources group events into categories and enable ad measurmeent and custom audience creation abilities from within the |destination-name| user interface. The default value for **action_source** is **physical_store**.
+
+       Add **action_source** to your query and then set a value:
+
+       ::
+
+          ,'physical_store' AS action_source
+
+       The value for **action_source** must be one of the following:
+
+       **app**
+         Use when the offline conversion was made from a mobile app.
+
+       **business_messaging**
+         Use when the offline conversion was made from ads associated with Facebook Messenger, Instagram, or WhatsApp.
+
+       **chat**
+         Use when the offline conversion was made over a messaging app, SMS, or online messaging feature.
+
+       **email**
+         Use when the offline conversion happened over email.
+
+       **other**
+         Use when the offline conversion occurred by some other workflow.
+
+       **phone_call**
+         Use when the offline conversion was made over a phone call.
+
+       **physical_store**
+         **Default** Use when the offline conversion was made in-person at a physical store location.
+
+         .. note:: The first time transaction events are sent to |destination-name|, and when **action_source** is set to **physical_store**, up to 62 days of transactions data may be sent, after which Amperity should be configured to send updates that maintain a 7-day rolling window of transaction events.
+
+            For example, the initial send:
+
+            ::
+
+               ,'physical_store' AS action_source
+               ...
+               WHERE uit.order_datetime > (CURRENT_DATE - interval '62' day)
+
+            Update "62" to "7" before the next send to maintain a 7-day rolling window.
+
+       **system_generated**
+         Use when the offline conversion occurred automatically, such as from a subscription renewal or monthly auto-pay.
+
+       **website**
+         Use when the offline conversion was made on a website.
+
+         When **action_source** is set to **website** the following fields are required: **client_user_agent**, **event_id**, and **event_source_url**. These fields must be in the results that are sent to |destination-name|. Missing or empty values are filtered from the results.
+
+         * The value for **client_user_agent** must be the user agent for the browser corresponding to the event.
+
+         * The value for **event_id** is a unique string chosen by advertiser.
+
+         * The value for **event_source_url** should be browser URL at which the event occurred.
+
+         **client_ip_address** is an optional field that, when present, is passed through to Meta. Meta recommends providing it to improve event matching quality. The value must be the IP address of the browser corresponding to the event.
+
+         **event_id**, **event_source_url**, and **client_user_agent** are `server event parameters <https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event/>`__ |ext_link| for the Conversions API.
+
+       The value for **action_source** is used by the Conversions API to categorize offline conversions within the |destination-name| user interface and may not be customized. Use the action source that best associates how your brand wants to use offline conversions within |destination-name|.
+
+       When **action_source** is not specified the default value is "physical_store".
+
+   * - **currency**
+     - **Required for Purchase events**
+
+       A value for **currency** is required by the Conversions API for Purchase events. When the **event_name** column is present in the dataset, **currency** is only required for rows where the event name is "Purchase" (or blank, which defaults to "Purchase"). When **event_name** is not present, all events are treated as Purchase and **currency** is required. Currency must be a valid |ext_iso_4217| three-digit currency code, such as "USD" (United States dollar), "AUD" (Australian dollar), "CAD" (Canadian dollar), "EUR" (Euro), "JPY" (Japanese yen) or "MXN" (Mexican peso).
+
+       Add **currency** to your query, and then set a value:
+
+       ::
+
+          ,'USD' AS currency
+
+       .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
+
+
+   * - **delivery_category**
+     - Optional for "Purchase" events.
+
+       Possible values: **in_store**, **curbside**, **home_delivery**, or **shipping**.
+
+   * - **email** or **phone**
+     - **Required**
+
+       You must send an email address *or* a phone number to |destination-name|. You may configure the query to send both.
+
+       Add at least one of **email** or **phone** to your query:
+
+       ::
+
+          ,c360.email AS email
+          ,c360.phone AS phone
+
+       .. note:: Amperity performs the same actions for email addresses and phone numbers when sending to the Conversions API as when sending to the Marketing API.
+
+   * - **event_name**
+     - **Optional**
+
+       Identifies an offline event within |destination-name|.
+
+       .. note:: The default value for **event_name** is "Purchase". Blank or **NULL** values for **event_name** will default to "Purchase".
+
+          This value may be set to one of: "ViewContent", "Search", "AddToCart", "AddToWishlist", "InitiateCheckout", "AddPaymentInfo", "Purchase", "Lead", or "Other".
+
+          To send non-"Purchase" event types add the **event_name** field to the SQL query and set the value to the event type. For example:
+
+          .. code-block:: sql
+             :emphasize-lines: 6
+             :linenos:
+
+             SELECT
+               c360.amperity_id AS external_id
+               ,c360.email AS email
+               ,c360.phone AS phone
+               ,leads.lead_datetime AS timestamp
+               ,'Lead' AS event_name
+               ,'website' AS action_source
+             FROM Customer_Leads leads
+             LEFT JOIN Customer_360 c360
+             ON leads.amperity_id = c360.amperity_id
+             WHERE leads.lead_datetime > (CURRENT_DATE - interval '7' day)
+
+
+   * - **external_id**
+     - **Recommended**
+
+       The **amperity_id** field **MUST** be renamed to **external_id**.
+
+       Add **external_id** to your query:
+
+       ::
+
+          ,c360.amperity_id AS external_id
+
+       .. note:: Amperity performs the same actions for the external ID when sending to the Conversions API as when sending to the Marketing API.
+
+   * - **order_id**
+     - **Optional**
+
+       The order ID that is associated with the offline event.
+
+       **When transactions data is available**
+
+       Use the **Order ID** field that is available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
+
+       ::
+
+          ,uit.order_id AS order_id
+
+       or:
+
+       ::
+
+          ,ut.order_id AS order_id
+
+       .. important:: The number of rows that results from the query may not be the same as the number of events that are uploaded to |destination-name|. This depends on the table from which the order ID is returned.
+
+          #. Transactions from the **Unified Itemized Transactions** table group items by order ID to ensure that individual events are combined to describe a complete transaction. |destination-name| processes each item as a unique conversion. For example, an order ID with three individual items is attributed by |destination-name| as three conversions.
+
+          #. Transactions from the **Unified Transactions** table are grouped by order ID. Each unique combination of **order_id** and **event_name** is sent to |destination-name| as a single conversion. If **event_name** column is not included all rows grouped by order ID are assigned the "Purchase" event type and each **order_id** produces one conversion.
+
+   * - **phone**
+     - See **email**.
+
+   * - **price**
+     - **Required for Purchase events**
+
+       The price that is associated with the offline event. When the **event_name** column is present in the dataset, **price** is only required for "Purchase" events. Non-"Purchase" events (such as "Lead") do not require **price**.
+
+       .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity**, and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
+
+       **When transactions data is available**
+
+       Calculate **price** by dividing item revenue by item quantity. These fields are available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
+
+       ::
+
+          ,CAST(
+            uit.item_revenue / uit.item_quantity AS DOUBLE
+          ) AS price
+
+
+   * - **product_id**
+     - **Optional**
+
+       A unique product identifier that can be associated with the offline event.
+
+       **When transactions data is available**
+
+       Use the **Product ID** field that is available from the **Unified Itemized Transactions** or **Unified Transactions** tables:
+
+       ::
+
+          ,uit.product_id AS product_id
+
+
+   * - **quantity** *or* **value**
+     - **Required for Purchase events**
+
+       A field that describes a quantity or a value amount associated with the offline event. When the **event_name** column is present in the dataset, **quantity** (or **value**) is only required for "Purchase" events. Non-"Purchase" events (such as "Lead") do not require **quantity** or **value**.
+
+       .. note:: When viewing parameters in the |destination-name| user interface, **price**, **quantity** (or **value**), and **currency** are combined to be shown as **value**, which represents the sum of price times quantity, shown in the currency used for the transaction.
+
+       **When transactions data is available**
+
+       Use the **Item Quantity** field from the **Unified Itemized Transactions** or **Unified Transactions** tables to define **quantity**:
+
+       ::
+
+          ,uit.item_quantity AS quantity
+
+
+   * - **timestamp**
+     - **Required**
+
+       A Unix timestamp in seconds that indicates when the offline event occurred.
+
+       .. note:: When viewing parameters in the |destination-name| user interface, **timestamp** is shown as **event_time**.
+
+       **When transactions data is available**
+
+       Use the **Order Datetime** field from the **Unified Itemized Transactions** or **Unified Transactions** tables to define **timestamp**:
+
+       ::
+
+          ,uit.order_datetime AS timestamp
+
+       Use a **WHERE** clause to limit the number of days to a maximum of seven:
+
+       ::
+
+          WHERE uit.order_datetime > (
+            CURRENT_DATE - interval '7' day
+          )
+
+
+   * - **value**
+     - The total value for a "Purchase" event. Required when **price** and **quantity** are not provided.
+
+       .. note:: **value** is not required for non-"Purchase" events, such as "Lead".
+
+   * - Optional profile attributes
+     - You may include any of the profile attributes that are supported by the Marketing API, including **Gender**, **Birthdate**, **First Name**, **Last Name**, **City**, **State**, **Zip Code**, and **Country Code**.
+
+.. events-meta-ads-manager-conversion-api-parameters-end

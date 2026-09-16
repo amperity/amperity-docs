@@ -4954,8 +4954,9 @@ div.body a.card:hover {
 	cursor:pointer;
 	width:auto;
 	border:0;
-	font-size:14px;
-	background: $amperity-brand-off-black;
+	font-size:15px;
+	font-weight: 700;
+	background: $amperity-brand-dark-teal;
 	color: $amperity-brand-white;
 	padding:10px 20px;
 	margin:0;
@@ -5083,13 +5084,13 @@ div.body a.card:hover {
 	padding:10px 20px 15px;
 	background:$amperity-brand-white;
 	margin:0;
-	border: 1px solid $amperity-brand-prime-gray;
+	border: 1px solid $amperity-brand-cement;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
-	-moz-box-shadow:2px 2px 2px 0 $amperity-brand-prime-gray;
-	-webkit-box-shadow:2px 2px 2px 0 $amperity-brand-prime-gray;
-	box-shadow:2px 2px 2px 0 $amperity-brand-prime-gray;
+	-moz-box-shadow:2px 2px 2px 0 $amperity-brand-cement;
+	-webkit-box-shadow:2px 2px 2px 0 $amperity-brand-cement;
+	box-shadow:2px 2px 2px 0 $amperity-brand-cement;
 	}
 
 
@@ -5100,7 +5101,7 @@ div.body a.card:hover {
     line-height: 1.42857143;
     color: $amperity-brand-off-black;
     background: $amperity-brand-white;
-    border: 1px solid $amperity-brand-ocean;
+    border: 1px solid $amperity-brand-cement;
     border-radius: 4px;
 //    -webkit-box-shadow: inset 0 1px 1px;
 //    box-shadow: inset 0 1px 1px;
@@ -5194,7 +5195,7 @@ div.body a.card:hover {
     vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    border: 1px solid $amperity-brand-off-black;
+    border: 1px solid $amperity-brand-dark-teal;
     white-space: nowrap;
     padding: 6px 12px;
     font-size: 14px;
@@ -5205,7 +5206,7 @@ div.body a.card:hover {
     -ms-user-select: none;
     user-select: none;
     color: $amperity-brand-white;
-    background: $amperity-brand-off-black;
+    background: $amperity-brand-dark-teal;
 	}
 
 
@@ -5232,10 +5233,10 @@ div.body a.card:hover {
 
 #doorbell #doorbell-add-attachments-label-button{
 	font-weight:normal;
-	border:1px solid $amperity-brand-prime-gray;
+	border:1px solid $amperity-brand-cement;
 	display:block;
 	width:96%;
-	color:$amperity-brand-prime-gray;
+	color:$amperity-brand-cement;
 	padding:6px 2%;
 	margin-bottom:10px;
 	cursor:pointer;
@@ -5264,7 +5265,7 @@ div.body a.card:hover {
 
 #doorbell #doorbell-add-attachments-label-button *{pointer-events:none}
 
-#doorbell #doorbell-add-attachments-label-button:hover{color:$amperity-brand-prime-gray}
+#doorbell #doorbell-add-attachments-label-button:hover{color:$amperity-brand-cement}
 
 #doorbell .captcha-container{margin-bottom:10px}
 

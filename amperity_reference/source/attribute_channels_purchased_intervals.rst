@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: purchased channels interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "purchased channels"
 
 
 .. meta::
@@ -21,7 +24,7 @@ Purchased channel intervals
 
 .. attribute-channel-purchased-intervals-about-start
 
-Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during during the specified time period.
+Purchased channel attributes represent the count of the distinct channels (online, in store, etc.) through which a customer interacted with your brand during the specified time period.
 
 .. attribute-channel-purchased-intervals-about-end
 
@@ -44,29 +47,27 @@ Purchased channel attributes are available at the following intervals:
 Use in segments
 ==================================================
 
-.. attribute-channel-purchased-intervals-segment-start
-
-You can access purchased channel intervals directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a purchase channel interval attribute, and then apply a condition.
-
-.. attribute-channel-purchased-intervals-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-channel-purchased-intervals-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-channel-purchased-intervals-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the specified purchase channel interval.

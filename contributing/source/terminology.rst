@@ -1,75 +1,93 @@
-.. 
-.. https://docs.amperity.com/internal/
-..
+.. https://docs.amperity.com/contributing/
 
 
 ==================================================
 Terminology
 ==================================================
 
-This topic describes the correct use of terms within Amperity documentation. Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified in this topic.
+Use terminology correctly within Amperity documentation and the user interface.
+
+.. note:: Refer to the Google Developer Documentation Style Guide: https://developers.google.com/style/ for words that are not specified here.
 
 
 .. _term-s3:
 
 **Amazon S3** vs. **S3**
-   Amazon S3 is the correct trademarked name for the Simple Storage Service. It's often shortened to just S3, but we should use Amazon S3 in documentation as often as possible.
+   Amazon S3 is the correct trademarked name for the Simple Storage Service. It is often shortened to just S3, but Amperity should use Amazon S3 as often as possible.
 
 
 .. _term-amperity:
 
 **Amperity** vs. **Amperity's**
-   You should almost never write |company_name| (or any trademarked term) as a possessive, such as "Amperity's Stitch process is the best!". Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|!"
+   You should almost never write |company_name|, or any trademarked term, as a possessive, such as "Amperity's Stitch process is the best." Rewrite until |company_name| stands alone, such as "The best Stitch offerings are from |company_name|."
 
-   .. note:: This is one of the reasons why the technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly. (Plus, in the event of a merger or company rename--and we all know that'll *never* happen!--we can just change the token.)
+   .. note:: This is one of the reasons why technical documentation uses a token for |company_name|: ``|company_name|``. Sure, you have to type more characters, but it also helps make sure that the company name is used correctly.
+
+   Plus, in the event of a merger or company rename--and everyone knows that will *never* happen--only the token requires an update.
 
 
 .. _term-azure:
 
 **Azure storage services**
-   Azure, in the context of storage services like Azure Blob Storage and Azure Data Lake Storage should be used in the first instance. Microsoft does not use acronyms (ABS, ADLS), but does drop the Azure from second instances (Blob Storage, Data Lake Storage). In Amperity context, "Azure storage services" is probably fine also for generic references.
+   Azure, in the context of storage services like Azure Blob Storage and Azure Data Lake Storage should be used in the first instance. Microsoft does not use acronyms--for example: ABS or ADLS--but does drop "Azure" from second instances--for example: Blob Storage or Data Lake Storage. In Amperity context, "Azure storage services" is probably fine also for generic references.
 
 
 .. _term-blacklist:
 
+.. vale off
+
 **blacklist** / **whitelist**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see |ext_itef_terminology|.  See **blocklist** / **allowlist**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **blocklist** / **allowlist**.
+
+.. vale on
 
 
 .. _term-blocklist:
 
+.. vale off
+
 **blocklist** / **allowlist**
    Use the word-pair **blocklist** and **allowlist** to refer behaviors and processes that block or allow values to be processed by Amperity, such as a bad-values blocklist or a 360 values blocklist.
 
+.. vale on
 
-.. _term-datasource:
 
-**datasource** vs. **data source**
-   Use **data source** as a single word to describe upstream sources from which Amperity is configured to pull data.
+.. _term-data-center:
+
+**data center** vs. **datacenter**
+   Use **data center** as a two word phrase to describe the physical locations in which essential infrastructure for cloud computing are located.
 
 
 .. _term-datasheet:
 
-**datasheet** vs. **data sheet**
-   Use **datasheet** as a single word to describe a deliverable that contains technical information for customers about an |company_name| product or scenario.
+**data sheet** vs. **datasheet**
+   Use **datasheet** as a single word to describe a deliverable that has technical information for customers about an |company_name| product or scenario.
+
+
+.. _term-datasource:
+
+**data source** vs. **datasource**
+   Use **data source** as a two word phrase to describe upstream sources from which Amperity is configured to pull data.
 
 
 .. _term-data-table:
 
 **data table** vs. **datatable**
-   Use **data table** as two words as a way to generically describe the things that exist in a database, i.e. "data tables". Use the correct name when it's available, such as "domain table" or "customer 360 table". But as a generic reference data table is fine.
+   Use **data table** as a two word phrase as a way to generically describe the things that exist in a database: "data tables".
+
+   Use the correct name when it is available, such as "domain table" or "customer 360 table", but as a generic reference "data table" is fine.
 
 
 .. _term-dummy:
 
 **dummy**, **dumb**
-   Avoid using **dummy** (and variations) as a synonym for "placeholder".
+   Avoid using **dummy** and variations as a synonym for "placeholder".
 
 
 .. _term-e-commerce:
 
 **e-commerce** vs. **ecommerce** or **eCommerce**
-   It's **e-commerce**. Why? `Because Mirram-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It's arbitrary otherwise.
+   It is **e-commerce**. Why? `Because Merriam-Webster says so <https://www.merriam-webster.com/dictionary/e-commerce>`__. It is arbitrary otherwise.
 
 
 .. _term-excited:
@@ -81,49 +99,72 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-filename:
 
 **filename** vs. **FILENAME**
-   Probably the latter. What we mean here is, for example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS`` (as opposed to ``xls``), unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
+   Probably the latter. For example, the file extension for a Microsoft Excel spreadsheet is literally ``.xls``. This should never be written literally, but instead abbreviated and in all caps, like ``XLS``, as opposed to ``xls``, unless you need to say the full filename and extension together, in which case you'd use ``some-file.xls``.
 
 
 .. _term-master:
 
+.. vale off
+
 **master** / **slave**
-   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see |ext_itef_terminology|. See **primary** / **replica**.
+   Do not use these terms. This remains true even when a third-party chooses to use those terms to describe their software. For background, see `Terminology, Power and Oppressive Language <https://tools.ietf.org/id/draft-knodel-terminology-00.html>`__ |ext_link|. See **primary** / **replica**.
+
+.. vale on
 
 
 .. _term-multi-tenant:
 
 **multitenant** vs **multi-tenant** or **multi tenant**
-   It's **multitenant**. Why? Because.
+   It is **multitenant**. Why? Because.
+
+
+.. _term-null:
+
+**NULL** vs. **Null** vs. **null**
+   **NULL** indicates something does not have a value. In Amperity documentation use **NULL**. Why? Because the context of **NULL** in Amperity documentation is almost always a SQL context.
 
 
 .. _term-on-premises:
 
 **on-premises** vs. **on-premise**
-   It's **on-premises**. Why? Because. The words premise and premises do not mean the same thing. The plural of premise is not premises.
+   It is **on-premises**. Why? Because. The words premise and premises do not mean the same thing. The plural of premise is not premises.
 
-   When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment (and not, say, "the cloud") always (and without exception) use the term **on-premises**.
+   When referring to the installation of computer-related hardware, software, and whatnots within the customer's physical environment, and not, say, "the cloud", always and without exception use the term **on-premises**.
 
-   .. note:: The use of a hyphen between on and premises in **on-premises** is debated in some circles, but not here at |company_name|. We use the hyphen. See **on-site**.
+   .. note:: The use of a hyphen between on and premises in **on-premises** is debated in some circles, but not here at |company_name|. Use the hyphen. See **on-site**.
 
 
 .. _term-on-site:
 
 **on-site** vs. **onsite**
-   A synonym of **on-premises** generally. Use **on-premises** when referring to hardware and software deployments that are not hosted in a Cloud environment, such as Amazon AWS. Use **on-site** for any non-on-premises situations, such as when individuals from |company_name| visit a customer: "An |company_name| representative visits with you on-site to discuss your on-premises deployment options."
+   A synonym of **on-premises**. Use **on-premises** when referring to hardware and software deployments that are not hosted in a Cloud environment, such as Amazon AWS. Use **on-site** for any non-on-premises situations, such as when individuals from |company_name| visit a customer: "An |company_name| representative visits with you on-site to discuss your on-premises deployment options."
 
 
 .. _term-open-source:
 
 **open source** vs. **open-source**
-   |company_name| prefers **open source** (without the hyphen) though technically both are correct.
+   |company_name| prefers **open source** without the hyphen though technically both are correct.
 
 
 .. _term-primary-replica:
 
+.. vale off
+
 **primary** / **replica**
-   Use the word-pair **primary** and **replica** to refer to machines in a cluster. For example, in a YARN/Spark/Hadoop cluster, a **primary** machine manages the cluster (the YARN Resource Manager), and then each **replica** node in the cluster is run when asked to by the primary (the YARN Node Manager).
+   Use the word-pair **primary** and **replica** to refer to machines in a cluster. For example, in a YARN/Spark/Hadoop cluster, a **primary** machine manages the cluster, which is the YARN Resource Manager, and then each **replica** node in the cluster is run when asked to by the primary, which is the YARN Node Manager.
 
    .. warning:: Use **primary** / **replica** even when the application to which you are referring uses another term, such as how YARN refers to **master** and **slave** nodes.
+
+.. vale on
+
+.. vale off
+
+.. _term-realtime:
+
+**real-time**
+   Use the hyphenated **real-time** rather than the portmanteau **realtime**. With a hyphen it looks like a serious technical term; without a hyphen it looks like a marketing buzzword. 
+
+.. vale on
 
 
 .. _term-replica:
@@ -135,23 +176,27 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-serial-comma:
 
 **serial comma**
-   See Oxford (or serial) comma.
+   See Oxford, or serial, comma.
 
 
 .. _term-slave:
 
+.. vale off
+
 **slave**
-   See **primary** / **replica**. Don't use this term.
+   See **primary** / **replica**. Do not use this term.
+
+.. vale on
 
 
 .. _term-stitch:
 
-**Stitch** vs. **stitch**, **stitched**, and/or **stitching**
+**Stitch** vs. **stitch**, **stitched**, or **stitching**
    You can stitch data and data can be stitched, but only Stitch is a feature within Amperity.
 
    Use a capital "S" when referring to Stitch as a feature. Never use Stitched, or Stitch's. Just Stitch. Rewrite your sentences to make this happen.
 
-   Any other use of stitch should have a lower-case "s" and may follow any other standard use cases.
+   Any other use of stitch should have a lowercase "s" and may follow any other standard use cases.
 
 
 .. _term-web-ui:
@@ -163,4 +208,4 @@ This topic describes the correct use of terms within Amperity documentation. Ref
 .. _term-white-paper:
 
 **white paper** vs. **whitepaper**
-   Use **white paper** (two words) to describe a technical article written by |company_name|.
+   Use **white paper** as a two word phrase to describe a technical article written by |company_name|.

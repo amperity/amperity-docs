@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Salesforce Marketing Cloud
 .. |file-format| replace:: CSV
@@ -13,9 +12,9 @@
 Salesforce Marketing Cloud
 ==================================================
 
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-sftp-about-start
-   :end-before: .. setting-sftp-about-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-salesforce-marketing-cloud-start
+   :end-before: .. term-salesforce-marketing-cloud-end
 
 
 Credentials
@@ -83,12 +82,6 @@ Settings
    :start-after: .. setting-salesforce-marketing-cloud-account-id-start
    :end-before: .. setting-salesforce-marketing-cloud-account-id-end
 
-**Import location**
-
-.. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-salesforce-marketing-cloud-import-location-start
-   :end-before: .. setting-salesforce-marketing-cloud-import-location-end
-
 **Folder name**
 
 .. include:: ../../shared/destination_settings.rst
@@ -117,8 +110,14 @@ Settings
    :start-after: .. setting-salesforce-marketing-cloud-append-data-start
    :end-before: .. setting-salesforce-marketing-cloud-append-data-end
 
-**Data extension name**
+**Data extension name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-marketing-cloud-data-extension-name-start
    :end-before: .. setting-salesforce-marketing-cloud-data-extension-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

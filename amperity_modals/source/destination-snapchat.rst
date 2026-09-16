@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Snapchat
 .. |audience-primary-key| replace:: "email"
@@ -55,8 +54,14 @@ Settings
    :start-after: .. setting-snapchat-ad-account-id-start
    :end-before: .. setting-snapchat-ad-account-id-end
 
-**Segment name**
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-snapchat-segment-name-start
    :end-before: .. setting-snapchat-segment-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

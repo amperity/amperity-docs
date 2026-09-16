@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -35,12 +33,22 @@ Amperity models churn propensity for each customer's unique purchase history. So
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Support a churn prevention campaign that has a series of escalating win-back offers
 * Optimize suppression and spend
 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
 
 .. model-churn-propensity-about-end
+
+.. model-churn-propensity-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Churn propensity determines the likelihood that a customer will be active based on their purchase history.
+
+   Open **Learning Lab** to learn more about `predicted churn <https://amperity.com/learning-lab/predicted-churn>`__ |ext_link|. Registration is required.
+
+.. model-churn-propensity-learning-lab-end
 
 
 .. _model-churn-propensity-use-cases:
@@ -80,22 +88,16 @@ Attributes that predict a customer's future purchase behavior are available from
 
    * - Attribute Name
      - Description
-   * - **Predicted Average Order Revenue Next 365d**
+   * - **Predicted Average Order Revenue Next 365 Days**
      - A customer's predicted average order revenue over the next 365 days.
-   * - **Predicted CLV Next 365d**
+   * - **Predicted CLV Next 365 Days**
      - The total predicted spend for a customer over the next 365 days.
-   * - **Predicted Order Frequency Next 365d**
+   * - **Predicted Order Frequency Next 365 Days**
      - A customer's predicted number of orders over the next 365 days.
-   * - **Predicted Probability of Transaction Next 365d**
+   * - **Predicted Probability of Transaction Next 365 Days**
      - The probability that a customer will purchase again in the next 365 days.
 
-Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns. You can access these attributes directly from the Segment Editor:
-
-.. image:: ../../images/attribute-predicted-transactions.png
-   :width: 600 px
-   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns.
 
 .. model-churn-propensity-use-cases-spend-end
 
@@ -123,27 +125,19 @@ Attributes that predict a customer's likelihood to churn, along with their predi
    * - **Predicted Customer Lifecycle Status**
      - A probabilistic grouping of a customer's likelihood to purchase again.
 
-       For repeat customers, groupings include the following tiers:
-
-       * Active (likelihood to purchase is greater than 60%)
-       * Cooling down (likelihood to purchase is between than 50% and 60%)
-       * At risk (likelihood to purchase is between than 35% and 50%)
-       * Highly at risk (likelihood to purchase is between than 20% and 35%)
-       * Lost (likelihood to purchase is less than 20%)
+       .. include:: ../../shared/models.rst
+          :start-after: .. models-churn-propensitity-tiers-repeat-start
+          :end-before: .. models-churn-propensitity-tiers-repeat-end
 
        By grouping repeat customers into these tiers, you can:
 
-       * Focus on retaining and nurturing customers who contribute significantly to revenue.
+       * Focus on retaining and nurturing customers who contribute to revenue.
        * Develop targeted campaigns that address the specific needs and preferences of different customer segments.
        * Proactively address the concerns of customers who may be considering churning.
 
-       For one-time buyers, groupings include the following tiers:
-
-       * Active (purchased within 60 days)
-       * Cooling down (purchased 60-120 days ago)
-       * At risk (purchased 120-180 days ago)
-       * Highly at risk (purchased 180-240 days ago)
-       * Lost (purchased 240+ days ago)
+       .. include:: ../../shared/models.rst
+          :start-after: .. models-churn-propensitity-tiers-onetime-start
+          :end-before: .. models-churn-propensitity-tiers-onetime-end
 
        By segmenting one-time buyers into different tiers, you can:
 
@@ -166,15 +160,9 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        * Identify and focus on customers who are predicted to generate the most revenue over their lifetime.
        * Develop targeted campaigns and offers that cater to the specific needs and preferences of different customer segments.
-       * Allocate resources more effectively by focusing on acquiring customers with high pCLV potential.
+       * Allocate resources by focusing on acquiring customers with high pCLV potential.
        * Implement strategies to retain and nurture high-value customers, maximizing their lifetime value.
 
-By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time. You can access these attributes directly from the segment editor:
-
-.. image:: ../../images/attribute-predicted-lifecycle-status.png
-   :width: 600 px
-   :alt: Choose the predicted lifecycle status attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time.
 
 .. model-churn-propensity-use-cases-churn-end

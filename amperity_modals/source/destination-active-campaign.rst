@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: ActiveCampaign
 .. |audience-primary-key| replace:: "email"
@@ -65,7 +64,7 @@ Settings
    :start-after: .. setting-active-campaign-group-name-access-start
    :end-before: .. setting-active-campaign-group-name-access-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-active-campaign-list-name-start
@@ -82,3 +81,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-active-campaign-verbose-logging-start
    :end-before: .. setting-active-campaign-verbose-logging-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

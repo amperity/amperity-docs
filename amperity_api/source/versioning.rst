@@ -1,6 +1,6 @@
-.. 
 .. https://docs.amperity.com/api/
-..
+
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -12,18 +12,17 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Versions
-
+        Amperity API versions
 
 ==================================================
-Amperity API Versions
+Versioning
 ==================================================
 
 .. versioning-start
 
 Amperity APIs evolve and change over time. Amperity versions API endpoints to help your brand track changes to the Amperity API and to offer support to developers as these endpoints evolve.
 
-Your team of developers can track improvements to the Amperity API from the `changelog <https://docs.amperity.com/api/changelog.html>`__. Monitor the changelog to know when new versions are available and/or when existing versions are updated or planned for deprecation.
+Your team of developers can track improvements to the Amperity API from the `changelog <https://docs.amperity.com/api/changelog.html>`__. Monitor the changelog to know when new versions are available or when existing versions are updated or planned for deprecation.
 
 .. versioning-end
 
@@ -105,14 +104,14 @@ A version identifier is a string that identifies a :ref:`supported version <vers
 
 .. versioning-version-identifier-request-header-example-start
 
-In the following example, replace "{tenant-id}" with your tenant name, "{endpoint}" with the name and path of the Amperity API endpoint, "{access-token}" with your Amperity API access token, and "{version}" with the version of the Amperity API to which the request will be made:
+In the following example, replace "{tenant}" with your tenant name, "{endpoint}" with the name and path of the Amperity API endpoint, "{access-token}" with your Amperity API access token, and "{version}" with the version of the Amperity API to which the request will be made:
 
 ::
 
    curl -request GET \
-        -url "https://{tenant-id}.amperity.com/api/{endpoint}/" \
+        -url "https://{tenant}.amperity.com/api/{endpoint}/" \
         -H "Authorization: Bearer ${access-token}" \
-        -H "Amperity-Tenant: {tenant-id}" \
+        -H "Amperity-Tenant: {tenant}" \
         -H "Content-Type: application/json" \
         -H "api-version: {version}"
 
@@ -133,6 +132,7 @@ New versions of the Amperity API are released periodically. Each version of an e
 Current versions:
 
 * **2024-04-01** The current version of the Amperity API.
+* **2025-07-31** The current version of the Profile API.
 
 .. versioning-supported-versions-end
 
@@ -146,7 +146,7 @@ Unstable versions
 
 During development, Amperity may release APIs for testing using the **unstable** version identifier. Unstable versions contain features that are still in progress and may not be backward compatible.
 
-There are no guarantees around customer support, notification of changes, breaking changes, or availability of unstable versions.
+Unstable versions do not guarantee customer support, notification of changes or breaking changes, or availability.
 
 .. versioning-unstable-versions-end
 
@@ -165,9 +165,9 @@ At least 6 months notice will be given before any supported version is marked as
 Amperity APIs evolve and change over time. To warn developers of upcoming deprecations Amperity uses the following headers:
 
 * `Deprecation Header <https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-deprecation-header>`__. When **true** a deprecation will occur at the date indicated in the header.
-* `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature will stop working and return a 4xx response at the date indicated in the header.
+* `Sunset Header <https://datatracker.ietf.org/doc/html/rfc8594>`__. When **true** a deprecated feature stops working and return a 4xx response at the date indicated in the header.
 
-Deprecation and Sunset headers will be added at least 6 months prior to a deprecation. A deprecation date will be at least 3 months prior to a sunset date. For example:
+Deprecation and Sunset headers will be added at least 6 months before a deprecation. A deprecation date will be at least 3 months before a sunset date. For example:
 
 ::
 

@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Cordial
 .. |audience-primary-key| replace:: "email"
@@ -61,7 +60,7 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-cordial-list-name-start
@@ -72,3 +71,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-cordial-subscription-status-start
    :end-before: .. setting-cordial-subscription-status-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

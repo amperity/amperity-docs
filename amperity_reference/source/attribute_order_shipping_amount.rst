@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: the **order shipping amount** attribute
+.. |what-choose| replace:: **order shipping amount**
+.. |what-find| replace:: "order shipping"
 
 
 .. meta::
@@ -29,36 +32,34 @@ Shipping amounts
 Use in segments
 ==================================================
 
-.. attribute-shipping-amount-start
-
-You can access order shipping amounts directly from the **Segment Editor**. To add this attribute to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table, select the **Order Shipping Amount** attribute, apply a condition, and then specify a value.
-
-.. attribute-shipping-amount-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-shipping-amount-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-shipping-amount-conditions-start
 
-The following table lists the conditions that are available to order shipping amounts.
+The following table lists the operators that are available to order shipping amounts.
 
-.. note:: Order shipping amounts have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Order shipping amounts have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific order shipping amount, such as "117.99", "129.99", or "179.99".
 
-       .. tip:: Use the following conditions to return a range of order shipping amounts instead of a specific shipping amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of order shipping amounts instead of a specific shipping amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -78,7 +79,7 @@ The following table lists the conditions that are available to order shipping am
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual order shipping amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual order shipping amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -110,7 +111,7 @@ The following table lists the conditions that are available to order shipping am
        Avoid using the **is not in list** condition when individual revenue amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "14.99", "59.99", and "127.22", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "14.99", "59.99", and "127.22", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

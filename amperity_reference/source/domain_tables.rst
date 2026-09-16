@@ -1,15 +1,13 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
     :description lang=en:
-        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built against source data tables to support any use case.
+        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built from source data tables to support any use case.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built against source data tables to support any use case.
+        Source domain tables are created when your brand pulls data to Amperity. Custom domain tables may be built from source data tables to support any use case.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -44,7 +42,7 @@ Column types
    * - Type
      - Description
    * - **Boolean**
-     - A value that represents an either/or, such as true or false, yes or no, 0 or 1, true or NULL.
+     - A value that represents an either/or, such as true or false, yes or no, 0 or 1, true or **NULL**.
 
    * - **date**
      - An ISO-8601 compliant date values, such as a birthdate. For example:
@@ -57,7 +55,7 @@ Column types
        * Mon Nov 30 2020 16:00:00 GMT-0800 (Pacific Standard Time)
        * Sat Sep 02 2017 14:36:19 GMT-0700 (Pacific Daylight Time)
 
-       .. important:: Some fields that store datetime values are set to the string data type.
+       .. important:: Some fields that store datetime values are set to the **string** data type.
 
    * - **decimal**
      - A fixed point number, such as for prices or message sizes. (The number of characters in the decimal value is configurable during feed setup.). For example:
@@ -79,7 +77,7 @@ Column types
        * 12345
 
    * - **string**
-     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs (and other IDs), phone numbers, zip codes, product names, descriptions, and so on. May be empty. For example:
+     - A sequence of characters, such as first and last names, email addresses, physical addresses, UUIDs and other IDs, phone numbers, ZIP codes, product names, and descriptions. May be empty. For example:
 
        * John
        * Smith
@@ -142,7 +140,7 @@ Interaction records
 
 Interaction records are defined by the presence of data that can be assigned semantic tags for :ref:`transactions <semantics-itemized-transactions>`, product catalogs, and other behavior data, such as :ref:`custom semantic tags for loyalty programs <semantics-custom>`.
 
-Interaction records often :ref:`require data to be reshaped using domain SQL (and custom domain tables) <domain-tables-custom>` to ensure that the right combination of fields are present in the data to support components and workflows within Amperity, including functionality that is available from the **Segment Brief** (a component within the **Segments** page), predicted customer lifetime value models, and the **Campaigns** page.
+Interaction records often :ref:`require data to be reshaped using domain SQL and custom domain tables <domain-tables-custom>` to ensure that the right combination of fields are present in the data to support components and workflows within Amperity, including functionality that is available from the **Segment Brief** (a component within the **Segments** page), predicted customer lifetime value models, and the **Campaigns** page.
 
 .. domain-domain-tables-record-type-interaction-end
 
@@ -172,7 +170,7 @@ A custom domain table is built directly using Spark SQL to define a schema for t
 
 .. domain-tables-custom-note-start
 
-.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch will run. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
+.. note:: When a database is run, any custom domain table that has changed is run first, and then Stitch runs. If there are no changes to custom domain tables *or* if custom domain tables have changed that are *not* configured for Stitch, Stitch will not run.
 
 .. domain-tables-custom-note-end
 
@@ -219,11 +217,12 @@ Combine day, month, year as birthdate
 
 .. domain-tables-custom-sql-use-case-combine-birthdate-start
 
-Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined in order to use the **birthdate** semantic tag.
+Some data sources do not contain fields for complete birthdates and instead contain values by day, month, and year in separate fields. These individual fields must be combined to use the **birthdate** semantic tag.
 
 The following example shows an ``IF`` statement within a ``SELECT`` statement that finds the values in day, month, and year fields, and then combines them into a field that captures the birthdate value as ``DD/MM/YYYY``:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -236,7 +235,7 @@ The following example shows an ``IF`` statement within a ``SELECT`` statement th
 
 .. _domain-tables-custom-sql-use-case-combine-postal:
 
-Combine five- and four-digit postal codes
+Combine five and four digit postal codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst
@@ -266,6 +265,7 @@ Some data sources contain fixed-width fields. Use a combination of the **TRIM()*
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      TRIM(SUBSTR(col_1, 2, 35)) AS NAME_LINE1,
@@ -297,7 +297,7 @@ Hash PII data that has been resent to Amperity
 
 .. _domain-tables-custom-sql-use-case-parse-fields-with-multiple-separators:
 
-Parse fields with multiple separators
+Parse fields with many separators
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. include:: ../../amperity_reference/source/sql_spark.rst
@@ -315,6 +315,7 @@ Reference custom domain tables
 A custom domain table may reference another custom domain table. For example:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      order_id
@@ -362,7 +363,7 @@ Standardize values for USA states
 Update blocklists
 --------------------------------------------------
 
-.. include:: ../../amperity_datagrid/source/blocklist_bad_values.rst
+.. include:: ../../amperity_operator/source/blocklist_bad_values.rst
    :start-after: .. bad-values-blocklist-advanced-custom-domain-tables-start
    :end-before: .. bad-values-blocklist-advanced-custom-domain-tables-end
 
@@ -377,10 +378,10 @@ Added columns
 Amperity adds the following columns to all domain tables. The added columns start with underscores (``_``) and are used by Amperity during Stitch processing.
 
 #. The **_pk** column is an identifier that is generated based on the all of the columns in the feed that were associated to the primary key.
-#. The **_uuid_pk** column contains a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
-#. The **_updated** column contains details about the last update; it is a system-generated 64-bit integer that combines a timestamp with file/line information.
+#. The **_uuid_pk** column has a system-generated UUID. This UUID helps Amperity distribute workers during Stitch processing.
+#. The **_updated** column has details about the last update. It is a system-generated 64-bit integer that combines a timestamp with file/line information.
 
-   Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files/days in the same load.
+   Amperity uses the value in the **_updated** column to ensure that the newest record is preferred over older records when both records have the same primary key. This preference is maintained between loads, between records in the same file, and between files and days in the same load.
 
 These columns will be available in the customer 360 database when a domain table is configured as a passthrough table.
 
@@ -394,7 +395,7 @@ Stitched domain tables
 
 .. domain-tables-stitched-start
 
-All domain tables to which semantic tags are added and/or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
+All domain tables to which semantic tags are added or to which a foreign key is added that can be used to associate records in a domain table to an Amperity ID are processed by Stitch. This is in addition to all domain tables to which customer profile semantic tags were applied, and then were :ref:`made available to Stitch <feeds-make-available-to-stitch>`.
 
 .. domain-tables-stitched-end
 
@@ -422,7 +423,7 @@ How-tos
 
 .. domain-tables-howtos-start
 
-This section describes tasks related to managing domain tables in Amperity:
+Tasks related to managing domain tables in Amperity:
 
 * :ref:`domain-tables-add`
 * :ref:`domain-tables-add-custom`
@@ -433,6 +434,7 @@ This section describes tasks related to managing domain tables in Amperity:
 * :ref:`domain-tables-explore`
 * :ref:`domain-tables-explore-sample-data`
 * :ref:`domain-tables-explore-schema`
+* :ref:`domain-tables-find-primary-key`
 * :ref:`domain-tables-purge`
 * :ref:`domain-tables-rename`
 * :ref:`domain-tables-search`
@@ -461,12 +463,12 @@ Add custom domain table
 
 .. domain-tables-custom-add-start
 
-A custom domain table is table that is created from a Spark SQL query built against one (or more) source domain tables to build a table with reshaped data. The custom domain table is made available to downstream processes, such as Stitch or the customer 360 database, in the same manner as source domain tables.
+A custom domain table is table that is created from a Spark SQL query built from one or more source domain tables to build a table with reshaped data. The custom domain table is made available to downstream processes, such as Stitch or the customer 360 database, in the same manner as source domain tables.
 
-Feeds quickly load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
+Feeds load data and apply a standard schema to customer data. Use a custom domain table to load this data in its raw form, and then reshape it to support any downstream workflow. For example:
 
 * Enabling privacy rights workflows to help remove data based on individual requests from customers, as required by CCPA and GDPR.
-* Applying semantic tags to data that contains :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
+* Applying semantic tags to data that has :ref:`transactions <semantics-itemized-transactions>` details, including extending the schema and adding new fields.
 * Supporting workflows that |data_first_party_raw_clickstream|.
 
 .. domain-tables-custom-add-end
@@ -490,7 +492,7 @@ Feeds quickly load data and apply a standard schema to customer data. Use a cust
 
    Apply :ref:`semantics-itemized-transactions` to any column in the data schema that can be matched with transactions semantics.
 
-   .. note:: Other semantic tags may be applied, including for customer records and product catalogs. Tables that contain *only* transactions, itemized transactions, or product catalog semantic tags are generally not made available to Stitch.
+   .. note:: Other semantic tags may be applied, including for customer records and product catalogs. Tables that contain *only* transactions, itemized transactions, or product catalog semantic tags are not made available to Stitch.
 
 #. Click **Activate**.
 
@@ -505,20 +507,21 @@ Example: Unified transactions
 .. domain-tables-add-custom-example-unified-transactions-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH uit_rollup AS (
      SELECT
-       order_id,
-       MIN(order_datetime) AS order_datetime,
-       SUM(IF(is_return IS NULL AND is_cancellation IS NULL, COALESCE(item_quantity, 1), 0)) AS order_quantity,
-       SUM(IF(is_return IS NULL AND is_cancellation IS NULL, item_revenue, 0)) AS sum_item_revenue,
-       SUM(IF(is_return = TRUE, COALESCE(item_quantity, -1), 0)) AS order_returned_quantity,
-       SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue,
-       SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity,
-       SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
-     FROM
-       Unified_Itemized_Transactions
-     GROUP BY 1)
+       order_id
+       ,MIN(order_datetime) AS order_datetime
+       ,SUM(IF(is_return IS NULL AND is_cancellation IS NULL COALESCE(item_quantity, 1), 0)) AS order_quantity
+       ,SUM(IF(is_return IS NULL AND is_cancellation IS NULL, item_revenue, 0)) AS sum_item_revenue
+       ,SUM(IF(is_return = TRUE, COALESCE(item_quantity, -1), 0)) AS order_returned_quantity
+       ,SUM(IF(is_return = TRUE, item_revenue, 0)) AS order_returned_revenue
+       ,SUM(IF(is_cancellation = TRUE, COALESCE(item_quantity, -1), 0)) AS order_canceled_quantity
+       ,SUM(IF(is_cancellation = TRUE, item_revenue, 0)) AS order_canceled_revenue
+     FROM Unified_Itemized_Transactions
+     GROUP BY 1
+   )
 
    SELECT
      ut.amperity_id
@@ -543,10 +546,9 @@ Example: Unified transactions
      -- Add in custom semantics as necessary. For example:
      --,ut.currency
      --,ut.order_shipping_amount
-   FROM
-     uit_rollup uitr JOIN
-     Unified_Transactions ut
-     ON uitr.order_id = ut.order_id
+   FROM uit_rollup uitr
+   JOIN Unified_Transactions ut
+   ON uitr.order_id = ut.order_id
 
 .. domain-tables-add-custom-example-unified-transactions-end
 
@@ -559,6 +561,7 @@ Example: Loyalty programs
 .. domain-tables-add-custom-example-loyalty-cte-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH Loyalty_cte AS (
      SELECT
@@ -589,6 +592,7 @@ Example: Loyalty programs
 .. domain-tables-add-custom-example-loyalty-last-updated-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH info_from_last_update AS (
      SELECT 
@@ -642,15 +646,27 @@ Example: Loyalty programs
 Add linkage table
 --------------------------------------------------
 
+.. domain-tables-add-linkage-start
+
+A linkage table defines how source tables and custom domain tables are linked by primary keys.
+
+.. domain-tables-add-linkage-end
+
 .. domain-tables-add-linkage-steps-start
 
 **To add a linkage table**
 
 #. Open the **Sources** page.
 #. Under **Custom domain tables** click **Add table**.
-#. Write SQL to specify which CDT records link to which source records. This will be four columns specifying the source table name, source table pk, cdt table name, and cdt pk.
+#. Write SQL to specify which custom domain table records link to which source records. This will be four columns: a column for the source table name, a column for the primary key in the source table, a column for the custom table name, and a column for the primary key in the custom domain table.
 #. Click **Next**.
-#. Tag the the source table name with `compliance/source-ds`, source table pk with `compliance/source-pk`, cdt table name with `compliance/cdt-ds`, and cdt pk with `compliance/cdt-pk`.
+#. Apply the ``compliance/source-ds`` semantic tag to the source table name.
+
+   Apply the ``compliance/source-pk`` semantic tag to the primary key for the source table. 
+
+   Apply the ``compliance/cdt-ds`` semantic tag to the custom domain table name.
+
+   Apply the ``compliance/cdt-pk`` semantic tag to the primary key for the custom domain table.
 #. Click **Activate**.
 
 .. domain-tables-add-linkage-steps-end
@@ -663,7 +679,7 @@ Delete domain table
 
 .. domain-tables-delete-start
 
-Use the **Delete** option to remove a domain table from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this domain table prior to deleting it. This action will *not* delete the feeds associated with the domain table.
+Use the **Delete** option to remove a domain table from Amperity. Verify that both upstream and downstream processes no longer depend on this domain table before deleting it. This action will *not* delete the feeds associated with the domain table.
 
 .. domain-tables-delete-end
 
@@ -715,7 +731,7 @@ You can delete all records in a domain table that are older than a date.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Older than a set date".
 
-   Select a field in the domain table with a datetime data type, and then select a date. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select a date. You may use relative dates. A relative date is always in Coordinated Universal Time (UTC).
 
 #. Click **Preview deletion**, and then review the list of records that are returned.
 #. Click **Delete records**. In the **Remove records** dialog box, confirm that you want to delete the list of records by clicking **Remove records**.
@@ -741,7 +757,7 @@ You can delete all records in a domain table that exist between two dates.
 #. From the **Sources** page, open the menu for a domain table, and then select **Delete records**. The **Delete records** dialog box opens.
 #. Under **Record criteria**, select "Within a set timeframe".
 
-   Select a field in the domain table with a datetime data type, and then select the start and end dates for the timeframe. You may use relative dates.
+   Select a field in the domain table with a **datetime** data type, and then select the start and end dates for the timeframe. You may use relative dates.
 
    .. note:: End dates are exclusive.
 
@@ -758,7 +774,7 @@ With a matching value
 
 .. domain-tables-delete-records-value-start
 
-You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address ("email is like ``amperity.com``") or records that match a specific email address ("email is ``john@amperity.com``").
+You can delete records in a domain table that meet specific conditions. For example, records that match the domain in an email address or records that match a specific email address.
 
 .. domain-tables-delete-records-value-end
 
@@ -784,7 +800,7 @@ Edit domain table
 
 .. domain-tables-edit-start
 
-A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to the feed (or feed schema) will update the data in the domain table automatically.
+A domain table cannot be edited directly. The data within the domain table is updated based on feed and courier settings. The name of the domain table is directly associated with the feed and its schema. Changes made to a feed updates the data in the domain table automatically.
 
 .. domain-tables-edit-end
 
@@ -865,6 +881,80 @@ The schema shows how data in the domain table maps to the semantic tagging appli
 .. domain-tables-records-mismatch-tip-end
 
 
+.. _domain-tables-find-primary-key:
+
+Find primary key
+--------------------------------------------------
+
+.. domain-tables-find-primary-key-start
+
+A custom domain table must have a primary key. The field to which the PK semantic tag is applied must have a unique value for every record in the table. 
+
+.. warning:: Duplicate primary key values will cause database failures. A primary key must be stable over time and should never be transformed or overwritten by updates to source tables.
+
+.. domain-tables-find-primary-key-end
+
+**To find primary key**
+
+.. domain-tables-find-primary-key-steps-start
+
+#. Open a custom domain table in edit mode.
+#. Click the **Start session** link to start a Spark SQL session. This may take a few minutes.
+
+#. After the Spark SQL session is started, click the **Find primary key** link. This opens the **Explore primary keys** dialog box.
+
+#. From the **Primary key field** dropdown, select one or more fields, and then click the **Validate** button.
+
+   Amperity will evaluate the selected fields and then report on the uniqueness of values in the selected fields. Only fields with unique values should be used as a primary key. For example:
+
+   .. code-block:: none
+
+      Primary key is only < 5.471% unique
+      There are duplicate values in the selected field.
+
+   Click the **View duplicates** link to view a list of records with duplicate values.
+
+   When a single field does not contain unique values you must concatenate two or more fields with values that are stable over time into a single field. Use the concatenated field as the primary key. Hash the value for the concatenated primary key when any of input fields contain personally identifiable information (PII), such as an email address or phone number.
+
+.. domain-tables-find-primary-key-steps-end
+
+
+.. _domain-tables-make-available-to-stitch:
+
+Make available to Stitch
+--------------------------------------------------
+
+.. domain-tables-make-available-to-stitch-start
+
+A custom domain table with semantic tags applied to records that contain PII data should be made available to Stitch. A custom domain table that is made available to Stitch is used by Stitch for customer identity resolution.
+
+Custom domain table data is made available to Stitch in two steps:
+
+#. Selecting the **Make this table available for Stitch** option when configuring a custom domain table.
+
+   When selected, the name of the custom domain table is added to a list of feeds and custom domain tables available for selection in Stitch configuration settings.
+#. The custom domain tables must be selected on the **Stitched tables** tab in the **Stitch settings** dialog.
+
+.. domain-tables-make-available-to-stitch-end
+
+.. domain-tables-make-available-to-stitch-tip-start
+
+.. tip:: Only tables that contain PII data should be made available to Stitch. Tables that are later associated with Amperity IDs, but do not contain PII data, such as those that contain transactions, should use a foreign key to associate those records with an Amperity ID.
+
+.. domain-tables-make-available-to-stitch-tip-end
+
+**To make data available to Stitch**
+
+.. domain-tables-make-available-to-stitch-steps-start
+
+#. From the **Sources** page, open the menu for a custom domain table, and then select **Edit**. The **Custom Domain Table** editor page opens.
+#. Click **Next**.
+#. Under **Settings** select **Make this table available for Stitch**.
+#. Click **Activate**.
+
+.. domain-tables-make-available-to-stitch-steps-end
+
+
 .. _domain-tables-publish-to-queries:
 
 Publish to Queries page
@@ -900,7 +990,7 @@ When primary keys for a table are updated the data in the existing domain table 
 
 .. domain-tables-purge-context-start
 
-A domain table cannot be purged directly (though it may be deleted). Operations that may cause a purge of domain table data are initiated when a feed is edited. For example, when the primary key is changed. Purging data ensures the Stitch process does not have to deal with both new and old data.
+A domain table cannot be purged directly, though it may be deleted. Operations that may cause a purge of domain table data are initiated when a feed is edited. For example, when the primary key is changed. Purging data ensures the Stitch process does not have to deal with both new and old data.
 
 .. domain-tables-purge-context-end
 
@@ -912,7 +1002,7 @@ Rename domain table
 
 .. domain-tables-rename-start
 
-You cannot rename a domain table directly because of their dependency on feeds. If you need to rename a domain table you must re-create the source/feed pair by adding a new feed, and then deleting the old feed to remove the old domain table from Amperity.
+You cannot rename a domain table directly because of their dependency on feeds. If you need to rename a domain table you must recreate the source and feed pair by adding a new feed, and then deleting the old feed to remove the old domain table from Amperity.
 
 .. domain-tables-rename-end
 

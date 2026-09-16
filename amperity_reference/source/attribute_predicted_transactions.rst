@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -62,7 +60,7 @@ Use a combination of predicted CLV attributes to identify high-value audiences f
 For example:
 
 #. Start with predicted probability of transaction to identify customers with a higher likelihood of return.
-#. Add predicted order frequency to identify which of those customers are more likely to order multiple times.
+#. Add predicted order frequency to identify which of those customers are more likely to order many times.
 #. Add predicted average order value to identify customers who are most likely to spend, on average, at least $100 per order.
 
 .. attribute-predicted-transactions-about-clv-example-end
@@ -75,27 +73,9 @@ Use in segments
 
 .. attribute-predicted-transactions-segment-start
 
-To find predicted probability of transactions, start with the **Predicted Probability of Transaction Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify the probability of transaction that you want to use in your segment.
+To find predicted probability of transactions, start with the **Predicted Probability of Transaction Next 365** attribute in the **Predicted CLV Attributes** table, and then select a condition. After the attribute appears in your segment, specify the probability of transaction that you want to use in your segment. After the attribute appears in your segment, specify a frequency for predicted probability of transaction that aligns to the condition you selected.
 
 .. attribute-predicted-transactions-segment-end
-
-.. image:: ../../images/attribute-predicted-transactions.png
-   :width: 600 px
-   :alt: Choose the predicted probability of transactions attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
-
-.. attribute-predicted-transactions-filters-start
-
-After the attribute appears in your segment, specify a frequency for predicted probability of transaction that aligns to the condition you selected. For example, to find customers whose likelihood to purchase is greater than or equal to 35%:
-
-.. attribute-predicted-transactions-filters-end
-
-.. image:: ../../images/attribute-predicted-transactions-example.png
-   :width: 600 px
-   :alt: Find customers whose likelihood to purchase is greater than or equal to 35%.
-   :align: left
-   :class: no-scaled-link
 
 .. attribute-predicted-transactions-modeling-enabled-note-start
 
@@ -106,27 +86,27 @@ After the attribute appears in your segment, specify a frequency for predicted p
 
 .. _attribute-predicted-transactions-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-predicted-transactions-conditions-start
 
-The following table lists the conditions that are available to this attribute.
+The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific probability of transaction, such as "1.2", "40.6", or "50.0".
 
-       .. tip:: Use the following conditions to return a range of probabilities instead of a specific probability: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of probabilities instead of a specific probability: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -146,7 +126,7 @@ The following table lists the conditions that are available to this attribute.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual probabilities are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual probabilities are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -178,7 +158,7 @@ The following table lists the conditions that are available to this attribute.
        Avoid using the **is not in list** condition when individual probabilities are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as ".50", "59.99", and "100.0", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as ".50", "59.99", and "100.0", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

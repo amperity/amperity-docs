@@ -1,9 +1,8 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Yahoo DSP
-.. |what-send| replace:: email addresses
+.. |what-send| replace:: email or phone
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "90"
@@ -52,11 +51,11 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Segment name**
+**Segment name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-yahoo-dsp-segment-name-start
-   :end-before: .. setting-yahoo-dsp-segment-name-start
+   :end-before: .. setting-yahoo-dsp-segment-name-end
 
 **Membership duration**
 
@@ -67,3 +66,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-membership-duration-frequency-start
    :end-before: .. setting-common-membership-duration-frequency-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

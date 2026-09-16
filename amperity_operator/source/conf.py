@@ -1,0 +1,279 @@
+import os
+import sys
+import shibuya
+
+# for example source
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
+
+project = "Operators Guide"
+#copyright = "Copyright &copy; 2026, Amperity"
+#author = "Amperity"
+
+#version = shibuya.shibuya_version
+#release = version
+
+extensions = [
+    "sphinx.ext.autodoc",
+#    "sphinx.ext.intersphinx",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.todo",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autosummary",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "sphinx_togglebutton",
+    "sphinx_sitemap",
+    "sphinxcontrib.mermaid",
+    "sphinxcontrib.video",
+    "sphinxcontrib.youtube",
+    "sphinx_new_tab_link",
+]
+todo_include_todos = True
+
+# ---------------------------------------------------------------------------
+# Mermaid (sphinxcontrib.mermaid)
+# ---------------------------------------------------------------------------
+
+# Render diagrams as inline SVG (no PDF/LaTeX support needed).
+mermaid_output_format = "raw"
+
+# Allow pan and zoom on diagrams via D3.
+mermaid_d3_zoom = True
+
+# Pin the mermaid.js version for build reproducibility.
+mermaid_version = "11.4.0"
+
+# Initialize Mermaid with the neutral (greyscale) theme and sequence diagram
+# layout tuned for this docs collection. Font family matches Shibuya's system
+# font stack; font size matches paragraph text (1rem / 16px).
+mermaid_init_js = """
+mermaid.initialize({
+    startOnLoad: true,
+    theme: 'neutral',
+    fontFamily: '"Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue", sans-serif',
+    fontSize: 16,
+    sequence: {
+        // Outer margins around the whole diagram
+        diagramMarginX: 20,
+        diagramMarginY: 10,
+        // Horizontal spacing between participant columns
+        actorMargin: 60,
+        // Participant box dimensions
+        width: 150,
+        height: 60,
+        // Padding inside and around boxes
+        boxMargin: 10,
+        boxTextMargin: 5,
+        // Space around note boxes
+        noteMargin: 10,
+        // Vertical space between messages
+        messageMargin: 35,
+        // Horizontal alignment of message labels ('center', 'left', 'right')
+        messageAlign: 'center',
+        // Repeat participant boxes at the bottom of the diagram
+        mirrorActors: false,
+        // Scale diagram to container width (max-width controlled via CSS)
+        useMaxWidth: true,
+        // Use right-angle (orthogonal) arrows instead of curved
+        rightAngles: false,
+        // Prefix each message with a sequence number
+        showSequenceNumbers: false,
+        // Wrap long message labels
+        wrap: true,
+        wrapPadding: 10,
+    },
+});
+"""
+#jupyter_sphinx_thebelab_config = {
+#    'requestKernel': True,
+#}
+#jupyter_sphinx_require_url = ''
+#nbsphinx_requirejs_path = ''
+sitemap_excludes = ['404/']
+
+extlinks = {
+#    'pull': ('https://github.com/lepture/shibuya/pull/%s', 'pull request #%s'),
+#    'issue': ('https://github.com/lepture/shibuya/issues/%s', 'issue #%s'),
+}
+
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+#intersphinx_mapping = {
+#    "python": ("https://docs.python.org/3", None),
+#    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
+#    "numpy": ("https://numpy.org/devdocs/", None),
+#}
+
+templates_path = ["_templates"]
+html_static_path = ["_static"]
+html_extra_path = ["_public"]
+html_css_files = [
+    "custom.css",
+    "shibuya.css",
+]
+html_title = "Operators Guide"
+html_theme = "shibuya"
+#html_theme_path = ['../../_themes/']
+html_baseurl = "https://docs.amperity.com/operator/"
+sitemap_url_scheme = "{link}"
+
+html_copy_source = False
+html_show_sourcelink = False
+
+html_additional_pages = {
+    'add_data_assets': 'add_data_assets.html'
+}
+
+
+# Config for sphinx_new_tab_link extension
+# Show external links with icons? Leave false. We already have icons appended. Don't need two.
+new_tab_link_show_external_link_icon = False
+# Remove rel="norefferer" from external links?
+new_tab_link_enable_referrer = False
+
+
+#if os.getenv('USE_DOCSEARCH'):
+#    extensions.append("sphinx_docsearch")
+#    docsearch_app_id = "3RU4IG0D1E"
+#    docsearch_api_key = "ec63fbf7ade2fa535b0b82c86e7d1463"
+#    docsearch_index_name = "shibuya-lepture"
+
+#if os.getenv("TRIM_HTML_SUFFIX"):
+#    html_link_suffix = ""
+
+html_favicon = "_static/icon-light.svg"
+
+html_theme_options = {
+    "logo_target": "/",
+    "light_logo": "_static/logo-light.png",
+    "dark_logo": "_static/logo-dark.png",
+    "accent_color": "violet",
+#    "og_image_url": "https://shibuya.lepture.com/icon.png",
+#    "twitter_creator": "lepture",
+#    "twitter_site": "lepture",
+
+#    "discussion_url": "https://amperity-docs.discourse.group/",
+#    "twitter_url": "https://amperity.com",
+#    "github_url": "https://github.com/amperity/amperity-docs",
+
+#    "carbon_ads_code": "CE7DKK3W",
+#    "carbon_ads_placement": "shibuya",
+
+    "globaltoc_expand_depth": 1,
+    "toctree_collapse": "collapse",
+    "nav_links": [
+        {
+            "title": "Guides",
+            "children": [
+                {
+                    "title": "Guided setup",
+                    "url": "../guides/index",
+                    "summary": "Guided setup for profiles and identity resolution."
+                },
+                {
+                    "title": "Users",
+                    "url": "../user/index",
+                    "summary": "Audiences, campaigns, journeys, activations."
+                },
+                {
+                    "title": "Operators",
+                    "url": "../operator/index",
+                    "summary": "Configuration, SQL queries, analytics, databases."
+                },
+            ]
+        },
+        {
+            "title": "APIs",
+            "children": [
+                {
+                    "title": "Amperity API",
+                    "url": "../api/overview",
+                    "summary": "Programmatic access to your Amperity tenant."
+                },
+                {
+                    "title": "Profile API",
+                    "url": "../operator/api_profile",
+                    "summary": "Endpoints for unified customer profiles."
+                },
+                {
+                    "title": "Streaming API",
+                    "url": "../operator/api_streaming",
+                    "summary": "Stream from external systems in real-time."
+                },
+            ]
+        },
+        {
+            "title": "Connections",
+            "children": [
+                {
+                    "title": "Amperity Bridge",
+                    "url": "../operator/grid_bridge",
+                    "summary": "Share data directly with data warehouses."
+                },
+                {
+                    "title": "Campaigns",
+                    "url": "../operator/grid_campaigns",
+                    "summary": "Send audiences to marketing workflows."
+                },
+                {
+                    "title": "Destinations",
+                    "url": "../operator/grid_destinations",
+                    "summary": "Send data to any downstream system."
+                },
+                {
+                    "title": "Events",
+                    "url": "../operator/grid_events",
+                    "summary": "Measure marketing efforts across channels."
+                },
+                {
+                    "title": "Sources",
+                    "url": "../operator/sources",
+                    "summary": "Pull data from any upstream system."
+                },
+            ]
+        },
+        {
+            "title": "Reference",
+            "url": "../reference/index",
+        },
+    ]
+}
+
+#if "READTHEDOCS" in os.environ:
+#    html_context = {
+#        "source_type": "github",
+#        "source_user": "lepture",
+#        "source_repo": "shibuya",
+#    }
+#    html_theme_options["carbon_ads_code"] = ""
+#    html_theme_options["announcement"] = (
+#        "This documentation is hosted on Read the Docs only for testing. Please use "
+#        "<a href='https://shibuya.lepture.com/'>the main documentation</a> instead."
+#    )
+#else:
+html_context = {
+#    "source_type": "github",
+#    "source_user": "amperity",
+#    "source_repo": "amperity-docs",
+#        "buysellads_code": "CE7DKK3M",
+#        "buysellads_placement": "shibuya",
+#        "buysellads_container_selector": ".yue > section > section",
+#    "github_path": "https://github.com/amperity/amperity-docs/tree/main/amperity_operator/source/", # Path in the checkout to the docs root
+}
+
+
+#DEBUG_RTD = False
+
+#if DEBUG_RTD:
+#    os.environ['READTHEDOCS_PROJECT'] = 'shibuya'
+#    html_context["DEBUG_READTHEDOCS"] = True
+#    html_theme_options["carbon_ads_code"] = None
+
+# A string of files with substitutions.
+rst_prolog = """
+.. include:: ../../tokens/external_links.txt
+.. include:: ../../tokens/fivetran_party.txt
+.. include:: ../../tokens/internal_links.txt
+.. include:: ../../tokens/names.txt
+.. include:: ../../tokens/unicode.txt
+"""

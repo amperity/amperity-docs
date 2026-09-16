@@ -1,6 +1,5 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
 
 .. meta::
     :description lang=en:
@@ -22,15 +21,25 @@ About queries
    :start-after: .. term-query-start
    :end-before: .. term-query-end
 
+.. queries-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Use the Queries page to build queries using a visual editor or by writing custom SQL.
+
+   Open **Learning Lab** to learn more about `creating and editing queries <https://amperity.com/learning-lab/creating-and-editing-queries>`__ |ext_link| and how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work. Registration is required.
+
+.. queries-learning-lab-end
+
 
 .. _queries-ai-assistant:
 
-About the AI Assistant
+About the Queries AI Assistant
 ==================================================
 
 .. queries-ai-assistant-start
 
-The :doc:`AI Assistant <assistant>` is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
+The :doc:`Queries AI Assistant <assistant>` is a generative AI feature within the SQL **Query Editor** that provides real-time insights while you author SQL queries against any database in the **Customer 360** page.
 
 .. queries-ai-assistant-end
 
@@ -135,7 +144,9 @@ Search queries
 
 .. queries-tab-search-start
 
-You can search for queries on the **Queries** page. From the search box, type a string and then hit the ENTER key. The list of queries is filtered to contain only those queries that match the search criteria. Each query in the list has available to it the same actions as it would from the unfiltered queries list. Click the name of the query to view it. Use the individual query menu to edit, make a copy, run, download, move, or delete.
+You can search for queries on the **Queries** page. From the search box, start searching by typing a string of characters.
+
+The list of queries is filtered to contain only queries that match the search criteria. Click the name of the query to view it. Use the individual query menu to edit, make a copy, run, download, move, or delete the query.
 
 Click **Clear** to return to the unfiltered queries list.
 
@@ -153,7 +164,7 @@ Data Explorer
 
 .. queries-data-explorer-start
 
-The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it will open the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
+The **Data Explorer** may be accessed from the **Queries** page via the **Open Data Explorer** link in the right-side navigation. This link is visible when working in the visual **Query Editor** or the **SQL Query Editor**. When clicked it opens the data explorer for the selected database and will display all of the tables in the database. Click any of the databases to explore the schema, view sample data, and details.
 
 .. queries-data-explorer-end
 
@@ -222,7 +233,7 @@ Completion
 
 .. queries-data-explorer-full-screen-completion-tip-start
 
-.. tip:: Ensure that prior to filtering a column that it actually contains data that can match the search criteria.
+.. tip:: Ensure that before filtering a column that it actually has data that can match the search criteria.
 
 .. queries-data-explorer-full-screen-completion-tip-end
 
@@ -242,11 +253,11 @@ Cardinality vs. uniqueness
 
 .. queries-data-explorer-full-screen-cardinality-start
 
-Use cardinality and uniqueness to help guide the creation of well-behaved JOIN operations when authoring SQL queries.
+Use cardinality and uniqueness to help guide the creation of well-behaved **JOIN** operations when authoring SQL queries.
 
-* Avoid using JOIN operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
-* Columns with low uniqueness values as keys on both sides of a JOIN operation will run more slowly and is less likely to return the desired results.
-* Empty fields (i.e. NULL values) are counted as duplicates, i.e. "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
+* Avoid using **JOIN** operations when columns have lower cardinality. The high frequency of duplicate values will result in a row for every possible match.
+* Columns with low uniqueness values as keys on both sides of a **JOIN** operation runs more slowly and is less likely to return the desired results.
+* Empty fields, such as **NULL** values, are counted as duplicates or "not unique". For example: a field with 90% completion and 90% uniqueness has different values for each of the non-empty rows.
 
 .. queries-data-explorer-full-screen-cardinality-end
 
@@ -313,7 +324,9 @@ All queries must be activated before they can run as part of a scheduled workflo
 
 .. note:: Amperity is a multi-user system and the set of queries for your company is shared across all users. That means that if one user creates a draft query, another can open and edit it, so work can be easily passed between people on your team.
 
-   However, it also means that if 2 users are editing the same thing at the same time, their changes will collide.  Amperity resolves this by applying the last set of changes saved as a whole. This will always keep the query in a consistent state (it will never be half-implemented). But changes that were saved first will be overwritten. As a result, we strongly recommend that you coordinate changes to specific objects in Amperity with others on your team.
+   However, it also means that if 2 users are editing the same query at the same time, their changes will collide. Amperity resolves this by applying the last set of changes saved as a whole.
+
+   This keeps the query in a consistent state and ensures it will never be half-finished. Changes that were saved first will be overwritten. Be sure to coordinate changes to ensure that only one individual is working in a query.
 
 .. queries-editor-multiuser-warning-end
 
@@ -329,7 +342,7 @@ About Presto SQL
 
 .. queries-editor-presto-sql-start
 
-Amperity queries are built using Presto SQL to define a **SELECT** statement. Please refer to the :doc:`sql_presto`.
+Amperity queries are built using Presto SQL to define a **SELECT** statement. Refer to the :doc:`sql_presto`.
 
 .. queries-editor-presto-sql-end
 
@@ -341,7 +354,7 @@ All queries that are built via the **SQL Query Editor** are done using a :ref:`S
 
 .. queries-editor-presto-sql-tip-start
 
-.. tip:: Follow the :ref:`general recommendations <sql-presto-style-guide>` and patterns for  :ref:`indentation <sql-presto-style-guide-indentation>`, :ref:`naming conventions <sql-presto-style-guide-naming-conventions>`, :ref:`reserved words <sql-presto-style-guide-reserved-words>`, and :ref:`whitespace <sql-presto-style-guide-whitespace>`.
+.. tip:: Follow the :ref:`general recommendations <sql-presto-style-guide>` and patterns for :ref:`indentation <sql-presto-style-guide-indentation>`, :ref:`naming conventions <sql-presto-style-guide-naming-conventions>`, :ref:`reserved words <sql-presto-style-guide-reserved-words>`, and :ref:`whitespace <sql-presto-style-guide-whitespace>`.
 
 .. queries-editor-presto-sql-tip-end
 
@@ -365,7 +378,7 @@ How-tos
 
 .. queries-howtos-start
 
-This section describes tasks related to building queries in Amperity:
+Tasks related to building queries in Amperity:
 
 .. queries-howtos-end
 
@@ -389,6 +402,7 @@ This section describes tasks related to building queries in Amperity:
 * :ref:`queries-edit`
 * :ref:`queries-enable-performance-mode`
 * :ref:`queries-enable-alerts`
+* :ref:`queries-filter`
 * :ref:`queries-format-sql`
 * :ref:`queries-open`
 * :ref:`queries-organize`
@@ -414,6 +428,7 @@ This section describes tasks related to building queries in Amperity:
 .. queries-howtos-list-end
 
 
+
 .. _queries-add-comment-to-query:
 
 Add comment to query
@@ -430,7 +445,7 @@ You can add a comments to a SQL query to explain sections or to prevent executio
 .. queries-add-comment-to-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Select a row in the SQL query to which a comment will be added. A row must have content; you may need to add the comment first, and then comment it out.
+#. Select a row in the SQL query to which a comment will be added. A row must have content. You may need to add the comment first, and then comment it out.
 
    -- OR --
 
@@ -445,6 +460,7 @@ You can add a comments to a SQL query to explain sections or to prevent executio
 For example, compare a SQL query without comments:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -456,6 +472,7 @@ For example, compare a SQL query without comments:
 to a SQL query with comments:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      amperity_id
@@ -497,7 +514,7 @@ Add as copy
 
 .. queries-add-as-copy-start
 
-Use the **Make a copy** option to add a copy of an existing query. This will create a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
+Use the **Make a copy** option to add a copy of an existing query. This creates a draft query with the same settings and SQL query as the copied query, along with a placeholder name. Rename the query, and then make any other changes before activating it.
 
 .. queries-add-as-copy-end
 
@@ -505,11 +522,11 @@ Use the **Make a copy** option to add a copy of an existing query. This will cre
 
 .. queries-add-as-copy-steps-start
 
-#. From the **Queries** page, open the menu for a query, and then select **Make a copy**. This refreshes the recently edited queries list to add a query with "COPY - DRAFT" appended to the name.
+#. From the **Queries** page, open the menu for a query, and then select **Make a copy**. This refreshes the recently edited queries list to add a query with ``COPY - DRAFT`` appended to the name.
 
    The copied query will be of the same type--visual or SQL--as the original query.
 
-#. From the **Queries** page, open the menu for a query, and then select **Edit**. This will open a query editor.
+#. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens a query editor.
 #. Make your changes to the query, and then validate them.
 #. Click **Activate**.
 #. In the **Activate Query** dialog box, select **Activate**.
@@ -553,7 +570,7 @@ Add as visual query
 .. queries-add-via-visual-editor-steps-start
 
 #. From the **Queries** page, click **Create**, and then select **Visual query**. This opens the **Visual Query Editor**.
-#. Define the query using the drop-down menus and buttons.
+#. Define the query using the dropdown menus and buttons.
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
 
@@ -578,7 +595,7 @@ Use the **Orchestration** option to define a schedule for a query.
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor.
 
    .. tip:: The query does not need to be in edit mode to configure an orchestration.
-#. Under **Being Sent To** click **Add one now**. This opens the **Add Orchestration** dialog box.
+#. Under **Being Sent To** click **Add**. This opens the **Add Orchestration** dialog box.
 #. Follow the steps to add an orchestration. The steps will vary depending on the destination, the data template, and the orchestration.
 #. Click **Save**.
 
@@ -592,7 +609,7 @@ Autocomplete table names
 
 .. queries-autocomplete-table-names-start
 
-Start typing table names in the **SQL Query Editor** and a list of available tables will appear. Use an arrow key to select a table, which autocompletes the rest of the table name.
+Start typing table names in the **SQL Query Editor** and a list of available tables appears. Use an arrow key to select a table, which autocompletes the rest of the table name.
 
 .. queries-autocomplete-table-names-end
 
@@ -615,7 +632,7 @@ A docked mode for the data explorer is available from the **Queries** page when 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor.
 
    .. tip:: The query does not need to be in edit mode to browse tables and columns.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, expand the name of a table. Details include the number of records in the table, a list of columns, and for each column its data type.
 
 .. queries-browse-table-columns-steps-end
@@ -658,12 +675,12 @@ You can convert a query to a segment on the **Queries** page.
 .. queries-convert-query-to-segment-steps-start
 
 #. From the **Queries** page, click **Create**, and then select **Visual query**. This opens the **Visual Query Editor**.
-#. Define the query using the drop-down menus and buttons.
+#. Define the query using the dropdown menus and buttons.
 #. In the **Query Details** pane, select the **Make query available for segment editor** checkbox.
 #. Click **Activate**.
 #. From the **Activate Query** dialog box, click **Activate**.
 
-The query is now available on the **Segments** page.
+The query is available on the **Segments** page.
 
 .. note:: To convert a query into a segment, the Amperity ID column must be added to the SQL in the query.
 
@@ -686,7 +703,7 @@ You can copy the name of a column from the list of tables available to the **SQL
 .. queries-copy-column-names-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, expand the name of a table.
 #. Click a column name to copy it.
 #. Paste the column name into SQL query.
@@ -701,7 +718,7 @@ Copy SELECT statement
 
 .. queries-copy-select-statement-start
 
-When adding a table, it's often necessary to reference many columns within that table. You can copy the **SELECT** statement for any table to use as a starting point for a table.
+When adding a table, it is often necessary to reference many columns within that table. You can copy the **SELECT** statement for any table to use as a starting point for a table.
 
 .. tip:: Use the copy **SELECT** statement functionality as a way to use existing queries that are similar to your use case as a template when adding queries. Be sure to review the **SELECT** statement and make any necessary updates for your new use case.
 
@@ -712,7 +729,7 @@ When adding a table, it's often necessary to reference many columns within that 
 .. queries-copy-select-statement-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor**.
-#. Under **Database**, select a database from the drop-down menu. The list of tables is updated to show the tables in that database.
+#. Under **Database**, select a database from the dropdown menu. The list of tables is updated to show the tables in that database.
 #. Under **Table**, to the left of the table name click the icon to copy the **SELECT** statement.
 #. Paste the **SELECT** statement into SQL query.
 
@@ -726,7 +743,7 @@ Delete query
 
 .. queries-delete-start
 
-Use the **Delete** option to remove a query from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this query prior to deleting it.
+Use the **Delete** option to remove a query from Amperity. Verify that both upstream and downstream processes no longer depend on this query before deleting it.
 
 .. queries-delete-end
 
@@ -753,7 +770,7 @@ Disable AI Assistant
 
 **To disable the AI Assistant**
 
-.. include:: ../../amperity_reference/source/settings.rst
+.. include:: ../../amperity_reference/source/ampai_settings.rst
    :start-after: .. settings-user-ampai-steps-start
    :end-before: .. settings-user-ampai-steps-end
 
@@ -787,7 +804,7 @@ Download query
 
 .. queries-download-start
 
-When a query returns fewer than 100,000 rows of data, you can download those query results as a CSV file. The CSV format is supported by many applications, which makes the format a great way to send smaller results sets and/or to test the potential of orchestrating queries for downstream applications and workflows. (For queries that return more than 100,000 rows of data use orchestrations to send those results to cloud-based storage, such as SFTP or Amazon S3, as a CSV file.)
+When a query returns fewer than 100,000 rows of data, you can download those query results as a CSV file. The CSV format is supported by many applications, which makes the format a great way to send smaller results sets or to test the potential of orchestrating queries for downstream applications and workflows. (For queries that return more than 100,000 rows of data use orchestrations to send those results to cloud-based storage, such as SFTP or Amazon S3, as a CSV file.)
 
 .. note:: You cannot download the results of any query that returns an error.
 
@@ -845,14 +862,22 @@ You may enable performance mode for any query that returns large result sets. Pe
 
 .. queries-enable-performance-mode-end
 
-.. important:: Performance mode is significantly faster than running a query in non-performance mode, but has the following limitations:
+.. queries-enable-performance-mode-note-about-copies-start
+
+.. note:: If you make a copy of a query that is enabled for performance mode, performance mode is disabled in the copy. You must re-enable performance mode in the copied query.
+
+.. queries-enable-performance-mode-note-about-copies-end
+
+.. queries-enable-performance-mode-important-start
+
+.. important:: Performance mode is faster than running a query in non-performance mode, but has the following limitations:
 
    * Sort order is not guaranteed because results are written in parallel to many files.
    * The **UNION** clause requires data types to match exactly.
    * Column names cannot contain spaces.
    * Column names are output in lowercase.
    * Small queries may take longer.
-   * Part file names in Apache Parquet orchestrations will have a different pattern.
+   * Part file names in Apache Parquet orchestrations have a different pattern.
    * Date fields will be output as timestamps.
    * The **CURRENT_TIMESTAMP** function must be cast as a timestamp. For example:
 
@@ -860,7 +885,7 @@ You may enable performance mode for any query that returns large result sets. Pe
 
         CAST(CURRENT_TIMESTAMP AS timestamp)
 
-.. sql-presto-function-current-timestamp-important-end
+.. queries-enable-performance-mode-important-end
 
 **To enable performance mode**
 
@@ -882,12 +907,21 @@ Enable query alerts
 
 Any query can be configured to send workflow alerts when configured thresholds are met. This is an important way to ensure that queries that have dependencies on courier groups so they never send inaccurate or incomplete data.
 
-Alerts are sent when the record count in the query output contains errors that exceed the configured threshold. There are two alert levels (you may enable one or both):
+Alerts are sent when the record count in the query output has errors that exceed the configured threshold. Alert levels include:
 
 #. **Warn when** record counts exceed the configured threshold. The workflow will continue running.
+
+   .. tip:: Use this threshold for queries that are not associated with an orchestration.
+
 #. **Fail when** record counts exceed the configured threshold. The workflow is stopped.
 
-You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one (or more) courier groups and/or scheduled orchestration groups.
+   .. caution:: A query with a configured query alert is always run **even if the query is not associated with an orchestration**.
+
+      A query that runs and fails when record counts exceed the configured threshold stops a workflow.
+
+      Use the **Warn when** threshold for queries that are not associated with an orchestration. This prevents that query from stopping the workflow when record counts exceed the configured alert threshold.
+
+You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts>` from the **Workflows** page. Provide your email address to receive alerts when this query is associated with one or more courier groups or scheduled orchestration groups.
 
 .. queries-enable-alerts-end
 
@@ -912,21 +946,44 @@ You may :ref:`sign up for workflow-based query alerts <workflows-discover-alerts
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
-
-      * - .. image:: ../../images/learning-lab-query-alerts.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Sign up to receive query alerts when record counts in the query output contains errors that exceed a configured threshold.
-
-          Open **Learning Lab** to learn more about how |ext_learning_lab_query_alerts| work. Registration is required.
+   Open **Learning Lab** to learn more about how `query alerts <https://amperity.com/learning-lab/query-alerts>`__ |ext_link| work.
 
 .. queries-enable-alerts-learning-lab-end
 
+.. _queries-filter:
+
+Filter queries
+--------------------------------------------------
+
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
+.. queries-filter-start
+
+You can filter the list of queries that appear on the **Queries** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
+
+* By status. Select any combination of **Active** and **Draft**.
+* By database. Select a database to show only queries associated with that database.
+* By created by. Select any combination of users who created queries.
+* By last edited by. Select any combination of users who most recently edited queries.
+* By label. Select one or more labels to filter queries by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
+
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
+
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
+
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When many labels are selected, queries matching any selected labels will be shown.
+
+.. queries-filter-end
 
 .. _queries-format-sql:
 
@@ -956,7 +1013,7 @@ You can view details for any query, including the SQL query associated with the 
 .. queries-open-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **View**. This opens the query editor with the query as view-only.
-#. Click **Edit** to make changes. (This will change the query to a draft query, which will require re-activation when you are done making changes.)
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-open-steps-end
 
@@ -984,7 +1041,7 @@ Add folder
 
 .. queries-add-folder-start
 
-Folders may be expanded (or collapsed) to view (and hide) the list of queries and subfolders contained within.
+Folders may be expanded or collapsed to view and hide the list of queries and subfolders contained within.
 
 .. queries-add-folder-end
 
@@ -1028,7 +1085,7 @@ Bulk delete
 
 .. queries-bulk-delete-start
 
-Bulk delete multiple queries on the **Queries** page.
+Bulk delete many queries on the **Queries** page.
 
 .. queries-bulk-delete-end
 
@@ -1049,7 +1106,7 @@ Bulk move
 
 .. queries-bulk-move-start
 
-Bulk move multiple queries on the **Queries** page.
+Bulk move many queries on the **Queries** page.
 
 .. queries-bulk-move-end
 
@@ -1070,7 +1127,7 @@ Move query
 
 .. queries-list-move-query-start
 
-Use the **Move** option to move around and organize the list of folders and queries. Folders may be expanded (or collapsed) to view (and hide) the list of queries and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and queries. Folders may be expanded to view the list of queries and subfolders contained within.
 
 .. queries-list-move-query-end
 
@@ -1103,7 +1160,7 @@ You can preview the results of a SQL query by clicking the **Run Query** button.
 * Return an empty table.
 * Return some type of error.
 
-Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they don't contain any errors.
+Use the preview results pane to fine-tune your queries, to make sure they return the data you want, and to make sure they do not contain any errors.
 
 .. queries-preview-results-end
 
@@ -1137,7 +1194,7 @@ Query domain data
 
 You may build queries against domain tables in your tenant, including custom domain tables.
 
-.. note:: Queries that are built against domain tables may not be activated.
+.. note:: Queries that are built from domain tables may not be activated.
 
 .. queries-query-domain-tables-end
 
@@ -1146,7 +1203,7 @@ You may build queries against domain tables in your tenant, including custom dom
 .. queries-query-domain-tables-steps-start
 
 #. From the **Queries** page, open the query editor.
-#. From the **Database** drop-down menu, under **Other datasets**, select "Domain tables". This will refresh the list of tables available for queries to be the list of domain tables in your tenant.
+#. From the **Database** dropdown menu, under **Other datasets**, select "Domain tables". This will refresh the list of tables available for queries to be the list of domain tables in your tenant.
 
    .. note:: This includes all domain tables, including custom domain tables.
 #. Build a query against any combination of domain tables.
@@ -1161,7 +1218,7 @@ Refresh query automatically
 
 .. queries-refresh-automatically-start
 
-A query may be configured to be refreshed automatically. When enabled, an active query will be run automatically whenever an upstream process is refreshed.
+A query may be configured to be refreshed automatically. When enabled, an active query is run automatically whenever an upstream process is refreshed.
 
 .. queries-refresh-automatically-end
 
@@ -1170,8 +1227,8 @@ A query may be configured to be refreshed automatically. When enabled, an active
 .. queries-refresh-automatically-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **Edit**. This opens the query editor with the query labeled a draft query.
-#. Under **Query Settings**, select the **Refresh automatically** checkbox. (This option is required to enable query alerts.)
-#. Click **Activate**. The query will run automatically when upstream data changes.
+#. Under **Query Settings**, select the **Refresh automatically** checkbox. This option is required to enable query alerts.
+#. Click **Activate**. The query runs automatically when upstream data changes.
 
 .. queries-refresh-automatically-steps-end
 
@@ -1183,7 +1240,7 @@ Rename query
 
 .. queries-rename-start
 
-Use the **Rename** option to rename a query. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this query prior to renaming it.
+Use the **Rename** option to rename a query. Verify that both upstream and downstream processes no longer depend on this query before renaming it.
 
 .. queries-rename-end
 
@@ -1214,7 +1271,7 @@ Amperity processes data in batches on automated schedules that start with collec
 .. queries-run-steps-start
 
 #. From the **Queries** page, open the menu for a query, and then select **Run**.
-#. After a few moments, a notification will appear in the **Notifications** list that reports the status of the query run.
+#. After a few moments, a notification appears in the **Notifications** list that reports the status of the query run.
 
 .. queries-run-steps-end
 
@@ -1237,7 +1294,7 @@ You can run part of a statement from the **SQL Query Editor**.
 #. From the **Queries** page, open the menu for a SQL query, and then select **Edit**. This opens the **SQL Query Editor** with the SQL query labeled a draft query.
 #. Within the SQL query, highlight part of the statement, and then select **Run selection**.
 
-   If the selected SQL is valid, Amperity will run it and return the results.
+   If the selected SQL is valid, Amperity runs it and return the results.
 
 .. queries-run-selection-steps-end
 
@@ -1410,7 +1467,7 @@ Notifications for the **Queries** page appear after Amperity has processed a que
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. queries-view-notifications-context-end
 
@@ -1431,7 +1488,7 @@ You can view details for any SQL query, including the SQL query associated with 
 .. queries-view-query-steps-start
 
 #. From the **Queries** page, open the menu for a SQL query, and then select **View**. This opens the **SQL Query Editor** with the SQL query as view-only.
-#. Click **Edit** to make changes. (This will change the query to a draft query, which will require re-activation when you are done making changes.)
+#. Click **Edit** to make changes. This will change the query to a draft query, which requires re-activation when you are done making changes.
 
 .. queries-view-query-steps-end
 
@@ -1443,7 +1500,7 @@ View query details
 
 .. queries-view-details-start
 
-Query details show the time at which the query last ran, when it was activated, to which database it's associated, what type of workflow it has been assigned, the destination to which it's being sent, and visual graph that shows trends over time.
+Query details show the time at which the query last ran, when it was activated, to which database it is associated, what type of workflow it has been assigned, the destination to which it is being sent, and visual graph that shows trends over time.
 
 .. queries-view-details-end
 
@@ -1453,7 +1510,7 @@ Query details show the time at which the query last ran, when it was activated, 
 
 #. From the **Queries** page, from the menu for a query, click the right angle icon. This opens the details pane for that query.
 #. Click the name of the query to view the orchestration details. The **View Orchestrations** dialog box opens. You can fully manage the orchestration from this dialog box.
-#. Click **Run now** to run the query from the details pane.
+#. Click **Run** to run the query from the details pane.
 
 .. queries-view-details-steps-end
 

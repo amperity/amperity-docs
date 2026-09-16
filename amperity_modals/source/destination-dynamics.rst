@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Microsoft Dynamics
 .. |audience-primary-key| replace:: "email"
@@ -61,8 +60,26 @@ Settings
    :start-after: .. setting-microsoft-dynamics-url-start
    :end-before: .. setting-microsoft-dynamics-url-end
 
-**Dynamics entity**
+**Dynamics entity** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dynamics-entity-start
    :end-before: .. setting-microsoft-dynamics-entity-end
+
+**Operation** (Required at orchestration)
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-microsoft-dynamics-operation-start
+   :end-before: .. setting-microsoft-dynamics-operation-end
+
+**ID field** (Required at orchestration)
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-microsoft-dynamics-id-field-start
+   :end-before: .. setting-microsoft-dynamics-id-field-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

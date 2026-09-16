@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Salesforce Sales Cloud
 .. |what-send| replace:: customer data
@@ -76,7 +75,7 @@ Settings
    :start-after: .. setting-salesforce-sales-cloud-salesforce-object-start
    :end-before: .. setting-salesforce-sales-cloud-salesforce-object-end
 
-**Operation**
+**Operation** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-sales-cloud-operation-start
@@ -103,3 +102,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-salesforce-sales-cloud-use-null-for-empty-fields-start
    :end-before: .. setting-salesforce-sales-cloud-use-null-for-empty-fields-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

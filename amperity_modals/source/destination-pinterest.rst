@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Pinterest
 .. |audience-primary-key| replace:: "email"
@@ -61,9 +60,15 @@ Settings
    :start-after: .. setting-pinterest-ad-account-id-start
    :end-before: .. setting-pinterest-ad-account-id-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-pinterest-list-name-start
    :end-before: .. setting-pinterest-list-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end
 

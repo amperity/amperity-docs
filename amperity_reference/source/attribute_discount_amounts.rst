@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: discount amount attributes
+.. |what-choose| replace:: **item discount amount**, **order discount amount**, or **unit discount amount**
+.. |what-find| replace:: "discount amount"
 
 
 .. meta::
@@ -41,36 +44,34 @@ Discount amounts can be present for items, orders, and units:
 Use in segments
 ==================================================
 
-.. attribute-discount-amounts-access-start
-
-You can access discount amount attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item Discount Amount** and **Unit Discount Amount**) *or* the **Unified Transactions** table (for **Order Discount Amount**), apply a condition, and then specify a value.
-
-.. attribute-discount-amounts-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-discount-amounts-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-discount-amounts-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific discount amount, such as "4.25", "12.00", or "38.50".
 
-       .. tip:: Use the following conditions to return a range of discount amounts instead of a specific discount amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of discount amounts instead of a specific discount amount: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -90,7 +91,7 @@ The following table lists the conditions that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual discount amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual discount amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -122,7 +123,7 @@ The following table lists the conditions that are available to these attributes.
        Avoid using the **is not in list** condition when individual profit amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.99", "5.99", and "27.22", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.99", "5.99", and "27.22", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

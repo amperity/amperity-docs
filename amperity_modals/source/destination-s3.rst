@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Amazon S3
 .. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
@@ -20,7 +19,7 @@ Amazon S3
 Credentials
 ==================================================
 
-**IAM role-to-role** credentials require the name of the Amazon S3 bucket and the target role ARN. Amperity will provide the values for the Amperity role ARN and the external ID.
+**IAM role-to-role** credentials require the name of the Amazon S3 bucket and the target role ARN. Amperity provides the values for the Amperity role ARN and the external ID.
 
 **IAM** credentials require the name of the Amazon S3 bucket, the IAM access key, and the IAM secret key. An IAM role ARN is optional.
 
@@ -110,6 +109,12 @@ Settings
    :start-after: .. setting-common-quote-mode-none-start
    :end-before: .. setting-common-quote-mode-none-end
 
+**Parquet extension**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-parquet-extension-start
+   :end-before: .. setting-common-parquet-extension-end
+
 **Success file**
 
 .. include:: ../../shared/destination_settings.rst
@@ -136,8 +141,20 @@ Settings
    :start-after: .. setting-common-row-number-column-name-start
    :end-before: .. setting-common-row-number-column-name-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

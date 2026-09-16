@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -40,6 +38,16 @@ You can use predicted CLV modeling to build high-value audiences that identify:
 
 .. model-predicted-clv-about-end
 
+.. model-predicted-clv-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predicted CLV forecasts the total value of orders a customer will make in the next 365 days.
+
+   Open **Learning Lab** to learn more about `predicted high value <https://amperity.com/learning-lab/predicted-high-value>`__ |ext_link|. Registration is required.
+
+.. model-predicted-clv-learning-lab-end
+
 
 .. _model-predicted-clv-use-cases:
 
@@ -63,13 +71,7 @@ How much will customers spend?
 
 .. model-predicted-clv-use-cases-spend-start
 
-The **Predicted CLV Next 365d** attribute in the **Predicted CLV Attributes** table contains the total predicted customer spend over the next 365 days. You can access this attribute directly from the segment editor:
-
-.. image:: ../../images/attribute-predicted-clv.png
-   :width: 600 px
-   :alt: Choose the predicted CLV attribute from the Segment Editor.
-   :align: left
-   :class: no-scaled-link
+The **Predicted CLV Next 365 Days** attribute in the **Predicted CLV Attributes** table has the total predicted customer spend over the next 365 days.
 
 After you select this attribute you can specify the type of values you want to use for this audience, such as:
 
@@ -85,14 +87,14 @@ After you select this attribute you can specify the type of values you want to u
 Which customers are the most valuable?
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-start
    :end-before: .. usecase-predicted-top-10-percent-end
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-end
 
-.. include:: ../../amperity_ampiq/source/usecase_predicted_top_10_percent.rst
+.. include:: ../../amperity_user/source/usecase_predicted_top_10_percent.rst
    :start-after: .. usecase-predicted-top-10-percent-howitworks-callouts-start
    :end-before: .. usecase-predicted-top-10-percent-howitworks-callouts-end

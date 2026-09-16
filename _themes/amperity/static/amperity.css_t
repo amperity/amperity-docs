@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -110,7 +110,7 @@ table {
 /* -- IMPORTANT -- color is the color of the text on div.document;
 	 must be $amperity-brand-slate or $amperity-brand-slate */
 body {
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.00em;
@@ -3943,8 +3943,9 @@ div.body a.card:hover {
   cursor: pointer;
   width: auto;
   border: 0;
-  font-size: 14px;
-  background: #0c0c0c;
+  font-size: 15px;
+  font-weight: 700;
+  background: #09717f;
   color: #ffffff;
   padding: 10px 20px;
   margin: 0;
@@ -4070,13 +4071,13 @@ div.body a.card:hover {
   padding: 10px 20px 15px;
   background: #ffffff;
   margin: 0;
-  border: 1px solid #c2cbd1;
+  border: 1px solid #e8edef;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -moz-box-shadow: 2px 2px 2px 0 #c2cbd1;
-  -webkit-box-shadow: 2px 2px 2px 0 #c2cbd1;
-  box-shadow: 2px 2px 2px 0 #c2cbd1; }
+  -moz-box-shadow: 2px 2px 2px 0 #e8edef;
+  -webkit-box-shadow: 2px 2px 2px 0 #e8edef;
+  box-shadow: 2px 2px 2px 0 #e8edef; }
 
 #doorbell .form-control {
   display: block;
@@ -4085,7 +4086,7 @@ div.body a.card:hover {
   line-height: 1.42857143;
   color: #0c0c0c;
   background: #ffffff;
-  border: 1px solid #459aa8;
+  border: 1px solid #e8edef;
   border-radius: 4px; }
 
 #doorbell.doorbell-inline form {
@@ -4169,7 +4170,7 @@ div.body a.card:hover {
   vertical-align: middle;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  border: 1px solid #0c0c0c;
+  border: 1px solid #09717f;
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
@@ -4180,7 +4181,7 @@ div.body a.card:hover {
   -ms-user-select: none;
   user-select: none;
   color: #ffffff;
-  background: #0c0c0c; }
+  background: #09717f; }
 
 #doorbell #doorbell-powered-by {
   margin-top: 5px;
@@ -4205,10 +4206,10 @@ div.body a.card:hover {
 
 #doorbell #doorbell-add-attachments-label-button {
   font-weight: normal;
-  border: 1px solid #c2cbd1;
+  border: 1px solid #e8edef;
   display: block;
   width: 96%;
-  color: #c2cbd1;
+  color: #e8edef;
   padding: 6px 2%;
   margin-bottom: 10px;
   cursor: pointer;
@@ -4239,7 +4240,7 @@ div.body a.card:hover {
   pointer-events: none; }
 
 #doorbell #doorbell-add-attachments-label-button:hover {
-  color: #c2cbd1; }
+  color: #e8edef; }
 
 #doorbell .captcha-container {
   margin-bottom: 10px; }
@@ -4300,7 +4301,7 @@ nav.nav-main {
     margin: 0;
     padding: 15px 0 0 20px;
     text-transform: uppercase;
-    font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
@@ -4332,7 +4333,7 @@ nav.nav-main {
     margin: 0;
     padding: 15px 0 0 20px;
     text-transform: uppercase;
-    font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
@@ -4360,7 +4361,7 @@ nav.nav-main {
   color: #ffffff;
   background: #0c0c0c;
   line-height: 2;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   text-transform: none;
@@ -4369,14 +4370,14 @@ nav.nav-main {
   -webkit-padding-start: 10px; }
   .nav-links a {
     display: inline-block;
-    color: inherit;
+    color: #ffffff;
     transition: all 0.4s ease; }
   .nav-links li {
     display: block;
     clear: both; }
   .nav-links a:hover,
   .nav-links .is-active a {
-    color: #dff200; }
+    color: #caefef; }
 
 @media (max-width: 1060px) {
   .nav-links {
@@ -4412,9 +4413,9 @@ nav.nav-main {
     padding-bottom: 3px;
     border-bottom: 2px solid transparent; }
     .nav-link a:hover {
-      border-bottom: 2px solid #dff200; }
+      border-bottom: 2px solid #caefef; }
   .nav-link.is-active a {
-    border-bottom: 2px solid #dff200; } }
+    border-bottom: 2px solid #caefef; } }
 .sublinks {
   margin: 0;
   clear: both;
@@ -4422,7 +4423,7 @@ nav.nav-main {
   color: #0c0c0c;
   background: #e8edef;
   line-height: 2;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   text-transform: none;
@@ -4438,7 +4439,7 @@ nav.nav-main {
     clear: both; }
   .sublinks a:hover,
   .sublinks .is-active a {
-    color: #5a5f66; }
+    color: #ffffff; }
 
 @media (max-width: 1060px) {
   .sublinks {
@@ -4641,7 +4642,7 @@ svg.svg-inline--fa.fa-search.fa-w-16.icon-search {
   background: white;
   font-size: 15px;
   color: #0c0c0c;
-  font-family: "Montserrat", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Outfit", "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 500; }
   @media (min-width: 1060px) {
     .nav-docs {

@@ -1,7 +1,6 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -13,15 +12,15 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        How to use this site
+        About this site
 
 ==================================================
-How to use this site
+About this site
 ==================================================
 
 .. docs-about-start
 
-This topic is about the Amperity documentation site and describes the topic collections that are here and the features that help you find what you are looking for.
+An overview of the Amperity documentation site.
 
 .. docs-about-end
 
@@ -46,7 +45,7 @@ The numbers in the following images refer to specific areas within the documenta
 
 .. docs-site-navigation-responsive-start
 
-On a tablet or mobile device, site navigation, search, and left-side navigation moves to the |bars| menu in the top-right corner. (The right-side navigation is not available when viewing the documentation from a tablet or mobile device.) Click the |bars| menu to search, browse the left-side navigation, and switch between the **User Guides**, **Operators Guide**, **API**, and **Amperity A-Z** topic collections.
+On a tablet or mobile device, site navigation, search, and left-side navigation moves to the |bars| menu in the top-right corner. The right-side navigation is not available when viewing the documentation from a tablet or mobile device. Click the |bars| menu to search, browse the left-side navigation, and switch between the **User Guides**, **Operators Guide**, **API**, and **Amperity A-Z** topic collections.
 
 .. image:: ../../images/docs-responsive.png
    :width: 600 px
@@ -85,7 +84,7 @@ Cross-site search
 
 Cross-site search enables a single interface that returns results for all topics in all topic collections.
 
-Synonyms are applied to search results to associate commonly used search terms to the right topics. For example: "SFMC" is a synonym for "Salesforce Marketing Cloud" and a search for either will return the same result.
+Synonyms are applied to search results to associate commonly used search terms to the right topics. For example: ``SFMC`` is a synonym for "Salesforce Marketing Cloud" and a search for either will return the same result.
 
 A naming pattern is used to help you recognize reference content and user-focused content within the search results:
 
@@ -110,7 +109,7 @@ Left-side navigation
 
 The left-side navigation represents all of the topics within a topic collection and is organized in a way that keeps similar topics close together, either by component or by workflow.
 
-* **User Guides** describe marketer activities, such as building audiences (using segments and segment insights), and then configuring those audiences to be part of campaigns that support a variety of marketing channels, use cases, and outcomes and analytics, along with analytics activities like building queries, and then sending the results to downstream workflows and BI tools.
+* **User Guides** describe marketer activities, such as building audiences using segments and segment insights, and then configuring those audiences to be part of campaigns that support a variety of marketing channels, use cases, and outcomes and analytics, along with analytics activities like building queries, and then sending the results to downstream workflows and BI tools.
 * **Operators Guide** describes how to configure Amperity to support your brand's use cases.
 * **Amperity A-Z** is organized alphabetically.
 
@@ -130,7 +129,7 @@ Topic pane
 
 .. docs-topic-pane-start
 
-The topic pane contains all of the content. The right-side navigation shows the structure of the topic. For example, a topic titled "About Couriers" contains all of the information about couriers and a topic titled "Send to Klaviyo" contains all of the information about sending query results to Klaviyo from Amperity.
+The topic pane has all of the content. The right-side navigation shows the structure of the topic. For example, a topic titled "About Couriers" has all of the information about couriers and a topic titled "Send to Klaviyo" has all of the information about sending query results to Klaviyo from Amperity.
 
 Some topics are very long, like the Presto SQL and Spark SQL reference topics. All topics are complete based on the title of the topic. Use your browser's finder window to search within large topics for keywords as necessary.
 
@@ -162,7 +161,7 @@ Feedback
 
 .. docs-feedback-start
 
-A feedback button is available in the lower right. Please use this button to send us feedback about Amperity documentation.
+A feedback button is available in the lower right. Use this button to send us feedback about Amperity documentation.
 
 .. image:: ../../images/docs-feedback.png
    :width: 380 px
@@ -170,14 +169,14 @@ A feedback button is available in the lower right. Please use this button to sen
    :align: left
    :class: no-scaled-link
 
-It's easy to send documentation feedback:
+It is easy to send documentation feedback:
 
 #. Click the feedback button.
 #. Type your feedback.
-#. A valid email address is required. Provide your email address or use ``docs@amperity.com`` to send your feedback anonymously. We will review your feedback and quickly address all feedback.
+#. A valid email address is required. Provide your email address or use ``docs@amperity.com`` to send your feedback anonymously. The docs team will review your feedback and will address all feedback.
 
-   .. important:: If you have a genuine support issue, please click the **Get Support** link in the site navigation (at the top), and then follow the directions listed there, or contact your Amperity representative directly.
-#. Send your feedback. Thank you!
+   .. important:: If you have a genuine support issue, click the **Get Support** link in the site navigation, and then follow the directions listed there, or contact your Amperity representative directly.
+#. Send your feedback. Thank you.
 
 .. docs-feedback-end
 

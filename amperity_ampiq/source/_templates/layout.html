@@ -128,7 +128,7 @@
 
       <ul class="nav-links links-main">
 
-         <li class="nav-link">
+         <li class="nav-link is-active">
           <div class="nav-dropdown">
             <a href="/ampiq/user_guides.html">User Guides</a>
           </div>
@@ -136,7 +136,7 @@
 
         <li class="nav-link">
           <div class="nav-dropdown">
-            <a href="/datagrid/start_here.html">Operators Guide</a>
+            <a href="/operator/start_here.html">Operators Guide</a>
           </div>
         </li>
 
@@ -151,30 +151,6 @@
             <a href="/reference/start_here.html">Amperity A-Z</a>
           </div>
         </li>
-
-<!--  this is the Canny changelog integration using default Docs nav styling. -->
-
-        <li class="nav-link">
-          <div class="nav-dropdown" data-canny-changelog>
-            <i class="fas fa-gift"></i>
-          </div>
-        </li>
-
-<!--  start Canny script -->
-
-<script>!function(w,d,i,s){function l(){if(!d.getElementById(i)){var f=d.getElementsByTagName(s)[0],e=d.createElement(s);e.type="text/javascript",e.async=!0,e.src="https://canny.io/sdk.js",f.parentNode.insertBefore(e,f)}}if("function"!=typeof w.Canny){var c=function(){c.q.push(arguments)};c.q=[],w.Canny=c,"complete"===d.readyState?l():w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}}(window,document,"canny-jssdk","script");</script>
-
-
-<script>
-  Canny('initChangelog', {
-    appID: '5ee29bf80008207d5df5ceb5',
-
-    position: 'bottom',
-    align: 'right',
-  });
-</script>
-
-<!--  end Canny script -->
 
 <!--  start Swiftype search box and script -->
 
@@ -211,6 +187,12 @@
         {%- if render_sidebar %}{% include 'sidebar.html' %}{%- endif %}
         <div class="bodywrapper">
           <div class="body" role="main">
+
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDNTKR8"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+
             {% block body %} {% endblock %}
           </div>
           {%- block footer %}
@@ -244,9 +226,9 @@
 
 <script type="text/javascript">
     window.doorbellOptions = {
-        email: "docs@amperity.com",
         "id": "13157",
-        "appKey": "otkMaSoqvriF1sC6RJZXNuA0negWEhY70ZyG34HzdDXD0Cic82vG0pjz2A7b91IE"
+        "appKey": "otkMaSoqvriF1sC6RJZXNuA0negWEhY70ZyG34HzdDXD0Cic82vG0pjz2A7b91IE",
+        "hideEmail": true
     };
     (function(w, d, t) {
         var hasLoaded = false;

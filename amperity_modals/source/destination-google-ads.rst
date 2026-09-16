@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Google Ads
 .. |what-send| replace:: audiences
@@ -55,13 +54,13 @@ Settings
    :start-after: .. setting-google-ads-customer-id-start
    :end-before: .. setting-google-ads-customer-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-audience-name-start
    :end-before: .. setting-google-ads-audience-name-end
 
-**Audience description**
+**Audience description** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-audience-description-start
@@ -88,3 +87,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-google-ads-mobile-app-id-start
    :end-before: .. setting-google-ads-mobile-app-id-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

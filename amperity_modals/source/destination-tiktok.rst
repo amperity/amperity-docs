@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: TikTok Ads
 .. |audience-primary-key| replace:: "email"
@@ -60,7 +59,7 @@ Settings
    :start-after: .. setting-tiktok-ads-manager-advertiser-id-start
    :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-custom-audience-name-start
@@ -71,3 +70,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-tiktok-ads-manager-user-id-type-start
    :end-before: .. setting-tiktok-ads-manager-user-id-type-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

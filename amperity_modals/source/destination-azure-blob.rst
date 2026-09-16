@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Azure Blob Storage
 .. |file-format| replace:: Apache Parquet, CSV, Custom delimiter, JSON, NDJSON, PSV, or TSV
@@ -106,6 +105,12 @@ Apache Parquet files only:
    :start-after: .. setting-common-quote-mode-none-start
    :end-before: .. setting-common-quote-mode-none-end
 
+**Parquet extension**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-parquet-extension-start
+   :end-before: .. setting-common-parquet-extension-end
+
 **Success file**
 
 .. include:: ../../shared/destination_settings.rst
@@ -132,8 +137,20 @@ Apache Parquet files only:
    :start-after: .. setting-common-row-number-column-name-start
    :end-before: .. setting-common-row-number-column-name-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

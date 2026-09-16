@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Criteo Retail Media
 .. |audience-primary-key| replace:: "Email"
@@ -66,3 +65,15 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-criteo-identifier-type-start
    :end-before: .. setting-criteo-identifier-type-end
+
+**Audience segment description** (Required at orchestration)
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-criteo-audience-segment-description-start
+   :end-before: .. setting-criteo-audience-segment-description-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

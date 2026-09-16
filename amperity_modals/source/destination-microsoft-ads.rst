@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Microsoft Advertising
 .. |what-send| replace:: customer data
@@ -54,8 +53,14 @@ Settings
    :start-after: .. setting-microsoft-advertising-account-and-customer-ids-start
    :end-before: .. setting-microsoft-advertising-account-and-customer-ids-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-advertising-list-name-start
    :end-before: .. setting-microsoft-advertising-list-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

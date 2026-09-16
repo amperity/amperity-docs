@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Adobe Marketo
 .. |audience-primary-key| replace:: "email"
@@ -75,7 +74,7 @@ Settings
    :start-after: .. setting-adobe-marketo-program-name-start
    :end-before: .. setting-adobe-marketo-program-name-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-adobe-marketo-list-name-start
@@ -84,3 +83,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-adobe-marketo-list-name-first-audience-start
    :end-before: .. setting-adobe-marketo-list-name-first-audience-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

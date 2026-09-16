@@ -1,6 +1,4 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
 
 
 .. meta::
@@ -21,21 +19,9 @@ Loyalty profiles
 
 .. attribute-loyalty-profiles-overview-start
 
-Loyalty programs help brands increase customer loyalty and provide incentives for customers to continue to interact with brands. Loyalty programs may require their members to provide their PII, which is used by companies to offer more personalized incentives to their customers.
+Loyalty programs may require their members to provide their PII, which is used by companies to offer more personalized incentives to their customers.
 
 .. attribute-loyalty-profiles-overview-end
-
-.. attribute-loyalty-profiles-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-profiles-links-end
 
 
 .. _attribute-loyalty-profiles-segment:
@@ -84,30 +70,30 @@ Use in segments
 
 .. attribute-loyalty-profiles-access-attributes-start
 
-You can access loyalty profile attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty profile attributes you want to use in your segment. Apply conditions and specify values for each attribute as necessary.
+You can access loyalty profile attributes directly from the **Segment Editor**. To add these attributes to your segments, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Loyalty** table, and then add the combination of loyalty profile attributes you want to use in your segment. Apply operators and specify values for each attribute as necessary.
 
 .. attribute-loyalty-profiles-access-attributes-end
 
 
 .. _attribut-loyalty-profiles-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-loyalty-profiles-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a String data type. All String data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**

@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Sailthru
 .. |audience-primary-key| replace:: "email"
@@ -66,8 +65,14 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-sailthru-list-name-start
    :end-before: .. setting-sailthru-list-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: store visits interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "stores"
 
 
 .. meta::
@@ -40,29 +43,27 @@ You can access store visit interval attributes directly from the **Segment Edito
 Use in segments
 ==================================================
 
-.. attribute-stores-visits-segment-start
-
-You can access 30 day visit intervals directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select a store visit interval attribute, and then apply a condition.
-
-.. attribute-stores-visits-segment-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-stores-visits-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-stores-visits-conditions-start
 
-The following table lists the conditions that are available to store visit interval attributes.
+The following table lists the operators that are available to store visit interval attributes.
 
-.. note:: Store visit interval attributes have an Integer data type. All Integer data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: Store visit interval attributes have an **integer** data type. All **integer** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns customer records with values that match the specified number of items in the interval.
@@ -72,19 +73,19 @@ The following table lists the conditions that are available to store visit inter
 
        Returns customer records with values that are between the specified number of items in the interval.
 
-       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items will be returned.
+       For example: if **is between** is set to 10 and 20, then customer records with at least 11 (but not more than 19) total items is returned.
 
    * - **is greater than**
      - |attribute-recommended| **More useful**
 
        Returns customer records with values that are greater than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is greater than** is set to 10, then customer records with 11 (or more) total items will be returned.
+       For example: if **is greater than** is set to 10, then customer records with 11 or more total items is returned.
 
    * - **is greater than or equal to**
      - Returns customer records with values that are greater than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is greater than or equal to** is set to 10, then customer records with 10 (or more) total items will be returned.
+       For example: if **is greater than or equal to** is set to 10, then customer records with 10 or more total items is returned.
 
    * - **is in list**
      - Returns customer records with values that match the number of items in the interval that are specified in a list.
@@ -94,12 +95,12 @@ The following table lists the conditions that are available to store visit inter
 
        Returns customer records with values that are less than the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items will be returned.
+       For example: if **is less than** is set to 20, then customer records with 19 (or fewer) total items is returned.
 
    * - **is less than or equal to**
      - Returns customer records with values that are less than or equal to the specified number of items in the interval, including the specified number of items.
 
-       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items will be returned.
+       For example: if **is less than or equal to** is set to 20, then customer records with 20 (or fewer) total items is returned.
 
    * - **is not**
      - |attribute-stop| **Less useful**
@@ -111,7 +112,7 @@ The following table lists the conditions that are available to store visit inter
 
        Returns customer records with values that are not between the specified number of items in the interval, not including the specified number of items.
 
-       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items will be returned.
+       For example: if **is not between** is set to 12 and 24, then customer records with at least 25 (but not more than 11) total items is returned.
 
    * - **is not in list**
      - |attribute-stop| **Less useful**

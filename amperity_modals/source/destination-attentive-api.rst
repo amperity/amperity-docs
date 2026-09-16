@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Attentive
 .. |audience-primary-key| replace:: "email" or "phone"
@@ -8,10 +7,10 @@
 .. |where-send| replace:: |destination-name|
 
 
-Attentive
+Attentive API
 ==================================================
 
-|destination-name| is an automation platform for email and SMS marketing. Use the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to extend customer profiles in |destination-name| with attributes from Amperity.
+|destination-name| is an automation platform for email and SMS marketing. Uses the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to extend customer profiles in |destination-name| with customer attributes from Amperity.
 
 
 Credentials
@@ -28,6 +27,10 @@ Credentials
 .. include:: ../../shared/credentials_settings.rst
    :start-after: .. credential-attentive-api-key-start
    :end-before: .. credential-attentive-api-key-end
+
+.. include:: ../../shared/credentials_settings.rst
+   :start-after: .. credential-attentive-api-key-scopes-start
+   :end-before: .. credential-attentive-api-key-scopes-end
 
 
 Settings
@@ -54,3 +57,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-attentive-primary-identifier-start
    :end-before: .. setting-attentive-primary-identifier-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

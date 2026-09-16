@@ -1,15 +1,18 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: list price attributes
+.. |what-choose| replace:: **item list price**, **order list price**, or **unit list price**
+.. |what-find| replace:: "list price"
 
 
 .. meta::
     :description lang=en:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -43,36 +46,34 @@ List prices
 Use in segments
 ==================================================
 
-.. attribute-list-prices-access-start
-
-You can access list price attributes directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Unified Itemized Transactions** table (for **Item List Price** and **Unit List Price**) *or* the **Unified Transactions** table (for **Order List Price**), apply a condition, and then specify a value.
-
-.. attribute-list-prices-access-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-list-prices-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-list-prices-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - |attribute-stop| **Less useful**
 
        Returns a specific list price, such as "9.99", "49.99", or "52.74".
 
-       .. tip:: Use the following conditions to return a range of list prices instead of a specific list price: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of list prices instead of a specific list price: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -92,7 +93,7 @@ The following table lists the conditions that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual list price amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual list price amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -124,7 +125,7 @@ The following table lists the conditions that are available to these attributes.
        Avoid using the **is not in list** condition when individual price amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - **is NULL** returns customer records that do not have a value.

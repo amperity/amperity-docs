@@ -1,10 +1,9 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: SoundCommerce
 .. |file-format| replace:: CSV
-.. |sftp-hostname| replace:: "client.sftp.soundcommerce.io"
+.. |sftp-hostname| replace:: "client-sftp.soundcommerce.io"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV files
 .. |where-send| replace:: |destination-name|
@@ -153,8 +152,20 @@ Settings
    :start-after: .. setting-common-header-start
    :end-before: .. setting-common-header-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

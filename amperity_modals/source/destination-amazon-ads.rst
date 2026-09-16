@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Amazon Ads
 .. |what-send| replace:: audiences
@@ -50,13 +49,13 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Audience name**
+**Audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-amazon-ads-audience-description-start
    :end-before: .. setting-amazon-ads-audience-description-end
 
-**Audience description**
+**Audience description** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-amazon-ads-audience-description-start
@@ -77,10 +76,20 @@ Settings
 **Membership duration**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-start
-   :end-before: .. setting-common-membership-duration-end
+   :start-after: .. setting-amazon-ads-membership-duration-start
+   :end-before: .. setting-amazon-ads-membership-duration-end
+
+**Enable consent signals?**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-common-membership-duration-frequency-start
-   :end-before: .. setting-common-membership-duration-frequency-end
+   :start-after: .. setting-amazon-ads-enable-consent-signals-start
+   :end-before: .. setting-amazon-ads-enable-consent-signals-end
+
+Consent signals are prioritized: 1. Use "tcf" for European Transparency and Consent Framework (TCF) consent signals. 2. Use "gpp" for Global Privacy Protocol (GPP) consent signals. 3. Use "amzn_user_data" and "amzn_ad_storage" for Amazon Consent Signal (ACS) consent signals.
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end
  

@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: HubSpot
 .. |audience-primary-key| replace:: "email"
@@ -12,6 +11,12 @@ HubSpot
 ==================================================
 
 |destination-name| is a CRM platform built around dedicated hubs for marketing, sales, services, content management, and operations. Use Amperity to manage contact lists in HubSpot.
+
+**CAUTION**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-hubspot-dates-and-datetimes-start
+   :end-before: .. setting-hubspot-dates-and-datetimes-end
 
 
 Credentials
@@ -55,8 +60,20 @@ Settings
    :start-after: .. setting-common-audience-primary-key-start
    :end-before: .. setting-common-audience-primary-key-end
 
-**List name**
+**List name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-hubspot-list-name-start
    :end-before: .. setting-hubspot-list-name-end
+
+**Create contacts?**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-hubspot-create-contacts-start
+   :end-before: .. setting-hubspot-create-contacts-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

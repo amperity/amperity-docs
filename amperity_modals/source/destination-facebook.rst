@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Meta Ads Manager
 .. |what-send| replace:: custom audiences
@@ -48,7 +47,7 @@ Settings
    :start-after: .. setting-common-business-user-access-restrict-pii-start
    :end-before: .. setting-common-business-user-access-restrict-pii-end
 
-**Custom audience name**
+**Custom audience name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-meta-ads-manager-custom-audience-name-start
@@ -65,3 +64,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-meta-ads-manager-customer-file-source-start
    :end-before: .. setting-meta-ads-manager-customer-file-source-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

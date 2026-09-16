@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Lorem Ipsum
 .. |what-send| replace:: files
@@ -25,6 +24,8 @@ Requirements
 
 .. TODO: This destination has the following requirements.
 
+.. vale off
+
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
@@ -38,6 +39,8 @@ Requirements
 #. .. include:: ../../shared/destination_settings.rst
       :start-after: .. setting-lorem-ipsum-short-start
       :end-before: .. setting-lorem-ipsum-short-end
+
+.. vale on
 
 
 Settings
@@ -85,21 +88,21 @@ This is a series of steps:
 More information
 --------------------------------------------------
 
-If we need more information we can add a section.
+Add a section if more information is needed.
 
 Formatting observations for Markdown files in app modals:
 
 * No admonitions in the core file.
-* Includes from /shared and other files is OK.
-* No tables (because tables are hard).
-* No images from docs site; app could put images into the modal.
-* Docs comments and docs TODO are not passed through by Pandoc when converting .rst > .md.
-* Links cannot be REF or DOC, only defined as external with paths (can be a relative path, should that be necessary).
+* Includes from ``/shared`` and other files is OK.
+* No tables because tables are hard.
+* No images from docs site. App could put images into the modal.
+* Docs comments and docs ``TODO`` are not passed through by Pandoc when converting .rst > .md.
+* Links cannot be ``REF`` or ``DOC``, only defined as external with paths. Can be a relative path, should that be necessary.
 
 
 Links
 ==================================================
 
 * Link to `Amperity Docs <https://docs.amperity.com>`__ |ext_link|.
-* Link to `Active Campaign <https://docs.amperity.com/datagrid/destination_active_campaign.html>`__ |ext_link|.
-* Relative link example (probably 404s) `some link text here <../tutorials/start_here.html>`__ |ext_link|.
+* Link to `Active Campaign <https://docs.amperity.com/operator/destination_active_campaign.html>`__ |ext_link|.
+* Relative link example (probably 404) `some link text here <../tutorials/start_here.html>`__ |ext_link|.

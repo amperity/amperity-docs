@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Microsoft Dataverse
 .. |what-send| replace:: table rows that match a table schema
@@ -72,14 +71,20 @@ Settings
    :start-after: .. setting-microsoft-dataverse-powerapps-name-start
    :end-before: .. setting-microsoft-dataverse-powerapps-name-end
 
-**Dataverse table logical name**
+**Dataverse table logical name** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dataverse-table-logical-name-start
    :end-before: .. setting-microsoft-dataverse-table-logical-name-end
 
-**Truncate table?**
+**Truncate table?** (Required at orchestration)
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-dataverse-truncate-table-start
    :end-before: .. setting-microsoft-dataverse-truncate-table-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -1,10 +1,9 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: LiveRamp
 .. |file-format| replace:: CSV, TSV, or PSV
-.. |sftp-hostname| replace:: "sftp.liveramp.com"
+.. |sftp-hostname| replace:: "files.liveramp.com", "sftp-au.liverampapac.com", or "sftp.liveramp.com"
 .. |remote-folder| replace:: "/folder"
 .. |what-send| replace:: CSV, TSV, or PSV files
 .. |where-send| replace:: |destination-name|
@@ -158,3 +157,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -851,6 +851,11 @@
    <a href="https://www.fivetran.com/connectors/tiktok-ads" target="_blank">TikTok Ads</a> <i class="fas fa-external-link-square-alt"></i>
 
 
+.. |fivetran_toast| raw:: html
+
+   <a href="https://fivetran.com/docs/connectors/applications/toast" target="_blank">Toast</a> <i class="fas fa-external-link-square-alt"></i>
+
+
 .. |fivetran_twilio| raw:: html
 
    <a href="https://www.fivetran.com/connectors/twilio" target="_blank">Twilio</a> <i class="fas fa-external-link-square-alt"></i>

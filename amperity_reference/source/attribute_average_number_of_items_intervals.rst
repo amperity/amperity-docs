@@ -1,6 +1,9 @@
-.. 
 .. https://docs.amperity.com/reference/
-.. 
+
+
+.. |what-access| replace:: average number of items interval attributes
+.. |what-choose| replace:: an interval
+.. |what-find| replace:: "average num items"
 
 
 .. meta::
@@ -38,34 +41,32 @@ Average number of items attributes identify the average order sizes (or "number 
 Use in segments
 ==================================================
 
-.. attribute-average-items-segments-start
-
-You can access averages for the number of items purchased directly from the **Segment Editor**. To add these attributes to your segment, To add these attributes to your segment, click **Add condition** and then **Add attribute**. Select the **Transaction Attributes Extended** source, select an average number of items interval attribute, and then apply a condition.
-
-.. attribute-average-items-segments-end
+.. include:: ../../shared/attributes.rst
+   :start-after: .. attributes-use-in-segments-start
+   :end-before: .. attributes-use-in-segments-end
 
 
 .. _attribute-average-items-conditions:
 
-Available conditions
+Available operators
 ==================================================
 
 .. attribute-average-items-conditions-start
 
-The following table lists the conditions that are available to these attributes.
+The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of conditions. Recommended conditions for this attribute are identified with "|attribute-recommended| **More useful**" and conditions with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
    :header-rows: 1
 
-   * - Condition
+   * - Operator
      - Description
    * - **is**
      - Returns a specific average number of items, such as "4.20", "7", or "5.10".
 
-       .. tip:: Use the following conditions to return a range of averages instead of a specific average: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
+       .. tip:: Use the following operators to return a range of averages instead of a specific average: **is between**, **is greater than**, **is greater than or equal to**, **is less than**, and **is less than or equal to**.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -85,7 +86,7 @@ The following table lists the conditions that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual average number of items are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual average number of items are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -117,7 +118,7 @@ The following table lists the conditions that are available to these attributes.
        Avoid using the **is not in list** condition when individual profit amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.10", "10", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.10", "10", and ".90", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

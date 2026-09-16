@@ -1,6 +1,5 @@
-.. 
-.. /markdown
-.. 
+.. /downloads/markdown/
+
 
 .. |destination-name| replace:: Zendesk
 .. |audience-primary-key| replace:: "email"
@@ -60,3 +59,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-zendesk-subdomain-start
    :end-before: .. setting-zendesk-subdomain-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

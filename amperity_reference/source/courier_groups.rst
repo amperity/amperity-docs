@@ -1,15 +1,13 @@
-.. 
 .. https://docs.amperity.com/reference/
-..
 
 
 .. meta::
     :description lang=en:
-        A courier group defines the end-to-end activities that will run within Amperity.
+        A courier group defines the end-to-end activities that runs within Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A courier group defines the end-to-end activities that will run within Amperity.
+        A courier group defines the end-to-end activities that runs within Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -25,9 +23,11 @@ About courier groups
 
 .. courier-groups-context-start
 
-A courier group is typically configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit; couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
+A courier group, also known as a scheduled workflow, is configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit. Couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
 
-For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate (or refresh) a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
+For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
+
+A bridge sync should be in a dedicated courier group.
 
 .. courier-groups-context-end
 
@@ -41,7 +41,7 @@ For each courier with required files, Amperity determines if those files have up
 
 What a courier group does:
 
-#. Logically organizes a list of couriers and bridges into a group that shares the same schedule and workflow.
+#. Logically organizes a list of couriers into a group that shares the same schedule and workflow.
 #. Allows for each courier to be assigned schedule variance via wait times and offsets.
 #. Enables both automatic and ad hoc runs.
 #. Polls each data source associated with a courier in the group to determine if data is ready to be pulled to Amperity.
@@ -80,7 +80,7 @@ Use the **Add courier group** button to add a courier group to Amperity. A couri
 
 For each courier added to a courier group, define a wait time and the number of days to look for data. This is used to help determine how much time the courier group should wait for the files associated with a courier to be ready for processing.
 
-In some cases, if the files are not ready, the courier (and courier group) will fail. But in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
+In some cases, if the files are not ready, the courier workflow fails, but in other cases, if the files in the courier are not flagged as required, the courier group may continue processing the rest of the files.
 
 .. courier-groups-add-context-end
 
@@ -94,7 +94,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
+          :alt: Step one.
           :align: left
           :class: no-scaled-link
 
@@ -109,7 +109,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
 
@@ -130,7 +130,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
+          :alt: Step three.
           :align: left
           :class: no-scaled-link
 
@@ -144,11 +144,11 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
+          :alt: Step four.
           :align: left
           :class: no-scaled-link
 
-     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when the configured amount of time is exceeded, an alert will be sent.
+     - Optional. Enable runtime alerts. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when the configured amount of time is exceeded, an alert is sent.
 
        .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
           :width: 400 px
@@ -159,11 +159,11 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
+          :alt: Step five.
           :align: left
           :class: no-scaled-link
 
-     - Define how the courier group will run: a **Full workflow**, a **Partial workflow**, or an **Ingest only** workflow.
+     - Define how the courier group runs: a **Full**, a **Refresh**, or an **Source** workflow.
 
        .. image:: ../../images/mockups-workflow-courier-group-run-types.png
           :width: 400 px
@@ -171,20 +171,22 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
+       A **Full** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-       A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+       A **Refresh** workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
-       An ingest-only workflow refreshes domain tables, but does not run Stitch.
+       .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
+
+       A **Source** workflow refreshes domain tables, but does not run Stitch.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
+          :alt: Step six.
           :align: left
           :class: no-scaled-link
 
-     - To enable the courier group and have it run on the configured schedule, set the courier group to **Active**. (If this setting is set to **Inactive** the courier group will not run on a schedule, but may be run manually.)
+     - To enable the courier group and have it run on the configured schedule, set the courier group to **Active**. If this setting is set to **Inactive** the courier group will not run on a schedule, but may be run manually.
 
        Many courier groups are scheduled to run on a daily basis. Some courier groups are scheduled to run less frequently, such as bi-weekly, monthly, or even quarterly. Use the **Only retrieve files dropped in the past day?** setting to configure a courier group that runs less frequently to only look for files dropped yesterday.
 
@@ -194,7 +196,7 @@ In some cases, if the files are not ready, the courier (and courier group) will 
           :align: left
           :class: no-scaled-link
 
-       .. tip:: A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+       .. tip:: A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
           When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -205,11 +207,11 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
+          :alt: Step seven.
           :align: left
           :class: no-scaled-link
 
-     - Add one (or more) couriers to the courier group.
+     - Add one or more couriers to the courier group.
 
        For each courier in the courier group, select a courier, configure the wait time and offset, and then enable alerts.
 
@@ -225,14 +227,14 @@ In some cases, if the files are not ready, the courier (and courier group) will 
 
        .. important:: A wait time is not required for a bridge.
 
-       A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and isn't made available within that time window.
+       A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and is not made available within that time window.
 
        Use a wait time to extend the time window for data to be made available. This can help reduce the number of alerts that may be generated for data sources that cannot be picked up by a courier group.
 
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
+          :alt: Step eight.
           :align: left
           :class: no-scaled-link
 
@@ -260,9 +262,9 @@ Activate courier group
 
 .. courier-groups-setting-activate-start
 
-A courier group :ref:`must be activated <courier-groups-howto-activate>` in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
+A courier group must be activated in order for it to run on an end-to-end schedule that pulls data to Amperity using couriers, syncs data using bridges, runs Stitch, refreshes databases, and then runs any orchestration, orchestration group, campaign, or profile API endpoint that is associated with the courier group.
 
-A courier group that is :ref:`deactivated <courier-groups-howto-deactivate>` may be run manually.
+A courier group that is deactivated may be run manually.
 
 .. courier-groups-setting-activate-end
 
@@ -292,16 +294,16 @@ Run types
 
 A courier group can be configured with any of the following run types:
 
-**Full workflow**
+**Full**
    A full workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, and then runs every activation that is configured to run as part of this courier group workflow.
 
-**Partial workflow**
-   A partial workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
+**Refresh**
+   A refresh workflow refreshes domain tables, runs Stitch, refreshes your customer 360 database, but does not run any activations.
 
    .. important:: Use partial workflows in sandboxes to ensure that data in your sandbox is not inadvertently sent to downstream destinations.
 
-**Ingest-only workflow**
-   An ingest-only workflow refreshes domain tables, but does not run Stitch.
+**Source**
+   A source workflow refreshes domain tables, but does not run Stitch.
 
 .. courier-groups-run-types-end
 
@@ -329,6 +331,36 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 .. courier-groups-schedules-end
 
+.. courier-groups-schedules-examples-start
+
+**Example cron schedules**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **0 17 * * ***
+     - Daily at 17:00 UTC
+
+   * - **0 17 * * 1,3**
+     - Monday and Wednesday at 17:00 UTC
+
+   * - **0 17 * * 1-5**
+     - Weekly on Monday through Friday at 17:00 UTC
+
+   * - **0 17 * * 0**
+     - Weekly on Sunday at 17:00 UTC
+
+   * - **0 22 * * 0**
+     - Weekly on Sunday at 22:00 UTC
+
+   * - **30 15 * * 1,2,5**
+     - Monday, Tuesday, and Friday 15:30 PM UTC
+
+.. courier-groups-schedules-examples-end
+
 .. courier-groups-schedules-note-start
 
 .. note:: Scheduling a courier group is optional. When a courier group is not assigned a schedule, it may be run manually on an ad hoc basis.
@@ -339,7 +371,7 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 A courier group that is scheduled to run on a daily basis will check for files on a daily basis.
 
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
 When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -365,7 +397,7 @@ Time zones
 
 A courier group schedule is associated with a time zone. The time zone determines the point at which a courier group's scheduled start time begins. A time zone should be aligned with the time zone of system from which the data is being pulled.
 
-Use the **Use this time zone for file date ranges** checkbox to use the selected time zone to look for files. If unchecked, the courier group will use the current time in UTC to look for files to pick up.
+Use the **Use this time zone for file date ranges** checkbox to use the selected time zone to look for files. If unchecked, the courier group uses the current time in UTC to look for files to pick up.
 
 .. courier-groups-timezones-end
 
@@ -377,14 +409,14 @@ The time zones that are available for selection in Amperity are modeled after th
 
    (GMT-08:00) Pacific Time
    (GMT-07:00) Mountain Time
-   (GMT-08:00) Central Time
-   (GMT-09:00) Eastern Time
+   (GMT-06:00) Central Time
+   (GMT-05:00) Eastern Time
 
 .. courier-groups-timezones-about-end
 
 .. courier-groups-timezones-downstream-start
 
-The time zone that is chosen for an courier group schedule should consider every downstream business processes that requires the data and also the time zone(s) in which the consumers of that data will operate.
+The time zone that is chosen for an courier group schedule should consider every downstream business processes that requires the data and also the time zones in which the consumers of that data will operate.
 
 .. courier-groups-timezones-downstream-end
 
@@ -392,7 +424,7 @@ The time zone that is chosen for an courier group schedule should consider every
 
 .. tip:: Do not create courier group schedules that may occur during a daylight savings time transition.
 
-   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" will run once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it will run twice.
+   For example, an courier group schedule with the cron string of ``30 2 * * *`` and the time zone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30 AM, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
 
    This is because American daylight savings time transitions at 2:00 AM, meaning the 2:00 AM hour occurs twice when transitioning out of daylight savings time (Fall) and is skipped altogether when transitioning into daylight savings time (Spring).
 
@@ -421,7 +453,7 @@ Bridge syncs
 
 .. courier-groups-bridge-syncs-start
 
-Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`quickly configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give your brand access to shared tables without replication.
+Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be :ref:`configured <courier-groups-howto-add-bridge>` for inbound and outbound shares to give you access to shared tables without replication. A bridge sync should be in a dedicated courier group.
 
 .. courier-groups-bridge-syncs-end
 
@@ -453,7 +485,7 @@ Courier alerts
 
 .. courier-groups-source-courier-alerts-start
 
-Files can be missing for any number of reasons, including by delays that may have occurred in upstream workflows that exist outside of Amperity. And in many situations a file is late, not missing.
+Files can be missing for any number of reasons, including by delays that may have occurred in upstream workflows that exist outside of Amperity. In many situations a file is late, not missing.
 
 .. courier-groups-source-courier-alerts-end
 
@@ -476,17 +508,17 @@ Number of days
 
 A courier can be configured to look for files within range of time that is older than the scheduled time. The scheduled time is in Coordinated Universal Time (UTC), unless the "Use this time zone for file date ranges" checkbox is enabled for the courier group.
 
-This range is typically 24 hours, but may be configured for longer ranges. For example, it's possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
+This range is typically 24 hours, but may be configured for longer ranges. For example, it is possible for a data file to be generated with a correct file name and datestamp appended to it, but for that datestamp to represent the previous day because of how an upstream workflow is configured. A wait time helps ensure that the data at the source location is recognized correctly by the courier.
 
-.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range; only the provided input day(s) to load data from are used as inputs.
+.. warning:: This range of time may affect couriers in a courier group whether or not they run on a schedule. A manually run courier group may not take its schedule into consideration when determining the date range. Only the provided input days to load data from are used as inputs.
 
 .. courier-groups-schedule-offset-end
 
 .. courier-groups-schedule-offset-callout-start
 
-.. important:: The schedule defines the frequency at which the courier group will run.
+.. important:: The schedule defines the frequency at which the courier group runs.
 
-   The timezone is the time at which the courier group will run. This may be set to your local time zone.
+   The timezone is the time at which the courier group runs. This may be set to your local time zone.
 
    Individual courier wait times are calculated using Coordinated Universal Time (UTC), even when a non-UTC time zone is specified for the courier group. This means that when a courier group runs, the current time in UTC is used to calculate the wait time.
 
@@ -506,7 +538,7 @@ A wait time is a constraint placed on a courier group that defines an extended t
 
 .. important:: A wait time is not required for a bridge.
 
-A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and isn't made available within that time window.
+A courier group typically runs on an automated schedule that expects customer data to be available at the source location within a defined time window. However, in some cases, the customer data may be delayed and is not made available within that time window.
 
 .. courier-groups-schedule-wait-time-end
 
@@ -538,7 +570,7 @@ Review activations
 
 An activation represents a part of a workflow that is run after databases have been updated. Any number of activations may be assigned to a workflow, after which all activations are run automatically on the schedule that is defined by the workflow.
 
-Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>` (that group multiple queries into a single activation), :ref:`Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
+Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>`, :ref:`Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
 
 .. courier-groups-review-activations-end
 
@@ -550,7 +582,7 @@ How-tos
 
 .. courier-groups-howtos-list-start
 
-This section describes tasks related to managing courier groups in Amperity:
+Tasks related to managing courier groups in Amperity:
 
 * :ref:`courier-groups-howto-activate`
 * :ref:`courier-groups-howto-add-bridge`
@@ -584,7 +616,7 @@ Activate courier group
 
 .. courier-groups-howto-activate-start
 
-An activated courier group is run automatically on a defined schedule. All couriers and bridges that are configured for the  courier group run as a unit and are used to run Stitch and refresh the customer 360 database. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
+An activated courier group is run automatically on a defined schedule. All couriers configured for the courier group run as a unit refresh domain table data. All orchestrations, orchestration groups, recurring campaigns, and profile API endpoints that are configured for the courier group are run automaticaly after the database is refreshed.
 
 .. courier-groups-howto-activate-end
 
@@ -606,7 +638,9 @@ Add bridge to workflow
 
 .. courier-groups-howto-add-bridge-start
 
-Any inbound share that has been configured and activated in your tenant may be added as a bridge within a courier group.
+Any inbound share configured and activated in your tenant may be added as a bridge to a scheduled workflow.
+
+.. important:: Add a bridge to a dedicated courier group that runs independently of other scheduled workflows. Assign offsets to courier groups to ensure a scheduled workflow with a bridge sync starts after or ends before other scheduled workflows.
 
 .. courier-groups-howto-add-bridge-end
 
@@ -654,7 +688,7 @@ Add courier
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
+#. Select the name of a courier from the dropdown list, set the wait time and range for which data is loaded. Enable alerts for when files are missing.
 #. Click **Save**.
 
 .. courier-groups-howto-add-courier-add-steps-end
@@ -677,7 +711,7 @@ A wait time is a constraint placed on a courier group that defines an extended t
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
    Next to **Wait** add an integer value and then select **Seconds**, **Minutes**, **Hours**, or **Days** to represent the amount of time a courier should wait for data.
 #. Click **Save**.
@@ -702,9 +736,9 @@ Each courier in a courier group may be configured to look for data during a time
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **Couriers** tab, click the **Add courier** link.
-#. Select the name of a courier from the drop-down list.
+#. Select the name of a courier from the dropdown list.
 
-   Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time order than the scheduled date and time for which the courier will look for data.
+   Next to **Load data** add an integer value and then select **Minutes**, **Hours**, **Days**, or **Weeks** to represent the amount of time older than the scheduled date and time for which the courier will look for data.
 #. Click **Save**.
 
 .. courier-groups-howto-add-courier-days-steps-end
@@ -717,15 +751,15 @@ Alert when data is missing?
 
 .. courier-groups-howto-add-courier-alert-start
 
-A courier group can be configured to send workflow alerts when one (or more) files are missing, and then continue processing if files are missing.
+A courier group can be configured to send workflow alerts when one or more files are missing, and then continue processing if files are missing.
 
 .. courier-groups-howto-add-courier-alert-end
 
 .. courier-groups-howto-add-courier-alert-tip-start
 
-.. tip:: Some files are not considered essential to the daily Amperity run. The reasons why a particular file may be considered non-essential will vary from tenant to tenant, but they may include situations like:
+.. tip:: Some files are not considered essential to the daily Amperity run. The reasons why a particular file may be considered non-essential varies from tenant to tenant, but they may include situations like:
 
-   * A data source is mostly static
+   * A data source is static
    * A data source does not contain PII that will affect the quality of the Amperity ID.
    * A data source is associated with a workflow that often misses the configured Amperity wait time period.
 
@@ -749,7 +783,7 @@ Stop when data is missing?
 
 .. courier-groups-howto-add-courier-stop-start
 
-A courier group can be configured to send workflow alerts when one (or more) files are missing, and then stop processing if files are missing.
+A courier group can be configured to send workflow alerts when one or more files are missing, and then stop processing if files are missing.
 
 .. courier-groups-howto-add-courier-stop-end
 
@@ -915,7 +949,7 @@ Delete courier group
 
 .. courier-groups-howto-delete-start
 
-Use the **Delete** option to remove a courier group from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this courier group prior to deleting it.
+Use the **Delete** option to remove a courier group from Amperity. Verify that both upstream and downstream processes no longer depend on this courier group before deleting it.
 
 .. important:: This action will *not* delete couriers that are associated with the courier group.
 
@@ -969,7 +1003,7 @@ A runtime alert is a type of workflow alert that is sent when a courier group ha
 .. courier-groups-howto-notify-slow-steps-start
 
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
-#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours (or minutes) at which, when this amount of time is exceeded, a workflow alert will be sent.
+#. Enable the **Alert when runtime exceeds** checkbox, and then set the number of hours or minutes at which, when this amount of time is exceeded, a workflow alert is sent.
 
    .. image:: ../../images/mockups-workflow-courier-group-duration-alerts.png
       :width: 400 px
@@ -989,7 +1023,7 @@ Pull files for previous 24 hours?
 
 .. courier-groups-howto-pull-for-24-hours-start
 
-A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will (by default) look for files on each day that has passed since the last time the courier group ran.
+A courier group that runs less frequently, such as weekly, bi-weekly, monthly, or quarterly, will look for files on each day that has passed since the last time the courier group ran.
 
 When a courier group is configured to run less frequently, you can also configure that courier group to only look for files on a specific day.
 
@@ -1086,7 +1120,7 @@ Automatically
 
 .. courier-groups-howto-run-automatically-start
 
-A courier group with a schedule will run automatically when :ref:`the courier group is activated <courier-groups-howto-activate>`.
+A courier group with a schedule runs automatically when :ref:`the courier group is activated <courier-groups-howto-activate>`.
 
 .. courier-groups-howto-run-automatically-end
 
@@ -1190,7 +1224,7 @@ Wait for missing files
 
 .. courier-groups-wait-for-missing-files-start
 
-When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find the these files. Use the **Wait** setting to configure amount of time Amperity should wait:
+When files are missing or late, in addition to sending an email alert and either continuing or stopping the workflow, Amperity will continue to attempt to find these files. Use the **Wait** setting to configure amount of time Amperity should wait:
 
 .. image:: ../../images/mockups-workflow-courier-group-settings-wait.png
    :width: 400 px

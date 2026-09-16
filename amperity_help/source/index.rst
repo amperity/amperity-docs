@@ -37,6 +37,7 @@ Collection of standalone topics
    destination_google_ads_id_mobile_app
    destination_google_ads_membership_duration
    destination_google_ads_upload_key_type
+   destination_premium_connectors
    file_patterns
    query_performance_mode
    relative_dates
@@ -58,25 +59,5 @@ Collection of standalone topics
    stitch_config_semantic_exclusions
    stitch_config_size_threshold
    stitch_config_skip_scores
-   stitch_evaluate_large_supersized_components
-   stitch_evaluate_largest_cluster_size
-   stitch_evaluate_multiple_addresses
-   stitch_evaluate_multiple_given_names
-   stitch_evaluate_multiple_surnames
-   stitch_evaluate_name_address_undercluster
-   stitch_evaluate_name_email_undercluster
-   stitch_evaluate_name_phone_undercluster
-   stitch_evaluate_small_supersized_components
-   stitch_evaluate_company_name_equality
-   stitch_evaluate_sparse_data
    term_uniqueness
    term_cardinality
-   test-animated-image
-   test-destination-template
-   test-long
-   test-long-with-title
-   test-paragraph
-   test-reauthorize-oauth
-   test-steps
-   test-term
-   test-words-animated-image

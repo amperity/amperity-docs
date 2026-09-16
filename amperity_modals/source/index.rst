@@ -1,6 +1,4 @@
-.. 
-.. https://docs.amperity.com/support/index.html
-..
+.. /downloads/markdown/
 
 
 ==================================================
@@ -15,6 +13,7 @@ Site Index
    :hidden:
 
    404
+   amps
    destination_lorem_ipsum
    destination-active-campaign
    destination-acxiom
@@ -22,21 +21,37 @@ Site Index
    destination-adobe-ecs
    destination-adobe-customer-attributes
    destination-adobe-campaign
+   destination-adobe-target
    destination-amazon-ads
+   destination-amazon-capi
+   destination-attentive
    destination-attentive-api
-   destination-attentive-mobile
+   destination-attentive-ecommerce
+   destination-attentivemobile
    destination-azure-blob
    destination-bazaar-voice
+   destination-bloomreach
+
    destination-blue-core
    destination-braze
+   destination-braze-cohort
+   destination-braze-purchases
+   destination-braze-rt-action-based
+   destination-braze-rt-api-trigger
    destination-camelot-smm
+   destination-cheetah-digital
    destination-cordial
    destination-criteo
+   destination-criteo-offline-sales
    destination-criteo-retail-media
    destination-cross-country-computer
+   destination-dotdigital
+   destination-dynamic-yield-customer-profiles
    destination-dynamics-365-marketing
    destination-dynamics
+   destination-eagle-eye
    destination-eloqua
+   destination-emarsys
    destination-epsilon-abacus
    destination-epsilon-conversant
    destination-epsilon-targeting
@@ -44,34 +59,58 @@ Site Index
    destination-facebook
    destination-gcs
    destination-google-ads
+   destination-google-analytics-offline-events
+   destination-google-cm360
    destination-google-customer-match
+   destination-google-customer-match-gdm
+   destination-google-enhanced-conversions
+   destination-google-enhanced-conversions-gdm
    destination-hubspot
    destination-infutor
+   destination-iterable
+
    destination-kibo
    destination-klaviyo
    destination-koupon-media
+   destination-linkedin-dmp
    destination-listrak
+   destination-listrak-sms
+   destination-listrak-sms-profile-update
    destination-liveramp
    destination-mailchimp
    destination-marketo
    destination-meta-offline-events
    destination-microsoft-dataverse
    destination-microsoft-ads
+   destination-microsoft-ads-conversions-api
+   destination-microsoft-ads-offline-events
+   destination-moengage
    destination-neustar
    destination-oracle-data-cloud
+   destination-oracle-opera-outbound
    destination-oracle-responsys
    destination-panda-printing
    destination-pebble-post
    destination-persado
    destination-pinterest
+   destination-pinterest-offline-events
+   destination-posthog
    destination-power-reviews
    destination-quad
+   destination-reddit
+   destination-roku-audience
+   destination-roku-capi
    destination-rr-donnelly
    destination-s3
    destination-sailthru
    destination-salesforce
    destination-salesforce-marketing-cloud
+   destination-sendgrid
+   destination-sevenrooms
+   destination-sfmc-data-extension-row
+   destination-sfmc-sftp
    destination-sftp
+   destination-shopify-graphql
    destination-smg
    destination-snapchat
    destination-snowflake
@@ -82,10 +121,17 @@ Site Index
    destination-tradedesk
    destination-tradedesk-offline-events
    destination-tradedesk-3rd-party
+   destination-tulip
+   destination-viant-dsp
    destination-vibes
    destination-webhook
+   destination-webhook-single-record
    destination-yahoo-dsp
    destination-zendesk
    openapi
+   plugins
+   quickstart-pk
    semantics
+   settings-destinations
+   stitch
    stitch_benchmarks
