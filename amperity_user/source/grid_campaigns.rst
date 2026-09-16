@@ -279,6 +279,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_neustar
 
+   .. grid-item-card:: OpenAI Audiences
+      :link-type: doc
+      :link: campaign_openai_ads_audiences
+
    .. grid-item-card:: Oracle Eloqua
       :link-type: doc
       :link: campaign_oracle_eloqua
@@ -368,6 +372,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Meta Ads Manager <campaign_meta_ads_manager>
    Microsoft Ads <campaign_microsoft_ads>
    Neustar <campaign_neustar>
+   OpenAI Audiences <campaign_openai_ads_audiences>
    Oracle Eloqua <campaign_oracle_eloqua>
    Pinterest <campaign_pinterest>
    Roku Audience <campaign_roku_audience>
