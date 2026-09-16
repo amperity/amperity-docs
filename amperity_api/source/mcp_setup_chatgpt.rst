@@ -56,7 +56,7 @@ To install the Amperity plugin:
 
 #. Select **Amperity**, and then select **Install plugin**.
 #. A browser tab opens. Sign in with your Amperity credentials.
-#. In a chat, bring in the plugin with an **@** mention, or by selecting **+** and then **More**.
+#. Enable the plugin in a chat with an **@** mention, or by selecting **+** and then **More**.
 
 .. mcp-setup-chatgpt-add-end
 
@@ -68,7 +68,7 @@ Start interacting with ChatGPT
 
 .. mcp-setup-chatgpt-interacting-start
 
-In a chat with the Amperity plugin brought in, ask:
+In a chat with the Amperity plugin enabled, ask:
 
 .. code-block:: none
 
