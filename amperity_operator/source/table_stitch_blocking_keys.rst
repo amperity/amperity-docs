@@ -29,7 +29,7 @@ Use with Stitch QA
 
 .. table-stitch-blocking-keys-use-with-stitch-qa-start
 
-Use the **Stitch Blocking Keys** table to understand why blocking used (or did not use) a foreign key or separation key to block (or unblock) two records.
+Use the **Stitch Blocking Keys** table to understand why blocking used or did not use a foreign key or separation key to block or unblock two records.
 
 .. table-stitch-blocking-keys-use-with-stitch-qa-end
 
@@ -60,6 +60,10 @@ Add table
 
 Column reference
 ==================================================
+
+.. include:: ../../amperity_reference/source/data_tables.rst
+   :start-after: .. data-tables-stitch-blocking-keys-table-about-start
+   :end-before: .. data-tables-stitch-blocking-keys-table-about-end
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-stitch-blocking-keys-table-about-start

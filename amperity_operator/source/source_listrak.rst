@@ -6,8 +6,8 @@
 .. |feed-name| replace:: Email Contacts *AND / OR* SMS Contacts
 .. |domain-table-name| replace:: |source-name|:EmailContacts *AND / OR* |source-name|:SmsContacts
 .. |credential-type| replace:: **listrak**
-.. |what-pull| replace:: email and/or SMS profiles
-.. |credential-fields| replace:: the name of the credential, a description, the |source-name| client ID(s) and client secret(s)
+.. |what-pull| replace:: email or SMS profiles
+.. |credential-fields| replace:: the name of the credential, a description, the |source-name| client IDs and client secrets
 .. |settings-details| replace:: the list name for each integration being used, as defined in |source-name|
 .. |box-names| replace:: Email Contacts *AND / OR* SMS Contacts
 
@@ -73,13 +73,13 @@ Amperity can pull |what-pull| from |source-name|.
 
 A |source-name| data source works like this:
 
-#. Configure Amperity to pull one (or both) of the following data sources:
+#. Configure Amperity to pull one or both of the following data sources:
 
    Email subscription status using the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|.
 
    SMS profiles, opt-in / opt-out status, and subscription status using the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|.
 
-   .. important:: You may configure one or both of these data sources.
+   .. important:: You may configure one or both of these data sources. In the case of both, you must configure them separately.
 
 #. Amperity pulls data from |source-name| using REST APIs, and then loads this data to Amperity as a feed that automatically assigns semantic tags to fields that contain customer PII.
 #. Domain tables within Amperity are refreshed.
@@ -97,15 +97,66 @@ Get details
 
 |source-name| requires the following configuration details:
 
-#. The client ID(s) and secret(s) for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| **and/or** `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
+#. The client IDs and secrets for the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link| or `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|. (You must configure at least one of email or SMS and may configure both.)
 
    .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist in |source-name|.
 
-#. The Email list name **and/or** SMS list name. (This depends on which REST APIs are configured.)
+#. The Email list name or SMS list name. (This depends on which REST APIs are configured.)
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+#. Pull additional customer profile fields to Amperity using the :ref:`Additional fields <source-listrak-get-details-additional-fields>` setting.
+
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-listrak-get-details-end
+
+
+.. _source-listrak-get-details-additional-fields:
+
+Additional fields
+--------------------------------------------------
+
+.. source-listrak-get-details-additional-fields-start
+
+Pull additional customer profile fields to Amperity using the **Additional fields** setting.
+
+#. Get a list of segmentation field IDs, also referred to as `custom profile fields <https://help.listrak.com/en/articles/10507490-profile-fields-in-the-nextgen-platform>`__ |ext_link|, from the |source-name| user interface.
+
+   For example, `create a custom profile group with custom profile fields <https://help.listrak.com/en/articles/2647683-creating-email-profile-fields>`__ |ext_link|. Make a list of the unique IDs for the custom profile fields. These values are the segmentation field IDs.
+
+   Access custom profile fields programmatically using the `SegmentationFieldGroup <https://api.listrak.com/email#operation/SegmentationFieldGroup_GetSegmentationFieldGroupResource>`__ |ext_link| and `SegmentationField <https://api.listrak.com/email#operation/SegmentationField_GetSegmentationFieldResource>`__ |ext_link| endpoints in the Listrak API.
+
+   .. note:: The segmentation field ID is the unique value assigned to ``segmentationFieldID`` properties in |source-name|. A collection of segmentation field IDs are created for profile groups in the |source-name| user interface.
+
+     **To access segmentation field IDs**
+
+     In |source-name| navigate to **Support** > **API** > **API ID Information**. The **Field IDs** section outlines the segmentation field IDs for profile fields. These IDs do not change unless a field is deleted and recreated.
+
+#. Reference the segmentation field IDs in the courier configuration.
+
+   Add a comma-separated list of segmentation field IDs to the **Additional fields** setting. Each segmentation field ID represents a custom field defined in |source-name| for email and SMS lists.
+
+#. Use SQL to convert the segmentation field IDs to meaningful column names. For example, a series of segmentation field IDs for individual months combined into a field named "birthday_month".
+
+   .. code-block:: sql
+      :linenos:
+
+      ,MAX(CASE
+        WHEN val.segmentationFieldID = 5101 AND val.value = "1" THEN "January"
+        WHEN val.segmentationFieldID = 5102 AND val.value = "1" THEN "February"
+        WHEN val.segmentationFieldID = 5103 AND val.value = "1" THEN "March"
+        WHEN val.segmentationFieldID = 5104 AND val.value = "1" THEN "April"
+        WHEN val.segmentationFieldID = 5105 AND val.value = "1" THEN "May"
+        WHEN val.segmentationFieldID = 5106 AND val.value = "1" THEN "June"
+        WHEN val.segmentationFieldID = 5107 AND val.value = "1" THEN "July"
+        WHEN val.segmentationFieldID = 5108 AND val.value = "1" THEN "August"
+        WHEN val.segmentationFieldID = 5109 AND val.value = "1" THEN "September"
+        WHEN val.segmentationFieldID = 5110 AND val.value = "1" THEN "October"
+        WHEN val.segmentationFieldID = 5111 AND val.value = "1" THEN "November"
+        WHEN val.segmentationFieldID = 5112 AND val.value = "1" THEN "December"
+        ELSE NULL
+      END) AS birthday_month
+
+.. source-listrak-get-details-additional-fields-end
 
 
 .. _source-listrak-add-courier:
@@ -137,6 +188,10 @@ Add courier
    To add a credential, enter |credential-fields|. Click **Save**.
    
 #. Under **Settings** enter the |settings-details|.
+
+   Enable **Subscribed contacts only?** to pull only contacts subscribed to the list, excluding unsubscribed contacts. When disabled, both subscribed and unsubscribed contacts are pulled.
+
+   Enable **Opted-in SMS contacts only?** to pull only SMS contacts who are opted-in, excluding opted-out (DNC) contacts. When disabled, both opted-in and opted-out SMS contacts are pulled.
 #. Under **Select Data**, enable |box-names|.
 #. Click **Create**.
 
@@ -178,6 +233,8 @@ Email
 
 .. source-listrak-review-data-email-start
 
+.. vale off
+
 The feed and domain table will match the fields defined in the `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|:
 
 * **emailAddress** (assigned the **email** and **ck** semantic tags)
@@ -185,6 +242,8 @@ The feed and domain table will match the fields defined in the `Listrak Email AP
 * **subscribeMethod**
 * **unsubscribeDate**
 * **unsubscribeMethod**
+
+.. vale on
 
 .. source-listrak-review-data-email-end
 
@@ -195,6 +254,8 @@ SMS
 --------------------------------------------------
 
 .. source-listrak-review-data-sms-start
+
+.. vale off
 
 The feed and domain table will match the fields defined in the `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|:
 
@@ -207,6 +268,8 @@ The feed and domain table will match the fields defined in the `Listrak SMS API 
 * **optedOut**
 * **subscribeDate**
 * **unsubscribeDate**
+
+.. vale on
 
 .. source-listrak-review-data-sms-end
 

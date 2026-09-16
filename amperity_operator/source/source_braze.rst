@@ -3,6 +3,7 @@
 
 .. |source-name| replace:: Braze Currents
 
+
 .. meta::
     :description lang=en:
         Configure Amperity to pull data from Braze Currents.
@@ -20,8 +21,8 @@ Pull events from Braze Currents
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-braze-start
-   :end-before: .. term-braze-end
+   :start-after: .. term-braze-currents-start
+   :end-before: .. term-braze-currents-end
 
 
 .. _source-braze-about-currents:
@@ -77,8 +78,8 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Open the Currents page**
 
@@ -87,8 +88,8 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Create current**
 
@@ -97,8 +98,8 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Configure credentials**
 
@@ -106,13 +107,13 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
        Use a secret access key *or* a role ARN. AES-256 encryption may be enabled.
 
-       Provide the name of an Amazon S3 bucket that is managed by your brand, along with the folder to which |source-name| will send events data.
+       Provide the name of an Amazon S3 bucket that is managed by your brand, along with the folder to which |source-name| sends events data.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Configure events data**
 
@@ -123,16 +124,16 @@ Your brand can configure |source-name| to send events `to an Amazon S3 bucket <h
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - Log in to Amperity and configure a data source that uses :doc:`Amazon S3 <source_amazon_s3>` to pull the events data from the customer-managed Amazon S3 bucket to Amperity.
 
@@ -160,8 +161,8 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Open the Currents page**
 
@@ -170,8 +171,8 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Create current**
 
@@ -180,20 +181,20 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Configure credentials**
 
        Give the integration a name and provide a contact email address.
 
-       Add the Azure Blob Storage connection string, the name of an Azure Blob Storage container, along with the prefix to which |source-name| will send events data.
+       Add the Azure Blob Storage connection string, the name of an Azure Blob Storage container, along with the prefix to which |source-name| sends events data.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Configure events data**
 
@@ -203,16 +204,16 @@ Your brand can configure |source-name| to send events `to an Azure Blob Storage 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - Log in to Amperity and configure a data source that uses :doc:`Azure Blob Storage <source_azure_blob_storage>` to pull the events data from a customer-managed Azure Blob Storage bucket to Amperity.
 
@@ -240,8 +241,8 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Open the Currents page**
 
@@ -250,8 +251,8 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Create current**
 
@@ -260,8 +261,8 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Configure credentials**
 
@@ -269,12 +270,12 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
        Provide JSON credentials for Google Cloud Storage.
 
-       Provide the name of a Google Cloud Storage bucket that is managed by your brand, along with the prefix to which |source-name| will send events data.
+       Provide the name of a Google Cloud Storage bucket that is managed by your brand, along with the prefix to which |source-name| sends events data.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Configure events data**
 
@@ -284,16 +285,16 @@ Your brand can configure |source-name| to send events `to a Google Cloud Storage
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - Log in to Amperity and configure a data source that uses :doc:`Google Cloud Storage <source_google_cloud_storage>` to pull the events data from the customer-managed Google Cloud Storage bucket to Amperity.
 
@@ -321,20 +322,20 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Log in to Amperity and configure a :doc:`Streaming API endpoint <api_streaming>` to send events data to Amperity using |source-name|.
 
-       You will need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
+       You need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
 
        Configure a :ref:`dedicated streaming API endpoint <streaming-ingest-endpoints>` for |source-name|.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Open the Currents page**
 
@@ -343,8 +344,8 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Create current**
 
@@ -353,8 +354,8 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Configure credentials**
 
@@ -365,8 +366,8 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - **Configure events data**
 
@@ -376,8 +377,8 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - When finished configuring the current click **Launch current**. Allow up to 30 minutes for the current to start sending events data.
 

@@ -23,11 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Salesforce Marketing Cloud Personalization
+        Configure destinations for Salesforce Marketing Cloud Personalization
 
-====================================================================
-Configure destination for Salesforce Marketing Cloud Personalization
-====================================================================
+=====================================================================
+Configure destinations for Salesforce Marketing Cloud Personalization
+=====================================================================
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-personalization-start
@@ -62,7 +62,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -74,11 +74,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -88,6 +89,7 @@ Get details
              :end-before: .. setting-common-file-format-custom-delimiter-end
 
        **Remote folder**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-remote-folder-start
              :end-before: .. setting-common-remote-folder-end
@@ -132,8 +134,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -141,8 +143,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-multiple-start
@@ -152,12 +154,12 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - The settings that are available for a credential are determined by the credential type and by the settings that are required by the SFTP site. The following credential settings are available for SFTP sites.
 
-       Configure the settings that are required by the SFTP site to which Amperity will connect, and then click **Save**.
+       Configure the settings that are required by the SFTP site to which Amperity connects, and then click **Save**.
 
        **Host public key**
 
@@ -166,6 +168,7 @@ Configure credentials
              :end-before: .. credential-sftp-host-public-key-end
 
        **Hostname**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -223,8 +226,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -243,8 +246,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -259,8 +262,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -279,8 +282,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -410,13 +413,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-salesforce-marketing-cloud-personalization-add-steps-end
 
@@ -439,7 +451,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -458,7 +470,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -473,7 +485,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -498,7 +510,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

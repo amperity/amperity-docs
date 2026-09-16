@@ -14,10 +14,14 @@
 
 
 ==================================================
-Configure campaigns for Oracle Eloqua
+Send data to Oracle Eloqua
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_oracle_eloqua.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_oracle_eloqua.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-oracle-eloqua-start
@@ -25,9 +29,9 @@ Configure campaigns for Oracle Eloqua
 
 .. destination-oracle-eloqua-context-start
 
-Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
+Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a defined relationship to the campaign or program that is managed from |destination-name|.
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
+Amperity adds and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list.
 
 .. destination-oracle-eloqua-context-end
 
@@ -74,7 +78,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Login information for |destination-name|. This includes:
 
@@ -84,19 +88,19 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The name of the shared list to be managed by Amperity.
 
-       Use filename templates and/or data templates to configure Amperity to support managing more than one shared list. For example:
+       Use filename templates or data templates to configure Amperity to support managing more than one shared list. For example:
 
-       * A timestamp at the end of a filename template --- **Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv** --- will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
-       * A campaign that is configured only for campaign name and group name --- **{{ campaign_name }} - {{ group_name }}** --- will update the same shared list each time the audience is sent from Amperity.
+       * A timestamp at the end of a filename template--**Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv**--creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
+       * A campaign that is configured only for campaign name and group name--**{{ campaign_name }} - {{ group_name }}**--updates the same shared list each time the audience is sent from Amperity.
 
        .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
 
-          This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically (but not always) prefixed with **C_**.
+          This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically, but not always, prefixed with **C_**.
 
           Use a query to build the results your brand wants to send to |destination-name|. Be sure to map each field in the query results to the database name in |destination-name|.
 
@@ -104,12 +108,12 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The primary key for the shared list: **C_EmailAddress**.
 
-       An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
+       An email address (mapped to the database type **C_EmailAddress**) is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|. `Custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
 
 .. destination-oracle-eloqua-get-details-end
 
@@ -133,8 +137,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -153,8 +157,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -193,8 +197,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -215,9 +219,9 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Shared List Name**
-            - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity will create it.
+            - The name of the shared list in |destination-name|. If the shared list does not exist, Amperity creates it.
 
-              .. important:: Amperity does not create custom attributes for a shared list. A shared list that contains custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
+              .. important:: Amperity does not create custom attributes for a shared list. A shared list that has custom attributes must be created in |destination-name| along with any custom attributes before Amperity can send data.
 
           * - **Audience Primary Key**
             - This value must be set to **C_EmailAddress**.
@@ -225,8 +229,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -239,8 +243,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -268,8 +272,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -288,8 +292,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -297,7 +301,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -308,8 +312,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -328,8 +332,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

@@ -22,13 +22,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Cordial
+        Configure destinations for Cordial
 
 ==================================================
-Configure destination for Cordial
+Configure destinations for Cordial
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_cordial.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-cordial-start
@@ -39,11 +37,13 @@ Configure destination for Cordial
 Use Amperity to manage contacts--attributes and list membership--in |destination-name| using the following REST APIs:
 
 * `Account Contact Attributes <https://support.cordial.com/hc/en-us/articles/204570347-Account-Contact-Attributes>`__ |ext_link| to create contact attributes. Attributes that do not exist in |destination-name| are added as custom contact attributes.
-* `Account Lists <https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists>`__ |ext_link| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact will retain its assigned subscription status.
+* `Account Lists <https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists>`__ |ext_link| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact retains its assigned subscription status.
 * `Contact Imports <https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports>`__ |ext_link| to import contacts to |destination-name|, and then associate contacts to the account list.
 * `Jobs <https://support.cordial.com/hc/en-us/articles/204570807-Jobs>`__ |ext_link| to monitor the import job for completion.
 
-Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+Build a query or segment that has the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+
+.. note:: Custom attribute names are automatically normalized before sending: uppercase letters are converted to lowercase and non-alphanumeric characters, such as spaces and hyphens, are replaced with underscores. For example, **First Name** becomes **first_name**.
 
 .. destination-cordial-end
 
@@ -51,7 +51,7 @@ Build a query or segment that contains the **email** field, along with any other
 
 .. note:: Amperity recommends using the |destination-api| to send |what-send| from Amperity to |destination-name|.
 
-   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+   However, if you prefer to send a CSV or JSON file instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/14659667437453-Data-Jobs-and-Transformations-overview>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 
 .. destination-cordial-get-details-alternate-note-end
 
@@ -74,7 +74,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -95,7 +95,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -121,7 +121,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Cordial Rest API configuration**
 
@@ -129,12 +129,12 @@ Get details
 
        ::
 
-           GET /accountcontractattributes
-           POST /accountcontractattributes
+           GET /accountcontactattributes
+           POST /accountcontactattributes
 
            GET /accountlists
            POST /accountlists
-           PUT /accountlists/{key}/clear
+           PUT /accountlists/{id}/clear
 
            POST /contactimports
 
@@ -166,8 +166,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -175,8 +175,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -184,8 +184,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -225,8 +225,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -245,8 +245,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -261,8 +261,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -281,8 +281,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -308,12 +308,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-cordial-add-steps-end
 
@@ -336,7 +346,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -355,7 +365,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -370,7 +380,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -396,7 +406,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -445,9 +455,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 
@@ -466,9 +476,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 

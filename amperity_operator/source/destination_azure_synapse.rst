@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Azure Synapse Analytics
+        Configure destinations for Azure Synapse Analytics
 
 ==================================================
-Configure destination for Azure Synapse Analytics
+Configure destinations for Azure Synapse Analytics
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -30,7 +30,7 @@ Configure destination for Azure Synapse Analytics
 
 .. destination-azure-synapse-steps-to-send-start
 
-This topic describes how to configure Amperity to send files to a cloud storage destination, load data from that destination to Azure Synapse Analytics, and then enable downstream applications and workflows.
+Configure Amperity to send files to a cloud storage destination, load data from that destination to Azure Synapse Analytics, and then enable downstream applications and workflows.
 
 .. destination-azure-synapse-steps-to-send-end
 

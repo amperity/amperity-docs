@@ -67,7 +67,7 @@ Available operators
 
 The following table lists the operators that are available to physical address attributes.
 
-.. note:: All physical address attributes have a String data type. All String data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: All physical address attributes have a **string** data type. All **string** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -76,7 +76,7 @@ The following table lists the operators that are available to physical address a
    * - Operator
      - Description
 
-   * - **contains**
+   * - **has**
      - Returns customer records with values that match a string of characters.
 
    * - **does not contain**

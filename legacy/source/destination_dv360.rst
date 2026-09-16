@@ -23,10 +23,14 @@
 
 
 ==================================================
-Configure campaigns for DV360
+Send data to DV360
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dv360.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dv360.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dv360-start
@@ -46,7 +50,7 @@ Configure campaigns for DV360
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
-   Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
+   Use Amperity to build high-value product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
    Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
 
@@ -95,11 +99,11 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
-       The name of the product to which Amperity will send data: "Display Video Advertiser" or "Display Video Partner".
+       The name of the product to which Amperity sends data: "Display Video Advertiser" or "Display Video Partner".
 
        The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Display Video Advertiser" or "Display Video Partner" account.
 
@@ -107,13 +111,13 @@ Get details
 
        A refresh token that is generated from the authentication process that authorizes Amperity to send data to the selected product. This must be a Google account with permission to access the configured customer ID and product within Google.
 
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring DV360 in Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Amperity must be `configured as a linked account in DV360 <https://support.google.com/displayvideo/answer/9134175?hl=en>`__ |ext_link| before audience lists can be sent from Amperity to partners or advertisers.
 
@@ -125,12 +129,12 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time in days at which individual audience members belong to the segment. The membership duration must be 0-540 inclusive or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 
@@ -141,8 +145,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail three.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - :ref:`Review the user consent policy <destination-dv360-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
@@ -173,8 +177,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -193,8 +197,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -212,7 +216,7 @@ Add destination
 
        To create a new credential for |destination-name|, generate an authorization link, and then use that link to log into your |destination-name| account. After you have completed that process, you will be provided a refresh token. Add the value for the refresh token to the **Refresh Token** setting in Amperity.
 
-       .. important:: Authentication for "Display Video Advertiser" and/or "Display Video Partner" *must* be completed within Google prior to configuring DV360 in Amperity.
+       .. important:: Authentication for "Display Video Advertiser" or "Display Video Partner" *must* be completed within Google before configuring DV360 in Amperity.
 
        .. image:: ../../images/mockup-destinations-tab-credentials-02-select-dv360.png
           :width: 500 px
@@ -227,8 +231,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -256,7 +260,7 @@ Add destination
 
           Use your partner ID to identify the customer ID to which Amperity should send data.
 
-       After choosing the type of advertising your brand will run on DV360, add your customer ID.
+       After choosing the type of advertising your brand runs on DV360, add your customer ID.
 
        .. image:: ../../images/mockup-destinations-tab-add-03-settings-dv360.png
           :width: 500 px
@@ -267,8 +271,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -281,8 +285,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -316,8 +320,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -336,8 +340,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -345,7 +349,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -360,8 +364,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -380,8 +384,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -427,7 +431,7 @@ Contact Info Matching
 
 .. destination-dv360-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -441,8 +445,8 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **Phone Number**
      - **phone**
@@ -451,7 +455,7 @@ A list can be matched to contact information that contains PII data. If a row co
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Last Name**
      - **lastname**
@@ -459,8 +463,8 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **First Name**
      - **firstname**
@@ -468,15 +472,15 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
-   * - **Zip Code**
+   * - **ZIP Code**
      - **zip**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -499,7 +503,7 @@ European Union user consent
 
 The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy.
+.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) or to adhere to the European Union (EU) user consent policy.
 
 .. list-table::
    :widths: 130 130 340
@@ -530,7 +534,7 @@ Mobile Device ID Matching
 
 .. destination-dv360-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -544,7 +548,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. destination-dv360-api-matching-mobile-list-end

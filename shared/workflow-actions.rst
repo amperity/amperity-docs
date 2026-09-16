@@ -4,6 +4,8 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
 **TEMPLATE SECTIONS FOR WORKFLOW ACTIONS**
@@ -11,6 +13,8 @@
 
 
 **INTRO**
+
+.. vale on
 
 .. workflow-actions-common-table-intro-start
 
@@ -21,9 +25,13 @@ Open the **Workflows** page to review a list of workflow actions, choose an acti
 .. workflow-actions-common-table-intro-end
 
 
+.. vale off
+
 **TABLE, SECTION ONE**
 **TABLE, SECTION ONE**
 **TABLE, SECTION ONE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-one-a-start
 
@@ -37,7 +45,11 @@ You may receive a notifications error for a configured |source-name| data source
 
 .. workflow-actions-common-table-section-one-a-source-end
 
+.. vale off
+
 **IMAGE IS HERE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-one-b-start
 
@@ -47,24 +59,35 @@ If you receive a notification error, review the details, and then click the **Vi
 
 
 
+.. vale off
+
 **TABLE, SECTION TWO**
 **TABLE, SECTION TWO**
 **TABLE, SECTION TWO**
+
+.. vale on
 
 .. workflow-actions-common-table-section-two-start
 
-On the **Workflows** page, review the individual steps to determine which step(s) have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions that were generated for this error.
+On the **Workflows** page, review the individual steps to determine which steps have errors that require your attention, and then click **Show Resolutions** to review the list of workflow actions generated for this error.
 
 .. workflow-actions-common-table-section-two-end
 
+.. vale off
+
 **IMAGE IS HERE**
 
+.. vale on
 
 
+
+.. vale off
 
 **TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
 **TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
 **TABLE, SECTION THREE (THIS CAN HAVE BESPOKE SECTIONS SEE TODO)**
+
+.. vale on
 
 .. workflow-actions-common-table-section-three-a-start
 
@@ -72,7 +95,11 @@ A list of individual workflow actions are shown. Review the list to identify whi
 
 .. workflow-actions-common-table-section-three-a-end
 
+.. vale off
+
 **IMAGE IS HERE**
+
+.. vale on
 
 .. workflow-actions-common-table-section-three-b-start
 
@@ -82,12 +109,16 @@ In certain cases, actions are specific and are shown when certain conditions exi
 
 .. workflow-actions-common-table-section-three-b-end
 
-.. TODO: Immediately after "section three" there is often a bespoke list of links to workflow action sections that are unique. See Salesforce Marketing Cloud, Zendesk, and/or Active Campaign for examples of how this can vary across topics.
+.. TODO: Immediately after "section three" there is often a bespoke list of links to workflow action sections that are unique. See Salesforce Marketing Cloud, Zendesk, or Active Campaign for examples of how this can vary across topics.
 
 
+.. vale off
+
 **TABLE, SECTION FOUR**
 **TABLE, SECTION FOUR**
 **TABLE, SECTION FOUR**
+
+.. vale on
 
 .. workflow-actions-common-table-section-four-a-start
 
@@ -106,9 +137,13 @@ After you have completed the steps in the workflow action, click **Continue** to
 
 
 
+.. vale off
+
 **GENERIC FILES BAD ARCHIVE**
 **GENERIC FILES BAD ARCHIVE**
 **GENERIC FILES BAD ARCHIVE**
+
+.. vale on
 
 .. TODO: This is a bit hand-wavy and vague.
 
@@ -126,9 +161,13 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **AMAZON S3 INCORRECT BUCKET NAME**
 **AMAZON S3 INCORRECT BUCKET NAME**
 **AMAZON S3 INCORRECT BUCKET NAME**
+
+.. vale on
 
 .. workflow-actions-s3-generic-incorrect-bucket-name-destination-start
 
@@ -161,13 +200,17 @@ To resolve this error, verify name of the Amazon S3 bucket, and then update the 
 
 
 
+.. vale off
+
 **GENERIC FILES MISSING FILE**
 **GENERIC FILES MISSING FILE**
 **GENERIC FILES MISSING FILE**
+
+.. vale on
 
 .. workflow-actions-files-generic-missing-file-start
 
-An archive that does not contain a file that is expected to be within an archive will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
+An archive that does not contain a file that is expected to be within an archive will return a workflow error. Amperity will be unable to complete the workflow until the issue is resolved.
 
 To resolve this error, do the following.
 
@@ -183,15 +226,19 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
 **GENERIC FILES UNABLE TO DECOMPRESS FILE**
+
+.. vale on
 
 .. workflow-actions-files-unable-to-decompress-file-start
 
-An archive that cannot be decompressed will return a workflow error; Amperity will be unable to complete the workflow until the issue is resolved.
+An archive that cannot be decompressed will return a workflow error. Amperity will be unable to complete the workflow until the issue is resolved.
 
-This issue may be shown when the name of the archive doesn't match the name of the configured archive or when Amperity is attempting to decompress a file (and not an archive). In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
+This issue may be shown when the name of the archive does not match the name of the configured archive or when Amperity is attempting to decompress a file and not an archive. In some cases, the contents of the archive file may be the reason why Amperity is unable to decompress the archive.
 
 To resolve this error, do the following.
 
@@ -208,9 +255,13 @@ To resolve this error, do the following.
 
 
 
+.. vale off
+
 **GENERIC INVALID CREDENTIALS**
 **GENERIC INVALID CREDENTIALS**
 **GENERIC INVALID CREDENTIALS**
+
+.. vale on
 
 .. workflow-actions-generic-invalid-credentials-start
 
@@ -237,9 +288,13 @@ To resolve this error, verify that the credentials required by this workflow are
 .. workflow-actions-generic-invalid-credentials-source-end
 
 
+.. vale off
+
 **GENERIC PGP ERROR**
 **GENERIC PGP ERROR**
 **GENERIC PGP ERROR**
+
+.. vale on
 
 .. workflow-actions-generic-pgp-error-start
 
@@ -250,7 +305,7 @@ To resolve this error, verify the PGP key.
 #. Open the **Sources** page.
 #. Review the details for the PGP key.
 
-   If the PGP key is correct, verify that the file that is associated with this workflow error was encrypted using the correct PGP key. If necessary, upload a new file.
+   If the PGP key is correct, verify that the file associated with this workflow error is encrypted using the correct PGP key. If necessary, upload a new file.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. workflow-actions-generic-pgp-error-end
@@ -258,13 +313,17 @@ To resolve this error, verify the PGP key.
 
 
 
+.. vale off
+
 **GENERIC STATUS 401**
 **GENERIC STATUS 401**
 **GENERIC STATUS 401**
+
+.. vale on
 
 .. workflow-actions-generic-status-401-start
 
-A "Status 401" error is an authorization error: Amperity was unable to connect to |destination-name|. This *may* be a transient error; however, this type of error is more likely caused by a configuration issue within Amperity. For example, the currently-configured API key is invalid because the API key was rotated.
+A "Status 401" error is an authorization error: Amperity is unable to connect to |destination-name|. This *may* be a transient error. However, this type of error is more likely caused by a configuration issue within Amperity. For example, the configured API key is invalid because of a rotated API key.
 
 To resolve this error, verify that the credentials required by this workflow are valid.
 
@@ -277,9 +336,13 @@ To resolve this error, verify that the credentials required by this workflow are
 
 
 
+.. vale off
+
 **MICROSOFT AZURE SAS TOKENS**
 **MICROSOFT AZURE SAS TOKENS**
 **MICROSOFT AZURE SAS TOKENS**
+
+.. vale on
 
 .. workflow-actions-azure-sas-intro-start
 
@@ -293,7 +356,7 @@ Microsoft Azure may be configured to use a shared access signature (SAS) to gran
 
    A shared access signature (SAS) grants limited access to storage resources in Microsoft Azure. A SAS may be constrained to access only specific storage resources, have specific permissions to those resources, and be configured to expire after a set amount of time. Every SAS is signed with a key.
 
-   The SAS is appended to the URI for a storage resource. The combined URI and SAS become a token that contains a set of query parameters that indiciate how a storage resource may be accessed. Use the SAS token to configure Amperity credentials to storage resources in Microsoft Azure.
+   The SAS is appended to the URI for a storage resource. The combined URI and SAS become a token that has a set of query parameters that indiciate how a storage resource may be accessed. Use the SAS token to configure Amperity credentials to storage resources in Microsoft Azure.
 
 .. workflow-actions-azure-sas-whatis-end
 
@@ -301,19 +364,19 @@ Microsoft Azure may be configured to use a shared access signature (SAS) to gran
 
 An SAS token may have invalid permissions for any of the following situations:
 
-#. The SAS token may be configured incorrectly within Amperity. For example: an extra character within or at at the end of the SAS token. Verify the string, and then make any updates that are required for the credentials within Amperity.
+#. The SAS token may be configured incorrectly within Amperity. For example: an extra character within or at the end of the SAS token. Verify the string, and then make any updates that are required for the credentials within Amperity.
 
-#. The permissions for the SAS token were configured incorrectly. Amperity requires an SAS token to be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+#. The permissions for the SAS token are configured incorrectly. Amperity requires an SAS token to be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
-#. The SAS token may have expired or the signing key associated with the SAS token may have been rotated.
+#. The SAS token may have expired or the signing key associated with the SAS token may have rotated.
 
-   These situations will require generating a new SAS token, and then updating the credentials in Amperity.
+   These situations require generating a new SAS token, and then updating the credentials in Amperity.
 
 .. workflow-actions-azure-sas-invalid-permissions-end
 
 .. workflow-actions-azure-sas-report-problem-start
 
-.. note:: If the shared access signature was provisioned by Amperity, please use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
+.. note:: If the shared access signature is provisioned by Amperity, use the "Report a problem" feature in Amperity to contact your Amperity Support team and ask for help resolving this workflow issue.
 
    The "Report a problem" option is available from the |fa-help-circle| menu in the top navigation.
 
@@ -323,15 +386,15 @@ An SAS token may have invalid permissions for any of the following situations:
 
 To resolve this error, determine the cause for the invalid permissions error.
 
-#. Do one (or more) of the following:
+#. Do one or more of the following:
 
-   Verify that the SAS token was configured correctly within Amperity.
+   Verify that the SAS token is configured correctly within Amperity.
 
-   Verify the permissions that have been assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
+   Verify the permissions assigned to the SAS token. This can be done from the Microsoft Azure Portal or by using `Azure Storage Explorer <https://azure.microsoft.com/en-in/products/storage/storage-explorer/>`__ |ext_link|. The policy for the SAS token must be assigned the following permissions: READ, ADD, CREATE, WRITE, DELETE, and LIST.
 
-   Verify that the SAS token and/or the signing key associated with the SAS token is valid (and has not expired). If either have expired, generate a new SAS token (using a new signing key, if necessary).
+   Verify that the SAS token and the signing key associated with the SAS token is valid and has not expired. If either have expired, generate a new SAS token using a new signing key, if necessary.
 
-#. After you have determined the cause of the invalid permissions error, make the appropriate updates within Microsoft Azure and/or the credentials for this destination within Amperity.
+#. After you have determined the cause of the invalid permissions error, make the appropriate updates within Microsoft Azure or the credentials for this destination within Amperity.
 
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
@@ -339,9 +402,13 @@ To resolve this error, determine the cause for the invalid permissions error.
 
 
 
+.. vale off
+
 **SFTP UNAVAILABLE (SHARED)**
 **SFTP UNAVAILABLE (SHARED)**
 **SFTP UNAVAILABLE (SHARED)**
+
+.. vale on
 
 .. TODO: This is a bit hand-wavy and vague.
 
@@ -352,9 +419,9 @@ The SFTP site at |sftp-hostname| is unavailable. This may be due to any of the f
 * A configuration error within Amperity.
 * The SFTP server is unavailable or unresponsive.
 * The SFTP server does not have enough storage space.
-* Too many connection attempts were made to the SFTP server.
+* Too many connection attempts are made to the SFTP server.
 
-.. note:: Amperity will make multiple attempts to connect to an SFTP server before showing this workflow error.
+.. note:: Amperity will make many attempts to connect to an SFTP server before showing this workflow error.
 
 To resolve this error, do any of the following.
 

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -34,13 +35,13 @@ When to use
 
 .. stitch-qa-query-unmatched-semantic-values-use-start
 
-#. Run this query to discover pairs of records that contain matching semantic values, but with different assigned Amperity IDs. For example: the same email address, but two different Amperity IDs. This query helps verify that Stitch correctly split records, and then also helps to discover underclustering.  
-#. Run with email as the semantic value (typically ~10 minutes).
-#. Run with phone as the semantic value (typically ~10 minutes).
-#. Run with address as the semantic value (typically ~10 minutes).
+#. Run this query to discover pairs of records that contain matching semantic values, but with different assigned Amperity IDs. For example: the same email address, but two different Amperity IDs. This query helps verify that Stitch correctly split records, and then also helps to discover underclustering.
+#. Run with email as the semantic value.
+#. Run with phone as the semantic value.
+#. Run with address as the semantic value.
 #. If other individual semantic values are useful for your tenant, run with those semantic values.
-#. Run for each semantic value with various **JOIN** conditions, such as given names matching or given names plus surnames matching (typically ~15 minutes).
-#. Run for each semantic with varying semantic frequency limit values (typically ~15-30 minutes).
+#. Run for each semantic value with various **JOIN** conditions, such as given names matching or given names plus surnames matching.
+#. Run for each semantic with varying semantic frequency limit values.
 #. Look for examples of underclustering.
 #. Look for values that should be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Look for examples of records that were missed during blocking.
@@ -60,12 +61,13 @@ Configure query
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-   .. note:: These steps describe how to complete this template to find unmatched semantic values for email addresses only. You may modify this template in the **SQL Query Editor** directly prior to running it to support other semantics (i.e. changing email to phone everywhere) *or* you could create additional queries, one per semantic, so that each query may remain fully customized and tuned for that use case.
+   .. note:: These steps describe how to complete this template to find unmatched semantic values for email addresses only. You may modify this template in the **SQL Query Editor** directly before running it to support other semantics, such as changing email to phone everywhere, *or* you could create additional queries, one per semantic, so that each query may remain fully customized and tuned for that use case.
 
 #. Update the list of matching fields to contain any additional semantic or custom fields required by your tenant:
    
    .. code-block:: sql
-      :emphasize-lines: 10
+      :linenos:
+      :emphasize-lines: 8-9
 
       SELECT DISTINCT
         ,t1.amperity_id AS amp_id_a
@@ -76,11 +78,12 @@ Configure query
         ,t2.given_name AS given_name_b
         ,t1.surname AS surname_a
         ,t2.surname AS surname_b
-        -- ADD MATCHING PAIRS FOR SEMANTICS
 
-   For example, to add **address**:
+   Extend this block to add matching pairs for semantic tags. For example, to add **address**:
 
    .. code-block:: sql
+      :linenos:
+      :emphasize-lines: 10-11
 
       SELECT DISTINCT
         ,t1.amperity_id AS amp_id_a
@@ -97,6 +100,7 @@ Configure query
 #. Update the matching records for all foreign keys:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 1,2
 
       -- ,t1.fk_field_name AS fk_field_name_a
@@ -105,6 +109,7 @@ Configure query
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       ,t1.fk_customer_id AS fk_customer_id_a
       ,t2.fk_customer_id AS fk_customer_id_b
@@ -114,34 +119,35 @@ Configure query
 #. Update the high-frequency value--"100"--for this semantic:
 
    .. code-block:: sql
-      :emphasize-lines: 7
+      :linenos:
+      :emphasize-lines: 6
 
-      FROM
-        Unified_Coalesced AS t1
-        LEFT JOIN (
-          SELECT email, TRUE AS high_freq_email
-          FROM Unified_Coalesced
-          GROUP BY email             
-          HAVING COUNT(email) > 100 ) AS hf
-          ON LOWER(t1.email) = LOWER(hf.email)
-        INNER JOIN
+      FROM Unified_Coalesced AS t1
+      LEFT JOIN (
+        SELECT email, TRUE AS high_freq_email
+        FROM Unified_Coalesced
+        GROUP BY email             
+        HAVING COUNT(email) > 100 ) AS hf
+        ON LOWER(t1.email) = LOWER(hf.email)
+      INNER JOIN
 
-#. Update the **INNER JOIN** for any required additional filtering to be done prior to returning matching conditions:
+#. Update the **INNER JOIN** for any required additional filtering to be done before returning matching conditions:
 
    .. code-block:: sql
-      :emphasize-lines: 6,7
+      :linenos:
+      :emphasize-lines: 6
 
       INNER JOIN
         Unified_Coalesced AS t2
         ON t1.amperity_id <> t2.amperity_id
         AND LOWER(t1.email) = LOWER(t2.email)      
         AND hf.high_freq_email IS NULL
-        -- MORE JOIN CONDITIONS MAY BE ADDED
         -- AND LOWER(t1.matching_field) = LOWER(t2.matching_field)
 
    For example, to require given name and surname to match when email addresses do not match:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,7
 
       INNER JOIN
@@ -155,6 +161,7 @@ Configure query
 #. If using the :doc:`bad-values blocklist <blocklist_bad_values>` you may apply those blocklist values to the results of this query:
 
    .. code-block:: sql
+      :linenos:
 
       -- EXCLUDE ENTIRE ROW
       -- AND t1.has_blv IS NULL
@@ -168,6 +175,7 @@ Configure query
    Uncomment the following line to exclude on the entire row:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2
 
       -- EXCLUDE ENTIRE ROW
@@ -182,6 +190,7 @@ Configure query
    Uncomment the following line to exclude on email addresses only:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       -- EXCLUDE ENTIRE ROW
@@ -193,7 +202,7 @@ Configure query
       -- AND t1.blv_phone IS NULL
       -- AND t1.blv_address IS NULL
 
-   Uncomment the appropriate row (or rows) for this query's use case.
+   Uncomment the appropriate row or rows for this query's use case.
 
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.

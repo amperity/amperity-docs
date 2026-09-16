@@ -97,9 +97,9 @@ For example:
     2        TSmith     1              Table:Two      pk          456a-789b-123c
    -------- ---------- -------------- -------------- ----------- --------------------
 
-This tells Stitch that TSmith, despite having different values in different data sources, should be matched to the same customer record.
+This tells Stitch that "TSmith", despite having different values in different data sources, should be matched to the same customer record.
 
-Whereas the following table tells Stitch that JCurrie, despite having the same value in different data sources, should be split into two customer records:
+Whereas the following table tells Stitch that "JCurrie", despite having the same value in different data sources, should be split into two customer records:
 
 .. code-block:: mysql
 
@@ -120,10 +120,10 @@ How Stitch labels work
 
 .. stitch-labels-how-they-work-start
 
-The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it won't matter about any of the other semantic values matching (or not matching) elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
+The Stitch labels table does not require all of the possible combinations of semantic values to be specified. If any two rows in the Stitch labels table indicate that a customer record should be merged or split, it will not matter about any of the other semantic values match or do not match elsewhere. Stitch will force the outcome to be what the Stitch labels table indicates.
 
 * Records labeled with the same **label-id** and the same **partition-id** will be merged into the same cluster. All records associated with these two records will be merged into the same cluster.
-* Records labeled with the same **label-id** and a different **partition-id** will be split into different clusters based on the **partition-id**. Other records associated with these two records may be split (or may not be split), depending on the outcome of the Stitch clustering analysis for each individual customer record.
+* Records labeled with the same **label-id** and a different **partition-id** will be split into different clusters based on the **partition-id**. Other records associated with these two records may be split or not split, depending on the outcome of the Stitch clustering analysis for each individual customer record.
 
 A Stitch labels table can have as many rows as required, but each individual row in the table must have a **label_id** that matches another **label_id** in another row in the table. More than one Stitch labels table may be used.
 
@@ -143,19 +143,20 @@ A Stitch labels table is a CSV file that is maintained as a local file, and then
 #. Use the **SQL Query Editor** to run a query similar to:
 
    .. code-block::
+      :linenos:
 
       SELECT
         *
       FROM Unified_Coalesced
       WHERE amperity_id IN ('123a-456b-789c','234d-567e-891f')
 
-   where "'123a-456b-789c','234d-567e-891f'" represents the pair of Amperity IDs in the overcluster or undercluster.
+   where ``123a-456b-789c``, ``234d-567e-891f`` represents the pair of Amperity IDs in the overcluster or undercluster.
 
    This query will return all of the rows associated with those Amperity IDs. Examine the results to understand if the customer records were merged or split correctly.
    
    .. tip:: Use the Unified Preprocessed Raw table instead of the Unified Coalesced table to compare normalized values used by Stitch instead of the values in the source tables.
    
-#. Add instances of incorrectly merged and/or split customer records to a CSV file with the correct schema for Stitch labels.
+#. Add instances of incorrectly merged or split customer records to a CSV file with the correct schema for Stitch labels.
 #. Ingest the CSV file as a feed.
 #. Select **row_id** field as primary key.
 #. Add semantic values to each field that matches the name of the column in the CSV file, with the exception of the **semantic** column, which must be associated with a profile (PII) semantic.
@@ -183,9 +184,9 @@ The following examples show overclustering and underclustering, and how to apply
 
 .. stitch-labels-examples-note-start
 
-.. note:: This topic uses similar examples as the ones in the :doc:`Stitch nicknames <stitch_nicknames>` topic to show how to use Stitch labels instead of nicknames to help Stitch evaluate records so they are grouped correctly.
+.. note:: Stitch labels use similar examples as the ones in the :doc:`Stitch nicknames <stitch_nicknames>` topic to show how to use Stitch labels instead of nicknames to help Stitch evaluate records so they are grouped correctly.
 
-   If the match/mismatch is only due to issues with given names, you should consider using nicknames instead of labels to resolve the issue.
+   If the match or mismatch is only due to issues with given names, you should consider using nicknames instead of labels to resolve the issue.
 
 .. stitch-labels-examples-note-end
 
@@ -241,12 +242,12 @@ Likely nickname
 
 .. stitch-labels-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details (email address and phone number), it's very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it is very likely that Ty is a nickname for Tylian. Add an entry to the Stitch labels table to ensure that Ty and Tylian are always merged into a single customer record:
 
 .. code-block:: none
 
    row_id,label_id,partition_id,datasource,semantic,value
    1,TyTylian,1,Table:One,pk,123a-456b-789c
-   2,TyTylian,2,Table:Two,pk,234d-567e-891f
+   2,TyTylian,1,Table:Two,pk,234d-567e-891f
 
 .. stitch-labels-example-likely-nickname-end

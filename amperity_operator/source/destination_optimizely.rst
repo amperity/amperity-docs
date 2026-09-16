@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Optimizely
+        Configure destinations for Optimizely
 
 ==================================================
-Configure destination for Optimizely
+Configure destinations for Optimizely
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -86,8 +86,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-destinations-configure-start
@@ -106,8 +106,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
@@ -122,8 +122,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
@@ -142,8 +142,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
@@ -155,8 +155,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
@@ -184,8 +184,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -204,8 +204,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -220,8 +220,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -240,20 +240,22 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -264,6 +266,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -282,24 +285,28 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -309,11 +316,13 @@ Add destination
              :end-before: .. setting-common-quote-mode-none-end
 
        **S3 prefix**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-amazon-s3-prefix-start
              :end-before: .. setting-amazon-s3-prefix-end
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -323,13 +332,22 @@ Add destination
              :end-before: .. setting-common-success-file-downstream-end
 
 
+       **Split outputs**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-split-outputs-start
+             :end-before: .. setting-common-split-outputs-end
+
+
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
 
 
        **Row Number**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-row-number-start
              :end-before: .. setting-common-row-number-end
@@ -339,16 +357,24 @@ Add destination
              :end-before: .. setting-common-row-number-column-name-end
 
 
-
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-optimizely-add-steps-end
 
@@ -371,7 +397,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -390,7 +416,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -405,7 +431,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -430,7 +456,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

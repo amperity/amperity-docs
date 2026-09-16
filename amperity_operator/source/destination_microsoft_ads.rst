@@ -11,6 +11,7 @@
 .. |filter-the-list| replace:: "micro"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **email**
 
 
 .. meta::
@@ -23,13 +24,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Microsoft Advertising
+        Configure destinations for Microsoft Advertising
 
 ==================================================
-Configure destination for Microsoft Advertising
+Configure destinations for Microsoft Advertising
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_ads.html>`__ |ext_link|.
 
 .. destination-microsoft-ads-start
 
@@ -39,17 +38,25 @@ Microsoft Advertising is a pay-per-click partner syndication network, which enab
 
 .. destination-microsoft-ads-about-start
 
-Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
+Use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link| to push customer data to the |destination-name| partner syndication network, which enables multichannel advertising to global audiencess across display, mobile, video, and native channels. This network includes:
 
-* Bing (and sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk)
+* Bing, along with sites owned and operated by Bing, such as Bing Maps, MSN.com, Bing.de and Bing.co.uk
 * `Microsoft Audience Network <https://about.ads.microsoft.com/en-us/solutions/microsoft-audience-network>`__ |ext_link|
 * Microsoft News
 * Microsoft Edge
 * Outlook.com
 * Microsoft Start
-* Access to external partners, such as Yahoo.com (and sites owned and operated by Yahoo), DuckDuckGo, AOL.com (and sites owned and operated by AOL), Xandr, and Nine.
+* Access to external partners, such as Yahoo.com, along with sites owned and operated by Yahoo, DuckDuckGo, AOL.com, along with sites owned and operated by AOL, Xandr, and Nine.
 
 .. destination-microsoft-ads-about-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
 
 .. destination-microsoft-ads-api-note-start
 
@@ -58,6 +65,8 @@ Use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/adve
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
       :end-before: .. destinations-add-destinations-intro-allow-for-end
+
+.. note:: Each time data is sent to |destination-name|, the customer list is fully replaced. Contacts that were in a previous send but are not in the current one are removed from the list.
 
 .. destination-microsoft-ads-api-note-end
 
@@ -80,11 +89,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -94,18 +104,19 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Account and customer IDs**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-microsoft-advertising-account-and-customer-ids-start
              :end-before: .. setting-microsoft-advertising-account-and-customer-ids-end
 
-          .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL for the **Campaigns** page will contain two key-value pairs, one for the customer ID and the other for the account ID.
+          .. tip:: To get your customer and account IDs, sign into the |destination-name| web application, and then click on the **Campaigns** page. The URL of the **Campaigns** page has two key-value pairs, one for the customer ID and the other for the account ID.
 
              The URL is similar to:
 
@@ -146,8 +157,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -155,8 +166,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -164,14 +175,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -210,8 +222,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -230,8 +242,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -246,8 +258,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -266,14 +278,15 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Account and customer IDs**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -282,19 +295,29 @@ Add destination
 
        **List name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-microsoft-advertising-list-name-start
-          :end-before: .. setting-microsoft-advertising-list-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-microsoft-advertising-list-name-start
+             :end-before: .. setting-microsoft-advertising-list-name-end
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-microsoft-ads-add-steps-end
 
@@ -317,7 +340,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -336,7 +359,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -351,7 +374,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -379,7 +402,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -463,7 +486,7 @@ Must accept terms and conditions
 
 .. destination-microsoft-ads-workflow-actions-must-accept-terms-start
 
-You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record - Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
+You must accept the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link| before you can use the `Customer List Record Bulk API <https://learn.microsoft.com/en-us/advertising/bulk-service/customer-list>`__ |ext_link|. You must select the **I accept** option from within the |destination-name| web application.
 
 To resolve this error, you must agree to the `Customer Match terms of use <https://help.ads.microsoft.com/#apex/ads/en/56921/1>`__ |ext_link|.
 
@@ -503,7 +526,7 @@ Two-step authentication required
 
 |destination-name| requires `two-step verification <https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4>`__ |ext_link| to be enabled before Amperity can send data.
 
-.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request wasn't made by the identity owner. For example: a login attempt from a device that is not trusted.
+.. note:: In some cases, this workflow error is caused by a sign-in risk, which represents the possibility that a given authentication request was not made by the identity owner. For example: a login attempt from a device that is not trusted.
 
 To resolve this error, ensure that multi-factor authentication is enabled for your |destination-name| account.
 

@@ -21,13 +21,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Microsoft Dynamics
+        Configure destinations for Microsoft Dynamics
 
 ==================================================
-Configure destination for Microsoft Dynamics
+Configure destinations for Microsoft Dynamics
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_dynamics.html>`__ |ext_link|.
 
 .. destination-microsoft-dynamics-about-start
 
@@ -60,7 +58,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -77,7 +75,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -114,8 +112,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail 2.
-          :align: left
+          :alt: Detail 3.
+          :align: center
           :class: no-scaled-link
      - **Microsoft Dynamics configuration**
 
@@ -173,7 +171,7 @@ An application user with permission to modify and update records is required.
 
 .. destination-microsoft-dynamics-configure-user-steps-start
 
-#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL for |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
+#. Go to the customer's instance of |destination-name|, and then log in with Admin credentials. The URL of |destination-name| is similar to "<tenant-name>.crm.dynamics.com".
 #. Click **Settings**, then **System**, and then **Security**.
 #. On the **Security** page, click **Users**, and then click **Application Users**.
 #. Click **New**.
@@ -181,7 +179,7 @@ An application user with permission to modify and update records is required.
 
    .. note:: The URI for the application ID and the Azure Active Directory Object ID are both completed automatically.
 
-#. Assign the user a role. Click **Manage Roles**, and then select a role with an access level that allows that user to modify and update records. (Some use cases require a user to delete records.)
+#. Assign the user a role. Click **Manage Roles**, and then select a role with an access level that allows that user to modify and update records. Some use cases require a user to delete records.
 
 .. destination-microsoft-dynamics-configure-user-steps-end
 
@@ -209,8 +207,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -218,8 +216,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -227,8 +225,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -260,8 +258,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -280,8 +278,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -296,8 +294,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -316,8 +314,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -343,12 +341,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-orchestration-only-start
           :end-before: .. destinations-steps-business-users-orchestration-only-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-microsoft-dynamics-add-steps-end
 
@@ -362,12 +370,12 @@ Common Data Service Web API
 
 .. note:: |destination-name| is a complex system. Even though Amperity has a built-in connector that supports sending data to entities within |destination-name|, there are more than 400 possible entities to which you can send data, such as sending segments to :doc:`Dynamics 365 Marketing <destination_dynamics_365_marketing>`, with each of these entities having its own schema that requires a unique mapping of data in a data template.
 
-The `Common Data Service Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link| (version 8.2 and higher or version 9.0) is the API to which Amperity can send data.
+The `Common Data Service Web API <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9>`__ |ext_link|, version 8.2 and higher or version 9.0, is the API to which Amperity can send data.
 
 * |destination-name| is not strict about required fields, in that you may choose to not send fields to |destination-name| even when they are marked as required.
 * |destination-name| is strict about extra fields, in that you should not send fields to |destination-name| that do not already exist in the entity's schema. Use the **include** section in the data template mapping to drop fields that should not be sent to |destination-name|.
 
-Review the entities in the Common Data Service Web API prior to configuring a data template. Some of the entities that are more focused toward marketing and user activity include `Contact <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact>`__ |ext_link|, `List <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/list>`__ |ext_link|, `Campaign <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaign>`__ |ext_link|, `CampaignActivity <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignactivity>`__ |ext_link|, `CampaignResponse <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignresponse>`__ |ext_link|, or `CustomerAddress <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/customeraddress>`__ |ext_link|. Any of the entities found in the `Web API EntityType Reference <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9>`__ |ext_link| may be configured as a destination, depending on your use case.
+Review the entities in the Common Data Service Web API before configuring a data template. Some of the entities that are more focused toward marketing and user activity include `Contact <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact>`__ |ext_link|, `List <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/list>`__ |ext_link|, `Campaign <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaign>`__ |ext_link|, `CampaignActivity <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignactivity>`__ |ext_link|, `CampaignResponse <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/campaignresponse>`__ |ext_link|, or `CustomerAddress <https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/customeraddress>`__ |ext_link|. Any of the entities found in the `Web API EntityType Reference <https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/entitytypes?view=dynamics-ce-odata-9>`__ |ext_link| may be configured as a destination, depending on your use case.
 
 .. destination-microsoft-dynamics-web-api-end
 

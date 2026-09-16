@@ -20,13 +20,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Google Cloud Storage
+        Configure destinations for Google Cloud Storage
 
 ==================================================
-Configure destination for Google Cloud Storage
+Configure destinations for Google Cloud Storage
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_google_cloud_storage.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-google-cloud-storage-start
@@ -55,11 +53,11 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Google Cloud Storage bucket details**
 
-       You will need to know the following details about the |destination-name| bucket to which Amperity will send data.
+       You need to know the following details about the |destination-name| bucket to which Amperity sends data.
 
        #. The name of the |destination-name| bucket. An object prefix is sometimes required.
 
@@ -73,7 +71,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential types and settings**
 
@@ -82,11 +80,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **File format**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-file-format-start
              :end-before: .. setting-common-file-format-end
@@ -127,8 +126,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -137,8 +136,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -147,14 +146,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Bucket name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -169,6 +169,7 @@ Configure credentials
 
 
        **Service account key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -215,7 +216,7 @@ A service account key must be downloaded so that it may be used to configure the
 
 #. Open the Google Cloud Platform console.
 #. Click **IAM**, and then **Admin**.
-#. Click the name of the project that is associated with the |destination-name| bucket to which Amperity will send data.
+#. Click the name of the project that is associated with the |destination-name| bucket to which Amperity sends data.
 #. Click **Service Accounts**, and then select **Create Service Account**.
 #. In the **Name** field, give your service account a name. For example, "Amperity GCS Connection".
 #. In the **Description** field, enter a description that will remind you of the purpose of the role.
@@ -306,8 +307,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -326,8 +327,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -342,8 +343,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -362,20 +363,22 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Compression**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-compression-start
              :end-before: .. setting-common-compression-end
 
 
        **Escape character**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-escape-character-start
              :end-before: .. setting-common-escape-character-end
@@ -386,6 +389,7 @@ Add destination
 
 
        **File format**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -404,30 +408,35 @@ Add destination
 
 
        **Filename template**
+
           .. include:: ../../shared/terms.rst
              :start-after: .. term-filename-template-start
              :end-before: .. term-filename-template-end
 
 
        **Header**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-header-start
              :end-before: .. setting-common-header-end
 
 
        **Object prefix**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-google-cloud-storage-object-prefix-start
              :end-before: .. setting-google-cloud-storage-object-prefix-end
 
 
        **PGP public key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-pgp-public-key-start
              :end-before: .. setting-common-pgp-public-key-end
 
 
        **Quote mode**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-quote-mode-start
              :end-before: .. setting-common-quote-mode-end
@@ -438,6 +447,7 @@ Add destination
 
 
        **Success file**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-success-file-start
              :end-before: .. setting-common-success-file-end
@@ -447,12 +457,22 @@ Add destination
              :end-before: .. setting-common-success-file-downstream-end
 
 
+       **Split outputs**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-split-outputs-start
+             :end-before: .. setting-common-split-outputs-end
+
+
        **Use Zip64?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-use-zip64-start
              :end-before: .. setting-common-use-zip64-end
 
+
        **Row Number**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-row-number-start
              :end-before: .. setting-common-row-number-end
@@ -463,13 +483,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-google-cloud-storage-add-steps-end
 
@@ -492,7 +521,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -511,7 +540,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -526,7 +555,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -549,7 +578,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

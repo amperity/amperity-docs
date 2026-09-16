@@ -9,7 +9,7 @@
 .. |credential-type| replace:: **microsoft-dataverse**
 .. |credential-details| replace:: Azure tenant ID, Azure client ID, and your Azure client secret
 .. |what-pull| replace:: data tables
-
+.. |filter-the-list| replace:: "data"
 
 .. meta::
     :description lang=en:
@@ -44,12 +44,7 @@ Use this connector to pull database tables from |source-name| to Amperity.
    :end-before: .. sources-overview-list-intro-end
 
 #. :ref:`Get details <source-microsoft-dataverse-get-details>`
-#. :ref:`Add courier <source-microsoft-dataverse-add-courier>`
-#. :ref:`Get sample files <source-microsoft-dataverse-get-sample-files>`
-#. :ref:`Add feeds <source-microsoft-dataverse-add-feeds>`
-#. :ref:`Add load operations <source-microsoft-dataverse-add-load-operations>`
-#. :ref:`Run courier <source-microsoft-dataverse-run-courier>`
-#. :ref:`Add to courier group <source-microsoft-dataverse-add-to-courier-group>`
+#. :ref:`Add data source and feed <source-microsoft-dataverse-add-data-source>`
 
 .. source-microsoft-dataverse-steps-to-pull-end
 
@@ -61,153 +56,170 @@ Get details
 
 .. source-microsoft-dataverse-get-details-start
 
+.. vale off
+
 Amperity can be configured to send |what-pull| from |source-name|.
 
 #. The Azure tenant ID, Azure client ID, and your Azure client secret that has access to your Power Apps application.
 
 #. The environment region, environment name, and logical table name for your Power Apps application. For example: "crm" (region), "acme" (name), and "abc123_acme" (logical table name).
 
+.. vale on
+
 .. source-microsoft-dataverse-get-details-end
 
 
-.. _source-microsoft-dataverse-add-courier:
+.. _source-microsoft-dataverse-add-data-source:
 
-Add courier
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
-**To add a courier**
-
-.. source-microsoft-dataverse-add-courier-steps-start
-
-#. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
-#. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
-
-   This automatically selects |credential-type| as the **Credential Type**.
-#. Enter the name of the courier. For example: "|source-name|".
-#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** page.
-#. Enter a name for the credential, the |credential-details|. Click **Save**.
-#. Under **Dataverse Settings**, add the catalog, database and logical table name.
-
-   .. caution:: The database and table names **must** be a valid database and table in |source-name|. Catalog name is **optional**.
-#. Configure the load operations to have the correct feed ID, operation, and file name. (The file name is the logical table name in |source-name|.)
-#. Click **Save**.
-
-.. source-microsoft-dataverse-add-courier-steps-end
-
-
-.. _source-microsoft-dataverse-get-sample-files:
-
-Get sample files
+Add data source and feed
 ==================================================
 
 .. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-start
-   :end-before: .. sources-get-sample-files-end
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-**To get sample files**
+**To add a data source for Microsoft Dataverse**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-microsoft-dataverse-add-data-source-steps-start
 
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-.. _source-microsoft-dataverse-add-feeds:
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-Add feeds
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-feed-start
-   :end-before: .. term-feed-end
-
-.. note:: A feed must be added for each table that is pulled from |source-name|.
-
-**To add a feed**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-steps-start
-   :end-before: .. sources-add-feed-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
-.. _source-microsoft-dataverse-add-load-operations:
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-sources-configure-already-configured-start
+          :end-before: .. credentials-sources-configure-already-configured-end
 
-Add load operations
-==================================================
+       .. tip::
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-start
-   :end-before: .. sources-add-load-operation-end
-
-**Example load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-example-intro-start
-   :end-before: .. sources-add-load-operation-example-intro-end
-
-.. source-microsoft-dataverse-add-courier-load-operations-example-start
-
-For example:
-
-::
-
-   {
-     "DATAVERSE-TABLE-FEED-ID": [
-       {
-         "type": "truncate"
-       },
-       {
-         "type": "load",
-         "file": "dataverse-table-name"
-       }
-     ]
-   }
-
-.. source-microsoft-dataverse-add-courier-load-operations-example-end
-
-**To add load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-steps-start
-   :end-before: .. sources-add-load-operation-steps-end
+          .. include:: ../../shared/credentials.rst
+             :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
+             :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
 
-.. _source-microsoft-dataverse-run-courier:
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - **Power Apps Environment Region**
 
-Run courier manually
-==================================================
+          |checkmark-required| **Required**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-start
-   :end-before: .. sources-run-courier-end
+          The region in which your Power Apps data center is located. For example: "crm".
 
-**To run the courier manually**
+       **Power Apps Environment Name**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+          |checkmark-required| **Required**
+
+          The unique name for your Power Apps environment. For example: "acme".
+
+       **Dataverse Table Logical Name**
+
+          |checkmark-required| **Required**
+
+          The logical name for the Dataverse table from which Amperity pulls data. For example: "abc123_customer".
 
 
-.. _source-microsoft-dataverse-add-to-courier-group:
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
 
-Add to courier group
-==================================================
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-group-start
-   :end-before: .. term-courier-group-end
+       **New feed**
 
-**To add the courier to a courier group**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-to-courier-group-steps-start
-   :end-before: .. sources-add-to-courier-group-steps-end
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-run.png
+          :width: 380 px
+          :alt: Add
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
+          :width: 380 px
+          :alt: Add
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
+
+.. source-microsoft-dataverse-add-data-source-steps-end

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -25,7 +26,7 @@ Use this query to identify the lowest-scoring record pair, also referred to as t
 
 .. stitch-qa-query-weakest-match-note-start
 
-.. note:: There should be a notable decline over time for the number of clusters in which the weakest match is below the Stitch threshold. These clusters are required to have transitive connections to other high-quality pairs. If records are matched in clusters that do not have transitive connections to other high-quality pairs, it's important to investigate those clusters to confirm if they were accurately clustered together and do have transitive connections to other high-quality pairs.
+.. note:: There should be a notable decline over time for the number of clusters in which the weakest match is below the Stitch threshold. These clusters are required to have transitive connections to other high-quality pairs. If records are matched in clusters that do not have transitive connections to other high-quality pairs, it is important to investigate those clusters to confirm if they were accurately clustered together and do have transitive connections to other high-quality pairs.
 
 .. stitch-qa-query-weakest-match-note-end
 
@@ -39,7 +40,7 @@ When to use
 
 #. Run this query periodically.
 #. Review the results of this query.
-#. Look for lowest scoring record pairs, and then investigate them (typically ~30 minutes).
+#. Look for lowest scoring record pairs, and then investigate them.
 
 .. stitch-qa-query-weakest-match-use-end
 

@@ -27,7 +27,7 @@ About Stitch benchmarks
 About benchmark results
 ==================================================
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-start
@@ -45,7 +45,7 @@ About benchmark results
 Optimal
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-optimal-start
@@ -57,7 +57,7 @@ Optimal
 Above optimal range
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-above-optimal-start
@@ -69,7 +69,7 @@ Above optimal range
 High
 ---------------------------------------------------
 
-.. TODO: Don't change the reference link name. It is shared with /reference/benchmarks.rst.
+.. TODO: Do not change the reference link name. It is shared with /reference/benchmarks.rst.
 
 .. include:: ../../amperity_reference/source/benchmarks.rst
    :start-after: .. stitch-benchmark-results-high-start
@@ -111,9 +111,9 @@ Revisit benchmarks
 
 You should revisit benchmark scores on a regular basis. The frequency is determined by the current state of your tenant. For example:
 
-#. A newly-configured tenant should have benchmark scores reviewed after every Stitch run. Reduce the frequency when you are satisfied with each benchmark score.
-#. Review benchmark scores after adding a data source that contains customer profile data that is used with identity resolution.
-#. On a production tenant with consistent data sources you may revisit benchmark scores less frequently.
+#. A newly configured tenant should have benchmark scores reviewed after every Stitch run. Reduce the frequency when you are satisfied with each benchmark score.
+#. Review benchmark scores after adding a data source that has customer profile data that is used with identity resolution.
+#. On a production tenant with consistent data sources you may revisit benchmark scores less often.
 
 .. benchmarks-revisit-benchmarks-end
 

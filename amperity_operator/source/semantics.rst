@@ -29,13 +29,17 @@ Apply semantic tags
 
 .. admonition:: Extract, load, transform (ELT)
 
-   An important benefit of semantic tagging is that it allows raw data to be provided directly to Amperity. This avoids a traditional (and more expensive) extract, transform, and load (ETL) operations. Amperity extracts, loads, and then transforms raw data from any number of data sources.
+   An important benefit of semantic tagging is that it allows raw data to be provided directly to Amperity. This avoids a traditional and more expensive extract, transform, and load (ETL) operations. Amperity extracts, loads, and then transforms raw data from any number of data sources.
 
 .. semantics-noetl-end
 
 .. semantics-reference-links-start
 
+.. vale off
+
 The following groups of semantic tags are available: |semantics_customer_profile|, email address (|semantics_email_events|, |semantics_email_events_summary|, and |semantics_email_optin|), |semantics_product_catalog|, |semantics_keys_fk|, loyalty programs (|semantics_loyalty_profiles| and |semantics_loyalty_events|), |semantics_sms_optin|, and |semantics_transactions|.
+
+.. vale on
 
 .. semantics-reference-links-end
 
@@ -57,7 +61,7 @@ The following groups of semantic tags are available: |semantics_customer_profile
       The field that is associated with the **update-dt** semantic tag *should also* be selected as the field that is associated with the LAST UPDATED FIELD dropdown list.
 #. Apply any other semantic tags, such as for transactions, itemized transactions, or custom semantic tags, as appropriate.
 
-   .. important:: Semantic tags for interactions records (transactions, itemized transactions, loyalty profiles, email events, and so on) may need to be reshaped prior to applying semantic tags. Use custom domain tables and reshape the data using domain SQL prior to applying semantic tags.
+   .. important:: Semantic tags for interactions records, such as transactions, itemized transactions, loyalty profiles, and email events, may need to be reshaped before applying semantic tags. Use custom domain tables and reshape the data using domain SQL before applying semantic tags.
 
       In those situations, leave the semantic tag fields empty in the **Feed Editor**, build a custom domain table that shapes the fields to align to the semantic tagging requirements, and then apply semantic tags.
 #. Click **Activate**.
@@ -88,6 +92,8 @@ Profiles
 
 .. semantics-profile-about-start
 
+.. vale off
+
 Semantic tagging is done while configuring a feed. A feed tells Amperity how to map your data to a series of standardized terms used by Amperity for PII data. These terms include:
 
 * **email** (for email addresses)
@@ -96,7 +102,9 @@ Semantic tagging is done while configuring a feed. A feed tells Amperity how to 
 * **address**, **city**, **state**, **postal** for addresses
 * **birthdate** (for birthdays)
 
-.. warning:: Fields to which the **postal** and **phone** semantic tags are applied must be configured to have a String data type. Fields to which the **birthdate** semantic tag is applied must be configured to have a Date data type. If these fields do not have the correct data type Amperity will show an error when saving the feed.
+.. vale on
+
+.. warning:: Fields to which the **postal** and **phone** semantic tags are applied must be configured to have a **string** data type. Fields to which the **birthdate** semantic tag is applied must be configured to have a **date** data type. If these fields do not have the correct data type Amperity shows an error when saving the feed.
 
 Custom semantic tags allow for additional tagging of certain types of fields, such as a field that identifies a loyalty membership ID. Use foreign keys to apply consistently across customer tables for certain types of identifiers.
 
@@ -114,9 +122,9 @@ Address groups
 
 .. semantics-profile-type-address-start
 
-An address group consists of a street address, city, state, and postal code. Some address groups also have apartment numbers or PO boxes. An address group depends on all of these details to define a complete address. Many individuals are often associated with home addresses, billing addresses, work addresses, and so on.
+An address group consists of a street address, city, state, and postal code. Some address groups also have apartment numbers or PO boxes. An address group depends on all of these details to define a complete address. Many individuals are often associated with home addresses, billing addresses, and work addresses.
 
-When a data source provides more than one address group in the data, it's important to apply the **address**, **address2**, **city**, **state**, and **postal** semantics to the correct fields in every group, and then apply a custom semantic that appends a namespace (recommended) or ordinal to each semantic within the address group to support potential downstream workflows.
+When a data source provides more than one address group in the data, it is important to apply the **address**, **address2**, **city**, **state**, and **postal** semantics to the correct fields in every group, and then apply a custom semantic that appends a namespace (recommended) or ordinal to each semantic within the address group to support potential downstream workflows.
 
 .. semantics-profile-type-address-end
 
@@ -159,7 +167,7 @@ Use an ordinal to append an integer to each semantic within an address group.
      - postal-2
      - postal-3
 
-This will create columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, **address_3** and so on and will keep each location (which is a combination of address, address2, city, state, postal) intact.
+This creates columns in the **Unified Coalesced** table like **address**, **address_1**, **address_2**, and **address_3**, and will keep each location intact.
 
 .. semantics-profile-type-address-ordinals-end
 
@@ -175,17 +183,17 @@ Email addresses
 
 .. semantics-profile-type-email-start
 
-A customer data source may have more than one field that contains an email address, such as for personal email and work email addresses.
+A customer data source may have more than one field that has an email address, such as for personal email and work email addresses.
 
-When a data source provides more than one email address in the data, it's important to apply the **email** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
+When a data source provides more than one email address in the data, it is important to apply the **email** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
 .. semantics-profile-type-email-end
 
 .. semantics-profile-type-email-options-start
 
-There are some options available as you determine the best way to configure Amperity for email addresses:
+Determine the best way to configure Amperity for email addresses:
 
-* :ref:`semantics-profile-type-email-namespace` (recommended when multiple email addresses are present)
+* :ref:`semantics-profile-type-email-namespace` (recommended when many email addresses are present)
 * :ref:`semantics-profile-type-email-ordinals`
 * :ref:`semantics-profile-type-email-consolidate`
 * :ref:`semantics-profile-type-email-exclude`
@@ -206,7 +214,7 @@ A namespace appends a string to the **email** semantic. This approach provides a
 
 For example, a data source has two columns for email addresses: personal_email and work_email. Apply the **email** semantic to both columns, and then apply **email-primary** to the **personal_email** column and **email-alternate** to the **work_email** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -232,7 +240,7 @@ Apply ordinals to emails
 
 For example, a data source has two columns for email addresses: personal_email and work_email. Apply the **email** semantic to both columns, and then apply **email-1** to the **personal_email** column and **email-2** to the **work_email** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -277,7 +285,7 @@ Exclude duplicate emails
 
 .. semantics-profile-type-email-exclude-start
 
-In some situations you might discover a large number of email addresses that should not be associated with any customer profiles. For example, a long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly-identical records, many with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
+In some situations you might discover a large number of email addresses that should not be associated with any customer profiles. For example, a long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly identical records, many with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
 
 Configure Stitch to define a semantic exclusion for email addresses:
 
@@ -291,7 +299,7 @@ and then define the threshold:
 
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 25
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. semantics-profile-type-email-exclude-end
 
@@ -310,6 +318,8 @@ Many email addresses are not useful for identity resolution. Some of them are ge
 .. semantics-profile-type-email-ignored-list-start
 
 The following values associated with the **email** semantic are ignored by Stitch when performing identity resolution:
+
+.. vale off
 
 * **@NOEMAIL.COM**
 * **@NOMAIL.COM**
@@ -386,6 +396,8 @@ The following values associated with the **email** semantic are ignored by Stitc
 * VENDORS@
 * **XXX@**
 
+.. vale on
+
 The values in **bold** are always ignored.
 
 .. semantics-profile-type-email-ignored-list-end
@@ -399,6 +411,8 @@ Stitch may be configured to allow certain generic email addresses to be availabl
    pre-processing-profile :allow-business-email
 
 When this setting is updated, only the following email address patterns are ignored by Stitch:
+
+.. vale off
 
 * @NOEMAIL.COM
 * @NOMAIL.COM
@@ -422,6 +436,8 @@ When this setting is updated, only the following email address patterns are igno
 * NOTHANKYOU@
 * REFUSED@
 * XXX@
+
+.. vale on
 
 Use a :doc:`bad-values blocklist <blocklist_bad_values>` to configure Amperity to continue ignoring any of the email address patterns that were removed from the default list of ignored email patterns.
 
@@ -457,13 +473,13 @@ Use the **loy/** and **loy-event/** semantic tag collections to apply semantic t
 
 .. semantics-profile-type-loyalty-make-available-to-stitch-start
 
-.. important:: Loyalty profiles are unique by Amperity ID; loyalty events are unique by Amperity ID and event datetime when:
+.. important:: Loyalty profiles are unique by Amperity ID. Loyalty events are unique by Amperity ID and event datetime when:
 
    #. The **fk-loyalty-id** semantic tag is applied to the same source fields as the **loy/loyalty-id** and **loy-event/loyalty-id** fields.
    #. The **loy/email** and **loy-event/email** semantic tags are applied to fields that contain email addresses.
    #. The **loy/birthdate** semantic tag is applied to fields that contain birthdates.
 
-   (Source tables for loyalty profiles and events should not be made available to Stitch.)
+   Source tables for loyalty profiles and events should not be made available to Stitch.
 
 .. semantics-profile-type-loyalty-make-available-to-stitch-end
 
@@ -475,7 +491,7 @@ Names
 
 .. semantics-profile-type-names-start
 
-Names are tagged using a combination of semantic tags. Apply the **given-name** and **surname** semantic tags to fields that contain the first and last names for customers. Apply the **full-name** semantic tag to fields that contain complete customer names, such as first, middle, and last. Apply the **generational-suffix** tag to fields that contain *only* suffixes like Jr, Sr, III, and so on.
+Names are tagged using a combination of semantic tags. Apply the **given-name** and **surname** semantic tags to fields that contain the first and last names for customers. Apply the **full-name** semantic tag to fields that contain complete customer names, such as first, middle, and last. Apply the **generational-suffix** tag to fields that contain *only* suffixes like Jr, Sr, or III.
 
 .. semantics-profile-type-names-end
 
@@ -498,7 +514,7 @@ Stitch will derive given names and surnames from **full-name** when a data sourc
 * Fields tagged with **given-name** and **surname** do not have explicit values
 * Fields cannot be tagged with **given-name** or **surname**
 
-When a table does not contain given names and/or surnames, values associated with **full-name** will not be available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
+When a table does not contain given names or surnames, values associated with **full-name** is not available from the **Unified Coalesced** table for that data source, but values will be available from the **Unified Preprocessed Raw** table.
 
 .. semantics-profile-type-names-derived-end
 
@@ -816,7 +832,7 @@ When Stitch generates clusters of customer records, a generational suffix is use
 
 .. semantics-profile-type-generational-suffix-derived-caution-start
 
-.. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that contains the suffix separated from the first and last names.
+.. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that has the suffix separated from the first and last names.
 
 .. semantics-profile-type-generational-suffix-derived-caution-end
 
@@ -832,17 +848,17 @@ Phone numbers
 
 .. semantics-profile-type-phone-start
 
-A customer data source may have more than one field that contains a phone number, such as a home phone number, a work phone number, a mobile phone number, and so on.
+A customer data source may have more than one field that has a phone number, such as a home phone number, a work phone number, or a mobile phone number.
 
-When a data source provides more than one phone number in the data, it's important to apply the **phone** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
+When a data source provides more than one phone number in the data, it is important to apply the **phone** semantic to *all* of the fields, and then apply a custom semantic that appends a namespace (recommended) or ordinal to support potential downstream workflows.
 
 .. semantics-profile-type-phone-end
 
 .. semantics-profile-type-phone-options-start
 
-There are some options available as you determine the best way to configure Amperity for phone numbers:
+Determine the best way to configure Amperity for phone numbers:
 
-* :ref:`semantics-profile-type-phone-namespaces` (recommended when multiple phone numbers are present)
+* :ref:`semantics-profile-type-phone-namespaces` (recommended when many phone numbers are present)
 * :ref:`semantics-profile-type-phone-ordinals`
 * :ref:`semantics-profile-type-phone-consolidate`
 
@@ -882,7 +898,7 @@ A namespace appends an string to the **phone** semantic. This approach provides 
 
 For example, a data source has three columns for phone numbers: personal_phone, mobile_phone, and work_phone. Apply the **phone** semantic to all columns, and then apply **phone-home** to the **personal_phone**, **phone-mobile** to the **mobile_phone** column, and **phone-work** to the **work_phone** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -910,7 +926,7 @@ An ordinal appends an integer to the **phone** semantic. This approach provides 
 
 For example, a data source has three columns for phone numbers: personal-phone, mobile-phone, and work-phone. Apply the **phone** semantic to all columns, and then apply **phone-1** to the **personal-phone**, **phone-2** to the **mobile-phone** column, and **phone-3** to the **work-phone** column.
 
-Amperity will create columns in the **Unified Coalesced** table similar to:
+Amperity creates columns in the **Unified Coalesced** table similar to:
 
 .. code-block:: mysql
 
@@ -985,13 +1001,13 @@ Domain SQL vs. feeds
 
 .. semantics-interactions-domain-sql-vs-feeds-start
 
-The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely will need to use a custom domain table to shape the SQL prior to applying semantic tags.
+The most important decision to make when providing transaction records to Amperity is which method to use when applying semantic tags. You can do this directly from the **Feed Editor**, but more likely need to use a custom domain table to shape the SQL before applying semantic tags.
 
 Some things to consider when determining the best approach for applying semantic tags:
 
 * What shape is the data after it has been loaded to the **Feed Editor**? Can all of the required tags be applied to fields that exist within the data?
 * What shape do you want to work with downstream, including the customer 360 database, segments that are sent from Amperity to downstream systems, and the **Campaigns** page within Amperity.
-* Can the data be trimmed using a saved query prior to loading it to Amperity? Consider clickstream data, which offers a very wide set of fields, many of which are not applicable to using interaction records to associate your customers with their most important activities.
+* Can the data be trimmed using a saved query before loading it to Amperity? Consider clickstream data, which offers a very wide set of fields, many of which are not applicable to using interaction records to associate your customers with their most important activities.
 * Do high quality customer records and interaction records exist side-by-side within this data source? In some cases, using domain SQL to build custom domain tables to capture the customer records separately from the interactions records may be necessary. In this situation, the same feed can be used to load the data, after which two custom tables are built using domain SQL.
 
 .. semantics-interactions-domain-sql-vs-feeds-end
@@ -1020,9 +1036,9 @@ Customer records
 
 .. semantics-interactions-customer-records-start
 
-If customer records use foreign keys---such as **fk-[namespace]**---as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
+If customer records use foreign keys--**fk-[namespace]**, where "[namespace]" represents a string of characters, such as **fk-customer-id**--as semantic tags *and* the same types of fields exist within interaction records, apply those foreign key semantic tags to the corresponding fields in the interaction records.
 
-This will directly associate the customer records to the interaction records and will create stitched output that adds the Amperity ID to both record types.
+This will directly associate the customer records to the interaction records and creates stitched output that adds the Amperity ID to both record types.
 
 .. semantics-interactions-customer-records-end
 
@@ -1034,9 +1050,9 @@ Interaction records
 
 .. semantics-interactions-interaction-records-start
 
-If interaction records use foreign keys---such as **fk-[namespace]**---as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
+If interaction records use foreign keys--**fk-[namespace]**, where "[namespace]" represents a string of characters, such as **fk-customer-id**--as semantic tags and the same types of fields exist within customer records, apply those foreign key semantic tags to the corresponding fields in the customer records.
 
-This will directly associate the interaction records to the customer records and will create stitched output that adds the Amperity ID to both record types.
+This will directly associate the interaction records to the customer records and creates stitched output that adds the Amperity ID to both record types.
 
 In this scenario, be sure to verify Stitch output to look for the presence of clusters that are matching on this foreign key.
 
@@ -1050,11 +1066,11 @@ Custom semantics
 
 .. semantics-interactions-custom-semantics-start
 
-In a scenario where foreign keys are not available, apply a custom semantic tag---such as **customer-id**---to a column that best identifies the customer within interaction records. Use a SQL join in the customer 360 database to associate this field (along with the interaction records) to the Amperity ID.
+In a scenario where foreign keys are not available, apply a custom semantic tag, such as **customer-id**, to a column that best identifies the customer within interaction records. Use a SQL join in the customer 360 database to associate this field, along with the interaction records, to the Amperity ID.
 
 Apply this type of custom semantic to both interaction records and customer records in a similar way as foreign keys. Use the following naming patterns:
 
-* For customer records: **customer-id** (without a prefix)
+* For customer records: **customer-id** without a prefix
 * For transactions data: **customer-id**
 
 and then use SQL in the customer 360 database similar to join transactions to the customer 360 table. For example:
@@ -1081,7 +1097,7 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that has customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -1103,7 +1119,7 @@ You can define custom blocking labels using **bk-[label]**, and then use them as
 
 .. semantics-key-blocking-caution-start
 
-.. caution:: Use blocking keys carefully and be sure to verify that Stitch results contain the desired outcome.
+.. caution:: Use caution with blocking keys and ensure that Stitch results contain the desired outcome.
 
 .. semantics-key-blocking-caution-end
 
@@ -1146,7 +1162,9 @@ Update blocking strategies
 
 .. semantics-key-blocking-update-start
 
-Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance. An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated). The right combination of blocking keys creates the ideal recall rate for Stitch results.
+Blocking is a non-trivial step for record linking in the Stitch process. An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated, along with negative system performance.
+
+An overly conservative blocking strategy may result in a low recall rate, which means too few pairs are evaluated. The right combination of blocking keys creates the ideal recall rate for Stitch results.
 
 .. semantics-key-blocking-update-end
 
@@ -1164,9 +1182,9 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys; NULL customer keys are ignored by Stitch.
+   * Records may have **NULL** customer keys. **NULL** customer keys are ignored by Stitch.
    * There may be only one customer key per data source.
-   * There may be multiple customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
+   * There may be many customer keys per Amperity ID. This is because customer keys may also be tagged as foreign keys.
 
 .. semantics-key-customer-tip-end
 
@@ -1188,7 +1206,7 @@ Foreign keys (fk)
 
 A foreign key semantic tag may be applied to any column in any data source, but should be associated with a field that can also act as a primary key for that data source *and* is present in other tables.
 
-A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source contains customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
+A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source has customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
 
 .. semantics-key-foreign-context-end
 
@@ -1209,16 +1227,16 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. tip:: What happens to foreign keys in the **Unified Coalesced** table?
 
-   * Records may have NULL foreign keys.
-   * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
-   * There may be multiple foreign keys per Amperity ID.
-   * There should not be multiple Amperity IDs per foreign key.
+   * Records may have **NULL** foreign keys.
+   * There may be many foreign keys in the data source, but there may not be duplicate foreign keys.
+   * There may be many foreign keys per Amperity ID.
+   * There should not be many Amperity IDs per foreign key.
 
 .. semantics-key-foreign-tip-end
 
 .. semantics-key-foreign-note-trivial-duplicates-start
 
-.. note:: If foreign keys are linked together by a trivial duplicate they will appear in the **Unified Preprocessed Raw** table as a comma-separated list.
+.. note:: If foreign keys are linked together by a trivial duplicate they appears in the **Unified Preprocessed Raw** table as a comma-separated list.
 
 .. semantics-key-foreign-note-trivial-duplicates-end
 
@@ -1242,7 +1260,7 @@ Use foreign keys to link identifiers in tables that contain interactions records
 
 .. tip:: Is there an appropriate foreign key that is already in use with customer records that are already made available to the Stitch process? Is this foreign key well-distributed across interaction records?
 
-If fields in a data source are unable to meet the requirements for using a foreign key, use **customer-id**. This will added the **customer_id** column to the **Unified Itemized Transactions** table.
+If fields in a data source are unable to meet the requirements for using a foreign key, use **customer-id**. This addsed the **customer_id** column to the **Unified Itemized Transactions** table.
 
 There can be only one customer ID per transaction.
 
@@ -1314,7 +1332,7 @@ Primary keys (pk)
 
    * Each record in the **Unified Coalesced** table must have a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source; each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the **Unified Coalesced** table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end
@@ -1331,7 +1349,7 @@ Separation keys (sk)
 
 .. semantics-key-separation-about-start
 
-A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-**NULL** value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 
@@ -1369,7 +1387,7 @@ Assign a unique separation key to each primary key to prevent clusters from bein
 
 .. caution:: This approach can result in the assignment of more than one Amperity ID for the same unique individual. For example, a customer shops at both ACME and ACME Deluxe and both data sources contain what would normally be scored as an exact match for profile (PII) data.
 
-   A separation key associated to the brands will create a cluster for each brand, despite the profile data matching well enough to score all of those records as belonging to the same customer.
+   A separation key associated to the brands creates a cluster for each brand, despite the profile data matching well enough to score all of those records as belonging to the same customer.
 
 .. semantics-key-separation-apply-to-brand-caution-end
 
@@ -1403,8 +1421,6 @@ Assign a unique separation key to each primary key to prevent clusters from bein
         - **pk**, **sk-brand-acme**
       * - **order_number**
         - **order-quantity**
-      * - etc.
-        - ...
 
    and for ACME Deluxe:
 
@@ -1418,13 +1434,11 @@ Assign a unique separation key to each primary key to prevent clusters from bein
         - **pk**, **sk-brand-acme-deluxe**
       * - **order_number**
         - **order-quantity**
-      * - etc.
-        - ...
 
 When **sk-brand-acme** and **sk-brand-acme-deluxe** appear in the same cluster, they will be scored as non-matching and the records will be separated.
 
 * Records with the same brand share a separation key, but those values are guaranteed to be different because they are primary keys.
-* Records with different brands will have no non-**NULL** separation keys in common and will use the standard classifier.
+* Records with different brands have no non-**NULL** separation keys in common and uses the standard classifier.
 
 .. semantics-key-separation-apply-to-brand-steps-end
 
@@ -1442,7 +1456,7 @@ By default, Amperity derives separation keys for **given-name** and **generation
 
 .. semantics-key-separation-associate-to-semantic-warning-start
 
-.. warning:: Using non-default separation keys to help resolve overclustering problems related to similarities in customer profile data (such as with names and households) requires the classifier for Stitch model configuration to be set to **:general-ordinal-sk-priority**.
+.. warning:: Using non-default separation keys to help resolve overclustering problems related to similarities in customer profile data, such as with names and households, requires the classifier for Stitch model configuration to be set to **:general-ordinal-sk-priority**.
 
 .. semantics-key-separation-associate-to-semantic-warning-end
 
@@ -1460,11 +1474,11 @@ sk-birthdate
 * Are not off by 1 character.
 * Do not have the month and day swapped.
 * Exactly one of month, day, or year are off by 1 character from each other.
-* Are not NULL.
+* Are not **NULL**.
 
 Add the **sk-birthdate** separation key to fields that are tagged with the **birthdate** semantic to prevent Stitch from using birthdates to match records.
 
-For example, a tenant has a datasource with high-quality **birthdate** data, yet post-Stitch output contains generational issues where parents and siblings are clustered together despite having different birth dates. 
+For example, a tenant has a datasource with high-quality **birthdate** data, yet post-Stitch output has generational issues where parents and siblings are clustered together despite having different birth dates. 
 
 .. semantics-key-separation-associate-to-birthdate-end
 
@@ -1555,7 +1569,7 @@ ACME Beverages defines its product catalog taxonomy using a simple hierarchy:
 
 This taxonomy results in approximately 400 individual types of beverages that are spread across 6 top-level categories with approximately 5000 individual beverages by brand.
 
-When determining the correct size of a product catalog for use with predictive modeling you want to choose the node in the taxonomy that will provide between 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
+When determining the correct size of a product catalog for use with predictive modeling you want to choose the node in the taxonomy that provides 20-2000 unique values. ACME Beverages chooses to use beverage type as the node within the taxonomy that is to be associated with predictive modeling for recommended audiences.
 
 By default, predictive modeling returns up to the top 50 values within the product catalog taxonomy, or the top 50 types of beverages within the product catalog. 
 

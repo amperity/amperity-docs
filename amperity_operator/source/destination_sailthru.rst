@@ -1,11 +1,11 @@
 .. https://docs.amperity.com/operator/
 
 
-.. |destination-name| replace:: Sailthru by Marigold
+.. |destination-name| replace:: Sailthru by Zeta
 .. |destination-api| replace:: Sailthru API
 .. |plugin-name| replace:: "Sailthru"
 .. |credential-type| replace:: "sailthru"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "API key" and "API secret"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
@@ -16,21 +16,19 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send data to Sailthru by Marigold.
+        Configure Amperity to send data to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send data to Sailthru by Marigold.
+        Configure Amperity to send data to Sailthru by Zeta.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Sailthru by Marigold
+        Configure destinations for Sailthru by Zeta
 
 ==================================================
-Configure destination for Sailthru by Marigold
+Configure destinations for Sailthru by Zeta
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_sailthru.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-sailthru-start
@@ -67,11 +65,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -79,6 +78,7 @@ Get details
              :end-before: .. credential-sailthru-api-key-end
 
        **API secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -89,16 +89,17 @@ Get details
              :start-after: .. credential-sailthru-api-find-key-and-secret-start
              :end-before: .. credential-sailthru-api-find-key-and-secret-end
 
-       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup – API & Postbacks" on that page.)
+       .. tip:: You can find the API key and secret after you log in to |destination-name|. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| are available after you authenticate to the |destination-name| API. (See the first item under "Setup: API & Postbacks" on that page.)
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Audience primary key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -106,6 +107,7 @@ Get details
              :end-before: .. setting-common-audience-primary-key-end
 
        **List name**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-sailthru-list-name-start
              :end-before: .. setting-sailthru-list-name-end
@@ -113,7 +115,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A query that outputs the fields that must be mapped to the |destination-name| audience.
 
@@ -133,7 +135,7 @@ Configure credentials
    :start-after: .. credential-snappass-start
    :end-before: .. credential-snappass-end
 
-**To configure credentials for Pinterest**
+**To configure credentials for Sailthru**
 
 .. destination-sailthru-credentials-steps-start
 
@@ -143,8 +145,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -152,8 +154,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -161,14 +163,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -176,6 +179,7 @@ Configure credentials
              :end-before: .. credential-sailthru-api-key-end
 
        **API secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -198,7 +202,7 @@ Add destination
    :start-after: .. setting-common-sandbox-recommendation-start
    :end-before: .. setting-common-sandbox-recommendation-end
 
-**To add a destination for Pinterest**
+**To add a destination for Sailthru**
 
 .. destination-sailthru-add-steps-start
 
@@ -208,8 +212,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -228,8 +232,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -244,8 +248,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -264,8 +268,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -286,12 +290,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-sailthru-add-steps-end
 
@@ -307,7 +321,8 @@ You can extend audiences that are sent to |destination-name| by including extend
 
 The following SQL query shows how to return results that map to |destination-name| field naming requirements:
 
-.. code-block::
+.. code-block:: sql
+   :linenos:
 
    SELECT
      address AS postal_address
@@ -324,7 +339,7 @@ The following SQL query shows how to return results that map to |destination-nam
      ,state AS postal_state
    FROM Customer360
 
-.. note:: |destination-name| field names are case sensitive and cannot start with a number. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
+.. note:: |destination-name| field names are case sensitive and cannot be all numbers, cannot start with a number, and cannot consist entirely of special characters. Review the list of `extended profile attributes <https://getstarted.sailthru.com/audience/managing-users/set-variables-on-users/>`__ |ext_link| that are supported by |destination-name|.
 
 .. destination-sailthru-extended-profile-attributes-end
 

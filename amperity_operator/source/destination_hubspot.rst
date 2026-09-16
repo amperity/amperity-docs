@@ -22,13 +22,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for HubSpot
+        Configure destinations for HubSpot
 
 ==================================================
-Configure destination for HubSpot
+Configure destinations for HubSpot
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_hubspot.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-hubspot-start
@@ -36,13 +34,13 @@ Configure destination for HubSpot
 
 .. destination-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|. Amperity creates contacts when the **Create contact?** setting is enabled.
 
 .. destination-hubspot-end
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-start
 
-.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters (``a-z``), numbers (``0-9``), and underscores (``_``). Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters (such as ``#``, ``*``, or ``-``) with an underscore.
+.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters, numbers, and underscores. Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters, such as ``#``, ``*``, or ``-``, with an underscore.
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
@@ -64,11 +62,11 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
    #. Must end in a valid top-level domain (TLD), as listed at `https://data.iana.org/TLD/tlds-alpha-by-domain.txt <https://data.iana.org/TLD/tlds-alpha-by-domain.txt>`__ |ext_link| and may contain Unicode characters within the TLD.
 
-   If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
+   If a list of email addresses that is sent to |destination-name| has a single invalid email address the entire import fails and return a 400 error.
 
-   If you experience a 400 error (due to invalid email addresses), identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
+   If you experience a 400 error due to invalid email addresses identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
-   Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+   Amperity updates contacts that already exist in |destination-name|. Amperity creates contacts when the **Create contact?** setting is enabled.
 
 .. destination-hubspot-build-query-end
 
@@ -91,11 +89,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -129,8 +128,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -138,8 +137,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -147,14 +146,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -193,8 +193,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -213,8 +213,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -229,8 +229,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -249,8 +249,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -268,15 +268,29 @@ Add destination
              :start-after: .. setting-hubspot-list-name-start
              :end-before: .. setting-hubspot-list-name-end
 
+       **Create new contacts?**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-hubspot-create-contacts-start
+             :end-before: .. setting-hubspot-create-contacts-end
+
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
-.. destination-hubspot-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
+.. destination-hubspot-add-steps-end

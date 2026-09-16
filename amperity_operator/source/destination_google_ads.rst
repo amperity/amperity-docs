@@ -13,6 +13,7 @@
 .. |filter-the-list| replace:: "google"
 .. |allow-for-what| replace:: audiences
 .. |allow-for-duration| replace:: up to 48 hours
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, **phone**, **country**, **zip**, **mobile_id**, and **user_id**
 
 .. meta::
     :description lang=en:
@@ -24,13 +25,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Google Ads
+        Configure destinations for Google Ads
 
 ==================================================
-Configure destination for Google Ads
+Configure destinations for Google Ads
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_google_ads.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-google-ads-start
@@ -50,7 +49,7 @@ Configure destination for Google Ads
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to DV360, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
-   Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
+   Use Amperity to build high-value product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
    Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
 
@@ -59,6 +58,18 @@ Configure destination for Google Ads
    Use these audience lists for precision cross-selling, to reach and convert new customers, and to improve the retention rate for your most loyal customers.
 
 .. destination-google-ads-whatis-google-customer-match-end
+
+.. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
+
+.. admonition:: When to use Google Customer Match for sending audiences to Google Ads?
+
+   Use the :doc:`Google Customer Match <destination_google_customer_match>` destination when you want to use the same Google Ads account to send an audience to Google Ads *and* Google Display & Video.
+
+.. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. destination-google-ads-api-note-start
 
@@ -89,7 +100,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -99,13 +110,13 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Ads" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Google Ads" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Review user consent policy**
 
@@ -115,7 +126,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -185,8 +196,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -194,8 +205,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -203,8 +214,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -248,8 +259,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -268,8 +279,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -284,8 +295,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -304,8 +315,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -354,17 +365,27 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 .. destination-google-ads-add-steps-end
 
 
-.. _source-google-ads-workflow-actions:
+.. _destination-google-ads-workflow-actions:
 
 Workflow actions
 ==================================================
@@ -373,7 +394,7 @@ Workflow actions
    :start-after: .. workflow-actions-common-table-intro-start
    :end-before: .. workflow-actions-common-table-intro-end
 
-.. source-google-ads-workflow-actions-start
+.. destination-google-ads-workflow-actions-start
 
 .. list-table::
    :widths: 10 90
@@ -382,7 +403,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -401,7 +422,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -416,7 +437,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -434,18 +455,18 @@ Workflow actions
 
        Amperity provides a series of workflow actions that can help resolve specific issues that may arise with |destination-name|, including:
 
-       * :ref:`source-google-ads-workflow-actions-cannot-update-audience`
-       * :ref:`source-google-ads-workflow-actions-expired-token`
-       * :ref:`source-google-ads-workflow-actions-incomplete-account-setup`
-       * :ref:`source-google-ads-workflow-actions-invalid-credentials`
-       * :ref:`source-google-ads-workflow-actions-missing-required-attributes`
-       * :ref:`source-google-ads-workflow-actions-2fa-required`
-       * :ref:`source-google-ads-workflow-actions-user-cannot-access-audience`
+       * :ref:`destination-google-ads-workflow-actions-cannot-update-audience`
+       * :ref:`destination-google-ads-workflow-actions-expired-token`
+       * :ref:`destination-google-ads-workflow-actions-incomplete-account-setup`
+       * :ref:`destination-google-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-google-ads-workflow-actions-missing-required-attributes`
+       * :ref:`destination-google-ads-workflow-actions-2fa-required`
+       * :ref:`destination-google-ads-workflow-actions-user-cannot-access-audience`
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -461,15 +482,15 @@ Workflow actions
           :start-after: .. workflow-actions-common-table-section-four-b-start
           :end-before: .. workflow-actions-common-table-section-four-b-end
 
-.. source-google-ads-workflow-actions-end
+.. destination-google-ads-workflow-actions-end
 
 
-.. _source-google-ads-workflow-actions-cannot-update-audience:
+.. _destination-google-ads-workflow-actions-cannot-update-audience:
 
 Cannot update audience
 --------------------------------------------------
 
-.. source-google-ads-workflow-actions-cannot-update-audience-start
+.. destination-google-ads-workflow-actions-cannot-update-audience-start
 
 Amperity uses a refresh token that is generated from your |destination-name| user account to access audiences that are associated with your |destination-name| customer ID. The user for whom the refresh token is created must have permission to update audiences in the |destination-name| account that is associated with the customer ID.
 
@@ -479,15 +500,15 @@ To resolve this error, verify that the user account can update audiences.
 #. Verify that the user has permission to update audiences that are associated with the customer ID.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
-.. source-google-ads-workflow-actions-cannot-update-audience-start
+.. destination-google-ads-workflow-actions-cannot-update-audience-start
 
 
-.. _source-google-ads-workflow-actions-expired-token:
+.. _destination-google-ads-workflow-actions-expired-token:
 
 Expired token
 --------------------------------------------------
 
-.. source-google-ads-workflow-actions-expired-token-start
+.. destination-google-ads-workflow-actions-expired-token-start
 
 The token used with |destination-name| has expired.
 
@@ -497,17 +518,17 @@ To resolve this error, refresh the token that is used with |destination-name|.
 #. Refresh the token that is associated with your |destination-name| account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
-.. source-google-ads-workflow-actions-expired-token-start
+.. destination-google-ads-workflow-actions-expired-token-start
 
 
-.. _source-google-ads-workflow-actions-incomplete-account-setup:
+.. _destination-google-ads-workflow-actions-incomplete-account-setup:
 
 Incomplete account setup
 --------------------------------------------------
 
-.. source-google-ads-workflow-actions-incomplete-account-setup-start
+.. destination-google-ads-workflow-actions-incomplete-account-setup-start
 
-Amperity cannot send data to an account in |destination-name| that is not set up completely. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
+Amperity cannot send data to an account in |destination-name| that is not set up. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
 
 To resolve this error, verify that your |destination-name| account is set up correctly.
 
@@ -515,10 +536,10 @@ To resolve this error, verify that your |destination-name| account is set up cor
 #. Verify the current state of your account. Complete any steps that are required to set up your |destination-name| account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
-.. source-google-ads-workflow-actions-incomplete-account-setup-start
+.. destination-google-ads-workflow-actions-incomplete-account-setup-start
 
 
-.. _source-google-ads-workflow-actions-invalid-credentials:
+.. _destination-google-ads-workflow-actions-invalid-credentials:
 
 Invalid credentials
 --------------------------------------------------
@@ -528,14 +549,14 @@ Invalid credentials
    :end-before: .. workflow-actions-generic-invalid-credentials-end
 
 
-.. _source-google-ads-workflow-actions-missing-required-attributes:
+.. _destination-google-ads-workflow-actions-missing-required-attributes:
 
-Missing required field(s)
+Missing required fields
 --------------------------------------------------
 
 .. destination-google-ads-workflow-actions-missing-required-field-start
 
-One (or more) required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
+One or more required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
 
 .. destination-google-ads-workflow-actions-missing-required-field-end
 
@@ -564,7 +585,7 @@ To resolve this error, update the results of the query to include all required f
 .. destination-google-ads-workflow-actions-missing-required-field-orchestrations-steps-start
 
 
-.. _source-google-ads-workflow-actions-2fa-required:
+.. _destination-google-ads-workflow-actions-2fa-required:
 
 Two-factor authentication required
 --------------------------------------------------
@@ -587,12 +608,12 @@ To resolve this error, ensure that two-factor authentication is enabled for your
 .. destination-google-ads-workflow-actions-missing-required-field-end
 
 
-.. _source-google-ads-workflow-actions-user-cannot-access-audience:
+.. _destination-google-ads-workflow-actions-user-cannot-access-audience:
 
 User cannot access audience
 --------------------------------------------------
 
-.. source-google-ads-workflow-actions-user-cannot-access-audience-start
+.. destination-google-ads-workflow-actions-user-cannot-access-audience-start
 
 When the |destination-name| user account that is associated with the Amperity workflow does not have `permission to view, edit, and manage <https://support.google.com/google-ads/answer/9977851?sjid=9166665541180738738-NA>`__ |ext_link| the linked client account, Amperity will be unable to complete the workflow.
 
@@ -602,7 +623,7 @@ To resolve this error, verify the permissions associated with the user account i
 #. Verify that |destination-name| user account that is associated with the Amperity workflow has `permission to view, edit, and manage <https://support.google.com/google-ads/answer/9977851?sjid=9166665541180738738-NA>`__ |ext_link| the linked client account.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
-.. source-google-ads-workflow-actions-user-cannot-access-audience-start
+.. destination-google-ads-workflow-actions-user-cannot-access-audience-start
 
 
 .. _destination-google-ads-api-matching:
@@ -633,7 +654,9 @@ Contact Info Matching
 
 .. destination-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
+
+.. note:: **firstname**, **lastname**, **zip**, and **country** must all be present or all be absent. If any one of these four fields is included, all four are required. Rows missing any of the four are filtered out. You can match using only **email** or only **phone** without including the name and address fields.
 
 .. list-table::
    :widths: 130 130 340
@@ -647,8 +670,8 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **Phone Number**
      - **phone**
@@ -657,7 +680,7 @@ A list can be matched to contact information that contains PII data. If a row co
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Last Name**
      - **lastname**
@@ -665,8 +688,8 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **First Name**
      - **firstname**
@@ -674,15 +697,15 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
-   * - **Zip Code**
+   * - **ZIP Code**
      - **zip**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -705,7 +728,7 @@ European Union user consent
 
 The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
+.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
 
 .. list-table::
    :widths: 130 130 340
@@ -736,7 +759,7 @@ Mobile Device ID Matching
 
 .. destination-google-ads-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -750,7 +773,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. destination-google-ads-api-matching-mobile-list-end
@@ -763,7 +786,7 @@ User ID Matching
 
 .. destination-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs and/or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -777,7 +800,7 @@ A list can be matched to advertiser-generated and assigned user IDs and/or to cu
      - A list of customer IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Optional. Hashes data as SHA-256
+       * Optional. Hashes data as one-way SHA-256
 
 .. destination-google-ads-api-matching-user-end
 

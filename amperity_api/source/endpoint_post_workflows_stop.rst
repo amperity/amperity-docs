@@ -3,38 +3,25 @@
 
 .. meta::
     :description lang=en:
-         Use this API to stop a running workflow.
+         Use this API endpoint to stop a running workflow.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-         Use this API to stop a running workflow.
+         Use this API endpoint to stop a running workflow.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
         POST /workflow/runs/{id}/stop
 
-
 ==================================================
-POST /workflow/runs/{id}/stop 
+POST /workflow/runs/{id}/stop
 ==================================================
 
 .. endpoint-post-workflows-stop-start
 
-Use the **workflow/runs/{id}/stop** to stop a running workflow. 
+Use the **POST workflow/runs/{id}/stop** to stop a running workflow. 
 
 .. endpoint-post-workflows-stop-end
-
-
-.. _endpoint-post-workflows-stop-http-methods:
-
-Available HTTP methods
-==================================================
-
-.. image:: ../../images/api-post-workflow-run-stop.png
-   :width: 440 px
-   :alt: POST /workflow/runs/{id}/stop
-   :align: left
-   :class: no-scaled-link
 
 
 .. _endpoint-post-workflows-stop-prerequisites:
@@ -50,20 +37,32 @@ Prerequisites
 .. endpoint-post-workflows-stop-prerequisites-end
 
 
-.. _endpoint-post-workflows-stop-base-url:
+.. _endpoint-post-workflows-stop-request-url:
 
-Base URL
+Request URL
 ==================================================
 
-.. endpoint-post-workflows-stop-base-url-start
+.. endpoint-post-workflows-stop-request-url-start
 
-All requests made to the **workflow/runs/{id}/stop** endpoint should be directed to the following base URL:
+Direct all requests to the **POST workflow/runs/{id}/stop** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/workflow/runs/{id}/stop
+
+**Microsoft Azure**
 
 .. code-block:: rest
 
    https://{tenant-id}.amperity.com/api/workflow/runs/{id}/stop
 
-.. endpoint-post-workflows-stop-base-url-end
+.. endpoint-post-workflows-stop-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
 
 
 .. _endpoint-post-workflows-stop-rate-limit:
@@ -75,6 +74,10 @@ Rate limit
    :start-after: .. rate-limits-start
    :end-before: .. rate-limits-end
 
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-amperity-start
+   :end-before: .. rate-limits-amperity-end
+
 
 .. _endpoint-post-workflows-stop-request:
 
@@ -83,18 +86,18 @@ Requests
 
 .. endpoint-post-workflows-stop-request-start
 
-A request to the **workflow/runs/{id}/stop** endpoint is similar to:
+A request to the **POST workflow/runs/{id}/stop** endpoint is similar to:
 
 .. code-block:: rest
 
    curl --request POST \ 
-          "https://app.amperity.com/api/workflow/runs/{id}/stop" \
-        --header 'amperity-tenant: tenant' \
+          'https://app.amperity.com/api/workflow/runs/{id}/stop' \
+        --header 'amperity-tenant: {tenant-id}' \
         --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+        --header 'Authorization: Bearer {token}'
 
 
-(This example is formatted for readability in a narrow page layout.)
+This example is formatted for readability in a narrow page layout.
 
 .. endpoint-post-workflows-stop-request-end
 
@@ -106,7 +109,7 @@ Request parameters
 
 .. endpoint-post-workflows-stop-request-parameters-start
 
-The following table describes the parameters that may be used with the **workflow/runs/{id}/stop** endpoint.
+The following table describes the parameters that may be used with the **POST workflow/runs/{id}/stop** endpoint.
 
 .. list-table::
    :widths: 35 65
@@ -140,31 +143,29 @@ Request examples
 
 .. endpoint-post-workflows-stop-request-examples-start
 
-The following examples show how to send requests to the **workflow/runs/{id}/stop** endpoint.
+The following examples show how to send requests to the **POST workflow/runs/{id}/stop** endpoint.
 
 .. endpoint-post-workflows-stop-request-examples-end
 
+.. endpoint-post-workflows-stop-request-examples-tabs-start
 
-.. _endpoint-post-workflows-stop-request-example-curl:
+.. tab-set::
 
-cURL
-++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. tab-item:: cURL
 
-.. endpoint-post-workflows-stop-request-example-curl-start
+      The following example shows how to use cURL to send a request to the **POST workflow/runs/{id}/stop** endpoint.
 
-The following example shows how to use cURL to send a request to the **workflow/runs/{id}/stop** endpoint.
+      .. code-block:: rest
 
-::
+         curl --request POST \
+                'https://app.amperity.com/api/workflow/runs/{id}/stop' \
+              --header 'amperity-tenant: {tenant-id}' \
+              --header 'api-version: 2024-04-01' \
+              --header 'Authorization: Bearer {token}'
 
-   curl --request GET \
-          'https://tenant.amperity.com/api/workflow/runs/{id}/stop" \
-        --header 'amperity-tenant: tenant' \
-        --header 'api-version: 2024-04-01' \
-        --header 'Authorization: Bearer token'
+      (This example is formatted for readability in a narrow page layout.)
 
-(This example is formatted for readability in a narrow page layout.)
-
-.. endpoint-post-workflows-stop-request-example-curl-end
+.. endpoint-post-workflows-stop-request-examples-tabs-end
 
 
 .. _endpoint-post-workflows-stop-responses:
@@ -174,7 +175,7 @@ Responses
 
 .. endpoint-post-workflows-stop-responses-start
 
-A response from the **workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response will contain workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+A response from the **POST workflow/runs/{id}/stop** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has workflow details for the workflow run that was stopped. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
 
 .. endpoint-post-workflows-stop-responses-end
 
@@ -189,15 +190,17 @@ A response from the **workflow/runs/{id}/stop** endpoint will match an :doc:`HTT
 The **200** response returns details for the workflow that was stopped.
 
 .. code-block:: json
+   :linenos:
 
    {
      "id":"wf-20240801-65278-x9E9U",
       "type":"campaign.send",
       "name":"testing",
-      "tenant":"acme2-max",
-      "created_at":"2024-08-01T18:07:58.099Z",
-      "ended_at":"2024-08-01T18:10:47.712Z",
-      "state":"succeeded"
+      "tenant":"socktown",
+      "created_at":"2026-08-01T18:07:58.099Z",
+      "ended_at":"2026-08-01T18:10:47.712Z",
+      "state":"canceled"
+      "task_instances": []
    }
 
 .. endpoint-post-workflows-stop-response-200ok-end
@@ -210,7 +213,7 @@ Response parameters
 
 .. endpoint-post-workflows-stop-response-parameters-start
 
-A **200 OK** response contains the following parameters.
+A **200 OK** response has the following parameters.
 
 .. list-table::
    :widths: 35 65
@@ -218,6 +221,9 @@ A **200 OK** response contains the following parameters.
 
    * - Parameter
      - Description
+
+   * - **created_at**
+     - The date and time at which the workflow started.
 
    * - **current_version**
      - A unique identifier that describes the configuration state of Amperity at the end of the workflow or at the time an error occurred. The value for this property is similar to: "etv-20240210-12345-6AbCDE".
@@ -254,17 +260,17 @@ A **200 OK** response contains the following parameters.
        **attribution**
           The source of the error. May be attributed to **customer** or **platform**.
 
-          * **customer** indicates the source of the error is one (or more) configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
-          * **platform** indicates there is an issue with components and/or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
+          * **customer** indicates the source of the error is one or more configuration issues within Amperity. These issues can often be resolved by updating the configuration, and then restarting or rerunning the workflow.
+          * **platform** indicates there is an issue with components or services that Amperity relies on to process the workflow. These issues are often transient and rerunning the workflow will resolve the error. In some cases, this type of error may require help from Amperity Support.
 
        **data**
-          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a NULL value.
+          Additional data that is associated with the error. This parameter may be omitted from the response when the error message does not contain additional data or may return a **NULL** value.
 
        **message**
           The error message.
 
        **type**
-          A period-delimited string that indicates where an error occurred
+          A period-delimited string that indicates where an error occurred.
 
    * - **id**
      - The Amperity internal identifier for the workflow. For example **wf-20240619-14418-6UhqSe**.
@@ -291,25 +297,24 @@ A **200 OK** response contains the following parameters.
    * - **state**
      - The current state of the workflow. For example:
 
-       * Scheduled
-       * Started
-       * In progress
-       * Stopping
-       * Stopped
-       * Succeeded
-       * Running with failures
-       * Failed
        * Canceled
+       * Canceling
+       * Failed
+       * Paused
+       * Running
+       * Running with failures
+       * Scheduled
+       * Succeeded
 
        .. note:: This is the same value that is visible from the **Status** box on each individual workflow page and from the **Status** column on the **Workflows** page.
 
    * - **task_instances**
-     - A JSON array that contains zero (or more) sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
+     - A JSON array that has zero or more sets of the following parameters, one set for each task in the workflow. The list of parameters returned in the response may vary, depending on the type of task.
 
        **ended_at**
           The date and time at which a workflow task ended.
 
-          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Completed** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **execution_type**
           The service that runs a workflow task. Possible return values are spark-sql, prodigal, prodigal-aurora, databricks, identity, task-identity, legacy.
@@ -317,7 +322,7 @@ A **200 OK** response contains the following parameters.
        **id**
           The unique identifier for the task instance.
 
-          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Task ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **label**
           The name of the task instance. Examples of task instance labels include:
@@ -338,29 +343,27 @@ A **200 OK** response contains the following parameters.
           * Updating domain tables
           * Updating [table-name]
 
-          where the brackets [] are placeholders for named objects within your tenant.
+          where the brackets ``[]`` are placeholders for named objects within your tenant.
 
        .. note:: This is the same value that is visible from the **Task** column on each individual workflow page.
 
        **run_id**
           A unique identifier provided to the task instance to support situations where execution engines cannot provide a run ID. The value for this property is similar to: "abc-20240210-12345-6AbCDE".
 
-          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Job ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **state**
           The current state of the task. For example:
 
-          * Scheduled
-          * Started
-          * In progress
-          * Running
-          * Finalizing
-          * Succeeded
-          * Stopping
-          * Stopped
-          * Failed
-          * Skipped
           * Canceled
+          * Failed
+          * Finalizing
+          * Paused
+          * Running
+          * Scheduled
+          * Skipped
+          * Succeeded
+          * Up for retry
 
           .. note:: This is the same value that is visible from the **Status** column on each individual workflow page. Some values are only visible while a task is active.
 
@@ -372,13 +375,13 @@ A **200 OK** response contains the following parameters.
        **task_definition_type**
           The task definition type. The possible values for this property are the similar to the **type** property for the workflow. For example, "bridge.sync" or "campaign.append-results".
 
-          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu (|fa-kebab|) for each task in the workflow.
+          .. note:: This is the same value as the **Definition ID** field in the **Task Details** dialog, which can be opened from the actions menu--|fa-kebab|--for each task in the workflow.
 
        **tenant**
           The unique identifier for the tenant.
 
        **timeout_ms**
-          The length of time (in milliseconds) after which a running task instance will be forced to stop.
+          The length of time in milliseconds after which a running task instance will be forced to stop.
 
        **workflow_id**
           The unique identifier for the workflow to which this task belongs.
@@ -387,7 +390,7 @@ A **200 OK** response contains the following parameters.
      - The unique identifier for the tenant.
 
    * - **type**
-     - The type of workflow. Most workflows will have workflow types related to the following areas within Amperity:
+     - The type of workflow. Most workflows have workflow types related to the following areas within Amperity:
 
        * Bridge sync
        * C360 validation
@@ -416,9 +419,8 @@ A **200 OK** response contains the following parameters.
        .. note:: This is the same value that is visible from the **Type** box on each individual workflow page and from the **Type** column on the **Workflows** page.
 
    * - **warn_after_ms**
-     - The length of time (in milliseconds) after which a warning is sent that notifies users that a workflow is running longer than expected.
+     - The length of time in milliseconds after which a warning is sent that notifies users that a workflow is running longer than expected.
 
        .. note:: This parameter only applies to workflows that use SQL to write tables to storage.
-
 
 .. endpoint-post-workflows-stop-response-parameters-end

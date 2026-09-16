@@ -47,7 +47,7 @@ Available operators
 
 The following table lists the operators that are available to this attribute.
 
-.. note:: This attribute has a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: This attribute has a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -80,7 +80,7 @@ The following table lists the operators that are available to this attribute.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual returned order revenue amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual returned order revenue amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -112,7 +112,7 @@ The following table lists the operators that are available to this attribute.
        Avoid using the **is not in list** condition when individual revenue amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.99", "5.99", and "27.22", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.99", "5.99", and "27.22", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - Returns customer records that do not have a value.

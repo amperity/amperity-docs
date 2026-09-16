@@ -8,11 +8,11 @@
 
 .. meta::
     :description lang=en:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The manufacturer’s suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
+        The manufacturer's suggested retail price (MSRP) for all units of this item, before shipping, tax, or discount amounts.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -60,7 +60,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Decimal data type. All Decimal data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **decimal** data type. All **decimal** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -93,7 +93,7 @@ The following table lists the operators that are available to these attributes.
    * - **is in list**
      - |attribute-stop| **Less useful**
 
-       Avoid using the **is in list** condition; individual list price amounts are not typically made available in a list.
+       Avoid using the **is in list** condition. Individual list price amounts are not typically made available in a list.
 
    * - **is less than**
      - |attribute-recommended| **More useful**
@@ -125,7 +125,7 @@ The following table lists the operators that are available to these attributes.
        Avoid using the **is not in list** condition when individual price amounts are not made available as a list.
 
    * - **is not NULL**
-     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it will be returned.
+     - Returns customer records that have a value, such as "4.99", "1.25", and "99.99", but also " " (a space) and "0" (zero). If the record has *any* value it is returned.
 
    * - **is NULL**
      - **is NULL** returns customer records that do not have a value.

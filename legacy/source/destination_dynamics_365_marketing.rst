@@ -14,10 +14,14 @@
 
 
 ==================================================
-Send segments to Dynamics 365 Marketing
+Send data to Dynamics 365 Marketing
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dynamics_365_marketing.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_dynamics_365_marketing.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dynamics-365-marketing-start
@@ -25,7 +29,7 @@ Send segments to Dynamics 365 Marketing
 
 .. destination-dynamics-365-marketing-context-start
 
-Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts -- all contacts, by demographic, by behavior, by firmographic, or by other considerations -- to narrow your segments down to the right audience for your marketing campaign.
+Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts--all contacts, by demographic, by behavior, by firmographic, or by other considerations--to narrow your segments down to the right audience for your marketing campaign.
 
 .. destination-dynamics-365-marketing-context-end
 
@@ -41,7 +45,7 @@ Send static segments to Dynamics 365 Marketing from Amperity, and then manage co
 
 .. destination-dynamics-365-marketing-api-note-start
 
-.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
+.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it is truncated, and then loaded.
 
 .. destination-dynamics-365-marketing-api-note-end
 
@@ -75,18 +79,21 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Microsoft Azure must be configured for your Power Apps application, after which your |destination-name| application must be added to the Microsoft Power Platform.
 
-       You will need to provide your Azure Active Directory tenant ID, Azure client ID, and your Azure client secret.
+       You need to provide your Azure Active Directory tenant ID, Azure client ID, and your Azure client secret.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The environment region and environment name |destination-name|. For example: "crm" (region) and "acme" (name).
+     - The environment region and environment name |destination-name|. For example:
+
+       * **Environment region** "crm"
+       * **Environment name** "socktown"
 
 .. destination-dynamics-365-marketing-get-details-end
 
@@ -98,7 +105,7 @@ Build query
 
 .. destination-dynamics-365-marketing-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to static segments in |destination-name|.
+You need to build a query that outputs fields that can be mapped to static segments in |destination-name|.
 
 .. important:: Query results **must** include the **contactid** field, which is the same as the **contactid** field for Microsoft Dynamics 365 CRM Contact.
 
@@ -124,8 +131,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -144,8 +151,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -184,8 +191,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -214,8 +221,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -228,8 +235,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -257,8 +264,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -277,8 +284,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -286,7 +293,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -297,8 +304,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -317,8 +324,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

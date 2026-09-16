@@ -64,3 +64,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-meta-ads-manager-customer-file-source-start
    :end-before: .. setting-meta-ads-manager-customer-file-source-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -23,18 +23,6 @@ Loyalty programs help brands increase customer loyalty and provide incentives fo
 
 .. attribute-loyalty-membership-overview-end
 
-.. attribute-loyalty-membership-links-start
-
-Amperity provides the following attributes to build audiences that help brands better understand how to bring more value to their customers through their loyalty program:
-
-* :doc:`Loyalty balances <attribute_loyalty_balances>`
-* :doc:`Loyalty membership <attribute_loyalty_membership>`
-* :doc:`Loyalty profiles <attribute_loyalty_profiles>`
-* :doc:`Loyalty spend <attribute_loyalty_spend>`
-* :doc:`Loyalty tiers <attribute_loyalty_tiers>`
-
-.. attribute-loyalty-membership-links-end
-
 
 .. _attribute-loyalty-membership-attributes:
 
@@ -116,7 +104,7 @@ Available operators
 
 The following table lists the operators that are available to these attributes.
 
-.. note:: These attributes have a Datetime data type. All Datetime data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **datetime** data type. All **datetime** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65
@@ -139,7 +127,7 @@ The following table lists the operators that are available to these attributes.
 
        .. tip:: Use the **Current Balance Expiration Datetime**, **Current Tier Expiration Datetime**, **Latest Opted Out Datetime**, **Latest Opted In Datetime**, and **Current Tier Start Datetime** attributes with this condition to return audiences based on the selected date.
 
-          For example, the **Current Tier Expiration Datetime** attribute returns an audience based on the selected date before which a customer’s membership in their current rewards tier will end.
+          For example, the **Current Tier Expiration Datetime** attribute returns an audience based on the selected date before which a customer's membership in their current rewards tier will end.
 
    * - **is between**
      - |attribute-recommended| **More useful**
@@ -151,14 +139,14 @@ The following table lists the operators that are available to these attributes.
    * - **is false**
      - |attribute-recommended| **More useful**
 
-       Returns an audience that contains customers who have not opted in to being contacted by your loyalty program.
+       Returns an audience that has customers who have not opted in to being contacted by your loyalty program.
 
        .. tip:: Combine the **Is Opted In** and **Latest Opted Out Datetime** attributes with this condition to return an audience of customers who have opted out of being contacted by your loyalty program to exclude from an advertising campaign.
 
    * - **is not**
      - **is not** returns an audience with any customer records that are not associated with a selected date.
 
-       .. tip:: Use the **Latest Update Datetime** attribute with this condition to return an audience of customers---who have made no updates to their loyalty profile within the defined selected dates---to send out a reminder message to ensure their loyalty profile information is up to date.
+       .. tip:: Use the **Latest Update Datetime** attribute with this condition to return an audience of customers--who have made no updates to their loyalty profile within the defined selected dates--to send out a reminder message to ensure their loyalty profile information is up to date.
 
    * - **is not between**
      - |attribute-stop| **Less useful**
@@ -170,20 +158,20 @@ The following table lists the operators that are available to these attributes.
 
        Returns customer records that are associated with a datetime or are opted in to being contacted by your loyalty program.
 
-       .. tip:: Use the **Latest Opted In Datetime** attribute with this condition to return an audience with customers---that have opted in to being contacted by your loyalty program---to be included in an advertising campaign.
+       .. tip:: Use the **Latest Opted In Datetime** attribute with this condition to return an audience with customers--that have opted in to being contacted by your loyalty program--to be included in an advertising campaign.
 
    * - **is NULL**
      - Returns customer records that are not opted in to being contacted by your loyalty membership or associated with a datetime.
 
    * - **is on or after**
-     - Returns all dates that occur on or after the selected date. Use a relative date to define a rolling window.
+     - Returns all dates that occur on or after the selected date. Use a relative date to define a rolling window. A relative date is always in Coordinated Universal Time (UTC).
 
    * - **is on or before**
      - Returns all dates that occur on or before the selected date.
 
        .. tip:: Use the **Current Balance Expiration Datetime**, **Current Tier Expiration Datetime**, **Latest Opted Out Datetime**, **Latest Opted In Datetime**, and **Current Tier Start Datetime** attributes with this condition to return audiences based on the selected date.
 
-          For example, use "today - 730 days" to return customer records with a current tier start datetime that occurred two years ago to include in a discount campaign that encourages customers to move up to the next tier.
+          For example, use ``today - 730 days`` to return customer records with a current tier start datetime that occurred two years ago to include in a discount campaign that encourages customers to move up to the next tier.
 
    * - **is true**
      - |attribute-recommended| **More useful**

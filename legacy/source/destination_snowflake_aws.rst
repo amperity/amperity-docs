@@ -17,7 +17,11 @@
 Send data to Snowflake on Amazon AWS
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_snowflake_aws.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_snowflake_aws.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-snowflake-start
@@ -65,7 +69,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and password.
 
@@ -74,7 +78,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The stage name, along with credentials that allow Amperity to send data to a customer-managed Amazon S3 bucket, which is the :ref:`storage location <destination-snowflake-aws-configure-storage-integration>` to which Amperity stages data and from which Snowflake pulls data.
 
@@ -83,14 +87,14 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The Snowflake account name.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The region in which Snowflake is located.
 
@@ -99,7 +103,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A list of table names in the Snowflake database to be sent from Amperity.
 
@@ -139,7 +143,7 @@ The following objects must be created in the customer's instance of Snowflake:
 
    The **CREATE STAGE** command defaults to CSV file types.
 
-   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL for the Amazon S3 bucket that is included with Amperity. (``URL = 's3://bucket[/path/]'``)
+   When sending data from Amperity to Snowflake you must configure an external stage that points to the URL of the Amazon S3 bucket that is included with Amperity. (``URL = 's3://bucket[/path/]'``)
 
 #. A warehouse via `CREATE WAREHOUSE <https://docs.snowflake.net/manuals/sql-reference/sql/create-warehouse.html>`__ |ext_link|.
 #. A user via `CREATE USER <https://docs.snowflake.net/manuals/sql-reference/sql/create-user.html>`__ |ext_link|.
@@ -188,9 +192,9 @@ To configure Snowflake objects use a Data Definition Language (DDL) command simi
 
 .. destination-snowflake-aws-configure-objects-note-start
 
-.. note:: You must send a customer who will connect directly to the Snowflake data warehouse the following information using a SnapPass link:
+.. note:: You must send a customer who connects directly to the Snowflake data warehouse the following information using a |ext_snappass| link:
 
-   #. The URL for the Snowflake data warehouse.
+   #. The URL of the Snowflake data warehouse.
    #. The Snowflake username.
    #. The password for that username.
    #. Snowflake data warehouse name.
@@ -205,7 +209,7 @@ Configure user access
 
 .. destination-snowflake-aws-configure-user-access-start
 
-Users that will connect to Snowflake to use data in external applications, such as from Tableau, from Microsoft Power BI, and from Databricks, will need to be granted read-only access to the Snowflake data warehouse.
+Users that connects to Snowflake to use data in external applications, such as from Tableau, from Microsoft Power BI, and from Databricks, need to be granted read-only access to the Snowflake data warehouse.
 
 .. destination-snowflake-aws-configure-user-access-end
 
@@ -310,15 +314,9 @@ Define a database export
 
 .. destination-snowflake-aws-database-export-start
 
-Database tables (or even entire databases) can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
+Database tables, or even entire databases, can be sent from Amperity to Snowflake as a database export. A database export is configured from the **Customer 360** page, and then added to an orchestration from the **Destinations** page. A database export can be an ad hoc process or be scheduled as a regular drop to an external filedrop location or data warehouse.
 
 .. destination-snowflake-aws-database-export-end
-
-**To add a database export for Snowflake**
-
-.. include:: ../../amperity_reference/source/data_exports.rst
-   :start-after: .. data-exports-add-steps-start
-   :end-before: .. data-exports-add-steps-end
 
 
 .. _destination-snowflake-aws-add-destination:
@@ -340,8 +338,8 @@ Add a Snowflake destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -360,8 +358,8 @@ Add a Snowflake destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -398,8 +396,8 @@ Add a Snowflake destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -420,7 +418,7 @@ Add a Snowflake destination
           * - **Setting**
             - **Description**
           * - **Account Name**
-            - The account name is contained within the URL for the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
+            - The account name is contained within the URL of the Snowflake instance and is a character code located before ``snowflakecomputing.com``. For example: "ab12345".
 
           * - **Region ID**
             - The region ID in Amazon AWS. For example: "us-west-2".
@@ -434,8 +432,8 @@ Add a Snowflake destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -448,8 +446,8 @@ Add a Snowflake destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -477,8 +475,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -497,8 +495,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -506,7 +504,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -517,8 +515,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -537,8 +535,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Under **Template Settings**, specify the **Snowflake Location**. This is a period-delimited list of the Snowflake database name, the Snowflake schema name, and the Snowflake table name:
 
@@ -571,15 +569,15 @@ Add data template
 
               .. important:: Always use this option when Snowflake is managed by |bic| or when user roles in Snowflake have permission to access all tables in the database.
           * - **Truncate table**
-            - Use the **Truncate table** option when the contents of the table should be emptied prior to loading data.
+            - Use the **Truncate table** option when the contents of the table should be emptied before loading data.
 
               .. caution:: Only use this option when Snowflake is not managed by |bic| and when user roles in Snowflake have permissions set on a per-table basis..
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

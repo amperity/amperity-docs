@@ -21,13 +21,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Oracle Eloqua
+        Configure destinations for Oracle Eloqua
 
 ==================================================
-Configure destination for Oracle Eloqua
+Configure destinations for Oracle Eloqua
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_oracle_eloqua.html>`__ |ext_link|.
 
 .. destination-oracle-eloqua-about-start
 
@@ -37,9 +35,9 @@ Configure destination for Oracle Eloqua
 
 .. destination-oracle-eloqua-context-start
 
-Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a clearly defined relationship to the campaign or program that is managed from |destination-name|.
+Send audiences from Amperity to manage `shared lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link|. Shared lists are static lists of contacts that can be used across |destination-name|. Each shared list should contain a list of contacts with a defined relationship to the campaign or program that is managed from |destination-name|.
 
-Amperity will add and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
+Amperity adds and remove audience members from a shared list, and then update any contact attributes that are associated with members of that shared list. The first audience that is sent from Amperity to |destination-name| should be to a new or empty shared list.
 
 .. destination-oracle-eloqua-context-end
 
@@ -76,11 +74,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Username**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -88,6 +87,7 @@ Get details
              :end-before: .. credential-sftp-username-end
 
        **Password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -95,6 +95,7 @@ Get details
              :end-before: .. credential-oracle-eloqua-password-end
 
        **Company name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -104,15 +105,15 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Shared list configuration**
 
-       Provide the name of the `shared list (or lists) <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link| to be managed by Amperity.
+       Provide the name of the `shared list or lists <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SharedLists/SharedContactLists.htm>`__ |ext_link| to be managed by Amperity.
 
        Use **C_EmailAddress** as the primary key for the shared list.
 
-       An email address that is mapped to the primary key is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|; `custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
+       An email address that is mapped to the primary key is the only requirement for sending audiences to |destination-name| for use as a shared list. Additional attributes may be sent. Some must be mapped to the `default attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/ContactFieldsDefinitions.htm>`__ |ext_link|. `Custom attributes <https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm>`__ |ext_link| may be defined.
 
        Use filename templates to configure Amperity to support managing more than one shared list. For example a timestamp at the end
 
@@ -120,7 +121,7 @@ Get details
 
           Early_Purchasers_{{format:'MM-dd-yyyy'}}.csv
 
-       will create a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but will have a unique datestamp.
+       creates a new shared list each time an audience is sent from Amperity. The shared list will always be titled "Early Purchasers", but have a unique datestamp.
 
        A campaign that is configured only for campaign name and group name
 
@@ -128,11 +129,11 @@ Get details
 
           {{ campaign_name }} - {{ group_name }}
 
-       will update the same shared list each time the audience is sent from Amperity.
+       updates the same shared list each time the audience is sent from Amperity.
 
        .. caution:: You may add custom attributes to the shared list as long as each custom attribute is mapped to the database name that was assigned to the custom contact field by |destination-name|.
 
-          This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically (but not always) prefixed with **C_**.
+          This approach requires adding an empty shared list to |destination-name|, and then adding any custom contact fields to that shared list. This will generate the database name, which is typically, but not always, prefixed with **C_**.
 
           Use a query to build the results your brand wants to send to |destination-name|. Be sure to map each field in the query results to the database name in |destination-name|.
 
@@ -164,8 +165,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -173,8 +174,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -182,14 +183,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Username**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -197,6 +199,7 @@ Configure credentials
              :end-before: .. credential-sftp-username-end
 
        **Password**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -204,6 +207,7 @@ Configure credentials
              :end-before: .. credential-oracle-eloqua-password-end
 
        **Company name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -232,8 +236,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -252,8 +256,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -268,8 +272,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -288,8 +292,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -316,13 +320,21 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
-.. destination-oracle-eloqua-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
+.. destination-oracle-eloqua-add-steps-end

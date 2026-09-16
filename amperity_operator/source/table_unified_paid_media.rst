@@ -55,7 +55,7 @@ The **Unified Paid Media** table is an optional table for the customer 360 datab
 
 .. table-unified-paid-media-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Unified_Paid_Media".
 #. Set the build mode to **SQL**.
@@ -64,7 +64,7 @@ The **Unified Paid Media** table is an optional table for the customer 360 datab
 #. Optional. :ref:`Adjust the row limit <table-unified-paid-media-sql-query-optional-configure-row-limit>`.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. Verify that semantic tags---**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.---were applied to all PII fields correctly.
+#. Verify that semantic tags--**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.--were applied to all PII fields correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
 #. Under **Version History**, select **Enable table version history**.
@@ -95,7 +95,8 @@ Recommended starting point
 The following query is the starting point for the **Unified Paid Media** table.
 
 .. code-block:: sql
-   :name: sql-unified-paid-media
+   :caption: sql-unified-paid-media
+   :linenos:
 
    WITH pii_row_limit AS (
      SELECT 10 AS limit
@@ -374,13 +375,14 @@ Configure the row limit
 
 .. table-unified-paid-media-sql-query-optional-configure-row-limit-start
 
-The **Unified Paid Media** table is configured by default to include a ranked list of up to 10 phone numbers, email addresses, and addresses/details for each unique Amperity ID.
+The **Unified Paid Media** table is configured by default to include a ranked list of up to 10 phone numbers, email addresses, and address details for each unique Amperity ID.
 
 .. important:: Amperity IDs are duplicated in the **Unified Paid Media** table, but are limited by the configured row limit.
 
 You can configure the row limit by changing a value in the **pii_row_limit** common table expression at the start of the query. For example, a value of "3" will include the top 3 ranked phone numbers, email addresses, and physical addresses for each unique Amperity ID:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 2
 
    WITH pii_row_limit AS (
@@ -393,15 +395,15 @@ You can configure the row limit by changing a value in the **pii_row_limit** com
 
 .. admonition:: How many rows are defined by the row limit?
 
-   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address/details, there will be 10 x 10 x 10 combinations of rows, or 1000 rows in the **Unified Paid Media** table.
+   If the limit is set to 10, and there are 10 rows each for email addresses, phone numbers, and address details, there will be "10 times 10 times 10" combinations of rows, or 1000 rows in the **Unified Paid Media** table.
 
-   If the limit is set to 5, and there are 5 rows each, there will be 5 x 5 x 5 combinations of rows, or 125 rows.
+   If the limit is set to 5, and there are 5 rows each, there will be "5 times 5 times 5" combinations of rows, or 125 rows.
 
-   If the limit is set to 3, and there are 3 rows each, there will be 3 x 3 x 3 combinations of rows, or 27 rows.
+   If the limit is set to 3, and there are 3 rows each, there will be "3 times 3 times 3" combinations of rows, or 27 rows.
 
    Adjust the row limit to control the size of the **Unified Paid Media** table, as required to support your brand's goals for match rates and customer matches in downstream marketing applications.
 
-   When an audiences is sent to a destination and that audience uses the **Unified Paid Media** table, only the fields that are supported by the downstream marketing application will be sent. For example, if a downstream marketing tool only requires email addresses, a row limit of 10 will send up to 10 email addresses *for each Amperity ID* that matched the audience that was built in Amperity.
+   When an audiences is sent to a destination and that audience uses the **Unified Paid Media** table, only the fields that are supported by the downstream marketing application is sent. For example, if a downstream marketing tool only requires email addresses, a row limit of 10 sends up to 10 email addresses *for each Amperity ID* that matched the audience that was built in Amperity.
 
 .. table-unified-paid-media-sql-query-optional-configure-row-limit-admonition-end
 
@@ -413,11 +415,12 @@ State, province, and territory codes
 
 .. table-unified-paid-media-sql-query-optional-configure-codes-start
 
-Amperity uses a **CASE** statement ot define standardized state and province codes for the United States (states and territories) and Canada (provinces and territories).
+Amperity uses a **CASE** statement ot define standardized state and province codes for states and territories within the United States and provinces and territories within Canada.
 
 The default **CASE** statement located in the **address_and_details_prep** common table expression standardizes states, provinces, and territories into two digit codes:
 
-::
+.. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN TRIM(LOWER(state)) IN ('alabama','al') THEN 'AL'
@@ -440,7 +443,7 @@ Column reference
 
 .. table-unified-paid-media-reference-start
 
-The **Unified Paid Media** table only contains field associated with customer profile semantic tags (names, physical addresses, phone numbers, email addresses, birthdates, and gender) along with the Amperity ID.
+The **Unified Paid Media** table only has field associated with customer profile semantic tags (names, physical addresses, phone numbers, email addresses, birthdates, and gender) along with the Amperity ID.
 
 .. list-table::
    :widths: 30 15 55
@@ -452,7 +455,7 @@ The **Unified Paid Media** table only contains field associated with customer pr
 
    * - **Amperity ID**
      - String
-     - The unique identifier that is assigned to clusters of customer records that all represent the same individual. Each row in this table is associated with an Amperity ID; rows in this table are not unique by Amperity ID.
+     - The unique identifier that is assigned to clusters of customer records that all represent the same individual. Each row in this table is associated with an Amperity ID. Rows in this table are not unique by Amperity ID.
 
    * - **Address**
      - String

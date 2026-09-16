@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -19,7 +20,7 @@ Foreign key validation
 
 .. stitch-qa-query-fk-validation-start
 
-Use this query to compare two versions of a data source or two distinct data sources and return coverage and distribution data for foreign keys across multiple data sources.
+Use this query to compare two versions of a data source or two distinct data sources and return coverage and distribution data for foreign keys across many data sources.
 
 .. note:: This query should not be used to compare distinct foreign keys across data sources, such as **fk-name-id** and **fk-customer-id**.
 
@@ -33,10 +34,10 @@ When to use
 
 .. stitch-qa-query-fk-validation-use-start
 
-#. :ref:`Looking for name IDs with multiple Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
+#. :ref:`Looking for name IDs with many Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
 #. :ref:`Looking for name IDs with different Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-different-amperity-ids>`.
 #. :ref:`Inspecting name IDs between tables <stitch-qa-query-fk-validation-inspect-name-ids>`.
-#. :ref:`Checking for foreign keys with multiple Amperity IDs between tables <stitch-qa-query-fk-validation-multiple-amperity-ids>`.
+#. :ref:`Checking for foreign keys with many Amperity IDs between tables <stitch-qa-query-fk-validation-multiple-amperity-ids>`.
 #. :ref:`Checking for foreign keys with different Amperity IDs between tables <stitch-qa-query-fk-validation-different-amperity-ids>`.
 #. :ref:`Inspecting foreign keys between tables <stitch-qa-query-fk-validation-inspect-between-tables>`.
 
@@ -63,28 +64,27 @@ Configure query
 
 .. _stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids:
 
-Names, multiple IDs
+Names, many IDs
 --------------------------------------------------
 
 .. stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for name IDs with multiple Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to look for name IDs with many Amperity IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      name_id
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source
+   FROM data_source
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
    SELECT
      name_id
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_v2
+   FROM data_source_v2
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
@@ -98,9 +98,10 @@ Names, different IDs
 
 .. stitch-qa-query-fk-validation-name-ids-with-different-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for name IDs with different Amperity IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to look for name IDs with different Amperity IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      v1.name_id
@@ -110,16 +111,14 @@ Use any of the following **SELECT** statements to look for name IDs with differe
      SELECT DISTINCT
        name_id
        ,amperity_id
-     FROM
-       data_source_v2)
-     AS v1
+     FROM data_source_v2
+   ) AS v1
    FULL OUTER JOIN (
      SELECT DISTINCT
        name_id
        ,amperity_id
-     FROM
-       data_source)
-     AS v2
+     FROM data_source
+   ) AS v2
    ON v1.name_id = v2.name_id
    WHERE v1.amperity_id <> v2.amperity_id
    LIMIT 100
@@ -134,19 +133,22 @@ Inspect Names
 
 .. stitch-qa-query-fk-validation-inspect-name-ids-start
 
-Use any of the following **SELECT** statements to inspect name IDs. Update **name_id** to the name ID, and **data_source** and/or **data_source_v2** to the name of the table and/or table version:
+Use any of the following **SELECT** statements to inspect name IDs. Update **name_id** to the name ID, and **data_source** or **data_source_v2** to the name of the table or table version:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source_v2
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source
@@ -156,6 +158,7 @@ Use any of the following **SELECT** statements to inspect name IDs. Update **nam
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT COUNT(DISTINCT name_id)
    FROM data_source_v2
@@ -174,23 +177,22 @@ Multiple Amperity IDs
 
 .. stitch-qa-query-fk-validation-multiple-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for foreign keys that have multiple Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to look for foreign keys that have many Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
     fk_field_name
     ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_1
+   FROM data_source_1
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
    
    SELECT
      fk_field_name
      ,COUNT(DISTINCT amperity_id)
-   FROM
-     data_source_2
+   FROM data_source_2
    GROUP BY 1
    HAVING COUNT(DISTINCT amperity_id) > 1
 
@@ -204,9 +206,10 @@ Different Amperity IDs
 
 .. stitch-qa-query-fk-validation-different-amperity-ids-start
 
-Use any of the following **SELECT** statements to look for foreign keys that have different Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to look for foreign keys that have different Amperity IDs. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      v1.fk_field_name
@@ -216,17 +219,15 @@ Use any of the following **SELECT** statements to look for foreign keys that hav
      SELECT DISTINCT
        fk_field_name
        ,amperity_id 
-     FROM
-       data_source_2
+     FROM data_source_2
      ) 
    AS v1 FULL OUTER JOIN (
      SELECT DISTINCT
        fk_field_name
        ,amperity_id
-     FROM
-       data_source_1
-     )
-   AS v2 ON v1.fk_field_name = v2.fk_field_name
+     FROM data_source_1
+   ) AS v2
+   ON v1.fk_field_name = v2.fk_field_name
    WHERE v1.amperity_id <> v2.amperity_id 
    LIMIT 100
 
@@ -240,27 +241,28 @@ Inspect keys between tables
 
 .. stitch-qa-query-fk-validation-inspect-between-tables-start
 
-Use any of the following **SELECT** statements to inspect foreign keys between tables. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** and/or **data_source_2** to the name of the table:
+Use any of the following **SELECT** statements to inspect foreign keys between tables. Update **fk_field_name** to the name of a foreign key, and **data_source**, **data_source_1** or **data_source_2** to the name of the table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
-   FROM
-     data_source
+   FROM data_source
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
-   FROM
-     data_source_1
+   FROM data_source_1
    WHERE fk_field_name IN (
      SELECT fk_field_name
      FROM data_source_2
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)
@@ -271,6 +273,7 @@ Use any of the following **SELECT** statements to inspect foreign keys between t
    )
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      COUNT(DISTINCT fk_field_name)

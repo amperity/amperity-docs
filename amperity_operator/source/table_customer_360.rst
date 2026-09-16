@@ -31,13 +31,18 @@ Add table
 
 The **Customer 360** table is the most important table in the customer 360 database. The **Customer 360** table is built as a passthrough from the **Merged Customers** table, which makes available to the **Customer 360** table a unified view of the customer across all points of engagement, along with any attributes that cross systems.
 
-Attributes will vary tenant-to-tenant, but typically include profile information (names, addresses, email, phone), interactions by channel (ecommerce, point of sale, loyalty), insights (total lifetime value, transaction frequency, recency), and predictions (next best purchase, next best action, churn prediction).
+Attributes vary tenant-to-tenant, but typically include:
+
+* Profile information, such as names, addresses, email, and phone
+* Interactions by channel, such as e-commerce, point of sale, and loyalty
+* Insights, such as total lifetime value, transaction frequency, and recency
+* Predictions, such as next best purchase, next best action, and churn prediction
 
 .. table-customer360-add-end
 
 .. table-customer360-add-important-start
 
-.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the recommended way to add the **Customer 360** table. This section documents how to manually add this table, should it be necessary.
+.. important:: This table is added automatically when the "Customer 360" template is used to add the customer 360 database. Using a template is the recommended way to add the recommended way to add the **Customer 360** table.
 
 .. table-customer360-add-important-end
 
@@ -45,7 +50,7 @@ Attributes will vary tenant-to-tenant, but typically include profile information
 
 .. table-customer360-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Customer_360".
 #. Set the build mode to **SQL**.
@@ -60,7 +65,7 @@ Attributes will vary tenant-to-tenant, but typically include profile information
 #. Review picklists to ensure they have the desired sorting parameters.
 #. Add friendly names for any field. For example, add **First Name** as a friendly name for **given_name**.
 
-   .. tip:: The profile attribute names under **Customer Profile** on the **Customer 360** page are the same names that are entered in the **Friendly Names** column. If a friendly name is not added, Amperity will use the **Field Name** as the profile attribute name, including capitalization and underscores.
+   .. tip:: The profile attribute names under **Customer Profile** on the **Customer 360** page are the same names that are entered in the **Friendly Names** column. If a friendly name is not added, Amperity uses the **Field Name** as the profile attribute name, including capitalization and underscores.
 #. Define the general sort order for fields in the customer profile.
 #. Review icons assigned to fields. Assigned icons are visible under **Customer Profile** on the **Customer 360** page.
 
@@ -86,7 +91,7 @@ Add SHA-256 hashed columns
 
 You can add SHA-256 hashed PII columns to your **Customer 360** table to enable their use from within campaigns.
 
-For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file contains SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that contains the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
+For example, Pinterest Ads and Reddit Ads allow audiences to be upload directly to their ads managers as a CSV file when the CSV file has SHA-256 hashed email addresses. Build an audience Amperity, and then from the **Campaigns** page choose the column that has the SHA-256 hashed email address from the **Edit attributes** page, send the results as a CSV file to cloud storage or SFTP, and then upload that CSV file to Pinterest Ads or Reddit Ads.
 
 Add hashed PII columns to the **Customer 360** table using the |sql_spark_function_sha2| function:
 

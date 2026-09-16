@@ -38,7 +38,7 @@ Use with Stitch QA
 Use the **Unified Preprocessed Raw** table as part of the Stitch QA process to:
 
 * Ensure semantic tags are selected and visible to the **Queries** page
-* Investigate relationships between records, especially when records appear to be assigned (not assigned) to an incorrect (correct) Amperity ID, which defines a single cluster of records
+* Investigate relationships between records, especially when records are assigned to a correct Amperity ID or not assigned to an incorrect Amperity ID, which defines a single cluster of records
 * Investigate blocklisted values
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-end
@@ -53,11 +53,11 @@ Use the **Unified Preprocessed Raw** table as part of the Stitch QA process to:
 Profile semantics and foreign keys
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-tags-keys-start
 
-Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and/or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
+Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
 
 Open the table in the **Database Explorer** and verify that all rows in the table that are associated with a semantic tag or a foreign key have a checkmark in the left column. Rows without a checkmark will not make the associated **FIELD** available to the **Queries** page. If rows do not have a checkmark, edit the table and apply the checkmark, save the table, activate the Stitch QA database, and then run the database to refresh the table.
 
@@ -69,7 +69,7 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 Relationships between records
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-start
 
@@ -77,7 +77,7 @@ Use the **Queries** page to investigate unexpected relationships between individ
 
 Use a combination of the **Unified Coalesced** and **Unified Preprocessed Raw** tables to review the data that is associated with these records to help understand why groups of records were matched or why certain records were assigned to a cluster.
 
-In some cases, you may need to investigate and compare entire clusters to better understand why (or why not) these groups of records were maintained (or split) during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
+In some cases, you may need to investigate and compare entire clusters to better understand why or why not these groups of records were maintained or split during hierarchical comparison, a step in the Stitch process that occurs *after* pairwise comparison and scoring.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-relationships-records-end
 
@@ -87,7 +87,7 @@ In some cases, you may need to investigate and compare entire clusters to better
 Global blocklist values
 --------------------------------------------------
 
-.. TODO: This section is identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
+.. TODO: Identical in both **Unified Coalesced** and **Unified Preprocessing Raw** topics. They share an overlapping workflow, but should be tracked to discover if there are unique aspects that would lead these sections to evolve independently.
 
 .. table-unified-preprocessed-raw-use-with-stitch-qa-blocklist-values-start
 
@@ -121,8 +121,8 @@ Cleaned vs. uncleaned data
 
 You can compare cleaned data to uncleaned data to improve the quality of data in the customer 360 database.
 
-* The **Unified Preprocessed Raw** table contains a row from every table that is associated with an Amperity ID and contains the results of Stitch processing. Values in this table are "cleaned" data.
-* The **Unified Coalesced** table contains the data exactly as it was processed by Stitch. Values in this table are "uncleaned data".
+* The **Unified Preprocessed Raw** table has a row from every table that is associated with an Amperity ID and has the results of Stitch processing. Values in this table are "cleaned" data.
+* The **Unified Coalesced** table has the data exactly as it was processed by Stitch. Values in this table are "uncleaned data".
 
 Use a query similar to the following to join fields in the **Unified Preprocessed Raw** table to the **Unified Coalesced** table, and then compare the results.
 
@@ -131,6 +131,7 @@ Use a query similar to the following to join fields in the **Unified Preprocesse
 .. table-unified-preprocessed-raw-cleaned-vs-uncleaned-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      upr.amperity_id AS "upr_amperity_id"
@@ -241,7 +242,7 @@ Use a series of **WHERE** clauses to compare specific Amperity IDs:
    -- WHERE uc.amperity_id = 'amperity-id-2'
    -- WHERE uc.amperity_id = 'amperity-id-3'
 
-This can help identify situations where the bad-values blocklist isn't blocking specific values. Compare the values in the **Unified Preprocessed Raw** table to the values in the **Unified Coalesced** table and verify that values were correctly added to the **blv_** columns.
+This can help identify situations where the bad-values blocklist is not blocking specific values. Compare the values in the **Unified Preprocessed Raw** table to the values in the **Unified Coalesced** table and verify that values were correctly added to the **blv_** columns.
 
 .. table-unified-preprocessed-raw-cleaned-vs-uncleaned-filter-end
 

@@ -74,7 +74,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and password.
 
@@ -83,7 +83,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The stage name, along with credentials that allow Amperity to pull data from a customer-managed Amazon S3 bucket, which is the :ref:`storage location <source-snowflake-aws-configure-storage-integration>` to which Snowflake stages data and from which Amperity pulls data.
 
@@ -92,14 +92,14 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The Snowflake account name.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The region in which Snowflake is located.
 
@@ -108,7 +108,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A list of table names in the Snowflake database to be pulled to Amperity.
 
@@ -226,7 +226,7 @@ Configure storage integration
 
 .. source-snowflake-aws-configure-storage-integration-start
 
-Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket,  from which Amperity pulls the data.
+Amperity can ingest any type of data structure or data format that can be output from Snowflake. This output is written by Snowflake to a customer-managed Amazon S3 bucket, from which Amperity pulls the data.
 
 Use `secrets and keys <https://docs.snowflake.com/en/user-guide/data-load-s3-config-aws-iam-user>`__ |ext_link| to pull Snowflake table output from the customer-managed Amazon S3 bucket.
 
@@ -392,9 +392,9 @@ Pull columns using Snowflake query syntax
 
 .. source-snowflake-aws-add-courier-query-start
 
-You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one (or more) Snowflake tables.
+You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference/constructs.html>`__ |ext_link| to build a query that runs against one or more Snowflake tables.
 
-.. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+.. important:: A Snowflake query name must be unique. The name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and periods. For example: "Query_name.12-345a".
 
 .. source-snowflake-aws-add-courier-query-end
 
@@ -408,7 +408,7 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
    This automatically selects |credential-type| as the **Credential Type**.
 #. Enter the username and password. This should be the Amperity username and password created in Snowflake for the :ref:`user security object <source-snowflake-aws-configure-storage-integration>`.
 #. Add the IAM Access Key and IAM Secret Key for the IAM role with permission to access the Amazon S3 bucket used for :ref:`Snowflake stages <source-snowflake-aws-configure-storage-integration>`. Add the Amazon Resource Name (ARN) if the IAM role is provisioned for cross-account access.
-#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one (or more) Snowflake tables against which a query that uses Snowflake query syntax will be run <source-snowflake-aws-configure-tables>` to be sent to Amperity:
+#. Add Snowflake settings for the account name, the region identifier, and a square-bracketed list of :ref:`one or more Snowflake tables against which a query that uses Snowflake query syntax is run <source-snowflake-aws-configure-tables>` to be sent to Amperity:
 
    ::
 
@@ -418,10 +418,10 @@ You can use `Snowflake query syntax <https://docs.snowflake.com/en/sql-reference
         "table.name.etc"
       ]
 
-   .. caution:: The courier will download both query results **AND** all listed tables.
+   .. caution:: The courier downloads both query results **AND** all listed tables.
 
 #. Enter :ref:`the name of the Snowflake stage <source-snowflake-aws-configure-storage-integration>`.
-#. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and/or periods. For example: "Query_name.12-345a".
+#. Click "Add Snowflake query". In the expanded box, provide a unique query name. A query name may contain alphanumeric characters (A-Z, a-z), underscores, hyphens, and periods. For example: "Query_name.12-345a".
 
    .. caution:: You must add a blank line to the end of the |source-name| query.
 

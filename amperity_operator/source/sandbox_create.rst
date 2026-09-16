@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -21,7 +22,7 @@ Create a sandbox
 
 Use a sandbox to safely make changes to your production tenant:
 
-#. Create a sandbox (this topic) before making configuration changes to your tenant.
+#. Create a sandbox before making configuration changes to your tenant.
 #. :doc:`Access the sandbox <sandbox_open>`, and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
 #. :doc:`Promote configuration changes <sandbox_promote>` to your production tenant.
 
@@ -33,7 +34,7 @@ This is part one of a series of topics that describes how your brand can use san
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when creating a sandbox to make configuration state changes to production.
+The following sections describe the steps you will follow when creating a sandbox to make configuration state changes to production.
 
 .. sandbox-promote-steps-end
 
@@ -45,10 +46,10 @@ The following sections describe the steps you'll follow when creating a sandbox 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
-     - Sandboxes are created from the **Users & Admin** page. Find the **Sandboxes** section, and then click **Create sandbox**.
+     - Sandboxes are created from the **Settings** page. Open the **Sandboxes** tab, and then click **Create sandbox**.
 
        .. image:: ../../images/mockups-sandbox-create.png
           :width: 600 px
@@ -72,10 +73,10 @@ The following sections describe the steps you'll follow when creating a sandbox 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Each sandbox should be given a name that clearly identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes. Click **Create** to generate the sandbox for your tenant.
+     - Each sandbox should be given a name that identifies the type of configuration state change that will be made in that sandbox, along with an expanded description of those changes. Click **Create** to generate the sandbox for your tenant.
 
        .. image:: ../../images/mockups-sandbox-create-dialog.png
           :width: 450 px
@@ -83,11 +84,13 @@ The following sections describe the steps you'll follow when creating a sandbox 
           :align: left
           :class: no-scaled-link
 
+       .. note:: The name of a sandbox may have up to 64 characters. The description for a sandbox may have up to 512 characters.
 
-   * - .. image:: ../../images/steps-04.png
+
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - You can view details about this sandbox. From the list of sandboxes, select the |fa-kebab| icon, and then from the list of options select **Details**.
 
@@ -100,12 +103,12 @@ The following sections describe the steps you'll follow when creating a sandbox 
        This opens a dialog box that shows details for the sandbox, including:
 
        * The date and time at which it was created
-       * The URL for the sandbox
+       * The URL of the sandbox
        * The last time a workflow ran in this sandbox
-       * What (if any) configuration state changes are ready for promotion to production
-       * What (if any) updates are ready to be pulled from production to the sandbox
+       * What configuration state changes are ready for promotion to production
+       * What updates are ready to be pulled from production to the sandbox
 
-       .. tip:: A sandbox that hasn't run recently---for example, within the previous two weeks---should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
+       .. tip:: A sandbox that has not run recently--for example, within the previous two weeks--should be accessed and then evaluated. If the changes in the sandbox are not candidates for promotion your brand should consider deleting the sandbox.
 
 
 .. sandbox-promote-callouts-end

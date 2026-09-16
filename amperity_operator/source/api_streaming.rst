@@ -12,18 +12,18 @@
 
 .. meta::
     :description lang=en:
-        This topic describes how the Streaming Ingest API works and how to pull data to Amperity.
+        Use the Streaming API to send events data to Amperity.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        This topic describes how the Streaming Ingest API works and how to pull data to Amperity.
+        Use the Streaming API to send events data to Amperity.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Streaming Ingest API
+        Streaming API
 
 ==================================================
-Streaming Ingest API
+Streaming API
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -38,13 +38,13 @@ Overview
 
 .. streaming-ingest-rest-api-overview-start
 
-The Streaming Ingest API is designed for streaming events and profile updates. It is a low latency, high throughput REST API, designed to accept billions of records per day.
+The Streaming API is designed for streaming events and profile updates. It is a low latency, high throughput REST API, designed to accept billions of records per day.
 
-The Streaming Ingest API is configured to use different streams to load data into individual feeds. For example, order events might be sent to one stream while profile updates are sent to another. Individual streams have a distinguished endpoint ``/stream/v0/data/<stream-id>``.
+The Streaming API is configured to use different streams to load data into individual feeds. For example, order events might be sent to one stream while profile updates are sent to another. Individual streams have a distinguished endpoint ``/stream/v0/data/<stream-id>``.
 
-The Streaming Ingest API supports the following payload types:
+The Streaming API supports the following payload types:
 
-#. JSON (preferred), which converts streaming data to NDJSON
+#. JSON, which converts streaming data to NDJSON. Recommended.
 #. XML, which converts streaming data to CBOR
 
 A stream may only be one payload type.
@@ -59,9 +59,9 @@ Rate limits
 
 .. streaming-ingest-rate-limits-start
 
-The Streaming Ingest API has the following rate limits.
+The Streaming API has the following rate limits.
 
-.. note:: Rate limits are not shared between production and sandboxes; each sandbox has its own rate limit.
+.. note:: Rate limits are not shared between production and sandboxes. Each sandbox has its own rate limit.
 
 .. list-table::
    :widths: 30 70
@@ -70,12 +70,12 @@ The Streaming Ingest API has the following rate limits.
    * - **Requests per second**
      - The number of requests may not exceed 1000 requests per second.
 
-       Requests to the Streaming Ingest API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
+       Requests to the Streaming API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
 
    * - **Payload size**
-     - The maximum payload size may not exceed 5 MB.
+     - The maximum payload size may not exceed 1 MB.
 
-       Attempts to post more than 5 MB will fail with an HTTP 413 Payload Too Large status code.
+       Attempts to post more than 1 MB fails with an HTTP 413 Payload Too Large status code.
 
 .. streaming-ingest-rate-limits-end
 
@@ -87,11 +87,11 @@ API Keys and JWTs
 
 .. streaming-ingest-rest-api-keys-and-jwt-start
 
-Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Streaming Ingest API. A single access token may be used to access any endpoint in your tenant's Streaming Ingest API.
+Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Streaming API. A single access token may be used to access any endpoint in your tenant's Streaming API.
 
-The access token is self-generated from the Amperity user interface and authorizes write access to the Streaming Ingest API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
+The access token is self-generated from the Amperity user interface and authorizes write access to the Streaming API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
 
-The access token must be available to each request made to the Streaming Ingest API.
+The access token must be available to each request made to the Streaming API.
 
 .. note:: More information about Amperity |api_keys| is available, including sections about |api_keys_add|, |api_keys_delete|, |api_keys_rotate|, |api_keys_access_generate|, and |api_keys_access_refresh|.
 
@@ -115,7 +115,7 @@ Generate an access token
 
 .. api-keys-access-tokens-generate-start
 
-Access tokens that enable authentication to the Amperity API are managed directly from the **Users & Activity** page in Amperity.
+Access tokens that enable authentication to the Amperity API are managed directly from the **Settings** page in Amperity.
 
 **To generate access tokens**
 
@@ -125,18 +125,18 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
-     - Open the **Users & Activity** page.
+     - Open the **Settings** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select "Generate access token".
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
 
        .. image:: ../../images/api-keys-generate-access-token-streaming.png
           :width: 500 px
@@ -147,10 +147,10 @@ Access tokens that enable authentication to the Amperity API are managed directl
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - Select the number of days this token will allow access to the API, after which it will expire. For example, 3 days:
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
 
        .. image:: ../../images/api-keys-set-token-expiration.png
           :width: 240 px
@@ -166,7 +166,7 @@ Access tokens that enable authentication to the Amperity API are managed directl
           :align: left
           :class: no-scaled-link
 
-       .. important:: You are the only person who will have access to the newly-generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 .. api-keys-access-tokens-generate-end
 
@@ -182,7 +182,7 @@ You can self-manage the endpoints your brand uses to stream data to Amperity.
 
 .. streaming-ingest-endpoints-end
 
-**To manage Streaming Ingest API endpoints**
+**To manage Streaming API endpoints**
 
 .. streaming-ingest-endpoints-steps-start
 
@@ -192,48 +192,48 @@ You can self-manage the endpoints your brand uses to stream data to Amperity.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **Streaming Ingest** click **Add stream**.
 
        .. image:: ../../images/api-streaming-ingest-add-stream.png
           :width: 500 px
-          :alt: Add a Streaming Ingest API endpoint.
+          :alt: Add a Streaming API endpoint.
           :align: left
           :class: no-scaled-link
 
-       Enter a name and description for the Streaming Ingest API endpoint.
+       Enter a name and description for the Streaming API endpoint.
 
        .. image:: ../../images/api-streaming-ingest-add-stream-name-desc.png
           :width: 420 px
-          :alt: Add a name and description for the Streaming Ingest API endpoint.
+          :alt: Add a name and description for the Streaming API endpoint.
           :align: left
           :class: no-scaled-link
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - The ID for the Streaming Ingest API endpoint is available from the **Stream ID** column:
+     - The ID for the Streaming API endpoint is available from the **Stream ID** column:
 
        .. image:: ../../images/api-streaming-ingest-stream-ids.png
           :width: 500 px
-          :alt: Get the ID for the Streaming Ingest API endpoint.
+          :alt: Get the ID for the Streaming API endpoint.
           :align: left
           :class: no-scaled-link
 
-       :ref:`Use this identifier in the path for the POST request <streaming-ingest-rest-api-streams>` when sending data to the Streaming Ingest API endpoint.
+       :ref:`Use this identifier in the path for the POST request <streaming-ingest-rest-api-streams>` when sending data to the Streaming API endpoint.
 
        For example:
 
@@ -251,13 +251,11 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-A data stream is generated for you by Amperity on request. Contact your support representative via the `Amperity Support Portal <../support/index.html>`__ (or send email to support@amperity.com) to request a new data stream.
-
-Data can be sent to the Streaming Ingest API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint.
+Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint with the value of **Host** set to the :ref:`base URL <streaming-ingest-rest-api-base-url>`.
 
 .. streaming-ingest-rest-api-stream-schema-important-start
 
-.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have multiple data schemas on a single stream, instead use multiple streams to support multiple schemas.
+.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have many data schemas on a single stream, instead use many streams to support many schemas.
 
 .. streaming-ingest-rest-api-stream-schema-important-end
 
@@ -269,33 +267,37 @@ Data can be sent to the Streaming Ingest API by issuing POST requests to the ``/
       :start-after: .. term-postman-start
       :end-before: .. term-postman-end
 
-   Amperity will provide complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
+   Amperity provides complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
 
 .. streaming-ingest-rest-api-configure-streams-postman-end
 
 
-.. _streaming-ingest-rest-api-send-json-using-http:
+.. _streaming-ingest-rest-api-base-url:
 
-Send JSON using HTTP
+Base URL of Streaming API endpoints
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-json-using-http-start
+.. streaming-ingest-rest-api-base-url-start
 
-To send JSON data to a stream using HTTP, submit a request similar to:
+The hostname for the Streaming API is:
 
 .. code-block:: none
 
-   POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/json
-   X-Amperity-Tenant: <tenant-name>
-   Authorization: Bearer <Streaming Ingest JWT token>
-   Content-Length: 32164
+   https://{tenant-id}.amperity.com/
 
-   {"field1": "value1",
-    "field2": "value2"}
+Streams are located at:
 
-.. streaming-ingest-rest-api-send-json-using-http-end
+.. code-block:: none
+
+   /stream/v0/data/<stream-id>
+
+and the base URL is:
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>
+
+.. streaming-ingest-rest-api-base-url-end
 
 
 .. _streaming-ingest-rest-api-send-json-using-curl:
@@ -311,9 +313,9 @@ To send JSON data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/json" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    ' {"field1": "value1",
       "field2": "value2"}'
@@ -321,36 +323,61 @@ To send JSON data to a stream using cURL, submit a request similar to:
 .. streaming-ingest-rest-api-send-json-using-curl-end
 
 
-.. _streaming-ingest-rest-api-send-xml-using-http:
+.. _streaming-ingest-rest-api-send-json-using-http:
 
-Send XML using HTTP
+Send JSON using HTTP
 --------------------------------------------------
 
-.. streaming-ingest-rest-api-send-xml-using-http-start
+.. streaming-ingest-rest-api-send-json-using-http-start
 
-To send XML data to a stream using HTTP, submit a request similar to:
+To send JSON data to a stream using HTTP, submit a request similar to:
 
 .. code-block:: none
 
    POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://<tenant-name>.amperity.com
-   Content-Type: application/xml
-   X-Amperity-Tenant: <tenant-name>
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/json
+   X-Amperity-Tenant: {tenant-id}
    Authorization: Bearer <Streaming Ingest JWT token>
    Content-Length: 32164
 
-    <records>
-    <record>
-    <field1>value1</field1>
-    ...
-    </record>
-    <record>
-    <field1>value2</field1>
-    ... t
-    </record>
-    </records>
+   {"field1": "value1",
+    "field2": "value2"}
 
-.. streaming-ingest-rest-api-send-xml-using-http-end
+.. streaming-ingest-rest-api-send-json-using-http-end
+
+
+.. _streaming-ingest-rest-api-send-json-using-python:
+
+Send JSON using Python
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-json-using-python-start 
+
+To send JSON data to a stream using Python, submit a request similar to:
+
+.. code-block:: python
+
+   import requests
+
+   url = "https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>"
+
+   headers = {
+     "Content-Type": "application/json",
+     "X-Amperity-Tenant": "{tenant-id}",
+     "Authorization": "Bearer <Streaming Ingest JWT token>"
+   }
+
+   payload = {
+     "field1": "value1",
+     "field2": "value2"
+   }
+
+   response = requests.post(url, headers=headers, json=payload)
+
+   print(response.status_code)
+
+.. streaming-ingest-rest-api-send-json-using-python-end
 
 
 .. _streaming-ingest-rest-api-send-xml-using-curl:
@@ -366,9 +393,9 @@ To send XML data to a stream using cURL, submit a request similar to:
 
    curl -XPOST \
    -H "Content-Type: application/xml" \
-   -H "X-Amperity-Tenant: <tenant-name>" \
+   -H "X-Amperity-Tenant: {tenant-id}" \
    -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://<tenant-name>.amperity.com/stream/v0/data/<stream-id> \
+   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
    --data-binary \
    '<records>
     <record>
@@ -383,6 +410,38 @@ To send XML data to a stream using cURL, submit a request similar to:
 .. streaming-ingest-rest-api-send-xml-using-curl-end
 
 
+.. _streaming-ingest-rest-api-send-xml-using-http:
+
+Send XML using HTTP
+--------------------------------------------------
+
+.. streaming-ingest-rest-api-send-xml-using-http-start
+
+To send XML data to a stream using HTTP, submit a request similar to:
+
+.. code-block:: none
+
+   POST /stream/v0/data/<stream-id> HTTP/1.1
+   Host: https://{tenant-id}.amperity.com
+   Content-Type: application/xml
+   X-Amperity-Tenant: {tenant-id}
+   Authorization: Bearer <Streaming Ingest JWT token>
+   Content-Length: 32164
+
+    <records>
+    <record>
+    <field1>value1</field1>
+    ...
+    </record>
+    <record>
+    <field1>value2</field1>
+    ...
+    </record>
+    </records>
+
+.. streaming-ingest-rest-api-send-xml-using-http-end
+
+
 .. _streaming-ingest-rest-api-http-status-codes:
 
 HTTP response status codes
@@ -390,7 +449,7 @@ HTTP response status codes
 
 .. streaming-ingest-rest-api-http-status-codes-start
 
-The Streaming Ingest API has the following HTTP status codes:
+The Streaming API has the following HTTP status codes:
 
 .. list-table::
    :widths: 180 380 50
@@ -405,7 +464,7 @@ The Streaming Ingest API has the following HTTP status codes:
    * - **400**
      - Request malformed.
 
-       .. note:: XML payloads are not checked synchronously; a 202 response does not guarantee that XML payloads will be parsable downstream.
+       .. note:: XML payloads are not checked synchronously. A 202 response does not guarantee that XML payloads will be parsable downstream.
      - No
    * - **401**
      - Unauthorized. JWT could not be verified or is expired.
@@ -450,7 +509,7 @@ Once data is sent to a stream, it is batched and collected to be made ready for 
 
 .. note::
 
-   * The Streaming Ingest API only accepts individual JSON payloads (and does not accept NDJSON payloads)
+   * The Streaming API only accepts individual JSON payloads and does not accept NDJSON payloads
    * JSON payloads are combined into a single NDJSON file
    * Nested JSON payloads require a saved query to flatten the data
    * XML payloads are converted into CBOR by the streaming API
@@ -473,7 +532,7 @@ Simple JSON data is batched together into NDJSON files that can be loaded direct
   {'field1': 'value1',
    'field2': 'value2'}
 
-NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+NDJSON data is loaded to Amperity using the NDJSON file format. Configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-simple-end
 
@@ -493,7 +552,7 @@ Nested JSON data requires a saved query to parse the nested values, after which 
    'field2': {'nested-field1': 'nested-value1',
               'nested-field2': 'nested-value2'}}
 
-Nested NDJSON data is loaded to Amperity using the NDJSON file format. Define an |format_ndjson_ingest_query| to flatten the data into a tabular format, configure a courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+Nested JSON data is loaded to Amperity using the NDJSON file format. Define an ingest query to flatten the data into a tabular format, configure a courier `load settings and operations <../reference/format_ndjson.html#couriers>`__, and then `define a feed <../reference/format_ndjson.html#couriers>`__.
 
 .. streaming-ingest-rest-api-stream-load-json-nested-end
 
@@ -518,7 +577,7 @@ To load streamed XML data that has been converted to CBOR format into Amperity, 
    #. Define a SQL query that shapes the data.
    #. Create a sample file, and then use it to add a feed, below.
 
-XML data sent to the Streaming Ingest API is loaded to Amperity using the CBOR file format. Define an |format_cbor_ingest_query|, configure courier |format_cbor_couriers|, and then |format_cbor_feeds|.
+XML data sent to the Streaming API is loaded to Amperity using the CBOR file format. Define an ingest query, configure courier `load settings and operations <../reference/format_cbor.html#couriers>`__, and then `define a feed <../reference/format_cbor.html#feeds>`__.
 
 .. streaming-ingest-rest-api-stream-load-cbor-end
 
@@ -551,13 +610,11 @@ Pull from Streaming Ingest
 Add courier
 --------------------------------------------------
 
-The Streaming Ingest courier pulls your data from the location that the Streaming Ingest API streams data to Amperity. A courier is required for each data stream.
+.. source-streaming-ingest-legacy-add-courier-start
 
-.. tip::
+The Streaming Ingest courier pulls your data from the location that the Streaming API streams data to Amperity. A courier is required for each data stream.
 
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
+.. source-streaming-ingest-legacy-add-courier-end
 
 **To add a courier for Streaming Ingest**
 
@@ -566,21 +623,21 @@ The Streaming Ingest courier pulls your data from the location that the Streamin
 #. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 #. Enter the name of the courier. For example: "|source-name|".
-#. A courier that pulls data that was streamed to Amperity by the Streaming Ingest API does not require a credential even though the configuration steps will ask you to provide a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming Ingest API".
+#. A courier that pulls data that was streamed to Amperity by the Streaming API does not require a credential even though the configuration steps will ask you to add a credential. Create a new credential, name it "<tenant>-streaming-ingest" and give it a description like "Pull streams to Amperity for Streaming API".
 
 #. Under **Streaming Ingest Settings**, add the Streaming Ingest endpoint ID which is available from the **Stream ID** column in the **Sources** page.
 
-   Specify the **File format**, which can be |format_xml|, |format_ndjson|, or |format_json|. If you are sending JSON data, Amperity will batch your data into |format_ndjson| so select that if you're sending JSON data.
+   Specify the **File format**, which can be `XML <../reference/format_xml.html>`__, `NDJSON <reference/format_ndjson.html>`__, or `JSON <reference/format_json.html>`__.
 
-   Set the **File tag**. This is usually just **streaming**. Set this within the file tag in load operations and the file tag text box.
+   Set the **File tag** to **streaming**. Set this within the file tag in load operations and the file tag text box.
 
    Enter the **File pattern prefix**, which is useful for time based ingestion of streaming data. This setting may be configured to load data on an hourly basis. Possible values range from ``00`` - ``24``, each of which represents an hour in a 24 hour window. For example, use ``00`` to load data at 12:00 AM, ``08`` to load data at 8:00 AM, or ``12`` to load data at 12:00 PM. A courier may only be configured to use a single file pattern prefix.
 
-#. Set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Set the load operations to a string that is wrong, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use a wrong string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 
 #. Click **Save**.
 

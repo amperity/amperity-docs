@@ -2,7 +2,7 @@
 
 
 .. |destination-name| replace:: The Trade Desk
-.. |what-send| replace:: email addresses or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -11,7 +11,7 @@
 The Trade Desk
 ==================================================
 
-|destination-name| is a platform for wide internet advertising and enables the use of UID 2.0 (UID2) and European Unified ID (EUID) for first-party paid media advertising.
+|destination-name| is a platform for wide internet advertising and enables the use of UID 2.0 (UID2) and European Unified ID (EUID). Use email addresses and phone numbers for first-party paid media advertising.
 
 Your brand must have a UID2 or EUID agreement in-place with |destination-name| before configuring this destination.
 
@@ -80,3 +80,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-the-trade-desk-membership-duration-example-start
    :end-before: .. setting-the-trade-desk-membership-duration-example-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

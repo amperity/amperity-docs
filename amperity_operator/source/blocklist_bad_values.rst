@@ -53,7 +53,7 @@ Values can be configured to be:
 
 * Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
 
-  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it is not used for identity resolution.
 
   Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/operator/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
 
@@ -81,7 +81,7 @@ For example:
    :align: left
    :class: no-scaled-link
 
-will automatically ignore an email address that is associated with 8 (or more) distinct values for **given_name**.
+will automatically ignore an email address that is associated with 8 or more distinct values for **given_name**.
 
 .. note:: Default thresholds are set for the following combinations:
 
@@ -175,6 +175,8 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
 
 .. bad-values-blocklist-global-values-list-start
 
+.. vale off
+
 .. list-table::
    :widths: 200 400
    :header-rows: 1
@@ -204,6 +206,7 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * REFUSED
        * TBD
        * TDB
+       * TEST
        * TRAVEL
        * UNKNOWN
 
@@ -224,6 +227,7 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
        * 1899-12-31
        * 1900-01-01
        * 1920-01-01
+       * 0000-02-29
 
    * - **city**
      - The following values associated with the **city** semantic are ignored by Stitch when performing identity resolution:
@@ -258,12 +262,16 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
      - The following values associated with the **given-name** semantic are ignored by Stitch when performing identity resolution:
 
        * BLOCK
+       * CARDHOLDER
        * CONTACT
+       * GIFT
        * GUEST
        * GUESTS
        * NO NAME
+       * PREPAID
        * RESERVED
        * USE
+       * VISA
 
    * - **phone**
      - The following values associated with the **phone** semantic are ignored by Stitch when performing identity resolution:
@@ -306,11 +314,14 @@ Amperity uses a global blocklist to automatically remove a set of known bad valu
    * - **surname**
      - The following values associated with the **surname** semantic are ignored by Stitch when performing identity resolution:
 
+       * CARDHOLDER
        * CONTACT
        * GUESTS
        * NO NAME
        * RESERVED
        * USE
+
+.. vale on
 
 .. bad-values-blocklist-global-values-list-start
 
@@ -372,9 +383,9 @@ This query must do the following:
 * Apply a count threshold, over which a value is returned for inclusion in the bad-values blocklist.
 * Return the data into columns named datasource, semantic, and values, one unique value per row.
 
-.. important:: Only the PII semantic fields **email**, **phone**, **given-name**, **surname**, and **address** will have corresponding **_blv** columns added to the **Unified Coalesced** table, but any semantic may be added to the blocklist.
+.. important:: Only the PII semantic fields **email**, **phone**, **given-name**, **surname**, and **address** have corresponding **_blv** columns added to the **Unified Coalesced** table, but any semantic may be added to the blocklist.
 
-The name of the query should contain the word "blocklist" to help clearly identify its purpose. For example: "Bad-values Blocklist".
+The name of the query should contain the word "blocklist" to help identify its purpose. For example: "Bad-values Blocklist".
 
 .. bad-values-blocklist-add-sql-query-requirements-end
 
@@ -383,6 +394,7 @@ The name of the query should contain the word "blocklist" to help clearly identi
 For example, a SQL query that returns values that appear more than 20 times for **email** and **phone** is similar to:
 
 .. code-block:: sql
+   :linenos:
 
    WITH
 
@@ -449,9 +461,9 @@ Run query
 
 .. bad-values-blocklist-run-query-start
 
-Run the query from the SQL **Query Editor** to validate the syntax and to verify the output. Fix any errors that may be returned. If the values in the returned output don't seem correct, update the threshold for values counts to see if that improves the results.
+Run the query from the SQL **Query Editor** to validate the syntax and to verify the output. Fix any errors that may be returned. If the values in the returned output do not seem correct, update the threshold for values counts to see if that improves the results.
 
-.. tip:: The goal with a bad-values blocklist isn't to catch every single bad value, but rather to remove from the Stitch process the most comon bad values.
+.. tip:: The goal of the bad-values blocklist is not to catch every single bad value, but rather to remove from the Stitch process the most common bad values.
 
 .. bad-values-blocklist-run-query-end
 
@@ -530,7 +542,7 @@ Add feed
       * - **value**
         - **blv/value**
 
-   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This, effectively, round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
+   .. note:: This is different from how semantics are applied to a non-blocklist feed. This is because the actual data source, actual semantic, and actual values are in the data source itself, as they were output from the customer 360 data as CSV data, and then re-ingested as CSV data in the feed created for the bad-values blocklist. This round-trips output from the customer 360 database as a CSV file that creates a new domain table for use during the Stitch process.
 #. Define the primary key. This is required by the Stitch process, but for the purpose of creating the bad-values blocklist is not important. Use any row ID.
 #. Uncheck the **Make available to Stitch** option.
 #. Activate the feed.
@@ -545,10 +557,10 @@ Run Stitch
 
 .. bad-values-blocklist-run-stitch-start
 
-Run the Stitch process to update the results for the bad-values blackist.
+Run the Stitch process to update the results for the bad-values blocklist.
 
 #. On the **Stitch** page, click **Run**.
-#. Re-run each data table in the customer 360 database that contains data that could be affected by the bad-values blocklist. This will add the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
+#. Re-run each data table in the customer 360 database that has data that could be affected by the bad-values blocklist. This adds the results of the most recent Stitch run to these data tables, including adding a series of columns that indicate the presence of bad-values.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-has-blv-start
@@ -606,11 +618,14 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 
 .. bad-values-blocklist-update-merged-customers-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Prioritized** section, and then update the first value blocks for **email** and **phone** to add the **.blv** entries:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 5,15
 
       ,FIRST_VALUE(email_struct)
@@ -636,6 +651,7 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6,14
 
       ,up.email_struct.email
@@ -660,6 +676,8 @@ When using the bad-values blocklist, you must update the **Merged Customers** ta
 #. Run the customer 360 database.
 
 .. note:: If you add other PII semantics to the bad-values blocklist, such as for addresses, be sure to make the same changes to the structs.
+
+.. vale on
 
 .. bad-values-blocklist-update-merged-customers-steps-end
 
@@ -701,7 +719,7 @@ The following Stitch QA queries can be configured to exclude values for the bad-
 #. :doc:`Split clusters <stitch_qa_split_clusters>`
 #. :doc:`Unmatched semantic values <stitch_qa_unmatched_semantic_values>`
 
-After configuring the bad-values blocklist, examine each of the Stitch QA queries and determine which bad values (if any) should be excluded from the query.
+After configuring the bad-values blocklist, examine each of the Stitch QA queries and determine which bad values should be excluded from the query.
 
 .. bad-values-blocklist-update-stitch-qa-end
 
@@ -713,7 +731,7 @@ Automate blocklist
 
 .. bad-values-blocklist-automate-start
 
-The bad-values blocklist must be refreshed on a daily basis. To do this, configure a destination to send the results of the :ref:`bad-values blocklist query <bad-values-blocklist-run-query>` to the cloud-based storage location that is included with your tenant -- :doc:`Amazon S3 <destination_amazon_s3>` *or* :doc:`Microsoft Azure Blob Storage <destination_azure_blob_storage>`. Update your courier to pull the bad-values blocklist from that location, and then configure the end-to-end workflow to run automatically.
+The bad-values blocklist must be refreshed on a daily basis. To do this, configure a destination to send the results of the :ref:`bad-values blocklist query <bad-values-blocklist-run-query>` to the cloud-based storage location that is included with your tenant: :doc:`Amazon S3 <destination_amazon_s3>` *or* :doc:`Microsoft Azure Blob Storage <destination_azure_blob_storage>`. Update your courier to pull the bad-values blocklist from that location, and then configure the end-to-end workflow to run automatically.
 
 .. bad-values-blocklist-automate-end
 
@@ -735,7 +753,7 @@ Advanced options
 
 .. bad-values-blocklist-advanced-start
 
-There are more ways to do blocklists:
+Blocklists can do any of the following advanced options:
 
 * :ref:`Per-data source <bad-values-blocklist-advanced-per-data-source>`
 * :ref:`Per-database <bad-values-blocklist-advanced-per-database>`
@@ -753,7 +771,7 @@ By data source
 
 .. bad-values-blocklist-advanced-per-data-source-start
 
-You can create a group of bad-values queries, with one query per data source. This allows you to tune the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
+You can create a group of bad-values queries, with one query per data source. This tunes the SQL query results to a specific data set for both semantic associations and thresholds. Use the existing SQL query as a template and the create a unique query for each bad-values blocklist you want to build based on results in the customer 360 database.
 
 .. bad-values-blocklist-advanced-per-data-source-end
 
@@ -777,7 +795,7 @@ Expand returned values
 
 .. bad-values-blocklist-advanced-expand-returned-values-start
 
-In situations where multiple values exist for phone and/or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole (concatenated) value.
+In situations where many values exist for phone numbers or email addresses and the field in the **Unified Coalesced** table is a comma-separated concatenation of all values, the automated blocklist SQL query may fail to catch individual bad values for phones or email addresses because the query looks at occurrances of the whole concatenated value.
 
 .. bad-values-blocklist-advanced-expand-returned-values-end
 
@@ -813,9 +831,9 @@ When **address** is added to the bad-values blocklist, be sure to verify that re
 
 .. bad-values-blocklist-advanced-addresses-context-start
 
-An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold (at least "40", but higher if necessary) for **address**, verify the results, and then adjust the threshold carefully until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
+An effective bad-values blocklist for **address** often requires tuning and validation of the results to ensure that the right level of values are removed from the data. Start with a high threshold--at least "40", but higher if necessary--for **address**, verify the results, and then adjust the threshold until the desired level of accuracy is achieved. Use an Internet search to help verify each address that is blocklisted as part of the verification process.
 
-When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group---**address**, **city**, and **state**---does not replace the **address** value in the **Stitch_BadValues** table; the same address value may appear multiple times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
+When the bad-values blocklist is applied to **address** keep in mind that it also considers **city** and **state** along with **address** before determining if the threshold is met. This group--**address**, **city**, and **state**--does not replace the **address** value in the **Stitch_BadValues** table. The same address value may appear many times for each city and state pair. When |apply_ordinals_to_address_groups|, the address group for each ordinal is checked.
 
 .. bad-values-blocklist-advanced-addresses-context-end
 
@@ -827,11 +845,13 @@ address2 fields
 
 .. bad-values-blocklist-advanced-addresses-address2-start
 
-The **address** field may be used in the bad-values blocklist as part of a complete, normalized address. This should be done carefully because the fields associated with this semantic can follow many patterns and contain many types of values so applying a bad-values blocklist to them is more difficult and the results are less accurate.
+The **address** field may be used in the bad-values blocklist as part of a complete, normalized address. 
+
+.. caution:: The fields associated with this semantic can follow many patterns and contain many types of values. Applying a bad-values blocklist to them is more difficult and the results are less accurate.
 
 .. important:: The **address2** field should never be used in the bad-values blocklist in isolation.
 
-In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. There are two ways to do this:
+In certain situations, the **address2** field is the source of a value that may need to be added to the bad-values blocklist. Do one of the following:
 
 #. :ref:`Remove a single address <bad-values-blocklist-advanced-addresses-address2-remove>`.
 #. :ref:`Concatenate address and address2 <bad-values-blocklist-advanced-addresses-address2-concatenate>`.
@@ -880,7 +900,7 @@ to:
      ELSE UPPER(CONCAT(address,' ',address2))
    END AS value
 
-.. caution:: This approach should not be used when the **address** field is known to contain a high volume of bad addresses that should be removed, and also the **address2** fields within that subset of records contains a variety of junk values. Updating the **bad_address** block in this scenario may cause addresses to be missed as the blocklist values are applied.
+.. caution:: This approach should not be used when the **address** field is known to contain a high volume of bad addresses that should be removed, and also the **address2** fields within that subset of records has a variety of junk values. Updating the **bad_address** block in this scenario may cause addresses to be missed as the blocklist values are applied.
 
 .. bad-values-blocklist-advanced-addresses-address2-concatenate-end
 
@@ -898,7 +918,11 @@ You may create a CSV file to use for custom bad-value blocklists. The table stru
 * semantic
 * value
 
+.. vale off
+
 and then must contain a unique value per row, associated to a single Amperity semantic. Use a wildcard value (``*``) to associate a value with all data sources:
+
+.. vale on
 
 .. code-block:: mysql
 
@@ -937,7 +961,7 @@ The CSV file itself would be similar to:
 
 .. bad-values-blocklist-advanced-custom-csv-steps-start
 
-#. Use a custom CSV file to blocklist birthdates that exist across multiple data sources. For example:
+#. Use a custom CSV file to blocklist birthdates that exist across many data sources. For example:
 
    .. code-block:: none
 
@@ -964,9 +988,9 @@ Custom domain tables
 
 .. bad-values-blocklist-advanced-custom-domain-tables-start
 
-The bad-values blocklist uses a regular expression to identify domain tables. Domain tables are built using a **source:feed** pattern, whereas custom domain tables use a SQL-safe pattern that uses underscores (``_``) instead of a colon (``:``) as a delimiter. When custom domain table names are present, the default regular expression will not identify the underscores (and any related custom domain tables), and may return **NULL** values.
+The bad-values blocklist uses a regular expression to identify domain tables. Domain tables are built using a **source:feed** pattern, whereas custom domain tables use a SQL-safe pattern that uses underscores (``_``) instead of a colon (``:``) as a delimiter. When custom domain table names are present, the default regular expression will not identify the underscores and any related custom domain tables, and may return **NULL** values.
 
-If a blocklist returns NULL values and if custom domain tables are present, update the regular expression in the **SELECT** statements for the following sections:
+If a blocklist returns **NULL** values and if custom domain tables are present, update the regular expression in the **SELECT** statements for the following sections:
 
 * **bad_addresses**
 * **bad_emails**
@@ -984,7 +1008,7 @@ to:
 
    COALESCE(REGEXP_EXTRACT(datasource, '.+?(?=:)'), '*') AS datasource,
 
-This update will allow these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and will prevent **NULL** values from being returned.
+This update allows these **SELECT** statements to continue using a regular expression to find domain tables, and then use ``*`` to find custom domain tables and prevents **NULL** values from being returned.
 
 .. bad-values-blocklist-advanced-custom-domain-tables-end
 
@@ -1034,7 +1058,7 @@ The bad-values blocklist operates against pre-processed semantic rows, and not a
 
    If the targeted data source is configured to derive **given-name** and **surname** semantics from the **full-name** semantic, values in the **full-name** semantic should never be added to a bad-values blocklist.
 
-   For example, if "BLACK BLACK" were added to the bad-values blocklist via the **full-name** semantic, then "BLACK" for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
+   For example, if ``BLACK BLACK`` were added to the bad-values blocklist via the **full-name** semantic, then ``BLACK`` for both **given-name** and **surname** semantics would be blocklisted too. This type of situation is not common, but must be considered when deciding which semantics to use for building the bad-values blocklist.
 
 .. bad-values-blocklist-derived-semantics-end
 
@@ -1051,6 +1075,7 @@ This SQL query provides a working example of a bad-values blocklist that looks f
 .. TODO: The following example for addresses does NOT include postal because city and state are equivalently precise, but postal can come in 5 & 9 digit forms while representing the same address.
 
 .. code-block:: sql
+   :linenos:
 
    -- QUERY NAME: Blocklist Values
    -- DESCRIPTION: Use this query to verify the presence of blocklisted values.

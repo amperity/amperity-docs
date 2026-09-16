@@ -17,7 +17,7 @@
 Configure Stitch
 ==================================================
 
-.. TODO: This section title is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
+.. TODO: Is required by a tooltip in the Stitch configuration dialog in Amperity. Do not change this title without also taking steps to ensure the link from the dialog is also updated.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-stitch-start
@@ -39,9 +39,7 @@ The default settings are recommended for most situations.
 Stitched tables
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
-
-.. TODO: Compare this to reference/stitch_results and sync up. Also image is updated.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. stitch-run-select-tables-start
 
@@ -81,15 +79,15 @@ After you have selected the list of tables to include in Stitch results, return 
 Interaction tables
 --------------------------------------------------
 
-.. TODO: If at all possible, edit this down. It's correct, but wordy.
+.. TODO: If at all possible, edit this down. It is correct, but wordy.
 
 .. configure-stitch-tables-interactions-start
 
-Domain tables that contain interactions, such as customer orders, loyalty profiles, website clicks, and so on, are generally not made available to Stitch.
+Domain tables that contain interactions, such as customer orders, loyalty profiles, or website clicks, are not made available to Stitch.
 
 Use foreign keys to associate unique identifiers in tables that **DO NOT** contain interactions to unique identifiers in tables that **DO** contain customer profile data.
 
-When foreign keys are present in tables that contain interactions that match foreign keys in tables that contain customer profile data an Amperity ID is assigned to each row in the table that contains interactions.
+When foreign keys are present in tables that contain interactions that match foreign keys in tables that contain customer profile data an Amperity ID is assigned to each row in the table that has interactions.
 
 The list of tables that contain interactions and in which rows of data are associated with an Amperity ID is found on the **Stitched tables** tab under **Interaction tables**.
 
@@ -117,7 +115,7 @@ Rules
 
 .. configure-stitch-rules-start
 
-Use the **Rules** tab to define a prioritized collection of rules that are used for deterministic identity resolution. Rules are evaluated in order (top-to-bottom), starting from the first rule defined in this tab, until a rule returns true.
+Use the **Rules** tab to define a prioritized collection of rules used during identity resolution. Rules are evaluated in order, from top-to-bottom, starting from the first rule defined in this tab, until a rule returns true.
 
 .. image:: ../../images/mockup-stitch-settings-rules.png
    :width: 520 px
@@ -139,7 +137,26 @@ Cluster records
 
 Rules can be configured to cluster records together when personally identifiable information (PII) matches or with matching foreign keys.
 
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+   * - **values match**
+     - Compares values for the selected semantic tag and clusters records when values match exactly.
+   * - **values approximately match**
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+
+.. configure-stitch-rules-cluster-end
+
 For example:
+
+.. image:: ../../images/mockup-stitch-settings-rules-match-cluster-complex.png
+   :width: 440 px
+   :alt: Use many criteria to define a single rule.
+   :align: left
+   :class: no-scaled-link
 
 .. image:: ../../images/mockup-stitch-settings-rules-match-birthdate.png
    :width: 440 px
@@ -159,19 +176,46 @@ For example:
    :align: left
    :class: no-scaled-link
 
-.. configure-stitch-rules-cluster-end
-
 
 .. _configure-stitch-rules-separate:
 
 Separate records
 --------------------------------------------------
 
+.. vale off
+
 .. configure-stitch-rules-separate-start
 
-Rules can be configured to separate records together when values differ or when specific types of PII are similar, but do not match.
+Rules can be configured to separate records when values differ or when specific types of PII are similar, but do not match.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+   * - **values differ**
+     - Compares values for the selected semantic tag and separates records when values do not match exactly.
+   * - **values significantly differ**
+     - Compares values for the selected semantic tag and separates records when values are more than approximately different.
+   * - **name is not the same (fuzzy match)**
+     - Compares values for names and separates records when values are not the same.
+   * - **birthdate is not the same (fuzzy match)**
+     - Compares values for birthdates and separates records when values are not the same.
+   * - **generational suffix is not the same (fuzzy match)**
+     - Compares values for generational suffix and separates records when values are not the same.
+   * - **company is not the same (fuzzy match)**
+     - Compares values for company and separates records when values are not the same.
+
+.. configure-stitch-rules-separate-end
 
 For example:
+
+.. image:: ../../images/mockup-stitch-settings-rules-match-separation-complex.png
+   :width: 440 px
+   :alt: Use many criteria to define a single rule.
+   :align: left
+   :class: no-scaled-link
 
 .. image:: ../../images/mockup-stitch-settings-rules-separate-email.png
    :width: 440 px
@@ -191,7 +235,7 @@ For example:
    :align: left
    :class: no-scaled-link
 
-.. configure-stitch-rules-separate-end
+.. vale on
 
 
 .. _configure-stitch-rules-order:
@@ -201,15 +245,17 @@ Rules can be in any order
 
 .. configure-stitch-rules-order-start
 
-Rules can be put in any order you want. Click the |fa-drag| icon, and then drag the rule into the desired position. For example:
+Rules can be put in any order you want. Click the |fa-drag| icon, and then drag the rule into the desired position.
+
+.. configure-stitch-rules-order-end
+
+For example:
 
 .. image:: ../../images/mockup-stitch-settings-rules-any-order.png
    :width: 500 px
    :alt: Rules can be put in any order you want.
    :align: left
    :class: no-scaled-link
-
-.. configure-stitch-rules-order-end
 
 
 .. _configure-stitch-rules-remaining:
@@ -225,7 +271,7 @@ For records that do not match any of the prioritized collection of rules there a
 
 #. Recommended. Allow Stitch to evaluate these records, discover connections, and then use those connections to build clusters.
 
-#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules will not be included in a cluster.
+#. Use only the prioritized collection of rules to build clusters. Records that do not match one of the rules is not included in a cluster.
 
 .. configure-stitch-rules-remaining-end
 
@@ -257,16 +303,52 @@ The **Code** view uses Extensible Data Notation (EDN) formatting and is similar 
 .. configure-stitch-rules-code-end
 
 
+.. _configure-stitch-rules-code-view:
+
+Rules in the Code view
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. configure-stitch-rules-code-view-start
+
+Stitch rules for :ref:`clustering records <configure-stitch-rules-cluster>` and :ref:`separating records <configure-stitch-rules-cluster>` have specific names in the **Code** view.
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Condition
+     - Description
+
+   * - **:fuzzy-different**
+     - Compares values for the selected semantic tag and separates records when values are more than approximately different.
+   * - **:fuzzy-similar**
+     - Compares values for the selected semantic tag and clusters records when values approximately match. Use this option when values match but have minor variations, such as misspellings, abbreviations, typos, or transposed characters.
+   * - **:fuzzy/different-birthdates**
+     - Compares values for birthdates and separates records when values are not the same.
+   * - **:fuzzy/different-companies**
+     - Compares values for company and separates records when values are not the same.
+   * - **:fuzzy/different-generations**
+     - Compares values for generational suffix and separates records when values are not the same.
+   * - **:fuzzy/incompatible-names**
+     - Compares values for names and separates records when values are not the same.
+   * - **:present-and-equal**
+     - Compares values for the selected semantic tag and clusters records when values match exactly.
+   * - **:present-and-not-equal**
+     - Compares values for the selected semantic tag and separates records when values do not match exactly.
+
+.. configure-stitch-rules-code-view-end
+
+
 .. _configure-stitch-general:
 
 General settings
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-general-start
 
-The **General** settings tab contains a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
+The **General** settings tab has a series of configuration settings that may be modified based on analysis of the data in your tenant to help improve data quality and clustering results.
 
 .. image:: ../../images/mockup-stitch-settings-general.png
    :width: 520 px
@@ -293,7 +375,7 @@ General settings are divided into the following categories:
 Allowed empty tables
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-allowed-empty-tables-start
 
@@ -303,7 +385,7 @@ Stitch may be configured to allow tables to be empty. For example, some CCPA and
 
 .. configure-stitch-general-performance-empty-tables-start
 
-To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** dropdown, select one (or more) tables:
+To allow empty tables, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Performance**, from the **Allow empty tables** dropdown, select one or more tables:
 
 .. image:: ../../images/mockup-stitch-settings-general-allow-empty-tables.png
    :width: 380 px
@@ -321,7 +403,7 @@ The list of tables will match the list of domain tables that have been defined i
 Days of recorded history
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-days-of-recorded-history-start
 
@@ -351,11 +433,11 @@ To update the days of recorded history, open the **Stitch** page, and then click
 Force Stitch to run
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation. Tooltip is paraphrased version of this.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation. Tooltip is paraphrased version of this.
 
 .. configure-stitch-general-stitch-force-start
 
-Stitch will run when domain tables contain updates to data that is used by Stitch for identity resolution. Stitch will not run when updates are not present.
+Stitch runs when domain tables contain updates to data that is used by Stitch for identity resolution. Stitch will not run when updates are not present.
 
 To force Stitch to run, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Stitch processing**, enable the **Force Stitch to run** setting:
 
@@ -379,17 +461,17 @@ To force Stitch to run, open the **Stitch** page, and then click **Stitch settin
 Ignore jitter alerts
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-jitter-alerts-start
 
-Jitter tracks changes to Amperity IDs across Stitch runs. You may configure Stitch to ignore jitter, such as during the initial configuration phase for your tenant or when running a tenant in training and/or demonstration use cases.
+Jitter tracks changes to Amperity IDs across Stitch runs. You may configure Stitch to ignore jitter, such as during the initial configuration phase for your tenant or when running a tenant in training or demonstration use cases.
 
 .. tooltip-stitch-config-jitter-alerts-end
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-start
 
-.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent (or greater) of all customer records are assigned an updated Amperity ID.
+.. note:: The rates at which jitter may occur is when large numbers of customer records are added to or removed from your tenant or when two percent or greater of all customer records are assigned an updated Amperity ID.
 
 .. configure-stitch-general-stitch-ignore-jitter-rates-end
 
@@ -415,11 +497,11 @@ This setting as **false** in your production tenant as often as possible.
 One-to-one Stitch
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-one-to-one-start
 
-You may configure Stitch to assign Amperity IDs to customers that are identified by a unique (and consistent) customer key. (This configuration option is sometimes referred to as "deterministic Stitch". You should not expect your Amperity IDs to be persistent when this mode is enabled.)
+You may configure Stitch to assign Amperity IDs to customers that are identified by a unique and consistent customer key. This configuration option is sometimes referred to as "deterministic Stitch". You should not expect your Amperity IDs to be persistent when this mode is enabled.
 
 .. tooltip-stitch-config-one-to-one-end
 
@@ -429,11 +511,11 @@ You may configure Stitch to assign Amperity IDs to customers that are identified
 
 Use the following steps to configure your tenant for one-to-one Stitch:
 
-#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that contains the existing customer ID.
+#. Ensure that each table that is made available to Stitch applies the **ck** semantic tag to the field that has the existing customer ID.
 
    .. tip:: You may apply the **ck** semantic tag from a feed or from a custom domain table.
 
-#. Apply all other semantic tags -- customer profile, foreign key, primary key, orders and items -- to the correct fields in all of your data sources. These tags will have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
+#. Apply all other semantic tags--customer profile, foreign key, primary key, orders and items--to the correct fields in all of your data sources. These tags have no effect when running one-to-one Stitch, but are required for customer profiles, transactions, segment insights, and predictive modeling.
 
 #. To configure Amperity for one-to-one Stitch, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Bypass Stitch**, move the slider for the **Run 1:1 Stitch** setting to the right:
 
@@ -445,7 +527,7 @@ Use the following steps to configure your tenant for one-to-one Stitch:
 
 #. Run Stitch.
 
-   When the run is complete, each unique customer ID will be associated with an Amperity ID.
+   When the run is complete, each unique customer ID is associated with an Amperity ID.
 
 .. configure-stitch-general-one-to-one-end
 
@@ -462,11 +544,11 @@ The following table describes the changes you will see in your tenant after it i
    * - Tab
      - Changes
    * - **Stitch**
-     - The overview page will show a 0.0% deduplication rate. The Amperity ID will align to the total source IDs provided by the **ck**.
+     - The overview page shows a 0.0% deduplication rate. The Amperity ID aligns to the total source IDs provided by the **ck**.
 
        The **Data Explorer** disables the tabs for **Cluster Graph** and **Pairwise Comparison**. These tabs are not available when one-to-one Stitch mode is configured.
 
-       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys (and not on stable clusters of customer records).
+       .. note:: The Amperity ID that is generated in one-to-one Stitch mode is based on customer keys and not on stable clusters of customer records.
 
    * - **Customer 360**
      - The **Unified Scores** table is not generated.
@@ -475,7 +557,7 @@ The following table describes the changes you will see in your tenant after it i
 
        Fields related to the bad-values blocklist are not available, including **has_blv**, **blv_address**, **blv_email**, **blv_given_name**, **blv_phone**, and **blv_surname**.
 
-       All standard tables will contain a **ck** field.
+       All standard tables has a **ck** field.
 
        The Stitch QA database template is not needed.
    * - **Queries**
@@ -489,7 +571,7 @@ The following table describes the changes you will see in your tenant after it i
 Skip unified changes
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-skip-changes-start
 
@@ -527,11 +609,11 @@ To skip building the unified changes tables, open the **Stitch** page, and then 
 Skip unified scores
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-skip-scores-start
 
-The unified scores table contains all of the scoring between record pairs for the previous Stitch run. This table is resource intensive and may be skipped.
+The unified scores table has all of the scoring between record pairs for the previous Stitch run. This table is resource intensive and may be skipped.
 
 .. tooltip-stitch-config-skip-scores-end
 
@@ -559,13 +641,13 @@ To skip building unified scores, open the **Stitch** page, and then click **Stit
 Stable IDs
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-start
    :end-before: .. term-amperity-id-end
 
-.. TODO: Keep the following in sync with a paragraph from the "stable ID assignment" section in /stitch.html; this is customized to link back to that section, but otherwise should have the same words.
+.. TODO: Keep the following in sync with a paragraph from the "stable ID assignment" section in /stitch.html. This is customized to link back to that section, but otherwise should have the same words.
 
 .. configure-stitch-general-stitch-stable-id-explore-start
 
@@ -577,9 +659,9 @@ As new data is input to Amperity, the Stitch process identifies when new or chan
 
 Stable ID assignment can be a resource-intensive process, in particular when:
 
-#. Adding data sources that contain large numbers of rows (100+ million rows) of customer records.
-#. Updating existing data sources with large numbers of rows on a periodic (monthly, quarterly, etc.) basis.
-#. Data contains a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
+#. Adding data sources that contain large numbers of rows, such as sources with 100+ million rows of customer records.
+#. Updating existing data sources with large numbers of rows on a periodic basis, such as monthly or quarterly.
+#. Data has a very large number of duplicate values, such as 400k+ instances of an email address that is associated to a common business process.
 
 .. configure-stitch-general-stitch-stable-id-end
 
@@ -589,7 +671,7 @@ You can configure the stable ID assignment process in the following ways:
 
 #. :ref:`Disable stable IDs <configure-stitch-general-stitch-stable-id-disable>`
 #. :ref:`Increase the number of partitions that are available to stable ID assignment <configure-stitch-general-stitch-stable-id-partitions>`
-#. :ref:`Stop building the Unified Changes table (temporarily) <configure-stitch-general-stitch-skip-changes>`
+#. :ref:`Temporarily stop building the Unified Changes table <configure-stitch-general-stitch-skip-changes>`
 
 .. configure-stitch-general-stitch-stable-id-links-end
 
@@ -631,10 +713,10 @@ When large differences are present between clusters of records for the current a
 
 By default, stable ID assignment is based on the edges that exist between current and previous clusters of customer records, weighted by the number of shared primary keys. The shared primary keys are sorted in descending order, after which ties are broken by sorting the cluster IDs in ascending order. Edges are removed when higher-ranked edges are associated to identical clusters of customer records. Edges that survive this ranking are then used to map current cluster IDs to previous cluster IDs. Changes to stable ID assignment are captured in the **Unified Changes Clusters** and **Unified Changes PKs** tables.
 
-In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck; in some cases the Stitch job has run out of memory and will need to be rerun. In these situations, do the following:
+In some cases, the differences between the current and previous clusters of customer records is very large, requiring access to a large amount of memory to complete the stable ID assignment process. In this type of situation Stitch processes may take a very long time, or even appear to be stuck. In some cases the Stitch job has run out of memory and need to be rerun. In these situations, do the following:
 
 #. Look for unusual values, such as a large set of identical email address, that appear in the **Unified Coalesced** table. This can sometimes be the cause of slow stable ID assignment. Mitigate the presence of these unusual values, and then run Stitch again.
-#. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to a value between 2-10 to improve the performance of Stitch during stable ID assigment.
+#. Increase the number of partitions that are available to Stitch during the stable ID assignment process. You can increase the value of **stable-id-partition-count** to 2-10 partitions to improve the performance of Stitch during stable ID assigment.
 
 This setting should be used temporarily, but for some tenants it may need to be left at a non-default value. Changing partitions may only be done using an advanced configuration setting:
 
@@ -668,7 +750,7 @@ Values can be configured to be:
 
 * Detected automatically using a threshold and an association between two fields. The value is ignored when the first field exceeds the configured threshold as it relates to the second field.
 
-  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it will not be used for identity resolution.
+  For example, "Ignore any email address with more than 8 given names." where **email** is the first field, the threshold is "8", and the second field is **given-name**. When an email address is associated with more than 8 given names, that email address will be added to the bad-values blocklist and ignored by Stitch, after which it is not used for identity resolution.
 
   Automatic detection is available for `all fields to which customer profile semantic tags were applied <https://docs.amperity.com/operator/semantics.html#profiles>`__, such as **email**, **phone**, **address**, **given-name** and for fields that contain foreign keys.
 
@@ -696,7 +778,7 @@ For example:
    :align: left
    :class: no-scaled-link
 
-will automatically ignore an email address that is associated with 8 (or more) distinct values for **given_name**.
+will automatically ignore an email address that is associated with 8 or more distinct values for **given_name**.
 
 .. note:: Default thresholds are set for the following combinations:
 
@@ -727,7 +809,7 @@ Values can be added to the bad-values blocklist manually for email addresses, ph
 Advanced settings
 ==================================================
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-start
 
@@ -756,7 +838,7 @@ The following settings are available for advanced configuration of Stitch:
 
 .. configure-stitch-advanced-configuration-warning-start
 
-.. note:: The editor for Stitch report settings uses Extensible Data Notation (EDN) formatting:
+.. note:: The editor for Stitch settings uses Extensible Data Notation (EDN) formatting:
 
    ::
 
@@ -781,11 +863,11 @@ The following settings are available for advanced configuration of Stitch:
 Blocking strategies
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-blocking-strategy-start
 
-Blocking is a non-trivial step for record linking. The default blocking strategy provides a reasonable recall rate for most use cases; work with your Amperity representative to identify the best approaches for tuning your tenant's blocking strategy.
+Blocking is a non-trivial step for record linking. The default blocking strategy provides a reasonable recall rate for most use cases. Work with your Amperity representative to identify the best approaches for tuning your tenant's blocking strategy.
 
 .. tooltip-stitch-config-blocking-strategy-end
 
@@ -793,15 +875,15 @@ Blocking is a non-trivial step for record linking. The default blocking strategy
 
 The combination of blocking keys is what creates the ideal recall rate without compromising the performance of Amperity.
 
-* An overly generous blocking strategy may result in a high recall rate (too many pairs being evaluated) along with negative system performance.
-* An overly conservative blocking strategy may result in a low recall rate (too few pairs being evaluated).
+* An overly generous blocking strategy may result in a high recall rate, which means too many pairs are evaluated. This can affect system performance.
+* An overly conservative blocking strategy may result in a low recall rate, which means too few pairs being evaluated.
 * Individual blocking keys may be conservative or generous.
 
 .. configure-stitch-advanced-clustering-blocking-end
 
 .. configure-stitch-advanced-clustering-blocking-default-start
 
-To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) blocking strategies from the **Blocking Strategies** dropdown:
+To configure the blocking strategies that are used for your tenant, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one or more blocking strategies from the **Blocking Strategies** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-blocking-strategy.png
    :width: 380 px
@@ -827,13 +909,13 @@ The default blocking strategies are: "dnf1", "dnf3", "dnf4", "dnf5", "dnf6", "dn
 
       :dnf1 :dnf4 :dnf5 :dnf3
 
-   will be processed in the same way and will return the same results.
+   is processed in the same way and will return the same results.
 
 .. configure-stitch-advanced-clustering-blocking-note-end
 
 .. configure-stitch-advanced-clustering-blocking-list-start
 
-In nearly all cases for all customers, the default blocking strategy should provide a reasonable recall rate. Each individual blocking strategy looks at various combinations of PII data:
+In most cases for all customers, the default blocking strategy should provide a reasonable recall rate. Each individual blocking strategy looks at various combinations of PII data:
 
 .. list-table::
    :widths: 200 400
@@ -848,7 +930,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:dnf1**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first character in **surname**, and **birthdate**.
    * - **:dnf2**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
+     - Non-default. This blocking strategy groups values associated with the following semantics: the full **given-name** and **email**.
    * - **:dnf3**
      - Default. This blocking strategy groups values associated with the following semantics: the first three characters in **given-name**, the first three characters in **surname**, and **postal**.
    * - **:dnf4**
@@ -874,7 +956,7 @@ In nearly all cases for all customers, the default blocking strategy should prov
    * - **:login-trimmed**
      - Non-default. This blocking strategy groups values associated with the first five characters of an email addresses derived from **email**. This is used for low-threshold email address matching.
    * - **:name**
-     - Non-default, use carefully. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for JOHN SMITH and SMITH JOHN is JOHN:SMITH.
+     - Non-defaul. This blocking strategy groups values associated with the following semantics: **given-name** and **surname**. The order of **given-name** and **surname** is sorted lexicographically. The blocking key for ``JOHN SMITH`` and ``SMITH JOHN`` is ``JOHN:SMITH``.
    * - **:phone**
      - Default. This blocking strategy groups values associated with the **phone** semantic.
 
@@ -897,7 +979,7 @@ Blocking strategies are configured with the following configuration setting:
 Case-sensitive foreign keys
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-case-sensitive-fk-start
 
@@ -907,7 +989,7 @@ Values associated with foreign keys are case-insensitive by default. You may con
 
 .. configure-stitch-advanced-clustering-case-sensitive-start
 
-To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one (or more) case-sensitive foreign keys from the **Case-sensitive foreign keys** dropdown:
+To specify which foreign keys are case-sensitive, open the **Stitch** page, and then click **Stitch settings**. In the list of settings, under **Cluster quality**, select one or more case-sensitive foreign keys from the **Case-sensitive foreign keys** dropdown:
 
 .. image:: ../../images/mockup-stitch-settings-general-case-sensitive.png
    :width: 380 px
@@ -953,7 +1035,7 @@ You can disable automatic bad-value blocklists by updating the configuration to 
 Matching strategy
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-matching-classifier-start
 
@@ -967,7 +1049,7 @@ The matching strategy classifier tells Stitch how to apply the results of the bl
 
 The default behavior prioritizes separation keys over foreign keys.
 
-.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results carefully to ensure that any changes to pairwise comparison scoring had the desired outcome.
+.. warning:: This value should be changed only after careful consideration. If changed, be sure to validate these results to ensure that any changes to pairwise comparison scoring had the desired outcome.
 
 .. configure-stitch-advanced-clustering-matching-strategy-end
 
@@ -999,11 +1081,17 @@ When foreign key matching is the priority, Amperity scores record pairs in the f
 
 .. configure-stitch-advanced-clustering-matching-strategy-fk-end
 
-.. image:: ../../images/classifier-fk-match.png
+.. figure:: ../../images/classifier-fk-match.png
    :width: 450 px
-   :alt: Foreign key matching priority.
+   :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-fk-match-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _configure-stitch-advanced-clustering-matching-strategy-sk:
@@ -1033,11 +1121,17 @@ When separation key unmatching is the priority, Amperity scores record pairs in 
 
 .. configure-stitch-advanced-clustering-matching-strategy-sk-end
 
-.. image:: ../../images/classifier-sk-unmatch.png
+.. figure:: ../../images/classifier-sk-unmatch.png
    :width: 450 px
    :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-sk-unmatch-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _configure-stitch-advanced-clustering-matching-thresholds:
@@ -1045,11 +1139,11 @@ When separation key unmatching is the priority, Amperity scores record pairs in 
 Matching thresholds
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. tooltip-stitch-config-matching-thresholds-start
 
-Matching record pairs are included when they score better than this value. A lower value leads to more matches and weaker pairs; a higher value leads to fewer matches and more precise pairs. Five values may be chosen: 1.0 (weak), 2.0 (moderate), 3.0 (high, default and recommended value), 4.0 (excellent), and 5.0 (exact).
+Matching record pairs are included when they score better than this value. A lower value leads to more matches and weaker pairs. A higher value leads to fewer matches and more precise pairs. Five values may be chosen: 1.0 (weak), 2.0 (moderate), 3.0 (high, default and recommended value), 4.0 (excellent), and 5.0 (exact).
 
 .. tooltip-stitch-config-matching-thresholds-end
 
@@ -1098,7 +1192,7 @@ Matching thresholds are configured with the following configuration setting:
 Pre-processing profiles
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profiles-start
 
@@ -1126,7 +1220,7 @@ The advanced configuration setting for preprocessing profiles is:
 Australian phone numbers
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-australian-phone-start
 
@@ -1144,7 +1238,7 @@ To use Australian phone numbers, use:
 Business email addresses
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-business-email-start
 
@@ -1162,11 +1256,11 @@ To allow business email addresses, use:
 Clean foreign keys
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-clean-foreign-keys-start
 
-To clean foreign keys (trim whitespace and update them to uppercase), use:
+To clean foreign keys, including trimming whitespace and updating to uppercase, use:
 
 .. code-block:: clojure
 
@@ -1180,7 +1274,7 @@ To clean foreign keys (trim whitespace and update them to uppercase), use:
 Multiple preprocessing profiles
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-multiple-profiles-start
 
@@ -1198,7 +1292,7 @@ To apply more than one preprocessing profile, use:
 Email addresses
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-email-start
 
@@ -1209,6 +1303,8 @@ Many email addresses are not useful for identity resolution. Some of them are ge
 .. configure-stitch-advanced-profile-email-address-patterns-start
 
 The following values associated with the **email** semantic are ignored by Stitch when performing identity resolution:
+
+.. vale off
 
 * **@NOEMAIL.COM**
 * **@NOMAIL.COM**
@@ -1285,6 +1381,8 @@ The following values associated with the **email** semantic are ignored by Stitc
 * VENDORS@
 * **XXX@**
 
+.. vale on
+
 The values in **bold** are always ignored.
 
 .. configure-stitch-advanced-profile-email-address-patterns-end
@@ -1298,6 +1396,8 @@ Stitch may be configured to allow certain generic email addresses to be availabl
    pre-processing-profile :allow-business-email
 
 When this setting is updated, only the following email address patterns are ignored by Stitch:
+
+.. vale off
 
 * @NOEMAIL.COM
 * @NOMAIL.COM
@@ -1322,6 +1422,8 @@ When this setting is updated, only the following email address patterns are igno
 * REFUSED@
 * XXX@
 
+.. vale on
+
 Use a bad-values blocklist to configure Amperity to continue ignoring any of the email address patterns that were removed from the default list of ignored email patterns.
 
 .. TODO: Re-link to the bad-values blocklist page.
@@ -1334,7 +1436,7 @@ Use a bad-values blocklist to configure Amperity to continue ignoring any of the
 Normalize gender
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-profile-normalize-gender-start
 
@@ -1386,11 +1488,11 @@ Configure the semantics for which thresholds are lowered using the **staple-sema
 Stitch reports
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. configure-stitch-advanced-reports-start
 
-A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included (or excluded) can help improve the quality of the Stitch report. The Amperity IDs that are included will appear first in the series of individuals shown when exploring Amperity IDs.
+A Stitch report shows cluster graphs for individuals associated with the Amperity ID. You can configure the Stitch report to include or exclude specific Amperity IDs. Ensuring that certain Amperity IDs are included or excluded can help improve the quality of the Stitch report. The Amperity IDs that are included appears first in the series of individuals shown when exploring Amperity IDs.
 
 Stitch may be configured to include or exclude specific Amperity IDs in the Stitch report.
 
@@ -1432,11 +1534,13 @@ For example:
 Graph partitions
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. include:: ../../amperity_help/source/stitch_config_cluster_size.rst
    :start-after: .. tooltip-stitch-config-graph-partitions-start
    :end-before: .. tooltip-stitch-config-graph-partitions-end
+
+.. vale off
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-start
 
@@ -1457,9 +1561,11 @@ All four groups of records transitively connect into a single connected cluster 
 
 .. configure-stitch-advanced-profile-supersized-clusters-example-end
 
+.. vale on
+
 .. configure-stitch-advanced-profile-supersized-clusters-config-start
 
-Amperity defines a supersized cluster as any cluster with 500 (or more) connections. Stitch will partition supersized clusters into separate graph partitions. To change this threshold to a higher or lower value, update the following advanced configuration setting:
+Amperity defines a supersized cluster as any cluster with 500 or more connections. Stitch will partition supersized clusters into separate graph partitions. To change this threshold to a higher or lower value, update the following advanced configuration setting:
 
 .. code-block:: clojure
 
@@ -1473,11 +1579,11 @@ Amperity defines a supersized cluster as any cluster with 500 (or more) connecti
 Trivial duplicates
 --------------------------------------------------
 
-.. TODO: Do not change this title; may be linked to from a tooltip in the application and also the left-side navigation.
+.. TODO: Do not change this title. May be linked to from a tooltip in the application and also the left-side navigation.
 
 .. term-trivial-duplicate-start
 
-A trivial duplicate is a set of nearly-identical records that share enough matching PII to clearly identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing; the other records---the trivial duplicates---are not.
+A trivial duplicate is a set of nearly identical records that share enough matching PII to identify a single unique individual. Trivial duplicates are identified by Stitch early in the identity resolution process. Only one of these records is passed downstream for additional Stitch processing. The other records--the trivial duplicates--are not.
 
 .. term-trivial-duplicate-end
 
@@ -1516,13 +1622,13 @@ However, not all of the PII is identical. The email addresses do not match acros
     r-829   Justin      Currie     123 West Elm St   ...    vnbb11095412@gmail.com
    ------- ----------- ---------- ----------------- ------ ------------------------
 
-The complete set of records (including trivial duplicates) will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
+The complete set of records, including trivial duplicates, will be available in the **Unified Coalesced** table. The collapsed records will be available in the **Unified Preprocessed Raw** table.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end
 
 .. term-trivial-duplicate-qualified-start
 
-A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 (or greater) and were grouped together.
+A qualified trivial duplicate is a set of records with enough matching PII to score 3.0 or greater and were grouped together.
 
 .. term-trivial-duplicate-qualified-end
 
@@ -1536,7 +1642,7 @@ Qualified trivial duplicates are treated as a single record by downstream Stitch
 
 .. admonition:: What are the rep_ds and rep_pk columns?
 
-   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it's necessary to understand why two records were not clustered together.
+   Use the **rep_pk** and **rep_ds** columns in the **Unified Coalesced** table to help with situations where it is necessary to understand why two records were not clustered together.
 
    .. include:: ../../shared/terms.rst
       :start-after: .. term-rep-pk-start
@@ -1558,7 +1664,7 @@ The advanced configuration setting for trivial duplicates is:
 
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 10
 
-An increase to this value will decrease the likelihood that multiple records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
+An increase to this value will decrease the likelihood that many records with trivial differences are collapsable into a single record for the identity resolution process. This setting should only be tuned after understanding the quality of downstream data, including stitched records.
 
 .. configure-stitch-advanced-trivial-duplicates-config-end
 
@@ -1570,7 +1676,7 @@ Semantic exclusions
 
 .. configure-stitch-advanced-trivial-duplicates-exclusions-start
 
-Semantic exclusions for trivial duplicates may be specified. When excluded, for the purpose of identifying clusters of records, the values associated with that semantic will be ignored. This should only be done for limited scenarios where certain types of data are known to be of lower quality.
+Semantic exclusions for trivial duplicates may be specified. When excluded, for the purpose of identifying clusters of records, the values associated with that semantic is ignored. This should only be done for limited scenarios where certain types of data are known to be of lower quality.
 
 To define an exclusion, add the following advanced configuration setting for Stitch:
 
@@ -1578,7 +1684,7 @@ To define an exclusion, add the following advanced configuration setting for Sti
 
    :amperity.stitch.settings/soft-trivial-dupe-semantic-exclusions #{"semantic_name"}
 
-where **semantic_name** is a the name of a semantic, such as **email**. (This value is **nil** by default.)
+where **semantic_name** is a the name of a semantic, such as **email**. This value is **nil** by default.
 
 .. configure-stitch-advanced-profile-trivial-duplicates-exclusions-end
 
@@ -1608,15 +1714,15 @@ All of the information is identical, except for variations in email addresses th
 
 The maximum allowed number of records with trivial duplicates is set to "10" by default. When the number of records with trivial duplicates is greater than this value, each individual record will be treated as a single record. Since the previous example shows eleven records for Justin Currie, each with a unique value for the email column, eleven individual records would be created.
 
-Semantic exclusions define a threshold over which records like these will be collapsed into a trivial duplicate. For example, let's say you have defined a semantic exclusion for **email** and left the size threshold at "10".
+Semantic exclusions define a threshold over which records like these will be collapsed into a trivial duplicate. For example, you have defined a semantic exclusion for **email** and left the size threshold at "10".
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 10 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 10 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end
 
 .. configure-stitch-advanced-trivial-duplicates-warning-start
 
-.. warning:: Semantic exclusions should be applied very carefully. Use a sandbox to configure and apply a semantic exclusion, and then carefully review and validate that all downstream processes are not adversely affected by the change prior to applying a semantic change to a production environment.
+.. warning:: Semantic exclusions should be applied. Use a sandbox to configure and apply a semantic exclusion, and then review and validate that all downstream processes are not adversely affected by the change before applying a semantic change to a production environment.
 
 .. configure-stitch-advanced-trivial-duplicates-warning-end
 
@@ -1628,7 +1734,7 @@ Example: email addresses
 
 .. configure-stitch-advanced-profile-trivial-duplicates-example-start
 
-A long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly-identical records, each with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
+A long-running promotion for a free food item results in a large number of email addresses associated with the same first name, last name, and phone number. This results in a large number of nearly identical records, each with a unique email address. You can use semantic exclusions to define a threshold over which records like this are collapsed into a trivial duplicate.
 
 Configure Stitch to define a semantic exclusion for email addresses:
 
@@ -1643,6 +1749,6 @@ and then define the threshold:
    :amperity.stitch.settings/soft-trivial-dupe-size-threshold 25
 
 
-For each unique combination of PII--excluding email addresses!--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
+For each unique combination of PII--excluding email addresses--the distinct email addresses that are associated with that unique combination of PII are compared. If there are more than 25 distinct email addresses, those records are collapsed into a trivial duplicate.
 
 .. configure-stitch-advanced-trivial-duplicates-example-end

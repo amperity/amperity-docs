@@ -20,13 +20,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Microsoft Dataverse
+        Configure destinations for Microsoft Dataverse
 
 ==================================================
-Configure destination for Microsoft Dataverse
+Configure destinations for Microsoft Dataverse
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_microsoft_dataverse.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-microsoft-dataverse-start
@@ -39,34 +37,26 @@ Configure destination for Microsoft Dataverse
 
 .. UNCOMMENT
 
-.. 
-.. .. _destination-microsoft-dataverse-howitworks:
-.. 
-.. How this destination works
-.. ==================================================
-.. 
-.. .. destination-microsoft-dataverse-howitworks-start
-.. 
-.. Use |destination-name| to send rows of data from Amperity, and then add them to tables in |destination-name|. The connector will validate each row of data that is sent from Amperity against the table schema in |destination-name|. Only rows that validate against the table schema will be added to the table.
-.. 
-.. .. destination-microsoft-dataverse-howitworks-end
-.. 
-.. .. image:: ../../images/destination-microsoft-dataverse.png
-..    :width: 600 px
-..    :alt: Send rows of data from Amperity to Microsoft Dataverse.
-..    :align: left
-..    :class: no-scaled-link
-.. 
-.. .. destination-microsoft-dataverse-howitworks-callouts-start
-.. 
-.. A |destination-name| destination works like this:
-.. 
-.. #. Use a query to build a table with rows of data that match the schema of a table in |destination-name|. The column names, data types, and column order must match the schema that is defined in |destination-name|.
-.. #. Configure the :ref:`Microsoft Dataverse destination <destination-microsoft-dataverse-add>` in Amperity.
-.. #. Validated table rows are sent to |destination-name|.
-.. 
-.. .. destination-microsoft-dataverse-howitworks-callouts-end
-.. 
+.. _destination-microsoft-dataverse-howitworks:
+
+How this destination works
+==================================================
+
+.. destination-microsoft-dataverse-howitworks-start
+
+Use |destination-name| to send rows of data from Amperity, and then add them to tables in |destination-name|. Amperity validates each row against the table schema in |destination-name| and sends only the fields that exist in both the dataset and the table. Fields present in the dataset but not in the |destination-name| table schema are silently dropped. If no fields match, the workflow returns an error.
+
+.. destination-microsoft-dataverse-howitworks-end
+
+.. destination-microsoft-dataverse-howitworks-callouts-start
+
+A |destination-name| destination works like this:
+
+#. Use a query to build a table with rows of data that match the schema of a table in |destination-name|. Column names and data types must match the schema defined in |destination-name|.
+#. Configure the :ref:`Microsoft Dataverse destination <destination-microsoft-dataverse-add>` in Amperity.
+#. Amperity sends only the fields that match the |destination-name| table schema. Non-matching fields are dropped silently.
+
+.. destination-microsoft-dataverse-howitworks-callouts-end
 
 
 .. _destination-microsoft-dataverse-get-details:
@@ -87,11 +77,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Azure tenant ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -99,6 +90,7 @@ Get details
              :end-before: .. credential-microsoft-dataverse-azure-tenant-id-end
 
        **Azure client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -108,11 +100,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Power Apps environment region**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -120,6 +113,7 @@ Get details
              :end-before: .. setting-microsoft-dataverse-powerapps-region-end
 
        **Power Apps environment name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -127,6 +121,7 @@ Get details
              :end-before: .. setting-microsoft-dataverse-powerapps-name-end
 
        **Dataverse table logical name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -155,7 +150,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 #. Log in to your Microsoft Azure account.
 #. Open **Azure Active Directory**, and then **App Registrations**.
 #. Click **New Registration**, and then enter the name for your application. Leave all other settings as the default, and then click **Register**.
-#. The application overview page contains the following IDs:
+#. The application overview page has the following IDs:
 
    **Application (client) ID**
 
@@ -176,7 +171,7 @@ To send data to |destination-name|, you need to configure an application in Micr
 
 #. Open the `Microsoft Power Platform console <https://admin.powerplatform.microsoft.com/>`__ |ext_link|, click **Environments**, and then click on your environment.
 #. Click **Settings**, then **Users and permissions**, and then **Application users**.
-#. Click **New app user**, and then select the application you just created, your business unit, and then under **Security roles** click the **Edit** button.
+#. Click **New app user**, and then select the application you created, your business unit, and then under **Security roles** click the **Edit** button.
 #. Select the following settings:
 
    **Service Reader**
@@ -212,8 +207,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -221,8 +216,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -230,14 +225,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Azure tenant ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -245,6 +241,7 @@ Configure credentials
              :end-before: .. credential-microsoft-dataverse-azure-tenant-id-end
 
        **Azure client ID and client secret**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -273,8 +270,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -293,8 +290,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -309,8 +306,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -329,8 +326,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -366,12 +363,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-orchestration-only-start
           :end-before: .. destinations-steps-business-users-orchestration-only-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-microsoft-dataverse-add-steps-end
 

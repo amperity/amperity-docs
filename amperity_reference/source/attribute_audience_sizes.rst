@@ -41,7 +41,7 @@ Audience size attributes include:
 
 .. important::
 
-   .. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+   .. include:: ../../amperity_user/source/recommended_audiences.rst
       :start-after: .. recommended-audience-sizes-low-purchase-frequencies-start
       :end-before: .. recommended-audience-sizes-low-purchase-frequencies-end
 
@@ -55,7 +55,7 @@ About the purchase curve
    :start-after: .. term-purchase-curve-start
    :end-before: .. term-purchase-curve-end
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-purchase-curve-about-start
    :end-before: .. recommended-audiences-purchase-curve-about-end
 
@@ -65,7 +65,7 @@ About the purchase curve
    :align: left
    :class: no-scaled-link
 
-.. include:: ../../amperity_ampiq/source/recommended_audiences.rst
+.. include:: ../../amperity_user/source/recommended_audiences.rst
    :start-after: .. recommended-audiences-purchase-curve-context-start
    :end-before: .. recommended-audiences-purchase-curve-context-end
 
@@ -163,7 +163,7 @@ Available operators
 
 The following table lists the operators that are available to audience size attributes.
 
-.. note:: These attributes have a Boolean data type. All Boolean data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
+.. note:: These attributes have a **Boolean** data type. All **Boolean** data types share the same set of operators. Recommended operators for this attribute are identified with "|attribute-recommended| **More useful**" and operators with more limited use cases are identified with "|attribute-stop| **Less useful**".
 
 .. list-table::
    :widths: 35 65

@@ -25,7 +25,7 @@ Transactions are a type of interaction record that contain information about you
 
 .. setup-transactions-start
 
-The process for adding transaction records to Amperity requires individual data sources that provide order-level, item-level, and product catalog data. The actual steps will vary from tenant to tenant, depending on how the individual data sources provide data for canceled and returned items, quantities, discounts, and revenue.
+The process for adding transaction records to Amperity requires individual data sources that have order-level, item-level, and product catalog data. The actual steps will vary from tenant to tenant, depending on how the individual data sources handle data for canceled and returned items, quantities, discounts, and revenue.
 
 At a high level, start with deciding how to apply semantic tags to your brand's transaction records. After you have run Stitch you will then configure a series of tables that associate each transaction with a customer profile.
 
@@ -33,7 +33,7 @@ At a high level, start with deciding how to apply semantic tags to your brand's 
 
 .. setup-transactions-start
 
-For each data source that your brand makes available to Amperity that contains transactions:
+For each data source that your brand makes available to Amperity that has transactions:
 
 #. :ref:`Apply transactions semantic tags <setup-transactions-apply-semantics>`
 #. :ref:`Review input validations <setup-transactions-input-validations>`
@@ -46,6 +46,16 @@ For each data source that your brand makes available to Amperity that contains t
 
 .. setup-transactions-end
 
+.. setup-transactions-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Transaction records contain information about your customers' purchase histories with your brand.
+
+   Open **Learning Lab** to learn more about `transactions <https://amperity.com/learning-lab/transactions>`__ |ext_link|. Registration is required.
+
+.. setup-transactions-learning-lab-end
+
 
 .. _setup-transactions-apply-semantics:
 
@@ -54,9 +64,9 @@ Apply semantics
 
 .. setup-customer-profiles-apply-semantics-start
 
-You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that contains transactions data.
+You should plan to use a custom domain table to apply |semantics_transactions_long| to data sources that has transactions data.
 
-Transaction semantics include a set of required semantic tags --- **is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id** --- along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
+Transaction semantics include a set of required semantic tags--**is-cancellation**, **is-return**, **item-quantity**, **item-revenue**, **order-datetime**, **order-discount-amount**, **order-id**, **product-id**, **purchase-brand**, **purchase-channel**, and **store-id**--along with a set of optional semantic tags, such as **item-cost** and **item-revenue**.
 
 .. important:: All transaction semantic tags are prefixed with **txn-item/**. For example: **txn-item/order-datetime**.
 
@@ -80,7 +90,7 @@ Purchase histories
 
 .. database-interactions-apply-to-itemized-transactions-start
 
-For each incoming data source that contains item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction (txn-item/) semantic tags can be applied.
+For each incoming data source that has item-level data, you should plan to use the domain SQL editor to reshape the data into a schema against which individual transaction semantic tags can be applied.
 
 .. database-interactions-apply-to-itemized-transactions-end
 
@@ -108,9 +118,9 @@ Product catalogs
 
 .. setup-transactions-apply-semantics-product-catalogs-start
 
-Use **txn-item/pc** semantic tags (a subset of **txn-item/** semantic tags) when your brand wants to use your product catalog for segmentation, building audiences, and sending product catalog data alongside (or as part of) audiences. These tags add your brand's product catalog to the **Unified Itemized Transactions** table alongside your customers' purchase histories.
+Use **txn-item/pc** semantic tags--a subset of **txn-item/** semantic tags--when your brand wants to use your product catalog for segmentation, building audiences, and sending product catalog data alongside (or as part of) audiences. These tags add your brand's product catalog to the **Unified Itemized Transactions** table alongside your customers' purchase histories.
 
-In some cases, you may need to use the domain SQL editor to reshape the data into a schema to which product catalog (**txn-item/pc**) semantic tags can be applied.
+In some cases, you may need to use the domain SQL editor to reshape the data into a schema to which product catalog semantic tags can be applied.
 
 .. setup-transactions-apply-semantics-product-catalogs-end
 
@@ -136,7 +146,7 @@ Review validations
 
 .. _setup-transactions-input-validations-checklist:
 
-**INPUT VALIDATIONS CHECKLIST**
+**Checklist for input validations**
 
 .. setup-transactions-stitch-checklist-start
 
@@ -146,8 +156,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Review customer profile reports**
 
@@ -157,8 +167,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Review transaction reports**
 
@@ -200,9 +210,9 @@ Extend your customer 360 database for transactions by adding the following table
 
 .. important:: Most of the work required to extend your customer 360 database for transaction histories and product catalogs happens one time.
 
-   Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates. For example, if your brand adds a data source that contains PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
+   Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates. For example, if your brand adds a data source that has PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
 
-   The initial configuration of your customer 360 database requires using SQL to add (and extend) a series of tables that are an extension that captures the interactions your brand has with your customers.
+   The initial configuration of your customer 360 database requires using SQL to add or extend a series of tables that are an extension that captures the interactions your brand has with your customers.
 
 .. setup-transactions-add-transaction-tables-important-end
 
@@ -228,8 +238,8 @@ Itemized transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -239,13 +249,11 @@ Itemized transactions
 
        Review the list of semantic tags that are available for **txn-items/** and ensure that data sources that contain your brand's purchase histories for your customers have these tags applied.
 
-       .. important:: Something_about_product_catalogs_goes_here. We support txn-items/product catalogs, but also pc/product catalogs. Can you do both to get both outcomes?
-
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
 
@@ -262,8 +270,8 @@ Itemized transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -295,8 +303,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Pre-requisite**
 
@@ -305,8 +313,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -315,8 +323,8 @@ Unified transactions
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -350,8 +358,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Pre-requisite**
 
@@ -360,8 +368,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -370,8 +378,8 @@ Extended attributes
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -432,7 +440,7 @@ A fiscal calendar is a yearly accounting period that aligns the weeks and months
 
 .. term-454-calendar-start
 
-A 4-5-4 calendar divides years into months using a 4 weeks - 5 weeks - 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
+A 4-5-4 calendar divides years into months using a 4 weeks × 5 weeks × 4 weeks pattern. Each week starts on a Sunday and ends on a Saturday. Each quarter has the same number of days. A 4-5-4 calendar can be useful for comparing like days for sales reporting purposes.
 
 .. term-454-calendar-end
 
@@ -440,7 +448,7 @@ A 4-5-4 calendar divides years into months using a 4 weeks - 5 weeks - 4 weeks p
 
 .. setup-transactions-extend-attributes-fiscal-calendars-steps-start
 
-#. Pre-requisite. Apply fiscal calendar attributes to a data source that contains the data that defines your brand's fiscal calendar.
+#. Pre-requisite. Apply fiscal calendar attributes to a data source that has the data that defines your brand's fiscal calendar.
 #. Optional. :ref:`Extended attributes for fiscal calendars may be added to the Transaction Attributes Extended table <table-transaction-attributes-extended-extend-attributes-net-order-revenue>`.
 
 .. setup-transactions-extend-attributes-fiscal-calendars-steps-end
@@ -552,21 +560,21 @@ To associate purchase histories with customer profiles apply transaction semanti
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Run Stitch**
 
        You must run Stitch to associate purchase histories with customer profiles.
 
-       .. important:: Data tables that contain purchase histories (and not customer PII) should not be made available to Stitch. The Stitch process evaluates your customers' purchase histories, and then identifies which purchases should be associated to each unique customer profile.
+       .. important:: Data tables that contain purchase histories and not customer PII should not be made available to Stitch. The Stitch process evaluates your customers' purchase histories, and then identifies which purchases should be associated to each unique customer profile.
 
           The results are added to the **Unified Itemized Transactions** table, which associates your customer's Amperity ID to their purchase history. A row exists in the **Unified Itemized Transactions** table for each item that was purchased.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Refresh the customer 360 database**
 
@@ -586,13 +594,13 @@ C360 validations
 
 A customer 360 validation report is generated as an output of running the database. You can access this report from the Notifications pane on the **Databases** page.
 
-You should work through any of the individual validations in the report that indicate a validation error. In some cases, you may choose to ignore the error or adjust a threshold. In many cases, you will want to investigate the report to try to identify what is causing the error, and then determine if any adjustments can be made.
+You should work through any of the individual validations in the report that indicate a validation error. In some cases, you may choose to ignore the error or adjust a threshold. In many cases, you should investigate the report to try to identify what is causing the error, and then determine if any adjustments can be made.
 
 .. setup-transactions-validate-database-end
 
 .. setup-transactions-validate-database-reports-start
 
-There are many types of C360 validation reports, including for customer attributes, email addresses, loyalty programs, fiscal calendars, and transactions. Each individual report describes the issue, suggests potential ways to address the issue, and then links to the SQL that generated the validation report. Use these reports to improve the quality of data in your tenant.
+Many types of C360 validation reports exist, including for customer attributes, email addresses, loyalty programs, fiscal calendars, and transactions. Each individual report describes the issue, suggests potential ways to address the issue, and then links to the SQL that generated the validation report. Use these reports to improve the quality of data in your tenant.
 
 .. setup-transactions-validate-database-reports-end
 
@@ -602,7 +610,7 @@ There are many types of C360 validation reports, including for customer attribut
 
 Validation reports for customer attributes include:
 
-* Are records associated with multiple Amperity IDs?
+* Are records associated with many Amperity IDs?
 * Are known purchasers also classified as prospects?
 * Are any prospects associated with a purchase history?
 * Are physical addresses complete?
@@ -618,10 +626,10 @@ Validation reports for customer attributes include:
 
 Validation reports for email addresses and phone numbers include:
 
-* Are email events associated with multiple Amperity IDs?
+* Are email events associated with many Amperity IDs?
 * Are email events unique by brand?
-* Does an email event have an associated event type (open, click, etc.)?
-* Are there conflicting opt-in preferences for email addresses and/or phone numbers?
+* Does an email event have an associated event type, such as opens or clicks?
+* Are there conflicting opt-in preferences for email addresses or phone numbers?
 
 .. setup-transactions-validate-database-reports-email-phone-end
 
@@ -646,7 +654,7 @@ Validation reports for loyalty programs include:
 Validation reports for fiscal calenders include:
 
 * Are fiscal calendar dates unique?
-* Are fiscal calendars complete (when joined to the **Unified Transactions** table)?
+* Are fiscal calendars complete after joining them to the **Unified Transactions** table?
 
 .. setup-transactions-validate-database-reports-fiscal-end
 
@@ -657,15 +665,15 @@ Validation reports for fiscal calenders include:
 Validation reports for transactions include:
 
 * Are there records without an associated Amperity ID?
-* Are orders associated with multiple Amperity IDs?
+* Are orders associated with many Amperity IDs?
 * Are there records without an associated order ID?
-* Are orders associated with multiple order IDs?
+* Are orders associated with many order IDs?
 * Are orders associated with a store ID?
-* Are there orders without associated product information (ID, category, subcategory, or description)?
+* Are there orders without associated product information, such as ID, category, subcategory, or description?
 * Are costs, quantities, and revenue non-positive for returns and cancellations?
 * Are returns and cancellations associated with their original order ID?
 * Are costs, list prices, discount amounts, discount percents, subtotals, and revenue positive for purchases?
-* Is revenue revenue greater than purchase revenue?
+* Is revenue greater than purchase revenue?
 * Does the differece between list price and revenue match discounted amounts?
 * Does revenue equal the sum of cost and profit?
 * Are discount percents accurate?
@@ -695,6 +703,6 @@ More transactions data
 
 .. setup-transactions-more-transactions-data-start
 
-Many brands add transactions to their tenant over time. Adding new transactions (and data for other customer interactions) generally follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
+Many brands add transactions to their tenant over time. Adding new transactions, along with data for other customer interactions, follow the same steps that were used for previous transactions. More sources helps Amperity build better profiles *and* helps your brand undersand how your customers' preferences for how they interact with your brand.
 
 .. setup-transactions-more-transactions-data-end

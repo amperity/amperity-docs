@@ -19,9 +19,19 @@ Real-time tables
 
 .. real-time-about-start
 
-Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that is used to build and maintain complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more frequently.
+Real-time tables contain data that is streamed to Amperity. Real-time tables are available alongside customer profiles in your brand's customer 360 database. Real-time tables complement the daily batch process that builds and maintains complete and durable customer profiles over longer timeframes by enabling use cases that require the use of time-sensitive data that is updated more often.
 
 .. real-time-about-end
+
+.. realtime-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Real-time tables enable use cases that require time-sensitive data updated more often than the daily batch process.
+
+   Open **Learning Lab** to learn more about `improving customer engagement with real-time tables <https://amperity.com/learning-lab/improving-customer-engagement-with-real-time-tables>`__ |ext_link|. Registration is required.
+
+.. realtime-learning-lab-end
 
 
 .. _realtime-howitworks:
@@ -31,7 +41,7 @@ How real-time tables work
 
 .. realtime-howitworks-start
 
-Amperity uses a batch layer to build and maintain customer profiles that are durable and complete over longer timeframes. The batch layer is typically run (and refreshed) on a daily basis.
+Amperity uses a batch layer to build and maintain customer profiles that are durable and complete over longer timeframes. The batch layer is typically run and refreshed on a daily basis.
 
 Amperity uses a streaming layer to support use cases that require data that is updated or refreshed more than once per day.
 
@@ -45,12 +55,9 @@ These layers are shown in the following diagram:
 
 The batch layer builds and maintains customer profiles that are durable and complete over long timeframes. The batch layer uses semantic tagging to standardize data into a collection of standard output tables for customer profiles, transactions, loyalty programs, product catalogs, and other types of data that your brand has made available to Amperity.
 
-The streaming layer makes data available for use alongside those profiles to support use cases that cannot wait for the batch layer to finish maintaining customer profiles. To support real-time use cases, configure a real-time table for each stream, and then use a query to build a profile API endpoint that can be accessed programmatically by downstream workflows.
+The streaming layer makes data available for use alongside those profiles to support use cases that cannot wait for the batch layer to finish maintaining customer profiles. To support real-time use cases, configure a real-time table for each stream, add real-time tables to a database as passthrough tables, and then use a query to build a profile API endpoint that can be accessed programmatically by downstream workflows.
 
 .. note:: The batch layer may also contain data that has arrived through the streaming layer. To support adding streamed data to your brand's customer profiles, configure a courier to pull the streamed data into the workflow.
-
-
-.. important:: Data in real-time tables is retained for 1 week from when it was written to the table. If you want to keep data for longer than 1 week, bring the data into the batch layer by configuring a streaming ingest courier and running it as part of a regular workflow.
 
 .. realtime-howitworks-end
 
@@ -89,10 +96,10 @@ Real-time table limitations
 Real-time tables have the following limitations:
 
 #. Streamed data takes up to 2 minutes to appear in a real-time table.
-#. Events that partially match the schema for a real-time table will appear in a real-time table; events that do not match the schema will not.
+#. Events that match part of the schema for a real-time table appears in a real-time table. Events that do not match the schema will not.
 #. The Streaming Ingest API is the only supported data source for real-time tables.
-#. Data is loaded to real-time tables as an append; data may not be deleted from a real-time table.
-#. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that contains the updated schema. (This may be the same Streaming Ingest API endpoint.)
+#. Data is loaded to real-time tables as an append. Data may not be deleted from a real-time table.
+#. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that has the updated schema. (This may be the same Streaming Ingest API endpoint.)
 #. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
 
 .. realtime-howitworks-limitations-end
@@ -125,7 +132,8 @@ To enable a real-time workflow:
 #. :ref:`Configure real-time table <realtime-configure-real-time-table>`
 #. :ref:`Create API key and access token <realtime-configure-api-key-access-token>`
 #. :ref:`Configure the POST request <realtime-configure-post-request>`
-#. :ref:`Run each database for which the streaming endpoint will be included <realtime-run-database>`
+#. :ref:`Add real-time tables to database as passthrough table <realtime-add-passthrough-tables>`
+#. :ref:`Run each database for which the streaming endpoint is included <realtime-run-database>`
 #. :ref:`Start streaming data to the streaming endpoint <realtime-stream-data>`
 #. :ref:`Build a query against the real-time table, and then verify data is returned <realtime-build-query>`
 #. :ref:`Make data available to real-time use cases <realtime-make-data-available>`
@@ -148,7 +156,7 @@ Streaming endpoints are managed from the **Sources** page.
 
 .. TODO: Gotta update api_streaming.rst with a "Send to real-time tables" section.
 
-.. TODO: Gotta update api_streaming.rst to say "#. JSON (preferred), which converts streaming data to NDJSON; required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
+.. TODO: Gotta update api_streaming.rst to say "#. JSON (preferred), which converts streaming data to NDJSON. Required for real-time tables" instead of "#. JSON (preferred), which converts streaming data to NDJSON"
 
 .. TODO: Link to api_streaming page, and then add admonition about setting up the keys. Just link to each section.
 
@@ -164,16 +172,16 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Under **Streaming Ingest** click **Add stream**.
 
@@ -185,7 +193,7 @@ Streaming endpoints are managed from the **Sources** page.
 
        Give the stream a name and description, and then click **Save**. This will return you to the **Sources** page.
 
-       .. important:: Be sure the name clearly indicates how the stream is to be used within Amperity by your brand.
+       .. important:: Be sure the name indicates how the stream is to be used within Amperity by your brand.
 
        .. image:: ../../images/api-streaming-ingest-add-stream-name-desc.png
           :width: 420 px
@@ -196,12 +204,12 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - For the stream that was just created, open the |fa-kebab| menu and click **Copy URL**.
 
-       The URL for the stream is similar to:
+       The URL of the stream is similar to:
 
        ::
 
@@ -215,7 +223,7 @@ Streaming endpoints are managed from the **Sources** page.
 
           is-2hzqsgX1E
 
-       Save these two values. You will need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and (optionally) to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
+       Save these two values. You need them to :ref:`configure the POST request <realtime-configure-post-request>` to the streaming endpoint and to configure streamed data to :ref:`be part of the daily batched workflow <realtime-add-to-batch-workflow>`.
 
        The ID for the Streaming Ingest API endpoint is also available from the **Stream ID** column:
 
@@ -228,8 +236,8 @@ Streaming endpoints are managed from the **Sources** page.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - To add streamed data to the daily batch processing workflow, use a courier, and then use the stream ID to identify which stream's data will be added to the daily workflow.
 
@@ -259,8 +267,8 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, and then select the **Real-time tables** tab.
 
@@ -268,14 +276,14 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Create real-time table** dialog, do the following:
 
        Ensure that the real-time table is set to **Active**.
 
-       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table and/or the use case.
+       Give the real-time table a name. Use a naming convention that associates the real-time table with its related streaming endpoint, and then identifies the type of data in the real-time table or the use case.
 
        .. image:: ../../images/mockup-databases-table-realtime-add-01.png
           :width: 420 px
@@ -287,7 +295,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Choose the data format for streaming data to the real-time table: "JSON" or "XML". If "XML" is selected a **Row tag** must be specified, which must identify a single row of XML data.
 
-       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This will allow the real-time table to process the complex object and make it available for querying purposes.
+       .. note:: If your data has complex types, such as nested JSON, choose **string** as the type. This allows the real-time table to process the complex object and make it available for querying purposes.
 
        Define the schema for the real-time table. Click **+ Add field** too add a field. Give the field a name and choose a data type. Drag-and-drop the fields into the order you want:
 
@@ -299,7 +307,7 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
        Each field in the schema must exist in the fields that are streamed to Amperity by the streaming source for this real-time table. The field names in the real-time table must match the fields that are defined for the streamed endpoint. If you have an existing feed configured for streaming purposes, you may refer to the feed for schema details.
 
-       .. note:: The schema for every real-time table will contain the following additional fields at the query layer:
+       .. note:: The schema for every real-time table has the following additional fields at the query layer:
 
           * **_received_at** The time at which data arrived at the streaming endpoint.
           * **_written_at** The time at which data was written to the real-time table.
@@ -312,8 +320,8 @@ A real-time table collects data that is streamed to Amperity, and then makes tha
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - Run any database to make the real-time table available for querying. When this step is complete, open the **Queries** page and verify that the real-time table is available for queries and that data in the real-time table can be returned in the results.
@@ -364,11 +372,23 @@ For example, a cURL request is similar to:
 
 where ``<stream>`` represents the unique stream ID, ``<token>`` represents the full Bearer token, and ``<tenant>`` represents the unique ID for your Amperity tenant.
 
-The ``--data-raw`` section contains the list of fields and field values that are sent by the upstream system to the streaming endpoint. The schema that is sent to the streaming endpoint must match the :ref:`schema that is defined for the real-time table <realtime-configure-real-time-table>`.
+The ``--data-raw`` section has the list of fields and field values that are sent by the upstream system to the streaming endpoint. The schema that is sent to the streaming endpoint must match the :ref:`schema that is defined for the real-time table <realtime-configure-real-time-table>`.
 
 .. note:: You may use any of the following `cURL command line options <https://curl.se/docs/manpage.html>`__ |ext_link| to define the set of fields that are sent to the streaming endpoint: ``-d``, ``-data-binary``, and ``--data-raw``.
 
 .. realtime-configure-post-request-end
+
+
+.. _realtime-add-passthrough-tables:
+
+Add passthrough tables
+--------------------------------------------------
+
+.. realtime-add-passthrough-tables-start
+
+Add real-time tables to databases as passthrough tables. Open a database in edit mode. For each real-time table, set the build mode to "Passthrough" and select the real-time table from the **Source tables** dropdown. Select all of the fields in the real-time table. Click **Next** and then **Save**.
+
+.. realtime-add-passthrough-tables-end
 
 
 .. _realtime-run-database:
@@ -378,7 +398,7 @@ Run database
 
 .. realtime-run-database-start
 
-Run each of the databases from which the real-time table will be available to queries. Use the **Normal** run option, which will refresh the database, add the real-time table, and make the real-time table available to accept data from the streaming endpoint.
+Run each of the databases from which the real-time table will be available to queries. Use the **Normal** run option, which will refresh the database and make the real-time table available to accept data from the streaming endpoint.
 
 .. realtime-run-database-end
 
@@ -390,7 +410,7 @@ Stream data to streaming endpoint
 
 .. realtime-stream-data-start
 
-Configure the upstream workflow to use the :ref:`POST request <realtime-configure-post-request>`, and then stream data to Amperity from the upstream data source. If data is being received correctly by the streaming endpoint you will be able to see data in the real-time table about ~2 minutes after it has been accepted by the streaming endpoint.
+Configure the upstream workflow to use the :ref:`POST request <realtime-configure-post-request>`, and then stream data to Amperity from the upstream data source. If data is being received correctly by the streaming endpoint you is able to see data in the real-time table about ~2 minutes after it has been accepted by the streaming endpoint.
 
 .. realtime-stream-data-end
 
@@ -408,18 +428,18 @@ Open the **Queries** page. Real-time tables are shown in the list of tables in t
 
 You may build queries that reference real-time tables *and* other database tables in the same query.
 
-To make a query that references real-time tables available to the segments and campaigns ensure that the query results return an Amperity ID. You may join the results to a table that already contains an Amperity ID.
+To make a query that references real-time tables available to the segments and campaigns ensure that the query results return an Amperity ID. You may join the results to a table that already has an Amperity ID.
 
 For example, a query that returns data from a real-time table named **Winback_Suppressions** can be joined to the **Customer 360** table:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      c360.amperity_id
      ,wb.*
-   FROM
-     winback_suppressions wb
-     JOIN Customer360 c360 ON wb.email = c360.email
+   FROM winback_suppressions wb
+   JOIN Customer360 c360 ON wb.email = c360.email
 
 .. realtime-build-query-end
 
@@ -546,7 +566,7 @@ To include data that is streamed to Amperity in your batch workflow, such as inc
 
       SELECT * FROM realtime_table
 
-   where ``realtime_table`` is the name of the real-time table from which data will be pulled into the batch layer.
+   where ``realtime_table`` is the name of the real-time table from which data is pulled into the batch layer.
 
 #. Make this table available to Stitch. You may also semantically tag fields for Stitch to process.
 

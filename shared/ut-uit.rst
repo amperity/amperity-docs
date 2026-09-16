@@ -3,9 +3,11 @@
 ..
 
 
+.. vale off
 
 **TEMPLATE SECTIONS FOR COMMON CONTENT RELATED TO ORDERS AND ITEMS**
 
+.. vale on
 
 
 
@@ -95,7 +97,7 @@ This value must be less than or equal to 0 when **is-return** or **is-cancellati
 
 .. less-than-or-equal-to-zero-is-canceled-start
 
-This value must be less than or equal to 0 when **is_canceled** is ``TRUE``.
+This value must be less than or equal to 0 when **is_canceled** is **TRUE**.
 
 .. less-than-or-equal-to-zero-is-canceled-end
 
@@ -107,7 +109,7 @@ This value must be less than or equal to 0 when **is_canceled** is ``TRUE``.
 
 .. less-than-or-equal-to-zero-is-return-start
 
-This value must be less than or equal to 0 when **is_return** is ``TRUE``.
+This value must be less than or equal to 0 when **is_return** is **TRUE**.
 
 .. less-than-or-equal-to-zero-is-return-end
 
@@ -129,7 +131,7 @@ The order ID should never change, even when an item in the order is returned or 
 
 .. recycled-order-ids-not-guaranteed-to-be-unique-start
 
-If order IDs are recycled and/or are otherwise not guaranteed to be unique over time, the unique identifier for the order must be updated to be a combination of the order ID and the date on which the order occurred. This must be done using domain SQL similar to: ``CONCAT(order_id, order_date)``.
+If order IDs are recycled and are otherwise not guaranteed to be unique over time, the unique identifier for the order must be updated to be a combination of the order ID and the date on which the order occurred. This must be done using domain SQL similar to: ``CONCAT(order_id, order_date)``.
 
 .. recycled-order-ids-not-guaranteed-to-be-unique-end
 
@@ -145,16 +147,3 @@ Other dates associated with an order that are not specific to a transactions, su
 
 .. related-order-dates-should-be-added-to-upc-end
 
-
-
-
-
-.. TODO: Use the following block as a template for adding these into tables:
-
-
-
-       .. note::
-
-          .. include:: ../../shared/ut-uit.rst
-             :start-after: .. related-order-dates-should-be-added-to-upc-start
-             :end-before: .. related-order-dates-should-be-added-to-upc-end

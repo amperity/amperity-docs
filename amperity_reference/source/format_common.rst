@@ -19,7 +19,7 @@ About file formats
 
 .. format-common-start
 
-This topic covers details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
+Details that are common to files that can be pulled to or sent from Amperity using Amazon S3, Azure Blob Storage, Google Cloud Storage, or any SFTP site.
 
 .. format-common-end
 
@@ -47,7 +47,7 @@ Connect to source
 
 .. format-common-pull-credentials-start
 
-Amperity requires the ability to connect to, and then read data from a filedrop location. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the filedrop location, which is often external to Amperity (but is sometimes a system that is owned by Amperity). The customer may need to provide credentials to Amperity using SnapPass to complete the configuration.
+Amperity requires the ability to connect to, and then read data from a filedrop location. The credentials that allow that connection and the permissions to read data are entered into the Amperity user interface while configuring a courier. These credentials are created and managed by the owner of the filedrop location, which is often external to Amperity (but is sometimes a system that is owned by Amperity). The customer may need to provide credentials to Amperity using |ext_snappass| to complete the configuration.
 
 .. format-common-pull-credentials-end
 
@@ -78,17 +78,23 @@ Amperity supports the following file formats when using a filedrop location to p
 
 .. format-common-pull-files-end
 
+.. vale off
+
 .. format-common-pull-files-note-start
 
-.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed in this section to determine if those data formats can be used as a way to provide data to Amperity.
+.. note:: Amperity can ingest data from a wide variety of data sources, such as legacy data outputs like :ref:`AS/400 <format-csv-pull-couriers-as400>`. Ask your Amperity Support representative about formats that are not directly listed to determine if those data formats can be used as a way to provide data to Amperity.
 
 .. format-common-pull-files-note-end
+
+.. vale on
 
 
 .. _format-common-pull-date-formats:
 
 Date formats
 --------------------------------------------------
+
+.. vale off
 
 .. format-common-pull-date-formats-start
 
@@ -98,13 +104,15 @@ Dates should be quoted and should be in the "yyyy-MM-dd HH:mm:ss.SSS" format. Th
 * 2019-01-28 18:32:05
 * 2019-01-28
 
-When the date format is not similar to the expected date format, Amperity will attempt to convert the date and time values. If date formats are mixed, Amperity will use the first one that matches.
+When the date format is not similar to the expected date format, Amperity attempts to convert the date and time values. If date formats are mixed, Amperity uses the first date format that matches.
 
 .. format-common-pull-date-formats-end
 
+.. vale on
+
 .. format-common-pull-date-formats-tip-start
 
-.. tip:: Spark SQL may be used to transform source data into a supported date format prior to loading it to Amperity.
+.. tip:: Spark SQL may be used to transform source data into a supported date format before loading it to Amperity.
 
 .. format-common-pull-date-formats-tip-end
 
@@ -113,6 +121,8 @@ When the date format is not similar to the expected date format, Amperity will a
 
 Date values conversion order
 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. vale off
 
 .. format-common-pull-date-formats-date-values-start
 
@@ -155,15 +165,19 @@ Date values are converted in the following order of precedence:
 
 .. format-common-pull-date-formats-date-values-end
 
+.. vale on
+
 
 .. _format-common-pull-date-formats-time-values:
 
 Time values conversion order
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
+.. vale off
+
 .. format-common-pull-date-formats-time-values-start
 
-Time values (when present) are converted in the following order of precedence:
+Time values, when present, are converted in the following order of precedence:
 
 .. list-table::
    :widths: 20 200 200
@@ -216,6 +230,8 @@ Time values (when present) are converted in the following order of precedence:
      - "hh:mma z"
 
 .. format-common-pull-date-formats-time-values-end
+
+.. vale on
 
 
 .. _format-common-pull-file-compression:
@@ -296,9 +312,9 @@ for single files
 .. format-common-send-input-examples-single-end
 
 
-.. _format-common-send-input-examples-multiple:
+.. _format-common-send-input-examples-many:
 
-for multiple files
+for many files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. format-common-send-input-examples-multiple-start
@@ -342,7 +358,7 @@ Connect to destination
 
 .. format-common-send-credentials-start
 
-Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer will need to provide these credentials to Amperity using SnapPass to complete the configuration.
+Amperity requires the ability to connect, and then write data to the location in which files will be dropped. The credentials that allow Amperity to write data to that location are configured in Amperity. If this location is not managed by Amperity, the customer need to provide these credentials to Amperity using |ext_snappass| to complete the configuration.
 
 .. format-common-send-credentials-end
 
@@ -440,7 +456,7 @@ Amperity supports the following compression and archiving formats:
 * Zip
 * GZip
 
-When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder will contain one (or more) files, each of which have generated names.
+When Tar or Zip options are not specified, a folder is created using the name filename template specified for the orchestration. This folder has one or more files, each of which have generated names.
 
 .. tip:: Compression and archive file extensions are not added to the filename template automatically. These may be added while configuring an orchestration. To add the file compression format to the output filename, append .tar, .tgz, .zip, or .gz after the file format extension in the filename template. For example: parquet.tar, csv.zip, or tsv.gz.
 
@@ -515,9 +531,9 @@ for single tables
 .. format-common-send-output-examples-single-end
 
 
-.. _format-common-send-output-examples-multiple:
+.. _format-common-send-output-examples-many:
 
-for multiple tables
+for many tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. format-common-send-output-examples-multiple-start
@@ -591,7 +607,7 @@ Generate SSH keypairs
 
       $ ssh-keygen -t rsa -m PEM -f generated-key
 
-   This will write two files: generated-key (the private key) and generated-key.pub (the public key).
+   This writes two files: generated-key (the private key) and generated-key.pub (the public key).
 
 #. The location in which the public and private keys should be placed depends on the location to which data is transferred.
 #. Add the public key to the SFTP location from which data is sent to Amperity.
@@ -615,7 +631,7 @@ PGP helps protect your files while they are at rest. Amperity recommends to use:
 
 * 4096-bit keys
 * A strong passphrase
-* One PGP key per-tenant (minimum); one PGP key per system (recommended)
+* One PGP key per-tenant (minimum). One PGP key per system (recommended)
 
 Files that are encrypted using PGP are appended with the .pgp extension.
 
@@ -623,7 +639,7 @@ Files that are encrypted using PGP are appended with the .pgp extension.
 
 .. format-common-pgp-important-subkeys-start
 
-.. important:: There are two types of PGP public keys: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Please provide a subkey or a keyring with exactly one subkey."
+.. important:: PGP public keys have two types: a primary key and a subkey. Amperity does not allow the use of a primary key for public-private key encryption. If you attempt to use a primary key you will see an error similar to "Destination failed validation: PGP public key is a primary key. Provide a subkey or a keyring with exactly one subkey."
 
 .. format-common-pgp-important-subkeys-end
 
@@ -648,7 +664,7 @@ Any tool that is compliant with the OpenPGP standard, as defined by `RFC 4880 <h
 
 To use PGP encryption with data sources use the **PGP credentials** setting to select a PGP credential. For new keys, use the **PGP credentials** setting to assign the credential a name and description, a passphrase, and then the public key that is used to encrypt data.
 
-.. caution:: Be sure to include the "BEGIN PGP PUBLIC KEY BLOCK" and "END PGP PUBLIC KEY BLOCK" header and footer in the key. Only users and systems with access to the private key will be able to decrypt this data. Use Snappass to share the public key.
+.. caution:: Be sure to include the ``BEGIN PGP PUBLIC KEY BLOCK`` and ``END PGP PUBLIC KEY BLOCK`` header and footer in the key. Only users and systems with access to the private key is able to decrypt this data. Use |ext_snappass| to share the public key.
 
 .. format-common-pgp-sources-end
 
@@ -660,7 +676,7 @@ To use PGP encryption with data sources use the **PGP credentials** setting to s
 .. 
 ..       $ gpg --encrypt --recipient s3@acme.amperity.com data.csv
 .. 
-..    This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data will be sent.
+..    This will encrypt a file named "data.csv" and will output a file named "data.csv.gpg". Change ``data.csv`` to the name of the file to be encrypted. Change ``s3@acme.amperity.com`` to the location in Amperity to which the data is sent.
 .. 
 
 
@@ -686,9 +702,9 @@ To use PGP decryption with data sources use the **PGP credentials** setting to s
 
 .. note:: Some data sources require you to switch to the legacy editor before you can configure PGP credentials. This link is at the top of the page when you are creating a courier and is named "Switch to legacy editor".
 
-.. caution:: Be sure to include the "BEGIN PGP PRIVATE KEY BLOCK" and "END PGP PRIVATE KEY BLOCK" header and footer in the key.
+.. caution:: Be sure to include the ``BEGIN PGP PRIVATE KEY BLOCK`` and ``END PGP PRIVATE KEY BLOCK`` header and footer in the key.
 
-   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Please keep both public and private keys confidential. Use Snappass to share the private key.
+   Anyone with access to the decryption key is capable of decrypting data that has been encrypted with the corresponding public key. Keep both public and private keys confidential. Use |ext_snappass| to share the private key.
 
 .. format-common-pgp-sources-end
 
@@ -700,7 +716,7 @@ To use PGP decryption with data sources use the **PGP credentials** setting to s
 .. 
 ..       $ gpg --decrypt --recipient [location]@acme.amperity.com data.csv.gpg
 .. 
-..    This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data will be sent.
+..    This will decrypt a file named "data.csv.gpg" and will output a file named "data.csv". Change ``data.csv`` to the name of the file to be decrypted. Change ``[location]`` to the parameter that indicates the cloud platform to which the data is sent.
 .. 
 
 
@@ -729,20 +745,20 @@ When Amperity pulls files from upstream systems using SFTP, use the following co
 
 **for SSH**
 
-#. The owner of the upstream system will create the SSH keypair and will maintain the private SSH key.
+#. The owner of the upstream system creates the SSH keypair and will maintain the private SSH key.
 
-#. The public SSH key is configured in Amperity; you may send the public SSH key to your Amperity representative using SnapPass.
+#. The public SSH key is configured in Amperity. You may send the public SSH key to your Amperity representative using |ext_snappass|.
 
 
 **for PGP**
 
-#. Amperity Support will create the PGP keypair and will maintain the private PGP key.
+#. Amperity Support creates the PGP keypair and will maintain the private PGP key.
 
-#. Amperity Support will send you the public PGP key using SnapPass; the owner of the upstream system will encrypt files using the public PGP key prior to adding the files to the location from which Amperity will pull data.
+#. Amperity Support sends you the public PGP key using |ext_snappass|. The owner of the upstream system will encrypt files using the public PGP key before adding the files to the location from which Amperity will pull data.
 
-   .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files; compression applied *after* encryption will not reduce the size of the file.
+   .. tip:: Use :ref:`file compression <format-common-pull-file-compression>` *before* encrypting files. Compression applied *after* encryption will not reduce the size of the file.
 
-#. Amperity will use the private PGP key to decrypt files pulled from the upstream system.
+#. Amperity uses the private PGP key to decrypt files pulled from the upstream system.
 
 .. format-common-pull-files-to-amperity-end
 
@@ -758,17 +774,17 @@ When Amperity sends files to downstream systems using SFTP, use the following co
 
 **for SSH**
 
-#. Amperity Support will create the SSH keypair and will maintain the private SSH key
+#. Amperity Support creates the SSH keypair and will maintain the private SSH key
 
-#. Amperity Support will send you the public SSH key using SnapPass; add the public SSH key to the downstream system to which Amperity is configured to send data
+#. Amperity Support sends you the public SSH key using |ext_snappass|. Add the public SSH key to the downstream system to which Amperity is configured to send data
 
 **for PGP**
 
-#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key; you may send the public PGP key to your Amperity representative using SnapPass
+#. The owner of the downstream system creates the PGP keypair and maintains the private PGP key. You may send the public PGP key to your Amperity representative using |ext_snappass|
 
-#. Amperity will use the public PGP key to encrypt files before sending them to the downstream system.
+#. Amperity uses the public PGP key to encrypt files before sending them to the downstream system.
 
-#. The downstream system will use the private PGP key to decrypt files sent from Amperity
+#. The downstream system uses the private PGP key to decrypt files sent from Amperity
 
 .. format-common-send-files-from-amperity-end
 
@@ -783,11 +799,11 @@ Key rotations
 Amperity performs key rotations on a periodic basis as a best practice. Key rotations are sometimes necessary in situations where a key may have been compromised. When a key rotation happens, Amperity will:
 
 #. Generate a key pair
-#. Create a keyring file that contains the old and new private keys and uses the same passphrase
+#. Create a keyring file that has the old and new private keys and uses the same passphrase
 #. Install the keyring file to the courier
-#. Share the new public key with the customer using SnapPass
+#. Share the new public key with the customer using |ext_snappass|
 #. Wait for confirmation from the customer that the public key is updated
-#. Create a keyring file that contains *only* the updated private key
-#. Install the keyring file that contains *only* the updated private key to the courier
+#. Create a keyring file that has *only* the updated private key
+#. Install the keyring file that has *only* the updated private key to the courier
 
 .. format-common-pgp-key-rotations-end

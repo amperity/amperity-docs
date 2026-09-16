@@ -25,6 +25,8 @@ Predicted CLV Attributes table
 
 .. note:: The size of the **Predicted CLV Attributes** table in your tenant is based on the number of Amperity IDs.
 
+.. note:: Each predicted CLV model writes to its own output table named **Predicted_<symbolic-name>_CLV_Attributes**, using the :ref:`symbolic name <model-predicted-clv-build-create-version>` assigned to the model. For example, a model with a symbolic name of "365d" produces a table named **Predicted_365d_CLV_Attributes**. The examples on this page use **Predicted_365d_CLV_Attributes**; substitute the symbolic name for the model in your database.
+
 .. table-predicted-clv-attributes-note-end
 
 
@@ -59,11 +61,12 @@ The **Days Since Last Order** and **Historical Order Frequency Lifetime** column
 
 .. table-predicted-clv-attributes-add-as-sql-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Set **Build Mode** to "SQL", and then use a **SELECT** statement similar to the following to define the schema:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         amperity_id AS `amperity_id`
@@ -73,7 +76,7 @@ The **Days Since Last Order** and **Historical Order Frequency Lifetime** column
         ,predicted_customer_lifetime_value_tier AS `value_tier`
         ,predicted_order_frequency_next_365d AS `predicted_orders_365`
         ,predicted_probability_of_transaction_next_365d AS `purchase_probability`
-      FROM Predicted_CLV_Attributes
+      FROM Predicted_365d_CLV_Attributes
 
 #. Hide the table from the **Visual Segment Editor** by verifying that **Show in VSE?** is unselected.
 #. Click **Activate** to update the customer 360 database with your changes.

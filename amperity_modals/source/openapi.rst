@@ -40,8 +40,6 @@ Non-breaking changes
 Version identifiers
 --------------------------------------------------
 
-.. TODO: Not identical to docs page because of an admonition. Could reverse the single-sourcing to be FROM this topic to get the admonition enabled (in the docs page).
-
 A version identifier is a date string that must be included with each request made to an API endpoint. All endpoints are versioned together. This provides consistency across all endpoints and ensures interoperability. A version identifier is updated only when breaking changes occur.
 
 For example:
@@ -83,7 +81,7 @@ Deprecated versions
 Authentication
 ==================================================
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 All requests that are made to Amperity API endpoints must be authenticated by access tokens that are signed by Amperity-managed API keys.
 
@@ -91,21 +89,21 @@ All requests that are made to Amperity API endpoints must be authenticated by ac
 API keys
 --------------------------------------------------
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 Amperity API keys are synthetic identities that are bound to your tenant and enable programmatic access to Amperity. Your API key is configured within Amperity from the **Settings** page, **Security** tab.
 
 Access tokens
 --------------------------------------------------
 
-.. TODO: This is NOT single-sourced, just paraphrased. This section in docs is pulling from the A-Z reference in docs and have images and more complex formatting.
+.. TODO: This is NOT single-sourced, just paraphrased. Is pulled from the A-Z reference in docs and have images and more complex formatting.
 
 Access to the Amperity API requires using JWT access tokens that are signed by Amperity-managed API keys. Access tokens are generated against Amperity API keys within Amperity from the **Settings** page, **Security** tab.
 
 Base URL
 ==================================================
 
-.. include:: ../../amperity_api/source/overview.rst
+.. include:: ../../amperity_api/source/base_url.rst
    :start-after: .. api-amperity-base-url-start
    :end-before: .. api-amperity-base-url-end
 
@@ -114,21 +112,21 @@ Requests
 
 .. TODO: Do list tables work when converting from RST > Markdown using Pandoc? Keep an eye here.
 
-.. include:: ../../amperity_api/source/overview.rst
+.. include:: ../../amperity_api/source/requests.rst
    :start-after: .. api-amperity-request-format-start
    :end-before: .. api-amperity-request-format-end
 
 Responses
 ==================================================
 
-.. include:: ../../amperity_api/source/overview.rst
-   :start-after: .. api-amperity-response-format-start
-   :end-before: .. api-amperity-response-format-end
+.. include:: ../../amperity_api/source/responses.rst
+   :start-after: .. status_codes-start
+   :end-before: .. status_codes-end
 
 Pagination
 ==================================================
 
-.. TODO: This is NOT single-sourced. The docs page has more content about pagination than this section in the OpenAPI specification.
+.. TODO: This is NOT single-sourced. The docs page has more content about pagination than the OpenAPI specification.
 
 Amperity uses cursor-based pagination to return pages of data for large lists. A paginated endpoint returns responses with a list of results *and* a **next_token** parameter when another page is available in the returned dataset. You have reached the last page in the results set when the **next_token** parameter is not returned.
 
@@ -144,7 +142,7 @@ Pagination in responses
 
 .. TODO: This is NOT single-sourced. The docs page has more content about request pagination and this is a paraphrased version of the key details.
 
-A response will include the value of the next page as the value of the **next_token** parameter. You may use this value in a subsequent request to return the next page of results. When the value for **next_token** is empty, the last page in the results set has been returned.
+A response will include the value of the next page as the value of the **next_token** parameter. You may use this value in the next request to return the next page of results. When the value for **next_token** is empty, the last page in the results set has been returned.
 
 
 Rate limits

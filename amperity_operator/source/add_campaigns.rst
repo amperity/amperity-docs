@@ -14,24 +14,26 @@
         Enable segments and campaigns
 
 
+.. TODO: adjust for a world where Activations tab replaces Campaigns in all tenants
+
 ==================================================
-Enable segments and campaigns
+Enable activations
 ==================================================
 
 .. add-campaigns-steps-start
 
-Amperity provides a set of features---the **Campaigns** page, segment insights, and predictive attributes---to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
+Amperity provides a set of features--the **Campaigns** page, segment insights, and predictive attributes--to help you understand your customer's preferences and behaviors, and then to make better informed decisions as to how often you choose to interact with them.
 
 .. add-campaigns-steps-end
 
 .. add-campaigns-important-start
 
-.. important:: This topic assumes that you have already configured Amperity using the recommended patterns and workflows for:
+.. important:: You must have already configured Amperity using the recommended patterns and workflows for:
 
    #. :doc:`Customer profiles <add_customer_data>`, which contain profile and PII data for individual customers.
    #. :doc:`Transactions <add_transactions>`, which contain transactions, itemized transactions, and product catalogs that, when compared to customer records, identify how your customers interacted with your brands.
 
-   Please refer to those topics for more information about how to configure customer records and interaction records as data sources for use with segments and campaigns.
+   Refer to those topics for more information about how to configure customer records and interaction records as data sources for use with segments and campaigns.
 
 .. add-campaigns-important-end
 
@@ -65,7 +67,9 @@ Verify prerequisites
 
 .. add-campaigns-verify-prerequisites-tip-start
 
-.. tip:: If you closely followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` this section may be a formality. If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should carefully review of all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
+.. tip:: If you followed the steps for configuring :doc:`customer profiles <add_customer_data>` and :doc:`transactions <add_transactions>` verifying prerequisites may be a formality.
+
+   If your tenant has been on Amperity for a while and wants to enable segments and campaigns, you should review all data sources, Stitch results, and customer data tables to ensure that all of those components meet all requirements.
 
 .. add-campaigns-verify-prerequisites-tip-end
 
@@ -83,7 +87,7 @@ Verify each of the following items to ensure that Amperity is ready for enableme
 
 #. Stitch output includes the following tables specific to interactions records: **Transaction Attributes Extended**, **Unified Itemized Transactions**, and **Unified Transactions**.
 
-#. The customer 360 database contains passthrough tables for **Transaction Attributes Extended**.
+#. The customer 360 database has passthrough tables for **Transaction Attributes Extended**.
 
    .. tip:: Add passthrough tables in the customer 360 database for each table that was defined in the **Sources** page using domain SQL.
 
@@ -112,12 +116,12 @@ Data requirements
 Amperity has the following requirements for segments and campaigns:
 
 #. Data sources that contain interaction records--customer orders, items purchased by customers, products, brands, preferences, etc.--must be made available to Amperity.
-#. Data sources should allow for applying semantic tags to support transactions and itemized transactions, either directly to the feed or (more likely) after reshaping the interaction records with domain SQL.
+#. Data sources should allow for applying semantic tags to support transactions and itemized transactions, either directly to the feed or after reshaping the interaction records with domain SQL.
 #. All required tables are present, along with all of the required fields for each table.
 
    The **Merged Customers** table must have fields for given name, surname, birthdate, city, state, postal, and loyalty membership.
 
-   The **Unified Transactions** table must have fields for orders (date and time, revenue, quantity, and discount amount), purchases (brand and channel), digital channel, and store ID.
+   The **Unified Transactions** table must have fields for order dates and times, order revenue, order quantity, order discount amount, purchase channel, brand channel, digital channel, and store ID.
 
    .. note:: Required fields for which there is no historical data should be added to the tables and should be configured to have **NULL** values.
 
@@ -129,7 +133,7 @@ Amperity has the following requirements for segments and campaigns:
 
 .. add-campaigns-data-requirements-caution-for-predictive-modeling-start
 
-.. caution:: If you are planning to use predictive modeling, please review the :ref:`data requirements for predictive modeling <add-predicted-models-data-requirements>`.
+.. caution:: If you are planning to use predictive modeling, review the :ref:`data requirements for predictive modeling <add-predicted-models-data-requirements>`.
 
 .. add-campaigns-data-requirements-caution-for-predictive-modeling-end
 
@@ -177,7 +181,7 @@ The fields required by segments and campaigns fall into three broad categories:
 
 * Demographic fields include details such as gender, age, and location. Demographic fields help marketers understand the segments to which their customers belong.
 * Product fields include details about individual products, such as brand, department, and categories. Product fields help marketers understand which products their customers prefer.
-* Channel and location fields include details about how the customer chose a certain product, such as digital, in-store (and store location), and online. Channel and location fields help marketers understand from where a customer chose to purchase a product or a service. 
+* Channel and location fields include details about how the customer chose a certain product, such as digital, in-store, and online. Channel and location fields help marketers understand from where a customer chose to purchase a product or a service. 
 
 The following table describes the fields that are required by column name, which component requires them, and the table (or tables) from which they are available. Columns that are required by predictive modeling are optional for tenants that do not plan to enable that feature.
 
@@ -194,7 +198,7 @@ The following columns must exist in the following tables as an output of the Sti
    :header-rows: 1
 
    * - Column Name
-     - Required for ...
+     - Required for
      - Description
    * - **address**
      - **Campaigns** page
@@ -466,13 +470,13 @@ Additional data sources
 
 .. add-campaigns-data-requirements-supporting-data-sources-start
 
-Additional data should be made available to Amperity beyond what is provided to support the basic requirements for segments and campaigns. Additional data will improve the quality of the downstream workflows that are available and will increase your ability to identify the right customer segments and profiles for which you will run campaigns.
+Additional data should be made available to Amperity beyond what is provided to support the basic requirements for segments and campaigns. Additional data will improve the quality of the downstream workflows that are available and increases your ability to identify the right customer segments and profiles for which you run campaigns.
 
 The following types of data are recommended to be made available to Amperity as additional data sources:
 
-#. Product information that contains details about categories, subcategories, and departments.
+#. Product information that has details about categories, subcategories, and departments.
 
-#. Channel information that contains details about purchases (in-store and online), channel types (digital, direct, and organic), social engagement (Facebook, Twitter, Pinterest, etc.), and first-party data (Google Analytics and Adobe Analytics).
+#. Channel information that has details about purchases (in-store and online), channel types (digital, direct, and organic), social engagement (Facebook, Twitter, Pinterest, etc.), and first-party data (Google Analytics and Adobe Analytics).
 
 #. Specific demographics data, such as age, state, country, and gender. This type of data may already available from customer records that have made available to Amperity.
 

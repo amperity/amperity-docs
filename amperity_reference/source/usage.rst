@@ -11,7 +11,7 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Usage dashboard
+        Usage
 
 ==================================================
 About the Usage dashboard
@@ -29,7 +29,7 @@ The **Usage** dashboard shows usage within Amperity across a broad range of feat
 
 .. usage-time-period-start
 
-You can configure the time period that is used to display metrics and graphs on the **Usage** dashboard. From the dropdown in the top right of the page, select one of the following time periods: "Last 30 days", "Last calendar month", "Last 60 days", "Last 90 days", "Last complete quarter", "Last year from now", or "Last calendar year".
+You can configure the time period that is used to display metrics and graphs on the **Usage** dashboard. From the dropdown in the top right of the page, select one of the following time periods: "Last 30 days", "Last calendar month", "Last 60 days", "Last 90 days", "Last complete quarter", "Last year", or "Last calendar year".
 
 .. usage-time-period-start
 
@@ -41,7 +41,7 @@ Activations
 
 .. usage-activations-start
 
-The **Activations** section in the **Usage** dashboard contains the following :ref:`time period-based <usage-time-period>` metrics:
+The **Activations** section in the **Usage** dashboard has the following :ref:`time period-based <usage-time-period>` metrics:
 
 **Queries executed**
    Shows the number of queries in the **Queries** tab have been run during the selected time period. This number is compared to the number of queries that were run during the previous time period.
@@ -52,7 +52,7 @@ The **Activations** section in the **Usage** dashboard contains the following :r
 **Segments used**
    Shows the total number of segments that were used by campaigns that ran as of the last date in the selected time period. This number is compared to the number of segments that were used by campaigns that ran during the previous time period.
 
-along with the following graphs:
+Along with the following graphs:
 
 **Campaigns**
    Shows the total number of distinct campaigns that are run, by day. Campaigns that are sent more than once per day are counted once. Recurring campaigns are counted on the days they are run. Campaigns with more than one destination or sub-audience are counted once. Only successful campaign runs are counted.
@@ -88,7 +88,7 @@ Customer profiles
 
 .. usage-customer-profiles-start
 
-The **Profiles** section in the **Usage** dashboard contains the following metrics and graphs that describe the composition of customer profiles within your tenant:
+The **Profiles** section in the **Usage** dashboard has the following metrics and graphs that describe the composition of customer profiles within your tenant:
 
 **Total profiles**
    Shows the total count of all profiles to which an Amperity ID is assigned after Stitch is run.
@@ -99,7 +99,7 @@ The **Profiles** section in the **Usage** dashboard contains the following metri
 **Average number of sources per profile**
    Shows the average number of data sources that are used to generate a stitched profile.
 
-along with the following categories:
+Along with the following categories:
 
 **Profiles added over time**
    Shows the change in profile counts day over day. This can be a helpful indicator for understanding how new data sources can affect the profile count within your tenant and for debugging issues with Stitch results.
@@ -117,10 +117,10 @@ Sources
 
 .. usage-sources-start
 
-The **Sources** section in the **Usage** dashboard contains the following metrics and graphs that describe source utilization:
+The **Sources** section in the **Usage** dashboard has the following metrics and graphs that describe source utilization:
 
 **Sources configured**
-   Shows the number of feeds that are currently configured in your tenant.
+   Shows the number of feeds configured in your tenant.
 
 **Average records ingested**
    Shows the average number of records that are ingested per day during the selected time period.
@@ -128,7 +128,7 @@ The **Sources** section in the **Usage** dashboard contains the following metric
 **Ingest connectors used**
    Shows the number of connectors that have been used during the selected time period.
 
-along with the following categories:
+Along with the following categories:
 
 **Sources over time**
    Shows the number of feeds that are used to ingest source data during the selected time period. Use this view to see how many individual feeds are being used compared to the number of feeds that are actively in use.

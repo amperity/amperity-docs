@@ -1142,7 +1142,21 @@
 
 
 
-.sd-card{background-clip:border-box;background-color:var(--sd-color-card-background);border:1px solid var(--sd-color-card-border);border-radius:.25rem;color:var(--sd-color-card-text);display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;position:relative;word-wrap:break-word}
+.sd-card{
+  background-clip:border-box;
+  background-color:var(--sd-color-card-background);
+  border:1px solid var(--sd-color-card-border);
+  border-radius:.25rem;
+  color:var(--sd-color-card-text);
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  min-width:0;
+  position:relative;
+  word-wrap:break-word
+}
+
 
 .sd-card>hr{margin-left:0;margin-right:0}
 

@@ -64,7 +64,7 @@ Get details
 
 #. The email address the customer uses to access |source-name|.
 #. The customer's |source-name| API token.
-#. The subdomain for the customer's |source-name| account, e.g. "acme" (in ``acme.zendesk.com``).
+#. The subdomain for the customer's |source-name| account. For example: "acme" (in ``acme.zendesk.com``).
 
 .. source-zendesk-get-details-end
 
@@ -127,6 +127,8 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-zendesk-review-data-start
 
+.. vale off
+
 The feed and domain table will match the fields defined in the `Zendesk Users API <https://developer.zendesk.com/api-reference/ticketing/users/users/>`__ |ext_link|:
 
 * **active**
@@ -168,6 +170,8 @@ The feed and domain table will match the fields defined in the `Zendesk Users AP
 * **url**
 * **user_fields**
 * **verified**
+
+.. vale on
 
 .. source-zendesk-review-data-end
 

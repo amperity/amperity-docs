@@ -27,7 +27,7 @@ Most frequent order
    :align: left
    :class: no-scaled-link
 
-.. important:: You must choose *at least one* product attribute -- category, subcategory, description, or gender -- and/or a store ID.
+.. important:: You must choose the order datetime value, and then any of category, subcategory, description, gender, and store ID.
 
 After you choose at least one product and specify a date range you may apply filters to associate your customers orders with specific products, brands, channels, and stores. For example, return a list of customers who most frequently ordered deluxe tacos in Goleta, CA.
 
@@ -43,7 +43,7 @@ How this attribute works
 
 **Most Frequent Order** represents a common approach people use when they build segments: figure out what your customers purchased most often within a certain time window, and then associate that list of customers to your marketing campaigns.
 
-**Most Frequent Order** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Most Frequent Order** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -142,13 +142,13 @@ After the **Most frequent order** purchase behavior attribute has been added, se
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 

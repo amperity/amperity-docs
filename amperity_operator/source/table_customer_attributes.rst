@@ -23,23 +23,23 @@ Customer Attributes table
 
 .. table-customer-attributes-start
 
-This topic describes the starting point for the **Customer Attributes** table, and then steps through the process required to extend it to be more specific to the use cases that are required by your tenant.
+After the **Customer Attributes** table is configured you can extend it to be more specific to the use cases that are required by your tenant.
 
-.. note:: This topic assumes that the data in your tenant has the following types of data already configured:
+.. note:: The data in your tenant must have the following types of data already configured:
 
-   #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the the **Merged Customers** table and is required by the **Customer Attributes** table.
-   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table (and is optional).
-   #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables (and is optional).
+   #. Customer profile data sources, such as names, addresses, email addresses, and phone numbers. This data is made available from the **Merged Customers** table and is required by the **Customer Attributes** table.
+   #. Customer interactions, such as orders and items. This data is made available from the **Transaction Attributes Extended** table and is optional.
+   #. Customer consent data for email address and SMS/phone opt-in to receiving communication from your brand. This data is made available from the **Email Opt Status** and **SMS Opt Status** tables and is optional.
 
 .. table-customer-attributes-end
 
 .. table-customer-attributes-important-start
 
-.. important:: Many columns in the **Customer Attributes** table are built to enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
+.. important:: Many columns in the **Customer Attributes** table enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
 
    Any column that exists in the :ref:`column reference <table-customer-attributes-reference>` must maintain the exact column name and data type, even if your tenant requires custom SQL to enable the feature.
 
-   This table may be extended to support use cases that are not described in this topic. The implementation for these types of use cases are always tenant-specific, but should follow a similar approach as the extensions that are described in this topic. Custom fields are not used by segment insights and predictive scoring, but may be used by workflows that you build within your tenant, and then enable downstream.
+   This table may be extended to support additional use cases. The implementations for these types of use cases are always tenant-specific, but should follow a similar approach as the :ref:`recommended <table-customer-attributes-recommended-updates>` and :ref:`optional <table-customer-attributes-optional>` extensions. Custom fields are not used by segment insights and predictive scoring, but may added to the **Customer Attributes** table.
 
 .. table-customer-attributes-important-end
 
@@ -62,8 +62,8 @@ The **Customer Attributes** table has a small number of specific requirements, w
 The **Customer Attributes** table has the following requirements:
 
 * PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain the following types of customer records: email addresses, phone numbers, and physical addresses.
-* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide multiple email addresses and/or phone numbers.
-* The **Merged Customers** table is extended to :doc:`exclude common or "bad" email, phone, and/or physical address values <blocklist_bad_values>`.
+* The **Merged Customers** table is extended to support :ref:`custom email <table-merged-customers-extend-pii-semantic-email>` or :ref:`custom phone <table-merged-customers-extend-pii-semantic-phone>` semantics that may be present when individual data sources provide many email addresses or phone numbers.
+* The **Merged Customers** table is extended to :doc:`exclude common or "bad" email, phone, or physical address values <blocklist_bad_values>`.
 
 .. table-customer-attributes-start-here-requirements-end
 
@@ -71,7 +71,7 @@ The **Customer Attributes** table has the following requirements:
 
 .. table-customer-attributes-start-here-recommended-start
 
-This topic assumes that your tenant will use transactions and customer consent tables for email addresses and SMS/phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
+The **Customer Attributes** table should have access to transactions and customer consent tables for email addresses, SMS, and phone numbers. These tables are enabled within the SQL that shows the :ref:`recommended starting point <table-customer-attributes-recommended-starting-sql>` for the **Customer Attributes** table.
 
 .. note:: You can comment out the SQL for :ref:`table-customer-attributes-recommended-update-transaction-attributes`, :ref:`table-customer-attributes-recommended-update-email-optin`, and :ref:`table-customer-attributes-recommended-update-sms-optin` if you do not plan to use these features within your tenant.
 
@@ -143,11 +143,11 @@ This table is designed to consolidate various data points about your customers i
 
 .. table-customer-attributes-sql-template-important-start
 
-.. important:: Review the :ref:`column reference <table-customer-attributes-reference>` to familiarize yourself with the table schema. If you extend and/or custommize this table you **must** use column names that match the names of columns that are in the defined table schema.
+.. important:: Review the :ref:`column reference <table-customer-attributes-reference>` to familiarize yourself with the table schema. If you extend or custommize this table you **must** use column names that match the names of columns that are in the defined table schema.
 
    For example, email and SMS opt-in status **must** return a Boolean value for **is_email_opted_in** and **is_sms_opted_in**.
 
-   You may extend and/or customize this table for columns that are not defined in the schema.
+   You may extend or customize this table for columns that are not defined in the schema.
 
 .. table-customer-attributes-sql-template-important-end
 
@@ -165,7 +165,7 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-note-start
 
-.. note:: If your tenant is not using transactions or if your tenant does not have email and/or SMS opt-in status, make some (or all) of the following changes to the recommended starting SQL for the **Customer Attributes** table:
+.. note:: If your tenant is not using transactions or if your tenant does not have email or SMS opt-in status, make some or all of the following changes to the recommended starting SQL for the **Customer Attributes** table:
 
    #. Remove the "Extend for transaction attributes" section, along with the **LEFT JOIN tae_cte ta** line in the "Extend for classifications" common table expression (CTE).
    #. Remove the "Extend for email opt-in status" section.
@@ -180,13 +180,14 @@ The following SQL represents a recommended starting point for the **Customer Att
 
 .. table-customer-attributes-recommended-starting-sql-tip-start
 
-.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use the pre-configured starting point described in this topic.
+.. tip:: Add the **Customer Attributes** table using the SQL template option to load a version of this table that does not have the **Transaction Attributes Extended**, **Email Opt Status**, and **SMS Opt Status** tables pre-configured. You may copy and paste the following example into the SQL editor to use it as a pre-configured starting point.
 
 .. table-customer-attributes-recommended-starting-sql-tip-end
 
 .. table-customer-attributes-recommended-starting-sql-code-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH mc_cte AS (
      SELECT
@@ -378,7 +379,7 @@ If a customer has a complete email address *and* phone number they are considere
 
 The **Merged Customers** table is the "source of truth" for this data within your customer 360 database and is required by the **Customer Attributes** table. Customers for which you do not have *any* personally identifiable information (PII) are also identified.
 
-.. note:: When the **Email Opt Status** and **SMS Opt Status** tables are available and are configured in this table, the **contactable_email** and **contactable_phone** records are updated to be email addresses and phone numbers that are complete in the **Merged Customers** table *and also* belong to customers who have given their consent to be contacted by your brand at their email address and/or phone number.
+.. note:: When the **Email Opt Status** and **SMS Opt Status** tables are available and are configured in this table, the **contactable_email** and **contactable_phone** records are updated to be email addresses and phone numbers that are complete in the **Merged Customers** table *and also* belong to customers who have given their consent to be contacted by your brand at their email address or phone number.
 
 .. table-customer-attributes-required-updates-end
 
@@ -390,7 +391,7 @@ Recommended updates
 
 .. table-customer-attributes-recommended-updates-start
 
-Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address and/or phone number. This topic assumes that this data is available in your tenant and that you want to include that data in the **Customer Attributes** table.
+Most brands have transaction data histories, along with data that indicates if your customers have given consent to be contacted at their email address or phone number.
 
 The following sections describe these features and also show you how to comment them out of the **Customer Attributes** table to disable them:
 
@@ -412,11 +413,12 @@ The **Customer Attributes** table can be extended to provide status for customer
 
 Customer states are typically defined as "new", "active", "lapsed", "dormant", and "prospect" and are based on purchase behaviors assigned across a 5-year window. A customer who has purchased within the previous 365 days (1 year) is assigned to "active" and within the previous 730 days (2 years) is assigned to "lapsed". A customer who has not purchased within 2 years is assigned to "dormant".
 
-A customer who has never interacted with your brand, i.e. "never made a purchase" is assigned the value of "prospect".
+A customer who has never interacted with your brand--never made a purchase--is assigned the value of "prospect".
 
-.. note:: This topic assumes that the :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table is available to your customer 360 database and that it will be included in the **Customer Attributes** table and that the **historical_purchaser_lifecycle_status** feature will be enabled. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
+.. note:: The :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>` table should be available in the customer 360 database. The **Customer Attributes** table should enable the **historical_purchaser_lifecycle_status** feature. You can comment out the following SQL if you do not plan to provide transaction data to the **Customer Attributes** table.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for transaction attributes
@@ -490,9 +492,10 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **Email Opt Status** table is generated when |semantics_email_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive email messages from your brand.
 
-.. note:: This topic assumes that the **Email Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
+.. note:: The **Email Opt Status** table should be available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their email address with your marketing campaigns.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Email opt-in status
@@ -517,7 +520,7 @@ SMS opt-in status
 
 .. table-customer-attributes-recommended-update-sms-optin-start
 
-The **Customer Attributes** table provides a list of customers who have complete and contactable phone numbers. You can upgrade this list to only be a list of customers who have given consent to your brand sending them SMS and/or text messages by using the **SMS Opt Status** table.
+The **Customer Attributes** table provides a list of customers who have complete and contactable phone numbers. You can upgrade this list to only be a list of customers who have given consent to your brand sending them SMS or text messages by using the **SMS Opt Status** table.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-sms-opt-status-table-start
@@ -525,9 +528,10 @@ The **Customer Attributes** table provides a list of customers who have complete
 
 .. tip:: The **SMS Opt Status** table is generated when |semantics_sms_optin| semantic tags are applied to feeds that contain records that indicate which of your customers have given their consent to receive SMS messages from your brand.
 
-.. note:: This topic assumes that the **SMS Opt Status** table is available to your customer 360 database and that it will be included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
+.. note:: The **SMS Opt Status** table should be available to your customer 360 database and that it is included in the **Customer Attributes** table. You can comment out the following SQL if you do not plan to provide to Amperity data sources that contain customer consent status regarding the use of their phone number with your marketing campaigns.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- SMS opt-in status
@@ -571,7 +575,7 @@ Custom inputs
 
 .. table-customer-attributes-optional-custom-inputs-start
 
-If your tenant has a table (or a set of tables) that represents the value your customers have to your brand you may configure those tables to provide attributes to the **Customer Attributes** table. Use a pattern similar to how the :ref:`Transaction Attributes <table-customer-attributes-recommended-update-transaction-attributes>` table is configured.
+If your tenant has a table or a set of tables that represents the value your customers have to your brand you may configure those tables to provide attributes to the **Customer Attributes** table. Use a pattern similar to how the :ref:`Transaction Attributes <table-customer-attributes-recommended-update-transaction-attributes>` table is configured.
 
 .. table-customer-attributes-optional-custom-inputs-end
 
@@ -601,7 +605,7 @@ Each of these options follows a similar series of steps:
 #. Use a LEFT JOIN to include it with the **classification_config** CTE
 #. Update the list in the **customer_attributes_final** CTE
 
-.. note:: Refer to the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` section in this topic to see a more complete walkthrough of the series of steps required to add each of the non-customer email address sections to the **Customer Attributes** table. The other sections highlight important details within the utility queries for :ref:`employees <table-customer-attributes-optional-email-categories-employees>`, :ref:`gift givers <table-customer-attributes-optional-email-categories-gift-givers>`, :ref:`outliers <table-customer-attributes-optional-email-categories-outliers>`, :ref:`resellers <table-customer-attributes-optional-email-categories-resellers>`, and :ref:`test accounts <table-customer-attributes-optional-email-categories-test-accounts>`.
+.. note:: Refer to the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` section to see a more complete walkthrough of the series of steps required to add each of the non-customer email address sections to the **Customer Attributes** table. The other sections highlight important details within the utility queries for :ref:`employees <table-customer-attributes-optional-email-categories-employees>`, :ref:`gift givers <table-customer-attributes-optional-email-categories-gift-givers>`, :ref:`outliers <table-customer-attributes-optional-email-categories-outliers>`, :ref:`resellers <table-customer-attributes-optional-email-categories-resellers>`, and :ref:`test accounts <table-customer-attributes-optional-email-categories-test-accounts>`.
 
 .. table-customer-attributes-optional-non-customer-emails-end
 
@@ -615,11 +619,12 @@ Businesses
 
 Use the "is_business" utility query to identify customer records that likely belong to a business. This query selects street addresses, first names, and last names from the **Merged Customers** table, and then builds a list of strings that are indicators a name or address may belong to a business.
 
-Review the utility query, and then configure it to identify likely business email addresses. There are two locations in this query that must be updated for your tenant.
+Review the utility query, and then configure it to identify likely business email addresses. Two locations in this query must be updated for your tenant.
 
 The first is the **likely_business** CTE. Update the values in the CASE statement to match known business address patterns that exist in your tenant:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name LIKE 'inc'
@@ -645,6 +650,7 @@ The first is the **likely_business** CTE. Update the values in the CASE statemen
 The second is for when you need to define exceptions for names that should not match known business address patterns:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name IN ('name1','name2','name3','...') THEN true
@@ -657,6 +663,7 @@ The second is for when you need to define exceptions for names that should not m
 After you have defined business address patterns and exceptions, return the list of likely businesses:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      *
@@ -688,6 +695,7 @@ When the query is ready, under the following section in the **Customer Attribute
 add the updated **is_likely_business** query:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for business email addresses
@@ -750,6 +758,7 @@ add the updated **is_likely_business** query:
 Extend **classification_config** by adding a CASE statement and a LEFT JOIN similar to:
 
 .. code-block:: sql
+   :linenos:
 
    ,classification_config AS (
      SELECT
@@ -776,6 +785,7 @@ Extend **classification_config** by adding a CASE statement and a LEFT JOIN simi
 Add the likely businesses to **customer_attributes_final**:
 
 .. code-block:: sql
+   :linenos:
 
    ,customer_attributes_final AS (
      SELECT DISTINCT
@@ -804,13 +814,14 @@ Employees
 
 .. table-customer-attributes-optional-email-categories-employees-start
 
-A customer is an employee when they are employed (or were employed) by your brand. You may choose to include employees within your marketing campaigns, but often it's preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
+A customer is an employee when they are employed or were employed by your brand. You may choose to include employees within your marketing campaigns, but often it is preferable to exclude them. Use this extension to identify employees of your brand within your customer profile data.
 
 .. note:: This utility query follows steps that are similar to ones described in the :ref:`businesses <table-customer-attributes-optional-email-categories-business>` utility query: build the utility query in **Queries** page, add the updated query to the **Customer Attributes** table, extend the **classification_config** section, and then update the **customer_attributes_final** section.
 
 Review the **is_employee** utility query, and then configure it to identify customers who have an email address that is associated with your brand.
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN email LIKE '%domain.com'
@@ -818,9 +829,10 @@ Review the **is_employee** utility query, and then configure it to identify cust
      ELSE false
    END AS is_email
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN email IN ('email1','email2','email3','...') THEN true
@@ -854,6 +866,7 @@ A gift giver is a customer who purchased an item for someone else.
 The **is_gift_giver** utility query returns product descriptions from the **Unified Itemized Transactions** table, and then analyzes those descriptions for indicators of product purchases that were gifts. Review the **is_gift_giver** utility query, and then configure it to match the approaches your brand uses to identify purchases that are gifts.
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN product_description LIKE '%gift%'
@@ -861,9 +874,10 @@ The **is_gift_giver** utility query returns product descriptions from the **Unif
      ELSE false
    END AS likely_gift_purchase
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN product_description IN ('description1','description2','description3','...') THEN true
@@ -899,15 +913,16 @@ Review the **is_outlier** utility query, and then configure it to identify custo
 The query starts by defining the revenue outlier threshold:
 
 .. code-block:: sql
+   :linenos:
 
    WITH outlier_param AS (
      SELECT
        995 AS percentile
    )
 
-.. note:: The outlier threshold specifies a value between 0-1000, where 1000 is 100% and 995 is 99.5%.
+.. note:: The outlier threshold is 0-1000, where 1000 is 100% and 995 is 99.5%.
 
-The query builds a list of outliers by comparing records that exceed the record count threshold to lifetime order revenue. In this topic, the outlier threshold is "995" which returns a list of customers whose lifetime revenue is in your top 0.5%.
+The query builds a list of outliers by comparing records that exceed the record count threshold to lifetime order revenue. The outlier threshold is "995" which returns a list of customers whose lifetime revenue is in your top 0.5%.
 
 Run the query and validate the results. When the query is ready, under the following section in the **Customer Attributes** SQL template:
 
@@ -938,17 +953,19 @@ Review the **is_reseller** utility query, and then configure it to identify cust
 The query starts by defining the revenue outlier threshold:
 
 .. code-block:: sql
+   :linenos:
 
    WITH outlier_param AS (
      SELECT
        990 AS percentile
    )
 
-.. note:: The outlier threshold specifies a value between 0-1000, where 1000 is 100% and 990 is 99%.
+.. note:: The outlier threshold is 0-1000, where 1000 is 100% and 990 is 99%.
 
 The following CTE identifies supersized clusters that exceed the defined threshold. In the following example, the threshold is "50":
 
 .. code-block:: sql
+   :linenos:
 
    ,uc_cte AS (
      SELECT 
@@ -960,7 +977,7 @@ The following CTE identifies supersized clusters that exceed the defined thresho
      having count(*) > 50
    )
 
-The query builds a list of likely resellers by comparing supersized cluster records that exceed the record count threshold to lifetime order revenue that exceeds the configured revenue threshold. In this topic, the supersized records threshold is "50" and the revenue threshold is "990" which returns a list of supersized clusters whose lifetime revenue is in your top 1%.
+The query builds a list of likely resellers by comparing supersized cluster records that exceed the record count threshold to lifetime order revenue that exceeds the configured revenue threshold. The supersized records threshold is "50" and the revenue threshold is "990" which returns a list of supersized clusters whose lifetime revenue is in your top 1%.
 
 Run the query and validate the results. When the query is ready, under the following section in the **Customer Attributes** SQL template:
 
@@ -989,6 +1006,7 @@ A test account is an email address that does not belong to a customer, such as `
 Review the **is_test_accounts** utility query, and then configure it to identify email addresses that do not belong to a customer and are likely test email accounts. Use a CASE statement to define the patterns that identify test accounts. For example:
 
 .. code-block:: sql
+   :linenos:
 
    CASE
      WHEN given_name LIKE 'test'
@@ -1005,9 +1023,10 @@ Review the **is_test_accounts** utility query, and then configure it to identify
      ELSE false
    END AS is_likely_test_account
 
-and then allows you to define exceptions:
+and then define exceptions:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN given_name IN ('name1','name2','...') THEN true
@@ -1060,6 +1079,7 @@ Under the following section in the **Customer Attributes** SQL template:
 configure the following SQL:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for households
@@ -1093,6 +1113,7 @@ configure the following SQL:
 and then extend **classification_config** for primary buyers:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN pb.amperity_id IS NULL
@@ -1113,17 +1134,17 @@ and then extend **classification_config** for primary buyers:
 Churn prevention
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/churn_prevention.rst
+.. include:: ../../amperity_user/source/churn_prevention.rst
    :start-after: .. churn-prevention-about-start
    :end-before: .. churn-prevention-about-about-end
 
 .. table-customer-attributes-optional-churn-prevention-start
 
-Each churn prevention campaign is unique, but they all have something in common: a series of messages that are sent when customers enter (or exit) specific stages within that churn prevention campaign. Each stage is associated with a threshold that defines a customer's current churn status.
+Each churn prevention campaign is unique, but they all have something in common: a series of messages that are sent when customers enter or exit specific stages within that churn prevention campaign. Each stage is associated with a threshold that defines a customer's current churn status.
 
 The **Customer Attributes** table can be configured to provide your customers' current churn status -- one of "active", "cooling down", "at risk", "highly at risk", or "lost" -- along with the date on which your customers were assigned to that status.
 
-.. important:: The **Customer Attributes** table requires a table that tracks churn prevention events to be present in your customer 360 database. The name of this table may be unique to your tenant. This topic refers to this table as the **Churn Events** table.
+.. important:: The **Customer Attributes** table should track churn prevention events from the customer 360 database. The name of this table may be unique to your tenant. For example: **Churn Events**.
 
 You have two choices for defining churn events for this table:
 
@@ -1139,9 +1160,10 @@ You have two choices for defining churn events for this table:
          :start-after: .. models-churn-propensitity-tiers-onetime-start
          :end-before: .. models-churn-propensitity-tiers-onetime-end
 
-#. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days", "at risk" as "within the past 365 days", and so on, using SQL similar to:
+#. Use historical order history to define your customers' churn status. For example, you could configure the **Customer Attributes** table to define churn status as "active" as "within the past 60 days" or "at risk" as "within the past 365 days", using SQL similar to:
 
    .. code-block:: sql
+      :linenos:
 
       ,historical_churn_classification AS (
         SELECT
@@ -1159,7 +1181,7 @@ You have two choices for defining churn events for this table:
 
    Update the values for each threshold to align to your products and customer purchase histories and to the stages your brand uses within churn prevention campaigns.
 
-If your brand will use the **Customer Attributes** table as part of your churn prevention campaign activities, replace the following SQL:
+If your brand uses the **Customer Attributes** table as part of your churn prevention campaign activities, replace the following SQL:
 
 .. code-block:: sql
 
@@ -1170,6 +1192,7 @@ If your brand will use the **Customer Attributes** table as part of your churn p
 with:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for churn prevention
@@ -1194,9 +1217,10 @@ Classifications
 
 .. table-customer-attributes-optional-classifications-start
 
-The recommended starting SQL, as described in this topic, configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
+The recommended starting SQL configures using the **Transaction Attributes Extended** table. This enables two flags that differentiate your customers into "purchasers" and "prospects". These flags are enabled by the following SQL in **classification_config**:
 
 .. code-block:: sql
+   :linenos:
 
    ,CASE
      WHEN ta.lifetime_order_frequency >= 1
@@ -1213,6 +1237,7 @@ The recommended starting SQL, as described in this topic, configures using the *
 and both attributes must be available in the list of customer attributes:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for customer attributes
@@ -1237,7 +1262,7 @@ Contactability
 
 .. table-customer-attributes-optional-contactability-start
 
-A customer is considered to be "contactable" when they have a complete email address, phone number, or physical address (including all of street address, city, state, postal code) in the **Merged Customers** table.
+A customer is considered to be "contactable" when they have a complete email address, phone number, or physical address, including all of street address, city, state, postal code, in the **Merged Customers** table.
 
 When a customer has a complete email address **and** phone number they are considered to be contactable on paid social media.
 
@@ -1254,6 +1279,7 @@ The **contactable_phone**, **contactable_email**, **contactable_address**, **con
 The following example shows the configuration for contactability, including for when customer consent for email addresses and phone numbers is available:
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for contactability
@@ -1305,6 +1331,7 @@ The following example shows the configuration for contactability, including for 
 .. note:: If your tenant does not have access to email and SMS consent status, update the configuration for the **contactable_email** and **contactable_phone** columns to:
 
    .. code-block:: sql
+      :linenos:
 
       ,CASE
         WHEN mc.email_completion = 1
@@ -1330,6 +1357,7 @@ Extended customer attributes
 The list of customer attributes must be extended to include all of the updates you have made. Review the section for :ref:`business email addresses <table-customer-attributes-optional-email-categories-business>` for an example of adding an attribute to this list.
 
 .. code-block:: sql
+   :linenos:
 
    -- -------------------------------------------------------
    -- Extend for customer attributes

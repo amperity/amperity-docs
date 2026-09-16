@@ -71,7 +71,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A `Kustomer API key <https://developer.kustomer.com/kustomer-api-docs/reference/authentication>`__ |ext_link|, along with the **org.user.read** role for that API key.
 
@@ -87,7 +87,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-get-details-fivetran-access-to-snowflake-start

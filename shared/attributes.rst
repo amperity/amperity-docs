@@ -3,7 +3,7 @@
 ..
 
 
-This topic contains paragraphs that can be applied to all attribute reference topics. The variables are defined within each attribute topic.
+Paragraphs that can be applied to all attribute reference topics. The variables are defined within each attribute topic.
 
 Attributes are sourced from the /reference collection, but also exist in the /ampiq collection so the variables do need to be maintained in two locations.
 

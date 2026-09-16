@@ -17,15 +17,19 @@
 Gender prediction
 ==================================================
 
+.. vale off
+
 .. predict-gender-about-start
 
 Gender prediction can be a helpful step when applying personalization to marketing campaigns, within email messages, and during visitor interactions on websites. When gender is known, it can be used as a signal for tailoring communications, recommendations, and product lists based on observed preferences that are common for that gender.
 
-When used carefully, gender prediction can have low downside risk due to false positives. That said, gender prediction should not be used for 1:1 personalization or to predict pronouns (he, him, she, her, they, them) because the benefits of correctly predicting gender is, in most cases, outweighed by the high downside risks of being wrong.
+Gender prediction can have low downside risk due to false positives. That said, gender prediction should not be used for 1:1 personalization or to predict pronouns--he, him, she, her, they, them--because the benefits of correctly predicting gender is, in most cases, outweighed by the high downside risks of being wrong.
 
-It's important that your brand understands how gender prediction will be used prior to enabling it within your tenant. Work closely with partners to ensure this generated data is used responsibly.
+It is important that your brand understands how gender prediction is used before enabling it within your tenant. Work with partners to ensure this generated data is used responsibly.
 
 .. predict-gender-about-end
+
+.. vale on
 
 
 .. _predict-gender-add-data-asset:
@@ -70,6 +74,7 @@ Adjust accuracy threshold
 The default accuracy threshold for gender prediction is ~95%. This means that for any given name it has a 20:1 likelihood of being associated with a specific gender. If greater accuracy is required for a use case, add a custom **gender_name_ratio** threshold to the query:
 
 .. code-block:: sql
+   :linenos:
 
    WITH ratios AS (
      SELECT * 

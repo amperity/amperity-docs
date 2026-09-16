@@ -1,10 +1,6 @@
 .. Use only for internal links that go from one internal site (reference, datagrid, amp360, ampiq, ampid, etc.) to another. Do not use this to define links that leave https://docs.amperity.com. Do not use this to define links to other topics WITHIN the same topic collection.
 
 
-.. |amperity_api| raw:: html
-
-   <a href="https://docs.amperity.com/api/start_here.html">Amperity API</a>
-
 
 .. |add_campaigns_data_requirements| raw:: html
 
@@ -630,11 +626,6 @@
    <a href="https://docs.amperity.com/operator/data_first_party.html#raw-clickstream-data">require filtered sets of raw clickstream data</a>
 
 
-.. |first_party_data_sources| raw:: html
-
-   <a href="https://docs.amperity.com/operator/data_first_party.html">First-party Data Sources</a>
-
-
 .. |format_actual_json| raw:: html
 
    <a href="https://docs.amperity.com/reference/format_json_actual.html">actual JSON</a>
@@ -647,7 +638,7 @@
 
 .. |format_cbor| raw:: html
 
-   <a href="https://docs.amperity.com/reference/format_cbor.html">CBOR</a>
+   <a href="https://docs.amperity.com/reference/format_cbor.html">Concise Binary Object Representation (CBOR)</a>
 
 
 .. |format_cbor_couriers| raw:: html
@@ -1424,6 +1415,11 @@
 .. |table_campaign_recipients| raw:: html
 
    <a href="https://docs.amperity.com/operator/table_campaign_recipients.html">Campaign Recipients</a>
+
+
+.. |table_campaign_recipients_summary| raw:: html
+
+   <a href="https://docs.amperity.com/operator/table_campaign_recipients_summary.html">Campaign Recipients Summary</a>
 
 
 .. |table_customer_attributes| raw:: html

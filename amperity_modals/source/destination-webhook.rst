@@ -12,7 +12,7 @@ Use a webhook to build custom integrations with Amperity using Amazon S3 storage
 
 The AWS Lambda function generates a file in NDJSON format, publishes to Amazon S3, and then provides a pre-signed URL from which the NDJSON file may be downloaded.
 
-After the NDJSON file is generated, the destination will send a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
+After the NDJSON file is generated, the destination sends a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
 
 Amperity provides an `AWS Serverless Application Repository <https://serverlessrepo.aws.amazon.com/applications>`__ |ext_link| that encapsulates all of the configuration to build your own custom destination.
 

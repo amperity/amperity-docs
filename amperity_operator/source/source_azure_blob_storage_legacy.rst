@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. |source-name| replace:: Azure Blob Storage
 .. |plugin-name| replace:: Azure Blob Storage
@@ -90,7 +91,7 @@ Amperity prefers to pull data from customer-managed cloud storage. This approach
 
 * Use security policies managed in Azure Data Share to manage access to data
 * Directly manage the files that are made available
-* Modify access without requiring involvement by Amperity; access may be revoked at any time by either Azure account, after which data sharing ends immediately
+* Modify access without requiring involvement by Amperity. Access may be revoked at any time by either Azure account, after which data sharing ends immediately
 * Directly troubleshoot incomplete or missing files
 
 Amperity recommends to use Azure Data Share to manage access to customer-managed cloud storage in Azure. This allows managed security policies to control access to data.
@@ -99,7 +100,7 @@ Amperity recommends to use Azure Data Share to manage access to customer-managed
 
 .. source-azure-blob-storage-legacy-azure-data-share-after-start
 
-After setting up Azure Data Share, a list of files (by filename and file type), along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
+After setting up Azure Data Share, a list of files by filename and file type, along with any sample files, must be made available to allow for feed creation. These files may be placed directly into the shared location after Azure Data Share is configured.
 
 .. source-azure-blob-storage-legacy-azure-data-share-after-end
 
@@ -130,12 +131,12 @@ Use credentials
 
 .. source-azure-blob-storage-legacy-credentials-start
 
-A source that uses credentials to send data to Amperity from |source-name| requires the following information be sent to Amperity via SnapPass:
+A source that uses credentials to send data to Amperity from |source-name| requires the following information be sent to Amperity via |ext_snappass|:
 
-#. The URL for the Azure authentication endpoint. This is typically in the format of ``https://login.microsoftonline.com/<directory_id>/oauth2/token``.
+#. The URL of the Azure authentication endpoint. This is typically in the format of ``https://login.microsoftonline.com/<directory_id>/oauth2/token``.
 #. The information needed for the selected credentials method: shared access credentials, a storage URI, or a connection string.
-#. The name of the container, the blob prefix, and credential details. (These vary depending on the chosen credential method.)
-#. A list of files (by filename and file type) in Azure Blob Storage to be sent to Amperity.
+#. The name of the container, the blob prefix, and credential details. These vary depending on the chosen credential method.
+#. A list of files by filename and file type in Azure Blob Storage to be sent to Amperity.
 #. A sample for each file to simplify feed creation.
 
 .. source-azure-blob-storage-legacy-credentials-end
@@ -149,13 +150,6 @@ Add courier
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
    :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
 
 .. _source-azure-blob-storage-legacy-add-courier-for-data-share:
 
@@ -206,11 +200,11 @@ Review :ref:`source-azure-blob-storage-legacy-azure-data-share` for more informa
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" or are not set to an obviously incorrect string the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" or are not set to an incorrect string the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-azure-blob-storage-legacy-add-courier-for-data-share-steps-end
@@ -270,11 +264,11 @@ Credentials options to access Azure Blob Storage include shared access signature
         }
       ]
 
-#. Under **Azure Blob Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Azure Blob Storage Settings** set the load operations to a string that is incorrect, such as **df-xxxxxx**. You may also set the load operation to empty: "{}".
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-azure-blob-storage-legacy-add-courier-for-credentials-steps-end
@@ -414,7 +408,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -433,7 +427,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -448,7 +442,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -476,7 +470,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

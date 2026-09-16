@@ -58,3 +58,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-microsoft-advertising-list-name-start
    :end-before: .. setting-microsoft-advertising-list-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

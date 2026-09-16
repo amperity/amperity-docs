@@ -12,7 +12,7 @@
 
 
 ==================================================
-Pull from Amazon S3 (Legacy)
+Pull from Amazon S3--Legacy
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -21,7 +21,7 @@ Pull from Amazon S3 (Legacy)
 
 .. source-amazon-s3-legacy-about-start
 
-Amperity can pull data from Amazon S3. A common scenario: a file is output from a customer data source with a consistent datestamp pattern appended to a static file name, added to an Amazon S3 bucket, and then updated on a regular basis. Amazon S3 can be a source for any number of file types and formats. A courier can be configured to ingest multiple file types and formats as a fileset.
+Amperity can pull data from Amazon S3. A common scenario: a file is output from a customer data source with a consistent datestamp pattern appended to a static file name, added to an Amazon S3 bucket, and then updated on a regular basis. Amazon S3 can be a source for any number of file types and formats. A courier can be configured to ingest many file types and formats as a fileset.
 
 .. source-amazon-s3-legacy-about-end
 
@@ -59,17 +59,17 @@ The |source-name| destination requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The name of the S3 bucket from which data will be pulled to Amperity.
+     - The name of the S3 bucket from which data is pulled to Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - For :ref:`cross-account role assumption <source-amazon-s3-legacy-credentials-role-to-role>` you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - For :ref:`cross-account role assumption <source-amazon-s3-legacy-credentials-role-to-role>` you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
        .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 
@@ -121,8 +121,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-start
@@ -141,8 +141,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-add-source-intro-start
@@ -157,8 +157,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-settings-intro-start
@@ -177,8 +177,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-policy-example-intro-start
@@ -190,8 +190,8 @@ Configure cross-account roles
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/amazon-s3.rst
           :start-after: .. sources-amazon-s3-cross-account-roles-steps-save-credentials-start
@@ -208,12 +208,6 @@ Add courier
 .. include:: ../../shared/terms.rst
    :start-after: .. term-courier-start
    :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
 
 **Example entities list**
 
@@ -261,11 +255,11 @@ For example:
 
 #. Under **Amazon S3 Settings**, add the name of the Amazon S3 bucket and prefix.
 #. Under **Amazon S3 Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity.
-#. Under **Amazon S3 Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
+#. Under **Amazon S3 Settings** set the load operations to a string that is incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
 
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
+   .. tip:: If you use an incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
 
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
+   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings fails.
 #. Click **Save**.
 
 .. source-amazon-s3-legacy-add-courier-steps-end

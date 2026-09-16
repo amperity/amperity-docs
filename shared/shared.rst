@@ -1,1 +1,1 @@
-*This file is authored in RestructuredText (.rst), intentionally italicized, and located in the `/shared` directory.*
+*This file is authored in RestructuredText using an .rst file extension, is intentionally italicized, and is located in the `/shared` directory.*

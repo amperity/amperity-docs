@@ -18,18 +18,28 @@ Enable predictive models
 ==================================================
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-predicted-models-start
-   :end-before: .. term-predicted-models-end
+   :start-after: .. term-predictive-models-start
+   :end-before: .. term-predictive-models-end
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-predicted-attribute-start
-   :end-before: .. term-predicted-attribute-end
+   :start-after: .. term-predictive-attribute-start
+   :end-before: .. term-predictive-attribute-end
 
 .. add-predicted-models-caution-start
 
 .. caution:: Predictive models are an optional component of Amperity. If you plan to enable predictive models it is recommended to review the :ref:`data requirements <add-campaigns-data-requirements-fields>`, and then take steps to configure :ref:`columns and tables <add-campaigns-data-requirements-columns-and-tables>` for predictive models *at the same time*.
 
 .. add-predicted-models-caution-end
+
+.. add-predicted-models-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Predictive models forecast customer behavior using customer profiles and behavioral history.
+
+   Open **Learning Lab** to learn more about `training predictive models <https://amperity.com/learning-lab/training-predictive-models>`__ |ext_link|. Registration is required.
+
+.. add-predicted-models-learning-lab-end
 
 
 .. _add-predicted-models-workflow-start:
@@ -48,8 +58,8 @@ The steps in the predictive models workflow include:
 #. A set of couriers are configured to pull these results from the Amazon S3 bucket to your tenant on a daily basis.
 #. Predictive models tables are loaded to Amperity using feeds, after which the associated predictive models domain tables are refreshed.
 #. After the Stitch process is complete, refreshed predictive models tables are passed through to your customer 360 database.
-#. Queries and segments that rely on predictive models table attributes will use the refreshed data the next time they are run and any new queries and segments will have access to the refreshed data.
-#. A campaign will use refreshed data the next time it is scheduled to run.
+#. Queries and segments that rely on predictive models table attributes use the refreshed data the next time they are run and any new queries and segments have access to the refreshed data.
+#. A campaign uses refreshed data the next time it is scheduled to run.
 
 **Predictive models components**
 
@@ -65,7 +75,7 @@ What components of predictive models are visible within Amperity?
      - Feeds that define the data model for predictive modeling tables within Amperity:
 
        * **PCLV**
-       * **PCLV - Changes**
+       * **PCLV Changes**
        * **Predicted Affinity ProductAttribute**
        * **Predicted Affinity Audience ProductAttribute**
 
@@ -79,7 +89,7 @@ What components of predictive models are visible within Amperity?
        Couriers to pull the results of predictive modeling to Amperity on a daily basis:
 
        * **PCLV** (including **PCLV Changes** and **PCLV Metadata**)
-       * **PCLV - Validation**
+       * **PCLV Validation**
        * **Predicted Affinity**
        * **Predicted Affinity Audience**
 
@@ -124,12 +134,12 @@ Data requirements
 
 Predictive models have :ref:`the same requirements as segments and campaigns <add-campaigns-data-requirements>`, along with the following additional requirements:
 
-#. Data sources must provide at least four years of historical data to support predictive models; five (or more) years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
+#. Data sources must have at least four years of historical data to support predictive models. Five or more years is recommended. Providing as much historical data as possible improves model performance and prediction quality.
 #. A defined product catalog with 20-2000 distinct values is required to support recommended audience sizes for product affinity.
 
    .. important:: SKU-level recommendations are not supported.
 
-#. If required fields are not available in customer data, maintain the column on the table with NULL values.
+#. If required fields are not available in customer data, maintain the column on the table with **NULL** values.
 
 .. add-predicted-models-data-requirements-end
 
@@ -180,7 +190,7 @@ The following columns are required by predictive models and must exist in the fo
    :header-rows: 1
 
    * - Column Name
-     - Required for ...
+     - Required for
      - Description
    * - **amperity_id**
      - Predictive models
@@ -374,7 +384,7 @@ After you have configured Amperity for the recommended patterns and workflows fo
 
 .. add-predicted-models-request-to-enable-important-start
 
-.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has multiple brands. To fit predictions for each brand:
+.. important:: By default, predictive models are fit across all brands for a tenant, even if a tenant has many brands. To fit predictions for each brand:
 
    #. A customer must purchase predictive models for each individual brand.
    #. The tenant must be configured to support brand-specific databases, with a database for each brand with dedicated **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables.
@@ -394,7 +404,7 @@ The typical process for setting up predictive models follows a series of general
 
 #. (~1 week) Amperity begins the process of training the models, validating backtesting, and optimizing predictions.
 
-#. (~1-2 weeks) Amperity performs stability testing on the models and the predictive results. This step may require some tuning of the model and will take longer for very large data sets.
+#. (~1-2 weeks) Amperity performs stability testing on the models and the predictive results. This step may require some tuning of the model and takes longer for very large data sets.
 
 Once this process is complete, the predicted attributes are available on a 1-day delayed rolling basis. These :ref:`tables are added to your tenant as a feed <add-predicted-models-configure>` in the **Sources** page and are available for use with segments and queries.
 
@@ -486,12 +496,13 @@ A product catalog must be defined, and then joined to the **Unified Itemized Tra
 
    .. note:: Amperity documentation refers to this data source as the :doc:`Unified Product Catalog table <table_unified_product_catalog>`, but it may have a different name in your tenant.
 
-#. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling; the **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
+#. Apply the **product-id** semantic tag to product catalog data as required by predictive modeling. The **product-category**, **product-description**, and **product-subcategory** semantic tags are optional.
 
-   .. important:: Product affinity modeling requires the field that defines product categories -- **product-category** in the **Unified Product Catalog** table -- to contain between 20 and 2000 unique values.
+   .. important:: Product affinity modeling requires the field that defines product categories--**product-category** in the **Unified Product Catalog** table--to contain between 20 and 2000 unique values.
 
 #. A list of custom attributes may be defined. These must be available as columns in the **Customer 360** database and must be added to the **Unified Itemized Transactions** table.
-#. Tables that define :ref:`product catalog semantic tags <semantics-product-catalogs>` and custom attributes are managed as a data source (and associated feed) and should be maintained as part of your organization's regular Amperity workflow.
+
+#. Tables that define :ref:`product catalog semantic tags <semantics-product-catalogs>` and custom attributes are managed as a data source and should be maintained as part of your organization's regular Amperity workflow.
 
 Extend the **Unified Itemized Transactions** to include the taxonomy that defines your products and brands:
 
@@ -502,6 +513,7 @@ Extend the **Unified Itemized Transactions** to include the taxonomy that define
 The following example extends the **Unified Itemized Transactions** table using a table named **Unified Product Catalog** that has columns for each of the optional product catalog semantic tags:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      uit.*
@@ -514,6 +526,7 @@ The following example extends the **Unified Itemized Transactions** table using 
 Some brands require a single parameter to define a taxonomy and some require more than one. The following example shows a taxonomy that defines custom attributes for a class and subclass:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT 
      uit.*,
@@ -553,8 +566,9 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
 #. Edit the **Customer 360** table to update the **SELECT** statement for attributes from the **Predicted CLV Attributes** table, similar to:
 
    .. code-block:: sql
+      :linenos:
 
-      -- Predicted Attributes from Predicted_CLV_Attributes pa
+      -- Predicted Attributes from Predicted_365d_CLV_Attributes pa
       ,pa.predicted_probability_of_transaction_next_365d AS `predicted_probability_of_transaction_next_365d`
       ,pa.predicted_order_frequency_next_365d AS `predicted_order_frequency_next_365d`
       ,pa.predicted_average_order_revenue_next_365d AS `predicted_average_order_revenue_next_365d`
@@ -568,7 +582,7 @@ You must edit the **SELECT** statement in the **Customer 360** table to select a
 
    .. code-block:: sql
 
-      LEFT JOIN Predicted_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
+      LEFT JOIN Predicted_365d_CLV_Attributes pa ON pa.amperity_id = mc.amperity_id
 
 #. Click **Next**.
 #. Click the icon or empty space in the **Icon** column to open the **Select an Icon** dialog box, after which you can choose an icon or search for additional icons on the `Font Awesome <https://fontawesome.com/v5/search>`__ |ext_link| website.

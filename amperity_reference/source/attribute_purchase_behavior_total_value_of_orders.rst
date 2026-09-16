@@ -41,7 +41,7 @@ How this attribute works
 
 **Total Value of Orders** represents a common approach people use when they build segments: find my customers by spend across a time window, and then associate those customers to specific products and brands.
 
-**Total Value of Orders** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Total Value of Orders** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -128,13 +128,13 @@ After the **Total value of orders** purchase behavior attribute has been added, 
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 

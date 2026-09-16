@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -67,48 +68,48 @@ The steps required to configure Amperity to send data that is accessible to Tabl
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Use a query return the data you want to make available to Tableau for use with data visualizations.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Send an Apache Parquet, Apache Avro, CSV, or JSON file to :doc:`Amazon S3 <destination_amazon_s3>` from Amperity.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - `Load data from Amazon S3 <https://docs.aws.amazon.com/redshift/latest/dg/t_Loading-data-from-S3.html>`__ |ext_link| to Amazon Redshift.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Connect Tableau to `Amazon Redshift <https://help.tableau.com/current/pro/desktop/en-us/examples_amazonredshift.htm>`__ |ext_link|, and then access the data sent from Amperity.
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Validate the workflow within Amperity and the data within Databricks.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - Configure Amperity to automate this workflow for a regular (daily) refresh of data.
 

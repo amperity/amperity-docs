@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -35,7 +36,7 @@ Orchestration groups are configured in the **Destinations** page, from the **Add
 
 .. orchestration-groups-about-list-start
 
-There are three configuration options for orchestration groups:
+Configure orchestration groups to:
 
 #. :ref:`Run after courier group <orchestration-groups-run-after-courier-group>`
 #. :ref:`Run on a schedule <orchestration-groups-run-on-a-schedule>`
@@ -71,24 +72,24 @@ An orchestration group may be configured to run only after a courier group has r
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run after courier group**.
 
@@ -103,8 +104,8 @@ An orchestration group may be configured to run only after a courier group has r
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 
@@ -120,7 +121,7 @@ Run on a schedule
 
 An orchestration group may be configured to run on a schedule, using a cron schedule to define the specific time at which the run should begin, and a UTC timezone.
 
-.. note:: You will see the enable/disable status only for scheduled orchestration groups.
+.. note:: You will see the enabled or disabled status only for scheduled orchestration groups.
 
 .. orchestration-groups-run-on-a-schedule-end
 
@@ -134,24 +135,24 @@ An orchestration group may be configured to run on a schedule, using a cron sche
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run on a schedule**.
 
@@ -164,8 +165,8 @@ An orchestration group may be configured to run on a schedule, using a cron sche
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 
@@ -230,7 +231,7 @@ The timezones that are available for selection in Amperity are modeled after the
 
 .. orchestration-groups-timezones-downstream-start
 
-The timezone that is chosen for an orchestration group schedule should consider every downstream business processes that requires the data and also the timezone(s) in which the consumers of that data will operate.
+The timezone that is chosen for an orchestration group schedule should consider every downstream business processes that requires the data and also the timezones in which the consumers of that data will operate.
 
 .. orchestration-groups-timezones-downstream-end
 
@@ -238,7 +239,7 @@ The timezone that is chosen for an orchestration group schedule should consider 
 
 .. tip:: Do not create orchestration group schedules that may occur during a daylight savings time transition. 
 
-   For example, an orchestration group schedule with the cron string of ``30 2 * * *`` and a timezone of "(GMT-08:00) Pacific Time" will run once a day most at 2:30am, except for one day in the spring when it will not run at all and one day in the fall when it will run twice.
+   For example, an orchestration group schedule with the cron string of ``30 2 * * *`` and a timezone of "(GMT-08:00) Pacific Time" runs once a day most at 2:30 AM, except for one day in the spring when it will not run at all and one day in the fall when it runs twice.
 
    This is because American daylight savings time transitions at 2:00 AM, meaning the 2:00 AM hour occurs twice when transitioning out of daylight savings time (Fall) and is skipped altogether when transitioning into daylight savings time (Spring).
 
@@ -266,24 +267,24 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Destinations** page, and then from the **Orchestrations** section, click the **Add orchestration group** link.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - In the **Add orchestration group** dialog box, give the orchestration group a name, and then move the slider to enabled.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Under **Run options**, select **Run manually**.
 
@@ -296,8 +297,8 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - To run the orchestration group, on the **Destinations** page, and then from the actions menu for that orchestration group, select the **Run** menu option.
 
@@ -310,8 +311,8 @@ An orchestration group can be configured to be run manually.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Click **Save**.
 

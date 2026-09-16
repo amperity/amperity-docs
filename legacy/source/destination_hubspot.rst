@@ -16,10 +16,14 @@
 
 
 ==================================================
-Configure campaigns for HubSpot
+Send data to HubSpot
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_hubspot.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_hubspot.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-hubspot-start
@@ -27,13 +31,13 @@ Configure campaigns for HubSpot
 
 .. destination-hubspot-start
 
-Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+Use Amperity to manage contact lists in |destination-name|. Build a query using the **email** field and send the results of that query to |destination-name|. Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
 
 .. destination-hubspot-end
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-start
 
-.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters (``a-z``), numbers (``0-9``), and underscores (``_``). Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters (such as ``#``, ``*``, or ``-``) with an underscore.
+.. note:: Field names that are sent from Amperity to HubSpot should be lowercase and contain only letters, numbers, and underscores. Amperity automatically converts uppercase letters to lowercase and replaces non-underscore characters, such as ``#``, ``*``, or ``-``, with an underscore.
 
 .. destination-hubspot-contain-only-numbers-letters-underscores-end
 
@@ -55,11 +59,11 @@ Use Amperity to manage contact lists in |destination-name|. Build a query using 
    #. May not contain quotation marks in the local part of the address, which is the part to the left of the @ symbol.
    #. Must end in a valid top-level domain (TLD), as listed at `https://data.iana.org/TLD/tlds-alpha-by-domain.txt <https://data.iana.org/TLD/tlds-alpha-by-domain.txt>`__ |ext_link| and may contain Unicode characters within the TLD.
 
-   If a list of email addresses that is sent to |destination-name| contains a single invalid email address the entire import will fail and return a 400 error.
+   If a list of email addresses that is sent to |destination-name| has a single invalid email address the entire import fails and return a 400 error.
 
-   If you experience a 400 error (due to invalid email addresses), identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
+   If you experience a 400 error due to invalid email addresses, first identify which email addresses are invalid, remove them from the list, and then resend a list of valid email addresses to |destination-name|.
 
-   Amperity will update contacts that already exist in |destination-name|; Amperity does not create contacts.
+   Amperity updates contacts that already exist in |destination-name|. Amperity does not create contacts.
 
 .. destination-hubspot-build-query-end
 
@@ -93,21 +97,21 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Hubspot account <destination-hubspot-configure-oauth>`.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The list name to which the |destination-name| connector will write. This can be the name of an existing list or a new list.
+     - The list name to which the |destination-name| connector writes. This can be the name of an existing list or a new list.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A query that outputs the fields that must be mapped to the |destination-name| contacts.
 
@@ -135,8 +139,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -144,8 +148,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -153,8 +157,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -180,8 +184,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -200,8 +204,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -234,8 +238,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -250,8 +254,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -264,8 +268,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -293,8 +297,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -313,8 +317,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -322,7 +326,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -337,8 +341,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -347,8 +351,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -19,7 +20,7 @@ Bad foreign key matches
 
 .. stitch-qa-query-bad-foreign-key-matches-start
 
-Use this query to return records where the Amperity ID and the foreign key are equal, but one (or more) values associated with the **email**, **given-name**, and **surname** semantics are not equal. Records with incorrect matches may be an indicator of overclustering.
+Use this query to return records where the Amperity ID and the foreign key are equal, but one or more values associated with the **email**, **given-name**, and **surname** semantics are not equal. Records with incorrect matches may be an indicator of overclustering.
 
 .. stitch-qa-query-bad-foreign-key-matches-end
 
@@ -42,8 +43,8 @@ When to use
 .. stitch-qa-query-bad-foreign-key-matches-use-start
 
 #. Run this query when foreign keys exist.
-#. Review the results of this query (typically ~30 minutes).
-#. Look for potentially inaccurate foreign keys.
+#. Review the results of this query.
+#. Look for inaccurate foreign keys.
 #. Look for indicators of overclustering.
 
 .. stitch-qa-query-bad-foreign-key-matches-use-end
@@ -65,6 +66,7 @@ Configure query
    Uncomment the following lines and replace them with the names of unique foreign keys, one pair of lines per unique foreign key or customer key:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4
 
       t1.amperity_id AS amp_id_a,
@@ -83,6 +85,7 @@ Configure query
    For example, for foreign keys named **fk-customer-id** and **fk-campaign**, with the latter concatenated against the **EmailList** data source:
 
    .. code-block:: sql
+      :linenos:
 
       t1.amperity_id AS amp_id_a,
       t2.amperity_id AS amp_id_b,
@@ -96,19 +99,21 @@ Configure query
 #. Update the INNER JOIN for the same set of foreign keys:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         -- AND t1.fk = t2.fk
         AND hf.high_freq_email IS NULL
 
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         AND fk_customer_id.fk = fk_customer_id.fk
         AND fk_campaign.fk = fk_campaign.fk
         AND hf.high_freq_email IS NULL
@@ -118,6 +123,7 @@ Configure query
    Add the following pair of lines for each added semantic value:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3,4
 
       t1.email AS email_a,
@@ -125,9 +131,10 @@ Configure query
       t1.semantic AS semantic_a,
       t2.semantic AS semantic_b,
 
-   For example, to add **address** and **loyalty** (a custom semantic typically associated with loyalty programs):
+   For example, to add **address** and **loyalty**, a custom semantic associated with loyalty programs:
 
    .. code-block:: sql
+      :linenos:
 
       t1.email AS email_a,
       t2.email AS email_b,
@@ -138,7 +145,10 @@ Configure query
 
 #. Replace **100** with the value that best represents the definition of high-frequency email:
 
+.. vale off
+
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       LEFT JOIN (
@@ -146,28 +156,33 @@ Configure query
         HAVING COUNT(email) > 100
       ) AS hf ON LOWER(t1.email) = LOWER(hf.email)
 
-   and then set the value for **high_freq_email** to NULL or TRUE:
+   and then set the value for **high_freq_email** to **NULL** or **TRUE**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id
         AND hf.high_freq_email IS NULL
 
+.. vale on
+
 #. Update the INNER JOIN for all foreign keys:
    
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         -- AND t1.fk = t2.fk
         AND hf.high_freq_email IS NULL
 
    For example:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id
@@ -184,10 +199,11 @@ Configure query
    Uncomment the following line and replace **unmatched_field** with the names of the field for which you want to explore unmatched values. Add a line for each field:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 7
 
       INNER JOIN Unified_Coalesced AS t2
-        ON  t1.amperity_id = t2.amperity_id
+        ON t1.amperity_id = t2.amperity_id
         AND hf.high_freq_email IS NULL
         AND TRIM(LOWER(t1.email)) <> TRIM(LOWER(t2.email))
         AND TRIM(LOWER(t1.given_name)) <> TRIM(LOWER(t2.given_name))
@@ -197,6 +213,7 @@ Configure query
    For example, to add **address** and **loyalty** to the list of conditions:
 
    .. code-block:: sql
+      :linenos:
 
       INNER JOIN Unified_Coalesced AS t2
         ON  t1.amperity_id = t2.amperity_id

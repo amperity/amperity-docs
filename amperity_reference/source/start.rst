@@ -11,19 +11,19 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Identity resolution agent
+        Identity Resolution Assistant
 
 ==================================================
-Identity resolution agent
+Identity Resolution Assistant
 ==================================================
 
 .. article-info::
    :avatar: _static/amperity_circle.png
    :avatar-link: https://docs.amperity.com/reference/start.html
    :avatar-outline: muted
-   :author: Identity resolution agent
+   :author: Identity Resolution Assistant
    :date: |today|
-   :read-time: 10 min read; ~1 hour to complete
+   :read-time: 10 min read. ~1 hour to complete
    :class-container: sd-p-2 sd-outline-muted sd-rounded-1
 
 .. start-overview-start
@@ -41,7 +41,7 @@ By the end of this guide you will know how to do the following:
 
 .. start-free-trial-start
 
-.. admonition:: Sign up for a free trial of Amperity!
+.. admonition:: Sign up for a free trial of Amperity.
 
    `Sign up for a free trial <https://amperity.com/trial>`__ |ext_link| to see how your brand can use Amperity to build robust unified datasets and durable customer profiles that support all of your brand's use cases. You may use trial data provided by Amperity or you may upload samples of your own customer data.
 
@@ -50,24 +50,24 @@ By the end of this guide you will know how to do the following:
 
 .. _start-data-model:
 
-Identity resolution agent data model
+Identity Resolution Assistant data model
 ==================================================
 
 .. start-data-model-start
 
-The following diagram shows the data model for the sample data that is part of the identity resolution agent. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
+The following diagram shows the data model for the sample data that is part of the Identity Resolution Assistant. Color coded sections identify which groups of tables are associated with source customer profiles, stitched domain tables, and unified tables.
 
 .. start-data-model-end
 
 .. image:: ../../images/quickstart_sample_erd.png
    :width: 600 px
-   :alt: The sample data model for Amperity identity resolution agent.
+   :alt: The sample data model for Amperity Identity Resolution Assistant.
    :align: left
    :class: no-scaled-link
 
 .. data-tables-data-model-tables-note-start
 
-.. note:: Click this diagram to open it in your full browser window. Click `HERE <https://docs.amperity.com/reference/_images/quickstart_sample_erd.png>`__ |ext_link| to open this diagram in a new tab or right-click that link to save a copy to your computer.
+.. note:: Click this diagram to open it in your full browser window. `Open this diagram <https://docs.amperity.com/reference/_images/quickstart_sample_erd.png>`__ |ext_link| in a new tab or right-click that link to save a copy to your computer.
 
 .. data-tables-data-model-tables-note-end
 
@@ -79,41 +79,42 @@ Prerequisites
 
 .. start-prerequisites-start
 
-To follow-along with this guide you will need:
+To follow-along with this guide you need:
 
 #. Access to an Amperity account.
 #. Approximately ~1 hour of time to complete all of the steps within the guide.
 
-   .. note:: More time may be required if you want to sync data from your Databricks account instead of using Amperity sample data.
+   .. note:: More time may be required if you want to sync your brand's data instead of using Amperity sample data.
 
-#. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data if you have a Databricks account with customer profile data *and* permissions to configure your Databricks account to accept Delta Sharing with Amperity from the Databricks Unity Catalog.
+#. Source data. Amperity provides a set of sample data that can be used to complete the steps in this guide. You may provide your own data with customer profiles.
 
-   .. note:: Amperity sample data contains ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
+   .. note:: Amperity sample data has ~10 million customer records. Additional time may be necessary for loading and processing data if you choose to use your own data instead of Amperity sample data assets, depending on the number of records.
 
 .. start-prerequisites-end
 
 
 .. _start-login:
 
-Log in to Amperity
+Connect to data sources
 ==================================================
 
 .. start-login-start
 
-To start using Amperity, do the following:
+To connect Amperity to data sources, do the following:
 
 #. Log in to `Amperity <https://app.amperity.com>`__.
-#. Open the **Quick Start** page. This is located in the left-side menu at the top.
-#. Under **Identity resolution** click **Set up**.
+#. Open the **Quick start** page. This is located in the left-side menu at the top.
+#. Under **Identity resolution** click **Add datasource**.
+#. Select one of the following options: Amazon S3, Azure Blob Storage, Databricks, Google BigQuery, SFTP, or Snowflake.
 
-   This opens the **Identity resolution** page that will walk you through steps for connecting to Databricks, adding semantic tags to synced tables, running Stitch, and then syncing unified tables back to Databricks.
+   This opens a page that will walk you through steps for connecting to Amperity to the selected option.
 
 .. start-login-end
 
 
 .. _start-connect:
 
-Connect to Databricks
+Example: Connect to Databricks
 ==================================================
 
 .. start-connect-start
@@ -125,7 +126,7 @@ You have two options:
 #. Use the provided data assets
 #. Use your own data from your own instance of Databricks
 
-   .. note:: For this option you will need a Databricks account, a configured Unity Catalog, and the ability to set up and manage Delta Sharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
+   .. note:: For this option you need a Databricks account, a configured Unity Catalog, and the ability to set up and manage OpenSharing. `Use these steps to configure your Databricks account to share data with Amperity <https://docs.amperity.com/operator/bridge_databricks.html#get-details>`__.
 
 .. start-connect-end
 
@@ -139,8 +140,8 @@ You have two options:
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, next to **Inbound sharing data** click **Add bridge**.
 
@@ -152,13 +153,13 @@ You have two options:
 
        This opens the **Add bridge** dialog box.
 
-       Choose **Sample data**. This will open the **Select tables** dialog box.
+       Choose **Sample data**. This opens the **Select tables** dialog box.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Use the **Select tables to share** dialog box to select the sample data from "amperity-trial/trial-data".
 
@@ -168,13 +169,13 @@ You have two options:
           :align: left
           :class: no-scaled-link
 
-       When finished, click **Create**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Create**. This opens the **Domain table mapping** dialog box.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - In the **Sample data** dialog, review the table names, and then click **Save and sync**.
 
@@ -192,7 +193,7 @@ You have two options:
 .. _start-semantics:
 
 Add semantic tags
-==================================================
+--------------------------------------------------
 
 .. start-semantics-start
 
@@ -200,18 +201,18 @@ Semantic tags are applied to fields in incoming data sources to indicate the typ
 
 The semantic tag tells Amperity how to treat the data, regardless of how the data is formatted, named, or originally stored.
 
-For example, a field named **evar_15** contains email addresses. This field should have the **email** semantic tag applied to it. This tag tells Amperity that the contents of the **evar_15** field are
+For example, a field named **evar_15** has email addresses. This field should have the **email** semantic tag applied to it. This tag tells Amperity that the contents of the **evar_15** field are
 
 * Email addresses
 * Personally identifiable information (PII)
 
-Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses (and PII!) saves you a lot of time because you don't have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
+Email addresses are an important part of the identity resolution process. Using a semantic tag to tell Amperity which fields in your data sources contain email addresses saves you a lot of time because you do not have to do any data processing, ETLs, or data modeling before making that data source available to Amperity.
 
 Connect the data, apply the semantic tag, and build customer profiles.
 
 You have two options:
 
-#. Let **AmpAI** apply semantic tags (this section)
+#. Let **AmpAI** apply semantic tags
 #. `Manually apply semantic tags <https://docs.amperity.com/operator/semantics.html>`__
 
 .. start-semantics-end
@@ -226,19 +227,19 @@ You have two options:
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
 
        **AmpAI** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags **AmpAI** assigns to fields.
 
-       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process will take up to 5 minutes to complete.
+       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process takes up to 5 minutes to complete.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - When **AmpAI** is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
 
@@ -246,7 +247,7 @@ You have two options:
 
        **AmpAI** will correctly assign semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
 
-       .. important:: If you are using your own data review the fields carefully. **AmpAI** will apply semantic tags for PII correctly most of the time, but it's good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
+       .. important:: **AmpAI** will apply semantic tags for PII correctly most of the time, but it is good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
 
 .. start-semantics-end
 
@@ -254,7 +255,7 @@ You have two options:
 .. _start-run-stitch:
 
 Run Stitch
-==================================================
+--------------------------------------------------
 
 .. start-run-stitch-start
 
@@ -272,21 +273,21 @@ After all of the source tables to which semantic tags should be applied have sem
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - In **Identity resolution**, next to **Generate Amperity IDs**, click **Run Stitch**.
 
        Wait for the Stitch to finish running before continuing to the next step. This process will 20-30 minutes to complete for Amperity sample data.
 
-       .. note:: The amount of time it will take to complete against your own data depends on the volume of data that is made available to Stitch, the number of unique data sources with PII, and the complexity of matching individual records across data with unique customer profiles.
+       .. note:: The amount of time it takes to complete against your own data depends on the volume of data that is made available to Stitch, the number of unique data sources with PII, and the complexity of matching individual records across data with unique customer profiles.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - The identity resolution agent will refresh to show high-level results of identity resolution similar to:
+     - The Identity Resolution Assistant will refresh to show high-level results of identity resolution similar to:
 
        .. image:: ../../images/quick-start-identity-resolution-results.png
           :width: 320 px
@@ -299,16 +300,16 @@ After all of the source tables to which semantic tags should be applied have sem
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - The **Summary** tab shows a comparison of domain tables and the record pairs identified both within each data source and across all data sources. This is presented as an UpSet Plot chart with links to the underlying data sources.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - The **Benchmark** tab shows the results of a series of tests that are run by Amperity, grouped by "Optimal" and "Abnormal".
 
@@ -333,7 +334,7 @@ After all of the source tables to which semantic tags should be applied have sem
        #. Step through and grade the result as a "Good example" or "Poor example". When benchmark grading is finished click **Next**.,
        #. Review the list of steps you can take to improve customer profile quality.
 
-       .. note:: Amperity sample data will show mostly abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and more actionable abnormal benchmarks.
+       .. note:: Amperity sample data shows abnormal benchmarks. This is because the data is generated and does not represent real customer profile data. If you used your own customer profile data you should expect to see more optimal benchmarks and fewer abnormal benchmarks.
 
 .. start-run-stitch-steps-end
 
@@ -341,7 +342,7 @@ After all of the source tables to which semantic tags should be applied have sem
 .. _start-create-database:
 
 Create database
-==================================================
+--------------------------------------------------
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-customer-360-database-start
@@ -357,8 +358,8 @@ Create database
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Customer 360** page, select the **Databases** tab, and then click **Create Database**.
 
@@ -367,25 +368,25 @@ Create database
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - The **Database Editor** page opens.
 
-       The following tables will be in the customer 360 database:
+       The following tables is in the customer 360 database:
 
        * Customer_360. A standardized table with the most complete set of customer profile data that is built from merge rules with a single row for each unique Amperity ID.
-       * Merged_Customers. A standardized table that contains configurable merge rules.
-       * Unified_Coalesced. A standardized table that contains all original data used to build the identity graph.
-       * Unified_Scores. A standardized table that contains the edges of the identity graph with confidence scores for each linked record.
+       * Merged_Customers. A standardized table that has configurable merge rules.
+       * Unified_Coalesced. A standardized table that has all original data used to build the identity graph.
+       * Unified_Scores. A standardized table that has the edges of the identity graph with confidence scores for each linked record.
 
        Click **Activate**. This will return you to the **Customer 360** page.
 
 
-   * - .. image:: ../../images/steps-02.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - For the database you just created click **Run**. This will load records to each of the customer 360 database tables.
 
@@ -397,15 +398,15 @@ Create database
 .. _start-sync-to-databricks:
 
 Sync identity data to Databricks
-==================================================
+--------------------------------------------------
 
 .. start-sync-to-databricks-start
 
-.. important:: The Amperity identity resolution agent does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. This section assumes that you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
+.. important:: The Amperity Identity Resolution Assistant does not intend for you to sync ~10 million records of fake data to your Databricks Unity Catalog. As long as you are sending *real* customer profiles from Amperity to Databricks and is a shortened version of the `documentation about syncing data from Amperity to Databricks <https://docs.amperity.com/operator/bridge_databricks.html#to-databricks>`__.
 
 Amperity can sync customer profiles to your Databricks account.
 
-.. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials; however, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
+.. note:: Additional configuration in Databricks is often required. Syncing data from Amperity to Databricks can use the same credentials. However, the configuration within Databricks is not the same as syncing data from Databricks to Amperity.
 
    To sync data to Databricks, `review the prerequisites <https://docs.amperity.com/operator/bridge_databricks.html#bridge-databricks-sync-with-databricks-prerequisites>`__, `add an outbound bridge <https://docs.amperity.com/operator/bridge_databricks.html#add-outbound-bridge>`__, `select tables to share with Databricks <https://docs.amperity.com/operator/bridge_databricks.html#select-tables-to-share>`__, `download the credentials file <https://docs.amperity.com/operator/bridge_databricks.html#download-credential-file>`__, `add the provider in Databricks <https://docs.amperity.com/operator/bridge_databricks.html#add-provider>`__, `add catalog from share <https://docs.amperity.com/operator/bridge_databricks.html#add-catalog-from-share>`__, and then `verify table sharing <https://docs.amperity.com/operator/bridge_databricks.html#verify-table-sharing>`__.
 
@@ -415,13 +416,13 @@ Amperity can sync customer profiles to your Databricks account.
 .. _start-merge-policy:
 
 Merge policy
-==================================================
+--------------------------------------------------
 
 .. TODO: Currently in review
 
 .. merge-policy-intro-start
 
-Merge policy defines how the **Merged Customers** table will be maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
+Merge policy defines how the **Merged Customers** table is maintained by Amperity. The **Merged Customers** table collects PII data from all source datasets, and then collapses the best data into single row that is unique by Amperity ID. Each row in the **Merged Customers** table represents a single customer's best set of profile data.
 
 Use merge policy to tell Amperity which tables are the most reliable sources of customer profile data.
 
@@ -439,8 +440,8 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Source priority can be defined for names, physical addresses, email addresses, phone numbers, birthdates, and gender.
 
@@ -452,18 +453,18 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 
           If the value in table A is "justin@email.com" then the priority for email address is table A and the value "justin@email.com".
 
-          If the value in table A is NULL and the value in table B is "justinc@email.com" then the priority for email address is table B and the value "justinc@email.com".
+          If the value in table A is **NULL** and the value in table B is "justinc@email.com" then the priority for email address is table B and the value "justinc@email.com".
 
-          If the values in tables A and B are NULL and the value in table C is "justin.c@email.com" then the priority for email address is table C and the value "justin.c@email.com".
+          If the values in tables A and B are **NULL** and the value in table C is "justin.c@email.com" then the priority for email address is table C and the value "justin.c@email.com".
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Source table precedence can also be defined for data sources that contain semantic tags that are not grouped by profile attribute. Precedence determines which tables are more likely to contain high quality customer profile data, as determined by your brand.
 
-       The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* contains fields to which profile semantic tags have been applied.
+       The list of domain tables under **Source_Priority** must contain *at least one* domain table that has been made available to Stitch *and* has fields to which profile semantic tags have been applied.
 
        To configure source table precedence, open the **Profile Builder**. Under **Source table precedence**, use the |fa-drag| icon to move the list of tables into the desired order, and then click **Save**.
 
@@ -473,7 +474,7 @@ Use merge policy to tell Amperity which tables are the most reliable sources of 
 .. _start-conclusion:
 
 Conclusion and next steps
-==================================================
+--------------------------------------------------
 
 .. start-conclusion-start
 
@@ -484,7 +485,7 @@ Amperity can do a lot more:
 * `Automate identity resolution <https://docs.amperity.com/operator/workflows.html#courier-groups>`__
 * `Automate syncing <https://docs.amperity.com/reference/bridge.html#add-bridge-to-scheduled-workflow>`__
 * Semantic tagging for `transactions <https://docs.amperity.com/reference/semantics.html#transactions>`__, `loyalty programs <https://docs.amperity.com/reference/semantics.html#loyalty-programs>`__, and more
-* Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `offline events <https://docs.amperity.com/offline_events.html>`__
+* Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `events <https://docs.amperity.com/offline_events.html>`__
 * `Segments <https://docs.amperity.com/ampiq/segments_reference.html>`__ and `campaigns <https://docs.amperity.com/ampiq/campaigns_reference.html>`__
 * `Queries <https://docs.amperity.com/amp360/queries_reference.html>`__ and orchestrations
 * `Profile API <https://docs.amperity.com/operator/api_profile.html>`__

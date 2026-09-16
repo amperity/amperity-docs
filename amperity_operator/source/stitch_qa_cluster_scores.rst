@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -52,14 +53,17 @@ Configure query
 
 .. stitch-qa-query-cluster-scores-steps-start
 
+.. vale off
+
 #. From the **Queries** page, open the **Stitch QA** folder, and then select this query.
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-#. The query selects a subset of the fields in the **Unified Coalesced** table by default. You may adjust this list up to (and including) selecting all fields.
+#. The query selects a subset of the fields in the **Unified Coalesced** table by default.
 #. The query is configured for a single Amperity ID. Replace **amp_id** with an Amperity ID:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       FROM Unified_Coalesced uc1
@@ -71,9 +75,10 @@ Configure query
       AND uc1.pk = us.pk1
       AND uc2.pk = us.pk2
 
-#. To run the query for multiple Amperity IDs, update the query to input a list of IDs, and then replace each **amp_id** with an Amperity ID:
+#. To run the query for many Amperity IDs, update the query to input a list of IDs, and then replace each **amp_id** with an Amperity ID:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       FROM Unified_Coalesced uc1
@@ -87,5 +92,7 @@ Configure query
 
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
+
+.. vale on
 
 .. stitch-qa-query-cluster-scores-steps-end

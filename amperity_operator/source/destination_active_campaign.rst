@@ -23,13 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for ActiveCampaign
+        Configure destinations for ActiveCampaign
 
 ==================================================
-Configure destination for ActiveCampaign
+Configure destinations for ActiveCampaign
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_active_campaign.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-active-campaign-start
@@ -46,6 +44,21 @@ Configure destination for ActiveCampaign
    |destination-name| API is rate limited to 5 requests per second.
 
 .. destination-active-campaign-api-note-end
+
+
+.. destination-active-campaign-behavior-note-start
+
+.. note:: On each run, Amperity performs a full membership sync. Contacts in the
+   audience that are not already on the list are added, and contacts on
+   the list that are no longer in the audience are removed.
+
+   Amperity filters out invalid emails before sending to |destination-name|.
+   Emails that are blank, contain consecutive dots, or have many consecutive
+   **@** symbols are excluded. If |destination-name| identifies additional invalid
+   contacts during import, Amperity removes those contacts from the batch and
+   retries with the remaining valid contacts.
+
+.. destination-active-campaign-behavior-note-end
 
 
 .. _destination-active-campaign-get-details:
@@ -66,18 +79,20 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-active-campaign-api-key-start
              :end-before: .. credential-active-campaign-api-key-end
 
-       **Base URL**
+       **URL**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -88,16 +103,18 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Audience primary key**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-common-audience-primary-key-start
              :end-before: .. setting-common-audience-primary-key-end
 
        **Group name**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-group-name-start
              :end-before: .. setting-active-campaign-group-name-end
@@ -107,6 +124,7 @@ Get details
              :end-before: .. setting-active-campaign-group-name-access-end
 
        **List name** (Required at orchestration)
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-list-name-start
              :end-before: .. setting-active-campaign-list-name-end
@@ -114,7 +132,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. setting-active-campaign-email-required-start
@@ -146,8 +164,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -156,8 +174,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -166,14 +184,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **API key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -181,6 +200,7 @@ Configure credentials
              :end-before: .. credential-active-campaign-api-key-end
 
        **URL**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -209,8 +229,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -229,8 +249,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -245,8 +265,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -265,14 +285,15 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Audience primary key**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -280,6 +301,7 @@ Add destination
              :end-before: .. setting-common-audience-primary-key-end
 
        **Group name**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -291,6 +313,7 @@ Add destination
              :end-before: .. setting-active-campaign-group-name-access-end
 
        **List name** (Required at orchestration)
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -298,6 +321,7 @@ Add destination
              :end-before: .. setting-active-campaign-list-name-end
 
        **Verbose logging?**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-active-campaign-verbose-logging-start
              :end-before: .. setting-active-campaign-verbose-logging-end
@@ -305,12 +329,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-active-campaign-add-steps-end
 
@@ -333,7 +367,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -352,7 +386,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -367,7 +401,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -392,7 +426,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -430,7 +464,7 @@ Invalid group name
 
 A `user group <https://help.activecampaign.com/hc/en-us/articles/115000090164#setting-user-permissions-create-user-groups-0-0>`__ |ext_link| defines which set of users within |destination-name| have permission to interact with contacts in a contact list. For example: managing tags, defining list exclusions, or running campaigns.
 
-When the name of the user group defined in Amperity does not match the name of a user group defined in |destination-name|, Amperity will be unable to update the list of contacts for a contact list and a workflow action will be shown.
+When the name of the user group defined in Amperity does not match the name of a user group defined in |destination-name|, Amperity will be unable to update the list of contacts for a contact list and a workflow action is shown.
 
 .. destination-active-campaign-workflow-actions-invalid-group-name-end
 
@@ -439,7 +473,7 @@ When the name of the user group defined in Amperity does not match the name of a
 To resolve this error, verify the name of the user group in |destination-name|, and then update the data template in Amperity for the correct name of the user group.
 
 #. Log in to |destination-name| as a user assigned who is assigned to the **Admin** permission.
-#. Verify the name of the user group and/or create a user group with the name that is required by this workflow.
+#. Verify the name of the user group and create a user group with the name that is required by this workflow.
 #. Verify the name of the user group that is defined in the data template used by this workflow. Update this value if required.
 #. Return to the workflow action, and then click **Resolve** to retry.
 

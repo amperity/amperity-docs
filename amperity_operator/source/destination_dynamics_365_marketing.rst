@@ -20,13 +20,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Dynamics 365 Marketing
+        Configure destinations for Dynamics 365 Marketing
 
 ==================================================
-Configure destination for Dynamics 365 Marketing
+Configure destinations for Dynamics 365 Marketing
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_dynamics_365_marketing.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-dynamics-365-marketing-start
@@ -34,7 +32,7 @@ Configure destination for Dynamics 365 Marketing
 
 .. destination-dynamics-365-marketing-context-start
 
-Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts -- all contacts, by demographic, by behavior, by firmographic, or by other considerations -- to narrow your segments down to the right audience for your marketing campaign.
+Send static segments to Dynamics 365 Marketing from Amperity, and then manage collections of contacts. Build customer journeys using any combination of contacts--all contacts, by demographic, by behavior, by firmographic, or by other considerations--to narrow your segments down to the right audience for your marketing campaign.
 
 .. destination-dynamics-365-marketing-context-end
 
@@ -50,7 +48,7 @@ Send static segments to Dynamics 365 Marketing from Amperity, and then manage co
 
 .. destination-dynamics-365-marketing-api-note-start
 
-.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it will be truncated, and then loaded.
+.. note:: This destination uses the `Microsoft Dynamics Segmentation API <https://learn.microsoft.com/en-us/dynamics365/marketing/developer/extend-segments>`__ |ext_link| to send static segments to |destination-name|. If the static segment does not exist, it will be created. If the static segment does exist, it is truncated, and then loaded.
 
 .. destination-dynamics-365-marketing-api-note-end
 
@@ -73,7 +71,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -92,7 +90,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -140,8 +138,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -149,8 +147,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -158,8 +156,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -199,8 +197,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -219,8 +217,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -235,8 +233,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -255,8 +253,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -283,12 +281,23 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-orchestration-only-start
           :end-before: .. destinations-steps-business-users-orchestration-only-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 
 .. destination-microsoft-dynamics-365-marketing-add-steps-end
 
@@ -300,7 +309,7 @@ Build query
 
 .. destination-dynamics-365-marketing-build-query-start
 
-You will need to build a query that outputs fields that can be mapped to static segments in |destination-name|.
+You need to build a query that outputs fields that can be mapped to static segments in |destination-name|.
 
 .. important:: Query results **must** include the **contactid** field, which is the same as the **contactid** field for Microsoft Dynamics 365 CRM Contact.
 

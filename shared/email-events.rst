@@ -4,11 +4,15 @@
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR EMAIL EVENTS**
 
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on
 
 .. email-events-brand-start
 
@@ -33,7 +37,7 @@ The number of times a link in an email was clicked from within the email events 
 
 .. email-events-clicks-x-days-start
 
-The number of email clicks in the last 1, 3, 5, 7, or 14 days.
+The number of email clicks in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-clicks-x-days-end
 
@@ -63,10 +67,11 @@ The email address to which an email was sent.
 
 A classification that measures engagement frequency click rates for email addresses that have received a low volume of emails. Possible values:
 
-* **Non-recipient** (0 received emails)
-* **New** (fewer than 5 received emails)
-* **Active** (currently engaging with received emails)
-* **Inactive** (not currently engaging with received emails)
+* **Non-recipient** Zero received emails.
+* **New** Fewer than five received emails.
+* **Low** Modeled open rate is in the lower third.
+* **Medium** Modeled open rate is in the middle third.
+* **High** Modeled open rate is in the upper third.
 
 .. important:: Send rates must be available.
 
@@ -77,11 +82,10 @@ A classification that measures engagement frequency click rates for email addres
 
 A classification that measures click rates for email addresses that have received a low volume of emails. Possible values:
 
-* **Non-recipient** (0 received emails)
-* **New** (fewer than 5 received emails)
-* **Low** (modeled open rate is in the lower third)
-* **Medium** (modeled open rate is in the middle third)
-* **High** (modeled open rate is in the upper third)
+* **Non-recipient** Zero received emails.
+* **New** Fewer than five received emails.
+* **Active** Engaging with received emails.
+* **Inactive** Not engaging with received emails.
 
 .. important:: Send rates must be available.
 
@@ -167,7 +171,7 @@ The number of all email opens from within the email events data that is provided
 
 .. email-events-opens-x-days-start
 
-The number of email opens in the last 1, 3, 5, 7, or 14 days.
+The number of email opens in the last 1, 3, 5, 7, 14, or 30 days.
 
 .. email-events-opens-x-days-end
 
@@ -205,7 +209,7 @@ The type of email event. Possible values:
 * Converted
 * Unsubscribe
 
-.. important:: The values for email event types **must** spelled as expected to ensure the **Email Engagement Summary** can properly summarize email events. For example: "Optin" may not be "Opt-in".
+.. important:: The values for email event types **must** spelled as expected to ensure the **Email Engagement Summary** can summarize email events. For example: "Optin" may not be "Opt-in".
 
 .. email-events-type-end
 
@@ -221,11 +225,15 @@ This flag indicates whether an Amperity ID is associated with a previous transac
 
 The number of days between the time this email was used to signup and the next transaction associated with an Amperity ID. 
 
-.. note:: This field will appear null if there is no transaction(s) made after the email signup.
+.. note:: This field appears null if there is no transactions made after the email signup.
 
 .. email-events-signup-to-purchase-days-end
 
 
+.. vale off
+
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
 **IN-BETWEEN THIS ARE NOT GLOSSARY TERMS**
+
+.. vale on

@@ -13,7 +13,6 @@
     :content class=swiftype name=title data-type=string:
         Authentication
 
-
 ==================================================
 Authentication
 ==================================================
@@ -43,6 +42,16 @@ After the token passes validation, the request will look up any access policies 
 .. include:: ../../amperity_reference/source/api.rst
    :start-after: .. api-keys-important-start
    :end-before: .. api-keys-important-end
+
+
+.. _authentication-sandboxes:
+
+Authentication for sandboxes
+==================================================
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-sandboxes-start
+   :end-before: .. api-keys-sandboxes-end
 
 
 .. _authentication-api-keys:
@@ -119,6 +128,22 @@ Generate access token
 .. include:: ../../amperity_reference/source/api.rst
    :start-after: .. api-keys-access-tokens-generate-start
    :end-before: .. api-keys-access-tokens-generate-end
+
+
+.. _authentication-access-token-oauth:
+
+Get OAuth credentials
+--------------------------------------------------
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-api-token-oauth-start
+   :end-before: .. api-keys-api-token-oauth-end
+
+**To get OAuth credentials for an API key**
+
+.. include:: ../../amperity_reference/source/api.rst
+   :start-after: .. api-keys-api-token-oauth-steps-start
+   :end-before: .. api-keys-api-token-oauth-steps-end
 
 
 .. _authentication-access-token-revoke:

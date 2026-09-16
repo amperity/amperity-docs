@@ -17,10 +17,14 @@
 
 
 ==================================================
-Configure campaigns for Pinterest Ads
+Send data to Pinterest Ads
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_pinterest_ads.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_pinterest_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-pinterest-start
@@ -28,7 +32,7 @@ Configure campaigns for Pinterest Ads
 
 .. destination-pinterest-start
 
-You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses prior to sending them to |destination-name|.)
+You can configure Amperity to maintain a list of SHA-256 hashed email addresses as a customer list in |destination-name| using the |destination-api|. (Amperity automatically applies SHA-256 hashing to all email addresses before sending them to |destination-name|.)
 
 .. destination-pinterest-end
 
@@ -36,11 +40,11 @@ You can configure Amperity to maintain a list of SHA-256 hashed email addresses 
 
 A customer list is associated with an audience in |destination-name|, after which your brand may use that audience to advertise on |destination-name|.
 
-Amperity will create the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity will update the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
+Amperity creates the customer list (if it does not already exist), and then add email addresses to that customer list **OR** Amperity updates the customer list (if it already exists) so that it matches the list of email addresses that were sent from Amperity.
 
 .. note:: An existing customer list should be empty the first time Amperity sends a list of email addresses.
 
-When a customer list is not associated with an audience in |destination-name|, Amperity will create an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
+When a customer list is not associated with an audience in |destination-name|, Amperity creates an audience using the same name as the list name that was used in Amperity, and then attach the customer list that is managed by Amperity to that audience list.
 
 .. note:: A customer list must contain at least 100 email addresses that are associated with a |destination-name| account before it can be associated with an audience.
 
@@ -58,7 +62,7 @@ When a customer list is not associated with an audience in |destination-name|, A
 
    * The `update customer list <https://developers.pinterest.com/docs/api/v5/#operation/customer_lists/update>`__ |ext_link| endpoint to manage the list of email addresses in a customer list.
 
-   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|; Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
+   |destination-name| applies `standard access rate limits <https://developers.pinterest.com/docs/reference/ratelimits/>`__ |ext_link|. Amperity can read from existing customer lists at up to 1000 calls per minute and can write to customer lists at up to 400 calls per minute.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -96,7 +100,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Your |destination-name| advertising account ID.
 
@@ -104,19 +108,19 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The customer list name to which the |destination-name| connector will send a list of SHA-256 hashed email addresses.
+     - The customer list name to which the |destination-name| connector sends a list of SHA-256 hashed email addresses.
 
-       If the customer list does not exist, Amperity will create the list using the :ref:`list name defined in the data template <destination-pinterest-add-data-template>`, and then add the list of email addresses that are sent from Amperity.
+       If the customer list does not exist, Amperity creates the list using the :ref:`list name defined in the data template <destination-pinterest-add-data-template>`, and then add the list of email addresses that are sent from Amperity.
 
-       If the customer list already exists, Amperity will update the list to match the list of email addresses that are sent from Amperity.
+       If the customer list already exists, Amperity updates the list to match the list of email addresses that are sent from Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Pinterest account <destination-pinterest-configure-oauth>`.
 
@@ -146,8 +150,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -155,8 +159,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -164,8 +168,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -191,8 +195,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -211,8 +215,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -249,8 +253,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -269,8 +273,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -283,8 +287,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -318,8 +322,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -338,8 +342,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -347,7 +351,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -362,8 +366,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -375,13 +379,13 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       Add the name of the customer list to the **List name** field. This may be the name of an existing customer list in |destination-name|. If the customer list does not exist, Amperity will create it.
+       Add the name of the customer list to the **List name** field. This may be the name of an existing customer list in |destination-name|. If the customer list does not exist, Amperity creates it.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

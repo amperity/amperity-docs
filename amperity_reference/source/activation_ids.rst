@@ -1,6 +1,7 @@
 .. https://docs.amperity.com/reference/
 
 
+.. meta::
     :description lang=en:
         An activation ID is a unique identifier that is used for precise segmentation and campaign targeting.
 
@@ -20,7 +21,7 @@ About activation IDs
 
 An activation ID is any unique identifier that your brand wants to use for precise segmentation and campaign targeting. Use activation IDs to associate a unique ID that is applied to certain types of marketing activity with the audiences you send downstream from Amperity.
 
-The default activation ID within Amperity is the **Amperity ID**. Your brand can configure additional identifiers as activation IDs, such as email addresses, loyalty account IDs, mobile advertising IDs, customer account IDs, or any other unique identifier, to support using segments to build audiences for those activation IDs, and then make those audiences availble for use in campaigns.
+The default activation ID within Amperity is the **Amperity ID**. Your brand can configure additional identifiers as activation IDs, such as email addresses, loyalty account IDs, mobile advertising IDs, customer account IDs, or any other unique identifier, to support using segments to build audiences for those activation IDs, and then make those audiences available for use in campaigns.
 
 .. activation-ids-intro-end
 
@@ -45,11 +46,11 @@ Additional activation IDs may be configured.
 #. In the right-side navigation pane, under **Activation IDs**, click **Add activation ID**. This opens the **Activation ID** dialog.
 #. Open the **Base table** dropdown.
 
-   Choose a table, and then choose a field in that table that will be used as an activation ID.
+   Choose a table, and then choose a field in that table that is used as an activation ID.
 
 #. Required. Assign the activation ID a friendly name, along with a singular and a plural version of the friendly name.
 
-   These terms will be used within the Amperity user interface.
+   These terms is used within the Amperity user interface.
 
    For example: "Email ID" is the friendly name, "email address" is the singular version, and "email addresses" is the plural version.
 
@@ -74,13 +75,12 @@ Default attributes are applied automatically when a destination is selected with
 
 Each default attribute is associated with a database *and* an activation ID. The list of tables from which attributes may be selected is filtered to match only those tables with a matching activation ID.
 
-Configure default attributes for each combination of destination + activation ID that will be used with campaigns. For example, configure default attributes for each of the following combinations:
+Configure default attributes for each combination of destination + activation ID that is used with campaigns. For example, configure default attributes for each of the following combinations:
 
 * Send to Braze from the **C360** database for **Loyalty ID**.
 * Send to Braze from the **C360** database for **Customer ID**.
 * Send to Meta Ads Manager from the **C360** database for **Customer ID**. Map the **Customer ID** field to **EXTERN_ID**.
 * Send to The Trade Desk from the C360 database for **email**, which is sent as a UID2 token from Amperity.
-* And so on.
 
 .. activation-ids-configure-default-attributes-end
 

@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
+
 
 .. meta::
     :description lang=en:
@@ -14,7 +16,7 @@
         About Stitch
 
 ==================================================
-About Stitch
+About Stitch results
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -88,6 +90,58 @@ After you have selected the list of tables to include in Stitch results, return 
 .. stitch-run-select-tables-note-end
 
 
+.. _stitch-run-types:
+
+About Stitch run types
+--------------------------------------------------
+
+.. stitch-run-types-start
+
+A Stitch workflow runs out-of-date source transforms and automatic databases. A Stitch workflow has the following options for reevaluating customer profiles:
+
+* :ref:`stitch-run-type-force-refresh`
+* :ref:`stitch-run-type-incremental-match`
+* :ref:`stitch-run-type-normal`
+
+.. stitch-run-types-end
+
+
+.. _stitch-run-type-force-refresh:
+
+Force refresh
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-force-refresh-start
+   :end-before: .. stitch-run-type-force-refresh-end
+
+
+.. _stitch-run-type-incremental-match:
+
+Incremental matching
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-incremental-match-start
+   :end-before: .. stitch-run-type-incremental-match-end
+
+.. stitch-run-type-incremental-match-note-start
+
+.. note:: Stitch benchmarks are unavailable when Stitch runs using the incremental matching run type.
+
+.. stitch-run-type-incremental-match-note-end
+
+
+.. _stitch-run-type-normal:
+
+Normal
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. include:: ../../amperity_operator/source/stitch.rst
+   :start-after: .. stitch-run-type-normal-start
+   :end-before: .. stitch-run-type-normal-end
+
+
 .. _stitch-run-about:
 
 About the Stitch run
@@ -95,7 +149,7 @@ About the Stitch run
 
 .. stitch-run-about-start
 
-A Stitch run takes a certain amount of time, depending on the size of the data analyzed and the number of potential pairs in the data. In general, you should expect to wait at least 20 minutes (but as much as 2 hours) for a Stitch run to complete.
+A Stitch run takes a certain amount of time, depending on the size of the data analyzed and the number of potential pairs in the data. In general, you should expect to wait at least 20 minutes, but as much as 2 hours, for a Stitch run to complete.
 
 You can navigate to other areas of Amperity and do other tasks while waiting for Stitch to complete successfully. Stitch has two notifications: the Stitch run, and then the Stitch report. The UI will refresh with updates when the Stitch report has been generated.
 
@@ -103,7 +157,7 @@ You can navigate to other areas of Amperity and do other tasks while waiting for
 
 .. stitch-run-important-start
 
-.. important:: Before starting the Stitch run, verify that *all* tables that should be analyzed by Stitch have been :ref:`made available to Stitch <feeds-make-available-to-stitch>` via the **Feed Editor**, that all processes that load data to Amperity (including couriers, feeds, and domain tables) have finished processing, and that all domain tables are selected.
+.. important:: Before starting the Stitch run, verify that *all* tables that should be analyzed by Stitch have been :ref:`made available to Stitch <feeds-make-available-to-stitch>` via the **Feed Editor**, that all processes that load data to Amperity, including couriers, feeds, and domain tables, have finished processing, and that all domain tables are selected.
 
 .. stitch-run-important-end
 
@@ -147,7 +201,7 @@ As new data is input to Amperity, the Stitch process identifies when new or chan
 
 .. stitch-explore-by-amperity-id-continued-start
 
-Amperity IDs do not replace primary and foreign keys already assigned in customer data; Amperity IDs exist alongside primary and foreign keys within the customer 360 profile and act as key for finding clusters of unique customer records.
+Amperity IDs do not replace primary and foreign keys already assigned in customer data. Amperity IDs exist alongside primary and foreign keys within the customer 360 profile and act as key for finding clusters of unique customer records.
 
 .. stitch-explore-by-amperity-id-continued-end
 
@@ -176,7 +230,7 @@ The **Stitched Sources** section of the **Stitch** page shows a comparison of do
 
 .. stitch-explore-by-data-source-upset-plot-start
 
-The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. (An UpSet plot chart will have a row for each data source. This diagram shows the first two only.)
+The following diagram shows the components of the UpSet plot chart, inclusive of the distribution of Amperity IDs across all data sources, and then for each data source, an individual breakdown of how that data source compares to all other data sources. An UpSet plot chart have a row for each data source. This diagram shows the first two only.
 
 .. stitch-explore-by-data-source-upset-plot-end
 
@@ -227,7 +281,7 @@ Explore semantics
 
 .. stitch-explore-semantics-start
 
-The **Semantics** link at the top of the **Stitch** page opens a dialog box that lists the configured semantics made available to Stitch from domain tables. This list is broken down by domain table, and then by semantic. For each semantic, it lists the semantic, the data type (string, date, integer, and so on), and the name of the field as defined in customer data.
+The **Semantics** link at the top of the **Stitch** page opens a dialog box that lists the configured semantics made available to Stitch from domain tables. This list is broken down by domain table, and then by semantic. For each semantic, it lists the semantic, its data type, and the name of the field as defined in customer data.
 
 .. stitch-explore-semantics-end
 
@@ -236,7 +290,7 @@ The **Semantics** link at the top of the **Stitch** page opens a dialog box that
 .. stitch-explore-semantics-steps-start
 
 #. From the **Stitch** tab, click the **Semantics** link. This opens the **Stitch Tools** dialog box.
-#. Each table that contains stitched records is listed in the dialog box.
+#. Each table that has stitched records is listed in the dialog box.
 #. For each table, a list of semantic names, their types, and the fields to which they are associated is listed.
 #. When finished, click **Close**.
 
@@ -258,7 +312,7 @@ View cluster graph
 
 .. stitch-explore-cluster-graph-start
 
-The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line relationship between each stitched record, along with a detailed breakdown of PII similarities (and differences) for each pair of stitched records in the cluster graph.
+The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line relationship between each stitched record, along with a detailed breakdown of PII similarities and differences for each pair of stitched records in the cluster graph.
 
 .. stitch-explore-cluster-graph-end
 
@@ -275,7 +329,7 @@ The **Cluster Graph** tab in the **Data Explorer** shows a graph with a line rel
 #. From the **Stitch** tab, click the **Explore Amperity IDs** button.
 #. This opens the **Data Explorer** to the **Stitched Records** tab.
 #. Click the **Cluster Graph** tab.
-#. In the cluster graph, select individual lines to view the details for that pair of records. The columns on the right shows the fields in the records that are associated with PII semantics.  Compare the values on each side to see how closely these two records match.
+#. In the cluster graph, select individual lines to view the details for that pair of records. The columns on the right shows the fields in the records that are associated with PII semantics. Compare the values on each side to see how these two records match.
 #. Use the left and right arrows surrounding the full name to view additional cluster graphs for additional record clusters.
 #. When finished exploring, click **Close**.
 
@@ -302,17 +356,11 @@ A tenant has three sources of customer records represented by tables 1, 2, and 3
 * Overall deduplication rate is 32.5%
 * Individual deduplication rates for three customer records are 7.7%, 6.6%, and 0%
 
-How is this possible? Let's walk through it.
+How is this possible?
 
 The overall deduplication rate (32.5%) represents the total number of records relative to the number of Amperity IDs. There can be a low deduplication rate on individual tables, but high connectivity between tables.
 
-An UpSet plot chart has a row for each table. In this case, the row for table 1 shows shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
-
-.. image:: ../../images/deduplication-rate.png
-   :width: 600 px
-   :alt: Deduplication rates for customer records.
-   :align: left
-   :class: no-scaled-link
+An UpSet plot chart has a row for each table. In this case, the row for table 1 shows 117k source IDs and 108k Amperity IDs. This represents a 7.7% deduplication rate.
 
 Next compare the overlap between customer records 1 and 3 by hovering over customer record 1. The hover box shows there are more than 69k records shared between tables 1 and 3. This is a significant amount of overlap between two tables and is the primary contributor to the 32.5% overall deduplication rate.
 
@@ -338,7 +386,7 @@ Next compare the overlap between customer records 1 and 3 by hovering over custo
      100 * [(117k - 108k) / 117k] = 7.7%
 
 
-.. important:: Deduplication rate depends! The previous example shows deduplication rate for a database that does not use customer keys:
+.. important:: Deduplication rate depends on many factors. The previous example shows deduplication rate for a database that does not use customer keys:
 
    ::
 
@@ -385,7 +433,7 @@ Notifications for Stitch reports that run in the **Stitch** page appear after Am
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. stitch-view-notifications-context-end
 
@@ -440,21 +488,15 @@ You can view metrics for changes to records and Amperity IDs that may have occur
 
 .. stitch-explore-stitch-metrics-end
 
-.. image:: ../../images/mockup-stitch-tab-metrics.png
-   :width: 600 px
-   :alt: The Stitch Metrics dialog box.
-   :align: left
-   :class: no-scaled-link
-
 .. stitch-explore-stitch-metrics-context-start
 
 This dialog box identifies the tenant, the time at which the job started, the ID for the Stitch report, and the Stitch ID, and then shows the following details about this Stitch run:
 
-* The collapsed ID count refers to the number of records present after nearly-identical records were removed.
+* The collapsed ID count refers to the number of records present after nearly identical records were removed.
 * The related pairs count shows number of unique record pairs that were identified by a blocking strategy.
 * The filtered related pairs count shows the number of unique record pairs that scored above the matching category threshold.
 
-The table contains a row for each data source that was made available to this Stitch run, along with columns for each row that show:
+The table has a row for each data source that was made available to this Stitch run, along with columns for each row that show:
 
 * The number of Amperity IDs in the current Stitch run.
 * The number of Amperity IDs in the previous Stitch run.

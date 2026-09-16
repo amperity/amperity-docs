@@ -33,7 +33,7 @@ Advantages of Amperity Bridge include:
    Control access to shared tables without replicating data across platforms. Build pipelines faster and consolidate your brand's storage costs into a single location.
 
 **Scalable processing**
-   Enrich massive volumes of data quickly. Data is not moved or transformed from where it resides. Model customer data directly in the lakehouse or model it in Amperity.
+   Enrich massive volumes of data. Data is not moved or transformed from where it resides. Model customer data directly in the lakehouse or model it in Amperity.
 
 **Live data**
    View customer data at rest in a lakehouse or in Amperity through a shared catalog. Explore and query data without waiting for refreshes or updates.
@@ -44,34 +44,24 @@ Advantages of Amperity Bridge include:
 
 .. admonition:: Amperity Learning Lab
 
-   .. list-table::
-      :widths: 150 450
-      :header-rows: 0
+   Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be configured for inbound and outbound shares to give you access to shared tables without replication.
 
-      * - .. image:: ../../images/learning-lab-bridge.png
-             :width: 140 px
-             :alt: Amperity Learning Lab
-             :align: left
-             :class: no-scaled-link
-        - Amperity Bridge enables data sharing between Amperity and data lakehouses. Each bridge can be quickly configured for inbound and outbound shares to give you access to shared tables without replication.
-
-          Start with an overview of data warehouses, compare Databricks and Snowflake, and then learn how Amperity Bridge shares data between Amperity and Databricks.
-
-          Open **Learning Lab** to learn more about how `Amperity Bridge <https://learn.amperity.com/amperity-bridge-and-data-warehouses>`__ |ext_link| works. Registration is required.
+   Open **Learning Lab** to learn more about `data warehouses <https://amperity.com/learning-lab/data-warehouses>`__ |ext_link| and how Amperity Bridge for `Databricks <https://amperity.com/learning-lab/amperity-bridge-with-databricks>`__ |ext_link|, `Google BigQuery <https://amperity.com/learning-lab/amperity-bridge-with-bigquery>`__ |ext_link|, and `Snowflake <https://amperity.com/learning-lab/amperity-bridge-with-snowflake>`__ |ext_link| works.
 
 .. bridge-learning-lab-end
 
 
 .. _bridge-sync-data-with:
 
-Sync data with ...
+Connect data warehousees
 ==================================================
 
 .. bridge-sync-data-with-start
 
-Amperity Bridge supports syncing tables with the following applications:
+Amperity Bridge supports connecting with the following applications:
 
 * :ref:`bridge-sync-data-with-databricks`
+* :ref:`bridge-sync-data-with-google-bigquery`
 * :ref:`bridge-sync-data-with-snowflake`
 
 .. bridge-sync-data-with-end
@@ -79,31 +69,39 @@ Amperity Bridge supports syncing tables with the following applications:
 
 .. _bridge-sync-data-with-databricks:
 
-Databricks
+Amperity Bridge for Databricks
 --------------------------------------------------
 
 .. include:: ../../shared/terms.rst
-   :start-after: .. term-delta-sharing-start
-   :end-before: .. term-delta-sharing-end
+   :start-after: .. term-opensharing-start
+   :end-before: .. term-opensharing-end
 
 .. bridge-sync-data-with-databricks-start
 
-You can configure Amperity Bridge for data sharing that :ref:`syncs Databricks with Amperity <bridge-databricks-sync-with-amperity>` and :ref:`syncs Amperity with Databricks <bridge-databricks-sync-with-databricks>`.
+Configure inbound and outbound shares in Amperity to :ref:`connect Databricks with Amperity <bridge-databricks-sync-with-amperity>` and :ref:`connect Amperity with Databricks <bridge-databricks-sync-with-databricks>`.
 
 .. bridge-sync-data-with-databricks-end
 
 
+.. _bridge-sync-data-with-google-bigquery:
+
+Amperity Bridge for Google BigQuery
+--------------------------------------------------
+
+.. bridge-sync-data-with-google-bigquery-start
+
+Configure inbound and outbound shares in Amperity to enable :ref:`inbound <bridge-google-bigquery-sync-with-amperity>` and :ref:`outbound connections <bridge-google-bigquery-sync-with-google-bigquery>` connections between Amperity and Google BigQuery.
+
+.. bridge-sync-data-with-google-bigquery-end
+
 
 .. _bridge-sync-data-with-snowflake:
 
-Snowflake
+Amperity Bridge for Snowflake
 --------------------------------------------------
 
 .. bridge-sync-data-with-snowflake-start
 
-Snowflake Bridge is a first-class bi-directional integration that leverages secure data sharing to enable bi-directional data access between Amperity and Snowflake without copying data or scheduling ETL workloads.
-
-You can configure Amperity Bridge for data sharing that :doc:`syncs Snowflake with Amperity <bridge_snowflake>`.
+Amperity Bridge for Snowflake is a first-class integration that leverages secure data sharing to enable :doc:`bi-directional data access between Amperity and Snowflake <bridge_snowflake>` without copying data or scheduling ETL workloads.
 
 .. bridge-sync-data-with-snowflake-end
-.. 

@@ -22,6 +22,25 @@ About sandboxes
    :start-after: .. term-sandbox-start
    :end-before: .. term-sandbox-end
 
+.. TODO: Need some kind of intro here for the grid?
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Create sandbox
+      :link-type: doc
+      :link: sandbox_create
+
+   .. grid-item-card:: Open sandbox
+      :link-type: doc
+      :link: sandbox_open
+
+   .. grid-item-card:: Promote changes
+      :link-type: doc
+      :link: sandbox_promote
+
 
 .. _sandboxes-policy-allow-sandbox-administration:
 
@@ -135,7 +154,7 @@ Common activities
 
 .. sandboxes-howtos-start
 
-This section describes tasks related to working with sandboxes in Amperity:
+Tasks related to working with sandboxes in Amperity:
 
 * `Access a sandbox <../reference/sandboxes.html#access-a-sandbox>`__
 * `Add a sandbox <../reference/sandboxes.html#add-a-sandbox>`__

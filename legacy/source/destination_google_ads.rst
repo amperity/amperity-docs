@@ -23,10 +23,14 @@
 
 
 ==================================================
-Configure campaigns for Google Ads
+Send data to Google Ads
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_google_ads.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_google_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-google-ads-start
@@ -46,7 +50,7 @@ Configure campaigns for Google Ads
    * Run ads within the `Shopping tab on Google.com <https://support.google.com/google-ads/answer/2454022>`__ |ext_link|.
    * Send audiences to :doc:`DV360 <destination_dv360>`, and then run video advertising campaigns in `YouTube Ads <https://www.youtube.com/intl/en_us/ads/how-it-works/>`__ |ext_link| or on web pages using any of the `available placement options <https://support.google.com/displayvideo/answer/2697401?hl=en>`__ |ext_link|. DV360 supports advertiser and partner networks.
 
-   Use Amperity to build high-value and/or product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
+   Use Amperity to build high-value product affinity segments that are based on first-party data, and then configure Amperity to use the Google Customer Match destination to send those segments to |destination-name|.
 
    Once uploaded, |plugin-name| hashes each record, and then matches all records against hashed user accounts that already exist in |plugin-name| to identify segments that contain records that match the ones sent from Amperity.
 
@@ -96,11 +100,11 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
-       The name of the product to which Amperity will send data: "Google Ads".
+       The name of the product to which Amperity sends data: "Google Ads".
 
        The customer ID associated with your Google Customer Match account, along with the customer ID associated with the "Google Ads" account.
 
@@ -108,17 +112,17 @@ Get details
 
        A refresh token that is generated from the OAuth process that :ref:`authorizes Amperity to send data to the selected product <destination-google-ads-configure-oauth>`. This must be a Google account with permission to access the configured customer ID and product within Google.
 
-       .. important:: OAuth for "Google Ads" *must* be completed within Google prior to configuring OAuth in Amperity.
+       .. important:: OAuth for "Google Ads" *must* be completed within Google before configuring OAuth in Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity will create it.
+     - The name of an audience in |destination-name|. The description is optional. If the audience does not exist, Amperity creates it.
 
-       The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+       The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be 0-540 (inclusive) or 10000 for an unlimited duration.
 
        .. tip:: Set this value to "0" to remove all audience members.
 
@@ -130,7 +134,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - :ref:`Review the user consent policy <destination-google-ads-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
 
@@ -151,7 +155,7 @@ Configure OAuth
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Google Ads" *must* be completed within Google prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Google Ads" *must* be completed within Google before configuring OAuth in Amperity.
 
 **To configure OAuth**
 
@@ -161,8 +165,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -170,8 +174,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -179,8 +183,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -220,8 +224,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -240,8 +244,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -274,8 +278,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -296,7 +300,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Audience name**
-            - The name of an audience in |destination-name|. If the audience does not exist, Amperity will create it.
+            - The name of an audience in |destination-name|. If the audience does not exist, Amperity creates it.
 
           * - **Audience description**
             - An optional description of the audience.
@@ -307,10 +311,10 @@ Add destination
               .. note:: The customer ID must be 10 digits and may not contain dashes.
 
           * - **Customer product**
-            - The name of the product to which Amperity will send data. Choose "Google Ads".
+            - The name of the product to which Amperity sends data. Choose "Google Ads".
 
           * - **Membership duration**
-            - The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The membership duration must be between 0-540 (inclusive) or 10000 for an unlimited duration.
+            - The membership duration defines the length of time (in days) at which individual audience members belong to the segment. The membership duration must be 0-540 (inclusive) or 10000 for an unlimited duration.
 
               .. tip:: Set this value to "0" to remove all audience members.
 
@@ -323,8 +327,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -337,8 +341,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -372,8 +376,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -392,8 +396,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -401,7 +405,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -416,8 +420,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -436,8 +440,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -474,7 +478,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -493,7 +497,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -508,7 +512,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -537,7 +541,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -599,7 +603,7 @@ Incomplete account setup
 
 .. source-google-ads-workflow-actions-incomplete-account-setup-start
 
-Amperity cannot send data to an account in |destination-name| that is not set up completely. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
+Amperity cannot send data to an account in |destination-name| that is not set up. For example, this error can occur when an account is an a "DRAFT" state in |destination-name|.
 
 To resolve this error, verify that your |destination-name| account is set up correctly.
 
@@ -622,12 +626,12 @@ Invalid credentials
 
 .. _source-google-ads-workflow-actions-missing-required-attributes:
 
-Missing required field(s)
+Missing required fields
 --------------------------------------------------
 
 .. destination-google-ads-workflow-actions-missing-required-field-start
 
-One (or more) required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
+One or more required attributes are missing. |destination-name| :ref:`requires the following attributes for contact matching <destination-google-ads-api-matching-contact>`: **firstname**, **lastname**, **email**, **phone**, **country**, and **zip**.
 
 .. destination-google-ads-workflow-actions-missing-required-field-end
 
@@ -725,7 +729,7 @@ Contact Info Matching
 
 .. destination-google-ads-api-matching-contact-list-start
 
-A list can be matched to contact information that contains PII data. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs. Each field should be matched to (at least) one of the following columns:
+A list can be matched to contact information that has PII data. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs. Each field should be matched to one of the following columns:
 
 .. list-table::
    :widths: 130 130 340
@@ -739,7 +743,7 @@ A list can be matched to contact information that contains PII data. If a row co
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as SHA-256
 
    * - **Phone Number**
@@ -757,7 +761,7 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as SHA-256
 
    * - **First Name**
@@ -766,15 +770,15 @@ A list can be matched to contact information that contains PII data. If a row co
 
        * Trims leading and trailing whitespace
        * Removes spaces in-between
-       * Converts to lower-case
+       * Converts to lowercase
        * Hashes data as SHA-256
 
-   * - **Zip Code**
+   * - **ZIP Code**
      - **zip**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
 
    * - **Country Code**
      - **country**
@@ -797,7 +801,7 @@ European Union user consent
 
 The Google Ads API uses the `Consent object <https://developers.google.com/google-ads/api/reference/rpc/v15/Consent>`__ |ext_link| to specify user consent signals for sending user data to Google for advertising purposes *and* for ad personalization.
 
-.. important:: Customers must `send the the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) and/or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
+.. important:: Customers must `send the required user consent signals <https://support.google.com/google-ads/answer/14310715>`__ |ext_link| when uploading data for advertising to customers in the European Economic Area (EEA) or to adhere to the European Union (EU) user consent policy. Not including these signals may result in lower match rates.
 
 .. list-table::
    :widths: 130 130 340
@@ -828,7 +832,7 @@ Mobile Device ID Matching
 
 .. destination-google-ads-api-matching-mobile-list-start
 
-A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to mobile device IDs. These may be identifier for advertising (IDFA) or Google advertising IDs (AAID) for mobile devices. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340
@@ -842,7 +846,7 @@ A list can be matched to mobile device IDs. These may be identifier for advertis
      - A list of mobile device IDs provided to Amperity by the customer. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Retains any hyphens in the mobile device ID
 
 .. destination-google-ads-api-matching-mobile-list-end
@@ -855,7 +859,7 @@ User ID Matching
 
 .. destination-google-ads-api-matching-user-start
 
-A list can be matched to advertiser-generated and assigned user IDs and/or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row contains a NULL value, it will be automatically filtered out by the connector and will be shown in the error logs.
+A list can be matched to advertiser-generated and assigned user IDs or to custom IDs created by the customer. This list of IDs must be provided to Amperity by the customer so they may be returned as part of the query data sent to |destination-name|. If a row has a **NULL** value, it will be automatically filtered out by the connector and is shown in the error logs.
 
 .. list-table::
    :widths: 130 130 340

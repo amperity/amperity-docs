@@ -45,15 +45,15 @@ Add table
 
 .. table-email-engagement-attributes-add-start
 
-The **Email Engagement Attributes** table is a table that contains one email address for each Amperity ID. This table may be used to apply email engagement data to campaigns. The **Email Engagement Attributes** table is built from a SQL template, is customized for your tenant, and then applies a series of **email-attribute** semantic tags to the fields in the table.
+The **Email Engagement Attributes** table is a table that has one email address for each Amperity ID. This table may be used to apply email engagement data to campaigns. The **Email Engagement Attributes** table is built from a SQL template, is customized for your tenant, and then applies a series of **email-attribute** semantic tags to the fields in the table.
 
 .. table-email-engagement-attributes-add-end
 
-**To add the Customer360 table**
+**To add the Email Engagement Attributes table**
 
 .. table-email-engagement-attributes-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Email Engagement Attributes".
 #. Set the build mode to **SQL**.
@@ -61,7 +61,6 @@ The **Email Engagement Attributes** table is a table that contains one email add
 #. Step through the table, and then apply any necessary customizations.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
-#. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
 #. Verify that **email-attribute** :ref:`semantic tags <table-email-engagement-attributes-semantic-tags>` are applied to all fields.
 #. Review picklists to ensure they have the desired sorting parameters.
 #. Add friendly names for any field.
@@ -206,7 +205,7 @@ The following table lists the tags available to this semantic group (with requir
           :end-before: .. email-events-region-end
    * - **signup_to_purchase_days**
      - Integer
-     - The amount of time (in days) between using this email to sign up and the next transaction associated with this Amperity ID. This field is NULL if there has not been a transaction.
+     - The amount of time in days between using this email to sign up and the next transaction associated with this Amperity ID. This field is **NULL** if there has not been a transaction.
 
        .. important:: This semantic tag requires the **Transaction Attributes Extended** and **Unified Transactions** tables to be joined to the **Email Engagement Attributes** table.
 

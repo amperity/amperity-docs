@@ -22,14 +22,14 @@ About the Customer 360 database
 The **Customer 360** page allows databases to be created from any combination of stitched output, passed-through domain tables, and custom domain tables. At least one database must be designated as your "Customer 360" database, but there is no limit to the number of databases you may configure for use with any downstream workflow. For example:
 
 * Use a passthrough database to separate raw source data from stitched customer data.
-* Use a QA database to build tables for use with validating Stitch quality and for ensuring that interactions records (for orders and items) are being measured correctly.
+* Use a QA database to build tables for use with validating Stitch quality and for ensuring that interactions records are measured correctly.
 * Use a custom database for experimentation.
 
 .. databases-end
 
 .. databases-prerequisites-start
 
-.. important:: This topic assumes that you have completed the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity and have created your customer 360 database.
+.. important:: Complete the processes for :doc:`adding customer profiles <add_customer_data>` and :doc:`adding transactions <add_transactions>` to Amperity before creating the customer 360 database.
 
 .. databases-prerequisites-start
 
@@ -87,14 +87,13 @@ Source and custom tables
 
 .. databases-table-type-source-and-custom-start
 
-Source and custom tables make raw source data and custom domain tables available to your customer 360 database as a series of passthrough tables. Source and custom tables will vary from tenant to tenant, but typically represent data that can provide useful context to your customer profile data and to support a variety of upstream and downstream workflows, such as:
+Source and custom tables make raw source data and custom domain tables available to your customer 360 database as a series of passthrough tables. Source and custom tables vary from tenant to tenant, but typically represent data that can provide useful context to your customer profile data and to support a variety of upstream and downstream workflows, such as:
 
 * Behavioral data
 * Clickstream data
 * Marketing campaign response data
 * Display advertising performance data
 * Passthrough tables that contain original customer data
-* And so on ...
 
 Any domain table or custom domain table can be configured as a passthrough table for any database.
 
@@ -124,8 +123,8 @@ Define customer profile
 
 Customer profile details are pulled from the **Customer 360** table, which represents all of your unified customer profiles, including:
 
-* Names (first names, last names), email addresses, physical addresses, phone numbers
-* Transaction details (first purchases, last purchases, total purchases, etc)
+* Names, including first and last names, email addresses, physical addresses, phone numbers
+* Transaction details, including first purchases, last purchases, and total purchases
 * Other custom profile values that are unique to your company
 
 You can choose to summarize these customer profile details directly on the **Customer 360** page.
@@ -176,7 +175,7 @@ Add empty database
 
 .. databases-manage-add-empty-start
 
-An empty database contains no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or  :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
+An empty database has no tables. Use any combination of :ref:`passthrough <databases-tables-add-passthrough>`, :ref:`SQL <databases-tables-add-sql>`, or :ref:`SQL template <databases-tables-add-sql>` tables to build a custom database.
 
 .. databases-manage-add-empty-end
 
@@ -198,7 +197,7 @@ Add database from template
 
 .. databases-manage-add-from-template-start
 
-Use the :ref:`Customer 360 <databases-manage-add-from-template-c360>`, :ref:`Passthrough <databases-manage-add-from-template-passthrough>`, or :ref:`Stitch QA <databases-manage-add-from-template-stitch-qa>` database templates to add a database that contains the set of tables for use with that type of database.
+Use the :ref:`Customer 360 <databases-manage-add-from-template-c360>`, :ref:`Passthrough <databases-manage-add-from-template-passthrough>`, or :ref:`Stitch QA <databases-manage-add-from-template-stitch-qa>` database templates to add a database that has the set of tables for use with that type of database.
 
 .. databases-manage-add-from-template-end
 
@@ -264,7 +263,7 @@ Passthrough template
 
 .. databases-manage-add-from-template-passthrough-start
 
-A database that is created using the passthrough template will add a table for each domain table or custom domain table that can be passed through to the database.
+A database that is created using the passthrough template adds a table for each domain table or custom domain table that can be passed through to the database.
 
 .. databases-manage-add-from-template-passthrough-end
 
@@ -290,20 +289,20 @@ Use this database to :doc:`validate the quality of Stitch output <qa_stitch>`.
 .. databases-manage-add-from-template-stitch-qa-end
 
 
-.. _databases-multiple:
+.. _databases-many:
 
-Use multiple databases
+Use many databases
 --------------------------------------------------
 
 .. databases-multiple-start
 
-You may configure more than one database to be a customer 360 database. Each customer 360 database will contain a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
+You may configure more than one database to be a customer 360 database. Each customer 360 database has a set of standard tables, and then may have an optional set of source and custom tables added as passthrough tables.
 
 .. databases-multiple-end
 
 .. image:: ../../images/use-cases-c360-multiple-alt.png
    :width: 600 px
-   :alt: Customer 360 tab, multiple databases, alternate
+   :alt: Customer 360 tab, many databases, alternate
    :align: left
    :class: no-scaled-link
 
@@ -315,7 +314,7 @@ Apply flexible merge rules
 
 .. databases-flexible-merge-rules-start
 
-Amperity allows multiple databases to exist within the same tenant. Each database may define its own unique set of rules for merging customer profile data. These merge rules are configured using Spark SQL and each field within the merge rules can be customized.
+Amperity allows many databases to exist within the same tenant. Each database may define its own unique set of rules for merging customer profile data. These merge rules are configured using Spark SQL and each field within the merge rules can be customized.
 
 For example, a tenant may have data sources from call centers, online transactions, and email platforms that may contain slightly different sets of customer profile data:
 
@@ -325,7 +324,7 @@ For example, a tenant may have data sources from call centers, online transactio
    :align: left
    :class: no-scaled-link
 
-After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support multiple customer 360 databases.
+After loading this data to Amperity and assigning the Amperity ID to each of your customers, you can use flexible merge rules to support many customer 360 databases.
 
 * Your operations teams can combine prioritizing the most common values for each customer with deterministic matching
 * Your email marketing team can combine prioritizing customer profile values from your email platform with probabilistic matching
@@ -363,7 +362,7 @@ Add as passthrough
 
 .. databases-tables-add-passthrough-start
 
-If a table already contains an Amperity ID, you may use a passthrough table.
+If a table already has an Amperity ID, you may use a passthrough table.
 
 .. databases-tables-add-passthrough-end
 
@@ -397,7 +396,7 @@ Add as SQL
 
 .. databases-tables-add-sql-note-start
 
-.. note:: If a table was not stitched and/or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, CCUST associates the unique ID in a table to the Amperity ID:
+.. note:: If a table was not stitched or does not have an Amperity ID, you must use SQL to associate the unique ID in that table to the Amperity ID. For example, ``CCUST`` associates the unique ID in a table to the Amperity ID:
 
    .. code-block:: sql
 
@@ -456,7 +455,7 @@ Use table templates to add tables to your database that use Amperity standard ta
 #. Update the name of the table template, if necessary.
 #. Update the SQL in the table template to support your use case.
 
-   .. important:: Refer to the individual topic for each :ref:`standard table template <databases-tables-add-table-template-standard>` for more information about how to configure any required and/or recommended steps.
+   .. important:: Refer to the individual topic for each :ref:`standard table template <databases-tables-add-table-template-standard>` for more information about how to configure any required or recommended steps.
 #. Verify semantic tags and ensure that fields that contain PII are marked correctly.
 #. Make the table available to the **Segment** editor by selecting the **Make available in Visual Segment Editor** option.
 
@@ -500,7 +499,7 @@ Table templates are available for other tables:
 
 * :doc:`Customer360 <table_customer_360>` that joins **Transaction Attributes Extended**
 * :doc:`Detailed Examples <table_detailed_examples>`
-* :doc:`Merged Households <table_merged_households>`; this table requires access to address standardization lookup tables.
+* :doc:`Merged Households <table_merged_households>`. This table requires access to address standardization lookup tables.
 
 .. databases-tables-add-table-template-other-end
 
@@ -516,7 +515,7 @@ The SQL editor shows a validation alert when syntax is detected in your query th
 
 .. admonition:: What should I do if my query has a validation alert?
 
-   A validation alert does not mean your SQL is invalid. If your query has a validation alert, review the alert, review your SQL, and consider alternates that can help you avoid potential performance issues or avoid the situation the alert describes. There are situations where the SQL you need is the SQL that is causing the validation warning. You may activate a query even when it contains a validation alert.
+   A validation alert does not mean your SQL is invalid. If your query has a validation alert, review the alert, review the SQL, and consider alternates that can help you avoid performance issues or avoid the situation the alert describes. You may activate a query even when it has a validation alert.
 
 Examples of validation alerts include:
 
@@ -539,9 +538,9 @@ An implicit **CROSS JOIN** occurs when a query unintentionally returns a Cartesi
 
 A Cartesian product in Amperity between any two tables is often a very, very large number of pairs and, as a result, is an expensive operation. It is recommended to optimize your Spark SQL queries to avoid an implicit **CROSS JOIN**.
 
-The database editor will show a validation alert for an implicit **CROSS JOIN** in situations like:
+The database editor shows a validation alert for an implicit **CROSS JOIN** in situations like:
 
-#. A join statement does not use an **ON()** or **USING()** clause to specify one (or more) column names as the join criteria.
+#. A join statement does not use an **ON()** or **USING()** clause to specify one or more column names as the join criteria.
 
 #. A **SELECT** statement returns too many columns from two tables. For example, using
 
@@ -591,7 +590,7 @@ Unintentional broadcast joins
 
 .. databases-validation-alert-unintentional-broadcast-joins-start
 
-A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. When a broadcast join is small, it's fast. Above a certain threshold they can performance issues.
+A broadcast join sends the smaller table in a join operation to all Spark executors, and then evaluates the larger table across each executor's partitions. A small broadcast join runs faster, but above a certain threshold a broadcast join causes performance issues.
 
 A broadcast join often looks like:
 
@@ -601,7 +600,7 @@ A broadcast join often looks like:
 
 When **values** is not a small list of constants a broadcast join may occur.
 
-.. note:: In some situations you may want to use a **LEFT ANTI JOIN**, which returns values from the left-side table when they do not have matches on the right-side table. Use a **LEFT ANTI JOIN** to avoid performance issues that may be caused by a broadcast join.
+.. note:: In some situations you may want to use a **LEFT ANTI JOIN**, which returns values from the left-side table when they do not have matches on the right-side table. Use a **LEFT ANTI JOIN** to avoid performance issues with broadcast joins.
 
 .. databases-validation-alert-unintentional-broadcast-joins-end
 
@@ -626,7 +625,7 @@ The following topics represent starting points for some of the ways you can exte
 #. :doc:`Use first-party data <data_first_party>`
 #. :doc:`Use third-party data <data_third_party>`
 
-This list represents a small percentage of the use cases you can enable with Amperity. Talk with your Amperity representative about how you can best enable these (and other) use cases for your tenant.
+This list represents a small percentage of the use cases you can enable with Amperity. Ask your Amperity representative about how you can best enable these types of use cases for your tenant.
 
 .. databases-extend-end
 
@@ -638,7 +637,7 @@ Export databases and tables
 
 .. databases-export-start
 
-A database may be configured to export one (or more) tables (or even the entire database) from Amperity. Each database export must be assigned a unique name, and then is configured to select one (or more) tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
+A database may be configured to export one or more tables or even the entire database from Amperity. Each database export must be assigned a unique name, and then is configured to select one or more tables to be included in the export. A database export must be associated with a configured destination and must be added to an orchestration.
 
 .. databases-export-end
 
@@ -648,12 +647,12 @@ A database may be configured to export one (or more) tables (or even the entire 
 
 #. From the **Customer 360** page click **Configure Exports**. This opens the **Database Exports** page.
 #. Click **Create New Export**. This opens the **Add Export** dialog box.
-#. Add the name of the database export, and then click **Add**. This will add a draft database export to the **Database Exports** page.
+#. Add the name of the database export, and then click **Add**. This adds a draft database export to the **Database Exports** page.
 #. Open the menu for the draft database export, and then select **Edit**.
 #. From the **Database** dropdown, select a database.
-#. From the **Entities** list, select one (or more) database tables to add to the database export.
+#. From the **Entities** list, select one or more database tables to add to the database export.
 
-   For a single table, click the table. For multiple tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
+   For a single table, click the table. For many tables, use click + command for each table to be selected. For all tables click the first table, hold shift, and then click the last table.
 
 #. Click **Activate**.
 #. Assign the database export to an orchestration.

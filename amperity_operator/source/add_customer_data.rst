@@ -21,7 +21,7 @@ Add customer data
 
 Amperity relies on data sources that contain personally identifiable information (PII) about your customers to build customer profiles.
 
-For each data source that your brand makes available to Amperity that contains PII:
+For each data source that your brand makes available to Amperity that has PII:
 
 #. :ref:`Apply customer profile semantic tags to individual fields within data sources <setup-customer-profiles-apply-semantics>`
 #. :ref:`Run input validations <setup-customer-profiles-input-validations>`
@@ -39,7 +39,7 @@ Apply semantics
 
 .. setup-customer-profiles-apply-semantics-start
 
-Use a feed or custom domain table to apply customer profile semantic tags to every data source that contains personally identifiable information (PII) about your customers.
+Use a feed or custom domain table to apply customer profile semantic tags to every data source that has personally identifiable information (PII) about your customers.
 
 Customer profile semantic tags include **address**, **birthdate**, **city**, **email**, **gender**, **given-name**, **phone**, **postal**, **state**, and **surname**. Apply them to individual fields within data sources to define a common schema across customer profiles in your customer 360 database.
 
@@ -79,7 +79,7 @@ Review validations
 
 .. _setup-customer-profiles-input-validations-checklist:
 
-**INPUT VALIDATIONS CHECKLIST**
+**Checklist for input validations**
 
 .. setup-customer-profiles-stitch-checklist-start
 
@@ -89,8 +89,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Review customer profile reports**
 
@@ -100,8 +100,8 @@ Review validations
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Review transaction reports**
 
@@ -136,17 +136,17 @@ Stitch runs on a daily basis after all of your brand's data sources have provide
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Make domain tables available to Stitch**
 
-       All domain tables in which customer profile semantic tags were applied to one (or more) fields should be made available to Stitch.
+       All domain tables in which customer profile semantic tags were applied to one or more fields should be made available to Stitch.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Run Stitch**
 
@@ -170,9 +170,9 @@ Your customer 360 database must be configured before you can use customer profil
 
    Depending on the types of data sources your brand adds to Amperity over time, you may need to make specific changes to specific tables in your customer 360 database to support these updates.
 
-   For example, if your brand adds a data source that contains PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
+   For example, if your brand adds a data source that has PII you may need to update the source and field priorities that are defined in the **Merged Customers** table.
 
-The initial configuration of your customer 360 database requires using SQL to add (and extend) a series of tables that are the foundation of your brand's set of unified customer profiles.
+The initial configuration of your customer 360 database requires using SQL to add or extend a series of tables that are the foundation of your brand's set of unified customer profiles.
 
 #. :ref:`Unified Coalesced <setup-customer-profiles-build-database-table-uc>`
 #. :ref:`Best email address <setup-customer-profiles-build-database-table-best-email>`
@@ -191,14 +191,13 @@ Unified coalesced
 
 .. setup-customer-profiles-build-database-table-uc-start
 
-The **Unified Coalesced** table is an output of the Stitch identity resolution process. This table is refreshed every time Stitch runs and contains one row for each unique record from every data source that contains customer PII.
+The **Unified Coalesced** table is an output of the Stitch identity resolution process. This table is refreshed every time Stitch runs and has one row for each unique record from every data source that has customer PII.
 
 Individual rows within the **Unified Coalesced** table may not represent complete profiles. For example:
 
-* Row 1 contains details from data source A and has customer email addresses, first and last names, and postal codes
-* Row 2 contains details from data source B and has phone numbers and first names
-* Row 3 contains details from data source C and has  first and last names, postal codes, and phone numbers
-* And so on ...
+* Row 1 has details from data source A and has customer email addresses, first and last names, and postal codes
+* Row 2 has details from data source B and has phone numbers and first names
+* Row 3 has details from data source C and has first and last names, postal codes, and phone numbers
 
 Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 
@@ -217,8 +216,8 @@ Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -226,8 +225,8 @@ Each row within the **Unified Coalesced** table is assigned an Amperity ID.
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
 
@@ -249,7 +248,7 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
 .. _setup-customer-profiles-build-database-table-best-email-checklist:
 
-**BEST EMAIL ADDRESS CHECKLIST**
+**Checklist for best email address**
 
 .. setup-customer-profiles-build-database-table-best-email-checklist-start
 
@@ -259,8 +258,8 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -268,8 +267,8 @@ The **Email Ampid Assignment** table identifies the best email address to use fo
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Optional. Use email priority instead of Amperity ID assignment**
 
@@ -289,7 +288,7 @@ Merged customers
 
 .. setup-customer-profiles-build-database-table-mc-start
 
-The **Merged Customers** table contains one row for each Amperity ID in the **Unified Coalesced** table.
+The **Merged Customers** table has one row for each Amperity ID in the **Unified Coalesced** table.
 
 Individual rows within the **Merged Customers** table represent unique customer profiles. This is done by collapsing all of the rows in the **Unified Coalesced** table that share the same Amperity ID into a single row.
 
@@ -308,8 +307,8 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -317,8 +316,8 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Repeat for all data sources that contain PII**
 
@@ -330,14 +329,14 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - **Repeat for all data sources that contain PII**
 
        A data source that is made available to Stitch may :ref:`assign field priorities for names, physical addresses, email addresses, birthdates, and gender <table-merged-customers-sql-query-required-update-field-priority>`.
 
-       A NULL field priority value uses the source priority value as the field priority value.
+       A **NULL** field priority value uses the source priority value as the field priority value.
 
        An integer priority value takes precedence over source priority when the field priority value is higher than the source priority value.
 
@@ -347,8 +346,8 @@ Individual rows within the **Merged Customers** table represent unique customer 
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - **Configure best email address**
 
@@ -366,9 +365,9 @@ Customer 360
 
 .. setup-customer-profiles-build-database-table-c360-start
 
-The **Customer 360** table contains all of your brand's unified customer profiles combined with the individual actions each of your customers have had with your brand.
+The **Customer 360** table has all of your brand's unified customer profiles combined with the individual actions each of your customers have had with your brand.
 
-Individual rows within the **Customer 360** table represent customer profiles (and their interactions), unique by Amperity ID.
+Individual rows within the **Customer 360** table represent customer profiles and their interactions with your brand, unique by Amperity ID.
 
 .. setup-customer-profiles-build-database-table-c360-end
 
@@ -385,8 +384,8 @@ Individual rows within the **Customer 360** table represent customer profiles (a
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Initial configuration only**
 
@@ -400,8 +399,8 @@ Individual rows within the **Customer 360** table represent customer profiles (a
 
    * - .. image:: ../../images/checklist-caution.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Optional. Extend for custom attributes**
 
@@ -433,8 +432,8 @@ To make data available in your customer 360 database you must activate, and then
 
    * - .. image:: ../../images/checklist-multibrand.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - **Multi-brand databases only**
 
@@ -446,8 +445,8 @@ To make data available in your customer 360 database you must activate, and then
 
    * - .. image:: ../../images/checklist-item.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - **Run the customer 360 database**
 

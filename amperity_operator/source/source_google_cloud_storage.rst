@@ -8,6 +8,7 @@
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |what-pull| replace:: files in any supported format
 .. |credential-type| replace:: **gcs-service-account-key**
+.. |filter-the-list| replace:: "google"
 
 
 .. meta::
@@ -38,12 +39,7 @@ Pull from Google Cloud Storage
 
 #. :ref:`Get details <source-google-cloud-storage-get-details>`
 #. :ref:`Review filedrop requirements for Google Cloud Storage <source-google-cloud-storage-filedrop-requirements>`
-#. :ref:`Add courier <source-google-cloud-storage-add-courier>`
-#. :ref:`Get sample files <source-google-cloud-storage-get-sample-files>`
-#. :ref:`Add feeds <source-google-cloud-storage-add-feeds>`
-#. :ref:`Add load operations <source-google-cloud-storage-add-load-operations>`
-#. :ref:`Run courier <source-google-cloud-storage-run-courier>`
-#. :ref:`Add to courier group <source-google-cloud-storage-add-to-courier-group>`
+#. :ref:`Add data source and feed <source-google-cloud-storage-add-data-source>`
 
 .. source-google-cloud-storage-steps-to-pull-end
 
@@ -59,7 +55,7 @@ Google Cloud Storage requires the following configuration details:
 
 #. The name of the bucket in Cloud Storage.
 #. A Cloud Storage :ref:`service account key <source-google-cloud-storage-service-account>` that is configured for the **Storage Object Admin** role.
-#. A list of objects (by filename and file type) in the Cloud Storage bucket.
+#. A list of objects by filename and file type in the Cloud Storage bucket.
 #. A sample for each file to simplify feed creation.
 
 .. source-google-cloud-storage-get-details-end
@@ -98,7 +94,7 @@ Dataflow, Pub/Sub
 
 .. source-google-cloud-storage-dataflow-pubsub-start
 
-Dataflow is a fully-managed service for transforming and enriching data using stream (real-time) and/or batch modes that can be configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to Cloud Storage.
+Dataflow is a fully managed service for transforming and enriching data using streaming or batch modes that are configured to `use Pub/Sub to stream messages <https://cloud.google.com/pubsub/docs/pubsub-dataflow#stream_messages_from_to>`__ |ext_link| to |source-name|.
 
 .. source-google-cloud-storage-dataflow-pubsub-end
 
@@ -168,6 +164,7 @@ Service account setup:
 .. source-google-cloud-storage-service-account-key-example-start
 
 .. code-block:: json
+   :linenos:
 
    {
      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
@@ -213,188 +210,220 @@ The **Storage Object Admin** role must be assigned to the service account.
 .. source-google-cloud-storage-service-account-role-steps-end
 
 
-.. _source-google-cloud-storage-add-courier:
+.. _source-google-cloud-storage-add-data-source:
 
-Add courier
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
-**To add a courier**
-
-.. source-google-cloud-storage-add-courier-steps-start
-
-#. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
-#. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
-
-   This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
-#. Enter a name for the credential, the Cloud Storage bucket name, and the service account key. Click **Save**.
-
-   .. important:: The bucket name must match the value of the **<<GCS_BUCKET_NAME>>** placeholder shown in the :ref:`service account key <source-google-cloud-storage-service-account-key>` example.
-
-   .. note:: The :ref:`service account key <source-google-cloud-storage-service-account-key>` is the contents of the JSON file downloaded from Cloud Storage. Open the JSON file in a text editor, copy the key, and paste it into the **Service Account Key** field.
-
-#. Under **Google Cloud Storage Settings** configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity. For example, two files: "CustomerRecords.csv" and "TransactionRecords.csv".
-
-   ::
-
-      [
-        {
-          "object/type": "file",
-          "object/file-pattern": "'CUSTOMER/ENV/CustomerRecords_'11-10-2020'.csv'",
-          "object/land-as": {
-            "file/header-rows": 1,
-            "file/tag": "customer-records-2020",
-            "file/content-type": "text/csv"
-          }
-        },
-        {
-          "archive/contents": {
-            "FILENAME": {
-              "subobject/land-as": {
-                "file/tag": "transaction-records-2020",
-                "file/content-type": "text/csv"
-              }
-            }
-          },
-          "object/type": "archive",
-          "object/file-pattern": "'ARCHIVED/TransactionRecords_'11-10-2020'.zip'"
-        }
-      ]
-
-#. Under **Google Cloud Storage Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
-
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
-
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
-#. Click **Save**.
-
-.. source-google-cloud-storage-add-courier-steps-end
-
-
-.. _source-google-cloud-storage-get-sample-files:
-
-Get sample files
+Add data source and feed
 ==================================================
 
 .. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-start
-   :end-before: .. sources-get-sample-files-end
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-**To get sample files**
+**To add a data source for an Amazon S3 bucket**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-google-cloud-storage-add-data-source-steps-start
 
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-.. _source-google-cloud-storage-add-feeds:
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-Add feeds
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-feed-start
-   :end-before: .. term-feed-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-note-file-start
-   :end-before: .. sources-add-feed-note-file-end
-
-**To add a feed**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-steps-start
-   :end-before: .. sources-add-feed-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
-.. _source-google-cloud-storage-add-load-operations:
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-sources-configure-already-configured-start
+          :end-before: .. credentials-sources-configure-already-configured-end
 
-Add load operations
-==================================================
+       .. tip::
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-start
-   :end-before: .. sources-add-load-operation-end
+          .. include:: ../../shared/credentials.rst
+             :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
+             :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
-**Example load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-example-intro-start
-   :end-before: .. sources-add-load-operation-example-intro-end
-
-.. source-google-cloud-storage-add-load-operations-example-start
-
-For example:
-
-::
-
-   {
-     "CUSTOMER-RECORDS-FEED-ID": [
-       {
-         "type": "truncate"
-       },
-       {
-         "type": "load",
-         "file": "customer-records"
-       }
-     ],
-     "TRANSACTION-RECORDS-FEED-ID": [
-       {
-         "type": "load",
-         "file": "transaction-records"
-       }
-     ]
-   }
-
-.. source-google-cloud-storage-add-load-operations-example-end
-
-**To add load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-steps-start
-   :end-before: .. sources-add-load-operation-steps-end
+          .. image:: ../../images/mockup-credentials-add-02-credential-status-azure-blob-storage.png
+             :width: 380 px
+             :alt: Add 
+             :align: left
+             :class: no-scaled-link
 
 
-.. _source-google-cloud-storage-run-courier:
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-select-file-start
+          :end-before: .. sources-steps-03-select-file-end
 
-Run courier manually
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-settings.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-start
-   :end-before: .. sources-run-courier-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-start
+          :end-before: .. sources-steps-03-browse-end
 
-**To run the courier manually**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-note-start
+          :end-before: .. sources-steps-03-browse-note-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+       .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-pgp-start
+          :end-before: .. sources-steps-03-pgp-end
+
+       .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
 
-.. _source-google-cloud-storage-add-to-courier-group:
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-start
+          :end-before: .. sources-steps-04-review-end
 
-Add to courier group
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-formatting.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-group-start
-   :end-before: .. term-courier-group-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-contents-start
+          :end-before: .. sources-steps-04-review-contents-end
 
-**To add the courier to a courier group**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-pgp-start
+          :end-before: .. sources-steps-04-review-pgp-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-to-courier-group-steps-start
-   :end-before: .. sources-add-to-courier-group-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-formatting-details-start
+          :end-before: .. sources-steps-04-review-formatting-details-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-file-types-start
+          :end-before: .. sources-steps-04-file-types-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
+
+
+       **New feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
+
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
+
+
+   * - .. image:: ../../images/steps-07.png
+          :width: 60 px
+          :alt: Step seven.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-run.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
+
+.. source-google-cloud-storage-add-data-source-steps-end
 
 
 .. _source-google-cloud-storage-workflow-actions:
@@ -415,7 +444,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -434,7 +463,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -449,7 +478,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -476,7 +505,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

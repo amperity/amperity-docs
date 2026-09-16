@@ -19,7 +19,9 @@ Stitch QA
 
 .. qa-stitch-about-start
 
-Stitch QA is a process that monitors the quality of Stitch results. Stitch QA has three components: a Stitch QA database, a set of queries to run against the Stitch QA database, and a prescribed workflow to follow while analyzing the results of those queries.
+Stitch QA is an optional process that uses a dedicated database and a series of SQL queries to monitor the quality of Stitch results.
+
+Stitch QA has three components: a Stitch QA database, a set of queries to run against the Stitch QA database, and a prescribed workflow to follow while analyzing the results of those queries.
 
 Use these results to identify over- and underclustering, to identify values to be blocklisted or labeled, or to discover situations where tuning Stitch to match your tenant's data is necessary.
 
@@ -73,7 +75,7 @@ The recommended way to add the Stitch QA database to your tenant is to use the "
 
 The Stitch QA database is preconfigured with the following tables:
 
-.. tip:: The following links open standalone pages for each table. This topic discusses how each of these tables fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each table. Each of the following tables fits within the recommended Stitch QA workflow.
 
 * :doc:`Detailed Examples <table_detailed_examples>`
 * :doc:`Unified Changes Clusters <table_unified_changes_clusters>`
@@ -86,7 +88,7 @@ The Stitch QA database is preconfigured with the following tables:
 
 .. qa-stitch-enable-steps-add-database-tables-uc-and-upr-start
 
-.. tip:: The **Unified Coalesced** and **Unified Preprocessed Raw** tables are frequently used together during Stitch QA because many investigation patterns will compare the values in one table to the values in the other.
+.. tip:: The **Unified Coalesced** and **Unified Preprocessed Raw** tables are often used together during Stitch QA because many investigation patterns will compare the values in one table to the values in the other.
 
 .. qa-stitch-enable-steps-add-database-tables-uc-and-upr-end
 
@@ -108,7 +110,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Stitch QA".
 #. From the **Template** dropdown, select **Stitch QA**.
-#. Click **Create**. This will create a folder, into which a collection of draft Stitch QA queries are added.
+#. Click **Create**. This creates a folder, into which a collection of draft Stitch QA queries are added.
 #. Take a few minutes to review the queries that are added by the "Stitch QA" query template.
 
 .. qa-stitch-enable-steps-add-queries-steps-end
@@ -117,7 +119,7 @@ The recommended way to add Stitch QA queries to your tenant is to use the "Stitc
 
 The Stitch QA folder is preconfigured with the following queries:
 
-.. tip:: The following links open standalone pages for each query. This topic discusses how each of these queries fits within the recommended Stitch QA workflow.
+.. tip:: The following links open standalone pages for each query. Each of the following queries fits within the recommended Stitch QA workflow.
 
 * :doc:`Bad foreign keys <stitch_qa_bad_foreign_keys>`
 * :doc:`Cluster scores <stitch_qa_cluster_scores>`
@@ -206,7 +208,7 @@ What to look for?
 
 It is important to review the quality of Stitch results. The general process for reviewing these results, also referred to as Stitch QA, is to use a series of SQL queries to pull back results that identify issues like overclustering, underclustering, or supersized clusters that indicate areas within the customer data that need more attention.
 
-These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses, unmonitored email accounts, and so on. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity will be the best approach for fine-tuning the quality of Stitch results.
+These issues are most likely caused by values within the data itself, such as from the presence of nicknames or common values that are associated with business addresses and unmonitored email accounts. In most cases, additional configuration within Amperity, such as adding values to a blocklist, will resolve the issue. In some cases, updating configuration settings in Amperity is the best approach for fine-tuning the quality of Stitch results.
 
 * :ref:`Anomalies in Stitch output <qa-stitch-look-for-anomalies>`
 * :ref:`Blocking keys <qa-stitch-look-for-blocking-keys>`
@@ -233,7 +235,7 @@ Anomalies in Stitch output
 
 .. qa-stitch-look-for-anomalies-start
 
-It's important to look for anomalies in Stitch output.
+It is important to look for anomalies in Stitch output.
 
 .. qa-stitch-look-for-anomalies-end
 
@@ -281,8 +283,9 @@ Blocking keys
 
    In some cases, large clusters are split even with matching PII because of this limit. For example:
 
-   .. code-block:: none
-   
+   .. code-block:: sql
+      :linenos:
+
       SELECT
         COUNT(*)
       FROM Unified_Preprocessed_Raw
@@ -291,6 +294,7 @@ Blocking keys
    For example, the following query returns 185 rows:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT COUNT(*)
       FROM Unified_Preprocessed_Raw
@@ -318,7 +322,7 @@ Customer keys
 
 #. Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID. Customer keys are interesting because they show before and after for entity distribution.
 
-   Update this query to use customer keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 (or more) dedupe keys.
+   Update this query to use customer keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys.
 
 .. qa-stitch-look-for-customer-keys-what-end
 
@@ -344,9 +348,9 @@ Foreign keys
 
 .. qa-stitch-look-for-foreign-keys-what-start
 
-#. Look for records where :ref:`the Amperity ID and a foreign key. <qa-stitch-look-for-foreign-keys-bad-matches>`  are equal, but one (or more) values associated with **email**, **given-name**, and **surname** are not.
+#. Look for records where :ref:`the Amperity ID and a foreign key. <qa-stitch-look-for-foreign-keys-bad-matches>`  are equal, but one or more values associated with **email**, **given-name**, and **surname** are not.
 #. :ref:`Compare foreign keys across data sources. <qa-stitch-look-for-foreign-keys-compare>`
-#. Return a rough distribution of :ref:`deduplicated foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>`, and then look for clusters of records 2 (or more).
+#. Return a rough distribution of :ref:`deduplicated foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>`, and then look for clusters of records two or more.
 #. Investigate if blocking size limits for :ref:`foreign keys caused splits <qa-stitch-look-for-foreign-keys-limit>` to groups of records.
 #. Are foreign keys being :ref:`prioritized over separation keys <qa-stitch-look-for-foreign-keys-prioritization>` correctly?
 #. Look for records that :ref:`score at 5.0 <qa-stitch-look-for-foreign-keys-trivial-duplicates>`, but do not have foreign keys in common.
@@ -361,7 +365,7 @@ Bad foreign key matches
 
 .. qa-stitch-look-for-foreign-keys-bad-matches-start
 
-Run the :doc:`bad foreign key matches <stitch_qa_bad_foreign_keys>` query to return records where the Amperity ID and a foreign key are equal, but one (or more) values associated with **email**, **given-name**, and **surname** are not equal.
+Run the :doc:`bad foreign key matches <stitch_qa_bad_foreign_keys>` query to return records where the Amperity ID and a foreign key are equal, but one or more values associated with **email**, **given-name**, and **surname** are not equal.
 
 .. qa-stitch-query-bad-foreign-key-matches-tip-start
 
@@ -391,10 +395,10 @@ Run the :doc:`foreign key validation <stitch_qa_fk_validation>` query and compar
 
 .. important:: The foreign key validation query is a series of small **SELECT** statements that can help focus on and narrow-down specific use cases for validating foreign keys. Use this query to:
 
-   #. Look for :ref:`name IDs with multiple Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
+   #. Look for :ref:`name IDs with many Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-multiple-amperity-ids>`.
    #. Look for :ref:`name IDs with different Amperity IDs <stitch-qa-query-fk-validation-name-ids-with-different-amperity-ids>`.
    #. Inspect :ref:`name IDs across tables <stitch-qa-query-fk-validation-inspect-name-ids>`.
-   #. Check for :ref:`foreign keys with multiple Amperity IDs <stitch-qa-query-fk-validation-multiple-amperity-ids>` across tables.
+   #. Check for :ref:`foreign keys with many Amperity IDs <stitch-qa-query-fk-validation-multiple-amperity-ids>` across tables.
    #. Check for :ref:`foreign keys with different Amperity IDs <stitch-qa-query-fk-validation-different-amperity-ids>` across tables.
    #. Inspect :ref:`foreign keys across tables <stitch-qa-query-fk-validation-inspect-between-tables>`.
 
@@ -410,9 +414,9 @@ Deduplicated distribution
 
 Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID.
 
-Foreign keys are interesting because Amperity deterministically matches on them in most situations. When there are 2 (or more) dedupe keys related to foreign keys, this is an indicator that records were connected beyond what could have been connected deterministically.
+Foreign keys are interesting because Amperity deterministically matches on them in most situations. When there are two or more dedupe keys related to foreign keys, this is an indicator that records were connected beyond what could have been connected deterministically.
 
-Update the query to use foreign keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 (or more) dedupe keys. Evidence of records that are connected, but were previously independent, is :ref:`an indicator of overclustering <qa-stitch-look-for-overclustering>`.
+Update the query to use foreign keys, and then run the query. You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys. Evidence of records that are connected, but were previously independent, is :ref:`an indicator of overclustering <qa-stitch-look-for-overclustering>`.
 
 .. tip:: Use concatenated values, such as "datasource + fk", to focus the results on a per-source level.
 
@@ -460,11 +464,17 @@ When foreign key matching is the priority, Amperity scores record pairs in the f
 
 .. configure-stitch-advanced-matching-strategy-fk-end
 
-.. image:: ../../images/classifier-fk-match.png
+.. figure:: ../../images/classifier-fk-match.png
    :width: 450 px
-   :alt: Foreign key matching priority.
+   :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-fk-match-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 .. configure-stitch-advanced-matching-strategy-start
 
@@ -472,11 +482,17 @@ Amperity is configured by default to prioritize foreign key matching over separa
 
 .. configure-stitch-advanced-matching-strategy-end
 
-.. image:: ../../images/classifier-sk-unmatch.png
+.. figure:: ../../images/classifier-sk-unmatch.png
    :width: 450 px
    :alt: Separation key matching priority.
    :align: left
-   :class: no-scaled-link
+   :class: light-only, no-scaled-link
+
+.. figure:: ../../images/classifier-sk-unmatch-dark.png
+   :width: 450 px
+   :alt: Separation key matching priority.
+   :align: left
+   :class: dark-only, no-scaled-link
 
 
 .. _qa-stitch-look-for-foreign-keys-trivial-duplicates:
@@ -490,7 +506,7 @@ Presence of trivial duplicates
 
 .. qa-stitch-look-for-foreign-keys-trivial-duplicates-start
 
-In some cases, more than one nearly-identical record is passed to downstream Stitch processes. These nearly-identical records are referred to as "trivial duplicates".
+In some cases, more than one nearly identical record is passed to downstream Stitch processes. These nearly identical records are referred to as "trivial duplicates".
 
 For example, a situation where a high number of records are associated to the same foreign key, the same email address, and the same name, but many individual record are associated to a unique physical address.
 
@@ -506,18 +522,22 @@ This approach can help records survive blocking by ensuring groups of records ar
 
 #. Use a combination of the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables to review and compare the data that is associated with these records to help understand why groups of records were matched or why certain records were assigned to a cluster.
 
-   .. tip:: The **Unified Coalesced** table contains two useful columns that help identify trivial duplicates: **rep_ds** and **rep_pk**.
+   .. tip:: The **Unified Coalesced** table has two useful columns that help identify trivial duplicates: **rep_ds** and **rep_pk**.
 
       * **rep_pk** is an identifier that represents the first grouping of records done by Stitch. This grouping is based on identical semantic patterns.
       * **rep_ds** is the datasource that is associated with the **rep_pk** column.
 
-      The combination of **rep_ds** and **rep_pk** represent nearly-identical records that were grouped together by Stitch early in the identity resolution process. (These nearly-identical records are also referred to as a "trivial duplicate".) All of these nearly-identical records are treated as a single record by downstream Stitch processes.
+      The combination of **rep_ds** and **rep_pk** represent nearly identical records that were grouped together by Stitch early in the identity resolution process.
+
+      .. note:: nearly identical records are also referred to as a "trivial duplicate.
+
+      All nearly identical records are treated as a single record by downstream Stitch processes.
 
    .. include:: ../../amperity_reference/source/semantics.rst
       :start-after: .. semantics-key-foreign-trivial-duplicates-start
       :end-before: .. semantics-key-foreign-trivial-duplicates-end
 
-#. Look for records that score at 5.0, but do not have foreign keys in common. One (or both) records likely have a trivial duplicate with another record with a different foreign key, causing there to be a foreign key match between two groups of trivial duplicates.
+#. Look for records that score at 5.0, but do not have foreign keys in common. One or both records likely have a trivial duplicate with another record with a different foreign key, causing there to be a foreign key match between two groups of trivial duplicates.
 #. If a trivial duplicate is identified, :ref:`configure Stitch to use a semantic exclusion <configure-stitch-advanced-trivial-duplicates-exclusions>`.
 
 .. qa-stitch-look-for-foreign-keys-trivial-duplicates-what-end
@@ -538,7 +558,7 @@ Overclustering
 
 .. qa-stitch-look-for-overclustering-important-start
 
-.. important:: The presence of overclustering has the greatest effect on Stitch quality!
+.. important:: The presence of overclustering has the greatest effect on Stitch quality.
 
 .. qa-stitch-look-for-overclustering-important-end
 
@@ -556,14 +576,14 @@ For example, two records with the same Amperity ID look as if they should be two
 
 .. qa-stitch-look-for-overclustering-what-start
 
-#. Run the :doc:`bad foreign key matches <stitch_qa_bad_foreign_keys>` query to return records where the Amperity ID and a foreign key are equal, but one (or more) values associated with **email**, **given-name**, and **surname** are not equal.
-#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers.
+#. Run the :doc:`bad foreign key matches <stitch_qa_bad_foreign_keys>` query to return records where the Amperity ID and a foreign key are equal, but one or more values associated with **email**, **given-name**, and **surname** are not equal.
+#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 #. Run the :doc:`cluster size distribution <stitch_qa_cluster_size_distribution>` query and look for a long-tail of supersized clusters.
 #. Run the :doc:`dedupe keys per Amperity ID <stitch_qa_dedupe_keys_per_amperity_id>` query to return a rough distribution of dedupe keys to Amperity ID.
 
    :ref:`Foreign keys <qa-stitch-look-for-foreign-keys-deduplicated-distribution>` are interesting because Amperity deterministically matches on them in most situations. :ref:`Customer keys <qa-stitch-look-for-customer-keys>` are interesting because they show before and after for entity distribution.
 
-   You should not expect obvious "good" or "bad" results, instead focus on clusters that return 2 (or more) dedupe keys.
+   You should not expect obvious "good" or "bad" results, instead focus on clusters that return two or more dedupe keys.
 
 #. Run the :doc:`common values <stitch_qa_common_values>` query to return common values across semantics in a single view that shows cardinality for semantic values and the context for values that occur across records and clusters.
 
@@ -599,9 +619,9 @@ Problematic nicknames
 
 Nicknames can affect the results of blocking and clustering when they prevent obvious matches from being matched. For example, Mike is a nickname for Michael. :ref:`Blocking strategies <configure-stitch-advanced-clustering-blocking>` that include **given-name** use the first three characters to match records.
 
-In this example, "Mik" and "Mic" do not match, but :ref:`depending the presence of foreign keys and other profile values <configure-stitch-advanced-clustering-matching-strategy>` (like **email**, **surname**, **phone**, and **address**), these records may still be scored together.
+In this example, "Mik" and "Mic" do not match, but :ref:`depending the presence of foreign keys and other profile values <configure-stitch-advanced-clustering-matching-strategy>` records may still be scored together.
 
-Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations. You can :doc:`upload your own static CSV files to extend the list of common nicknames to add and/or remove nicknames <stitch_nicknames>` as needed for your tenant.
+Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations. You can :doc:`upload your own static CSV files to extend the list of common nicknames to add or remove nicknames <stitch_nicknames>` as needed for your tenant.
 
 .. qa-stitch-look-for-problematic-nicknames-end
 
@@ -615,7 +635,7 @@ Record pairs and scores
 
 The quality of record pairs and their associated pairwise comparison scores should be investigated, starting with low-scoring record pairs in each cluster. At the start of the Stitch QA process it is not uncommon for low-scoring record pairs in a cluster to fall below threshold for pairwise comparison scoring.
 
-Each cluster of records will contain high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
+Each cluster of records has high-scoring record pairs with transitive connections to other high-scoring record pairs. A low-scoring record pair often does not show a transitive connection to a high-scoring record pair.
 
 Each cluster with low-scoring record pairs should be investigated to confirm if those pairs were accurately clustered and to determine if transitive connections to other high-scoring record pairs do exist.
 
@@ -629,7 +649,7 @@ Each cluster with low-scoring record pairs should be investigated to confirm if 
 
 #. Run the :doc:`weakest match <stitch_qa_weakest_match>` query and examine low-scoring record pairs to confirm if those records were accurately clustered.
 #. Run the :doc:`cluster scores <stitch_qa_cluster_scores>` query to investigate pairwise comparison scores for individual clusters or for a set of clusters.
-#. Nicknames (unusual or less common) can be a reason for a low-scoring record pair.
+#. Unusual or less common nicknames can be a reason for a low-scoring record pair.
 #. Consider tuning Stitch to :ref:`raise or lower the pairwise comparison scoring threshold <configure-stitch-advanced-clustering-matching-thresholds>`. The default threshold is 3.0.
 
    .. important:: The default threshold is recommended, regardless of data quality or volume of data or quality of your current Stitch results. A lower threshold leads to more matches and fuzzier matched pairs, whereas a higher threshold will lead to fewer matches and more precise matched pairs. The default threshold is the right balance. Look for ways to resolve low-scoring record pairs without changing the pairwise comparison scoring threshold.
@@ -655,7 +675,7 @@ You should periodically review at a high level cluster sizes and source cluster 
 #. Run the :doc:`cluster size distribution <stitch_qa_cluster_size_distribution>` query to identify if distinct entities are clustered together, if :ref:`clusters are supersized <qa-stitch-look-for-supersized-clusters>`, or for other :ref:`indicators of overclustering <qa-stitch-look-for-overclustering>`.
 #. Run the :doc:`source cluster distribution <stitch_qa_source_cluster_distribution>` query to return a breakdown of record-to-cluster size distribution by datasource.
 #. Run the :doc:`connections across sources <stitch_qa_connections_across_sources>` query to return a count of clusters that are comprised of records across various combinations of datasources.
-#. Run the :doc:`combined statistics <stitch_qa_combined_statistics>` query to return an overview of Stitch statistics that contains the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
+#. Run the :doc:`combined statistics <stitch_qa_combined_statistics>` query to return an overview of Stitch statistics that has the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
 #. Run the :doc:`separated statistics <stitch_qa_separated_statistics>` query to return an overview of Stitch statistics, separated by dedupe keys and tables.
 
 .. qa-stitch-look-for-review-cluster-details-end
@@ -674,7 +694,7 @@ Be sure to apply semantic tags consistently across data sources, in particular f
 
 .. table-unified-preprocessed-raw-use-with-qa-stitch-tags-keys-start
 
-Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile and/or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less frequently used profile semantic tags is applied to a new data source.
+Use the **Customer 360** page to verify that rows with profile semantic tags and foreign keys are selected to be available to the **Queries** page. Has the list of profile or foreign key semantics changed since the last time you have performed Stitch QA? This will occur when a data source is added that requires a new foreign key *or* in a situation where one of the less often used profile semantic tags is applied to a new data source.
 
 Open the table in the **Database Explorer** and verify that all rows in the table that are associated with a semantic tag or a foreign key have a checkmark in the left column. Rows without a checkmark will not make the associated **FIELD** available to the **Queries** page. If rows do not have a checkmark, edit the table and apply the checkmark, save the table, activate the Stitch QA database, and then run the database to refresh the table.
 
@@ -702,12 +722,12 @@ Open the table in the **Database Explorer** and verify that all rows in the tabl
 
    Look for inconsistencies in the results of semantic tagging and, if discovered, edit them to apply consistent tagging patterns, rerun Stitch, and then re-review the results.
 
-#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and/or post office boxes, and for semantic tagging issues that may arise when using multiple, ordinal, or namespaced semantics.
+#. Run the :doc:`split clusters <stitch_qa_split_clusters>` query to investigate patterns in split clusters that lack transitive connections for names, email addresses, and post office boxes, or for semantic tagging issues that may arise when using many, ordinal, or namespaced semantics.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
-#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are generally good identifiers.
+#. Run the :doc:`many semantic values <stitch_qa_many_semantic_values>` query to explore cases where a single Amperity ID is associated with many different semantic values or associated with combinations of semantic values that are good identifiers.
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 .. qa-stitch-look-for-semantic-tags-what-end
 
@@ -721,9 +741,11 @@ Supersized clusters
    :start-after: .. term-supersized-cluster-start
    :end-before: .. term-supersized-cluster-end
 
+.. vale off
+
 .. configure-stitch-advanced-configuration-supersized-clusters-example-start
 
-A supersized cluster is created when multiple transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
+A supersized cluster is created when many transitive connections are present. For example, a couple named Mary Johnson and Jeffrey Johnson with the following records:
 
 #. Mary Johnson, maryjohnson @gmail.com, 50 1st Avenue, New York, NY, with 50 connected records.
 #. Jeffrey Johnson, jeffjohnson @gmail.com, 50 1st Avenue, New York, NY, with 25 connected records.
@@ -739,6 +761,8 @@ These records block together in the following ways:
 All four groups of records transitively connect into a single connected cluster with a size of 100.
 
 .. configure-stitch-advanced-configuration-supersized-clusters-example-end
+
+.. vale on
 
 **What to look for**
 
@@ -767,14 +791,14 @@ Underclustering
 
 #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+   This query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 #. Run the :doc:`common values <stitch_qa_common_values>` query to return common values across semantics in a single view that shows cardinality for semantic values and the context for values that occur across records and clusters.
 #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to look for underclustering. The results of this query help identify incorrectly split entities, explain the cardinality of semantic values, and identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 #. Look for two records that have been assigned different Amperity IDs, but should have been assigned the same Amperity ID. Do they share a foreign key? Do they have profile (PII) values in common?
 #. Determine if your :ref:`foreign key matching vs. separation key unmatching <configure-stitch-advanced-clustering-matching-strategy>` strategy needs to be modified. 
 #. Are larger clusters part of a :ref:`supersized cluster <qa-stitch-look-for-supersized-clusters>`?
-#. Look at the first names. Are they similar to the human eye, but potentially different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
+#. Look at the first names. Are they similar to the human eye, but different based on edit distance? Should they be added to the :ref:`list of common nicknames <qa-stitch-look-for-problematic-nicknames>`?
 #. Open the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables and compare values in the **component_id** column. Did these records block together?
 
    .. include:: ../../shared/terms.rst
@@ -811,7 +835,7 @@ Values to blocklist
    #. Run the :doc:`many Amperity IDs <stitch_qa_many_amperity_ids>` query to identify values to add to the :doc:`bad-values blocklist <blocklist_bad_values>`.
    #. Run the :doc:`unmatched semantic values <stitch_qa_unmatched_semantic_values>` query and look for situations where unique semantic values are equal, but Amperity IDs are not.
 
-      The unmatched semantic values query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, frequency limits, and so on.
+      The unmatched semantic values query has a :ref:`variety of use cases focused on individual semantic values <stitch-qa-query-unmatched-semantic-values-use>`, such as running against only **email**, **phone**, or **address** semantic values, combinations of semantic values, or frequency limits.
 
 #. Use a combination of the :doc:`Unified Coalesced <table_unified_coalesced>` and :doc:`Unified Preprocessed Raw <table_unified_preprocessed_raw>` tables to review and compare the values associated with **blv_** columns in the **Unified Coalesced** table. Are these values in the :doc:`Stitch BlocklistValues table <table_stitch_blocklistvalues>`?
 

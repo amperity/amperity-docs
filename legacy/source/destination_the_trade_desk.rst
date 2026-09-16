@@ -20,10 +20,14 @@
 
 
 ==================================================
-Configure campaigns for The Trade Desk
+Send data to The Trade Desk
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_the_trade_desk.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-thetradedesk-start
@@ -43,7 +47,7 @@ Configure campaigns for The Trade Desk
 
 .. destination-the-trade-desk-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -52,33 +56,33 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
        Amperity can manage :ref:`custom audiences <destination-the-trade-desk-custom-audiences>` for |destination-name| demand-side platform, from which your brand can reach those audiences throughout their entire digital journey and across every channel and device, including:
 
-       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events (Major League Baseball), in-store advertising at WalMart, and more.
+       * Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events, such as Major League Baseball, and more.
        * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
        * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Custom audiences
-          :align: left
+          :alt: Events
+          :align: center
           :class: no-scaled-link
-     - **Offline events**
+     - **Events**
 
-       :ref:`Offline events <destination-the-trade-desk-offline-events>` help your brand track offline conversions---for in-store sales, place visits, and other events---for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
+       :ref:`Events <destination-the-trade-desk-offline-events>` help your brand track offline conversions--for in-store sales, place visits, and other events--for your marketing campaigns. Send offline measurement data to |destination-name|, and then use that data for attribution and targeting.
 
-       .. tip:: Send offline events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
+       .. tip:: Send events to |destination-name| as soon as possible, ideally, within 1 to 3 days of the transaction date and avoid sending data older than 25 days.
 
 .. destination-the-trade-desk-custom-audiences-and-offline-events-end
 
 .. destination-the-trade-desk-api-note-start
 
-.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences and send offline events.
+.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences and send events.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -94,7 +98,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
 
 #. :ref:`Get details <destination-the-trade-desk-get-details>`
 #. :ref:`Custom audiences <destination-the-trade-desk-custom-audiences>`
-#. :ref:`Offline events <destination-the-trade-desk-offline-events>`
+#. :ref:`Events <destination-the-trade-desk-offline-events>`
 
 .. destination-the-trade-desk-steps-to-send-end
 
@@ -115,7 +119,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
@@ -129,15 +133,15 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The name of a segment in |destination-name|.
 
-       Membership duration defines the length of time (in days) at which individual audience members will belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
+       Membership duration defines the length of time in days at which individual audience members belong to the segment in |destination-name|. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the default duration. The maximum value is "180".
 
        .. tip:: Set this value to "0" to remove all audience members.
 
-       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than (or equal to) than the frequency at which your brand will send campaigns or orchestrations from Amperity.
+       .. caution:: The membership duration is measured in days. Adjust the membership duration value to be greater than or equal to than the frequency at which your brand sends campaigns or orchestrations from Amperity.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -146,7 +150,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - You may use a query to build the list of email addresses or you may select the **email** attribute from the attribute editor in your campaigns.
 
@@ -158,7 +162,7 @@ Get details
           :start-after: .. sendtos-build-query-email-only-start
           :end-before: .. sendtos-build-query-email-only-end
 
-       .. include:: ../../amperity_amp360/source/destination_the_trade_desk.rst
+       .. include:: ../../amperity_user/source/destination_the_trade_desk.rst
           :start-after: .. sendto-the-trade-desk-build-query-start
           :end-before: .. sendto-the-trade-desk-build-query-end
 
@@ -166,17 +170,17 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - **The Trade Desk offline events only**
+     - **The Trade Desk events only**
 
-       A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
+       A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name appears in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send events to |destination-name|.
 
        .. important:: The tracking tag name must be unique across all offline tracking tags, especially if shared between an advertiser and an offline provider. The tracking tag name must not duplicate any previous name for the same advertiser and offline data provider ID.
 
           |destination-name| uses a combination of the tracking tag name, your brand's advertiser ID, and offline data provider ID to build an offline tracking tag ID your brand can use to help measure the success of your marketing campaigns.
 
-       A :ref:`query that defines the set of offline events <destination-the-trade-desk-offline-events-build-query>` to be sent to |destination-name|.
+       A :ref:`query that defines the set of events <destination-the-trade-desk-offline-events-build-query>` to be sent to |destination-name|.
 
 
 .. destination-the-trade-desk-get-details-end
@@ -219,8 +223,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -239,8 +243,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -273,8 +277,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -286,9 +290,9 @@ Add destination
           :align: left
           :class: no-scaled-link
 
-       Optional. You may define a segment name and membership duration (in days) for individual audience members. These may be left blank, and then specified with a data template.
+       Optional. You may define a segment name and membership duration in days for individual audience members. These may be left blank, and then specified with a data template.
 
-       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than or equal to the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -296,8 +300,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -310,8 +314,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -345,8 +349,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -365,8 +369,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -374,7 +378,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step two.
           :align: left
           :class: no-scaled-link
 
@@ -385,8 +389,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -398,7 +402,7 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than (or equal to) the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
+       .. tip:: The membership duration is measured in days. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration, but this value should be greater than or equal to the frequency at which your brand sends campaigns or orchestrations to |destination-name|.
 
           For example, if your brand sends a campaign to |destination-name| every 30 days, then the membership duration should be set to "30". If your brand sends a campaign every 14 days, then the membership duration should be set to "14".
 
@@ -409,8 +413,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -429,10 +433,10 @@ Add data template
 
 .. _destination-the-trade-desk-offline-events:
 
-Offline events
+Events
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-overview-start
    :end-before: .. events-the-trade-desk-overview-end
 
@@ -442,15 +446,15 @@ Offline events
 Build a query
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-end
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-tip-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-tip-end
 
-.. include:: ../../amperity_ampiq/source/events_the_trade_desk.rst
+.. include:: ../../amperity_user/source/events_the_trade_desk.rst
    :start-after: .. events-the-trade-desk-offline-events-build-query-example-start
    :end-before: .. events-the-trade-desk-offline-events-build-query-retail-end
 
@@ -478,8 +482,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -498,8 +502,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -528,8 +532,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -550,7 +554,7 @@ Add destination
           * - **Setting**
             - **Description**
           * - **Tracking tag name**
-            - A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name will appear in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send offline events to |destination-name|.
+            - A tracking tag name must be provided. The value for the tracking tag name is a string with a maximum of 256 characters. The tracking tag name appears in the UI for |destination-name| exactly as it is entered in the configuration for a destination in Amperity that is configured to send events to |destination-name|.
 
               .. important:: The tracking tag name must be unique across all offline tracking tags, especially if shared between an advertiser and an offline provider. The tracking tag name must not duplicate any previous name for the same advertiser and offline data provider ID.
 
@@ -559,8 +563,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -573,8 +577,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -590,7 +594,7 @@ Add data template
 
 .. destination-meta-ads-manager-offline-events-add-data-template-start
 
-Offline events must be sent using a query and orchestration. The data template associated with offline events should not be made available to the **Campaigns** editor.
+Events must be sent using a query and orchestration. The data template associated with events should not be made available to the **Campaigns** editor.
 
 .. destination-meta-ads-manager-offline-events-add-data-template-end
 
@@ -604,8 +608,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -617,13 +621,13 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       Enter the name of the data template and a description. For example: "|destination-name| offline events" and "Send offline events to |destination-name|.".
+       Enter the name of the data template and a description. For example: "|destination-name| events" and "Send events to |destination-name|.".
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -631,7 +635,7 @@ Offline events must be sent using a query and orchestration. The data template a
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access-no-campaigns.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -642,8 +646,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -655,7 +659,7 @@ Offline events must be sent using a query and orchestration. The data template a
           :align: left
           :class: no-scaled-link
 
-       The name of the segment in |destination-name|. The membership duration defines the length of time (in days) at which individual audience members will belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
+       The name of the segment in |destination-name|. The membership duration defines the length of time in days at which individual audience members belong to the segment. The minimum value should be "7" because |destination-name| uses the previous seven days when building audiences. "14" is the recommended duration. Set this value to "0" to clear out the audience in the segment.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-note-start
@@ -664,8 +668,8 @@ Offline events must be sent using a query and orchestration. The data template a
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -686,12 +690,12 @@ Offline events must be sent using a query and orchestration. The data template a
 
 .. _destination-the-trade-desk-parameters-offline-events:
 
-Offline events paramaters
+Events paramaters
 ==================================================
 
 .. destination-the-trade-desk-parameters-offline-events-start
 
-The following table describes each of the parameters that are required by |destination-name| for offline events. The **TD1** - **TD10** fields represent the optional fields your brand may include to extend customer profiles to include offline events.
+The following table describes each of the parameters that are required by |destination-name| for events. The **TD1** - **TD10** fields represent the optional fields your brand may include to extend customer profiles to include events.
 
 The fields are listed alphabetically, but may be returned by the query in any order.
 
@@ -703,7 +707,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
      - Description
 
    * - **cat**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **item_code**, **name**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **item_code**, **name**, **price**, and **qty**.
 
        The name of a product in your product catalog.
 
@@ -727,9 +731,9 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The three-letter country code for the country in which the offline event occurred.
 
-       .. note:: Offline events should only be sent to |destination-name| when they occurred within the United States.
+       .. note:: Events should only be sent to |destination-name| when they occurred within the United States.
 
-          Use a **WHERE** clause to limit query results to only offline events that occurred within the United States.
+          Use a **WHERE** clause to limit query results to only events that occurred within the United States.
 
           .. code-block:: sql
 
@@ -748,11 +752,11 @@ The fields are listed alphabetically, but may be returned by the query in any or
           You may use **uid2** as an attribute when Amperity is configured as a `UID2 Operator <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| for your brand.
 
    * - **eventname**
-     - **Optional**; **Required** for sending product catalogs alongside offline events.
+     - **Optional**, but **Required** for sending product catalogs alongside events.
 
-       An event name groups your brand's offline events a specific category type for offline events as defined by |destination-name|.
+       An event name groups your brand's events a specific category type for events as defined by |destination-name|.
 
-       The event name that most frequently is associated with offline events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table (listed alphabetically):
+       The event name that most frequently is associated with events for retail transactions is "purchase", but the event name may be any of the event names that are described in the following table, listed alphabetically:
 
        .. list-table::
           :widths: 25 75
@@ -773,7 +777,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
           * - **purchase**
             - Default. A user completed a purchase.
 
-              .. tip:: Recommended for *all* retail offline events.
+              .. tip:: Recommended for *all* retail events.
 
           * - **searchcategory**
             - A user searched for a category
@@ -798,7 +802,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **item_code**
-     - **Optional**; **Required** when transaction details are included with offline events. See **cat**, **name**, **price**, and **qty**.
+     - **Optional**, but **Required** when transaction details are included with events. See **cat**, **name**, **price**, and **qty**.
 
        The unique identifier for a product in your brand's product catalog.
 
@@ -812,7 +816,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **name**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **price**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **price**, and **qty**.
 
        The name of a product in your brand's product catalog.
 
@@ -830,7 +834,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        A unique identifier for the transaction. The value for this field is a string with a maximum of 64 characters.
 
-       .. note:: This field should be included with offline events to help |destination-name| deduplicate conversion events.
+       .. note:: This field should be included with events to help |destination-name| deduplicate conversion events.
 
        This value is most often associated with the **Order ID** field in the **Unified Transactions** table. Within the **SELECT** statement, return **Order ID**, and then rename it to the field name required by |destination-name|.
 
@@ -842,7 +846,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **price**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, **name**, and **qty**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, **name**, and **qty**.
 
        The price of each item that is associated with an offline event. For example: "$9.99"
 
@@ -856,7 +860,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **qty**
-     - **Optional**; **Recommended** when transaction details are included with offline events. See **cat**, **item_code**, and **price**.
+     - **Optional**, but **Recommended** when transaction details are included with events. See **cat**, **item_code**, and **price**.
 
        The number of items that are associated with an offline event. For example: "10".
 
@@ -871,7 +875,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
 
    * - **region**
-     - **Optional**; **Required** when **country** is included with offline events.
+     - **Optional**, but **Required** when **country** is included with events.
 
        The region in which the offline event occurred. For the United States, **region** refers to the state in which the offline event occurred.
 
@@ -884,7 +888,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
           ,country AS country
           ,state AS region
 
-       .. tip:: Use a **WHERE** clause to limit query results to only offline events that occurred in specific states.
+       .. tip:: Use a **WHERE** clause to limit query results to only events that occurred in specific states.
 
           .. code-block:: sql
 
@@ -904,7 +908,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
           ,store_id AS storeid
 
-       If you don't need to track offline events by individual physical stores, you may use a purchase channel to define this value. For example:
+       If you do not need to track events by individual physical stores, you may use a purchase channel to define this value. For example:
 
        .. code-block:: sql
 
@@ -920,9 +924,9 @@ The fields are listed alphabetically, but may be returned by the query in any or
    * - **timestamp**
      - **Required**
 
-       A field in a database table that contains the date and time at which the offline event occurred.
+       A field in a database table that has the date and time at which the offline event occurred.
 
-       For retail-focused offline events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Order Datetime** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and how your brand has configured Amperity. Within the **SELECT** statement, return **Order Datetime**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -953,9 +957,9 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The monetary value of the offline event to your brand. The value for this field must be a decimal.
 
-       .. note:: This field should be included with offline events to help |destination-name| deduplicate conversion events.
+       .. note:: This field should be included with events to help |destination-name| deduplicate conversion events.
 
-       For retail-focused offline events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Order Value** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and how your brand has configured Amperity. Within the **SELECT** statement, return **Order Value**, and then rename it to the field name required by |destination-name|.
 
        For example:
 
@@ -969,7 +973,7 @@ The fields are listed alphabetically, but may be returned by the query in any or
 
        The currency that was associated with the offline event.
 
-       For retail-focused offline events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and/or how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
+       For retail-focused events this is most often the **Currency** field in the **Unified Transactions** table, but it may be from a different table depending on your use case and how your brand has configured Amperity. Within the **SELECT** statement, return **Currency**, and then rename it to the field name required by |destination-name|.
 
        For example:
 

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -14,17 +15,17 @@
         General advice
 
 ==================================================
-General advice
+General advice for sending data
 ==================================================
 
 .. send-data-to-amperity-start
 
-This topic contains general advice and recommendations for sending data to Amperity.
+General advice and recommendations for sending data to Amperity.
 
 Sending data to Amperity is the combination of:
 
 #. Identifying a data source. It is important to define data sources to have predictable handoffs.
-#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that will be used (cloud-based storage, SFTP, FiveTran, REST API, or Snowflake) to make that available.
+#. Determining the location from which that data source will be made available to Amperity, the file format to be provided, and the process that is used (cloud-based storage, SFTP, Fivetran, REST API, or Snowflake) to make that available.
 
    .. important:: Even if you do not see a data source in various lists of data sources that are shown to be "available" (such as on the Amperity website or on various pages within the documentation site), this does not mean you cannot send data from that source. A significant percentage of data sources used by Amperity customers are enabled using cloud-based storage.
 
@@ -37,14 +38,15 @@ For a production environment, most data sources are configured to run once per 2
 * Processing all queries and segments that have downstream dependencies
 * Sending query results or audiences to all configured destinations and marketing channels
 
-.. note:: Preprocessing or filtering data before sending it to Amperity is typically not required, but sometimes business and security concerns will require it.
+.. note:: Preprocessing or filtering data before sending it to Amperity is typically not required, but sometimes business and security concerns requires it.
 
 .. send-data-to-amperity-end
 
 .. send-data-to-amperity-sections-start
 
-The following sections contain specific advice and/or recommendations:
+The following sections contain specific advice and recommendations:
 
+* :ref:`Character encoding <send-data-to-amperity-character-encoding>`
 * :ref:`Credentials and secrets <send-data-to-amperity-credentials-and-secrets>`
 * :ref:`File formats <send-data-to-amperity-file-format>`
 * :ref:`Pull data vs. push data <send-data-to-amperity-pull-vs-push>`
@@ -57,6 +59,20 @@ The following sections contain specific advice and/or recommendations:
 .. send-data-to-amperity-sections-end
 
 
+.. _send-data-to-amperity-character-encoding:
+
+Character encoding
+==================================================
+
+.. send-data-to-amperity-character-encoding-start
+
+Character encoding within files must be in `UTF-8 <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link| or `UTF-16 <https://en.wikipedia.org/wiki/UTF-16>`__ |ext_link|, including the use of valid escape characters for the provided file format.
+
+When using UTF-16 character encoding ensure the file honors the byte order mark (BOM) for the header row *and* all later data rows.
+
+.. send-data-to-amperity-character-encoding-end
+
+
 .. _send-data-to-amperity-credentials-and-secrets:
 
 Credentials and Secrets
@@ -66,7 +82,7 @@ Credentials and Secrets
 
 Amperity requires the ability to connect to, and then read data from the data source. The credentials that allow that connection and the ability to read that data are entered into the Amperity user interface while configuring a courier.
 
-These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using SnapPass to complete the configuration.
+These credentials are created and managed by the owner of the data source, which is often external to Amperity (but is sometimes a system that is owned by Amperity, such as Amazon S3 or Azure Blob Storage). Credentials must be provided to Amperity using |ext_snappass| to complete the configuration.
 
 .. send-data-to-amperity-credentials-and-secrets-end
 
@@ -144,7 +160,7 @@ Amperity can ingest data from many types of data sources, such as:
 * |format_ndjson|
 * |format_json| and |format_json_streaming|
 * Many REST APIs
-* Snowflake tables, including data sources that use FiveTran to send data
+* Snowflake tables, including data sources that use Fivetran to send data
 * |format_cbor|
 
 .. send-data-to-amperity-file-format-other-end
@@ -175,7 +191,7 @@ Data may be provided to Amperity in the following ways:
    
    Some data sources provide a REST API that may be used to provide data to Amperity, such as |source_campaign_monitor|.
 
-   Many data sources are eligible to use FiveTran as the interface that pulls data to Amperity, such as |source_hubspot| |source_klaviyo|, |source_kustomer|, |source_shopify|, |source_sailthru|, and |source_square|.
+   Many data sources are eligible to use Fivetran as the interface that pulls data to Amperity, such as |source_hubspot| |source_klaviyo|, |source_kustomer|, |source_shopify|, |source_sailthru|, and |source_square|.
 #. The customer pushes data to Amperity via the |api_streaming_ingest|.
 
    .. note:: This scenario should only be used for transactional or event-like data that would be streamed as it happens.
@@ -183,8 +199,6 @@ Data may be provided to Amperity in the following ways:
 Amperity strongly recommends and prefers data exchange to use customer-managed cloud storage locations. This is because many REST APIs are designed for smaller volumes or have record limits. An additional challenge is that many REST APIs are record oriented rather than change oriented. This can result in scenarios like deleted records not showing up in incremental pulls or sources that are missing discrete data on upstream merges.
 
 Systems that support change data capture (CDC) are often suitable, but those types of systems are uncommon. Even when systems do support all of these properties, upstream changes, such as normalizing a status column or changing a billing code, can cause updates to large percentages of records, which can be risky given the preference for 24-hour cadences for all workflows.
-
-A hybrid path where a REST API is used for partial incremental changes, and then a separate file-based delivery path is used for catch-ups (either on regular intervals or on-demand) adds more surface area (i.e. risk) to the workflow.
 
 Some REST APIs support bulk delivery, which can perform with the same type of reliability as cloud-accessible storage locations.
 
@@ -210,9 +224,16 @@ To push data to Amperity you may use the |api_streaming_ingest|.
 Apache Spark
 ==================================================
 
-.. include:: ../../amperity_reference/source/sql_spark.rst
-   :start-after: .. sql-spark-recommendation-load-sizes-start
-   :end-before: .. sql-spark-recommendation-load-sizes-end
+.. send-data-to-amperity-apache-spark-start
+
+Apache Spark prefers to load 1-10000 files with a 1-1000 MB size. Apache Spark parses one hundred 10 MB files faster than ten 100 MB files and much faster than one 10000 MB file. When loading large files to Amperity, as a general guideline to optimize the performance of Apache Spark, look to create situations where:
+
+* The number of individual files is below 3000.
+* The range of individual file sizes is below 100 MB.
+
+Put differently, Apache Spark parses three thousand 100 MB files faster than three hundred 1000 MB files and much faster than thirty 10000 MB files.
+
+.. send-data-to-amperity-apache-spark-end
 
 
 .. _send-data-to-amperity-connection-details:
@@ -235,7 +256,7 @@ The following collection details are needed for customer-owned Amazon S3, Azure 
    * - Azure Blob Storage
      - Using shared access credentials, the name of the container, the blob prefix, and credential details.
    * - SFTP
-     - Host name, user name, public key (preferred).
+     - Recommended. Host name, user name, and public key.
 
        -or-
 
@@ -259,63 +280,33 @@ Date Formats
 IP addresses for allowlists
 ==================================================
 
-.. send-data-to-amperity-ip-allowlists-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-end
 
-You can add Amperity services to allowlists that may be required by upstream systems. The IP address that should be added to the allowlist for the upstream system depends on the service to which that upstream system will connect.
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-important-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-important-end
 
-.. send-data-to-amperity-ip-allowlists-end
-
-.. send-data-to-amperity-ip-allowlists-important-start
-
-.. important:: Amperity does not maintain allowlists for connections that are made to Amperity services from upstream systems.
-
-.. send-data-to-amperity-ip-allowlists-important-end
-
-.. send-data-to-amperity-ip-allowlists-warning-start
-
-.. warning:: Using an IP allowlist is not recommended. Many issues can arise when an IP address is on an allowlist within Amazon AWS or Microsoft Azure because both services use their own internal networks for routing.
-
-   * Amazon AWS recommends against using allowlists on the SourceIP condition because it `denies access to AWS services that make calls on your behalf <https://aws.amazon.com/premiumsupport/knowledge-center/iam-restrict-calls-ip-addresses/>`__ |ext_link|
-   * Microsoft Azure suggests that using IP allowlists for shared access signature (SAS) tokens is only recommended for use with IP addresses that are located outside of Microsoft Azure.
-
-.. send-data-to-amperity-ip-allowlists-warning-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-warning-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-warning-end
 
 **When connecting to your Amperity tenant**
 
-.. send-data-to-amperity-ip-allowlists-amperity-start
-
-Most connections are made directly to your Amperity tenant. Use one of the following Amperity IP addresses for an allowlist that is required by an upstream system. The specific IP address to use depends on the location in which your tenant is hosted:
-
-* On Amazon AWS use "52.42.237.53"
-* On Amazon AWS (Canada) use "3.98.199.97"
-* On Microsoft Azure use "104.46.106.84" and "20.81.91.210"
-* On Microsoft Azure (EU) use "20.123.127.54"
-
-.. send-data-to-amperity-ip-allowlists-amperity-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-amperity-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-amperity-end
 
 **When connecting to the attached SFTP site**
 
-.. send-data-to-amperity-ip-allowlists-sftp-start
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-sftp-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-sftp-end
 
-Some connections are made directly to the SFTP site that is included with your Amperity tenant. The specific IP address to use depends on the location in which your tenant is hosted:
-
-* On Amazon AWS use "52.11.51.214"
-* On Amazon AWS (Canada) use "52.60.229.171"
-* On Microsoft Azure use "20.36.236.80"
-* On Microsoft Azure (EU) use "51.104.139.110"
-
-.. send-data-to-amperity-ip-allowlists-sftp-end
-
-.. send-data-to-amperity-ip-allowlists-tip-start
-
-.. tip:: Alternatives to using an allowlist include: 
-
-   #. Cross-account roles within Amazon AWS, which requires using an Amazon Resource Name (ARN) for the role with cross-account access.
-   #. Using Azure Data Share.
-
-   Discuss these options with your Amperity representative prior to making a decision to allowlist IP addresses.
-
-.. send-data-to-amperity-ip-allowlists-tip-end
+.. include:: ../../amperity_reference/source/infrastructure.rst
+   :start-after: .. send-data-to-amperity-ip-allowlists-tip-start
+   :end-before: .. send-data-to-amperity-ip-allowlists-tip-end
 
 
 .. _send-data-to-amperity-large-datasets:

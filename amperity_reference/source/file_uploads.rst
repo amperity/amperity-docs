@@ -3,23 +3,28 @@
 
 .. meta::
     :description lang=en:
-        Upload CSV files directly to the Customer 360, Queries, Segments, and Campaigns pages.
+        Upload CSV files directly to the Customer 360, Queries, and Segments pages.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Upload CSV files directly to the Customer 360, Queries, Segments, and Campaigns pages.
+        Upload CSV files directly to the Customer 360, Queries, and Segments pages.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
         File uploads
 
 ==================================================
-File uploads
+About file uploads
 ==================================================
 
 .. file-uploads-overview-start
 
-Use the file upload feature on the **Customer 360** and **Queries** pages to upload CSV files to a database to use on the **Queries**, **Segments**, and **Campaigns** pages.
+Use file uploads from the **Customer 360** and **Queries** pages to upload CSV files to a database. Uploaded files are accessible as tables from the **Queries** page and can be made available as audiences from the **Segments** page.
+
+When making files available in the segment editor, you can choose how the file matches to customer records:
+
+* **Activation ID** Choose a column in the file that exactly matches one of your configured activation IDs. Files configured this way can be used in segments that use the selected activation ID.
+* **Legacy match** Select an email column to join on the **Merged Customers** table and return the Amperity ID. Files configured this way can only be used in segments that use the Amperity ID (not segments using a different activation ID).
 
 .. image:: ../../images/modal-file-uploads.png
    :width: 400 px
@@ -27,30 +32,88 @@ Use the file upload feature on the **Customer 360** and **Queries** pages to upl
    :align: left
    :class: no-scaled-link
 
+Uploaded files belong to the database to which they are uploaded, but are not refreshed by scheduled workflows or included within customer profiles. Uploaded files cannot be referenced by database tables.
+
+If the data in an uploaded file *should* be part of a scheduled workflow *or* included within customer profiles, upload the CSV file using a feed, apply semantic tags or foreign keys, and then make the uploaded file available to Stitch workflows.
+
 .. file-uploads-overview-end
 
 .. file-uploads-overview-from-a-sandbox-start
 
-.. important:: Files that are uploaded to a sandbox are copied to your production tenant when that sandbox is promoted.
+.. important:: Files uploaded to a sandbox are copied to your production tenant when the sandbox is promoted. Files uploaded to production are copied to a sandbox and are available after the database is refreshed in the sandbox.
 
 .. file-uploads-overview-from-a-sandbox-end
 
 
- .. _file-uploads-use-cases:
+.. _file-uploads-use-cases:
  
-File upload use cases
+File uploads use cases
 ==================================================
 
 .. file-uploads-use-cases-start
 
-You can use the CSV file upload feature to upload a CSV file to a database. The following examples shows several ways you can use this feature:
+Upload CSV files to a database to support ad hoc use cases. For example:
 
-* Upload an anonymous list of customers which the system then connects with known customers with Amperity IDs
-* Upload a reference file to render on the **Queries** page
-* Upload a list of customers who filled out a survey in order to include in a campaign that addresses their concerns
+* Upload a recently acquired anonymous list of customers
+* Upload a list of customers who have signed up using a form
+* Upload a reference file, and then access it from the **Queries** page
+* Upload a list of customers who completed a survey, and then include those customers in a segment
+
+.. important:: CSV files uploaded for use with segments must identify either:
+
+   * A column that matches one of your configured activation IDs (for activation ID matching), or
+   * A column containing valid email addresses (for legacy matching via the **Merged Customers** table)
 
 .. file-uploads-use-cases-end
 
+.. _file-uploads-segment-matching:
+
+Segment matching options
+--------------------------------------------------
+
+.. file-uploads-segment-matching-start
+
+When uploading a file and selecting **Make available in segment editor**, you must choose a matching method:
+
+.. file-uploads-segment-matching-end
+
+
+.. _file-uploads-activation-id:
+
+Activation ID
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. file-uploads-activation-id-start
+
+Use activation ID matching when your uploaded file has a column that corresponds to one of your tenant's configured activation IDs.
+
+#. From the **Configure File** window, select **Make available in segment editor**.
+#. Select **Activation ID**.
+#. From the dropdown, choose a column in your file that exactly matches one of your configured activation IDs.
+
+Files configured with activation ID matching can be used in segments that use the selected activation ID. For example, if your file has a column of email addresses that match your email activation ID, you can use this file in segments activated on email.
+
+.. file-uploads-activation-id-end
+
+
+.. _file-uploads-legacy-match:
+
+Legacy match
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. file-uploads-legacy-match-start
+
+Use legacy matching when you want to associate customers in your uploaded file with their Amperity customer profiles using email addresses.
+
+#. From the **Configure File** window, select **Make available in segment editor**.
+#. Select **Legacy match**.
+#. From the **Email Column** dropdown, select the column in your file that has email addresses.
+
+Legacy matching joins the email column in your uploaded file to the **Merged Customers** table and returns the corresponding Amperity ID. Files configured with legacy matching can only be used in segments that use the Amperity ID.
+
+.. note:: Legacy match is recommended when you want to preserve the existing behavior of matching uploaded files to customer profiles via email and using the results in Amperity ID-based segments.
+
+.. file-uploads-legacy-match-end
 
 .. _file-uploads-example-sql:
 
@@ -59,11 +122,11 @@ SQL use case example
 
 .. file-uploads-example-sql-start
 
-Upload a list of customers to include or exclude from a campaign by building a query against file uploads that return the Amperity ID via the file upload feature.
+Upload a list of customers to include or exclude from an audience by building a query against file uploads that returns the Amperity ID.
 
-The following example shows SQL in the **Query Editor** that returns a series of values from an uploaded file, joins those values to the **Merged Customers** table (using the **email** column in both tables), and then returns a list of Amperity IDs.
+The following example shows SQL in the **Query Editor** that returns a series of values from an uploaded file, joins those values to the **Merged Customers** table using the **email** column in both tables, and then returns a list of Amperity IDs.
 
-.. note:: This is not required for uploaded files that contain an **email** column. For more complex use cases, a query that is made available to segments and campaigns must return a list of Amperity IDs.
+.. note:: This is not required for uploaded files that contain an **email** column. For more complex use cases, a query that is made available to segments must return a list unique by Amperity ID.
 
 .. image:: ../../images/mockup-queries-tab-query-in-segments.png
    :width: 600 px
@@ -72,6 +135,7 @@ The following example shows SQL in the **Query Editor** that returns a series of
    :class: no-scaled-link
 
 .. code-block:: sql
+   :linenos:
 
    WITH file_upload AS (
       SELECT
@@ -106,13 +170,14 @@ Example inbound request
 The following example shows a inbound request for a customer list in the form of a CSV file:
 
 .. code-block:: none
+   :linenos:
 
    customer,email
    John Doe,john.doe@abc.com
    Jane Doe,jane.doe@abc.com
    John Smith,john.smith@abc.com
    Jane Smith,jane.smith@abc.com
-   Jim Johns,jim.jones@abc.com
+   Jim Johns,jim.johns@abc.com
 
 .. file-uploads-example-request-end
 
@@ -124,12 +189,12 @@ Query output
 
 .. file-uploads-query-output-start
 
-The following are some ways that you can use this feature on the **Segments Editor** and on the **Campaigns** page: 
+The following examples show how to use file uploads from the **Segment Editor** and from the **Campaigns** page: 
 
-* Create a complex view of customers on the **Segments** page by adding a query output to a segment, which can also be included or excluded in a campaign on the **Campaigns** page.
-* Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page.
+* Create a complex view of customers on the **Segments** page by adding a query output to a segment
+* Create a custom join logic from an uploaded customer list for further segmentation in the **Segment Editor** and on the **Campaigns** page
 
-   .. note:: Queries that are made available for segments and campaigns can reference any uploaded files within the database that they are associated with.
+   .. note:: Queries made available for segments can reference any uploaded files within the database to which they are associated.
 
 .. file-uploads-query-output-end
 
@@ -141,7 +206,7 @@ How-tos
 
 .. file-uploads-overview-start
 
-This section describes tasks related to uploading CSV files and adding query outputs to segments and campaigns in Amperity.
+Tasks related to uploading CSV files and adding query outputs to segments in Amperity.
 
 .. file-uploads-overview-end
 
@@ -188,18 +253,19 @@ You can add a query output to a segment from the **Segment Editor**.
 #. From the **Condition** menu, select a condition.
 #. From the value menu, either select a value *or* search for a value in the search field.
 #. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **Queries** section, select a query output.
 
-   .. note:: To delete a segment associated with a query output, you will need to first delete the query output before being able to delete the segment.
+.. note:: To delete a segment associated with a query output, you need to first delete the query output before being able to delete the segment.
    
 #. Click **Save As**.
 
 The data appears on the **Segments** page.
 
-.. note:: In order for a query output to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column in to the .CSV file.
+.. note:: In order for an uploaded file to appear in the **Segment Editor**, you must configure it with one of the following matching methods:
 
-   If your uploaded file doesn't have any Amperity IDs, you can select an email field to join one from the **Merged Customers** table on the **Configure File** window.
+   * **Activation ID** The file has a column that matches one of your configured activation IDs. The file can be used in segments using that activation ID.
+   * **Legacy match** The file has an email column that joins to the **Merged Customers** table to return the Amperity ID. The file can only be used in segments using the Amperity ID.
 
 .. file-uploads-add-query-steps-end
 
@@ -223,7 +289,7 @@ You can select a query source from the **Campaigns** page.
 #. In the **Queries (Custom Tables)**, select a query source.
 #. Click **Save**.
 
-   .. note:: To delete a campaign associated with a query output, you must first delete the uploaded file before being able to delete the segment.
+.. note:: To delete an audience associated with a query output, you must first delete the uploaded file before deleting the segment.
 
 .. file-uploads-select-query-source-steps-end
 
@@ -239,7 +305,7 @@ You can add an uploaded file to a segment from the **Segment Editor**.
 
 .. note:: It may take up to 10 minutes for your file to upload and you can only upload one file per tenant at a time.
 
-.. warning:: Uploaded CSV files are limited to 50MB.
+.. warning:: Uploaded CSV files are limited to 50 MB.
 
 .. file-uploads-add-query-end
 
@@ -253,10 +319,10 @@ You can add an uploaded file to a segment from the **Segment Editor**.
 #. From the **Condition** menu, select a condition.
 #. From the value menu, either select a value *or* search for a value in the search field.
 #. Click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **File Uploads** section, select an uploaded file output.
 
-   .. note:: To delete a segment associated with a query output, you must first delete the uploaded file before being able to delete the segment.
+.. note:: To delete a segment associated with a query output, you must first delete the uploaded file before being able to delete the segment.
    
 #. Click **Save As**.
 
@@ -281,7 +347,7 @@ You can view a list of uploaded files on the **Segment Editor**.
 .. file-uploads-view-file-segment-steps-start
 
 #. From the **Segment Editor** window, click **Add List**.
-#. From the **Condition** list, select **Is a member of...**.
+#. From the **Condition** list, select **Is a member of**.
 #. From the **Customer Lists** list, in the **File Uploads** section, view a list of uploaded files.
 
 .. file-uploads-view-file-segment-steps-end
@@ -311,7 +377,7 @@ Upload CSV file
 
 You can upload a CSV file in Amperity to use on the **Queries**, **Segments**, and **Campaigns** pages.
 
-.. note:: When you upload a file to Amperity, the system will write a table from the data contained in that file. The table is then layered on top of a database at the queries (storage-service) layer. 
+.. note:: When you upload a file to Amperity, the system writes a table from the data contained in that file. The table is then layered on top of a database at the queries layer.
 
    Amperity does not enforce a time constraint on how long uploaded files can remain in the database.
 
@@ -319,12 +385,12 @@ You can upload a CSV file in Amperity to use on the **Queries**, **Segments**, a
 
 .. admonition:: Multi-brand databases
 
-   A file is uploaded to a single database. When your tenant is configured for multi-brand databases a file must be uploaded to each database.
+   A file is uploaded to a single database. When your tenant is configured for multi-brand databases, and an uploaded file must be available to more than one database, upload the CSV file to each database.
 
 
 .. _file-uploads-via-c360:
 
-Upload file via the Customer 360 page
+Upload via the Customer 360 page
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. file-uploads-via-c360-start
@@ -342,17 +408,17 @@ You can upload a CSV file the **Customer 360** page.
 #. Wait a few moments for the file to upload.
 #. In the **File Identifier** field, select a file.
 #. Select **Make available in segment editor**.
-#. In the **Email** field, select a incoming field to have the data mapped to that field.
+#. Choose a matching method: Select **Activation ID** and choose a column that matches one of your configured activation IDs *OR* select **Legacy match** and choose an email column to join on the **Merged Customers** table.
 #. Click **Save**.
 
-   .. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you will need to add the Amperity ID field as a column or add the email field as a column to the CSV file.
+.. note:: In order for the uploaded customer list to appear on the **Segment Editor**, you need to add the Amperity ID field as a column or add the email field as a column to the CSV file.
 
 .. file-uploads-via-c360-steps-end
 
 
 .. _file-uploads-via-queries:
 
-Upload file via the Query editor
+Upload via the Query editor
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. file-uploads-via-queries-start
@@ -379,12 +445,12 @@ You can upload a CSV file from the **Query Editor** page.
 #. Wait a few moments for the file to upload.
 #. In the **File Identifier** field, select a file.
 #. Select **Make available in Segment Editor**.
-#. In the **Email** field, select a incoming field to have the data mapped to that field.
+#. Choose a matching method: Select **Activation ID** and choose a column that matches one of your configured activation IDs *OR* select **Legacy match** and choose an email column to join on the **Merged Customers** table.
 #. Click **Save**.
 
-   .. note:: The uploaded file is not added as a table to your database.
+.. note:: The uploaded file is not added as a table to your database.
 
-   .. warning:: Only upload CSV files on the **Query Editor**, if you are going to add additional SQL to your query.
+.. warning:: Only upload CSV files on the **Query Editor** if you are going to add additional SQL to your query.
 
 .. file-uploads-via-queries-steps-end
 

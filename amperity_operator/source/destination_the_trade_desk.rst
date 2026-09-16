@@ -6,7 +6,7 @@
 .. |plugin-name| replace:: "The Trade Desk"
 .. |credential-type| replace:: "tradedesk"
 .. |required-credentials| replace:: "advertiser ID" and "advertiser secret"
-.. |what-send| replace:: email addresses, EUID, or UID2 tokens
+.. |what-send| replace:: email addresses, phone numbers, EUID, or UID2 tokens
 .. |where-send| replace:: |destination-name|
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "180"
@@ -24,13 +24,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for The Trade Desk
+        Configure destinations for The Trade Desk
 
 ==================================================
-Configure destination for The Trade Desk
+Configure destinations for The Trade Desk
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_the_trade_desk.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-thetradedesk-start
@@ -40,7 +38,7 @@ Configure destination for The Trade Desk
 
 Amperity can manage audiences within |destination-name| demand-side platform, from which your brand can reach those audiences throughout their entire digital journey and across every channel and device, including:
 
-* Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events (Major League Baseball), in-store advertising at WalMart, and more.
+* Display advertising on ABC, ESPN, the Wall Street Journal, live sporting events, such as Major League Baseball, and more.
 * Video advertising on over-the-top (OTT) and connected TV (CTV) apps and platforms, such as Disney+, Major League Baseball, Hulu, Fox, Vevo, Paramount+, and more.
 * Audio advertising in-between songs and during podcasts across Spotify, Pandora, SoundCloud, iHeart, and more.
 
@@ -62,7 +60,7 @@ Amperity can manage audiences within |destination-name| demand-side platform, fr
 
 .. destination-the-trade-desk-api-note-start
 
-.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences and send offline events.
+.. note:: This destination uses the `The Trade Desk API <https://api.thetradedesk.com/v3/portal/data/doc/UnifiedIDs>`__ |ext_link| to manage audiences and send events.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -89,47 +87,49 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - A `UID 2.0 agreement <https://docs.amperity.com/reference/uid2.html>`__ |ext_link| and / or a `European Unified ID (EUID) agreement <https://docs.amperity.com/reference/euid.html>`__ |ext_link|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-id-start
-          :end-before: .. credential-the-trade-desk-advertiser-id-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-id-start
+             :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-secret-start
-          :end-before: .. credential-the-trade-desk-advertiser-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-secret-start
+             :end-before: .. credential-the-trade-desk-advertiser-secret-end
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-find-id-and-secret-start
-          :end-before: .. credential-the-trade-desk-find-id-and-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-find-id-and-secret-start
+             :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Segment name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-segment-name-start
-          :end-before: .. setting-the-trade-desk-segment-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-segment-name-start
+             :end-before: .. setting-the-trade-desk-segment-name-end
 
 .. destination-the-trade-desk-get-details-end
 
@@ -157,8 +157,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -166,8 +166,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -175,30 +175,32 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-id-start
-          :end-before: .. credential-the-trade-desk-advertiser-id-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-id-start
+             :end-before: .. credential-the-trade-desk-advertiser-id-end
 
        **Advertiser secret**
+
           |checkmark-required| **Required**
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-advertiser-secret-start
-          :end-before: .. credential-the-trade-desk-advertiser-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-advertiser-secret-start
+             :end-before: .. credential-the-trade-desk-advertiser-secret-end
 
-       .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-the-trade-desk-find-id-and-secret-start
-          :end-before: .. credential-the-trade-desk-find-id-and-secret-end
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-the-trade-desk-find-id-and-secret-start
+             :end-before: .. credential-the-trade-desk-find-id-and-secret-end
 
 .. destination-the-trade-desk-credentials-steps-end
 
@@ -222,8 +224,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -242,8 +244,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -258,8 +260,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -278,8 +280,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -287,32 +289,43 @@ Add destination
 
        **Segment name** (Required at orchestration)
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-segment-name-start
-          :end-before: .. setting-the-trade-desk-segment-name-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-segment-name-start
+             :end-before: .. setting-the-trade-desk-segment-name-end
 
        **Membership duration**
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-common-membership-duration-start
-          :end-before: .. setting-common-membership-duration-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-common-membership-duration-start
+             :end-before: .. setting-common-membership-duration-end
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-membership-duration-minmax-start
-          :end-before: .. setting-the-trade-desk-membership-duration-minmax-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-membership-duration-minmax-start
+             :end-before: .. setting-the-trade-desk-membership-duration-minmax-end
 
-       .. include:: ../../shared/destination_settings.rst
-          :start-after: .. setting-the-trade-desk-membership-duration-example-start
-          :end-before: .. setting-the-trade-desk-membership-duration-example-end
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-the-trade-desk-membership-duration-example-start
+             :end-before: .. setting-the-trade-desk-membership-duration-example-end
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-the-trade-desk-add-steps-end

@@ -8,6 +8,7 @@
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |what-pull| replace:: streamed data
 .. |credential-type| replace:: **iam-credential**
+.. |filter-the-list| replace:: "ama"
 
 
 .. meta::
@@ -44,12 +45,7 @@ Amperity can pull data from Amazon |source-name| via Amazon S3. A common scenari
 
 #. :ref:`Get details <source-amazon-kinesis-data-firehose-get-details>`
 #. :ref:`Configure Amazon Kinesis Data Firehose <source-amazon-kinesis-data-firehose-kinesis-data-firehose>`
-#. :ref:`Add courier <source-amazon-kinesis-data-firehose-add-courier>`
-#. :ref:`Get sample files <source-amazon-kinesis-data-firehose-get-sample-files>`
-#. :ref:`Add feeds <source-amazon-kinesis-data-firehose-add-feeds>`
-#. :ref:`Add load operations <source-amazon-kinesis-data-firehose-add-load-operations>`
-#. :ref:`Run courier <source-amazon-kinesis-data-firehose-run-courier>`
-#. :ref:`Add to courier group <source-amazon-kinesis-data-firehose-add-to-courier-group>`
+#. :ref:`Add data source and feed <source-amazon-kinesis-data-firehose-add-data-source>`
 
 .. source-amazon-kinesis-data-firehose-steps-to-pull-end
 
@@ -70,17 +66,17 @@ The |source-name| destination requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The name of the S3 bucket from which data will be pulled to Amperity, which is also the bucket to which the Firehose delivery stream will write data.
+     - The name of the S3 bucket from which data is pulled to Amperity, which is also the bucket to which the Firehose delivery stream writes data.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - For cross-account role assumption you will need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
+     - For cross-account role assumption you need the value for the **Target Role ARN**, which enables Amperity to access the customer-managed Amazon S3 bucket.
 
        .. note:: The values for the **Amperity Role ARN** and the **External ID** fields are provided automatically.
 
@@ -94,10 +90,10 @@ The |source-name| destination requires the following configuration details:
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
-     - A list of objects (by filename and file type) in the S3 bucket to be sent to Amperity and a sample for each file to simplify feed creation.
+     - A list of objects by filename and file type in the S3 bucket to be sent to Amperity and a sample for each file to simplify feed creation.
 
        Review :ref:`how to configure Kinesis Data Firehose <source-amazon-kinesis-data-firehose-kinesis-data-firehose>`.
 
@@ -115,7 +111,7 @@ Configure Kinesis Data Firehose
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-start
 
-You may configure any supported data producer to use |source-name| services to automatically send real-time streaming data to |source-name|, and then make that data available to Amperity. Amperity can be configured to pull the real-time data (in batches) from any Amazon S3 location. It is recommended to send this data to a customer-managed Amazon S3 bucket, and then configure Amperity to pull data from that bucket.
+You may configure any supported data producer to use |source-name| services to automatically send real-time streaming data to |source-name|, and then make that data available to Amperity. Amperity can be configured to pull batched real-time data from any Amazon S3 location. It is recommended to send this data to a customer-managed Amazon S3 bucket, and then configure Amperity to pull data from that bucket.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-end
 
@@ -142,9 +138,9 @@ Record separators
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-record-separators-start
 
-Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you will need to configure the delivery stream to add `a record separator <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format>`__ |ext_link| at the end of each data record.
+Data records are delivered to Amazon S3 as an Amazon S3 object. If you need to ensure that individual records are available to Amperity in |source-name|, you need to configure the delivery stream to add `a record separator <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#format>`__ |ext_link| at the end of each data record.
 
-When using the |source-name| connector, which only accepts NDJSON files, you will need to ensure that each data record is followed by a newline character.
+When using the |source-name| connector, which only accepts NDJSON files, you need to ensure that each data record is followed by a newline character.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-record-separators-end
 
@@ -158,8 +154,8 @@ Filename patterns
 
 Recommended `filename patterns <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#s3-object-name>`__ |ext_link| include:
 
-* Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix will create a logical hierarchy in the bucket by year, then month, then date, and finally hour.
-* Using the default |source-name| object naming pattern that increments (by an increase of 1) a random string at the end of the object's filename.
+* Using the YYYY/MM/DD/HH format when writing objects to |source-name|. This prefix creates a logical hierarchy in the bucket by year, then month, then date, and finally hour.
+* Using the default |source-name| object naming pattern that increments by 1 a random string at the end of the object's filename.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-filename-patterns-end
 
@@ -173,7 +169,7 @@ Delivery frequency
 
 The |source-name| buffer size and interval will determine the `frequency of delivery <https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#frequency>`__ |ext_link|. Incoming records will be concatenated based on the frequency of the delivery stream. 
 
-.. warning:: If data fails to deliver to |source-name|, |source-name| will retry for up to 24 hours. If data fails to deliver within 24 hours, the data will be lost, unless it is successfully delivered to a backup location. (You can re-send data if it's backed up.)
+.. warning:: If data fails to deliver to |source-name|, |source-name| will retry for up to 24 hours. If data fails to deliver within 24 hours, the data will be lost, unless it is successfully delivered to a backup location. You can re-send data if it is backed up.
 
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-delivery-frequency-end
 
@@ -192,176 +188,223 @@ Delivery failures
 .. source-amazon-kinesis-data-firehose-kinesis-data-firehose-delivery-failures-end
 
 
-.. _source-amazon-kinesis-data-firehose-add-courier:
+.. _source-amazon-kinesis-data-firehose-add-data-source:
 
-Add courier
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
-**To add a courier**
-
-.. source-amazon-kinesis-data-firehose-add-courier-steps-start
-
-#. From the **Sources** page, click **Add Courier**. The **Add Source** page opens.
-#. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
-
-   This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** dropdown, select **Create a new credential**. This opens the **Create New Credential** dialog box. 
-#. Enter a name for the credential, the IAM access key, and the IAM secret key. Click **Save**.
-#. Under **Settings**, add the name of the S3 bucket to which the Firehose delivery stream will write.
-#. Configure the list of files to pull to Amperity. Configure the **Entities List** for each file to be loaded to Amperity. For example, the files from two different streams: "customer-records" and "transaction-records".
-
-   ::
-
-      [
-        {
-          "object/type": "file",
-          "object/file-pattern": "'/production/customer-records/'yyyy/MM/dd'/*.ndjson'",
-          "object/land-as": {
-            "file/tag": "customer-records",
-            "file/content-type": "application/x-ndjson"
-          }
-        },
-        {
-          "object/type": "file",
-          "object/file-pattern": "'/production/transaction-records/'yyyy/MM/dd'/*.ndjson'",
-          "object/land-as": {
-            "file/tag": "transaction-records",
-            "file/content-type": "application/x-ndjson"
-          }
-        }
-      ]
-
-#. Under **Settings** set the load operations to a string that is obviously incorrect, such as **df-xxxxxx**. (You may also set the load operation to empty: "{}".)
-
-   .. tip:: If you use an obviously incorrect string, the load operation settings will be saved in the courier configuration. After the schema for the feed is defined and the feed is activated, you can edit the courier and replace the feed ID with the correct identifier.
-
-   .. caution:: If load operations are not set to "{}" the validation test for the courier configuration settings will fail.
-#. Click **Save**.
-
-.. source-amazon-kinesis-data-firehose-add-courier-steps-end
-
-
-.. _source-amazon-kinesis-data-firehose-get-sample-files:
-
-Get sample files
+Add data source and feed
 ==================================================
 
 .. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-start
-   :end-before: .. sources-get-sample-files-end
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-**To get sample files**
+**To add a data source for an Amazon S3 bucket**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-amazon-kinesis-data-firehose-add-data-source-steps-start
 
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-.. _source-amazon-kinesis-data-firehose-add-feeds:
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-Add feeds
-==================================================
+       .. image:: ../../images/mockup-sources-add-01-select-source.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-feed-start
-   :end-before: .. term-feed-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-note-file-start
-   :end-before: .. sources-add-feed-note-file-end
-
-**To add a feed**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-steps-start
-   :end-before: .. sources-add-feed-steps-end
-
-
-.. _source-amazon-kinesis-data-firehose-add-load-operations:
-
-Add load operations
-==================================================
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-start
-   :end-before: .. sources-add-load-operation-end
-
-**Example load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-example-intro-start
-   :end-before: .. sources-add-load-operation-example-intro-end
-
-.. source-amazon-kinesis-data-firehose-add-load-operations-example-start
-
-For example:
-
-::
-
-   {
-     "CUSTOMER-RECORDS-FEED-ID": [
-       {
-         "type": "truncate"
-       },
-       {
-         "type": "load",
-         "file": "customer-records"
-       }
-     ],
-     "TRANSACTION-RECORDS-FEED-ID": [
-       {
-         "type": "load",
-         "file": "transaction-records"
-       }
-     ]
-   }
-
-.. source-amazon-kinesis-data-firehose-add-load-operations-example-end
-
-**To add load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-steps-start
-   :end-before: .. sources-add-load-operation-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
-.. _source-amazon-kinesis-data-firehose-run-courier:
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-sources-configure-already-configured-start
+          :end-before: .. credentials-sources-configure-already-configured-end
 
-Run courier manually
-==================================================
+       .. tip::
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-start
-   :end-before: .. sources-run-courier-end
+          .. include:: ../../shared/credentials.rst
+             :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
+             :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
-**To run the courier manually**
+          .. image:: ../../images/mockup-credentials-add-02-credential-status-s3.png
+             :width: 380 px
+             :alt: Add 
+             :align: left
+             :class: no-scaled-link
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-select-file-start
+          :end-before: .. sources-steps-03-select-file-end
+
+       .. image:: ../../images/mockup-sources-add-03-file-settings.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-start
+          :end-before: .. sources-steps-03-browse-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-note-start
+          :end-before: .. sources-steps-03-browse-note-end
+
+       .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-pgp-start
+          :end-before: .. sources-steps-03-pgp-end
+
+       .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
 
-.. _source-amazon-kinesis-data-firehose-add-to-courier-group:
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-start
+          :end-before: .. sources-steps-04-review-end
 
-Add to courier group
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-formatting.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-group-start
-   :end-before: .. term-courier-group-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-contents-start
+          :end-before: .. sources-steps-04-review-contents-end
 
-**To add the courier to a courier group**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-pgp-start
+          :end-before: .. sources-steps-04-review-pgp-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-to-courier-group-steps-start
-   :end-before: .. sources-add-to-courier-group-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-formatting-details-start
+          :end-before: .. sources-steps-04-review-formatting-details-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-file-types-start
+          :end-before: .. sources-steps-04-file-types-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
+
+
+       **New feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
+
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
+
+
+   * - .. image:: ../../images/steps-07.png
+          :width: 60 px
+          :alt: Step seven.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-run.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
+
+.. source-amazon-kinesis-data-firehose-add-data-source-steps-end

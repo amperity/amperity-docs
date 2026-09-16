@@ -4,7 +4,7 @@
 Semantic tags
 ==================================================
 
-This topic contains a list of semantic tags that are individually shown as tooltips within the Amperity user interface.
+A list of semantic tags that are individually shown as tooltips within the Amperity user interface.
 
 
 
@@ -708,7 +708,7 @@ Product catalogs
 
 **pc/product-gender**
 
-   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, **NULL** (for unknown).
 
 **pc/product-group**
 
@@ -817,7 +817,7 @@ SMS opt-in and subscriber status
 
 **sms-opt/phone**
 
-   The phone number to which a marketing may (or may not) be sent.
+   The phone number to which a marketing may or may not be sent.
 
 **sms-opt/region**
 
@@ -1009,7 +1009,7 @@ Transactions
 
 **txn-item/product-gender**
 
-   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, NULL (for unknown).
+   Apply this as a custom semantic tag to a fields that contain a list of gender options for products. For example: F, M, unisex, **NULL** (for unknown).
 
 **txn-item/product-group**
 

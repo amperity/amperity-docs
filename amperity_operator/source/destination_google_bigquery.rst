@@ -18,10 +18,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Google BigQuery
+        Configure destinations for Google BigQuery
 
 ==================================================
-Configure destination for Google BigQuery
+Configure destinations for Google BigQuery
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -30,7 +30,7 @@ Configure destination for Google BigQuery
 
 .. destination-google-bigquery-steps-to-send-start
 
-This topic describes how to configure Amperity to send files to a cloud storage destination, load data from that destination to Google BigQuery, and then enable downstream applications and workflows.
+Configure Amperity to send files to a cloud storage destination, load data from that destination to Google BigQuery, and then enable downstream applications and workflows.
 
 .. destination-google-bigquery-steps-to-send-end
 

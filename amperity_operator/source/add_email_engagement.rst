@@ -37,7 +37,7 @@ About data sources
 
 .. add-email-engagement-data-sources-start
 
-There are two general types of data sources that may be used to provide email engagement data to Amperity: "raw email events" and "summarized events".
+Two types of data sources exist for providing email engagement data to Amperity: "raw email events" and "summarized events".
 
 Your tenant's approach to adding email engagement will determine which types of data sources to use, along with which sets of semantic tags will be applied to incoming data.
 
@@ -53,11 +53,11 @@ Raw email events
 
 Raw email events data is captured by email service providers when users interact with emails, such as opens, clicks, opt-ins, opt-outs, sends, unsubscribes, and conversions.
 
-A custom domain table is often necessary to :ref:`filter and reshape raw email events data <add-email-engagement-example-custom-domain-table>` prior to applying :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags.
+A custom domain table is often necessary to :ref:`filter and reshape raw email events data <add-email-engagement-example-custom-domain-table>` before applying :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags.
 
 Raw email events data is available from most email service providers, though the specific data points that are available may vary from provider to provider.
 
-Salesforce Marketing Cloud, Oracle Repsonsys, Mailchimp, Campaign Monitor, Bluecore, Klaviyo, Adobe Marketo, Adobe Campaign, Sailthru, Listrak, SendGrid, and HubSpot are all data sources that can provide usable raw email events data to Amperity.
+Salesforce Marketing Cloud, Oracle Repsonsys, Mailchimp, Campaign Monitor, Bluecore, Klaviyo, Adobe Marketo, Adobe Campaign, Sailthru, Listrak, SendGrid, and HubSpot are all data sources that can send usable raw email events data to Amperity.
 
 .. add-email-engagement-data-source-raw-end
 
@@ -77,13 +77,13 @@ Summarized email events
 
 Summarized email events data is subset of raw email events data that is scoped to support a specific set of email engagement data.
 
-Email events data should be summarized prior to sending that data to Amperity. In some use cases, you may use a custom domain table to do the summarization prior to applying semantic tags, and then apply the :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags.
+Email events data should be summarized before sending that data to Amperity. In some use cases, you may use a custom domain table to do the summarization before applying semantic tags, and then apply the :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags.
 
 Examples of summarized email events data include:
 
 * Email opens in the previous N days
 * Email clicks in the previous N days
-* Most recent click (date and time)
+* Most recent click, including date and time
 * Filters by opt-in and opt-out customers
 
 .. add-email-engagement-data-source-rollup-end
@@ -106,7 +106,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
 #. Use :ref:`email events <add-email-engagement-semantics-email-events>` semantic tags when raw email events data is sent directly to Amperity.
 
-#. Use :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags when email events data is summarized prior to sending it to Amperity.
+#. Use :ref:`email summary <add-email-engagement-semantics-email-summary>` semantic tags when email events data is summarized before sending it to Amperity.
 
 .. semantics-email-end
 
@@ -121,7 +121,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
 .. semantics-email-tip-start
 
-.. tip:: If the email service provider does not provide email addresses alongside sends and clicks data, look for a table from that email service provider that provides a list of contacts that may include email addresses along with a unique ID that can be used to link events data.
+.. tip:: If the email service provider does not send email addresses alongside sends and clicks data, look for a table from that email service provider that sends a list of contacts that may include email addresses along with a unique ID that can be used to link events data.
 
 .. semantics-email-tip-end
 
@@ -185,14 +185,14 @@ Steps to enable
 
 .. email-engagement-steps-start
 
-There are two options available for email engagement:
+Do one of the following:
 
-#. :ref:`Unified (from raw email events data) <email-engagement-steps-workflow-unified>`
-#. :ref:`Summarized (from summarized email events data) <email-engagement-steps-workflow-summarized>`
+#. :ref:`Unified engagement from raw email events data <email-engagement-steps-workflow-unified>`
+#. :ref:`Summarized engagement from summarized email events data <email-engagement-steps-workflow-summarized>`
 
 Choose the option that matches the type of email engagment data that your organization will make available to Amperity.
 
-.. important:: :ref:`Email engagement attributes <email-engagement-steps-engagement-attributes>` are available to both options. These attributes use the **Merged Customers** table to associate email events data with the Amperity ID. Add the **Email Engagement Attributes** table to your customer 360 database after the **Unified Email Events** and/or **Email Engagement Summary** tables are available.
+.. important:: :ref:`Email engagement attributes <email-engagement-steps-engagement-attributes>` are available to both options. These attributes use the **Merged Customers** table to associate email events data with the Amperity ID. Add the **Email Engagement Attributes** table to your customer 360 database after the **Unified Email Events** and **Email Engagement Summary** tables are available.
 
 .. email-engagement-steps-end
 
@@ -218,6 +218,7 @@ This option starts with semantically tagging raw email events data, and then add
 #. Use Spark SQL to build a custom domain table that maps the incoming fields to the following field names: **Sent**, **Open**, **Click**, **Unsubscribe**, **Optin**, **Bounce**, and **Converted**. For example:
 
    .. code-block:: sql
+      :linenos:
 
       ,CASE 
         WHEN EventType = 'Sent' THEN 'Sent'
@@ -229,8 +230,8 @@ This option starts with semantically tagging raw email events data, and then add
         WHEN EventType = 'Bounce' THEN 'Bounce'
       END AS EventType
 
-#. A field for **Brand** must be added if it's not already present in the source data. Most email service providers do not provide brand unless there is multi-brand data. Brands may be identifiable by an account ID or some other indicator.
-#. A field for **SendID** must be added if it's not already present in the source data. The send ID is a unique identifier for a given email send action. An open and click data point may share the same send ID.
+#. A field for **Brand** must be added if it is not already present in the source data. Most email service providers do not provide brand unless there is multi-brand data. Brands may be identifiable by an account ID or some other indicator.
+#. A field for **SendID** must be added if it is not already present in the source data. The send ID is a unique identifier for a given email send action. An open and click data point may share the same send ID.
 
    Some email service providers do not provide a send ID directly. When a **SendID** is not directly available, build one using a concatenation similar to:
 
@@ -291,7 +292,7 @@ Engagement attributes
 
 .. email-engagement-steps-engagement-attributes-start
 
-The **Email Engagement Attributes** table is available to both options and may be added as a SQL table after the **Unified Email Events** and/or **Email Events Summary** tables have been added as passthrough tables.
+The **Email Engagement Attributes** table is available to both options and may be added as a SQL table after the **Unified Email Events** and **Email Events Summary** tables have been added as passthrough tables.
 
 .. important:: To improve the quality of email engagement data be sure that each email address is associated to only one Amperity ID. 
 
@@ -324,6 +325,7 @@ Salesforce Marketing Cloud
 .. add-email-engagement-example-custom-domain-table-salesforce-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH union_data AS (
    SELECT
@@ -429,6 +431,7 @@ Oracle Responsys
 .. add-email-engagement-example-custom-domain-table-responsys-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH union_data AS (
      SELECT

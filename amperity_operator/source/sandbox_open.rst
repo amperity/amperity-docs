@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -23,7 +24,7 @@ Configure your tenant
 Use a sandbox to safely make changes to your production tenant:
 
 #. :doc:`Create a sandbox <sandbox_create>` before making configuration changes to your tenant.
-#. Access the sandbox (this topic), and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
+#. Open the sandbox, and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
 #. :doc:`Promote configuration changes <sandbox_promote>` to your production tenant.
 
 This is part two of a series of topics that describes how your brand can use sandboxes to safely make changes to your production tenant.
@@ -34,7 +35,7 @@ This is part two of a series of topics that describes how your brand can use san
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when working in a sandbox to make configuration state changes to production.
+The following sections describe the steps you will follow when working in a sandbox to make configuration state changes to production.
 
 .. sandbox-promote-steps-end
 
@@ -46,14 +47,14 @@ The following sections describe the steps you'll follow when working in a sandbo
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
-     - To access a sandbox, from the list of sandboxes, select the |fa-kebab| icon, and then from the list of options select **Access sandbox**.
+     - To access a sandbox, from the list of sandboxes, select the |fa-kebab| icon, and then from the list of options select **Open sandbox**.
 
        .. image:: ../../images/mockups-sandbox-access.png
           :width: 600 px
-          :alt: Access a sandbox from the Users and Activity page.
+          :alt: Open a sandbox from the Sandboxes tab on the Settings page.
           :align: left
           :class: no-scaled-link
 
@@ -67,12 +68,12 @@ The following sections describe the steps you'll follow when working in a sandbo
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Sandbox configuration works the same way as it does in production with all of the same features and functionality. The main difference is that users in a sandbox are assigned the **DataGrid Administrator** policy, which gives them full access to the configuration state within the sandbox.
 
-       When you access a sandbox, it'll look much the same as production, but with a different color scheme.
+       When you access a sandbox, it will look much the same as production, but with a different color scheme.
 
        .. image:: ../../images/mockups-sandbox-generic-page.png
           :width: 600 px
@@ -95,8 +96,8 @@ The following sections describe the steps you'll follow when working in a sandbo
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Sandbox-specific notifications are built into the pages to help you identify the current configuration state of the sandbox as it relates to the configuration state in production. These appear near the top of each page. 
 
@@ -116,13 +117,13 @@ The following sections describe the steps you'll follow when working in a sandbo
           :align: left
           :class: no-scaled-link
 
-       A list of changes will appear under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
+       A list of changes appears under the **Added**, **Changed**, or **Removed** sections. Click the name of the update to learn more about the differences between the configuration states of your sandbox and production.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - A series of validations are run against updates. These validations will notify you within the sandbox when the configuration state of production and a sandbox conflict.
 
@@ -134,11 +135,11 @@ The following sections describe the steps you'll follow when working in a sandbo
           :align: left
           :class: no-scaled-link
 
-       Occasionally, you will receive a validation report that shows one (or more) validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
+       Occasionally, you will receive a validation report that shows one or more validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
 
        .. image:: ../../images/mockups-sandbox-access-validations-errors.png
           :width: 600 px
-          :alt: Some validations passed; schema error.
+          :alt: Some validations passed. Schema error.
           :align: left
           :class: no-scaled-link
 
@@ -147,8 +148,8 @@ The following sections describe the steps you'll follow when working in a sandbo
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - When there are updates that can be pulled to your sandbox from production you will be notified, after which you can review the validations and each of the updates. Click the **Pull** button in the top-right of the page to pull the updates to your sandbox.
 

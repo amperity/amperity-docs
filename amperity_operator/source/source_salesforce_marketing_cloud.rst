@@ -9,6 +9,7 @@
 .. |credential-type| replace:: **passphrase**
 .. |sftp-hostname| replace:: **sftp.[instance].salesforce.com**
 .. |what-pull| replace:: email campaigns data
+.. |filter-the-list| replace:: "sales"
 
 
 .. meta::
@@ -38,12 +39,7 @@ Pull from Salesforce Marketing Cloud
    :end-before: .. sources-overview-list-intro-end
 
 #. :ref:`Get details <source-salesforce-marketing-cloud-get-details>`
-#. :ref:`Add courier <source-salesforce-marketing-cloud-add-courier>`
-#. :ref:`Get sample files <source-salesforce-marketing-cloud-get-sample-files>`
-#. :ref:`Add feeds <source-salesforce-marketing-cloud-add-feeds>`
-#. :ref:`Add load operations <source-salesforce-marketing-cloud-add-load-operations>`
-#. :ref:`Run courier <source-salesforce-marketing-cloud-run-courier>`
-#. :ref:`Add to courier group <source-salesforce-marketing-cloud-add-to-courier-group>`
+#. :ref:`Add data source and feed <source-salesforce-marketing-cloud-add-data-source>`
 
 .. source-salesforce-marketing-cloud-steps-to-pull-end
 
@@ -59,9 +55,11 @@ Get details
 
 #. The username.
 #. The passphrase.
-#. The host public key (if encryption is configured).
+#. The optional host public key for SSH host validation.
 #. The hostname.
-#. A list of objects (by filename and file type, e.g. "accounts.csv", "customers.csv", "email-list.csv", and so on) in the |source-name| SFTP location to be sent to Amperity. This location is also referred to as the "Export" folder from the perspective of |source-name|.
+#. The location must contain the list of files by filename and file type to be pulled to Amperity. For example: "accounts.csv", "customers.csv", and "email-list.csv". A sample of each file is used during feed creation.
+
+   This location is also referred to as the "Export" folder from the perspective of |source-name|.
 #. A sample for each file to simplify feed creation.
 #. Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |source-name|.
 #. The name of the directory within the |source-name| SFTP server from which data should is pulled. Use the **Import Location** field to define a non-default directory.
@@ -76,179 +74,223 @@ Subscriber key
 
 .. source-salesforce-marketing-cloud-subscriber-key-start
 
-The subscriber key is an identifier in |source-name|. When a subscriber key is provided to Amperity for a workflow that will send data back to |source-name|, you should configure this workflow to carry the subscriber key through to the customer 360 database so that it may be included in the query that defines the results to be sent.
+The subscriber key is an identifier in |source-name|. When a subscriber key is provided to Amperity for a workflow that sends data back to |source-name|, you should configure this workflow to carry the subscriber key through to the customer 360 database so that it may be included in the query that defines the results to be sent.
 
-Use a customer key semantic tag for the subscriber key field when configuring the feed, and then ensure this field is available to the **Customer 360**, **Queries**, and/or **Segments** pages. Map this field to the |source-name| **subscriber_key** using a data template.
+Use a customer key semantic tag for the subscriber key field when configuring the feed, and then ensure this field is available to the **Customer 360**, **Queries**, and **Segments** pages. Map this field to the |source-name| **subscriber_key** using a data template.
  
 .. source-salesforce-marketing-cloud-subscriber-key-end
 
 
-.. _source-salesforce-marketing-cloud-add-courier:
+.. _source-salesforce-marketing-cloud-add-data-source:
 
-Add courier
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
-**Example entities list**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-intro-sftp-only-start
-   :end-before: .. sources-add-courier-entities-list-intro-sftp-only-end
-
-.. source-salesforce-marketing-cloud-add-courier-entities-list-start
-
-For example:
-
-::
-
-   [
-     {
-       "object/type": "file",
-       "object/file-pattern": "'/path/to/customer-record.csv'",
-       "object/land-as": {
-         "file/header-rows": 1,
-         "file/tag": "customer-record-files",
-         "file/content-type": "text/csv"
-       }
-     }
-   ]
-
-.. source-salesforce-marketing-cloud-add-courier-entities-list-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-note-sftp-only-start
-   :end-before: .. sources-add-courier-entities-list-note-sftp-only-end
-
-**To add a courier**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-sftp-only-start
-   :end-before: .. sources-add-courier-sftp-only-end
-
-
-.. _source-salesforce-marketing-cloud-get-sample-files:
-
-Get sample files
+Add data source and feed
 ==================================================
 
 .. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-start
-   :end-before: .. sources-get-sample-files-end
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-**To get sample files**
+**To add a data source for any SFTP site**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-salesforce-marketing-cloud-add-data-source-steps-start
 
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-.. _source-salesforce-marketing-cloud-add-feeds:
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-Add feeds
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-feed-start
-   :end-before: .. term-feed-end
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-note-file-start
-   :end-before: .. sources-add-feed-note-file-end
-
-**To add a feed**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-steps-start
-   :end-before: .. sources-add-feed-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
-.. _source-salesforce-marketing-cloud-add-load-operations:
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-sources-configure-already-configured-start
+          :end-before: .. credentials-sources-configure-already-configured-end
 
-Add load operations
-==================================================
+       .. tip::
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-start
-   :end-before: .. sources-add-load-operation-end
+          .. include:: ../../shared/credentials.rst
+             :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
+             :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
-**Example load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-example-intro-start
-   :end-before: .. sources-add-load-operation-example-intro-end
-
-.. source-salesforce-marketing-cloud-add-load-operations-example-start
-
-For example:
-
-::
-
-   {
-     "CUSTOMER-RECORDS-FEED-ID": [
-       {
-         "type": "truncate"
-       },
-       {
-         "type": "load",
-         "file": "customer-records"
-       }
-     ],
-     "TRANSACTION-RECORDS-FEED-ID": [
-       {
-         "type": "load",
-         "file": "transaction-records"
-       }
-     ]
-   }
-
-.. source-salesforce-marketing-cloud-add-load-operations-example-end
-
-**To add load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-steps-start
-   :end-before: .. sources-add-load-operation-steps-end
+          .. image:: ../../images/mockup-credentials-add-02-credential-status-sftp.png
+             :width: 380 px
+             :alt: Add 
+             :align: left
+             :class: no-scaled-link
 
 
-.. _source-salesforce-marketing-cloud-run-courier:
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-select-file-start
+          :end-before: .. sources-steps-03-select-file-end
 
-Run courier manually
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-settings.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-start
-   :end-before: .. sources-run-courier-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-start
+          :end-before: .. sources-steps-03-browse-end
 
-**To run the courier manually**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-note-start
+          :end-before: .. sources-steps-03-browse-note-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+       .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-pgp-start
+          :end-before: .. sources-steps-03-pgp-end
+
+       .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
 
-.. _source-salesforce-marketing-cloud-add-to-courier-group:
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-start
+          :end-before: .. sources-steps-04-review-end
 
-Add to courier group
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-formatting.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-group-start
-   :end-before: .. term-courier-group-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-contents-start
+          :end-before: .. sources-steps-04-review-contents-end
 
-**To add the courier to a courier group**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-pgp-start
+          :end-before: .. sources-steps-04-review-pgp-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-to-courier-group-steps-start
-   :end-before: .. sources-add-to-courier-group-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-formatting-details-start
+          :end-before: .. sources-steps-04-review-formatting-details-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
+
+
+       **New feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
+
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
+
+
+   * - .. image:: ../../images/steps-07.png
+          :width: 60 px
+          :alt: Step seven.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-run.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
+
+.. source-salesforce-marketing-cloud-add-data-source-steps-end
 
 
 .. _source-salesforce-marketing-cloud-workflow-actions:
@@ -269,7 +311,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-source-start
@@ -288,7 +330,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -303,7 +345,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -331,7 +373,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

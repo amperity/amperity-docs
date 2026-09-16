@@ -1,7 +1,6 @@
 .. https://docs.amperity.com/operator/
 
 
-
 .. meta::
     :description lang=en:
         Churn propensity predicts each customer's likelihood to churn based on their purchase history with your brand.
@@ -34,7 +33,7 @@ Amperity models churn propensity for each customer's unique purchase history. So
 
 * Identify customers who are likely to churn
 * Provide better insights about the root causes of customer churn to help you determine what will compel them to stay with right-timed messaging and relevant products
-* Support a churn prevention campaign that contains a series of escalating win-back offers
+* Support a churn prevention campaign that has a series of escalating win-back offers
 * Optimize suppression and spend
 
 By leveraging churn propensity modeling, you can take a proactive approach to customer retention, reduce churn rates, and improve overall customer satisfaction.
@@ -79,13 +78,13 @@ Attributes that predict a customer's future purchase behavior are available from
 
    * - Attribute Name
      - Description
-   * - **Predicted Average Order Revenue Next 365d**
+   * - **Predicted Average Order Revenue Next 365 Days**
      - A customer's predicted average order revenue over the next 365 days.
-   * - **Predicted CLV Next 365d**
+   * - **Predicted CLV Next 365 Days**
      - The total predicted spend for a customer over the next 365 days.
-   * - **Predicted Order Frequency Next 365d**
+   * - **Predicted Order Frequency Next 365 Days**
      - A customer's predicted number of orders over the next 365 days.
-   * - **Predicted Probability of Transaction Next 365d**
+   * - **Predicted Probability of Transaction Next 365 Days**
      - The probability that a customer will purchase again in the next 365 days.
 
 Use any combination of these attributes to build audiences that align to various stages within your churn prevention campaigns. You can access these attributes directly from the **Segment Editor**.
@@ -122,7 +121,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        By grouping repeat customers into these tiers, you can:
 
-       * Focus on retaining and nurturing customers who contribute significantly to revenue.
+       * Focus on retaining and nurturing customers who contribute to revenue.
        * Develop targeted campaigns that address the specific needs and preferences of different customer segments.
        * Proactively address the concerns of customers who may be considering churning.
 
@@ -151,7 +150,7 @@ Attributes that predict a customer's likelihood to churn, along with their predi
 
        * Identify and focus on customers who are predicted to generate the most revenue over their lifetime.
        * Develop targeted campaigns and offers that cater to the specific needs and preferences of different customer segments.
-       * Allocate resources more effectively by focusing on acquiring customers with high pCLV potential.
+       * Allocate resources to focus on acquiring customers with high pCLV potential.
        * Implement strategies to retain and nurture high-value customers, maximizing their lifetime value.
 
 By combining various customer attributes, you can create highly targeted churn prevention and one-time buyer campaigns that focus on your most valuable customers at the optimal time. You can access these attributes directly from the **Segment Editor**.
@@ -166,15 +165,15 @@ Build a churn propensity model
 
 .. model-churn-propensity-configure-start
 
-You can build a churn propensity model from the **Customer 360** page. Each database that is a "customer 360" database and contains the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
+You can build a churn propensity model from the **Customer 360** page. Each database that is a "customer 360" database and has the **Merged Customers**, **Unified Itemized Transactions**, and **Unified Transactions** tables may be configured for predictive modeling. You may use other tables in that database that are unique by Amperity ID to extend predictive models.
 
 .. model-churn-propensity-configure-end
 
 .. important:: 
 
    .. include:: ../../amperity_operator/source/models.rst
-      :start-after: .. models-fields-used-by-all-models-start
-      :end-before: .. models-fields-used-by-all-models-end
+      :start-after: .. models-fields-used-by-all-models-table-start
+      :end-before: .. models-fields-used-by-all-models-table-end
 
 **To build a churn propensity model**
 
@@ -186,15 +185,15 @@ You can build a churn propensity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
-     - Open the **Customer 360** page, select a database, and then open the bottom (|fa-kebab|) menu and select **Predictive models**. This opens the **Predictive models page**.
+     - Open the **Customer 360** page, and then select the **Predictive models** tab. This opens the **Predictive models** page.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Next to **Predicted customer lifetime value (pCLV)**, click **Add model**. This opens the **Predictive enablement** page for churn propensity models.
 
@@ -202,39 +201,39 @@ You can build a churn propensity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1st, 2020 or you may choose a relative date like "today - 4 years".
+     - Choose the model start date, which is the date from which the pCLV model starts tracking customer purchase behavior. You may choose a calendar date, such as specific date like January 1, 2020 or you may choose a relative date like ``today - 4 years``.
 
-       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer. 
+       A model that uses a calendar date will always use data from that date to the present day. Over time the time window used by the model will get longer.
 
-       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same.
+       A model that uses a relative date will always have a time window with a consistent length. Over time the time window used by the model will stay the same. A relative date is always in Coordinated Universal Time (UTC).
 
        .. note:: A relative date is determined at the time a model is run, where "now" is the date on which the model is run. The time window should be at least 3 years, but may be 4 or 5, depending on how much data is available to the model in Amperity.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
-     - Select the tables from which order- and item-level data is made available to the model.
+     - Select the tables from which order-level and item-level data is made available to the model.
 
        For order-level data, select **Unified Transactions**. For item-level data, select **Unified Itemized Transactions**.
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Use the **Prediction horizon** field to specify the number of days into the future for which you want pCLV modeling. The default value ("365") is fine for most use cases.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - Use the **Customer exclusions** field to use fields in the **Customer Attributes** table to identify customers who have purchase patterns that should be excluded from pCLV modeling.
 
@@ -249,8 +248,8 @@ You can build a churn propensity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-07.png
           :width: 60 px
-          :alt: Step 7.
-          :align: left
+          :alt: Step seven.
+          :align: center
           :class: no-scaled-link
      - Use the **Additional features** field to add more fields from the **Unified Transactions** and **Unified Itemized Transactions** tables to the pCLV model.
 
@@ -259,8 +258,8 @@ You can build a churn propensity model from the **Customer 360** page. Each data
 
    * - .. image:: ../../images/steps-08.png
           :width: 60 px
-          :alt: Step 8.
-          :align: left
+          :alt: Step eight.
+          :align: center
           :class: no-scaled-link
      - Click **Start validation**.
 
@@ -299,6 +298,7 @@ The lifecycle status for the main churn propensity model cannot be customized. H
 For example:
 
 .. code-block:: sql
+   :linenos:
 
    WITH overrides AS (
     SELECT
@@ -334,7 +334,7 @@ For example:
        c.life_cycle
        ,p.predicted_customer_lifecycle_status
      ) AS life_cycle_final
-   FROM Predicted_CLV_Attributes AS p
+   FROM Predicted_365d_CLV_Attributes AS p
    LEFT JOIN overrides c ON p.amperity_id = c.amperity_id
 
 .. model-churn-propensity-customize-lifecycle-status-end

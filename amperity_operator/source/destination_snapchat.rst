@@ -9,6 +9,7 @@
 .. |what-send| replace:: email addresses, mobile advertiser IDs, or phone numbers
 .. |where-send| replace:: |destination-name|
 .. |filter-the-list| replace:: "snap"
+.. |hashed-fields| replace:: **email**, **phone**, and **mobile_id**
 
 
 .. meta::
@@ -21,13 +22,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Snapchat
+        Configure destinations for Snapchat
 
 ==================================================
-Configure destination for Snapchat
+Configure destinations for Snapchat
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_snapchat.html>`__ |ext_link|.
 
 .. destination-snapchat-about-start
 
@@ -35,11 +34,21 @@ Send email addresses, mobile advertiser IDs, or phone numbers to |destination-na
 
 .. destination-snapchat-about-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
 .. destination-snapchat-api-note-start
 
 .. note:: This destination uses the `Snap Audience Match <https://marketingapi.snapchat.com/docs/?lang=en-US#snap-audience-match>`__ |ext_link| component within the `Snapchat Marketing API <https://marketingapi.snapchat.com/docs/>`__ |ext_link| to `add users <https://marketingapi.snapchat.com/docs/?lang=en-US#adding-users>`__ |ext_link| as a list of email addresses, mobile advertiser IDs, or phone numbers.
 
 .. destination-snapchat-api-note-end
+
+.. destination-snapchat-replace-behavior-start
+
+.. caution:: Each send to |destination-name| replaces the audience completely. Amperity removes all existing members before adding the users in the current send. Members not included in the current send are removed from the audience.
+
+.. destination-snapchat-replace-behavior-end
 
 .. _destination-snapchat-get-details:
 
@@ -59,11 +68,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -73,11 +83,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -88,9 +99,9 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 3.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The name of the custom audience to which Amperity will send data. Amperity will create the custom audience name if it does not already exist.
+     - The name of the custom audience to which Amperity sends data. Amperity creates the custom audience name if it does not already exist.
 
        .. tip:: The custom audience name is visible from the **Snapchat Audiences** page. This name should be clear and understandable to users of Snapchat. An audience with this will be created if it does not exist.
 
@@ -98,7 +109,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 4.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - :ref:`Authorize Amperity to send data to the customer's Snapchat account <destination-snapchat-credentials>`. This requires activation in the Amperity |destination-name| account and approval in the customer's |destination-name| account.
 
@@ -128,8 +139,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -137,8 +148,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -146,14 +157,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -192,8 +204,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -212,8 +224,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -228,8 +240,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -248,14 +260,15 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Ad account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -270,12 +283,23 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 
 .. destination-snapchat-add-steps-end
 
@@ -297,7 +321,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -316,7 +340,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -331,7 +355,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -355,7 +379,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start

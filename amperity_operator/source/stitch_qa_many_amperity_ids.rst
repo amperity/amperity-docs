@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -46,7 +47,7 @@ When to use
 #. Run with **phone** as the semantic.
 #. Run with **address** as the semantic.
 #. Run with other semantics, as necessary.
-#. Examine the results (~30 minutes). Look for examples of underclustering and for values that can be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
+#. Examine the results. Look for examples of underclustering and for values that can be added to the :doc:`bad-values blocklist <blocklist_bad_values>`.
 
 .. stitch-qa-query-many-amperity-ids-use-end
 
@@ -58,24 +59,25 @@ Configure query
 
 .. stitch-qa-query-many-amperity-ids-steps-start
 
+.. vale off
+
 #. From the **Queries** page, open the **Stitch QA** folder, and then select this query.
 
    .. tip:: :ref:`Add the Stitch QA queries template folder <qa-stitch-enable-steps-add-queries>` if it does not already exist.
 
-#. Run the query three times, once each for the following semantics: **email**, **phone**, and **address**. Update the highlighted lines prior to running the query.
+#. Run the query three times, once each for the following semantics: **email**, **phone**, and **address**. Update the highlighted lines before running the query.
 
    For **email**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
         LOWER(email),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        email IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE email IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -83,15 +85,14 @@ Configure query
    For **phone**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
         LOWER(phone),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        phone IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE phone IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
@@ -99,24 +100,24 @@ Configure query
    For **address**:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       SELECT
         LOWER(address),
         COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        address IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE address IS NOT NULL
       GROUP BY 1
       ORDER BY 2 DESC
       LIMIT 100
 
    Run for other semantics, as necessary.
 
-#. If you need to run the query against multiple semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
+#. If you need to run the query against many semantics, comment out the **SELECT** statement used for single semantics and then uncomment the following **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
 
       /*
       SELECT
@@ -124,8 +125,7 @@ Configure query
         LOWER(semantic)
         ,LOWER(semantic)
         ,COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
+      FROM Unified_Coalesced
       WHERE
         -- UPDATE FOR SEMANTICS YOU WANT TO USE
         semantic IS NOT NULL
@@ -141,19 +141,18 @@ Configure query
    For example, to run this statement for **email**, **phone**, and **address**:
 
    .. code-block:: sql
+      :linenos:
 
       SELECT
         LOWER(email)
         ,LOWER(phone)
         ,LOWER(address)
         ,COUNT(DISTINCT (amperity_id)) num_amperity_ids
-      FROM
-        Unified_Coalesced
-      WHERE
-        -- UPDATE FOR SEMANTICS YOU WANT TO USE
-        email IS NOT NULL
-        AND phone IS NOT NULL
-        AND address IS NOT NULL
+      FROM Unified_Coalesced
+      WHERE email IS NOT NULL
+      -- UPDATE FOR SEMANTICS YOU WANT TO USE
+      AND phone IS NOT NULL
+      AND address IS NOT NULL
       GROUP BY 1
       -- UPDATE ORDERING FOR NUMBER OF COMBINED SEMANTICS
       ORDER BY 2,3 DESC
@@ -164,6 +163,7 @@ Configure query
 #. Use the following query to use those values to find the related Amperity IDs: 
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       SELECT
@@ -173,8 +173,10 @@ Configure query
 
    Replace **email** with the correct semantic and **value** with one of the values retured by the other **SELECT** statements in this query.
 
-   .. tip:: You can create a separate query that contains only this **SELECT** statement instead of commenting out the **SELECT** statements in this query that find a single semantic or a combination of semantics.
+   .. tip:: You can create a separate query that has only this **SELECT** statement instead of commenting out the **SELECT** statements in this query that find a single semantic or a combination of semantics.
 #. Click **Run Query** and debug any issues that may arise.
 #. Click **Activate**.
+
+.. vale on
 
 .. stitch-qa-query-many-amperity-ids-steps-end

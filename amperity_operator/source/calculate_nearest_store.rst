@@ -39,7 +39,7 @@ Requirements
 
 .. calculate-nearest-store-requirements-start
 
-Calculating nearest store requires data to be provided to Amperity that includes the latitude and longitude for each store location. Amperity then uses a publicly available dataset to convert home zip codes to latitude and longitude. Amperity then uses the geographic center of each zip code to calculate the straight-line distance for the store nearest to the individual.
+Calculating nearest store requires data to be provided to Amperity that includes the latitude and longitude for each store location. Amperity then uses a publicly available dataset to convert home ZIP codes to latitude and longitude. Amperity then uses the geographic center of each ZIP code to calculate the straight-line distance for the store nearest to the individual.
 
 .. calculate-nearest-store-requirements-end
 
@@ -67,19 +67,20 @@ Example
 
 .. calculate-nearest-store-example-start
 
-A very simple example of calculating nearest stores starts with a common table expression that uses a `Haversine formula <https://en.wikipedia.org/wiki/Haversine_formula>`__ |ext_link| to calculate latitude and longitude. United States zip codes are joined to a table that contains data about the physical location of stores, after which stores are ranked by distance. The store with the highest rank is the closest store.
+A very simple example of calculating nearest stores starts with a common table expression that uses a `Haversine formula <https://en.wikipedia.org/wiki/Haversine_formula>`__ |ext_link| to calculate latitude and longitude. United States ZIP codes are joined to a table that has data about the physical location of stores, after which stores are ranked by distance. The store with the highest rank is the closest store.
 
 .. calculate-nearest-store-example-end
 
 .. calculate-nearest-store-example-caution-start
 
-.. caution:: This example is appropriate for use with small, static data sources, or for defining a proof of concept for early iteration that will require a more complex workflow.
+.. caution:: This example is appropriate for use with small, static data sources, or for defining a proof of concept for early iteration that requires a more complex workflow.
 
 .. calculate-nearest-store-example-caution-end
 
 .. calculate-nearest-store-example-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH
      distance_cte AS (

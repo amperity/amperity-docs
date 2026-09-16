@@ -21,6 +21,15 @@ Data assets
    :start-after: .. term-data-assets-start
    :end-before: .. term-data-assets-end
 
+.. data-assets-from-bridge-or-s3-start
+
+.. note:: :ref:`Reference data assets <data-asset-reference>` and an :ref:`NRF calendar <data-asset-fiscal-calendar-nrf>` data asset are available from the **Reference data** collection in Amperity Bridge or from an Amazon S3 bucket named **Amperity Data Assets**.
+
+   #. Configure Amperity Bridge. Choose the **Reference data** option, and then select one or more data assets.
+   #. To use the Amazon S3 bucket as the source, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load data assets.
+
+.. data-assets-from-bridge-or-s3-end
+
 
 .. _data-asset-customer-attributes:
 
@@ -45,7 +54,7 @@ Customer consent
 
 .. data-asset-customer-consent-start
 
-Customer consent data assets help your brand keep track of which customers can (and cannot) be sent email and/or SMS messages.
+Customer consent data assets help your brand keep track of which customers can and cannot be sent email or SMS messages.
 
 .. data-asset-customer-consent-end
 
@@ -61,7 +70,7 @@ All opted-in email addresses
 
 .. data-asset-customer-consent-all-opted-email-start
 
-The **All Opted In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
+The **All Opted-In Emails** table requires the :ref:`Email Opt Status <data-asset-customer-consent-email>` table, after which you can extend support for additional requirements.
 
 .. data-asset-customer-consent-all-opted-email-end
 
@@ -105,7 +114,7 @@ Email engagement
 
 .. data-asset-email-engagement-start
 
-Email engagement captures interactions with the emails that your brand has sent to your customers. There are three sets of data that you can make available in your tenant:
+Email engagement captures interactions with the emails that your brand has sent to your customers. Use any of the following sets of data:
 
 * :ref:`Email engagment attributes <data-asset-email-engagement-attributes>`
 * :ref:`Email engagment summaries <data-asset-email-engagement-summary>`
@@ -141,7 +150,7 @@ Engagement summary
 
 .. data-asset-email-engagement-summary-start
 
-The :doc:`Email Engagement Summary <table_email_engagement_summary>` table is generated as Stitch output after applying |semantics_email_events_summary| semantic tags (when available) alongside |semantics_email_events| semantic tags to data sources that contain email engagement data, such as opens, clicks, opt-in and opt-out preferences, or conversions.
+The :doc:`Email Engagement Summary <table_email_engagement_summary>` table is generated as Stitch output after applying |semantics_email_events_summary| semantic tags alongside |semantics_email_events| semantic tags to data sources that contain email engagement data, such as opens, clicks, opt-in and opt-out preferences, or conversions.
 
 .. data-asset-email-engagement-summary-end
 
@@ -173,7 +182,7 @@ Fiscal calendars
 
 .. data-asset-fiscal-calendars-start
 
-You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that contains your brand's complete fiscal calendar:
+You may use one of the following data assets to define a fiscal calendar or you may provide to Amperity a file that has your brand's complete fiscal calendar:
 
 * :ref:`data-asset-fiscal-calendar-nrf`
 * :ref:`data-asset-fiscal-calendar-extended`
@@ -188,7 +197,7 @@ NRF calendar
 
 .. data-asset-fiscal-calendar-nrf-start
 
-The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans from 2016-2024 and divides each year into months based on a 4 weeks - 5 weeks - 4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
+The NRF calendars data asset has a `4-5-4 fiscal calendar <https://nrf.com/resources/4-5-4-calendar>`__ |ext_link| that spans 2016-2024 and divides each year into months based on a 4 weeks--5 weeks--4 weeks format. Each month has the same number of Saturdays and Sundays, which ensures like days can be compared.
 
 .. data-asset-fiscal-calendar-nrf-end
 
@@ -200,7 +209,7 @@ The NRF calendars data asset contains a `4-5-4 fiscal calendar <https://nrf.com/
 
 .. data-asset-fiscal-calendar-nrf-steps-start
 
-Add the NRF calendar data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "NRF_Calendar.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
+Add the NRF calendar data asset to your tenant by pulling the **nrf_calendar** file to your tenant.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -237,7 +246,7 @@ You can |ext_fiscal_calendar_download| that runs from 2016 to 2030 and uses a 4-
 * Christmas
 * Boxing Day
 
-Use this CSV file to explore what a fiscal calendar looks like. Use a text editor to add additional holidays, extend for additional years, and so on. You may upload this CSV file to Amperity directly using the **Feed Editor**, and then apply semantic tags for fiscal calendars.
+Use this CSV file to explore what a fiscal calendar looks like. Use a text editor to add additional holidays and extend for additional years. You may upload this CSV file to Amperity directly using the **Feed Editor**, and then apply semantic tags for fiscal calendars.
 
 .. data-asset-fiscal-calendar-extended-end
 
@@ -302,6 +311,7 @@ The following file-based data assets are available:
 
 * :ref:`data-asset-address-standardization`
 * :ref:`data-asset-gender-name-ratios`
+* :ref:`data-asset-latitude-longitude`
 * :ref:`data-asset-lookup-table-row`
 * :ref:`data-asset-lookup-table-usa`
 * :ref:`data-asset-lookup-table-zip`
@@ -331,8 +341,8 @@ Amperity makes CSV files available to your tenant from a bridge.
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the **Sources** page. Under **Inbound shares** click **Add bridge**.
 
@@ -357,20 +367,20 @@ Amperity makes CSV files available to your tenant from a bridge.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - Use the **Select tables** dialog box to select any combination of reference data to be synced to Amperity.
 
-       If you select a schema, all tables in that schema will be synced. Any new tables added later will need to be manually added to the sync.
+       If you select a schema, all tables in that schema will be synced. Any new tables added later need to be manually added to the sync.
 
-       When finished, click **Next**. This will open the **Domain table mapping** dialog box.
+       When finished, click **Next**. This opens the **Domain table mapping** dialog box.
 
 
-   * - .. image:: ../../images/steps-04.png
+   * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Map the reference data tables that are synced to domain tables in Amperity.
 
@@ -386,7 +396,7 @@ Amperity makes CSV files available to your tenant from a bridge.
        * Primary keys should not be assigned.
        * Semantic tags should not be applied.
 
-       When finished, click **Save and sync**. This will start a workflow that synchronizes reference data to Amperity and will create the mapped domain table names.
+       When finished, click **Save and sync**. This will start a workflow that synchronizes reference data to Amperity and creates the mapped domain table names.
 
        You can manually sync tables with Amperity using the **Sync** option from the **Actions** menu for the bridge.
 
@@ -400,13 +410,16 @@ Address standardization
 
 .. data-asset-address-standardization-start
 
-Address standardization is a data asset that contains a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
+Address standardization is a data asset that has a list of address variations for state and street names within the United States. Use this data asset to support :doc:`address-based householding <householding>` workflows.
 
 .. data-asset-address-standardization-end
 
 .. data-asset-address-standardization-prerequisites-start
 
-The address standardization data asset is available from an Amazon S3 bucket named **Amperity Data Assets**. You may make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
+The address standardization data asset is available from Amperity Bridge, or, alternatively, from an Amazon S3 bucket named **Amperity Data Assets**. For most current use cases, Amperity Bridge is the preferred approach.
+
+* Configure Amperity Bridge. Choose the **Reference data** option, and then select the **address_standardization_conversion** table.
+* To use the Amazon S3 bucket as the source for address standardization, make a request to Amperity Support to :ref:`enable file-based data assets <data-asset-reference-enable>`, after which you can use the `Amazon S3 data source <https://docs.amperity.com/operator/source_amazon_s3.html>`__ to load the "address_standardization_conversion.csv" file from the "/householding" directory in that bucket.
 
 .. data-asset-address-standardization-prerequisites-end
 
@@ -414,15 +427,14 @@ The address standardization data asset is available from an Amazon S3 bucket nam
 
 .. data-asset-address-standardization-steps-start
 
-Add the address standardization data asset to your tenant by following the steps for :ref:`adding a data source and feed from an Amazon S3 bucket <source-amazon-s3-add-data-source>`. Click **Browse** and select the "address_standardization_conversion.csv" file from the **Amperity Data Assets** Amazon S3 bucket, which is located in the "householding" directory in the bucket.
-
-Use all three fields – **before**, **convert**, and **type** as the primary key.
+After adding the address standardization data asset, use all three fields--**before**, **convert**, and **type**--as the primary key.
 
 Add a passthrough table to your customer 360 database named **LookupTables AddressStandardization**, and then run your customer 360 database to build the **LookupTables AddressStandardization** table.
 
-.. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of LEFT JOIN operations that are used to standardize addresses. For example:
+.. important:: The **LookupTables AddressStandardization** table is used within the **Merged Households** SQL template in a series of **LEFT JOIN** operations that are used to standardize addresses. For example:
 
    .. code-block:: sql
+      :linenos:
 
       LEFT JOIN (
         SELECT
@@ -432,7 +444,7 @@ Add a passthrough table to your customer 360 database named **LookupTables Addre
         WHERE type = 'STREET'
       ) AS a7clean ON (a7clean.before = core.a7)
 
-   You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you will need to update the LEFT JOIN sections within that template to contain the updated table name.
+   You can name this table *anything* else, such as **Address Standardization USA**. If you use the **Merged Households** SQL template, you need to update the LEFT JOIN sections within that template to contain the updated table name.
 
 .. data-asset-address-standardization-steps-end
 
@@ -450,7 +462,7 @@ Use the gender name ratios data asset to use :doc:`gender prediction <predict_ge
 
 .. data-asset-gender-name-ratios-start
 
-The **gender_name_ratios.csv** file contains a list of baby names from the past ~130 years, along with their associated gender.
+The **gender_name_ratios.csv** file has a list of baby names from the past ~130 years, along with their associated gender.
 
 The source of the data in the **gender_name_ratios.csv** file is from United States Social Security Administration records for `popularity and frequency of baby names <https://www.ssa.gov/oact/babynames/limits.html>`__ |ext_link|. These records were used to generate the **gender_name_ratios.csv** file, which is similar to:
 
@@ -477,15 +489,13 @@ The most important column is **gender_name_ratio**, which describes what proport
 
 .. data-asset-gender-name-ratios-steps-start
 
-Add the gender name ratios data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "gender_name_ratios.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
-
-Use **given_name** as the primary key.
+After adding the **gender_name_ratios** data asset, use **given_name** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
 You can add predicted gender to your customer 360 database in two ways, depending on how your brand wants to use predicted gender to build segments:
 
-#. Extend the **Customer 360** and/or **Merged Customers** tables to include predicted gender (recommended).
+#. Extend the **Customer 360** and **Merged Customers** tables to include predicted gender (recommended).
 #. Add predicted gender values to your customer 360 database as a standalone table.
 
 **Extend the Merged_Customers table (recommended)**
@@ -494,9 +504,10 @@ You can add predicted gender to your customer 360 database in two ways, dependin
 
    Edit the **Merged Customers** table and extend the table for predicted gender.
 
-Use a common table expression (CTE) to pull data from the domain table that contains predicted gender data ("Predictions_Gender"):
+Use a common table expression (CTE) to pull data from the domain table that has predicted gender data ("Predictions_Gender"):
 
 .. code-block:: sql
+   :linenos:
 
    predict_gender AS (
      SELECT
@@ -537,6 +548,7 @@ Your brand's use cases for predicted gender may prefer using a standalone table.
 #. Choose **SQL** as the build mode, and then use SQL similar to:
 
    .. code-block:: sql
+      :linenos:
 
       WITH ratios AS (
         SELECT * 
@@ -558,6 +570,18 @@ Your brand's use cases for predicted gender may prefer using a standalone table.
    .. tip:: This table will be unique by Amperity ID and may be made available to the **Segment Editor** for use with campaigns.
 
 .. data-asset-gender-name-ratios-steps-end
+
+
+.. _data-asset-latitude-longitude:
+
+Latitudes and longitudes
+--------------------------------------------------
+
+.. data-asset-latitude-longitude-start
+
+Use the latitudes and longitudes data asset to apply :doc:`nearest store calculations <calculate_nearest_store>` using postal codes for all customers in the United States and Canada. Select the **lat_lng_zip** data asset from the list of :ref:`reference data assets <data-asset-reference-enable>`, and then add it as a passthrough table to your customer 360 database.
+
+.. data-asset-latitude-longitude-end
 
 
 .. _data-asset-lookup-tables:
@@ -583,7 +607,11 @@ Lookup: Countries
 
 .. data-asset-lookup-table-row-start
 
-The country lookup data asset provides a set of standardized names and codes for all countries, along with categories for regions (Americas, Asia, Africa, etc.), sub-regions (Latin America and the Caribbean, Sub-Saharan Africa, etc.), and region codes.
+The country lookup data asset provides a set of standardized names and codes for all countries, along with categories for:
+
+* Regions, including Americas, Asia, and Africa
+* Region codes
+* Sub-regions, including Latin America and the Caribbean, and Sub-Saharan Africa
 
 .. data-asset-lookup-table-row-end
 
@@ -591,9 +619,7 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-row-steps-start
 
-Add the country lookups data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "lookup_country.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
-
-Use **country_name** and **country_code** as the primary key.
+After adding the country lookups data asset, use **country_name** and **country_code** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -617,9 +643,7 @@ The country lookup data asset provides a set of standardized names and codes for
 
 .. data-asset-lookup-table-usa-steps-start
 
-Add the United States lookup data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "lookup_us_state_territory.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
-
-Use a combination of **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
+After adding the United States lookup data asset, use a combination of **US_State_Territory_Name**, **USPS_Code**, and **ISO_Code_2** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -630,29 +654,27 @@ Add a passthrough table to your customer 360 database named **Lookup USA**, and 
 
 .. _data-asset-lookup-table-zip:
 
-Lookup: Zip codes
+Lookup: ZIP codes
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. data-asset-lookup-table-zip-start
 
-The zip codes lookup data asset provides a list of zip codes that:
+The ZIP codes lookup data asset provides a list of ZIP codes that:
 
-* Identifies if a zip code is standard, a post office box, or unique
-* Associates the primary city for each zip code
-* The state, county, and time zone in which a zip code is located
-* The phone number area codes associated with a zip code
-* The number of households and population counts within each zip code, including demographics
-* Geolocation data for each zip code
+* Identifies if a ZIP code is standard, a post office box, or unique
+* Associates the primary city for each ZIP code
+* The state, county, and time zone in which a ZIP code is located
+* The phone number area codes associated with a ZIP code
+* The number of households and population counts within each ZIP code, including demographics
+* Geolocation data for each ZIP code
 
 .. data-asset-lookup-table-zip-end
 
-**To add the zip codes lookups data asset**
+**To add the ZIP codes lookups data asset**
 
 .. data-asset-lookup-table-zip-steps-start
 
-Add the zip codes lookups data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "zip_code_database_small_business.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
-
-Use **zip** as the primary key.
+After adding the ZIP codes lookup data asset, use **zip** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 
@@ -671,13 +693,11 @@ The normalization for United States data asset provides a list of long and abbre
 
 .. data-asset-lookup-table-normalization-usa-end
 
-**To add the zip codes lookups data asset**
+**To add the ZIP codes lookups data asset**
 
 .. data-asset-lookup-table-normalization-usa-steps-start
 
-Add the normalization for United States data asset to your tenant by pulling the file that is available from **Amperity Data Assets**, which is the name of an Amazon S3 bucket that can be made available to your tenant. Follow the steps for :ref:`adding a data source and feed <source-amazon-s3-add-data-source>`. Click **Browse** and select the "US_State_Normalization.csv" file from the **Amperity Data Assets** Amazon S3 bucket.
-
-Use **US_State_Abbrev** and **US_State_Long** as the primary key.
+After adding the United States normalization data asset, use **US_State_Abbrev** and **US_State_Long** as the primary key.
 
 .. note:: If Amperity data assets credentials are not available on your tenant, make a request to Amperity Support to enable Amperity data assets for your tenant.
 

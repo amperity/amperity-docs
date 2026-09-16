@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -24,7 +25,7 @@ Use a sandbox to safely make changes to your production tenant:
 
 #. :doc:`Create a sandbox <sandbox_create>` before making configuration changes to your tenant.
 #. :doc:`Access the sandbox <sandbox_open>`, and then make configuration changes to your tenant. Run the updated workflow from within the sandbox, run sandbox validations, and verify that your changes are ready for promotion.
-#. Promote configuration changes (this topic) to your production tenant.
+#. Promote configuration changes to your production tenant.
 
    .. tip::
 
@@ -40,7 +41,7 @@ This is part three of a series of topics that describes how your brand can use s
 
 .. sandbox-promote-steps-start
 
-The following sections describe the steps you'll follow when promoting changes in a sandbox to production.
+The following sections describe the steps you will follow when promoting changes in a sandbox to production.
 
 .. sandbox-promote-steps-end
 
@@ -52,8 +53,8 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - Open the sandbox from which you want to promote configuration state changes.
 
@@ -66,8 +67,8 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - A series of validations are run against updates. These validations will notify you within the sandbox when the configuration states of production and sandbox conflict.
 
@@ -79,7 +80,7 @@ The following sections describe the steps you'll follow when promoting changes i
           :align: left
           :class: no-scaled-link
 
-       Occasionally, you will receive a validation report that shows one (or more) validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
+       Occasionally, you will receive a validation report that shows one or more validation errors. For example, a schema mismatch between a custom domain table in production and a custom domain table in the sandbox:
 
        .. image:: ../../images/mockups-sandbox-access-validations-errors.png
           :width: 380 px
@@ -92,10 +93,10 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - When configuration state changes in a sandbox are ready for promotion to production, the sandbox-specific notifications will provide a link named "Ready to promote".
+     - When configuration state changes in a sandbox are ready for promotion to production, the sandbox-specific notifications provides a link named "Ready to promote".
 
        .. image:: ../../images/mockups-sandbox-sync-with-production-promote.png
           :width: 600 px
@@ -106,10 +107,10 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
-     - Review the list of **Added**, **Changed**, and/or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
+     - Review the list of **Added**, **Changed**, or **Removed** configuration state changes. Click the name of the added, changed, or removed object to review the details for the configuration state change.
 
        Resolve validation issues, as necessary.
 
@@ -121,8 +122,8 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - Enter a merge message for this set of configuration state changes.
 
@@ -143,8 +144,8 @@ The following sections describe the steps you'll follow when promoting changes i
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
-          :alt: Step 6.
-          :align: left
+          :alt: Step six.
+          :align: center
           :class: no-scaled-link
      - After the updates are safely running in production, you should delete the sandbox.
 

@@ -23,7 +23,7 @@ Third-party data, such as from cookies that track a product or brand on someone 
 
 This is due to a combination of emerging trends around data transparency that give users more control over their data along with new government policies that mandate this transparency, such as General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
 
-With the value of using third-party data rapidly degrading, it's time to shift focus to first-party data.
+With the value of using third-party data degrading, it is time to shift focus to first-party data.
 
 .. backstory-end
 
@@ -52,7 +52,7 @@ Amperity is built to handle this complexity. Billions of PII-based customer reco
 
 Amperity can analyze first-party cookies and clickstream events to associate those interaction records to a unique customer. For example. clickstream events identify a product was browsed via a mobile application, first-party cookies identify that product was purchased online, and the Amperity ID associates a unique individual to both clickstream and first-party cookie interaction records. All of these results are available in the customer 360 database Use these results to create more useful marketing and analytics use cases.
 
-In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data (and knowing to which individual its associated) will help you be ready for future best practices around information security and knowing who's who in your data set.
+In addition to using first-party data as a fundamental part of your marketing strategy, understanding that first-party data, along knowing to which individual its associated, will help you be ready for future best practices around information security and knowing who is who in your data set.
 
 .. why-amperity-end
 
@@ -66,20 +66,20 @@ Use cases
 
 Using first-party data as part of the effort to understand your customer helps with questions like:
 
-* What products are my customers viewing?
-* What products are my customers viewing the most?
+* What products are customers viewing?
+* What products are customers viewing the most?
 * Do these views correspond to purchase events?
 * What is the customer's purchase history?
 * What devices are associated with this customer?
 * Does this customer have a preferred device?
-* What interactions did a customer have with a product prior to a login or identification event?
+* What interactions did a customer have with a product before a login or identification event?
 * Based on online and offline purchase history, is this customer's lifetime value high, medium, or low?
 * What is this customer's preferred channel? A retail store? A website? A mobile application?
 * Did the customer add items to their cart, but not purchase the items?
 * Did the customer eventually purchase those items via a different channel?
 * Are there other products to recommend?
 
-These questions (and their answers) are an important part of identifying downstream marketing efforts.
+These questions and answers are an important part of identifying downstream marketing efforts.
 
 .. data-source-first-party-use-cases-end
 
@@ -93,14 +93,14 @@ Raw clickstream data
 
 Raw clickstream data should be provided to Amperity as a targeted subset of operational data points. This filtering can be done in two ways:
 
-#. (Recommended) Configure the application that is sending clickstream data to send files that contain only a useful subset of fields. Configure these files as feeds and run the files that contain useful clickstream data on a daily basis.
-#. Use a saved query to filter the fields into a useful subset prior to loading the data to Amperity, and then use two domain tables: one for all of the raw data and the other for the subset of useful data.
+#. Recommended. Configure the application that is sending clickstream data to send files that contain only a useful subset of fields. Configure these files as feeds and run the files that contain useful clickstream data on a daily basis.
+#. Use a saved query to filter the fields into a useful subset before loading the data to Amperity, and then use two domain tables: one for all of the raw data and the other for the subset of useful data.
 
    The domain table with all of the raw data should never be made available to Stitch and never added to the customer 360 database.
 
-   The domain table with the useful subset of data should be processed on a regular basis and may be made available to Stitch if it contains meaningful profile (PII) data, and then added to the customer 360 database as a passthrough table.
+   The domain table with the useful subset of data should be processed on a regular basis and may be made available to Stitch if it has meaningful profile (PII) data, and then added to the customer 360 database as a passthrough table.
 
-   This dual-domain table approach ensures that Amperity has direct access to a filtered subset of operational clickstream data and that the superset of data does not require daily processing. Updates to that filtered subset can be done quickly by updating the saved query instead of creating a new feed.
+   This dual-domain table approach ensures that Amperity has direct access to a filtered subset of operational clickstream data and that the superset of data does not require daily processing. Updates to that filtered subset can be done by updating the saved query instead of creating a new feed.
 
 .. data-source-first-party-raw-clickstream-end
 
@@ -116,7 +116,11 @@ Adobe Analytics
 
 .. data-source-first-party-raw-clickstream-adobe-analytics-start
 
-Clickstream data from Adobe Analytics `contains standard fields <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html>`__ |ext_link|, and then `up to 250 conversion variables (evar1-evar250) <https://docs.adobe.com/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html>` |ext_link|.
+.. vale off
+
+Clickstream data from Adobe Analytics `has standard fields <https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html>`__ |ext_link|, and then `up to 250 conversion variables (evar1-evar250) <https://docs.adobe.com/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html>`__ |ext_link|.
+
+.. vale on
 
 Conversion variables are customer-specific and represent events that identify:
 
@@ -146,7 +150,7 @@ Google Analytics
 
 .. data-source-first-party-raw-clickstream-google-analytics-start
 
-Clickstream data from Google Analytics `contains a predefined series of fields <https://support.google.com/analytics/answer/3437719?hl=en>`__ |ext_link|, with sets of fields available for:
+Clickstream data from Google Analytics `has a predefined series of fields <https://support.google.com/analytics/answer/3437719?hl=en>`__ |ext_link|, with sets of fields available for:
 
 * Identifiers, such as client ID, user ID, visit ID, along with dates and times
 * Totals, such as hits, page views, bounces, time on screen
@@ -163,6 +167,7 @@ Clickstream data from Google Analytics `contains a predefined series of fields <
 Use a Spark SQL query similar to:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      _c1 AS clientId,

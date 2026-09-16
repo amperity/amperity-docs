@@ -29,7 +29,7 @@ Use with Stitch QA
 
 .. table-stitch-scores-use-with-stitch-qa-start
 
-Use the **Stitch Scores** table to understand why blocking used (or did not use) a foreign key or separation key to block (or unblock) two records.
+Use the **Stitch Scores** table to understand why blocking used or did not use a foreign key or separation key to block or unblock two records.
 
 .. table-stitch-scores-use-with-stitch-qa-end
 
@@ -44,6 +44,7 @@ Compare records
 Use a query similar to the following to compare scores for two records:
 
 .. code-block:: sql
+   :linenos:
 
    SELECT * FROM Stitch_Scores
    WHERE source1 = 'Table_Name' AND pk1 = '123abc456def'

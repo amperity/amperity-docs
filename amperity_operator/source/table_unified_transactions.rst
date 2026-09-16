@@ -36,7 +36,7 @@ Unified Transactions table
 .. important:: Database tables for transactions must be configured in the following order:
 
    #. :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>`
-   #. Unified Transactions (this topic)
+   #. Unified Transactions
    #. :doc:`Transaction Attributes Extended <table_transaction_attributes_extended>`
 
    The :doc:`Unified Product Catalog <table_unified_product_catalog>` table is optional and may be configured for use with building queries, database tables, and other non-audience workflows. Your brand's product catalog must be integrated into the **Unified Itemized Transactions** table before you can use product catalog attributes to build audiences, segments, and campaigns.
@@ -64,7 +64,7 @@ The **Unified Transactions** table is a required table for the customer 360 data
 #. Set the build mode to **SQL**, and then select "Unified Transactions" from the **Apply template** dropdown.
 #. Review the :ref:`list of optional attributes <table-unified-transactions-extend-attributes>` to determine if any of those should be enabled for your tenant.
 #. Click **Next** to validate the SQL.
-#. Select "Unified Transactions" from the **Table Semantics** dropdown, and then add a description for the table. (The description is available as a tooltip in other locations in Amperity.
+#. Select "Unified Transactions" from the **Table Semantics** dropdown, and then add a description for the table. The description is available as a tooltip in other locations in Amperity.
 #. Click **Save**.
 
 .. table-unified-transactions-add-steps-end
@@ -80,6 +80,7 @@ Multiple Amperity IDs
 The following section (located near the top of the SQL) prioritizes order IDs when order IDs are associated with more than one Amperity ID. This may be customized.
 
 .. code-block:: sql
+   :linenos:
 
    amp_priority AS (
      SELECT DISTINCT
@@ -151,6 +152,7 @@ Fiscal calendars
 #. Uncomment the following section, which is located around line 45:
 
    .. code-block:: sql
+      :linenos:
 
       ,fc.fiscal_year AS fiscal_year
       ,fc.fiscal_quarter AS fiscal_quarter
@@ -191,6 +193,7 @@ Net order revenue
 #. Uncomment the following section, which is located around line 45:
 
    .. code-block:: sql
+      :linenos:
 
       ,order_revenue
         + order_returned_revenue
@@ -219,13 +222,14 @@ Order costs
 
 #. Ensure that cost information is available from the **Unified Itemized Transactions** table.
 
-   .. important:: If cost information is not available, review the data sources and/or custom domain tables in which **txn-item** semantic tags were applied and apply the **txn-item/item-cost** semantic tag to the appropriate fields.
+   .. important:: If cost information is not available, review the data sources and custom domain tables in which **txn-item** semantic tags were applied and apply the **txn-item/item-cost** semantic tag to the appropriate fields.
 
 #. Open the **Unified Transactions** table in the SQL editor.
 #. Find the section named "rollup_uit", which rolls-up individual attributes from the **Unified Itemized Transactions** custom domain table.
 #. Uncomment the following section, which is located around line 30:
 
    .. code-block:: sql
+      :linenos:
 
       ,SUM(
         IF(
@@ -276,6 +280,7 @@ When itemized discount amount values are consistent across records:
 #. Uncomment the following section, which is located around line 30:
 
    .. code-block:: sql
+      :linenos:
 
       ,MAX(
         IF(
@@ -306,6 +311,7 @@ When itemized discount amount values are pro-rated across records:
 #. Uncomment the following section, which is located around line 30, and then change the **MAX()** function to **SUM()**:
 
    .. code-block:: sql
+      :linenos:
 
       ,SUM(
         IF(

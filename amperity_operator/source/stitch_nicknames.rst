@@ -23,11 +23,11 @@ Manage nicknames
 
 .. stitch-nicknames-start
 
-Stitch uses given names to identify customer records that should (or should not) be grouped together. Nicknames help Stitch associate variations in given names to the sets of records that uniquely identify your customers.
+Stitch uses given names to identify customer records that should or should not be grouped together. Nicknames help Stitch associate variations in given names to the sets of records that uniquely identify your customers.
 
 Amperity pre-loads a set of common nicknames to your tenant in the form of a static CSV file. This file has thousands of nicknames, including all of the most common nicknames, along with many variations.
 
-You can upload your files to extend the list of common nicknames to add and/or remove nicknames as needed for your tenant. You can use any file format -- |format_csv|, |format_json|, |format_psv|, |format_tsv|, |format_parquet|, etc. -- that is supported by Amperity. (This topic uses a CSV file to describe how to manage nicknames.)
+You can upload your files to extend the list of common nicknames to add or remove nicknames as needed for your tenant. You can use any file format--|format_csv|, |format_json|, |format_psv|, |format_tsv|, or |format_parquet|--that is supported by Amperity. Stitch nicknames use a CSV file to describe how to manage nicknames.
 
 .. stitch-nicknames-end
 
@@ -89,9 +89,9 @@ The following table tells Stitch which nicknames *should not* be associated with
        8        Daniel            Danny      REMOVE
       -------- ----------------  ---------- -------------
 
-   If you add a nickname for a canonical name that does not exist, a new row is added. For example, if "Daniel" does not exist in your nicknames list, row 8 will add "Daniel" and add a nickname for "Danny".
+   If you add a nickname for a canonical name that does not exist, a new row is added. For example, if "Daniel" does not exist in your nicknames list, row 8 adds "Daniel" and add a nickname for "Danny".
 
-   If a nickname is added *and* removed, Amperity will ignore the remove request and keep the nickname in the list.
+   If a nickname is added *and* removed, Amperity will ignore the add request and remove the nickname from the list.
 
 .. stitch-nicknames-about-pairs-note-end
 
@@ -103,7 +103,7 @@ Upload CSV file
 
 .. stitch-nicknames-semantic-tags-start
 
-You may upload a file to Amperity that contains a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
+You may upload a file to Amperity that has a list of nicknames that should be added to or removed from the nicknames file. For example, a CSV file would be similar to:
 
 .. code-block:: none
 
@@ -144,9 +144,9 @@ The following examples show how you can use a nicknames table to manage the list
 
 .. stitch-nicknames-examples-note-start
 
-.. note:: This topic uses similar examples as the ones in the :doc:`Stitch labels <stitch_labels>` topic to show how to use nicknames instead of Stitch labels to help Stitch evaluate records so they are grouped correctly.
+.. note:: Stitch nicknames use similar examples as the ones in the :doc:`Stitch labels <stitch_labels>` topic to show how to use nicknames instead of Stitch labels to help Stitch evaluate records so they are grouped correctly.
 
-   If the match/mismatch is due to issues unrelated to given names, you should consider using Stitch labels instead of nicknames to resolve the issue.
+   If the match or mismatch is due to issues unrelated to given names, you should consider using Stitch labels instead of nicknames to resolve the issue.
 
 .. stitch-nicknames-examples-note-end
 
@@ -207,7 +207,7 @@ Likely nickname
 
 .. stitch-nicknames-example-likely-nickname-start
 
-Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details (email address and phone number), it's very likely that Ty is a nickname for Tylian.
+Ty and Tylian were split into two customer records, but after examining the split customer records and noticing they share other details, such as email address and phone number, it is very likely that Ty is a nickname for Tylian.
 
 Add an entry to the nicknames table to increase the likelihood that Ty and Tylian are considered matching given names:
 

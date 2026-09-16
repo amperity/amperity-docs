@@ -12,7 +12,6 @@
 .. |box-names| replace:: Users
 
 
-
 .. meta::
     :description lang=en:
         Configure Amperity to pull data from Sailthru.
@@ -66,7 +65,7 @@ Get details
 #. The `API key and API secret <https://getstarted.sailthru.com/account/management/settings/>`__ |ext_link| for |source-name|.
 #. The list name.
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-sailthru-get-details-end
 
@@ -129,12 +128,14 @@ After running the |source-name| courier a feed is created automatically with a p
 
 .. source-sailthru-review-data-start
 
+.. vale off
+
 The feed and domain table will match the fields defined in the `GET user profile data endpoint <https://getstarted.sailthru.com/developers/api/user/#GET_user_profile_data>`__ |ext_link|:
 
 * **click_time**
 * **create_time**
 * **device**
-* **email** (assigned the **email** semantic tag; this field is also the unique identifier)
+* **email** (assigned the **email** semantic tag. This field is also the unique identifier)
 * **engagement**
 * **lifetime_click**
 * **lifetime_message**
@@ -146,6 +147,8 @@ The feed and domain table will match the fields defined in the `GET user profile
 * **optout_email**
 * **signup_time**
 * **view_time**
+
+.. vale on
 
 .. source-sailthru-review-data-end
 

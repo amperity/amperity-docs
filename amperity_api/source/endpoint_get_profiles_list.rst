@@ -1,0 +1,341 @@
+.. https://docs.amperity.com/api/
+
+
+.. meta::
+    :description lang=en:
+         Return a list of customer profiles from your tenant.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+         Return a list of customer profiles from your tenant.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        GET /indexes/{id}/profiles
+
+==================================================
+GET /indexes/{id}/profiles
+==================================================
+
+.. endpoint-get-profiles-list-start
+
+Use the **GET /indexes/{id}/profiles** endpoint to return a paginated list of customer profiles.
+
+.. endpoint-get-profiles-list-end
+
+.. endpoint-get-profiles-list-maximum-filters-start
+
+.. note:: The maximum number of fields for an index is 30.
+
+.. endpoint-get-profiles-list-maximum-filters-end
+
+
+.. _endpoint-get-profiles-list-prerequisites:
+
+Prerequisites
+==================================================
+
+.. endpoint-get-profiles-list-prerequisites-start
+
+#. :ref:`Add an API key <authentication-api-keys-add>`.
+#. :ref:`Generate an access token <authentication-access-token-generate>`.
+
+.. endpoint-get-profiles-list-prerequisites-end
+
+
+.. _endpoint-get-profiles-list-request-url:
+
+Request URL
+==================================================
+
+.. endpoint-get-profiles-list-request-url-start
+
+Direct all requests to the **GET /indexes/{id}/profiles** endpoint to the request URL. The request URL uses the base URL with the endpoint path appended.
+
+**Amazon AWS**
+
+.. code-block:: rest
+
+   https://app.amperity.com/api/indexes/{id}/profiles
+
+**Microsoft Azure**
+
+.. code-block:: rest
+
+   https://{tenant-id}.amperity.com/api/indexes/{id}/profiles
+
+.. endpoint-get-profiles-list-request-url-end
+
+.. include:: ../../amperity_api/source/base_url.rst
+   :start-after: .. base-url-tenant-id-start
+   :end-before: .. base-url-tenant-id-end
+
+
+.. _endpoint-get-profiles-list-rate-limit:
+
+Rate limit
+==================================================
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-start
+   :end-before: .. rate-limits-end
+
+.. include:: ../../amperity_api/source/rate_limits.rst
+   :start-after: .. rate-limits-profile-start
+   :end-before: .. rate-limits-profile-end
+
+
+.. _endpoint-get-profiles-list-request:
+
+Requests
+==================================================
+
+.. endpoint-get-profiles-list-request-start
+
+A request to the **GET /indexes/{id}/profiles** endpoint is similar to:
+
+.. code-block:: rest
+
+   curl --request GET \
+          'https://app.amperity.com/api/indexes/{id}/profiles \
+          ?limit=100 \
+          &with_total=true \
+          &filter[<attribute>]=<value>' \
+        --header 'amperity-tenant: {tenant-id}' \
+        --header 'api-version: 2025-07-31' \
+        --header 'Authorization: Bearer {token}'
+
+This example is formatted for readability in a narrow page layout.
+
+.. endpoint-get-profiles-list-request-end
+
+
+.. _endpoint-get-profiles-list-request-parameters:
+
+Request parameters
+--------------------------------------------------
+
+.. endpoint-get-profiles-list-request-parameters-start
+
+The following table describes the parameters that may be used with the **GET /indexes/{id}/profiles** endpoint.
+
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+
+   * - **filter**
+     - String. Optional.
+
+       One or more index attributes that are configured to be available as filter request properties. Each filter limits the response to include properties that match the attribute and value for each filter.
+
+       .. code-block:: none
+
+          filter[<attribute>]=<value>
+
+       where:
+
+       * ``[<attribute>]`` is the name of a field in the index.
+       * ``<value>`` is the value to be returned in the response.
+
+       For example:
+
+       .. code-block:: none
+
+          filter[first_name]=Daniel
+
+       Apply additional filters to the request to narrow the response to return a specific set of profile attributes.
+
+	   .. include:: ../../amperity_operator/source/api_profile.rst
+	      :start-after: .. profile-api-howitworks-filter-fields-example-start
+	      :end-before: .. profile-api-howitworks-filter-fields-example-end
+
+
+   * - **limit**
+     - Integer. Optional.
+
+       The maximum number of records to include in a single page of results.
+
+
+   * - **next_token**
+     - String. Optional.
+
+       An opaque token that is used to paginate results. Omit the **next_token** property to return the first page. Use the cursor value for **next_token** that was returned in a response to view the next page of results.
+
+       For example: **ABCd1fghIJk2l3M**
+
+       .. note:: The possible values for **next_token** are returned within the **200** response.
+
+       .. important:: The value for **next_token** cannot be **NULL**.
+
+
+   * - **with_total**
+     - Boolean. Optional.
+
+       Set this value to **true** to include a total count of all results. Default value: **false**.
+
+       .. note:: Obtaining the total count of all results can be an expensive operation when there is a high number of pages in the results set.
+
+.. endpoint-get-profiles-list-request-parameters-end
+
+
+.. _endpoint-get-profiles-list-request-examples:
+
+Request examples
+--------------------------------------------------
+
+.. endpoint-get-profiles-list-request-examples-start
+
+The following examples show how to send requests to the **GET /indexes/{id}/profiles** endpoint.
+
+.. endpoint-get-profiles-list-request-examples-end
+
+
+.. endpoint-get-profiles-list-request-examples-tabs-start
+
+.. tab-set::
+
+   .. tab-item:: cURL
+
+      The following example shows how to use cURL to send a request to the **GET /indexes/{id}/profiles** endpoint.
+
+      .. code-block:: rest
+
+         curl --request GET \
+                'https://app.amperity.com/api/indexes/{id}/profiles \
+                ?limit=100 \
+                &with_total=true \
+                &filter[<attribute>]=<value>' \
+                --header 'amperity-tenant: {tenant-id}' \
+                --header 'api-version: 2025-07-31' \
+                --header 'Authorization: Bearer {token}'
+
+      This example is formatted for readability in a narrow page layout.
+
+   .. tab-item:: Python
+
+      The following example shows how to use Python to send a request to the **GET /indexes/{id}/profiles** endpoint. This example converts the JSON response into a CSV file named "profiles.csv".
+
+      .. code-block:: python
+         :linenos:
+
+         import requests
+         import json
+         import csv
+
+         # URL for Campaigns endpoint
+         url = "https://app.amperity.com/api/indexes/{id}/profiles?filter[<attribute>]=<value>"
+
+         # Required headers
+         headers = {
+           'accept': 'application/json',
+           'authorization': 'Bearer {token}', # add token here
+           'amperity-tenant': '{tenant-id}',
+           'api-version': '{version}'
+         }
+
+         # Get the response from the Profiles endpoint
+         response = requests.request("GET", url, headers=headers, params=payload)
+         response_json = response.json()
+
+         # Extract headers from the first data entry
+         headers = list(response_json["data"][0].keys())
+
+         # Specify the output CSV file path
+         csv_file_path = "profiles.csv"
+
+         # Write data to a CSV file
+         with open(csv_file_path, mode='w', newline='') as file:
+           writer = csv.DictWriter(file, fieldnames=headers)
+           writer.writeheader()
+           for entry in response_json["data"]:
+             writer.writerow(entry)
+
+         print("CSV file generated successfully.")
+
+.. endpoint-get-profiles-list-request-examples-tabs-end
+
+
+.. _endpoint-get-profiles-list-responses:
+
+Responses
+==================================================
+
+.. endpoint-get-profiles-list-responses-start
+
+A response from the **GET /indexes/{id}/profiles** endpoint will match an :doc:`HTTP status code <responses>`. A 200 response has the results set. A 4xx response indicates an issue with the configuration of your request. A 5xx response indicates that the endpoint is unavailable.
+
+.. endpoint-get-profiles-list-responses-end
+
+
+.. _endpoint-get-profiles-list-response-200ok:
+
+200 OK
+--------------------------------------------------
+
+.. endpoint-get-profiles-list-response-200ok-start
+
+The **200** response returns a set of customer profile indexes.
+
+.. code-block:: json
+   :linenos:
+
+   {
+     "total": 2,
+     "next_token": "ABCa1bcdDEe2f3G",
+     "data": [
+       {
+         "id": "cl-abc123",
+         "index_id": "index-ID",
+         "attributes": "attributes"
+       },
+       {
+         "id": "cl-abc123",
+         "index_id": "index-ID",
+         "attributes": "attributes"
+       },
+     ]
+   }
+
+.. endpoint-get-profiles-list-response-200ok-end
+
+
+.. _endpoint-get-profiles-list-response-parameters:
+
+Response parameters
+--------------------------------------------------
+
+.. endpoint-get-profiles-list-response-parameters-start
+
+A **200 OK** response has the following parameters.
+
+.. list-table::
+   :widths: 35 65
+   :header-rows: 1
+
+   * - Parameter
+     - Description
+
+   * - **data**
+     - A JSON array of values for the current page of results. The array of values includes the following properties:
+
+       **id**
+          The Amperity internal identifier for the campaign.
+
+       **index_id**
+          The ID for the profile index.
+
+       **attributes**
+          A list of attributes for the profile index.
+
+   * - **next_token**
+     - The cursor value to use in the next request to return the next page of results.
+
+       .. note:: When the value for **next_token** is empty, the last page in the results set has been returned.
+
+   * - **total**
+     - The total count of all results.
+
+.. endpoint-get-profiles-list-response-parameters-end

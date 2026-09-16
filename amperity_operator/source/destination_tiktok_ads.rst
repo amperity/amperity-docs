@@ -11,6 +11,7 @@
 .. |filter-the-list| replace:: "tik"
 .. |allow-for-what| replace:: audience mapping
 .. |allow-for-duration| replace:: up to 10 hours
+.. |hashed-fields| replace:: **EMAIL**, **PHONE**, or **AAID**
 
 
 .. meta::
@@ -23,13 +24,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for TikTok Ads
+        Configure destinations for TikTok Ads
 
 ==================================================
-Configure destination for TikTok Ads
+Configure destinations for TikTok Ads
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_tiktok_ads.html>`__ |ext_link|.
 
 .. destination-tiktok-ads-custom-audiences-start
 
@@ -43,6 +42,16 @@ Custom audiences help find people who already know about or have engaged with yo
 
 .. destination-tiktok-ads-custom-audiences-size-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. destination-tiktok-ads-email-normalization-start
+   :end-before: .. destination-tiktok-ads-email-normalization-end
+
+.. note:: Values that already match the 64-character lowercase hex pattern are passed through as-is to prevent double-hashing.
+
 .. TODO: Sync following with ampiq/destination_tiktok_ads
 
 .. destination-tiktok-ads-important-one-time-delivery-start
@@ -53,7 +62,7 @@ Custom audiences help find people who already know about or have engaged with yo
 
 .. destination-tiktok-ads-api-note-start
 
-.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map multiple advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
+.. note:: Amperity uses a combination of endpoints in the |destination-name| Segment API to `verify existing segments <https://ads.tiktok.com/marketing_api/docs?id=1708578418908161>`__ |ext_link|, `add or update <https://ads.tiktok.com/marketing_api/docs?id=1735136750113793>`__ |ext_link| the list of customers to match the list of customers sent from Amperity, and then `map many advertising account IDs to the same business account <https://ads.tiktok.com/marketing_api/docs?id=1735141667215361>`__ |ext_link|.
 
    .. include:: ../../shared/destinations.rst
       :start-after: .. destinations-add-destinations-intro-allow-for-start
@@ -80,11 +89,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -98,11 +108,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -110,6 +121,7 @@ Get details
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
        **Audience name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -117,6 +129,7 @@ Get details
              :end-before: .. setting-tiktok-ads-manager-custom-audience-name-end
 
        **User ID type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -137,7 +150,7 @@ Configure credentials
 
 .. destination-tiktok-ads-configure-oauth-important-start
 
-.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that will be used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
+.. important:: TikTok Advertiser Accounts are required to use OAuth. Confirm that the account that is used to authorize to |destination-name| has the **TikTok Ad Account Operator** or **TikTok Ad Account Admin** permission level. OAuth will not work if your account has **TikTok Ad Account Analyst** permission.
 
 .. destination-tiktok-ads-configure-oauth-important-end
 
@@ -155,8 +168,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -164,8 +177,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -173,14 +186,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Refresh token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -223,8 +237,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -243,8 +257,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -259,8 +273,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -279,14 +293,15 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Advertiser ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -294,6 +309,7 @@ Add destination
              :end-before: .. setting-tiktok-ads-manager-advertiser-id-end
 
        **Audience name**
+
           |checkmark-required| **Required at orchestration**
 
           .. include:: ../../shared/destination_settings.rst
@@ -301,6 +317,7 @@ Add destination
              :end-before: .. setting-tiktok-ads-manager-custom-audience-name-end
 
        **User ID type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -310,12 +327,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-tiktok-ads-add-steps-end
 
@@ -338,7 +365,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -358,7 +385,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -374,7 +401,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -394,13 +421,14 @@ Workflow actions
 
        * :ref:`destination-tiktok-ads-workflow-actions-advertiser-not-found`
        * :ref:`destination-tiktok-ads-workflow-actions-invalid-credentials`
+       * :ref:`destination-tiktok-ads-workflow-actions-max-audience-limit`
        * :ref:`destination-tiktok-ads-workflow-actions-missing-advertiser-permissions`
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -455,6 +483,24 @@ Invalid credentials
 .. include:: ../../shared/workflow-actions.rst
    :start-after: .. workflow-actions-generic-invalid-credentials-start
    :end-before: .. workflow-actions-generic-invalid-credentials-end
+
+
+.. _destination-tiktok-ads-workflow-actions-max-audience-limit:
+
+Maximum audience limit
+--------------------------------------------------
+
+.. destination-tiktok-ads-workflow-actions-max-audience-limit-start
+
+|destination-name| allows a maximum of 400 custom audiences per account. When this limit is reached, Amperity cannot create new audiences and the workflow will fail.
+
+To resolve this error, delete unused custom audiences from your |destination-name| account to bring the total below 400, and then retry the workflow.
+
+#. Open `TikTok Ads Manager <https://ads.tiktok.com/>`__ |ext_link| and navigate to **Assets**, then **Audiences**.
+#. Review the list of custom audiences and delete any that are no longer needed.
+#. Return to the workflow action, and then click **Resolve** to retry this workflow.
+
+.. destination-tiktok-ads-workflow-actions-max-audience-limit-end
 
 
 .. _destination-tiktok-ads-workflow-actions-missing-advertiser-permissions:

@@ -10,6 +10,7 @@
 .. |filter-the-list| replace:: "meta"
 .. |allow-for-what| replace:: custom audiences
 .. |allow-for-duration| replace:: up to 24 hours
+.. |hashed-fields| replace:: **EXTERN_ID**, **EMAIL**, **PHONE**, **GEN**, **FN**, **LN**, **ST**, **CT**, **ZIP**, **COUNTRY**, **BIRTH**, and **MADID**
 
 
 .. meta::
@@ -22,13 +23,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Meta Ads Manager
+        Configure destinations for Meta Ads Manager
 
 ==================================================
-Configure destination for Meta Ads Manager
+Configure destinations for Meta Ads Manager
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_meta_ads_manager.html>`__ |ext_link|.
 
 .. destination-meta-ads-manager-start
 
@@ -39,6 +38,10 @@ The `Facebook Marketing API <https://developers.facebook.com/docs/marketing-api/
 This endpoint removes existing customers from an audience **without resetting your ad set's learning phase when an audience is part of active ad sets**, and then replaces those users with the list of customers that was sent to |destination-name| from Amperity.
 
 .. destination-meta-ads-manager-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
 
 .. note::
 
@@ -65,11 +68,12 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
        **Access token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -80,7 +84,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Meta Ads Manager settings**
 
@@ -123,28 +127,28 @@ Audiences sent to Meta Ads Manager have access to Facebook, Messenger, Instagram
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-ads.svg
           :width: 140 px
           :alt: Facebook Ads
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure `a variety of ad placements across Facebook <https://www.facebook.com/business/help/407108559393196?id=369787570424415>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-instagram.svg
           :width: 140 px
           :alt: Instagram
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Instagram <https://www.facebook.com/business/help/1634705703469129?helpref=search&sr=2&query=create%20ads%20in%20instagram>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-facebook-messenger.svg
           :width: 140 px
           :alt: Facebook Messenger
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use Meta Ads Manager to configure objectives that `place ads on Messenger <https://www.facebook.com/business/help/1420905584664062?id=274377816589261>`__ |ext_link|.
 
    * - .. image:: ../../amperity_base/source/_static/connector-whatsapp.svg
           :width: 140 px
           :alt: WhatsApp
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use `Audience Manager <https://www.facebook.com/business/help/1409448922609084?id=571563249872422&ref=fbb_an>`__ |ext_link| to reach users who are not on Facebook or Instagram, but are on mobile apps that are within the audience network. For example, creating ads that `open conversation threads in WhatsApp <https://www.facebook.com/business/help/447934475640650?id=371525583593535>`__ |ext_link|.
 
@@ -174,8 +178,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -183,8 +187,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -192,14 +196,15 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
        **Access token**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
@@ -228,7 +233,7 @@ Terms of service
 
 .. destination-meta-ads-manager-terms-of-service-start
 
-The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to |destination-name|.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your |destination-name| account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to |destination-name|.
 
 .. destination-meta-ads-manager-terms-of-service-end
 
@@ -239,7 +244,7 @@ The permissions error is similar to:
 ::
 
    Permissions error: To create or edit an audience with an uploaded
-   customer list, please agree to the Custom Audience terms at
+   customer list, agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=123.
 
 To resolve this error the terms of service must be signed by a business user who has a role in your |destination-name| account.
@@ -266,8 +271,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -286,8 +291,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -302,8 +307,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -322,8 +327,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -350,13 +355,22 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-meta-ads-manager-add-steps-end
 
@@ -379,7 +393,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -398,7 +412,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -413,7 +427,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -444,7 +458,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -576,14 +590,14 @@ Must agree to Facebook terms
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-start
 
-The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error will prevent Amperity from sending data to Facebook Ads.
+The `custom audience terms of service <https://developers.facebook.com/docs/marketing-api/audiences/reference/custom-audience-terms-of-service/>`__ |ext_link| must be signed by *each business user* that is associated with your Facebook Ads account. If the terms of service are not signed, a permissions error prevents Amperity from sending data to Facebook Ads.
 
 When the business user has not agreed to Facebook terms, an error similar to the following is shown:
 
 ::
 
    Permissions error: To create or edit an audience with an uploaded customer list,
-   please agree to the Custom Audience terms at
+ agree to the Custom Audience terms at
    https://business.facebook.com/ads/manage/customaudiences/tos/?act=1234567890123456.
 
 .. destination-meta-ads-manager-workflow-actions-facebook-terms-end
@@ -627,7 +641,7 @@ Security challenge
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-start
 
-Sometimes |destination-name| will issue a security challenge to the advertising account and/or business account associated with this workflow.
+Sometimes |destination-name| issues a security challenge to the advertising account or business account associated with this workflow.
 
 .. destination-meta-ads-manager-workflow-actions-security-challenge-end
 
@@ -671,8 +685,8 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
 
    * - **Phone Numbers**
      - **PHONE**
@@ -682,16 +696,16 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
        * Trims leading and trailing whitespace
        * Removes symbols, letters, and any leading zeros
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Gender**
      - **GEN**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Converts to m and f
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
    * - **Birth Date**
      - **BIRTH**
@@ -701,37 +715,37 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
 
    * - **Birth Year**
      - **DOBY**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBY with a format of **YYYY** and a range from 1900 to the current year.
 
    * - **Birth Month**
      - **DOBM**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBM with a format of **01** to **12**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBM with a format of **01** to **12**.
 
    * - **Birth Day**
      - **DOBD**
-     - .. warning:: Do not pass this column. For this key, the connector will use birthdate to split out the value for DOBD with a format of **01** to **31**.
+     - .. warning:: Do not pass this column. For this key, the connector uses birthdate to split out the value for DOBD with a format of **01** to **31**.
 
    * - **Last Name**
      - **LN**
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Name**
      - **FN**
      - This key supports special characters and non-Roman alphabet characters. For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation
        * Updates special characters to `UTF-8 format <https://en.wikipedia.org/wiki/UTF-8>`__ |ext_link|
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **First Initial**
      - **FI**
-     - .. warning:: Do not pass this column. The connector will use the first character of the normalized first name.
+     - .. warning:: Do not pass this column. The connector uses the first character of the normalized first name.
    * - **US States**
      - **ST**
      - A two-character `ANSI abbreviation code <https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations>`__ |ext_link| for US states.
@@ -739,29 +753,29 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Normalizes states located outside of the United States
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **City**
      - **CT**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Removes punctuation, special characters, and whitespace
-       * Hashes data as SHA-256
-   * - **Zip Code**
+       * Hashes data as one-way SHA-256
+   * - **ZIP Code**
      - **ZIP**
-     - Use only the first five digits for the United States. Use Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
+     - Use only the first five digits for the United States. Use `postcodes (area, district, sector) format <https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom>`__ |ext_link| for United Kingdom.
 
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Removes whitespace from lower-case for United Kingdom
+       * Converts to lowercase
+       * Removes whitespace from lowercase for United Kingdom
        * Trims to five digits for United States
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
    * - **Country Code**
      - **COUNTRY**
      - A two-letter country code in |ext_iso_31661alpha2| format.
@@ -769,15 +783,15 @@ The following Amperity columns should be mapped to the corresponding `Facebook M
        For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
-       * Hashes data as SHA-256
+       * Converts to lowercase
+       * Hashes data as one-way SHA-256
    * - **Mobile Advertiser ID**
      - **MADID**
      - For this key, the connector:
 
        * Trims leading and trailing whitespace
-       * Converts to lower-case
+       * Converts to lowercase
        * Keeps hyphens
-       * Hashes data as SHA-256
+       * Hashes data as one-way SHA-256
 
 .. destination-meta-ads-manager-api-keys-end

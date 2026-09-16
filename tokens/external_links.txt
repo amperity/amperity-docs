@@ -108,25 +108,11 @@
 
 .. |ext_snappass| raw:: html
 
-   <a href="https://snappass.amperity.com/" target="_blank">Snappass</a>
-
-
-.. TODO: Keep this one as a consolidated external link.
-
-.. |ext_snowflake_jdbc| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/jdbc.html" target="_blank">Snowflake JDBC driver</a>
-
-
-.. TODO: Keep this one as a consolidated external link.
-
-.. |ext_snowflake_odbc| raw:: html
-
-   <a href="https://docs.snowflake.com/en/user-guide/odbc.html" target="_blank">Snowflake ODBC driver</a>
+   <a href="https://snappass.amperity.com/" target="_blank">SnapPass</a>
 
 
 .. TODO: Keep this one as a consolidated external link.
 
 .. |ext_sparksql_version_current| raw:: html
 
-   <a href="https://archive.apache.org/dist/spark/docs/3.5.1/api/sql/index.html" target="_blank">Spark SQL, version 3.5.1</a>
+   <a href="https://spark.apache.org/docs/3.5.5/sql-ref-syntax.html#data-retrieval-statements" target="_blank">Spark SQL, version 3.5.5</a>

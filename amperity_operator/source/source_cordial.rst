@@ -7,7 +7,7 @@
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |credential-type| replace:: **cordial**
 .. |what-pull| replace:: contact and activity data
-.. |credential-fields| replace:: the name of the credential, a description, the |source-name| API key and secret
+.. |credential-fields| replace:: the name of the credential, a description, the |source-name| API key, and the API URL
 .. |box-names| replace:: Contacts or Contacts Activities
 
 
@@ -68,16 +68,16 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - The API key and secret for |source-name|.
+     - The API key and API URL for |source-name|.
 
-       .. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+       .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Optional. The |source-name| audience key.
 
@@ -88,7 +88,7 @@ The |source-name| data source requires the following configuration details:
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Optional. A comma-separated list of activity types. For example:
 
@@ -155,6 +155,12 @@ Add courier
    .. note:: When this field is empty, Amperity will pull all activity types.
 
 #. Under **Select Data**, enable |box-names|.
+
+#. Choose a **Load type**:
+
+   * **Truncate and load** deletes all rows in the domain table before loading data from |source-name|.
+   * **Load** adds data from |source-name| without removing existing rows.
+
 #. Click **Create**.
 
 .. source-cordial-add-courier-end
@@ -194,6 +200,8 @@ Email contacts
 
 .. source-cordial-contacts-start
 
+.. vale off
+
 The feed and domain table for email contacts will match the following fields:
 
 The contacts ingress type will only capture all data, regardless of if a date restriction is placed in the UI.
@@ -203,8 +211,10 @@ The contacts ingress type will only capture all data, regardless of if a date re
 * **cID**
 * **createDate**
 * **ID**
-* **subscribedAt**
+* **subscribeDate**
 * **subscribeStatus**
+
+.. vale on
 
 .. source-cordial-contacts-start
 
@@ -216,7 +226,7 @@ Contact activities
 
 .. source-cordial-contact-activities-start
 
-Contact activities capture all activities or events - opens, clicks, and custom actions created by the user. Contact activities are linked with a customer via their primary and secondary identifier. The secondary identifier can have multiple values i.e. email address, phone number, customer ID, etc. For this reason, contact activities can encompass email activity, web engagement, etc.
+Contact activities capture all activities or events, such as opens, clicks, and custom actions created by the user. Contact activities are linked with a customer via their primary and secondary identifier. The secondary identifier can have many values, such as email address, phone number, or customer ID. For this reason, contact activities can encompass email activity and web engagement.
 
 The feed and domain table for contact activities will match the following fields:
 

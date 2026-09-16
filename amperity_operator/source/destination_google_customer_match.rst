@@ -10,6 +10,7 @@
 .. |duration| replace:: (in days)
 .. |duration-value| replace:: "0" - "540"
 .. |filter-the-list| replace:: "google"
+.. |hashed-fields| replace:: **firstname**, **lastname**, **email**, and **phone**
 
 
 .. meta::
@@ -22,17 +23,33 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Google Customer Match
+        Configure destinations for Google Customer Match
 
 ==================================================
-Configure destination for Google Customer Match
+Configure destinations for Google Customer Match
 ==================================================
 
 .. destination-google-customer-match-start
 
 Use Google Customer Match to create and publish search, display, and video ads across the Google-owned paid media ecosystem.
 
+.. note:: Amperity provides a newer :doc:`Google Customer Match (GDM) <destination_google_customer_match_gdm>` connector that syncs audiences through Google's Data Manager API. Google recommends the Data Manager API for new Customer Match setups, so use the Google Customer Match (GDM) connector for new destinations.
+
 .. destination-google-customer-match-end
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-sha-256-hashed-fields-start
+   :end-before: .. setting-common-sha-256-hashed-fields-end
+
+.. note:: The **country** field is normalized to an ISO 3166-1 alpha-2 country code before sending but is not hashed. The **zip** field is sent as-is without normalization or hashing.
+
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-end
+
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-start
+   :end-before: .. destination-google-ads-whatis-google-customer-match-versus-google-ads-end
 
 
 .. _destination-google-customer-match-get-details:
@@ -53,7 +70,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -63,13 +80,13 @@ Get details
              :start-after: .. credential-oauth-refresh-token-start
              :end-before: .. credential-oauth-refresh-token-end
 
-          .. important:: Authentication for "Google Customer Match" *must* be completed within Google prior to configuring Amperity to send |what-send| to |destination-name|.
+          .. important:: Authentication for "Google Customer Match" *must* be completed within Google before configuring Amperity to send |what-send| to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail 3.
-          :align: left
+          :alt: Detail 2.
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -97,6 +114,15 @@ Get details
              :start-after: .. setting-google-ads-upload-key-type-start
              :end-before: .. setting-google-ads-upload-key-type-end
 
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: center
+          :class: no-scaled-link
+     - **European Union user consent**
+
+       .. important:: :ref:`Review the user consent policy <destination-google-customer-match-api-matching-eu-consent>` for the European Union (EU) and European Economic Area (EEA), and then add the required columns to your orchestration or campaign.
+
 .. destination-google-customer-match-get-details-end
 
 
@@ -105,17 +131,17 @@ Get details
 Configure credentials
 ==================================================
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-configure-first-start
-   :end-before: .. credential-configure-first-end
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-oauth-start
+   :end-before: .. term-oauth-end
 
-.. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-snappass-start
-   :end-before: .. credential-snappass-end
+.. include:: ../../shared/destinations.rst
+   :start-after: .. destinations-oauth-intro-start
+   :end-before: .. destinations-oauth-intro-end
 
-**To configure credentials for Google Customer Match**
+.. important:: OAuth for "Google Customer Match" *must* be completed within Google before configuring OAuth in Amperity.
 
-.. destination-google-customer-match-credentials-steps-start
+**To configure OAuth for Google Customer Match**
 
 .. list-table::
    :widths: 10 90
@@ -123,38 +149,30 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-add-credential-start
-          :end-before: .. credential-steps-add-credential-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-1-start
+          :end-before: .. destinations-oauth-configure-step-1-end
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-select-type-start
-          :end-before: .. credential-steps-select-type-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-2-start
+          :end-before: .. destinations-oauth-configure-step-2-end
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - .. include:: ../../shared/credentials_settings.rst
-          :start-after: .. credential-steps-settings-intro-start
-          :end-before: .. credential-steps-settings-intro-end
-
-       **Refresh token**
-
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
-
-.. destination-google-customer-match-credentials-steps-end
+     - .. include:: ../../shared/destinations.rst
+          :start-after: .. destinations-oauth-configure-step-3-start
+          :end-before: .. destinations-oauth-configure-step-3-end
 
 
 .. _destination-google-customer-match-reauthorize-amperity:
@@ -186,8 +204,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -206,8 +224,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -222,8 +240,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -242,8 +260,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -298,11 +316,31 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
 .. destination-google-customer-match-add-steps-end
+
+
+.. _destination-google-customer-match-api-matching-eu-consent:
+
+European Union user consent
+==================================================
+
+.. include:: ../../amperity_operator/source/destination_google_ads.rst
+   :start-after: .. destination-google-ads-api-matching-eu-consent-start
+   :end-before: .. destination-google-ads-api-matching-eu-consent-end

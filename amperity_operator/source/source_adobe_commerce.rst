@@ -80,7 +80,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The hostname or IP address for the |source-name| storefront.
 
@@ -88,7 +88,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - |source-name| uses `OAuth-based credentials <https://devdocs.magento.com/guides/v2.3/get-started/authentication/gs-authentication-oauth.html>`__ |ext_link|, which requires all of the following settings:
 
@@ -96,7 +96,7 @@ Get details
        * The access token and access token secret.
 
 
-.. tip:: Use SnapPass to securely share configuration details for |source-name| between your company and your Amperity representative.
+.. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
 .. source-adobe-commerce-get-details-end
 
@@ -120,8 +120,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-start
@@ -139,8 +139,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-already-configured-start
@@ -155,8 +155,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - Add the hostname or IP address for the |source-name| storefront, the consumer key and consumer secret, and the access token and access token secret.
 
@@ -192,8 +192,8 @@ Add data source and feeds
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-add-source-start
@@ -212,8 +212,8 @@ Add data source and feeds
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials.rst
           :start-after: .. credentials-sources-configure-already-configured-start
@@ -222,10 +222,10 @@ Add data source and feeds
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
-     - On the **Add courier** page, under **Select data to ingest**, enable one (or more) data sets to pull to Amperity:
+     - On the **Add courier** page, under **Select data to ingest**, enable one or more data sets to pull to Amperity:
 
        * **Customers**
        * **Customer Address**
@@ -239,8 +239,8 @@ Add data source and feeds
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-run-the-courier-start
@@ -249,8 +249,8 @@ Add data source and feeds
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/sources.rst
           :start-after: .. sources-verify-feeds-and-domain-tables-start
@@ -266,7 +266,7 @@ Review feeds and domain tables
 
 .. source-adobe-commerce-review-data-start
 
-After running the |source-name| courier it will create a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name|.
+After running the |source-name| courier it creates a series of feeds and domain tables. Review the records for each domain table to ensure the right data was loaded from |source-name|.
 
 .. source-adobe-commerce-review-data-end
 
@@ -278,7 +278,9 @@ Customers
 
 .. source-adobe-commerce-review-data-customer-start
 
-The feed and domain table for customer details will contain the following fields:
+The feed and domain table for customer details has the following fields:
+
+.. vale off
 
 * **CREATED_AT**
 * **CREATED_IN**
@@ -294,6 +296,8 @@ The feed and domain table for customer details will contain the following fields
 * **UPDATED_AT**
 * **WEBSITE_ID**
 
+.. vale on
+
 You may choose to apply customer profile semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-customer-end
@@ -306,7 +310,9 @@ Customer address
 
 .. source-adobe-commerce-review-data-customer-address-start
 
-The feed and domain table for customer addresses will contain the following fields:
+The feed and domain table for customer addresses has the following fields:
+
+.. vale off
 
 * **CITY**
 * **COUNTRY_ID**
@@ -321,6 +327,8 @@ The feed and domain table for customer addresses will contain the following fiel
 * **TELEPHONE**
 * **UPDATED_AT**
 
+.. vale on
+
 You may choose to apply customer profile semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-customer-address-end
@@ -333,13 +341,17 @@ Customer group
 
 .. source-adobe-commerce-review-data-customer-group-start
 
-The feed and domain table for customer group will contain the following fields:
+The feed and domain table for customer group has the following fields:
+
+.. vale off
 
 * **CODE**
 * **CUSTOMER_GROUP_ID**
 * **TAX_CLASS_ID**
 * **TAX_CLASS_NAME**
 * **VIP_DATA**
+
+.. vale on
 
 .. source-adobe-commerce-review-data-customer-group-end
 
@@ -351,7 +363,9 @@ Orders
 
 .. source-adobe-commerce-review-data-orders-start
 
-The feed and domain table for orders will contain the following fields:
+The feed and domain table for orders has the following fields:
+
+.. vale off
 
 * **ADJUSTMENT_NEGATIVE**
 * **ADJUSTMENT_POSITIVE**
@@ -460,6 +474,8 @@ The feed and domain table for orders will contain the following fields:
 * **WEIGHT**
 * **X_FORWARDED_FOR**
 
+.. vale on
+
 You may choose to apply itemized transaction semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-orders-end
@@ -472,7 +488,9 @@ Order address
 
 .. source-adobe-commerce-review-data-order-address-start
 
-The feed and domain table for order address will contain the following fields:
+The feed and domain table for order address has the following fields:
+
+.. vale off
 
 * **ADDRESS_TYPE**
 * **CITY**
@@ -492,6 +510,8 @@ The feed and domain table for order address will contain the following fields:
 * **STREET**
 * **TELEPHONE**
 
+.. vale on
+
 You may choose to apply customer profile semantic tags to the columns in this table.
 
 .. source-adobe-commerce-review-data-order-address-end
@@ -504,7 +524,9 @@ Order items
 
 .. source-adobe-commerce-review-data-order-items-start
 
-The feed and domain table for order items will contain the following fields:
+The feed and domain table for order items has the following fields:
+
+.. vale off
 
 * **AMOUNT_REFUNDED**
 * **BASE_AMOUNT_REFUNDED**
@@ -560,6 +582,8 @@ The feed and domain table for order items will contain the following fields:
 * **UPDATED_AT**
 * **WEEE_TAX_APPLIED**
 * **WEIGHT**
+
+.. vale on
 
 You may choose to apply itemized transaction semantic tags to the columns in this table.
 

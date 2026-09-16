@@ -20,10 +20,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pull from Pardot
+        Pull from Salesforce Pardot
 
 ==================================================
-Pull from Pardot
+Pull from Salesforce Pardot
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -81,7 +81,7 @@ Get details
 
 #. A new security token for using SSO with Salesforce.
 
-   .. tip:: Reset your security token to be sent an email that contains the new security token.
+   .. tip:: Reset your security token to be sent an email that has the new security token.
 
 #. The daily API call limit. (Default is 150,000.)
 

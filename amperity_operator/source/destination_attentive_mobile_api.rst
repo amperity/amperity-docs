@@ -3,8 +3,8 @@
 
 .. |destination-name| replace:: Attentive
 .. |destination-api| replace:: Custom Attributes API
-.. |plugin-name| replace:: "attentive-api"
-.. |credential-type| replace:: "Custom Attributes API"
+.. |plugin-name| replace:: "Attentive API"
+.. |credential-type| replace:: "attentive-api"
 .. |required-credentials| replace:: "API key"
 .. |audience-primary-key| replace:: "email" or "phone"
 .. |what-send| replace:: custom attributes
@@ -24,21 +24,33 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Attentive (attributes)
+        Configure destinations for Attentive (attributes)
 
 ==================================================
-Configure destination for Attentive (attributes)
+Configure destinations for Attentive (attributes)
 ==================================================
 
 .. destination-attentive-mobile-api-attributes-start
 
 |destination-name| is your source of truth for your customers' subscription status, while Amperity is your source of truth for profile attributes that describe those customers.
 
-Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/tag/Subscribers/>`__ |ext_link| and `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoints to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
-
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
+Amperity uses the `Bulk attribute endpoint <https://docs.attentive.com/reference/postbulkuserattributes>`__ |ext_link| to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
 .. destination-attentive-mobile-api-attributes-end
+
+.. destination-attentive-mobile-api-attributes-caution-start
+
+.. caution:: The |destination-name| |destination-api| builds segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
+
+.. destination-attentive-mobile-api-attributes-caution-end
+
+.. destination-attentive-mobile-api-attributes-important-start
+
+.. important:: Field names and field values are case sensitive in |destination-name|. For example, field names like "Favorite color" and "Favorite Color" are treated as different custom attributes and field values like "Blue" and "blue" are treated as different values.
+
+   Queries that are run in `performance mode <../reference/queries.html#enable-performance-mode>`__ **automatically convert field names to lowercase**. If a query must be run in performance mode, consider using the `LOWER() <../reference/sql_presto.html#lower>`__ function to ensure consistent capitalization is applied to field names.
+
+.. destination-attentive-mobile-api-attributes-important-end
 
 .. destination-attentive-sftp-and-api-start
 
@@ -47,6 +59,12 @@ Amperity uses the `Subscriptions <https://docs.attentive.com/openapi/reference/t
    Amperity uses the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| process to manage segments. This process does not use an endpoint and is not subject to `Attentive API rate limits <https://docs.attentive.com/pages/api-rate-limits/>`__ |ext_link|. Updates appear on the **Segments** page within your audience in |destination-name|.
 
 .. destination-attentive-sftp-and-api-end
+
+.. destination-attentive-mobile-api-async-start
+
+.. note:: |destination-name| processes attribute updates asynchronously after Amperity sends the data. Amperity reports rows as succeeded once |destination-name| accepts the request. There is no attribute update status tracking.
+
+.. destination-attentive-mobile-api-async-end
 
 
 .. _destination-attentive-api-get-details:
@@ -67,7 +85,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
@@ -79,10 +97,18 @@ Get details
              :start-after: .. credential-attentive-api-key-start
              :end-before: .. credential-attentive-api-key-end
 
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-scopes-start
+             :end-before: .. credential-attentive-api-key-scopes-end
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-attentive-api-key-update-permissions-start
+             :end-before: .. credential-attentive-api-key-update-permissions-end
+
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -97,15 +123,6 @@ Get details
              .. include:: ../../shared/destination_settings.rst
                 :start-after: .. setting-attentive-primary-identifier-context-start
                 :end-before: .. setting-attentive-primary-identifier-context-end
-
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 3.
-          :align: left
-          :class: no-scaled-link
-     - **Sign-up units**
-
-       The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
 .. destination-attentive-api-get-details-end
 
@@ -133,8 +150,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -142,8 +159,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -151,8 +168,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
@@ -188,8 +205,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -208,8 +225,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -224,8 +241,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -244,8 +261,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -254,8 +271,8 @@ Add destination
        **Primary identifier**
 
           .. include:: ../../shared/destination_settings.rst
-             :start-after: .. setting-active-campaign-verbose-logging-start
-             :end-before: .. setting-active-campaign-verbose-logging-end
+             :start-after: .. setting-attentive-primary-identifier-start
+             :end-before: .. setting-attentive-primary-identifier-end
 
           .. important:: 
 
@@ -265,13 +282,21 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
-.. destination-attentive-api-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
+.. destination-attentive-api-add-steps-end

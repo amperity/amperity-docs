@@ -24,10 +24,14 @@
 
 
 ==================================================
-Configure campaigns for Attentive
+Send data to Attentive
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_attentive_mobile.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_attentive_mobile.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-attentive-mobile-start
@@ -50,7 +54,7 @@ How this destination works
 
 .. destination-attentive-howitworks-start
 
-Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you will send emails or messages. A subscriber is a customer for which you have an opt-in/out status. You can only send emails or messages to customers who have opted-in.
+Amperity can manage audiences in |destination-name| and provide attributes about the customers who belong to those audiences. A segment is the list of customers to which you sends emails or messages. A subscriber is a customer for which you have an opt-in or opt-out status. You can only send emails or messages to customers who have opted-in.
 
 .. destination-attentive-howitworks-end
 
@@ -64,7 +68,7 @@ Amperity can manage audiences in |destination-name| and provide attributes about
 
 An |destination-name| destination works like this:
 
-#. Use a query or segment to a) build a list of subscribers for whom you have opt-in/out data, and then b) build a segment that contains a list of customers to whom you want to send email or SMS messages.
+#. Use a query or segment to a) build a list of subscribers for whom you have opt-in/out data, and then b) build a segment that has a list of customers to whom you want to send email or SMS messages.
 
 #. Configure destinations that manage :ref:`audience segments <destination-attentive-segments>`, and then provide :ref:`attributes about the customers <destination-attentive-attributes>` who belong to those audiences.
 
@@ -125,35 +129,35 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The username and passphrase with permission to write data to Attentive Mobile using their SFTP process.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The remote folder to which Amperity will send data: ``/uploads``.
+     - The remote folder to which Amperity sends data: ``/uploads``.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The public key to use for PGP encryption, if required.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail five.
+          :align: center
           :class: no-scaled-link
      - Do not include header rows in output.
 
@@ -171,7 +175,7 @@ Add destination
 
 .. destination-attentive-segments-add-destination-important-start
 
-.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who will send segments to |destination-name| will be able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
+.. important:: Be sure to use "Segments" in the destination title so that users of Amperity who sends segments to |destination-name| is able to identify this destination. Review the `subscriber segment upload <https://docs.attentivemobile.com/pages/developer-guides/sftp-solution/subscriber-segment-upload/#subscriber-segment-upload>`__ |ext_link| topic for specific requirements for how to format the CSV file. Do not include header rows in output.
 
 .. destination-attentive-segments-add-destination-important-end
 
@@ -185,8 +189,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -205,8 +209,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-sftp-start
@@ -239,8 +243,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -259,8 +263,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -273,8 +277,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -294,7 +298,7 @@ Custom attributes (API)
 
 Amperity uses the `Custom Attributes <https://docs.attentivemobile.com/openapi/reference/tag/Custom-Attributes/>`__ |ext_link| endpoint to send custom profile attributes to |destination-name|. Use these attributes to apply customizable data or characteristics to each of your subscribers, and then use that information to build segments for use with campaigns and journeys.
 
-.. caution:: The |destination-name| |destination-api| allows you to build segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
+.. caution:: The |destination-name| |destination-api| builds segments based on a match with customer profile attributes. Custom attributes `cannot contain any sensitive or special categories of information <https://docs.attentivemobile.com/pages/legal-docs/pi-disclaimer/>`__ |ext_link|.
 
 .. destination-attentive-attributes-end
 
@@ -327,15 +331,15 @@ The |destination-name| Custom Attributes API requires the following configuratio
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The |destination-name| API key.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The ID for the `sign-up unit <https://help.attentivemobile.com/hc/en-us/articles/360051443552-What-are-sign-up-units->`__ |ext_link|. Sign-up units are managed from the **Sign-up Units** page in |destination-name|. You must provide an ID for an active sign-up unit.
 
@@ -369,8 +373,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -389,8 +393,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -427,8 +431,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -454,8 +458,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -468,8 +472,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -497,8 +501,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -517,8 +521,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -527,7 +531,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -542,8 +546,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -562,8 +566,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -589,20 +593,20 @@ About filename templates
 
 .. destination-attentive-add-data-template-intro-start
 
-A filename template defines how the names of segments and campaigns will appear in |destination-name|.
+A filename template defines how the names of segments and campaigns appears in |destination-name|.
 
 .. destination-attentive-add-data-template-intro-end
 
 .. destination-attentive-add-data-template-about-start
 
-The following table shows how your segment name will appear in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that will be sent to |destination-name|.
+The following table shows how your segment name appears in |destination-name|. These examples represent a one-time buyer campaign that is attempting to win a second purchase. The campaign is named "Winback" and it has sub-audiences for "Dress Shirts", "Jeans", and "Shoes". Keep these types of patterns in mind when naming campaigns, treatment groups, and sub-audiences within your campaigns that is sent to |destination-name|.
 
 .. list-table::
    :widths: 150 150 300
    :header-rows: 1
 
    * - Pattern
-     - Segment name(s)
+     - Segment names
      - Description
 
    * - (empty)
@@ -615,7 +619,7 @@ The following table shows how your segment name will appear in |destination-name
 
    * - **campaign_name**
      - Winback
-     - Use this pattern for campaigns that do not have more than one treatment group or sub-audiences. This will use the name of the campaign as the name of the segment in |destination-name|.
+     - Use this pattern for campaigns that do not have more than one treatment group or sub-audiences. This uses the name of the campaign as the name of the segment in |destination-name|.
 
        .. tip:: Use **{{ campaign_name }}** *instead of* **{{ list_name }}**.
 
@@ -625,29 +629,29 @@ The following table shows how your segment name will appear in |destination-name
        Winback_Jeans
 
        Winback_Shoes
-     - Use this pattern for campaigns that have more than one treatment group and/or have sub-audiences.
+     - Use this pattern for campaigns that have more than one treatment group or have sub-audiences.
 
-       You may use an underscore ( _ ) or a hyphen ( - ): **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
+       You may use an underscore ``_`` or a hyphen ``-``: **{{ campaign_name }}_{{ group_name }}** or **{{ campaign_name }}-{{ group_name }}**.
 
-       You may put them next to each other (without using an underscore or hyphen): **{{ campaign_name }}{{ group_name }}**.
+       You may put them next to each other without using an underscore or hyphen: **{{ campaign_name }}{{ group_name }}**.
 
        You may switch the ordering: **{{ group_name }}_{{ campaign_name }}**.
 
        .. tip:: Be sure to use descriptive names for campaigns *and* treatment groups and be careful to not use the default treatment group names when sending campaigns to |destination-name|.
 
-          This will ensure that downstream users in |destination-name| will be able to understand what each segment is for and won't have to view default naming patterns like "Winback_Recipient1", "WinbackRecipient2", etc.
+          This will ensure that downstream users in |destination-name| is able to understand what each segment is for and will not have to view default naming patterns like "Winback_Recipient1", "WinbackRecipient2", etc.
    * - **group_name**
      - DressShirts
 
        Jeans
 
        Shoes
-     - Use this pattern to only use the names of treatment groups as segment names in |destination-name|. This will omit the name of the campaign *and* the name of the sub-audience from the segment name.
+     - Use this pattern to only use the names of treatment groups as segment names in |destination-name|. This omits the name of the campaign *and* the name of the sub-audience from the segment name.
 
 .. destination-attentive-add-data-template-about-end
 
 .. destination-attentive-add-data-template-important-start
 
-.. important:: The filename template, as used with |destination-name| (and unlike how it is used with other destinations), **does not** build a file name. Instead the filename template defines which strings (campaign and/or treatment group) will be used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
+.. important:: The filename template, as used with |destination-name|, and unlike how it is used with other destinations, **does not** build a file name. Instead the filename template defines which strings--campaign or treatment group--is used as the name of a segment in |destination-name|. Spaces in campaign and treatment group names are removed.
 
 .. destination-attentive-add-data-template-important-end

@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -19,7 +20,7 @@ Statistics -- combined
 
 .. stitch-qa-query-combined-statistics-start
 
-Use this query to return an overview of Stitch statistics that contains the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
+Use this query to return an overview of Stitch statistics that has the number of records, accounts, Amperity IDs, singletons, clusters with more than one record, overall deduplication rate, and the deduplication rate across all data sources.
 
 .. stitch-qa-query-combined-statistics-end
 
@@ -38,6 +39,7 @@ Configure query
 #. If customer keys are available, change the following line in the common table expression:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       WITH overall_dedupe_keys AS (
@@ -49,6 +51,7 @@ Configure query
    to:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4
 
       WITH overall_dedupe_keys AS (
@@ -60,6 +63,7 @@ Configure query
    and then change the following line in the **table_dedupe_keys** **SELECT** statement:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 5
 
       ,table_dedupe_keys AS (
@@ -72,6 +76,7 @@ Configure query
    to:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 5
 
       ,table_dedupe_keys AS (

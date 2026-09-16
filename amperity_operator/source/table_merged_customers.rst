@@ -23,9 +23,7 @@ Merged Customers table
 
 .. table-merged-customers-important-start
 
-.. tip:: This topic describes a recommended starting point for the **Merged Customers** table.
-
-   The **Merged Customers** table collects PII data from the **Unified Coalesced** table, and then performs additional processing and grouping of this data *prior* to making this data available to the **Customer 360** table.
+.. tip:: The **Merged Customers** table collects PII data from the **Unified Coalesced** table, and then performs additional processing and grouping of this data *prior* to making this data available to the **Customer 360** table.
 
    Use the **Merged Customers** tables to apply bad-values blocklists to merge rules.
 
@@ -35,7 +33,7 @@ Merged Customers table
 
 .. table-merged-customers-start
 
-This topic describes the starting point for the **Merged Customers** table, and then steps through the process of updating it to be specific to your tenant. (This topic does not attempt to address all of the specific use cases you may have for your tenant.)
+Configure the **Merged Customers** table, and then step through the process of updating it to be specific to your tenant.
 
 Common ways of extending this table to support additional use cases are described, along with providing links to more detailed examples, when available. Start with the SQL that is added to your tenant by the "Customer 360" database template, and then add support for all of your required use cases.
 
@@ -49,18 +47,18 @@ Requirements
 
 .. table-merged-customers-requirements-start
 
-This topic assumes the following requirements are met:
+The **Merged Customers** table has the following requirements:
 
-* PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and/or non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
+* PII semantic tags are applied consistently, including assigning the correct data types, to all feeds that contain customer records. For custom PII semantics and non-PII data that must be accessible from the **Unified Coalesced** table, you may need to :ref:`extend the Merged Customers table <table-merged-customers-custom-semantics>` to support them.
 * Feeds that contain customer records are made available to Stitch.
-* Each feed has a primary key; foreign keys are applied consistently across all feeds that are made available to Stitch.
+* Each feed has a primary key. Foreign keys are applied consistently across all feeds that are made available to Stitch.
 * At least one feed must contain a field that indicates when the data was last updated.
 
   .. include:: ../../shared/terms.rst
      :start-after: .. term-update-dt-start
      :end-before: .. term-update-dt-end
 
-* You can extend the **Merged Customers** table to exclude common or "bad" values. Extensions may be done *after* the **Merged Customers** table is created because they often have both downstream and upstream dependencies within the Amperity workflow that will require some tuning within for the **Merged Customers** table.
+* You can extend the **Merged Customers** table to exclude common or "bad" values. Extensions may be done *after* the **Merged Customers** table is created because they often have both downstream and upstream dependencies within the Amperity workflow that requires some tuning within for the **Merged Customers** table.
 
 .. table-merged-customers-requirements-end
 
@@ -88,17 +86,17 @@ Add table
 
 .. table-merged-customers-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "Merged_Customers".
 #. Set the build mode to **SQL**.
 #. Click **Apply template**, and then select **Merged Customers**.
-#. Update the placeholder names (shown as "Domain:Table" in the query) and set field-level priorities.
+#. Update the placeholder names--shown as "Domain:Table" in the query--and set field-level priorities.
 #. Click **Validate** to verify the SQL runs without error.
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Add a table description. This enables a tooltip that is visible from other areas in Amperity.
 #. Verify that the **db/required** and **db/unique** database field semantics were applied to the **amperity_id** column.
-#. Verify that semantic tags---**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.---were applied to all PII fields correctly.
+#. Verify that semantic tags--**given_name**, **surname**, **email**, **phone**, **address**, **city**, **state**, **postal**, **birthdate**, **gender**, etc.--were applied to all PII fields correctly.
 
    .. tip:: You can clear incorrectly tagged semantics individually or for the entire table. To clear semantic tags for the entire table, under **Semantic Suggestions** click **Clear semantics**.
 #. From the **Table Semantics** dropdown, select **Merged Customers**.
@@ -117,10 +115,10 @@ SQL query
 
 The following SQL query is the recommended starting point for the **Merged Customers** table. It exists in two parts: a window function that collects and groups PII data, and then a statement that updates the **Merged Customers** table with the results. This query does the following:
 
-#. Provides a location in which domain tables (i.e. "feeds that are made available to Stitch") are assigned priority. (This section must be updated to contain the names of the domain tables for your tenant that should be assigned a non-default priority.)
-#. Provides a location in which PII fields are assigned priority. (This section must be updated to contain the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, e.g. email addresses, physical addresses, and so on.)
+#. Provides a location in which domain tables are assigned priority. Update **Merged Customers** for the names of the domain tables in your tenant that should be assigned a non-default priority.
+#. Provides a location in which PII fields are assigned priority. Update **Merged Customers** for the names of the domain tables that are assigned source priority, and then be updated to assign priorities to logical groups of fields that contain PII data, such as email addresses and physical addresses.
 #. Left joins the fields in the **Unified Coalesced** table into a temporary table for prioritization.
-#. Left joins the fields in the **Unified Coalesced** table to form groupings of PII fields. For example, all address-related fields (**address**, **address2**, **city**, **state**, **postal**, and **country**) are grouped together. This is done for names, addresses, phone numbers, email addresses, birthdates, and gender.
+#. Left joins the fields in the **Unified Coalesced** table to form groupings of PII fields. For example, all address-related fields--**address**, **address2**, **city**, **state**, **postal**, and **country**--are grouped together. This is done for names, addresses, phone numbers, email addresses, birthdates, and gender.
 #. Left joins the fields in the **Unified Coalesced** table by logical groups *and* by assigned priority.
 #. Adds a set of fields to the temporary table for each of the logical groups, which are then added to the **Merged Customers** table.
 #. Refreshes the data in the **Merged Customers** table.
@@ -148,7 +146,8 @@ The following query represents the recommended starting point for the **Merged C
 .. table-merged-customers-sql-query-recommended-start
 
 .. code-block:: sql
-   :name: sql-merged-customers
+   :caption: sql-merged-customers
+   :linenos:
 
    WITH
      Source_Priority AS (
@@ -401,7 +400,10 @@ Update the list of domain tables under **Source_Priority** to contain *at least 
 
 .. table-merged-customers-sql-query-required-update-source-priority-sql-start
 
+.. vale off
+
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 5,6
 
    WITH
@@ -413,6 +415,8 @@ Update the list of domain tables under **Source_Priority** to contain *at least 
        AS (sp_datasource, priority)
      )
 
+.. vale on
+
 .. table-merged-customers-sql-query-required-update-source-priority-sql-end
 
 
@@ -423,9 +427,9 @@ Field priority
 
 .. table-merged-customers-sql-query-required-update-field-priority-start
 
-Use the field priority table to assign priorities for individual fields that are different from the priority assigned generally to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
+Use the field priority table to assign priorities for individual fields that are different from the priority assigned to each source domain table **Source_Priority**. Update the list of tables to match the same domain tables that were specified for **Source_Priority**, and then update the field priority table to specify individual priorities.
 
-* A NULL value will use the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
+* A **NULL** value uses the priority assigned to the source domain table or, when a priority is not assigned by a source domain table, the default priority of "999".
 * An integer value will assign priority, where "1" has a higher priority than "2".
 
 .. table-merged-customers-sql-query-required-update-field-priority-end
@@ -433,6 +437,7 @@ Use the field priority table to assign priorities for individual fields that are
 .. table-merged-customers-sql-query-required-update-field-priority-sql-start
 
 .. code-block:: sql
+   :linenos:
 
    ,Field_Priority AS (
      SELECT *
@@ -474,6 +479,7 @@ The database in this tenant also includes three other tables: **Table D**, **Tab
 .. table-merged-customers-sql-query-required-update-example-query-start
 
 .. code-block:: sql
+   :linenos:
 
    WITH
      Source_Priority AS (
@@ -518,7 +524,7 @@ The :doc:`table_email_ampid_assignment` is configured by default in the SQL temp
 
 .. table-merged-customers-undo-ampid-assignment-steps-start
 
-Using the **Email Ampid Assignment** table is strongly recommended, but may be byassed when email opt status and/or email engagement data is not available in your tenant.
+Using the **Email Ampid Assignment** table is strongly recommended, but may be byassed when email opt status or email engagement data is not available in your tenant.
 
 If your tenant chooses to bypass the **Email Ampid Assignment** table, the following steps are required to update the **Merged Customers** table to use email address priority and completion values that do not rely on the **Email Ampid Assignment** table.
 
@@ -557,6 +563,7 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
    ,NAMED_STRUCT(
      'email', email
@@ -567,7 +574,7 @@ with:
      ,'completion', INT(ISNOTNULL(email))
    ) AS `email_struct`
 
-This should be placed in-between the **NAMED_STRUCT** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` in this topic to refernce the position of this block within the SQL template for the **Merged Customers** table.
+This should be placed in-between the **NAMED_STRUCT** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` to reference the position of this block within the SQL template for the **Merged Customers** table.
 
 .. table-merged-customers-undo-ampid-assignment-named-struct-end
 
@@ -589,6 +596,7 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
    ,FIRST(email_struct)
      OVER (
@@ -599,7 +607,7 @@ with:
                 ,email_struct.pk
      ) AS email_struct
 
-This should be placed in-between the **FIRST** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` in this topic to refernce the position of this block within the SQL template for the **Merged Customers** table.
+This should be placed in-between the **FIRST** blocks for **address** and **phone**. Refer to the :ref:`recommended starting point <table-merged-customers-sql-query-recommended>` to reference the position of this block within the SQL template for the **Merged Customers** table.
 
 .. note:: If your tenant is using the bad-values blocklist you must also add the following line:
 
@@ -620,6 +628,7 @@ Replace email completion
 When your tenant is not using the **Email Ampid Assignment** table you must replace the following SQL:
 
 .. code-block:: sql
+   :linenos:
 
     -- Get email completion from Email Ampid Assignment table
     ,email_ampid_assignment.email
@@ -632,13 +641,14 @@ When your tenant is not using the **Email Ampid Assignment** table you must repl
 with:
 
 .. code-block:: sql
+   :linenos:
 
-     ,up.email_struct.email
-     ,up.email_struct.pk AS `email_pk`
-     ,up.email_struct.update_dt AS `email_update_dt`
-     ,up.email_struct.datasource AS `email_datasource`
-     ,up.email_struct.priority AS `email_priority`
-     ,up.email_struct.completion AS `email_completion`
+   ,up.email_struct.email
+   ,up.email_struct.pk AS `email_pk`
+   ,up.email_struct.update_dt AS `email_update_dt`
+   ,up.email_struct.datasource AS `email_datasource`
+   ,up.email_struct.priority AS `email_priority`
+   ,up.email_struct.completion AS `email_completion`
 
 .. note:: If your tenant is using the bad-values blocklist you must also add the following line:
 
@@ -659,6 +669,7 @@ Undo LEFT JOIN
 When your tenant is not using the **Email Ampid Assignment** table you must remove the following **LEFT JOIN** at the bottom of the SQL template:
 
 .. code-block:: sql
+   :linenos:
 
    LEFT JOIN email_ampid_assignment
    ON email_ampid_assignment.amperity_id = up.amperity_id
@@ -690,18 +701,18 @@ Add custom semantics
 
 You can create custom semantics for PII and non-PII fields. All custom semantics are added to the **Unified Coalesced** table.
 
-#. Apply the custom semantics to to feeds. Ensure each custom semantic uses a consistent data type across all feeds.
+#. Apply the custom semantics to feeds. Ensure each custom semantic uses a consistent data type across all feeds.
 #. Extend the **Merged Customers** table with custom merge rules that load the column created by the custom semantic from the **Unified Coalesced** table.
 #. Apply similar merge patterns used for PII semantics.
 
-Within the **Merged Customers** table, you must decide if the custom semantic requires source and/or field priority:
+Within the **Merged Customers** table, you must decide if the custom semantic requires source and field priority:
 
 * :ref:`Assign field priority <table-merged-customers-extend-pii-semantic-custom-assign-priority>`
 * :ref:`Skip field priority <table-merged-customers-extend-pii-semantic-custom-skip-priority>`
 
-For example, a company may have data sources that provide data about its own employees, such as internal email addresses, phone numbers, and so on. Use a custom PII semantic named **email-internal** to tag the fields that contain internal email addresses. Apply this custom PII semantic to all fields in all data sources that contain internal email addresses.
+For example, a company may have data sources that provide data about its own employees, such as internal email addresses, and phone numbers. Use a custom PII semantic named **email-internal** to tag the fields that contain internal email addresses. Apply this custom PII semantic to all fields in all data sources that contain internal email addresses.
 
-Consistently tagging fields with internal email addresses with the **email-internal** custom PII semantic will create a column named **email_internal** in the **Unified Coalesced** table. The **Merged Customers** table can use this column to extend the merge rules to include rules for internal email addresses.
+Consistently tagging fields with internal email addresses with the **email-internal** custom PII semantic creates a column named **email_internal** in the **Unified Coalesced** table. The **Merged Customers** table can use this column to extend the merge rules to include rules for internal email addresses.
 
 .. important:: Do not apply the default **email** semantic to the **email-internal** columns or add the **email-internal** semantic to any merge rules that handle the presence of namespaced or ordinal custom email semantics.
 
@@ -715,7 +726,7 @@ Assign field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities.
+Assigning field priority to a custom PII semantic is optional and should only be done when a custom PII semantic is tagged in many data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -723,11 +734,14 @@ Assigning field priority to a custom PII semantic is optional and should only be
 
 .. table-merged-customers-extend-pii-semantic-custom-with-priority-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the **Merged Customers** table.
 #. Find the **Field_Priority** section and update it to add the **email_internal** column to the field priority list:
 
    .. code-block:: sql
+      :linenos:
 
       ,Field_Priority AS (
         SELECT *
@@ -740,6 +754,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the **Unified_Structs** sections, and then add a named struct for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 6
 
       ,NAMED_STRUCT(
@@ -754,6 +769,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the **Unified_Prioritized** section, and then add a first value block for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(email_internal_struct)
         OVER (
@@ -767,6 +783,7 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
 
       ,up.email_internal_struct.email_internal
       ,up.email_internal_struct.pk AS `email_internal_pk`
@@ -780,6 +797,8 @@ Assigning field priority to a custom PII semantic is optional and should only be
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
 
+.. vale on
+
 .. table-merged-customers-extend-pii-semantic-custom-with-priority-steps-end
 
 
@@ -790,7 +809,7 @@ Skip field priority
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-start
 
-Field priority is only necessary when a custom PII semantic is tagged in multiple data sources, requires a priority other than the default priority ("999"), and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
+Field priority is only necessary when a custom PII semantic is tagged in many data sources, requires a priority other than the default priority of "999", and requires these data sources to be assigned different priorities. Any custom semantic that does not meet this criteria should be assigned a default field priority and should not be added to the columns in the field priority list.
 
 .. table-merged-customers-extend-pii-semantic-custom-without-priority-end
 
@@ -803,6 +822,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the **Unified_Structs** sections, and then add a named struct for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,NAMED_STRUCT(
         'email_internal', email_internal
@@ -816,6 +836,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the **Unified_Prioritized** section, and then add a first value block for the **email_internal** column:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(email_internal_struct)
         OVER (
@@ -829,6 +850,7 @@ Field priority is only necessary when a custom PII semantic is tagged in multipl
 #. Find the SELECT statement that builds the **Merged Customers** table, and then add the columns for **email_internal**:
 
    .. code-block:: sql
+      :linenos:
 
       ,up.email_internal_struct.email_internal
       ,up.email_internal_struct.pk AS `email_internal_pk`
@@ -857,6 +879,7 @@ You can measure how much data a single feed contributes to the larger set of dat
 The **Merged Customers** table is already configured to provide this data. For example:
 
 .. code-block:: sql
+   :linenos:
    :emphasize-lines: 11
 
    SELECT
@@ -913,11 +936,14 @@ The following example shows how to extend the **Merged Customers** table to conc
 
 .. table-merged-customers-extend-pii-semantic-full-names-steps-start
 
+.. vale off
+
 #. From the **Customer 360** tab, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -930,6 +956,7 @@ The following example shows how to extend the **Merged Customers** table to conc
 #. Find the **NAMED_STRUCT** with the **name** column, and then update it to use the coalesced column **full_name_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 4,12
 
       ,NAMED_STRUCT(
@@ -952,6 +979,8 @@ The following example shows how to extend the **Merged Customers** table to conc
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
 
+.. vale on
+
 .. table-merged-customers-extend-pii-semantic-full-names-steps-end
 
 
@@ -962,7 +991,7 @@ Multiple email addresses
 
 .. table-merged-customers-extend-pii-semantic-email-start
 
-The following example shows how to extend the **Merged Customers** table to support email addresses that are tagged with namespaced custom email semantic tags: **email-home** and **email-work**. These tags are applied in addition to the default **email** semantic. These tags will create two columns in the **Unified Coalesced** table: **email_home** and **email_work**.
+The following example shows how to extend the **Merged Customers** table to support email addresses that are tagged with namespaced custom email semantic tags: **email-home** and **email-work**. These tags are applied in addition to the default **email** semantic. These tags creates two columns in the **Unified Coalesced** table: **email_home** and **email_work**.
 
 .. table-merged-customers-extend-pii-semantic-email-end
 
@@ -970,11 +999,14 @@ The following example shows how to extend the **Merged Customers** table to supp
 
 .. table-merged-customers-extend-pii-semantic-email-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -989,6 +1021,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **NAMED_STRUCT** with the **email** column, and then update it to use the coalesced column **email_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       ,NAMED_STRUCT(
@@ -1005,6 +1038,8 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
 
+.. vale on
+
 .. table-merged-customers-extend-pii-semantic-email-steps-end
 
 
@@ -1015,7 +1050,7 @@ Multiple phone numbers
 
 .. table-merged-customers-extend-pii-semantic-phone-start
 
-The following example shows how to extend the **Merged Customers** table to support multiple phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags will create two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
+The following example shows how to extend the **Merged Customers** table to support many phone numbers that are tagged with ordinal custom semantic tags: **phone-1** and **phone-2**. These tags are applied in addition to the default **phone** semantic. These tags creates two columns in the **Unified Coalesced** table: **phone_1** and **phone_2**.
 
 .. table-merged-customers-extend-pii-semantic-phone-end
 
@@ -1023,11 +1058,14 @@ The following example shows how to extend the **Merged Customers** table to supp
 
 .. table-merged-customers-extend-pii-semantic-phone-steps-start
 
+.. vale off
+
 #. From the **Customer 360** page, under **All Databases**, open the menu for the customer 360 database, and then select **Edit**.
 #. Open the menu for the **Merged Customers** table and select **Edit**.
 #. Find the **Unified_Preprocessed** section and add the highlighted line:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 3
 
       ,Unified_Preprocessed AS (
@@ -1042,6 +1080,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Find the **NAMED_STRUCT** with the **phone** column, and then update it to use the coalesced column **phone_p**. This must be done in the following locations:
 
    .. code-block:: sql
+      :linenos:
       :emphasize-lines: 2,7
 
       ,NAMED_STRUCT(
@@ -1057,5 +1096,7 @@ The following example shows how to extend the **Merged Customers** table to supp
 #. Click **Next**. This opens the **Database Table Definition** page.
 #. Verify these settings, and then click **Save**.
 #. Run the customer 360 database.
+
+.. vale on
 
 .. table-merged-customers-extend-pii-semantic-phone-steps-end

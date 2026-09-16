@@ -55,19 +55,27 @@ For example:
 
 
 
+.. vale off
+
 **TEMPLATE SECTIONS FOR DESTINATIONS**
 
-This topic contains the templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
+Templated sections for all of the "Send to xxxxx" topics in /operators/. You must use these templated sections. Use the beginning of the topic to introduce anything that is destination-specific. You cannot add destination-specific content within the templated sections outside of providing the variables for "destination name", xxxxx, and xxxxx.
 
-In certain cases, a destination topic will require *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
+In certain cases, a destination topic requires *some* customization within the templated sections. See the xxxxx topic, **xxxxx** section for how to do this.
+
+.. vale on
 
 .. destinations-overview-list-intro-start
 
-This topic describes the steps that are required to send |what-send| to |destination-name| from Amperity:
+The steps that are required to send |what-send| to |destination-name| from Amperity.
 
 .. destinations-overview-list-intro-end
 
+.. campaigns-overview-list-intro-start
 
+The steps that are required to send campaigns to |destination-name| from Amperity.
+
+.. campaigns-overview-list-intro-end
 
 
 
@@ -169,7 +177,7 @@ Configure Amperity to send data to |destination-name| using the |destination-api
 
 .. destinations-add-destinations-intro-api-only-end
 
-.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are mostly global to API-based destinations, but you will need to also update ones with bespoke settings to retain consistency.
+.. TODO: The following API-based destinations have bespoke settings: Campaign Monitor, Mailchimp. If the steps below change, they are global to API-based destinations, but you need to also update ones with bespoke settings to retain consistency.
 
 .. TODO: Facebook, Google use Oauth, which has different steps.
 
@@ -207,7 +215,7 @@ Configure Amperity to send data to |destination-name| using the |destination-api
 
 .. destinations-add-destinations-api-oauth-reminder-start
 
-.. warning:: Amperity must be authorized to send data to your |destination-name| account prior to configuring the destination.
+.. warning:: Amperity must be authorized to send data to your |destination-name| account before configuring the destination.
 
 .. destinations-add-destinations-api-oauth-reminder-end
 
@@ -240,10 +248,10 @@ Use a webhook destination to send query results from Amperity to a Lambda functi
 
 #. Select **Allow business users to use this destination**.
 
-   This allows users who have been assigned to the **Amp360 User** and/or **AmpIQ User** policies to use this destination with orchestrations and/or campaigns.
+   Users who are assigned the **Amp360 User** or **AmpIQ User** policies can access this destination from orchestrations, journeys, and campaigns.
 #. Select **Allow business users with limited PII access to send data**.
 
-   This allows users who have been assigned to the **Restrict PII access** policy option to use this destination with orchestrations and/or campaigns.
+   Users who are assigned the **Restrict PII access** policy option can access this destination from orchestrations, journeys, and campaigns.
 #. Click **Save**.
 
 .. destinations-add-destinations-webhook-end
@@ -295,32 +303,13 @@ You can configure Amperity to |sendto-link|. These results are sent using an orc
 
 
 
+.. vale off
 
+**DESTINATIONS**
 
+.. vale on
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-DESTINATIONS
-DESTINATIONS
-DESTINATIONS
-
-.. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
+.. TODO: This is the sections for the templated content for adding destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step xxxxxx as much as possible for consistency.
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
 
@@ -330,7 +319,7 @@ Open the **Destinations** tab to configure a destination for |destination-name|.
 
 .. destinations-add-destination-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-add-name-and-description-start
 
@@ -341,7 +330,7 @@ From the **Plugin** dropdown, start typing |filter-the-list| to filter the list,
 .. destinations-add-name-and-description-end
 
 
-.. TODO: This is Step 2; add credentials or use existing
+.. TODO: This is Step 2. Add credentials or use existing
 
 .. destinations-add-credentials-start
 
@@ -359,7 +348,7 @@ The credential type is set automatically to |sftp-type|. You may use an existing
 
 .. destinations-add-credentials-sftp-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-add-new-or-select-existing-start
 
@@ -371,7 +360,7 @@ Select **Create a new credential** from the **Credential** dropdown. This opens 
 
 .. destinations-add-new-or-select-existing-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-intro-for-additional-settings-start
 
@@ -406,7 +395,7 @@ Enter the name for the credential, and then add a description.
    #. When complete, you will be redirected to the **Credentials** page in Amperity.
    #. Verify the credential is on the page, and then return to the **Destinations** tab. From the **Plugin** dropdown, select the |destination-name|, and then use the credential that was just created.
 
-      .. note:: The value for the **Refresh Token** setting will be updated automatically after you select the credential.
+      .. note:: The value for the **Refresh Token** setting is updated automatically after you select the credential.
 
 .. destinations-intro-for-additional-settings-oauth-refresh-token-end
 
@@ -417,7 +406,7 @@ Enter the name for the credential, and then add a description. Select |sftp-host
 
 .. destinations-intro-for-additional-settings-sftp-end
 
-.. TODO: For some connectors, we'll use "After the credential is saved you will need to provide additional settings for this destination." but only if there are additional settings.
+.. TODO: For some connectors, we'll use "After the credential is saved you need to provide additional settings for this destination." but only if there are additional settings.
 
 .. TODO: What follows here is bespoke for most destinations, except for the "When finished, click save" bit.
 
@@ -428,7 +417,7 @@ When finished, click **Save**.
 .. destinations-save-settings-end
 
 
-.. TODO: This is Step 3; add credentials or use existing
+.. TODO: This is Step 3. Add credentials or use existing
 
 .. destinations-destination-settings-start
 
@@ -441,7 +430,11 @@ Each destination has settings that define how Amperity will deliver data to |des
 .. TODO: The following section is used *only* with SFTP connectors. It consolidates all of the common settings. If there is a unique setting for a specific connector, just add it to the topic LAST in the list so we can continue to reuse the common settings.
 
 
-SETTINGS FOR SFTP DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR SFTP DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-sftp-start
 
@@ -449,9 +442,9 @@ Complete the following **SFTP Settings**:
 
 * The path to the **Remote folder**.
 
-   .. tip:: If the path to the remote folder contains a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
+   .. tip:: If the path to the remote folder has a space, use a backslash (\) character to escape that space. For example, a folder named "From ACME" should be entered as "From\\ ACME".
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -461,7 +454,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -480,7 +473,11 @@ Complete the following **SFTP Settings**:
 .. destinations-destination-settings-sftp-end
 
 
-SETTINGS FOR GOOGLE CLOUD STORAGE DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR GOOGLE CLOUD STORAGE DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-google-cloud-storage-start
 
@@ -490,7 +487,7 @@ Complete the following **SFTP Settings**:
 
    The object prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -500,7 +497,7 @@ Complete the following **SFTP Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -519,7 +516,11 @@ Complete the following **SFTP Settings**:
 .. destinations-destination-settings-google-cloud-storage-end
 
 
-SETTINGS FOR AMAZON S3 DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR AMAZON S3 DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-amazon-s3-start
 
@@ -529,7 +530,7 @@ Complete the following **Amazon S3 Settings**:
 
    The S3 prefix is a string that is used to filter results to include only objects whose names begin with this prefix. When this value is set, the names of objects that may be returned in the response are relative to the root of the bucket.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -539,7 +540,7 @@ Complete the following **Amazon S3 Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -559,7 +560,11 @@ Complete the following **Amazon S3 Settings**:
 
 
 
-SETTINGS FOR AZURE BLOB STORAGE DESTINATIONS ONLY
+.. vale off
+
+**SETTINGS FOR AZURE BLOB STORAGE DESTINATIONS ONLY**
+
+.. vale on
 
 .. destinations-destination-settings-azure-blob-storage-start
 
@@ -569,7 +574,7 @@ Complete the following **Azure Blob Storage Settings**:
 
    The name of the container and blob prefix. For example: |azure-container-name| and |azure-blob-prefix|.
 
-* The **File format**. Select the file format -- |file-format| -- from the dropdown list.
+* The **File format**. Select the file format--|file-format|--from the dropdown list.
 
 * Optional. The **Escape character** that is required by |destination-name|.
 
@@ -579,7 +584,7 @@ Complete the following **Azure Blob Storage Settings**:
 
 * Optional. The **PGP public key** that is used to encrypt files that are sent to |destination-name|.
 
-* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-NULL fields", "fields with special characters only", "all non-numeric fields" or "None".
+* Optional. The **Quote mode** that should be used within the file. From the dropdown, select one of "all fields", "all non-**NULL** fields", "fields with special characters only", "all non-numeric fields" or "None".
 
   .. note:: If the quote mode is set to "None" *and* the **Escape Character** setting is empty this may result in unescaped, unquoted files. When quote mode is not set to "None", you should specify an escape character.
 
@@ -600,7 +605,7 @@ Complete the following **Azure Blob Storage Settings**:
 
 
 
-.. TODO: This is Step "Business Users"; these are the same everywhere.
+.. TODO: This is Step "Business Users". These are the same everywhere.
 
 .. destinations-business-users-start
 
@@ -620,7 +625,7 @@ By default a destination is available to all users who have permission to view p
 .. destinations-business-users-admonition-end
 
 
-.. TODO: This is Step "Save"; these are the same everywhere.
+.. TODO: This is Step "Save". These are the same everywhere.
 
 .. destinations-save-start
 
@@ -643,11 +648,15 @@ Review all settings, and then click **Save**.
 
 
 
-DATA TEMPLATES
-DATA TEMPLATES
-DATA TEMPLATES
+.. vale off
 
-.. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, usually as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
+**DATA TEMPLATES**
+**DATA TEMPLATES**
+**DATA TEMPLATES**
+
+.. vale on
+
+.. TODO: This is the sections for the templated content for adding data templates to destinations in /operator/. These sections allow for bespoke steps, as Step 4, but may have more if they are more complicated. Try to keep the bespoke content within Step 4 as much as possible for consistency.
 
 
 .. TODO: This is Step 1. Contains variable for image, in case it is necessary to customize.
@@ -660,7 +669,7 @@ This opens the **Add Data Template** dialog box.
 
 .. destinations-data-template-open-template-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
 
 .. destinations-data-template-open-template-name-start
 
@@ -669,7 +678,7 @@ Enter the name of the data template and a description. For example: "|data-templ
 .. destinations-data-template-open-template-name-end
 
 
-.. TODO: This is Step 2; the 2nd section can be removed for destinations that are not usable with campaigns.
+.. TODO: This is Step 2. The 2nd section can be removed for destinations that are not usable with campaigns.
 
 .. destinations-data-template-business-users-start
 
@@ -679,19 +688,21 @@ A business user may also have restricted access to PII, which prevents them from
 
 .. destinations-data-template-business-users-end
 
-.. TODO: There is an image here that should mostly be static across destination topics, but it's customizable if necessary.
+.. TODO: There is an image here that should be static across destination topics, but it is customizable if necessary.
+
+.. TODO: The following is /legacy only.
 
 .. destinations-data-template-business-users-access-not-configured-start
 
-If business user access was not configured as part of the destination, you may configure access from the data template.
+If business user access is not configured for a destination, you may configure access from a data template.
 
 .. destinations-data-template-business-users-access-not-configured-end
 
 .. destinations-data-template-business-users-allow-campaigns-start
 
-.. important:: To allow business users to use this destination with campaigns, you must enable the **Available to campaigns** option. This allows users to send campaign results from Amperity to |destination-name|.
+.. important:: Use the **Available to campaigns** option to allow business users to use this destination from campaigns.
 
-   If you enable this option, the data extension settings require using campaign name and group name template variables to associate the name of the data extension to your campaign.
+   When enabled data extension settings require using campaign name and group name template variables to associate the name of the data extension with the campaign.
 
 .. destinations-data-template-business-users-allow-campaigns-end
 
@@ -729,7 +740,7 @@ Review all settings, and then click **Save**.
 
 .. destinations-data-template-save-after-start
 
-After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and/or |channel-link| to |destination-name|.
+After you have saved the data template, and depending on how you configured it, business users can |sendto-link| and |channel-link| to |destination-name|.
 
 .. destinations-data-template-save-after-end
 

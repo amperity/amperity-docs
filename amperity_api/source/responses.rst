@@ -11,23 +11,22 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Responses
-
+        Amperity API response codes
 
 ==================================================
-Amperity API response codes
+Responses
 ==================================================
 
 .. status_codes-start
 
-Amperity API endpoints use conventional HTTP response status codes---3-digit numbers where the first digit of the code defines the class of response---to indicate success or failure for any API request. Response status codes fall into three categories:
+Amperity API endpoints use conventional HTTP response status codes--3-digit numbers where the first digit of the code defines the class of response--to indicate success or failure for any API request. Response status codes fall into three categories:
 
-#. 2xx - Success
-#. 4xx - Error
+#. 2xx Success
+#. 4xx Error
 
    A 4xx error occurs when information in a request is invalid, such as requesting access to an endpoint that does not exist or by including the wrong value for a query parameter.
 
-#. 5xx - Error
+#. 5xx Error
 
    A 5xx error is caused when the API or endpoint is unavailable.
 
@@ -75,10 +74,11 @@ When a request returns a fatal client error, the standard error response will in
 For example:
 
 .. code-block:: json
+   :linenos:
 
    {
      "status": 400,
-     "message": "Error updating database: Can't find campaign named \
+     "message": "Error updating database: Cannot find campaign named \
                  'CampaignName'",
      "request_id":"1ab23456-c78d-9012-3456-78efg9hi01j2",
      "trace_id":"1a2b3456789cd0ef1g234hijklm5nopq"
@@ -96,10 +96,10 @@ For example:
      - A request did not contain a required parameter or has an invalid parameter.
 
    * - **401 Authentication Required**
-     - A request contains invalid authentication, an invalid version identifier, or an expired token.
+     - A request has invalid authentication, an invalid version identifier, or an expired token.
 
    * - **403 Not Authorized**
-     - A request contains valid authentication, but does have permission to perform the requested action.
+     - A request has valid authentication, but does have permission to perform the requested action.
 
    * - **404 Not Found**
      - A request was made to a resource that does not exist.
@@ -113,7 +113,9 @@ For example:
    * - **429 Too Many Requests**
      - A rate limit has been exceeded.
 
-       .. note:: Amperity does not currenctly enforce a rate limit.
+       The Amperity API supports requests to endpoints that do not exceed a rate of 10 requests per second. Response times will vary by endpoint and the complexity of data that is returned by the response. Some requests may take seconds to return.
+
+       Requests to the Amperity API that exceed 10 requests per second may return an error response with an HTTP 429 status code.
 
        .. tip:: Watch for 429 error codes and build a retry mechanism into the integrations or applications that interact with the Amperity API. Use an exponential backoff schedule with some randomness built in to reduce request volume.
 
@@ -140,7 +142,7 @@ The 5xx class of status codes indicate a fatal server error. When your integrati
      - An internal error occurred. Simplify the request or retry with exponential backoff.
 
    * - **503 Service Unavailable**
-     - The server is currently unavailable.
+     - The server is unavailable.
 
        .. tip:: Watch for 503 error codes and build a retry mechanism into the integrations or applications that interact with the Amperity API.
 

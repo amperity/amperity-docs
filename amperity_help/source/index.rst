@@ -61,12 +61,3 @@ Collection of standalone topics
    stitch_config_skip_scores
    term_uniqueness
    term_cardinality
-   test-animated-image
-   test-destination-template
-   test-long
-   test-long-with-title
-   test-paragraph
-   test-reauthorize-oauth
-   test-steps
-   test-term
-   test-words-animated-image

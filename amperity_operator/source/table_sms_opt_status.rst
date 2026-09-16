@@ -23,11 +23,11 @@ SMS Opt Status table
 
 .. table-sms-opt-status-important-start
 
-.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change quickly, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
+.. important:: Amperity is not the source of truth for SMS consent status. SMS consent status can change, including between the time of this table's most recent update and the time at which your brand wants to send your customers an SMS message as part of a campaign.
 
    The source of truth for consent status exists downstream from Amperity, often directly within the marketing tool or application that you are using to configure the SMS campaign, such as Cordial, Braze, Klaviyo, or Attentive.
 
-   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately prior to sending an SMS message.
+   Use this table to filter audiences in Amperity to include customers who have consented to receiving SMS messages, and then build a step within the downstream marketing tool that verifies consent status immediately before sending an SMS message.
 
 .. table-sms-opt-status-important-end
 
@@ -53,7 +53,7 @@ The **SMS Opt Status** table is a recommended table for the customer 360 databas
 
 .. table-sms-opt-status-add-steps-start
 
-#. From the **Customer 360** page, under **All Databases**, select the menu for the customer 360 database, and then click **Edit**.
+#. From the **Customer 360** page, select the **Databases** tab, select the menu for the customer 360 database, and then click **Edit**.
 #. From the **Database Editor**, click **Add Table**.
 #. Name the table "SMS Opt Status".
 #. Set the build mode to **Passthrough**.
@@ -68,6 +68,24 @@ The **SMS Opt Status** table is a recommended table for the customer 360 databas
 #. Click **Save**.
 
 .. table-sms-opt-status-add-steps-end
+
+
+.. _table-sms-opt-status-query:
+
+Use table in a query
+==================================================
+
+.. table-sms-opt-status-query-start
+
+An SMS profile often requires only a phone number, but may include other profile attributes, such as email address, first name, last name, postal code, and birthdate. Custom attributes are often allowed within SMS profiles.
+
+.. important:: Use the **SMS Opt Status** table to filter the results to include only customers who have opted in to receiveing SMS messaaging.
+
+.. table-sms-opt-status-query-end
+
+.. include:: ../../amperity_user/source/destination_listrak_sms.rst
+   :start-after: .. sendto-listrak-sms-build-query-start
+   :end-before: .. sendto-listrak-sms-build-query-end
 
 
 .. _table-sms-opt-status-reference:

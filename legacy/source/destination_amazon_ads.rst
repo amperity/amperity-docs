@@ -18,23 +18,27 @@
 
 
 ==================================================
-Configure campaigns for Amazon Ads
+Send data to Amazon Ads
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_amazon_ads.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amazon-ads-start
    :end-before: .. term-amazon-ads-end
 
-.. warning:: Please ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
+.. warning:: Ask your Amperity representative for assistance with setting up |destination-name| as a destination within your tenant.
 
 .. destination-amazon-ads-start
 
 Amperity can manage audiences within |destination-name| for use with a variety of advertising and paid media channels, such as: 
 
 * Sponsored ads for products and brands that appear within search results on the Amazon website and within the mobile app.
-* Sponsored display ads that reach audiences as they browse, research, or buy products on Amazon, on Twitch, or by using Amazon DSP, a demand-side platform that allows you to programmatically buy ads to reach new and existing audiences on and off Amazon.
+* Sponsored display ads that reach audiences as they browse, research, or buy products on Amazon, on Twitch, or by using Amazon DSP, a demand-side platform to programmatically buy ads to reach new and existing audiences on and off Amazon.
 * Video ads for streaming TV and online video. Streaming TV ads can appear on Twitch, live sports events, top TV and network broadcaster apps, and curated news on Fire TV. Online video ads reach audiences on Amazon-owned sites, including IMDb.com and Twitch and may appear on third-party sites through Amazon Publisher Direct.
 * Audio ads that are heard during breaks in premium audio content, including first-party Amazon Music ad-supported tiers, connected TV environments, Twitch News, Alexa-enabled devices, and third-party sites through Amazon Publisher Direct.
 * Access to a secure, privacy-safe, and cloud-based clean room solution when the instance name for your brand's `Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/solutions/products/amazon-marketing-cloud>`__ |ext_link| account is configured.
@@ -43,7 +47,7 @@ Amperity can manage audiences within |destination-name| for use with a variety o
 
 .. destination-amazon-ads-api-note-start
 
-.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity will create it. If the audience exists, Amperity will update the list of members to match the list that is sent.
+.. note:: This destination uses the `Amazon Ads API <https://advertising.amazon.com/API/docs/en-us/info/api-overview>`__ |ext_link| to manage audiences. If the audience does not exist, Amperity creates it. If the audience exists, Amperity updates the list of members to match the list that is sent.
 
 .. destination-amazon-ads-api-note-end
 
@@ -76,16 +80,16 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configuration details for |destination-name|.
 
        #. An |destination-name| demand-side platform (DSP) advertiser.
        #. Optional. Your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link|.
 
-          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector will skip adding audience members to Amazon Marketing Cloud.
+          .. important:: If an instance for Amazon Marketing Cloud **is not** configured, the connector skips adding audience members to Amazon Marketing Cloud.
 
-             If an Amazon Marketing Cloud instance is configured, the connector will attempt to use an existing connection for Amazon Marketing Cloud *or* will create a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
+             If an Amazon Marketing Cloud instance is configured, the connector attempts to use an existing connection for Amazon Marketing Cloud *or* creates a connection between the chosen demand-side platform advertiser and the instance for Amazon Marketing Cloud.
 
        .. note:: The `refresh token <https://advertising.amazon.com/API/docs/en-us/getting-started/retrieve-access-token>`__ |ext_link| is provided :ref:`after the OAuth process is completed <destination-amazon-ads-configure-oauth>`.
 
@@ -93,24 +97,24 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - Details for the audiences in |destination-name| that will be managed by Amperity.
+     - Details for the audiences in |destination-name| that is managed by Amperity.
 
-       #. An audience name and description. If there is not an audience that exactly matches the one sent from Amperity to |destination-name|, Amperity will create a new audience.
+       #. An audience name and description. If there is not an audience that exactly matches the one sent from Amperity to |destination-name|, Amperity creates a new audience.
 
-       #. The amount of time (in seconds) an audience member will belong to this audience, after which they are removed. Maximum value: "34,300,800" (which is the equivalent of 9528 hours or 397 days).
+       #. The amount of time (in seconds) an audience member belong to this audience, after which they are removed. Maximum value: "34,300,800" (which is the equivalent of 9528 hours or 397 days).
 
           .. tip:: Set this value to "0" to remove all audience members.
 
-       #. Leave the the external ID setting empty.
+       #. Leave the external ID setting empty.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that contains any of the following attributes:
+     - When you have an **extern_id** that is available and appropriately configured for your downstream destination, use a query to return an audience that has any of the following attributes:
 
        .. code-block:: sql
 
@@ -154,11 +158,11 @@ Get details
 
        .. note::
 
-           If both **extern_id** and **amperity_id** are provided, only **extern_id** will be used.
+           If both **extern_id** and **amperity_id** are provided, only **extern_id** is used.
 
        A phone number must be in `E.164 format <https://en.wikipedia.org/wiki/E.164>`__ |ext_link|.
 
-       All personally identifiable information (PII)—email, phone, address, and so on—is sent to |destination-name| as SHA-256 hashed data.
+       All personally identifiable information (PII), such as email, phone, or address, is sent to |destination-name| as SHA-256 hashed data.
 
 
 .. destination-amazon-ads-get-details-end
@@ -171,11 +175,11 @@ About Amazon Marketing Cloud (AMC)
 
 .. destination-amazon-ads-about-amc-start
 
-Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign events, such as ad impressions, ad clicks, and ad-attributed conversions that span across media including streaming TV, audio, video, display, and sponsored ads. These inputs are uploaded into a dedicated instance of AMC---a "clean room"---after which that data stays within that instance and cannot be accessed or exported by Amazon.
+Amazon Marketing Cloud (AMC) uses pseudonymized inputs from Amazon Ads campaign events, such as ad impressions, ad clicks, and ad-attributed conversions that span across media including streaming TV, audio, video, display, and sponsored ads. These inputs are uploaded into a dedicated instance of AMC--a "clean room"--after which that data stays within that instance and cannot be accessed or exported by Amazon.
 
 Audience analysis takes place within Amazon Marketing Cloud, including across dimensions like audiences, device, time, or campaigns. Results are aggregated and may be exported as anonymous reports.
 
-Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination will send data.
+Amperity can send data to your brand's `instance of Amazon Marketing Cloud (AMC) <https://advertising.amazon.com/API/docs/en-us/guides/amazon-marketing-cloud/how-amc-works>`__ |ext_link| when the instance name is :ref:`configured alongside the demand-side platform (DSP) advertiser <destination-amazon-ads-get-details>` to which this destination sends data.
 
 .. destination-amazon-ads-about-amc-end
 
@@ -211,8 +215,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -220,8 +224,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -229,8 +233,8 @@ Configure OAuth
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -266,8 +270,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -286,8 +290,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -318,8 +322,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -332,8 +336,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -346,8 +350,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -381,8 +385,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -401,8 +405,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -410,7 +414,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -425,8 +429,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -451,8 +455,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -487,7 +491,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -506,7 +510,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -521,7 +525,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -547,7 +551,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -573,13 +577,13 @@ Invalid advertiser account ID
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-start
 
-|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID --- such as when an advertiser account ID has been deleted --- Amperity will be unable to manage audiences within |destination-name| and a workflow action will be shown.
+|destination-name| requires a valid advertiser account ID to be associated with an advertiser. When an advertiser is not associated with an advertiser account ID, such as when an advertiser account ID has been deleted, Amperity will be unable to manage audiences within |destination-name| and a workflow action is shown.
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-end
 
 .. destination-amazon-ads-workflow-actions-invalid-advertiser-id-steps-start
 
-To resolve this error, verify that the advertiser account ID exists in |destination-name|, and then update Amperity for the correct advertiser ID (if necessary).
+To resolve this error, verify that the advertiser account ID exists in |destination-name|, and then update Amperity for the correct advertiser ID if necessary.
 
 #. Open the |destination-name| management console and verify your advertiser account ID.
 #. Open the **Destinations** page in Amperity, and then open the destination for |destination-name| that is associated with this workflow.

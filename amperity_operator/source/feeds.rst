@@ -53,7 +53,7 @@ Apply semantic tags
 
 .. feeds-apply-semantic-tags-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every feed that provides profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Each group of semantic tags--:ref:`customer profile semantic tags <semantics-profile>`, :ref:`interaction semantic tags <semantics-profile>`, and :ref:`key semantic tags <semantics-profile>`--allow for a range of options.
 
@@ -231,7 +231,7 @@ Transactions
       :start-after: .. term-unified-itemized-transactions-table-start
       :end-before: .. term-unified-itemized-transactions-table-end
 
-   Carefully review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :doc:`Unified Transactions table <table_unified_transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
+   Review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :doc:`Unified Transactions table <table_unified_transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
 
 .. feeds-apply-semantic-tags-itemized-important-end
 

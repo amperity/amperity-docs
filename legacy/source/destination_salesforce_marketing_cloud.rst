@@ -17,10 +17,14 @@
 
 
 ==================================================
-Configure campaigns for Salesforce Marketing Cloud
+Send data to Salesforce Marketing Cloud
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_salesforce_marketing_cloud.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-salesforce-marketing-cloud-start
@@ -67,23 +71,23 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Optional. Configure a data extension in |destination-name|.
 
        .. admonition:: What is a data extension?
 
-          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and/or attributes that are sent from Amperity.
+          A `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| is a table that stores data about your contacts. The fields that are available from your data extension match the columns and attributes that are sent from Amperity.
 
           Within |destination-name|, use the data in the data extension as a data source. Run queries, pull a subset of contacts from the data extension, and then send offers to that subset of contacts.
 
-       This step is optional because Amperity will manage the data extension as part of its workflow. If the data extension does not exist, Amperity will add it. If the data extension does exist, Amperity will update the contact data in that data extension.
+       This step is optional because Amperity manages the data extension as part of its workflow. If the data extension does not exist, Amperity adds it. If the data extension does exist, Amperity updates the contact data in that data extension.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure permissions for the installed package to allow business units to read from and write to the data extension.
 
@@ -91,13 +95,13 @@ A |destination-name| destination works like this:
 
           Amperity uses the `Marketing Cloud SOAP API <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/soap_tech_articles_de.html>`__ |ext_link| to manage the installed package and manage the `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| process, which gets the contact data from the |what-send| that were sent from Amperity and then either adds a data extension or updates an existing data extension.
 
-       .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This will place the |what-send| in the configured SFTP location, but will require configuring the `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| and `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| and any process that moves that data from the SFTP location to the data extension.
+       .. note:: You may configure Amperity to send |what-send| to |destination-name| using only SFTP. This places the |what-send| in the configured SFTP location, but requires configuring the `data extension <https://help.salesforce.com/s/articleView?id=sf.mc_cab_data_extensions.htm&type=5>`__ |ext_link| and `import definition <https://help.salesforce.com/s/articleView?id=sf.mc_cab_imports.htm&type=5>`__ |ext_link| and any process that moves that data from the SFTP location to the data extension.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Use a query or segment to build a list of contacts.
 
@@ -107,7 +111,7 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Configure the :ref:`Salesforce Marketing Cloud destination <destination-salesforce-marketing-cloud-add-destination>` in Amperity.
 
@@ -115,7 +119,7 @@ A |destination-name| destination works like this:
 
           Amperity uses SFTP to transfer data to |destination-name|.
 
-          |destination-name| has strict rate limits when using their APIs to manage contact data. These rate limits generally exceed the number of contacts that are in the lists that you will want to send to |destination-name|.
+          |destination-name| has strict rate limits when using their APIs to manage contact data. These rate limits exceed the number of contacts that are in the lists sent to |destination-name|.
 
           Amperity uses SFTP to ensure that your contact lists can be successfully updated in |destination-name|, after which Amperity uses the Marketing Cloud SOAP API to make that list of contacts available to the configured data extension.
 
@@ -123,17 +127,17 @@ A |destination-name| destination works like this:
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
           :alt: Step five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Send a test from Amperity.
 
-       .. important:: Be sure to send all fields from Amperity that will be required by the data extension in |destination-name|.
+       .. important:: Be sure to send all fields required by the data extension in |destination-name|.
 
 
    * - .. image:: ../../images/steps-06.png
           :width: 60 px
           :alt: Step six.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - From within |destination-name| verify the data that has been loaded to the data extension is correct and that you can run a query against it.
 
@@ -156,28 +160,28 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - For the installed package: the API client ID, API client secret, and the `SOAP base URI for the authentication subdomain <https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html>`__ |ext_link|.
 
        .. admonition:: What is the authentication subdomain for the SOAP base URI?
 
-          Your authentication subdomain is represented by a 28-character string that starts with the letters "mc", such as "mcabc123...". The subdomain is part of the SOAP base URI for |destination-name|.
+          Your authentication subdomain is represented by a 28-character string that starts with the letters "mc", such as "mcabc123". The subdomain is part of the SOAP base URI for |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Within |destination-name|, configure the installed package to allow business units:
 
        #. Apply **Read** and **Write** permissions to the data extension.
        #. Apply **Read**, **Write**, and **Execute** permissions for Automations.
 
-       .. important:: Each installed package is configured to have access to one business unit *or* multiple business units, depending on the desired workflow.
+       .. important:: Each installed package is configured to have access to one business unit *or* many business units, depending on the desired workflow.
 
-          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to multiple business units, you must configure a data template for each business unit.
+          Configure a data template for each busines unit to which you want to send data. When a single installed package has permissions to many business units, you must configure a data template for each business unit.
 
           Amperity cannot send data to a shared business unit in |destination-name|.
 
@@ -185,7 +189,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - For SFTP configuation: the hostname, username, and passphrase.
 
@@ -193,15 +197,15 @@ Get details
 
        .. admonition:: What is the SFTP hostname?
 
-          Your SFTP hostname is represented by the same 28-character string that starts with the letters "mc", such as "mcabc123...". This is the same 28-character string that represents the subdomain, which is part of the SOAP base URI for |destination-name|.
+          Your SFTP hostname is represented by the same 28-character string that starts with the letters "mc", such as "mcabc123". This is the same 28-character string that represents the subdomain, which is part of the SOAP base URI for |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail four.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - For each business unit to which data will be sent: the account ID for the business unit, the import location, and selecting the field to use as the primary key.
+     - For each business unit to which data is sent: the account ID for the business unit, the import location, and selecting the field to use as the primary key.
 
        .. note:: The account ID is also referred to as the member ID within |destination-name|.
 
@@ -211,17 +215,17 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail five.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` for |destination-name|. (The use of the subscriber key is recommended.)
 
-       .. important:: A subscriber key is configured as the "primary key" for the destination. There are two options: using the |destination-name| subscriber key or using **email**. One of these options must be specified before the destination can send data to |destination-name|.
+       .. important:: A subscriber key is configured as the "primary key" for the destination. Do one of the following: use the |destination-name| subscriber key or use **email**. One of these options must be specified before the destination can send data to |destination-name|.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail six.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Review the `Marketing Cloud SFTP Guide <https://help.salesforce.com/articleView?id=mc_es_enhanced_ftp_guide.htm>`__ |ext_link| to answer questions about configuring and managing |destination-name|.
 
@@ -242,7 +246,7 @@ Subscriber key
 
 The subscriber key is an identifier in |destination-name|. All data that is sent to |destination-name| must be associated to a subscriber key. Use the **primary key** field while configuring |destination-name| to specify the subscriber key to use for this destination.
 
-The use of the subscriber key within Amperity will vary, depending on if the subscriber key is made available to Amperity as field provided by a |destination-name| data source:
+The use of the subscriber key within Amperity varies, depending on if the subscriber key is made available to Amperity as field provided by a |destination-name| data source:
 
 .. list-table::
    :widths: 10 90
@@ -251,19 +255,19 @@ The use of the subscriber key within Amperity will vary, depending on if the sub
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - When a subscriber key is available, ensure that it is made available to the **Customer 360**, **Queries**, and **Segments** pages and that it may be included in queries and segments that will be sent to |destination-name|.
+     - When a subscriber key is available, ensure that it is made available to the **Customer 360**, **Queries**, and **Segments** pages and that it may be included in queries and segments that is sent to |destination-name|.
 
-       Use a customer key semantic tag (e.g. "fk-salesforce-subscriber key") to identify the subscriber key in your data sources.
+       Use a customer key semantic tag, such as "fk-salesforce-subscriber key", to identify the subscriber key in your data sources.
 
        .. tip:: Use an email address as the subscriber key if the subscriber key identifier is unavailable.
 
 
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
-          :alt: Detail three.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The **primary key** field **must** be set to **subscriber_key** or **email** as part of the configuration of the data template that is used for this destination.
 
@@ -303,8 +307,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -323,8 +327,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -371,8 +375,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -403,13 +407,13 @@ Add destination
 
               Use **subscriber_key** when a field can be mapped directly to the subscriber key in |destination-name|, or else choose **email**.
 
-       .. important:: Settings that are not configured as part of the destination will be required by the data template.
+       .. important:: Settings that are not configured as part of the destination is required by the data template.
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -422,8 +426,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -451,8 +455,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -471,8 +475,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -495,8 +499,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -515,14 +519,14 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
-     - Configure how Amperity will send data to the data extension in |destination-name|.
+     - Configure how Amperity sends data to the data extension in |destination-name|.
 
-       Amperity will overwrite the data in the data extension by default. Enable the **Append Data** option to append data instead of overwriting it.
+       Amperity overwrites the data in the data extension by default. Enable the **Append Data** option to append data instead of overwriting it.
 
-       Set the name of the data extension you want to create or update. This data extension will be in the business unit within |destination-name| that is associated with the credentials you provided.
+       Set the name of the data extension you want to create or update. This data extension is in the business unit within |destination-name| that is associated with the credentials you provided.
 
        **For campaigns**
 
@@ -544,15 +548,19 @@ Add data template
           :align: left
           :class: no-scaled-link
 
-       Assign a name to the data extension that will be added (or updated) by Amperity.
+       Assign a name to the data extension that will be added or updated by Amperity.
 
-       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters: ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
+       .. important:: The name of a data extension must be unique within |destination-name|, should use underscores ``_`` instead of spaces, and may not contain *any* of the following characters:
+
+          .. code-block::
+
+             ! @ # $ % ^ * ( ) = { } [ ] \ . < > / " : ? | , &
 
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -589,7 +597,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -609,7 +617,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -625,7 +633,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -655,7 +663,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -702,7 +710,7 @@ Import location not found
 
 .. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-start
 
-The name of the directory into which Amperity will add data must be discoverable to Amperity. If Amperity cannot find that directory, CSV files will not be uploaded to the |destination-name| SFTP site.
+The name of the directory into which Amperity adds data must be discoverable to Amperity. If Amperity cannot find that directory, CSV files is not uploaded to the |destination-name| SFTP site.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-import-wrong-location-end
 
@@ -724,7 +732,7 @@ Incorrect data extension name
 
 .. destination-salesforce-marketing-cloud-workflow-actions-incorrect-extension-name-start
 
-The name of a data extension must be unique within |destination-name|, should use underscores ( _ ) instead of spaces, and may not contain *any* of the following characters:
+The name of a data extension must be unique within |destination-name|, should use underscores ``_`` instead of spaces, and may not contain *any* of the following characters:
 
 ::
 
@@ -765,7 +773,7 @@ Incorrect folder
 
 .. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-start
 
-The name of the directory within the |destination-name| SFTP site must match the folder name that is configured in Amperity. When the folder name does not match, the Marketing Cloud SOAP API will unable to get CSV files from that directory and the data extension will not be updated.
+The name of the directory within the |destination-name| SFTP site must match the folder name that is configured in Amperity. When the folder name does not match, the Marketing Cloud SOAP API is unable to get CSV files from that directory and the data extension is not updated.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-incorrect-folder-end
 
@@ -791,7 +799,7 @@ Invalid credentials
 
 .. destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials-note-start
 
-.. note:: In some situations the user account that is associated with the Amperity workflow will require a new password and security token. When a new password and security token are created in |destination-name|, be sure to update the credentials for this workflow in Amperity.
+.. note:: In some situations the user account that is associated with the Amperity workflow requires a new password and security token. When a new password and security token are created in |destination-name|, be sure to update the credentials for this workflow in Amperity.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-invalid-credentials-note-end
 
@@ -805,7 +813,7 @@ Missing primary key
 
 The **primary_key** field is typically used to specify the :ref:`subscriber key <destination-salesforce-marketing-cloud-subscriber-key>` that is used with this destination.
 
-There are two options: using the |destination-name| subscriber key or using email addresses. One of these options must be specified before Amperity can send data to |destination-name|.
+Do one of the following: use the |destination-name| subscriber key or use email addresses. One of these options must be specified before Amperity can send data to |destination-name|.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-missing-primary-key-end
 
@@ -814,7 +822,7 @@ There are two options: using the |destination-name| subscriber key or using emai
 To resolve this error, you must configure the primary key.
 
 #. Open the Amperity **Credentials** page in a new tab.
-#. For a query, open the **Queries** page, and then update the query to return the field -- **subscriber_key** or **email** -- that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
+#. For a query, open the **Queries** page, and then update the query to return the field--**subscriber_key** or **email**--that matches the **Primary Key** setting in the data template. Validate, and then activate the query.
 
    For a campaign, open the **Campaigns** page, and then update the campaign and ensure the primary key is in the list of attributes that are sent to |destination-name|. Activate the campaign.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
@@ -842,7 +850,7 @@ To resolve this error, you must verify the configuration settings for SFTP.
 #. Open the Amperity **Credentials** page in a new tab.
 #. Find the credentials for the SFTP site that is associated with |destination-name|, and then verify the configuration for the hostname, username, and passphrase. Make any necessary changes.
 
-   .. note:: If the SFTP site is unavailable due to external reasons, such as not enough free space or the SFTP site is down, you must resolve those issues before Amperity will be able to send data to that SFTP site.
+   .. note:: If the SFTP site is unavailable due to external reasons, such as not enough free space or the SFTP site is down, you must resolve those issues before Amperity is able to send data to that SFTP site.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. destination-salesforce-marketing-cloud-workflow-actions-sftp-unavailable-steps-end

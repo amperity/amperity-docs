@@ -4,7 +4,7 @@
 .. |destination-name| replace:: Criteo
 .. |plugin-name| replace:: "Criteo"
 .. |credential-type| replace:: "criteo"
-.. |required-credentials| replace:: "refresh token"
+.. |required-credentials| replace:: "OAuth"
 .. |audience-primary-key| replace:: "email"
 .. |what-send| replace:: email lists
 .. |where-send| replace:: |destination-name|
@@ -13,21 +13,19 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send audiences to Criteo.
+        Configure Amperity to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send audiences to Criteo.
+        Configure Amperity to send audiences to Criteo Retail Media for use with offline and onsite display campaigns.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Criteo
+        Configure destinations for Criteo
 
 ==================================================
-Configure destination for Criteo
+Configure destinations for Criteo
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_criteo.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-criteo-start
@@ -39,9 +37,13 @@ Configure destination for Criteo
 
 .. destination-criteo-api-note-end
 
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-invalid-emails-filtered-start
+   :end-before: .. setting-common-invalid-emails-filtered-end
+
 .. destination-criteo-custom-audiences-and-offline-events-start
 
-Your brand can send custom audiences and offline events to |destination-name|:
+Your brand can send custom audiences and events to |destination-name|:
 
 .. list-table::
    :widths: 10 90
@@ -50,7 +52,7 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Custom audiences**
 
@@ -59,13 +61,19 @@ Your brand can send custom audiences and offline events to |destination-name|:
    * - .. image:: ../../images/steps-arrow-off-black.png
           :width: 60 px
           :alt: Custom audiences
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Transactions data**
 
        Use :ref:`transactions data <destination-criteo-send-transactions>` to help your brand track offline conversions from your marketing campaigns.
 
 .. destination-criteo-custom-audiences-and-offline-events-end
+
+.. destination-criteo-audience-replacement-start
+
+.. note:: Each time Amperity sends an audience to |destination-name|, the `entire audience is replaced <https://developers.criteo.com/marketing-solutions/docs/audience-segments#deleting-all-users>`__ |ext_link|. Amperity clears all existing contacts before adding contacts from the current send. Contacts from a previous send who are not included in the current send are removed.
+
+.. destination-criteo-audience-replacement-end
 
 
 .. _destination-criteo-send-transactions:
@@ -77,7 +85,7 @@ Send transactions data
 
 .. events-criteo-overview-start
 
-You can send transactions data (offline events) to |destination-name| as a CSV or TSV file using SFTP.
+You can send transactions data to |destination-name| as a CSV or TSV file using SFTP.
 
 Review the `requirements for using SFTP to send transactions data to Criteo <https://help.criteo.com/kb/guide/en/how-can-i-pass-my-offline-sales-data-to-criteo-Yf95KPKbjB/Steps/775624,914151,775585>`__ |ext_link|, and then configure Amperity to connect to |destination-name| using the |destination_sftp| destination.
 
@@ -131,24 +139,22 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Credential settings**
 
-       **Refresh token**
+       **OAuth**
 
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
+          Amperity connects to |destination-name| using OAuth. After clicking the generated authorization link, sign in to |destination-name| and select the portfolios to which access will be granted. The credential is created automatically after |destination-name| sends the authorization callback to Amperity.
 
        .. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-          |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly-generated link.
+          |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly generated link.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
@@ -190,7 +196,7 @@ Configure credentials
 
 .. important:: When configuring OAuth for |destination-name| you must `select the portfolios <https://developers.criteo.com/marketing-solutions/docs/authorization-requests>`__ |ext_link| to which access will be granted.
 
-   |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly-generated link.
+   |destination-name| will only create the credential if the account you are using has not already granted Amperity access. If you need to create a new credential, `revoke access for Amperity <https://consent.criteo.com/>`__ |ext_link|, and then reconfigure OAuth using the newly generated link.
 
 .. destination-criteo-configure-oauth-must-select-portfolios-end
 
@@ -204,8 +210,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-add-credential-start
@@ -213,8 +219,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-select-type-start
@@ -222,18 +228,16 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/credentials_settings.rst
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
-       **Refresh token**
+       **OAuth**
 
-          .. include:: ../../shared/credentials_settings.rst
-             :start-after: .. credential-oauth-refresh-token-start
-             :end-before: .. credential-oauth-refresh-token-end
+          Click the generated authorization link, sign in to |destination-name|, and select the portfolios to which access will be granted. The credential is created automatically after |destination-name| sends the authorization callback to Amperity.
 
 .. destination-criteo-credentials-steps-end
 
@@ -267,8 +271,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -287,8 +291,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -303,8 +307,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -323,8 +327,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -351,13 +355,21 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
 
-.. destination-criteo-add-steps-end
 
-.. TODO: Add workflow resolutions from existing topics HERE.
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
+
+.. destination-criteo-add-steps-end

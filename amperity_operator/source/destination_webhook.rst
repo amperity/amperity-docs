@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Webhook
+        Configure destinations for Webhook
 
 ==================================================
-Configure destination for Webhook
+Configure destinations for Webhook
 ==================================================
 
 .. term-webhook-destination-start
@@ -38,12 +38,11 @@ A webhook destination tracks the AWS Lambda function runs and monitors for succe
 
 .. destination-webhook-steps-to-send-start
 
-This topic describes the steps that are required to send query results to a custom destination using a webhook:
+Send query results to a custom destination using a webhook:
 
 #. :ref:`Use serverless destinations <destination-webhook-serverless>`
 #. :ref:`Configure custom destination <destination-webhook-custom>`
 #. :ref:`Add webhook destination <destination-webhook-add-destination>`
-#. :ref:`Add data template <destination-webhook-add-data-template>`
 #. :ref:`Extend the AWS Lambda function <destination-webhook-extend-function>`
 
 .. destination-webhook-steps-to-send-end
@@ -58,7 +57,7 @@ How a webhook destination works
 
 The webhook destination is a broad purpose destination that generates a file in NDJSON format, publishes to Amazon S3, and then provides a pre-signed URL from which that NDJSON file may be downloaded.
 
-After the NDJSON file is generated, the destination will send a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
+After the NDJSON file is generated, the destination sends a request to an AWS Lambda endpoint that exists outside of the Amperity virtual private cloud (VPC).
 
 The Lambda function is built to process and publish the data however it needs. To ensure that Amperity can track the Lambda function, a public endpoint is available, to which regular updates from the Lambda function must be provided.
 
@@ -74,7 +73,7 @@ The Lambda function is built to process and publish the data however it needs. T
 
 A webhook destination works like this:
 
-#. Use a query to build a table with data that matches rows, columns, and/or data types that are required by the custom destination.
+#. Use a query to build a table with data that matches rows, columns, or data types that are required by the custom destination.
 #. Configure a webhook destination to send data to a Lambda function that is running in AWS Lambda.
 #. Deploy a Lambda function to AWS Lambda. The Lambda function may be deployed as a :ref:`serverless application (recommended) <destination-webhook-serverless>` or it may be :ref:`a custom Lambda function that you have built using the open source toolkit provided by Amperity <destination-webhook-custom>`, and then uploaded to AWS Lambda.
 #. Configure a webhook destination to send data to a function that runs in AWS Lambda.
@@ -113,7 +112,7 @@ Custom destinations
 
 .. destination-webhook-configure-manual-start
 
-A custom destination is configured using a webhook destination and Lambda function. The Lambda function must be able to perform all actions that are required to move the data from Amperity to the custom destination, including validations and/or pre-processing that is required by the custom destination, and including any services, such as Amazon S3, that may be needed in-between Amperity and the custom destination.
+A custom destination is configured using a webhook destination and Lambda function. The Lambda function must be able to perform all actions that are required to move the data from Amperity to the custom destination, including validations and pre-processing that is required by the custom destination, and including any services, such as Amazon S3, that may be needed in-between Amperity and the custom destination.
 
 .. destination-webhook-configure-manual-end
 
@@ -139,7 +138,7 @@ To manually configure a custom webhook destination, do each of the following ste
 
 .. destination-webhook-configure-manual-important-start
 
-.. important:: Your custom destination may require additional steps and/or modifications to the steps described in this topic.
+.. important:: Your custom destination may require additional steps or modifications.
 
 .. destination-webhook-configure-manual-important-end
 
@@ -198,7 +197,7 @@ Upload function to AWS Lambda
 
 .. destination-webhook-manual-upload-function-start
 
-You must upload the application code (and any dependencies) to AWS Lambda as a ZIP file archive.
+You must upload the application code and any dependencies to AWS Lambda as a ZIP file archive.
 
 **To upload a Lambda function to AWS Lambda**
 
@@ -210,11 +209,11 @@ You must upload the application code (and any dependencies) to AWS Lambda as a Z
 
          sh util/lambda-build.sh filename=application_name.py
 
-      This will create a ZIP file that contains the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
+      This creates a ZIP file that has the following files: **application_name.py**, **amperity_runner.py**, and **helpers.py**, where "application_name" is the name of your Lambda function.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code (and any dependencies), and then click **Upload**.
+#. Find the ZIP file archive that has the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-webhook-manual-upload-function-end
@@ -233,7 +232,7 @@ AWS Lambda must be updated for the name of the custom destination application an
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Under **Runtime settings**, select **Edit**.
-#. Under **Handler**, add "app.application_name" (where "application_name" is replaced with the name of your application), and then click **Save**.
+#. Under **Handler**, add "app.application_name", where "application_name" is replaced with the name of your application, and then click **Save**.
 #. In the AWS Lambda console, open the **Configuration** tab.
 #. Under **General configuration**, select **Edit**.
 #. Set the **Timeout** value to "15 min 0 sec", and then click **Save**.
@@ -272,7 +271,7 @@ Add the API gateway
 
 #. Click **Add**.
 
-   You will need these values when configuring the webhook destination in Amperity.
+   You need these values when configuring the webhook destination in Amperity.
 
 .. destination-webhook-manual-add-gateway-end
 
@@ -359,7 +358,7 @@ Add destination
 
       If your Lambda function does not have any settings *OR* when your Lambda function is deployed as a serverless application, use empty curly braces: "{}".
 
-#. Enable the **Allow customers to use this data template** option, and then enable the **Make available to campaigns** option. This allows users to send campaign results from Amperity to |destination-name|.
+#. Enable the **Allow customers to use this data template** option, and then enable the **Make available to campaigns** option to send campaign results from Amperity to |destination-name|.
 #. Verify all template settings and make any required updates.
 #. Click **Save**.
 
@@ -389,8 +388,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -399,7 +398,7 @@ Add data template
        .. image:: ../../images/mockup-data-template-tab-add-01-details.png
           :width: 500 px
           :alt: Step 1
-          :align: left
+          :align: center
           :class: no-scaled-link
 
        .. include:: ../../shared/destinations.rst
@@ -409,8 +408,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -418,19 +417,15 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -451,8 +446,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -478,7 +473,7 @@ Extend the AWS Lambda function
 
 .. destination-webhook-extend-function-start
 
-Amperity provides an open source toolkit that you can use as a reference when building AWS Lambda functions. This toolkit contains example AWS Lambda functions, an AWS Lambda function you can use as a template, a helper class, and a tools that help you set up and configure your local environment.
+Amperity provides an open source toolkit that you can use as a reference when building AWS Lambda functions. This toolkit has example AWS Lambda functions, an AWS Lambda function you can use as a template, a helper class, and a tools that help you set up and configure your local environment.
 
 **To extend the AWS Lambda function using the Amperity open source toolkit**
 

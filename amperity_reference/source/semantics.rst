@@ -14,7 +14,7 @@
         About semantic tags
 
 ==================================================
-About semantic tags
+About semantics
 ==================================================
 
 
@@ -55,7 +55,7 @@ How semantic tags work
 
 .. semantics-howitworks-start
 
-Semantic tags must be defined for every feed that will provide profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
+Semantic tags must be defined for every data source that provides customer profile data to Stitch. This ensures that data from rich sources of profile data are brought into Amperity in a consistent manner, which improves the outcome of the Stitch process.
 
 Semantic tagging works like this:
 
@@ -63,9 +63,10 @@ Semantic tagging works like this:
 #. A field in the customer's system named "lname" stores the same individual's last name.
 #. A field in the customer's system named "primary-phone" stores a phone number.
 #. A field in the customer's system named "date" stores an individual's birthdate.
-#. And so on.
 
-For those semantic tags, the feed should apply semantic tags like this:
+.. vale off
+
+For those fields apply semantic tags like this:
 
 .. list-table::
    :widths: 100 100
@@ -84,13 +85,19 @@ For those semantic tags, the feed should apply semantic tags like this:
    * - ...
      - ...
 
-This same pattern is applied to every customer data source that is brought into Amperity and it results in every single semantically-tagged field being analyzed by Amperity during the Stitch process in exactly the same way.
+.. vale on
 
-Amperity has built-in semantic tags for personally-identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
+Apply the same pattern every customer data source that is brought into Amperity that has customer profiles to ensure that all customer profile data is evaluated by Stitch in exactly the same way.
+
+.. semantics-howitworks-end
+
+.. semantics-howitworks-context-start
+
+Amperity has built-in semantic tags for personally identifiable information (PII), transactions, and behaviors. In addition, custom semantic tagging may be applied to fields when adding them can help identify unique individuals across massive data sets.
 
 Profile semantic tags are used by Amperity for identity resolution, which is the process that builds a unified customer profile for all of your unique customers. All other semantic tags, such as for transactions and itemized transactions, are used to associate your customer's interactions with your brand to their individual customer profiles.
 
-.. semantics-howitworks-end
+.. semantics-howitworks-context-end
 
 .. semantics-howitworks-profile-tags-start
 
@@ -136,6 +143,10 @@ The following table describes recommended patterns to use when defining semantic
    * - **blv/datasource**
      - String
      - Apply to the ``datasource`` column in the bad-values blocklist table.
+   * - **blv/is-preprocessed**
+     - Boolean
+     - Optional. Use when the provided bad value is already standardized and requires no further preprocessing. For example, assign this semantic tag to "iPhone Max Black 5G" to prevent blocklisting anyone with "Max" or "Black" in their first or last names.
+
    * - **blv/semantic**
      - String
      - Apply to the ``semantic`` column in the bad-values blocklist table.
@@ -153,7 +164,7 @@ Compliance
 
 .. semantics-compliance-about-start
 
-The following table describes the semantic tags that are used for CCPA and/or GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics dropdown menu in the **Feed Editor**.
+The following table describes the semantic tags that are used for CCPA and GDPR compliance workflows. Compliance semantics are prefixed with **compliance/** in the semantics dropdown menu in the **Feed Editor**.
 
 .. semantics-compliance-about-end
 
@@ -171,7 +182,7 @@ The following table describes the semantic tags that are used for CCPA and/or GD
 
        Semantic tag: **compliance/request-id**
 
-       Usually a unique identifier for an inbound request. **Unified_Compliance_Overview** will report results for duplicates as if they were a single request.
+       A unique identifier for an inbound request. **Unified_Compliance_Overview** will report results for duplicates as if they were a single request.
 
        This identifier is used for validation purposes, allowing compliance actions to be easily linked to specific requests.
 
@@ -240,9 +251,10 @@ The following table describes the semantic tags that are used for CCPA and/or GD
         * **compliance/request-postal**
         * **compliance/request-country**
 
-       The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and/or **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
+       The values in these fields will be checked against any domain table that has the **address**, **address2**, **city**, **state**, **postal**, and **country** semantic tags. If a domain table only has some of these values tagged, the missing values will be treated as **NULL**. 
 
-        .. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+        .. note:: An address group has many fields, but is a single entity for a compliance action. In order to match to records in domain tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+
 
    * - **custom-key**
      - **Optional**
@@ -252,6 +264,18 @@ The following table describes the semantic tags that are used for CCPA and/or GD
        Find all records that match a custom value. This action is case-insensitive.
 
        The values in this field will be checked against any domain table that has the **compliance/custom-key** semantic tag.
+
+
+   * - **system-updated**
+     - **Optional**
+
+       Semantic tag: **system-updated**
+
+       Processed compliance requests are automatically removed from the inbound requests table after each privacy rights workflow.
+
+       To retain request records that arrived after the domain transaction closes apply the **system-updated** semantic tag to a field in the inbound requests table by choosing the **Generate an "updated" field** from the **Feed Editor**.
+
+       When the **system-updated** semantic tag is not applied to the inbound requests table **all records** are deleted from the inbound requests table.
 
 .. semantics-compliance-request-table-end
 
@@ -297,9 +321,9 @@ The following table describes recommended patterns to use when defining custom s
           :start-after: .. term-loyalty-id-start
           :end-before: .. term-loyalty-id-end
 
-       A loyalty ID may be associated with a customer key (**ck**) or a foreign key (**fk-[namespace]**), but otherwise follows all patterns associated with PII semantics.
+       A loyalty ID may be associated with a customer key (**ck**) or a foreign key, but otherwise follows all patterns associated with PII semantics. For example: **fk-loyalty-id**
 
-       .. tip:: Use additional custom semantic tags when the data contains more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data contains a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
+       .. tip:: Use additional custom semantic tags when the data has more information about loyalty programs. Keep the prefix **loyalty-**, and then append an appropriate string to improve the user experience with downstream workflows. For example, if the data has a field for loyalty points, use a custom semantic named **loyalty-points** to tag that field.
 
    * - **PII**
      - All custom semantics that are associated with transactions should be prefixed with the PII semantic to which the custom semantic is most closely associated. For example: **email-personal** and **email-work** are most closely associated with the **email** semantic.
@@ -341,11 +365,11 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - Description
    * - **required**
      - 
-     - Indicates if the field is required to have a non-NULL value.
+     - Indicates if the field is required to have a non-**NULL** value.
 
        .. note:: This tag is assigned automatically to all fields that contain the Amperity ID.
 
-       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-NULL value, but does not require values to be unique. NULL values will cause an error during validation. All other values, including zero-length strings, will pass validation.
+       A field that is assigned the **required** semantic requires every value for that field within the same table to have a non-**NULL** value, but does not require values to be unique. **NULL** values will cause an error during validation. All other values, including zero-length strings, will pass validation.
 
        .. note::
 
@@ -355,7 +379,7 @@ The following semantics may be used to tag fields as required, as unique, or as 
      - 
      - Indicates if the field is required to be a unique field in the customer 360 database.
 
-       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with NULL values are ignored by validation, but all other values, including zero-length strings, must pass.
+       A field that is assigned the **unique** semantic requires every value for that field within the same table to be unique. Fields with **NULL** values are ignored by validation, but all other values, including zero-length strings, must pass.
 
        .. note::
 
@@ -377,7 +401,7 @@ Email engagement semantic tags capture email events data, such as clicks, opens,
 
    .. caution:: The data volume for email events data can be very large. Talk with your Amperity representative before applying email events semantic tags to raw email events data.
 
-#. Use :ref:`email summary <semantics-email-summary>` semantic tags when data is aggregated prior to sending it to Amperity.
+#. Use :ref:`email summary <semantics-email-summary>` semantic tags when data is aggregated before sending it to Amperity.
 
 .. semantics-email-end
 
@@ -399,7 +423,7 @@ Apply email event semantic tags to data sources that contain data for raw email 
 
 .. semantics-email-events-important-start
 
-.. important:: Email events semantic tags should only be applied to data sources that provide at least 15 months of raw email events data. The storage requirements for this type of data can be significant. Talk with your Amperity representative about your downstream use cases prior to applying email events semantic tags to raw email events data sources.
+.. important:: Email events semantic tags should only be applied to data sources that provide at least 15 months of raw email events data. The storage requirements for this type of data can be significant. Talk with your Amperity representative about your downstream use cases before applying email events semantic tags to raw email events data sources.
 
 .. semantics-email-events-important-end
 
@@ -750,7 +774,9 @@ Keys
 
 .. semantics-keys-start
 
-Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that contains customer records automatically assigns the **pk** semantic to any field identified as a primary key. For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
+Keys are used to identify signals in source data that can be applied during the Stitch process. For example, a table that has customer records automatically assigns the **pk** semantic to any field identified as a primary key.
+
+For tables that contain interaction records, a foreign key is often used to associate important fields for interaction records to primary keys for customer records. This allows interaction records to be correlated with the Amperity ID as an outcome of the Stitch process even though interaction records are (typically) not processed by Stitch for the purpose of identity resolution.
 
 .. semantics-keys-end
 
@@ -778,7 +804,7 @@ You can define custom blocking labels using **bk-[label]**, and then use them as
 
 .. semantics-key-blocking-caution-start
 
-.. caution:: Use blocking keys carefully and be sure to verify that Stitch results contain the desired outcome.
+.. caution:: Verify that Stitch results contain the desired outcome.
 
 .. semantics-key-blocking-caution-end
 
@@ -796,7 +822,7 @@ Customer keys (ck)
 
 .. tip:: What happens to customer keys in the **Unified Coalesced** table?
 
-   * Records may have NULL customer keys.
+   * Records may have **NULL** customer keys.
    * There may be only one customer key per data source.
 
 .. semantics-key-customer-tip-end
@@ -819,8 +845,6 @@ Foreign keys (fk)
 
 A foreign key semantic tag may be applied to any column in any data source, but should be associated with a field that can also act as a primary key for that data source *and* is present in other tables.
 
-A foreign key may be used once within a table. A table may have more than one foreign key. For example, if a data source contains customer and audience identifiers, apply **fk-customer** to the customer identifier and **fk-audience** to the audience identifier.
-
 .. semantics-key-foreign-end
 
 .. semantics-key-foreign-default-start
@@ -842,18 +866,36 @@ Use foreign keys to define meaningful connections across all types of data sourc
 
 .. semantics-key-foreign-tip-start
 
-.. tip:: What happens to foreign keys in the **Unified Coalesced** table?
+.. admonition:: How foreign keys work in Amperity
 
-   * Records may have NULL foreign keys.
-   * There may be multiple foreign keys in the data source, but there may not be duplicate foreign keys.
-   * There may be multiple foreign keys per Amperity ID.
-   * There should not be multiple Amperity IDs per foreign key.
+   Amperity ID assignment occurs when tables with customer profile data have semantic tags applied to personally identifiable information (PII) and those tables are made available to Stitch.
+
+   This requires a foreign key relationship in cases where tables include non-customer profile semantic tags, such as for transactions, loyalty programs, or engagement events.
+
+   This relationship exists when three conditions are met:
+
+   * Records may have **NULL** foreign keys.
+   * There may be many foreign keys in the data source, but there may not be duplicate foreign keys.
+   * There may be many foreign keys per Amperity ID.
+   * There should not be many Amperity IDs per foreign key.
+
+   #. At least one source table with customer profile semantic tags is made available to Stitch **and** a foreign key is applied to at least one field in that table.
+
+      .. note:: A source table with customer profile semantic tags may have more than one foreign key.
+
+   #. For tables with non-customer profile semantic tags, a single foreign key must be assigned to a single field in the table.
+
+      .. important:: A source table with non-customer profile semantic tags **must have only one** field assigned a foreign key.
+
+   #. The **Unified Coalesced** table has rows for all customer profile data processed by Stitch. Each semantic tag is represented by a column header, including columns for foreign keys, in the **Unified Coalesced** table.
+
+      When a foreign key matches a foreign key in the **Unified Coalesced** table **and** matches only one Amperity ID, that Amperity ID is assigned to the rows in non-customer profile tables with the matching foreign keys.
 
 .. semantics-key-foreign-tip-end
 
 .. semantics-key-foreign-trivial-duplicates-start
 
-.. note:: If foreign keys are linked together by a trivial duplicate they will appear in the **Unified Preprocessed Raw** table as a comma-separated list.
+.. note:: If foreign keys are linked together by a trivial duplicate they appears in the **Unified Preprocessed Raw** table as a comma-separated list.
 
 .. semantics-key-foreign-trivial-duplicates-end
 
@@ -883,7 +925,7 @@ Primary keys (pk)
 
 .. semantics-key-primary-caution-start
 
-.. caution:: Amperity allows you to assign the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that contains events -- clickstream, email, web activity, mobile app activity, and so on -- often contain many fields that could be used like a primary key.
+.. caution:: Amperity allows assignment of the **pk** semantic tag to more than one field in the **Feed Editor**. This is because with some data sources, such as data that has events--clickstream, email, web activity, or mobile app activity--often contain many fields that could be used like a primary key.
 
    A domain table can have only one primary key. When the **pk** semantic tag is applied to more than one field in the **Feed Editor**, those values are concatenated into a primary key, which is stored in the **_pk** field in the domain table. You should limit the number of fields to which the **pk** semantic tag is applied.
 
@@ -895,11 +937,15 @@ Primary keys (pk)
 
 .. semantics-key-primary-tip-start
 
-.. tip:: What happens to primary keys in the **Unified Coalesced** table?
+.. note:: What happens to primary keys in the **Unified Coalesced** table?
 
-   * Each record in the **Unified Coalesced** table must have a primary key.
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-unified-coalesced-table-start
+      :end-before: .. term-unified-coalesced-table-end
+
+   * Each record in the **Unified Coalesced** table has a primary key.
    * A primary key is unique within a data source, but that primary key may not be unique across all data sources.
-   * There can be only one primary key per data source; each record in the **Unified Coalesced** table can be uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
+   * There can be only one primary key per data source. Each record in the **Unified Coalesced** table is uniquely identified by the pair of values defined in the "datasource" and "pk" columns.
    * Each record in the Unified Coalesced table may only be associated with a single Amperity ID.
 
 .. semantics-key-primary-tip-end
@@ -934,7 +980,7 @@ Use a separation key (sk) for deterministic unmatching of records. This prevents
 
 .. semantics-key-separation-assign-pairs-start
 
-A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-NULL value.
+A record pair is assigned a non-matching score (0.0) when separation keys contain conflicting values during pairwise comparison. A record pair is split into two clusters when both pairs contain a non-**NULL** value.
 
 .. note:: The following separation keys do not consider approximately matched values to be conflicting values:
 
@@ -1163,6 +1209,8 @@ Apply loyalty profile semantic tags to data sources that contain data that provi
    #. The **fk-loyalty-id** semantic tag is applied to the same source field as the **loy/loyalty-id** field.
    #. The **loy/email** semantic tag is applied to fields that contain email addresses.
    #. The **loy/birthdate** semantic tag is applied to fields that contain birthdates.
+   
+   (Source tables for loyalty profiles and events should not be made available to Stitch.)
 
 .. semantics-loyalty-profiles-make-available-to-stitch-end
 
@@ -1355,7 +1403,7 @@ The following table lists the tags available to this semantic group (with requir
      - Description
    * - **brand**
      - String
-     - |checkmark-recommended| **Recommended** (when your tenant has data for multiple brands).
+     - |checkmark-recommended| **Recommended** (when your tenant has data for many brands).
 
        The brand to which the opt-in status applies.
 
@@ -1381,7 +1429,7 @@ The following table lists the tags available to this semantic group (with requir
 
        Indicates whether a customer has given consent to being contacted by your brand using the customer's email address.
 
-       .. important:: The field to which this semantic tag is applied **must** have a Boolean data type. If the data source to which you want to apply this tag is not a Boolean, use a custom domain table to shape the data into a Boolean data type, and then apply this semantic tag.
+       .. important:: The field to which this semantic tag is applied **must** have a **Boolean** data type. If the data source to which you want to apply this tag is not a **Boolean**, use a custom domain table to shape the data into a **Boolean** data type, and then apply this semantic tag.
 
    * - **language-preference**
      - String
@@ -1428,7 +1476,7 @@ The following table lists the tags available to this semantic group (with requir
      - Description
    * - **brand**
      - String
-     - |checkmark-recommended| **Recommended** (when your tenant has data for multiple brands).
+     - |checkmark-recommended| **Recommended** (when your tenant has data for many brands).
 
        The brand to which the opt-in status applies.
 
@@ -1438,7 +1486,7 @@ The following table lists the tags available to this semantic group (with requir
 
        Indicates whether a customer has opted-in to being contacted by your brand using the customer's phone number.
 
-       .. important:: The field to which this semantic tag is applied **must** have a Boolean data type. If the data source to which you want to apply this tag is not a Boolean, use a custom domain table to shape the data into a Boolean data type, and then apply this semantic tag.
+       .. important:: The field to which this semantic tag is applied **must** have a **Boolean** data type. If the data source to which you want to apply this tag is not a **Boolean** data type, use a custom domain table to shape the data into a **Boolean** data type, and then apply this semantic tag.
 
    * - **language-preference**
      - String
@@ -1594,7 +1642,7 @@ The following table lists the tags available to this semantic group (with requir
           :start-after: .. term-product-id-start
           :end-before: .. term-product-id-end
 
-       .. important:: Predictive modeling requires a product catalog to contain between 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
+       .. important:: Predictive modeling requires a product catalog to have 20-2000 unique product IDs. A product ID is often associated with a stock keeping unit (SKU).
 
           .. include:: ../../shared/terms.rst
              :start-after: .. term-sku-start
@@ -1712,7 +1760,7 @@ Profile (PII)
 
 .. semantics-profile-start
 
-Profile semantics should be applied to customer records that contain three (or more) good sources of PII data. Profile semantics should be applied to interaction records only when customer records are stored alongside transaction details *and* when there are three (or more) good sources of PII data.
+Profile semantics should be applied to customer records that contain three or more good sources of PII data. Profile semantics should be applied to interaction records only when customer records are stored alongside transaction details *and* when there are three or more good sources of PII data.
 
 .. semantics-profile-end
 
@@ -1749,7 +1797,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-birthdate-start
           :end-before: .. term-birthdate-end
 
-       .. tip:: A field that is tagged with the **birthdate** semantic tag will return an error when the feed is saved and the data type is not set to Date.
+       .. tip:: A field that is tagged with the **birthdate** semantic tag will return an error when the feed is saved and the data type is not set to **Date**.
 
    * - **city**
      - String
@@ -1799,21 +1847,9 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-gender-start
           :end-before: .. term-gender-end
 
-       Supported values for fields associated with the **gender** semantic tag include:
-
-       * F
-       * FEMALE (is normalized to F)
-       * M
-       * MALE (is normalized to M)
-       * MAN (is normalized to M)
-       * NONE (is treated as NULL)
-       * WOMAN (is normalized to F)
-       * X
-       * NONBINARY (is normalized to X)
-       * NON-BINARY (is normalized to X)
-       * ENBY (is normalized to X)
-       * NB (is normalized to X)
-       * OTHER (is normalized to X)
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-gender-supported-values-start
+          :end-before: .. term-gender-supported-values-end
 
    * - **generational-suffix**
      - String
@@ -1821,7 +1857,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-generational-suffix-start
           :end-before: .. term-generational-suffix-end
 
-       .. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that contains the suffix separated from the first and last names.
+       .. caution:: The **generational-suffix** semantic tag should only be applied once per feed and only to a field that has the suffix separated from the first and last names.
 
    * - **given-name**
      - String
@@ -1837,7 +1873,7 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-phone-start
           :end-before: .. term-phone-end
 
-       .. tip:: A field that is tagged with the **phone** semantic tag will return an error when the feed is saved and the data type is not set to String.
+       .. tip:: A field that is tagged with the **phone** semantic tag will return an error when the feed is saved and the data type is not set to **String**.
 
        .. important::
 
@@ -1856,9 +1892,9 @@ The following table lists the tags available to this semantic group:
           :start-after: .. term-postal-start
           :end-before: .. term-postal-end
 
-       A full 9-digit zip code is derived from fields that contain zip code data.
+       A full 9-digit ZIP code is derived from fields that contain ZIP code data.
 
-       .. tip:: A field that is tagged with the **postal** semantic tag will return an error when the feed is saved and the data type is not set to String.
+       .. tip:: A field that is tagged with the **postal** semantic tag will return an error when the feed is saved and the data type is not set to **String**.
 
    * - **state**
      - String
@@ -1937,7 +1973,7 @@ Subscriber status
 
 .. semantics-subscriber-status-start
 
-Subscriber status -- whether a customer has opted-in or opted-out to receiving communication -- can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email and/or phone subscriber status information into a single table.
+Subscriber status--whether a customer has opted-in or opted-out to receiving communication--can be difficult to track when it is not consolidated into a single table within your customer 360 database. Use subscriber status semantic tags to consolidate email or phone subscriber status information into a single table.
 
 The following semantic tags consolidate your customers' email and phone subscriber status:
 
@@ -1983,7 +2019,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - |checkmark-required| **Required**
 
-       The email address to which a marketing may (or may not) be sent.
+       The email address to which a marketing may or may not be sent.
 
    * - **is-email-opted-in**
      - Boolean
@@ -2046,7 +2082,7 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - |checkmark-required| **Required**
 
-       The phone number to which a marketing may (or may not) be sent.
+       The phone number to which a marketing may or may not be sent.
 
    * - **region**
      - String
@@ -2082,7 +2118,7 @@ Itemized transaction semantics are prefixed with **txn-item/** in the semantics 
       :start-after: .. term-unified-itemized-transactions-table-start
       :end-before: .. term-unified-itemized-transactions-table-end
 
-   Carefully review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :ref:`Unified Transactions table <data-tables-unified-transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
+   Review the data in the **Unified Itemized Transactions** table, including column values that are calculated from values in other columns in this table or the :ref:`Unified Transactions table <data-tables-unified-transactions>`, to verify their accuracy and to ensure that associated semantic tags have been applied correctly.
 
 .. semantics-itemized-transactions-important-end
 
@@ -2111,7 +2147,7 @@ The following table lists the tags available to this semantic group (with requir
 
        When a custom semantic tag is added to itemized transactions data it:
 
-       * Must be a unique customer identifier that can be used to join interaction records (transactions and itemized transactions) to tables that contain the Amperity ID.
+       * Must be a unique customer identifier that can be used to join interaction records to tables that contain the Amperity ID.
        * Must be unique for each order ID in the **Unified Itemized Transactions** table.
 
    * - **currency**
@@ -2155,7 +2191,7 @@ The following table lists the tags available to this semantic group (with requir
        * Must match a foreign key in a table that is output by Stitch.
        * Must be well-distributed across the data source (a high percentage of values must not be 0).
        * Must be unique for each order ID in the **Unified Itemized Transactions** table.
-       * May contain a ``NULL`` value.
+       * May contain a **NULL** value.
 
    * - **is-cancellation**
      - Boolean
@@ -2406,17 +2442,17 @@ The following table lists the tags available to this semantic group (with requir
      - String
      - *Optional*
 
-       Product catalog semantics may be applied to data sources that contain product catalog data. There are two sets of product catalog semantic tags: **txn-item/** and **pc/**.
+       Product catalog semantics may be applied to data sources that contain product catalog data. Use one of these product catalog semantic tags: **txn-item/** and **pc/**.
 
        #. You may use **txn-item/** product catalog semantic tags when product catalog data appears within data sources that contain details about your product catalog when it exists alongside details about orders and items.
 
           Fields to which **txn-item/** product catalog semantic tags are applied will be built into the **Unified Itemized Transactions** table in your customer 360 database.
 
-       #. You may use **pc/** product catalog semantic tags in any data source that contains details about your product catalog. Fields to which the **pc/** product catalog semantic tags are applied will be built into the **Unified Product Catalog** table.
+       #. You may use **pc/** product catalog semantic tags in any data source that has details about your product catalog. Fields to which the **pc/** product catalog semantic tags are applied will be built into the **Unified Product Catalog** table.
 
        .. important:: The names of the semantic tags that are available for product catalogs are identical. For example: "product-brand", "product-category", and "product-gender". The difference is the prefix that you choose to use and the pattern your tenant chooses for defining your product catalog within Amperity. You should determine which pattern you want to use early in your configuration and deployment process. Talk with your Amperity representative if you have questions about the best ways to approach this within your tenant.
 
-       To review the descriptions for all of the product catalog semantic tags you may prefix with **txn-item/** refer to the section in this topic about product catalog semantic tags.
+       To review the descriptions for all of the product catalog semantic tags you may prefix with **txn-item/** refer to the section about product catalog semantic tags.
 
    * - **product-id**
      - String
@@ -2432,7 +2468,7 @@ The following table lists the tags available to this semantic group (with requir
 
        For example, a shirt with the same color and material, but with three different sizes would be represented by three unique SKUs and would also be represented by three unique product IDs.
 
-       For data that contains itemized transactions, where a single transaction includes more than one of the same product, the product ID must appear only once per order ID in the **Unified Itemized Transactions** table. Multiple instances of the same product must be added to the item quantity in the same row.
+       For data that has itemized transactions, where a single transaction includes more than one of the same product, the product ID must appear only once per order ID in the **Unified Itemized Transactions** table. Multiple instances of the same product must be added to the item quantity in the same row.
 
        .. caution:: Every customer has their own definition for SKUs and product IDs. Be sure to understand this definition before applying semantic tags to fields with product IDs to ensure they accurately reflect the customer's definition.
 

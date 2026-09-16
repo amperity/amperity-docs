@@ -9,7 +9,7 @@
 Microsoft Dynamics 365 Marketing
 ==================================================
 
-Send static segments to |destination-name| to manage collections of contacts. Build customer journeys using any combination of contacts details---all contacts, by demographic, by behavior, by firmographic, or by other considerations---to narrow your segments down to the right audience for your marketing campaign.
+Send static segments to |destination-name| to manage collections of contacts. Build customer journeys using any combination of contacts details--all contacts, by demographic, by behavior, by firmographic, or by other considerations--to narrow your segments down to the right audience for your marketing campaign.
 
 
 Credentials
@@ -70,3 +70,9 @@ Settings
 .. include:: ../../shared/destination_settings.rst
    :start-after: setting-microsoft-dynamics-365-segment-name-start
    :end-before: setting-microsoft-dynamics-365-segment-name-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

@@ -35,8 +35,8 @@ Credentials
 **Port**
 
 .. include:: ../../shared/credentials_settings.rst
-   :start-after: .. credential-sftp-port-start
-   :end-before: .. credential-sftp-port-end
+   :start-after: .. credential-airship-port-start
+   :end-before: .. credential-airship-port-end
 
 **Username**
 
@@ -158,8 +158,20 @@ Settings
    :start-after: .. setting-common-header-start
    :end-before: .. setting-common-header-end
 
+**Split outputs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-common-split-outputs-start
+   :end-before: .. setting-common-split-outputs-end
+
 **Use Zip64?**
 
 .. include:: ../../shared/destination_settings.rst
    :start-after: .. setting-common-use-zip64-start
    :end-before: .. setting-common-use-zip64-end
+
+**Campaign file settings**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

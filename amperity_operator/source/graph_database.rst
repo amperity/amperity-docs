@@ -1,5 +1,6 @@
 .. https://docs.amperity.com/operator/
 
+:orphan:
 
 .. meta::
     :description lang=en:
@@ -28,15 +29,13 @@ A graph database is a collection of vertices and edges:
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-vertex-start
      :end-before: .. term-vertex-end
-* .. include:: ../../shared/terms.rst
-     :start-after: .. term-edge-start
-     :end-before: .. term-edge-end
+* An edge is the relationship between two vertices in a graph database. Each edge has a type and must start with one vertex and end with another.
 
 .. graph-database-end
 
 .. graph-database-important-start
 
-.. important:: This topic describes a graph database that uses the Gremlin data format, which is a supported data format for Amazon Neptune.
+.. important:: Configure a graph database for the Gremlin data format, which is a supported data format for Amazon Neptune.
 
    The graph database queries included with Amperity may be customized to support any graph database format and destination.
 
@@ -52,7 +51,7 @@ Graph database workflow
 
 A graph database workflow has two main steps:
 
-#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then  run queries in Amperity to return data in a format that can be loaded by a graph database.
+#. :ref:`Add query templates <graph-database-workflow-add-templates>`, and then run queries in Amperity to return data in a format that can be loaded by a graph database.
 #. :ref:`Send the data <graph-database-workflow-send-data>` to Amazon S3, Azure Blob Storage, Google Cloud Storage, or SFTP, and then load that data to a graph database.
 #. Enabling downstream :ref:`use cases <graph-database-workflow-use-cases>`.
 
@@ -77,7 +76,7 @@ The query templates for the graph database are added to, and then accessed from 
 #. From the **Queries** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Name the folder "Graph Database".
 #. From the **Template** dropdown, select **Graph Database**.
-#. Click **Create**. This will create a folder, into which a collection of draft Graph Database queries are added.
+#. Click **Create**. This creates a folder, into which a collection of draft Graph Database queries are added.
 #. Take a few minutes to review the queries that are added by the "Graph Database" query template.
 
 .. graph-database-workflow-add-templates-steps-end
@@ -165,9 +164,9 @@ Vertices
      - The unique identifier for the vertice.
    * - **name:type**
      - 
-     - The properties of the vertice. There is no limit to the number of properties that may be specified.
+     - The properties of the vertice. Any number of properties may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
    * - **~label**
      - |policy|
      - The type of vertice that matches the object type. For Amperity, this is a customer profile, a Customer 360 profile, or a transaction.
@@ -207,9 +206,9 @@ Edges
      - The type of vertice that matches the object type. For Amperity, this is a customer profile, a Customer 360 profile, or a transaction.
    * - **name:type**
      - 
-     - The properties of the vertice. There is no limit to the number of properties that may be specified.
+     - The properties of the vertice. Any number of properties may be specified.
 
-       The format for this field is is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
+       The format for this field is the name of the field in the Amperity data table and its data type, separated by a colon. For example: **given_name:String** or **birthdate:Date**.
 
 .. graph-database-gremlin-edges-end
 

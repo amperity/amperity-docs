@@ -33,7 +33,7 @@ Add transaction QA queries
 
 Use transactions QA queries to validate the quality of interaction records in the customer 360 database.
 
-The recommended way to add transactions QA queries to your tenant is to use the "Transactions QA" query template. You can do this after you have added the customer 360 database and it contains the required tables.
+The recommended way to add transactions QA queries to your tenant is to use the "Transactions QA" query template. You can do this after you have added the customer 360 database and it has the required tables.
 
 .. database-interactions-transactions-query-qa-end
 
@@ -44,7 +44,7 @@ The recommended way to add transactions QA queries to your tenant is to use the 
 #. From the **Segments** page click **Create**, and then select **Add Folder**. This opens the **Create Folder** dialog box.
 #. Enter the name for the folder. For example: Transactions QA.
 #. From the **Template** dropdown, select **Transactions QA**.
-#. Click **Create**. This will create a folder, into which a collection of draft queries are added. Review the queries for more information about how each query works.
+#. Click **Create**. This creates a folder, into which a collection of draft queries are added. Review the queries for more information about how each query works.
 
 .. database-interactions-transactions-query-qa-steps-end
 
@@ -69,6 +69,7 @@ for item-level rollups
 .. qa-transaction-rollup-validation-queries-item-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,YEAR(order_datetime) AS order_year
@@ -96,6 +97,7 @@ for order-level rollups
 .. qa-transaction-rollup-validation-queries-order-start
 
 .. code-block:: sql
+   :linenos:
 
    SELECT
      ,YEAR(order_datetime)
@@ -121,7 +123,7 @@ Prioritize Amperity IDs
 
 .. qa-transaction-prioritize-amperity-id-start
 
-If multiple Amperity IDs exist for interaction records after the Stitch process or after the use of foreign keys, use SQL to ensure that only one Amperity ID is associated to each interaction record.
+If many Amperity IDs exist for interaction records after the Stitch process or after the use of foreign keys, use SQL to ensure that only one Amperity ID is associated to each interaction record.
 
 .. qa-transaction-prioritize-amperity-id-end
 

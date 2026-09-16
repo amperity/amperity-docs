@@ -31,11 +31,23 @@ Transaction Attributes Extended table
 
    #. :doc:`Unified Itemized Transactions <table_unified_itemized_transactions>`
    #. :doc:`Unified Transactions <table_unified_transactions>`
-   #. Transaction Attributes Extended (this topic)
+   #. Transaction Attributes Extended
 
    The :doc:`Unified Product Catalog <table_unified_product_catalog>` table is optional and may be configured for use with building queries, database tables, and other non-audience workflows. Your brand's product catalog must be integrated into the **Unified Itemized Transactions** table before you can use product catalog attributes to build audiences, segments, and campaigns.
 
 .. table-transaction-attributes-extended-table-group-links-end
+
+.. table-transaction-attributes-extended-important-start
+
+.. important:: Many columns in the **Transaction Attributes Extended** table enable specific features within Amperity, such as segment insights, predictive scoring, and churn prevention campaigns.
+
+   Any column that exists in the **Transaction Attributes Extended** table must maintain the exact column name and data type, even if your tenant requires custom SQL to enable the feature.
+
+   The **l12m_order_revenue**, **l12m_order_frequency** and **l12m_total_items** attributes must not be renamed. These attributes populate the **Revenue tree** and **Historical revenue** cards on the segment summary page and enable segment insights.
+
+   This table may be extended to support additional use cases. The implementations for these types of use cases are always tenant-specific, but should follow a similar approach as :ref:`optional <table-transaction-attributes-extended-extend-attributes>` extensions. Custom fields are not used by segment insights and predictive scoring, but may be added to the **Transaction Attributes Extended** table.
+
+.. table-transaction-attributes-extended-important-end
 
 
 .. _table-transaction-attributes-extended-add:
@@ -136,10 +148,11 @@ Net order revenue
 
 #. Required. :ref:`Add Net Order Revenue to the Unified Transactions table <table-unified-transactions-extend-attributes-net-order-revenue>`.
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
-#. Find the section named "attrs", which contains a series of commented-out extended attributes for net order revenue.
-#. Uncomment one (or more) of the following extended attributes:
+#. Find the section named "attrs", which has a series of commented-out extended attributes for net order revenue.
+#. Uncomment one or more of the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(txn.first_order.net_order_revenue IGNORE NULLS) AS first_net_order_revenue
       ,FIRST(txn.second_order.net_order_revenue IGNORE NULLS) AS second_net_order_revenue
@@ -184,10 +197,11 @@ Order costs
 
 #. Required. :ref:`Add Order Cost to the Unified Transactions table <table-unified-transactions-extend-attributes-order-costs>`.
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
-#. Find the section named "attrs", which contains a series of commented-out extended attributes for order costs.
-#. Uncomment one (or more) of the following extended attributes:
+#. Find the section named "attrs", which has a series of commented-out extended attributes for order costs.
+#. Uncomment one or more of the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(txn.first_order.order_cost IGNORE NULLS) AS first_order_cost
       ,FIRST(txn.latest_order.order_cost IGNORE NULLS) AS latest_order_cost
@@ -204,6 +218,7 @@ Order costs
 #. Find the **SELECT** statement at the end of the SQL template, and then for each of the attributes enabled within "attrs", uncomment the line to add the extended attribute to the **Transaction Attributes Extended** table:
 
    .. code-block:: sql
+      :linenos:
 
       ,CAST(attrs.first_order_cost AS decimal(38,2)) AS first_order_cost
       ,CAST(attrs.latest_order_cost AS decimal(38,2)) AS latest_order_cost
@@ -274,10 +289,11 @@ RFM
 .. table-transaction-attributes-extended-extend-attributes-rfm-steps-start
 
 #. Open the **Transaction Attributes Extended** table in the SQL editor.
-#. Uncomment the **l12m_rfm** block of SQL. This section uses the **NTILE()** function to calculate recency, frequency, and monetary scores as deciles.
+#. Uncomment the **l12m_rfm** block of SQL. Use the **NTILE()** function to calculate recency, frequency, and monetary scores as deciles.
 #. In the **attrs** block of SQL, uncomment the calculations for RFM attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,FIRST(rfm.recency) AS L12M_recency
       ,FIRST(rfm.frequency) AS L12M_frequency
@@ -293,6 +309,7 @@ RFM
 #. Find the **SELECT** statement at the end of the SQL template, and then uncomment the following extended attributes:
 
    .. code-block:: sql
+      :linenos:
 
       ,attrs.L12M_rfm_score
       ,attrs.L12M_recency
@@ -311,7 +328,7 @@ Column reference
 
 .. transaction-attributes-extended-start
 
-Extended transaction attributes are presented as a single table (with many columns), including an Amperity ID, and fit into the following categories:
+Extended transaction attributes are presented as a single table with many columns, including an Amperity ID, and fit into the following categories:
 
 * :ref:`Customer flags <table-transaction-attributes-extended-reference-customer-flags>`
 * :ref:`Customer orders <table-transaction-attributes-extended-reference-customer-orders>`

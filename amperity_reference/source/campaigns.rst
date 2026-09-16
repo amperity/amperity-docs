@@ -23,6 +23,16 @@ Use the **Campaigns** page to build the audiences to which you want to send mess
 
 .. campaigns-overview-context-end
 
+.. campaigns-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Campaigns break audiences into sub-audiences that align to your marketing strategies and goals.
+
+   Open **Learning Lab** to learn more about `creating and launching a campaign <https://amperity.com/learning-lab/creating-and-launching-a-campaign>`__ |ext_link|. Registration is required.
+
+.. campaigns-learning-lab-end
+
 
 .. _campaigns-tab:
 
@@ -61,9 +71,11 @@ Use the **Campaigns** page to activate a variety of use cases across your market
 How campaigns work
 ==================================================
 
-.. include:: ../../amperity_ampiq/source/campaigns.rst
-   :start-after: .. campaigns-howitworks-start
-   :end-before: .. campaigns-howitworks-end
+.. campaigns-howitworks-start
+
+A campaign is defined in the **Campaigns** page, from which you configure the audience and sub-audiences that is associated with the campaign, the downstream locations to which the campaign is sent, and the time at which the campaign is to begin.
+
+.. campaigns-howitworks-end
 
 .. image:: ../../images/mockup-campaigns-editor.png
    :width: 600 px
@@ -77,7 +89,7 @@ Follow this sequence when building a campaign:
 
 .. campaigns-howitworks-steps-end
 
-.. include:: ../../amperity_ampiq/source/campaigns.rst
+.. include:: ../../amperity_user/source/campaigns.rst
    :start-after: .. campaigns-howitworks-callouts-start
    :end-before: .. campaigns-howitworks-callouts-end
 
@@ -131,7 +143,7 @@ Recurring campaigns
 A recurring campaign has the following components:
 
 #. A state change that initiates a campaign message.
-#. A segment that defines a list of customers to which the campaign message applies. This segment can be configured to limit the list to certain types of users, such as only business travelers, high-value customers, and so on.
+#. A segment that defines a list of customers to which the campaign message applies. This segment can be configured to limit the list to certain types of users, such as only business travelers or high-value customers.
 #. A launch cadence that defines the frequency--daily, weekly, monthly, quarterly--at which the campaign messages are run.
 
 .. campaigns-types-recurring-end
@@ -153,7 +165,7 @@ A multichannel campaign defines combinations of sub-audiences and channels to de
 A multichannel campaign has the following components:
 
 #. A state change that initiates a campaign message.
-#. A segment that defines the audience to which the multichannel campaign messages will be applied. This segment can be configured to limit the list to certain types of users, such as only business travelers, high-value customers, and so on.
+#. A segment that defines the audience to which the multichannel campaign messages will be applied. This segment can be configured to limit the list to certain types of users, such as only business travelers or high-value customers.
 #. The use of sub-audiences to partition the audience into a variety of campaign channels. Each sub-audience may be configured to have its own control group.
 #. A launch cadence that defines the frequency--daily, weekly, monthly, quarterly--at which the campaign messages are run.
 
@@ -188,14 +200,14 @@ Audience attributes
 
 .. campaigns-attributes-start
 
-For many |campaign_destinations|, you may configure the list of attributes (i.e. first name, last name, state, etc.) that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
+For many |campaign_destinations|, you may configure the list of attributes, such as first name, last name, and state, that are sent for each sub-audience. Click the **Edit attributes** link to open the list of attributes that are available for each destination defined for the audience. Use the dropdown menu to select the destination if there is more than one.
 
 .. campaigns-attributes-end
 
 
 .. campaigns-attributes-important-start
 
-.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you don't attach unsupported attributes to the campaigns that you send.
+.. important:: Some destinations only support sending specific attributes. Review the requirements for each destination to ensure that you do not attach unsupported attributes to the campaigns that you send.
 
 .. campaigns-attributes-important-end
 
@@ -219,7 +231,7 @@ All campaigns start with an audience. Choose a segment from the **Include** drop
 
 .. image:: ../../images/mockup-campaigns-select-audience-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to form the audience for this campaign.
+   :alt: Choose one or more segments to form the audience for this campaign.
    :align: left
    :class: no-scaled-link
 
@@ -241,13 +253,13 @@ Control groups
 
 .. campaigns-control-groups-note-start
 
-.. note:: A control group is a completely randomized sample of customers that is pulled from the original audience.
+.. note:: A control group is a randomized sample of customers that is pulled from the original audience.
 
 .. campaigns-control-groups-note-end
 
 .. campaigns-control-groups-start
 
-A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may contain a control group.
+A campaign typically has a single control group, unless sub-audiences are defined within the campaign. Each sub-audience may have a control group.
 
 .. campaigns-control-groups-end
 
@@ -263,15 +275,23 @@ A campaign typically has a single control group, unless sub-audiences are define
 
    Audience members that are added to a control group may have belonged to a treatment group on the previous send.
 
-   Audience members that are removed from the control group will belong to a treatment group on the next send.
+   Audience members that are removed from the control group belong to a treatment group on the next send.
 
-   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and contains a mostly static group of customers, but with small fluctuations in audience size.
+   For example: A campaign is built using one segment, one control group, and one treatment group. The audience is refreshed weekly and has a static group of customers, but with small fluctuations in audience size.
 
    #. Today the size of the audience for the segment is 1200 customers and the size of the control group is 20 percent, or 240 customers. The campaign is sent to 960 customers.
    #. Next week the size of the audience is 1240, which means the size of the control group will be larger (248). The campaign is sent to 992 customers.
-   #. And the following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
+   #. The following week the size of the audience is 1160, which means the size of the control group will be smaller (232). The campaign is sent to 928 customers.
 
 .. campaigns-control-groups-consistent-membership-end
+
+.. campaigns-control-groups-zero-membership-start
+
+.. admonition:: What if a control group consistently has zero members?
+
+   When small audiences are configured with control group percentages below 10% it is possible for a control groups to have zero members. For small audiences that consistently see zero, or an unusual low percentage, adjust the size of the control group closer to 10%.
+
+.. campaigns-control-groups-zero-membership-end
 
 
 .. _campaigns-default-attributes:
@@ -295,11 +315,11 @@ Default attributes
 Destinations
 --------------------------------------------------
 
-.. include:: ../../amperity_ampiq/source/destinations.rst
+.. include:: ../../amperity_user/source/destinations.rst
    :start-after: .. destinations-howitworks-start
    :end-before: .. destinations-howitworks-end
 
-.. include:: ../../amperity_ampiq/source/destinations.rst
+.. include:: ../../amperity_user/source/destinations.rst
    :start-after: .. destinations-howitworks-callouts-start
    :end-before: .. destinations-howitworks-callouts-end
 
@@ -315,17 +335,17 @@ Exclusion lists
 
 .. campaigns-exclusion-lists-start
 
-Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging and/or who have unsubscribed from an email list.
+Sometimes campaigns need to exclude certain members of your audience. For example, a churn prevention campaign is often configured to exclude customers who have opted-out of SMS messaging or who have unsubscribed from an email list.
 
-When you need to exclude audience members, choose one (or more) segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
+When you need to exclude audience members, choose one or more segments from the **Exclude** dropdown list. The customers in an exclusion list will be removed from the audience for this campaign.
 
-.. note:: When you select multiple exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
+.. note:: When you select many exclusion lists, audience members will be excluded when they belong to *either* list. This is the same behavior as when the **OR** operator is used in SQL. "Exclude customers from this audience when they belong to segment A *OR* segment B."
 
 .. campaigns-exclusion-lists-end
 
 .. image:: ../../images/mockup-campaigns-select-exclusions-from-segment.png
    :width: 650 px
-   :alt: Choose one (or more) segments to exclude customers from this campaign.
+   :alt: Choose one or more segments to exclude customers from this campaign.
    :align: left
    :class: no-scaled-link
 
@@ -345,6 +365,11 @@ You may configure more than one treatment group for each audience and sub-audien
 
 .. campaigns-treatment-groups-end
 
+.. campaigns-treatment-groups-note-start
+
+.. note:: Naming a treatment group with an underscore (_) as the first character will cause the campaign to fail. 
+
+.. campaigns-treatment-groups-note-end
 
 .. _campaigns-sub-audiences:
 
@@ -357,9 +382,7 @@ Sub-audiences
 
 .. campaigns-sub-audiences-start
 
-A sub-audience enables you to measure the performance of individual communications in a campaign. A sub-audience could represent a set of users for which you have a better understanding of their marketing preferences and you would like to send them specific messaging as part of a larger campaign. For example, you can see how the jackets sub-audience marketing email performed as compared to the t-shirts sub-audience marketing email within the same campaign. Additionally, each sub-audience can be configured to use its own control and treatment groups, providing even greater control and flexibility. 
-
-A sub-audience may define users by brand, most commonly purchased sub-brand, product affinity, product category, product type, demographics, etc.
+A sub-audience may define users by brand, most commonly purchased sub-brand, product affinity, product category, product type, or demographics.
 
 .. note:: The limit for number of sub-audiences per campaign is 60.
 
@@ -423,13 +446,13 @@ Download recipients
 
 .. campaigns-download-recipients-start
 
-The download recipients feature allows you to download and see your recipients list. This option provides you with the ability to see details about your recipients, including the Amperity ID and the Treatment ID.
+Use the download recipients feature to download a list of recipients to view details about recipients in the list, including the Amperity ID and the Treatment ID.
 
 .. campaigns-download-recipients-end
 
 .. campaigns-download-recipients-manual-workflows-start
 
-.. tip:: Downloaded files can enable ad hoc workflows in any downstream tool that supports directly uploading and/or using CSV files. For example, marketing applications like `Airship <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/>`__ |ext_link|, `Attentive <https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment>`__ |ext_link|, `Bluecore <https://help.bluecore.com/en/articles/3552694-import-data>`__ |ext_link|, `Braze <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv>`__ |ext_link|, `Facebook Ads <https://www.facebook.com/business/help/170456843145568?id=2469097953376494>`__ |ext_link|, `Iterable <https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices->`__ |ext_link|, |channel_pinterest|, |channel_reddit_ads|, and `SendGrid <https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts>`__ |ext_link| all support directly uploading CSV files. Downloaded CSV files can be opened directly in Microsoft Excel and Google Sheets.
+.. tip:: Downloaded files can enable ad hoc workflows in any downstream tool that supports directly uploading or using CSV files. For example, marketing applications like `Airship <https://docs.airship.com/guides/messaging/user-guide/audience/segmentation/audience-lists/uploaded/>`__ |ext_link|, `Attentive <https://help.attentivemobile.com/hc/en-us/articles/360051463212-Create-a-manual-segment>`__ |ext_link|, `Bluecore <https://help.bluecore.com/en/articles/3552694-import-data>`__ |ext_link|, `Braze <https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_import/#csv>`__ |ext_link|, `Facebook Ads <https://www.facebook.com/business/help/170456843145568?id=2469097953376494>`__ |ext_link|, `Iterable <https://support.iterable.com/hc/en-us/articles/205694345-CSV-List-Import-Best-Practices->`__ |ext_link|, |channel_pinterest|, |channel_reddit_ads|, and `SendGrid <https://docs.sendgrid.com/ui/managing-contacts/create-and-manage-contacts>`__ |ext_link| all support directly uploading CSV files. Downloaded CSV files can be opened directly in Microsoft Excel and Google Sheets.
 
 .. campaigns-download-recipients-manual-workflows-end
 
@@ -443,7 +466,7 @@ Email notifications
 
 Email notifications will alert you when there is an issue with campaign delivery. For example, email notifications are sent when Facebook Ads is missing an external identifier or two-factor authorization is not enabled for Google Ads.
 
-Email notifications will describe the issue and the steps that are required to resolve the issue, and will provide a link to the **Workflows** page in Amperity.
+Email notifications will describe the issue and the steps that are required to resolve the issue, and provides a link to the **Workflows** page in Amperity.
 
 .. campaigns-reference-campaign-notifications-end
 
@@ -455,7 +478,7 @@ Campaign results
 
 .. campaigns-results-overview-start
 
-The campaign results feature allows you to download and see your one-time or recurring campaign results data. This option provides you with the ability to explore campaign results data and measure performance in more detail.
+Use campaign results feature to download and view one-time or recurring campaign results data, explore campaign results data, and measure performance.
 
 .. image:: ../../images/mockup-campaign-results-standalone.png
    :width: 400 px
@@ -472,7 +495,7 @@ Use this feature to define a performance measurement time period and then analyz
 
 .. tip:: Amperity tracks the purchases of your customers in the audiences lists. The purchase information is based on purchasing behavior across channels. 
 
-If you make any changes to this information downstream (i.e. launching a campaign on a different date then the one you entered into Amperity) they will not be reflected in Amperity.
+If you make any changes to this information downstream, such as launching a campaign on a different date then the one you entered into Amperity, they is not reflected in Amperity.
 
 .. campaigns-results-overview-end
 
@@ -501,7 +524,7 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - The average dollar value per order made by purchasers during the campaign measurement period. 
 
-       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group/sub-audiences.
+       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group or sub-audiences.
    * - **Average Unit Revenue**
      - Decimal
      - The average revenue per item purchased during the campaign measurement period.
@@ -532,19 +555,19 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - Additional percentage of recipients converted in the treatment group relative to the control group during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue (Over Control)**
      - Decimal
      - Additional revenue generated measured by the difference between total test revenue recipient and total control revenue per recipient and then multiply that by test recipients. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Incremental Revenue Per Recipient (Over Control)**
      - Decimal
      - Additional revenue per recipient in the treatment group relative to the control audience during the campaign measurement period. 
 
-       .. note:: This column will appear as null if there is no control group.
+       .. note:: This column appears as null if there is no control group.
 
    * - **Is Control**
      - Boolean
@@ -556,7 +579,7 @@ You can finds details about the columns found in the campaign results download f
 
    * - **Measurement End Date**
      - Datetime
-     - The end of the campaign measurement period, plus the number of days selected prior to that date. The date prior to all preceding transactions and events associated with outcomes of this campaign.
+     - The end of the campaign measurement period, plus the number of days selected before that date. The date before all preceding transactions and events associated with outcomes of this campaign.
 
        .. note:: By default, this end date is 7 days preceding the selected measurement start date.
 
@@ -584,7 +607,7 @@ You can finds details about the columns found in the campaign results download f
      - Decimal
      - The amount of revenue per recipient in a campaign.
 
-       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group/sub-audiences.
+       .. note:: This metric is calculated by total revenue divided by the recipients count for the specific treatment group or sub-audiences.
 
    * - **Revenue Per Recipient Lift (Over Control)**
      - Decimal
@@ -635,8 +658,8 @@ Use cases
 You can use campaign results to determine how to successfully reach out to their customers for the following reasons:
 
 * If your campaign message was effective at converting customers
-* Whether one offer or treatment worked better at converting customers (i.e. A/B testing)
-* If a campaign drove incremental value (i.e. via a control group holdout)
+* Whether one offer or treatment worked better at converting customers
+* If a campaign drove incremental value
 
 .. campaigns-results-use-cases-end
 
@@ -648,7 +671,7 @@ Driving a campaign
 
 .. recurring-campaign-results-driving-start
 
-Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you will need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
+Once you have determined which channel to use for your campaign, you need to determine which is the most effective way to approach a campaign. For instance, if a you decide to send out an email campaign to your customers, you need to decide which type of email will be most effective. Does the email with the 10% offer bring in more customer orders or does the $10 off email offer give customers more incentive to make a purchase?
 
 .. recurring-campaign-results-driving-end
 
@@ -660,7 +683,7 @@ Amperity's approach
 
 .. campaigns-results-amperitys-method-start
 
-Amperity creates a 360-degree view of your customers, which includes a complete transaction history. This process uses a stable identifier -- the Amperity ID -- to track customers even when their path to a purchase is non-linear.
+Amperity creates a 360-degree view of your customers, which includes a complete transaction history. This process uses a stable identifier--the Amperity ID--to track customers even when their path to a purchase is non-linear.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-amperity-id-start
@@ -668,12 +691,12 @@ Amperity creates a 360-degree view of your customers, which includes a complete 
 	  
 Amperity provides marketers with the following capabilities which gives them a 360 view of their customer's behavior:
 
-* Compares more than one set of marketing data -- via the Amperity ID -- to determine whether customer behavior has changed around a campaign.
+* Compares more than one set of marketing data using the Amperity ID to determine if customer behavior has changed around a campaign.
 * Tracks customer behavior through transactional data and an Amperity ID associated with a campaign.
 * Automatically holds back a control group when a campaign is created to test whether a customer will buy something in a store or whether they received an email or not.
 * Tracks omnichannel behavior of customers targeted in the test group, as well as the behavior of customers in the control holdout group.
 * Compares the behavior of control customers to those who received the marketing treatment and calculates the incremental impact of the campaign.
-* Determines whether a customer -- with an Amperity ID associated with a campaign -- has made a purchase within a timeframe set by the marketer. For instance, if a customer were to shop online or in a store. 
+* Determines whether a customer--with an Amperity ID associated with a campaign--has made a purchase within a timeframe set by the marketer. For instance, if a customer were to shop online or in a store. 
 * Tests within smaller sub-sets of customer groups to determine how certain components within a campaign affect customer behavior. For example, how was the 10 percent email offer received by customers compared to the $10 off email offer.
 * Uses people-based measurement to randomly assign customers to control and treatment groups, which gives you the ability to accurately measure the incremental effects of a campaign. To learn more about people-based measurement, refer to the |people_based_measurement| topic.
 
@@ -715,7 +738,7 @@ How-tos
 
 .. campaigns-how-tos-start
 
-This section describes tasks related to building campaigns in Amperity:
+Tasks related to building campaigns in Amperity:
 
 .. campaigns-how-tos-end
 
@@ -733,14 +756,14 @@ This section describes tasks related to building campaigns in Amperity:
 * :ref:`campaigns-config-multi-channel-campaign`
 * :ref:`campaigns-config-onetime-campaign`
 * :ref:`campaigns-config-recurring-campaign`
+* :ref:`campaigns-copy-campaign`
 * :ref:`campaigns-copy-campaign-id`
 * :ref:`campaigns-delete-campaign`
 * :ref:`campaigns-discard-campaign`
-* :ref:`campaigns-duplicate-campaign`
 * :ref:`campaigns-edit-attribute`
 * :ref:`campaigns-edit-campaign`
 * :ref:`campaigns-edit-sub-audience`
-* :ref:`campaigns-enable-campaign-recipients-table`
+* :ref:`campaigns-enable-campaign-activation-states`
 * :ref:`campaigns-filter-a-campaign`
 * :ref:`campaigns-remove-sub-audience`
 * :ref:`campaigns-run-as-part-of-workflow`
@@ -809,9 +832,9 @@ You can add a saved segment to a sub-audience in a campaign on the **Edit Campai
 
 #. From the **Edit Campaign** page, click **Add Sub-audience**.
 #. From the **Source** menu, click **Saved segments**.
-#. From the **Segment(s)** list, select one or more saved segments.
+#. From the **Segments** list, select one or more saved segments.
 
-The saved segment(s) appear in the **Sub-audiences and Destinations** section on the **Edit Campaign** page.
+The saved segments appear in the **Sub-audiences and Destinations** section on the **Edit Campaign** page.
 
 .. campaigns-add-a-saved-segment-to-sub-audience-steps-end
 
@@ -847,19 +870,19 @@ Allocate customers to more than one sub-audience
 
 .. campaigns-allocate-multiple-sub-audiences-start
 
-You can allocate customers (Amperity IDs) to multiple sub-audiences in a campaign on the **Edit Campaign** page.
+You can allocate customers (Amperity IDs) to many sub-audiences in a campaign on the **Edit Campaign** page.
 
 .. note:: Amperity defaults to allocating customers (Amperity IDs) to the first (mutually exclusive) sub-audience.
 
 .. campaigns-allocate-multiple-sub-audiences-end
 
-**To allocate customers (Amperity IDs) multiple sub-audiences in a campaign**
+**To allocate customers (Amperity IDs) many sub-audiences in a campaign**
 
 .. campaigns-allocate-multiple-sub-audiences-steps-start
 
 #. From the **Edit Campaign** page, in the **Sub-audiences and Destinations** section, switch the **Assign to first match only** toggle off.
 
-Amperity will now allocate your customers (Amperity IDs) to multiple sub-audiences in your campaign. 
+Amperity will allocate your customers (Amperity IDs) to many sub-audiences in your campaign. 
 
 .. campaigns-allocate-multiple-sub-audiences-steps-end
 
@@ -889,7 +912,7 @@ You can build a sub-audience in a campaign on the **Edit Campaign** page.
 #. Click **Edit attributes** to edit or add attributes.
 #. Click **Add Treatment** to add a treatment group.
 
-   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you will need to edit it directly in the **Segment Editor**.
+   .. note:: You cannot edit a segment that is added as a sub-audience if it is built from a segment. To make changes to the segment, you need to edit it directly in the **Segment Editor**.
 
 .. campaigns-define-recipient-groups-steps-end
 
@@ -1058,9 +1081,9 @@ Archive campaign
 
 .. campaigns-build-audience-start
 
-Use the archive feature for campaigns you have actively used, but you don't need anymore.
+Use the archive feature for campaigns you have actively used, but you do not need anymore.
 
-.. note:: This action effectively deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, please contact Amperity support.
+.. note:: This action deletes the campaign from your tenant. If you want to this campaign to be moved back into your tenant, contact Amperity support.
 
 .. campaigns-build-audience-end
 
@@ -1068,7 +1091,7 @@ Use the archive feature for campaigns you have actively used, but you don't need
 
 .. campaigns-build-audience-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Archive**.
 
 .. campaigns-build-audience-steps-end
@@ -1089,12 +1112,12 @@ You can build an audience in a campaign on the **Edit Campaign** page.
 
 .. campaigns-build-audience-steps-start
 
-#. From the **Edit Campaign** page, in the **Audience** section, in the **Include** list, select the segment(s) to include.
-#. In the **Exclude** list, select the segment(s) to exclude.
+#. From the **Edit Campaign** page, in the **Audience** section, in the **Include** list, select the segments to include.
+#. In the **Exclude** list, select the segments to exclude.
 
    .. note:: The **Exclude** list is optional. Use the **Exclude** list to choose recipients to exclude from a campaign.
    
-   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for   an audience.
+   .. tip:: You can select up to 10 saved segments from the same database to build inclusions and exclusions for an audience.
 
 The recipients group and control group appear in the **All Recipients** table in the **Sub-audiences and Destinations** section.
 
@@ -1116,7 +1139,7 @@ Campaign audience counts are updated to reflect the count for records that match
 
 The language that is used within the **Campaign Editor** is updated to match the friendly, singular, and plural names of the activation ID.
 
-For example, the "Customers" column that is associated with audiences (and sub-audiences) is updated to "Email addresses" when the plural name is "email addresses" and the count of customers at the top of the **Campaign Editor** is updated to show "Total email addresses".
+For example, the "Customers" column that is associated with audiences and sub-audiences is updated to "Email addresses" when the plural name is "email addresses" and the count of customers at the top of the **Campaign Editor** is updated to show "Total email addresses".
 
 Attributes that are useable within campaigns are limited to only attributes that are available from tables that match the activation ID.
 
@@ -1192,21 +1215,21 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
    A control group should be set to 10%, with the initial treatment group set to 90%. Click **Add treatment** to add more treatment groups. Rename them as necessary and adjust the percentages as appropriate.
 
-#. For each treatment group (including the control group, if configured for this campaign), assign multiple destinations.
+#. For each treatment group (including the control group, if configured for this campaign), assign many destinations.
 
-   .. note:: A treatment group with multiple destinations will send data to *all* of the configured destinations.
+   .. note:: A treatment group with many destinations sends data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
-#. Optional. Assign multiple destinations to each treatment group in a sub-audience.
+#. Optional. Assign many destinations to each treatment group in a sub-audience.
 
 #. Configure recipient list delivery. One-time campaigns you have two options: at a scheduled date and time in the future or as soon as possible.
 
@@ -1214,7 +1237,7 @@ You you can configure a multichannel campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-multi-channel-steps-end
 
@@ -1238,7 +1261,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
@@ -1246,9 +1269,9 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
@@ -1260,7 +1283,7 @@ You can configure a one-time campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-onetime-steps-end
 
@@ -1284,7 +1307,7 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. Choose the segment that represents the audience to use for this campaign.
 
-   Optional. Choose a segment that contains a list of customers to *exclude* from this campaign.
+   Optional. Choose a segment that has a list of customers to *exclude* from this campaign.
 
 #. Configure at least one control group/treatment group set for this campaign. Rename these groups as necessary.
 
@@ -1292,9 +1315,9 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. For each treatment group (including the control group, if configured for this campaign), assign at least one destination. You may assign more than one.
 
-   .. note:: A treatment group with more than one configuration destination will send data to *all* of the configured destinations.
+   .. note:: A treatment group with more than one configuration destination sends data to *all* of the configured destinations.
 
-#. Optional. Add one (or more) sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
+#. Optional. Add one or more sub-audiences. Click **Add Sub-audience** to add more sets to this campaign, and then use the **Audience Builder** to define the criteria for each sub-audience.
 
 #. Optional. Give each sub-audience a name.
 
@@ -1306,9 +1329,34 @@ You you can configure a recurring campaign on the **Edit Campaign** page.
 
 #. Click **Schedule** to put this campaign into the queue.
 
-   Amperity will process the segments, and then send the results to the configured destinations. Please allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
+   Amperity will process the segments, and then send the results to the configured destinations. Allow for enough time for Amperity to complete this process before kicking off the campaign in the downstream system.
 
 .. campaigns-workflow-recurring-steps-end
+
+
+.. _campaigns-copy-campaign:
+
+Copy campaign
+--------------------------------------------------
+
+.. campaigns-copy-campaign-start
+
+You can reuse, build, and scale campaigns with ease by using an existing campaign as a template for building new ones.
+
+.. campaigns-copy-campaign-end
+
+**To copy a campaign**
+
+.. campaigns-copy-campaign-steps-start
+
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
+#. Click **Make a copy**.
+#. The **Copy campaign** dialog box opens. Enter the name of the new campaign, and then click **Save**.
+#. On the **Edit Campaign** page, update the campaign configuration for the new campaign, and then click **Save**.
+
+The new campaign appears on the **Campaigns** page.
+
+.. campaigns-copy-campaign-steps-end
 
 
 .. _campaigns-copy-campaign-id:
@@ -1326,7 +1374,7 @@ You can copy a campaign ID on the **Campaigns** page.
 
 .. campaigns-copy-campaign-id-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Copy ID**.
 #. Paste the campaign ID in the appropriate location.
 
@@ -1348,9 +1396,9 @@ You can delete a campaign on the **Campaigns** page.
 
 .. campaigns-delete-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu, click **Delete**.
-#. The **Delete Campaign** dialogue box opens. Click **Confirm**.
+#. The **Delete Campaign** dialog box opens. Click **Confirm**.
 
 The campaign no longer appears on the **Campaigns** page.
 
@@ -1376,7 +1424,7 @@ You can discard a campaign on the **Edit Campaign** page.
 
 .. campaigns-discard-campaign-steps-start
 
-Use the **Discard** option to remove a campaign from Amperity. This should be done carefully. Verify that both upstream and downstream processes no longer depend on this campaign prior to discarding it.
+Use the **Discard** option to remove a campaign from Amperity. Verify that both upstream and downstream processes no longer depend on this campaign before discarding it.
 
 #. From the **Campaigns** page, open a campaign, and then select **Discard**.
 #. The **Discard Campaign** dialog box opens. Click **Confirm**.
@@ -1391,9 +1439,9 @@ Download campaign results
 
 .. campaigns-download-start
 
-You can download a file that contains a list of campaign results.
+You can download a file that has a list of campaign results.
 
-For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file will show one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
+For example, a daily campaign has a launch date of March 7. From the **Download results** dialog, select "March 7" and 4 days. The downloaded file shows one row of data for each treatment group for every email address (as identified by the Amperity ID) that received the campaign on March 7-10.
 
 .. campaigns-download-end
 
@@ -1424,38 +1472,13 @@ You can download a recipients list from a delivered campaign on the **Campaigns*
 
 .. campaigns-download-recipients-how-to-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. In the menu, click **Download Recipients**.
-#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date:** dropdown menu.
+#. On the **Download Recipients** window, select the recipient list from the **Recipients list delivery date** dropdown menu.
 #. Click **Download**. An .CSV file downloads to your Downloads folder on your computer.
 #. Open the .CSV file in a program and then view the recipients list.
 
 .. campaigns-download-recipients-how-to-end
-
-
-.. _campaigns-duplicate-campaign:
-
-Duplicate campaign
---------------------------------------------------
-
-.. campaigns-duplicate-campaign-start
-
-You can reuse, build, and scale campaigns with ease by utilizing a pre-existing campaign as a template. 
-
-.. campaigns-duplicate-campaign-end
-
-**To duplicate a campaign**
-
-.. campaigns-duplicate-campaign-steps-start
-
-#. From the **Campaigns** page, click the more options button on a campaign.
-#. Click **Duplicate**.
-#. The **Duplicate Segment** dialog box opens. Click **Confirm**.
-#. On the **Edit Campaign**, make your changes, and then click **Save**.
-
-The duplicated campaign appears on the **Campaigns** page.
-
-.. campaigns-duplicate-campaign-steps-end
 
 
 .. _campaigns-edit-attribute:
@@ -1494,7 +1517,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-draft-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Edit**.
 #. On the **Edit Campaigns** page, make your changes.
 #. When done, click **Schedule**.
@@ -1505,7 +1528,7 @@ You can edit a draft, scheduled, or delivered campaign on the **Campaigns** pa
 
 .. campaigns-edit-scheduled-campaign-steps-start
 
-#. On the **Campaigns** page, on a campaign, click the more options button.
+#. On the **Campaigns** page, open the |fa-kebab| menu for a campaign.
 #. In the menu that appears, click **Unschedule and Edit**.
 #. On the **Unschedule and Edit** dialog box, click **Confirm**.
 #. On the **Edit Campaigns** page, make your changes.
@@ -1548,30 +1571,25 @@ You can edit a sub-audience on the **Edit Campaign** page.
 .. campaigns-campaigns-edit-sub-audience-steps-end
 
 
-.. _campaigns-enable-campaign-recipients-table:
+.. _campaigns-enable-campaign-activation-states:
 
-Enable Campaign Recipients table
+Enable activation states
 --------------------------------------------------
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-campaign-recipients-table-start
-   :end-before: .. term-campaign-recipients-table-end
+.. campaigns-enable-campaign-activation-states-start
 
-.. campaigns-enable-campaign-recipients-table-start
+Activation activity is enabled by default for every campaign and keeps track of the activation states for customers who were activated by the campaign, including by sub-audience or treatment, by destination, how often and when.
 
-A **Campaign Recipients** table can be enabled directly from the **Campaigns** page. It may be enabled for each combination of database + activation that is configured in your tenant.
+.. campaigns-enable-campaign-activation-states-end
 
-.. campaigns-enable-campaign-recipients-table-end
+**To disable Campaign Recipients tables**
 
-**To enable Campaign Recipients tables**
+.. campaigns-enable-campaign-activation-states-steps-start
 
-.. campaigns-enable-campaign-recipients-table-steps-start
+#. From the **Campaigns** page open a campaign.
+#. De-select the **Record to campaign recipients?** checkbox at the bottom.
 
-#. Click the **Campaign settings** link next to the **Create campaign** button, and then open the **Campaign Recipients** tab.
-#. Select the databases for which the **Campaign Recipients** table should be enabled.
-#. Click **Save**.
-
-.. campaigns-enable-campaign-recipients-table-steps-end
+.. campaigns-enable-campaign-activation-states-steps-end
 
 
 .. _campaigns-filter-a-campaign:
@@ -1579,14 +1597,37 @@ A **Campaign Recipients** table can be enabled directly from the **Campaigns** p
 Filter campaigns
 --------------------------------------------------
 
+.. TODO: Filter documentation exists for campaigns, segments, queries, and journeys. When updating filter options or labels documentation, replicate changes across all four reference topics: campaigns.rst, segments_howtos.rst, queries.rst, journeys.rst.
+
 .. campaigns-filter-campaigns-start
 
-You can filter the list of campaigns that appear on the **Campaigns** page by using any combination of the following:
+You can filter the list of campaigns that appear on the **Campaigns** page. Click **Show filters** to open the filter bar, and then select values from any combination of the following:
 
 * By cadence. Select **One-time** or **Recurring**.
-* By status. Select any combination of **Delivered**, **Draft**, **Error** and **Scheduled**.
+* By status. Select any combination of **Delivered**, **Draft**, **Error**, and **Scheduled**.
 * By destination. Select any combination of destinations that have been configured for your tenant.
-* By user. Users can be filtered by author (who created the campaign?) and by most recent update (who last edited the campaign?). Select any combination of users in your tenant.
+* By created by. Select any combination of users who created campaigns.
+* By last edited by. Select any combination of users who most recently edited campaigns.
+* By label. Select one or more labels to filter campaigns by organizational category.
+
+.. tip:: Labels help organize journeys by grouping related items together. For example, use labels to:
+
+   * Identify journey types: "Welcome series", "Retention", or "Winback"
+   * Assign team ownership: "Marketing" or "Analytics"
+   * Track status: "In review" or "Approved"
+   * Indicate priority: "High priority" or "Evergreen"
+
+Labels are created on the **Settings** page, in the **Labels** tab, by clicking **Add label**. Label naming conventions should:
+
+* Not exceed 35 characters
+* Contain only alphanumeric characters, hyphens, and underscores allowed
+* Not exceed 10 labels per journey
+* Use consistent prefixes for related labels. For example: "Q1-" or "Holiday-"
+
+.. note:: When many labels are selected, journeys matching any selected labels are shown.
+
+
+.. note:: When many labels are selected, campaigns matching any selected labels will be shown.
 
 .. campaigns-filter-campaigns-end
 
@@ -1680,7 +1721,7 @@ Move campaign
 
 .. campaigns-list-move-campaign-start
 
-Use the **Move** option to move around and organize the list of folders and campaigns. Folders may be expanded (or collapsed) to view (and hide) the list of campaigns and subfolders contained within.
+Use the **Move** option to move around and organize the list of folders and campaigns. Folders may be expanded (or collapsed) to view and hide the list of campaigns and subfolders contained within.
 
 .. campaigns-list-move-campaign-end
 
@@ -1734,7 +1775,7 @@ A recurring campaign can be configured to run as part of a scheduled workflow wh
 .. image:: ../../images/mockup-activation-scheduled-campaign.png
    :width: 420 px
    :alt: Add a campaign as part of a scheduled workgroup.
-   :align: center
+   :align: left
    :class: no-scaled-link
 
 .. campaigns-run-as-part-of-workflow-end
@@ -1777,7 +1818,7 @@ You can search for a campaign on the **Campaigns** page.
 
 .. campaigns-search-campaigns-steps-start
 
-#. From the **Campaigns** page, on the top of the page, enter the search term(s) into the search field.
+#. From the **Campaigns** page, on the top of the page, enter the search terms into the search field.
 
 The search results appear on the **Campaigns** page.
 
@@ -1811,7 +1852,7 @@ Send campaign metadata to destination
 
 .. campaigns-send-metadata-start
 
-You can send campaign metadata (i.e., Amperity IDs and names associated with each audience group) to a destination on the **Edit Campaign** page.
+You can send campaign metadata, such as Amperity IDs and names associated with each audience group, to a destination on the **Edit Campaign** page.
 
 .. campaigns-send-metadata-end
 
@@ -1843,7 +1884,7 @@ You can set a campaign launch date on the **Edit Campaign** page.
 
 .. campaigns-set-launch-date-steps-start
 
-#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, enter the amount of days in the **Campaign launch date:** field.
+#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, enter the amount of days in the **Campaign launch date** field.
 
 .. campaigns-set-launch-date-steps-end
 
@@ -1863,7 +1904,7 @@ You can set a delivery schedule on the **Edit Campaign** page.
 
 .. campaigns-set-delivery-schedule-steps-start
 
-#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver ASAP** from the menu.
+#. From the **Edit Campaign** page, in the **Recipient List Delivery** section, either select **Schedule delivery** *or* **Deliver as soon as possible** from the menu.
 
 .. campaigns-set-delivery-schedule-steps-end
 
@@ -1903,9 +1944,9 @@ You can unschedule a campaign on the **Campaigns** page.
 
 .. campaigns-unschedule-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a scheduled campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a scheduled campaign.
 #. On the menu that appears, click **Unschedule and edit**.
-#. The **Unschedule and Edit** dialogue box appears. Click **Confirm**.
+#. The **Unschedule and Edit** dialog box appears. Click **Confirm**.
 
 .. campaigns-unschedule-campaign-steps-end
 
@@ -1925,7 +1966,7 @@ You can view a campaign on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **View**.
 
 The **Edit Campaign** page appears displaying the campaign details.
@@ -1948,10 +1989,10 @@ You can view a campaign's history on the **Campaigns** page.
 
 .. campaigns-view-campaign-steps-start
 
-#. From the **Campaigns** page, click the more options button on a delivered campaign.
+#. From the **Campaigns** page, open the |fa-kebab| menu for a delivered campaign.
 #. On the menu that appears, click **History**.
 
-The **Campaign History** dialogue box appears displaying the campaign's history details.
+The **Campaign History** dialog box appears displaying the campaign's history details.
 
 .. campaigns-view-campaign-steps-end
 
@@ -2001,7 +2042,7 @@ Notifications for the **Campaigns** page appear after Amperity processes the seg
 
 If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
 
-In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page will provide a set of workflow actions that you can initiate directly.
+In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
 .. campaigns-view-notifications-context-end
 

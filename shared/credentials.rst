@@ -7,10 +7,14 @@
 .. |sftp-hostname| replace:: ``xxxxx``
 
 
-This topic contains credentials information that is shared across all credentials steps. The pathway into sources is different from destinations. Some credentials -- Amazon S3, for example -- will quickly have bespoke steps. Keep those either in the source/destination topics (if they are unique) OR use a shared file like /shared/amazon_s3 to ensure reusability.
+Credentials information that is shared across all credentials steps. The pathway into sources is different from destinations. Some credentials--Amazon S3, for example--will have bespoke steps. Keep those either in the source or destination topics if they are unique or use a shared file like ``/shared/amazon_s3`` to ensure reusability.
 
+
+.. vale off
 
 **CREDENTIALS - INTRO, SOURCES & DESTINATIONS**
+
+.. vale on
 
 .. credentials-sources-intro-start
 
@@ -32,7 +36,11 @@ The following steps describe how to configure Amperity to connect to |destinatio
 
 
 
+.. vale off
+
 **CREDENTIALS - STEP ONE, A**
+
+.. vale on
 
 .. credentials-sources-configure-start
 
@@ -52,7 +60,11 @@ Click the **Add destination** button to open the **Add destination** dialog box.
 .. credentials-destinations-configure-end
 
 
+.. vale off
+
 **CREDENTIALS - STEP ONE, B**
+
+.. vale on
 
 .. TODO: IMPORTANT. This is also used in step 2 of "Add data source and feed" because you end up doing the same exact thing.
 
@@ -74,7 +86,11 @@ Select |destination-name| from the **Plugin** dropdown.
 
 
 
+.. vale off
+
 **CREDENTIALS - STEP TWO, CREDENTIALS DO NOT EXIST**
+
+.. vale on
 
 .. credentials-sources-configure-credential-createx-start
 
@@ -93,7 +109,11 @@ Credentials allow Amperity to connect to |destination-name|. Give the destinatio
 
 
 
+.. vale off
+
 **CREDENTIALS - STEP TWO, CREDENTIALS EXIST**
+
+.. vale on
 
 .. credentials-sources-configure-already-configured-start
 
@@ -109,17 +129,25 @@ Credentials allow Amperity to connect to |destination-name| and must exist befor
 .. credentials-destinations-configure-already-configured-end
 
 
+.. vale off
+
 **CREDENTIALS - SOURCES - STEP TWO, A**
+
+.. vale on
 
 .. credentials-sources-configure-already-configured-tip-intro-start
 
-A courier that has credentials that are configured correctly will show a "Connection successful" status, similar to:
+A courier that has credentials that are configured correctly shows a "Connection successful" status, similar to:
 
 .. credentials-sources-configure-already-configured-tip-intro-end
 
 
 
+.. vale off
+
 **CREDENTIALS - SOURCES - STEP CONTINUE, A**
+
+.. vale on
 
 .. credentials-sources-configure-click-continue-start
 

@@ -17,10 +17,14 @@
 
 
 ==================================================
-Configure campaigns for Listrak
+Send data to Listrak
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_listrak.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_listrak.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-listrak-start
@@ -38,7 +42,7 @@ Amperity can manage email and SMS lists in |destination-name|. You can send emai
 
 * The `Listrak Email API <https://api.listrak.com/email>`__ |ext_link|
 * The `Listrak SMS API <https://api.listrak.com/sms>`__ |ext_link|
-* SFTP for email address and/or SMS lists, along with product catalogs, orders, and ordered items
+* SFTP for email address or SMS lists, along with product catalogs, orders, and ordered items
 
 Additional attributes may be appended using any of these processes.
 
@@ -55,6 +59,8 @@ Amperity automatically adds a field attribute to all contact lists that are sent
    :alt: Send email and SMS lists to Listrak to automate downstream workflows.
    :align: left
    :class: no-scaled-link
+
+.. vale off
 
 .. destination-listrak-howitworks-callouts-start
 
@@ -76,6 +82,8 @@ An |destination-name| destination works like this:
 
 .. destination-listrak-howitworks-callouts-end
 
+.. vale on
+
 
 .. _destination-listrak-api:
 
@@ -96,6 +104,8 @@ Build a query or segment that returns an **email** field or **phone** field, and
 Get details
 --------------------------------------------------
 
+.. vale off
+
 .. destination-listrak-api-get-details-start
 
 |destination-name| requires the following configuration details:
@@ -107,27 +117,29 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - A client ID and secret for an email integration *and/or* a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
+     - A client ID and secret for an email integration or a client ID and secret for an SMS integration. These integrations must already be set up in |destination-name|.
 
        .. important:: The Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| must also be added to the allowlist of the |destination-name| integration.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
-     - The name of the list that will be managed in |destination-name|. This is often, but not always, named "Master List".
+     - The name of the list that is managed in |destination-name|. This is often, but not always, named "Master List".
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A query or segment that returns a list of email addresses *or* phone numbers.
 
 .. destination-listrak-api-get-details-end
+
+.. vale on
 
 
 .. _destination-listrak-api-add-destination:
@@ -147,6 +159,8 @@ Add destination
 
 **To add a destination**
 
+.. vale off
+
 .. destination-listrak-api-add-destination-steps-start
 
 .. list-table::
@@ -155,8 +169,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -175,8 +189,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -214,8 +228,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -236,13 +250,13 @@ Add destination
           * - **Setting**
             - **Description**
           * - **List name**
-            - The name of the list that will be managed in |destination-name|. This is often, but not always, named "Master List".
+            - The name of the list that is managed in |destination-name|. This is often, but not always, named "Master List".
 
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -255,14 +269,16 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
           :end-before: .. destinations-save-end
 
 .. destination-listrak-api-add-destination-steps-end
+
+.. vale on
 
 
 .. _destination-listrak-sftp:
@@ -272,7 +288,7 @@ SFTP
 
 .. destination-listrak-sftp-start
 
-Configure Amperity to send email addresses and/or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
+Configure Amperity to send email addresses or phone numbers to |destination-name| using SFTP. This option uses the SFTP destination that is built into Amperity and should follow the steps and requirements that are outlined in the |destination-name| `file import guide <https://help.listrak.com/en/articles/1669274-file-import-guide>`__ |ext_link|.
 
 You can use SFTP to send the following sets of data to |destination-name|.
 
@@ -305,8 +321,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -325,8 +341,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -334,7 +350,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -349,8 +365,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -369,8 +385,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

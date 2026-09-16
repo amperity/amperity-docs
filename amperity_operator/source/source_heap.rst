@@ -8,6 +8,7 @@
 .. |example-filename| replace:: filename_YYYY-MM-DD.csv
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |what-pull| replace:: clickstream events for users, page views, and sessions
+.. |filter-the-list| replace:: "ama"
 
 
 .. meta::
@@ -37,12 +38,7 @@ Pull from Heap
    :end-before: .. sources-overview-list-intro-end
 
 #. :ref:`Get details <source-heap-get-details>`
-#. :ref:`Add courier <source-heap-add-courier>`
-#. :ref:`Get sample files <source-heap-get-sample-files>`
-#. :ref:`Add feeds <source-heap-add-feeds>`
-#. :ref:`Add load operations <source-heap-add-load-operations>`
-#. :ref:`Run courier <source-heap-run-courier>`
-#. :ref:`Add to courier group <source-heap-add-to-courier-group>`
+#. :ref:`Add data source and feed <source-heap-add-data-source>`
 
 .. source-heap-steps-to-pull-end
 
@@ -87,10 +83,10 @@ Get details
 
 Amperity can be configured to pull data from |source-name| using Amazon S3. This requires the following configuration details:
 
-#. |source-name| must be configured to use `Heap Connect for S3 <https://help.heap.io/hc/en-us/articles/18700055185308-S3-Integration>`__ |ext_link|. This will send data from |source-name| to a customer-managed Amazon S3 bucket.
+#. |source-name| must be configured to use `Heap Connect for S3 <https://help.heap.io/hc/en-us/articles/18700055185308-S3-Integration>`__ |ext_link|. This sends data from |source-name| to a customer-managed Amazon S3 bucket.
 #. The Amazon Resource Name (ARN) for a role with cross-account access.
 #. The name of the customer-managed Amazon S3 bucket.
-#. A list of objects (by filename and file type) in the customer-managed Amazon S3 bucket to be pulled to Amperity. 
+#. A list of objects by filename and file type in the customer-managed Amazon S3 bucket to be pulled to Amperity. 
 #. A sample for each file to simplify feed creation.
 
 .. include:: ../../shared/sources.rst
@@ -100,154 +96,213 @@ Amperity can be configured to pull data from |source-name| using Amazon S3. This
 .. source-heap-get-details-end
 
 
-.. _source-heap-add-courier:
+.. _source-heap-add-data-source:
 
-Add courier
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-start
-   :end-before: .. term-courier-end
-
-.. tip::
-
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
-
-**Example entities list**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-entities-list-intro-s3-generic-start
-   :end-before: .. sources-add-courier-entities-list-intro-s3-generic-end
-
-.. source-heap-add-courier-entities-list-start
-
-For example:
-
-::
-
-   [
-     {
-       "object/type": "file",
-       "object/file-pattern": "'path/to/users'-YYYY-MM-dd'.avro'",
-       "object/land-as": {
-         "file/tag": "FILE_NAME",
-         "file/content-type": "application/avro"
-       }
-     }
-   ]
-
-.. source-heap-add-courier-entities-list-end
-
-**To add an Amazon S3 courier**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-courier-s3-generic-start
-   :end-before: .. sources-add-courier-s3-generic-end
-
-
-.. _source-heap-get-sample-files:
-
-Get sample files
+Add data source and feed
 ==================================================
 
 .. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-start
-   :end-before: .. sources-get-sample-files-end
+   :start-after: .. sources-steps-00-intro-start
+   :end-before: .. sources-steps-00-intro-end
 
-**To get sample files**
+**To add a data source for Heap**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-heap-add-data-source-steps-start
 
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
 
-.. _source-heap-add-feeds:
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-open-dialog-start
+          :end-before: .. sources-steps-01-open-dialog-end
 
-Add feeds
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-feed-start
-   :end-before: .. term-feed-end
-
-**To add a feed**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-feed-steps-start
-   :end-before: .. sources-add-feed-steps-end
-
-
-.. _source-heap-add-load-operations:
-
-Add load operations
-==================================================
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-start
-   :end-before: .. sources-add-load-operation-end
-
-**Example load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-example-intro-start
-   :end-before: .. sources-add-load-operation-example-intro-end
-
-.. source-heap-add-load-operations-example-start
-
-For example:
-
-::
-
-   {
-     "USERS-FEED-ID": [
-       {
-         "type": "truncate"
-       },
-       {
-         "type": "load",
-         "file": "users"
-       }
-     ]
-   }
-
-.. source-heap-add-load-operations-example-end
-
-**To add load operations**
-
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-load-operation-steps-start
-   :end-before: .. sources-add-load-operation-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-01-select-source-start
+          :end-before: .. sources-steps-01-select-source-end
 
 
-.. _source-heap-run-courier:
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/credentials.rst
+          :start-after: .. credentials-sources-configure-already-configured-start
+          :end-before: .. credentials-sources-configure-already-configured-end
 
-Run courier manually
-==================================================
+       .. tip::
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-start
-   :end-before: .. sources-run-courier-end
+          .. include:: ../../shared/credentials.rst
+             :start-after: .. credentials-sources-configure-already-configured-tip-intro-start
+             :end-before: .. credentials-sources-configure-already-configured-tip-intro-end
 
-**To run the courier manually**
+          .. image:: ../../images/mockup-credentials-add-02-credential-status-s3.png
+             :width: 380 px
+             :alt: Add 
+             :align: left
+             :class: no-scaled-link
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-select-file-start
+          :end-before: .. sources-steps-03-select-file-end
+
+       .. image:: ../../images/mockup-sources-add-03-file-settings.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-start
+          :end-before: .. sources-steps-03-browse-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-browse-note-start
+          :end-before: .. sources-steps-03-browse-note-end
+
+       .. image:: ../../images/mockup-sources-add-03-file-browser-sftp.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-03-pgp-start
+          :end-before: .. sources-steps-03-pgp-end
+
+       .. image:: ../../images/mockup-sources-add-03-pgp-credential.png
+          :width: 500 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
 
-.. _source-heap-add-to-courier-group:
+   * - .. image:: ../../images/steps-04.png
+          :width: 60 px
+          :alt: Step four.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-start
+          :end-before: .. sources-steps-04-review-end
 
-Add to courier group
-==================================================
+       .. image:: ../../images/mockup-sources-add-03-file-formatting.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
 
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-courier-group-start
-   :end-before: .. term-courier-group-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-contents-start
+          :end-before: .. sources-steps-04-review-contents-end
 
-**To add the courier to a courier group**
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-pgp-start
+          :end-before: .. sources-steps-04-review-pgp-end
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-add-to-courier-group-steps-start
-   :end-before: .. sources-add-to-courier-group-steps-end
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-04-review-formatting-details-start
+          :end-before: .. sources-steps-04-review-formatting-details-end
+
+
+   * - .. image:: ../../images/steps-05.png
+          :width: 60 px
+          :alt: Step five.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-options-start
+          :end-before: .. sources-steps-05-feed-options-end
+
+
+       **New feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-new-start
+          :end-before: .. sources-steps-05-feed-new-end
+
+
+       **Existing feed**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-feed-existing-start
+          :end-before: .. sources-steps-05-feed-existing-end
+
+
+       **Pull data**
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-start
+          :end-before: .. sources-steps-05-load-types-end
+
+       .. image:: ../../images/mockup-sources-add-04-feed-load-type.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-upsert-start
+          :end-before: .. sources-steps-05-load-type-upsert-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-type-truncate-start
+          :end-before: .. sources-steps-05-load-type-truncate-end
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-05-load-types-note-start
+          :end-before: .. sources-steps-05-load-types-note-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-06-feed-editor-start
+          :end-before: .. sources-steps-06-feed-editor-end
+
+
+   * - .. image:: ../../images/steps-07.png
+          :width: 60 px
+          :alt: Step seven.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-courier-start
+          :end-before: .. sources-steps-07-courier-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-run.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-calendar-start
+          :end-before: .. sources-steps-07-calendar-end
+
+       .. image:: ../../images/mockup-courier-add-07-menu-load-data.png
+          :width: 380 px
+          :alt: Add 
+          :align: left
+          :class: no-scaled-link
+
+       .. include:: ../../shared/sources.rst
+          :start-after: .. sources-steps-07-run-start
+          :end-before: .. sources-steps-07-run-end
+
+.. source-heap-add-data-source-steps-end

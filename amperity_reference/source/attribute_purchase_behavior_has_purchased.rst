@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Which customers have purchased N (or more) items during the specified time period?
+        Which customers have purchased N or more items during the specified time period?
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ Has purchased
 
 .. attribute-purchase-behavior-has-purchased-start
 
-**Has Purchased** returns a list of orders that meets the threshold that you define -- for example, exactly 4, less than 5, more than 2, or between 2 and 10 -- *and* occurred during your chosen date range. For example, return all customers who have purchased 3 (or more) times in the previous 2 years:
+**Has Purchased** returns a list of orders that meets the threshold that you define--for example, exactly 4, less than 5, more than 2, or between 2 and 10--*and* occurred during your chosen date range. For example, return all customers who have purchased 3 or more times in the previous 2 years:
 
 .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
    :width: 600 px
@@ -41,7 +41,7 @@ How this attribute works
 
 **Has Purchased** represents a common approach people use when they build segments: start with all orders, and then associate that list of orders to the products and brands your customers purchased.
 
-**Has Purchased** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Has Purchased** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -51,7 +51,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
 
 .. admonition:: How does the SQL for Has Purchased work?
 
-   **Has Purchased** is built from standard columns that are output by Amperity. The following example returns a list of customers who have purchased 3 (or more) times in the previous 2 years:
+   **Has Purchased** is built from standard columns that are output by Amperity. The following example returns a list of customers who have purchased 3 or more times in the previous 2 years:
 
    .. image:: ../../images/attribute-purchase-behavior-has-purchased-example.png
       :width: 500 px
@@ -68,7 +68,7 @@ With this attribute, you can focus less on SQL and more on finding answers that 
         ,COUNT(DISTINCT order_id) AS purchase_count
       FROM Unified_Itemized_Transactions
 
-   and finds all of the distinct orders that were made by all customers -- the "purchase count" -- and then returns all orders that match the date range:
+   and finds all of the distinct orders that were made by all customers--the "purchase count"--and then returns all orders that match the date range:
 
    ::
 
@@ -128,13 +128,13 @@ After the **Has purchased** purchase behavior attribute has been added, select a
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 

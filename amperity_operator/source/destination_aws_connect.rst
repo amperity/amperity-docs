@@ -22,10 +22,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for AWS Connect
+        Configure destinations for AWS Connect
 
 ==================================================
-Configure destination for AWS Connect
+Configure destinations for AWS Connect
 ==================================================
 
 .. include:: ../../shared/terms.rst
@@ -41,7 +41,6 @@ Configure destination for AWS Connect
 #. :ref:`Get details <destination-aws-connect-get-details>`
 #. :ref:`Configure AWS Connect <destination-aws-connect-configure>`
 #. :ref:`Add webhook destination <destination-aws-connect-add-destination>`
-#. :ref:`Add data template <destination-aws-connect-add-data-template>`
 
 .. destination-aws-connect-steps-to-send-end
 
@@ -72,11 +71,8 @@ An |destination-name| destination works like this:
    .. code-block:: sql
 
       SELECT
-        given_name AS "First Name"
-        surname AS "Last Name"
-        postal AS "Zip Code"
         email AS "Email Address"
-        phone AS "Phone Number"
+        ,phone AS "Phone Number"
       FROM Merged_Customers
 
 #. Configure a webhook destination to send data to a Lambda function that is running in AWS Lambda.
@@ -103,23 +99,23 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - |destination-name| must be enabled in your Amazon AWS account.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - A Lambda function must be uploaded to AWS Lambda that is running in your Amazon AWS account, and then configured to be available to Amperity.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - A webhook destination that is configured in your Amperity tenant that sends query results to a Lambda function running in AWS Lambda.
 
@@ -237,9 +233,9 @@ Amperity provides a pre-built collection of Lambda functions that is available f
 
 **To get the Lambda function template**
 
-#. Clone the open source **amperity-lambda-runner** repository or download it as a ZIP file.
-#. In the repo, navigate to "/src/lambdas/lambda_handlers/", and then open "amazon_pinpoint.py".
-#. You may use this file directly (requiring only configuration updates) or you may customize it to support your desired workflow.
+#. Clone the open source `amperity-lambda-runner <https://github.com/amperity/amperity-lambda-runner>`__ |ext_link| repository or download it as a ZIP file.
+#. In the repo, navigate to "/src/lambdas/lambda_handlers/", and then open "amazon_aws_connect.py".
+#. You may use this file directly, requiring only configuration updates, or you may customize it to support your desired workflow.
 
 .. destination-aws-connect-manual-get-template-end
 
@@ -251,7 +247,7 @@ Upload function to AWS Lambda
 
 .. destination-aws-connect-manual-upload-function-start
 
-You must upload the application code (and any dependencies) to AWS Lambda as a ZIP file archive.
+You must upload the application code and any dependencies to AWS Lambda as a ZIP file archive.
 
 **To upload a Lambda function to AWS Lambda**
 
@@ -263,11 +259,11 @@ You must upload the application code (and any dependencies) to AWS Lambda as a Z
 
          sh util/lambda-build.sh filename=amazon_aws_connect.py
 
-      This will create a ZIP file that contains the following files: **amazon_aws_connect.py**, **amperity_runner.py**, and **helpers.py**.
+      This creates a ZIP file that has the following files: **amazon_aws_connect.py**, **amperity_runner.py**, and **helpers.py**.
 
 #. Open the AWS Lambda console, and then open the **Code** tab.
 #. Click **Upload from**, and then click **ZIP file**.
-#. Find the ZIP file archive that contains the application code (and any dependencies), and then click **Upload**.
+#. Find the ZIP file archive that has the application code and any dependencies, and then click **Upload**.
 #. Click **Save**.
 
 .. destination-aws-connect-manual-upload-function-end
@@ -325,7 +321,7 @@ Add the API gateway
 
 #. Click **Add**.
 
-   You will need these values when configuring the webhook destination in Amperity.
+   You need these values when configuring the webhook destination in Amperity.
 
 .. destination-aws-connect-manual-add-gateway-end
 
@@ -337,7 +333,7 @@ Set AWS Lambda environment variables
 
 .. destination-aws-connect-manual-set-variables-start
 
-Use AWS Lambda environment variables provide to the Lambda function the name of the project, the origination number, and the region.
+Use AWS Lambda `environment variables <https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html>`__ |ext_link| to provide the Lambda function with the name of the project, the origination number, and the region.
 
 **To set environment variables**
 
@@ -345,6 +341,9 @@ Use AWS Lambda environment variables provide to the Lambda function the name of 
 #. Open the Lambda function for AWS Connect.
 #. Click **Configuration**.
 #. On the **Configuration** page, click **Environment variables**, and then click **Edit**.
+
+   .. note:: AWS Lambda environment variables will vary, depending on how a Lambda function is implemented.
+
 #. Click **Save**.
 
 .. destination-aws-connect-manual-set-variables-end
@@ -395,101 +394,3 @@ Add webhook destination
 .. include:: ../../shared/destinations.rst
    :start-after: .. destinations-add-destinations-webhook-start
    :end-before: .. destinations-add-destinations-webhook-end
-
-
-.. _destination-aws-connect-add-data-template:
-
-Add data template
-==================================================
-
-.. include:: ../../shared/terms.rst
-   :start-after: .. term-data-template-start
-   :end-before: .. term-data-template-end
-
-**To add a data template**
-
-.. destination-aws-connect-add-data-template-steps-start
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step 1.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-start
-          :end-before: .. destinations-data-template-open-template-end
-
-       .. image:: ../../images/mockup-data-template-tab-add-01-details.png
-          :width: 500 px
-          :alt: Step 1
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-open-template-name-start
-          :end-before: .. destinations-data-template-open-template-name-end
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-start
-          :end-before: .. destinations-data-template-business-users-end
-
-
-       .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
-          :width: 500 px
-          :alt: Step 2.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-business-users-access-not-configured-start
-          :end-before: .. destinations-data-template-business-users-access-not-configured-end
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step 3.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-start
-          :end-before: .. destinations-data-template-verify-config-settings-end
-
-       .. important:: Under **Webhook settings**, if **Webhook Settings** is empty, set it to empty curly braces: {}.
-
-       .. image:: ../../images/mockup-data-template-tab-add-03-settings.png
-          :width: 500 px
-          :alt: Verify settings for the data template.
-          :align: left
-          :class: no-scaled-link
-
-       .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-verify-config-settings-note-start
-          :end-before: .. destinations-data-template-verify-config-settings-note-end
-
-
-   * - .. image:: ../../images/steps-04.png
-          :width: 60 px
-          :alt: Step 4.
-          :align: left
-          :class: no-scaled-link
-     - .. include:: ../../shared/destinations.rst
-          :start-after: .. destinations-data-template-save-start
-          :end-before: .. destinations-data-template-save-end
-
-       .. image:: ../../images/mockup-destinations-tab-add-05-save.png
-          :width: 500 px
-          :alt: Save the data template.
-          :align: left
-          :class: no-scaled-link
-
-.. destination-aws-connect-add-data-template-steps-end

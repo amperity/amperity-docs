@@ -1,5 +1,7 @@
 .. https://docs.amperity.com/reference/
 
+:orphan:
+
 .. |destination-name| replace:: a destination
 .. |plugin-name| replace:: the plugin for the destination
 .. |filter-the-list| replace:: the first three characters of the destination
@@ -22,7 +24,7 @@ About destinations
 
 .. destinations-about-start
 
-A destination is a connection between Amperity and a downstream system that enables users of Amperity to send data to that system.
+A destination is a connection between Amperity and a downstream system that allows Amperity to send data to that system.
 
 After a destination is configured, users of Amperity can:
 
@@ -30,6 +32,16 @@ After a destination is configured, users of Amperity can:
 * Use segments to define audiences, and then assign those segments to single-touch campaigns or to nodes in a journey. More than one destination can be configured for a campaign or for a node in a journey.
 
 .. destinations-about-end
+
+.. destinations-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   Destinations are connections between Amperity and downstream systems that enable sending data to those systems.
+
+   Open **Learning Lab** to learn more about `creating destinations for campaigns and journeys <https://amperity.com/learning-lab/creating-destinations-for-campaigns-and-journeys>`__ |ext_link|. Registration is required.
+
+.. destinations-learning-lab-end
 
 
 .. _destinations-add:
@@ -64,7 +76,7 @@ Each destination requires configuration, such as:
 
 Configuration requirements are unique to each destination and use case. Review the "Get details" section for each destination that your brand wants to configure in Amperity. Review any links to external documentation to help ensure that your brand understands destination-specific requirements.
 
-After a destination is configured, run a test using a small audience. Verify that the data has arrived correctly. Make adjustments, if necessary, before sending an audience that will be used with your brand's marketing activity.
+After a destination is configured, run a test using a small audience. Verify that the data has arrived correctly. Make adjustments, if necessary, before sending an audience that is used with your brand's marketing activity.
 
 .. destinations-get-details-end
 
@@ -100,8 +112,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -120,8 +132,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -136,8 +148,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
@@ -156,8 +168,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
@@ -167,8 +179,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start

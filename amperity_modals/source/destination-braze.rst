@@ -61,8 +61,8 @@ Settings
    :start-after: .. setting-braze-user-identifier-start
    :end-before: .. setting-braze-user-identifier-end
 
-**Profile updates?**
+**Campaign file settings**
 
 .. include:: ../../shared/destination_settings.rst
-   :start-after: .. setting-braze-profile-updates-start
-   :end-before: .. setting-braze-profile-updates-end
+   :start-after: .. campaigns-steps-campaign-settings-start
+   :end-before: .. campaigns-steps-campaign-settings-end

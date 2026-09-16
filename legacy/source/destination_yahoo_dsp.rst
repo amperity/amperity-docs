@@ -19,10 +19,14 @@
 
 
 ==================================================
-Configure campaigns for Yahoo DSP
+Send data to Yahoo DSP
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_yahoo_dsp.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-yahoo-dsp-start
@@ -81,7 +85,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - Your brand's MDM ID.
 
@@ -101,26 +105,26 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - The name of a segment in |destination-name|. This can be the name of an existing segment or be a new segment.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail two.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - To ensure that audiences are compliant with General Data Protection Regulation (GDPR) requirements for "information storage and access" and "personalization" features within the `transparency consent framework <https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#what-are-the-purposes-and-features-being-supported->`__ |ext_link| you must include the following fields:
 
        * **storage-consent**
        * **personalization-consent**
 
-       Both fields have a Boolean data type and may be set to "true" or "false".
+       Both fields have a **Boolean** data type and may be set to "true" or "false".
 
-       When these fields are present in an audience, any users for whom the fields are not set or are both set to "false" will be omitted from the upload to |destination-name|. Only users who have both fields set and at least one field set to "true" are uploaded.
+       When these fields are present in an audience, any users for whom the fields are not set or are both set to "false" is omitted from the upload to |destination-name|. Only users who have both fields set and at least one field set to "true" are uploaded.
 
-       .. important:: If your brand knows your audience contains users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
+       .. important:: If your brand knows your audience has users who reside in the Europe and are protected by GDPR consent requirements you should include these fields in the audience to ensure that your brand meets GDPR consent requirements.
 
 .. destination-yahoo-dsp-get-details-end
 
@@ -144,8 +148,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -164,8 +168,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -206,8 +210,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -230,7 +234,7 @@ Add destination
           * - **Segment name**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
+                 :end-before: .. setting-yahoo-dsp-segment-name-end
           * - **Membership duration**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-common-membership-duration-start
@@ -238,8 +242,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -252,8 +256,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -281,8 +285,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -301,8 +305,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -310,7 +314,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -325,8 +329,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -343,7 +347,7 @@ Add data template
           * - **Segment name**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-yahoo-dsp-segment-name-start
-                 :end-before: .. setting-yahoo-dsp-segment-name-start
+                 :end-before: .. setting-yahoo-dsp-segment-name-end
           * - **Membership duration**
             - .. include:: ../../shared/destination_settings.rst
                  :start-after: .. setting-common-membership-duration-start
@@ -351,8 +355,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start

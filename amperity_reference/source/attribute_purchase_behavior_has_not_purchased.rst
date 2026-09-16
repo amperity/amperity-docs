@@ -27,7 +27,7 @@ Has not purchased
    :align: left
    :class: no-scaled-link
 
-After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores, i.e. "who hasn't purchased a specific product by a specific brand from a specific channel or store." For example, return a list of customers who have not purchased a wool product online during the previous 3 months.
+After you specify a date range you may apply filters to focus in on specific products, brands, channels, and stores to discover"who has not purchased a specific product by a specific brand from a specific channel or store. For example, return a list of customers who have not purchased a wool product online during the previous three months.
 
 .. attribute-purchase-behavior-has-not-purchased-end
 
@@ -35,9 +35,9 @@ After you specify a date range you may apply filters to focus in on specific pro
 
 .. tip:: As you add filters to this attribute, the number of customer records that is returned gets larger.
 
-   Consider all of your brands and all of the products in your product catalog and all of your stores and your website. Consider the percentage of all of your customers who may have purchased within any time window. And then consider the number of customers you have in your Customer 360.
+   Consider all of your brands and all of the products in your product catalog and all of your stores and your website, consider the percentage of all of your customers who may have purchased within any time window, and then consider the number of customers you have in your Customer 360.
 
-   For example, let's say you have 1,000,000 customers in your Customer 360. If you configure **Has Not Purchased** to return only customers who purchased last month, that might be 8,000 customers.
+   For example, you have 1,000,000 customers in your Customer 360. If you configure **Has Not Purchased** to return only customers who purchased last month, that might be 8,000 customers.
 
    **Has Not Purchased** compares the list of customers who did purchase to your total list of customers, and then returns the difference. In this example that difference is 992,000 customers.
 
@@ -53,7 +53,7 @@ How this attribute works
 
 **Has Not Purchased** represents a common approach people use when they build segments: which of my customers have not purchased, and then associate that list of customers to your products and brands.
 
-**Has Not Purchased** is a *compound attribute*, which means that it's built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
+**Has Not Purchased** is a *compound attribute*, which means that it is built from a combination of attributes that already exist in your data, and then appears as a single attribute that you can choose from the **Segment Editor**.
 
 With this attribute, you can focus less on SQL and more on finding answers that align to your marketing goals and strategies. Purchase behavior attributes simplify the number of steps that are required to associate a list of customers to your products, stores, channels, and brands.
 
@@ -80,7 +80,7 @@ The following example returns all customers who have not purchased:
    :align: left
    :class: no-scaled-link
 
-This can be a large list!
+This can be a large list.
 
 The SQL for **Has Not Purchased** works like this. It uses order ID from the **Unified Itemized Transactions** table as its starting point:
 
@@ -91,7 +91,7 @@ The SQL for **Has Not Purchased** works like this. It uses order ID from the **U
      ,COUNT(DISTINCT order_id) AS purchase_count
    FROM Unified_Itemized_Transactions
 
-and finds all of the distinct orders that were made by all customers -- the "purchase count" -- and groups them by Amperity ID for all orders that match the date range:
+and finds all of the distinct orders that were made by all customers--the "purchase count"--and groups them by Amperity ID for all orders that match the date range:
 
 ::
 
@@ -112,7 +112,7 @@ You may then filter this list of customers more by applying any of the product, 
    AND product_category = 'wool'
    AND purchase_channel = 'online'
 
-This will return a list of customers from the **Unified Itemized Transactions** table who purchased wool socks in all styles from your website.
+This will return a list of customers from the **Unified Itemized Transactions** table who purchased wool in all styles from your website.
 
 This list of customers from the **Unified Itemized Transactions** table is then compared to the list of customers in your **Merged Customers** table. What is the **Merged Customers** table? It is the table in which *all* of your customers are located and is the foundation of your customer 360 database.
 
@@ -168,7 +168,7 @@ As you add filters to **Has Not Purchased** the size of the audience that is ret
 
 This series of diagrams steps through and shows you why your audience gets larger as you apply more filters. On the left side is the **Unified Itemized Transactions** table and on the right side is the **Merged Customers** table.
 
-#. The following diagram shows just one filter (the white inner circle). Let's say that filter is purchase channel and that you chose "online":
+#. The following diagram shows just one filter (the white inner circle). For example, filter is purchase channel and the channel type is "online":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-1.png
       :width: 500 px
@@ -178,7 +178,7 @@ This series of diagrams steps through and shows you why your audience gets large
 
    The results of **Has Not Purchased** will return "all of your customers who did not purchase from your website."
 
-#. The following diagram shows a *second* filter. Let's say this one adds product category and that you chose "shirts":
+#. The following diagram shows a *second* filter. For example, product category and category type of "shirts":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-2.png
       :width: 500 px
@@ -186,9 +186,9 @@ This series of diagrams steps through and shows you why your audience gets large
       :align: left
       :class: no-scaled-link
 
-   The results from the **Unified Itemized Transactions** table is smaller because only purchases that exist in both filters are returned. This means the results for **Has Not Purchased** will be larger, and now return "all of your customers who did not purchase a shirt from your website."
+   The results from the **Unified Itemized Transactions** table is smaller because only purchases that exist in both filters are returned. This means the results for **Has Not Purchased** will be larger and return "all of your customers who did not purchase a shirt from your website."
 
-#. The following diagram shows a *third* filter. Let's say this one adds product gender and that you chose "F":
+#. The following diagram shows a *third* filter. For example, product gender and "F":
 
    .. image:: ../../images/attribute-purchase-behavior-has-not-purchased-larger-3.png
       :width: 500 px
@@ -196,7 +196,7 @@ This series of diagrams steps through and shows you why your audience gets large
       :align: left
       :class: no-scaled-link
 
-   The results from the **Unified Itemized Transactions** table is now much smaller and the results for **Has Not Purchased** have grown larger, and now return "all of your customers who did not purchase a women's shirt from your website."
+   The results from the **Unified Itemized Transactions** table is much smaller and the results for **Has Not Purchased** have grown larger and return "all of your customers who did not purchase a women's shirt from your website."
 
 .. attribute-purchase-behavior-has-not-purchased-howitworks-larger-end
 
@@ -226,13 +226,13 @@ After the **Has not purchased** purchase behavior attribute has been added, sele
 About relative dates
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-dates-start
    :end-before: .. segments-editor-relative-dates-end
 
 **Relative date values**
 
-.. include:: ../../amperity_reference/source/segments_editor.rst
+.. include:: ../../amperity_reference/source/segment_editor.rst
    :start-after: .. segments-editor-relative-date-values-start
    :end-before: .. segments-editor-relative-date-values-end
 
@@ -272,15 +272,15 @@ The following table lists the operators that are available to this attribute.
    * - **not between**
      - Returns a list of customers who have not made a purchase outside the dates that define the specified time window.
 
-       For example, if you want to find customers who only purchased school supplies in the two weeks prior to the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window will be returned.
+       For example, if you want to find customers who only purchased school supplies in the two weeks before the start of school, and if school started on 9/7, you could define the start of the time window as 8/24 and the end of the time window as 9/6, the **not between** condition will ensure that only customers who purchased within that time window is returned.
 
    * - **not on**
+     - Returns a list of customers who have not purchased on the specified date.
+
+   * - **on**
      - |attribute-stop| **Less useful**
 
        Returns a list of customers who made a purchase on the specified date.
-
-   * - **on**
-     - Returns a list of customers who have not purchased on the specified date.
 
 .. attribute-purchase-behavior-has-not-purchased-conditions-end
 

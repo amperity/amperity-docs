@@ -25,7 +25,7 @@ The **Email AmpID Assignment** table narrows the many-to-many relationships betw
 
 .. table-email-ampid-assignment-note-start
 
-.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with multiple email addresses *or* prevent email addresses from being associated with multiple Amperity IDs.
+.. note:: The **Email AmpID Assignment** table does not prevent Amperity IDs from being associated with many email addresses *or* prevent email addresses from being associated with many Amperity IDs.
 
    This table enforces a one-to-one relationship for use in the **Merged Customers** table.
 
@@ -54,7 +54,7 @@ The **Email AmpID Assignment** table:
 #. Reranks all remaining email addresses and Amperity ID and identifies email addresses and Amperity IDs that share the top ranking.
 #. Unions the two sets of matching email addresses and Amperity IDs into a single list.
 
-   Some email addresses and Amperity IDs will not be matched. These non-matched email addresses and Amperity IDs are often not the best choice for a given email address or Amperity ID and should not be used to build campaigns that require the highest-ranked email address.
+   Some email addresses and Amperity IDs is not matched. These non-matched email addresses and Amperity IDs are often not the best choice for a given email address or Amperity ID and should not be used to build campaigns that require the highest-ranked email address.
 
 .. table-email-ampid-assignment-howitworks-end
 
@@ -97,6 +97,7 @@ Transaction attributes, such as those that capture purchase history or those tha
 The following block shows the default list of attributes used for ranking Amperity IDs. These rankings may be extended to include additional attributes.
 
 .. code-block:: sql
+   :linenos:
 
    ,attrs_by_amp AS (
      SELECT
@@ -108,7 +109,7 @@ The following block shows the default list of attributes used for ranking Amperi
        ,MAX(pclv.predicted_clv_next_365d) AS predicted_clv_next_365d
      FROM email_universe univ
      LEFT JOIN Transaction_Attributes_Extended tae ON tae.amperity_id = univ.amperity_id
-     LEFT JOIN Predicted_CLV_Attributes pclv ON pclv.amperity_id = univ.amperity_id
+     LEFT JOIN Predicted_365d_CLV_Attributes pclv ON pclv.amperity_id = univ.amperity_id
      GROUP BY univ.amperity_id, univ.email, univ.update_dt
    )
 
@@ -144,7 +145,7 @@ The following block shows the default list of attributes used for ranking Amperi
 
    .. code-block:: sql
 
-      LEFT JOIN Predicted_CLV_Attributes pclv
+      LEFT JOIN Predicted_365d_CLV_Attributes pclv
       ON pclv.amperity_id = univ.amperity_id
 
    .. note:: You may include other predicted modeling tables.
@@ -164,6 +165,7 @@ Email attributes, such as those that capture consent status and engagement with 
 The following block shows the default list of attributes used for ranking email addresses. These rankings may be extended to include additional attributes.
 
 .. code-block:: sql
+   :linenos:
 
    ,all_attrs AS (
      SELECT
@@ -226,6 +228,7 @@ The **ORDER BY** clause lists the attributes that determine priority. You may ex
 .. note:: The following block shows the recommended priority for ranking email addresses. This block is commented out in the SQL template and must be uncommented and updated before this table can be activated.
 
 .. code-block:: sql
+   :linenos:
 
    ,amp_email_ranking AS (
      SELECT *
@@ -274,6 +277,7 @@ The **ORDER BY** clause lists the attributes that determine priority. You may ex
 .. note:: The following block shows the recommended priority for ranking Amperity IDs. This block is commented out in the SQL template and must be uncommented and updated before this table can be activated.
 
 .. code-block:: sql
+   :linenos:
 
    ,email_amp_ranking AS (
      SELECT *

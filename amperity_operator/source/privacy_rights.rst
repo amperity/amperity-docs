@@ -19,7 +19,7 @@ Privacy rights
 
 .. privacy-rights-overview-start
 
-A privacy rights workflow can help your organization stay in compliance with data protection and privacy regulations, such as those required by California Consumer Privacy Act (CCPA) or General Data Protection Regulation (GDPR).
+A privacy rights workflow can help your organization stay in compliance with data protection and privacy regulations, such as those required by California Consumer Privacy Act (CCPA), General Data Protection Regulation (GDPR), or Personal Information Protection and Electronic Documents Act (PIPEDA).
 
 * .. include:: ../../shared/terms.rst
      :start-after: .. term-ccpa-start
@@ -34,7 +34,7 @@ A privacy rights workflow can help your organization stay in compliance with dat
      :start-after: .. term-pipeda-start
      :end-before: .. term-pipeda-end
 
-This topic describes how to configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR), depending on the :ref:`type of inbound compliance request <privacy-rights-workflows>`.
+Configure Amperity to support a self-service privacy rights workflow that deletes consumer profile data and discovers records for a data subject access request (DSAR), depending on the :ref:`type of inbound compliance request <privacy-rights-workflows>`.
 
 .. privacy-rights-overview-end
 
@@ -46,6 +46,8 @@ This topic describes how to configure Amperity to support a self-service privacy
 
 .. privacy-rights-note-end
 
+.. vale off
+
 .. privacy-rights-important-start
 
 .. important:: This topic does not constitute legal advice to third parties regarding General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) compliance, nor does it imply that steps taken by Amperity will satisfy these compliance requirements.
@@ -53,6 +55,8 @@ This topic describes how to configure Amperity to support a self-service privacy
    Customers are encouraged to seek legal counsel regarding General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA) compliance and should not rely solely on Amperity for compliance.
 
 .. privacy-rights-important-end
+
+.. vale on
 
 
 .. _privacy-rights-workflows:
@@ -68,7 +72,7 @@ The following sections describe the three types of privacy rights workflows:
 * :ref:`Delete records <privacy-rights-workflows-delete-records>`
 * :ref:`Delete PII <privacy-rights-workflows-delete-pii>`
 
-The sections are repetitive when the workflows have shared behavior and are different when they have unique behavior. For example: the first step for all privacy rights workflows is to find all records with exact matches to the inbound request; however, the **Delete PII** privacy rights workflow is the only one that requires using the **compliance/pii** semantic tag.
+The sections are repetitive when the workflows have shared behavior and are different when they have unique behavior. For example: the first step for all privacy rights workflows is to find all records with exact matches to the inbound request. However, the **Delete PII** privacy rights workflow is the only one that requires using the **compliance/pii** semantic tag.
 
 .. privacy-rights-workflows-end
 
@@ -100,8 +104,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
@@ -112,7 +116,7 @@ The following sections describe the individual steps within the workflow that oc
 
        .. admonition:: About the connected_pii strategy
 
-          Using the the **exact** strategy for DSAR requests is recommended.
+          Using the **exact** strategy for DSAR requests is recommended.
 
           The **strategy** may be set to **connected_pii**. A connected PII matching strategy will find all records in source tables that:
 
@@ -121,17 +125,17 @@ The following sections describe the individual steps within the workflow that oc
 
           The request match category resulting from a match on Amperity ID will be **connected** and can be viewed from the **Unified_Compliance** table.
 
-          A Stitch cluster often contains variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
+          A Stitch cluster often has variations of email addresses, phone numbers, and address groups that are all associated with a single unique individual, but only one email address, phone number, or address group will match exactly to the values in the inbound request.
 
-          To avoid potentially exposing additional customer PII in the DSAR report (and possible DSAR response) it is recommended to use the **exact** strategy as often as possible.
+          To avoid exposing additional customer PII in the DSAR report and possible DSAR response it is recommended to use the **exact** strategy as often as possible.
 
        .. note:: Source keys or linkage tables can be used to trace records in a custom domain table back to a source table. When either of these are implemented, a direct or connected match on a custom domain table will find all corresponding records in source domain tables.
 
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Results**
@@ -158,6 +162,8 @@ Delete records
 
 An inbound request may require deleting customer records.
 
+.. note:: A record that matches the delete records **and** :ref:`delete PII <privacy-rights-workflows-delete-pii>` workflows will delete records.
+
 The following diagram shows the workflow that occurs when a delete records request is present in the inbound requests table.
 
 .. image:: ../../images/privacy-rights-delete-records.png
@@ -174,8 +180,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
@@ -191,19 +197,19 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Suppress records**
 
-       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table) that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
+       Data in Stitch output--the **Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table--that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - **Delete records**
@@ -215,8 +221,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
 
      - **Results**
@@ -244,7 +250,9 @@ Delete PII
 
 An inbound request may require deleting specific PII fields within customer records.
 
-.. important:: The delete PII workflow requires requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
+.. note:: A record that matches the :ref:`delete records <privacy-rights-workflows-delete-records>` **and** delete PII workflows will delete records.
+
+.. important:: The delete PII workflow requires using the **compliance/pii** semantic tag to specify which fields within records may be deleted.
 
 The following diagram shows the workflow that occurs when a delete PII request is present in the inbound requests table.
 
@@ -262,13 +270,13 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
 
      - **Find records**
 
-       A delete PII request runs runs when **type** field in the inbound requests table is set to **delete_pii**.
+       A delete PII request runs when **type** field in the inbound requests table is set to **delete_pii**.
 
        The **strategy** for an inbound request is set to **exact** by default. An exact matching strategy will find all records in all source tables that match the email address, phone number, or address group that is included in the inbound request.
 
@@ -284,19 +292,19 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
 
      - **Suppress records**
 
-       Data in Stitch output (**Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table) that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
+       Data in Stitch output--the **Unified Coalesced** table and core tables derived from **Unified Coalesced**, such as the **Unified Customer** table--that matches the inbound request is suppressed. These suppressed rows are removed from Stitch output.
 
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
 
      - **Delete PII**
@@ -311,8 +319,8 @@ The following sections describe the individual steps within the workflow that oc
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
 
      - **Results**
@@ -381,7 +389,7 @@ You can configure compliance actions to support the following request strategies
 #. Find all rows that exactly match the compliance request.
 #. Find all rows that exactly match the compliance request *along with* any row in a stitched table that shares an Amperity ID with those records.
 
-.. important:: You may wish to use Amperity to identify which records belong to a customer. If the strategy field is set to **connected_pii**, records are connected by the Amperity ID using probabilistic Stitch. The detailed report contains those records. Send these results to your downstream workflows to locate data that should be deleted from other systems.
+.. important:: You may wish to use Amperity to identify which records belong to a customer. If the strategy field is set to **connected_pii**, records are connected by the Amperity ID using probabilistic Stitch. The detailed report has those records. Send these results to your downstream workflows to locate data that should be deleted from other systems.
 
 .. privacy-rights-request-strategies-end
 
@@ -399,6 +407,8 @@ A privacy rights workflow requires the following steps:
 #. :ref:`Apply semantic tags to tables with desired deletes <privacy-rights-apply-semantic-tags>`.
 #. :ref:`Configure source keys <privacy-rights-configure-source-keys>`.
 
+.. note:: A privacy rights workflow runs after Stitch and in parallel with database generation. A failure in a privacy rights workflow will block database publication.
+
 .. privacy-rights-enable-end
 
 
@@ -409,13 +419,13 @@ Inbound requests table
 
 .. privacy-rights-inbound-requests-table-start
 
-An inbound request table contains information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
+An inbound request table has information about compliance requests. It must contain at least one field that is used to identify matching records: this is most commonly email address, but phone number, address, and custom fields such as a customer key or loyalty ID can also be used.
 
-If multiple identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
+If many identification fields exist, they are treated as though they are separate requests, identifying source domain records that can be matched to ANY of the identification fields.
 
 .. note:: An address group is a single entity. A compliance action must match all fields within the address group: address, address2, city, state, postal, and country. It is important for addresses in incoming data to be standardized before they can be used for matching in compliance requests.
 
-It also contains information about the request type and request strategy.
+It also has information about the request type and request strategy.
 
 .. tip:: You may use a custom domain table to transform an inbound request table into the needed format. If you intend to use only a single **request_type** or **request_strategy**, those can be hard-coded in the custom domain table, rather than be included as part of the inbound request.
 
@@ -465,7 +475,7 @@ Inbound requests must include at least one field that can be used to identify re
 
 In addition to email, phone number and physical address can be used to identify records belonging to a person.
 
-.. note:: An address group contains multiple fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
+.. note:: An address group has many fields, but is a single entity for a compliance action. In order to match to records in source tables, ALL values must match. Address standardization should be applied upstream of Amperity so that address can be reliably used to identify source records.
 
 .. privacy-rights-semantic-tag-find-records-end
 
@@ -495,7 +505,7 @@ You may the following custom key pairs:
 Identify fields to delete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: This section only applies if the **delete_pii** request type is used.
+.. note:: Only applies if the **delete_pii** request type is used.
   
 The **delete** request type acts on entire rows of source tables, but it is possible to only delete PII from a record, while leaving the rest of the data intact.
 
@@ -551,7 +561,7 @@ In some cases a compliance request cannot directly match to source rows. This in
 
 .. privacy-rights-build-linkage-tables-note-start
 
-.. note:: The main reason for using a linkage table instead of using source keys is when the custom domain table to which you are linking aggregates records using multiple keys. Amperity does not allow source keys to be composed of multiple columns.
+.. note:: The main reason for using a linkage table instead of using source keys is when the custom domain table to which you are linking aggregates records using many keys. Amperity does not allow source keys to be composed of many columns.
 
 .. privacy-rights-build-linkage-tables-note-end
 
@@ -571,9 +581,15 @@ Report tables
 
 .. privacy-rights-reports-tables-start
 
-Amperity generates the following tables for reporting compliance results as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables will be empty when no requests were made.
+Amperity generates the following tables for reporting compliance results as part of a Stitch run. Each table contain the results of the most recent privacy rights workflow. These tables are empty when no requests were made.
 
 .. privacy-rights-reports-tables-end
+
+.. privacy-rights-reports-tables-passthrough-start
+
+.. note:: Report tables are not automatically added to any database. Optional: You may add each report table to any database as a passthrough table.
+
+.. privacy-rights-reports-tables-passthrough-end
 
 
 .. _privacy-rights-reports-tables-unified-compliance-overview:
@@ -585,7 +601,7 @@ Unified Compliance Overview
    :start-after: .. term-unified-compliance-overview-table-start
    :end-before: .. term-unified-compliance-overview-table-end
 
-The **Unified Compliance Overview** table contains the following columns:
+The **Unified Compliance Overview** table has the following columns:
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-overview-table-start
@@ -601,7 +617,7 @@ Unified Compliance
    :start-after: .. term-unified-compliance-table-start
    :end-before: .. term-unified-compliance-table-end
 
-The **Unified Compliance** table contains the following columns:
+The **Unified Compliance** table has the following columns:
 
 .. include:: ../../amperity_reference/source/data_tables.rst
    :start-after: .. data-tables-unified-compliance-table-start
@@ -629,7 +645,7 @@ A match in the **Unified Compliance** table will be assigned one of the followin
    Occurs when matches are made from keys that are present in upstream data sources.
 
 **linkage_table**
-   Occurs when matches are identified by a custom domain table that traces records back to a source table that contained records with multiple keys.
+   Occurs when matches are identified by a custom domain table that traces records back to a source table that contained records with many keys.
 
 If a record is not found in the Unified Compliance table use the expected matching category to troubleshoot why a record is missing.
 
@@ -683,7 +699,7 @@ Record has returned?
 
 .. privacy-rights-record-has-returned-start
 
-Amperity is not able to delete records from upstream data sources. It is recommended to design a workflow that ensures that records that appear in the **Unified Compliance** table are deleted from upstream data sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant. (The **Unified Compliance** table is refreshed as part of each Stitch run.)
+Amperity is not able to delete records from upstream data sources. It is recommended to design a workflow that ensures that records that appear in the **Unified Compliance** table are deleted from upstream data sources on a schedule that matches the frequency at which Stitch is run in your Amperity tenant. The **Unified Compliance** table is refreshed as part of each Stitch run.
 
 If records are not deleted in upstream data sources, and then the records in those upstream data sources are made available to Amperity, it is possible for records that have been flagged for deletion by previous privacy rights workflows will return.
 

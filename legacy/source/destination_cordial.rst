@@ -16,10 +16,14 @@
 
 
 ==================================================
-Configure campaigns for Cordial
+Send data to Cordial
 ==================================================
 
-.. note:: This topic contains information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_cordial.html>`__ |ext_link|.
+.. vale off
+
+.. note:: This topic has information about configuring a destination to send audiences to |destination-name| using campaigns *and* for configuring a destination that sends query results using orchestrations, but have not yet been upgraded to the new user experience. To configure a destination that sends query results to |destination-name| using orchestrations see `this topic <https://docs.amperity.com/operator/destination_cordial.html>`__ |ext_link|.
+
+.. vale on
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-cordial-start
@@ -30,11 +34,11 @@ Configure campaigns for Cordial
 Use Amperity to manage contacts--attributes and list membership--in |destination-name| using the following REST APIs:
 
 * `Account Contract Attributes <https://support.cordial.com/hc/en-us/articles/204570347-Account-Contact-Attributes>`__ |ext_link| to create contact attributes. Attributes that do not exist in |destination-name| are added as custom contact attributes.
-* `Account Lists <https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists>`__ |ext_link| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact will retain its assigned subscription status.
+* `Account Lists <https://support.cordial.com/hc/en-us/articles/204570497-Account-Lists>`__ |ext_link| to fetch, create, and clear account lists, to which contacts are associated. An account list is overwritten each time results are sent from Amperity. An email address is added when it is not already a contact, after which it is assigned the **subscribed** status. An email address that is already a contact retains its assigned subscription status.
 * `Contact Imports <https://support.cordial.com/hc/en-us/articles/203886058-Contact-Imports>`__ |ext_link| to import contacts to |destination-name|, and then associate contacts to the account list.
 * `Jobs <https://support.cordial.com/hc/en-us/articles/204570807-Jobs>`__ |ext_link| to monitor the import job for completion.
 
-Build a query or segment that contains the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
+Build a query or segment that has the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes.
 
 .. destination-cordial-end
 
@@ -42,7 +46,7 @@ Build a query or segment that contains the **email** field, along with any other
 
 .. note:: Amperity recommends using the |destination-api| to send |what-send| from Amperity to |destination-name|.
 
-   However, if you prefer to send a CSV or JSON file (one-time or recurring) instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
+   However, if you prefer to send a CSV or JSON file instead of using the |destination-api| you may configure `Cordial Data Automations <https://support.cordial.com/hc/en-us/articles/360029407471>`__ |ext_link|, and then enable that workflow using any of these destinations: :doc:`SFTP <destination_sftp>`, :doc:`Amazon S3 <destination_amazon_s3>`, or :doc:`Google Cloud Storage <destination_google_cloud_storage>`.
 
 .. destination-cordial-get-details-alternate-note-end
 
@@ -75,16 +79,16 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail one.
-          :align: left
+          :align: center
           :class: no-scaled-link
-     - A |destination-api| key and the URL for the |destination-name| API.
+     - A |destination-api| key and the URL of the |destination-name| API.
 
        .. important:: Use the `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| for Amperity to configure the allowlist for the |destination-api|.
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail two.
+          :align: center
           :class: no-scaled-link
      - The name of the contacts list.
 
@@ -92,15 +96,15 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail three.
+          :align: center
           :class: no-scaled-link
      - The following REST API methods must be enabled:
 
        ::
 
-           GET /accountcontractattributes
-           POST /accountcontractattributes
+           GET /accountcontactattributes
+           POST /accountcontactattributes
 
            GET /accountlists
            POST /accountlists
@@ -112,8 +116,8 @@ Get details
 
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
-          :alt: Detail one.
-          :align: left
+          :alt: Detail four.
+          :align: center
           :class: no-scaled-link
      - A query or segment that returns the **email** field, along with any other fields that you want created or updated in |destination-name| and represented as contact attributes in |destination-name|.
 
@@ -139,8 +143,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-destination-start
@@ -159,8 +163,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-add-credentials-start
@@ -189,7 +193,7 @@ Add destination
        |destination-name| has the following settings:
 
        * The |destination-api| key.
-       * The URL for the |destination-name| API.
+       * The URL of the |destination-name| API.
 
        .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-settings-start
@@ -198,8 +202,8 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-destination-settings-start
@@ -214,8 +218,8 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-business-users-start
@@ -228,8 +232,8 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-save-start
@@ -257,8 +261,8 @@ Add data template
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-open-template-start
@@ -277,8 +281,8 @@ Add data template
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-business-users-start
@@ -286,7 +290,7 @@ Add data template
 
        .. image:: ../../images/mockup-data-template-tab-add-02-allow-access.png
           :width: 500 px
-          :alt: Step 2.
+          :alt: Step 2
           :align: left
           :class: no-scaled-link
 
@@ -301,8 +305,8 @@ Add data template
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-verify-config-settings-start
@@ -311,8 +315,8 @@ Add data template
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-data-template-save-start
@@ -349,7 +353,7 @@ Workflow actions
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
           :alt: Step one.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-one-a-start
@@ -368,7 +372,7 @@ Workflow actions
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-two-start
@@ -383,7 +387,7 @@ Workflow actions
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
           :alt: Step three.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-three-a-start
@@ -409,7 +413,7 @@ Workflow actions
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
           :alt: Step four.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/workflow-actions.rst
           :start-after: .. workflow-actions-common-table-section-four-a-start
@@ -458,9 +462,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 
@@ -479,9 +483,9 @@ To resolve this error, verify the attributes that are required by |destination-n
 #. Open the |destination-name| management console, and then `open Jobs <https://support.cordial.com/hc/en-us/articles/115008871127-Jobs-widget>`__ |ext_link|.
 #. Find the job with the ID that matches the ID in the error message associated with this workflow action, and then view job details.
 
-#. Download the rejected errors using the link in the job details. If the errors mention "missing required attribute(s)" do one of the following:
+#. Download the rejected errors using the link in the job details. If the errors mention "missing required attributes" do one of the following:
 
-   Update the attribute(s) in |destination-name| to no longer be required.
+   Update the attributes in |destination-name| to no longer be required.
 
    *or*
 

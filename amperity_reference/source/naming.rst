@@ -26,7 +26,7 @@ Use the following naming conventions to ensure that your tenant is configured wi
 
 .. naming-note-start
 
-.. note:: A tenant that is configured to support multiple brands or regions should use a consistent prefix for each brand and/or region.
+.. note:: A tenant that is configured to support many brands or regions should use a consistent prefix for each brand and region.
 
 .. naming-note-end
 
@@ -60,7 +60,7 @@ Establish naming conventions around the following:
 
 Apply these naming conventions to folders, in addition to campaigns, segments, journeys, and queries.
 
-.. tip:: Only use abbreviations when the abbreviation is understood by users within your tenant. For example, "INTL" for "Internal use".
+.. tip:: Only use abbreviations when the abbreviation is understood by users within your tenant.
 
 .. naming-general-end
 
@@ -97,13 +97,13 @@ Courier names
 
 .. naming-couriers-start
 
-Use a combination of source and feed for the name of the courier as much as possible. Separate the source and feed name using an underscore (``_``). Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand. Consider if the courier is pulling a dedicated data source or if it is pulling multiple sources.
+Use a combination of source and feed for the name of the courier as much as possible. Separate the source and feed name using an underscore (``_``). Add details like "historical", "daily", or "test" as appropriate. Add details if the data is regional or by brand. Consider if the courier is pulling a dedicated data source or if it is pulling many sources.
 
 For example:
 
 * Adobe_Clickstream
 * Adobe_Clickstream_Daily
-* Amazon_S3:Static (which contains individual files for postal codes, geolocation data, etc.)
+* Amazon_S3:Static, which has individual files for postal codes, and geolocation data
 * Braze_Audience_EMEA
 * Braze_Audience_PNW
 * Sailthru_Responses
@@ -155,7 +155,7 @@ Destination names
 
 .. naming-destinations-start
 
-Use the name of the system to which Amperity will send data. Use title case and separate the name using an underscore (``_``), if needed.
+Use the name of the system to which Amperity sends data. Use title case and separate the name using an underscore (``_``), if needed.
 
 For example:
 
@@ -184,7 +184,7 @@ For example:
 * Sailthru:Responses
 * Shopify:Orders
 
-.. important:: Custom domain tables should follow the source/feed naming convention as often as possible. Apply a consistent prefix to the source name to identify the table as a custom domain table, and then append the purpose of the table. For example, a custom domain table that filters Shopify data, and then applies semantic tags for unified transactions: CDT_Shopify_Orders_UT.
+.. important:: Custom domain tables should follow the source and feed naming convention as often as possible. Apply a consistent prefix to the source name to identify the table as a custom domain table, and then append the purpose of the table. For example, a custom domain table that filters Shopify data, and then applies semantic tags for unified transactions: CDT_Shopify_Orders_UT.
 
 .. naming-domain-tables-end
 

@@ -9,7 +9,8 @@
 .. |where-send| replace:: |destination-name|
 .. |audience-primary-key| replace:: "email"
 .. |filter-the-list| replace:: "crit"
-
+.. |allow-for-what| replace:: offline or onsite display audiences
+.. |allow-for-duration| replace:: up to 24 hours
 
 .. meta::
     :description lang=en:
@@ -21,17 +22,33 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure destination for Criteo Retail Media
+        Configure destinations for Criteo Retail Media
 
 ==================================================
-Configure destination for Criteo Retail Media
+Configure destinations for Criteo Retail Media
 ==================================================
-
-.. note:: This topic contains information about configuring a destination that sends query results to |destination-name| using orchestrations. To configure a destination that sends audiences to |destination-name| using campaigns see `this topic <https://docs.amperity.com/legacy/destination_criteo_retail_media.html>`__ |ext_link|.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-criteo-retail-media-start
    :end-before: .. term-criteo-retail-media-end
+
+.. destination-criteo-retail-media-offline-vs-online-start
+
+.. important:: |destination-name| supports offsite and onsite display campaigns. These audiences must be sent independently and require specific configurations. Review the requirements for offline and online campaigns, and then configure a destination for each use case. A minimum match rate of 0.1% is required, calculated as ``number of matches / total lines`` before the audience is usable in |destination-name|.
+
+.. destination-criteo-retail-media-offline-vs-online-start
+
+.. note::
+
+   .. include:: ../../shared/destinations.rst
+      :start-after: .. destinations-add-destinations-intro-allow-for-start
+      :end-before: .. destinations-add-destinations-intro-allow-for-end
+
+.. destination-criteo-retail-media-incremental-updates-start
+
+.. note:: |destination-name| uses `incremental audience updates <https://developers.criteo.com/retail-media/v2025.10/docs/audience-segment-endpoints#addremove-identifiers-in-contact-list-audience-segment>`__ |ext_link|. Each send applies to the audience segment only the changes since the previous send. New contacts are added. Removed contacts are deleted.
+
+.. destination-criteo-retail-media-incremental-updates-end
 
 
 .. _destination-criteo-retail-media-get-details:
@@ -52,7 +69,7 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 1.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Use OAuth to connect Amperity to Criteo Retail Media**
 
@@ -62,24 +79,53 @@ Get details
    * - .. image:: ../../images/steps-check-off-black.png
           :width: 60 px
           :alt: Detail 2.
-          :align: left
+          :align: center
           :class: no-scaled-link
      - **Required configuration settings**
 
        **Account ID**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-account-id-start
              :end-before: .. setting-criteo-account-id-end
 
        **Retailer ID**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-retailer-id-start
              :end-before: .. setting-criteo-retailer-id-end
 
        **Identifier type**
+
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-criteo-identifier-type-start
              :end-before: .. setting-criteo-identifier-type-end
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 3.
+          :align: center
+          :class: no-scaled-link
+     - **Offsite campaigns only**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-criteo-retail-media-offsite-start
+          :end-before: .. term-criteo-retail-media-offsite-end
+
+       To configure offsite campaigns use one of "Email" or "UserIdentifier" for the identifier type. If "UserIdentifier", the value may be one of the following: "IDFA", "AAID", "LiveRamp ID", or "Criteo Cookie ID".
+
+   * - .. image:: ../../images/steps-check-off-black.png
+          :width: 60 px
+          :alt: Detail 4.
+          :align: center
+          :class: no-scaled-link
+     - **Onsite display campaigns only**
+
+       .. include:: ../../shared/terms.rst
+          :start-after: .. term-criteo-retail-media-onsite-start
+          :end-before: .. term-criteo-retail-media-onsite-end
+
+       To configure onsite display campaigns use the "CustomerID" identifier type.
 
 .. destination-criteo-retail-media-get-details-table-end
 
@@ -97,7 +143,7 @@ Configure credentials
    :start-after: .. destinations-oauth-intro-start
    :end-before: .. destinations-oauth-intro-end
 
-.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo prior to configuring OAuth in Amperity.
+.. important:: OAuth for "Criteo Retail Media" *must* be completed within Criteo before configuring OAuth in Amperity.
 
 **To configure OAuth**
 
@@ -107,8 +153,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-1-start
@@ -116,8 +162,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-2-start
@@ -125,8 +171,8 @@ Configure credentials
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destinations.rst
           :start-after: .. destinations-oauth-configure-step-3-start
@@ -162,8 +208,8 @@ Add destination
 
    * - .. image:: ../../images/steps-01.png
           :width: 60 px
-          :alt: Step 1.
-          :align: left
+          :alt: Step one.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-add-destinations-start
@@ -182,8 +228,8 @@ Add destination
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
-          :alt: Step 2.
-          :align: left
+          :alt: Step two.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-select-credential-start
@@ -198,12 +244,14 @@ Add destination
 
    * - .. image:: ../../images/steps-03.png
           :width: 60 px
-          :alt: Step 3.
-          :align: left
+          :alt: Step three.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-name-and-description-start
           :end-before: .. destinations-steps-name-and-description-end
+
+       .. important:: Be sure the name of the destination includes a reference to the type of audience that is sent from Amperity. For example: "Criteo Onsite Display" or "Criteo Retail Media Offsite".
 
        .. admonition:: Configure business user access
 
@@ -218,14 +266,15 @@ Add destination
 
    * - .. image:: ../../images/steps-04.png
           :width: 60 px
-          :alt: Step 4.
-          :align: left
+          :alt: Step four.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-settings-start
           :end-before: .. destinations-steps-settings-end
 
        **Account ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -233,6 +282,7 @@ Add destination
              :end-before: .. setting-criteo-account-id-end
 
        **Retailer ID**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -240,6 +290,7 @@ Add destination
              :end-before: .. setting-criteo-retailer-id-end
 
        **Identifier type**
+
           |checkmark-required| **Required**
 
           .. include:: ../../shared/destination_settings.rst
@@ -255,11 +306,21 @@ Add destination
 
    * - .. image:: ../../images/steps-05.png
           :width: 60 px
-          :alt: Step 5.
-          :align: left
+          :alt: Step five.
+          :align: center
           :class: no-scaled-link
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. destinations-steps-business-users-start
           :end-before: .. destinations-steps-business-users-end
+
+
+   * - .. image:: ../../images/steps-06.png
+          :width: 60 px
+          :alt: Step six.
+          :align: center
+          :class: no-scaled-link
+     - .. include:: ../../shared/destination_settings.rst
+          :start-after: .. destinations-steps-validate-audience-start
+          :end-before: .. destinations-steps-validate-audience-end
 
 .. destination-criteo-retail-media-add-steps-end

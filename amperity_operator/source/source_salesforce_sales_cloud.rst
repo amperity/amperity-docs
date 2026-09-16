@@ -8,6 +8,7 @@
 .. |domain-table-name| replace:: |source-name|:|feed-name|
 .. |what-pull| replace:: customer records
 .. |credential-type| replace:: **salesforce**
+.. |filter-the-list| replace:: "sales"
 
 
 .. meta::
@@ -66,7 +67,8 @@ Get details
 
 Salesforce Sales Cloud requires the following configuration details:
 
-#. The username and password of a Salesforce account configured for API access.
+#. The Salesforce Sales Cloud username.
+#. The Salesforce Sales Cloud password.
 #. The Salesforce Sales Cloud security token that belongs to username. (The security token is not required if IP range policies are configured from the Salesforce admin console.)
 #. The scheme and host for a custom Salesforce Sales Cloud URL, if used by customer.
 #. If Salesforce Sales Cloud will send data to Amperity from a sandbox instance.
@@ -88,9 +90,7 @@ Add courier
 
 .. tip::
 
-   .. include:: ../../amperity_reference/source/couriers.rst
-      :start-after: .. couriers-run-without-load-operations-start
-      :end-before: .. couriers-run-without-load-operations-end
+   You can run a courier with an empty load operation using ``{}`` as the value for the load operation. Use this approach to get files to upload during feed creation, as a feed requires knowing the schema of a file before you can apply semantic tagging and other feed configuration settings.
 
 **To add a courier for Salesforce Sales Cloud**
 
@@ -100,7 +100,7 @@ Add courier
 #. Find, and then click the icon for |plugin-name|. The **Add Courier** page opens.
 
    This automatically selects |credential-type| as the **Credential Type**.
-#. From the **Credential** dropdown, select **Create a new credential**.
+#. From the **Credential** drop-down, select **Create a new credential**.
 #. Enter the username, password, and security token.
 
 #. Under **Salesforce Sales Cloud Settings** configure **Queries** to specify the tables (and object names) from which Amperity will pull data. For example:
@@ -149,7 +149,7 @@ Add courier
 
    .. important:: Do not connect to a Salesforce sandbox or enter a custom login URL.
 
-   .. note:: You can enable a sandbox or add a custom login URL for this courier later. A custom URL for Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity. A sandbox instance is ignored when a custom URL for Salesforce logins is used.
+   .. note:: You can enable a sandbox or add a custom login URL of this courier later. A custom URL of Salesforce logins requires only the scheme (http:// or https://) and hostname parts of the URL. For example: "https://<hostname>" or "http://<hostname>". The rest of the path is added automatically by Amperity. A sandbox instance is ignored when a custom URL of Salesforce logins is used.
 
 #. Click **Save**.
 
