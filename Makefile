@@ -72,14 +72,13 @@ clean: ## Flush the entire build directory
 	# Cleaning out build directory...
 	@rm -rf $(BUILDDIR)
 
-serve: contributing ## Start up a server on http://locahost:8080
-	serve -dir build
-	open http://localhost:8080
+serve: contributing ## Start up a server on http://localhost:8080
+	# Serving docs on http://localhost:8080 ...
+	python3 -m http.server --directory $(BUILDDIR) --bind localhost 8080
 
 dependencies: ## Install all the required dependencies. You must have Homebrew installed first
 	brew install python
 	pip3 install -r requirements.txt
-	brew install serve
 
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \

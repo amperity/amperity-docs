@@ -48,4 +48,4 @@ Build the contributing documentation and start the local server:
 make serve
 ```
 
-Open [http://localhost:8080/contributing/](http://localhost:8080/contributing/) to view the contributing documentation. The `serve` command must be installed separately; the setup guide describes the supported installation method.
+Open [http://localhost:8080/contributing/](http://localhost:8080/contributing/) to view the contributing documentation.
