@@ -343,7 +343,7 @@ A **200 OK** response has the following parameters.
           * Updating domain tables
           * Updating [table-name]
 
-          where the brackets ``[]`` are placeholders for named objects withn your tenant.
+          where the brackets ``[]`` are placeholders for named objects within your tenant.
 
        .. note:: This is the same value that is visible from the **Task** column on each individual workflow page.
 
