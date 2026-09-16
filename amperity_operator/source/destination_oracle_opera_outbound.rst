@@ -87,11 +87,9 @@ Get details
           :class: no-scaled-link
      - **Credential settings**
 
-       |checkmark-required| **Required**
-
-       Both credential fields are required. No call can be made without them.
-
        **Client ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-id-start
@@ -99,9 +97,17 @@ Get details
 
        **Client Secret**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
+
+       **Environment tier**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oracle-opera-outbound-tier-start
+             :end-before: .. credential-oracle-opera-outbound-tier-end
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -199,11 +205,9 @@ Configure credentials
           :start-after: .. credential-steps-settings-intro-start
           :end-before: .. credential-steps-settings-intro-end
 
-       |checkmark-required| **Required**
-
-       Both credential fields are required.
-
        **Client ID**
+
+          |checkmark-required| **Required**
 
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-id-start
@@ -211,9 +215,17 @@ Configure credentials
 
        **Client Secret**
 
+          |checkmark-required| **Required**
+
           .. include:: ../../shared/credentials_settings.rst
              :start-after: .. credential-oracle-opera-outbound-client-secret-start
              :end-before: .. credential-oracle-opera-outbound-client-secret-end
+
+       **Environment tier**
+
+          .. include:: ../../shared/credentials_settings.rst
+             :start-after: .. credential-oracle-opera-outbound-tier-start
+             :end-before: .. credential-oracle-opera-outbound-tier-end
 
 .. destination-oracle-opera-outbound-credentials-steps-end
 
