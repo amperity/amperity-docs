@@ -251,6 +251,12 @@ Control groups
    :start-after: .. term-control-group-start
    :end-before: .. term-control-group-end
 
+.. campaigns-control-groups-ab-testing-start
+
+Control groups can be used in combination with treatment groups to A/B test segments and sub-audiences. By observing the campaign performance against a treatment group as compared to a control group one can understand its effectiveness.
+
+.. campaigns-control-groups-ab-testing-end
+
 .. campaigns-control-groups-note-start
 
 .. note:: A control group is a randomized sample of customers that is pulled from the original audience.

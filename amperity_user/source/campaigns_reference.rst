@@ -191,6 +191,10 @@ Control groups
    :end-before: .. term-control-group-end
 
 .. include:: ../../amperity_reference/source/campaigns.rst
+   :start-after: .. campaigns-control-groups-ab-testing-start
+   :end-before: .. campaigns-control-groups-ab-testing-end
+
+.. include:: ../../amperity_reference/source/campaigns.rst
    :start-after: .. campaigns-control-groups-note-start
    :end-before: .. campaigns-control-groups-note-end
 
