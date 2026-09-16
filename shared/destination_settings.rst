@@ -29,7 +29,7 @@ A query must return at least one of **email** or **phone**. The remaining column
 
 .. setting-bloomreach-identity-column-start
 
-The Bloomreach hard identifier to use as the primary key. Options include **email**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
+The Bloomreach hard identifier to use as the primary key. Options include **email**, **email_id**, **registered**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
 
 .. setting-bloomreach-identity-column-end
 
