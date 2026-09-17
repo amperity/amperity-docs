@@ -24,3 +24,6 @@ bin/
 lib/
 pyvenv.cfg
 /amperity_reference/.claude
+
+# personal working instructions, not team policy
+/CLAUDE.md
