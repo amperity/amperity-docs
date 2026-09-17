@@ -3186,13 +3186,6 @@ Google Customer Match (GDM) syncs an Amperity audience to a Google Customer Matc
 .. term-google-customer-match-gdm-end
 
 
-.. term-openai-ads-audiences-start
-
-OpenAI Audiences syncs an Amperity audience to an OpenAI custom audience, so you can target, exclude, or bid-adjust those customers in your OpenAI ad campaigns. Members are matched to OpenAI users on a single hashed identifier — an email address or a phone number — that you choose when you configure the destination. The connector uses the OpenAI Advertiser API.
-
-.. term-openai-ads-audiences-end
-
-
 **Looker** part of Google Cloud
 
 .. term-google-looker-start
@@ -4723,6 +4716,15 @@ One and done is a flag that indicates if a customer has made only one purchase.
 OneTrust is a consent and preference management platform that tracks customer opt-in and opt-out status across email, SMS, and other marketing channels and helps companies meet compliance goals related to privacy and security laws, such as CCPA, GDPR, and ISO27001.
 
 .. term-onetrust-end
+
+
+**OpenAI Audiences**
+
+.. term-openai-ads-audiences-start
+
+OpenAI Audiences syncs an Amperity audience to an OpenAI custom audience, so you can target, exclude, or bid-adjust those customers in your OpenAI ad campaigns. Members are matched to OpenAI users on a single hashed identifier — an email address or a phone number — that you choose when you configure the destination. The connector uses the OpenAI Advertiser API.
+
+.. term-openai-ads-audiences-end
 
 
 **Open Database Connectivity (ODBC)**

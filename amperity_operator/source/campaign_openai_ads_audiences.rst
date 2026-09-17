@@ -107,13 +107,6 @@ Get details
              :start-after: .. setting-openai-ads-audiences-list-name-archived-start
              :end-before: .. setting-openai-ads-audiences-list-name-archived-end
 
-   * - .. image:: ../../images/steps-check-off-black.png
-          :width: 60 px
-          :alt: Detail 3.
-          :align: center
-          :class: no-scaled-link
-     - A campaign that is configured to use the sub-audience editor or one-time campaign that is configured to use a query or segment.
-
 .. campaign-openai-ads-audiences-get-details-table-end
 
 
@@ -259,7 +252,7 @@ Add destination
              :start-after: .. setting-openai-ads-audiences-match-identifier-start
              :end-before: .. setting-openai-ads-audiences-match-identifier-end
 
-       **List name** (Required at orchestration)
+       **List name** (Required at campaign)
 
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-openai-ads-audiences-list-name-start
