@@ -57,6 +57,25 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
 .. real-time-page-grid-end
 
 
+.. _real-time-page-use-cases:
+
+Use cases
+==================================================
+
+.. real-time-page-use-cases-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Recognize and re-engage abandoning customers
+      :link-type: doc
+      :link: real_time_abandonment
+
+.. real-time-page-use-cases-grid-end
+
+
 .. toctree::
    :caption: Real-time page
    :maxdepth: 2
@@ -68,3 +87,4 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    About real-time identity recognition <real_time_identity>
    About real-time segments <real_time_segments>
    About real-time journeys <real_time_journeys>
+   Recognize and re-engage abandoning customers <real_time_abandonment>
