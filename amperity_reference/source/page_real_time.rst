@@ -46,6 +46,10 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
       :link-type: doc
       :link: real_time_segments
 
+   .. grid-item-card:: About real-time journeys
+      :link-type: doc
+      :link: real_time_journeys
+
 .. real-time-page-grid-end
 
 
@@ -58,3 +62,4 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    About profile collections and real-time profiles <real_time_profiles>
    About real-time identity recognition <real_time_identity>
    About real-time segments <real_time_segments>
+   About real-time journeys <real_time_journeys>
