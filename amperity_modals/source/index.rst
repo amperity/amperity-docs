@@ -86,6 +86,7 @@ Site Index
    destination-microsoft-ads-offline-events
    destination-moengage
    destination-neustar
+   destination-openai-ads-audiences
    destination-oracle-data-cloud
    destination-oracle-opera-outbound
    destination-oracle-responsys

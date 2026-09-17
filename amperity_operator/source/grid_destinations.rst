@@ -302,6 +302,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_neustar
 
+   .. grid-item-card:: OpenAI Audiences
+      :link-type: doc
+      :link: destination_openai_ads_audiences
+
    .. grid-item-card:: Optimizely
       :link-type: doc
       :link: destination_optimizely
@@ -529,6 +533,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Monetate <destination_monetate>
    Movable Ink <destination_moveableink>
    Neustar <destination_neustar>
+   OpenAI Audiences <destination_openai_ads_audiences>
    Optimizely <destination_optimizely>
    Oracle Data Cloud <destination_oracle_data_cloud>
    Oracle Eloqua <destination_oracle_eloqua>

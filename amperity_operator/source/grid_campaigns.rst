@@ -236,6 +236,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_neustar
 
+   .. grid-item-card:: OpenAI Audiences
+      :link-type: doc
+      :link: campaign_openai_ads_audiences
+
    .. grid-item-card:: Oracle Data Cloud
       :link-type: doc
       :link: campaign_oracle_data_cloud
@@ -418,6 +422,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    MoEngage <campaign_moengage>
    Monetate <campaign_monetate>
    Neustar <campaign_neustar>
+   OpenAI Audiences <campaign_openai_ads_audiences>
    Oracle Data Cloud <campaign_oracle_data_cloud>
    Oracle Eloqua <campaign_oracle_eloqua>
    Oracle Responsys <campaign_oracle_responsys>

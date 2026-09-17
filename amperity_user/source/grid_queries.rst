@@ -269,6 +269,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_neustar
 
+   .. grid-item-card:: OpenAI Audiences
+      :link-type: doc
+      :link: destination_openai_ads_audiences
+
    .. grid-item-card:: Optimizely
       :link-type: doc
       :link: destination_optimizely
@@ -595,6 +599,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Microsoft Power BI <destination_power_bi>
    Monetate <destination_monetate>
    Neustar <destination_neustar>
+   OpenAI Audiences <destination_openai_ads_audiences>
    Optimizely <destination_optimizely>
    Oracle Data Cloud <destination_oracle_data_cloud>
    Oracle Eloqua <destination_oracle_eloqua>

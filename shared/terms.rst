@@ -4718,6 +4718,15 @@ OneTrust is a consent and preference management platform that tracks customer op
 .. term-onetrust-end
 
 
+**OpenAI Audiences**
+
+.. term-openai-ads-audiences-start
+
+OpenAI Audiences syncs an Amperity audience to an OpenAI custom audience, so you can target, exclude, or bid-adjust those customers in your OpenAI ad campaigns. Members are matched to OpenAI users on a single hashed identifier — an email address or a phone number — that you choose when you configure the destination. The connector uses the OpenAI Advertiser API.
+
+.. term-openai-ads-audiences-end
+
+
 **Open Database Connectivity (ODBC)**
 
 .. term-odbc-start
