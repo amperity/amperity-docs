@@ -34,6 +34,10 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
       :link-type: doc
       :link: event_streams
 
+   .. grid-item-card:: About profile collections and real-time profiles
+      :link-type: doc
+      :link: real_time_profiles
+
 .. real-time-page-grid-end
 
 
@@ -43,3 +47,4 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    :hidden:
 
    About event streams and event types <event_streams>
+   About profile collections and real-time profiles <real_time_profiles>
