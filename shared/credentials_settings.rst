@@ -1925,6 +1925,15 @@ OAuth client secret from the OHIP Developer Portal.
 .. credential-oracle-opera-outbound-client-secret-end
 
 
+**Environment tier**
+
+.. credential-oracle-opera-outbound-tier-start
+
+Optional. Selects which of Amperity's OHIP applications signs these calls--**prod** or **nonprod**. Oracle registers a partner's production and non-production OHIP applications separately, and a key issued for one does not work against the other. Leave this blank only on a credential created before this option existed; such a credential keeps using the key its stack already holds.
+
+.. credential-oracle-opera-outbound-tier-end
+
+
 
 .. vale off
 

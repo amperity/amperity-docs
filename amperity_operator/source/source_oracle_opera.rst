@@ -76,17 +76,19 @@ Get details
           :alt: Detail one.
           :align: center
           :class: no-scaled-link
-     - **Configure environment and application, get Oracle OPERA config settings**
+     - **Provide environment details and approve Amperity's connection**
 
-       Do the following steps in |source-name| before configuring Amperity:
+       New |source-name| customers do not register their own OHIP application or supply an application key. Amperity's application connects to your |source-name| environment; you approve the connection, and an Amperity operator then generates the credential.
 
-       #. `Create an environment in Oracle OPERA <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_adding_an_environment.htm>`__ |ext_link|. After the environment is created, get the enterprise ID and chain code for that environment.
+       #. Provide your Amperity representative with the enterprise ID, chain code, and gateway URL for your `Oracle OPERA environment <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_adding_an_environment.htm>`__ |ext_link|.
+
+       #. An Amperity operator adds your environment to Amperity's OHIP application and subscribes to the profile and reservation events.
+
+       #. Approve the partner connection request and the event subscription in |source-name|.
 
           .. caution:: Do not enable streaming in the |source-name| environment until **after** the courier that will pull streamed data to Amperity has been configured.
 
-       #. Get the `client ID, client secret, and gateway URL <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_viewing_environment_details_ssd.htm>`__ |ext_link| for |source-name|
-
-       #. `Register an application <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_registering_an_application.htm>`__ |ext_link|. After the application is registered, `get the application key <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_view_application_key.htm>`__ |ext_link| for that application.
+       #. Once you approve the connection, an Amperity operator generates the client credentials--the **Client ID** and **Client secret**--in the OHIP Developer Portal.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -98,9 +100,9 @@ Get details
 
        :ref:`Configure a courier <source-oracle-opera-add-courier>` for streaming events using the configuration settings from |source-name|.
 
-       Use the **Client ID** and **Client secret** to configure credentials.
+       Use the **Client ID**, **Client secret**, and **Environment tier** to configure credentials. The environment tier--**prod** or **nonprod**--selects which of Amperity's OHIP applications signs the calls.
 
-       Use the **Gateway URL**, **Application key**, **Enterprise ID**, and **Chain code** to configure the courier.
+       Use the **Gateway URL**, **Enterprise ID**, and **Chain code** to configure the courier.
 
 
    * - .. image:: ../../images/steps-check-off-black.png
@@ -159,15 +161,15 @@ Configure Oracle OPERA
 
 .. source-oracle-opera-configure-start
 
-The following steps must be completed in |source-name| before you can configure Amperity:
+New |source-name| customers do not register their own OHIP application or supply an application key. Amperity's application connects to your |source-name| environment; you approve the connection, and an Amperity operator then generates the credential. Complete the following before you configure Amperity:
 
-#. `Create an environment in Oracle OPERA <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_adding_an_environment.htm>`__ |ext_link|. After the environment is created, get the enterprise ID and chain code for that environment.
+#. Provide your Amperity representative with the enterprise ID, chain code, and gateway URL for your `Oracle OPERA environment <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_adding_an_environment.htm>`__ |ext_link|.
 
    .. caution:: Do not enable streaming in the |source-name| environment until **after** the courier that will pull streamed data to Amperity has been configured.
 
-#. Get the `client ID, client secret, and gateway URL <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_viewing_environment_details_ssd.htm>`__ |ext_link| for |source-name|
+#. An Amperity operator adds your environment to Amperity's OHIP application and subscribes to the profile and reservation events.
 
-#. `Register an application <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_registering_an_application.htm>`__. After the application is registered, `get the application key <https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_view_application_key.htm>`__ |ext_link| for that application.
+#. Approve the partner connection request and the event subscription in |source-name|. Once you approve, an Amperity operator generates the client credentials--the **Client ID** and **Client secret**--in the OHIP Developer Portal.
 
 .. source-oracle-opera-configure-end
 
@@ -196,11 +198,13 @@ Add courier
 
    This automatically selects |credential-type| as the **Credential Type**.
 
-#. From the **Credential** dropdown, select **Create a new credential**. Configure the credential using the **Client ID** and **Client secret**.
+#. From the **Credential** dropdown, select **Create a new credential**. Configure the credential using the **Client ID**, **Client secret**, and **Environment tier**.
 
-#. Under **Oracle Opera Settings** configure the **Gateway URL**, **Application key**, **Enterprise ID**, and **Chain code**.
+   The **Environment tier**--**prod** or **nonprod**--selects which of Amperity's OHIP applications signs the calls. Leave it blank only for a credential created before this option existed.
 
-   .. note:: The combination of gateway URL, application key, and chain code uniquely identifies a stream.
+#. Under **Oracle Opera Settings** configure the **Gateway URL**, **Enterprise ID**, and **Chain code**.
+
+   .. note:: **Application key** is a legacy setting. New couriers leave it blank and sign with Amperity's OHIP application, chosen by the credential's environment tier; the combination of gateway URL, OHIP application, and chain code uniquely identifies a stream. The field remains only for feeds configured before this change. A stored key is read-only because it forms part of the feed's stream identity--changing it replays up to seven days of events, so contact Amperity support to change or retire it.
 
 #. Under **Oracle Opera Settings**, select the **Load Type**:
 
