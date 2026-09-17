@@ -42,6 +42,10 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
       :link-type: doc
       :link: real_time_identity
 
+   .. grid-item-card:: About real-time segments
+      :link-type: doc
+      :link: real_time_segments
+
 .. real-time-page-grid-end
 
 
@@ -53,3 +57,4 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    About event streams and event types <event_streams>
    About profile collections and real-time profiles <real_time_profiles>
    About real-time identity recognition <real_time_identity>
+   About real-time segments <real_time_segments>
