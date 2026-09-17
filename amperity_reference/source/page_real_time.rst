@@ -30,6 +30,10 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: About real-time
+      :link-type: doc
+      :link: real_time
+
    .. grid-item-card:: About event streams and event types
       :link-type: doc
       :link: event_streams
@@ -58,6 +62,7 @@ Recognize customers and react to their behavior as it happens. Amperity's real-t
    :maxdepth: 2
    :hidden:
 
+   About real-time <real_time>
    About event streams and event types <event_streams>
    About profile collections and real-time profiles <real_time_profiles>
    About real-time identity recognition <real_time_identity>
