@@ -87,7 +87,7 @@ Keychain and identity ordering
 
 A collection's linking keys form a :ref:`keychain <k-keychain>`: the key identifiers, in priority order, that map an inbound identifier to a profile. When Amperity resolves an event, it walks the keychain in priority order and returns the first profile a key resolves to. A keychain entry maps a linking-key value to a single Amperity ID; a value that would map to more than one Amperity ID is left out of the keychain rather than resolved ambiguously.
 
-The keychain here is the collection-side view: the ordered keys a collection resolves against. How the keychain is built from Stitch outputs, and how an inbound event is recognized as a stitched customer end to end, is covered in real-time identity recognition.
+The keychain here is the collection-side view: the ordered keys a collection resolves against. How the keychain is built from Stitch outputs, and how an inbound event is recognized as a stitched customer end to end, is covered in :doc:`real-time identity recognition <real_time_identity>`.
 
 .. real-time-profiles-keychain-end
 

@@ -36,7 +36,7 @@ Real-time segments and :doc:`database segments <segments>` are different objects
 * A **real-time segment** is a predicate bound to a **profile collection**. Its membership is maintained continuously, in real time, as the collection's profiles change.
 * A **database segment** is a query bound to a **database**. Its membership is produced by running that query as a batch job.
 
-Use a real-time segment when membership has to reflect a customer's most recent activity the moment it happens--for example, to drive a :ref:`real-time journey <r-real-time-journey>`. Use a database segment for audiences built from your customer 360 database on a scheduled or on-demand basis.
+Use a real-time segment when membership has to reflect a customer's most recent activity the moment it happens--for example, to drive a :doc:`real-time journey <real_time_journeys>`. Use a database segment for audiences built from your customer 360 database on a scheduled or on-demand basis.
 
 .. real-time-segments-vs-database-end
 
@@ -48,7 +48,7 @@ How membership is maintained
 
 .. real-time-segments-membership-start
 
-A real-time segment's predicate is written in :doc:`Amperity's expression language <expressions>` and evaluated against each profile in the bound collection. As events update a profile, Amperity re-evaluates the predicate for that profile: a profile that newly satisfies it **enters** the segment, and a profile that no longer satisfies it **exits**. These entries and exits are the signal that drives :ref:`real-time journeys <r-real-time-journey>`--a customer entering a segment is what starts them on a journey.
+A real-time segment's predicate is written in :doc:`Amperity's expression language <expressions>` and evaluated against each profile in the bound collection. As events update a profile, Amperity re-evaluates the predicate for that profile: a profile that newly satisfies it **enters** the segment, and a profile that no longer satisfies it **exits**. These entries and exits are the signal that drives :doc:`real-time journeys <real_time_journeys>`--a customer entering a segment is what starts them on a journey.
 
 You can read a segment's current membership--the profiles that belong to it right now--through the Real-time API. See the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
 

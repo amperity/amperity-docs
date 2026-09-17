@@ -60,7 +60,7 @@ An event type is the schema Amperity applies to the events on a stream. An event
 * A **data type** that the produced value is coerced to.
 * Whether a value is **required**. When a required field produces no value, the event is marked invalid.
 
-A field can also be designated a **linking key**--an identifier, such as an email address, that Amperity uses to link the event to a customer. Recognizing *which* customer an event belongs to is a distinct step from recognizing the event's type, and is covered separately in real-time identity recognition. A field can additionally carry a **format** that constrains how its value is interpreted.
+A field can also be designated a **linking key**--an identifier, such as an email address, that Amperity uses to link the event to a customer. Recognizing *which* customer an event belongs to is a distinct step from recognizing the event's type, and is covered separately in :doc:`real-time identity recognition <real_time_identity>`. A field can additionally carry a **format** that constrains how its value is interpreted.
 
 .. event-streams-types-end
 
