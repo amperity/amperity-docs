@@ -26,6 +26,10 @@ Send query results to OpenAI Audiences
    :end-before: .. term-openai-ads-audiences-end
 
 .. include:: ../../amperity_operator/source/destination_openai_ads_audiences.rst
+   :start-after: .. destination-openai-ads-audiences-beta-start
+   :end-before: .. destination-openai-ads-audiences-beta-end
+
+.. include:: ../../amperity_operator/source/destination_openai_ads_audiences.rst
    :start-after: .. destination-openai-ads-audiences-api-note-start
    :end-before: .. destination-openai-ads-audiences-api-note-end
 
