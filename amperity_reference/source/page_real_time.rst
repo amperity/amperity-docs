@@ -73,6 +73,10 @@ Use cases
       :link-type: doc
       :link: real_time_abandonment
 
+   .. grid-item-card:: Personalize experiences for recognized customers
+      :link-type: doc
+      :link: real_time_personalization
+
 .. real-time-page-use-cases-grid-end
 
 
@@ -88,3 +92,4 @@ Use cases
    About real-time segments <real_time_segments>
    About real-time journeys <real_time_journeys>
    Recognize and re-engage abandoning customers <real_time_abandonment>
+   Personalize experiences for recognized customers <real_time_personalization>
