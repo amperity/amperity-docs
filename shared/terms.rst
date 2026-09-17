@@ -319,6 +319,15 @@ The **All Opted-In Emails** table has all opted-in email addresses and associate
 .. vale on
 
 
+**always-on segment**
+
+.. term-always-on-segment-start
+
+Always-on describes an audience whose membership Amperity maintains continuously instead of producing it from a scheduled run. In the real-time suite, an always-on segment is a real-time segment: its membership updates as inbound events change the profiles it evaluates.
+
+.. term-always-on-segment-end
+
+
 **Amazon Ads**
 
 .. term-amazon-ads-start
@@ -2684,6 +2693,24 @@ Event propensity is a predictive model that finds the likelihood that a customer
 An **Event Propensity** table associates individual customers to the events that, depending on the event, are most likely to lead to engagement with your brand.
 
 .. term-event-propensity-table-end
+
+
+**event stream**
+
+.. term-event-stream-start
+
+An event stream is a configured flow of inbound events that Amperity ingests and processes in real time. A stream recognizes the type of each event it receives, evaluates the identifiers that link the event to a customer, and routes qualifying events to the profile collections that subscribe to it. A stream can be set to accept, silently drop, or reject the events sent to it.
+
+.. term-event-stream-end
+
+
+**event type**
+
+.. term-event-type-start
+
+An event type is the schema that Amperity applies to the events on an event stream. It declares a set of typed fields — each field defines an expression that produces its value, a data type, and whether a value is required — and can designate fields to use as linking keys. Field data types include complex and nested structures, such as arrays, maps, and structs.
+
+.. term-event-type-end
 
 
 **Eventbrite**
@@ -5486,6 +5513,26 @@ The **Allow Profile API administration** policy option allows full access to the
 .. term-profile-api-administrator-policy-end
 
 
+**profile collection**
+
+.. term-profile-collection-start
+
+A profile collection is a set of real-time profiles that share an identity graph, a set of subscribed event streams, and a set of attribute definitions. A collection resolves each inbound event to a profile keyed by its profile ID, and maintains the computed and aggregate attributes that every profile in the collection carries.
+
+.. term-profile-collection-end
+
+
+**profile ID**
+
+.. TODO: verify with <eng> — code pins the collection :profile-id to "amperity_id" (profile-rama/config.clj:731-733, ";; TODO: prototyping legacy, remove this special-casing"). Confirm no per-collection profile-id override ships before generalizing this wording (NC9).
+
+.. term-profile-id-start
+
+A profile ID is the identifier that keys a real-time profile within a profile collection. The profile ID is the Amperity ID, the stitched identifier that represents all of the records for a single customer, so each profile in a collection corresponds to one stitched customer.
+
+.. term-profile-id-end
+
+
 **Pseudonymous identifier**
 
 .. term-pseudonymous-identifier-start
@@ -5696,6 +5743,24 @@ Raw UID2 values are unencrypted alphanumeric identifiers that are created from a
 .. term-rcfile-end
 
 .. vale on
+
+
+**real-time journey**
+
+.. term-real-time-journey-start
+
+A real-time journey is an always-on journey that customers enter and move through in real time. Travelers enter a real-time journey through their membership in a real-time segment, and each traveler's path through the journey's stages is recorded in a travel log.
+
+.. term-real-time-journey-end
+
+
+**real-time segment**
+
+.. term-real-time-segment-start
+
+A real-time segment is an always-on audience defined by an expression that Amperity evaluates against the profiles in a profile collection. Membership is maintained continuously — a profile joins or leaves the segment as the events that change it arrive — rather than being produced by a scheduled query run. Real-time segments provide the entry criteria for real-time journeys.
+
+.. term-real-time-segment-end
 
 
 **recall**
