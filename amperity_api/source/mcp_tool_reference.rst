@@ -542,6 +542,22 @@ Manage campaigns, campaign folders, journeys, and audiences.
    * - Read the journey authoring reference
      - **journey_get_authoring_reference**
 
+   * - Manage real-time journeys, which admit travelers continuously on real-time segment membership
+     - **real_time_journey_create**
+
+       **real_time_journey_update**
+
+   * - Activate or pause a real-time journey
+     - **real_time_journey_activate**
+
+       **real_time_journey_pause**
+
+   * - Read the real-time journey authoring reference
+     - **real_time_journey_get_authoring_reference**
+
+   * - Look up where an individual is in real-time journeys
+     - **real_time_journey_traveler_status**
+
 
 .. _mcp-tool-data-exports:
 
