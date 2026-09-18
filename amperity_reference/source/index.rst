@@ -55,6 +55,12 @@ Key concepts
 
       Customer profiles are the foundation for your brand's marketing activity.
 
+   .. grid-item-card:: |fa-wave-pulse| Real-time
+      :link-type: doc
+      :link: page_real_time
+
+      Recognize customers and react to their behavior in real time with event streams, profile collections, and real-time segments.
+
    .. grid-item-card:: |fa-users-between-lines| Audiences
       :link-type: doc
       :link: page_audiences
@@ -308,6 +314,7 @@ Components
    Sources <sources>
    Stitch <page_stitch>
    Customer profiles <page_customer_profiles>
+   Real-time <page_real_time>
    Audiences <page_audiences>
    Workflows <page_workflows>
    Activations <page_activations>

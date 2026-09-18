@@ -107,6 +107,59 @@ Time-windowed expressions--such as those used in real-time segments and aggregat
 .. realtime-expressions-time-end
 
 
+.. _realtime-expressions-scope:
+
+Scoping an aggregation
+==================================================
+
+.. realtime-expressions-scope-start
+
+An aggregation attribute summarizes a profile's events. Each aggregation declares a **scope** that selects which of the profile's events it includes:
+
+* **A specific event type** -- only events of that type on that stream.
+* **A stream** -- every event on the stream, across its event types.
+* **All events** -- every event on the profile, across all streams.
+
+Choose the narrowest scope that answers the question. For example, scope a "most recent cart value" aggregation to the cart event type, and a "total events in the last hour" aggregation to all events.
+
+.. realtime-expressions-scope-end
+
+
+.. _realtime-expressions-arrays:
+
+Working with arrays
+==================================================
+
+.. realtime-expressions-arrays-start
+
+Real-time attributes often work with arrays--the line items in a cart, the events in a window. AEL provides a set of array functions for these values:
+
+* **Select and reshape:** ``filter``, ``transform``, ``take``, ``skip``, ``array_sort``
+* **Combine and compare:** ``union``, ``difference``, ``array_intersect``, ``distinct``, ``array_zip``
+* **Summarize:** ``array_sum``, ``array_avg``, ``array_min``, ``array_max``, ``array_mode``, ``array_counts``
+
+Two behaviors to keep in mind:
+
+* An array function returns ``NULL`` when its input is ``NULL``, not an empty array. Guard for ``NULL`` where an input array may be absent.
+* ``union``, ``difference``, and ``distinct`` can differ from their batch Spark equivalents in some cases. Verify results if you depend on exact parity with a batch computation.
+
+.. realtime-expressions-arrays-end
+
+
+.. _realtime-expressions-types:
+
+Decimals and type checking
+==================================================
+
+.. realtime-expressions-types-start
+
+Real-time expressions honor **decimal scale**: a value declared as a decimal keeps its precision and scale through the computation, so monetary and other fixed-point values are not silently reduced to a floating-point approximation.
+
+Real-time configuration also type-checks expressions strictly. An expression that resolves to a type that does not match where it is used is reported as a configuration error when you save it, rather than failing later at run time.
+
+.. realtime-expressions-types-end
+
+
 .. _realtime-expressions-more:
 
 Beyond this subset
@@ -114,7 +167,7 @@ Beyond this subset
 
 .. realtime-expressions-more-start
 
-AEL includes many additional operators and functions--arithmetic, decimal precision, array operations, and more--that are beyond the subset needed for real-time configuration.
+AEL includes many additional operators and functions beyond the subset described here. For every operation available in real-time expressions, including its full signature, see the :ref:`AEL operations <expressions-operations>` catalog below.
 
 .. realtime-expressions-more-end
 
