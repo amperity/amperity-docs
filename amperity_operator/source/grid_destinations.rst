@@ -150,6 +150,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_cross_country_computer
 
+   .. grid-item-card:: Customer.io
+      :link-type: doc
+      :link: destination_customerio
+
    .. grid-item-card:: Domo
       :link-type: doc
       :link: destination_domo
@@ -495,6 +499,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Criteo <destination_criteo>
    Criteo Retail Media <destination_criteo_retail_media>
    Cross Country Computer <destination_cross_country_computer>
+   Customer.io <destination_customerio>
    Domo <destination_domo>
    Dotdigital <destination_dotdigital>
    DV360 <destination_dv360>

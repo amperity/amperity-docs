@@ -2051,6 +2051,15 @@ A data type defines the data that is in a column. Amperity supports the followin
 .. term-data-type-end
 
 
+**Customer.io**
+
+.. term-customerio-start
+
+Customer.io is a customer engagement platform for sending automated messages across email, SMS, push, and in-app channels, driven by customer data and behavior.
+
+.. term-customerio-end
+
+
 **Databricks**
 
 .. term-databricks-start
