@@ -68,9 +68,14 @@ This destination uses the `Bloomreach Engagement API <https://documentation.bloo
 
 .. destination-bloomreach-reporting-start
 
-.. note:: Amperity sends customer updates and segment membership changes to |destination-name| over the batch API and receives a result for each row in the same request. Rows that |destination-name| rejects are reported as failed, and the rejection reason is recorded as an error on the orchestration or campaign run in Amperity.
+.. note:: Amperity sends only what changed since the previous run. For each run, Amperity chooses how to send each lane of data--customer attribute updates and segment membership changes are separate lanes--based on how many rows that lane contains:
 
-.. warning:: Attributes accumulate across everything sent to a |destination-name| project over time. If the project's total number of distinct attributes would exceed |destination-name|'s per-customer attribute limit (255 by default), |destination-name| rejects the over-limit writes and Amperity reports them as errors on the run.
+   * **Up to 250,000 rows in a lane** are sent over the |destination-name| batch API, and Amperity receives a result for each row in the same request. Rows that |destination-name| rejects are reported as failed, and the rejection reason is recorded as an error on the orchestration or campaign run in Amperity.
+   * **More than 250,000 rows in a lane** are sent over the |destination-name| Imports API as one or more bulk files. |destination-name| accepts each import and processes it afterward, and does not return per-row results. The run reports success when |destination-name| accepts the import, not when its rows finish processing. Import outcomes surface only in |destination-name|: in the import history in the |destination-name| console (retained for 30 days) and in ``ImportError`` and ``ImportRowsDiscarded`` notifications to project users. Because processing is progressive, an import that fails partway may leave rows partly applied.
+
+   The two lanes cross this threshold independently, so a single run may use the batch API for one lane and the Imports API for the other.
+
+.. warning:: Attributes accumulate across everything sent to a |destination-name| project over time. If the project's total number of distinct attributes would exceed |destination-name|'s per-customer attribute limit (255 by default), |destination-name| rejects the over-limit writes. For lanes sent over the batch API (up to 250,000 rows) Amperity reports these rejections as errors on the run; for lanes sent over the Imports API they surface only in |destination-name|'s import history and notifications, as described above.
 
 .. destination-bloomreach-reporting-end
 
@@ -147,6 +152,12 @@ Get details
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
+
+       **Additional identifiers**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-bloomreach-soft-id-columns-start
+             :end-before: .. setting-bloomreach-soft-id-columns-end
 
        **Segment name**
 
@@ -340,6 +351,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
+
+       **Additional identifiers**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-bloomreach-soft-id-columns-start
+             :end-before: .. setting-bloomreach-soft-id-columns-end
 
        **Segment name**
 

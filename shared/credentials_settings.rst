@@ -56,7 +56,7 @@ The public API key ID for your Bloomreach Engagement project.
 
 .. credential-bloomreach-api-secret-start
 
-The private API secret for your Bloomreach Engagement project. The API key's API group must permit customer updates and event tracking.
+The private API secret for your Bloomreach Engagement project. The API key's API group must permit customer updates, event tracking, and imports--under **Imports**, both **Allow to Create new Imports** and the delete permission. Import permissions are used only when a run exceeds the bulk threshold, so a key that lacks them still passes the connection test and works until the first large run.
 
 .. credential-bloomreach-api-secret-end
 
