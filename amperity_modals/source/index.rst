@@ -45,6 +45,7 @@ Site Index
    destination-criteo-offline-sales
    destination-criteo-retail-media
    destination-cross-country-computer
+   destination-customerio
    destination-dotdigital
    destination-dynamic-yield-customer-profiles
    destination-dynamics-365-marketing
