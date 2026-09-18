@@ -1107,6 +1107,19 @@ Required. The API URL of your |destination-name| account. May be one of the foll
 .. credential-cordial-api-url-end
 
 
+.. credential-customerio-api-key-start
+
+Required. The Pipelines API key that authenticates each request. Generate it in Customer.io under **Account Settings > API Credentials**, and use the Pipelines API key -- not the App API key, which is a different credential type.
+
+.. credential-customerio-api-key-end
+
+.. credential-customerio-region-start
+
+Required. The regional data center that hosts your Customer.io workspace, which determines the API base URL. Select **us** or **eu**. Defaults to **us**. Customer.io has no cross-region fallback, so a value that does not match your workspace's region causes the connection to fail.
+
+.. credential-customerio-region-end
+
+
 
 
 .. vale off
