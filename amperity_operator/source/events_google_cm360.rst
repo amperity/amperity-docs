@@ -40,14 +40,6 @@ Amperity sends conversions to CM360 through the Google Data Manager API. There i
 
 .. events-google-cm360-overview-end
 
-.. events-google-cm360-beta-start
-
-.. admonition:: Beta
-
-   The Google CM360 connector is currently in beta. Contact your Amperity representative to learn more.
-
-.. events-google-cm360-beta-end
-
 
 .. _events-google-cm360-howitworks:
 

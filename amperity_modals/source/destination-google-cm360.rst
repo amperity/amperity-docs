@@ -13,10 +13,6 @@ Google Campaign Manager 360
    :start-after: .. term-google-cm360-start
    :end-before: .. term-google-cm360-end
 
-.. admonition:: Beta
-
-   The Google CM360 connector is currently in beta. Contact your Amperity representative to learn more.
-
 
 Credentials
 ==================================================
