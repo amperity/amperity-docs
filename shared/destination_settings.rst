@@ -29,9 +29,16 @@ A query must return at least one of **email** or **phone**. The remaining column
 
 .. setting-bloomreach-identity-column-start
 
-The Bloomreach hard identifier to use as the primary key. Options include **email**, **email_id**, **registered**, **cookie**, **google_analytics**, or **external_id**. Map a dataset attribute to a destination attribute with the same name as the identifier you select. If no dataset attribute matches, the run fails with an error before any data is sent.
+The Bloomreach hard identifier to use as the primary key. Enter the name exactly as one of the hard identifiers defined for your Bloomreach project (under **Administration > Identifiers**). Map a dataset attribute to a destination attribute with the same name as the identifier you enter. If no dataset attribute matches, the run fails with an error before any data is sent. The list of hard and soft identifiers is project-dependent; for your project's identifier lists, contact your Bloomreach CSM.
 
 .. setting-bloomreach-identity-column-end
+
+
+.. setting-bloomreach-soft-id-columns-start
+
+A list of other Bloomreach hard or soft identifiers to key your data with, entered as comma-separated values (for example, ``cookie,google_analytics``). Name each one exactly as it is defined for your Bloomreach project. Map a dataset attribute to a destination attribute with the same name as each identifier in the list. If a dataset attribute does not match a listed identifier, the run fails with an error before any data is sent. Each additional identifier is sent as identity data, not as a customer attribute: attribute updates carry these identifiers, but segment membership is always keyed on the primary **Bloomreach identifier** alone. The list of hard and soft identifiers is project-dependent; for your project's identifier lists, contact your Bloomreach CSM.
+
+.. setting-bloomreach-soft-id-columns-end
 
 
 .. setting-bloomreach-segment-name-start

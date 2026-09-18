@@ -153,6 +153,12 @@ Get details
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
 
+       **Additional identifiers**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-bloomreach-soft-id-columns-start
+             :end-before: .. setting-bloomreach-soft-id-columns-end
+
        **Segment name**
 
           |checkmark-required| **Required**
@@ -345,6 +351,12 @@ Add destination
           .. include:: ../../shared/destination_settings.rst
              :start-after: .. setting-bloomreach-identity-column-start
              :end-before: .. setting-bloomreach-identity-column-end
+
+       **Additional identifiers**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-bloomreach-soft-id-columns-start
+             :end-before: .. setting-bloomreach-soft-id-columns-end
 
        **Segment name**
 
