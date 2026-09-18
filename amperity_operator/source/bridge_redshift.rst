@@ -333,11 +333,9 @@ The following table describes how Amazon Redshift data types map to Amperity dat
 
        .. note:: Synonymous with **BINARY**, **BINARY VARYING**, and **VARBINARY**.
 
-     - .. warning:: The Amazon Redshift **VARBYTE** data type is unsupported.
+     - .. warning:: The Amazon Redshift **VARBYTE** data type is unsupported. A table that includes a **VARBYTE** column fails when the bridge runs its export.
 
-          Amperity Bridge reads a Redshift table by unloading it to Parquet, and Amazon Redshift can `only unload VARBYTE columns to text or CSV format <https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html#unload-usage-varbyte>`__ |ext_link|.
-
-          Use a view or a custom domain table to coerce a binary column to a supported Amperity data type before sharing it with Amperity Bridge. For example, use `FROM_VARBYTE <https://docs.aws.amazon.com/redshift/latest/dg/r_FROM_VARBYTE.html>`__ |ext_link| to return the column as a string:
+          Amperity Bridge reads a Redshift table by unloading it to Parquet, and Amazon Redshift can `only unload VARBYTE columns to text or CSV format <https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html#unload-usage-varbyte>`__ |ext_link|. Exclude the column, or use a view or a custom domain table to coerce it to a supported Amperity data type before sharing it with Amperity Bridge. For example, use `FROM_VARBYTE <https://docs.aws.amazon.com/redshift/latest/dg/r_FROM_VARBYTE.html>`__ |ext_link| to return the column as a string:
 
           .. code-block:: sql
 
@@ -528,6 +526,10 @@ Configure Amazon Redshift
 To configure |destination-name| to connect with Amperity you need to create the query role and the unload role in the AWS account that owns your |destination-name|, attach the unload role to your cluster or workgroup, and then grant read access within |destination-name| to the identity that the queries run as. On a provisioned cluster you must also create the database user that the queries run as.
 
 .. note:: IAM gets Amperity as far as the cluster. It grants no access to any data. Access to data is granted inside |destination-name|, as described in :ref:`Grant database access <bridge-redshift-from-redshift-configure-redshift-grants>`.
+
+.. note:: **Bring Your Own Storage (BYOS)**
+
+   These instructions describe Amperity-managed storage, where your unload role chains into the **Amperity storage role** that Amperity provides. If your tenant uses Bring Your Own Storage, the storage role lives in your own AWS account and you manage its trust yourself. See :ref:`Provision storage on Amazon AWS <storage-provision-location-aws>`, and work with your Amperity representative for the BYOS storage-role details.
 
 .. bridge-redshift-from-redshift-configure-redshift-end
 
@@ -776,6 +778,10 @@ On Serverless the identity name contains a colon, which is why |destination-name
 
 Grant only what you want Amperity to see. Amperity can read exactly what this identity can read, and nothing more. If you want Amperity to have access to only a subset of the columns on a particular table, consider creating a view that exposes only those columns, and granting **SELECT** on the view instead of the table.
 
+.. note:: **Metadata security**
+
+   If your |destination-name| cluster or workgroup has metadata security enabled, the query identity also needs the **ACCESS CATALOG** permission--or a database role that carries it--before Amperity can read your table schemas. Without it, catalog reads fail even after **USAGE** and **SELECT** have been granted.
+
 .. important:: **External table access**
 
    If some of your |destination-name| tables are external tables rather than standard internal tables, be aware that permission management for external tables is less fine-grained. |destination-name| grants access to external tables, such as Amazon Redshift Spectrum or external schemas, at the schema level and not per table. This means that you will not be able to expose a single external table without granting access to the entire schema, which may be inconvenient.
@@ -823,7 +829,7 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - Enter the Amperity Access Role ARN, your |destination-name| deployment details (cluster identifier or Serverless workgroup), database name, and region.
+     - Enter your connection and IAM details: select the **Deployment** (provisioned cluster or Serverless workgroup); enter the **Region**, the **Cluster identifier** or **Workgroup name**, and the **Database**, plus the **Database user** for a provisioned cluster; then enter your **AWS account ID**, the **Query role ARN** you created, and the **Unload role name** you created.
 
 
    * - .. image:: ../../images/steps-03.png
@@ -831,7 +837,7 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Test the connection. Amperity validates the role, external ID, and network path.
+     - Select **Save and continue**. Amperity validates the query role, external ID, and network path by reading your |destination-name| catalog through the connection.
 
 
    * - .. image:: ../../images/steps-04.png
@@ -862,6 +868,8 @@ Configure an inbound bridge to connect |destination-name| with Amperity.
 .. bridge-redshift-from-redshift-add-bridge-after-start
 
 Once saved, the bridge runs alongside any other bridges or couriers that you already use. You do not need to migrate everything to Amperity Bridge for |destination-name| at once.
+
+.. note:: Amperity does not assign primary keys to the domain tables that the bridge creates. Use a custom domain table to assign primary keys, apply semantic tags, and shape the data to support any of your Amperity workflows.
 
 .. tip:: Amperity recommends starting with one to three representative tables or views, including at least one higher-volume feed, to validate |destination-name| query runtime, **UNLOAD** duration, ingestion timing, and workload impact before expanding further.
 
