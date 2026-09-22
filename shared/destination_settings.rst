@@ -1413,6 +1413,13 @@ See SFTP.
 
 .. vale on
 
+.. setting-customerio-person-id-field-start
+
+Selects the field that supplies each person's Customer.io identifier (``userId``) -- the value Customer.io upserts each profile on. Only ``id`` (the Amperity ID) is available. Every other column in the query results is sent to Customer.io as a profile attribute (trait), keeping the column name, value, and type (string, number, or boolean).
+
+.. setting-customerio-person-id-field-end
+
+
 Settings unique to Databricks.
 
 **Catalog name**
