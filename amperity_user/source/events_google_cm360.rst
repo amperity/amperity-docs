@@ -30,10 +30,6 @@ Send offline conversions to Google Campaign Manager 360
    :start-after: .. events-google-cm360-overview-start
    :end-before: .. events-google-cm360-overview-end
 
-.. include:: ../../amperity_operator/source/events_google_cm360.rst
-   :start-after: .. events-google-cm360-beta-start
-   :end-before: .. events-google-cm360-beta-end
-
 
 .. _events-google-cm360-user-howitworks:
 
