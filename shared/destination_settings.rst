@@ -2908,6 +2908,24 @@ The name of the audience list to create in Roku Ads Manager.
 
 .. setting-roku-audience-list-name-unique-end
 
+.. setting-airship-custom-events-identifier-type-start
+
+The kind of |destination-name| identifier that the **airship_identifier** column holds. Every event is keyed on exactly one identifier, and this setting applies to the whole orchestration. Select one of:
+
+* **named_user_id** — an |destination-name| named user ID. Limited to 128 characters.
+* **channel** — a generic |destination-name| channel.
+* **ios_channel**, **android_channel**, **amazon_channel**, or **web_channel** — a channel for a specific platform.
+
+Every value other than **named_user_id** must be a valid |destination-name| channel UUID. |destination-name| accepts **sms_channel**, **email_channel**, and **open_channel** for some other upload paths, but not for events, so you cannot key an event on an email address or phone number. Defaults to **named_user_id**.
+
+.. setting-airship-custom-events-identifier-type-end
+
+.. setting-airship-custom-events-query-must-return-start
+
+A query must return **airship_identifier** and **event_name**. All other columns are optional.
+
+.. setting-airship-custom-events-query-must-return-end
+
 .. setting-roku-capi-event-group-id-start
 
 The Roku event group (online property) that receives the events. Find it in Roku Ads Manager under **Events**. A destination sends to a single event group.
