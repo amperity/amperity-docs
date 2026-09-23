@@ -32,7 +32,7 @@ Configure custom events for Airship
 
 Send |what-send| to |destination-name| so that customer behavior in Amperity can trigger an |destination-name| automation — such as a push notification, in-app message, SMS, or email — and personalize the message it sends. Each row returned by your query is sent as a single |destination-name| custom event, carrying an event name, a customer identifier, an optional timestamp, and any additional columns as event properties.
 
-An event is different from a profile attribute: an |destination-name| automation listens for an event by name and acts when it arrives, whereas attributes only enrich a profile for segmentation and personalization. This connector sends events; the Airship Attributes connector sends attributes. It also replaces the file-based "Audience Uploader" process, in which Amperity dropped a file over SFTP for Airship to turn into events, by sending events to |destination-name| directly.
+An event is different from a profile attribute: an |destination-name| automation listens for an event by name and acts when it arrives, whereas attributes only enrich a profile for segmentation and personalization. This connector sends events; the Airship Attributes connector sends attributes. Unlike the file-based Airship connector, which delivers a file to an |destination-name| SFTP location, this connector sends events to |destination-name| directly.
 
 Amperity sends customer identifiers to |destination-name| exactly as your query returns them. Unlike some event connectors, this connector does not hash or normalize identifiers, so provide values in the form |destination-name| expects.
 
@@ -360,10 +360,10 @@ Bound the query to recent events so each orchestration sends new events instead 
    SELECT
      c360.loyalty_id AS airship_identifier  -- the ID your Airship named users are keyed on
      ,'purchase' AS event_name              -- lower-cased before sending
-     ,ut.order_datetime AS occurred         -- uit.order_datetime
-     ,ut.order_id AS order_id               -- uit.order_id (sent as a property)
-     ,ut.order_revenue AS order_total       -- uit.order_revenue (sent as a property)
-     ,ut.currency AS currency               -- uit.currency (sent as a property)
+     ,ut.order_datetime AS occurred         -- when the event occurred
+     ,ut.order_id AS order_id               -- sent as a property
+     ,ut.order_revenue AS order_total       -- sent as a property
+     ,ut.currency AS currency               -- sent as a property
    FROM Unified_Transactions ut
    LEFT JOIN Customer_360 c360 ON ut.amperity_id = c360.amperity_id
    WHERE ut.order_datetime > (CURRENT_DATE - interval '30' day)
@@ -595,15 +595,17 @@ Invalid settings
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-start
 
-Amperity was unable to reach |destination-name|. This most often means the credential's **Data Center** does not match the region hosting your |destination-name| project — verify that the **Data Center** is set to the region (US or EU) where your project is hosted.
+|destination-name| did not accept this workflow's configuration. Confirm the destination's settings, and verify that the credential's **Data Center** is set to the region (US or EU) that hosts your |destination-name| project.
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-end
+
+.. TODO: verify with connector team — what condition surfaces the "Invalid settings" workflow action for this connector, and whether it is reachable at all. The connector classifies 401/403 as invalid credentials and other 4xx as an invalid-schema error carrying Airship's own message; there is no distinct "unreachable" path. Confirm whether a Data Center mismatch surfaces here or as invalid credentials (which already covers Data Center), and reword or remove this section accordingly.
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-steps-start
 
 To resolve this error, verify the settings configured for this workflow in Amperity.
 
-#. Open the **Destinations** page and review the credential connected to the |destination-name| destination associated with this workflow. Verify the **Data Center** matches the region hosting your |destination-name| project.
+#. Open the **Destinations** page and review the |destination-name| destination associated with this workflow, along with its connected credential. Verify the destination's settings, and that the credential's **Data Center** matches the region hosting your |destination-name| project.
 #. Return to the workflow action, and then click **Resolve** to retry this workflow.
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-steps-end
