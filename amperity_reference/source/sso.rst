@@ -165,7 +165,7 @@ Send URL of Amperity metadata
 
 .. sso-exchange-amperity-metadata-start
 
-After your Amperity Support team has configured the metadata for your IdP they sends to you the URL of Amperity service provider metadata.
+After your Amperity Support team has configured the metadata for your IdP they send to you the URL of Amperity service provider metadata.
 
 .. important:: The specific configuration details for your IdP may vary.
 
