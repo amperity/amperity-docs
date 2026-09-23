@@ -187,6 +187,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_adobe_marketo
 
+   .. grid-item-card:: Airship Attributes
+      :link-type: doc
+      :link: campaign_airship_attributes
+
    .. grid-item-card:: Amazon S3
       :link-type: doc
       :link: campaign_amazon_s3
@@ -349,6 +353,7 @@ Send campaigns to any of the following marketing applications and workflows.
 
    ActiveCampign <campaign_active_campaign>
    Adobe Marketo <campaign_adobe_marketo>
+   Airship Attributes <campaign_airship_attributes>
    Amazon S3 <campaign_amazon_s3>
    Attentive <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
