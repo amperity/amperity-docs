@@ -376,7 +376,7 @@ Bound the query to recent conversions so each orchestration sends new conversion
      c360.email AS email
      ,c360.phone AS phone
      ,ut.order_datetime AS conversion_timestamp
-     ,ut.order_revenue AS conversion_value
+     ,CASE WHEN ut.order_revenue < 0 THEN 0 ELSE ut.order_revenue END AS conversion_value
      ,'USD' AS currency_code
      ,ut.order_id AS order_id
    FROM Unified_Transactions ut
@@ -395,7 +395,7 @@ where:
 
   The ``'UTC'`` argument is required, not cosmetic. It makes ``from_unixtime`` return a timestamp with a time zone so that ``to_iso8601`` emits the trailing ``Z``. Without it the value carries no offset and Google rejects every conversion.
 
-* **conversion_value** is the value Google Ads bids on, and is sent only when **currency_code** is also present.
+* **conversion_value** is the value Google Ads bids on, and is sent only when **currency_code** is also present. Google rejects a negative conversion value, so a row whose revenue is negative — a return, refund, or void — is dropped and reported as a failed row. The ``CASE`` expression sends zero for those rows instead of the negative amount, which reports the order with no value rather than dropping it. Where **order_id** holds the identifier of the *original* order, sending zero for it removes the value from the conversion already reported for that order; where the return is recorded as its own transaction with its own ID, it instead reports a separate conversion worth zero, which increases your conversion count. Check the result in Google Ads after the first run. To leave these conversions unreported instead, drop the ``CASE`` expression and add ``AND ut.order_revenue > 0`` to the ``WHERE`` clause.
 * **currency_code** is a valid |ext_iso_4217| currency code — for example, ``USD``.
 * **order_id** is the deduplication key. Send a stable value so that repeated sends of the same conversion are not double-counted.
 
@@ -418,6 +418,8 @@ Return these names in lower case — ``conversion_timestamp``, ``email``, ``phon
 During a send, a row is dropped and reported as failed when it has no usable **email** or **phone** value. A row that has a **conversion_value** but no **currency_code** is still sent, but the value is dropped and reported: the conversion is recorded as a count rather than carrying the value. Rows that Google rejects for a per-row reason are reported as failed rows with Google's reason in the orchestration's error log.
 
 Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string.
+
+**conversion_value** must be zero or greater. Google rejects a negative conversion value, so rows carrying one — most often returns, refunds, and voids in the source transaction data — are dropped and reported as failed rows with the reason ``Invalid conversion_value (must be a finite non-negative number)``. On a dataset that records returns this way, these can account for every failed row in a run that otherwise succeeds. Decide in the query whether to send those orders with a value of zero or to leave them out.
 
 **A malformed conversion_timestamp is the exception to per-row handling.** Google validates the timestamp when it receives the batch and rejects the whole request rather than the offending row, so a timestamp in the wrong format fails every conversion in that batch. The orchestration then fails with ``Exceeded error limit of 100%`` and the error log carries Google's reason, ``Illegal timestamp format; timestamps must end with 'Z' or have a valid timezone offset``. If you see that, correct the format in the query and run the orchestration again.
 
@@ -464,6 +466,8 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **Optional**
 
        The value of the conversion, as a number. Sent only when **currency_code** is also present.
+
+       Must be zero or greater. A negative value is rejected by Google, so rows carrying one are dropped and reported as failed rows.
 
    * - **currency_code**
      - **currency**
