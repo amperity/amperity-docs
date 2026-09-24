@@ -5,7 +5,7 @@
 .. |plugin-name| replace:: SAP S/4HANA Public Cloud
 .. |credential-type| replace:: **sap-s4hana-public-cloud**
 .. |source-interface| replace:: |source-name|
-.. |what-pull| replace:: sales orders, products, business partners, and stores
+.. |what-pull| replace:: sales orders, sales order line items, products, business partners, and plants
 .. |credential-fields| replace:: the name of the credential, a description, and the |source-name| communication user and password
 
 
@@ -31,9 +31,11 @@ Pull from SAP S/4HANA Public Cloud
 
 .. source-sap-s4hana-public-cloud-context-start
 
-|source-name| can send |what-pull| to Amperity using the OData v2 APIs that SAP publishes for S/4HANA Cloud, Public Edition. Choose which data types to pull: **Sales orders**, **Sales order line items**, **Products**, **Business partners**, and **Plants (stores)**. Amperity creates a feed and domain table for each data type you select.
+|source-name| can send |what-pull| to Amperity using the OData v2 APIs that SAP publishes for S/4HANA Cloud, Public Edition. Choose which data types to pull: **Business partners**, **Plants**, **Products**, **Sales order items**, and **Sales orders**. Amperity creates a feed and domain table for each data type you select.
 
 Amperity lands every field that your SAP tenant returns for the selected records. Fields and field names are not modified, apart from the following: OData structural fields are removed, SAP timestamps are converted to standard timestamps, and fields that have no value are omitted from the record.
+
+Only the fields on the record itself are landed. Data that SAP holds in related records, such as a sales order's partners or a business partner's addresses, is not included.
 
 .. source-sap-s4hana-public-cloud-context-end
 
@@ -80,15 +82,17 @@ SAP S/4HANA Cloud, Public Edition does not allow an external application to auth
 
 **To configure SAP access**
 
+.. TODO: verify with SAP administrator / PO — the communication system step below is standard SAP procedure but is not described anywhere in /app, and no one at Amperity has walked it on a tenant. No screenshots exist for either SAP-side screen.
+
 #. Create a communication user for Amperity using the **Maintain Communication Users** app. Record the user name and password.
 #. Create a communication system that registers Amperity as the calling system, and then assign the communication user to it for inbound communication.
-#. Create and activate a communication arrangement for each data type that Amperity pulls. A communication arrangement instantiates a communication scenario, which determines the APIs that the communication user is allowed to call.
+#. Create and activate a communication arrangement for each communication scenario in the table below. A communication arrangement is based on a communication scenario, which determines the APIs that the communication user is allowed to call.
 
 .. source-sap-s4hana-public-cloud-configure-sap-end
 
 .. source-sap-s4hana-public-cloud-scenarios-start
 
-Each data type requires its own communication arrangement. Selecting a data type in Amperity does not grant access to it.
+Access is granted per communication scenario, not per data type. Each scenario in the following table requires its own communication arrangement, and selecting a data type in Amperity does not grant access to it.
 
 .. list-table::
    :widths: 40 60
@@ -96,22 +100,24 @@ Each data type requires its own communication arrangement. Selecting a data type
 
    * - Data type
      - Communication scenario
-   * - Sales orders
-     - SAP_COM_0109
-   * - Sales order line items
-     - SAP_COM_0109
-   * - Products
-     - SAP_COM_0009
    * - Business partners
      - SAP_COM_0008
-   * - Plants (stores)
+   * - Plants
      - Not identified. See the note below.
+   * - Products
+     - SAP_COM_0009
+   * - Sales order items
+     - SAP_COM_0109
+   * - Sales orders
+     - SAP_COM_0109
+
+Sales orders and sales order items are served by the same scenario, so one communication arrangement covers both.
 
 .. note::
 
-   The communication scenario that exposes plant (store) data is not identified. SAP does not document which scenario publishes this API for Public Edition. Before you select **Plants (stores)**, confirm with your SAP administrator that this data can be read from your tenant.
+   The communication scenario that exposes plant data is not identified. SAP does not document which scenario publishes this API for Public Edition. Before you select **Plants**, confirm with your SAP administrator that this data can be read from your tenant. Plant records carry the plant identifier and name and the company code and name. They do not include an address.
 
-Adding a data type later requires a new communication arrangement for that data type.
+Adding a data type later requires a communication arrangement for its scenario, unless a data type you already pull uses the same one. Amperity creates a feed and domain table for each data type that you add.
 
 .. source-sap-s4hana-public-cloud-scenarios-end
 
@@ -137,7 +143,7 @@ Get details
 
       The API URL is not the address that your staff use to sign in to SAP. It is a separate host, and the two are easily confused. Amperity verifies that the API URL is a secure address, but cannot verify that it is the correct host, so an incorrect value appears as a failed connection rather than as a validation message.
 
-#. The **Data types** to pull. Select any combination of **Sales orders**, **Sales order line items**, **Products**, **Business partners**, and **Plants (stores)**. Select at least one.
+#. The **Data types** to pull. Select any combination of **Business partners**, **Plants**, **Products**, **Sales order items**, and **Sales orders**. Select at least one.
 
 .. tip:: Use |ext_snappass| to securely share configuration details for |source-name| between your company and your Amperity representative.
 
@@ -217,7 +223,7 @@ Review feed and domain table
 
 After running the |source-name| courier, Amperity creates a feed and domain table for each data type you selected. You may apply semantic tags to the fields in these tables and you may make each domain table available to Stitch, depending on your use case.
 
-The fields in each domain table are the fields that your SAP tenant returns for that record type, which vary between SAP customers because SAP customers activate different parts of the product. For example, a sales order header carries approximately 94 fields. The authoritative field list for your tenant comes from your own SAP system rather than from SAP's general documentation. Contact your Amperity representative if you need the exact field list for your tenant.
+The fields in each domain table are the fields that your SAP tenant returns for that record type, which vary between SAP customers because SAP customers activate different parts of the product. Expect a wide table: a sales order header in SAP's own sample data carries around 94 fields. The authoritative field list for your tenant comes from your own SAP system rather than from SAP's general documentation. Contact your Amperity representative if you need the exact field list for your tenant.
 
 .. source-sap-s4hana-public-cloud-review-data-end
 
@@ -235,7 +241,9 @@ Add to courier group
 
 .. important::
 
-   Set the courier group to look back over a time period that is at least twice the schedule interval. A scheduled courier group calculates the start of its time period from the schedule, not from the last successful run, so a failed daily run that looks back one day loses that day permanently. Pulling the same time period twice has no adverse effect, because loading the same record again updates it.
+   Leave **Only retrieve files dropped in the past day?** cleared unless the courier group runs daily. A scheduled courier group calculates the start of its time period from the schedule, not from the last successful run, so a failed run loses that period permanently.
+
+   The courier group settings do not offer a longer look-back period than one day. Contact your Amperity representative to set a look-back period that is at least twice the schedule interval. Pulling the same time period twice has no adverse effect, because loading the same record again updates it.
 
 .. source-sap-s4hana-public-cloud-courier-group-lookback-end
 
@@ -256,21 +264,21 @@ A courier group that runs on a schedule pulls records that changed during the sc
    * - Data type
      - Pulled incrementally
      - Notes
-   * - Sales orders
-     - Yes
-     - Filtered on the sales order's last-changed timestamp.
-   * - Sales order line items
-     - Yes
-     - Filtered on the parent sales order's last-changed timestamp. SAP does not maintain a last-changed timestamp on line items.
-   * - Products
-     - Yes
-     - Filtered on the product's last-changed timestamp.
    * - Business partners
      - No
      - Pulled in full on every run. SAP does not populate a last-changed date on business partner records reliably enough to filter on, and filtering on it would omit records without reporting an error.
-   * - Plants (stores)
+   * - Plants
      - No
      - Pulled in full on every run. SAP does not publish a last-changed timestamp for this record type.
+   * - Products
+     - Yes
+     - Filtered on the product's last-changed timestamp.
+   * - Sales order items
+     - Yes
+     - Filtered on the parent sales order's last-changed timestamp. SAP does not maintain a last-changed timestamp on line items.
+   * - Sales orders
+     - Yes
+     - Filtered on the sales order's last-changed timestamp.
 
 .. source-sap-s4hana-public-cloud-incremental-end
 
@@ -282,14 +290,14 @@ SAP does not expose deleted records through these APIs. A record that is deleted
 
 Sales orders are less affected than other data types, because SAP users typically reject a sales order rather than delete it. A rejection is an ordinary field change that an incremental pull collects.
 
-To clear records that were deleted in SAP, configure a second courier that uses the **Truncate and upsert** load option, and then add it to a courier group that runs infrequently and looks back over a longer time period. Whether a courier empties a table before loading is a property of the courier rather than of an individual run, so a single courier cannot do this only sometimes. Point the second courier at the same feeds, settings, and credential as the first.
+To clear records that were deleted in SAP, configure a second courier that uses the **Truncate and upsert** load option, and then add it to a courier group that runs infrequently. Whether a courier empties a table before loading is a property of the courier rather than of an individual run, so a single courier cannot do this only sometimes. Point the second courier at the same feeds, settings, and credential as the first. This courier group requires a look-back period that is longer than the history held in your SAP tenant, which is longer than the courier group settings offer. Contact your Amperity representative to set it.
 
 .. source-sap-s4hana-public-cloud-deletes-end
 
 
 .. _source-sap-s4hana-public-cloud-connection-errors:
 
-Troubleshoot connection errors
+Troubleshoot errors
 ==================================================
 
 .. source-sap-s4hana-public-cloud-connection-errors-start
