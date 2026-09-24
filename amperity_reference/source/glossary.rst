@@ -230,6 +230,16 @@ A
       :end-before: .. term-all-opted-in-emails-table-end
 
 
+.. _a-always-on-segment:
+
+**always-on segment**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-always-on-segment-start
+      :end-before: .. term-always-on-segment-end
+
+   See :ref:`real-time segment <r-real-time-segment>`.
+
+
 .. _a-amazon-ads:
 
 **Amazon Ads**
@@ -1814,6 +1824,26 @@ E
    .. include:: ../../shared/terms.rst
       :start-after: .. term-event-propensity-start
       :end-before: .. term-event-propensity-end
+
+
+.. _e-event-stream:
+
+**event stream**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-event-stream-start
+      :end-before: .. term-event-stream-end
+
+   See :ref:`event type <e-event-type>`.
+
+
+.. _e-event-type:
+
+**event type**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-event-type-start
+      :end-before: .. term-event-type-end
+
+   See :ref:`event stream <e-event-stream>`.
 
 
 .. _e-evergage:
@@ -3742,6 +3772,26 @@ P
       :end-before: .. term-profile-api-end
 
 
+.. _p-profile-collection:
+
+**profile collection**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-profile-collection-start
+      :end-before: .. term-profile-collection-end
+
+   See :ref:`event stream <e-event-stream>` and :ref:`real-time segment <r-real-time-segment>`.
+
+
+.. _p-profile-id:
+
+**profile ID**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-profile-id-start
+      :end-before: .. term-profile-id-end
+
+   See :ref:`Amperity ID <a-amperity-id>`.
+
+
 .. _p-pseudonymous-identifier:
 
 **Pseudonymous identifier**
@@ -3901,10 +3951,30 @@ R
       :end-before: .. term-rcfile-end
 
 
+.. _r-real-time-journey:
+
+**real-time journey**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-real-time-journey-start
+      :end-before: .. term-real-time-journey-end
+
+   See :ref:`real-time segment <r-real-time-segment>`.
+
+
 .. _r-real-time-profile-api:
 
 **Real-time Profile API**
    See :ref:`Profile API <p-profile-api>`.
+
+
+.. _r-real-time-segment:
+
+**real-time segment**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-real-time-segment-start
+      :end-before: .. term-real-time-segment-end
+
+   See :ref:`profile collection <p-profile-collection>`.
 
 
 .. _r-recall:
