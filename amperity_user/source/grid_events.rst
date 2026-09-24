@@ -31,6 +31,10 @@ Events
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: Airship Custom Events
+      :link-type: doc
+      :link: events_airship_custom_events
+
    .. grid-item-card:: Amazon Ads Conversion API
       :link-type: doc
       :link: events_amazon_capi
@@ -117,6 +121,7 @@ Events
    :hidden:
 
    About events <events>
+   Airship Custom Events <events_airship_custom_events>
    Amazon Ads Conversion API <events_amazon_capi>
    Attentive eCommerce & Conversion Events <events_attentive_ecommerce>
    Braze Purchases <events_braze_purchases>

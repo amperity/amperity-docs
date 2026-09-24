@@ -2346,6 +2346,41 @@ Generate the API key in |destination-name| by navigating to **Settings > API Key
 
 .. credential-dynamic-yield-customer-profiles-api-find-key-end
 
+.. credential-airship-custom-events-client-id-start
+
+The client ID from a set of OAuth client credentials that you create in your |destination-name| project. It is the identifier half of the credential pair.
+
+.. credential-airship-custom-events-client-id-end
+
+.. credential-airship-custom-events-client-secret-start
+
+The client secret paired with the Client ID. |destination-name| shows the client secret only once, when you create the credentials, so record it before you leave the page.
+
+.. credential-airship-custom-events-client-secret-end
+
+.. credential-airship-custom-events-app-key-start
+
+The app key for the |destination-name| project that receives the events. It scopes the credential to a single project and identifies the integration to |destination-name| support.
+
+.. credential-airship-custom-events-app-key-end
+
+.. credential-airship-custom-events-data-center-start
+
+The |destination-name| data center that hosts your project. Select the region that matches your project:
+
+* ``US``
+* ``EU``
+
+Credentials are regional: a project's credentials sent to the other data center fail as though they were invalid. Confirm the region with your |destination-name| project settings. Defaults to **US**.
+
+.. credential-airship-custom-events-data-center-end
+
+.. credential-airship-custom-events-find-start
+
+Create the credentials in |destination-name| under **Settings > Project settings > OAuth > Add credentials**. Grant the **Events** permission and enable the option to generate a client secret (labeled "Allow basic auth"). If you also use the Airship Attributes connector, grant both the **Events** and **Lists** permissions to the same credentials rather than creating two sets.
+
+.. credential-airship-custom-events-find-end
+
 .. credential-eagle-eye-client-id-start
 
 The Eagle Eye AIR API client ID, provisioned by your Eagle Eye account manager. It identifies your Amperity integration to Eagle Eye.

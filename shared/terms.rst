@@ -306,6 +306,15 @@ Airship is a customer engagement platform that helps marketers connect with thei
 .. term-airship-attributes-end
 
 
+**Airship Custom Events**
+
+.. term-airship-custom-events-start
+
+Airship Custom Events send behavioral events from Amperity to Airship, where each event can trigger an Airship automation — such as a push notification, in-app message, SMS, or email — and personalize the message it sends. Airship is a customer engagement platform that helps marketers connect with their customers across every stage of the customer lifecycle.
+
+.. term-airship-custom-events-end
+
+
 **Airtable**
 
 .. term-airtable-start
