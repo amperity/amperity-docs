@@ -37,7 +37,7 @@ You can configure Amperity to send customer attributes to |destination-name| usi
 
 Each send uploads the entire query result to a named Airship attribute list, creating the list on the first send and reusing it after that. The list name prefix selects how empty values are handled: a name beginning ``ua_attributes_`` preserves the attribute values already on each profile, for an incremental send, while ``ua_attributes_snapshot_`` removes attributes left empty by the upload, for a full refresh.
 
-Amperity uploads the attributes as a compressed file, then waits for Airship to finish processing before reporting results, which can take up to 30 minutes for a large list. Amperity reports how many rows Airship applied and how many it rejected, along with a sample of any row-level errors.
+Amperity uploads the attributes as a compressed file, then waits for Airship to finish processing before reporting results. A large list usually finishes within 5 to 10 minutes; Amperity waits up to 30 minutes before timing out. Amperity reports how many rows Airship applied and how many it rejected, along with a sample of any row-level errors.
 
 .. destination-airship-attributes-end
 
@@ -63,7 +63,7 @@ Amperity uploads the attributes as a compressed file, then waits for Airship to 
 
 .. note:: Airship applies each upload as a whole: if Airship rejects the upload, because a column is not an existing attribute or the list fails validation, none of the rows are applied. Individual rows can still fail after an accepted upload, and Amperity reports these separately with a sample of the reasons. A successful send confirms that Airship accepted and applied the file, not that every row reached a profile: Airship counts a row as applied even when its identifier matches no existing user, holding that data for 90 days before discarding it. If a send reports success but you see no change in Airship, confirm that the **Identifier type** matches the identifier your Airship project uses.
 
-.. note:: Airship enforces these limits per attribute list and project: 10 million rows and 101 columns per list (one identifier column plus up to 100 attributes), a list name of at most 64 characters, 100 attribute lists per project, and 250 attributes per project. Airship does not publish a request rate limit; Amperity sends conservatively to stay within Airship's unpublished threshold.
+.. note:: Airship enforces these limits per attribute list and project: 10 million rows and 101 columns per list (one identifier column plus up to 100 attributes), 1.5 GB per uploaded file, a list name of at most 64 characters, 100 attribute lists per project, and 250 attributes per project. Airship does not publish a request rate limit.
 
 .. destination-airship-attributes-behavior-end
 
