@@ -840,6 +840,34 @@ See SFTP.
 
 
 
+.. setting-airship-attributes-identifier-type-start
+
+The type of Airship identifier that the ``airship_identifier`` column holds. Airship accepts only one identifier type per upload, so this setting applies to the whole destination. Select one of ``named_user`` (the named user ID in your Airship project), ``channel_id`` (an Airship channel ID), or ``email_address``. Defaults to ``named_user``.
+
+A phone number (``msisdn``) identifier is not available, because Airship requires an additional sender column alongside it that this destination does not provide.
+
+.. setting-airship-attributes-identifier-type-end
+
+
+.. setting-airship-attributes-list-name-start
+
+The name of the Airship attribute list to upload to. This is set for each send, so different sends can write to different lists.
+
+.. setting-airship-attributes-list-name-end
+
+
+.. setting-airship-attributes-list-name-prefix-start
+
+.. important:: The list name must be at most 64 characters and must begin with one of two prefixes that determine how empty values are handled:
+
+   * ``ua_attributes_`` — empty values are ignored, preserving the attribute values already on the Airship profile. Use this for incremental, additive sends.
+   * ``ua_attributes_snapshot_`` — empty values remove the matching attribute from the Airship profile, making the upload authoritative. Use this for a full refresh.
+
+   Amperity rejects a name that does not start with one of these prefixes before the send begins.
+
+.. setting-airship-attributes-list-name-prefix-end
+
+
 .. vale off
 
 **AMAZON ADS**

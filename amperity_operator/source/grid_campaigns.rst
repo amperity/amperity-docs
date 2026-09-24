@@ -66,6 +66,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_airship
 
+   .. grid-item-card:: Airship Attributes
+      :link-type: doc
+      :link: campaign_airship_attributes
+
    .. grid-item-card:: Amazon Ads
       :link-type: doc
       :link: campaign_amazon_ads
@@ -379,6 +383,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    Adobe Experience Platform <campaign_adobe_aep>
    Adobe Marketo <campaign_adobe_marketo>
    Airship <campaign_airship>
+   Airship Attributes <campaign_airship_attributes>
    Amazon Ads <campaign_amazon_ads>
    Amazon S3 <campaign_amazon_s3>
    Attentive API (Attributes) <campaign_attentive_mobile_api>

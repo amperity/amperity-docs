@@ -18,6 +18,7 @@ Site Index
    destination-active-campaign
    destination-acxiom
    destination-airship
+   destination-airship-attributes
    destination-airship-custom-events
    destination-adobe-ecs
    destination-adobe-customer-attributes

@@ -574,6 +574,43 @@ See SFTP.
 
 .. credential-airship-port-end
 
+
+.. credential-airship-attributes-client-id-start
+
+The client ID from the OAuth credentials created in your Airship project. This identifies the API client that Amperity authenticates as.
+
+.. credential-airship-attributes-client-id-end
+
+
+.. credential-airship-attributes-client-secret-start
+
+The client secret that pairs with the client ID. Airship displays the client secret only once, when the credentials are created, so copy it at that time.
+
+.. credential-airship-attributes-client-secret-end
+
+
+.. credential-airship-attributes-app-key-start
+
+The app key for the Airship project that receives the data. This scopes access to a single Airship project and identifies the integration to Airship.
+
+.. credential-airship-attributes-app-key-end
+
+
+.. credential-airship-attributes-data-center-start
+
+The Airship data center that hosts your project, either US or EU. Defaults to US. Credentials are specific to a data center; selecting the wrong one fails in the same way as an incorrect credential.
+
+.. credential-airship-attributes-data-center-end
+
+
+.. credential-airship-attributes-find-credentials-start
+
+Create these credentials in your Airship project under **Settings > Project settings > OAuth > Add credentials**. Grant the credentials the **Lists** permission, which covers attribute uploads, and enable the option that generates a client secret (**Allow basic auth**). Provide the resulting client ID, client secret, app key, and data center to Amperity.
+
+If you also use the Airship Custom Events destination, grant both the **Lists** and **Events** permissions to a single set of credentials rather than creating a separate set.
+
+.. credential-airship-attributes-find-credentials-end
+
 **Private key**
 
 See SFTP.
