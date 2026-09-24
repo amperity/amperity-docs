@@ -140,6 +140,7 @@ Add inbound bridge
 
 The steps for adding an inbound bridge depend on the location from which data will be connected to Amperity:
 
+* `Amperity Bridge for Amazon Redshift <../operator/bridge_redshift.html#from-amazon-redshift>`__
 * `Amperity Bridge for Databricks <../operator/bridge_databricks.html#from-databricks>`__
 * `Amperity Bridge for Google BigQuery <../operator/bridge_google_bigquery.html#from-google-bigquery>`__
 * `Amperity Bridge for Snowflake <../operator/bridge_snowflake.html#from-snowflake>`__
