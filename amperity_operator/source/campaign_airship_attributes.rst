@@ -37,7 +37,7 @@ You can configure Amperity to send a campaign audience of customer attributes to
 
 Each campaign send uploads the entire audience to a named Airship attribute list, creating the list on the first send and reusing it after that. The list name prefix selects how empty values are handled: a name beginning ``ua_attributes_`` preserves the attribute values already on each profile, for an incremental send, while ``ua_attributes_snapshot_`` removes attributes left empty by the upload, for a full refresh.
 
-Amperity uploads the attributes as a compressed file, then waits for Airship to finish processing before reporting results. A large list usually finishes within 5 to 10 minutes; Amperity waits up to 30 minutes before timing out. Amperity reports how many rows Airship applied and how many it rejected, along with a sample of any row-level errors.
+Amperity uploads the attributes as a compressed file, then waits for Airship to finish processing before reporting results. A large list usually finishes within 5 to 10 minutes; Amperity waits up to 30 minutes before timing out. Amperity reports how many rows Airship accepted and how many it rejected, along with a sample of any row-level errors.
 
 .. campaign-airship-attributes-end
 
