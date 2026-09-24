@@ -297,6 +297,15 @@ Airship is a customer engagement platform that helps marketers connect with thei
 .. term-airship-end
 
 
+**Airship Attributes**
+
+.. term-airship-attributes-start
+
+Airship is a customer engagement platform that helps marketers connect with their customers across every stage of the customer lifecycle. The Airship Attributes destination sends customer attributes from Amperity to matching profiles in an Airship project using the Airship Attribute Lists API, where they can be used for segmentation and personalization.
+
+.. term-airship-attributes-end
+
+
 **Airtable**
 
 .. term-airtable-start
