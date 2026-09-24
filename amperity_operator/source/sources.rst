@@ -222,6 +222,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_salesforce_sales_cloud
 
+   .. grid-item-card:: SAP S/4HANA Public Cloud
+      :link-type: doc
+      :link: source_sap_s4hana_public_cloud
+
    .. grid-item-card:: SevenRooms
       :link-type: doc
       :link: source_sevenrooms
@@ -314,6 +318,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Salesforce Marketing Cloud <source_salesforce_marketing_cloud>
    Salesforce Pardot <source_salesforce_pardot>
    Salesforce Sales Cloud <source_salesforce_sales_cloud>
+   SAP S/4HANA Public Cloud <source_sap_s4hana_public_cloud>
    SevenRooms <source_sevenrooms>
    SFTP <source_sftp>
    Shopify (GraphQL) <source_shopify_graphql>
