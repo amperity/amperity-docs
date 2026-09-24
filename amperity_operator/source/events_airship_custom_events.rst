@@ -451,9 +451,7 @@ The following table describes each column Amperity sends to |destination-name|. 
      - **occurred**
      - **Optional**
 
-       When the event occurred. Send a full |ext_iso_8601| timestamp that includes a time — for example, ``2026-07-10T12:00:00Z`` or ``2026-07-10T12:00:00``. A value with a UTC offset such as ``2026-07-10T12:00:00+02:00`` is converted to UTC. A date-only value (``2026-07-10``), a space-separated timestamp (``2026-07-10 12:00:00``), or a numeric epoch value is not accepted, and the row is held back. If the column is absent or blank, the time of the send is used. A value that is present but cannot be read as a timestamp causes the row to be held back rather than defaulted, because sending an event with the wrong date is worse than not sending it. |destination-name| rejects events more than three months old or more than one hour in the future.
-
-       .. TODO: verify with connector team — how a date/time-typed query column (for example ut.order_datetime) serializes into the row value, and whether that string form is accepted by Instant/parse. If typed columns do not render as ISO 8601 with a "T" separator, the build-query example must cast occurred to an ISO 8601 string.
+       When the event occurred. Send a full |ext_iso_8601| timestamp that includes a time — for example, ``2026-07-10T12:00:00Z`` or ``2026-07-10T12:00:00``. A value with a UTC offset such as ``2026-07-10T12:00:00+02:00`` is converted to UTC. A value with no offset, such as ``2026-07-10T12:00:00``, is read as UTC, so send store-local times with an explicit offset to avoid a silent shift. A date-only value (``2026-07-10``), a space-separated timestamp (``2026-07-10 12:00:00``), or a numeric epoch value is not accepted, and the row is held back. If the column is absent or blank, the time of the send is used. A value that is present but cannot be read as a timestamp causes the row to be held back rather than defaulted, because sending an event with the wrong date is worse than not sending it. |destination-name| rejects events more than three months old or more than one hour in the future.
 
    * - **interaction_id**
      - **body.interaction_id**
@@ -598,8 +596,6 @@ Invalid settings
 |destination-name| did not accept this workflow's configuration. Confirm the destination's settings, and verify that the credential's **Data Center** is set to the region (US or EU) that hosts your |destination-name| project.
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-end
-
-.. TODO: verify with connector team — what condition surfaces the "Invalid settings" workflow action for this connector, and whether it is reachable at all. The connector classifies 401/403 as invalid credentials and other 4xx as an invalid-schema error carrying Airship's own message; there is no distinct "unreachable" path. Confirm whether a Data Center mismatch surfaces here or as invalid credentials (which already covers Data Center), and reword or remove this section accordingly.
 
 .. events-airship-custom-events-workflow-actions-invalid-settings-steps-start
 
