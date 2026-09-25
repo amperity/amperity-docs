@@ -341,7 +341,7 @@ where:
 
   The ``'UTC'`` argument is required, not cosmetic. It makes ``from_unixtime`` return a timestamp with a time zone so that ``to_iso8601`` emits the trailing ``Z``. Without it the value carries no offset and CM360 rejects every conversion.
 
-* **conversion_value** is the value CM360 bids on. To bid on delivered value, such as a predicted lifetime value, send that value here in place of the order total. CM360 rejects a negative value and fails the entire batch it was sent in, so the ``CASE`` expression sends zero for rows whose revenue is negative — returns, refunds, and voids. To leave those conversions unreported instead, drop the ``CASE`` expression and add ``AND ut.order_revenue > 0`` to the ``WHERE`` clause.
+* **conversion_value** is the value CM360 bids on. To bid on delivered value, such as a predicted lifetime value, send that value here in place of the order total. CM360 rejects a negative value, so Amperity drops rows carrying one and reports them as failed. The ``CASE`` expression sends zero for rows whose revenue is negative — returns, refunds, and voids — which reports the order with no value rather than dropping it. To leave those conversions unreported instead, drop the ``CASE`` expression and add ``AND ut.order_revenue > 0`` to the ``WHERE`` clause.
 * **currency_code** is a valid |ext_iso_4217| currency code — for example, ``USD`` — that matches the currency of **conversion_value**.
 * **order_id** is the deduplication key. Send a stable value so that repeated sends of the same conversion are not double-counted.
 
@@ -360,13 +360,11 @@ Amperity validates your data in two stages — it checks the dataset for the req
 **For each row**, Amperity then drops rows that CM360 would reject, so that one invalid row does not stop the rest of the batch. Dropped rows are reported as failed with the reason, and the remaining rows are sent. A row is dropped when:
 
 * a required column is present but empty in that row.
-* **conversion_value** is present but is not a number.
+* **conversion_value** cannot be read as a finite, non-negative decimal number. Transaction data commonly records returns, refunds, and voids as negative revenue, and CM360 rejects a negative value, so those rows are dropped unless the query sends zero in their place or excludes them. ``NaN``, ``Infinity``, and values in hexadecimal notation such as ``0x1p4`` are rejected the same way, rather than being sent to CM360 as revenue.
 
 Column names are matched without regard to capitalization. Numeric columns are read as-is: **conversion_value** may be returned as a number or as a string, and an **order_id** returned as a number is sent as text.
 
 **A malformed conversion_timestamp is the exception to per-row handling.** CM360 validates the timestamp when it receives the batch and rejects the whole request rather than the offending row, so a timestamp in the wrong format fails every conversion in that batch, not just one. The orchestration then fails with ``Exceeded error limit of 100%`` and the error log carries CM360's reason, ``Illegal timestamp format; timestamps must end with 'Z' or have a valid timezone offset``. If you see that, correct the format in the query and run the orchestration again.
-
-**A negative conversion_value also fails the whole batch.** Amperity does not check the sign of **conversion_value** before sending, so a negative value reaches CM360, which rejects the entire request rather than the offending row. Transaction data commonly records returns, refunds, and voids as negative revenue, so handle those rows in the query: either send zero in place of the negative amount, or exclude them.
 
 .. events-google-cm360-data-validation-end
 
@@ -406,7 +404,7 @@ The following table describes each column Amperity sends to |destination-name|. 
 
        The value of the conversion, as a number. It may be returned as a numeric column or as a string; rows whose value cannot be read as a number are dropped. Send a predicted lifetime value here to have Search Ads 360 bid on delivered value.
 
-       Must be zero or greater. CM360 rejects a negative value and fails the whole batch it was sent in, so handle negative revenue in the query.
+       Must be zero or greater, and a finite decimal number. Rows carrying a negative value, ``NaN``, ``Infinity``, or a hexadecimal literal are dropped and reported as failed.
 
    * - **currency_code**
      - **currency**
