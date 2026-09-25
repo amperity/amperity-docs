@@ -6097,6 +6097,15 @@ SAP Business Objects is a centralized BI tool for data reporting, visualization,
 .. term-sap-business-objects-end
 
 
+**SAP S/4HANA Public Cloud**
+
+.. term-sap-s4hana-public-cloud-start
+
+SAP S/4HANA Cloud, Public Edition is SAP's cloud-hosted enterprise resource planning (ERP) suite. Organizations use it to run core business operations, including sales orders, product master data, and customer records.
+
+.. term-sap-s4hana-public-cloud-end
+
+
 **SAS Cloud Analytic Services**
 
 .. term-sas-cas-start
