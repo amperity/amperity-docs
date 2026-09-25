@@ -33,7 +33,7 @@ Pull from SAP S/4HANA Public Cloud
 
 |source-name| can send |what-pull| to Amperity using the OData v2 APIs that SAP publishes for S/4HANA Cloud, Public Edition. Choose which data types to pull: **Business partners**, **Plants**, **Products**, **Sales order items**, and **Sales orders**. Amperity creates a feed and domain table for each data type you select.
 
-Amperity lands every field that your SAP tenant returns for the selected records. Fields and field names are not modified, apart from the following: OData structural fields are removed, SAP timestamps are converted to standard timestamps, and fields that have no value are omitted from the record.
+Amperity lands every field that your SAP tenant returns for the selected records. Fields and field names are not modified, apart from the following: OData structural fields are removed, SAP timestamps are converted to standard timestamps, and fields that SAP returns as null are omitted from the record. A field that SAP returns as empty is landed as an empty value rather than omitted.
 
 Only the fields on the record itself are landed. Data that SAP holds in related records, such as a sales order's partners or a business partner's addresses, is not included.
 
@@ -223,7 +223,7 @@ Review feed and domain table
 
 After running the |source-name| courier, Amperity creates a feed and domain table for each data type you selected. You may apply semantic tags to the fields in these tables and you may make each domain table available to Stitch, depending on your use case.
 
-The fields in each domain table are the fields that your SAP tenant returns for that record type, which vary between SAP customers because SAP customers activate different parts of the product. Expect a wide table: a sales order header in SAP's own sample data carries around 94 fields. The authoritative field list for your tenant comes from your own SAP system rather than from SAP's general documentation. Contact your Amperity representative if you need the exact field list for your tenant.
+The fields in each domain table are the fields that your SAP tenant returns for that record type, which vary between SAP customers because SAP customers activate different parts of the product. Expect a wide table: a sales order header in SAP's own sample data carries around 94 fields. Expect many of its columns to be empty. SAP returns an empty value for every field that your tenant does not use, and those fields are landed rather than dropped, so more than half of the columns in a domain table can be empty. That is normal for SAP data and is not a sign that the pull was incomplete. The authoritative field list for your tenant comes from your own SAP system rather than from SAP's general documentation. Contact your Amperity representative if you need the exact field list for your tenant.
 
 .. source-sap-s4hana-public-cloud-review-data-end
 
