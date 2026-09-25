@@ -743,6 +743,11 @@ Configure the real-time surface: event streams and their event types, profile co
 
        **real_time_segment_delete**
 
+   * - Look up the folders real-time segments are organized into (create and rename them in Amperity)
+     - **real_time_segment_folder_list**
+
+       **real_time_segment_folder_get**
+
 
 .. _mcp-tool-labels:
 
