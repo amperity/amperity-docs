@@ -162,6 +162,10 @@ Set up connections for Amperity to ingest data from other tools and platforms.
       :link-type: doc
       :link: source_microsoft_dataverse
 
+   .. grid-item-card:: Microsoft Fabric
+      :link-type: doc
+      :link: source_microsoft_fabric
+
    .. grid-item-card:: Monetate
       :link-type: doc
       :link: source_monetate
@@ -299,6 +303,7 @@ Set up connections for Amperity to ingest data from other tools and platforms.
    Kustomer <source_kustomer>
    Listrak <source_listrak>
    Microsoft Dataverse <source_microsoft_dataverse>
+   Microsoft Fabric <source_microsoft_fabric>
    Monetate <source_monetate>
    Neustar <source_neustar>
    Optimizely <source_optimizely>
