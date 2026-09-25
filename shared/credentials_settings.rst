@@ -182,6 +182,14 @@ Obtain the token in the Microsoft Advertising UI: open the **UET** section, edit
 
 .. credential-microsoft-ads-conversions-api-token-find-end
 
+.. credential-microsoft-fabric-find-credentials-start
+
+The **Server** and **Database** values come from the Microsoft Fabric item that you are reading. The **Client ID** and **Client Secret** identify a Microsoft Entra service principal, which is usually created by your identity or IT team rather than by the team that requests the integration.
+
+A Fabric administrator must enable service principal access for your tenant, and the service principal must be granted a role on the workspace. Neither is part of creating the credential, and a credential that is correct in every other way cannot connect until both are done.
+
+.. credential-microsoft-fabric-find-credentials-end
+
 .. credential-sendgrid-api-key-start
 
 The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).

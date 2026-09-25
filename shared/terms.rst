@@ -4446,6 +4446,15 @@ Microsoft Dynamics CRM is a customer relationship management (CRM) software appl
 .. term-microsoft-dynamics-end
 
 
+**Microsoft Fabric**
+
+.. term-microsoft-fabric-start
+
+Microsoft Fabric is a cloud-based analytics platform that brings data storage, data engineering, and business intelligence together in a single workspace. Data is held in items such as a Warehouse or a Lakehouse, each of which publishes a SQL analytics endpoint that supports both tables and views.
+
+.. term-microsoft-fabric-end
+
+
 **Microsoft Power BI**
 
 .. term-microsoft-powerbi-start
