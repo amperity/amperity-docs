@@ -261,6 +261,10 @@ Components
       :link-type: doc
       :link: settings
 
+   .. grid-item-card:: |fa-wave-pulse| Signal
+      :link-type: doc
+      :link: signal
+
    .. grid-item-card:: |fa-shield-check| Single sign-on (SSO)
       :link-type: doc
       :link: sso
@@ -345,6 +349,7 @@ Components
    Settings <settings>
    Segments <segments>
    Segment Editor <segment_editor>
+   Signal <signal>
    Single sign-on (SSO) <sso>
    Spark SQL <sql_spark>
    Workflows <workflows>
