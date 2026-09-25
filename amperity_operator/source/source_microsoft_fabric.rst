@@ -36,25 +36,25 @@ Pull from Microsoft Fabric
 
 |source-name| can send |what-pull| to Amperity from a Warehouse or a Lakehouse SQL analytics endpoint. Name each table or view to pull, and then Amperity reads each one and lands it as a CSV file.
 
-Amperity reads |source-name| over the same protocol and port that Microsoft SQL Server uses. No REST API is involved, and there is nothing to allow through a firewall apart from outbound access on that port.
-
 Each run reads every table and view that you configure, in full. There is no option to pull only the records that changed.
 
 .. source-microsoft-fabric-context-end
 
 .. source-microsoft-fabric-views-start
 
-**Views are the reason to choose this connector.** A view in |source-name| is a saved query rather than a stored file. It is evaluated when it is read and exists nowhere on disk, so a file-based connector such as Azure Blob Storage cannot read one at any path. Use this connector when you want Amperity to read a view.
+Amperity can read both tables and views. A view in |source-name| is a saved query that is evaluated when it is read, so what Amperity lands is the output of the view rather than the contents of the tables beneath it.
 
 .. source-microsoft-fabric-views-end
 
-.. source-microsoft-fabric-not-fivetran-start
+.. source-microsoft-fabric-network-start
 
 .. important::
 
-   This connector reads |source-name| directly. It is not a Fivetran connector, and the setup steps for Fivetran-based sources do not apply. Warehouse and database sources have historically reached Amperity through Fivetran, so follow the steps on this page rather than steps written for a Fivetran source.
+   Amperity connects to the `SQL analytics endpoint <https://learn.microsoft.com/en-us/fabric/data-warehouse/connectivity>`__ |ext_link| over TDS on TCP port 1433, the same protocol and port that Microsoft SQL Server uses. No REST API is involved.
 
-.. source-microsoft-fabric-not-fivetran-end
+   Allow outbound access on TCP 1433, and make sure that any firewall between Amperity and |source-name| treats that port as MSSQL or TDS traffic. Protocol-aware inspection that assumes HTTPS on 1433 breaks the connection even when the port itself is open.
+
+.. source-microsoft-fabric-network-end
 
 .. source-microsoft-fabric-item-types-start
 
@@ -89,7 +89,7 @@ Configure Microsoft Entra access
 
 .. source-microsoft-fabric-configure-entra-start
 
-|source-name| does not accept a user name and password. Amperity connects as a Microsoft Entra service principal, which must be created and authorized in your Microsoft tenant before a credential can connect.
+|source-name| does not accept a user name and password. The SQL analytics endpoint supports `Microsoft Entra authentication <https://learn.microsoft.com/en-us/fabric/data-warehouse/entra-id-authentication>`__ |ext_link| only. Amperity connects as a Microsoft Entra service principal, which must be created and authorized in your Microsoft tenant before a credential can connect.
 
 These steps are usually owned by three different groups. Identify who performs each one before you start, because a step that is discovered midway through an implementation can take days to schedule.
 
@@ -99,13 +99,13 @@ These steps are usually owned by three different groups. Identify who performs e
 
    * - Step
      - Who performs it
-   * - Register an application in Microsoft Entra. This produces the **Client ID**.
+   * - `Register an application <https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app>`__ |ext_link| in the `Microsoft Entra admin center <https://entra.microsoft.com/>`__ |ext_link|. This produces the **Client ID**.
      - Your identity or IT team. Registering an application is often restricted to that team.
-   * - Create a client secret on that application. This is the **Client Secret**.
+   * - `Create a client secret <https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app#add-a-client-secret>`__ |ext_link| on that application. This is the **Client Secret**.
      - Your identity or IT team. The value is shown once, when it is created, and is masked afterward. Record it at that point.
    * - Enable the tenant setting **Service principals can use Fabric APIs**, under **Admin portal > Tenant settings > Developer settings**.
      - A Fabric administrator. No one else can change a tenant setting.
-   * - Grant the service principal access to the workspace that holds the data.
+   * - `Grant the service principal access <https://learn.microsoft.com/en-us/fabric/fundamentals/give-access-workspaces>`__ |ext_link| to the workspace that holds the data.
      - The team that owns the workspace, which is usually the team requesting the integration. Any workspace role is sufficient to connect, including **Viewer**.
 
 Microsoft requires the tenant setting in the third step before a service principal may use a SQL connection string at all. There is no way to work around it, and a service principal that is otherwise configured correctly cannot connect until a Fabric administrator enables it.
@@ -138,11 +138,11 @@ Get details
       :start-after: .. credential-microsoft-fabric-find-credentials-start
       :end-before: .. credential-microsoft-fabric-find-credentials-end
 
-   |source-name| shows this value as the **SQL connection string** on the warehouse item. It is a host name that ends in ``datawarehouse.fabric.microsoft.com``.
+   |source-name| shows this value as the **SQL connection string**, on the Warehouse or on the settings for the Lakehouse SQL analytics endpoint. It is a host name that ends in ``datawarehouse.fabric.microsoft.com``.
 
    .. important::
 
-      Despite the label that |source-name| gives it, this value is a host name and not a full connection string. A value that includes ``Server=tcp:`` or a port number does not work. Enter only the host name.
+      Despite that label, this value is a host name and not a full connection string. A value that includes ``Server=tcp:`` or a port number does not work. Enter only the host name.
 
 #. The **Database** to read from. This is the name of the Warehouse or the Lakehouse SQL analytics endpoint. Names that contain spaces are supported.
 
@@ -179,7 +179,7 @@ Add courier
    When finished click **Continue**.
 
 #. Under **Tables**, enter the fully qualified name of each table or view to read. For example: ``dbo.vw_active_members``.
-#. Click **Create**.
+#. Click **Save**.
 
 .. source-microsoft-fabric-add-courier-end
 
@@ -187,7 +187,7 @@ Add courier
 
 .. note::
 
-   When you save the configuration, Amperity reads one row from every table and view that you named. This verifies that each object exists and can be read, rather than verifying only that the service principal can sign in. An object that is misspelled or that the service principal cannot read is reported here, instead of failing later during an unattended courier run.
+   Every courier run begins by reading one row from each table and view that you named. This verifies that each object exists and can be read, rather than verifying only that the service principal can sign in. A misspelled object, or one that the service principal cannot read, fails the run at the start instead of partway through.
 
 .. source-microsoft-fabric-add-courier-test-end
 
@@ -209,9 +209,23 @@ Amperity names each file after the table or view that it was read from, with ``.
 
 **To get sample files**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-get-sample-files-steps-start
-   :end-before: .. sources-get-sample-files-steps-end
+.. source-microsoft-fabric-get-sample-files-steps-start
+
+#. From the **Sources** tab, open the |fa-kebab| menu for a courier configured for |source-name| with empty load operations, and then select **Run**. The **Run Courier** dialog box opens.
+#. Select **Load all data**. This is the only load option that |source-name| supports.
+#. Click **Run**.
+
+   .. important:: The courier run fails, but this process will successfully return a list of files from |source-name|.
+
+   These files will be available for selection as an existing source from the **Add Feed** dialog box.
+#. Wait for the notification for this courier run to return an error similar to:
+
+   ::
+
+      Error running load-operations task
+      Cannot find required feeds: "df-xxxxxx"
+
+.. source-microsoft-fabric-get-sample-files-steps-end
 
 
 .. _source-microsoft-fabric-add-feeds:
@@ -251,18 +265,28 @@ Add load operations
 
 .. source-microsoft-fabric-add-load-operations-example-start
 
-Refer to each file by the name of the table or view, without the ``.csv`` extension. For example:
+Refer to each file by the name of the table or view, without the ``.csv`` extension.
+
+Because |source-name| is read in full on every run, pair each load with a truncate operation. The truncate empties the domain table so that each run replaces its contents. Without it, every run appends another full copy of the table.
+
+For example:
 
 ::
 
    {
      "df-A1B2C3": [
        {
+         "type": "truncate"
+       },
+       {
          "type": "load",
          "file": "dbo.vw_active_members"
        }
      ],
      "df-D4E5F6": [
+       {
+         "type": "truncate"
+       },
        {
          "type": "load",
          "file": "dbo.transactions"
@@ -290,9 +314,19 @@ Run courier manually
 
 **To run the courier manually**
 
-.. include:: ../../shared/sources.rst
-   :start-after: .. sources-run-courier-steps-start
-   :end-before: .. sources-run-courier-steps-end
+.. source-microsoft-fabric-run-courier-steps-start
+
+#. From the **Sources** tab, open the |fa-kebab| menu for the courier with updated load operations that is configured for |source-name|, and then select **Run**. The **Run Courier** dialog box opens.
+#. Select **Load all data**, the only load option that |source-name| supports. Actual data will be loaded to a domain table because the feed is configured.
+#. Click **Run**.
+
+   This time the notification will return a message similar to:
+
+   ::
+
+      Completed in 5 minutes 12 seconds
+
+.. source-microsoft-fabric-run-courier-steps-end
 
 
 .. _source-microsoft-fabric-add-to-courier-group:
@@ -320,7 +354,7 @@ How data is pulled
 
 **Every run reads everything.** Each run reads every table and view that you configure, in full. There is no incremental or date-windowed pull, and there is no setting that requests one.
 
-Because each object is replaced in full on every run, a record that was deleted in |source-name| stops appearing in Amperity after the next run. This differs from a source that pulls only the records that changed, where a delete is invisible.
+Because each object is read in full, a record that was deleted in |source-name| can stop appearing in Amperity after the next run. This requires load operations that truncate the domain table before loading, as described in :ref:`Add load operations <source-microsoft-fabric-add-load-operations>`. A load operation without a truncate appends each run to the previous one, and a delete is never reflected.
 
 .. source-microsoft-fabric-full-reads-end
 
@@ -328,7 +362,7 @@ Because each object is replaced in full on every run, a record that was deleted 
 
 .. important::
 
-   Each run consumes the |source-name| capacity that is attached to your workspace, because reading a table or a view is a query that your capacity pays for. Include this in any sizing conversation, and take it into account when you set the schedule for the courier group. Reading a large warehouse frequently is a cost that your organization carries, not Amperity.
+   Reading a table or a view is a query, and each run consumes the |source-name| capacity that is assigned to your workspace. Take this into account when you set the schedule for the courier group, especially for large tables.
 
 .. source-microsoft-fabric-capacity-end
 
@@ -344,6 +378,12 @@ Because each object is replaced in full on every run, a record that was deleted 
 
 .. source-microsoft-fabric-nulls-end
 
+.. source-microsoft-fabric-column-types-start
+
+**Every column is read as text.** Amperity converts each column to a string as it writes the CSV file, so dates, timestamps, decimals, and other typed columns land in whatever text form the SQL driver produces for them. Review a sample file before you configure the feed, and cast a column in the view definition when a downstream workflow requires a specific format.
+
+.. source-microsoft-fabric-column-types-end
+
 
 .. _source-microsoft-fabric-connection-errors:
 
@@ -352,7 +392,7 @@ Troubleshoot errors
 
 .. source-microsoft-fabric-connection-errors-start
 
-The following errors may occur when you test the connection to |source-name| or when a courier runs.
+The following errors may occur when a courier runs.
 
 .. list-table::
    :widths: 40 60
@@ -364,11 +404,13 @@ The following errors may occur when you test the connection to |source-name| or 
      - The client ID or client secret is incorrect, or the client secret has expired. Confirm both values with whoever owns the application registration, and check the expiration date on the secret.
    * - The credential could not connect to the configured database.
      - The database name does not match a Warehouse or Lakehouse SQL analytics endpoint in the workspace, or the service principal has not been granted access to the workspace. |source-name| reports both of these the same way, so check both.
-   * - A configured table or view does not exist.
-     - The name is misspelled, is missing its schema, or names an object that the service principal cannot read. Enter the fully qualified name, such as ``dbo.vw_active_members``.
-   * - |source-name| is temporarily unavailable.
-     - |source-name| interrupted the connection for a system update, a shutdown, or workspace maintenance. Amperity retries these.
+   * - Invalid object name ``'dbo.vw_active_members'``.
+     - A configured table or view does not exist. The name is misspelled, is missing its schema, or names an object that the service principal cannot read. Enter the fully qualified name, such as ``dbo.vw_active_members``.
+   * - A message from |source-name| about a system update, a shutdown in progress, or a workspace that is temporarily unavailable.
+     - |source-name| interrupted the connection for maintenance or an internal operation. Amperity retries these automatically.
    * - Reading a table or view stopped making progress.
-     - The read was ended after ten minutes without progress, rather than being left running. The error names the table or view and the number of rows that had been read, which distinguishes a read that never started from one that stopped partway through. Run the courier again, and contact your Amperity representative if it recurs.
+     - The read was ended after ten minutes without progress, rather than being left running. The error names the table or view and the number of rows that had been read. Amperity retries these automatically. Contact your Amperity representative if the error recurs.
+   * - Any other error reported by |source-name|.
+     - An error that Amperity does not recognize is retried automatically. Contact your Amperity representative if the error recurs.
 
 .. source-microsoft-fabric-connection-errors-end
