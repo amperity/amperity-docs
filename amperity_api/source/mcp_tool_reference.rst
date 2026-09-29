@@ -232,7 +232,7 @@ Author, run, and organize queries against Amperity data.
 Signal dashboard
 ==================================================
 
-Manage Signal boards — the dashboard's tabs — and the cards on them. Each card names its own database and table, and declares the measure, dimension, and filter it renders rather than carrying SQL.
+Manage Signal boards — the dashboard's tabs — and the cards on them. Each card names its own database and table, and declares the measure, dimension, and filter it renders rather than carrying SQL. Running a card returns the SQL the service built for it along with its results.
 
 .. list-table::
    :header-rows: 1
@@ -258,6 +258,11 @@ Manage Signal boards — the dashboard's tabs — and the cards on them. Each ca
        **signal_viz_upsert**
 
        **signal_viz_delete**
+
+   * - Run a card and see the SQL it ran
+     - **signal_board_coverage**
+
+       **signal_viz_run**
 
    * - Read the Signal authoring reference
      - **signal_get_authoring_reference**
