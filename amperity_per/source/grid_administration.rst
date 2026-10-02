@@ -35,3 +35,5 @@ Administration
    :maxdepth: 2
    :hidden:
 
+   Managing access to Pér <managing_access>
+

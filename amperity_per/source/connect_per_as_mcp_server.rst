@@ -99,13 +99,11 @@ There is nothing Pér-specific to revoke, because there is nothing Pér-specific
 The connection is made with the same Amperity access the person already had. So it is removed the
 same way all their access is removed, and removing it is not a separate job anyone has to remember.
 
-* **Cutting the person off in Amperity cuts off the connection**, on the next check.
+* :ref:`Cutting the person off in Amperity <per-managing-access-revoking>` **cuts off the
+  connection**, on the next check.
 * **On a tenant that admits people individually**, removing their grant removes this too.
 * **There is no list of connected clients** in Pér, and no way to end one connection while leaving
   the person's other access alone.
-
-.. FORWARD-LINK: managing_access.rst: link "cutting the person off in Amperity" to
-   per-managing-access-revoking once that article exists.
 
 
 .. _per-connect-as-mcp-server-using:

@@ -70,12 +70,12 @@ enabled for Pér one at a time, and until yours is, the people in it do not see 
 If nobody at your organization can reach Pér, confirm with your Amperity representative that your
 tenant is enabled for Pér.
 
-Once a tenant is enabled, who gets in is a separate choice. A tenant can admit anyone already
-authorized for it, or admit people one at a time — and either way, each person's existing Amperity
-permissions govern what they are able to do once they are in.
+Once a tenant is enabled, :ref:`who gets in <per-managing-access-modes>` is a separate choice. A
+tenant can admit anyone already authorized for it, or admit people one at a time — and either way,
+each person's existing Amperity permissions govern what they are able to do once they are in.
 
-.. FORWARD-LINK: accessing_per.rst, managing_access.rst: link "who gets in" to open and managed
-   access once those articles exist.
+.. FORWARD-LINK: accessing_per.rst: link the ways into Pér from this section once that article
+   exists. The managed-access half was resolved in chunk 4.
 
 .. PENDING NC-023: who can enable a tenant for Pér — the customer or Amperity — is not settled.
    This section deliberately does not say.
