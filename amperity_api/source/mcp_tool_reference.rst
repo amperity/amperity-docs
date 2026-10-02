@@ -373,6 +373,9 @@ Configure data movement into and out of Amperity.
    * - Description
      - Tools
 
+   * - List credentials (never secret values) to find the credential for a new courier or destination
+     - **credential_list**
+
    * - Manage couriers
      - **courier_list**
 
@@ -809,7 +812,7 @@ Inspect configuration changes and revert to prior versions.
 Workflows and compute
 ==================================================
 
-Inspect Amperity workflows and Spark execution.
+Inspect Amperity workflows, Spark execution, and Amps usage.
 
 .. list-table::
    :header-rows: 1
@@ -852,6 +855,11 @@ Inspect Amperity workflows and Spark execution.
      - **compute_get_settings**
 
        **compute_update_settings**
+
+   * - Ask Amp Insights about Amps usage
+     - **amp_insights_ask**
+
+       **amp_insights_get_result**
 
 
 .. _mcp-tool-alerts-training:
