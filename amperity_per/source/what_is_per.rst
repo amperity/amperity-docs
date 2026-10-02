@@ -96,7 +96,7 @@ What Pér will and won't do on its own
 
 Pér reads on its own. It writes only with your approval.
 
-This is a product boundary, not a setting — it is the reason it is safe to let an agent work
+This is a boundary, not an adjustable setting, and is why it is feasible to let an agent work
 directly in a production tenant. You can hand Pér a broad question without first deciding how much
 of your tenant you are willing to let it change.
 
@@ -128,13 +128,10 @@ How the boundary works:
 
 .. _per-what-is-per-where:
 
-Where you use Pér
+Where to use Pér
 ==================================================
 
-Pér is not a separate product you migrate to. It is the same Amperity platform, reached from
-wherever the work is already happening, and able to act rather than only answer.
-
-There are two ways in:
+You can access Pér via:
 
 * :ref:`The Pér web app <per-accessing-per-web>`, where the full experience lives — chat,
   recommendations, plans, approvals and the reports Pér produces.
@@ -146,22 +143,3 @@ For the address, signing in and choosing a tenant, see
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: add Slack and Teams to this list when those
    surfaces reach production.
-
-
-.. _per-what-is-per-limits:
-
-Honest limits
-==================================================
-
-Pér is deliberate about what it claims. Knowing where it stops is part of knowing how to use it.
-
-* **Pér proposes; you decide.** It does not act on its own judgement about what your business
-  should do. Every recommendation is an argument with its evidence attached, offered for you to
-  accept, change or reject.
-* **Pér works when you ask it to.** It does not watch your tenant between sessions.
-  Recommendations are produced when someone asks for a fresh set, and you can always see when
-  that last happened.
-* **Pér shows its uncertainty.** A recommendation carries a confidence grade and the reasoning
-  behind that grade, including what Pér could not establish.
-* **Pér does not tell you what your marketing achieved.** It keeps a record of what it did and
-  what it produced. Judging the business result of that work is still yours to do.
