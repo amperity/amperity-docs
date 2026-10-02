@@ -96,6 +96,7 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Connect Pér as an MCP server <connect_per_as_mcp_server>
    Connect Salesforce Marketing Cloud <connect_sfmc>
 
 
