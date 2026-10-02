@@ -61,6 +61,8 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Approvals and write confirmations <approvals_and_write_confirmations>
+
 
 .. toctree::
    :caption: CONTEXT AND SKILLS
