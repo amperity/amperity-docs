@@ -56,6 +56,7 @@ This documentation covers Pér for the people who use it:
    Pér in Public Preview <public_preview>
    Accessing Pér <accessing_per>
    Interface tour <interface_tour>
+   Quickstart <quickstart>
 
 
 .. toctree::
