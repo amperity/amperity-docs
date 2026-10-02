@@ -167,7 +167,7 @@ built for that rather than against it.
 * **It records who saved it last, and when.**
 * **A save by someone else while you are editing asks you to choose.** You can keep your draft or
   take the saved version. Neither is thrown away without you saying so.
-* **Edits are recorded in the Activity log.**
+* **Edits are recorded in the** :ref:`Activity log <per-activity-log>`.
 
 You do not have to write it yourself:
 
@@ -177,8 +177,6 @@ You do not have to write it yourself:
 * **The** :ref:`Build company context <per-skills-available>` **skill** works out what your tenant
   already has, interviews you about the rest, shows you the finished document, and publishes it
   through that same confirmation.
-
-.. FORWARD-LINK: activity_log.rst: link "the Activity log" once that article exists.
 
 
 .. _per-company-context-using:

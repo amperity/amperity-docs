@@ -99,7 +99,7 @@ it does not raise an alert about something it noticed on its own. See
 :ref:`Steps that take a while <per-plans-waiting>`.
 
 For the record of what Pér actually did — the steps it carried out and the recommendations it
-made — the Activity log is the place to look, not the feed.
+made — the :ref:`Activity log <per-activity-log>` is the place to look, not the feed.
 
 
 .. _per-notifications-using:
@@ -118,8 +118,6 @@ Entries you have not read are marked. Opening the list marks them read for you.
 #. Click the notification.
 
 The plan it belongs to opens at the step it concerns.
-
-.. FORWARD-LINK: activity_log.rst: link "the Activity log" once that article exists.
 
 .. FORWARD-LINK: interface_tour.rst: link where the notifications control sits once that article
    exists.

@@ -186,8 +186,8 @@ not depend on anyone remembering.
   treat it as done.
 * **The outcome is written into the conversation**, so the next thing you ask, and the same
   conversation reopened later, read the same history.
-* **Plan steps reach the Activity log.** A step that was approved and executed, a plan that was
-  reverted, and a step that was retried each appear there.
+* **Plan steps reach the** :ref:`Activity log <per-activity-log>`. A step that was approved and
+  executed, a plan that was reverted, and a step that was retried each appear there.
 * **Steps a run approved for you are marked as such** in the plan's own record.
 
 .. important::
@@ -198,8 +198,6 @@ not depend on anyone remembering.
 
 .. PENDING NC-028: the Activity log does not record one-off confirmed writes, and its entries do not
    name the person who acted. Flagged for the PO; activity_log.rst depends on the same facts.
-
-.. FORWARD-LINK: activity_log.rst: link "the Activity log" to that article once it exists.
 
 
 .. _per-approvals-using:

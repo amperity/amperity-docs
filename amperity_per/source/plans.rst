@@ -265,4 +265,5 @@ Work already set running in Amperity continues; nothing further is approved.
 #. Click **Revert to recommendation**.
 #. Confirm.
 
-.. FORWARD-LINK: activity_log.rst: link the record of approved steps once that article exists.
+A step you approved and executed, a plan you reverted and a step you retried each appear in the
+:ref:`Activity log <per-activity-log>`.

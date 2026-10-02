@@ -136,11 +136,10 @@ recommendation is retired as soon as there is a reason to retire it.
 * **Addressed.** Once the plan written from a recommendation finishes, that recommendation is
   marked as addressed and stops being offered.
 * **Dismissed.** You can dismiss a recommendation you do not intend to act on. It leaves the board
-  for everyone in the tenant, and the dismissal is recorded in the Activity log.
+  for everyone in the tenant, and the dismissal is recorded in the
+  :ref:`Activity log <per-activity-log>`.
 * **Superseded.** At the end of a successful refresh, earlier recommendations the run did not
   propose again are retired — unless a plan for one is still live, in which case it stays.
-
-.. FORWARD-LINK: activity_log.rst: link "the Activity log" once that article exists.
 
 
 .. _per-recommendations-using:

@@ -87,6 +87,8 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Activity log <activity_log>
+
 
 .. toctree::
    :caption: INTEGRATIONS
