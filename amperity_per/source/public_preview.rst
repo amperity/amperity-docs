@@ -101,8 +101,9 @@ on your own data.
 * **The Activity log**, the record of what Pér did.
 * **System settings**, for your tenant's configuration and integration status.
 
-.. FORWARD-LINK: all WORKING WITH PÉR, CONTEXT AND SKILLS and SETTINGS articles: link each item
-   in this list to its article once they exist.
+.. FORWARD-LINK: all WORKING WITH PÉR, CONTEXT AND SKILLS and SETTINGS articles: link every item
+   in this list, in one pass, in the closing run — NOT as each target lands. Linking some bullets
+   and not others reads as omissions. Ruled 2026-10-02; recorded as NC-021(d).
 
 
 .. _per-public-preview-config:
@@ -130,7 +131,8 @@ These depend on your tenant's data, your connected tools, or your permissions:
 * **Managing access**, which requires the Amperity policy that administers users.
 
 .. FORWARD-LINK: skills.rst, app_integrations.rst, data_connections.rst, connect_sfmc.rst,
-   connect_per_as_mcp_server.rst, managing_access.rst: link each item once those articles exist.
+   connect_per_as_mcp_server.rst, managing_access.rst: link every item in one pass in the closing
+   run, not as each target lands — same reason as the list above. NC-021(d).
 
 
 .. _per-public-preview-not-claimed:
