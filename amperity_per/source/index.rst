@@ -22,10 +22,25 @@ Pér
 
 .. per-about-start
 
-.. TODO chunk 1: the landing prose goes between these markers.
-   Follow amperity_user/source/index.rst: one short intro paragraph, then a bulleted
-   list of what a reader can do. Add a .. grid:: of grid-item-cards below it, one card
-   per section, once the articles those cards point at exist.
+Pér is Amperity's customer data agent. Ask it about your customers in plain language, and it
+answers from the customer data your organization already keeps in Amperity — then carries out the
+work that follows, in Amperity, once you approve it.
+
+This documentation covers Pér for the people who use it:
+
+* What Pér is, who it is for, and what it will and won't do on its own
+* The customer decision loop it works in, and which part of Pér serves each stage
+* The words this documentation uses, defined in one place
+* What Public Preview includes, and what depends on your own setup
+* Getting in, finding your way around, and taking a first session
+* Working with recommendations, plans, approvals and the reports Pér produces
+* Giving Pér the context and memory it works from
+* Connecting Pér to the other tools you use
+* Administering who can reach Pér
+
+.. TODO closing run: add the .. grid:: of grid-item-cards here, one per section, once every
+   built article exists — :link-type: doc to a missing document fails the -W build. Tracked
+   as NC-021(a).
 
 .. per-about-end
 
