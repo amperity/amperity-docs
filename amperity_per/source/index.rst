@@ -77,6 +77,8 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Company context <company_context>
+
 
 .. toctree::
    :caption: SETTINGS
