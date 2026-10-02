@@ -328,14 +328,6 @@ A
       :end-before: .. term-amperity-id-format-end
 
 
-.. _a-amperity-js:
-
-**Amperity.js**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-amperity-js-start
-      :end-before: .. term-amperity-js-end
-
-
 .. _a-amplitude:
 
 **Amplitude**
