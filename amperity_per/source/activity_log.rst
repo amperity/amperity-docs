@@ -59,16 +59,13 @@ stays worth opening. Three kinds of thing reach it.
 
 * An edit to your :ref:`company context <per-company-context>`, however it was made.
 * A :ref:`memory <per-memory>` created, edited, archived or restored.
-* A change to the word Pér uses for your customers.
+* A change to the :ref:`word Pér uses for your customers <per-system-settings-customer-name>`.
 
 .. note::
 
    Writing an entry is best-effort everywhere except one place: if the log write fails, the work it
    describes still stands. Reverting a plan is the exception — its entry is written as part of the
    revert itself, so a plan cannot be abandoned without the log saying so.
-
-.. FORWARD-LINK: system_settings.rst: link "the word Pér uses for your customers" to
-   per-system-settings-customer-name once that article exists.
 
 
 .. _per-activity-log-reading:

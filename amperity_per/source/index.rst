@@ -90,6 +90,7 @@ This documentation covers Pér for the people who use it:
    App integrations <app_integrations>
    Data connections <data_connections>
    Activity log <activity_log>
+   System settings <system_settings>
 
 
 .. toctree::
