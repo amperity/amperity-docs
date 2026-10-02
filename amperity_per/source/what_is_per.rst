@@ -125,7 +125,8 @@ How the boundary works:
 .. important::
 
    Approving a plan is not the same as watching each write go by. One approval can set a sequence
-   of Amperity writes running. Read a plan's steps before you approve it.
+   of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
+   steps before you approve it.
 
 .. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is
    reused verbatim in approvals_and_write_confirmations.rst and plans.rst.

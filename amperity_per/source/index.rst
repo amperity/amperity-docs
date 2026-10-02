@@ -36,6 +36,7 @@ Pér
    :hidden:
 
    What is Pér <what_is_per>
+   The customer decision loop <customer_decision_loop>
 
 
 .. toctree::
