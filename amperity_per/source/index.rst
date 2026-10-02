@@ -69,6 +69,7 @@ This documentation covers Pér for the people who use it:
    Artifacts <artifacts>
    Chat history, sharing, and export <chat_history>
    Notifications <notifications>
+   Giving feedback <giving_feedback>
 
 
 .. toctree::
