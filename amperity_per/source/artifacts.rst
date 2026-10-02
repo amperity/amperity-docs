@@ -118,7 +118,8 @@ an artifact is that it survives that trip. The PDF carries real text rather than
 so it can be searched, selected and quoted.
 
 An artifact you created also links back to the conversation it came from, so the reasoning behind a
-report is one click away from the report itself.
+report is one click away from the report itself. Deleting that chat does not delete the artifact —
+see :ref:`Deleting a chat <per-chat-history-deleting>`.
 
 
 .. _per-artifacts-using:
@@ -156,6 +157,3 @@ It is then readable by everyone in your tenant, and shows as shared in your list
 
 .. FORWARD-LINK: interface_tour.rst: link where Artifacts sits in the sidebar once that article
    exists.
-
-.. FORWARD-LINK: chat_history.rst: link "the conversation it came from" and say that deleting a
-   chat does not delete its artifacts, once that article exists.

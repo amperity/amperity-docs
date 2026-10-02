@@ -43,7 +43,7 @@ in March is still there in June, with everything it established and everything P
 can pick it up rather than start again.
 
 * **Your chats are yours.** Your list shows the conversations you started. A colleague does not see
-  them unless you share one.
+  them unless you :ref:`share one <per-chat-history-sharing>`.
 * **A chat is named by your first message** until you rename it. Pér does not title your chats
   for you.
 * **One answer at a time.** If you send something while a response is still running, Pér says so
@@ -261,9 +261,6 @@ To attach a different file, remove the attached one first.
 
 .. FORWARD-LINK: skills.rst: link "A skill is a packaged piece of work" and "Which skills you have
    depends on your tenant" to that article once it exists.
-
-.. FORWARD-LINK: chat_history.rst: link "Your chats are yours", renaming, and sharing a chat to
-   that article once it exists.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
    are read-only — they answer questions but cannot make changes, and a change is made in the Pér

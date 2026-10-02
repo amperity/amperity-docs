@@ -67,6 +67,7 @@ This documentation covers Pér for the people who use it:
    Recommendations <recommendations>
    Plans <plans>
    Artifacts <artifacts>
+   Chat history, sharing, and export <chat_history>
 
 
 .. toctree::
