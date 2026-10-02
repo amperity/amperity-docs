@@ -35,6 +35,8 @@ Pér
    :maxdepth: 2
    :hidden:
 
+   What is Pér <what_is_per>
+
 
 .. toctree::
    :caption: WORKING WITH PÉR
