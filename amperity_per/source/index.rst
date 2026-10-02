@@ -38,6 +38,7 @@ Pér
    What is Pér <what_is_per>
    The customer decision loop <customer_decision_loop>
    Key concepts <key_concepts>
+   Pér in Public Preview <public_preview>
 
 
 .. toctree::
