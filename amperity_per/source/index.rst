@@ -54,6 +54,7 @@ This documentation covers Pér for the people who use it:
    The customer decision loop <customer_decision_loop>
    Key concepts <key_concepts>
    Pér in Public Preview <public_preview>
+   Accessing Pér <accessing_per>
 
 
 .. toctree::
