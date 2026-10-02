@@ -559,15 +559,6 @@ The unique identifier assigned to clusters of customer profiles that all represe
 .. term-amperity-id-format-end
 
 
-**Amperity.js**
-
-.. term-amperity-js-start
-
-**Amperity.js** is a JavaScript-based software development kit that integrates directly with any website or web application to support real-time streaming of data from that website to Amperity.
-
-.. term-amperity-js-end
-
-
 **Amperity Lakehouse**
 
 .. term-amperity-lakehouse-start
