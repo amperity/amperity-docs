@@ -22,12 +22,33 @@ Administration
 
 .. per-administration-about-start
 
-.. TODO chunk 4: the section intro goes between these markers.
-   Follow amperity_user/source/grid_campaigns.rst: one or two paragraphs, then a
-   .. grid:: of grid-item-cards, one per article in the section, once those articles
-   exist. NC-009 applies — at launch this section holds one article.
+This section covers who can reach Pér, and how that is administered.
+
+All of it happens in Amperity rather than in Pér. Pér shows you which mode your tenant uses and
+links out; the choice between the two modes, the grants to individuals, and cutting someone off are
+all made on the Amperity **Users** page, alongside the rest of your user administration. What a
+person can do once they are in is governed by the Amperity permissions they already hold.
 
 .. per-administration-about-end
+
+.. per-administration-about-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Managing access to Pér
+      :link-type: ref
+      :link: per-managing-access
+
+      Open and managed access, granting access to one person, and cutting someone off.
+
+
+.. per-administration-about-grid-end
+
+.. PENDING NC-009: this section holds one article. The other administrator-gated topics are all
+   parked, and the Pér MCP server turned out not to be one. Recorded for the reviewer brief.
 
 
 .. toctree::
