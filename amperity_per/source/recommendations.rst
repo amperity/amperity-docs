@@ -82,7 +82,7 @@ changes when a refresh runs, and not before.
 What a refresh draws on:
 
 * Your tenant's own customer data.
-* Your company context and your memories.
+* Your :ref:`company context <per-company-context>` and your :ref:`memories <per-memory>`.
 * What Pér has already carried out for you, and what is already proposed — so the board does not
   keep re-proposing work you have started.
 * Recent public news, where it bears on the question.
@@ -98,8 +98,7 @@ How a refresh behaves:
 Recommendations belong to the tenant, not to you. Everyone working in your tenant sees the same
 board, and a recommendation one person dismisses leaves it for everyone.
 
-.. FORWARD-LINK: interface_tour.rst, company_context.rst, memory.rst: link the Portfolio, company
-   context and memories once those articles exist.
+.. FORWARD-LINK: interface_tour.rst: link the Portfolio once that article exists.
 
 
 .. _per-recommendations-acting:
