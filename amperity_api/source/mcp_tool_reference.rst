@@ -856,7 +856,7 @@ Inspect Amperity workflows, Spark execution, and Amps usage.
 
        **compute_update_settings**
 
-   * - Ask Amp Insights about Amps usage (parent tenants only)
+   * - Ask Amp Insights about Amps usage
      - **amp_insights_ask**
 
        **amp_insights_get_result**
