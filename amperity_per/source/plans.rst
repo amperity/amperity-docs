@@ -202,9 +202,10 @@ Before you start approving steps, you can have Pér change what a step will do, 
 plan aside. Both have limits, and the second one has a name that invites exactly the wrong
 expectation.
 
-**Changing a step.** Ask Pér in conversation to change a step that has not run yet — a different
-audience, another name, a changed offer. A step that has already been approved, has run, or was
-rejected cannot be changed, and a changed step still waits for your approval rather than running.
+**Changing a step.** Ask Pér in :ref:`conversation <per-chatting>` to change a step that has not
+run yet — a different audience, another name, a changed offer. A step that has already been
+approved, has run, or was rejected cannot be changed, and a changed step still waits for your
+approval rather than running.
 A plan that is approving its own steps cannot be changed at all; stop the run first.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
@@ -264,5 +265,4 @@ Work already set running in Amperity continues; nothing further is approved.
 #. Click **Revert to recommendation**.
 #. Confirm.
 
-.. FORWARD-LINK: chatting_with_per.rst, activity_log.rst: link "in conversation" and the record of
-   approved steps once those articles exist.
+.. FORWARD-LINK: activity_log.rst: link the record of approved steps once that article exists.

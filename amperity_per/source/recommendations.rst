@@ -153,8 +153,8 @@ Working with recommendations
 
 #. On a recommendation, click **Evidence →**.
 
-A conversation opens with the recommendation's evidence and the reasoning behind its confidence
-grade. Ask follow-up questions there.
+A :ref:`conversation <per-chatting>` opens with the recommendation's evidence and the reasoning
+behind its confidence grade. Ask follow-up questions there.
 
 **To see why Pér graded its confidence**
 
@@ -179,4 +179,3 @@ A recommendation that already has a plan waiting reads **View plan** instead.
 #. Open the recommendation's menu and choose to remove it.
 #. Confirm.
 
-.. FORWARD-LINK: chatting_with_per.rst: link "a conversation opens" once that article exists.

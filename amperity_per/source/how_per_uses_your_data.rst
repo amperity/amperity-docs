@@ -108,7 +108,8 @@ when you ask it to stop.
 Files you attach
 ==================================================
 
-A file you attach to a conversation is material for Pér to work from, not a set of orders.
+A file you :ref:`attach to a conversation <per-chatting-attachments>` is material for Pér to work
+from, not a set of orders.
 
 This matters most for documents that came from outside your organization, which is exactly where an
 instruction aimed at an agent would be hidden. Pér reads the file, uses it however your message
@@ -118,8 +119,8 @@ thing it is acting on.
 If the file contains directives addressed to Pér, such as calling a tool, changing its rules or
 contacting someone, Pér does not carry them out. It mentions them instead, where they are relevant.
 
-.. FORWARD-LINK: chatting_with_per.rst, artifacts.rst: link attaching a file, and the fact that an
-   attachment is also kept as an artifact, once those articles exist.
+Every file you attach is also kept as an :ref:`artifact <per-artifacts>`, so you can reopen it
+without going back through the conversation.
 
 
 .. _per-how-per-uses-your-data-web:

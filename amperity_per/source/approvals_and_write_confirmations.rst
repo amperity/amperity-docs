@@ -207,7 +207,7 @@ not depend on anyone remembering.
 Approving or rejecting a change
 ==================================================
 
-**To approve a change Pér proposes in a conversation**
+**To approve a change Pér proposes in a** :ref:`conversation <per-chatting>`
 
 #. Read the confirmation: what the change does, the object it names, and the values listed on it.
 #. Open any collapsed value you want to check.
@@ -239,8 +239,6 @@ Nothing runs, the confirmation settles to **Rejected**, and Pér is told the cha
 #. Click **Stop automatic run**.
 
 Work already set running in Amperity continues; nothing further is approved.
-
-.. FORWARD-LINK: chatting_with_per.rst: link "a conversation" to that article once it exists.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
    cannot answer a confirmation, so changes are made in the Pér web app instead.
