@@ -39,9 +39,8 @@ Pér is for the people who already work in Amperity: the marketers and analysts 
 audiences, segments, campaigns and predictive models, and the administrators who look after the
 tenant they work in.
 
-The distance between a question about customers and the Amperity work that answers it is usually
-several tools and several people wide. Pér closes that distance. The same question that starts a
-conversation can end in configured, approved, running work — without leaving the conversation to
+Pér closes the distance between asking a question about customers and the work in Amperity work that answers and acts on it. The same question that starts a
+conversation can end in configured, approved, running work, without leaving the conversation to
 do it.
 
 What that looks like depends on the work you do:
@@ -52,22 +51,17 @@ What that looks like depends on the work you do:
   and keep what it produces as a report you can share with your team.
 * **If you administer Amperity**, control who can reach Pér and what they are able to do there.
 
-In the Pér web app, Pér acts under your own Amperity access. It can do no more on your behalf than
-you could do yourself, and a step that is refused for lack of permission is a gap in your own
-Amperity access — not something Pér can retry or work around.
-
 
 .. _per-what-is-per-trusted-context:
 
 Trusted customer context
 ==================================================
 
-Everything Pér says and proposes rests on the same foundation: your tenant's own customer data,
+Everything Pér says and proposes rests on the foundation of your Amperity tenant's own customer data,
 together with the standing instructions you have given it.
 
-This is what separates an answer you can act on from an answer that merely sounds right. Pér is
-not reasoning about customers in the abstract. It is reading the customer records your
-organization has already resolved, cleaned and agreed on, and it shows its working so you can
+This is what separates an answer you can act on from an answer that merely sounds right. Rather than reasoning about customers in the abstract, Pér is reading the customer records your
+organization has already resolved, cleaned, and agreed on, and it shows its work so you can
 check it.
 
 Four things make up that context:
@@ -82,13 +76,13 @@ Four things make up that context:
 * **The approval boundary.** Nothing Pér proposes reaches Amperity until a person approves it.
 
 Alongside your Pér company context, Pér also reads the context documents and the AmpAI system
-prompt your tenant has set up in Amperity. It reads those; it does not replace them.
+prompt your tenant has set up in Amperity.
 
 .. note::
 
    All of that material — company context, memories, your Amperity context documents, the AmpAI
    system prompt, and anything Pér finds on the web — is treated as information to work from, not
-   as instructions addressed to Pér. Text that arrives in context cannot change Pér's operating
+   as instructions addressed to Pér. Receieved context cannot change Pér's operating
    rules, grant it a permission, or move it to another tenant.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
@@ -140,18 +134,15 @@ Where you use Pér
 Pér is not a separate product you migrate to. It is the same Amperity platform, reached from
 wherever the work is already happening, and able to act rather than only answer.
 
-There are three ways in:
+There are two ways in:
 
-* **The Pér web app**, where the full experience lives — chat, recommendations, plans, approvals
-  and the reports Pér produces.
-* **A link from Amperity.** Somewhere you are already looking at a customer, an audience or a
-  campaign, you can ask Pér about it; the link opens a Pér session with your question already
-  asked.
-* **As a tool for another agent.** Pér can be connected as an MCP server, so an agent you already
-  use can reach your Amperity customer context through it.
+* :ref:`The Pér web app <per-accessing-per-web>`, where the full experience lives — chat,
+  recommendations, plans, approvals and the reports Pér produces.
+* :ref:`As a tool for another agent <per-accessing-per-from-an-agent>`. Pér can be connected as an
+  MCP server, so an agent you already use can reach your Amperity customer context through it.
 
-.. FORWARD-LINK: accessing_per.rst: link each of the three entry points to its section in
-   Accessing Pér once that article exists.
+For the address, signing in and choosing a tenant, see
+:ref:`Accessing Pér <per-accessing-per>`.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: add Slack and Teams to this list when those
    surfaces reach production.
