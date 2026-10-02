@@ -148,6 +148,8 @@ would not be much use for real work. So a step can launch a job and the plan wai
   picks up again on your next visit. Where a plan is running itself, only the person who started
   the run carries it on — though anyone visiting Pér lets a finished job be recognized and the next
   step proposed.
+* **You find out when a job ends.** Work that finishes after you have moved on raises a
+  :ref:`notification <per-notifications>`.
 
 .. important::
 
@@ -155,9 +157,6 @@ would not be much use for real work. So a step can launch a job and the plan wai
 
 .. PENDING NC-027: the wording of "the plan moves while you are here" — PO to confirm. The
    behaviour is verified; the sentence is a product-messaging call.
-
-.. FORWARD-LINK: notifications.rst: link "a notification" here once that article exists — work that
-   finishes after you have moved on raises one.
 
 
 .. _per-plans-failure:
