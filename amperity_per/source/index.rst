@@ -63,6 +63,7 @@ This documentation covers Pér for the people who use it:
 
    How Pér uses your data <how_per_uses_your_data>
    Approvals and write confirmations <approvals_and_write_confirmations>
+   Recommendations <recommendations>
 
 
 .. toctree::
