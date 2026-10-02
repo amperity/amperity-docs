@@ -173,8 +173,8 @@ The limits, and what happens at them:
    long enough conversation the oldest attachments are dropped, and Pér says which ones by name so
    you know it is no longer reading them. Attach the file again, or start a new chat.
 
-Every file you attach is also kept, so you can open it again later without digging through the
-thread.
+Every file you attach is also kept as an :ref:`artifact <per-artifacts>`, so you can open it again
+later without digging through the thread.
 
 .. note::
 
@@ -258,9 +258,6 @@ To attach a different file, remove the attached one first.
 
 .. FORWARD-LINK: interface_tour.rst: link where the chat panel sits, and the Plans list, once that
    article exists.
-
-.. FORWARD-LINK: artifacts.rst: link "Every file you attach is also kept" to that article once it
-   exists.
 
 .. FORWARD-LINK: skills.rst: link "A skill is a packaged piece of work" and "Which skills you have
    depends on your tenant" to that article once it exists.

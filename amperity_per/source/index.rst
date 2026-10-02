@@ -66,6 +66,7 @@ This documentation covers Pér for the people who use it:
    Approvals and write confirmations <approvals_and_write_confirmations>
    Recommendations <recommendations>
    Plans <plans>
+   Artifacts <artifacts>
 
 
 .. toctree::
