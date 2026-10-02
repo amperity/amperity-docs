@@ -257,8 +257,8 @@ To attach a different file, remove the attached one first.
 #. Click **+** beside the composer and choose **Skills**, or type ``/`` in an empty composer.
 #. Choose the skill you want.
 
-.. FORWARD-LINK: interface_tour.rst: link where the chat panel sits, and the Plans list, once that
-   article exists.
+For where the conversation sits in relation to the rest of Pér, see
+:ref:`The chat panel <per-interface-tour-chat>`.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
    are read-only — they answer questions but cannot make changes, and a change is made in the Pér

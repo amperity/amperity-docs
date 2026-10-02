@@ -119,5 +119,4 @@ Entries you have not read are marked. Opening the list marks them read for you.
 
 The plan it belongs to opens at the step it concerns.
 
-.. FORWARD-LINK: interface_tour.rst: link where the notifications control sits once that article
-   exists.
+Notifications are reached from :ref:`the top bar <per-interface-tour-utility>`.

@@ -163,5 +163,4 @@ Choose **Unpin** to move it back.
 #. Open the chat and click **Export chat**.
 #. Choose **Copy Markdown** or **Download Markdown**.
 
-.. FORWARD-LINK: interface_tour.rst: link where the chat list sits in the sidebar once that
-   article exists.
+Your conversations are listed in :ref:`the sidebar <per-interface-tour-sidebar>`.

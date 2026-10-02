@@ -54,7 +54,7 @@ A plan carries:
 Plans belong to the tenant, not to you. Everyone working in your tenant sees the same list of
 plans.
 
-.. FORWARD-LINK: interface_tour.rst: link the Plans list once that article exists.
+That list is the :ref:`Plans page <per-interface-tour-pages>`.
 
 
 .. _per-plans-authoring:

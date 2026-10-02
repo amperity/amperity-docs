@@ -98,7 +98,7 @@ How a refresh behaves:
 Recommendations belong to the tenant, not to you. Everyone working in your tenant sees the same
 board, and a recommendation one person dismisses leaves it for everyone.
 
-.. FORWARD-LINK: interface_tour.rst: link the Portfolio once that article exists.
+The board is the :ref:`Portfolio <per-interface-tour-pages>`, the page you land on.
 
 
 .. _per-recommendations-acting:

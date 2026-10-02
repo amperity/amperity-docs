@@ -155,5 +155,4 @@ It is then readable by everyone in your tenant, and shows as shared in your list
 
 #. On an artifact you created, click **Open source chat**.
 
-.. FORWARD-LINK: interface_tour.rst: link where Artifacts sits in the sidebar once that article
-   exists.
+Artifacts is one of :ref:`the four pages <per-interface-tour-pages>`, reached from the sidebar.
