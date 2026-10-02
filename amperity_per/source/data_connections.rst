@@ -43,15 +43,13 @@ that. What Amperity does not hold is the identifier a destination's own reportin
 there is no field for it in Amperity and no tool that can look it up, so the only way Pér can have
 it is for a person to type it in.
 
-* **Only one destination asks for anything here: Salesforce Marketing Cloud.** Every other
-  destination in your tenant works without a visit to this page, and does not appear on it.
+* **Only one destination asks for anything here:**
+  :ref:`Salesforce Marketing Cloud <per-connect-sfmc>`. Every other destination in your tenant
+  works without a visit to this page, and does not appear on it.
 * **The detail it asks for is the subdomain** that identifies your Salesforce account.
 * **The list comes from Amperity**, and you can pull it again at any time. A tenant that has never
   pulled it sees an empty page that says so.
 * **What you enter here survives.** Pulling the list again does not overwrite a value you set.
-
-.. FORWARD-LINK: connect_sfmc.rst: link "Salesforce Marketing Cloud" to that article once it
-   exists, here and in the readiness section below.
 
 
 .. _per-data-connections-ready:
@@ -66,8 +64,9 @@ This is the one thing on the page that is easy to misread. Two separate things h
 before Pér can get a destination's reporting, and only one of them is tenant-wide:
 
 * **The detail on this page has to be filled in.** Anyone can do it, once, for everyone.
-* **You have to be signed in to the destination yourself.** Salesforce Marketing Cloud is connected
-  per person, not per tenant, so Pér reaches it as you.
+* **You have to be signed in to the destination yourself.**
+  :ref:`Salesforce Marketing Cloud <per-connect-sfmc>` is connected per person, not per tenant, so
+  Pér reaches it as you.
 
 .. important::
 

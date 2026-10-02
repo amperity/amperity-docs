@@ -96,6 +96,8 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Connect Salesforce Marketing Cloud <connect_sfmc>
+
 
 .. toctree::
    :caption: ADMINISTRATION
