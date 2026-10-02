@@ -31,9 +31,6 @@ than inferred.
 The connection is also the one in Pér that belongs to a person rather than to a tenant, which
 changes who has to do what.
 
-.. FORWARD-LINK: app_integrations.rst: link "App integrations" in the procedures below once that
-   article exists.
-
 
 .. _per-connect-sfmc-two-halves:
 
@@ -115,7 +112,7 @@ Working with the connection
 ==================================================
 
 All of these are on the **Salesforce Marketing Cloud** card, reached from **Settings** →
-**App integrations** → **MCP connections**.
+:ref:`App integrations <per-app-integrations>` → **MCP connections**.
 
 **To connect a Business Unit**
 

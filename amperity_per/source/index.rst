@@ -87,6 +87,7 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   App integrations <app_integrations>
    Data connections <data_connections>
    Activity log <activity_log>
 
