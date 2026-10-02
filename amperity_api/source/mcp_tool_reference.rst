@@ -373,6 +373,9 @@ Configure data movement into and out of Amperity.
    * - Description
      - Tools
 
+   * - List credentials (never secret values) to find the credential for a new courier or destination
+     - **credential_list**
+
    * - Manage couriers
      - **courier_list**
 
@@ -428,9 +431,6 @@ Configure data movement into and out of Amperity.
      - **destination_create_attribute_set**
 
        **destination_delete_attribute_set**
-
-   * - List credentials (never secret values) to find the credential for a new destination
-     - **credential_list**
 
 
 .. _mcp-tool-orchestrations:
