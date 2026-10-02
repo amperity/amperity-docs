@@ -210,7 +210,8 @@ There are three levels:
 Starting a skill
 ==================================================
 
-A skill is a packaged piece of work you can start by name instead of describing from scratch.
+A :ref:`skill <per-skills>` is a packaged piece of work you can start by name instead of
+describing from scratch.
 
 The hard part of asking an agent for analysis is knowing what to ask for. Starting a skill skips
 that: it carries its own method, so you get a considered piece of work rather than whatever a cold
@@ -222,7 +223,7 @@ question produces.
 * **Starting one while an answer is still running** puts it in the composer ready for your next
   message, rather than interrupting.
 
-Which skills you have depends on your tenant.
+Which skills you have :ref:`depends on your tenant <per-skills-availability>`.
 
 
 .. _per-chatting-using:
@@ -258,9 +259,6 @@ To attach a different file, remove the attached one first.
 
 .. FORWARD-LINK: interface_tour.rst: link where the chat panel sits, and the Plans list, once that
    article exists.
-
-.. FORWARD-LINK: skills.rst: link "A skill is a packaged piece of work" and "Which skills you have
-   depends on your tenant" to that article once it exists.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
    are read-only — they answer questions but cannot make changes, and a change is made in the Pér

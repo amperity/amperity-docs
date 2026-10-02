@@ -79,6 +79,7 @@ This documentation covers Pér for the people who use it:
 
    Company context <company_context>
    Memory <memory>
+   Skills <skills>
 
 
 .. toctree::

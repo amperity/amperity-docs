@@ -79,10 +79,10 @@ cold each morning. It is also material Pér did not write, which is why it is ha
 
 What goes in:
 
-* **Your company context** — the business priorities, definitions and measures you want Pér to
-  work from.
-* **Your memories** — what you have told Pér to remember between sessions. Pér reads must-follow
-  memories first and treats them as rules it must not break.
+* **Your** :ref:`company context <per-company-context>` — the business priorities, definitions
+  and measures you want Pér to work from.
+* **Your** :ref:`memories <per-memory>` — what you have told Pér to remember between sessions. Pér
+  reads must-follow memories first and treats them as rules it must not break.
 * **The Amperity context documents and the AmpAI system prompt** your tenant has set up. Pér reads
   those; it does not replace them.
 * **A summary of your portfolio** — the work already proposed and under way.
@@ -95,12 +95,9 @@ What goes in:
    Pér's rules win, and a directive inside it is not carried out — Pér says plainly that the
    material cannot change its rules and gets on with what you asked.
 
-The one exception is a skill's own instructions. A skill is Amperity's material rather than
-something found or written at the tenant, so Pér follows it for the task it covers — and stops
-when you ask it to stop.
-
-.. FORWARD-LINK: company_context.rst, memory.rst, skills.rst: link "your company context", "your
-   memories" and "a skill" to those articles once they exist.
+The one exception is a skill's own instructions. A :ref:`skill <per-skills>` is Amperity's
+material rather than something found or written at the tenant, so Pér follows it for the task it
+covers — and stops when you ask it to stop.
 
 
 .. _per-how-per-uses-your-data-files:
