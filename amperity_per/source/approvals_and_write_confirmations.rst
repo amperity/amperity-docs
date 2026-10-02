@@ -93,21 +93,19 @@ A confirmation carries:
 
 .. note::
 
-   The same card appears in conversation and on a step of a plan. What you are approving, and what
-   you can see before approving it, is the same in both places.
+   The same card appears in conversation and on a
+   :ref:`step of a plan <per-plans-approving>`. What you are approving, and what you can see
+   before approving it, is the same in both places.
 
 .. PENDING NC-025: the card also shows the exact Amperity operation. Naming one here would put a
    code identifier in the docs (rules §7), so the article describes it and names none.
-
-.. FORWARD-LINK: plans.rst: link "a step of a plan" to the plan steps section once plans.rst exists.
-
 
 .. _per-approvals-whole-plan:
 
 Approving a whole plan at once
 ==================================================
 
-A plan can be approved as a whole, rather than a step at a time.
+A :ref:`plan <per-plans>` can be approved as a whole, rather than a step at a time.
 
 A plan of a dozen steps should not need a dozen clicks. But approving a plan and watching each
 write go by are not the same thing, and the difference is worth stating exactly.
@@ -136,8 +134,6 @@ What that means in practice:
    same sentence used in what_is_per.rst and customer_decision_loop.rst and is reused in plans.rst.
 
 .. PENDING NC-027: "it runs while you are here" — PO to confirm the wording of this limit.
-
-.. FORWARD-LINK: plans.rst: link "a plan" and the whole-plan run to plans.rst once it exists.
 
 
 .. _per-approvals-limits:

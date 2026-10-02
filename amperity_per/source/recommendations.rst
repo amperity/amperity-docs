@@ -107,7 +107,7 @@ board, and a recommendation one person dismisses leaves it for everyone.
 Acting on a recommendation
 ==================================================
 
-Acting on a recommendation turns it into a plan.
+Acting on a recommendation turns it into a :ref:`plan <per-plans>`.
 
 This is the hinge of the whole loop — the point where an argument becomes work. It is also the
 point at which the approval boundary takes over, because a plan is a list of changes waiting for
@@ -122,9 +122,6 @@ What happens when you act on one:
   not been started, acting on it again opens that plan rather than writing a second one.
 * **It can come back with no plan.** A recommendation that does not yet map to a change in
   Amperity produces no plan, and Pér says so rather than inventing steps.
-
-.. FORWARD-LINK: plans.rst: link "a plan" to plans.rst once it exists, here and in the lifecycle
-   section below.
 
 
 .. _per-recommendations-lifecycle:
