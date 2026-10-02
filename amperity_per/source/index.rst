@@ -61,6 +61,7 @@ This documentation covers Pér for the people who use it:
    :maxdepth: 2
    :hidden:
 
+   Chatting with Pér <chatting_with_per>
    How Pér uses your data <how_per_uses_your_data>
    Approvals and write confirmations <approvals_and_write_confirmations>
    Recommendations <recommendations>
