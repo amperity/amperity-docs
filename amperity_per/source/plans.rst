@@ -158,6 +158,10 @@ would not be much use for real work. So a step can launch a job and the plan wai
 .. PENDING NC-027: the wording of "the plan moves while you are here" — PO to confirm. The
    behaviour is verified; the sentence is a product-messaging call.
 
+.. PARKED-LINK: connect_databricks.rst: when the Databricks connection ships, note that a plan
+   needing Databricks tables brought into Amperity carries a step that works out which bridge
+   covers them and waits for a person to confirm it.
+
 
 .. _per-plans-failure:
 

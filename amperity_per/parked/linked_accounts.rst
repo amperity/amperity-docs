@@ -109,8 +109,7 @@ Using linked accounts
 ==================================================
 
 Linked accounts is a setting of your own rather than your tenant's: what you link is yours, and
-changing it changes nothing for anyone else. See :ref:`System settings <per-system-settings>` for
-the other settings that work that way.
+changing it changes nothing for anyone else.
 
 **To link a chat account**
 

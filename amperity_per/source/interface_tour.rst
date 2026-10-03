@@ -174,6 +174,9 @@ yours, plus anything a colleague has shared with the tenant. See
 .. PARKED-LINK: scheduled_tasks.rst: add it to the pages list, and to the sidebar section above,
    when it ships.
 
+.. PARKED-LINK: linked_accounts.rst: when account linking ships, name it in the "settings that are
+   yours alone" bullet above, alongside the appearance choice below.
+
 
 .. _per-interface-tour-appearance:
 

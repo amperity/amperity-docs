@@ -63,6 +63,16 @@ back with something to approve — and it is the one rule that holds across ever
    The boundary is a product rule, not a setting. There is no mode in which Pér changes your
    Amperity tenant without a person approving the change first.
 
+.. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, say here that a run happens with
+   nobody present and so can only read — the boundary holds by withholding every write, not by
+   deferring one. It is the one case where Pér acts without a person in the room.
+
+.. PARKED-LINK: lookalikes.rst: when lookalikes ship, note that saving one draws a confirmation
+   whose numbers are rendered from the expansion itself rather than from what Pér said about it.
+
+.. PARKED-LINK: use_case_feasibility.rst: when feasibility ships, note that correcting a saved
+   analysis in chat is a carded write like any other.
+
 
 .. _per-approvals-card:
 

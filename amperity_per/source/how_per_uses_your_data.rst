@@ -176,6 +176,10 @@ boundary is in
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, add that they are
    read-only, use a shared connection rather than the asker's own access, and never return PII.
 
+.. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, add that a scheduled run is
+   offered only reading tools, and that each read is checked a second time against the task
+   owner's own Amperity access rather than only against the tenant's.
+
 
 .. _per-how-per-uses-your-data-not-covered:
 

@@ -56,6 +56,10 @@ Publishing an artifact changes nothing in Amperity, so it needs no approval. Pé
 appears. (What does need approval, and why, is in
 :ref:`Approvals and write confirmations <per-approvals>`.)
 
+.. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, say that a task keeps one artifact
+   up to date run over run rather than making a new one each time, and that its owner can share
+   that artifact with the tenant while the task itself stays private.
+
 
 .. _per-artifacts-sharing:
 

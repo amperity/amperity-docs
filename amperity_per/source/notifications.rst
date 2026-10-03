@@ -101,6 +101,11 @@ it does not raise an alert about something it noticed on its own. See
 For the record of what Pér actually did — the steps it carried out and the recommendations it
 made — the :ref:`Activity log <per-activity-log>` is the place to look, not the feed.
 
+.. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, distinguish them from this feed —
+   a finished run is not a notification. It reaches its owner by email and by a marker on the
+   Tasks list. This section's "Pér does not watch your tenant between sessions" stays true: a task
+   runs a request on a cadence, which is not the same as watching.
+
 
 .. _per-notifications-using:
 
