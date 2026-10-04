@@ -225,9 +225,9 @@ to keep, not everything it has seen. Knowing which is which saves a lot of re-re
 .. _per-key-concepts-trusted-customer-context:
 
 **trusted customer context**
-   What Pér works from: your identity-resolved customer data, the history and signals in it, the
-   rules you have given Pér to work inside, and the predictive intelligence available in your
-   tenant — all of it delivered by the Amperity platform. See
+   What Pér works from: your identity-resolved customer data, the history in it, the rules you
+   have given Pér to work inside, and the predictive intelligence available in your tenant — all
+   of it delivered by the Amperity platform. See
    :ref:`Trusted customer context <per-what-is-per-trusted-context>`.
 
    .. PENDING NC-003: the "rules you have given Pér to work inside" clause rests on company
