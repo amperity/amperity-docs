@@ -73,6 +73,9 @@ do.
    Archive what you no longer need. Keeping the set small is what keeps the memories you rely on in
    play.
 
+.. PENDING NC-030: the limited space is a token cap on the pinned band, and overflow is dropped.
+   The article states the behaviour without naming a figure. PO to confirm the wording.
+
 
 .. _per-memory-what-per-does:
 

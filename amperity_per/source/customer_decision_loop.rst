@@ -160,3 +160,7 @@ new round on its own. Each turn begins when a person begins it.
 Nor does Pér close the loop for you on the question of whether the work was worth doing. It keeps
 a record of what it did and what it produced; judging the business result of that work is still
 yours.
+
+.. PENDING NC-020: what the Learn stage may claim, and whether the loop may be described as
+   recurring. Memory, the Activity log and artifacts carry forward and are verified; measurement
+   and automatic re-running are barred (D9, rules §7). PO.
