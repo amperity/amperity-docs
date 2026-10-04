@@ -49,9 +49,10 @@ A recommendation carries:
   it came from. A claim drawn from a query records the tables that query read, so you can see what
   it was based on.
 * **Constraints.** The limits Pér worked within when it put the proposal together.
-* **Confidence.** A grade — **High confidence**, **Medium confidence** or **Low confidence** —
-  and the reasoning behind that grade, including what Pér could not establish. A recommendation
-  Pér could not assess reads **Needs review** instead.
+* **Confidence.** A grade — **High confidence** or **Medium confidence** — and the reasoning
+  behind it, including what Pér could not establish. One Pér could not assess at all reads
+  **Needs review**. Not every recommendation carries a grade: one Pér was less sure of, or has not
+  finished assessing, shows none and sorts below the ones that do.
 
 Opening a recommendation's evidence starts a conversation about it. You get the reasoning behind
 the grade and the evidence it was given, and because it is a conversation rather than a panel, you
@@ -149,14 +150,14 @@ Working with recommendations
 
 **To read a recommendation's evidence**
 
-#. On a recommendation, click **Evidence →**.
+#. On a recommendation, click **Evidence**.
 
 A :ref:`conversation <per-chatting>` opens with the recommendation's evidence and the reasoning
 behind its confidence grade. Ask follow-up questions there.
 
 **To see why Pér graded its confidence**
 
-#. Click the confidence grade on the recommendation.
+#. On a recommendation that shows a grade, click the grade.
 
 The reasoning opens under a heading naming the grade, such as **Why high confidence?**
 
