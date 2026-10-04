@@ -62,13 +62,13 @@ Pér proposes something worth doing, and makes the argument for it.
 
 A recommendation is not a hunch. It is a proposal with its evidence attached: the claims it rests
 on, the numbers behind those claims, and where in your data they came from. It also carries a
-confidence grade — high, medium or low — and the reasoning behind that grade, including what Pér
-could not establish. You are meant to be able to disagree with it on the evidence.
+confidence grade and the reasoning behind that grade, including what Pér could not establish.
+You are meant to be able to disagree with it on the evidence.
 
 Recommendations gather in the Portfolio, which is where Pér puts the work it thinks is worth your
 attention. They are drawn from your tenant's data, your company context and your memories,
 together with what Pér has already carried out for you and what it has already proposed — so the
-board does not keep re-proposing work you have started.
+Portfolio does not keep re-proposing work you have started.
 
 .. note::
 
@@ -91,7 +91,7 @@ Acting on a recommendation authors a plan: a titled list of steps, each one a co
 your Amperity tenant. You can also ask for a plan directly in conversation, and Pér will author
 one. Either way, you read the steps before any of them runs.
 
-When you approve and execute a whole plan, you approve the plan — not each write inside it one at
+When you approve and run a whole plan, you approve the plan — not each write inside it one at
 a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs
 a person, and records which steps it approved on your behalf.
 
@@ -143,7 +143,7 @@ Three things carry forward:
   can come back to or share with your team.
 
 The next set of recommendations is drawn with all of that in view, including the steps you have
-already carried out and the recommendations already on the board.
+already carried out and the recommendations already in the Portfolio.
 
 
 .. _per-customer-decision-loop-limits:
