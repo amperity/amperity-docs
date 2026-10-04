@@ -100,7 +100,7 @@ grade with the reasoning for that grade, including what Pér could not establish
 
 **To read the argument behind one**
 
-#. On a recommendation, click **Evidence →**.
+#. On a recommendation, click **Evidence**.
 
 That opens a conversation about the recommendation rather than a panel, so you can push on it:
 ask where a number came from, or have Pér query your data to check it.
@@ -176,12 +176,12 @@ approved on your behalf.
 **To approve one step**
 
 #. Read the step's confirmation.
-#. Click **Execute step**. A step that only reads reads **Run step**.
+#. Click **Run step**.
 
 **To approve and run the whole plan**
 
 #. Read every step.
-#. Click **Approve & execute all** at the top of the plan.
+#. Click **Approve & run all** at the top of the plan.
 
 See :ref:`Approvals and write confirmations <per-approvals>`.
 
