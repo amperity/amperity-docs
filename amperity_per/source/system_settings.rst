@@ -101,8 +101,8 @@ What is running right now
 
 The last section says whether Pér is working on a fresh set of recommendations at this moment.
 
-A refresh takes a while, and knowing one is under way explains a board that is about to change.
-When one is running, the section says so and when it started.
+A refresh takes a while, and knowing one is under way explains a Portfolio that is about to
+change. When one is running, the section says so and when it started.
 
 The rest of this section describes the server Pér is running on. It is there for Amperity support
 rather than for you, and nothing in it changes what Pér does.
