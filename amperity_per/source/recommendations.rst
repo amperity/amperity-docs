@@ -22,8 +22,9 @@ Recommendations
 
 A recommendation is Pér proposing something worth doing, with the argument attached: the claims it
 rests on, the numbers behind those claims, where in your data they came from, the constraints it
-worked under, and how confident it is and why. Recommendations gather in the Portfolio, which is
-where Pér puts the work it thinks deserves your attention.
+worked under, and how confident it is and why. Recommendations gather in the
+:ref:`Portfolio <per-interface-tour-pages>`, which is where Pér puts the work it thinks deserves
+your attention.
 
 A recommendation is the part of Pér you are meant to be able to disagree with. An answer you have
 to take on trust is worth less than a proposal you can check, and acting on one is the shortest
@@ -71,9 +72,9 @@ Where recommendations come from
 
 Recommendations are produced by a refresh, which someone asks for.
 
-This answers two questions that come up in the first week: why the board looks the same as it did
-yesterday, and why something that was on it has gone. Both have the same answer — the board
-changes when a refresh runs, and not before.
+This answers two questions that come up in the first week: why the Portfolio looks the same as it
+did yesterday, and why something that was on it has gone. Both have the same answer — the
+Portfolio changes when a refresh runs, and not before.
 
 .. note::
 
@@ -84,22 +85,20 @@ What a refresh draws on:
 
 * Your tenant's own customer data.
 * Your :ref:`company context <per-company-context>` and your :ref:`memories <per-memory>`.
-* What Pér has already carried out for you, and what is already proposed — so the board does not
-  keep re-proposing work you have started.
+* What Pér has already carried out for you, and what is already proposed — so the Portfolio does
+  not keep re-proposing work you have started.
 * Recent public news, where it bears on the question.
 
 How a refresh behaves:
 
 * **One at a time.** A tenant runs one refresh at a time; asking for another while one is running
   is declined rather than queued.
-* **You can stop one.** A run you stop ends without changing the board.
+* **You can stop one.** A run you stop ends without changing the Portfolio.
 * **It can honestly find nothing.** A refresh that completes with no new recommendations says so,
   rather than implying something arrived.
 
 Recommendations belong to the tenant, not to you. Everyone working in your tenant sees the same
-board, and a recommendation one person dismisses leaves it for everyone.
-
-The board is the :ref:`Portfolio <per-interface-tour-pages>`, the page you land on.
+Portfolio, and a recommendation one person dismisses leaves it for everyone.
 
 
 .. _per-recommendations-acting:
@@ -117,7 +116,7 @@ What happens when you act on one:
 
 * **Pér writes the plan.** It reads the recommendation in full, does the minimum reads needed to
   turn the intent into concrete Amperity changes, and writes the steps. This takes a few seconds.
-* **Nothing runs.** Writing a plan executes none of it. Every step still waits for approval.
+* **Nothing runs.** Writing a plan runs none of it. Every step still waits for approval.
 * **One plan per recommendation.** If a plan has already been written for a recommendation and has
   not been started, acting on it again opens that plan rather than writing a second one.
 * **It can come back with no plan.** A recommendation that does not yet map to a change in
@@ -129,15 +128,13 @@ What happens when you act on one:
 When a recommendation stops being offered
 ==================================================
 
-A recommendation leaves the board in one of three ways.
-
-A board that keeps proposing work you have already started is worse than no board, so a
-recommendation is retired as soon as there is a reason to retire it.
+A recommendation leaves the Portfolio in one of three ways, and is retired as soon as there is a
+reason to retire it.
 
 * **Addressed.** Once the plan written from a recommendation finishes, that recommendation is
   marked as addressed and stops being offered.
-* **Dismissed.** You can dismiss a recommendation you do not intend to act on. It leaves the board
-  for everyone in the tenant, and the dismissal is recorded in the
+* **Dismissed.** You can dismiss a recommendation you do not intend to act on. It leaves the
+  Portfolio for everyone in the tenant, and the dismissal is recorded in the
   :ref:`Activity log <per-activity-log>`.
 * **Superseded.** At the end of a successful refresh, earlier recommendations the run did not
   propose again are retired — unless a plan for one is still live, in which case it stays.
