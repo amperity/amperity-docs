@@ -91,19 +91,20 @@ Everyone in an enabled tenant gets the whole of the customer decision loop.
 That is the point of the preview: not a sample of the product, but the working cycle end to end,
 on your own data.
 
-* **Conversation with Pér** about your customer data, including what Pér can find on the web.
-* **Recommendations**, gathered in the Portfolio, each with its evidence and its confidence.
-* **Plans, approvals and write confirmations** — the whole approval path, including approving a
-  plan and letting it run.
-* **Artifacts** — the reports Pér writes and the files you give it, shareable with your team.
-* **Notifications**, for work that finishes after you have moved on.
-* **Memory and company context**, so Pér carries what you have told it between sessions.
-* **The Activity log**, the record of what Pér did.
-* **System settings**, for your tenant's configuration and integration status.
-
-.. FORWARD-LINK: all WORKING WITH PÉR, CONTEXT AND SKILLS and SETTINGS articles: link every item
-   in this list, in one pass, in the closing run — NOT as each target lands. Linking some bullets
-   and not others reads as omissions. Ruled 2026-10-02; recorded as NC-021(d).
+* :ref:`Conversation with Pér <per-chatting>` about your customer data, including what Pér can
+  find on the web.
+* :ref:`Recommendations <per-recommendations>`, gathered in the Portfolio, each with its evidence
+  and its confidence.
+* :ref:`Plans <per-plans>`, :ref:`approvals and write confirmations <per-approvals>` — the whole
+  approval path, including approving a plan and letting it run.
+* :ref:`Artifacts <per-artifacts>` — the reports Pér writes and the files you give it, shareable
+  with your team.
+* :ref:`Notifications <per-notifications>`, for work that finishes after you have moved on.
+* :ref:`Memory <per-memory>` and :ref:`company context <per-company-context>`, so Pér carries what
+  you have told it between sessions.
+* :ref:`The Activity log <per-activity-log>`, the record of what Pér did.
+* :ref:`System settings <per-system-settings>`, for your tenant's configuration and integration
+  status.
 
 
 .. _per-public-preview-config:
@@ -118,21 +119,21 @@ from the outside and call for completely different responses.
 
 These depend on your tenant's data, your connected tools, or your permissions:
 
-* **How good Pér's recommendations are.** Pér reasons from your tenant's data and your company
-  context. A tenant with rich history and a well-stated company context gets sharper proposals
-  than one without.
-* **Skills.** Which packaged pieces of work you can start by name depends on your tenant.
-* **App integrations.** The tools Pér can reach beyond Amperity depend on what has been connected.
-* **Data connections.** Some destinations need connection details that Amperity does not already
-  hold, and Pér can only use what has been supplied.
-* **Connecting Salesforce Marketing Cloud**, which needs an account you authorize.
-* **Pér as an MCP server.** Available to any enabled tenant, but you connect the agent that uses
-  it.
-* **Managing access**, which requires the Amperity policy that administers users.
-
-.. FORWARD-LINK: skills.rst, app_integrations.rst, data_connections.rst, connect_sfmc.rst,
-   connect_per_as_mcp_server.rst, managing_access.rst: link every item in one pass in the closing
-   run, not as each target lands — same reason as the list above. NC-021(d).
+* **How good** :ref:`Pér's recommendations <per-recommendations>` **are.** Pér reasons from your
+  tenant's data and your :ref:`company context <per-company-context>`. A tenant with rich history
+  and a well-stated company context gets sharper proposals than one without.
+* :ref:`Skills <per-skills>`. Which packaged pieces of work you can start by name depends on your
+  tenant.
+* :ref:`App integrations <per-app-integrations>`. The tools Pér can reach beyond Amperity depend
+  on what has been connected.
+* :ref:`Data connections <per-data-connections>`. Some destinations need connection details that
+  Amperity does not already hold, and Pér can only use what has been supplied.
+* :ref:`Connecting Salesforce Marketing Cloud <per-connect-sfmc>`, which needs an account you
+  authorize.
+* :ref:`Pér as an MCP server <per-connect-as-mcp-server>`. Available to any enabled tenant, but
+  you connect the agent that uses it.
+* :ref:`Managing access <per-managing-access>`, which requires the Amperity policy that
+  administers users.
 
 
 .. _per-public-preview-not-claimed:
