@@ -103,13 +103,17 @@ Aggregate campaign reporting
 --------------------------------------------------
 
 Reports one campaign's aggregate results, broken out by calendar month from its first delivery
-through to today. Partial months are marked as partial, and any group of metrics it could not
-compute is named rather than quietly omitted. You can ask for a different window once you have the
-first answer.
+through to today, with the window each figure covers stated beside it. Partial months are marked as
+partial, and any group of metrics it could not compute is named rather than quietly omitted. You
+can ask for a different window once you have the first answer.
+
+If Pér cannot establish when the campaign was delivered, it does not pick a window anyway. It
+reports what was sent instead — when the sends first and last started, and how many ended in each
+state — and says separately that the results cannot be computed without a delivery date.
 
 .. PENDING NC-014: D9 holds all measurement, holdout, incrementality, lift and attribution
-   language. This skill is documented as reporting — what it aggregates, over what window, and
-   what it could not compute.
+   language. This skill is documented as reporting — what it aggregates, over what window, what it
+   could not compute, and what it reports instead when the window cannot be anchored.
 
 Set up event propensity
 --------------------------------------------------
