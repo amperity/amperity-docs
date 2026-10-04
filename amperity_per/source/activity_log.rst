@@ -46,7 +46,7 @@ stays worth opening. Three kinds of thing reach it.
 
 **Plans and their steps**
 
-* A :ref:`plan <per-plans>` approved and executed, and each step approved and executed.
+* A :ref:`plan <per-plans>` approved and run, and each step approved and run.
 * A step that was approved, and a step that was rejected.
 * A plan :ref:`reverted <per-plans-changing>` before any of its steps ran.
 * A fresh attempt proposed for a :ref:`step that failed <per-plans-failure>`.
@@ -95,7 +95,7 @@ What the log does not tell you
 The log is deliberately narrow, and four of its edges are worth knowing before you lean on it.
 
 * **It does not always say who.** A settings change names the person who made it. Plan work and
-  recommendation work does not: the entry records that a step was approved and executed, not which
+  recommendation work does not: the entry records that a step was approved and run, not which
   person approved it.
 * **A personal memory keeps its title out of it.** Maintaining your own memories does not publish
   them to everyone in the tenant. A memory shared with the tenant is named.
@@ -119,9 +119,6 @@ where to look for work that did not come from Pér.
 .. PENDING NC-028: the Activity log does not record one-off confirmed writes, and names the person
    only on settings changes. Flagged for the PO; approvals_and_write_confirmations.rst depends on
    the same facts.
-
-.. PENDING NC-034: two entry titles use the word "decision", which this documentation does not.
-   The article describes what those entries record rather than quoting their titles. PO to settle.
 
 
 .. _per-activity-log-using:
