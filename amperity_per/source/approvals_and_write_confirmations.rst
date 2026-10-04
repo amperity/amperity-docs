@@ -45,8 +45,8 @@ back with something to approve — and it is the one rule that holds across ever
   yourself, and reading never draws a confirmation. It reads before it proposes, because a change
   it has not checked against your current data is a change not worth proposing.
 * **Pér can ask for a change; it cannot make one.** Pér is given the ability to propose far more
-  than it is able to carry out. Asking is what draws the confirmation. Only when you approve does
-  that one change — and nothing else — become something that runs.
+  than it is able to carry out. Asking is what draws the confirmation. Nothing it proposes runs
+  until you approve it, and what runs is what you approved and nothing more.
 * **The boundary covers more than Amperity.** A confirmation also stands in front of an edit to
   your company context, a memory shared with everyone in your tenant, connection details you
   supply so Pér can reach a destination, and feedback you send to Amperity about Pér.
@@ -66,9 +66,6 @@ back with something to approve — and it is the one rule that holds across ever
 .. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, say here that a run happens with
    nobody present and so can only read — the boundary holds by withholding every write, not by
    deferring one. It is the one case where Pér acts without a person in the room.
-
-.. PARKED-LINK: lookalikes.rst: when lookalikes ship, note that saving one draws a confirmation
-   whose numbers are rendered from the expansion itself rather than from what Pér said about it.
 
 .. PARKED-LINK: use_case_feasibility.rst: when feasibility ships, note that correcting a saved
    analysis in chat is a carded write like any other.
@@ -91,7 +88,8 @@ A confirmation carries:
   journey.
 * **Which object** it acts on, named.
 * **The values that will be sent.** A long value is collapsed so the card stays readable, and you
-  can open it.
+  can open it. On a step of a plan the values sit behind **Details**, because a plan page carries
+  many cards at once.
 * **A warning, where one is warranted.** A deletion, or anything that reaches real customers, is
   marked as the more serious thing it is.
 * **A warning that depends on your current data.** Before drawing the card, Pér checks what the
@@ -99,7 +97,11 @@ A confirmation carries:
   leave that segment no longer editable in the visual segment editor, or that a segment being
   changed is one a campaign is already using.
 * **Every write it covers.** Some changes only make sense together, and arrive as one confirmation
-  covering several writes. The card lists each of them.
+  covering several writes. The card lists each of them, and approving it approves all of them.
+* **Several changes of the same kind, together.** When Pér proposes several changes of the same
+  kind in one turn, they arrive as one card with a row for each. You can answer any row on its own,
+  or answer the rest together — so approving once here can run more than one change. A deletion
+  among them is confirmed again before anything runs.
 
 .. note::
 
@@ -191,7 +193,9 @@ Every confirmation leaves a trace, and the trace says which way it went.
 not depend on anyone remembering.
 
 * **The confirmation itself settles.** It stays in the conversation showing whether the change ran,
-  was rejected, or failed — and, when it failed, Amperity's own message.
+  was rejected, or failed — and, when it failed, Amperity's own message. A change can also finish
+  with a warning: it ran, but something it was meant to set up alongside it did not, and the card
+  says what to check.
 * **A rejection is recorded as a rejection.** Pér is told the change was not made and must not
   treat it as done.
 * **The outcome is written into the conversation**, so the next thing you ask, and the same
@@ -219,10 +223,11 @@ Approving or rejecting a change
 
 #. Read the confirmation: what the change does, the object it names, and the values listed on it.
 #. Open any collapsed value you want to check.
-#. Click **Execute**. Some changes name what they do instead, such as **Create segment**.
+#. Click **Run**. Some changes name what they do instead, such as **Create segment**.
 
-The confirmation settles to **Executed** when the change has run, and links to the object in
-Amperity where there is one to open.
+The confirmation settles to **Done** when the change has run, and links to the object in Amperity
+where there is one to open. A change that finished with a warning reads **Done with warning** and
+says what to check.
 
 **To reject a change Pér proposes**
 
@@ -230,16 +235,25 @@ Amperity where there is one to open.
 
 Nothing runs, the confirmation settles to **Rejected**, and Pér is told the change was not made.
 
+**To answer a card covering several changes of the same kind**
+
+#. Read each row.
+#. Answer a row on its own, or choose **Approve all** or **Reject all**.
+
+Once some rows have been answered, those controls read **Approve remaining** and **Reject
+remaining**. A deletion among them asks you to confirm before anything runs.
+
 **To approve one step of a plan**
 
 #. Open the plan and read the step's confirmation.
-#. Click **Execute step**. A step that only reads reads **Run step** and offers no rejection,
-   because it changes nothing.
+#. Click **Run step**.
+
+A step that only reads changes nothing, so it offers no rejection.
 
 **To approve and run a whole plan**
 
 #. Open the plan and read every step.
-#. Click **Approve & execute all** at the top of the plan.
+#. Click **Approve & run all** at the top of the plan.
 
 **To stop a plan that is running itself**
 
