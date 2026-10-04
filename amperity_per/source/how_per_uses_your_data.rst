@@ -167,10 +167,9 @@ On the reading side, Pér cannot retrieve a stored credential, and it cannot rea
 server it runs on. Both are refused even though they are reads, and even though your own Amperity
 access might otherwise allow them.
 
-On the changing side, Pér cannot create or delete people, grant or revoke access, change the shape
-of your tenant, set up a new destination for your data to be sent to, roll your tenant's
-configuration back, move to another tenant, or relax the confirmation gate itself. The full
-boundary is in
+On the changing side the list is longer: identity and access, the shape of your tenant, where your
+data may be sent, and the confirmation gate itself are all out of reach, whatever is approved. The
+full boundary is in
 :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, add that they are
