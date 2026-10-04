@@ -48,12 +48,12 @@ to keep, not everything it has seen. Knowing which is which saves a lot of re-re
 **apply mode**
    How a memory that Pér proposes gets saved. By default Pér asks every time. You can choose to
    let your personal memories save without asking; a memory shared with your tenant always asks,
-   under every setting.
+   under every setting, as does one that records an answer Pér had to ask you for.
 
 
-.. _per-key-concepts-approve-execute-all:
+.. _per-key-concepts-auto-run:
 
-**Approve & execute all**
+**Approve & run all**
    Approving a whole plan at once and letting it run itself. You approve the plan, not each write
    inside it: Pér re-checks at every step whether it may still go on, stops at any step that needs
    a person, and records which steps it approved on your behalf.
