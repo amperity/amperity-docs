@@ -85,7 +85,7 @@ somebody asks for, so on a tenant where nobody has asked yet the Portfolio is em
 normal, not a fault.
 
 * **A refresh takes a while**, and a tenant runs one at a time.
-* **You can stop one**, and stopping it leaves the board as it was.
+* **You can stop one**, and stopping it leaves the Portfolio as it was.
 * **It can honestly come back with nothing**, and says so rather than implying something arrived.
 
 Each recommendation carries what it proposes, the evidence for it — claims, the numbers behind
@@ -121,7 +121,7 @@ changes to your Amperity tenant, each one waiting for a person. It is where
 
 * **Pér writes the plan**, reading what it needs to turn the intent into real identifiers,
   tables and settings. This takes a few seconds.
-* **Nothing runs.** Writing a plan executes none of it.
+* **Nothing runs.** Writing a plan runs none of it.
 * **One plan per recommendation.** Acting on one that already has a plan waiting opens that plan
   rather than writing a second.
 * **It can come back with no plan.** A recommendation that does not yet map to a change in
@@ -146,7 +146,8 @@ This is the only point in the walk where your Amperity tenant changes, which mak
 worth slowing down for. It spans :ref:`Approve <per-customer-decision-loop-approve>` and
 :ref:`Act <per-customer-decision-loop-act>`.
 
-* **A step that only reads runs itself.** It changes nothing, so it needs no approval.
+* **A step that only reads runs itself.** It changes nothing, so it needs no approval — unless
+  it is there so you can read a long job's results, in which case it waits for you.
 * **A step that changes something shows a write confirmation**, naming the operation, the object
   and the values that will be sent. Read it; it is deliberately specific rather than reassuring.
 * **Your permission is checked again at the moment you approve**, not only when the step was
@@ -158,7 +159,7 @@ worth slowing down for. It spans :ref:`Approve <per-customer-decision-loop-appro
 * **What happened is recorded.** Plan steps that ran, plans reverted and steps retried all reach
   the :ref:`Activity log <per-activity-log>`.
 
-You can also approve the whole plan at once. When you approve and execute a whole plan, you
+You can also approve the whole plan at once. When you approve and run a whole plan, you
 approve the plan — not each write inside it one at a time. Pér then re-checks at every step
 whether it may still go on, stops at any step that needs a person, and records which steps it
 approved on your behalf.
