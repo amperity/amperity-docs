@@ -114,7 +114,9 @@ is worth being exact about where that setting stops.
   level, the body, and the kind Pér chose with its reason for choosing it. Nothing is saved until
   you approve it.
 * **You can let your personal memories save without asking.** That is the other setting, and it
-  covers memories about you alone.
+  covers memories about you alone. Where Pér had to ask you something in order to answer — how to
+  read the numbers in your data, say — it asks again before remembering your answer, even with this
+  setting on.
 * **A memory shared with your tenant always asks**, under either setting, because everyone in your
   tenant can read it and Pér may act on it in their work.
 * **Saving automatically is the same save.** It answers the same confirmation rather than taking
