@@ -36,10 +36,10 @@ each one up.
 What you can connect
 ==================================================
 
-The page holds one thing: **MCP connections**, which works in both directions.
+Pér can be connected to other systems in two directions, and the two have opposite consequences
+for who can do what.
 
-The two directions are easy to confuse and worth keeping apart, because they have opposite
-consequences for who can do what:
+They are easy to confuse, and worth keeping apart:
 
 * **Systems Pér reaches out to.** Connecting one lets Pér look things up there and, with your
   approval, change them. Today that is
@@ -47,6 +47,8 @@ consequences for who can do what:
 * **Pér as something another agent reaches into.** Pér can also be
   :ref:`connected as a context source <per-connect-as-mcp-server>` for an agent somewhere else.
   That direction only ever reads.
+
+Both directions are set up under **MCP connections** on this page.
 
 Connecting anything here needs no special permission. Anyone who can reach Pér can set a connection
 up and anyone who can reach Pér can take it away, so a connection is worth agreeing on rather than
