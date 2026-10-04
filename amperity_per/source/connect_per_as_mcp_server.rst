@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Bring the portfolio data Pér holds into another agent as read-only context, scoped to what you can already see.
+        Bring what Pér holds for your tenants into another agent as read-only context, scoped to what you can already see.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Bring the portfolio data Pér holds into another agent as read-only context, scoped to what you can already see.
+        Bring what Pér holds for your tenants into another agent as read-only context, scoped to what you can already see.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -52,7 +52,7 @@ What it offers instead:
 
 * **The tenants your own access covers**, and which of them it is working in by default.
 * **A summary of a tenant**, the same material Pér uses to orient itself.
-* **The recommendations on the board**, and the detail behind each one.
+* **The recommendations in the Portfolio**, and the detail behind each one.
 * **Recent activity** — what has been happening in the tenant.
 
 .. important::
