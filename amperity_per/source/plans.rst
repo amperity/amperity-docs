@@ -111,11 +111,13 @@ step.
   conversation, with the values that will be sent. See
   :ref:`What a write confirmation shows you <per-approvals-card>`.
 * **A step that only reads runs itself.** It changes nothing, so it needs no approval and offers no
-  rejection; it goes as soon as the step before it finishes.
+  rejection; it goes as soon as the step before it finishes. The exception is a step whose job's
+  results are meant to be read before the plan goes on — that one waits for you. See
+  :ref:`Steps that take a while <per-plans-waiting>`.
 * **Some steps cover several changes at once.** Where changes only make sense together, they arrive
   as one step and one approval, and the confirmation lists each of them.
 
-You can also approve the whole plan at once. When you approve and execute a whole plan, you
+You can also approve the whole plan at once. When you approve and run a whole plan, you
 approve the plan — not each write inside it one at a time. Pér then re-checks at every step
 whether it may still go on, stops at any step that needs a person, and records which steps it
 approved on your behalf. See :ref:`Approving a whole plan at once <per-approvals-whole-plan>`.
@@ -214,9 +216,9 @@ your approval rather than running.
 A plan that is approving its own steps cannot be changed at all; stop the run first.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
-recommendation to the board, so that work can be proposed again. It is offered only while nothing
-has progressed past the first step, and only for a plan written from a recommendation. Starting
-again creates a new plan.
+recommendation to the Portfolio, so that work can be proposed again. It is offered only while
+nothing has progressed past the first step, and only for a plan written from a recommendation.
+Starting again creates a new plan.
 
 .. important::
 
@@ -246,7 +248,9 @@ From a conversation, open the plan from the card Pér posted there.
 #. Read every step first.
 #. Click **Approve & run all** at the top of the plan.
 
-The control may also read **Run all {n} steps** beside the first step.
+The control names the number of steps it covers — **Approve & run all 5 steps**, say. Beside the
+first step the same action reads **Run all 5 steps**, or **Run the whole plan** when there is no
+count to show.
 
 **To stop a plan that is running itself**
 
@@ -270,5 +274,5 @@ Work already set running in Amperity continues; nothing further is approved.
 #. Click **Revert to recommendation**.
 #. Confirm.
 
-A step you approved and executed, a plan you reverted and a step you retried each appear in the
+A step you approved and ran, a plan you reverted and a step you retried each appear in the
 :ref:`Activity log <per-activity-log>`.
