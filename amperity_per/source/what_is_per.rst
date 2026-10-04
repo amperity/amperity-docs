@@ -39,9 +39,9 @@ Pér is for the people who already work in Amperity: the marketers and analysts 
 audiences, segments, campaigns and predictive models, and the administrators who look after the
 tenant they work in.
 
-Pér closes the distance between asking a question about customers and the work in Amperity work that answers and acts on it. The same question that starts a
-conversation can end in configured, approved, running work, without leaving the conversation to
-do it.
+Pér closes the distance between asking a question about customers and doing the work in Amperity
+that answers and acts on it. The same question that starts a conversation can end in configured,
+approved, running work, without leaving the conversation to do it.
 
 What that looks like depends on the work you do:
 
@@ -69,11 +69,17 @@ Four things make up that context:
 * **Your identity-resolved customer data.** Pér queries your tenant's own customer tables, where
   records from different systems have already been resolved into one view of a person. It reads
   that data through Amperity, under your own access.
-* **Company context.** The business priorities, definitions and KPIs you want Pér to work from.
-  Pér carries company context into every session.
-* **Must-follow memories.** Standing rules you have told Pér to observe. Pér reads must-follow
-  memories first and treats them as rules it must not break.
-* **The approval boundary.** Nothing Pér proposes reaches Amperity until a person approves it.
+* **The history in that data.** Not only who your customers are, but what they have done.
+* **The rules you have given Pér to work inside.** Three things make these up:
+
+  * **Company context** — the business priorities, definitions and KPIs you want Pér to work
+    from, carried into every session.
+  * **Must-follow memories** — standing rules you have told Pér to observe. Pér reads must-follow
+    memories first and treats them as rules it must not break.
+  * **The approval boundary** — nothing Pér proposes reaches Amperity until a person approves it.
+
+* **The predictive intelligence available in your tenant.** Where your tenant already has
+  predictive models, Pér looks at the audiences they identify and proposes work that acts on them.
 
 Alongside your Pér company context, Pér also reads the context documents and the AmpAI system
 prompt your tenant has set up in Amperity.
@@ -82,7 +88,7 @@ prompt your tenant has set up in Amperity.
 
    All of that material — company context, memories, your Amperity context documents, the AmpAI
    system prompt, and anything Pér finds on the web — is treated as information to work from, not
-   as instructions addressed to Pér. Receieved context cannot change Pér's operating
+   as instructions addressed to Pér. Received context cannot change Pér's operating
    rules, grant it a permission, or move it to another tenant.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
@@ -107,14 +113,15 @@ How the boundary works:
 * **Every write becomes something you approve.** When Pér wants to change something in Amperity, it
   does not just do it. The change becomes a write confirmation or a step in a plan, and nothing is
   sent to Amperity until a person approves it.
-* **One approval can cover a whole plan.** When you approve and execute a whole plan, you approve
+* **One approval can cover a whole plan.** When you approve and run a whole plan, you approve
   the plan — not each write inside it one at a time. Pér then re-checks at every step whether it
   may still go on, stops at any step that needs a person, and records which steps it approved on
   your behalf.
 * **Some tools are withheld from Pér entirely.** Whatever else is permitted, Pér cannot read
-  credentials, create or delete users, grant or revoke access, change the shape of your tenant, or
-  relax the confirmation gate itself. These are refused before any other rule is considered, so no
-  setting and no instruction can re-enable them.
+  credentials, create or delete people, grant or revoke access, change the shape of your tenant,
+  or relax the confirmation gate itself. These are refused before any other rule is considered, so
+  no setting and no instruction can re-enable them. The full list is in
+  :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
 
 .. important::
 
