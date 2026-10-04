@@ -38,9 +38,50 @@ This documentation covers Pér for the people who use it:
 * Connecting Pér to the other tools you use
 * Administering who can reach Pér
 
-.. TODO closing run: add the .. grid:: of grid-item-cards here, one per section, once every
-   built article exists — :link-type: doc to a missing document fails the -W build. Tracked
-   as NC-021(a).
+.. per-index-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Get started
+      :link-type: ref
+      :link: per-what-is-per
+
+      What Pér is, the loop it works in, the words this documentation uses, and a first session.
+
+   .. grid-item-card:: Working with Pér
+      :link-type: ref
+      :link: per-chatting
+
+      Conversation, recommendations, plans, approvals, and the reports Pér produces.
+
+   .. grid-item-card:: Context and skills
+      :link-type: ref
+      :link: per-company-context
+
+      The standing material Pér works from, and the packaged workflows you can start by name.
+
+   .. grid-item-card:: Settings
+      :link-type: ref
+      :link: per-app-integrations
+
+      What Pér is connected to, what it has done, and how your tenant is configured.
+
+   .. grid-item-card:: Integrations
+      :link-type: ref
+      :link: per-connect-as-mcp-server
+
+      Connect Pér to Salesforce Marketing Cloud, or to another agent as a context source.
+
+   .. grid-item-card:: Administration
+      :link-type: ref
+      :link: per-administration
+
+      Who can reach Pér, and how that is administered in Amperity.
+
+.. per-index-grid-end
 
 .. per-about-end
 
