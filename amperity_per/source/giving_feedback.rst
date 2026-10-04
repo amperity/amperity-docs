@@ -101,7 +101,7 @@ Sending feedback
 
 #. Tell Pér what you want passed on to the team.
 #. Read the confirmation, which shows the note Pér has written.
-#. Click **Execute**.
+#. Click **Run**.
 
 If the note is not what you meant, reject it and tell Pér what to say instead.
 
