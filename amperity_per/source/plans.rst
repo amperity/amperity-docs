@@ -206,10 +206,11 @@ Before you start approving steps, you can have Pér change what a step will do, 
 plan aside. Both have limits, and the second one has a name that invites exactly the wrong
 expectation.
 
-**Changing a step.** Ask Pér in :ref:`conversation <per-chatting>` to change a step that has not
-run yet — a different audience, another name, a changed offer. A step that has already been
-approved, has run, or was rejected cannot be changed, and a changed step still waits for your
-approval rather than running.
+**Changing the steps.** Ask Pér in :ref:`conversation <per-chatting>` to change a step that has
+not run yet — a different audience, another name, a changed offer — or to add a step, drop one, or
+put them in a different order. A step that has already been approved, has run, or was rejected
+cannot be changed and nothing can be placed before it, and a changed or added step still waits for
+your approval rather than running.
 A plan that is approving its own steps cannot be changed at all; stop the run first.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
@@ -238,12 +239,12 @@ From a conversation, open the plan from the card Pér posted there.
 **To approve and run one step**
 
 #. Read the step's confirmation.
-#. Click **Execute step**. A step that only reads reads **Run step**.
+#. Click **Run step**.
 
 **To approve and run a whole plan**
 
 #. Read every step first.
-#. Click **Approve & execute all** at the top of the plan.
+#. Click **Approve & run all** at the top of the plan.
 
 The control may also read **Run all {n} steps** beside the first step.
 
