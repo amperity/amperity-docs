@@ -53,7 +53,8 @@ back with something to approve — and it is the one rule that holds across ever
 * **What Pér keeps to itself is not gated.** A report Pér writes for you changes nothing in
   Amperity, so it needs no approval. A memory about you alone follows your own setting: by default
   Pér asks before saving one, and you can choose to let your personal memories save without
-  asking. A memory shared with your tenant always asks.
+  asking. A memory shared with your tenant always asks, and so does one that records an answer
+  Pér had to ask you for.
 * **Amperity holds its own gate.** On a production tenant, Amperity itself keeps changes behind an
   explicit confirmation, and your approval in Pér is what answers it. Pér cannot turn that gate
   off.
@@ -122,7 +123,7 @@ A :ref:`plan <per-plans>` can be approved as a whole, rather than a step at a ti
 A plan of a dozen steps should not need a dozen clicks. But approving a plan and watching each
 write go by are not the same thing, and the difference is worth stating exactly.
 
-When you approve and execute a whole plan, you approve the plan — not each write inside it one at
+When you approve and run a whole plan, you approve the plan — not each write inside it one at
 a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs a
 person, and records which steps it approved on your behalf.
 
@@ -201,7 +202,7 @@ not depend on anyone remembering.
 * **The outcome is written into the conversation**, so the next thing you ask, and the same
   conversation reopened later, read the same history.
 * **Plan steps reach the** :ref:`Activity log <per-activity-log>`. A step that was approved and
-  executed, a plan that was reverted, and a step that was retried each appear there.
+  run, a plan that was reverted, and a step that was retried each appear there.
 * **Steps a run approved for you are marked as such** in the plan's own record.
 
 .. important::
@@ -248,7 +249,9 @@ remaining**. A deletion among them asks you to confirm before anything runs.
 #. Open the plan and read the step's confirmation.
 #. Click **Run step**.
 
-A step that only reads changes nothing, so it offers no rejection.
+A step that only reads usually runs itself and shows no confirmation — see
+:ref:`Approving the steps <per-plans-approving>`. Where one does wait for you, it changes nothing,
+so it offers no rejection.
 
 **To approve and run a whole plan**
 
