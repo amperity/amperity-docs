@@ -45,8 +45,8 @@ customer records your organization has already agreed on, as they are now.
 
 How that works:
 
-* **Under your own access.** Pér reads as you, using the access your Amperity sign-in gives you. It
-  can do no more on your behalf than you could do yourself.
+* **Under your own access.** In the Pér web app, Pér reads as you, using the access your Amperity
+  sign-in gives you. It can do no more on your behalf than you could do yourself.
 * **Your policies apply.** Whatever your Amperity policies restrict is restricted for Pér. If your
   policies carry the `Restrict PII access
   <../reference/policies.html#policies-option-restrict-pii>`__ option, Pér does not see that data
@@ -60,6 +60,12 @@ How that works:
   an identifier, a table, a column, the current state of something it is about to change.
 * **It does not invent results.** When a read fails, Pér says so and carries on with what it has,
   rather than filling the gap.
+
+The chat surfaces work differently. In Slack and Microsoft Teams, Pér answers on one connection
+belonging to the workspace rather than on the Amperity sign-in of whoever asked, and that connection
+is not given access to PII. Values from columns tagged as PII come back redacted, though counts and
+other aggregates over them still work. Neither surface can change anything. See
+:ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`.
 
 .. note::
 
@@ -170,9 +176,6 @@ access might otherwise allow them.
 On the changing side the list is longer: identity and access, the shape of your tenant, where your
 data may be sent, and the confirmation gate itself are all out of reach, whatever is approved. The
 full boundary is in :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
-
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, add that they are
-   read-only, use a shared connection rather than the asker's own access, and never return PII.
 
 .. PARKED-LINK: scheduled_tasks.rst: when scheduled tasks ship, add that a scheduled run is
    offered only reading tools, and that each read is checked a second time against the task
