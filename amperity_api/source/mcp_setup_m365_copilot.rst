@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Configure GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to connect to the Amperity MCP server.
+        Connect Microsoft 365 Copilot, GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to connect to the Amperity MCP server.
+        Connect Microsoft 365 Copilot, GitHub Copilot in VS Code, GitHub Copilot CLI, Copilot Studio, or Microsoft Foundry to the Amperity MCP server.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,8 +20,9 @@ Set up Microsoft Copilot and Foundry
 
 .. mcp-setup-copilot-page-start
 
-Connect Microsoft's agent products to the Amperity MCP server and sign in with your Amperity credentials. This page covers four clients:
+Connect Microsoft's agent products to the Amperity MCP server and sign in with your Amperity credentials. This page covers five clients:
 
+* :ref:`Microsoft 365 Copilot <mcp-setup-m365-copilot>` -- Copilot Chat in Microsoft 365, installed from Microsoft Marketplace.
 * :ref:`VS Code <mcp-setup-vscode>` -- GitHub Copilot in agent mode.
 * :ref:`GitHub Copilot CLI <mcp-setup-copilot-cli>` -- the terminal agent.
 * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>` -- the agent builder for Microsoft 365.
@@ -30,6 +31,75 @@ Connect Microsoft's agent products to the Amperity MCP server and sign in with y
 .. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code and GitHub Copilot CLI receive the full tool surface. Copilot Studio and Microsoft Foundry receive a curated subset of tools--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-copilot-page-end
+
+
+.. _mcp-setup-m365-copilot:
+
+Microsoft 365 Copilot
+==================================================
+
+.. mcp-setup-m365-copilot-start
+
+Install the Amperity app from Microsoft Marketplace, after which Amperity is available as a source in Microsoft 365 Copilot Chat.
+
+.. mcp-setup-m365-copilot-end
+
+
+.. _mcp-setup-m365-copilot-requirements:
+
+Requirements
+--------------------------------------------------
+
+.. mcp-setup-m365-copilot-requirements-start
+
+Connecting Microsoft 365 Copilot to the MCP server requires:
+
+* An active Amperity account with access to at least one tenant.
+* A Microsoft 365 account with access to Microsoft 365 Copilot Chat.
+
+.. mcp-setup-m365-copilot-requirements-end
+
+
+.. _mcp-setup-m365-copilot-install:
+
+Install the Amperity app
+--------------------------------------------------
+
+.. mcp-setup-m365-copilot-install-start
+
+#. Open the `Amperity listing on Microsoft Marketplace <https://marketplace.microsoft.com/en-us/product/WA200012351?tab=Overview>`__.
+#. Select **Get it now**, and then sign in with your Microsoft 365 account.
+
+   If your organization restricts app installs, ask your Microsoft 365 admin to make the Amperity app available to you.
+
+#. In Copilot Chat, open the source picker from the message box to show **Select sources**.
+#. Find **Amperity** in the list, and then select **Connect**.
+#. Sign in with your Amperity credentials, and then approve the consent screen. Copilot returns to the conversation.
+#. Make sure the **Amperity** toggle is on.
+
+The connection persists across conversations.
+
+.. mcp-setup-m365-copilot-install-end
+
+
+.. _mcp-setup-m365-copilot-interacting:
+
+Start interacting with Copilot
+--------------------------------------------------
+
+.. mcp-setup-m365-copilot-interacting-start
+
+With the Amperity source turned on, ask about your Amperity tenant:
+
+.. code-block:: none
+
+   "Using Amperity, tell me about my Amperity tenant."
+
+Copilot calls the **tenant_info** tool and returns details about your current Amperity tenant.
+
+.. tip:: Start a prompt with "Using Amperity" to route the question to Amperity rather than another connected source.
+
+.. mcp-setup-m365-copilot-interacting-end
 
 
 .. _mcp-setup-vscode:
