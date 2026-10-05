@@ -26,7 +26,9 @@ Pér in Teams
 Pér answers questions in Microsoft Teams, in the channel where the conversation is already
 happening.
 
-Teams serves the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop, and deliberately only that. It reads and cannot change anything, so adding Pér to a channel is not a decision about what it may change.
+Teams serves the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer
+decision loop, and deliberately only that. It reads and cannot change anything, so adding Pér to a
+channel is not a choice about what it may change.
 
 
 .. _per-in-teams-what:
@@ -37,8 +39,8 @@ What Pér can do in Teams
 Pér answers from the same customer data it works from everywhere else, and shows where the answer
 came from.
 
-An answer in a channel is read by people who were not there when it was asked, so it has to carry
-enough of its own ecidence to be checked by someone who arrives late.
+An answer in a channel may be read by people who were not there when it was asked, so it has to
+carry enough of its own evidence to be checked by someone who arrives late.
 
 * **It looks things up.** What exists in your tenant, and what state it is in.
 * **It can run a query** to answer a question that nothing on the shelf answers.
@@ -82,7 +84,8 @@ Values from columns tagged as PII come back redacted. Counts and other aggregate
 work.
 
 A channel transcript is permanent, searchable, and visible to everyone in the channel, including
-people who hold no Amperity access at all. That is why this surface cannot carry individual-level PII, and nothing you can do in Teams changes that.
+people who hold no Amperity access at all. That is why this surface cannot carry individual-level
+PII, and nothing you can do in Teams changes that.
 
 * **Teams queries run on one connection belonging to the installation**, not on the Amperity
   sign-in of whoever asked. That connection is not given access to PII.
@@ -100,7 +103,8 @@ people who hold no Amperity access at all. That is why this surface cannot carry
 Where Pér answers
 ==================================================
 
-Pér answers in channels, and only in channels. It answers what was addressed to it, and stays out of everything else.
+Pér answers in channels, and only in channels. It answers what was addressed to it, and stays out of
+everything else.
 
 * **Mention Pér in a channel it is in, and it answers** — including a bare mention with no
   question, which it reads as asking whether it is there.
