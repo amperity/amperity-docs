@@ -39,7 +39,9 @@ Pér is for the people who already work in Amperity: the marketers and analysts 
 audiences, segments, campaigns and predictive models, and the administrators who look after the
 tenant they work in.
 
-Pér makes it simple to ask a question about customers, get answers grounded in data, and do the work in Amperity that acts on the answers. The same question that starts a conversation can end in configured, approved, running work, without leaving the conversation to do it.
+Pér makes it simple to ask a question about customers, get answers grounded in data, and do the work
+in Amperity that acts on the answers. The same question that starts a conversation can end in
+configured, approved, running work, without leaving the conversation to do it.
 
 What that looks like depends on the work you do:
 
