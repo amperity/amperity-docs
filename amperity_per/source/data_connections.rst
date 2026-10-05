@@ -23,9 +23,11 @@ Data connections
 Data connections is where you supply the connection details a destination needs that
 Amperity does not carry for it.
 
-Pér can read what a destination reports back about the work sent to it, which is how it can tell
-you what became of a campaign rather than only what was sent. A destination missing the detail that
-identifies your account cannot be reached at all, which will result in a lack of information from that estination. This page in Pér says which destinations are ready and lets you fill in what is missing.
+Pér can read what a destination reports back about the work sent to it, which is how it can tell you
+what became of a campaign rather than only what was sent. A destination missing the detail that
+identifies your account cannot be reached at all, which will result in a lack of information from
+that destination. This page in Pér says which destinations are ready and lets you fill in what is
+missing.
 
 
 .. _per-data-connections-what-goes-in:
