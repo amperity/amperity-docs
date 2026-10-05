@@ -24,7 +24,8 @@ Conversation is how you work with Pér. You ask a question in plain language, P�
 tenant's data to answer it, and it shows you what it is doing as it goes. When the answer implies
 work in Amperity, the conversation is also where that work starts.
 
-A question does not have to be restated as a query, then a ticket, then a round of configuration — it stays one thread, and what comes out of it is a plan you can read. Most of this article is the
+A question does not have to be restated as a query, then a ticket, then a round of configuration —
+it stays one thread, and what comes out of it is a plan you can read. Most of this article is the
 :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop; the
 last part of it is the second way into :ref:`Approve <per-customer-decision-loop-approve>`.
 
@@ -36,7 +37,8 @@ What a conversation is
 
 A conversation is a persistent thread of questions and answers against your own customer data.
 
-The chat where you worked out why repeat purchase fell in March is still there in June, with everything it established and everything Pér looked at. You can pick it up rather than start again.
+The chat where you worked out why repeat purchase fell in March is still there in June, with
+everything it established and everything Pér looked at. You can pick it up rather than start again.
 
 * **Your chats are yours.** Your list shows the conversations you started. A colleague does not see
   them unless you :ref:`share one <per-chat-history-sharing>`.
@@ -56,14 +58,16 @@ Asking, and following along
 
 Between sending a question and getting an answer, Pér shows its working.
 
-Complex questions may take Pér several steps to answer, so Pér narrates as it goes. You can watch as it narrates, but because the work happens on Amperity's servers rather than in your browser, it will be there when you come back if you opt not to sit and watch.
+Complex questions may take Pér several steps to answer, so Pér narrates as it goes. You can watch as
+it narrates, but because the work happens on Amperity's servers rather than in your browser, it will
+be there when you come back if you opt not to sit and watch.
 
 How a response behaves:
 
 * **Pér says what it is about to do before it does it.** Each round of work opens with one plain
-  sentence naming the step and why it matters in business terms rather than tables and columns, for 
-  example, — "First I'll pull customers who purchased in the
-  last 12 months." Alongside it you see what Pér is working on at that moment.
+  sentence naming the step and why it matters, in business terms rather than tables and columns —
+  for example, "First I'll pull customers who purchased in the last 12 months." Alongside it you
+  see what Pér is working on at that moment.
 * **The work happens on the server.** You can move to another page, close the chat panel, or reload
   the browser; the answer is still produced and saved. Coming back shows you what you missed and
   then follows along live.
@@ -71,9 +75,9 @@ How a response behaves:
   and expects you to ask for more. An answer that runs long opens with a one-line version of the
   conclusion so you can decide whether to read the rest.
 * **Pér keeps going without asking permission to look things up.** It chains the reads an answer
-  needs — resolving an identifier, fetching a related object, pulling a detail, etc. — and comes
-  back once with the whole picture. It stops to ask only when the choice is genuinely yours: which 
-  of several things you meant, an ambiguous target, or a change you did not ask for.
+  needs — resolving an identifier, fetching a related object, pulling a detail — and comes back
+  once with the whole picture. It stops to ask only when the choice is genuinely yours: which of
+  several things you meant, an ambiguous target, or a change you did not ask for.
 * **Sometimes it asks as a choice.** Where a question has a few clear answers, Pér offers them to
   pick from. You can skip the choice and reply in your own words instead.
 * **Objects are linked.** Where Pér names something in your tenant, it links to it, so you can open
@@ -86,7 +90,7 @@ How a response behaves:
    what it did. Your own sources, destinations, and bridges are named normally, because they are
    yours.
 
-Two things Pér will not do: 
+Two things Pér will not do:
 
 * It will not hand you a query to run yourself.
 * It will not work around a permission you do not have. A read your Amperity access does not allow
