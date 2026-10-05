@@ -24,8 +24,12 @@ Company context is the standing briefing you give Pér. It says what your busine
 it is working toward, the rules it operates under, and what your own words mean when they appear in
 your data. You write it once, and Pér reads it in every session.
 
-It is the difference between an agent that knows your data and one that also knows your business. Pér can see that a segment's revenue fell; only your company context tells it whether that segment is one you are deliberately winding down. This is the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop, and
-company context is one of the three things that make up the rules Pér works inside, along with must-follow memories and the approval boundary. 
+It is the difference between an agent that knows your data and one that also knows your business.
+Pér can see that a segment's revenue fell; only your company context tells it whether that segment
+is one you are deliberately winding down. This is the :ref:`Understand
+<per-customer-decision-loop-understand>` stage of the customer decision loop, and company context is
+one of the three things that make up the rules Pér works inside, along with must-follow memories and
+the approval boundary.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
    memories and the approval boundary. PO to confirm. Same clause as what_is_per.rst and
@@ -40,7 +44,9 @@ What goes in it
 Four kinds of thing are worth writing down: what you measure, what you are trying to do, the rules
 you work under, and what your terms mean.
 
-Pér can already read your data, so there is no need to restate that information. Instead, it is useful to states what the data *means*. The useful material for company context is the part that lives in people's heads rather than in a table.
+Pér can already read your data, so there is no need to restate that information. Instead, it is
+useful to state what the data *means*. The useful material for company context is the part that
+lives in people's heads rather than in a table.
 
 A tenant with nothing written yet starts from a template with four sections:
 
@@ -69,7 +75,8 @@ permission for it — anyone who can reach Pér can read and edit it.
 How Pér uses it
 ==================================================
 
-Company context goes into every session, and Pér treats company context as reference rather than instruction.
+Company context goes into every session, and Pér treats company context as reference rather than
+instruction.
 
 What this means:
 
@@ -128,7 +135,9 @@ Adding documents Pér should read
 
 The page can also take whole files. These go to Amperity, not into the document above.
 
-The upload control sits beside your company context, but it does not fill it in. Each file you upload becomes a separate Amperity context document, and shows up in the read-only panel below rather than in the text you are editing.
+The upload control sits beside your company context, but it does not fill it in. Each file you
+upload becomes a separate Amperity context document, and shows up in the read-only panel below
+rather than in the text you are editing.
 
 The limits:
 
@@ -150,7 +159,8 @@ Editing it
 
 Company context belongs to the tenant, so editing it is something more than one person does.
 
-With a document everyone shares, it is likely that two people will eventually open it at once. The page takes this into account.
+With a document everyone shares, it is likely that two people will eventually open it at once. The
+page takes this into account.
 
 * **It records who saved it last, and when.**
 * **A save by someone else while you are editing asks you to choose.** You can keep your draft or
