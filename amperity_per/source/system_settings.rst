@@ -25,7 +25,7 @@ destinations, and whether anything is running right now.
 
 Nearly everything else in Pér assumes you are in the right tenant with the right data in front of
 you. When an answer looks wrong, this is the page that tells you whether those assumptions hold —
-and it is the page worth having open when you contact Amperity support about something.
+and it is the page worth having open when you ask your Amperity representative about something.
 
 Nothing here changes how Pér reasons. It is a statement of what is, with one editable setting.
 
