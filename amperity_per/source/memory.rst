@@ -132,10 +132,11 @@ What Pér won't keep
 
 Three things a memory will not do:
 
-* **Contact details and credentials are stripped before a memory is saved.** Email addresses, phone
-  numbers, card numbers and anything that looks like a credential are removed, whether Pér proposed
-  the memory or you typed it. A memory is a note about how to work, not a place to keep a customer
-  record or a password.
+* **Recognized contact details and credentials are stripped before a memory is saved.** Email
+  addresses, phone numbers, card numbers and some key and token formats are removed, whether Pér
+  proposed the memory or you typed it. The check matches known patterns rather than catching
+  everything, so treat it as a backstop: a memory is a note about how to work, not a place to keep a
+  customer record or a password.
 * **Two memories in the same scope cannot share a title.** A clash is reported so you can decide
   which one you meant, rather than quietly merged into one.
 * **You can turn memory off for yourself.** Pér stops saving new memories and stops using the ones
