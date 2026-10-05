@@ -26,16 +26,13 @@ Everything Pér knows about your customers comes from Amperity, but plenty of wh
 customers happens somewhere else. This page is both the short list of what Pér can reach beyond
 Amperity and the way in to setting each one up.
 
-.. PENDING NC-039: the page's own lead text names Slack and Teams on every tenant, including the
-   ones that have neither. Product copy; this article describes what is actually on the page.
-
 
 .. _per-app-integrations-mcp-connections:
 
 What you can connect
 ==================================================
 
-Pér can be connected to other systems in two directions.
+Pér can be connected to other systems in three ways.
 
 * **Systems Pér reaches out to.** Connecting one lets Pér look things up there and, with your
   approval, change them. Today that is
@@ -43,16 +40,18 @@ Pér can be connected to other systems in two directions.
 * **Pér as something another agent reaches into.** Pér can also be
   :ref:`connected as a context source <per-connect-as-mcp-server>` for an agent somewhere else.
   That direction only ever reads.
+* **Places Pér answers in.** Pér can be added to Slack and to Microsoft Teams, where it answers
+  questions in a channel. Setting either one up is described with the surface itself, in
+  :ref:`Setting up the Slack app <per-in-slack-setup>` and
+  :ref:`Setting up the Teams app <per-in-teams-setup>`.
 
-Both directions are set up under **MCP connections** on this page.
+The first two are set up under **MCP connections** on this page. Slack and Microsoft Teams have
+their own entries beside it.
 
-Connecting anything here needs no special permission. Anyone who can reach Pér can set a connection
-up and anyone who can reach Pér can take it away, so a connection is worth agreeing on rather than
-assuming.
-
-.. PARKED-LINK: per_in_slack.rst: add the Slack setup section to this article once Slack ships.
-
-.. PARKED-LINK: per_in_teams.rst: add the Teams setup section to this article once Teams ships.
+Setting up an MCP connection needs no special permission. Anyone who can reach Pér can set one up
+and anyone who can reach Pér can take it away, so a connection is worth agreeing on rather than
+assuming. Slack and Teams are different: both need Amperity permission to administer API keys, and
+Teams also needs a Microsoft directory administrator.
 
 .. PARKED-LINK: connect_databricks.rst: when Databricks ships it becomes a second system Pér
    reaches out to, so the "Today that is Salesforce Marketing Cloud" sentence above changes.
