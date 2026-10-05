@@ -52,8 +52,9 @@ what you could ship next week, and what belongs further out.
 
 .. note::
 
-   A verdict is Pér's assessment, not a measurement. It is a careful reading of your tenant — worth    taking seriously, and worth checking where it matters. 
-   See :ref:`Correcting what Pér concluded <per-use-case-feasibility-refine>`.
+   A verdict is Pér's assessment, not a measurement. It is a careful reading of your tenant — worth
+   taking seriously, and worth checking where it matters. See :ref:`Correcting what Pér concluded
+   <per-use-case-feasibility-refine>`.
 
 .. PENDING NC-052: the reads are real, and the verdict, score and impact rating are Pér's
    judgement over them against a standard catalogue. The article frames every one as an
