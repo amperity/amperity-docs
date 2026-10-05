@@ -64,7 +64,7 @@ Four things make up that context:
 
 * **Your identity-resolved customer data.** Pér queries your tenant's own customer tables, where
   records from different systems have already been resolved into one view of a person. It reads
-  that data through Amperity, under your own access.
+  that data through Amperity, and never beyond the access it has been given.
 * **The history in that data.** Not only who your customers are, but what they have done.
 * **The rules you have given Pér to work inside.** Three things make these up:
 
@@ -138,11 +138,11 @@ You can access Pér via:
 
 * :ref:`The Pér web app <per-accessing-per-web>`, where the full experience lives — chat,
   recommendations, plans, approvals and the reports Pér produces.
+* :ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`, where Pér answers in
+  the channel where the work is already being discussed. Both answer only; a change is made in the
+  Pér web app.
 * :ref:`As a tool for another agent <per-accessing-per-from-an-agent>`. Pér can be connected as an
   MCP server, so an agent you already use can reach your Amperity customer context through it.
 
 For the address, signing in and choosing a tenant, see
 :ref:`Accessing Pér <per-accessing-per>`.
-
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: add Slack and Teams to this list when those
-   surfaces reach production.
