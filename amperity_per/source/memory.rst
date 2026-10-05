@@ -205,6 +205,5 @@ A memory shared with your tenant asks either way.
 
 Your existing memories stay where they are.
 
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that a
-   memory cannot be saved from them, because they cannot show a confirmation — it is saved from
-   the Pér web app instead.
+A memory cannot be saved from Slack or Microsoft Teams. Both surfaces answer only and cannot show a
+confirmation, so a memory is saved from the Pér web app instead.
