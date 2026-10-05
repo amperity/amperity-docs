@@ -47,8 +47,14 @@ everything it established and everything Pér looked at. You can pick it up rath
 * **One answer at a time.** If you send something while a response is still running, Pér says so
   rather than starting a second one.
 
+A conversation does not have to happen in Pér. Pér answers in Slack and in Microsoft Teams from the
+same customer data, in the channel where the work is already being discussed. Those surfaces answer
+only: they cannot make a change and cannot take an approval, so when something needs changing Pér
+points back to the Pér web app and the change is made there.
+
 For what Pér reads to answer you, and under whose access, see
-:ref:`How Pér uses your data <per-how-per-uses-your-data>`.
+:ref:`How Pér uses your data <per-how-per-uses-your-data>`. For the chat surfaces, see
+:ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`.
 
 
 .. _per-chatting-asking:
@@ -255,7 +261,3 @@ To attach a different file, remove the attached one first.
 
 For where the conversation sits in relation to the rest of Pér, see
 :ref:`The chat panel <per-interface-tour-chat>`.
-
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
-   are read-only — they answer questions but cannot make changes, and a change is made in the Pér
-   web app instead.
