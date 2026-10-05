@@ -21,8 +21,9 @@ How Pér uses your data
 ==================================================
 
 Pér answers from your organization's own customer data, read out of Amperity at the moment you ask.
-It keeps no separate copy of that data, and it reads under your own Amperity access, so it can see
-exactly what you can see and nothing more.
+Amperity stays the system of record: Pér builds no separate store of your customer data, though what
+it read to answer you is kept with the conversation it was asked in. It reads under your own
+Amperity access, so it can see exactly what you can see and nothing more.
 
 Every answer Pér gives is as solid as its sources. This article sets out what those
 sources are: which of your data Pér reads and under whose access, what else it carries into a
@@ -147,16 +148,18 @@ How it works:
 * **Queries are checked before they leave.** A search Pér sends out may not contain an email
   address; may not contain the characters ``$``, ``%``, ``@`` or ``#``; may not contain numbers
   other than a four-digit year or a quarter such as ``Q3``; and may not contain your tenant's own
-  identifiers or the names of internal fields. A query that breaks any of those rules is refused
-  before it is sent, and Pér is asked to rephrase it in public terms.
+  identifier or a term on a blocked list that covers common internal field names. A query that
+  breaks any of those rules is refused before it is sent, and Pér is asked to rephrase it in public
+  terms.
 * **Sources are cited when used.** Pér cites a result it actually relied on, and is told not to
   list sources it read but did not use.
 
 .. important::
 
-   Those rules mean a web search cannot carry your customer counts, your revenue figures, your
-   audience sizes, your customers' details or your tenant's name out of Amperity — not as a matter
-   of care, but because the query is rejected.
+   Those rules are what keeps a web search from carrying your customer counts, your revenue figures,
+   your audience sizes or your customers' details out of Amperity — not as a matter of care, but
+   because the query is rejected. They are structural rules rather than a complete filter: your
+   company's own public name, for instance, is meant to go out, because that is what news is about.
 
 
 .. _per-how-per-uses-your-data-withheld:
