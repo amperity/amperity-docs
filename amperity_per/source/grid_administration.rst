@@ -24,6 +24,9 @@ Administration
 
 This section covers who can reach Pér, and how that is administered.
 
+All of it happens in Amperity. The choice of access mode, the grants to individuals, and cutting
+someone off are all made on the Amperity **Users** page.
+
 .. per-administration-about-end
 
 .. per-administration-about-grid-start
