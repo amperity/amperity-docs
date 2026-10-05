@@ -24,9 +24,11 @@ A plan is where work Pér proposes becomes work that runs: a titled, ordered lis
 step a concrete change to your Amperity tenant, and each one approved by a person before it
 happens. A plan also carries the reason it exists, what to watch out for, and what it produced.
 
-A plan is durable and resumable — you can leave it, come back tomorrow, and it is still there with its history. It is the place to read everything Pér intends to do before any of it happens. 
+A plan is durable and resumable — you can leave it, come back tomorrow, and it is still there with
+its history. It is the place to read everything Pér intends to do before any of it happens.
 
-Plans span two stages of the customer decision loop: :ref:`Approve <per-customer-decision-loop-approve>`, then :ref:`Act <per-customer-decision-loop-act>`.
+Plans span two stages of the customer decision loop: :ref:`Approve
+<per-customer-decision-loop-approve>`, then :ref:`Act <per-customer-decision-loop-act>`.
 
 
 .. _per-plans-what-a-plan-is:
@@ -34,7 +36,8 @@ Plans span two stages of the customer decision loop: :ref:`Approve <per-customer
 What a plan is
 ==================================================
 
-A plan gathers everything one piece of work needs into a single object. There is no second kind of record to learn and no separate place where the detail lives.
+A plan gathers everything one piece of work needs into a single object. There is no second kind of
+record to learn and no separate place where the detail lives.
 
 A plan carries:
 
@@ -134,7 +137,8 @@ Steps that take a while
 
 Some steps start work in Amperity that takes minutes or hours.
 
-Training a model, running a database, running a workflow may take longer than other operations, so a step can launch a job and the plan waits for it.
+Training a model, running a database, running a workflow may take longer than other operations, so a
+step can launch a job and the plan waits for it.
 
 * **The plan waits, then carries on.** When the job finishes, the next step unlocks.
 * **A checkpoint can hold the plan.** Where the results of a long job need reading before the next
@@ -163,11 +167,13 @@ Training a model, running a database, running a workflow may take longer than ot
 When a step fails
 ==================================================
 
-There are a few reasons a plan may fail. A plan never leaves you on a step that has simply stopped with no explanation.
+Two things can go wrong, and they are handled differently. A plan never leaves you on a step that
+has simply stopped with no explanation.
 
-**Amperity refused the change.** Pér reads the refusal, corrects the step, and offers it again as
-a confirmation for you to approve. It will say what was rejected and that it has been corrected. It
-tries this at most twice; after that the step stays as it is, with the error, for a person to deal with.
+**Amperity refused the change.** Pér reads the refusal, corrects the step, and offers it again as a
+confirmation for you to approve. It will say what was rejected and that it has been corrected. It
+tries this at most twice; after that the step stays as it is, with the error, for a person to deal
+with.
 
 **You do not have the access the step needs.** This is not corrected and retried, because there is
 nothing to correct. The step keeps its message and waits for you to get the access and run it.
@@ -197,11 +203,12 @@ Before you start approving steps, you can have Pér change what a step will do, 
 plan aside. Both have limits, and the second one has a name that invites exactly the wrong
 expectation.
 
-**Changing the steps.** Ask Pér in :ref:`conversation <per-chatting>` to change a step that has
-not run yet — a different audience, another name, a changed offer — or to add a step, drop one, or
-put them in a different order. A step that has already been approved, has run, or was rejected
-cannot be changed and nothing can be placed before it, and a changed or added step still waits for
-your approval rather than running. A plan that is approving its own steps cannot be changed at all; stop the run first.
+**Changing the steps.** Ask Pér in :ref:`conversation <per-chatting>` to change a step that has not
+run yet — a different audience, another name, a changed offer — or to add a step, drop one, or put
+them in a different order. A step that has already been approved, has run, or was rejected cannot be
+changed and nothing can be placed before it, and a changed or added step still waits for your
+approval rather than running. A plan that is approving its own steps cannot be changed at all; stop
+the run first.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
 recommendation to the Portfolio, so that work can be proposed again. It is offered only while
