@@ -29,9 +29,12 @@ install and no second password to keep.
 The Pér web app
 ==================================================
 
-Pér runs as a web application. Everything Pér can do happens here: the conversation, the recommendations it gathers, the plans it writes, the approvals that let those plans run, and the reports it produces.
+Pér runs as a web application. Everything Pér can do happens here: the conversation, the
+recommendations it gathers, the plans it writes, the approvals that let those plans run, and the
+reports it produces.
 
-This all happens in one place rather than several, which means a piece of work you start can be finished without moving anywhere else.
+This all happens in one place rather than several, which means a piece of work you start can be
+finished without moving anywhere else.
 
 How to reach it:
 
@@ -61,13 +64,16 @@ Signing in
 
 You sign in to Pér with your Amperity account, through the same sign-in Amperity uses.
 
-Pér does not keep its own list of people or its own credentials. There is one set of credentials to manage for a given user, one place to change it, and nothing extra to set up before someone can be let in. Whatever your organization already requires in order to sign in to Amperity is what Pér asks for too.
+Pér does not keep its own list of people or its own credentials. There is one set of credentials to
+manage for a given user, one place to change it, and nothing extra to set up before someone can be
+let in. Whatever your organization already requires in order to sign in to Amperity is what Pér asks
+for too.
 
 * **Single sign-on applies.** If your organization signs in to Amperity through its own identity
   provider, Pér signs you in the same way. See
   `How single sign-on works <../reference/sso.html#sso-howitworks>`__.
-* **Multi-factor authentication applies**, where your organization has set it up. See
-  `Multi-factor authentication <../reference/users.html#settings-users-multifactor-authentication>`__.
+* **Multi-factor authentication applies**, where your organization has set it up. See `Multi-factor
+  authentication <../reference/users.html#settings-users-multifactor-authentication>`__.
 * **Who can hold an Amperity account at all** is governed by your tenant's
   `allowed domains <../reference/users.html#settings-users-allow-domains>`__, as it is everywhere
   else in the platform.
@@ -93,7 +99,9 @@ Choosing a tenant
 Pér works in one Amperity tenant at a time, and it shows you only the tenants that have been
 enabled for Pér.
 
-This is the most common the usual explanation for a tenant you expected to see and cannot. The list in Pér is not your list of Amperity tenants; it is the part of that list Pér has been turned on for. Nothing is wrong with the tenants that are missing — they have just not been enabled.
+This is the usual explanation for a tenant you expected to see and cannot. The list in Pér is not
+your list of Amperity tenants; it is the part of that list Pér has been turned on for. Nothing is
+wrong with the tenants that are missing — they have just not been enabled.
 
 * **Pér picks one to start with.** When you arrive without a tenant already chosen, Pér selects one
   for you so you are not met with a list.
