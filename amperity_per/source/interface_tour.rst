@@ -22,7 +22,8 @@ Interface tour
 
 This is what each part of Pér is for.
 
-Asking and working happen side by side rather than in turn or in different tools. This is why the conversation sits beside whatever you are looking at, the whole time.
+Asking and working happen side by side rather than in turn or in different tools. This is why the
+conversation sits beside whatever you are looking at, the whole time.
 
 .. note::
 
@@ -94,7 +95,8 @@ The top bar
 
 The top bar holds the things that belong to your session rather than to the page.
 
-This will display which tenant you are in, whether anything has finished while you were away, and how to reach settings, no matter what page you are on.
+This will display which tenant you are in, whether anything has finished while you were away, and
+how to reach settings, no matter what page you are on.
 
 * **The tenant picker** shows which Amperity tenant you are working in, and changes it. See
   :ref:`Choosing a tenant <per-accessing-per-tenant>`.
@@ -137,7 +139,8 @@ See :ref:`Chatting with Pér <per-chatting>` for how a conversation works, and
 The pages
 ==================================================
 
-There are four pages. Knowing which holds what is most of the navigation you need, because the same thing never appears in two of them.
+There are four pages. Knowing which holds what is most of the navigation you need, because the same
+thing never appears in two of them.
 
 **Portfolio** is where you land. It gathers the work Pér thinks deserves your attention: the
 recommendations it has made, with a note of when that set was produced and a way to ask for a
