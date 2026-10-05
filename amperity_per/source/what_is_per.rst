@@ -39,9 +39,7 @@ Pér is for the people who already work in Amperity: the marketers and analysts 
 audiences, segments, campaigns and predictive models, and the administrators who look after the
 tenant they work in.
 
-Pér closes the distance between asking a question about customers and doing the work in Amperity
-that answers and acts on it. The same question that starts a conversation can end in configured,
-approved, running work, without leaving the conversation to do it.
+Pér makes it simple to ask a question about customers, get answers grounded in data, and do the work in Amperity that acts on the answers. The same question that starts a conversation can end in configured, approved, running work, without leaving the conversation to do it.
 
 What that looks like depends on the work you do:
 
@@ -57,12 +55,8 @@ What that looks like depends on the work you do:
 Trusted customer context
 ==================================================
 
-Everything Pér says and proposes rests on the foundation of your Amperity tenant's own customer data,
+Everything Pér says and proposes is grounded in your Amperity tenant's own customer data,
 together with the standing instructions you have given it.
-
-This is what separates an answer you can act on from an answer that merely sounds right. Rather than reasoning about customers in the abstract, Pér is reading the customer records your
-organization has already resolved, cleaned, and agreed on, and it shows its work so you can
-check it.
 
 Four things make up that context:
 
@@ -102,7 +96,7 @@ What Pér will and won't do on its own
 
 Pér reads on its own. It writes only with your approval.
 
-This is a boundary, not an adjustable setting, and is why it is feasible to let an agent work
+This is a boundary, not an adjustable setting, and is why you can let an agent work
 directly in a production tenant. You can hand Pér a broad question without first deciding how much
 of your tenant you are willing to let it change.
 

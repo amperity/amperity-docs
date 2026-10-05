@@ -25,7 +25,7 @@ Pér wants to make a change, that change becomes a write confirmation: a card st
 is about to happen, which waits for a person to approve it.
 
 This is the approval boundary, and it is the stage of the customer decision loop called
-:ref:`Approve <per-customer-decision-loop-approve>`. It is the reason it is reasonable to let an
+:ref:`Approve <per-customer-decision-loop-approve>`. It is the reason you can let an
 agent work directly in a production tenant. You can hand Pér a broad question without first
 deciding how much of your tenant you are willing to let it change, because the answer is always
 "none of it, until you say so".
@@ -39,11 +39,11 @@ Where the boundary sits
 The boundary runs between reading and changing.
 
 Knowing which side a request falls on tells you whether Pér will come back with an answer or come
-back with something to approve — and it is the one rule that holds across every part of Pér.
+back with something to approve. This rule that holds across every part of Pér.
 
 * **Reading is not gated.** Pér can look at anything in your tenant that you could look at
-  yourself, and reading never draws a confirmation. It reads before it proposes, because a change
-  it has not checked against your current data is a change not worth proposing.
+  yourself, and reading never draws a confirmation. It reads before it proposes, so that it can 
+  check andy change against your current data.
 * **Pér can ask for a change; it cannot make one.** Pér is given the ability to propose far more
   than it is able to carry out. Asking is what draws the confirmation. Nothing it proposes runs
   until you approve it, and what runs is what you approved and nothing more.
@@ -79,9 +79,7 @@ What a write confirmation shows you
 
 A write confirmation is a plain statement of one change, written so you can check it.
 
-You can only approve what you can read. The card is deliberately specific rather than
-reassuring — it names the operation, the object and the values, so that approving is a judgement
-rather than a reflex.
+The card is specific: it names the operation, the object, and the values to enable clear judgment about the approval.
 
 A confirmation carries:
 
@@ -92,9 +90,9 @@ A confirmation carries:
   can open it. On a step of a plan the values sit behind **Details**, because a plan page carries
   many cards at once.
 * **A warning, where one is warranted.** A deletion, or anything that reaches real customers, is
-  marked as the more serious thing it is.
+  marked as being more serious.
 * **A warning that depends on your current data.** Before drawing the card, Pér checks what the
-  change would do to what you already have, and says so — for example that a segment rewrite would
+  change would do to what you already have, and says so — for example, that a segment rewrite would
   leave that segment no longer editable in the visual segment editor, or that a segment being
   changed is one a campaign is already using.
 * **Every write it covers.** Some changes only make sense together, and arrive as one confirmation
@@ -120,12 +118,7 @@ Approving a whole plan at once
 
 A :ref:`plan <per-plans>` can be approved as a whole, rather than a step at a time.
 
-A plan of a dozen steps should not need a dozen clicks. But approving a plan and watching each
-write go by are not the same thing, and the difference is worth stating exactly.
-
-When you approve and run a whole plan, you approve the plan — not each write inside it one at
-a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs a
-person, and records which steps it approved on your behalf.
+A plan of a dozen steps does not need a dozen clicks. When you approve and run a whole plan, you approve the plan — not each write inside it one at a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs a person, and records which steps it approved on your behalf.
 
 What that means in practice:
 
@@ -156,8 +149,7 @@ What Pér can't do, whatever you approve
 
 Some things stay out of reach however the conversation goes.
 
-A boundary that an instruction, a setting or a persuasive request could move would not be a
-boundary. These are the parts that hold regardless.
+These are the parts that hold regardless of settings, instructions, or persuasion:
 
 * **Pér cannot approve on your behalf.** Approving a step and restarting a run are things only a
   person does. If Pér is asked to approve a step itself, the attempt is refused and recorded.
@@ -169,12 +161,19 @@ boundary. These are the parts that hold regardless.
 * **Approving twice does not run the change twice.**
 * **Permission is checked again at the moment you approve**, not only when the card was drawn. A
   change that was permitted when Pér proposed it, and is not permitted now, is refused.
-* **Some operations are refused before any other rule is considered.** Whatever else is permitted,
-  Pér cannot read a stored credential, read a file off the server it runs on, create or delete
-  people, grant or revoke access, create or delete a sandbox or push configuration to a parent
-  tenant, set up a new destination for your data to be sent to, roll your tenant's configuration
-  back to an earlier version, move itself to another tenant, or relax the confirmation gate
-  itself. No setting and no instruction re-enables these.
+
+Some operations are refused before any other rule is considered.
+Whatever else is permitted Pér cannot: 
+
+* Read a stored credential
+* Read a file off the server it runs on
+* Create or delete people
+* Grant or revoke access
+* Create or delete a sandbox or push configuration to a parent tenant
+* Set up a new destination for your data to be sent to
+* Roll your tenant's configuration back to an earlier version
+* Move itself to another tenant
+* Relax the confirmation gate itself. 
 
 .. note::
 
@@ -188,7 +187,7 @@ boundary. These are the parts that hold regardless.
 What's recorded
 ==================================================
 
-Every confirmation leaves a trace, and the trace says which way it went.
+Every confirmation leaves a trace that says which way it went.
 
 "Who approved what, and when" is the first question asked after anything surprising, and it should
 not depend on anyone remembering.

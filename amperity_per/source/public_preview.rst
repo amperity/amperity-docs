@@ -20,7 +20,7 @@
 Pér in Public Preview
 ==================================================
 
-Pér is in Public Preview. It is a working product, used on real Amperity tenants to do real work,
+Pér is in Public Preview. It is a functional product, used on real Amperity tenants to do real work,
 and it is still moving.
 
 This article says what that means in practice: what you can rely on now, what depends on your own
@@ -36,7 +36,7 @@ process to build on Pér, read this first.
 What Public Preview means
 ==================================================
 
-Public Preview means Pér is available and supported, and that it is still being built.
+Public Preview means Pér is available for use, and that it is still being built.
 
 The practical difference from a finished product is the rate of change. Capabilities arrive.
 Screens are rearranged and controls are renamed. Something you learned last month may be
@@ -63,10 +63,6 @@ Before anyone can use Pér
 
 An Amperity tenant has to be enabled for Pér before anyone in it can use Pér at all.
 
-This is worth knowing first because it explains the most common way of encountering nothing: not a
-permission problem, not a missing feature, but a tenant that has not been turned on. Tenants are
-enabled for Pér one at a time, and until yours is, the people in it do not see Pér.
-
 If nobody at your organization can reach Pér, confirm with your Amperity representative that your
 tenant is enabled for Pér.
 
@@ -88,8 +84,7 @@ What's included
 
 Everyone in an enabled tenant gets the whole of the customer decision loop.
 
-That is the point of the preview: not a sample of the product, but the working cycle end to end,
-on your own data.
+The end-to-end working cycle includes:
 
 * :ref:`Conversation with Pér <per-chatting>` about your customer data, including what Pér can
   find on the web.
@@ -140,11 +135,6 @@ These depend on your tenant's data, your connected tools, or your permissions:
 
 What this documentation doesn't claim
 ==================================================
-
-Being clear about what is not here is part of being trustworthy about what is.
-
-An honest account of a preview is more useful than an enthusiastic one, particularly if you are
-deciding what to depend on.
 
 * **Pér does not tell you what your marketing achieved.** It keeps a record of what it did and
   what it produced. Judging the business result of that work is still yours.

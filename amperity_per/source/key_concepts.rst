@@ -20,11 +20,9 @@
 Key concepts
 ==================================================
 
-These are the words this documentation uses, and what each one means in Pér.
+These are the terms this documentation uses, and what each one means in Pér.
 
-Several of them are ordinary English carrying a specific meaning here. A *plan* is a particular
-object with a particular lifecycle, not just an intention. A *memory* is something you asked Pér
-to keep, not everything it has seen. Knowing which is which saves a lot of re-reading.
+Several of them are everyday English words with a specific meaning in Pér. For example, A *plan* is a particular object with a particular lifecycle, not just an intention. A *memory* is something you asked Pér to keep, not everything it has seen.
 
 
 .. _per-key-concepts-activity-log:
@@ -47,8 +45,8 @@ to keep, not everything it has seen. Knowing which is which saves a lot of re-re
 
 **apply mode**
    How a memory that Pér proposes gets saved. By default Pér asks every time. You can choose to
-   let your personal memories save without asking; a memory shared with your tenant always asks,
-   under every setting, as does one that records an answer Pér had to ask you for.
+   let your personal memories save without asking; a memory shared with the rest of your tenant
+   always asks, as does one that records an answer Pér had to ask you for.
 
 
 .. _per-key-concepts-auto-run:
@@ -73,8 +71,8 @@ to keep, not everything it has seen. Knowing which is which saves a lot of re-re
 
 **Block user**
    The Amperity control that revokes all of a person's access to a tenant, overriding any
-   permission they hold directly or inherit. Pér has no revocation of its own — a person is cut
-   off in Amperity.
+   permission they hold directly or inherit. Pér has no revocation of its own — blocking happens
+   in Amperity.
 
    .. PENDING NC-006: blocking a user is documented nowhere in amperity-docs, so this entry has
       no link target. Sam's call; three options in collection-plan.md §3.1.
@@ -160,12 +158,7 @@ to keep, not everything it has seen. Knowing which is which saves a lot of re-re
 .. _per-key-concepts-per:
 
 **Pér**
-   Amperity's customer data agent, and the name used throughout this documentation. Written with
-   the acute é, including in headings.
-
-   .. PENDING NC-007: amperity-docs names this product "the Customer Data Agent" in four places
-      in the A-Z reference. Sam is reconciling those separately; until then the docs name the
-      product two ways.
+   Amperity's customer data agent, and the name used throughout this documentation.
 
 
 .. _per-key-concepts-plan:

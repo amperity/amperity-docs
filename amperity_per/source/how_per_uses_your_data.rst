@@ -24,7 +24,7 @@ Pér answers from your organization's own customer data, read out of Amperity at
 It keeps no separate copy of that data, and it reads under your own Amperity access, so it can see
 exactly what you can see and nothing more.
 
-Every answer Pér gives is worth what its sources are worth. This article sets out what those
+Every answer Pér gives is as solid as its sources. This article sets out what those
 sources are: which of your data Pér reads and under whose access, what else it carries into a
 session, what may leave Amperity, and what it is never allowed to reach at all. It is the
 :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop,
@@ -63,7 +63,7 @@ How that works:
 
 .. note::
 
-   Reading is not something you approve. Changing anything is. See
+   Reading is not something you approve. Only making changes in Amperity requires approval. See
    :ref:`Approvals and write confirmations <per-approvals>`.
 
 
@@ -75,7 +75,7 @@ What else Pér brings to a question
 Alongside your customer data, Pér carries standing material into every session.
 
 This is the part you control, and it is why Pér's answers get better over time rather than starting
-cold each morning. It is also material Pér did not write, which is why it is handled carefully.
+cold each new session. It is also material Pér did not write, which is why it is handled carefully.
 
 What goes in:
 
@@ -92,8 +92,8 @@ What goes in:
    All of that material is treated as information to work from, not as instructions addressed to
    Pér. Text that arrives in context cannot change Pér's operating rules, hand it a tool, grant it
    a permission, or move it to another tenant. Where such material conflicts with Pér's own rules,
-   Pér's rules win, and a directive inside it is not carried out — Pér says plainly that the
-   material cannot change its rules and gets on with what you asked.
+   Pér's rules win, and a directive inside it is not carried out. In such a case, Pér says plainly 
+   that the material cannot change its rules and gets on with what you asked.
 
 The one exception is a skill's own instructions. A :ref:`skill <per-skills>` is Amperity's
 material rather than something found or written at the tenant, so Pér follows it for the task it
@@ -125,11 +125,9 @@ without going back through the conversation.
 Searching the web
 ==================================================
 
-Pér can look outside Amperity for recent public news.
+Pér can look outside Amperity for recent public news. This helps recommendations account for current events that might affect a campaign, such as a recall or a regulatory change. 
 
-A recommendation that ignores a storm, a recall or a regulatory change is worse than no
-recommendation. But anything leaving your tenant deserves a stated rule, so there is one, and it is
-enforced on every query rather than left to judgement.
+There are rules enforced on how web searches function.
 
 How it works:
 
@@ -169,8 +167,7 @@ access might otherwise allow them.
 
 On the changing side the list is longer: identity and access, the shape of your tenant, where your
 data may be sent, and the confirmation gate itself are all out of reach, whatever is approved. The
-full boundary is in
-:ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
+full boundary is in :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
 
 .. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, add that they are
    read-only, use a shared connection rather than the asker's own access, and never return PII.
@@ -189,7 +186,7 @@ This article describes how Pér reaches your data and what it does with it insid
 
 It is not a statement about where your data is processed, who processes it, how long anything is
 retained, or whether any of it is used to train a model. Those are commitments rather than product
-behavior, and they belong in your agreement with Amperity. For anything in that category, see your
+behavior, outlined in your agreement with Amperity. For anything in that category, see your
 agreement or ask your Amperity representative.
 
 .. PENDING NC-024: no processing, retention, subprocessor or training claim is made here. PO and

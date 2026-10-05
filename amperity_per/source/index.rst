@@ -23,20 +23,7 @@ Pér
 .. per-about-start
 
 Pér is Amperity's customer data agent. Ask it about your customers in plain language, and it
-answers from the customer data your organization already keeps in Amperity — then carries out the
-work that follows, in Amperity, once you approve it.
-
-This documentation covers Pér for the people who use it:
-
-* What Pér is, who it is for, and what it will and won't do on its own
-* The customer decision loop it works in, and which part of Pér serves each stage
-* The words this documentation uses, defined in one place
-* What Public Preview includes, and what depends on your own setup
-* Getting in, finding your way around, and taking a first session
-* Working with recommendations, plans, approvals and the reports Pér produces
-* Giving Pér the context and memory it works from
-* Connecting Pér to the other tools you use
-* Administering who can reach Pér
+answers from the customer data your organization already keeps in Amperity. It makes recommendations and plans for you to approve then carries out the work in Amperity. 
 
 .. per-index-grid-start
 
@@ -49,7 +36,7 @@ This documentation covers Pér for the people who use it:
       :link-type: ref
       :link: per-what-is-per
 
-      What Pér is, the loop it works in, the words this documentation uses, and a first session.
+      What Pér is, the loop it works in, the terms this documentation uses, and a first session.
 
    .. grid-item-card:: Working with Pér
       :link-type: ref

@@ -23,10 +23,7 @@ Quickstart: your first session
 This walks one piece of work the whole way: a question, a proposal you can check, a plan, the
 approvals that let it run, and something you can hand to somebody afterwards.
 
-Every part of Pér is documented on its own, and reading those articles in order does not tell you
-how they join up. This is the joining up. It is also the
-:ref:`customer decision loop <per-customer-decision-loop>` with the product names attached, so by
-the end of it the five stages should have stopped being abstract.
+This article traces the :ref:`customer decision loop <per-customer-decision-loop>` with the product names attached, so by the end of it the five stages should have stopped being abstract.
 
 **Before you start**
 
@@ -45,9 +42,7 @@ Ask something
 
 Start by asking Pér a question about your own customers, in your own words.
 
-This is the cheapest thing you can do and the most informative. It tells you what Pér can see,
-how it reasons about your data, and whether your tenant holds what you assumed it held — all
-before you have committed to anything. This is :ref:`Understand <per-customer-decision-loop-understand>`.
+This tells you what Pér can see, how it reasons about your data, and whether your tenant holds what you assumed it held — all before you have committed to anything. This is :ref:`Understand <per-customer-decision-loop-understand>`.
 
 What to expect:
 
@@ -61,8 +56,7 @@ What to expect:
 
 #. Type your question in the chat panel and click **Ask Pér**.
 
-Good first questions are concrete and about your own data — how many customers bought twice last
-year, which segment has grown most since spring, what a particular audience actually contains.
+Good first questions are concrete and about your own data — for example, how many customers bought twice last year, which segment has grown most since spring, what a particular audience actually contains, etc.
 
 See :ref:`Chatting with Pér <per-chatting>`, and
 :ref:`How Pér uses your data <per-how-per-uses-your-data>` for what it reads and under whose
@@ -77,7 +71,7 @@ Read a recommendation
 Next, look at something Pér proposes, and at the argument underneath it.
 
 A recommendation is the part of Pér you are meant to be able to disagree with. Reading the
-evidence now is the cheapest moment to find a problem with it — far cheaper than finding it after
+evidence now is the best moment to find a problem with it — far better than finding it after
 a campaign has gone out. This is :ref:`Recommend <per-customer-decision-loop-recommend>`.
 
 **This step has a prerequisite the others don't.** Recommendations are produced by a refresh that
@@ -86,11 +80,9 @@ normal, not a fault.
 
 * **A refresh takes a while**, and a tenant runs one at a time.
 * **You can stop one**, and stopping it leaves the Portfolio as it was.
-* **It can honestly come back with nothing**, and says so rather than implying something arrived.
+* **It can come back with nothing**, and says so rather than implying something arrived.
 
-Each recommendation carries what it proposes, the evidence for it — claims, the numbers behind
-them, and where in your data they came from — the constraints Pér worked within, and a confidence
-grade with the reasoning for that grade, including what Pér could not establish.
+Each recommendation carries what it proposes, the evidence for it (including claims, the numbers behind them, and where in your data they came from), the constraints Pér worked within, and a confidence grade with the reasoning for that grade, including what Pér could not establish.
 
 **To get a first set of recommendations**
 
@@ -115,9 +107,7 @@ Act on it
 
 Acting on a recommendation turns it into a plan.
 
-This is the hinge of the whole thing — the point where an argument becomes a list of concrete
-changes to your Amperity tenant, each one waiting for a person. It is where
-:ref:`Approve <per-customer-decision-loop-approve>` begins.
+This is the point where an argument becomes a list of proposed concrete changes to your Amperity tenant, each one waiting for a person. It is where the :ref:`Approve <per-customer-decision-loop-approve>` step begins.
 
 * **Pér writes the plan**, reading what it needs to turn the intent into real identifiers,
   tables and settings. This takes a few seconds.
@@ -142,8 +132,7 @@ Approve the steps
 
 Read the plan, then approve it — a step at a time, or all at once.
 
-This is the only point in the walk where your Amperity tenant changes, which makes it the one
-worth slowing down for. It spans :ref:`Approve <per-customer-decision-loop-approve>` and
+This is the only point in the process where actual changes are made in your Amperity tenant. It spans :ref:`Approve <per-customer-decision-loop-approve>` and
 :ref:`Act <per-customer-decision-loop-act>`.
 
 * **A step that only reads runs itself.** It changes nothing, so it needs no approval — unless
@@ -194,7 +183,7 @@ Keep what you found
 
 Finish by asking Pér to write up what happened, and share it.
 
-A piece of work is not finished when the plan is; it is finished when the people who have to act
+A piece of work goes beyond a plan concluding; it is only finished when the people who have to act
 on it can read it without you in the room. This is :ref:`Learn <per-customer-decision-loop-learn>`.
 
 * **You ask for it.** A plan does not produce a write-up on its own — a report exists because

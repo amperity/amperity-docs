@@ -23,23 +23,15 @@ Accessing Pér
 Pér is reached in a web browser, with the Amperity account you already have. There is nothing to
 install and no second password to keep.
 
-Most of the trouble people have reaching Pér is one of four things, and they look alike from the
-outside: the tenant has not been enabled for Pér, your organization admits people one at a time
-and you are not on the list yet, you are on an address that does not serve your tenant, or you
-followed a link into a tenant that is not yours. This article is how to tell them apart.
-
 
 .. _per-accessing-per-web:
 
 The Pér web app
 ==================================================
 
-Pér runs as a web application, and that is where the whole of it is.
+Pér runs as a web application. Everything Pér can do happens here: the conversation, the recommendations it gathers, the plans it writes, the approvals that let those plans run, and the reports it produces.
 
-Everything Pér can do happens here: the conversation, the recommendations it gathers, the plans it
-writes, the approvals that let those plans run, and the reports it produces. It is worth knowing
-that this is one place rather than several, because it means a piece of work you start can be
-finished without moving anywhere else.
+This all happens in one place rather than several, which means a piece of work you start can be finished without moving anywhere else.
 
 How to reach it:
 
@@ -69,10 +61,7 @@ Signing in
 
 You sign in to Pér with your Amperity account, through the same sign-in Amperity uses.
 
-Pér does not keep its own list of people or its own credentials. That means there is one identity
-to manage, one place to change it, and nothing extra to set up before someone can be let in — and
-it means whatever your organization already requires in order to sign in to Amperity is what Pér
-asks for too.
+Pér does not keep its own list of people or its own credentials. There is one set of credentials to manage for a given user, one place to change it, and nothing extra to set up before someone can be let in. Whatever your organization already requires in order to sign in to Amperity is what Pér asks for too.
 
 * **Single sign-on applies.** If your organization signs in to Amperity through its own identity
   provider, Pér signs you in the same way. See
@@ -104,10 +93,7 @@ Choosing a tenant
 Pér works in one Amperity tenant at a time, and it shows you only the tenants that have been
 enabled for Pér.
 
-That second half is the one worth knowing in advance, because it is the usual explanation for a
-tenant you expected to see and cannot. The list in Pér is not your list of Amperity tenants; it is
-the part of that list Pér has been turned on for. Nothing is wrong with the tenants that are
-missing — they have not been enabled.
+This is the most common the usual explanation for a tenant you expected to see and cannot. The list in Pér is not your list of Amperity tenants; it is the part of that list Pér has been turned on for. Nothing is wrong with the tenants that are missing — they have just not been enabled.
 
 * **Pér picks one to start with.** When you arrive without a tenant already chosen, Pér selects one
   for you so you are not met with a list.
@@ -139,11 +125,8 @@ missing — they have not been enabled.
 When you can't get in
 ==================================================
 
-Four things stop people reaching Pér, and each one has a different answer.
+Four things typically stop people reaching Pér.
 
-They are easy to confuse, because all four end with a screen instead of the product. Telling them
-apart is the difference between asking an administrator for something, asking your Amperity
-representative for something else, and simply waiting a minute.
 
 * **Nothing in your list has Pér.** Pér says there are no tenants available, or that it is not
   available for your tenants yet. This means your tenant has not been enabled for Pér, which is
@@ -157,19 +140,19 @@ representative for something else, and simply waiting a minute.
   shortly. This is not a refusal, and nothing about your access has changed. Try again.
 * **The link you followed names a tenant that is not yours.** Pér says so, and offers a picker of
   the tenants you can reach. Nothing is chosen for you here on purpose: a link into somebody
-  else's tenant should not quietly move you into one of your own. Pick a tenant, or ask whoever
+  else's tenant should not move you into one of your own. Pick a tenant, or ask whoever
   sent the link which tenant they meant.
 
 .. note::
 
-   The first two look similar and are not. "No tenants available" is about the tenant; "access not
+   The first two look similar but are not. "No tenants available" is about the tenant; "access not
    enabled" is about you. Only the second one can be solved by an administrator in your own
    organization.
 
 
 .. _per-accessing-per-from-an-agent:
 
-From another agent
+Access from another agent
 ==================================================
 
 An agent you already use can read your Pér context directly, rather than being handed a copy of it.

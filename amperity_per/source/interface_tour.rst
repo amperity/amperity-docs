@@ -22,10 +22,7 @@ Interface tour
 
 This is what each part of Pér is for.
 
-Pér is arranged around one idea that most tools are not: asking and working happen side by side
-rather than in turn. The conversation is not a place you go to and come back from — it sits beside
-whatever you are looking at, the whole time. Knowing which part of the window owns what saves a
-good deal of looking in the wrong one.
+Asking and working happen side by side rather than in turn or in different tools. This is why the conversation sits beside whatever you are looking at, the whole time.
 
 .. note::
 
@@ -41,8 +38,8 @@ How the window is arranged
 
 There are three parts: somewhere to navigate from, the page you are on, and the conversation.
 
-They are always all three present, which is the point. You can ask about what is in front of you
-without leaving it, and the answer arrives beside it rather than on top of it.
+All three are always present. You can ask about what is in front of you without leaving it,
+and the answer arrives beside it rather than on top of it.
 
 * **The sidebar**, down one side, is where you start work and where your past work is listed.
 * **The page** is whatever you are looking at — the Portfolio, a plan, an artifact, a settings
@@ -52,7 +49,7 @@ without leaving it, and the answer arrives beside it rather than on top of it.
 
 As the window gets narrower, those three parts fold down rather than disappear:
 
-* **The sidebar collapses to icons**, and in a window too narrow to do otherwise Pér collapses it
+* **The sidebar collapses to icons**, and when the window becomes too narrow Pér collapses it
   for you and takes the control away rather than leaving one that does nothing.
 * **Narrower still, the page and the conversation become two tabs**, one named after the page you
   are on and the other **Chat**.
@@ -97,8 +94,7 @@ The top bar
 
 The top bar holds the things that belong to your session rather than to the page.
 
-Which tenant you are in, whether anything has finished while you were away, and how to reach
-settings are all questions you can have anywhere, so their answers do not move with the page.
+This will display which tenant you are in, whether anything has finished while you were away, and how to reach settings, no matter what page you are on.
 
 * **The tenant picker** shows which Amperity tenant you are working in, and changes it. See
   :ref:`Choosing a tenant <per-accessing-per-tenant>`.
@@ -117,7 +113,7 @@ the sidebar and a way to reach your conversations.
 The chat panel
 ==================================================
 
-The chat panel is the conversation, and it is the one part of Pér present on every page.
+The chat panel is the conversation, present on every page of Pér.
 
 That is what makes it the place everything else starts from. A question about the plan you are
 reading does not require going anywhere; neither does asking for a change to it.
@@ -128,7 +124,7 @@ reading does not require going anywhere; neither does asking for a change to it.
 * **The panel can be widened, narrowed, or expanded** to fill the window.
 * **Sharing and exporting a conversation** are in the panel's own header, because they belong to
   the conversation rather than to the page behind it.
-* **Pér answers in cards where an answer needs a decision from you.** A change to Amperity arrives
+* **Pér answers in cards where an answer needs input from you.** A change to Amperity arrives
   as a write confirmation, a piece of work as a plan, something Pér wants to remember as a memory
   to accept. Each one states what it is and waits.
 
@@ -141,10 +137,7 @@ See :ref:`Chatting with Pér <per-chatting>` for how a conversation works, and
 The pages
 ==================================================
 
-There are four pages, and each one holds a different kind of thing.
-
-Knowing which holds what is most of the navigation you need, because nothing appears in two of
-them.
+There are four pages. Knowing which holds what is most of the navigation you need, because the same thing never appears in two of them.
 
 **Portfolio** is where you land. It gathers the work Pér thinks deserves your attention: the
 recommendations it has made, with a note of when that set was produced and a way to ask for a
@@ -153,13 +146,12 @@ ones waiting on a job to finish. A Portfolio with nothing on it says so and offe
 look. See :ref:`Recommendations <per-recommendations>`.
 
 **Plans** is every plan in the tenant and where each one stands. Plans belong to the tenant, so
-this is the same list for everyone. See :ref:`Plans <per-plans>`.
+this is the same list for every user in that tenant. See :ref:`Plans <per-plans>`.
 
-**Artifacts** is what sessions have left behind — reports Pér wrote and files you brought in —
-yours, plus anything a colleague has shared with the tenant. See
-:ref:`Artifacts <per-artifacts>`.
+**Artifacts** is what sessions have left behind, like reports Pér wrote and files you brought in —
+yours, plus anything a colleague has shared with the tenant. See :ref:`Artifacts <per-artifacts>`.
 
-**Settings** is in three parts, and the division is the useful bit:
+**Settings** is in three parts:
 
 * **What Pér works from and what it has done** — :ref:`Memory <per-memory>`,
   :ref:`Company context <per-company-context>`,
@@ -167,7 +159,7 @@ yours, plus anything a colleague has shared with the tenant. See
   :ref:`Data connections <per-data-connections>`,
   :ref:`the Activity log <per-activity-log>` and
   :ref:`System <per-system-settings>`.
-* **Things administered in Amperity**, which link out rather than being set here. Your tenant's
+* **Things administered in Amperity**, which link out rather than being set in Pér. Your tenant's
   Pér access mode is shown among them. See :ref:`Managing access to Pér <per-managing-access>`.
 * **Settings that are yours alone**, rather than the tenant's.
 
@@ -185,9 +177,7 @@ Choosing how Pér looks
 
 You can have Pér on a dark canvas or a light one.
 
-It is the one purely personal choice in the product, it changes nothing for anyone else, and it is
-not where most people look for it — it sits with the settings that are yours rather than the
-tenant's.
+This is a personal setting that changes nothing for anyone else.
 
 **To switch between dark and light**
 
