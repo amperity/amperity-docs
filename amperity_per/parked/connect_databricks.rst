@@ -26,9 +26,7 @@ Connect Databricks
 Connecting Databricks gives Pér a second place to look: your own Databricks workspace, queried
 directly.
 
-Plenty of what you would want Pér to reason about has not been brought into Amperity yet, and
-until it is, Pér can only tell you what it cannot see. With the connection it can answer from
-Databricks as well — and, more usefully, tell you which of those tables are worth bringing in.
+It may be the case that you want Pér to reason about information has not been brought into Amperity yet, and until it is, Pér can only tell you what it cannot see. With this connection it can answer from Databricks as well, including telling you which of those tables are worth bringing in.
 That is the :ref:`Understand <per-customer-decision-loop-understand>` stage reaching past
 Amperity's own edges.
 
@@ -60,12 +58,7 @@ Pér sees through it.
 What Pér can and can't reach
 ==================================================
 
-A connection that sets up cleanly is not the same as a connection Pér can answer from.
-
-Setup checks the credential and the warehouse, because it can. It cannot check whether the
-service principal has been granted anything to read — so a connection can pass every check Pér is
-able to run and still return nothing. Knowing that in advance is the difference between a
-five-minute fix and an afternoon.
+Setup checks the credential and the warehouse. It cannot check whether the service principal has been granted anything to read — so a connection can pass every check Pér is able to run and still return nothing.
 
 * **Setup verifies the credential and the warehouse.** Pér asks Databricks for a token and runs a
   real check against the warehouse you named. A failure here stops the connection being saved.

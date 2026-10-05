@@ -23,7 +23,7 @@
 Linked accounts
 ==================================================
 
-Linking records that an account in a chat workspace and an Amperity user are the same person.
+Linking is a way to record that an account in a chat workspace and an Amperity user are the same person.
 
 Everywhere else, Pér knows who is asking. On a chat surface it does not: the whole workspace
 reaches Pér through one shared connection, and nothing in a channel message says which Amperity
@@ -68,10 +68,7 @@ address. A guess would be wrong occasionally and invisible when it was, so Pér 
 What linking does not do
 ==================================================
 
-Linking does not change what Pér will answer, or what anyone can reach.
-
-This is worth stating plainly rather than leaving to be discovered, because the feature's name
-invites the opposite assumption. A link is a record Pér keeps. It is not a credential, and it is
+Linking does not change what Pér will answer, or what anyone can reach. A link is a record Pér keeps. It is not a credential, and it is
 not a permission.
 
 * **It does not change what Pér answers on a chat surface.** Those answers are still produced
@@ -90,9 +87,6 @@ When a link goes away
 ==================================================
 
 A link lasts until you remove it, or until the workspace it covers stops being connected.
-
-Nothing about a link is permanent, and nothing about losing one is destructive — which is why
-none of this needs a decision from you in advance.
 
 * **You can unlink at any time**, and link again afterwards.
 * **An unfinished link expires.** The link Pér gives you is single-use, and one left sitting has

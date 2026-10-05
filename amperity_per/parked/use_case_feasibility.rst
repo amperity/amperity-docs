@@ -26,9 +26,7 @@ Use-case feasibility
 Give Pér the list of things your team wants to do with customer data, and it works through them
 one by one against your tenant as it actually is.
 
-The expensive version of this conversation is a quarter of meetings and a spreadsheet nobody
-trusts. The cheap version is Pér reading your tenant and grading the list against what is really
-there. It is the :ref:`Understand <per-customer-decision-loop-understand>` stage done at the scale
+It is the :ref:`Understand <per-customer-decision-loop-understand>` stage done at the scale
 of a roadmap, and it ends in :ref:`Recommend <per-customer-decision-loop-recommend>` — not a
 verdict list, but an order to do things in.
 
@@ -41,8 +39,7 @@ What a feasibility run tells you
 Each use case comes back with a verdict, a score, an estimate of its impact, and where it belongs
 in a sequence.
 
-A list of verdicts is less useful than it looks: everything blocked for the same missing thing is
-really one piece of work. So the run groups what it found into an order — what has to exist first,
+The run groups what it found into an order — what has to exist first,
 what you could ship next week, and what belongs further out.
 
 * **Every use case gets a verdict**: ready, partial or blocked.
@@ -55,8 +52,7 @@ what you could ship next week, and what belongs further out.
 
 .. note::
 
-   A verdict is Pér's assessment, not a measurement. It is a careful reading of your tenant by
-   something that read your tenant — worth taking seriously, and worth checking where it matters.
+   A verdict is Pér's assessment, not a measurement. It is a careful reading of your tenant — worth    taking seriously, and worth checking where it matters. 
    See :ref:`Correcting what Pér concluded <per-use-case-feasibility-refine>`.
 
 .. PENDING NC-052: the reads are real, and the verdict, score and impact rating are Pér's
@@ -72,7 +68,7 @@ Giving Pér your list
 You upload the list, Pér shows you how it read it, and you correct that before anything runs.
 
 Most use-case lists are a spreadsheet somebody maintains, with columns named whatever made sense
-at the time. The mapping step is where a misreading is cheap to fix — afterwards it would mean
+at the time. The mapping step is where a misreading is easier to fix — afterwards it would mean
 grading the wrong column for every row in the file.
 
 * **The list is a spreadsheet or a CSV.**
@@ -112,7 +108,7 @@ Correcting what Pér concluded
 You can change what a run concluded by saying so in the chat beside the results.
 
 Pér read the data; you know the business. A verdict that is wrong because Pér could not know
-something should be correctable in a sentence rather than by re-running everything — and the
+something should be correctable in a sentence rather than by re-running everything. The
 corrected version is what everyone else sees afterwards.
 
 * **Ask in the chat beside the results.** You can correct a use case, change its classification,
@@ -134,8 +130,7 @@ One run at a time
 A tenant runs one feasibility analysis at a time.
 
 A run reads a great deal of the tenant, and two at once would compete for the same answers. The
-limit is per tenant rather than per person, which is the part worth knowing if a colleague starts
-one first.
+limit is per tenant rather than per person.
 
 * **While a run is going, nobody in the tenant can start another.** The page says one is in
   progress and offers to show it to you.

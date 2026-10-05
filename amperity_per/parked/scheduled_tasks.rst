@@ -26,10 +26,7 @@ Scheduled tasks
 A scheduled task is a question you only have to ask once. You write the request, choose how often
 Pér should answer it, and Pér answers it on that cadence and leaves the answer waiting for you.
 
-Much of the work of knowing your customers is the same question asked again on Monday. A task
-takes the asking off you and leaves you the reading, which is the part worth your time. It serves
-the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop,
-and only that stage: a run can look, and cannot change anything.
+It serves the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop, and only that stage: a run can look, and cannot change anything.
 
 .. note::
 
@@ -68,11 +65,8 @@ A task is yours
 
 A task belongs to the person who created it, and to nobody else.
 
-A standing question says something about what you are watching, and that is yours to share or
-not. What you can hand round is the result.
-
 * **Nobody else can see, edit, run or delete your task.** To anyone else in your tenant, your task
-  reads exactly as a task that does not exist.
+  does not appear.
 * **A run acts as you.** What it can reach is what you can reach.
 * **Results land in a conversation belonging to the task**, not in the chat where you set it up.
 * **What a task produces can still be shared.** The report it keeps up to date can go to everyone
@@ -86,9 +80,7 @@ What a run may do
 
 A run reads. It does not change anything in Amperity.
 
-This is the approval boundary holding at the one moment nobody is there to approve. Pér does not
-change anything in Amperity on its own, and a scheduled run is no exception — which is what makes
-a task something you can set and then leave alone.
+Pér does not change anything in Amperity on its own, and a scheduled run is no exception. This is what makes a task something you can set and then leave alone.
 
 * **Only reading is offered.** Anything that would change Amperity is withheld from the run
   rather than offered and refused later.
@@ -119,9 +111,7 @@ Where results go
 
 Each run writes its answer into the task's own conversation, and tells you it is there.
 
-A result that arrives while you are doing something else has to be findable afterwards. And a
-report you get every week is more useful as one document that keeps changing than as fifty
-documents you have to compare.
+This helps to make results findable if they come in while you are doing something else, and keeps results streamlined into one document that updates rather than producing multiple documents. 
 
 * **The answer is posted into the task's conversation**, which Pér creates for the task and names
   after it. You open it from the task.
@@ -131,8 +121,8 @@ documents you have to compare.
   the run finished, finished with gaps, or failed, and links back into Pér. It carries neither the
   answer nor the error — both stay in Pér.
 * **Pér says what it made of its own run.** A run that succeeded but could not do everything the
-  task asked is reported as having finished with gaps; one that could not do it at all is reported
-  as failed, even though it produced an answer.
+  task asked is reported as having finished with gaps. A run that that could not do it at all is  
+  reported as failed, even though it produced an answer.
 * **A task keeps one artifact up to date.** Rather than producing a new report each time, a run
   updates the :ref:`artifact <per-artifacts>` the last successful run produced.
 * **Deleting a task deletes its run history and its conversation**, and cannot be undone.
@@ -152,8 +142,7 @@ documents you have to compare.
 When runs happen, and when they don't
 ==================================================
 
-The cadence decides when a task runs. Three things change that, and all three are worth knowing
-before you build a routine on one.
+The cadence decides when a task runs. Three things change that:
 
 * **You can run a task yourself at any time**, including while it is paused. A run you start by
   hand does not move the schedule.
