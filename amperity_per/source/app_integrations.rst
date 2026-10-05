@@ -45,8 +45,9 @@ Pér can be connected to other systems in three ways.
   :ref:`Setting up the Slack app <per-in-slack-setup>` and
   :ref:`Setting up the Teams app <per-in-teams-setup>`.
 
-The first two are set up under **MCP connections** on this page. Slack and Microsoft Teams have
-their own entries beside it.
+The systems Pér reaches out to are set up under **MCP connections** on this page. Connecting Pér as
+a context source is set up in the other agent's own client rather than here. Slack and Microsoft
+Teams have their own entries beside **MCP connections**.
 
 Setting up an MCP connection needs no special permission. Anyone who can reach Pér can set one up
 and anyone who can reach Pér can take it away, so a connection is worth agreeing on rather than
