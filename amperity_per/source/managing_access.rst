@@ -63,7 +63,9 @@ A tenant admits people to Pér one of two ways, and the choice is the tenant's.
 * **Open.** Anyone authorized for the tenant can enter Pér. Nothing has to be granted per person.
 * **Managed.** Only people who have been granted access individually can enter.
 
-Open matches a tenant whose Amperity access list is already the list of people who should be in Pér. Managed matches one where it is not — a large tenant, a pilot, or a team rolling Pér out to some people before others.
+Open matches a tenant whose Amperity access list is already the list of people who should be in Pér.
+Managed matches one where it is not — a large tenant, a pilot, or a team rolling Pér out to some
+people before others.
 
 .. important::
 
@@ -85,8 +87,10 @@ Turning on managed access
 
 Turning on managed access is a reviewed change, not a switch.
 
-This prevents a situation in which flipping a live tenant to managed access with
-nobody granted and locking everyone out at once. So instead of Amperity flipping the switch, it shows you the people who currently have access, and the ones you keep are granted access as the mode starts. Everybody else is shut out.
+This prevents flipping a live tenant to managed access with nobody granted, which would lock
+everyone out at once. So instead of flipping the switch, Amperity shows you the people who
+currently have access, and the ones you keep are granted access as the mode starts. Everybody else
+is shut out.
 
 * **You review a list before anything changes**, and you are told how many people will keep access.
 * **Returning to open access** restores entry for everyone authorized for the tenant.
@@ -108,7 +112,7 @@ Pér has no revocation of its own. A person is cut off in Amperity.
   `SSO group mapping <../reference/sso.html#sso-map-groups-to-policies>`__.
 * **A blocked person is refused at the door**, whatever credential they are holding. They are not
   left with a working session that happens to be ignored.
-* **Blocking a parent tenant covers its sandboxes.** You do not have to cover the whole list.
+* **Blocking a parent tenant covers its sandboxes.** You do not have to block them one by one.
 * **Blocking needs a user-administration permission**, and it has to be turned on for your tenant.
   If you cannot see it, your Amperity representative can tell you whether it is.
 * **Removing a Pér grant is the narrower move**, and it is the right one when someone should keep
