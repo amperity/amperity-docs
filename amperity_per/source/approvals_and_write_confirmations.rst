@@ -39,11 +39,11 @@ Where the boundary sits
 The boundary runs between reading and changing.
 
 Knowing which side a request falls on tells you whether Pér will come back with an answer or come
-back with something to approve. This rule that holds across every part of Pér.
+back with something to approve. This rule holds across every part of Pér.
 
 * **Reading is not gated.** Pér can look at anything in your tenant that you could look at
-  yourself, and reading never draws a confirmation. It reads before it proposes, so that it can 
-  check andy change against your current data.
+  yourself, and reading never draws a confirmation. It reads before it proposes, so that it can
+  check any change against your current data.
 * **Pér can ask for a change; it cannot make one.** Pér is given the ability to propose far more
   than it is able to carry out. Asking is what draws the confirmation. Nothing it proposes runs
   until you approve it, and what runs is what you approved and nothing more.
@@ -79,7 +79,8 @@ What a write confirmation shows you
 
 A write confirmation is a plain statement of one change, written so you can check it.
 
-The card is specific: it names the operation, the object, and the values to enable clear judgment about the approval.
+The card is specific: it names the operation, the object, and the values to enable clear judgment
+about the approval.
 
 A confirmation carries:
 
@@ -118,7 +119,10 @@ Approving a whole plan at once
 
 A :ref:`plan <per-plans>` can be approved as a whole, rather than a step at a time.
 
-A plan of a dozen steps does not need a dozen clicks. When you approve and run a whole plan, you approve the plan — not each write inside it one at a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs a person, and records which steps it approved on your behalf.
+A plan of a dozen steps does not need a dozen clicks. When you approve and run a whole plan, you
+approve the plan — not each write inside it one at a time. Pér then re-checks at every step whether
+it may still go on, stops at any step that needs a person, and records which steps it approved on
+your behalf.
 
 What that means in practice:
 
@@ -162,8 +166,8 @@ These are the parts that hold regardless of settings, instructions, or persuasio
 * **Permission is checked again at the moment you approve**, not only when the card was drawn. A
   change that was permitted when Pér proposed it, and is not permitted now, is refused.
 
-Some operations are refused before any other rule is considered.
-Whatever else is permitted Pér cannot: 
+Some operations are refused before any other rule is considered. Whatever else is permitted,
+Pér cannot:
 
 * Read a stored credential
 * Read a file off the server it runs on
@@ -173,7 +177,9 @@ Whatever else is permitted Pér cannot:
 * Set up a new destination for your data to be sent to
 * Roll your tenant's configuration back to an earlier version
 * Move itself to another tenant
-* Relax the confirmation gate itself. 
+* Relax the confirmation gate itself
+
+No setting and no instruction re-enables these.
 
 .. note::
 
