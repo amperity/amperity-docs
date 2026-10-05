@@ -26,7 +26,8 @@ Scheduled tasks
 A scheduled task is a question you only have to ask once. You write the request, choose how often
 Pér should answer it, and Pér answers it on that cadence and leaves the answer waiting for you.
 
-It serves the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer decision loop, and only that stage: a run can look, and cannot change anything.
+It serves the :ref:`Understand <per-customer-decision-loop-understand>` stage of the customer
+decision loop, and only that stage: a run can look, and cannot change anything.
 
 .. note::
 
@@ -80,7 +81,8 @@ What a run may do
 
 A run reads. It does not change anything in Amperity.
 
-Pér does not change anything in Amperity on its own, and a scheduled run is no exception. This is what makes a task something you can set and then leave alone.
+Pér does not change anything in Amperity on its own, and a scheduled run is no exception. This is
+what makes a task something you can set and then leave alone.
 
 * **Only reading is offered.** Anything that would change Amperity is withheld from the run
   rather than offered and refused later.
@@ -111,7 +113,8 @@ Where results go
 
 Each run writes its answer into the task's own conversation, and tells you it is there.
 
-This helps to make results findable if they come in while you are doing something else, and keeps results streamlined into one document that updates rather than producing multiple documents. 
+This helps to make results findable if they come in while you are doing something else, and keeps
+results streamlined into one document that updates rather than producing multiple documents.
 
 * **The answer is posted into the task's conversation**, which Pér creates for the task and names
   after it. You open it from the task.
@@ -121,7 +124,7 @@ This helps to make results findable if they come in while you are doing somethin
   the run finished, finished with gaps, or failed, and links back into Pér. It carries neither the
   answer nor the error — both stay in Pér.
 * **Pér says what it made of its own run.** A run that succeeded but could not do everything the
-  task asked is reported as having finished with gaps. A run that that could not do it at all is  
+  task asked is reported as having finished with gaps. A run that could not do it at all is
   reported as failed, even though it produced an answer.
 * **A task keeps one artifact up to date.** Rather than producing a new report each time, a run
   updates the :ref:`artifact <per-artifacts>` the last successful run produced.
