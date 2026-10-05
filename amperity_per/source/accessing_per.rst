@@ -158,6 +158,20 @@ Four things typically stop people reaching Pér.
    organization.
 
 
+.. _per-accessing-per-from-chat:
+
+Access from Slack or Teams
+==================================================
+
+Pér answers questions in a Slack or Microsoft Teams channel, where the work is already being
+discussed and the answer is visible to everyone in the thread.
+
+Both surfaces answer only. Neither can approve a change and neither returns individual-level PII,
+so a change — and anything that needs a confirmation — is made in the Pér web app instead.
+
+See :ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`.
+
+
 .. _per-accessing-per-from-an-agent:
 
 Access from another agent
@@ -170,6 +184,3 @@ confined to one window. The connection only ever reads, so widening who can see 
 widens who can act on it.
 
 See :ref:`Connect Pér as an MCP server <per-connect-as-mcp-server>`.
-
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: add Slack and Teams here as further ways in,
-   and say that neither can approve a change, so a change is made in the Pér web app instead.
