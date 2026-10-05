@@ -25,7 +25,8 @@ Pér can act as a context source for another agent. A client that speaks the
 as you, and can then read what Pér holds for the tenants you can already see.
 
 Not all the work happens in Pér. A briefing, a deck, or another team's agent can be built on the
-same trusted customer context Pér works from. Because the connection only ever reads, widening who can see that context never widens who can act on it.
+same trusted customer context Pér works from. Because the connection only ever reads, widening who
+can see that context never widens who can act on it.
 
 .. PENDING NC-037: there is no published address for this endpoint and no page in Pér that shows
    one, so this article cannot tell a reader how to make the connection. See the last section.
