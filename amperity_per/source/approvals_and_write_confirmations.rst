@@ -270,5 +270,5 @@ so it offers no rejection.
 
 Work already set running in Amperity continues; nothing further is approved.
 
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that they
-   cannot answer a confirmation, so changes are made in the Pér web app instead.
+A confirmation cannot be answered from Slack or Microsoft Teams. Both surfaces answer only, so a
+change is made in the Pér web app instead.
