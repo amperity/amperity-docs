@@ -20,9 +20,11 @@
 Connect Salesforce Marketing Cloud
 ==================================================
 
-Connecting Salesforce Marketing Cloud lets Pér work in your Salesforce account: look up what is there, and — once you approve — change it.
+Connecting Salesforce Marketing Cloud lets Pér work in your Salesforce account: look up what is
+there, and — once you approve — change it.
 
-With this connection, the same conversation covers both platforms, and the things Pér tells you about Salesforce are things it looked up rather than inferred.
+With this connection, the same conversation covers both platforms, and the things Pér tells you
+about Salesforce are things it looked up rather than inferred.
 
 The connection is also the one in Pér that belongs to a person rather than to a tenant, which
 changes who has to do what.
@@ -36,16 +38,17 @@ A tenant connection, and your own sign-in
 Setting this up is two separate jobs: someone connects the tenant to a Business Unit once, and then
 each person who wants to use it signs in to Salesforce as themselves.
 
-One person setting it up will not automatcally connect everyone else. Pér does not get a shared Salesforce account that sees everything, it gets your account.
+One person setting it up will not automatically connect everyone else. Pér does not get a shared
+Salesforce account that sees everything, it gets your account.
 
 * **The tenant connection is made once.** It points Pér at one Salesforce Business Unit, and
   everyone in the tenant shares it. It needs no special permission — anyone who can reach Pér can
   make it, and anyone who can reach Pér can take it away.
-* **The address has to be assembled.** Salesforce does not display the address Pér needs
-  ready-made; someone with access to your Salesforce setup builds it from the installed package
-  that authorizes Pér. The setup panel in Pér walks through it, and
-  `Salesforce's own setup guide <https://developer.salesforce.com/docs/marketing/mce-mcp/guide/mce-mcp-setup.html>`__
-  |ext_link| is the fuller reference.
+* **The address has to be assembled.** Salesforce does not display the address Pér needs ready-made;
+  someone with access to your Salesforce setup builds it from the installed package that authorizes
+  Pér. The setup panel in Pér walks through it, and `Salesforce's own setup guide
+  <https://developer.salesforce.com/docs/marketing/mce-mcp/guide/mce-mcp-setup.html>`__ |ext_link|
+  is the fuller reference.
 * **Then each person signs in.** Signing in is per person and takes one click once the tenant
   connection exists.
 * **A tenant can connect several Business Units**, up to five. Past the first, each one needs a
@@ -64,7 +67,7 @@ change is approved exactly the way an Amperity change is.
   permissions there decide what it can see and what it can do. A colleague with narrower Salesforce
   access gets narrower answers from Pér, in the same tenant, on the same day.
 * **Looking things up needs no approval**, the same as reading in Amperity.
-* **Changing something needs approvals.** A Salesforce change Pér proposes — creating something,
+* **Changing something needs approval.** A Salesforce change Pér proposes — creating something,
   updating something, deleting something, sending something — arrives as a
   :ref:`write confirmation <per-approvals-card>` and runs only when a person approves it.
 
