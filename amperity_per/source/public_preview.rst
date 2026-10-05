@@ -45,8 +45,10 @@ somewhere else this month, or may work better than it did.
 Two things are not subject to that change, because they are the shape of the product rather than
 features of it:
 
-* **Pér works from your tenant's own data, under your own access.** It reads what you could read
-  and acts as you could act.
+* **Pér works from your tenant's own data, and never beyond the access it is given.** In the Pér
+  web app that access is your own: it reads what you could read and acts as you could act. In
+  Slack and Microsoft Teams it is narrower — one workspace connection, no PII, and no ability to
+  change anything.
 * **A person approves before anything is written to Amperity.** This is a boundary, not a setting,
   and nothing in Public Preview relaxes it.
 
