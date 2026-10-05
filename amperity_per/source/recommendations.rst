@@ -37,7 +37,8 @@ What a recommendation carries
 
 Each recommendation presents its evidence, not just the conclusion.
 
-If you cannot find fault with the evidence, that is a reason to act; if you can, you have found it at an ideal time to correct course, before anything ran.
+If you cannot find fault with the evidence, that is a reason to act; if you can, you have found it
+at an ideal time to correct course, before anything ran.
 
 A recommendation carries:
 
@@ -68,7 +69,9 @@ Where recommendations come from
 
 Recommendations are produced by a refresh, which someone must ask for.
 
-This answers two common questions: why the Portfolio looks the same as it did yesterday, and why something that was on it has gone. Both have the same answer: the Portfolio changes when a refresh runs, and not before.
+This answers two common questions: why the Portfolio looks the same as it did yesterday, and why
+something that was on it has gone. Both have the same answer: the Portfolio changes when a refresh
+runs, and not before.
 
 .. note::
 
