@@ -49,7 +49,8 @@ attached it to.
 
    What is kept for a file you uploaded is the text Pér read out of it, not the original file. For
    a spreadsheet or a PDF that means the content, not the formatting — this is a record of what Pér
-   worked from, not a copy of your document.
+   worked from, not a copy of your document. Deleting the artifact takes that record off the
+   Artifacts page; the conversation you attached the file to keeps its own copy of what Pér read.
 
 Publishing an artifact changes nothing in Amperity, so it needs no approval. Pér writes it, and it
 appears. (What does need approval, and why, is in
