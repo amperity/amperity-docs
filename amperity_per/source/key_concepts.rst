@@ -22,7 +22,9 @@ Key concepts
 
 These are the terms this documentation uses, and what each one means in Pér.
 
-Several of them are everyday English words with a specific meaning in Pér. For example, A *plan* is a particular object with a particular lifecycle, not just an intention. A *memory* is something you asked Pér to keep, not everything it has seen.
+Several of them are everyday English words with a specific meaning in Pér. For example, A *plan* is
+a particular object with a particular lifecycle, not just an intention. A *memory* is something you
+asked Pér to keep, not everything it has seen.
 
 
 .. _per-key-concepts-activity-log:
@@ -45,8 +47,8 @@ Several of them are everyday English words with a specific meaning in Pér. For 
 
 **apply mode**
    How a memory that Pér proposes gets saved. By default Pér asks every time. You can choose to
-   let your personal memories save without asking; a memory shared with the rest of your tenant
-   always asks, as does one that records an answer Pér had to ask you for.
+   let your personal memories save without asking; a memory shared with your tenant always asks,
+   under either setting, as does one that records an answer Pér had to ask you for.
 
 
 .. _per-key-concepts-auto-run:
@@ -159,6 +161,10 @@ Several of them are everyday English words with a specific meaning in Pér. For 
 
 **Pér**
    Amperity's customer data agent, and the name used throughout this documentation.
+
+   .. PENDING NC-007: amperity-docs names this product "the Customer Data Agent" in four places
+      in the A-Z reference. Sam is reconciling those separately; until then the docs name the
+      product two ways.
 
 
 .. _per-key-concepts-plan:
