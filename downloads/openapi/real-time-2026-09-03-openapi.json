@@ -3,7 +3,7 @@
     "schemas": {
       "ErrorBody": {
         "additionalProperties": {},
-        "description": "Error response.",
+        "description": "Error reported by the endpoint itself.",
         "properties": {
           "error": {
             "description": "Machine-readable error keyword.",
@@ -14,6 +14,43 @@
             "type": "string"
           }
         },
+        "required": [
+          "error",
+          "message"
+        ],
+        "type": "object"
+      },
+      "ErrorResponse": {
+        "additionalProperties": {},
+        "description": "Error reported by the API framework.",
+        "properties": {
+          "message": {
+            "description": "Human-readable description of what went wrong.",
+            "type": "string"
+          },
+          "request-id": {
+            "description": "Identifier of the failed request.",
+            "type": "string"
+          },
+          "status": {
+            "description": "HTTP status code of the error.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "trace-id": {
+            "description": "Trace identifier to quote when contacting support.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "message"
+        ],
+        "type": "object"
+      },
+      "Event": {
+        "additionalProperties": {},
+        "description": "A JSON event object, shaped by the event type configured for the stream.",
         "type": "object"
       },
       "KeychainLookup": {
@@ -28,6 +65,9 @@
             "$ref": "#/components/schemas/KeychainLookupKeys"
           }
         },
+        "required": [
+          "keys"
+        ],
         "type": "object"
       },
       "KeychainLookupKeys": {
@@ -73,6 +113,10 @@
             "type": "string"
           }
         },
+        "required": [
+          "collection_id",
+          "profile_id"
+        ],
         "type": "object"
       },
       "ProfileAttributes": {
@@ -99,6 +143,10 @@
             "type": "string"
           }
         },
+        "required": [
+          "segment_id",
+          "segment_name"
+        ],
         "type": "object"
       },
       "ProfileSegmentsEnvelope": {
@@ -122,6 +170,9 @@
             "type": "integer"
           }
         },
+        "required": [
+          "data"
+        ],
         "type": "object"
       },
       "SegmentMember": {
@@ -134,6 +185,9 @@
             "type": "string"
           }
         },
+        "required": [
+          "profile_id"
+        ],
         "type": "object"
       },
       "SegmentMembersEnvelope": {
@@ -157,7 +211,17 @@
             "type": "integer"
           }
         },
+        "required": [
+          "data"
+        ],
         "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "description": "Authenticate with an Amperity access token.",
+        "scheme": "bearer",
+        "type": "http"
       }
     }
   },
@@ -167,7 +231,7 @@
       "name": "Amperity Support",
       "url": "https://docs.amperity.com/"
     },
-    "description": "Send events to a stream, read real-time customer profiles, and read real-time segment membership.",
+    "description": "Send events to a stream, read real-time customer profiles, and read real-time segment membership. Name the version to serve a request at in the `api-version` header; a request without it is served the latest version.",
     "title": "Amperity Real-Time API",
     "version": "2026-09-03",
     "x-logo": {
@@ -196,6 +260,17 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Event"
+              }
+            }
+          },
+          "description": "A JSON event object, shaped by the event type configured for the stream.",
+          "required": true
+        },
         "responses": {
           "202": {
             "description": "Event accepted for processing."
@@ -207,11 +282,31 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ErrorBody"
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
               }
             },
             "description": "The body was not a JSON object."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
           },
           "404": {
             "content": {
@@ -222,6 +317,16 @@
               }
             },
             "description": "No such stream for this tenant."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
           },
           "409": {
             "content": {
@@ -239,11 +344,28 @@
           "413": {
             "description": "The body exceeds 64 KiB."
           },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
+          },
           "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
             "description": "The event bus is unavailable; retry."
           }
         },
-        "summary": "Event Stream Endpoint",
+        "summary": "Event stream endpoint",
         "tags": [
           "Events"
         ]
@@ -305,6 +427,26 @@
             },
             "description": "No keychain keys were supplied."
           },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
+          },
           "404": {
             "content": {
               "application/json": {
@@ -314,9 +456,29 @@
               }
             },
             "description": "No profile in the collection matched the supplied keys."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
           }
         },
-        "summary": "Profile Lookup API",
+        "summary": "Profile lookup API",
         "tags": [
           "Profiles"
         ]
@@ -378,6 +540,26 @@
             },
             "description": "No keychain keys were supplied."
           },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
+          },
           "404": {
             "content": {
               "application/json": {
@@ -387,9 +569,29 @@
               }
             },
             "description": "No profile in the collection matched the supplied keys."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
           }
         },
-        "summary": "Profile Lookup API",
+        "summary": "Profile lookup API",
         "tags": [
           "Profiles"
         ]
@@ -443,6 +645,26 @@
             },
             "description": "The requested profile."
           },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
+          },
           "404": {
             "content": {
               "application/json": {
@@ -452,6 +674,26 @@
               }
             },
             "description": "No profile in the collection with that id."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
           }
         },
         "summary": "Profile API",
@@ -517,9 +759,49 @@
               }
             },
             "description": "Segment memberships for the profile."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
           }
         },
-        "summary": "Profile Segment API",
+        "summary": "Profile segment API",
         "tags": [
           "Segments"
         ]
@@ -572,6 +854,46 @@
               }
             },
             "description": "Member profiles of the segment."
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No access token was supplied, or it is not valid."
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The token is valid but lacks the permission this endpoint requires."
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "The method is not allowed on this path."
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unexpected server error."
           }
         },
         "summary": "Segment API",
@@ -581,6 +903,11 @@
       }
     }
   },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
   "servers": [
     {
       "description": "Amazon AWS",
