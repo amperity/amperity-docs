@@ -24,7 +24,11 @@ A memory is a standing note Pér carries between sessions: a preference you woul
 a rule you want held to, a fact about your business that keeps coming up, or a correction you do not
 want to make twice.
 
-It is also where the strongest standing instruction you can give Pér lives: a must-follow memory. This is one of the three things, along with your :ref:`company context <per-company-context>` and the approval boundary, that make up the rules Pér works inside. This is the :ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, and it is the part of it you control directly.
+It is also where the strongest standing instruction you can give Pér lives: a must-follow memory.
+This is one of the three things, along with your :ref:`company context <per-company-context>` and
+the approval boundary, that make up the rules Pér works inside. This is the :ref:`Learn
+<per-customer-decision-loop-learn>` stage of the customer decision loop, and it is the part of it
+you control directly.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
    memories and the approval boundary. PO to confirm. Same clause as what_is_per.rst,
@@ -38,7 +42,8 @@ What a memory is
 
 A memory is a short note with two choices attached: who it applies to, and how hard it binds.
 
-Everything else about a memory — where it came from, how often it has been used, what kind of thing it is — Pér works out and shows you.
+Everything else about a memory — where it came from, how often it has been used, what kind of thing
+it is — Pér works out and shows you.
 
 * **Scope** says who it applies to. **Personal — only you** keeps it to your own conversations.
   **Tenant — shared with everyone here** puts it in front of everyone in your tenant, and Pér may
@@ -73,12 +78,13 @@ do.
 
 .. _per-memory-what-per-does:
 
-What Pér does with with memories
+What Pér does with memories
 ==================================================
 
 Pér tells you when it uses a memory, and keeps a count of how often each one has mattered.
 
-If Pér does something you did not expect, you want to know whether a memory caused it; if a memory you wrote is doing nothing, you want to know that too.
+If Pér does something you did not expect, you want to know whether a memory caused it; if a memory
+you wrote is doing nothing, you want to know that too.
 
 * **Pér says when it applies one**, naming the memory, in the conversation where it applied.
 * **The list records how often each memory has been cited**, and when it last changed. A memory
