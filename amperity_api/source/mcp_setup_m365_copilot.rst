@@ -28,7 +28,7 @@ Connect Microsoft's agent products to the Amperity MCP server and sign in with y
 * :ref:`Copilot Studio <mcp-setup-copilot-studio-section>` -- the agent builder for Microsoft 365.
 * :ref:`Microsoft Foundry <mcp-setup-foundry>` -- Foundry Agent Service.
 
-.. important:: These are separate Microsoft products and they receive different tool surfaces. VS Code and GitHub Copilot CLI receive the full tool surface. Copilot Studio and Microsoft Foundry receive a curated subset of tools--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
+.. important:: These are separate Microsoft products and they receive different tool surfaces. Microsoft 365 Copilot, VS Code, and GitHub Copilot CLI receive the full tool surface. Copilot Studio and Microsoft Foundry receive a curated subset of tools--see :ref:`Tool surface limits <mcp-setup-copilot-surface-limits>`.
 
 .. mcp-setup-copilot-page-end
 
