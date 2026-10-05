@@ -23,7 +23,8 @@ Quickstart: your first session
 This walks one piece of work the whole way: a question, a proposal you can check, a plan, the
 approvals that let it run, and something you can hand to somebody afterwards.
 
-This article traces the :ref:`customer decision loop <per-customer-decision-loop>` with the product names attached, so by the end of it the five stages should have stopped being abstract.
+This article traces the :ref:`customer decision loop <per-customer-decision-loop>` with the product
+names attached, so by the end of it the five stages should have stopped being abstract.
 
 **Before you start**
 
@@ -42,7 +43,9 @@ Ask something
 
 Start by asking Pér a question about your own customers, in your own words.
 
-This tells you what Pér can see, how it reasons about your data, and whether your tenant holds what you assumed it held — all before you have committed to anything. This is :ref:`Understand <per-customer-decision-loop-understand>`.
+This tells you what Pér can see, how it reasons about your data, and whether your tenant holds what
+you assumed it held — all before you have committed to anything. This is :ref:`Understand
+<per-customer-decision-loop-understand>`.
 
 What to expect:
 
@@ -56,7 +59,9 @@ What to expect:
 
 #. Type your question in the chat panel and click **Ask Pér**.
 
-Good first questions are concrete and about your own data — for example, how many customers bought twice last year, which segment has grown most since spring, what a particular audience actually contains, etc.
+Good first questions are concrete and about your own data — for example, how many customers bought
+twice last year, which segment has grown most since spring, what a particular audience actually
+contains.
 
 See :ref:`Chatting with Pér <per-chatting>`, and
 :ref:`How Pér uses your data <per-how-per-uses-your-data>` for what it reads and under whose
@@ -82,7 +87,9 @@ normal, not a fault.
 * **You can stop one**, and stopping it leaves the Portfolio as it was.
 * **It can come back with nothing**, and says so rather than implying something arrived.
 
-Each recommendation carries what it proposes, the evidence for it (including claims, the numbers behind them, and where in your data they came from), the constraints Pér worked within, and a confidence grade with the reasoning for that grade, including what Pér could not establish.
+Each recommendation carries what it proposes, the evidence for it (including claims, the numbers
+behind them, and where in your data they came from), the constraints Pér worked within, and a
+confidence grade with the reasoning for that grade, including what Pér could not establish.
 
 **To get a first set of recommendations**
 
@@ -107,7 +114,9 @@ Act on it
 
 Acting on a recommendation turns it into a plan.
 
-This is the point where an argument becomes a list of proposed concrete changes to your Amperity tenant, each one waiting for a person. It is where the :ref:`Approve <per-customer-decision-loop-approve>` step begins.
+This is the point where an argument becomes a list of proposed concrete changes to your Amperity
+tenant, each one waiting for a person. It is where :ref:`Approve
+<per-customer-decision-loop-approve>` begins.
 
 * **Pér writes the plan**, reading what it needs to turn the intent into real identifiers,
   tables and settings. This takes a few seconds.
@@ -132,8 +141,9 @@ Approve the steps
 
 Read the plan, then approve it — a step at a time, or all at once.
 
-This is the only point in the process where actual changes are made in your Amperity tenant. It spans :ref:`Approve <per-customer-decision-loop-approve>` and
-:ref:`Act <per-customer-decision-loop-act>`.
+This is the only point in the process where actual changes are made in your Amperity tenant. It
+spans :ref:`Approve <per-customer-decision-loop-approve>` and :ref:`Act
+<per-customer-decision-loop-act>`.
 
 * **A step that only reads runs itself.** It changes nothing, so it needs no approval — unless
   it is there so you can read a long job's results, in which case it waits for you.
