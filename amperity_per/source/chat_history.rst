@@ -23,7 +23,8 @@ Chat history, sharing, and export
 Every conversation you have with Pér is kept. This article covers finding one again, keeping the
 list usable, handing a chat to a colleague, and taking one out of Pér.
 
-This is the :ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, in its most literal form — nothing is thrown away.
+This is the :ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, in
+its most literal form — nothing is thrown away.
 
 
 .. _per-chat-history-finding:
@@ -31,7 +32,8 @@ This is the :ref:`Learn <per-customer-decision-loop-learn>` stage of the custome
 Finding a chat again
 ==================================================
 
-Your chats are the index of everything you have asked Pér. They are listed newest first, and the list is specific to your Pér usage.
+Your chats are the index of everything you have asked Pér. They are listed newest first, and the
+list is specific to your Pér usage.
 
 * **Only your own chats are listed.** A colleague does not see them unless you share one.
 * **Rename a chat** to something you will recognize. Until you do, it is named by your first
@@ -54,7 +56,7 @@ Deleting a chat removes it for good, and takes not-yet-approved work with it.
 
 * **Deleting cannot be undone.** Pér asks you to confirm, and names the chat it will remove.
 * **Anything in it still waiting for your approval can no longer be run.** A change Pér proposed
-  and you never approved goes away with the conversation, even if you have a tab still showing it. 
+  and you never approved goes away with the conversation, even if you have a tab still showing it.
   See :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
 
 .. note::
@@ -78,7 +80,7 @@ How it works:
 * **Reading, then forking.** Your colleague opens the link and reads the whole conversation. The
   moment they reply, they get their own copy of it and carry on there. Nothing they do reaches
   your chat.
-* **They have to be in your shared tenant.** The link works for someone signed in to Pér with 
+* **They have to be in your tenant.** The link works for someone signed in to Pér with
   access to the same tenant, and for nobody else. A link does not grant access to a tenant.
 * **If they are signed in to a different tenant of yours**, Pér offers to switch them rather than
   telling them the link is broken.
@@ -100,7 +102,8 @@ Taking a chat out of Pér
 A chat exports as Markdown, to the clipboard or as a file.
 
 This is for the times the destination is not Pér: a ticket, a planning document, a mail you write
-yourself, etc. The export is a fresh read of the saved conversation, so what you get is what is stored rather than what happens to be on screen.
+yourself. The export is a fresh read of the saved conversation, so what you get is what is stored
+rather than what happens to be on screen.
 
 .. note::
 
@@ -108,7 +111,7 @@ yourself, etc. The export is a fresh read of the saved conversation, so what you
    finish and try again.
 
 For a report rather than a transcript, export the artifact instead — see
-:ref:`Taking one with you <per-artifacts-export>`.
+:ref:`Taking an artifact with you <per-artifacts-export>`.
 
 
 .. _per-chat-history-using:
