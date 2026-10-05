@@ -40,7 +40,7 @@ What it records
 
 The log records work that changed something or retired something, not everything Pér said.
 
-Three kinds of thing reach it the Activity log:
+Three kinds of thing reach the Activity log:
 
 **Plans and their steps**
 
