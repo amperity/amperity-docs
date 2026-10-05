@@ -35,11 +35,12 @@ The two ways to send it
 
 One route is you writing a note. The other is Pér writing it for you.
 
-When you write the note, you have already read it, so there is nothing to check. When Pér writes the feedback, it shows you what it is about to send first.
+When you write the note, you have already read it, so there is nothing to check. When Pér writes the
+feedback, it shows you what it is about to send first.
 
 * **The Feedback control sends what you wrote, directly.** You write it, you send it, and it goes.
 * **Telling Pér draws a confirmation first.** Ask Pér to pass something on and it writes the note
-  and shows it to you as a :ref:`write confirmation <per-approvals-card>`. Nothing is sent until 
+  and shows it to you as a :ref:`write confirmation <per-approvals-card>`. Nothing is sent until
   you approve it, and Pér does not tell you it has been sent before you do.
 * **Pér passes your words on as you said them.** It is instructed to carry your feedback through
   rather than rewrite it or soften it, so what the team reads is what you meant.
@@ -61,7 +62,8 @@ What travels with it
 
 Feedback does not arrive anonymously, and it does not arrive without context.
 
-This means the note leaves your tenant with more attached than the words you typed, and you should be able to take that into account when you decide what to put in it.
+This means the note leaves your tenant with more attached than the words you typed, and you should
+be able to take that into account when you decide what to put in it.
 
 What goes with every piece of feedback:
 
