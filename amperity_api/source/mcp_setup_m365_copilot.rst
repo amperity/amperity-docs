@@ -40,7 +40,7 @@ Microsoft 365 Copilot
 
 .. mcp-setup-m365-copilot-start
 
-Install the Amperity app from Microsoft Marketplace, after which Amperity is available as a source in Microsoft 365 Copilot Chat.
+Install the Amperity app from Microsoft Marketplace, after which Amperity is available as a source to Microsoft 365 Copilot in Copilot Chat, Word, Excel, and Teams.
 
 .. mcp-setup-m365-copilot-end
 
