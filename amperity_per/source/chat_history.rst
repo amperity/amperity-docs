@@ -52,9 +52,10 @@ finished.
 Deleting a chat
 ==================================================
 
-Deleting a chat removes it for good, and takes not-yet-approved work with it.
+Deleting a chat takes it out of your history, and takes not-yet-approved work with it.
 
-* **Deleting cannot be undone.** Pér asks you to confirm, and names the chat it will remove.
+* **Deleting cannot be undone.** Pér asks you to confirm, and names the chat it will remove. Once
+  removed, it is no longer yours to open, search or share.
 * **Anything in it still waiting for your approval can no longer be run.** A change Pér proposed
   and you never approved goes away with the conversation, even if you have a tab still showing it.
   See :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
@@ -62,7 +63,9 @@ Deleting a chat removes it for good, and takes not-yet-approved work with it.
 .. note::
 
    Deleting a chat does not delete what it produced. A report Pér wrote and a file you attached are
-   kept as :ref:`artifacts <per-artifacts>` and survive the conversation.
+   kept as :ref:`artifacts <per-artifacts>` and survive the conversation. Deleting is not an erasure
+   request either: it takes the conversation out of Pér, and what Amperity retains beyond that is
+   governed by your agreement.
 
 
 .. _per-chat-history-sharing:
