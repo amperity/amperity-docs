@@ -20,10 +20,13 @@
 Notifications
 ==================================================
 
-Some of what you approve in Pér takes minutes or hours to run in Amperity, for example, training a model, running a database, or running a workflow. It usually finishes long after you have moved on to something else. A notification is how you find out.
+Some of what you approve in Pér takes minutes or hours to run in Amperity, for example, training a
+model, running a database, or running a workflow. It usually finishes long after you have moved on
+to something else. A notification is how you find out.
 
 It closes the gap between approving something and knowing whether it worked, without you having to
-go back and check. This is the :ref:`Act <per-customer-decision-loop-act>` stage of the customer decision loop, after you have stopped watching.
+go back and check. This is the :ref:`Act <per-customer-decision-loop-act>` stage of the customer
+decision loop, after you have stopped watching.
 
 
 .. _per-notifications-what-raises-one:
@@ -31,7 +34,8 @@ go back and check. This is the :ref:`Act <per-customer-decision-loop-act>` stage
 What raises one
 ==================================================
 
-A notification comes when a long-running job in Amperity that a Pér plan step started reaches an end.
+A notification comes when a long-running job in Amperity that a Pér plan step started reaches an
+end.
 
 The feed is a short list of specific events, not a stream of everything Pér does.
 
@@ -63,7 +67,8 @@ Who sees what
 
 The feed is your tenant's; whether an entry has been read is yours alone.
 
-That combination explains an entry about work you did not start, and a badge that stays after a colleague says they cleared theirs.
+That combination explains an entry about work you did not start, and a badge that stays after a
+colleague says they cleared theirs.
 
 * **Everyone in the tenant sees the same entries.** Work a colleague approved appears in your feed
   too, because it is work in your tenant.
