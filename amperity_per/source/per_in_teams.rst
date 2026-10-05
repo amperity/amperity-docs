@@ -1,6 +1,3 @@
-.. PENDING D3: this article ships when the Microsoft Teams app is enabled for production tenants.
-   At the pin it is limited to named tenants.
-
 .. https://docs.amperity.com/per/
 
 

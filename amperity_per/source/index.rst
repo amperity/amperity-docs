@@ -43,7 +43,8 @@ plans for you to approve, then carries out the work in Amperity.
       :link-type: ref
       :link: per-chatting
 
-      Conversation, recommendations, plans, approvals, and the reports Pér produces.
+      Conversation in Pér, Slack, and Teams, plus recommendations, plans, approvals, and the
+      reports Pér produces.
 
    .. grid-item-card:: Context and skills
       :link-type: ref
@@ -94,6 +95,8 @@ plans for you to approve, then carries out the work in Amperity.
    :hidden:
 
    Chatting with Pér <chatting_with_per>
+   Pér in Slack <per_in_slack>
+   Pér in Teams <per_in_teams>
    How Pér uses your data <how_per_uses_your_data>
    Approvals and write confirmations <approvals_and_write_confirmations>
    Recommendations <recommendations>
