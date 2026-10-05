@@ -24,8 +24,9 @@ An artifact is something a session leaves behind that is worth keeping — a rep
 wrote for you, or a file you brought into a conversation. It outlives the chat that produced it,
 and you can hand it to someone else.
 
-Artifacts are the part of Pér's work that becomes an object: something to open next month, export, or share with the people who have to act on it. They belong to the
-:ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop.
+Artifacts are the part of Pér's work that becomes an object: something to open next month, export,
+or share with the people who have to act on it. They belong to the :ref:`Learn
+<per-customer-decision-loop-learn>` stage of the customer decision loop.
 
 
 .. _per-artifacts-what-it-is:
@@ -35,7 +36,8 @@ What an artifact is
 
 Artifacts come from two places: Pér publishes one, or you upload one.
 
-Both end up on the Artifacts page, easily findable instead of buried in the conversation you attached it to.
+Both end up on the Artifacts page, easily findable instead of buried in the conversation you
+attached it to.
 
 * **Reports, pages and documents** are Pér's work. Ask for a readout, a one-pager or a tear sheet
   and it publishes one you can open on its own.
@@ -65,7 +67,8 @@ Who can see one
 
 An artifact is private to the person who made it until they share it.
 
-This is the difference between a report your colleagues cannot yet find and one the whole team can read.
+This is the difference between a report your colleagues cannot yet find and one the whole team can
+read.
 
 * **Private by default.** An artifact Pér publishes for you, and a file you upload, are yours
   alone.
@@ -89,9 +92,8 @@ Changing and deleting
 
 Pér can rework an artifact it wrote, and you can delete any of your own. Deleting is final.
 
-
-* **Asking for a change rewrites the same artifact.** It does not produce a separate artifact. Keep 
-  working on it in the conversation that produced it — a bigger headline, another section, 
+* **Asking for a change rewrites the same artifact.** It does not produce a separate artifact. Keep
+  working on it in the conversation that produced it — a bigger headline, another section,
   different framing — and you end up with one artifact, not a pile of near-identical ones.
 * **Pér cannot edit a file you uploaded.** That is your document; Pér can only publish its own
   work alongside it.
@@ -110,7 +112,8 @@ Taking an artifact with you
 
 Any artifact can be downloaded as a PDF.
 
-The common case for a report is sending it to someone who does not use Pér. The PDF carries real text rather than a picture of it, so it can be searched, selected and quoted.
+The common case for a report is sending it to someone who does not use Pér. The PDF carries real
+text rather than a picture of it, so it can be searched, selected and quoted.
 
 An artifact you created also links back to the conversation it came from, so the reasoning behind a
 report is one click away from the report itself. Deleting that chat does not delete the artifact —
