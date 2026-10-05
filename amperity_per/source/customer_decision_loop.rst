@@ -20,7 +20,7 @@
 The customer decision loop
 ==================================================
 
-Marketing work on customer data follows a shape, whatever the campaign: Someone works out what is
+Marketing work on customer data follows a shape, whatever the campaign: someone works out what is
 happening with a group of customers, proposes what to do about it, agrees on a plan, makes it
 happen in the tools, and carries what they learn into the next round.
 
@@ -29,7 +29,8 @@ In brief:
 
 This is the customer decision loop, and it is what Pér is built around.
 
-Knowing the loop is the quickest way to find your way around Pér, because every part of Pér serves one of its stages. This documentation is, in effect, a close-up of one stage at a time.
+Knowing the loop is the quickest way to find your way around Pér, because every part of Pér serves
+one of its stages. This documentation is, in effect, a close-up of one stage at a time.
 
 
 .. _per-customer-decision-loop-understand:
@@ -82,19 +83,21 @@ Approve
 
 Nothing happens in Amperity until a person says so.
 
-Because approval is a real gate rather than a formality, you can let Pér do the work of figuring out *what* should happen without giving up control of *whether* it happens.
+Because approval is a real gate rather than a formality, you can let Pér do the work of figuring out
+*what* should happen without giving up control of *whether* it happens.
 
 Acting on a recommendation authors a plan: a titled list of steps, each one a concrete change to
 your Amperity tenant. You can also ask for a plan directly in conversation, and Pér will author
 one. Either way, you read the steps before any of them runs.
 
-When you approve and run a plan, you approve the whole plan, not each write inside it one at
+When you approve and run a whole plan, you approve the plan — not each write inside it one at
 a time. Pér then re-checks at every step whether it may still go on, stops at any step that needs
 a person, and records which steps it approved on your behalf.
 
 .. important::
 
-   Read a plan's steps before you approve it. One approval can kick off a sequence of Amperity writes, and a write that has run cannot be undone from Pér.
+   Read a plan's steps before you approve it. One approval can kick off a sequence of Amperity
+   writes, and a write that has run cannot be undone from Pér.
 
 .. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
    same sentence used in what_is_per.rst and is reused in approvals_and_write_confirmations.rst
@@ -108,11 +111,17 @@ Act
 
 The approved steps run in Amperity.
 
-This means that the audience now exists, the campaign is configured, the model is trained, etc. Nothing is left for you to go and replicate by hand.
+This means the audience now exists, the campaign is configured, and the model is trained. Nothing
+is left for you to go and replicate by hand.
 
-Steps run in order, and some of them start work that takes a while, for example, training a model or running a database. Pér waits for those and carries on when they finish. If a step fails, it says what went wrong rather than leaving the plan stuck, and you can fix the cause and run that step again.
+Steps run in order, and some of them start work that takes a while, for example, training a model or
+running a database. Pér waits for those and carries on when they finish. If a step fails, it says
+what went wrong rather than leaving the plan stuck, and you can fix the cause and run that step
+again.
 
-Work you approved may finish after you have moved on to something else. When something finishes after you have moved on, Pér raises a notification so you find out without having to go back and check.
+Work you approved may finish after you have moved on to something else. When something finishes
+after you have moved on, Pér raises a notification so you find out without having to go back and
+check.
 
 
 .. _per-customer-decision-loop-learn:
@@ -122,7 +131,8 @@ Learn
 
 What happened feeds what Pér does next.
 
-This stage is what makes the second round better than the first — both for you, in having a record to look back at, and for Pér, in not starting cold.
+This stage is what makes the second round better than the first — both for you, in having a record
+to look back at, and for Pér, in not starting cold.
 
 Three things carry forward:
 
