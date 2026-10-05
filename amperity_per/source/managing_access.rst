@@ -123,14 +123,17 @@ Pér has no revocation of its own. A person is cut off in Amperity.
    Signing out is not the same as revoking access. If you need to be certain someone is out, block
    them in Amperity rather than relying on them having signed out.
 
+   A block covers the Pér web app. It does not reach Slack or Microsoft Teams, because a turn on
+   those surfaces runs on the installation's own connection rather than on the identity of
+   whoever asked — Pér does not know which Amperity user is speaking. Who can ask there is
+   controlled by who is in the channel. What a blocked person could still see is bounded: those
+   surfaces never return individual-level PII and cannot change anything.
+
 .. PENDING NC-036: how a signed-out session behaves in detail, and how long a block takes to show
    up in Pér, are deliberately not stated. PO.
 
 .. PENDING NC-006: blocking a user is documented nowhere else in the Amperity documentation, so
    this section has no link target for it and describes it instead.
-
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: a block does not reach a chat surface, because
-   turns there run on the tenant's own key rather than the person's. Add that once either ships.
 
 .. note::
 
