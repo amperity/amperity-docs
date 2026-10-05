@@ -37,7 +37,8 @@ What a skill is
 
 A skill is a workflow with a method, started by name.
 
-Because it is persistent and repeatable, it is a reliable way to get quality answers that don't depend on reproducing specific wording.
+Because it is persistent and repeatable, it is a reliable way to get quality answers that don't
+depend on reproducing specific wording.
 
 * **You start one by name**, from the composer.
 * **Pér can start one itself** when what you asked for clearly matches a skill, and it says which
