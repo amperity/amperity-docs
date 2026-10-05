@@ -157,9 +157,10 @@ These are the parts that hold regardless of settings, instructions, or persuasio
 
 * **Pér cannot approve on your behalf.** Approving a step and restarting a run are things only a
   person does. If Pér is asked to approve a step itself, the attempt is refused and recorded.
-* **Only the person who asked can answer the card.** A confirmation belongs to the request that
-  produced it. Someone else in your tenant cannot approve or reject it, and cannot tell that it
-  exists.
+* **Only the person who asked can answer a confirmation card.** A card belongs to the request that
+  produced it, in the conversation that produced it. Someone else in your tenant cannot approve or
+  reject it, and cannot tell that it exists. A plan is different: a plan is visible to your tenant,
+  and another person there can approve a step in it, under their own access.
 * **A confirmation does not outlive its conversation.** Delete the conversation and its unapproved
   changes can no longer be run, even from a tab still showing them.
 * **Approving twice does not run the change twice.**
