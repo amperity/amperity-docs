@@ -36,9 +36,17 @@ Pull from Microsoft Fabric
 
 |source-name| can send |what-pull| to Amperity from a Warehouse or a Lakehouse SQL analytics endpoint. Name each table or view to pull, and then Amperity reads each one and lands it as a CSV file.
 
-Each run reads every table and view that you configure, in full. There is no option to pull only the records that changed.
+Each run reads every table and view that you configure, in full.
 
 .. source-microsoft-fabric-context-end
+
+.. source-microsoft-fabric-beta-start
+
+.. admonition:: Beta
+
+   The |source-name| source connector is currently in beta. Contact your Amperity representative to learn more.
+
+.. source-microsoft-fabric-beta-end
 
 .. source-microsoft-fabric-views-start
 
@@ -50,9 +58,10 @@ Amperity can read both tables and views. A view in |source-name| is a saved quer
 
 .. important::
 
-   Amperity connects to the `SQL analytics endpoint <https://learn.microsoft.com/en-us/fabric/data-warehouse/connectivity>`__ |ext_link| over TDS on TCP port 1433, the same protocol and port that Microsoft SQL Server uses. No REST API is involved.
+   If your workspace restricts inbound access, Amperity must be allowed to reach it.
 
-   Allow outbound access on TCP 1433, and make sure that any firewall between Amperity and |source-name| treats that port as MSSQL or TDS traffic. Protocol-aware inspection that assumes HTTPS on 1433 breaks the connection even when the port itself is open.
+   * **IP firewall rules.** If your workspace allows connections only from selected networks, add the Amperity `IP address for allowlists <https://docs.amperity.com/operator/send_data.html#ip-allowlists>`__ |ext_link| for your region to the allowlist.
+   * **Private links.** Amperity connects over the public internet. A workspace or tenant that blocks public internet access, such as one using Azure Private Link with **Block Public Internet Access**, cannot be reached by this connector.
 
 .. source-microsoft-fabric-network-end
 
