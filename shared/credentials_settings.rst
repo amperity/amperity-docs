@@ -190,6 +190,14 @@ A Fabric administrator must enable service principal access for your tenant, and
 
 .. credential-microsoft-fabric-find-credentials-end
 
+.. credential-sap-s4hana-public-cloud-find-credentials-start
+
+Request the communication user name and password from your SAP administrator. This is a technical user that your administrator creates for Amperity in SAP using the **Maintain Communication Users** app; it is not an ordinary SAP user account.
+
+Your SAP administrator must also activate a communication arrangement for each data type that Amperity pulls. A communication user on its own does not grant access to any data.
+
+.. credential-sap-s4hana-public-cloud-find-credentials-end
+
 .. credential-sendgrid-api-key-start
 
 The API key for SendGrid. This key must have the following scopes: **Marketing > Contacts** (read and write) and **User > Profile** (read).

@@ -559,15 +559,6 @@ The unique identifier assigned to clusters of customer profiles that all represe
 .. term-amperity-id-format-end
 
 
-**Amperity.js**
-
-.. term-amperity-js-start
-
-**Amperity.js** is a JavaScript-based software development kit that integrates directly with any website or web application to support real-time streaming of data from that website to Amperity.
-
-.. term-amperity-js-end
-
-
 **Amperity Lakehouse**
 
 .. term-amperity-lakehouse-start
@@ -6106,6 +6097,15 @@ SAP Business Objects is a centralized BI tool for data reporting, visualization,
 .. term-sap-business-objects-end
 
 
+**SAP S/4HANA Public Cloud**
+
+.. term-sap-s4hana-public-cloud-start
+
+SAP S/4HANA Cloud, Public Edition is SAP's cloud-hosted enterprise resource planning (ERP) suite. Organizations use it to run core business operations, including sales orders, product master data, and customer records.
+
+.. term-sap-s4hana-public-cloud-end
+
+
 **SAS Cloud Analytic Services**
 
 .. term-sas-cas-start
@@ -6365,6 +6365,15 @@ A shared dataset represents all databases and database tables configured for out
 Shopify is an e-commerce platform for online stores and retail point-of-sale systems that consolidates shopping, payments, marketing, shipping, and customer engagement tools into a single unified experience.
 
 .. term-shopify-end
+
+
+**Signal**
+
+.. term-signal-start
+
+Signal is the dashboarding surface in Amperity. A Signal board is one tab, a Signal card is one chart on a board, and each card declares the aggregate it measures over a table in an Amperity database rather than carrying a saved result. Boards and cards are authored through AmpAI.
+
+.. term-signal-end
 
 
 **single sign-on**, **SSO**

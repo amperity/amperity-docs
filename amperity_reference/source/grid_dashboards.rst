@@ -3,23 +3,23 @@
 
 .. meta::
     :description lang=en:
-        Dashboards show consumption of compute resources and storage for Amps and show usage across features and time periods.
+        The Amps and usage dashboards show consumption of compute resources and storage for Amps, and show usage across features and time periods.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Dashboards show consumption of compute resources and storage for Amps and show usage across features and time periods.
+        The Amps and usage dashboards show consumption of compute resources and storage for Amps, and show usage across features and time periods.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Dashboards
+        Amps & usage
 
 ==================================================
-Dashboards
+Amps & usage
 ==================================================
 
 .. grid-dashboards-about-start
 
-Dashboards show consumption of compute resources and storage for Amps and show usage across features and time periods.
+The **Amps** and **Usage** dashboards show consumption of compute resources and storage for Amps, and show usage across features and time periods.
 
 .. grid-dashboards-about-end
 
@@ -42,7 +42,7 @@ Dashboards show consumption of compute resources and storage for Amps and show u
 
 
 .. toctree::
-   :caption: Predictive models
+   :caption: Amps & usage
    :maxdepth: 2
    :hidden:
 

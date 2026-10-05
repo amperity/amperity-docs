@@ -109,6 +109,10 @@ Components
       :link-type: doc
       :link: ampai
 
+   .. grid-item-card:: |fa-chart-line| Amps & usage
+      :link-type: doc
+      :link: grid_dashboards
+
    .. grid-item-card:: |fa-circle-nodes| APIs
       :link-type: doc
       :link: api
@@ -144,10 +148,6 @@ Components
    .. grid-item-card:: |fa-sparkles| Customer Data Assistant
       :link-type: doc
       :link: customer_data_assistant
-
-   .. grid-item-card:: |fa-chart-line| Dashboards
-      :link-type: doc
-      :link: grid_dashboards
 
    .. grid-item-card:: |fa-expand| Data Explorer
       :link-type: doc
@@ -261,6 +261,10 @@ Components
       :link-type: doc
       :link: settings
 
+   .. grid-item-card:: |fa-wave-pulse| Signal
+      :link-type: doc
+      :link: signal
+
    .. grid-item-card:: |fa-shield-check| Single sign-on (SSO)
       :link-type: doc
       :link: sso
@@ -323,13 +327,13 @@ Components
    AI Assistants <assistant>
    Amperity Bridge <bridge>
    AmpAI <ampai>
+   Amps & usage <grid_dashboards>
    APIs <api>
    Attribute types <grid_attributes>
    Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
    Customer Data Assistant <customer_data_assistant>
-   Dashboards <grid_dashboards>
    Data exports <data_exports>
    Destinations <page_destinations>
    File formats <grid_formats>
@@ -345,6 +349,7 @@ Components
    Settings <settings>
    Segments <segments>
    Segment Editor <segment_editor>
+   Signal <signal>
    Single sign-on (SSO) <sso>
    Spark SQL <sql_spark>
    Workflows <workflows>
