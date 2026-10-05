@@ -26,9 +26,7 @@ worked under, and how confident it is and why. Recommendations gather in the
 :ref:`Portfolio <per-interface-tour-pages>`, which is where Pér puts the work it thinks deserves
 your attention.
 
-A recommendation is the part of Pér you are meant to be able to disagree with. An answer you have
-to take on trust is worth less than a proposal you can check, and acting on one is the shortest
-route from "that looks right" to configured, approved work. This is the
+A recommendation is the part of Pér you are meant to be able to disagree with. This is the
 :ref:`Recommend <per-customer-decision-loop-recommend>` stage of the customer decision loop.
 
 
@@ -37,11 +35,9 @@ route from "that looks right" to configured, approved work. This is the
 What a recommendation carries
 ==================================================
 
-Each recommendation carries the case for itself, not just the conclusion.
+Each recommendation presents its evidence, not just the conclusion.
 
-Every part of it is there so you can test the proposal rather than weigh it. If you cannot find
-fault with the evidence, that is a reason to act; if you can, you have found it before anything
-ran.
+If you cannot find fault with the evidence, that is a reason to act; if you can, you have found it at an ideal time to correct course, before anything ran.
 
 A recommendation carries:
 
@@ -70,11 +66,9 @@ can push further and have Pér query your data to answer.
 Where recommendations come from
 ==================================================
 
-Recommendations are produced by a refresh, which someone asks for.
+Recommendations are produced by a refresh, which someone must ask for.
 
-This answers two questions that come up in the first week: why the Portfolio looks the same as it
-did yesterday, and why something that was on it has gone. Both have the same answer — the
-Portfolio changes when a refresh runs, and not before.
+This answers two common questions: why the Portfolio looks the same as it did yesterday, and why something that was on it has gone. Both have the same answer: the Portfolio changes when a refresh runs, and not before.
 
 .. note::
 

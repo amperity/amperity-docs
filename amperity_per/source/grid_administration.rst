@@ -24,11 +24,6 @@ Administration
 
 This section covers who can reach Pér, and how that is administered.
 
-All of it happens in Amperity rather than in Pér. Pér shows you which mode your tenant uses and
-links out; the choice between the two modes, the grants to individuals, and cutting someone off are
-all made on the Amperity **Users** page, alongside the rest of your user administration. What a
-person can do once they are in is governed by the Amperity permissions they already hold.
-
 .. per-administration-about-end
 
 .. per-administration-about-grid-start

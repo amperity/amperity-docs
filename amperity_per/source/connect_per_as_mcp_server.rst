@@ -25,9 +25,7 @@ Pér can act as a context source for another agent. A client that speaks the
 as you, and can then read what Pér holds for the tenants you can already see.
 
 Not all the work happens in Pér. A briefing, a deck, or another team's agent can be built on the
-same trusted customer context Pér works from, rather than on somebody's copy of it pasted into a
-document a month ago. Because the connection only ever reads, widening who can see that context
-never widens who can act on it.
+same trusted customer context Pér works from. Because the connection only ever reads, widening who can see that context never widens who can act on it.
 
 .. PENDING NC-037: there is no published address for this endpoint and no page in Pér that shows
    one, so this article cannot tell a reader how to make the connection. See the last section.
@@ -40,10 +38,9 @@ never widens who can act on it.
 Context, not control
 ==================================================
 
-The connection is read-only, in the strong sense: there is nothing on the other end that can change
-anything.
+The connection is read-only: there is nothing on the other end that can change anything.
 
-That is worth stating plainly, because connecting an agent to a production system usually raises
+That is important to keep in mind, because connecting an agent to a production system usually raises
 the question of what it could do by mistake. Here the answer is nothing. The connection offers no
 way to create, change or delete anything in Pér or in Amperity, and nothing an agent asks for
 through it can become a change — not even one waiting for approval.

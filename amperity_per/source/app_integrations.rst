@@ -22,10 +22,7 @@ App integrations
 
 App integrations is where Pér is connected to the other systems your team works in.
 
-Pér's answers are only as complete as what it can reach. Everything it knows about your customers
-comes from Amperity, but plenty of what happens to those customers happens somewhere else — and
-this page is both the short list of what Pér can reach beyond Amperity and the way in to setting
-each one up.
+Everything Pér knows about your customers comes from Amperity, but plenty of what happens to those customers happens somewhere else. This page is both the short list of what Pér can reach beyond Amperity and the way in to setting each one up.
 
 .. PENDING NC-039: the page's own lead text names Slack and Teams on every tenant, including the
    ones that have neither. Product copy; this article describes what is actually on the page.
@@ -36,14 +33,12 @@ each one up.
 What you can connect
 ==================================================
 
-Pér can be connected to other systems in two directions, and the two have opposite consequences
-for who can do what.
-
-They are easy to confuse, and worth keeping apart:
+Pér can be connected to other systems in two directions.
 
 * **Systems Pér reaches out to.** Connecting one lets Pér look things up there and, with your
   approval, change them. Today that is
   :ref:`Salesforce Marketing Cloud <per-connect-sfmc>`.
+  
 * **Pér as something another agent reaches into.** Pér can also be
   :ref:`connected as a context source <per-connect-as-mcp-server>` for an agent somewhere else.
   That direction only ever reads.

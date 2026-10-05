@@ -23,11 +23,7 @@ Chat history, sharing, and export
 Every conversation you have with Pér is kept. This article covers finding one again, keeping the
 list usable, handing a chat to a colleague, and taking one out of Pér.
 
-Analysis is only worth doing once. The chat that answered a question in March is the fastest answer
-to the same question in June, and the quickest way to bring a colleague into a piece of work is to
-hand them the thread rather than re-explain it. This is the
-:ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, in its most
-literal form — nothing is thrown away.
+This is the :ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, in its most literal form — nothing is thrown away.
 
 
 .. _per-chat-history-finding:
@@ -35,10 +31,7 @@ literal form — nothing is thrown away.
 Finding a chat again
 ==================================================
 
-Your chats are listed newest first, and the list is yours.
-
-It is the index of everything you have asked Pér, which is why it is worth a little maintenance:
-a list of forty chats all called by whatever you happened to type first is not an index.
+Your chats are the index of everything you have asked Pér. They are listed newest first, and the list is specific to your Pér usage.
 
 * **Only your own chats are listed.** A colleague does not see them unless you share one.
 * **Rename a chat** to something you will recognize. Until you do, it is named by your first
@@ -57,15 +50,12 @@ finished.
 Deleting a chat
 ==================================================
 
-Deleting a chat removes it for good, and takes one other thing with it.
+Deleting a chat removes it for good, and takes not-yet-approved work with it.
 
-It is worth reading this before clearing out a list, because one of the two consequences is not
-obvious from the word "delete".
-
-* **It cannot be undone.** Pér asks you to confirm, and names the chat it will remove.
+* **Deleting cannot be undone.** Pér asks you to confirm, and names the chat it will remove.
 * **Anything in it still waiting for your approval can no longer be run.** A change Pér proposed
-  and you never approved dies with the conversation, even in a tab still showing it. See
-  :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
+  and you never approved goes away with the conversation, even if you have a tab still showing it. 
+  See :ref:`What Pér can't do, whatever you approve <per-approvals-limits>`.
 
 .. note::
 
@@ -88,8 +78,8 @@ How it works:
 * **Reading, then forking.** Your colleague opens the link and reads the whole conversation. The
   moment they reply, they get their own copy of it and carry on there. Nothing they do reaches
   your chat.
-* **They have to be in your tenant.** The link works for someone signed in to Pér with access to
-  the same tenant, and for nobody else. A link does not grant access to a tenant.
+* **They have to be in your shared tenant.** The link works for someone signed in to Pér with 
+  access to the same tenant, and for nobody else. A link does not grant access to a tenant.
 * **If they are signed in to a different tenant of yours**, Pér offers to switch them rather than
   telling them the link is broken.
 * **One link per chat.** Asking to share the same chat again hands back the same link.
@@ -110,8 +100,7 @@ Taking a chat out of Pér
 A chat exports as Markdown, to the clipboard or as a file.
 
 This is for the times the destination is not Pér: a ticket, a planning document, a mail you write
-yourself. The export is a fresh read of the saved conversation, so what you get is what is stored
-rather than what happens to be on screen.
+yourself, etc. The export is a fresh read of the saved conversation, so what you get is what is stored rather than what happens to be on screen.
 
 .. note::
 

@@ -20,13 +20,9 @@
 Connect Salesforce Marketing Cloud
 ==================================================
 
-Connecting Salesforce Marketing Cloud lets Pér work in your Salesforce account: look up what is
-really there, and — once you approve it — change it.
+Connecting Salesforce Marketing Cloud lets Pér work in your Salesforce account: look up what is there, and — once you approve — change it.
 
-Without the connection Pér can describe an audience but cannot check the asset that will carry it,
-confirm what a send is configured to do, or read back what happened. With it, the same conversation
-covers both platforms, and the things Pér tells you about Salesforce are things it looked up rather
-than inferred.
+With this connection, the same conversation covers both platforms, and the things Pér tells you about Salesforce are things it looked up rather than inferred.
 
 The connection is also the one in Pér that belongs to a person rather than to a tenant, which
 changes who has to do what.
@@ -40,9 +36,7 @@ A tenant connection, and your own sign-in
 Setting this up is two separate jobs: someone connects the tenant to a Business Unit once, and then
 each person who wants to use it signs in to Salesforce as themselves.
 
-Knowing that in advance saves the common disappointment, which is one person setting it up and
-everyone else wondering why it did not work for them. It is also what keeps the connection honest:
-Pér does not get a shared Salesforce account that sees everything, it gets your account.
+One person setting it up will not automatcally connect everyone else. Pér does not get a shared Salesforce account that sees everything, it gets your account.
 
 * **The tenant connection is made once.** It points Pér at one Salesforce Business Unit, and
   everyone in the tenant shares it. It needs no special permission — anyone who can reach Pér can
@@ -70,8 +64,8 @@ change is approved exactly the way an Amperity change is.
   permissions there decide what it can see and what it can do. A colleague with narrower Salesforce
   access gets narrower answers from Pér, in the same tenant, on the same day.
 * **Looking things up needs no approval**, the same as reading in Amperity.
-* **Changing something does.** A Salesforce change Pér proposes — creating something, updating
-  something, deleting something, sending something — arrives as a
+* **Changing something needs approvals.** A Salesforce change Pér proposes — creating something,
+  updating something, deleting something, sending something — arrives as a
   :ref:`write confirmation <per-approvals-card>` and runs only when a person approves it.
 
 .. important::
@@ -90,7 +84,7 @@ destination reads as ready only when both are in place.
 Staying connected, and coming apart
 ==================================================
 
-A connection can lapse quietly, so Pér checks rather than trusting what it last saw.
+A connection can lapse, so Pér checks rather than trusting what it last saw.
 
 * **Every visit re-checks.** If your sign-in has expired while you were away, you are asked to sign
   in again rather than told you are connected when you are not.

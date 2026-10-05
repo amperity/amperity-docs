@@ -25,7 +25,7 @@ destinations, and whether anything is running right now.
 
 Nearly everything else in Pér assumes you are in the right tenant with the right data in front of
 you. When an answer looks wrong, this is the page that tells you whether those assumptions hold —
-and it is the page worth having open when you ask Amperity about something.
+and it is the page worth having open when you contact Amperity support about something.
 
 Nothing here changes how Pér reasons. It is a statement of what is, with one editable setting.
 
@@ -63,7 +63,7 @@ What Pér calls your customers
 
 One setting on this page is editable: the word Pér uses for the people in your customer data.
 
-Not every business calls them customers. If yours says guests, members, riders or fans, setting it
+Not every business calls them customers. If yours says guests, members, riders, or fans, setting it
 here means Pér uses your word instead of a generic one.
 
 * **It is a tenant setting**, so the word is the same for everyone.
@@ -82,9 +82,6 @@ Which destinations Pér knows about
 
 The second section lists the destinations Pér has picked up from Amperity, and when it last looked.
 
-A destination Pér has never seen is a destination it cannot talk about, and "when did it last
-look" is the difference between Pér being wrong and Pér being out of date. This list answers both.
-
 * **Each destination says when it was last synced.**
 * **A destination only administrators may use is marked** **Admin only**.
 * **The list is searchable** once there is more than one.
@@ -101,7 +98,7 @@ What is running right now
 
 The last section says whether Pér is working on a fresh set of recommendations at this moment.
 
-A refresh takes a while, and knowing one is under way explains a Portfolio that is about to
+A refresh takes a while, and knowing one is underway explains a Portfolio that is about to
 change. When one is running, the section says so and when it started.
 
 The rest of this section describes the server Pér is running on. It is there for Amperity support

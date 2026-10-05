@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        A plan is a titled, ordered list of changes to Amperity, each one approved before it runs.
+        A plan is a titled, ordered list of proposed changes to Amperity, each one approved before it runs.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        A plan is a titled, ordered list of changes to Amperity, each one approved before it runs.
+        A plan is a titled, ordered list of proposed changes to Amperity, each one approved before it runs.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -24,11 +24,9 @@ A plan is where work Pér proposes becomes work that runs: a titled, ordered lis
 step a concrete change to your Amperity tenant, and each one approved by a person before it
 happens. A plan also carries the reason it exists, what to watch out for, and what it produced.
 
-A plan is the difference between advice and work. It is durable and resumable — you can leave it,
-come back tomorrow, and it is still there with its history — and it is the one place to read
-everything Pér intends to do before any of it happens. Plans span two stages of the customer
-decision loop: :ref:`Approve <per-customer-decision-loop-approve>`, then
-:ref:`Act <per-customer-decision-loop-act>`.
+A plan is durable and resumable — you can leave it, come back tomorrow, and it is still there with its history. It is the place to read everything Pér intends to do before any of it happens. 
+
+Plans span two stages of the customer decision loop: :ref:`Approve <per-customer-decision-loop-approve>`, then :ref:`Act <per-customer-decision-loop-act>`.
 
 
 .. _per-plans-what-a-plan-is:
@@ -36,10 +34,7 @@ decision loop: :ref:`Approve <per-customer-decision-loop-approve>`, then
 What a plan is
 ==================================================
 
-A plan gathers everything one piece of work needs into a single object.
-
-There is no second kind of record to learn and no separate place where the detail lives. What will
-change, in what order, why, what could go wrong, and what came out of it are all on the plan.
+A plan gathers everything one piece of work needs into a single object. There is no second kind of record to learn and no separate place where the detail lives.
 
 A plan carries:
 
@@ -81,14 +76,14 @@ How plans are written:
   is a normal outcome. A plan holds at most sixteen steps.
 * **Reads only, to make the writes concrete.** While writing a plan, Pér reads what it needs to
   fill in real identifiers, tables and settings. It changes nothing.
-* **A single send is a campaign; a sequence is a journey.** When the work is one one-time send, the
+* **A single send is a campaign; a sequence is a journey.** When the work is a one-time send, the
   plan creates a campaign. When it is more than one send, has a wait between sends, or branches on
   whether someone opened or clicked, the plan creates a journey instead. A sequence cannot be
   expressed as a campaign, and Amperity rejects one that tries.
 * **A plan stops short of sending.** A campaign it creates is left a draft and a journey it creates
   is left paused. Scheduling the send is yours.
 * **Pér does not write the content of a send.** It builds the audience, the campaign or the
-  journey and the configuration around it; the creative is not its work.
+  journey and the configuration around it; it does not produce the creative.
 * **A missing destination is stated, not invented.** If a channel the work needs has no destination
   set up in Amperity, Pér writes the smaller plan your existing destinations support and says
   plainly, in that step, what is missing.
@@ -101,8 +96,7 @@ Approving the steps
 
 A plan moves one step at a time, and each step waits for you.
 
-This is the section to come back to, because it is the part that governs what actually happens in
-your tenant. Nothing in a plan runs because the plan exists; it runs because someone approved that
+Nothing in a plan runs simply because the plan exists; it runs because someone approved that
 step.
 
 * **The first step waits; the rest unlock in order.** A step that cannot run yet says so rather
@@ -140,8 +134,7 @@ Steps that take a while
 
 Some steps start work in Amperity that takes minutes or hours.
 
-Training a model, running a database, running a workflow: a plan that could not wait for those
-would not be much use for real work. So a step can launch a job and the plan waits for it.
+Training a model, running a database, running a workflow may take longer than other operations, so a step can launch a job and the plan waits for it.
 
 * **The plan waits, then carries on.** When the job finishes, the next step unlocks.
 * **A checkpoint can hold the plan.** Where the results of a long job need reading before the next
@@ -170,15 +163,11 @@ would not be much use for real work. So a step can launch a job and the plan wai
 When a step fails
 ==================================================
 
-Two different things can go wrong, and they are handled differently.
+There are a few reasons a plan may fail. A plan never leaves you on a step that has simply stopped with no explanation.
 
-Telling them apart is what decides whether you wait, fix something in Amperity, or run the step
-again. A plan never leaves you on a step that has simply stopped with no explanation.
-
-**Amperity refused the change.** Pér reads the refusal, corrects the step and offers it again as
-a confirmation for you to approve, saying what was rejected and that it has been corrected. It
-tries
-this at most twice; after that the step stays as it is, with the error, for a person to deal with.
+**Amperity refused the change.** Pér reads the refusal, corrects the step, and offers it again as
+a confirmation for you to approve. It will say what was rejected and that it has been corrected. It
+tries this at most twice; after that the step stays as it is, with the error, for a person to deal with.
 
 **You do not have the access the step needs.** This is not corrected and retried, because there is
 nothing to correct. The step keeps its message and waits for you to get the access and run it.
@@ -212,8 +201,7 @@ expectation.
 not run yet — a different audience, another name, a changed offer — or to add a step, drop one, or
 put them in a different order. A step that has already been approved, has run, or was rejected
 cannot be changed and nothing can be placed before it, and a changed or added step still waits for
-your approval rather than running.
-A plan that is approving its own steps cannot be changed at all; stop the run first.
+your approval rather than running. A plan that is approving its own steps cannot be changed at all; stop the run first.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
 recommendation to the Portfolio, so that work can be proposed again. It is offered only while

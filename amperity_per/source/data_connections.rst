@@ -20,14 +20,12 @@
 Data connections
 ==================================================
 
-Data connections is where you supply the handful of connection details a destination needs that
+Data connections is where you supply the connection details a destination needs that
 Amperity does not carry for it.
 
 Pér can read what a destination reports back about the work sent to it, which is how it can tell
 you what became of a campaign rather than only what was sent. A destination missing the detail that
-identifies your account cannot be reached at all, and the symptom is a destination that quietly has
-nothing to say. This page is the one place that says which destinations are ready and lets you fill
-in what is missing.
+identifies your account cannot be reached at all, which will result in a lack of information from that estination. This page in Pér says which destinations are ready and lets you fill in what is missing.
 
 
 .. _per-data-connections-what-goes-in:
@@ -39,7 +37,7 @@ Most of what Pér knows about a destination comes from Amperity. A few things do
 what you enter here.
 
 Amperity knows which destinations your tenant has and how they are configured, and Pér reads all of
-that. What Amperity does not hold is the identifier a destination's own reporting is addressed to —
+that. Amperity does not hold the identifier a destination's own reporting is addressed to —
 there is no field for it in Amperity and no tool that can look it up, so the only way Pér can have
 it is for a person to type it in.
 
@@ -57,11 +55,10 @@ it is for a person to type it in.
 Knowing when a destination is ready
 ==================================================
 
-The page marks each destination as ready or as still needing something — and "ready" means ready
+The page marks each destination as ready or as still needing something. "Ready" means ready
 for you, not ready for the tenant.
 
-This is the one thing on the page that is easy to misread. Two separate things have to be true
-before Pér can get a destination's reporting, and only one of them is tenant-wide:
+Two separate things have to be true before Pér can get a destination's reporting:
 
 * **The detail on this page has to be filled in.** Anyone can do it, once, for everyone.
 * **You have to be signed in to the destination yourself.**

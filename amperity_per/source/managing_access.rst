@@ -23,8 +23,7 @@ Managing access to Pér
 This is how an administrator decides who can get into Pér, and how they cut someone off.
 
 Pér acts in a production tenant on a person's behalf, so who is allowed in is a real control rather
-than a formality. Everything in this article is administered in Amperity rather than in Pér — which
-is the first thing to know, because it is the thing most often looked for in the wrong place.
+than a formality. Everything in this article is administered in Amperity rather than in Pér.
 
 
 .. _per-managing-access-where:
@@ -48,8 +47,7 @@ Who can do what:
   between the two modes and grants access to individuals.** Amperity refuses the change to anyone
   else, and says so.
 * **Removing someone's access is deliberately easier than giving it.** Anyone who can edit users in
-  Amperity can take a Pér grant away, so an administrator is never the reason a grant outlives the
-  person who should have lost it.
+  Amperity can take a Pér grant away.
 
 .. PENDING NC-008: amperity-docs already publishes a "Use Customer Data Agent" row in the policies
    reference, which may not match the two gates the product applies. PO and engineering.
@@ -65,15 +63,13 @@ A tenant admits people to Pér one of two ways, and the choice is the tenant's.
 * **Open.** Anyone authorized for the tenant can enter Pér. Nothing has to be granted per person.
 * **Managed.** Only people who have been granted access individually can enter.
 
-Which one suits you is a question about the tenant, not about Pér. Open matches a tenant whose
-Amperity access list is already the list of people who should be in Pér. Managed matches one where
-it is not — a large tenant, a pilot, or a team rolling Pér out to some people before others.
+Open matches a tenant whose Amperity access list is already the list of people who should be in Pér. Managed matches one where it is not — a large tenant, a pilot, or a team rolling Pér out to some people before others.
 
 .. important::
 
    Neither mode decides what a person can **do**. Access is permission to enter; each person's
    existing Amperity permissions still govern everything that happens afterwards, exactly as they
-   do elsewhere in the platform. Granting someone Pér access grants them nothing in Amperity.
+   do elsewhere in the platform. Granting someone Pér access grants them nothing new in Amperity.
 
 Someone refused under managed access is told that their Amperity administrator has not enabled Pér
 access for them, so they know to ask rather than to retry.
@@ -87,13 +83,10 @@ See :ref:`Open access <per-key-concepts-open-access>` and
 Turning on managed access
 ==================================================
 
-Turning on managed access is a reviewed change, not a switch — and knowing that beforehand saves a
-surprise.
+Turning on managed access is a reviewed change, not a switch.
 
-The risk it is built against is obvious once stated: flipping a live tenant to managed access with
-nobody granted would lock everyone out at once. So Amperity does not flip it. It shows you the
-people who currently have access, and the ones you keep are granted access as the mode starts.
-Everybody else is shut out.
+This prevents a situation in which flipping a live tenant to managed access with
+nobody granted and locking everyone out at once. So instead of Amperity flipping the switch, it shows you the people who currently have access, and the ones you keep are granted access as the mode starts. Everybody else is shut out.
 
 * **You review a list before anything changes**, and you are told how many people will keep access.
 * **Returning to open access** restores entry for everyone authorized for the tenant.
@@ -108,18 +101,14 @@ Everybody else is shut out.
 Cutting someone off
 ==================================================
 
-Pér has no revocation of its own. A person is cut off in Amperity, and that is the whole mechanism.
-
-This is deliberate rather than missing. A second place to revoke access would be a second place to
-forget, and the question "is this person out?" should have one answer.
+Pér has no revocation of its own. A person is cut off in Amperity.
 
 * **Blocking a person in Amperity revokes all of their access to that tenant.** It overrides
   permissions they hold directly and permissions they inherit from an
-  `SSO group mapping <../reference/sso.html#sso-map-groups-to-policies>`__, which is the case with
-  no attachment to remove.
+  `SSO group mapping <../reference/sso.html#sso-map-groups-to-policies>`__.
 * **A blocked person is refused at the door**, whatever credential they are holding. They are not
   left with a working session that happens to be ignored.
-* **Blocking a parent tenant covers its sandboxes.** You do not have to walk the list.
+* **Blocking a parent tenant covers its sandboxes.** You do not have to cover the whole list.
 * **Blocking needs a user-administration permission**, and it has to be turned on for your tenant.
   If you cannot see it, your Amperity representative can tell you whether it is.
 * **Removing a Pér grant is the narrower move**, and it is the right one when someone should keep

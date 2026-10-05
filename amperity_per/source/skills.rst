@@ -25,8 +25,7 @@ look at, in what order, what to check before drawing a conclusion — so you can
 rather than describing it from scratch.
 
 The hard part of asking an agent for analysis is knowing what to ask for. A skill is Amperity's
-answer to that for the work customers do most often, and it is the fastest way to see what Pér is
-actually for. Most skills carry you from
+answer to that for the work customers do most often. Most skills carry you from
 :ref:`understanding something <per-customer-decision-loop-understand>` to
 :ref:`a recommendation you can act on <per-customer-decision-loop-recommend>` in one run.
 
@@ -38,9 +37,7 @@ What a skill is
 
 A skill is a workflow with a method, started by name.
 
-That is the whole of the difference between a skill and a well-written question. Both get you an
-answer; only one of them gets you the same quality of answer next quarter, from a colleague who
-words it differently.
+Because it is persistent and repeatable, it is a reliable way to get quality answers that don't depend on reproducing specific wording.
 
 * **You start one by name**, from the composer.
 * **Pér can start one itself** when what you asked for clearly matches a skill, and it says which

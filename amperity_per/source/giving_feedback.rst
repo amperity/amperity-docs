@@ -24,9 +24,7 @@ There are two ways to tell Amperity what Pér got right or wrong. You can write 
 with the **Feedback** control, or you can tell Pér in a conversation and have it send the note for
 you.
 
-Pér is in :ref:`Public Preview <per-public-preview>`, and what gets reported is what gets fixed.
-The answer that was subtly wrong, the step that needed a workaround, the thing you went looking for
-and could not find — none of that reaches the people building Pér unless somebody sends it.
+Pér is in :ref:`Public Preview <per-public-preview>`, and feedback will help the product to evolve.
 Feedback also leaves your tenant, so it is worth knowing what travels with it before you write.
 
 
@@ -37,15 +35,12 @@ The two ways to send it
 
 One route is you writing a note. The other is Pér writing it for you.
 
-That difference is the whole reason only one of them stops to ask. When you write the note, you
-have already read it — there is nothing left to check. When Pér writes it, you have not, so Pér
-shows you what it is about to send first.
+When you write the note, you have already read it, so there is nothing to check. When Pér writes the feedback, it shows you what it is about to send first.
 
 * **The Feedback control sends what you wrote, directly.** You write it, you send it, and it goes.
 * **Telling Pér draws a confirmation first.** Ask Pér to pass something on and it writes the note
-  and shows it to you as a
-  :ref:`write confirmation <per-approvals-card>`. Nothing is sent until you approve it, and Pér
-  does not tell you it has been sent before you do.
+  and shows it to you as a :ref:`write confirmation <per-approvals-card>`. Nothing is sent until 
+  you approve it, and Pér does not tell you it has been sent before you do.
 * **Pér passes your words on as you said them.** It is instructed to carry your feedback through
   rather than rewrite it or soften it, so what the team reads is what you meant.
 * **The same point is not filed twice in one conversation.** Ask again in the same chat and Pér
@@ -66,9 +61,7 @@ What travels with it
 
 Feedback does not arrive anonymously, and it does not arrive without context.
 
-That is deliberate — a report nobody can follow up on is a report that goes nowhere. But it means
-the note leaves your tenant with more attached than the words you typed, and you should be able to
-take that into account when you decide what to put in it.
+This means the note leaves your tenant with more attached than the words you typed, and you should be able to take that into account when you decide what to put in it.
 
 What goes with every piece of feedback:
 

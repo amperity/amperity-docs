@@ -26,7 +26,7 @@ how it works.
 
 Pér acts in a production tenant, which makes "what did it do, and on whose say-so" a question
 somebody eventually asks — usually somebody who was not in the conversation that started it. The
-Activity log is where that is answered. It is also one of the three things that carry forward into
+Activity log answers this. It is also one of the three things that carry forward into
 the :ref:`Learn <per-customer-decision-loop-learn>` stage of the customer decision loop, alongside
 :ref:`memories <per-memory>` and :ref:`artifacts <per-artifacts>`.
 
@@ -38,11 +38,9 @@ The log belongs to the tenant rather than to you. Everyone who can reach Pér se
 What it records
 ==================================================
 
-The log records work that changed something or retired something — not everything Pér said.
+The log records work that changed something or retired something, not everything Pér said.
 
-That is a narrower record than it first sounds, and the narrowness is what makes it useful: a log
-of every exchange would be unreadable a month later, while a log of what was actually carried out
-stays worth opening. Three kinds of thing reach it.
+Three kinds of thing reach it the Activity log:
 
 **Plans and their steps**
 
@@ -92,7 +90,7 @@ count beside each day.
 What the log does not tell you
 ==================================================
 
-The log is deliberately narrow, and four of its edges are worth knowing before you lean on it.
+The log is deliberately narrow, and has four specific edges worth knowing:
 
 * **It does not always say who.** A settings change names the person who made it. Plan work and
   recommendation work does not: the entry records that a step was approved and run, not which
