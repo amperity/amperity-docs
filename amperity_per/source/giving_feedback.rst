@@ -100,6 +100,5 @@ Sending feedback
 
 If the note is not what you meant, reject it and tell Pér what to say instead.
 
-.. PARKED-LINK: per_in_slack.rst, per_in_teams.rst: when those surfaces ship, say here that
-   feedback cannot be sent from them, because they cannot show a confirmation — it is sent from
-   the Pér web app instead.
+Feedback cannot be sent from Slack or Microsoft Teams. Both surfaces answer only and cannot show a
+confirmation, so feedback is sent from the Pér web app instead.
