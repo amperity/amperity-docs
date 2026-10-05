@@ -11,11 +11,11 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Set up Microsoft Copilot and Foundry
+        Set up Microsoft Copilot
 
 
 ==================================================
-Set up Microsoft Copilot and Foundry
+Set up Microsoft Copilot
 ==================================================
 
 .. mcp-setup-copilot-page-start
