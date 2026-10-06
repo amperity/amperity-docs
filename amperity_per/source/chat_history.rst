@@ -32,14 +32,15 @@ its most literal form — nothing is thrown away.
 Finding a chat again
 ==================================================
 
-Your chats are the index of everything you have asked Pér. They are listed newest first, and the
-list is specific to your Pér usage.
+Your chats are the index of what you have asked Pér. They are listed newest first, the 50 most
+recent at a time, and the list is specific to your Pér usage.
 
 * **Only your own chats are listed.** A colleague does not see them unless you share one.
 * **Rename a chat** to something you will recognize. Until you do, it is named by your first
   message — see :ref:`What a conversation is <per-chatting-what-it-is>`.
 * **Pin the ones you keep coming back to.** Pinned chats are grouped above the rest.
-* **Search by anything said in a chat**, not just by its name.
+* **Search by anything said in a chat**, not just by its name. Search covers the chats in your
+  list, so it reaches text inside your 50 most recent.
 
 The list also tells you what each chat is doing: which are still working, which have an answer
 waiting that you have not read, and which had a response fail. That is the other half of work
