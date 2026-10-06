@@ -139,19 +139,12 @@ step can launch a job and the plan waits for it.
 * **The plan waits, then carries on.** When the job finishes, the next step unlocks.
 * **A checkpoint can hold the plan.** Where the results of a long job need reading before the next
   step runs, the step after it waits for a person and says what finished and what to review.
-* **The plan moves while you are here.** A plan advances while you are signed in with Pér open, and
-  picks up again on your next visit. Where a plan is running itself, only the person who started
-  the run carries it on — though anyone visiting Pér lets a finished job be recognized and the next
-  step proposed.
 
 .. PARKED-LINK: notifications.rst: restore the "You find out when a job ends" bullet to this list.
 
 .. important::
 
    A plan is not work that continues overnight on its own. It resumes when someone returns to Pér.
-
-.. PENDING NC-027: the wording of "the plan moves while you are here" — PO to confirm. The
-   behaviour is verified; the sentence is a product-messaging call.
 
 .. PARKED-LINK: connect_databricks.rst: when the Databricks connection ships, note that a plan
    needing Databricks tables brought into Amperity carries a step that works out which bridge
@@ -204,7 +197,8 @@ run yet — a different audience, another name, a changed offer — or to add a 
 them in a different order. A step that has already been approved, has run, or was rejected cannot be
 changed and nothing can be placed before it, and a changed or added step still waits for your
 approval rather than running. A plan that is approving its own steps cannot be changed at all; stop
-the run first.
+the run first. Only plans Pér wrote in conversation can be changed this way — a plan built as a
+fixed sequence of steps keeps its steps as they are.
 
 **Reverting a plan.** Reverting rejects every step of a plan that has not started and returns its
 recommendation to the Portfolio, so that work can be proposed again. It is offered only while
