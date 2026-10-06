@@ -196,6 +196,3 @@ It is not a statement about where your data is processed, who processes it, how 
 retained, or whether any of it is used to train a model. Those are commitments rather than product
 behavior, and they belong in your agreement with Amperity. For anything in that category, see your
 agreement or ask your Amperity representative.
-
-.. PENDING NC-024: no processing, retention, subprocessor or training claim is made here. PO and
-   legal own that statement; this section exists so the gap is stated rather than assumed.
