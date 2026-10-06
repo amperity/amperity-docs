@@ -60,15 +60,10 @@ asked Pér to keep, not everything it has seen.
 
 .. _per-key-concepts-auto-run:
 
-**Approve & execute all**
+**Approve & run all**
    Approving a whole plan at once and letting it run itself. You approve the plan, not each write
    inside it: Pér re-checks at every step whether it may still go on, stops at any step that needs
    a person, and records which steps it approved on your behalf.
-
-   .. PENDING NC-061: this label is ahead of the code. At the pin and at amp-parity HEAD the
-      controls render "Approve & run all N steps" and "Run step"; the docset uses the reviewer's
-      "Approve & execute all" and "Execute step" on the understanding that a rename is landing.
-      Revert to "run" if it does not.
 
 
 .. _per-key-concepts-artifact:

@@ -230,7 +230,7 @@ remaining**. A deletion among them asks you to confirm before anything runs.
 **To approve one step of a plan**
 
 #. Open the plan and read the step's confirmation.
-#. Click **Execute step**.
+#. Click **Run step**.
 
 A step that only reads usually runs itself and shows no confirmation — see
 :ref:`Approving the steps <per-plans-approving>`. Where one does wait for you, it changes nothing,
@@ -239,10 +239,7 @@ so it offers no rejection.
 **To approve and run a whole plan**
 
 #. Open the plan and read every step.
-#. Click **Approve & execute all** at the top of the plan.
-
-.. PENDING NC-061: these two labels are ahead of the code. At the pin the controls render
-   "Run step" and "Approve & run all N steps"; see NC-061 before changing them back.
+#. Click **Approve & run all** at the top of the plan.
 
 **To stop a plan that is running itself**
 
