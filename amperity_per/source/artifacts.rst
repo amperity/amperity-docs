@@ -68,16 +68,11 @@ Who can see one
 
 An artifact is private to the person who made it until they share it.
 
-This is the difference between a report your colleagues cannot yet find and one the whole team can
-read.
-
 * **Private by default.** An artifact Pér publishes for you, and a file you upload, are yours
   alone.
 * **Sharing is to everyone in your tenant**, not to named people. There is no per-person sharing.
 * **Only the owner can share or stop sharing.** Nobody else sees those controls, and an artifact
   shared with you stays read-only.
-* **Your list is in two parts** — the artifacts you created, and the ones your colleagues have
-  shared with you.
 * **Stopping sharing takes access back from everyone**, including anyone who has it open. Pér asks
   you to confirm before it does.
 
