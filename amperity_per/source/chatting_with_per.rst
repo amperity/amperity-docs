@@ -74,18 +74,15 @@ How a response behaves:
   sentence naming the step and why it matters, in business terms rather than tables and columns —
   for example, "First I'll pull customers who purchased in the last 12 months." Alongside it you
   see what Pér is working on at that moment.
-* **The work happens on the server.** You can move to another page, close the chat panel, or reload
-  the browser; the answer is still produced and saved. Coming back shows you what you missed and
-  then follows along live.
+* **The work continues if you leave.** You can move to another page, open a different
+  conversation, or reload the browser; the answer is still produced and saved, and coming back
+  shows you what you missed.
 * **Answers are short on purpose.** Pér gives the shortest answer that addresses what you asked,
   and expects you to ask for more. An answer that runs long opens with a one-line version of the
   conclusion so you can decide whether to read the rest.
-* **Pér keeps going without asking permission to look things up.** It chains the reads an answer
-  needs — resolving an identifier, fetching a related object, pulling a detail — and comes back
-  once with the whole picture. It stops to ask only when the choice is genuinely yours: which of
-  several things you meant, an ambiguous target, or a change you did not ask for.
-* **Sometimes it asks as a choice.** Where a question has a few clear answers, Pér offers them to
-  pick from. You can skip the choice and reply in your own words instead.
+* **Pér keeps going without asking permission to look things up.** It stops to ask only when the
+  choice is genuinely yours: which of several things you meant, an ambiguous target, or a change
+  you did not ask for.
 * **Objects are linked.** Where Pér names something in your tenant, it links to it, so you can open
   it in Amperity.
 
@@ -95,12 +92,6 @@ How a response behaves:
    your data — those change, and neither is something you can act on. It reports what it found and
    what it did. Your own sources, destinations, and bridges are named normally, because they are
    yours.
-
-Two things Pér will not do:
-
-* It will not hand you a query to run yourself.
-* It will not work around a permission you do not have. A read your Amperity access does not allow
-  is reported immediately, naming the permission that is missing, rather than retried or estimated.
 
 
 .. _per-chatting-stopping:
