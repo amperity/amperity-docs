@@ -87,6 +87,9 @@ PII, and nothing you can do in Slack changes that.
 
 * **Slack queries run on one connection belonging to the workspace**, not on the Amperity sign-in
   of whoever asked. That connection is not given access to PII.
+* **Anyone in the channel can ask.** Pér answers whoever mentions it, without checking that
+  person's Amperity access. Which channels Pér is in is therefore the control: limit where the app
+  is added to limit who can reach it.
 * **PII values come back as a dash.** The row is returned; the value is not.
 * **Aggregates still work.** Counting the customers who have an email address, for example, is
   unaffected — Pér can count what it cannot read.
@@ -115,11 +118,11 @@ everything else.
 
 .. PENDING NC-048: the Slack setup page tells an administrator that Pér will answer a direct
    message. It will not — direct messages and group messages are both refused. This article
-   follows the behavior; the product copy is reported to engineering.
-
-.. PENDING NC-050: the daily limit is real and user-visible, and no figure for it exists to
-   publish. D5 holds consumption claims, so this says a limit exists and that Pér tells you when
-   you reach it. PO to confirm.
+   follows the behavior; the product copy is reported to engineering. **Re-verified 2026-10-06:
+   still true at amp-parity HEAD.** `lib/slack/admit.ts` rejects `im` and `mpim`, and
+   `app/settings/slack/SlackSetupContent.tsx` still says "send it a direct message, and it will
+   answer there"; neither file has changed since the pin. TECH-3424 and TECH-3426 do **not** fix
+   this — they are refusal links and Teams greetings.
 
 .. note::
 
@@ -182,13 +185,13 @@ takes someone who administers API keys.
 
 #. Open **Settings**.
 #. Choose **App integrations**, then **Slack**.
-#. Click **Generate token**, if no token is stored yet.
+#. Click **Issue API token**, if no token is stored yet.
 #. Click **Add to Slack** and complete the install.
 
 **To renew the Amperity token**
 
 #. Return to the same page.
-#. Click **Rotate token**.
+#. Click **Issue API token**.
 #. Revoke the previous token in Amperity if it should stop working.
 
 See :ref:`App integrations <per-app-integrations>` for the rest of what is set up there.
