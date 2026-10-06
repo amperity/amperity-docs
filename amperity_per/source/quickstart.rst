@@ -172,12 +172,15 @@ approved on your behalf.
 **To approve one step**
 
 #. Read the step's confirmation.
-#. Click **Run step**.
+#. Click **Execute step**.
 
 **To approve and run the whole plan**
 
 #. Read every step.
-#. Click **Approve & run all** at the top of the plan.
+#. Click **Approve & execute all** at the top of the plan.
+
+.. PENDING NC-061: these two labels are ahead of the code. At the pin the controls render
+   "Run step" and "Approve & run all N steps"; see NC-061 before changing them back.
 
 See :ref:`Approvals and write confirmations <per-approvals>`.
 
