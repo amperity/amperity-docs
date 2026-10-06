@@ -25,10 +25,9 @@ Pér wants to make a change, that change becomes a write confirmation: a card st
 is about to happen, which waits for a person to approve it.
 
 This is the approval boundary, and it is the stage of the customer decision loop called
-:ref:`Approve <per-customer-decision-loop-approve>`. It is the reason you can let an
-agent work directly in a production tenant. You can hand Pér a broad question without first
-deciding how much of your tenant you are willing to let it change, because the answer is always
-"none of it, until you say so".
+:ref:`Approve <per-customer-decision-loop-approve>`. It lets you use Pér safely in a production
+tenant and hand it a broad question: you will always be asked before Pér changes anything in
+Amperity.
 
 
 .. _per-approvals-boundary:
@@ -53,8 +52,8 @@ back with something to approve. This rule holds across every part of Pér.
 * **What Pér keeps to itself is not gated.** A report Pér writes for you changes nothing in
   Amperity, so it needs no approval. A memory about you alone follows your own setting: by default
   Pér asks before saving one, and you can choose to let your personal memories save without
-  asking. A memory shared with your tenant always asks, and so does one that records an answer
-  Pér had to ask you for.
+  asking. A memory shared with your tenant always asks. With automatic saving on, a personal
+  memory still appears in the chat as a card, already marked **Saved**.
 * **Amperity holds its own gate.** On a production tenant, Amperity itself keeps changes behind an
   explicit confirmation, and your approval in Pér is what answers it. Pér cannot turn that gate
   off.
@@ -92,10 +91,6 @@ A confirmation carries:
   many cards at once.
 * **A warning, where one is warranted.** A deletion, or anything that reaches real customers, is
   marked as being more serious.
-* **A warning that depends on your current data.** Before drawing the card, Pér checks what the
-  change would do to what you already have, and says so — for example, that a segment rewrite would
-  leave that segment no longer editable in the visual segment editor, or that a segment being
-  changed is one a campaign is already using.
 * **Every write it covers.** Some changes only make sense together, and arrive as one confirmation
   covering several writes. The card lists each of them, and approving it approves all of them.
 * **Several changes of the same kind, together.** When Pér proposes several changes of the same
@@ -131,8 +126,6 @@ What that means in practice:
 * **It stops on failure.** A step Amperity refuses ends the run rather than carrying on past it.
 * **You can stop it.** Work already set running in Amperity cannot be recalled, but nothing further
   is approved, and the run stops at the next step rather than instantly.
-* **It runs while you are here.** A plan moves forward while you are signed in and have Pér open,
-  and picks up again on your next visit. It is not work that continues overnight on its own.
 
 .. important::
 
@@ -142,8 +135,6 @@ What that means in practice:
 
 .. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
    same sentence used in what_is_per.rst and customer_decision_loop.rst and is reused in plans.rst.
-
-.. PENDING NC-027: "it runs while you are here" — PO to confirm the wording of this limit.
 
 
 .. _per-approvals-limits:
@@ -209,17 +200,6 @@ not depend on anyone remembering.
   conversation reopened later, read the same history.
 * **Plan steps reach the** :ref:`Activity log <per-activity-log>`. A step that was approved and
   run, a plan that was reverted, and a step that was retried each appear there.
-* **Steps a run approved for you are marked as such** in the plan's own record.
-
-.. important::
-
-   A one-off change you approve in conversation is recorded on its card and in that conversation,
-   not in the Activity log. The Activity log is the record of plan steps, reverts, retries,
-   dismissed recommendations and settings changes.
-
-.. PENDING NC-028: the Activity log does not record one-off confirmed writes, and its entries do not
-   name the person who acted. Flagged for the PO; activity_log.rst depends on the same facts.
-
 
 .. _per-approvals-using:
 
@@ -253,7 +233,7 @@ remaining**. A deletion among them asks you to confirm before anything runs.
 **To approve one step of a plan**
 
 #. Open the plan and read the step's confirmation.
-#. Click **Run step**.
+#. Click **Execute step**.
 
 A step that only reads usually runs itself and shows no confirmation — see
 :ref:`Approving the steps <per-plans-approving>`. Where one does wait for you, it changes nothing,
@@ -262,7 +242,10 @@ so it offers no rejection.
 **To approve and run a whole plan**
 
 #. Open the plan and read every step.
-#. Click **Approve & run all** at the top of the plan.
+#. Click **Approve & execute all** at the top of the plan.
+
+.. PENDING NC-061: these two labels are ahead of the code. At the pin the controls render
+   "Run step" and "Approve & run all N steps"; see NC-061 before changing them back.
 
 **To stop a plan that is running itself**
 
