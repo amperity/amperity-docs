@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Pér is Amperity's customer data agent. Ask it about your customers, and it carries out the work in Amperity once you approve it.
+        Pér is Amperity's AI agent for customer data. Ask it about your customers, and it carries out the work in Amperity once you approve it.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Pér is Amperity's customer data agent. Ask it about your customers, and it carries out the work in Amperity once you approve it.
+        Pér is Amperity's AI agent for customer data. Ask it about your customers, and it carries out the work in Amperity once you approve it.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -20,8 +20,8 @@
 What is Pér
 ==================================================
 
-Pér is Amperity's customer data agent. Ask it about your customers in plain language, and it
-answers from the customer data your organization already keeps in Amperity. When the answer
+Pér is Amperity's AI agent for customer data. Ask it about your customers in plain language,
+and it answers from the customer data your organization already keeps in Amperity. When the answer
 implies work — an audience to build, a campaign to set up, a model to train — Pér proposes that
 work as a plan and carries it out in Amperity once you approve it.
 
