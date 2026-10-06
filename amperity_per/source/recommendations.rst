@@ -67,7 +67,8 @@ can push further and have Pér query your data to answer.
 Where recommendations come from
 ==================================================
 
-Recommendations are produced by a refresh, which someone must ask for.
+Recommendations are produced by a refresh. Apart from the very first one, a refresh happens
+because someone asked for it.
 
 This answers two common questions: why the Portfolio looks the same as it did yesterday, and why
 something that was on it has gone. Both have the same answer: the Portfolio changes when a refresh
@@ -75,8 +76,8 @@ runs, and not before.
 
 .. note::
 
-   Pér produces recommendations when someone asks for a fresh set, not continuously. You can see
-   when the current set was produced.
+   Pér produces recommendations a set at a time, not continuously. You can see when the current
+   set was produced.
 
 What a refresh draws on:
 
@@ -93,6 +94,9 @@ How a refresh behaves:
 * **You can stop one.** A run you stop ends without changing the Portfolio.
 * **It can honestly find nothing.** A refresh that completes with no new recommendations says so,
   rather than implying something arrived.
+* **The first one starts itself.** On a tenant where no refresh has ever run, Pér starts one when
+  the Portfolio is first opened, so it is not empty on arrival. Every refresh after that waits to
+  be asked for.
 
 Recommendations belong to the tenant, not to you. Everyone working in your tenant sees the same
 Portfolio, and a recommendation one person dismisses leaves it for everyone.
