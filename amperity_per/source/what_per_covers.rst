@@ -132,8 +132,3 @@ What this documentation doesn't claim
   start a new round of the loop by itself. Each turn begins when a person begins it.
 * **This documentation names no dates.** It describes Pér as it works now, and is updated as Pér
   changes.
-
-.. PENDING NC-015: D10 bars launch, GA and availability dates.
-
-.. PENDING NC-016: D5 holds all pricing, consumption, credit and amp-spend claims. This section
-   deliberately says nothing about cost; do not add it without a PO ruling.
