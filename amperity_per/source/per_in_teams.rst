@@ -108,17 +108,17 @@ everything else.
 * **Reply in a thread Pér is already part of, and it may answer** without being mentioned again.
   Whether a reply was meant for Pér is a judgement it makes each time.
 * **A new channel post that does not mention Pér is left alone**, however relevant it looks.
+* **Pér posts once when it is added to a team**, introducing itself. That is the only time it
+  speaks without being addressed.
 * **Pér does not answer in a personal chat or a group chat.**
 * **There is a daily limit on questions** — your own, your organization's, and across every
   installation Pér serves. Pér tells you when one has been reached.
 
 .. PENDING NC-048: a chat surface's setup page tells an administrator that Pér will answer a
    direct message. It will not — personal chats and group chats are both refused. This article
-   follows the behavior; the product copy is reported to engineering.
-
-.. PENDING NC-050: the daily limit is real and user-visible, and no figure for it exists to
-   publish. D5 holds consumption claims, so this says a limit exists and that Pér tells you when
-   you reach it. PO to confirm.
+   follows the behavior; the product copy is reported to engineering. **Re-verified 2026-10-06:
+   still true at amp-parity HEAD.** `lib/teams/admit.ts:194,197` refuses `personal` and
+   `groupChat`. TECH-3424 and TECH-3426 do **not** fix this.
 
 .. note::
 
@@ -182,8 +182,8 @@ separate, and the person who can grant it is often not the person setting Pér u
 
 #. Open **Settings**.
 #. Choose **App integrations**, then **Microsoft Teams**.
-#. Start the connection, and complete the Microsoft sign-in — or use
-   **Send this link to your Microsoft admin** to pass it to someone who can.
+#. Click **Connect Microsoft Teams**, and complete the Microsoft sign-in — or use
+   **Send this to your Microsoft admin instead** to pass it to someone who can.
 
 **To add the Teams app to your organization**
 
@@ -193,7 +193,7 @@ separate, and the person who can grant it is often not the person setting Pér u
 **To connect the Amperity token**
 
 #. Return to the same page once the app is installed.
-#. Click **Generate token**.
+#. Click **Issue API token**.
 
 The page shows where setup has got to: **Not started**, **Consent recorded**, **Added — not
 connected**, or **Connected**.
