@@ -171,16 +171,5 @@ so a change — and anything that needs a confirmation — is made in the Pér w
 
 See :ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`.
 
-
-.. _per-accessing-per-from-an-agent:
-
-Access from another agent
-==================================================
-
-An agent you already use can read your Pér context directly, rather than being handed a copy of it.
-
-Not all the work happens in Pér, and the context Pér draws on is worth more when it is not
-confined to one window. The connection only ever reads, so widening who can see that context never
-widens who can act on it.
-
-See :ref:`Connect Pér as an MCP server <per-connect-as-mcp-server>`.
+.. PARKED-LINK: connect_per_as_mcp_server.rst: restore the "Access from another agent" section and
+   its _per-accessing-per-from-an-agent anchor, which what_is_per links to.

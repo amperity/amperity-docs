@@ -95,16 +95,16 @@ The top bar
 
 The top bar holds the things that belong to your session rather than to the page.
 
-This will display which tenant you are in, whether anything has finished while you were away, and
-how to reach settings, no matter what page you are on.
+This will display which tenant you are in and how to reach settings, no matter what page you are
+on.
 
 * **The tenant picker** shows which Amperity tenant you are working in, and changes it. See
   :ref:`Choosing a tenant <per-accessing-per-tenant>`.
-* **Notifications** tells you when work you approved has finished after you moved on. See
-  :ref:`Notifications <per-notifications>`.
-* **Feedback** sends Amperity your view of how Pér is doing. See
-  :ref:`Giving feedback <per-giving-feedback>`.
 * **A menu** holding **Settings** and **Log out**.
+
+.. PARKED-LINK: notifications.rst: restore the **Notifications** bullet to the top bar list, and
+   the "whether anything has finished while you were away" clause to the lead-in above.
+.. PARKED-LINK: giving_feedback.rst: restore the **Feedback** bullet to the top bar list.
 
 On a narrow window these move into a header across the top of the page, along with a way to open
 the sidebar and a way to reach your conversations.

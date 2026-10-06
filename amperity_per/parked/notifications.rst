@@ -1,3 +1,6 @@
+.. PENDING NC-059: this article ships when notifications are mature enough to document. The
+   feature works at the pin; the call to park it was made on review, not on behaviour.
+
 .. https://docs.amperity.com/per/
 
 

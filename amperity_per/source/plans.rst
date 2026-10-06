@@ -147,8 +147,8 @@ step can launch a job and the plan waits for it.
   picks up again on your next visit. Where a plan is running itself, only the person who started
   the run carries it on — though anyone visiting Pér lets a finished job be recognized and the next
   step proposed.
-* **You find out when a job ends.** Work that finishes after you have moved on raises a
-  :ref:`notification <per-notifications>`.
+
+.. PARKED-LINK: notifications.rst: restore the "You find out when a job ends" bullet to this list.
 
 .. important::
 

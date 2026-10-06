@@ -141,8 +141,9 @@ You can access Pér via:
 * :ref:`Pér in Slack <per-in-slack>` and :ref:`Pér in Teams <per-in-teams>`, where Pér answers in
   the channel where the work is already being discussed. Both answer only; a change is made in the
   Pér web app.
-* :ref:`As a tool for another agent <per-accessing-per-from-an-agent>`. Pér can be connected as an
-  MCP server, so an agent you already use can reach your Amperity customer context through it.
+
+.. PARKED-LINK: connect_per_as_mcp_server.rst: restore the "As a tool for another agent" bullet to
+   this list of places Pér is reached from.
 
 For the address, signing in and choosing a tenant, see
 :ref:`Accessing Pér <per-accessing-per>`.

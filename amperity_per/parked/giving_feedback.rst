@@ -1,3 +1,6 @@
+.. PENDING NC-060: this article ships if sending feedback is judged essential to document. The
+   feature works at the pin; the call to park it was made on review, not on behaviour.
+
 .. https://docs.amperity.com/per/
 
 

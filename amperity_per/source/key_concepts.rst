@@ -142,11 +142,8 @@ asked Pér to keep, not everything it has seen.
    them as rules it must not break.
 
 
-.. _per-key-concepts-notification:
-
-**notification**
-   A message telling you that work you approved has finished, for when it finishes after you have
-   moved on to something else. Whether a notification has been read is particular to you.
+.. PARKED-LINK: notifications.rst: restore the **notification** glossary entry and its
+   _per-key-concepts-notification anchor.
 
 
 .. _per-key-concepts-open-access:

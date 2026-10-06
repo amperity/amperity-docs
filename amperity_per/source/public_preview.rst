@@ -96,7 +96,6 @@ The end-to-end working cycle includes:
   approval path, including approving a plan and letting it run.
 * :ref:`Artifacts <per-artifacts>` — the reports Pér writes and the files you give it, shareable
   with your team.
-* :ref:`Notifications <per-notifications>`, for work that finishes after you have moved on.
 * :ref:`Memory <per-memory>` and :ref:`company context <per-company-context>`, so Pér carries what
   you have told it between sessions.
 * :ref:`The Activity log <per-activity-log>`, the record of what Pér did.
@@ -127,8 +126,6 @@ These depend on your tenant's data, your connected tools, or your permissions:
   Amperity does not already hold, and Pér can only use what has been supplied.
 * :ref:`Connecting Salesforce Marketing Cloud <per-connect-sfmc>`, which needs an account you
   authorize.
-* :ref:`Pér as an MCP server <per-connect-as-mcp-server>`. Available to any enabled tenant, but
-  you connect the agent that uses it.
 * :ref:`Managing access <per-managing-access>`, which requires the Amperity policy that
   administers users.
 

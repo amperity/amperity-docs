@@ -216,8 +216,8 @@ Two more things worth doing on a first session, now that you have something to c
 * **Tell Pér what to remember.** Anything you had to explain once — how your business defines a
   term, a rule it should always work inside — can be kept, so you do not explain it again. See
   :ref:`Memory <per-memory>` and :ref:`Company context <per-company-context>`.
-* **Check your notifications.** Work you approved that finished after you moved on is waiting
-  there. See :ref:`Notifications <per-notifications>`.
+
+.. PARKED-LINK: notifications.rst: restore the "Check your notifications" bullet to this list.
 
 See :ref:`Artifacts <per-artifacts>`.
 

@@ -32,22 +32,22 @@ Amperity and the way in to setting each one up.
 What you can connect
 ==================================================
 
-Pér can be connected to other systems in three ways.
+Pér can be connected to other systems in two ways.
 
 * **Systems Pér reaches out to.** Connecting one lets Pér look things up there and, with your
   approval, change them. Today that is
   :ref:`Salesforce Marketing Cloud <per-connect-sfmc>`.
-* **Pér as something another agent reaches into.** Pér can also be
-  :ref:`connected as a context source <per-connect-as-mcp-server>` for an agent somewhere else.
-  That direction only ever reads.
 * **Places Pér answers in.** Pér can be added to Slack and to Microsoft Teams, where it answers
   questions in a channel. Setting either one up is described with the surface itself, in
   :ref:`Setting up the Slack app <per-in-slack-setup>` and
   :ref:`Setting up the Teams app <per-in-teams-setup>`.
 
-The systems Pér reaches out to are set up under **MCP connections** on this page. Connecting Pér as
-a context source is set up in the other agent's own client rather than here. Slack and Microsoft
-Teams have their own entries beside **MCP connections**.
+The systems Pér reaches out to are set up under **MCP connections** on this page. Slack and
+Microsoft Teams have their own entries beside **MCP connections**.
+
+.. PARKED-LINK: connect_per_as_mcp_server.rst: restore the "Pér as something another agent reaches
+   into" bullet, the "three ways" count above, and the sentence saying a context source is set up
+   in the other agent's own client.
 
 Setting up an MCP connection needs no special permission. Anyone who can reach Pér can set one up
 and anyone who can reach Pér can take it away, so a connection is worth agreeing on rather than

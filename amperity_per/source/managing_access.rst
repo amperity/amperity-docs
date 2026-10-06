@@ -95,9 +95,11 @@ is shut out.
 * **You review a list before anything changes**, and you are told how many people will keep access.
 * **Returning to open access** restores entry for everyone authorized for the tenant.
 * **The mode applies everywhere Pér can be reached**, not just at the front door: choosing a
-  tenant, following a link into one, opening a chat someone shared with you, and
-  :ref:`connecting Pér to another agent <per-connect-as-mcp-server-access>` all consult the same
-  check.
+  tenant, following a link into one, and opening a chat someone shared with you all consult the
+  same check.
+
+.. PARKED-LINK: connect_per_as_mcp_server.rst: restore "connecting Pér to another agent" to the
+   list of surfaces that consult the same access check.
 
 
 .. _per-managing-access-revoking:

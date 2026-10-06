@@ -1,3 +1,6 @@
+.. PENDING NC-004: this article ships when the Pér MCP server is advertised to customers and a
+   host address is published. The feature works at the pin; it is not being advertised yet.
+
 .. https://docs.amperity.com/per/
 
 

@@ -119,9 +119,8 @@ running a database. Pér waits for those and carries on when they finish. If a s
 what went wrong rather than leaving the plan stuck, and you can fix the cause and run that step
 again.
 
-Work you approved may finish after you have moved on to something else. When something finishes
-after you have moved on, Pér raises a notification so you find out without having to go back and
-check.
+.. PARKED-LINK: notifications.rst: restore the paragraph saying Pér raises a notification when
+   work finishes after you have moved on.
 
 
 .. _per-customer-decision-loop-learn:

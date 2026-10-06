@@ -60,9 +60,9 @@ plans for you to approve, then carries out the work in Amperity.
 
    .. grid-item-card:: Integrations
       :link-type: ref
-      :link: per-connect-as-mcp-server
+      :link: per-connect-sfmc
 
-      Connect Pér to Salesforce Marketing Cloud, or to another agent as a context source.
+      Connect Pér to Salesforce Marketing Cloud.
 
    .. grid-item-card:: Administration
       :link-type: ref
@@ -103,8 +103,11 @@ plans for you to approve, then carries out the work in Amperity.
    Plans <plans>
    Artifacts <artifacts>
    Chat history, sharing, and export <chat_history>
-   Notifications <notifications>
-   Giving feedback <giving_feedback>
+
+.. PARKED-LINK: notifications.rst: restore the "Notifications <notifications>" entry to the
+   WORKING WITH PÉR toctree.
+.. PARKED-LINK: giving_feedback.rst: restore the "Giving feedback <giving_feedback>" entry to the
+   WORKING WITH PÉR toctree.
 
 
 .. toctree::
@@ -133,8 +136,11 @@ plans for you to approve, then carries out the work in Amperity.
    :maxdepth: 2
    :hidden:
 
-   Connect Pér as an MCP server <connect_per_as_mcp_server>
    Connect Salesforce Marketing Cloud <connect_sfmc>
+
+.. PARKED-LINK: connect_per_as_mcp_server.rst: restore the toctree entry to INTEGRATIONS, and
+   point the Integrations grid card back at per-connect-as-mcp-server with the "or to another
+   agent as a context source" clause.
 
 
 .. toctree::
