@@ -36,6 +36,13 @@ asked Pér to keep, not everything it has seen.
    the platform.
 
 
+.. _per-key-concepts-ai-agent-for-customer-data:
+
+**AI agent for customer data**
+   The kind of product Pér is: an agent that works on your customer data, answering questions
+   about it and — with your approval — acting on it in Amperity.
+
+
 .. _per-key-concepts-allow-per-access:
 
 **Allow Pér access**
@@ -48,17 +55,22 @@ asked Pér to keep, not everything it has seen.
 **apply mode**
    How a memory that Pér proposes gets saved. By default Pér asks every time. You can choose to
    let your personal memories save without asking; a memory shared with your tenant always asks,
-   under either setting, as does one that records an answer Pér had to ask you for.
+   under either setting.
 
 
 .. _per-key-concepts-auto-run:
 
-**Approve & run all**
+**Approve & execute all**
    Approving a whole plan at once and letting it run itself. You approve the plan, not each write
    inside it: Pér re-checks at every step whether it may still go on, stops at any step that needs
    a person, and records which steps it approved on your behalf.
 
    .. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording.
+
+   .. PENDING NC-061: this label is ahead of the code. At the pin and at amp-parity HEAD the
+      controls render "Approve & run all N steps" and "Run step"; the docset uses the reviewer's
+      "Approve & execute all" and "Execute step" on the understanding that a rename is landing.
+      Revert to "run" if it does not.
 
 
 .. _per-key-concepts-artifact:
@@ -87,13 +99,6 @@ asked Pér to keep, not everything it has seen.
    goes into every session. Alongside it, Pér reads the
    `context documents <../reference/ampai.html#ampai-company-context>`__ and the AmpAI system
    prompt your tenant has set up in Amperity; it reads those, and does not replace them.
-
-
-.. _per-key-concepts-customer-data-agent:
-
-**customer data agent**
-   The kind of product Pér is: an agent that works on your customer data, answering questions
-   about it and — with your approval — acting on it in Amperity.
 
 
 .. _per-key-concepts-customer-decision-loop:
@@ -157,11 +162,7 @@ asked Pér to keep, not everything it has seen.
 .. _per-key-concepts-per:
 
 **Pér**
-   Amperity's customer data agent, and the name used throughout this documentation.
-
-   .. PENDING NC-007: amperity-docs names this product "the Customer Data Agent" in four places
-      in the A-Z reference. Sam is reconciling those separately; until then the docs name the
-      product two ways.
+   Amperity's AI agent for customer data, and the name used throughout this documentation.
 
 
 .. _per-key-concepts-plan:
