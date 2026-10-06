@@ -183,15 +183,6 @@ asked Pér to keep, not everything it has seen.
    and the plans already under way.
 
 
-.. _per-key-concepts-public-preview:
-
-**Public Preview**
-   The stage Pér is at. Capabilities and interface details change as the product develops. See
-   :ref:`Pér in Public Preview <per-public-preview>`.
-
-   .. PENDING NC-001: "Public Preview" is a lifecycle label and needs stakeholder sign-off (O5).
-
-
 .. _per-key-concepts-recommendation:
 
 **recommendation**

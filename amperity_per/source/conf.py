@@ -41,7 +41,7 @@ extlinks = {
 #    'issue': ('https://github.com/amperity/amperity-docs/issues/%s', 'issue #%s'),
 }
 
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_banner.rst']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 #intersphinx_mapping = {
 #    "python": ("https://docs.python.org/3", None),
@@ -216,7 +216,6 @@ html_context = {
 
 # A string of files with substitutions.
 rst_prolog = """
-.. include:: _banner.rst
 .. include:: ../../tokens/external_links.txt
 .. include:: ../../tokens/fivetran_party.txt
 .. include:: ../../tokens/internal_links.txt

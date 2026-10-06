@@ -27,9 +27,8 @@ conversation sits beside whatever you are looking at, the whole time.
 
 .. note::
 
-   Pér is in :ref:`Public Preview <per-public-preview>`, and the arrangement described here is the
-   part of it most likely to change. This article names a control only where you need the name to
-   find it; everything else is described by what it does.
+   The arrangement described here is the part of Pér most likely to change. This article names a
+   control only where you need the name to find it; everything else is described by what it does.
 
 
 .. _per-interface-tour-shape:

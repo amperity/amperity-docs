@@ -27,8 +27,8 @@ There are two ways to tell Amperity what Pér got right or wrong. You can write 
 with the **Feedback** control, or you can tell Pér in a conversation and have it send the note for
 you.
 
-Pér is in :ref:`Public Preview <per-public-preview>`, and feedback will help the product to evolve.
-Feedback also leaves your tenant, so it is worth knowing what travels with it before you write.
+Feedback helps the product to evolve. It also leaves your tenant, so it is worth knowing what
+travels with it before you write.
 
 
 .. _per-giving-feedback-two-ways:

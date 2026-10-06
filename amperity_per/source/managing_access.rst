@@ -156,7 +156,7 @@ This is the most common reason for an organization seeing nothing at all, and it
 permission problem.
 
 If nobody at your organization can reach Pér, ask your Amperity representative to confirm that your
-tenant is enabled. See :ref:`Pér in Public Preview <per-public-preview-prerequisite>`.
+tenant is enabled. See :ref:`Before anyone can use Pér <per-what-per-covers-prerequisite>`.
 
 .. PENDING NC-023: whether a customer can enable a tenant for Pér, or only Amperity can, is not
    settled. No control in the product sets it. This section deliberately does not say who does.

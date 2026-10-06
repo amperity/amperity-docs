@@ -139,7 +139,7 @@ Four things typically stop people reaching Pér.
 * **Nothing in your list has Pér.** Pér says there are no tenants available, or that it is not
   available for your tenants yet. This means your tenant has not been enabled for Pér, which is
   not a permission problem and cannot be fixed by granting you anything. Ask your Amperity
-  representative — see :ref:`Before anyone can use Pér <per-public-preview-prerequisite>`.
+  representative — see :ref:`Before anyone can use Pér <per-what-per-covers-prerequisite>`.
 * **Your tenant admits people one at a time, and you are not on the list.** Pér says that access
   is not enabled and to ask your Amperity User Administrator to allow Pér access for your user,
   and offers a link into Amperity. Ask the person who administers your users — see

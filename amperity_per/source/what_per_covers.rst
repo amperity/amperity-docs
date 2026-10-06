@@ -3,62 +3,53 @@
 
 .. meta::
     :description lang=en:
-        What Public Preview means for Pér: what is included, what depends on your setup, and what is not claimed yet.
+        What Pér covers: what a tenant needs first, what is included, what depends on your setup, and what is not claimed.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        What Public Preview means for Pér: what is included, what depends on your setup, and what is not claimed yet.
+        What Pér covers: what a tenant needs first, what is included, what depends on your setup, and what is not claimed.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Pér in Public Preview
+        What Pér covers
 
 
-.. _per-public-preview:
+.. _per-what-per-covers:
 
 ==================================================
-Pér in Public Preview
+What Pér covers
 ==================================================
 
-Pér is in Public Preview. It is a functional product, used on real Amperity tenants to do real work,
-and it is still moving.
+Pér is a functional product, used on real Amperity tenants to do real work, and it keeps
+developing.
 
-This article says what that means in practice: what you can rely on now, what depends on your own
-setup, and what this documentation does not claim yet. If you are deciding how much of your
-process to build on Pér, read this first.
-
-.. PENDING NC-001: "Public Preview" is a lifecycle label. It needs stakeholder sign-off before
-   this collection publishes (O5).
+This article says what you can rely on now, what your tenant needs before anyone can use Pér at
+all, what depends on your own setup, and what this documentation does not claim. If you are
+deciding how much of your process to build on Pér, read this first.
 
 
-.. _per-public-preview-what-it-means:
+.. _per-what-per-covers-constants:
 
-What Public Preview means
+What doesn't change
 ==================================================
 
-Public Preview means Pér is available for use, and that it is still being built.
-
-The practical difference from a finished product is the rate of change. Capabilities arrive.
-Screens are rearranged and controls are renamed. Something you learned last month may be
-somewhere else this month, or may work better than it did.
-
-Two things are not subject to that change, because they are the shape of the product rather than
-features of it:
+Capabilities arrive, screens are rearranged and controls are renamed. Two things are the shape of
+the product rather than features of it, and they hold throughout:
 
 * **Pér works from your tenant's own data, and never beyond the access it is given.** In the Pér
   web app that access is your own: it reads what you could read and acts as you could act. In
   Slack and Microsoft Teams it is narrower — one workspace connection, no PII, and no ability to
   change anything.
 * **A person approves before anything is written to Amperity.** This is a boundary, not a setting,
-  and nothing in Public Preview relaxes it.
+  and nothing relaxes it.
 
 This documentation is written against the product as it is, and describes behavior rather than
 layout wherever it can — so that what you read stays true when a screen is rearranged. Where it
-describes something you cannot find, the usual explanation is your tenant's own configuration.
-The next two sections are about that.
+describes something you cannot find, the usual explanation is your tenant's own configuration,
+which the sections below describe.
 
 
-.. _per-public-preview-prerequisite:
+.. _per-what-per-covers-prerequisite:
 
 Before anyone can use Pér
 ==================================================
@@ -79,7 +70,7 @@ For how someone actually gets in once both of those are settled, see
    This section deliberately does not say.
 
 
-.. _per-public-preview-included:
+.. _per-what-per-covers-included:
 
 What's included
 ==================================================
@@ -103,7 +94,7 @@ The end-to-end working cycle includes:
   status.
 
 
-.. _per-public-preview-config:
+.. _per-what-per-covers-config:
 
 What depends on your setup
 ==================================================
@@ -130,7 +121,7 @@ These depend on your tenant's data, your connected tools, or your permissions:
   administers users.
 
 
-.. _per-public-preview-not-claimed:
+.. _per-what-per-covers-not-claimed:
 
 What this documentation doesn't claim
 ==================================================

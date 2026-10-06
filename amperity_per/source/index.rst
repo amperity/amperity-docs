@@ -83,7 +83,7 @@ plans for you to approve, then carries out the work in Amperity.
    What is Pér <what_is_per>
    The customer decision loop <customer_decision_loop>
    Key concepts <key_concepts>
-   Pér in Public Preview <public_preview>
+   What Pér covers <what_per_covers>
    Accessing Pér <accessing_per>
    Interface tour <interface_tour>
    Quickstart <quickstart>
