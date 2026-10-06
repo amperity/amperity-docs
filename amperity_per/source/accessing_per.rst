@@ -40,7 +40,6 @@ How to reach it:
 
 * **The address is** ``https://askper.amperity.com``. If you have ``per.amperity.com`` or
   ``amp-agent.amperity.com`` bookmarked, both still work — they send you to the same place.
-* **Canadian tenants use a different address**, ``https://per-aws-cc1.amperity.com``.
 * **Pér runs in more than one location**, and your tenant is served from one of them. If you open
   an address that does not serve your tenant, Pér sends you to the one that does, keeping the page
   and the tenant you asked for. You do not sign in again on the way.
@@ -52,8 +51,7 @@ How to reach it:
 
 **To open Pér**
 
-#. Go to `Pér <https://askper.amperity.com>`__, or to
-   `per-aws-cc1.amperity.com <https://per-aws-cc1.amperity.com>`__ if your tenant is Canadian.
+#. Go to `Pér <https://askper.amperity.com>`__.
 #. Sign in with your Amperity account.
 
 
@@ -78,11 +76,6 @@ for too.
   `allowed domains <../reference/users.html#settings-users-allow-domains>`__, as it is everywhere
   else in the platform.
 * **A session lasts up to seven days.** After that you sign in again.
-
-.. note::
-
-   Signing out is not the same as losing access. Someone who should no longer be able to reach Pér
-   is cut off in Amperity — see :ref:`Cutting someone off <per-managing-access-revoking>`.
 
 **To sign out**
 
