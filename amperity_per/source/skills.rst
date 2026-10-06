@@ -40,12 +40,12 @@ A skill is a workflow with a method, started by name.
 Because it is persistent and repeatable, it is a reliable way to get quality answers that don't
 depend on reproducing specific wording.
 
-* **You start one by name**, from the composer.
+* **You start one by name**, from the chat input box.
 * **Pér can start one itself** when what you asked for clearly matches a skill, and it says which
   one it is using. It is never a silent change of mode.
 * **A skill's instructions are Amperity's material**, so Pér follows them for the task the skill
   covers — and stops when you ask it to stop. Where you take the work afterwards is yours.
-* **Starting one while an answer is still running** puts it in the composer ready for your next
+* **Starting one while an answer is still running** puts it in the chat input box ready for your
   message, rather than interrupting what is in flight.
 
 .. important::
@@ -136,7 +136,7 @@ Starting a skill
 
 **To start a skill**
 
-#. Click **+** beside the composer and choose **Skills**, or type ``/`` in an empty composer.
+#. Click **+** beside the chat input box and choose **Skills**, or type ``/`` in the empty box.
 #. Choose the skill you want.
 #. Answer what it asks you.
 

@@ -210,10 +210,10 @@ The hard part of asking an agent for analysis is knowing what to ask for. Starti
 that: it carries its own method, so you get a considered piece of work rather than whatever a cold
 question produces.
 
-* **You can start one from the composer**, by name.
+* **You can start one from the chat input box**, by name.
 * **Pér can start one itself** when what you asked for clearly matches a skill, and it says which
   one it is using — it is never a silent change of mode.
-* **Starting one while an answer is still running** puts it in the composer ready for your next
+* **Starting one while an answer is still running** puts it in the chat input box ready for your
   message, rather than interrupting.
 
 Which skills you have :ref:`depends on your tenant <per-skills-availability>`.
@@ -234,7 +234,7 @@ Working in a conversation
 
 **To attach a file**
 
-#. Click **+** beside the composer.
+#. Click **+** beside the chat input box.
 #. Choose **Attach a file** and pick the file.
 #. Type your message and send it.
 
@@ -242,12 +242,12 @@ To attach a different file, remove the attached one first.
 
 **To change how much thinking Pér does**
 
-#. Click the effort control beside the composer.
+#. Click the effort control beside the chat input box.
 #. Choose **Low effort**, **Medium effort** or **High effort**.
 
 **To start a skill**
 
-#. Click **+** beside the composer and choose **Skills**, or type ``/`` in an empty composer.
+#. Click **+** beside the chat input box and choose **Skills**, or type ``/`` in the empty box.
 #. Choose the skill you want.
 
 For where the conversation sits in relation to the rest of Pér, see
