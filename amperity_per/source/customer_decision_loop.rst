@@ -144,22 +144,3 @@ Three things carry forward:
 The next set of recommendations is drawn with all of that in view, including the steps you have
 already carried out and the recommendations already in the Portfolio.
 
-
-.. _per-customer-decision-loop-limits:
-
-Where the loop stops
-==================================================
-
-The loop does not activate or repeat by itself.
-
-That is worth stating plainly, because "loop" can suggest something running in the background on
-your behalf. Pér does not watch your tenant, does not act between sessions, and does not start a
-new round on its own. Each turn begins when a person begins it.
-
-Nor does Pér close the loop for you on the question of whether the work was worth doing. It keeps
-a record of what it did and what it produced; judging the business result of that work is still
-yours.
-
-.. PENDING NC-020: what the Learn stage may claim, and whether the loop may be described as
-   recurring. Memory, the Activity log and artifacts carry forward and are verified; measurement
-   and automatic re-running are barred (D9, rules §7). PO.

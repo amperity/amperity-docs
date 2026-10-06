@@ -96,7 +96,7 @@ that nothing is.
 An entry appears because a job you approved was checked on while someone was in Pér — not because
 a scheduler is running in the background. Pér does not watch your tenant between sessions, and
 it does not raise an alert about something it noticed on its own. See
-:ref:`Where the loop stops <per-customer-decision-loop-limits>` and
+:ref:`What this documentation doesn't claim <per-what-per-covers-not-claimed>` and
 :ref:`Steps that take a while <per-plans-waiting>`.
 
 For the record of what Pér actually did — the steps it carried out and the recommendations it
