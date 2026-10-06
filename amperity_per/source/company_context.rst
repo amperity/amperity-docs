@@ -142,7 +142,7 @@ rather than in the text you are editing.
 The limits:
 
 * **Ten files at a time**, at most.
-* **1 MB each.**
+* **1 MB per file**, and the text Pér extracts from each file must be no larger than 64 KiB.
 * **``.txt``, ``.md``, ``.pdf`` and ``.docx``** only. A file that is too large, or of a format that
   is not supported, is refused by name.
 
@@ -163,8 +163,9 @@ With a document everyone shares, it is likely that two people will eventually op
 page takes this into account.
 
 * **It records who saved it last, and when.**
-* **A save by someone else while you are editing asks you to choose.** You can keep your draft or
-  take the saved version. Neither is thrown away without you saying so.
+* **If the page sees a newer saved version while you have an unsaved draft, it asks you to
+  choose.** You can keep your draft or take the saved version. The page may not notice another
+  person's save before you click **Save**.
 * **Edits are recorded in the** :ref:`Activity log <per-activity-log>`.
 
 You do not have to write it yourself:
@@ -188,8 +189,8 @@ Working with company context
 #. Edit the document. A tenant with nothing written yet starts from the template.
 #. Click **Save**.
 
-If someone else saved while you were editing, choose **Keep draft** to keep your version or
-**Use latest** to take theirs.
+If the page shows a conflict, choose **Keep draft** to carry on with your version, or **Use
+latest** to load the saved one. Saving a kept draft replaces the latest saved version.
 
 **To add documents Pér should read**
 
