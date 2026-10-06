@@ -169,21 +169,5 @@ yours, plus anything a colleague has shared with the tenant. See :ref:`Artifacts
    when it ships.
 
 .. PARKED-LINK: linked_accounts.rst: when account linking ships, name it in the "settings that are
-   yours alone" bullet above, alongside the appearance choice below.
+   yours alone" bullet above.
 
-
-.. _per-interface-tour-appearance:
-
-Choosing how Pér looks
-==================================================
-
-You can have Pér on a dark canvas or a light one.
-
-This is a personal setting that changes nothing for anyone else.
-
-**To switch between dark and light**
-
-#. Open **Settings**.
-#. Under **User settings**, find **Appearance** and choose **Dark** or **Light**.
-
-Your choice is remembered for you and is not visible to anyone else in your tenant.
