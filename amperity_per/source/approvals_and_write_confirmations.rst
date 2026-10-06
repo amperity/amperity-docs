@@ -133,9 +133,6 @@ What that means in practice:
    of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
    steps before you approve it.
 
-.. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
-   same sentence used in what_is_per.rst and customer_decision_loop.rst and is reused in plans.rst.
-
 
 .. _per-approvals-limits:
 

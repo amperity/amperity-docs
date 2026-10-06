@@ -125,10 +125,6 @@ approved on your behalf. See :ref:`Approving a whole plan at once <per-approvals
    of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
    steps before you approve it.
 
-.. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
-   same sentence used in what_is_per.rst, customer_decision_loop.rst and
-   approvals_and_write_confirmations.rst.
-
 
 .. _per-plans-waiting:
 

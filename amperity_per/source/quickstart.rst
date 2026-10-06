@@ -169,10 +169,6 @@ approved on your behalf.
    of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
    steps before you approve it — and on a first session, approve them one at a time.
 
-.. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
-   same sentence used in what_is_per.rst, customer_decision_loop.rst, plans.rst and
-   approvals_and_write_confirmations.rst.
-
 **To approve one step**
 
 #. Read the step's confirmation.

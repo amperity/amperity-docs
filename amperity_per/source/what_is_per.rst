@@ -125,9 +125,6 @@ How the boundary works:
    of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
    steps before you approve it.
 
-.. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is
-   reused verbatim in approvals_and_write_confirmations.rst and plans.rst.
-
 
 .. _per-what-is-per-where:
 

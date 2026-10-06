@@ -99,10 +99,6 @@ a person, and records which steps it approved on your behalf.
    Read a plan's steps before you approve it. One approval can kick off a sequence of Amperity
    writes, and a write that has run cannot be undone from Pér.
 
-.. PENDING NC-005: "you approve the plan, not every write" — PO to bless this wording. It is the
-   same sentence used in what_is_per.rst and is reused in approvals_and_write_confirmations.rst
-   and plans.rst.
-
 
 .. _per-customer-decision-loop-act:
 
