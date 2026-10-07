@@ -43,9 +43,9 @@ that. Amperity does not hold the identifier a destination's own reporting is add
 there is no field for it in Amperity and no tool that can look it up, so the only way Pér can have
 it is for a person to type it in.
 
-* **Only one destination asks for anything here:**
-  :ref:`Salesforce Marketing Cloud <per-connect-sfmc>`. Every other destination in your tenant
-  works without a visit to this page, and does not appear on it.
+* **Only Salesforce Marketing Cloud destinations ask for anything here**, whether standard or
+  SFTP: :ref:`Salesforce Marketing Cloud <per-connect-sfmc>`. Every other destination in your
+  tenant works without a visit to this page, and does not appear on it.
 * **The detail it asks for is the subdomain** that identifies your Salesforce account.
 * **The list comes from Amperity**, and you can pull it again at any time. A tenant that has never
   pulled it sees an empty page that says so.
@@ -113,6 +113,7 @@ Working with data connections
 #. Find the destination and choose its **Business Unit**.
 #. Click **Save**.
 
-The **Business Unit** choice appears only when your tenant has connected more than one.
+The **Business Unit** choice appears only when your tenant has connected more than one. When it
+does, each destination needs one assigned before Pér can read what it reports back.
 
 Each destination is marked **Configured** or **Needs configuration**.
