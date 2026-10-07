@@ -7873,3 +7873,10 @@ A 4-5-4 calendar divides years into months using a 4 weeks--5 weeks--4 weeks pat
 PostHog is a product analytics platform. It captures product events and maintains person and group profiles that teams use to analyze and segment product usage.
 
 .. term-posthog-end
+
+
+.. term-onesignal-start
+
+OneSignal is a customer engagement platform for sending push notifications, email, SMS, and in-app messages. It keeps a user record for each person, carrying that person's subscriptions and a set of custom data tags that teams use to build segments and personalize messages.
+
+.. term-onesignal-end

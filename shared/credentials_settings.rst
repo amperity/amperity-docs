@@ -3024,3 +3024,11 @@ The PostHog Project API Key, a write-only capture token that authenticates every
 The PostHog Personal API Key, used to verify the connection and, in person-deletion mode, to delete people through PostHog's Persons API. Create it in PostHog under **Account Settings > Personal API Keys**. For person-deletion mode, the key must be scoped to allow person deletion (the ``person:write`` scope).
 
 .. credential-posthog-personal-api-key-end
+
+.. credential-onesignal-api-key-start
+
+Required. The App API Key that authorizes every request Amperity sends to |destination-name|. Copy it from **Settings > Keys & IDs** in the |destination-name| dashboard; it begins with ``os_v2_app_``.
+
+.. important:: An App API Key is scoped to a single |destination-name| app, so it must come from the same app as the **App ID** destination setting. A message saying the key is valid but does not grant access to the App ID means the two came from different apps — copy both values together from the same app's **Keys & IDs** page. A message saying |destination-name| rejected the key means the key itself is wrong.
+
+.. credential-onesignal-api-key-end

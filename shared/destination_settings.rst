@@ -4029,3 +4029,15 @@ Applies to person-deletion mode only. When enabled, PostHog also queues each del
 Applies to person-deletion mode only. When enabled, PostHog also queues each deleted person's session recordings for deletion. Off by default.
 
 .. setting-posthog-delete-recordings-end
+
+.. setting-onesignal-app-id-start
+
+Required. The |destination-name| App ID for the app this destination writes into. Copy it from **Settings > Keys & IDs** in the |destination-name| dashboard, alongside the App API Key. It is a UUID, for example ``11111111-2222-3333-4444-555555555555``. Every request Amperity sends is scoped to this app, and the App API Key on the connected credential must come from the same app.
+
+.. setting-onesignal-app-id-end
+
+.. setting-onesignal-user-identifier-start
+
+Required. Selects the |destination-name| alias that identifies each person. Only ``external_id`` is available. The query results must include a column with that name, and Amperity sends its value as the person's External ID. Every other column except ``email`` and ``phone`` is sent as a data tag.
+
+.. setting-onesignal-user-identifier-end
