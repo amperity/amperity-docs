@@ -60,6 +60,8 @@ Amperity syncs attributes incrementally. Only the rows whose attributes changed 
 
 .. important:: The connector reads each row's External ID from a column named ``external_id``. If your query produces the identifier under another name, alias it — for example ``SELECT amperity_id AS external_id``. A send whose query results have no ``external_id`` column fails before any data is sent, with a message naming the missing column.
 
+.. important:: Column names are matched exactly, in lower case. ``external_id``, ``email``, and ``phone`` are recognized only when spelled that way, and a column spelled any other way is not recognized even though it passes validation. An identifier column under another spelling stops the send, and an ``email`` or ``phone`` column under another spelling is written as a data tag instead of creating a subscription. Alias these columns in your query when your source data spells them differently.
+
 .. note:: A successful connection test confirms that the App API Key can reach the app named by the **App ID** setting, by requesting that app's configuration. Amperity runs the test when the destination is configured, so a key and App ID that do not belong to the same app surface then rather than during the first send.
 
 .. caution:: Amperity writes data tags named after the columns in your query results. If your own app or website also writes tags with those names through a |destination-name| SDK, the last write wins and the values become unpredictable. Treat the tag names this destination manages as owned by Amperity, and do not write them from another source.
@@ -81,8 +83,9 @@ Every column in the query results except ``external_id``, ``email``, and ``phone
 * **Tag values are sent as strings.** Numbers, dates, and boolean values are converted to their string form. Build the exact string you want to see in |destination-name| in your query.
 * **Tags are merged, not replaced.** |destination-name| keeps any tag that a request does not name, so sending a subset of a person's attributes never clears the rest.
 * **An empty value removes the tag.** When a column is empty or null for a row, Amperity sends that tag with an empty value, which is how |destination-name| deletes it. This keeps an attribute that was cleared in Amperity from leaving a stale value behind in |destination-name|.
+* **Some tag names are reserved.** |destination-name| uses ``message``, ``notification``, ``subscription``, ``user``, ``template``, ``app``, ``org``, ``dynamic_content``, ``data_feed``, ``journey``, and ``custom_data`` internally for message personalization. Do not return columns with those names.
 
-.. caution:: |destination-name| limits how many distinct data tags a person can carry, and the limit depends on your |destination-name| plan. The free plan allows 10; paid plans allow more. Exceeding the limit stops the run — |destination-name| rejects the write, nothing from the rejected request is applied, and every remaining row would reach the same limit. Confirm your plan's tag allowance before sending a wide set of attributes, and reduce the number of columns in the query if you exceed it.
+.. caution:: |destination-name| limits how many distinct data tags a person can carry, and the limit depends on your |destination-name| plan. Exceeding the limit stops the run — |destination-name| rejects the write, nothing from the rejected request is applied, and every remaining row is likely to reach the same limit. Check your |destination-name| plan's data tag allowance before sending a wide set of attributes. Returning fewer columns prevents the next run from adding tags, but it does not bring a person who is already at the limit back under it: |destination-name| accepts no new tag for that person until tags are removed from them.
 
 .. destination-onesignal-data-tags-end
 
@@ -178,9 +181,9 @@ Get details
           :class: no-scaled-link
      - **Query results**
 
-       The query that sends to this destination must return a column named ``external_id``. Every other column except ``email`` and ``phone`` becomes a data tag named after that column, so the set of columns you return is the set of attributes that reach |destination-name|.
+       The query that sends to this destination must return a column named ``external_id``. Every other column except ``email`` and ``phone`` becomes a data tag named after that column, so the set of columns you return is the set of attributes that reach |destination-name|. These three names are matched exactly, in lower case.
 
-       Confirm your |destination-name| plan's data tag allowance before you decide how many columns to return, and make sure ``phone`` values are in E.164 format.
+       Check your |destination-name| plan's data tag allowance before you decide how many columns to return, avoid the tag names |destination-name| reserves, and make sure ``phone`` values are in E.164 format.
 
 
 .. destination-onesignal-get-details-end
