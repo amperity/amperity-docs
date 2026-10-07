@@ -81,6 +81,10 @@ This one authorizes Pér to act in Salesforce as you. Data connections supplies 
 identifies your account, which a destination needs before Pér can read the engagement metrics from
 a send. A destination reads as ready only when both are in place.
 
+**Setting this up changes nothing in Amperity.** The subdomain and the connection are held by Pér
+and used only to read engagement metrics; the destination's own configuration in Amperity is
+untouched.
+
 
 .. _per-connect-sfmc-staying-connected:
 
