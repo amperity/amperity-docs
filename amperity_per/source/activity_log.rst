@@ -90,33 +90,24 @@ count beside each day.
 What the log does not tell you
 ==================================================
 
-The log is deliberately narrow, and has four specific edges worth knowing:
+The log is deliberately narrow, and has three specific edges worth knowing:
 
-* **It does not always say who.** A settings change names the person who made it. Plan work and
-  recommendation work does not: the entry records that a step was approved and run, not which
-  person approved it.
+* **It does not always say who.** A settings change, a rejected step and a memory change name the
+  person. Everything else records what happened rather than who did it — a step that was approved
+  and run, a recommendation dismissed or kept, a plan reverted, a retry proposed.
 * **A personal memory keeps its title out of it.** Maintaining your own memories does not publish
   them to everyone in the tenant. A memory shared with the tenant is named.
-* **A one-off change you approved in conversation is not here.** A
-  :ref:`write confirmation <per-approvals-card>` settles on its own card and in the conversation it
-  happened in, and that conversation is the record of it. The Activity log covers plan steps,
-  reverts, retries, dismissed recommendations and settings changes.
 * **There is nothing to filter or search.** It is one list, newest first, and that is all it is.
 
 .. important::
 
-   Taken together, the first and third points mean the Activity log is not a complete audit trail
-   of every change Pér made on your behalf, and was not built as one. For a particular change, the
-   :ref:`conversation it happened in <per-chat-history>` and the plan it belonged to are the fuller
-   record.
+   The Activity log is not a complete audit trail of every change Pér made on your behalf. For a
+   particular change, the :ref:`conversation it happened in <per-chat-history>` and the plan it
+   belonged to are the fuller record.
 
 Amperity keeps its own, separate `activity logs <../reference/activity_logs.html>`__ covering
 everything that happens across the platform. They are a broader record than this one, and they are
 where to look for work that did not come from Pér.
-
-.. PENDING NC-028: the Activity log does not record one-off confirmed writes, and names the person
-   only on settings changes. Flagged for the PO; approvals_and_write_confirmations.rst depends on
-   the same facts.
 
 
 .. _per-activity-log-using:
