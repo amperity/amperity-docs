@@ -37,10 +37,6 @@ Which tenant, and who you are
 
 The first section names the tenant Pér is working in and the account you are signed in as.
 
-Pér can reach more than one tenant, and a question answered against the wrong one looks like a
-wrong answer rather than a wrong tenant. This section is how you rule that out in a second, and it
-is the quickest thing to check before anything else.
-
 It also carries the identifiers Amperity uses for your tenant and your account. Those are not
 things you need day to day; they are there so support has something exact to work from.
 
@@ -51,9 +47,6 @@ There is no permission on this page. Anyone who can reach Pér can open it.
    Amperity usage is tracked in Amperity rather than in Pér. The **Settings** page carries an
    **Amps** tile that links out to it; see
    `About Amps consumption <../reference/amps.html>`__.
-
-.. PENDING NC-016: pricing, consumption and amp-spend claims are on hold. This note names the link
-   out and claims nothing about what Pér consumes.
 
 
 .. _per-system-settings-customer-name:
@@ -106,6 +99,11 @@ rather than for you, and nothing in it changes what Pér does.
 
 .. PENDING NC-040: the page shows raw internal identifiers and runtime details to every user. The
    article describes the rows and names no value, and does not tell readers to quote them.
+   **TECH-3413 (`123d1bde6`) removes all of this — merged to amp-parity main 2026-10-05 but NOT on
+   the release branch, so it is not in production.** Verified 2026-10-06 against the live app. When
+   it ships, see NC-040 in needs-confirmation.md for the seven edits: the two `.. meta::` lines, the
+   lead, the identifiers paragraph, this whole section and its anchor, and the closing line's
+   section count.
 
 
 .. _per-system-settings-using:
