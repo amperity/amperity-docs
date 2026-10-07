@@ -46,7 +46,9 @@ someone off are all made on the Amperity **Users** page.
 .. per-administration-about-grid-end
 
 .. PENDING NC-009: this section holds one article. The other administrator-gated topics are all
-   parked, and the Pér MCP server turned out not to be one. Recorded for the reviewer brief.
+   parked. Recorded for the reviewer brief. (Until 2026-10-06 this also noted that the Pér MCP
+   server "turned out not to be one" — it is now parked too, for an unrelated reason, so the
+   remark no longer reads as intended and is dropped.)
 
 
 .. toctree::

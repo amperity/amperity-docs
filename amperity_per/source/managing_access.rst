@@ -71,7 +71,8 @@ people before others.
 
    Neither mode decides what a person can **do**. Access is permission to enter; each person's
    existing Amperity permissions still govern everything that happens afterwards, exactly as they
-   do elsewhere in the platform. Granting someone Pér access grants them nothing new in Amperity.
+   do elsewhere in the platform. A direct Pér grant adds the entry entitlement and nothing else —
+   no Amperity data permissions come with it.
 
 Someone refused under managed access is told that their Amperity administrator has not enabled Pér
 access for them, so they know to ask rather than to retry.
@@ -130,9 +131,6 @@ Pér has no revocation of its own. A person is cut off in Amperity.
    whoever asked — Pér does not know which Amperity user is speaking. Who can ask there is
    controlled by who is in the channel. What a blocked person could still see is bounded: those
    surfaces never return individual-level PII and cannot change anything.
-
-.. PENDING NC-036: how a signed-out session behaves in detail, and how long a block takes to show
-   up in Pér, are deliberately not stated. PO.
 
 .. PENDING NC-006: blocking a user is documented nowhere else in the Amperity documentation, so
    this section has no link target for it and describes it instead.
