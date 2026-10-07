@@ -223,6 +223,10 @@
             <input type="checkbox" id="compact-coll-reference" checked />
             <label for="compact-coll-reference">Reference</label>
           </div>
+          <div class="compact-filter-option">
+            <input type="checkbox" id="compact-coll-per" checked />
+            <label for="compact-coll-per">Pér</label>
+          </div>
         </div>
       </div>
     </div>
@@ -262,6 +266,7 @@
       api: null,
       guides: null,
       operator: null,
+      per: null,
       reference: null,
       user: null
     };
@@ -516,6 +521,7 @@
       if (document.getElementById('compact-coll-user').checked) collections.push('user');
       if (document.getElementById('compact-coll-reference').checked) collections.push('reference');
       if (document.getElementById('compact-coll-api').checked) collections.push('api');
+      if (document.getElementById('compact-coll-per').checked) collections.push('per');
       return collections;
     }
 
@@ -707,6 +713,7 @@
         'api': 'Amperity API',
         'guides': 'Guided setup',
         'operator': 'Operators guide',
+        'per': 'Pér',
         'reference': 'Reference',
         'user': 'User guides'
       };

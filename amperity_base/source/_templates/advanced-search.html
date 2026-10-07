@@ -328,6 +328,10 @@
           <input type="checkbox" id="coll-reference" checked />
           <label for="coll-reference">Reference</label>
         </div>
+        <div class="filter-option">
+          <input type="checkbox" id="coll-per" checked />
+          <label for="coll-per">Pér</label>
+        </div>
       </div>
     </div>
 
@@ -449,6 +453,7 @@
             api: null,
             guides: null,
             operator: null,
+            per: null,
             reference: null,
             user: null
         };
@@ -675,6 +680,7 @@
             if (document.getElementById('coll-operator').checked) selectedCollections.push('operator');
             if (document.getElementById('coll-api').checked) selectedCollections.push('api');
             if (document.getElementById('coll-reference').checked) selectedCollections.push('reference');
+            if (document.getElementById('coll-per').checked) selectedCollections.push('per');
 
             const searchPageTitles = document.getElementById('loc-page-titles').checked;
             const searchSectionHeaders = document.getElementById('loc-section-headers').checked;
@@ -1113,6 +1119,7 @@
                 'api': 'Amperity API',
                 'guides': 'Guided setup',
                 'operator': 'Operators guide',
+                'per': 'Pér',
                 'reference': 'Reference',
                 'user': 'User guides'
             };
