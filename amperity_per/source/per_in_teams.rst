@@ -86,6 +86,9 @@ PII, and nothing you can do in Teams changes that.
 
 * **Teams queries run on one connection belonging to the installation**, not on the Amperity
   sign-in of whoever asked. That connection is not given access to PII.
+* **Anyone in the channel can ask.** Pér answers whoever mentions it, without checking that
+  person's Amperity access. Which teams Pér is added to is therefore the control: limit where the
+  app is added to limit who can reach it.
 * **PII values come back as a dash.** The row is returned; the value is not.
 * **Aggregates still work.** Counting the customers who have an email address, for example, is
   unaffected — Pér can count what it cannot read.
