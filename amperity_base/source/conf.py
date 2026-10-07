@@ -101,6 +101,10 @@ html_theme_options = {
     "toctree_collapse": "collapse",
     "nav_links": [
         {
+            "title": "Pér",
+            "url": "../per/index",
+        },
+        {
             "title": "Guides",
             "children": [
                 {

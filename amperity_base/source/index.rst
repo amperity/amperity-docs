@@ -42,6 +42,12 @@ Type or enter "/" on your keyboard to search the docs site.
    :padding: 0
    :class-row: surface
 
+   .. grid-item-card:: |fa-sparkles| Pér
+      :link: /per/index.html
+
+      Amperity's AI agent for customer data.
+
+
    .. grid-item-card:: |fa-user-plus| User guides
       :link: /user/index.html
 
