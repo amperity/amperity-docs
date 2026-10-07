@@ -78,8 +78,8 @@ change is approved exactly the way an Amperity change is.
 
 This connection and :ref:`Data connections <per-data-connections>` are two halves of one job.
 This one authorizes Pér to act in Salesforce as you. Data connections supplies the subdomain that
-identifies your account, which a destination needs before Pér can read what it reports back. A
-destination reads as ready only when both are in place.
+identifies your account, which a destination needs before Pér can read the engagement metrics from
+a send. A destination reads as ready only when both are in place.
 
 
 .. _per-connect-sfmc-staying-connected:
@@ -114,7 +114,8 @@ All of these are on the **Salesforce Marketing Cloud** card, reached from **Sett
 **To connect a Business Unit**
 
 #. Click **Set up**.
-#. Paste the **MCP server URL** from your Salesforce installed package, and give it a **Label**.
+#. Paste the **MCP server URL** from your Salesforce installed package. Add a **Label**, which is
+   optional for the first Business Unit and required for each one after it.
 #. Click **Continue**, and sign in to Salesforce when you are sent there.
 
 **To connect yourself to a Business Unit someone else set up**
