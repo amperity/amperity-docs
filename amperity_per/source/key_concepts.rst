@@ -81,9 +81,6 @@ asked Pér to keep, not everything it has seen.
    permission they hold directly or inherit. Pér has no revocation of its own — blocking happens
    in Amperity.
 
-   .. PENDING NC-006: blocking a user is documented nowhere in amperity-docs, so this entry has
-      no link target. Sam's call; three options in collection-plan.md §3.1.
-
 
 .. _per-key-concepts-company-context:
 

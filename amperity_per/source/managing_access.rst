@@ -132,9 +132,6 @@ Pér has no revocation of its own. A person is cut off in Amperity.
    controlled by who is in the channel. What a blocked person could still see is bounded: those
    surfaces never return individual-level PII and cannot change anything.
 
-.. PENDING NC-006: blocking a user is documented nowhere else in the Amperity documentation, so
-   this section has no link target for it and describes it instead.
-
 .. note::
 
    Removing someone's access to the tenant in Amperity also clears their Pér grant. If that part
