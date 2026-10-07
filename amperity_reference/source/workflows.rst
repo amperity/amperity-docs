@@ -1562,7 +1562,7 @@ The **Sources**, **Stitch**, **Customer 360**, **Campaigns**, and **Destinations
 #. Open the **Sources**, **Stitch**, **Customer 360**, **Campaigns**, or **Destinations** page.
 #. Open the **Recent activity** pane.
 #. Browse or search the notifications.
-#. Notifications for workflow action are highlighted. Click the "View workflow" link to open the workflow.
+#. Notifications for workflow action are highlighted. Click the **Workflow job** link to open the workflow.
 
    .. tip:: When workflow resolutions are available, an alert appears with a button named **Show resolutions**.
 

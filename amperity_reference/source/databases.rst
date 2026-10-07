@@ -2486,7 +2486,7 @@ Notifications for databases that run in the **Customer 360** page appear after A
 
 .. databases-database-howto-view-recent-activity-context-start
 
-If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **View Workflow** to open the workflow in the **Workflows** page.
+If a notification is about a non-successful outcome, the details for why and what happened can be found in the notification itself. Click **More** to view the full notification. Click **Workflow job** to open the workflow in the **Workflows** page.
 
 In some cases viewing the log files may be helpful. In many cases, fix the root cause of the non-successful outcome, and then rerun the process manually. The **Workflows** page provides a set of workflow actions that you can initiate directly.
 
