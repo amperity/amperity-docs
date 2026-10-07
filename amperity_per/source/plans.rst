@@ -219,7 +219,7 @@ Working with plans
 
 **To open a plan**
 
-#. Open **Plans** and choose the plan.
+* Open **Plans** and choose the plan.
 
 From a conversation, open the plan from the card Pér posted there.
 
@@ -239,7 +239,7 @@ count to show.
 
 **To stop a plan that is running itself**
 
-#. Click **Stop automatic run**.
+* Click **Stop automatic run**.
 
 Work already set running in Amperity continues; nothing further is approved.
 

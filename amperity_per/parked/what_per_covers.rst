@@ -1,3 +1,9 @@
+.. PENDING NC-064: this article ships if a single "what Pér covers" overview is judged worth
+   its own page. The call to park it was made on review, not on behaviour. Its two
+   load-bearing claims — that Pér does not watch your tenant between sessions, and the
+   measurement disclaimer — moved verbatim to what_is_per.rst under
+   _per-what-is-per-boundary; de-duplicate against that section before unparking.
+
 .. https://docs.amperity.com/per/
 
 

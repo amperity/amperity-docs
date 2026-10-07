@@ -135,7 +135,7 @@ Working with your chats
 
 **To pin a chat**
 
-#. Open the chat's menu and choose **Pin**.
+* Open the chat's menu and choose **Pin**.
 
 Choose **Unpin** to move it back.
 

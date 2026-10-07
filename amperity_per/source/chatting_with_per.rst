@@ -182,9 +182,8 @@ later without digging through the thread.
 Choosing how much thinking Pér does
 ==================================================
 
-You can trade depth against speed.
-
-A one-line lookup and a four-table analysis should not involve the same wait.
+You can trade depth against speed. A one-line lookup and a four-table analysis should not involve
+the same wait.
 
 There are three levels:
 
@@ -226,11 +225,11 @@ Working in a conversation
 
 **To start a conversation**
 
-#. Type your question and click **Ask Pér**.
+* Type your question and click **Ask Pér**.
 
 **To stop a response**
 
-#. Click **Stop generation**.
+* Click **Stop generation**.
 
 **To attach a file**
 

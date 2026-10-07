@@ -33,7 +33,7 @@ the approval boundary.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
    memories and the approval boundary. PO to confirm. Same clause as what_is_per.rst and
-   key_concepts.rst.
+   per_glossary.rst.
 
 
 .. _per-company-context-what-goes-in:
@@ -102,17 +102,17 @@ Context Pér reads from Amperity
 If your tenant already set up context in Amperity, Pér reads that too, and this page shows it to
 you.
 
-Plenty of tenants wrote their business context for AmpAI before Pér existed. None of that has to be
-written again, and knowing it is already in play saves you duplicating or contradicting
-it.
+Plenty of tenants wrote their business context for the AI Assistant in Amperity before Pér
+existed. None of that has to be written again, and knowing it is already in play saves you
+duplicating or contradicting it.
 
 Below your own company context, the page shows two things from Amperity, read-only:
 
 * **Company context documents** — the
   `context documents <../reference/ampai.html#ampai-company-context>`__ configured in your
   Amperity tenant.
-* **The AmpAI system prompt** — the standing instructions your tenant gave AmpAI. Amperity's own
-  documentation calls this the
+* **The AI Assistant system prompt in Amperity** — the standing instructions your tenant gave the
+  AI Assistant. Amperity's own documentation calls this the
   `custom prompt <../reference/ampai.html#ampai-custom-prompt>`__.
 
 Pér reads both alongside the company context you write here. This page does not replace them, and
@@ -121,11 +121,14 @@ it cannot edit them — both are edited in Amperity.
 .. note::
 
    The panel appears only when Pér can reach Amperity for your session. A tenant with no context
-   documents, or no AmpAI system prompt, is told so rather than shown an empty box.
+   documents, or no AI Assistant system prompt, is told so rather than shown an empty box.
 
 .. PENDING NC-032: one object, two names. Pér's settings page labels it the AmpAI system prompt;
-   Amperity's own UI and documentation call it the custom prompt. The article names it as the page
-   the reader is on labels it, and links to the Amperity reference. PO to settle.
+   Amperity's own UI and documentation call it the custom prompt. The article now says "AI
+   Assistant system prompt in Amperity", ahead of the product: at the pin the page still renders
+   the literal string "AmpAI system prompt" (amp-parity AmperityContextReadOnly.tsx:91,
+   AMPAI_SYSTEM_PROMPT_HEADING in trust-precedence.ts:13), pending the AmpAI → AI Assistant
+   rename. PO to settle the naming; re-check the UI string before publication.
 
 
 .. _per-company-context-uploading:

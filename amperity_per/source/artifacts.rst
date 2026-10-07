@@ -123,15 +123,15 @@ Working with artifacts
 
 **To open an artifact**
 
-#. Open **Artifacts** and choose the one you want.
+* Open **Artifacts** and choose the one you want.
 
 **To download an artifact as a PDF**
 
-#. Click **Download PDF**, on the artifact or on its card in the list.
+* Click **Download PDF**, on the artifact or on its card in the list.
 
 **To share an artifact with your team**
 
-#. On an artifact you own, click **Share with your team**.
+* On an artifact you own, click **Share with your team**.
 
 It is then readable by everyone in your tenant, and shows as shared in your list.
 
@@ -147,6 +147,6 @@ It is then readable by everyone in your tenant, and shows as shared in your list
 
 **To open the conversation an artifact came from**
 
-#. On an artifact you created, click **Open source chat**.
+* On an artifact you created, click **Open source chat**.
 
 Artifacts is one of :ref:`the four pages <per-interface-tour-pages>`, reached from the sidebar.

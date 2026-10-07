@@ -212,7 +212,7 @@ says what to check.
 
 **To reject a change Pér proposes**
 
-#. Click **Reject**.
+* Click **Reject**.
 
 Nothing runs, the confirmation settles to **Rejected**, and Pér is told the change was not made.
 

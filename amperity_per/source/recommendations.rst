@@ -148,14 +148,14 @@ Working with recommendations
 
 **To read a recommendation's evidence**
 
-#. On a recommendation, click **Evidence**.
+* On a recommendation, click **Evidence**.
 
 A :ref:`conversation <per-chatting>` opens with the recommendation's evidence and the reasoning
 behind its confidence grade. Ask follow-up questions there.
 
 **To see why Pér graded its confidence**
 
-#. On a recommendation that shows a grade, click the grade.
+* On a recommendation that shows a grade, click the grade.
 
 The reasoning opens under a heading naming the grade, such as **Why high confidence?**
 

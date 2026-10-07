@@ -32,7 +32,7 @@ you control directly.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
    memories and the approval boundary. PO to confirm. Same clause as what_is_per.rst,
-   key_concepts.rst and company_context.rst.
+   per_glossary.rst and company_context.rst.
 
 
 .. _per-memory-what-it-is:

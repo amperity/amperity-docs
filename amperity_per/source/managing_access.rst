@@ -43,7 +43,7 @@ your tenant uses and links out to Amperity; there is nothing to set there.
 
 Who can do what:
 
-* **A** :ref:`User Administrator <per-key-concepts-user-administrator>` **switches the tenant
+* **A** :ref:`User Administrator <per-glossary-user-administrator>` **switches the tenant
   between the two modes and grants access to individuals.** Amperity refuses the change to anyone
   else, and says so.
 * **Removing someone's access is deliberately easier than giving it.** Anyone who can edit users in
@@ -77,8 +77,8 @@ people before others.
 Someone refused under managed access is told that their Amperity administrator has not enabled Pér
 access for them, so they know to ask rather than to retry.
 
-See :ref:`Open access <per-key-concepts-open-access>` and
-:ref:`Managed access <per-key-concepts-managed-access>`.
+See :ref:`Open access <per-glossary-open-access>` and
+:ref:`Managed access <per-glossary-managed-access>`.
 
 
 .. _per-managing-access-switching:
@@ -151,7 +151,10 @@ This is the most common reason for an organization seeing nothing at all, and it
 permission problem.
 
 If nobody at your organization can reach Pér, ask your Amperity representative to confirm that your
-tenant is enabled. See :ref:`Before anyone can use Pér <per-what-per-covers-prerequisite>`.
+tenant is enabled.
+
+.. PARKED-LINK: what_per_covers.rst: restore "See :ref:`Before anyone can use Pér
+   <per-what-per-covers-prerequisite>`." to the end of the paragraph above.
 
 .. PENDING NC-023: whether a customer can enable a tenant for Pér, or only Amperity can, is not
    settled. No control in the product sets it. This section deliberately does not say who does.
@@ -168,7 +171,7 @@ place.
 
 **To see which mode your tenant uses**
 
-#. In Amperity, open **Users** and find the **Pér user access** section.
+* In Amperity, open **Users** and find the **Pér user access** section.
 
 **To turn on managed access**
 

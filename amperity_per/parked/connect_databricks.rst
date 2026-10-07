@@ -127,7 +127,7 @@ on the card, and names the host it is connected to.
 
 **To remove the connection**
 
-#. Click **Delete**, then confirm.
+* Click **Delete**, then confirm.
 
 This removes the connection for the whole tenant, not just for you. Setting it up again means
 another client secret, since the first one is not shown twice.

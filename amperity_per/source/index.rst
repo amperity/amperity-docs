@@ -66,7 +66,7 @@ recommendations and plans for you to approve, then carries out the work in Amper
 
    .. grid-item-card:: Administration
       :link-type: ref
-      :link: per-administration
+      :link: per-managing-access
 
       Who can reach Pér, and how that is administered in Amperity.
 
@@ -82,11 +82,13 @@ recommendations and plans for you to approve, then carries out the work in Amper
 
    What is Pér <what_is_per>
    The customer decision loop <customer_decision_loop>
-   Key concepts <key_concepts>
-   What Pér covers <what_per_covers>
    Accessing Pér <accessing_per>
    Interface tour <interface_tour>
-   Quickstart <quickstart>
+   Your first session <first_session>
+   Glossary <per_glossary>
+
+.. PARKED-LINK: what_per_covers.rst: restore the "What Pér covers <what_per_covers>" entry to the
+   GET STARTED toctree.
 
 
 .. toctree::
@@ -148,7 +150,7 @@ recommendations and plans for you to approve, then carries out the work in Amper
    :maxdepth: 2
    :hidden:
 
-   Administration <grid_administration>
+   Managing access to Pér <managing_access>
 
 
 .. toctree::

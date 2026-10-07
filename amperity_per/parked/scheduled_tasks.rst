@@ -32,7 +32,7 @@ decision loop, and only that stage: a run can look, and cannot change anything.
 .. note::
 
    A *task* on this page is a scheduled task — a request of your own that repeats. It is not a
-   :ref:`step of a plan <per-key-concepts-step>`, which is a single change waiting for your
+   :ref:`step of a plan <per-glossary-step>`, which is a single change waiting for your
    approval.
 
 

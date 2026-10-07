@@ -25,11 +25,6 @@ This is what each part of Pér is for.
 Asking and working happen side by side rather than in turn or in different tools. This is why the
 conversation sits beside whatever you are looking at, the whole time.
 
-.. note::
-
-   The arrangement described here is the part of Pér most likely to change. This article names a
-   control only where you need the name to find it; everything else is described by what it does.
-
 
 .. _per-interface-tour-shape:
 
@@ -69,10 +64,6 @@ The sidebar
 
 The sidebar is both the way to start something and the record of everything you have started.
 
-Those two things are deliberately in one list. A conversation from three weeks ago is work, not
-history, and keeping it beside the things you can begin means picking something up costs the same
-as starting it.
-
 * **Four places to go:** **New Chat** starts a fresh conversation, **Portfolio** is where Pér
   gathers what it thinks deserves your attention, **Plans** is every plan in the tenant, and
   **Artifacts** is what sessions have left behind.
@@ -92,10 +83,7 @@ For renaming, pinning, searching and deleting conversations, see
 The top bar
 ==================================================
 
-The top bar holds the things that belong to your session rather than to the page.
-
-This will display which tenant you are in and how to reach settings, no matter what page you are
-on.
+The top bar displays the same elements no matter what page you are on.
 
 * **The tenant picker** shows which Amperity tenant you are working in, and changes it. See
   :ref:`Choosing a tenant <per-accessing-per-tenant>`.
@@ -116,11 +104,8 @@ The chat panel
 
 The chat panel is the conversation, present on every page of Pér.
 
-That is what makes it the place everything else starts from. A question about the plan you are
-reading does not require going anywhere; neither does asking for a change to it.
-
-* **A new conversation offers a few openers** under **Suggested** — *Walk me through my top
-  recommendation*, *Build a segment*, *What changed since yesterday?* — for when you want to see
+* **A new conversation offers a few openers** under **Suggested** (for example, *Walk me through my
+  top recommendation*, *Build a segment*, *What changed since yesterday?*) for when you want to see
   what a question to Pér looks like.
 * **The panel can be widened, narrowed, or expanded** to fill the window.
 * **Sharing and exporting a conversation** are in the panel's own header, because they belong to
@@ -138,10 +123,9 @@ See :ref:`Chatting with Pér <per-chatting>` for how a conversation works, and
 The pages
 ==================================================
 
-There are four pages. Knowing which holds what is most of the navigation you need, because the same
-thing never appears in two of them.
+There are four pages.
 
-**Portfolio** is where you land. It gathers the work Pér thinks deserves your attention: the
+**Portfolio** is the landing page. It gathers the work Pér thinks deserves your attention: the
 recommendations it has made, with a note of when that set was produced and a way to ask for a
 fresh one, and below them the plans already under way — split into the ones waiting on you and the
 ones waiting on a job to finish. A Portfolio with nothing on it says so and offers to go and
@@ -163,7 +147,7 @@ yours, plus anything a colleague has shared with the tenant. See :ref:`Artifacts
   :ref:`System <per-system-settings>`.
 * **Things administered in Amperity**, which link out rather than being set in Pér. Your tenant's
   Pér access mode is shown among them. See :ref:`Managing access to Pér <per-managing-access>`.
-* **Settings that are yours alone**, rather than the tenant's.
+* **Settings that are yours alone**, rather than the tenant's (like light/dark mode).
 
 .. PARKED-LINK: scheduled_tasks.rst: add it to the pages list, and to the sidebar section above,
    when it ships.

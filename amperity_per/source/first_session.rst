@@ -11,32 +11,32 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Quickstart: your first session
+        Your first session
 
 
-.. _per-quickstart:
+.. _per-first-session:
 
 ==================================================
-Quickstart: your first session
+Your first session
 ==================================================
 
 This walks one piece of work the whole way: a question, a proposal you can check, a plan, the
 approvals that let it run, and something you can hand to somebody afterwards.
 
-This article traces the :ref:`customer decision loop <per-customer-decision-loop>` with the product
-names attached, so by the end of it the five stages should have stopped being abstract.
+This article traces the :ref:`customer decision loop <per-customer-decision-loop>` with the feature
+names attached, to help make the five stages of the loop concrete.
 
 **Before you start**
 
 * **Your tenant has to be enabled for Pér**, and you have to be able to get in. See
   :ref:`Accessing Pér <per-accessing-per>`.
 * **What you can do inside Pér is your own Amperity access**, not something Pér grants. If you
-  cannot read a table in Amperity, Pér cannot read it for you.
+  do not have access to read a table in Amperity, Pér cannot read it for you.
 * **Nothing in this walk changes your tenant until you approve it.** You can follow it as far as
   the last section and still have changed nothing.
 
 
-.. _per-quickstart-ask:
+.. _per-first-session-ask:
 
 Ask something
 ==================================================
@@ -53,11 +53,11 @@ What to expect:
   answer is something you can follow rather than wait out.
 * **The work happens on Amperity's servers.** You can move to another page or close the browser;
   the answer is still produced, and it is there when you come back.
-* **Answers are short on purpose.** Ask for more.
+* **Answers are short on purpose.** Ask for more detail if needed.
 
 **To ask Pér something**
 
-#. Type your question in the chat panel and click **Ask Pér**.
+* Type your question in the chat panel and click **Ask Pér**.
 
 Good first questions are concrete and about your own data — for example, how many customers bought
 twice last year, which segment has grown most since spring, what a particular audience actually
@@ -68,7 +68,7 @@ See :ref:`Chatting with Pér <per-chatting>`, and
 access.
 
 
-.. _per-quickstart-recommendation:
+.. _per-first-session-recommendation:
 
 Read a recommendation
 ==================================================
@@ -80,8 +80,7 @@ evidence now is the best moment to find a problem with it — far better than fi
 a campaign has gone out. This is :ref:`Recommend <per-customer-decision-loop-recommend>`.
 
 **This step has a prerequisite the others don't.** Recommendations are produced by a refresh that
-somebody asks for, so on a tenant where nobody has asked yet the Portfolio is empty. That is
-normal, not a fault.
+somebody asks for, so on a tenant where nobody has asked yet the Portfolio is empty.
 
 * **A refresh takes a while**, and a tenant runs one at a time.
 * **You can stop one**, and stopping it leaves the Portfolio as it was.
@@ -99,7 +98,7 @@ confidence grade with the reasoning for that grade, including what Pér could no
 
 **To read the argument behind one**
 
-#. On a recommendation, click **Evidence**.
+* On a recommendation, click **Evidence**.
 
 That opens a conversation about the recommendation rather than a panel, so you can push on it:
 ask where a number came from, or have Pér query your data to check it.
@@ -107,7 +106,7 @@ ask where a number came from, or have Pér query your data to check it.
 See :ref:`Recommendations <per-recommendations>`.
 
 
-.. _per-quickstart-plan:
+.. _per-first-session-plan:
 
 Act on it
 ==================================================
@@ -134,7 +133,7 @@ tenant, each one waiting for a person. It is where :ref:`Approve
 See :ref:`Plans <per-plans>` and :ref:`How a plan gets written <per-plans-authoring>`.
 
 
-.. _per-quickstart-approve:
+.. _per-first-session-approve:
 
 Approve the steps
 ==================================================
@@ -182,7 +181,7 @@ approved on your behalf.
 See :ref:`Approvals and write confirmations <per-approvals>`.
 
 
-.. _per-quickstart-artifact:
+.. _per-first-session-artifact:
 
 Keep what you found
 ==================================================
@@ -201,13 +200,13 @@ on it can read it without you in the room. This is :ref:`Learn <per-customer-dec
 
 **To have Pér write something up**
 
-#. In the conversation, ask for a readout, a one-pager or a summary of what was done.
+* In the conversation, ask for a readout, a one-pager or a summary of what was done.
 
 **To share it**
 
-#. On the artifact, click **Share with your team**.
+* On the artifact, click **Share with your team**.
 
-Two more things worth doing on a first session, now that you have something to compare them to:
+Also worth doing after a session:
 
 * **Tell Pér what to remember.** Anything you had to explain once — how your business defines a
   term, a rule it should always work inside — can be kept, so you do not explain it again. See
@@ -218,7 +217,7 @@ Two more things worth doing on a first session, now that you have something to c
 See :ref:`Artifacts <per-artifacts>`.
 
 
-.. _per-quickstart-next:
+.. _per-first-session-next:
 
 Where to go next
 ==================================================

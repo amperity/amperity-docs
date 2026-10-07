@@ -30,7 +30,7 @@ In brief:
 This is the customer decision loop, and it is what Pér is built around.
 
 Knowing the loop is the quickest way to find your way around Pér, because every part of Pér serves
-one of its stages. This documentation is, in effect, a close-up of one stage at a time.
+one of its stages. This article is a close-up of one stage at a time.
 
 
 .. _per-customer-decision-loop-understand:
@@ -47,7 +47,7 @@ against what you know.
 You do this stage in conversation. Ask a question in plain language and Pér queries your tenant's
 own customer data to answer it — the same identity-resolved records your organization already
 relies on, read under your own Amperity access. As it works, it says in one line what it is about
-to look at and why, so you can follow the shape of the analysis before the answer arrives.
+to look at and why, so you can see the direction of the analysis before the answer arrives.
 
 What Pér brings to the question, beyond the data: the company context your tenant has set up, the
 memories you have given it, and what it can find on the web.
@@ -107,7 +107,7 @@ Act
 
 The approved steps run in Amperity.
 
-This means the audience now exists, the campaign is configured, and the model is trained. Nothing
+This means the audience now exists, the campaign is configured, or the model is trained. Nothing
 is left for you to go and replicate by hand.
 
 Steps run in order, and some of them start work that takes a while, for example, training a model or

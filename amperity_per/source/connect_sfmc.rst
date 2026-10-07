@@ -120,15 +120,15 @@ All of these are on the **Salesforce Marketing Cloud** card, reached from **Sett
 
 **To connect yourself to a Business Unit someone else set up**
 
-#. Click **Sign in with Salesforce**.
+* Click **Sign in with Salesforce**.
 
 **To check that your connection still works**
 
-#. Click **Test connection**.
+* Click **Test connection**.
 
 **To disconnect yourself**
 
-#. Click **Disconnect**.
+* Click **Disconnect**.
 
 **To rename a Business Unit or point it somewhere else**
 
@@ -143,6 +143,6 @@ All of these are on the **Salesforce Marketing Cloud** card, reached from **Sett
 
 **To add another Business Unit**
 
-#. Click **Add another Business Unit** and set it up as above.
+* Click **Add another Business Unit** and set it up as above.
 
 A connected Business Unit says so, and says how many Salesforce tools Pér has through it.

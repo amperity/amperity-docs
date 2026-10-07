@@ -11,13 +11,13 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Key concepts
+        Glossary
 
 
-.. _per-key-concepts:
+.. _per-glossary:
 
 ==================================================
-Key concepts
+Glossary
 ==================================================
 
 These are the terms this documentation uses, and what each one means in Pér.
@@ -27,7 +27,7 @@ a particular object with a particular lifecycle, not just an intention. A *memor
 asked Pér to keep, not everything it has seen.
 
 
-.. _per-key-concepts-activity-log:
+.. _per-glossary-activity-log:
 
 **Activity log**
    The record of what Pér did in your tenant: the actions it took and the recommendations it
@@ -36,21 +36,21 @@ asked Pér to keep, not everything it has seen.
    the platform.
 
 
-.. _per-key-concepts-ai-agent-for-customer-data:
+.. _per-glossary-ai-agent-for-customer-data:
 
 **AI agent for customer data**
    The kind of product Pér is: an agent that works on your customer data, answering questions
    about it and — with your approval — acting on it in Amperity.
 
 
-.. _per-key-concepts-allow-per-access:
+.. _per-glossary-allow-per-access:
 
 **Allow Pér access**
    The grant that lets one person into Pér when a tenant uses managed access. Given and removed
    in Amperity, on the `Users <../reference/users.html>`__ page.
 
 
-.. _per-key-concepts-apply-mode:
+.. _per-glossary-apply-mode:
 
 **apply mode**
    How a memory that Pér proposes gets saved. By default Pér asks every time. You can choose to
@@ -58,7 +58,7 @@ asked Pér to keep, not everything it has seen.
    under either setting.
 
 
-.. _per-key-concepts-auto-run:
+.. _per-glossary-auto-run:
 
 **Approve & run all**
    Approving a whole plan at once and letting it run itself. You approve the plan, not each write
@@ -66,7 +66,7 @@ asked Pér to keep, not everything it has seen.
    a person, and records which steps it approved on your behalf.
 
 
-.. _per-key-concepts-artifact:
+.. _per-glossary-artifact:
 
 **artifact**
    Something a session leaves behind: a report Pér wrote, or a file you gave it. You can come back
@@ -74,7 +74,7 @@ asked Pér to keep, not everything it has seen.
    it.
 
 
-.. _per-key-concepts-block-user:
+.. _per-glossary-block-user:
 
 **Block user**
    The Amperity control that revokes all of a person's access to a tenant, overriding any
@@ -82,30 +82,30 @@ asked Pér to keep, not everything it has seen.
    in Amperity.
 
 
-.. _per-key-concepts-company-context:
+.. _per-glossary-company-context:
 
 **company context**
    The business priorities, definitions and measures you want Pér to work from. Company context
    goes into every session. Alongside it, Pér reads the
-   `context documents <../reference/ampai.html#ampai-company-context>`__ and the AmpAI system
-   prompt your tenant has set up in Amperity; it reads those, and does not replace them.
+   `context documents <../reference/ampai.html#ampai-company-context>`__ and the AI Assistant
+   system prompt your tenant has set up in Amperity; it reads those, and does not replace them.
 
 
-.. _per-key-concepts-customer-decision-loop:
+.. _per-glossary-customer-decision-loop:
 
 **customer decision loop**
    The cycle Pér is built around: :ref:`Understand → Recommend → Approve → Act → Learn
    <per-customer-decision-loop>`.
 
 
-.. _per-key-concepts-guideline:
+.. _per-glossary-guideline:
 
 **Guideline**
    One of the two enforcement levels of a memory. A guideline shapes what Pér does without binding
    it.
 
 
-.. _per-key-concepts-managed-access:
+.. _per-glossary-managed-access:
 
 **Managed access**
    One of the two ways a tenant admits people to Pér: only people granted access individually can
@@ -113,7 +113,7 @@ asked Pér to keep, not everything it has seen.
    Administrator.
 
 
-.. _per-key-concepts-mcp-tools:
+.. _per-glossary-mcp-tools:
 
 **MCP tools**
    The Amperity tools Pér calls to read your data and to change things on your behalf. Pér reads
@@ -121,7 +121,7 @@ asked Pér to keep, not everything it has seen.
    Pér entirely.
 
 
-.. _per-key-concepts-memory:
+.. _per-glossary-memory:
 
 **memory**
    Something you have told Pér to remember between sessions — a preference, a rule, a fact or a
@@ -130,7 +130,7 @@ asked Pér to keep, not everything it has seen.
    written by hand, and can be archived and restored. They do not expire.
 
 
-.. _per-key-concepts-must-follow:
+.. _per-glossary-must-follow:
 
 **Must follow**
    One of the two enforcement levels of a memory. Pér reads must-follow memories first and treats
@@ -138,10 +138,10 @@ asked Pér to keep, not everything it has seen.
 
 
 .. PARKED-LINK: notifications.rst: restore the **notification** glossary entry and its
-   _per-key-concepts-notification anchor.
+   _per-glossary-notification anchor.
 
 
-.. _per-key-concepts-open-access:
+.. _per-glossary-open-access:
 
 **Open access**
    One of the two ways a tenant admits people to Pér: anyone authorized for the tenant can enter.
@@ -149,13 +149,13 @@ asked Pér to keep, not everything it has seen.
    they are able to do once inside.
 
 
-.. _per-key-concepts-per:
+.. _per-glossary-per:
 
 **Pér**
    Amperity's AI agent for customer data, and the name used throughout this documentation.
 
 
-.. _per-key-concepts-plan:
+.. _per-glossary-plan:
 
 **plan**
    A titled, reviewable list of Amperity writes that you approve before any of them runs. A plan
@@ -167,14 +167,14 @@ asked Pér to keep, not everything it has seen.
    acted on again. It is not a way to undo work that has already run.
 
 
-.. _per-key-concepts-portfolio:
+.. _per-glossary-portfolio:
 
 **Portfolio**
    Where Pér gathers the work it thinks is worth your attention: the recommendations it has made,
    and the plans already under way.
 
 
-.. _per-key-concepts-recommendation:
+.. _per-glossary-recommendation:
 
 **recommendation**
    Something Pér proposes doing, with the argument attached: the claims it rests on, the numbers
@@ -183,14 +183,14 @@ asked Pér to keep, not everything it has seen.
    have acted on one, Pér stops offering it.
 
 
-.. _per-key-concepts-skill:
+.. _per-glossary-skill:
 
 **skill**
    A packaged piece of work you can start by name rather than describing from scratch. Which
    skills are available depends on your tenant.
 
 
-.. _per-key-concepts-step:
+.. _per-glossary-step:
 
 **step**
    A single approvable unit inside a plan: one concrete change to your Amperity tenant. Steps are
@@ -200,7 +200,7 @@ asked Pér to keep, not everything it has seen.
       scheduled tasks ship, since "task" then becomes a word in this documentation.
 
 
-.. _per-key-concepts-trusted-customer-context:
+.. _per-glossary-trusted-customer-context:
 
 **trusted customer context**
    What Pér works from: your identity-resolved customer data, the history in it, the rules you
@@ -212,7 +212,7 @@ asked Pér to keep, not everything it has seen.
       context, must-follow memories and the approval boundary. PO to confirm.
 
 
-.. _per-key-concepts-user-administrator:
+.. _per-glossary-user-administrator:
 
 **User Administrator**
    The Amperity `policy <../reference/policies.html>`__ held by the people who manage Pér access:
@@ -220,7 +220,7 @@ asked Pér to keep, not everything it has seen.
    individuals.
 
 
-.. _per-key-concepts-write-confirmation:
+.. _per-glossary-write-confirmation:
 
 **write confirmation**
    What stands between Pér proposing a change to Amperity and that change happening. Nothing runs

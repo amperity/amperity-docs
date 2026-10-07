@@ -82,7 +82,7 @@ Starting a skill
 
 **To find a skill**
 
-#. Open the skill picker and start typing.
+* Open the skill picker and start typing.
 
 The picker matches on more than the words shown in the list, so a skill can surface on a term that
 is not in its name.

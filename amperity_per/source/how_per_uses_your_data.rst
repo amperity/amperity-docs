@@ -90,8 +90,8 @@ What goes in:
   and measures you want Pér to work from.
 * **Your** :ref:`memories <per-memory>` — what you have told Pér to remember between sessions. Pér
   reads must-follow memories first and treats them as rules it must not break.
-* **The Amperity context documents and the AmpAI system prompt** your tenant has set up. Pér reads
-  those; it does not replace them.
+* **The Amperity context documents and the AI Assistant system prompt** your tenant has set up.
+  Pér reads those; it does not replace them.
 * **A summary of your portfolio** — the work already proposed and under way.
 
 .. important::

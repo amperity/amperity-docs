@@ -25,9 +25,8 @@ and it answers from the customer data your organization already keeps in Amperit
 implies work — an audience to build, a campaign to set up, a model to train — Pér proposes that
 work as a plan and carries it out in Amperity once you approve it.
 
-That cycle is the customer decision loop: **Understand → Recommend → Approve → Act → Learn**.
-Every part of Pér serves one of its stages, and
-:ref:`the customer decision loop <per-customer-decision-loop>` walks through it stage by stage.
+That cycle is :ref:`the customer decision loop <per-customer-decision-loop>`:
+**Understand → Recommend → Approve → Act → Learn**. Every part of Pér serves one of its stages.
 
 
 .. _per-what-is-per-who-its-for:
@@ -77,15 +76,15 @@ Four things make up that context:
 * **The predictive intelligence available in your tenant.** Where your tenant already has
   predictive models, Pér looks at the audiences they identify and proposes work that acts on them.
 
-Alongside your Pér company context, Pér also reads the context documents and the AmpAI system
+Alongside your Pér company context, Pér also reads the context documents and the AI Assistant system
 prompt your tenant has set up in Amperity.
 
 .. note::
 
-   All of that material — company context, memories, your Amperity context documents, the AmpAI
-   system prompt, and anything Pér finds on the web — is treated as information to work from, not
-   as instructions addressed to Pér. Received context cannot change Pér's operating
-   rules, grant it a permission, or move it to another tenant.
+   All of that material — company context, memories, your Amperity context documents, the AI
+   Assistant system prompt, and anything Pér finds on the web — is treated as information to work
+   from, but it cannot change Pér's operating rules, grant it a permission, or move it to another
+   tenant.
 
 .. PENDING NC-003: the "rules Pér works inside" clause rests on company context, must-follow
    memories and the approval boundary. PO to confirm before publication.
@@ -124,6 +123,13 @@ How the boundary works:
    Approving a plan is not the same as watching each write go by. One approval can set a sequence
    of Amperity writes running, and a write that has run cannot be undone from Pér. Read a plan's
    steps before you approve it.
+
+Two things Pér does not do:
+
+* **Pér does not watch your tenant between sessions.** It does not act on its own, and it does not
+  start a new round of the loop by itself. Each turn begins when a person begins it.
+* **Pér does not tell you what your marketing achieved.** It keeps a record of what it did and
+  what it produced. Judging the business result of that work is still yours.
 
 
 .. _per-what-is-per-where:
