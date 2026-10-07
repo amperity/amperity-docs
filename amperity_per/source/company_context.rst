@@ -173,7 +173,7 @@ You do not have to write it yourself:
 * **Pér can propose an edit**, which arrives as a
   :ref:`write confirmation <per-approvals-card>` showing what the document would become. Nothing
   changes until you approve it.
-* **The** :ref:`Build company context <per-skills-available>` **skill** works out what your tenant
+* **The** :ref:`Build company context <per-skills>` **skill** works out what your tenant
   already has, interviews you about the rest, shows you the finished document, and publishes it
   through that same confirmation.
 

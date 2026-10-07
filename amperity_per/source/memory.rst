@@ -158,7 +158,7 @@ Nothing expires on its own, so this is maintenance somebody has to do.
   can restore it later.
 * **Changes are recorded in the** :ref:`Activity log <per-activity-log>`. A personal memory's
   entry deliberately leaves its title out, so maintaining your own memories does not publish them.
-* **The** :ref:`Review memories <per-skills-available>` **skill reads the memories available to a
+* **The** :ref:`Review memories <per-skills>` **skill reads the memories available to a
   conversation and looks for duplicates and contradictions.** It proposes changes; it does not make
   them. It also tells you when the set it looked at may not have been complete.
 

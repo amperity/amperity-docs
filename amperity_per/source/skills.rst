@@ -68,66 +68,6 @@ not have is not shown to you as unavailable — it is simply not in the list.
 
 A tenant with none available is told so, rather than shown an empty picker.
 
-.. PENDING NC-013: which skills may carry the Pér story is a PO question. Five are visible to an
-   ordinary tenant at the pin; the GTM material's flagship example is an internal-only skill, and
-   one of the five is housekeeping rather than a business outcome.
-
-
-.. _per-skills-available:
-
-The skills available today
-==================================================
-
-Five skills are available to an ordinary tenant. Each one says what it produces and what it needs
-from you, because that is what decides whether to start it.
-
-Build company context
---------------------------------------------------
-
-Works out what your tenant already has, interviews you about what is ambiguous or missing, shows
-you the finished document, and publishes it once you approve. Reach for it when your
-:ref:`company context <per-company-context>` is empty or has gone stale, and you would rather be
-asked good questions than face a blank page.
-
-1x buyer conversion
---------------------------------------------------
-
-Diagnoses one-time buyers: how large the group is and whether it is growing, what first purchases
-tend to predict a second one, what the paths of customers who did return look like, and how much of
-the group is realistically addressable. It runs as a conversation and works through those questions
-in order, so you can stop when you have what you need.
-
-Aggregate campaign reporting
---------------------------------------------------
-
-Reports one campaign's aggregate results, broken out by calendar month from its first delivery
-through to today, with the window each figure covers stated beside it. Partial months are marked as
-partial, and any group of metrics it could not compute is named rather than quietly omitted. You
-can ask for a different window once you have the first answer.
-
-If Pér cannot establish when the campaign was delivered, it does not pick a window anyway. It
-reports what was sent instead — when the sends first and last started, and how many ended in each
-state — and says separately that the results cannot be computed without a delivery date.
-
-.. PENDING NC-014: D9 holds all measurement, holdout, incrementality, lift and attribution
-   language. This skill is documented as reporting — what it aggregates, over what window, what it
-   could not compute, and what it reports instead when the window cannot be anchored.
-
-Set up event propensity
---------------------------------------------------
-
-Turns a business question into a target event, checks that your event tables actually hold usable
-data for it, builds competing model variants, validates them, and activates the one you choose. It
-stops for you twice: once to confirm the data is fit for the question, and once to pick the winner.
-
-Review memories
---------------------------------------------------
-
-Reads the :ref:`memories <per-memory-reviewing>` available to the conversation and looks for
-duplicates and contradictions. It proposes changes and does not make them, and it tells you when
-the set it reviewed may not have been complete. Housekeeping rather than analysis, and worth
-running when your memory set has grown.
-
 
 .. _per-skills-using:
 
