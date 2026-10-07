@@ -3029,6 +3029,6 @@ The PostHog Personal API Key, used to verify the connection and, in person-delet
 
 Required. The App API Key that authorizes every request Amperity sends to |destination-name|. Copy it from **Settings > Keys & IDs** in the |destination-name| dashboard; it begins with ``os_v2_app_``.
 
-.. important:: An App API Key is scoped to a single |destination-name| app, so it must come from the same app as the **App ID** destination setting. |destination-name| returns the same "Access denied" wording for a key that is wrong as for a key that belongs to a different app, so its message names the key even when the App ID is at fault. Copy both values together from the same app's **Keys & IDs** page.
+.. important:: An App API Key is scoped to a single |destination-name| app, so it must come from the same app as the **App ID** destination setting. A message saying the key is valid but does not grant access to the App ID means the two came from different apps — copy both values together from the same app's **Keys & IDs** page. A message saying |destination-name| rejected the key means the key itself is wrong.
 
 .. credential-onesignal-api-key-end

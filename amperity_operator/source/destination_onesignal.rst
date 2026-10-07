@@ -40,7 +40,7 @@ Amperity syncs attributes incrementally. Only the rows whose attributes changed 
 
 .. destination-onesignal-end
 
-.. important:: This connector does not create or manage a list or segment in |destination-name|. |destination-name| segments are defined by filter rules rather than by a membership list, so there is nothing for Amperity to add people to. Amperity writes the data tags, and you build the segments that filter on them. To act on an Amperity audience in |destination-name|, create a |destination-name| segment that filters on the tag Amperity sends.
+.. important:: This connector does not create or manage a list or segment in |destination-name|. |destination-name| segments are defined by filter rules rather than by a membership list, so there is nothing for Amperity to add people to. Amperity writes the data tags, and you build the segments that filter on them. To act on an Amperity audience in |destination-name|, create a |destination-name| segment that filters on the tag Amperity sends. Return every customer in the query and let that tag's value mark who qualifies — see :ref:`destination-onesignal-data-tags`.
 
 .. destination-onesignal-api-note-start
 
@@ -62,7 +62,7 @@ Amperity syncs attributes incrementally. Only the rows whose attributes changed 
 
 .. important:: Column names are matched exactly, in lower case. ``external_id``, ``email``, and ``phone`` are recognized only when spelled that way, and a column spelled any other way is not recognized even though it passes validation. An identifier column under another spelling stops the send, and an ``email`` or ``phone`` column under another spelling is written as a data tag instead of creating a subscription. Alias these columns in your query when your source data spells them differently.
 
-.. note:: A successful connection test confirms that the App API Key can reach the app named by the **App ID** setting, by requesting that app's configuration. Amperity runs the test when the destination is configured, so a key and App ID that do not belong to the same app surface then rather than during the first send.
+.. note:: Amperity validates the connection when the destination is saved, by requesting the configuration of the app named by the **App ID** setting. A key and App ID that do not belong to the same app are caught then rather than during the first send, and the destination is not saved.
 
 .. caution:: Amperity writes data tags named after the columns in your query results. If your own app or website also writes tags with those names through a |destination-name| SDK, the last write wins and the values become unpredictable. Treat the tag names this destination manages as owned by Amperity, and do not write them from another source.
 
@@ -84,6 +84,10 @@ Every column in the query results except ``external_id``, ``email``, and ``phone
 * **Tags are merged, not replaced.** |destination-name| keeps any tag that a request does not name, so sending a subset of a person's attributes never clears the rest.
 * **An empty value removes the tag.** When a column is empty or null for a row, Amperity sends that tag with an empty value, which is how |destination-name| deletes it. This keeps an attribute that was cleared in Amperity from leaving a stale value behind in |destination-name|.
 * **Some tag names are reserved.** |destination-name| uses ``message``, ``notification``, ``subscription``, ``user``, ``template``, ``app``, ``org``, ``dynamic_content``, ``data_feed``, ``journey``, and ``custom_data`` internally for message personalization. Do not return columns with those names.
+
+.. caution:: Amperity sends only the rows that are present in the query results. A person who drops out of those results is not sent again, so the tags they already carry stay on them in |destination-name| and keep matching any segment that filters on those tags. Removing a column from the query has the same effect: that tag stays on everyone who already has it, holding its last value.
+
+   Return every customer rather than only the people who currently qualify, and let the column value carry the distinction — an empty value for everyone outside the audience, which removes the tag. A query that returns only qualifying people can add someone to a |destination-name| segment but can never take them out of it.
 
 .. caution:: |destination-name| limits how many distinct data tags a person can carry, and the limit depends on your |destination-name| plan. Exceeding the limit stops the run — |destination-name| rejects the write, nothing from the rejected request is applied, and every remaining row is likely to reach the same limit. Check your |destination-name| plan's data tag allowance before sending a wide set of attributes. Returning fewer columns prevents the next run from adding tags, but it does not bring a person who is already at the limit back under it: |destination-name| accepts no new tag for that person until tags are removed from them.
 
@@ -112,7 +116,7 @@ Two columns are treated as subscriptions rather than as data tags.
 
 Both columns are optional. A row that has neither still updates that person's data tags, and a row whose ``email`` or ``phone`` is empty is sent without that subscription rather than with an empty one.
 
-Sending the same address or number on every run is safe. |destination-name| identifies a subscription by its value, so repeated runs update the existing subscription instead of accumulating duplicates.
+Repeated runs do not create duplicate subscriptions. |destination-name| identifies a subscription by its value, so sending the same address or number again updates the existing subscription rather than adding another one.
 
 .. important:: ``phone`` must be in E.164 format: a leading plus sign, then the country code, then the national number, with no spaces, dashes, or parentheses. For example, ``+12065551234``. Amperity sends the value as your query produces it, apart from removing surrounding whitespace, so a national number (``2065551234``), a formatted number (``(206) 555-1234``), or a number with no country code is rejected by |destination-name|. ``email`` is sent the same way, with no normalization. A rejected value fails the whole row, which means that person's data tags are not written either, so normalize these columns in your query when your source data is not already in the required form.
 
@@ -387,7 +391,7 @@ Some conditions stop the entire run instead of failing individual rows:
 * The App API Key is valid but does not grant access to the configured **App ID**. Confirm that the key and the App ID come from the same |destination-name| app.
 * A person's data tags would exceed the allowance on your |destination-name| plan. Nothing from the rejected request is applied.
 
-Each of these is a property of the credential, the settings, or the |destination-name| plan rather than of one row, so every remaining row would fail the same way. Amperity stops the run rather than working through the rest of the query results.
+Each of these is a property of the credential, the settings, or the |destination-name| plan rather than of one row. A rejected key and an App ID the key cannot reach fail every remaining row identically; the tag allowance applies per person, so it fails every person already at the limit. In both cases Amperity stops the run rather than working through the rest of the query results.
 
 .. note:: A run that stops partway has already written the rows it sent before the failure. Amperity completes the requests that are in flight and then stops, so those people are updated in |destination-name| and the rest are not.
 
