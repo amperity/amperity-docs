@@ -104,9 +104,6 @@ A confirmation carries:
    :ref:`step of a plan <per-plans-approving>`. What you are approving, and what you can see
    before approving it, is the same in both places.
 
-.. PENDING NC-025: the card also shows the exact Amperity operation. Naming one here would put a
-   code identifier in the docs (rules §7), so the article describes it and names none.
-
 .. _per-approvals-whole-plan:
 
 Approving a whole plan at once
