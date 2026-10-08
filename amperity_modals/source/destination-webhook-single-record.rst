@@ -75,15 +75,15 @@ Settings
 
 **HTTP method**
 
-Optional. The HTTP method for each request. May be "POST", "PUT", or "PATCH". Defaults to "POST".
+The HTTP method for each request. May be "POST", "PUT", or "PATCH". Defaults to "POST".
 
 **Content type**
 
-Optional. The value of the "Content-Type" header. May be "application/json" or "text/plain". Defaults to "application/json".
+The value of the "Content-Type" header. May be "application/json" or "text/plain". Defaults to "application/json".
 
 **Send record as body**
 
-Optional. Disabled by default, so that the customer's attributes are nested under the **payload-field** set on a journey's **Activate** node, for example {"data": {...}}. Enable this option to send the customer's attributes as the whole request body. The **payload-field** is then ignored.
+Disabled by default, so that the customer's attributes are nested under the **payload-field** set on a journey's **Activate** node, for example {"data": {...}}. Enable this option to send the customer's attributes as the whole request body. The **payload-field** is then ignored.
 
 **Custom headers**
 
@@ -103,7 +103,7 @@ The rest of the configuration for this connector belongs to each journey that se
 
 **payload-field**
 
-Optional. The name of the field that the customer's attributes are nested under in the request body. Defaults to "data". Ignored when **Send record as body** is enabled.
+The name of the field that the customer's attributes are nested under in the request body. Defaults to "data". Ignored when **Send record as body** is enabled.
 
 **route-params**
 
