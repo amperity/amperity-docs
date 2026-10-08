@@ -71,24 +71,41 @@ The keychain is a lookup, not live stitching
 
 Real-time recognition does not re-run :doc:`Stitch <page_stitch>` on each event. It is a lookup against a **keychain that is materialized from Stitch's output**. Stitch resolves your customer records into stitched customers, each identified by an Amperity ID; the keychain is built from that output, mapping each linking-key value to the single Amperity ID it resolves to. A value that Stitch associates with more than one Amperity ID is left out of the keychain rather than resolved ambiguously.
 
-Because recognition is a lookup against this materialized keychain, a customer is recognized in real time only once their identifiers are present in the keychain. A newly stitched identity is not recognizable in real time until the keychain reflects it.
+After each Stitch run, Amperity applies the changes in Stitch's output to the keychain, so that newly stitched identities become recognizable in real time. Between runs, the keychain also grows in real time as events arrive, as described in the next section.
 
 .. real-time-identity-keychain-lookup-end
 
-.. TODO: verify with <eng> -- when/how the keychain materialization task is (re)built and loaded into the live index (on Stitch completion? scheduled? on demand?), which determines the recognition latency between a newly stitched identity and real-time recognition (task/keychain.clj, keychain/sql.clj, link/sync.clj). Do not state a refresh cadence or a latency figure until confirmed (NC1).
 
+.. _real-time-identity-real-time:
 
-.. _real-time-identity-anonymous:
-
-Anonymous events and reconciliation
+Identity changes in real time
 ==================================================
 
-.. real-time-identity-anonymous-start
+.. real-time-identity-real-time-start
 
-When an event carries an identifier that is not in the keychain--a first-time visitor, or an identity Stitch has not yet resolved--the event cannot be resolved to a stitched customer. Amperity treats the event as anonymous and can provision a profile for it just in time, so that the activity is not lost.
+Recognition does not wait for the next Stitch run to learn about new customers and identifiers. As events arrive, Amperity updates identity in real time:
 
-Once that identifier becomes part of the stitched graph, later events that carry it resolve to the customer's stitched profile.
+* **New profiles.** When an event's identifiers match nothing in the keychain--a first-time visitor, or a customer Stitch has not seen--Amperity assigns a new Amperity ID and creates a profile for it within seconds, so that the activity is not lost and the visitor can be recognized on their next event.
+* **New identifiers.** When an event resolves to a known profile and also carries an identifier that is not yet in the keychain--a new device, a second email address--Amperity adds that identifier to the profile's keychain.
+* **Anonymous to known.** When an event links an anonymous profile to a known customer--for example, a login event that carries both a cookie ID and an email address--Amperity merges the anonymous profile's history into the known customer's profile.
 
-.. real-time-identity-anonymous-end
+.. real-time-identity-real-time-end
 
-.. TODO: verify with <eng> -- the detail of how and when an anonymous (unclaimed/unlinked) profile's already-collected activity is reconciled into the stitched profile once the identifier appears in Stitch (auger.merge/resolve-profile-id>, auger.clj:217-261,250-261). Do not describe the merge/reconciliation mechanics until confirmed (NC2).
+
+.. _real-time-identity-stitch:
+
+Real-time identity and Stitch
+==================================================
+
+.. real-time-identity-stitch-start
+
+Real-time identity and Stitch keep each other up to date:
+
+* **Events feed Stitch.** Every event type is saved to a table in your tenant's events dataset. Stitch reads those tables as source data, so identifiers seen in real-time events take part in identity resolution on the next Stitch run. The identifiers of profiles created in real time also flow back to Stitch, which keeps their Amperity IDs.
+* **Stitch corrects real time.** When a Stitch run merges, splits, adds, or removes customers, Amperity applies those changes to every affected profile collection: it recalculates the affected profiles' attributes from their full event history and re-evaluates their segment membership.
+
+Real-time profiles are always the best available answer, and each Stitch run trues them up. Expect some Amperity IDs to change between runs as Stitch refines its results.
+
+.. real-time-identity-stitch-end
+
+.. TODO: verify with <eng> -- whether real-time anonymous-to-known merges are sent back to Stitch. Per the feature context, merge feedback to Stitch is off by default, so the batch identity graph reflects a merge only when Stitch reaches the same conclusion from the underlying data. Do not state that real-time merges update Stitch until confirmed.

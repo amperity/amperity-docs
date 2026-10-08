@@ -48,8 +48,8 @@ Look up the profile at request time
 At request time, personalize from the customer's :doc:`real-time profile <real_time_profiles>`:
 
 #. **Identify the visitor.** Resolve an identifier for the visitor--an email address, a loyalty ID, a known device identifier.
-#. **Read the profile.** Call the Real-time API to look up the profile for that identifier: ``GET /prof/profiles/{collection-id}/{profile-id}``. The response carries the customer's attributes--the aggregate and computed values the collection maintains.
-#. **Read segment membership.** Where personalization depends on an audience, read the customer's :doc:`real-time segment <real_time_segments>` memberships from the segment-membership endpoint.
+#. **Look up the profile.** Call the Real-time API to look up the profile by that identifier: ``GET /prof/lookup/{collection-id}/keychain``, or ``POST`` to the same path to pass several identifiers in the request body. Amperity tries the identifiers in the collection's keychain priority order and returns the first profile that matches--a single profile, or nothing. The response carries the customer's attributes. When you already have the customer's Amperity ID, read the profile directly with ``GET /prof/profiles/{collection-id}/{profile-id}``.
+#. **Read segment membership.** Where personalization depends on an audience, read the customer's :doc:`real-time segment <real_time_segments>` memberships with ``GET /prof/profiles/{collection-id}/{profile-id}/segments``. The profile response does not include segment membership, so personalizing on both attributes and segments takes two calls.
 #. **Personalize the response.** Use the attributes and memberships to shape what the customer sees.
 
 For request and response details, and for the full set of endpoints, see the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
@@ -66,11 +66,9 @@ Personalization depends on recognition
 
 This pattern works only for customers Amperity has **recognized**. A lookup succeeds when the visitor's identifier resolves to a profile; if it does not resolve, there is no profile to personalize from, and you fall back to a default experience.
 
-Recognition is a lookup against a keychain built from Stitch output, not live re-stitching (see :doc:`real-time identity recognition <real_time_identity>`). A customer whose identity Stitch has only just resolved may not yet be recognized in real time, so a very recent first-time customer can still see the default experience until their identifier is reflected in the keychain.
+Recognition is a lookup against the collection's keychain, not live re-stitching (see :doc:`real-time identity recognition <real_time_identity>`). The keychain is built from Stitch output and refreshed after each Stitch run, and it also grows in real time: a visitor whose identifier has arrived on an event has a profile within seconds and can be looked up by that identifier. A visitor whose identifier Amperity has never seen--on an event or in Stitch--has no profile yet and sees the default experience.
 
 .. real-time-personalization-recognition-end
-
-.. TODO: verify with <eng> -- state the recognition latency plainly once NC1 lands (the keychain refresh cadence between a newly stitched identity and real-time recognition). Until then, describe the dependency qualitatively without a latency figure.
 
 
 .. _real-time-personalization-related:

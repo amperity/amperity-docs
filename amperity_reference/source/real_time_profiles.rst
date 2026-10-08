@@ -56,7 +56,7 @@ Real-time profiles
 
 A real-time profile is the per-customer record a collection maintains. Each profile belongs to a tenant and a collection, is identified by its **profile ID**, and holds:
 
-* The profile's **attributes**--the known, aggregated, and computed values the collection defines.
+* The profile's **attributes**--the database, event, and custom attribute values the collection defines.
 * The profile's **keychain**--the linking-key values that resolve to this profile.
 
 As events arrive on the collection's subscribed streams, Amperity updates the matching profile's attributes in place, so a read of the profile reflects the customer's most recent recognized activity.
@@ -99,12 +99,13 @@ Attributes
 
 .. real-time-profiles-attributes-start
 
-A collection defines the attributes its profiles carry. Beyond known values brought in from customer 360 tables, two kinds of attribute are computed from a profile's real-time events:
+A collection defines the attributes its profiles carry. There are three kinds of attribute:
 
-* **Aggregate attributes** summarize a profile's events--a count, a sum, a maximum, the most recent value, and so on. Each aggregate declares a **scope** that determines which events it summarizes: a specific event type, every event on a stream, or all of the profile's events.
-* **Computed attributes** derive a value from a profile's other attributes using an expression.
+* **Database attributes** bring in values from your customer 360 database, such as a customer's name or best email address. They update when the database refreshes.
+* **Event attributes** summarize a profile's events--a count, a sum, a maximum, the most recent value, and so on--over an hourly, daily, or weekly window, or over all time. Each event attribute declares a **scope** that determines which events it summarizes: a specific event type, every event on a stream, or all of the profile's events.
+* **Custom attributes** derive a value from a profile's other attributes using an expression. A custom attribute that depends on the current time--for example, minutes since the cart last changed--is recalculated on a schedule, so its value changes even when no new event arrives.
 
-Both kinds are written in :doc:`Amperity's expression language <expressions>`, where the full set of functions--including the array functions used to work with event collections--is documented.
+Event and custom attributes are written in :doc:`Amperity's expression language <expressions>`, where the full set of functions--including the array functions used to work with event collections--is documented.
 
 .. real-time-profiles-attributes-end
 

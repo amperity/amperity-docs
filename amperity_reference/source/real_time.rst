@@ -36,7 +36,7 @@ Data moves through the real-time suite in a fixed flow:
 #. **Event streams and event types.** Customer events arrive on an :doc:`event stream <event_streams>`. The stream recognizes each event's :doc:`event type <event_streams>` and coerces its fields into a typed record.
 #. **Identity recognition.** Amperity resolves the event's identifiers to the stitched customer they belong to, so the event updates the right person. See :doc:`real-time identity recognition <real_time_identity>`.
 #. **Profile collections.** The event updates a :doc:`real-time profile <real_time_profiles>` in a profile collection--a per-customer record of attributes, keyed by the customer's Amperity ID.
-#. **Attributes.** The collection maintains aggregate and computed :doc:`attributes <real_time_profiles>` from the profile's events, written in :doc:`Amperity's expression language <expressions>`.
+#. **Attributes.** The collection maintains event and custom :doc:`attributes <real_time_profiles>` from the profile's events, alongside database attributes from your customer 360 database. Event and custom attributes are written in :doc:`Amperity's expression language <expressions>`.
 #. **Real-time segments.** An always-on :doc:`real-time segment <real_time_segments>` continuously evaluates a predicate over the collection's profiles; a profile enters or exits the segment as its attributes change.
 #. **Real-time journeys.** A :doc:`real-time journey <real_time_journeys>` that travelers enter by segment membership drives activations in real time--sending to a :doc:`destination <page_destinations>`--and records each traveler's path in a travel log.
 

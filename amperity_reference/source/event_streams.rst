@@ -37,7 +37,7 @@ An event stream defines how Amperity receives and interprets a flow of inbound e
 
 * A **recognition method** that resolves every inbound event to one of the event types defined for the stream. An event whose type cannot be resolved is left unrecognized rather than processed.
 * A **routing expression**, a **timestamp expression**, and an **event-id expression**. These extract, respectively, the value used to route the event, the time of the event itself, and a unique identifier for the event.
-* A **mode** that determines whether the stream accepts, silently drops, or rejects the events sent to it.
+* A **mode**--**Active**, **Drop**, or **Reject**--that determines whether the stream accepts the events sent to it, silently drops them, or rejects them.
 
 Events reach a stream through the Real-time API endpoint ``POST /prof/events/{stream-id}``. The stream's mode governs the response the sender receives. For the exact status codes and the request constraints, see :ref:`How events are processed <api-realtime-async>` and the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
 

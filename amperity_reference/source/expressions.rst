@@ -36,7 +36,7 @@ You write expressions in these real-time settings:
 * **Event streams** -- a routing expression recognizes each incoming event and determines its event type. A stream may also define expressions for the event timestamp and event ID.
 * **Event types** -- each field in an event type uses an expression to extract and coerce a value from the raw event payload.
 * **Real-time segments** -- a segment is defined by a boolean expression that is evaluated against a profile's attributes.
-* **Real-time attributes** -- aggregation and computed attributes use expressions over a profile's events and attributes.
+* **Real-time attributes** -- event and custom attributes use expressions over a profile's events and attributes.
 
 .. realtime-expressions-where-end
 
@@ -109,18 +109,18 @@ Time-windowed expressions--such as those used in real-time segments and aggregat
 
 .. _realtime-expressions-scope:
 
-Scoping an aggregation
+Scoping an event attribute
 ==================================================
 
 .. realtime-expressions-scope-start
 
-An aggregation attribute summarizes a profile's events. Each aggregation declares a **scope** that selects which of the profile's events it includes:
+An event attribute summarizes a profile's events. Each event attribute declares a **scope** that selects which of the profile's events it includes:
 
 * **A specific event type** -- only events of that type on that stream.
 * **A stream** -- every event on the stream, across its event types.
 * **All events** -- every event on the profile, across all streams.
 
-Choose the narrowest scope that answers the question. For example, scope a "most recent cart value" aggregation to the cart event type, and a "total events in the last hour" aggregation to all events.
+Choose the narrowest scope that answers the question. For example, scope a "most recent cart value" attribute to the cart event type, and a "total events in the last hour" attribute to all events.
 
 .. realtime-expressions-scope-end
 
@@ -140,8 +140,8 @@ Real-time attributes often work with arrays--the line items in a cart, the event
 
 Two behaviors to keep in mind:
 
-* An array function returns ``NULL`` when its input is ``NULL``, not an empty array. Guard for ``NULL`` where an input array may be absent.
-* ``union``, ``difference``, and ``distinct`` can differ from their batch Spark equivalents in some cases. Verify results if you depend on exact parity with a batch computation.
+* Most array functions return ``NULL``, not an empty array, when an input array is ``NULL``. Guard for ``NULL`` where an input array may be absent, and check each function's entry in the :ref:`AEL operations <expressions-operations>` catalog for its exact behavior.
+* ``union``, ``difference``, and ``distinct`` can differ from their batch Spark equivalents in some cases. The catalog notes each difference; verify results if you depend on exact parity with a batch computation.
 
 .. realtime-expressions-arrays-end
 
@@ -158,6 +158,8 @@ Real-time expressions honor **decimal scale**: a value declared as a decimal kee
 Real-time configuration also type-checks expressions strictly. An expression that resolves to a type that does not match where it is used is reported as a configuration error when you save it, rather than failing later at run time.
 
 .. realtime-expressions-types-end
+
+.. TODO: verify with <eng> -- strict type-checking on save is confirmed for real-time segment queries (ae3228c6ccb). Confirm it also applies to event-type fields and event and custom attributes before keeping the general "real-time configuration" wording.
 
 
 .. _realtime-expressions-more:

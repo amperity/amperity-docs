@@ -2717,7 +2717,7 @@ An **Event Propensity** table associates individual customers to the events that
 
 .. term-event-stream-start
 
-An event stream is a configured flow of inbound events that Amperity ingests and processes in real time. A stream recognizes the type of each event it receives, evaluates the identifiers that link the event to a customer, and routes qualifying events to the profile collections that subscribe to it. A stream can be set to accept, silently drop, or reject the events sent to it.
+An event stream is a configured flow of inbound events that Amperity ingests and processes in real time. A stream recognizes the type of each event it receives, evaluates the identifiers that link the event to a customer, and routes qualifying events to the profile collections that subscribe to it. A stream's mode--Active, Drop, or Reject--determines whether it accepts, silently drops, or rejects the events sent to it.
 
 .. term-event-stream-end
 
@@ -5522,11 +5522,7 @@ A product recommendation predicts which products a given customer is most likely
 
 .. term-profile-api-start
 
-The `Database Profile API <explorer-database-profile-api_>`__ enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
-
-* Identify returning customers
-* Personalize welcome messages and emails
-* Extend customer profiles for campaigns managed from Braze, Movable Ink, Criteo, Salesforce Marketing Cloud, and other downstream marketing applications.
+The `Database Profile API <explorer-database-profile-api_>`__ enables your brand to access customer profiles using a collection of REST API endpoints for site personalization and custom services using data from a Customer 360 database.
 
 .. term-profile-api-end
 
@@ -5544,7 +5540,7 @@ The **Allow Profile API administration** policy option allows full access to the
 
 .. term-profile-collection-start
 
-A profile collection is a set of real-time profiles that share an identity graph, a set of subscribed event streams, and a set of attribute definitions. A collection resolves each inbound event to a profile keyed by its profile ID, and maintains the computed and aggregate attributes that every profile in the collection carries.
+A profile collection is a set of real-time profiles that share an identity graph, a set of subscribed event streams, and a set of attribute definitions. A collection resolves each inbound event to a profile keyed by its profile ID, and maintains the database, event, and custom attributes that every profile in the collection carries.
 
 .. term-profile-collection-end
 
