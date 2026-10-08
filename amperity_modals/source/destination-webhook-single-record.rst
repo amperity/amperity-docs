@@ -54,7 +54,7 @@ Optional, for OAuth. Space-separated scopes to request.
 .. note:: Testing the connection sends a POST request with the JSON body {"text": "This is a simple message."} to the webhook URL. Your endpoint must return a success status code for the test to pass.
 
 
-Settings
+Destination settings
 ==================================================
 
 **Name and description**
