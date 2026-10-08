@@ -41,8 +41,8 @@ When a source row changes, such as when a user adds a secondary phone number or 
 
 To select primary keys open the **Identity resolution** page in **Quick start**. On the **Identity tables** card, do one of the following:
 
-#. Click **AmpAI select** to have the **AmpAI Assistant** determine which tables contain the best data for identity resolution, which fields in each data source are the optimal primary key, and which customer profile semantic tags to apply to fields in each data source.
-#. Click **Manually select** on the **Primary keys** card to configure primary keys without using the **AmpAI Assistant**.
+#. Click **AI Assistant select** to have the **AI Assistant** determine which tables contain the best data for identity resolution, which fields in each data source are the optimal primary key, and which customer profile semantic tags to apply to fields in each data source.
+#. Click **Manually select** on the **Primary keys** card to configure primary keys without using the **AI Assistant**.
 
 Click **Edit** on the **Primary keys** card to review primary keys for all tables.
 

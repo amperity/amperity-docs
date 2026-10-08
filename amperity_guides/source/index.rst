@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Use AmpAI guided setup to configure customer profiles for your tenant.
+        Use guided setup, with help from the AI Assistant, to configure customer profiles for your tenant.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Use AmpAI guided setup to configure customer profiles for your tenant.
+        Use guided setup, with help from the AI Assistant, to configure customer profiles for your tenant.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,7 +19,7 @@ Guided setup
 
 .. setup-about-start
 
-Guided setup is a series of guided workflows for configuring identity resolution and customer profiles. For many steps you can use the AmpAI Assistant to do the initial work, after which you can review the results and make any necessary changes. You can revisit each step in any guided workflow at any time.
+Guided setup is a series of guided workflows for configuring identity resolution and customer profiles. For many steps you can use the **AI Assistant** to do the initial work, after which you can review the results and make any necessary changes. You can revisit each step in any guided workflow at any time.
 
 .. setup-about-end
 

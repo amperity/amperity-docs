@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Set up a measurement courier to bring Meta and Google paid media performance data into Amperity, and then use AmpAI to analyze it.
+        Set up a measurement courier to bring Meta and Google paid media performance data into Amperity, and then use the AI Assistant to analyze it.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Set up a measurement courier to bring Meta and Google paid media performance data into Amperity, and then use AmpAI to analyze it.
+        Set up a measurement courier to bring Meta and Google paid media performance data into Amperity, and then use the AI Assistant to analyze it.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -19,12 +19,12 @@ Paid Media Measurement & Optimization
 
 .. paid-media-measurement-overview-start
 
-Paid Media Measurement & Optimization brings your paid media performance data from Meta and Google into Amperity where it is available to AmpAI for analysis alongside your customer data.
+Paid Media Measurement & Optimization brings your paid media performance data from Meta and Google into Amperity where it is available to the **AI Assistant** for analysis alongside your customer data.
 
 There are two parts to it:
 
 #. **Set up a measurement courier** for Meta and/or Google. The courier pulls paid media performance data into your tenant on a daily schedule and adds it to the Customer 360 database.
-#. **Ask AmpAI about paid media performance** using natural language. AmpAI answers questions about your paid media data without requiring you to write SQL.
+#. **Ask the AI Assistant about paid media performance** using natural language. The **AI Assistant** answers questions about your paid media data without requiring you to write SQL.
 
 .. paid-media-measurement-overview-end
 
@@ -38,7 +38,7 @@ How it works
 
 A measurement courier connects to Meta or Google using an authorized credential, and then pulls paid media performance data for a selected ad account into Amperity. The data lands in the Customer 360 database under a dedicated namespace for each platform, one for Meta and one for Google.
 
-After the courier is set up, a courier group runs every day to keep the data current. Because the performance data lands in the Customer 360 database, it is available to AmpAI, which can use it to answer questions about paid media performance.
+After the courier is set up, a courier group runs every day to keep the data current. Because the performance data lands in the Customer 360 database, it is available to the **AI Assistant**, which can use it to answer questions about paid media performance.
 
 .. paid-media-measurement-how-it-works-end
 
@@ -54,7 +54,7 @@ Before you set up a measurement courier, make sure you have:
 
 * An authorized credential for the platform you want to measure--Meta or Google. You can reuse an existing credential, including one you already use to send data to a Meta or Google destination, so you do not need to create a separate credential for measurement. Add and authorize credentials from the **Credentials** page. See :doc:`Credentials <credentials>`.
 * Access to the ad account whose performance data you want to bring into Amperity.
-* AmpAI enabled for your tenant, so that you can ask questions about paid media performance. See :doc:`AmpAI <ampai>`.
+* The **AI Assistant** enabled for your tenant, so that you can ask questions about paid media performance. See :doc:`AI Assistant <ampai>`.
 
 .. paid-media-measurement-requirements-end
 
@@ -113,22 +113,22 @@ Because these tables are part of the Customer 360 database, you can browse them 
 
 .. _paid-media-measurement-ampai:
 
-Query paid media performance with AmpAI
+Query paid media performance with the AI Assistant
 ==================================================
 
 .. paid-media-measurement-ampai-start
 
-After paid media performance data lands in the Customer 360 database, you can use AmpAI to analyze it with natural language---no SQL required. AmpAI recognizes the paid media tables and can answer questions about performance across Meta and Google.
+After paid media performance data lands in the Customer 360 database, you can use the **AI Assistant** to analyze it with natural language---no SQL required. The **AI Assistant** recognizes the paid media tables and can answer questions about performance across Meta and Google.
 
-Ask AmpAI questions such as:
+Ask the **AI Assistant** questions such as:
 
 * "Compare the performance of Facebook and Instagram last month."
 * "Rank my campaigns by return on ad spend."
 * "Which campaigns show a declining click-through rate week over week?"
 * "Show me reach by campaign."
 
-AmpAI uses a set of standard paid media metrics as context when it answers, including return on ad spend (ROAS), cost per acquisition (CPA), click-through rate (CTR), cost per mille (CPM), cost per click (CPC), data freshness, and attribution status.
+The **AI Assistant** uses a set of standard paid media metrics as context when it answers, including return on ad spend (ROAS), cost per acquisition (CPA), click-through rate (CTR), cost per mille (CPM), cost per click (CPC), data freshness, and attribution status.
 
-For how to ask questions, view the generated SQL, and work with results, see :doc:`AmpAI <ampai>` and :doc:`Customer Data Assistant <customer_data_assistant>`.
+For how to ask questions, view the generated SQL, and work with results, see :doc:`Working with the AI Assistant <customer_data_assistant>`.
 
 .. paid-media-measurement-ampai-end

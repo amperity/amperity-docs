@@ -68,13 +68,13 @@ Enhance customer 360 view
 
 #. When the workflow is complete, click on the **Quick start** page and select **View Details**.
 
-#. Click **AmpAI Select** to have **AmpAI** select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
+#. Click **AI Assistant select** to have the **AI Assistant** select identity tables and appropriately configure everything. This should only take ~20 seconds to complete.
 
-   .. note:: If **AmpAI Select** does not appear to make any changes refresh the page. This is a known bug.
+   .. note:: If **AI Assistant select** does not appear to make any changes refresh the page. This is a known bug.
 
       .. image:: /_images/ex02_ampai_select.png
          :width: 400 px
-         :alt: AmpAI Select
+         :alt: AI Assistant select
          :align: left
          :class: no-scaled-link
 

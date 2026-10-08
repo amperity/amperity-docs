@@ -2052,10 +2052,10 @@ Format SQL
 
 .. databases-database-howto-format-sql-start
 
-AmpAI can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
+The **AI Assistant** can reformat the SQL in a custom database table editor. Click **Format SQL** in the toolbar and choose one of two options:
 
 * **Standard format** Reformats the SQL using default style rules.
-* **Custom format** Opens a dialog where you can provide additional instructions that AmpAI applies on top of standard formatting.
+* **Custom format** Opens a dialog where you can provide additional instructions that the **AI Assistant** applies on top of standard formatting.
 
 .. databases-database-howto-format-sql-end
 
@@ -2080,7 +2080,7 @@ Generate field descriptions
 
 .. databases-database-howto-generate-field-descriptions-start
 
-AmpAI can generate descriptions for database table fields that do not already have one. Click **Generate field descriptions** in the **Description** settings group on the right side of the table editor. When the table is defined by a SQL query, AmpAI uses the upstream schema to improve the accuracy of the generated descriptions. This may take a few minutes depending on the number of fields.
+The **AI Assistant** can generate descriptions for database table fields that do not already have one. Click **Generate field descriptions** in the **Description** settings group on the right side of the table editor. When the table is defined by a SQL query, the **AI Assistant** uses the upstream schema to improve the accuracy of the generated descriptions. This may take a few minutes depending on the number of fields.
 
 .. note:: The **Generate field descriptions** link is disabled when all fields already have descriptions.
 

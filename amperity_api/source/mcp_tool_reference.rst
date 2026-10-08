@@ -676,7 +676,7 @@ Manage segments and folders.
 
        **context_documents_create**
 
-   * - Read the tenant's AmpAI system prompt
+   * - Read the tenant's AI Assistant system prompt
      - **ai_system_prompt_get**
 
 

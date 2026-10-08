@@ -6371,7 +6371,7 @@ Shopify is an e-commerce platform for online stores and retail point-of-sale sys
 
 .. term-signal-start
 
-Signal is the dashboarding surface in Amperity. A Signal board is one tab, a Signal card is one chart on a board, and each card declares the aggregate it measures over a table in an Amperity database rather than carrying a saved result. Boards and cards are authored through AmpAI.
+Signal is the dashboarding surface in Amperity. A Signal board is one tab, a Signal card is one chart on a board, and each card declares the aggregate it measures over a table in an Amperity database rather than carrying a saved result. Boards and cards are authored through the AI Assistant.
 
 .. term-signal-end
 

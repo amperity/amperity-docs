@@ -25,7 +25,7 @@ A collection of in-depth user guides to help marketers and analysts:
 * Build and run SQL queries and send those results anywhere
 * Send audiences to paid media applications
 * Use events to help track the success of your campaigns
-* Use AmpAI features
+* Use **AI Assistant** features
 
 .. user-guides-about-end
 
@@ -50,7 +50,7 @@ Key concepts
 
 .. user-guides-concepts-start
 
-Define audiences with AmpAI, segments, and queries. Activate audiences using campaigns, journeys, and orchestrations.
+Define audiences with the AI Assistant, segments, and queries. Activate audiences using campaigns, journeys, and orchestrations.
 
 Focus on your most valuable customers to build audiences that grow loyalty and increase customer lifetime value. Use SQL to build audiences that support any use case. Send audiences to marketing applications, advertising platforms, and analytics and reporting tools.
 
@@ -234,7 +234,7 @@ Build audiences around activities like first orders, repeat orders, and who has 
    :maxdepth: 3
    :hidden:
 
-   AmpAI <grid_ampai>
+   AI Assistant <grid_ampai>
    Segments <grid_segments>
    Campaigns <grid_campaigns>
    Journeys <grid_journeys>

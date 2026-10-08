@@ -33,7 +33,7 @@ Use the **Settings** page to manage users, configure SSO, define resource groups
    .. grid-item-card:: Activity logs
       :link: activity_logs.html
 
-   .. grid-item-card:: AmpAI settings
+   .. grid-item-card:: AI Assistant settings
       :link: ampai_settings.html
 
    .. grid-item-card:: API keys
@@ -69,7 +69,7 @@ Use the **Settings** page to manage users, configure SSO, define resource groups
    :hidden:
 
    Activity logs <activity_logs>
-   AmpAI settings <ampai_settings>
+   AI Assistant settings <ampai_settings>
    Credentials <credentials>
    Integrations <integrations>
    Policies <policies>
