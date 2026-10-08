@@ -3,32 +3,29 @@
 
 .. meta::
     :description lang=en:
-        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
+        Tool-specific AI Assistants bring conversational help into the segment, journey, query, and Amps consumption editors, where they help with detailed refinements in place.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
+        Tool-specific AI Assistants bring conversational help into the segment, journey, query, and Amps consumption editors, where they help with detailed refinements in place.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI assistants
+        Tool-specific AI Assistants
 
 
 ==================================================
-About AmpAI assistants
+Tool-specific AI Assistants
 ==================================================
 
 .. assistant-overview-start
 
-**AmpAI** assistants include the following:
+The tool-specific **AI Assistants** include the following:
 
 * **Amp Insights** helps users understand Amps usage and consumption
 * **Journeys AI Assistant** helps users build and personalize multi-touch journeys
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
 * **Segments AI Assistant** helps users build segments
-* Explains workflow task errors inline on the **Workflows** page
-* Generates field descriptions for database tables in the table editor
-* Formats SQL in the custom table editor, with optional custom instructions
 
 These assistants are generative AI features within Amperity that use natural language as input commands.
 
@@ -69,7 +66,7 @@ Use the **Segments AI Assistant** in the **Segment Editor** to:
 
 When a workflow task fails, click **Explain this error** on the **Workflows** page to get an AI-generated plain-language explanation of why the task failed.
 
-When editing a database table, click **Generate field descriptions** in the table settings panel to have AmpAI write descriptions for any fields that do not yet have one.
+When editing a database table, click **Generate field descriptions** in the table settings panel to have the **AI Assistant** write descriptions for any fields that do not yet have one.
 
 When editing a custom SQL table, use **Format SQL** to reformat the SQL in the editor. Choose **Custom format** to provide specific formatting instructions, such as adding explanatory comments to each CTE.
 
@@ -77,9 +74,9 @@ When editing a custom SQL table, use **Format SQL** to reformat the SQL in the e
 
 .. assistant-overview-important-start
 
-.. important:: As with all generative AI capabilities, the outputs of **AmpAI** assistants are probabilistic. Users should double check outputs for accuracy.
+.. important:: As with all generative AI capabilities, the outputs of tool-specific **AI Assistants** are probabilistic. Users should double check outputs for accuracy.
 
-   Review the |support_ai_assistant_privacy_faq| to learn more about how the **AmpAI Assistant** interacts with LLMs and the Microsoft Azure OpenAI Service.
+   Review the |support_ai_assistant_privacy_faq| to learn more about how tool-specific **AI Assistants** interact with LLMs and the Microsoft Azure OpenAI Service.
 
 .. assistant-overview-important-end
 
@@ -87,85 +84,31 @@ When editing a custom SQL table, use **Format SQL** to reformat the SQL in the e
 
 .. admonition:: Amperity Learning Lab
 
-   The **AmpAI** assistants are generative AI features that can help you build better SQL queries, generate customer segments, and structure journeys based on the data in your Amperity tenant.
+   The tool-specific **AI Assistants** are generative AI features that can help you build better SQL queries, generate customer segments, and structure journeys based on the data in your Amperity tenant.
 
    Open **Learning Lab** to learn more about how `the Amperity AI Assistant <https://amperity.com/learning-lab/the-amperity-ai-assistant>`__ |ext_link| and the `Segments AI Assistant <https://amperity.com/learning-lab/ai-assisted-segment-creation>`__ |ext_link| can help you build better queries, segments, and journeys. Registration is required.
 
 .. assistant-learning-lab-end
 
 
-.. _assistant-regional-availability:
-
-Regional availability
-==================================================
-
-.. assistant-regional-availability-start
-
-The availability of each **AmpAI** assistant depends on the hosting region for your tenant. Tenant settings and user permissions may also affect access.
-
-For tenants hosted in Canada:
-
-.. list-table::
-   :widths: 35 30 35
-   :header-rows: 1
-
-   * - Assistant
-     - Availability
-     - Additional requirements
-   * - Amp Insights
-     - Available
-     - **AmpAI** enabled for the tenant and access to the **Amps** dashboard
-   * - Journeys AI Assistant
-     - Not available
-     - Not applicable
-   * - Queries AI Assistant
-     - Available
-     - **AmpAI** enabled for the tenant and access to the **Queries** page
-   * - Segments AI Assistant
-     - Not available
-     - Not applicable
-
-Canada currently deploys GPT-4.1 mini. When an available assistant requests a model that is not deployed in Canada, Amperity routes the request to GPT-4.1 mini.
-
-.. assistant-regional-availability-end
-
-
-.. _assistant-enable-disable:
-
-Enable or disable AmpAI assistants
-==================================================
-
-.. assistant-enable-disable-start
-
-AmpAI features, including **AmpAI** assistants, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
-
-.. assistant-enable-disable-end
-
-**To disable AmpAI assistants**
-
-.. include:: ../../amperity_reference/source/ampai_settings.rst
-   :start-after: .. settings-user-ampai-steps-start
-   :end-before: .. settings-user-ampai-steps-end
-
-
 .. _assistant-howitworks:
 
-How AmpAI assistants work
+How tool-specific AI Assistants work
 ==================================================
 
 .. assistant-howitworks-start
 
-**AmpAI** assistants are powered by LLMs on a private instance of Azure OpenAI Service.
+Tool-specific **AI Assistants** are powered by LLMs on a private instance of Azure OpenAI Service.
 
 Amperity passes information on the schema information, query and segment examples, results, errors, table usage, and performs a series of research tool calls to improve the quality of results. While working, the assistant shows each step with a running, succeeded, or failed indicator so you can follow its progress.
 
-.. note:: More detail about how **AmpAI** assistants work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
+.. note:: More detail about how tool-specific **AI Assistants** work, including data sharing policies, how the model stores data, and what types of data is sent (or not sent), is available from the |ext_amperity_assistant_privacy_faq|.
 
 .. assistant-howitworks-end
 
 .. assistant-workflow-errors-start
 
-When a workflow task fails with a system-level error, an **Explain this error** link appears in the task error panel on the **Workflows** page. Click it to send the error details to AmpAI and receive a plain-language explanation of what went wrong. The explanation appears inline, directly below the error message.
+When a workflow task fails with a system-level error, an **Explain this error** link appears in the task error panel on the **Workflows** page. Click it to send the error details to the **AI Assistant** and receive a plain-language explanation of what went wrong. The explanation appears inline, directly below the error message.
 
 .. note:: The **Explain this error** link is available for system-level errors only. Errors caused by customer configuration do not show this option.
 
@@ -173,13 +116,13 @@ When a workflow task fails with a system-level error, an **Explain this error** 
 
 .. assistant-generate-field-descriptions-start
 
-In the table editor, a **Generate field descriptions** link appears in the **Description** settings group on the right side panel. Click it to have AmpAI write descriptions for any fields that do not already have one. When the table is defined by a SQL query, AmpAI queries the upstream schema to improve the accuracy of the generated descriptions. Generation may take a few minutes depending on the number of fields. Fields that already have descriptions are left unchanged.
+In the table editor, a **Generate field descriptions** link appears in the **Description** settings group on the right side panel. Click it to have the **AI Assistant** write descriptions for any fields that do not already have one. When the table is defined by a SQL query, the **AI Assistant** queries the upstream schema to improve the accuracy of the generated descriptions. Generation may take a few minutes depending on the number of fields. Fields that already have descriptions are left unchanged.
 
 .. assistant-generate-field-descriptions-end
 
 .. assistant-format-sql-start
 
-In the SQL editor for a custom database table, a **Format SQL** button appears in the toolbar. It offers two modes. **Standard format** reformats the SQL using default style rules. **Custom format** opens a dialog where you can provide additional instructions. For example: "Add a comment explaining the content of each CTE" that AmpAI applies on top of standard formatting. The editor is read-only while formatting is in progress.
+In the SQL editor for a custom database table, a **Format SQL** button appears in the toolbar. It offers two modes. **Standard format** reformats the SQL using default style rules. **Custom format** opens a dialog where you can provide additional instructions. For example: "Add a comment explaining the content of each CTE" that the **AI Assistant** applies on top of standard formatting. The editor is read-only while formatting is in progress.
 
 .. assistant-format-sql-end
 
@@ -226,7 +169,7 @@ The following examples show some of the ways you can use the **Journeys AI Assis
 
 .. note:: The answers to these questions within your tenant will depend on the journey configuration, schema, results, and error information that was provided to the model and may be different than the examples shown.
 
-.. tip:: Review the steps generated by the **AmpAI Assistant** to ensure they align with your campaign strategy before activating the journey.
+.. tip:: Review the steps generated by the **Journeys AI Assistant** to ensure they align with your campaign strategy before activating the journey.
 
 .. assistant-journey-examples-end
 
@@ -395,7 +338,7 @@ Build natural language queries
 
 .. assistant-query-example-natural-language-start
 
-You can use natural language--the same types of sentences you use when talking to co-workers and friends--to ask the **AmpAI Assistant** to help you build queries against any database in the **Customer 360** page.
+You can use natural language--the same types of sentences you use when talking to co-workers and friends--to ask the **Queries AI Assistant** to help you build queries against any database in the **Customer 360** page.
 
 .. assistant-query-example-natural-language-end
 
@@ -419,9 +362,9 @@ Customers by lifetime spend
       :align: left
       :class: no-scaled-link
 
-   .. tip:: When "Tables and fields are valid" is shown for the SQL returned by the **AmpAI Assistant** you can try running the query in the SQL **Query Editor**.
+   .. tip:: When "Tables and fields are valid" is shown for the SQL returned by the **Queries AI Assistant** you can try running the query in the SQL **Query Editor**.
 
-      Click the **Copy SQL** link in the response from the **AmpAI Assistant**, paste the SQL into the SQL **Query Editor**, click the **Run query** button, and then (after the query is finished running) you can view the results.
+      Click the **Copy SQL** link in the response from the **Queries AI Assistant**, paste the SQL into the SQL **Query Editor**, click the **Run query** button, and then (after the query is finished running) you can view the results.
 
 .. assistant-query-example-natural-language-lifetime-spend-end
 
@@ -454,7 +397,7 @@ Ask for help resolving errors
 
 .. assistant-query-example-errors-start
 
-When you have an error in your query syntax you can ask the **AmpAI Assistant** for help resolving the error.
+When you have an error in your query syntax you can ask the **Queries AI Assistant** for help resolving the error.
 
 **Question**
    "Can you help me resolve this error?"
@@ -477,7 +420,7 @@ Ask questions about syntax
 
 .. assistant-query-example-syntax-start
 
-You can ask the **AmpAI Assistant** to help you understand how specific types of syntax work in a SQL query.
+You can ask the **Queries AI Assistant** to help you understand how specific types of syntax work in a SQL query.
 
 **Question**
    "What is the syntax for a CASE statement?"
@@ -531,11 +474,11 @@ You can ask the **Segments AI Assistant** to build a segment based on the criter
      :align: left
      :class: no-scaled-link
 
-.. tip:: Be sure to check that the segment created matches what you were looking for, and if not you can guide the **AmpAI Assistant** on how to try again.
+.. tip:: Be sure to check that the segment created matches what you were looking for, and if not you can guide the **Segments AI Assistant** on how to try again.
 
    For example, if you ask for a segment of your highest value customers without specifying customer lifetime value as the criteria, you may get a segment based on highest spend over the past year. 
 
-   In cases like this, prompt the **AmpAI Assistant** again and specify how you want to measure value. 
+   In cases like this, prompt the **Segments AI Assistant** again and specify how you want to measure value. 
 
 .. ampai-segments-example-create-segment-end
 

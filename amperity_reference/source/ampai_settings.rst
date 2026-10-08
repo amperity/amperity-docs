@@ -3,32 +3,32 @@
 
 .. meta::
     :description lang=en:
-        Configuration settings allow AmpAI to be turned on or off.
+        Configuration settings allow the AI Assistant to be turned on or off.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configuration settings allow AmpAI to be turned on or off.
+        Configuration settings allow the AI Assistant to be turned on or off.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI settings
+        AI Assistant settings
 
 ==================================================
-About AmpAI settings
+About AI Assistant settings
 ==================================================
 
 .. settings-user-ampai-start
 
-AmpAI provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AmpAI features, including the AmpAI Assistant, may be enabled or disabled by a user who is assigned the **DataGrid Operator** policy.
+The **AI Assistant** provides marketers, analysts, and data engineers with an AI-powered toolkit for smarter decision-making. AI Assistant features, including the tool-specific **AI Assistants**, may be enabled or disabled by a user who is assigned the **DataGrid Operator** policy.
 
 .. settings-user-ampai-end
 
-**To disable AmpAI features**
+**To disable AI Assistant features**
 
 .. settings-user-ampai-steps-start
 
-#. From the **Settings** page, open the **AmpAI** tab.
-#. Under **Advanced settings**, select the **Disable AmpAI features** option to disable AmpAI features, including the AmpAI Assistant.
+#. From the **Settings** page, open the **AI Assistant** tab.
+#. Under **Advanced settings**, select the **Disable AI features** option to disable AI Assistant features, including the tool-specific **AI Assistants**.
 #. Click **Confirm**.
 
 .. settings-user-ampai-steps-end
@@ -36,16 +36,16 @@ AmpAI provides marketers, analysts, and data engineers with an AI-powered toolki
 
 .. _settings-user-ampai-prompts:
 
-AmpAI prompts
+AI Assistant prompts
 ==================================================
 
 .. settings-user-ampai-prompts-start
 
-.. note:: Ask your Amperity representative about configuring AmpAI prompts for your tenant.
+.. note:: Ask your Amperity representative about configuring **AI Assistant** prompts for your tenant.
 
-A prompt is a question asked to AmpAI by a user of Amperity, such as asking AmpAI to build a query or segment that meets a set of criteria.
+A prompt is a question asked to the **AI Assistant** by a user of Amperity, such as asking it to build a query or segment that meets a set of criteria.
 
-Prompts can also be used to provide context to AmpAI to help ensure answers from AmpAI align to brand criteria and goals. For example:
+Prompts can also be used to provide context to the **AI Assistant** to help ensure answers align to brand criteria and goals. For example:
 
 * Defining key terms
 * Excluding certain types of customers from analysis
@@ -53,7 +53,7 @@ Prompts can also be used to provide context to AmpAI to help ensure answers from
 
 Use the prompt testing environment to validate that prompts achieve the desired results, and then promote effective prompts to your production environment.
 
-The **Prompts** page also supports :ref:`company context <ampai-company-context>`, which lets admins upload reference documents, such as business term definitions, brand guidelines, and product catalogs, that the agent searches when answering business-specific questions.
+The **Prompts** page also supports :ref:`company context <ampai-company-context>`, which lets admins upload reference documents, such as business term definitions, brand guidelines, and product catalogs, that the **AI Assistant** searches when answering business-specific questions.
 
 **Example prompts**
 

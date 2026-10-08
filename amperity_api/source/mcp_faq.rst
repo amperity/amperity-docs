@@ -218,7 +218,7 @@ The model that processes those results is the one in the client you connect, und
 
 .. note:: No tool response includes your access token, a stored plugin credential, or a system secret.
 
-.. note:: This is a different architecture from `AmpAI <https://docs.amperity.com/reference/ampai.html>`__, which is a first-party Amperity feature. For how AmpAI handles data, see the `AmpAI Privacy FAQ <https://docs.amperity.com/reference/ampai_privacy.html>`__.
+.. note:: This is a different architecture from the `AI Assistant <https://docs.amperity.com/reference/ampai.html>`__, which is a first-party Amperity feature. For how the AI Assistant handles data, see the `AI Assistant Privacy FAQ <https://docs.amperity.com/reference/ampai_privacy.html>`__.
 
 .. mcp-faq-llm-end
 

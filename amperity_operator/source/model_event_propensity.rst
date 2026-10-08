@@ -109,7 +109,7 @@ Choose a model type
 
 .. model-event-propensity-configure-model-types-start
 
-When you add an event propensity model you first choose a model type. The four preset types come pre-filled with a name and description, use AmpAI to identify the target event table for you, and set the prediction audience automatically. Choose **Custom event** when the event you want to predict doesn't match a preset; you then provide the target event, prediction audience, and inputs yourself.
+When you add an event propensity model you first choose a model type. The four preset types come pre-filled with a name and description, use the **AI Assistant** to identify the target event table for you, and set the prediction audience automatically. Choose **Custom event** when the event you want to predict doesn't match a preset; you then provide the target event, prediction audience, and inputs yourself.
 
 .. list-table::
    :widths: 25 45 30
@@ -172,7 +172,7 @@ When you add an event propensity model you first choose a model type. The four p
 
        #. Optionally, enter a **Description**.
 
-       #. Under **Target event**, select the **Event table** that contains the target event and the **Event date field** that records when the event occurred. Click **Select with AmpAI** to have AmpAI identify the target event table for you.
+       #. Under **Target event**, select the **Event table** that contains the target event and the **Event date field** that records when the event occurred. Click **Select with AI Assistant** to have the **AI Assistant** identify the target event table for you.
 
           .. note:: Only tables that contain an **amperity_id** field and at least one date (or datetime) field are eligible to use as the target event table.
 
@@ -591,7 +591,7 @@ Tips
 * **Check date field types.** Event date fields must be a date or datetime type. If a date is stored as a string, cast it in the table schema first.
 * **Use one row per event.** Event tables must have one row per event occurrence, not one row per customer. Data that is aggregated to the customer level cannot be used as an event table.
 * **Use one table per event type.** Each event type must have its own table. For example, keep flight bookings and seat upgrades in separate tables.
-* **Use a preset when it fits.** Preset model types auto-identify the target event table with AmpAI, which saves setup time. Use **Custom event** only when no preset matches.
+* **Use a preset when it fits.** Preset model types auto-identify the target event table with the **AI Assistant**, which saves setup time. Use **Custom event** only when no preset matches.
 
 .. model-event-propensity-configure-tips-end
 

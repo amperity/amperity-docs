@@ -21,13 +21,13 @@ About Signal
 
 **Signal** is the AI-powered dashboarding surface in Amperity. It uses your unified data foundation to visualize the KPIs driving your business, and lets you interact naturally with them to gather actionable insights.
 
-With a conversational **AmpAI** interface beside the dashboard, **Signal** helps you understand both what happened and why without having to toggle to a separate query editor or a reporting tool.
+With a conversational **AI Assistant** interface beside the dashboard, **Signal** helps you understand both what happened and why without having to toggle to a separate query editor or a reporting tool.
 
 .. signal-overview-end
 
 .. image:: ../../images/signal_overview.png
    :width: 800 px
-   :alt: A Signal board, with the hero metric and its trend chart above the supporting metrics and breakdowns, and the AmpAI chat docked alongside.
+   :alt: A Signal board, with the hero metric and its trend chart above the supporting metrics and breakdowns, and the AI Assistant chat docked alongside.
    :align: left
    :class: no-scaled-link
 
@@ -67,18 +67,18 @@ The cards on a board are ordered so the page reads top to bottom: the headline m
 
 .. _signal-runs-via-ampai:
 
-Runs via AmpAI chat
+Runs via AI Assistant chat
 --------------------------------------------------
 
 .. signal-runs-via-ampai-start
 
-A **Signal** board is operated by conversation. An :doc:`AmpAI <ampai>` chat sits beside the board, and it is the best way to interact with the board. 
+A **Signal** board is operated by conversation. An :doc:`AI Assistant <ampai>` chat sits beside the board, and it is the best way to interact with the board. 
 
 Ask it what a metric means, or why one moved, and it answers from that card's own definition and the numbers currently on screen. Ask it to add a card, remove one, retitle or reorder the cards, change what a card measures, or build a new board, and it writes those changes to the board and the page reloads itself.
 
 You do not have to provide additional context when asking a question. The chat is already grounded in the board, its cards, the values on screen, and the filters you have applied, so a question about why a given metric is up or down knows what to look for.
 
-A few things are handled in the user interface instead of the **AmpAI** chat: renaming a board, setting which board opens by default, duplicating or deleting one, and saving filters. Everything that changes what a board measures should be a request to **AmpAI**.
+A few things are handled in the user interface instead of the **AI Assistant** chat: renaming a board, setting which board opens by default, duplicating or deleting one, and saving filters. Everything that changes what a board measures should be a request to the **AI Assistant**.
 .. signal-runs-via-ampai-end
 
 
@@ -111,15 +111,15 @@ For **Signal** to show anything, three things must be in place:
 
 * A :doc:`database <databases>` containing the table the cards query.
 * Data loaded into that table. A table that reports no load date gives the board no window to measure, and every card on it reports that its window cannot be resolved.
-* A board with at least one card on it. Until then, **Signal** shows an empty page offering to build one with **AmpAI**.
+* A board with at least one card on it. Until then, **Signal** shows an empty page offering to build one with the **AI Assistant**.
 
 .. image:: ../../images/signal_no_board_yet.png
    :width: 700 px
-   :alt: The Signal page on a tenant with no board yet, offering to build one with AmpAI.
+   :alt: The Signal page on a tenant with no board yet, offering to build one with the AI Assistant.
    :align: left
    :class: no-scaled-link
 
-Setup is most direct on a tenant with Unified Transactions, because that is what **AmpAI** builds the analytics table from. A tenant without it can still use **Signal**, provided it has a transactional table with dates, but the card catalog **AmpAI** builds from is written for retail order data. On a tenant whose data describes tickets, stays, or other non-order events, **AmpAI** reports that gap rather than forcing the retail shape onto it.
+Setup is most direct on a tenant with Unified Transactions, because that is what the **AI Assistant** builds the analytics table from. A tenant without it can still use **Signal**, provided it has a transactional table with dates, but the card catalog the **AI Assistant** builds from is written for retail order data. On a tenant whose data describes tickets, stays, or other non-order events, the **AI Assistant** reports that gap rather than forcing the retail shape onto it.
 
 .. signal-prerequisites-end
 
@@ -152,7 +152,7 @@ Each of these comes from the policy assigned to you. To change what someone can 
 
 .. signal-access-permissions-end
 
-.. TODO: verify with the access model owner -- policies.rst has no Signal section, and its Allowed actions tables map named policies to UI capabilities ("Run query", "Edit query") without ever naming the action string behind a row, so nothing there says which policies grant segments:read, queries:execute, or queries:write. Confirm the mapping so this table can name policies alongside the actions, and open a fast-follow to add a Signal section to policies.rst. Also confirm whether the Restrict AmpAI access policy option disables the Signal chat -- the Signal page itself gates only on the feature flag, so this is unverified.
+.. TODO: verify with the access model owner -- policies.rst has no Signal section, and its Allowed actions tables map named policies to UI capabilities ("Run query", "Edit query") without ever naming the action string behind a row, so nothing there says which policies grant segments:read, queries:execute, or queries:write. Confirm the mapping so this table can name policies alongside the actions, and open a fast-follow to add a Signal section to policies.rst. Also confirm whether the Restrict AI Assistant access policy option disables the Signal chat -- the Signal page itself gates only on the feature flag, so this is unverified.
 
 
 .. _signal-write-a-board:
@@ -162,27 +162,27 @@ Using AI to write a board
 
 .. signal-build-a-board-start
 
-Boards are built by **AmpAI**. You can start a build from the **Signal** page in Amperity, or from the Amperity MCP server---the same instructions drive both, so a board built one way is a board you can read and change the other way.
+Boards are built by the **AI Assistant**. You can start a build from the **Signal** page in Amperity, or from the Amperity MCP server---the same instructions drive both, so a board built one way is a board you can read and change the other way.
 
 A build has two steps, and the first one only runs on a tenant that does not already have the analytics table.
 
-**Setting up the table.** **AmpAI** checks for **UT_Analytics** and creates it, or adds the columns a card needs to an existing one. It asks you before it touches a table, because a table is used outside the dashboard, and it confirms the names of the database and the table with you first. It changes no other table. A new or repaired table has no rows until the database runs, so **AmpAI** also asks before running it and tells you that the run rebuilds every table in that database, not only this one. The fastest mode takes 5 to 15 minutes and continues after the chat turn ends. Reload the page when it finishes.
+**Setting up the table.** The **AI Assistant** checks for **UT_Analytics** and creates it, or adds the columns a card needs to an existing one. It asks you before it touches a table, because a table is used outside the dashboard, and it confirms the names of the database and the table with you first. It changes no other table. A new or repaired table has no rows until the database runs, so the **AI Assistant** also asks before running it and tells you that the run rebuilds every table in that database, not only this one. The fastest mode takes 5 to 15 minutes and continues after the chat turn ends. Reload the page when it finishes.
 
-**Building the board.** **AmpAI** reads your data, proposes the metrics worth tracking, and writes the cards. A build runs over several turns and stops for your confirmation at each point that needs it.
+**Building the board.** The **AI Assistant** reads your data, proposes the metrics worth tracking, and writes the cards. A build runs over several turns and stops for your confirmation at each point that needs it.
 
-Before it writes anything, **AmpAI** reads the :ref:`custom prompt <ampai-custom-prompt>` and the :ref:`company context <ampai-company-context>` documents set for your tenant, so that card titles and metric definitions follow your own business rules and vocabulary rather than generic defaults. Where your own definition of a metric differs from the default, yours wins.
+Before it writes anything, the **AI Assistant** reads the :ref:`custom prompt <ampai-custom-prompt>` and the :ref:`company context <ampai-company-context>` documents set for your tenant, so that card titles and metric definitions follow your own business rules and vocabulary rather than generic defaults. Where your own definition of a metric differs from the default, yours wins.
 
 .. signal-build-a-board-end
 
 
 .. _signal-working-with-ampai:
 
-Working with AmpAI
+Working with the AI Assistant
 ==================================================
 
 .. signal-ampai-intro-start
 
-**Signal** has an **AmpAI** chat docked beside the board. It is one ongoing conversation: pointing it at a card does not start a separate one.
+**Signal** has an **AI Assistant** chat docked beside the board. It is one ongoing conversation: pointing it at a card does not start a separate one.
 
 .. signal-ampai-intro-end
 
@@ -194,17 +194,17 @@ Investigating a card or a board
 
 .. signal-ampai-investigate-start
 
-Each card carries an **Ask AmpAI** control. Selecting it re-grounds the docked chat in that card: its compiled SQL, the values currently on screen, the filters currently applied, and---if you have dragged across a run of buckets on the trend chart---the range you highlighted. It loads a question into the input box for you to edit or send. It does not send one for you.
+Each card carries an **Ask Signal Assistant** control. Selecting it re-grounds the docked chat in that card: its compiled SQL, the values currently on screen, the filters currently applied, and---if you have dragged across a run of buckets on the trend chart---the range you highlighted. It loads a question into the input box for you to edit or send. It does not send one for you.
 
 .. image:: ../../images/signal_ask_ampai.png
    :width: 225 px
-   :alt: The Ask AmpAI control on a Signal card.
+   :alt: The Ask Signal Assistant control on a Signal card.
    :align: left
    :class: no-scaled-link
 
 With no card selected, the chat is grounded in the board as a whole: its title, and every card's kind, position, title, table, and measure.
 
-**AmpAI** answers by querying the table the card reads rather than speculating. 
+The **AI Assistant** answers by querying the table the card reads rather than speculating. 
 
 When the conversation is empty, it offers a few questions to start from, and suggests follow-ups after each answer, drawn from what it just found.
 
@@ -218,24 +218,24 @@ Editing the board
 
 .. signal-ampai-change-start
 
-Ask **AmpAI** to add, remove, retitle, or reorder cards, to change what a card measures, or to point the board at a fiscal calendar, and it writes those changes to the board's configuration. The page reloads itself when the run ends.
+Ask the **AI Assistant** to add, remove, retitle, or reorder cards, to change what a card measures, or to point the board at a fiscal calendar, and it writes those changes to the board's configuration. The page reloads itself when the run ends.
 
 Several safeguards sit around those writes:
 
-* **It validates before it writes.** **AmpAI** checks a card against the table it will read, and reads a column's real values rather than guessing their spelling or case. If it cannot validate a card---the table is missing, or has no rows yet---it does not write the card, and tells you what blocked the check.
-* **It confirms before it deletes.** Deleting a board deletes every card on it, so **AmpAI** lists those cards before it asks.
-* **It confirms before it changes a table.** Table changes and database runs are separate confirmations from card changes, and **AmpAI** touches only the analytics table the dashboard reads.
+* **It validates before it writes.** The **AI Assistant** checks a card against the table it will read, and reads a column's real values rather than guessing their spelling or case. If it cannot validate a card---the table is missing, or has no rows yet---it does not write the card, and tells you what blocked the check.
+* **It confirms before it deletes.** Deleting a board deletes every card on it, so the **AI Assistant** lists those cards before it asks.
+* **It confirms before it changes a table.** Table changes and database runs are separate confirmations from card changes, and the **AI Assistant** touches only the analytics table the dashboard reads.
 * **Every change is versioned.** Boards and cards are recorded in your tenant's configuration history alongside your other configuration, as **Signal board**, **Signal metric viz**, and **Signal stacked bar viz**, and a change can be reverted there.
 
-A card belongs to the board it was created on. To move one to another board, ask **AmpAI** to delete it and create it on the other board.
+A card belongs to the board it was created on. To move one to another board, ask the **AI Assistant** to delete it and create it on the other board.
 
-The user interface handles a smaller set of changes directly: renaming a board and its description, setting the chart scale and fiscal view, saving filters, setting the default board, and duplicating or deleting a board. Adding a card, removing one, or changing what one measures is a request to **AmpAI**.
+The user interface handles a smaller set of changes directly: renaming a board and its description, setting the chart scale and fiscal view, saving filters, setting the default board, and duplicating or deleting a board. Adding a card, removing one, or changing what one measures is a request to the **AI Assistant**.
 
 .. signal-ampai-change-end
 
 .. signal-ampai-feedback-start
 
-.. tip:: When **Signal** cannot do something you need---a chart type, a granularity, or a control it does not offer---say so in the **Signal** chat. **AmpAI** can file the request with Amperity's product team on your behalf, after you confirm.
+.. tip:: When **Signal** cannot do something you need---a chart type, a granularity, or a control it does not offer---say so in the **Signal** chat. The **AI Assistant** can file the request with Amperity's product team on your behalf, after you confirm.
 
 .. signal-ampai-feedback-end
 
@@ -272,7 +272,7 @@ That last part is the statement itself, not a description of one: the same perio
 
 .. signal-card-definitions-note-start
 
-.. note:: A card's description is written when the card is authored. A card that has none shows its raw aggregate in place of a plain-language explanation. When you ask **AmpAI** to change what a card measures, ask it to rewrite the description in the same change.
+.. note:: A card's description is written when the card is authored. A card that has none shows its raw aggregate in place of a plain-language explanation. When you ask the **AI Assistant** to change what a card measures, ask it to rewrite the description in the same change.
 
 .. signal-card-definitions-note-end
 
@@ -282,9 +282,9 @@ That last part is the statement itself, not a description of one: the same perio
 Your definitions, not generic ones
 --------------------------------------------------
 
-**AmpAI** reads the :ref:`custom prompt <ampai-custom-prompt>` and the :ref:`company context <ampai-company-context>` documents set for your tenant before it authors or changes a card. Where those define a metric, name something, or set a business rule, they take precedence over the defaults **AmpAI** would otherwise use. A board therefore reports your own definition of a metric under your own name for it, rather than a generic one that has to be translated every time someone reads it.
+The **AI Assistant** reads the :ref:`custom prompt <ampai-custom-prompt>` and the :ref:`company context <ampai-company-context>` documents set for your tenant before it authors or changes a card. Where those define a metric, name something, or set a business rule, they take precedence over the defaults the **AI Assistant** would otherwise use. A board therefore reports your own definition of a metric under your own name for it, rather than a generic one that has to be translated every time someone reads it.
 
-If **AmpAI** cannot read one of them, it says so in its reply and continues from the defaults, so you know when your own definitions were not applied.
+If the **AI Assistant** cannot read one of them, it says so in its reply and continues from the defaults, so you know when your own definitions were not applied.
 
 .. signal-tenant-context-end
 
@@ -306,7 +306,7 @@ Limitations
 
 * **Signal** measures data already in Amperity. Bringing outside data in is a separate exercise.
 * Every card on a board must read from the same database.
-* The card catalog **AmpAI** builds from is written for retail order data. On a tenant whose data describes tickets, stays, or other non-order events, **AmpAI** reports that gap rather than forcing the retail shape onto it.
+* The card catalog the **AI Assistant** builds from is written for retail order data. On a tenant whose data describes tickets, stays, or other non-order events, the **AI Assistant** reports that gap rather than forcing the retail shape onto it.
 
 **Filtering**
 
@@ -321,9 +321,9 @@ Limitations
 
 **Authoring**
 
-* Adding a card, removing one, or changing what one measures is done by asking **AmpAI**.
+* Adding a card, removing one, or changing what one measures is done by asking the **AI Assistant**.
 * A card cannot be moved between boards. It must be re-created on the other board.
-* The page does not passively refresh. **AmpAI** reloads the board after a change it made, but a change made from anywhere else is not visible until you reload the page or complete a change through the **AmpAI** chat.
+* The page does not passively refresh. The **AI Assistant** reloads the board after a change it made, but a change made from anywhere else is not visible until you reload the page or complete a change through the **AI Assistant** chat.
 
 .. signal-limitations-end
 
@@ -447,7 +447,7 @@ Limitations
 
    A board can be measured on your own fiscal calendar instead of the ordinary one. Two things have to be true, and they are separate:
 
-   * **The board names a fiscal calendar table.** This is set through **AmpAI**, either during a build or as a later change.
+   * **The board names a fiscal calendar table.** This is set through the **AI Assistant**, either during a build or as a later change.
    * **The board is read in fiscal view.** Giving a board a calendar does not by itself put it on one. Fiscal view is a board setting, so everyone who opens the board reads it the same way.
 
    On a board that meets both, the granularity control offers **Fiscal weekly**, **Fiscal monthly**, and **Fiscal quarterly** in place of the calendar granularities, and the to-date periods are measured on that calendar. A fiscal granularity is offered only where the calendar names the column that divides it, so a calendar that does not describe its own quarters offers no fiscal quarter.
@@ -469,7 +469,7 @@ Limitations
    * Every card on a board must name the same database.
    * Every card reading the same table must measure over the same date column.
 
-   In practice the table a card reads is **UT_Analytics**, an order-grain analytics table built on your Unified Transactions. **AmpAI** creates it during setup if your tenant does not have it. It exists so that the dashboard's cards do not query raw transactions directly, and it is deliberately not the same thing:
+   In practice the table a card reads is **UT_Analytics**, an order-grain analytics table built on your Unified Transactions. The **AI Assistant** creates it during setup if your tenant does not have it. It exists so that the dashboard's cards do not query raw transactions directly, and it is deliberately not the same thing:
 
    * It applies exclusions---outliers, employees, test accounts---that the tables beneath it do not. A card's number and the same aggregate run against **Unified_Transactions** can therefore disagree, and the card's is the one the dashboard means.
    * It keeps anonymous orders rather than dropping them, and flags which rows are identified. Revenue, orders, and units count every order. Counting customers counts identified customers only, so a customer count and a revenue total on the same board are measured over different row sets by design.

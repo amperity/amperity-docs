@@ -172,7 +172,7 @@ The following policy options are available:
 * :ref:`Allow source data deletion <policies-allow-source-data-deletion>`
 * :ref:`Allow user administration <policies-allow-user-administration>`
 * :ref:`Audience monetization access <policies-audience-monetization-access>`
-* :ref:`Restrict AmpAI access <policies-option-restrict-ampai>`
+* :ref:`Restrict AI Assistant access <policies-option-restrict-ampai>`
 * :ref:`Restrict data exports <policies-option-restrict-data-exports>`
 * :ref:`Restrict download access <policies-option-restrict-downloads>`
 * :ref:`Restrict PII access <policies-option-restrict-pii>`
@@ -273,12 +273,12 @@ The **Audience monetization access** policy option may be assigned to users assi
 
 .. _policies-option-restrict-ampai:
 
-Restrict AmpAI access
+Restrict AI Assistant access
 --------------------------------------------------
 
 .. policies-option-restrict-ampai-start
 
-The **Restrict AmpAI access** policy option prevents users from interacting with **AmpAI** features.
+The **Restrict AI Assistant access** policy option prevents users from interacting with **AI Assistant** features.
 
 .. policies-option-restrict-ampai-end
 
@@ -424,7 +424,7 @@ Allowed actions
 
 .. policies-allowed-actions-start
 
-The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`AmpAI <policies-allowed-actions-amp-ai>`, :ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Journeys <policies-allowed-actions-journeys>`, :ref:`Audience Monetization <policies-allowed-actions-audience-monetization>`, :ref:`Orchestrations <policies-allowed-actions-orchestrations>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Settings <policies-allowed-actions-settings>`, :ref:`Workflows <policies-allowed-actions-workflows>`, and :ref:`Credentials <policies-allowed-actions-settings-credentials>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
+The following sections describe the set of actions that may be assigned to users of Amperity. These actions are grouped by page (:ref:`AI Assistant <policies-allowed-actions-amp-ai>`, :ref:`Sources <policies-allowed-actions-sources>`, :ref:`Stitch <policies-allowed-actions-stitch>`, :ref:`Customer 360 <policies-allowed-actions-databases>`, :ref:`Queries <policies-allowed-actions-queries>`, :ref:`Segments <policies-allowed-actions-segments>`, :ref:`Campaigns <policies-allowed-actions-campaigns>`, :ref:`Journeys <policies-allowed-actions-journeys>`, :ref:`Audience Monetization <policies-allowed-actions-audience-monetization>`, :ref:`Orchestrations <policies-allowed-actions-orchestrations>`, :ref:`Destinations <policies-allowed-actions-destinations>`, :ref:`Settings <policies-allowed-actions-settings>`, :ref:`Workflows <policies-allowed-actions-workflows>`, and :ref:`Credentials <policies-allowed-actions-settings-credentials>`) with additional sections for the :ref:`Data Explorer <policies-allowed-actions-data-explorer>` and :ref:`Sandboxes <policies-allowed-actions-sandboxes>`.
 
 .. policies-allowed-actions-end
 
@@ -485,12 +485,12 @@ The following sections describe the set of actions that may be assigned to users
 
 .. _policies-allowed-actions-amp-ai:
 
-AmpAI
+AI Assistant
 --------------------------------------------------
 
 .. policies-allowed-actions-amp-ai-start
 
-The following table shows which policies enable user actions within **AmpAI** features, including the AmpAI page, the Customer Data Agent, and the AI assistants embedded in the Journeys, Segments, and Queries editors.
+The following table shows which policies enable user actions within **AI Assistant** features, including the **AI Assistant** page and the tool-specific **AI Assistants** embedded in the Journeys, Segments, and Queries editors.
 
 .. policies-allowed-actions-amp-ai-end
 
@@ -512,31 +512,31 @@ The following table shows which policies enable user actions within **AmpAI** fe
      - |policy|
      - |policy|
 
-   * - Open **AmpAI** page
+   * - Open **AI Assistant** page
      - |policy|
      - |policy|
      - |policy|
      - |policy|
 
-   * - Use Customer Data Agent
+   * - Use the AI Assistant
      - |policy|
      - |policy|
      - |policy|
      - |policy|
 
-   * - Use Journeys AI assistant
+   * - Use Journeys AI Assistant
      -
      - |policy|
      - |policy|
      - |policy|
 
-   * - Use Queries AI assistant
+   * - Use Queries AI Assistant
      - |policy|
      -
      - |policy|
      - |policy|
 
-   * - Use Segments AI assistant
+   * - Use Segments AI Assistant
      -
      - |policy|
      - |policy|
@@ -2479,7 +2479,7 @@ The following table shows which policies enable user actions within the **Settin
      - |polius|
      - |policy|
 
-   * - View :ref:`AmpAI <policies-allowed-actions-settings-ampai>` tab
+   * - View :ref:`AI Assistant <policies-allowed-actions-settings-ampai>` tab
      -
      -
      - |policy|
@@ -2564,12 +2564,12 @@ The **Activity log** tab shows records of :doc:`all user activity that occured i
 
 .. _policies-allowed-actions-settings-ampai:
 
-AmpAI tab
+AI Assistant tab
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. policies-allowed-actions-settings-ampai-start
 
-The **AmpAI** tab has configuration settings for AmpAI features, along with a record of conversations users in your tenant have had with AmpAI features.
+The **AI Assistant** tab has configuration settings for AI Assistant features, along with a record of conversations users in your tenant have had with AI Assistant features.
 
 .. policies-allowed-actions-settings-ampai-end
 
@@ -2585,13 +2585,13 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      - DataGrid Operator
      - DataGrid Admin
 
-   * - **AmpAI**
+   * - **AI Assistant**
      -
      -
      -
      -
 
-   * - Disable AmpAI
+   * - Disable AI Assistant
      -
      -
      - |policy|
@@ -2609,7 +2609,7 @@ The **AmpAI** tab has configuration settings for AmpAI features, along with a re
      - |policy|
      - |policy|
 
-   * - Enable AmpAI
+   * - Enable AI Assistant
      -
      -
      - |policy|

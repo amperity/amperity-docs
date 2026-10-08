@@ -1,26 +1,24 @@
 .. https://docs.amperity.com/reference/
 
-:orphan:
-
 .. meta::
     :description lang=en:
-        Frequently asked questions about AmpAI.
+        Frequently asked questions about the AI Assistant.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Frequently asked questions about AmpAI.
+        Frequently asked questions about the AI Assistant.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI Privacy FAQ
+        AI Assistant Privacy FAQ
 
 ==================================================
-AmpAI Privacy FAQ
+AI Assistant Privacy FAQ
 ==================================================
 
 .. ampai-privacy-start
 
-AmpAI is powered by models that reside on Azure OpenAI Service.
+The **AI Assistant** is powered by models that reside on Azure OpenAI Service.
 
 Azure OpenAI Service has the following data sharing policies:
 
@@ -41,7 +39,7 @@ What data does the Azure OpenAI Service store?
 
 .. ampai-azure-openai-service-store-start
 
-Azure OpenAI Service does not store any data after the API response is returned. AmpAI's implementation is stateless and all context must be sent to Azure OpenAI Service with each API call.
+Azure OpenAI Service does not store any data after the API response is returned. The **AI Assistant** implementation is stateless and all context must be sent to Azure OpenAI Service with each API call.
 
 .. ampai-azure-openai-service-store-end
 
@@ -68,7 +66,7 @@ What data does the Azure OpenAI Service process?
 Amperity sends two types of data to the Azure OpenAI Service:
 
 * Data to improve model performance. This includes database schema information, tables names, fields and descriptions, the current query's SQL, a sample of results from the query, and any errors encountered.
-* AmpAI message history. Amperity sends the full message history for a given conversation to Azure OpenAI Service to maintain the context of the conversation.
+* **AI Assistant** message history. Amperity sends the full message history for a given conversation to Azure OpenAI Service to maintain the context of the conversation.
 
 .. ampai-azure-openai-service-process-end
 

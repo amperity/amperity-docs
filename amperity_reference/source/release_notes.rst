@@ -56,7 +56,7 @@ Summer 2026
 
 **Paid Media Measurement & Optimization**
 
-   :bdg-success:`NEW` :doc:`Paid Media Measurement & Optimization <paid_media_measurement>` brings your paid media performance data from Meta and Google into Amperity, where it is available to AmpAI for analysis alongside your customer data.
+   :bdg-success:`NEW` :doc:`Paid Media Measurement & Optimization <paid_media_measurement>` brings your paid media performance data from Meta and Google into Amperity, where it is available to the AI Assistant for analysis alongside your customer data.
 
 **Recommended Actions**
 
@@ -84,9 +84,9 @@ Spring 2026
 
    :bdg-success:`NEW` The :doc:`Audience monetization <monetize>` page is available for monetizing UID 2.0-based audiences in The Trade Desk Data Marketplace.
 
-**Customer Data Assistant**
+**AI Assistant**
 
-   :bdg-success:`NEW` The :doc:`Customer Data Assistant <customer_data_assistant>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
+   :bdg-success:`NEW` The :doc:`AI Assistant <customer_data_assistant>` helps you move from intent to action through natural language conversation to create segments, build journeys, and explore customer data.
 
 **Home page**
 
@@ -160,9 +160,9 @@ Fall 2025
 
    :bdg-success:`NEW` Keep track of customers who are `activated by a campaign <../user/activations.html#campaign-activation-states>`__, including by sub-audience or treatment, by destination, and frequency.
 
-**Custom prompts for AmpAI**
+**Custom prompts for the AI Assistant**
 
-   :bdg-success:`NEW` Use :ref:`custom prompts <ampai-custom-prompt>` with AmpAI to align responses to specific business logic for the AI Assistant for segments and queries.
+   :bdg-success:`NEW` Use :ref:`custom prompts <ampai-custom-prompt>` with the AI Assistant to align responses to specific business logic for the Segments and Queries AI Assistants.
 
 **Custom segment metrics**
 

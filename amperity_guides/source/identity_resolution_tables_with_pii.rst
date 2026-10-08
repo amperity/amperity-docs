@@ -3,11 +3,11 @@
 
 .. meta::
     :description lang=en:
-        Identify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
+        Identify tables with personally identifiable information (PII). Have the AI Assistant make the selections for you or make the selections yourself.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Identify tables with personally identifiable information (PII). Have AmpAI make the selections for you or make the selections yourself.
+        Identify tables with personally identifiable information (PII). Have the AI Assistant make the selections for you or make the selections yourself.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -31,7 +31,7 @@ Identify tables with PII
 
 To identify tables with personally identifiable information (PII) open the **Identity resolution** page in **Quick start**. On the **Identity tables** card, do one of the following:
 
-#. Click **AmpAI select** to have the **AmpAI Assistant** automatically select which tables contain the best data for identity resolution, identify the optimal primary key fields, and apply customer profile semantic tags. The selections are applied immediately. Click **Edit** on the **Identity tables** card to review or override them.
+#. Click **AI Assistant select** to have the **AI Assistant** automatically select which tables contain the best data for identity resolution, identify the optimal primary key fields, and apply customer profile semantic tags. The selections are applied immediately. Click **Edit** on the **Identity tables** card to review or override them.
 #. Click **Manually select** to make the table selections yourself.
 
    .. image:: ../../images/mockup-guided-idres-tables-with-pii.png

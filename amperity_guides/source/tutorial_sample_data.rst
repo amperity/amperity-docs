@@ -33,7 +33,7 @@ Amperity specializes in using AI to turn raw data into a growing library of robu
 By the end of this guide you will know how to do the following:
 
 #. Sync data from a data warehouse to Amperity.
-#. Apply semantic tags to your data sources using AmpAI.
+#. Apply semantic tags to your data sources using the **AI Assistant**.
 #. Build an identity graph that links disparate profile records together using a unique and persistent identifier.
 
 .. start-overview-end
@@ -201,12 +201,12 @@ Connect the data, apply the semantic tag, and build customer profiles.
 
 You have two options:
 
-#. Let **AmpAI** apply semantic tags
+#. Let the **AI Assistant** apply semantic tags
 #. `Manually apply semantic tags <https://docs.amperity.com/operator/semantics.html>`__
 
 .. start-semantics-end
 
-**To let AmpAI apply semantic tags**
+**To let the AI Assistant apply semantic tags**
 
 .. start-semantics-steps-start
 
@@ -219,24 +219,24 @@ You have two options:
           :alt: Step one.
           :align: center
           :class: no-scaled-link
-     - In **Identity resolution**, if you are using Amperity sample data, next to **Identity tables**, click **AmpAI select**.
+     - In **Identity resolution**, if you are using Amperity sample data, next to **Identity tables**, click **AI Assistant select**.
 
-       **AmpAI** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags **AmpAI** assigns to fields.
+       The **AI Assistant** will analyze the sample data and identify which tables contain PII, and then idenfity which semantic tags should be applied. You may change the tags the **AI Assistant** assigns to fields.
 
-       Click **Continue**. Wait for the **AmpAI** to finish applying semantic tags before continuing to the next step. This process takes up to 5 minutes to complete.
+       Click **Continue**. Wait for the **AI Assistant** to finish applying semantic tags before continuing to the next step. This process takes up to 5 minutes to complete.
 
    * - .. image:: ../../images/steps-02.png
           :width: 60 px
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - When **AmpAI** is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
+     - When the **AI Assistant** is finished applying semantic tags, next to **Identify your fields**, click **Edit**.
 
-       This opens the **Semantic tag** editor. For each table that **AmpAI** applied semantic tags a list of fields, field types, and semantic tags are shown.
+       This opens the **Semantic tag** editor. For each table that the **AI Assistant** applied semantic tags a list of fields, field types, and semantic tags are shown.
 
-       **AmpAI** will correctly assign semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
+       The **AI Assistant** will correctly assign semantic tags to all of the sample data tables, so you can click the **Save** button in the top right.
 
-       .. important:: **AmpAI** will apply semantic tags for PII correctly most of the time, but it is good to double-check and be sure. If you think they are wrong, just remove the tag **AmpAI** applied and find the correct semantic tag.
+       .. important:: The **AI Assistant** will apply semantic tags for PII correctly most of the time, but it is good to double-check and be sure. If you think they are wrong, just remove the tag the **AI Assistant** applied and find the correct semantic tag.
 
 .. start-semantics-end
 
