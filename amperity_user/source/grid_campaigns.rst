@@ -123,6 +123,11 @@ Use the **Campaigns** page to build campaigns using included or excluded segment
       :link: campaigns-control-groups
 
 
+   .. grid-item-card:: Convert to journey
+      :link-type: doc
+      :link: convert_campaigns_to_journeys
+
+
    .. grid-item-card:: Default attributes
       :link-type: ref
       :link: campaigns-default-attributes
