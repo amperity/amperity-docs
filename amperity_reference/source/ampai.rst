@@ -31,22 +31,6 @@ The **AI Assistant** offers enterprise-grade privacy and security, is built on t
 
 .. ai-assistant-about-end
 
-.. ai-assistant-privacy-note-start
-
-.. note:: The **AI Assistant** is powered by models that reside on Azure OpenAI Service. Review the :doc:`AI Assistant Privacy FAQ <ampai_privacy>` for information about how Amperity interacts with Azure OpenAI service.
-
-.. ai-assistant-privacy-note-end
-
-.. ai-assistant-learning-lab-start
-
-.. admonition:: Amperity Learning Lab
-
-   The **AI Assistant** is the conversational interface to your customer data in Amperity, and tool-specific **AI Assistants** bring that same conversation into individual editors.
-
-   Open **Learning Lab** to learn more about `the Amperity AI Assistant <https://amperity.com/learning-lab/the-amperity-ai-assistant>`__ |ext_link|, `exploring data with AmpAI <https://amperity.com/learning-lab/exploring-data-with-ampai>`__ |ext_link|, and `creating custom prompts with AmpAI <https://amperity.com/learning-lab/creating-custom-prompts-with-ampai>`__ |ext_link|. Registration is required.
-
-.. ai-assistant-learning-lab-end
-
 
 .. _ai-assistant-grid:
 
@@ -94,6 +78,16 @@ The **AI Assistant** offers enterprise-grade privacy and security, is built on t
       How Amperity interacts with the Azure OpenAI Service, and how your data is handled.
 
 .. ai-assistant-grid-end
+
+.. ai-assistant-learning-lab-start
+
+.. admonition:: Amperity Learning Lab
+
+   The **AI Assistant** is the conversational interface to your customer data in Amperity, and tool-specific **AI Assistants** bring that same conversation into individual editors.
+
+   Open **Learning Lab** to learn more about `the Amperity AI Assistant <https://amperity.com/learning-lab/the-amperity-ai-assistant>`__ |ext_link|, `exploring data with AmpAI <https://amperity.com/learning-lab/exploring-data-with-ampai>`__ |ext_link|, and `creating custom prompts with AmpAI <https://amperity.com/learning-lab/creating-custom-prompts-with-ampai>`__ |ext_link|. Registration is required.
+
+.. ai-assistant-learning-lab-end
 
 
 .. toctree::

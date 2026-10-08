@@ -19,6 +19,31 @@ Custom prompts
 
 .. _ampai-custom-prompt:
 
+
+.. ampai-custom-prompt-start
+
+Custom prompts are always-on instructions that are injected into every **AI Assistant** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to the **AI Assistant**, to all tool-specific **AI Assistants**, and via MCP connection.
+
+Below are common examples of the types of data nuances prompts can account for:
+
+* **Customer definitions**: define how your brand breaks out new vs. repeat vs. reactivated customers.
+* **Priority tables and fields**: identify whether different tables should be used for different brands, loyalty programs, channel-specific marketing flags, and similar cases.
+* **Product catalog**: specify the level of granularity AI should use and identify products that should always be grouped together.
+* **Exclusions**: define criteria that should always be excluded from reporting, commonly employees or outliers.
+* **Calendar**: specify whether AI should default to the calendar year, a fiscal calendar, or something else.
+* **Revenue calculations**: identify default revenue fields, and specify which discount fields should be used when questions involve discount percentages or coupon codes.
+
+While the **AI Assistant** works out of the box, updating the custom prompt is often necessary to keep it aligned with how your brand understands your customers. The custom prompt should be updated when a response does not meet expectations.
+
+When your brand starts using the **AI Assistant** you should start with a list of 3-5 key customer questions that it should answer correctly. Test these questions, and then refine the custom prompt to ensure accurate and meaningful responses. This will help establish an effective first iteration of the custom prompt.
+
+.. ampai-custom-prompt-end
+
+.. _ampai-edit-custom-prompt:
+
+Edit a custom prompt
+==================================================
+
 .. ai-assistant-prompts-page-start
 
 Both custom prompts and context files are managed on the **Prompts** page. To open the **Prompts** page:
@@ -39,26 +64,6 @@ The **Prompts** page uses a draft and production workflow:
 
 .. ai-assistant-prompts-workflow-end
 
-.. ampai-custom-prompt-start
-
-Custom prompts are always-on instructions that are injected into every **AI Assistant** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to the **AI Assistant**, to all tool-specific **AI Assistants**, and via MCP connection.
-
-Below are common examples of the types of data nuances prompts can account for:
-
-* **Customer definitions**: define how your brand breaks out new vs. repeat vs. reactivated customers.
-* **Priority tables and fields**: identify whether different tables should be used for different brands, loyalty programs, channel-specific marketing flags, and similar cases.
-* **Product catalog**: specify the level of granularity AI should use and identify products that should always be grouped together.
-* **Exclusions**: define criteria that should always be excluded from reporting, commonly employees or outliers.
-* **Calendar**: specify whether AI should default to the calendar year, a fiscal calendar, or something else.
-* **Revenue calculations**: identify default revenue fields, and specify which discount fields should be used when questions involve discount percentages or coupon codes.
-
-Set a custom prompt on the **Prompts** page: On the **AI Assistant** page, click **Production prompts** and then **Edit prompts**.
-
-While the **AI Assistant** works out of the box, updating the custom prompt is often necessary to keep it aligned with how your brand understands your customers. The custom prompt should be updated when a response does not meet expectations.
-
-When your brand starts using the **AI Assistant** you should start with a list of 3-5 key customer questions that it should answer correctly. Test these questions, and then refine the custom prompt to ensure accurate and meaningful responses. This will help establish an effective first iteration of the custom prompt.
-
-.. ampai-custom-prompt-end
 
 
 .. _ampai-write-custom-prompt:

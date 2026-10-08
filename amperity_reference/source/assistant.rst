@@ -26,9 +26,6 @@ The tool-specific **AI Assistants** include the following:
 * **Journeys AI Assistant** helps users build and personalize multi-touch journeys
 * **Queries AI Assistant** helps users author SQL queries and resolve errors
 * **Segments AI Assistant** helps users build segments
-* Explains workflow task errors inline on the **Workflows** page
-* Generates field descriptions for database tables in the table editor
-* Formats SQL in the custom table editor, with optional custom instructions
 
 These assistants are generative AI features within Amperity that use natural language as input commands.
 

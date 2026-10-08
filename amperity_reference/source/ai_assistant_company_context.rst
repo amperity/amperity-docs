@@ -19,13 +19,6 @@ Company context
 
 .. _ampai-company-context:
 
-.. include:: ../../amperity_reference/source/ai_assistant_custom_prompts.rst
-   :start-after: .. ai-assistant-prompts-page-start
-   :end-before: .. ai-assistant-prompts-page-end
-
-.. include:: ../../amperity_reference/source/ai_assistant_custom_prompts.rst
-   :start-after: .. ai-assistant-prompts-workflow-start
-   :end-before: .. ai-assistant-prompts-workflow-end
 
 .. ampai-company-context-start
 
@@ -36,6 +29,20 @@ Context files are used by the **AI Assistant** and via **MCP** connection. Think
 Context files are available for the **AI Assistant**, the **Segments AI Assistant**, and the **Journeys AI Assistant**.
 
 .. ampai-company-context-end
+
+.. _ampai-edit-company-context:
+
+Edit company context
+==================================================
+
+.. include:: ../../amperity_reference/source/ai_assistant_custom_prompts.rst
+   :start-after: .. ai-assistant-prompts-page-start
+   :end-before: .. ai-assistant-prompts-page-end
+
+.. include:: ../../amperity_reference/source/ai_assistant_custom_prompts.rst
+   :start-after: .. ai-assistant-prompts-workflow-start
+   :end-before: .. ai-assistant-prompts-workflow-end
+
 
 
 .. _ampai-company-context-manage:
@@ -49,7 +56,7 @@ Context files are managed in the **Context files** section on the **Prompts** pa
 
 To add context files:
 
-#. Open the **Prompts** page: On the **AI Assistant** page, click **Production prompts** and then **Edit prompts**.
+#. Open the **Prompts** page.
 #. Click **Upload file** or drag and drop files into the **Context files** section on the **Draft** side.
 #. Use the checkbox next to each file to enable or disable it. Only enabled files are searched by the assistant.
 #. Click **Activate draft** to push context file changes to production.
