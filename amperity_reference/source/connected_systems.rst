@@ -159,8 +159,10 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Amplitude**
      - |system-yes|
-     - 
+     - |system-yes|
      - Pull data to Amperity from Amplitude using Fivetran.
+
+       Send user properties, events, group properties, audiences, and deletion requests to Amplitude.
 
    * - **Apache Kafka**
      - |system-yes|

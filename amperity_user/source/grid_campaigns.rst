@@ -195,6 +195,10 @@ Send campaigns to any of the following marketing applications and workflows.
       :link-type: doc
       :link: campaign_amazon_s3
 
+   .. grid-item-card:: Amplitude
+      :link-type: doc
+      :link: campaign_amplitude
+
    .. grid-item-card:: Attentive (Audiences)
       :link-type: doc
       :link: campaign_attentive_mobile
@@ -355,6 +359,7 @@ Send campaigns to any of the following marketing applications and workflows.
    Adobe Marketo <campaign_adobe_marketo>
    Airship Attributes <campaign_airship_attributes>
    Amazon S3 <campaign_amazon_s3>
+   Amplitude <campaign_amplitude>
    Attentive <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>
    Bloomreach <campaign_bloomreach>

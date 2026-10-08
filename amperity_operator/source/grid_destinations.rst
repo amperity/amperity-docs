@@ -90,6 +90,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_amazon_s3
 
+   .. grid-item-card:: Amplitude
+      :link-type: doc
+      :link: destination_amplitude
+
    .. grid-item-card:: Attentive API (Attributes)
       :link-type: doc
       :link: destination_attentive_mobile_api
@@ -491,6 +495,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Amazon Pinpoint <destination_amazon_pinpoint>
    Amazon Redshift <destination_amazon_redshift>
    Amazon S3 <destination_amazon_s3>
+   Amplitude <destination_amplitude>
    Attentive API (Attributes) <destination_attentive_mobile_api>
    Attentive (Audiences) <destination_attentive_mobile>
    AWS Connect <destination_aws_connect>
