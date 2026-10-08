@@ -156,14 +156,22 @@ AmpAI has the following user-level policy options:
 
 .. _ampai-disable:
 
-Disable AmpAI features
+.. _assistant-enable-disable:
+
+Enable or disable AI Assistant features
 ==================================================
 
-.. ampai-disable-start
+.. ai-assistant-enable-disable-start
 
-The **Customer Data Assistant** and the **AmpAI Assistants** can be disabled for all users. Open the **Settings** page, select the **AmpAI** tab, and then click **Disable AmpAI features**.
+AI Assistant features, including the **AI Assistant** and all tool-specific **AI Assistants**, may be enabled (or disabled) for all users in a tenant by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
 
-.. ampai-disable-end
+.. ai-assistant-enable-disable-end
+
+**To disable AI Assistant features**
+
+.. include:: ../../amperity_reference/source/ampai_settings.rst
+   :start-after: .. settings-user-ampai-steps-start
+   :end-before: .. settings-user-ampai-steps-end
 
 
 .. _ampai-audit:
@@ -179,21 +187,3 @@ The **AmpAI** tab on the **Settings** page logs the questions that are asked to 
 The **Activity log** tab on the **Settings** page logs when **AmpAI Assistant** questions are asked using the "amperity.query.exec/sampled" action.
 
 .. ampai-audit-end
-
-
-.. _assistant-enable-disable:
-
-Enable or disable AmpAI assistants
-==================================================
-
-.. assistant-enable-disable-start
-
-AmpAI features, including **AmpAI** assistants, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
-
-.. assistant-enable-disable-end
-
-**To disable AmpAI assistants**
-
-.. include:: ../../amperity_reference/source/ampai_settings.rst
-   :start-after: .. settings-user-ampai-steps-start
-   :end-before: .. settings-user-ampai-steps-end
