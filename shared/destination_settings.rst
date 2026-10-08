@@ -4041,3 +4041,46 @@ Required. The |destination-name| App ID for the app this destination writes into
 Required. Selects the |destination-name| alias that identifies each person. Only ``external_id`` is available. The query results must include a column with that name, and Amperity sends its value as the person's External ID. Every other column except ``email`` and ``phone`` is sent as a data tag.
 
 .. setting-onesignal-user-identifier-end
+
+.. setting-mixpanel-project-id-start
+
+Required. The numeric ID of the |destination-name| project this destination writes to, found in |destination-name| under **Project Settings > Overview**. It must be digits only — for example ``1234567``.
+
+The service account on the connected credential must have been added to this project. Amperity uses the project ID to look the project up at the start of every run, which is also how it determines the project's data residency.
+
+.. setting-mixpanel-project-id-end
+
+.. setting-mixpanel-project-token-start
+
+Required. The token for the same |destination-name| project, found under **Project Settings > Access Keys**. It must be letters and digits only. |destination-name| treats a project token as an identifier rather than a secret.
+
+.. important:: A project token that belongs to a different |destination-name| project is accepted by the profile and group endpoints, which answer with success and then discard the data. Because a write can never detect a wrong token, Amperity checks the token against the **Project ID** when you test the connection. Test the connection after changing either value.
+
+.. setting-mixpanel-project-token-end
+
+.. setting-mixpanel-operation-start
+
+Required. What this destination writes to |destination-name|:
+
+* **user-profiles** sets properties on |destination-name| user profiles, addressed by the ``distinct_id`` column. A profile that does not exist yet is created.
+* **group-profiles** sets properties on |destination-name| group profiles, addressed by the ``group_id`` column. Requires the **Group key** setting.
+* **events** sends events, addressed by the ``distinct_id``, ``event``, and ``time`` columns. Use it to load history that your own apps did not send.
+* **deletions** files GDPR or CCPA deletion requests for the users named by the ``distinct_id`` column. Requires the **GDPR OAuth token** on the connected credential.
+
+A destination performs one operation. To send more than one, configure a separate destination for each operation, each with its own query, all pointing at the same |destination-name| project.
+
+.. setting-mixpanel-operation-end
+
+.. setting-mixpanel-group-key-start
+
+Required when **Operation** is **group-profiles**, and unused by the other three operations. The |destination-name| group key that the profiles belong to — for example ``company_id``. A group-profiles destination with no group key fails before any data is sent.
+
+.. important:: Set the group key up in |destination-name| under **Project Settings > Group Keys** before the first run. |destination-name| accepts group profile data for a group key that has not been configured, and reports it as successful, but that data cannot be viewed or used in |destination-name| until the key exists.
+
+.. setting-mixpanel-group-key-end
+
+.. setting-mixpanel-compliance-type-start
+
+Applies to the **deletions** operation only. Which regulation |destination-name| files this destination's deletion requests under — **GDPR** or **CCPA**. Defaults to **GDPR**.
+
+.. setting-mixpanel-compliance-type-end
