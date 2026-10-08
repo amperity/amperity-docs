@@ -109,11 +109,11 @@ duplicating or contradicting it.
 Below your own company context, the page shows two things from Amperity, read-only:
 
 * **Company context documents** — the
-  `context documents <../reference/ampai.html#ampai-company-context>`__ configured in your
+  `context documents <../reference/ai_assistant_company_context.html>`__ configured in your
   Amperity tenant.
 * **The AI Assistant system prompt in Amperity** — the standing instructions your tenant gave the
   AI Assistant. Amperity's own documentation calls this the
-  `custom prompt <../reference/ampai.html#ampai-custom-prompt>`__.
+  `custom prompt <../reference/ai_assistant_custom_prompts.html>`__.
 
 Pér reads both alongside the company context you write here. This page does not replace them, and
 it cannot edit them — both are edited in Amperity.

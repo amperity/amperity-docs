@@ -87,7 +87,7 @@ asked Pér to keep, not everything it has seen.
 **company context**
    The business priorities, definitions and measures you want Pér to work from. Company context
    goes into every session. Alongside it, Pér reads the
-   `context documents <../reference/ampai.html#ampai-company-context>`__ and the AI Assistant
+   `context documents <../reference/ai_assistant_company_context.html>`__ and the AI Assistant
    system prompt your tenant has set up in Amperity; it reads those, and does not replace them.
 
 
