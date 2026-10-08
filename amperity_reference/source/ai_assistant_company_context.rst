@@ -27,20 +27,13 @@ Company context
    :start-after: .. ai-assistant-prompts-workflow-start
    :end-before: .. ai-assistant-prompts-workflow-end
 
-.. ai-assistant-company-context-definition-start
-
-* **Company context** is a library of reference documents that the assistant searches only when a question involves business-specific knowledge. Use context files to provide richer background material such as brand guidelines, product catalogs, and business term definitions. Context files are used by all **AmpAI** tools including the Customer Data Agent and other AI Assistants in the platform. They can also be read via MCP connection.
-
-.. ai-assistant-company-context-definition-end
-
-
 .. ampai-company-context-start
 
-Company context lets tenant administrators upload company-specific knowledge like business definitions, brand guidelines, product catalogs, and strategy documents, so that **AmpAI** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
+Company context lets tenant administrators upload company-specific knowledge like business definitions, brand guidelines, product catalogs, and strategy documents, so that the **AI Assistant** produces outputs grounded in your actual business rather than generic defaults. Context files are a searchable reference library that AI assistants consult on demand. Unlike custom prompts, which are injected into every conversation, context files are searched only when a question involves business-specific knowledge.
 
-Context files are used by **AmpAI** and via **MCP** connection. Think of a context file as an overview that helps AI get to know the nuances of the business, including additional information about a brand or business and its goals.
+Context files are used by the **AI Assistant** and via **MCP** connection. Think of a context file as an overview that helps AI get to know the nuances of the business, including additional information about a brand or business and its goals.
 
-Context files are available across the following AmpAI tools: **Customer Data Assistant**, **Segments AI Assistant**, and **Journeys AI Assistant**.
+Context files are available for the **AI Assistant**, the **Segments AI Assistant**, and the **Journeys AI Assistant**.
 
 .. ampai-company-context-end
 
@@ -56,7 +49,7 @@ Context files are managed in the **Context files** section on the **Prompts** pa
 
 To add context files:
 
-#. Open the **Prompts** page: On the **AmpAI** page, click **Production prompts** and then **Edit prompts**.
+#. Open the **Prompts** page: On the **AI Assistant** page, click **Production prompts** and then **Edit prompts**.
 #. Click **Upload file** or drag and drop files into the **Context files** section on the **Draft** side.
 #. Use the checkbox next to each file to enable or disable it. Only enabled files are searched by the assistant.
 #. Click **Activate draft** to push context file changes to production.
@@ -90,7 +83,7 @@ Some examples of situations where the assistant will check company context:
 
 You can also manually trigger the context lookup by adding a sentence like "Please use company context to answer this next question." 
 
-.. note:: AmpAI only uses your context files for reference when answering your questions or responding to your prompts. Company context is not used to train any models or applied in any other capacity.
+.. note:: The **AI Assistant** only uses your context files for reference when answering your questions or responding to your prompts. Company context is not used to train any models or applied in any other capacity.
 
 .. ampai-company-context-how-it-works-end
 

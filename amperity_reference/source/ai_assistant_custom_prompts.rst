@@ -23,7 +23,7 @@ Custom prompts
 
 Both custom prompts and context files are managed on the **Prompts** page. To open the **Prompts** page:
 
-#. On the **AmpAI** page, click **Production prompts** to view the production prompt.
+#. On the **AI Assistant** page, click **Production prompts** to view the production prompt.
 #. Click **Edit prompts** in the **Production prompt** window.
 
 .. ai-assistant-prompts-page-end
@@ -33,22 +33,15 @@ Both custom prompts and context files are managed on the **Prompts** page. To op
 The **Prompts** page uses a draft and production workflow:
 
 #. Make changes on the **Draft prompt** side.
-#. Click **Test draft** to validate changes in your own AmpAI session without affecting other users.
+#. Click **Test draft** to validate changes in your own **AI Assistant** session without affecting other users.
 #. Click **Activate draft** to push draft changes to production for all users.
 #. Click **Revert draft** to discard draft changes and return to the current production version.
 
 .. ai-assistant-prompts-workflow-end
 
-.. ai-assistant-custom-prompts-definition-start
-
-* **Custom prompts** are short, always-on instructions that are injected into every AmpAI conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts are used by all **AmpAI** tools including the Customer Data Agent and other AI Assistants in the platform. They can also be read via MCP connection.
-
-.. ai-assistant-custom-prompts-definition-end
-
-
 .. ampai-custom-prompt-start
 
-Custom prompts are always-on instructions that are injected into every **AmpAI** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to all **AmpAI** interfaces, including Customer Data Assistant, other AI Assistants in the platform, and via MCP connection.
+Custom prompts are always-on instructions that are injected into every **AI Assistant** conversation. Use custom prompts to encode business logic, define terminology, and set default behaviors. Custom prompts apply to the **AI Assistant**, to all tool-specific **AI Assistants**, and via MCP connection.
 
 Below are common examples of the types of data nuances prompts can account for:
 
@@ -59,11 +52,11 @@ Below are common examples of the types of data nuances prompts can account for:
 * **Calendar**: specify whether AI should default to the calendar year, a fiscal calendar, or something else.
 * **Revenue calculations**: identify default revenue fields, and specify which discount fields should be used when questions involve discount percentages or coupon codes.
 
-Set a custom prompt on the **Prompts** page: On the **AmpAI** page, click **Production prompts** and then **Edit prompts**.
+Set a custom prompt on the **Prompts** page: On the **AI Assistant** page, click **Production prompts** and then **Edit prompts**.
 
-While **AmpAI** works out of the box, updating the custom prompt is often necessary to keep AmpAI aligned with how your brand understands your customers. The custom prompt should be updated when an AmpAI response does not meet expectations.
+While the **AI Assistant** works out of the box, updating the custom prompt is often necessary to keep it aligned with how your brand understands your customers. The custom prompt should be updated when a response does not meet expectations.
 
-When your brand starts using AmpAI you should start with a list of 3-5 key customer questions that AmpAI should answer correctly. Test these questions, and then refine the custom prompt to ensure accurate and meaningful responses. This will help establish an effective first iteration of the custom prompt.
+When your brand starts using the **AI Assistant** you should start with a list of 3-5 key customer questions that it should answer correctly. Test these questions, and then refine the custom prompt to ensure accurate and meaningful responses. This will help establish an effective first iteration of the custom prompt.
 
 .. ampai-custom-prompt-end
 
@@ -75,7 +68,7 @@ Write an effective custom prompt
 
 .. ampai-write-custom-prompt-start
 
-Follow these guidelines to create custom prompts that help **AmpAI** understand your brand's specific terminology, business logic, and data structure.
+Follow these guidelines to create custom prompts that help the **AI Assistant** understand your brand's specific terminology, business logic, and data structure.
 
 .. ampai-write-custom-prompt-end
 
@@ -87,7 +80,7 @@ Use database section headers
 
 .. ampai-write-custom-prompt-database-headers-start
 
-The custom prompt is set per tenant, but a tenant may have many databases. To define different behavior per database, use the database name as a section header. When **AmpAI** runs a session, it operates against a single active database. The system prompt instructs **AmpAI** to use the section matching the active database name for additional context.
+The custom prompt is set per tenant, but a tenant may have many databases. To define different behavior per database, use the database name as a section header. When the **AI Assistant** runs a session, it operates against a single active database. The system prompt instructs the **AI Assistant** to use the section matching the active database name for additional context.
 
 If a tenant has rules for many databases, structure the prompt like this:
 
@@ -159,7 +152,7 @@ Provide SQL patterns for complex logic
 
 .. ampai-write-custom-prompt-sql-patterns-start
 
-For reusable filters and complex business logic, give **AmpAI** a complete CTE it can copy and adapt.
+For reusable filters and complex business logic, give the **AI Assistant** a complete CTE it can copy and adapt.
 
 .. code-block:: sql
 
@@ -256,7 +249,7 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
         - Exclusions are applied automatically
         - Any customer count query excludes employees
       * - Table routing
-        - AmpAI uses the right table
+        - The AI Assistant uses the right table
         - Profile questions go to Customer360, not Unified_Coalesced
       * - Business definitions
         - Concepts match brand meaning
@@ -271,7 +264,7 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
 
 #. **Run tests in draft mode.**
 
-   Set your custom prompt as the draft prompt, open **AmpAI** in a new conversation, and ask each test question one at a time. For each response, check:
+   Set your custom prompt as the draft prompt, open the **AI Assistant** in a new conversation, and ask each test question one at a time. For each response, check:
 
    * Did it use the correct table?
    * Did it use the correct column names?
@@ -311,7 +304,7 @@ Testing is not "ask a question and see if it looks right." Use a structured appr
 
 #. **Iterate.**
 
-   For each failure, identify why **AmpAI** did not follow the instruction. Common reasons:
+   For each failure, identify why the **AI Assistant** did not follow the instruction. Common reasons:
 
    * Instruction was ambiguous, such as "use the customer table". Which customer table?
    * Instruction was buried in too much text. Move critical rules to the top.
@@ -334,7 +327,7 @@ Sample test prompts
 
 .. ampai-sample-test-prompts-start
 
-Copy these into **AmpAI** with the draft prompt active. Adapt the expected results to your brand's custom prompt.
+Copy these into the **AI Assistant** with the draft prompt active. Adapt the expected results to your brand's custom prompt.
 
 .. ampai-sample-test-prompts-end
 
@@ -543,7 +536,7 @@ The custom prompt cannot:
 
 * Change the AI's tools or capabilities
 * Override core SQL syntax rules (Presto SQL)
-* Make **AmpAI** access tables outside the active database
+* Make the **AI Assistant** access tables outside the active database
 * Configure destinations, campaigns, or orchestrations
 * For segment/journey creation, the custom prompt provides context but the Segment assistant and Journey assistant have their own specialized logic
 

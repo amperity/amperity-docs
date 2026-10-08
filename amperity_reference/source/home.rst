@@ -76,14 +76,14 @@ The Amps display is clickable and navigates to the full :doc:`Amps <amps>` page,
 
 .. _home-ask-ampai:
 
-Ask AmpAI
+Ask the AI Assistant
 ==================================================
 
 .. home-ask-ampai-start
 
-The **Ask AmpAI** section provides an embedded input field for submitting a question directly from the **Home** page. When you submit a query, Amperity navigates you to the :doc:`AmpAI <ampai>` page, where the response is loaded.
+The **Ask the AI Assistant** section provides an embedded input field for submitting a question directly from the **Home** page. When you submit a query, Amperity navigates you to the :doc:`AI Assistant <ampai>` page, where the response is loaded.
 
-Use the **Ask AmpAI** section to start a conversation with AmpAI without navigating away from the **Home** page first.
+Use the **Ask the AI Assistant** section to start a conversation with the **AI Assistant** without navigating away from the **Home** page first.
 
 .. home-ask-ampai-end
 

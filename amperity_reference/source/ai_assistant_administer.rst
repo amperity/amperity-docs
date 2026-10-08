@@ -46,43 +46,37 @@ AI Assistant
 
 .. customer-data-agent-regional-availability-start
 
-The experience available from the **AmpAI** button and the model used depend on the region and hosting platform for your Amperity tenant.
+The capabilities available from the **AI Assistant** button and the model used depend on the region and hosting platform for your Amperity tenant.
 
 .. list-table::
-   :widths: 20 20 35 25
+   :widths: 35 35 30
    :header-rows: 1
 
    * - Region
      - Hosting platform
-     - AmpAI experience
      - Current model
    * - United States
      - Amazon AWS
-     - Customer Data Assistant
      - GPT-5.4
    * - United States
      - Microsoft Azure
-     - Customer Data Assistant
      - GPT-5.4
    * - European Union
      - Microsoft Azure
-     - Customer Data Assistant
      - GPT-5.4
    * - Canada
      - Amazon AWS
-     - AmpGPT
      - GPT-4.1 mini
    * - Australia
      - Amazon AWS
-     - AmpGPT
      - GPT-4.1 mini
 
-The **Customer Data Assistant** requests GPT-5.4. If GPT-5.4 is not deployed in a region, Amperity routes the request to the first available model in its fallback sequence. Canada and Australia currently deploy GPT-4.1 mini only. Enabling the **Customer Data Assistant** in either region without an additional model deployment would therefore continue to use GPT-4.1 mini.
+The **AI Assistant** requests GPT-5.4. If GPT-5.4 is not deployed in a region, Amperity routes the request to the first available model in its fallback sequence. Canada and Australia currently deploy GPT-4.1 mini only. Enabling the **AI Assistant** in either region without an additional model deployment would therefore continue to use GPT-4.1 mini.
 
-The experiences also support different workflows. For example, consider the request: "Find high-value customers who have lapsed for 90 days, create a segment for them, and build a re-engagement journey."
+The supported workflows also differ by region. For example, consider the request: "Find high-value customers who have lapsed for 90 days, create a segment for them, and build a re-engagement journey."
 
-* The **Customer Data Assistant** can analyze the data, create and track a plan, produce a reviewable segment draft, save the segment after approval, and then draft the journey.
-* **AmpGPT** can analyze the data, generate and run SQL, retry SQL errors, and return a table or visualization. It cannot create, edit, search, or save segments; create journeys; or provide the plan, artifact, and approval workflow.
+* In the United States and the European Union, the **AI Assistant** can analyze the data, create and track a plan, produce a reviewable segment draft, save the segment after approval, and then draft the journey.
+* In Canada and Australia, the **AI Assistant** can analyze the data, generate and run SQL, retry SQL errors, and return a table or visualization. It cannot create, edit, search, or save segments; create journeys; or provide the plan, artifact, and approval workflow.
 
 .. customer-data-agent-regional-availability-end
 
@@ -95,7 +89,7 @@ Tool-specific AI Assistants
 
 .. assistant-regional-availability-start
 
-The availability of each **AmpAI** assistant depends on the hosting region for your tenant. Tenant settings and user permissions may also affect access.
+The availability of each tool-specific **AI Assistant** depends on the hosting region for your tenant. Tenant settings and user permissions may also affect access.
 
 For tenants hosted in Canada:
 
@@ -108,13 +102,13 @@ For tenants hosted in Canada:
      - Additional requirements
    * - Amp Insights
      - Available
-     - **AmpAI** enabled for the tenant and access to the **Amps** dashboard
+     - **AI Assistant** enabled for the tenant and access to the **Amps** dashboard
    * - Journeys AI Assistant
      - Not available
      - Not applicable
    * - Queries AI Assistant
      - Available
-     - **AmpAI** enabled for the tenant and access to the **Queries** page
+     - **AI Assistant** enabled for the tenant and access to the **Queries** page
    * - Segments AI Assistant
      - Not available
      - Not applicable
@@ -131,21 +125,21 @@ Permissions and policies
 
 .. ampai-permissions-and-policies-start
 
-AmpAI permissions are controlled at the user level, allowing **User Administrators** the ability to grant access to AmpAI for individual users.
+**AI Assistant** permissions are controlled at the user level, allowing **User Administrators** the ability to grant access for individual users.
 
-AmpAI has the following user-level policy options:
+The **AI Assistant** has the following user-level policy options:
 
-#. **Restrict AmpAI access**
+#. **Restrict AI Assistant access**
 
-   Prevents users from accessing the **AmpAI** page.
+   Prevents users from accessing the **AI Assistant** page.
 
 #. **Restrict Queries AI Assistant access**
 
-   Prevents users from accessing the **AmpAI Assistant** from within the **Queries** page.
+   Prevents users from accessing the **Queries AI Assistant** from within the **Queries** page.
 
 #. **Restrict Segments AI Assistant access**
 
-   Prevents users from accessing the **AmpAI Assistant** from within the **Segments** page.
+   Prevents users from accessing the **Segments AI Assistant** from within the **Segments** page.
 
 #. **Allow prompt administration**
 
@@ -181,9 +175,9 @@ Audit conversations
 
 .. ampai-audit-start
 
-**Customer Data Assistant** and **AmpAI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
-The **AmpAI** tab on the **Settings** page logs the questions that are asked to the **Customer Data Assistant** and the **AmpAI Assistants** under **AI Conversations**.
+**AI Assistant** and tool-specific **AI Assistant** conversations can be audited by users assigned the **Datagrid Operator** and **Datagrid Administrator** policies from the **Settings** page.
+The **AI Assistant** tab on the **Settings** page logs the questions that are asked to the **AI Assistant** and the tool-specific **AI Assistants** under **AI Assistant conversations**.
 
-The **Activity log** tab on the **Settings** page logs when **AmpAI Assistant** questions are asked using the "amperity.query.exec/sampled" action.
+The **Activity log** tab on the **Settings** page logs when tool-specific **AI Assistant** questions are asked using the "amperity.query.exec/sampled" action.
 
 .. ampai-audit-end
