@@ -294,6 +294,10 @@ Set up connections to send data from Amperity to other marketing applications, t
       :link-type: doc
       :link: destination_power_bi
 
+   .. grid-item-card:: Mixpanel
+      :link-type: doc
+      :link: destination_mixpanel
+
    .. grid-item-card:: MoEngage
       :link-type: doc
       :link: destination_moengage
@@ -543,6 +547,7 @@ Set up connections to send data from Amperity to other marketing applications, t
    Microsoft Dataverse <destination_microsoft_dataverse>
    Microsoft Dynamics <destination_microsoft_dynamics>
    Microsoft Power BI <destination_power_bi>
+   Mixpanel <destination_mixpanel>
    MoEngage <destination_moengage>
    Monetate <destination_monetate>
    Movable Ink <destination_moveableink>
