@@ -72,6 +72,9 @@ training: static ## Build only the "/training" section
 	# Building Training pages...
 	$(BUILD_COMMAND) amperity_training/source $(BUILDDIR)/training
 
+dev: static ## Serve on http://localhost:8765, rebuild what changes on save, and reload the browser
+	python3 tools/dev-server.py
+
 clean: ## Flush the entire build directory
 	# Cleaning out build directory...
 	@rm -rf $(BUILDDIR)
