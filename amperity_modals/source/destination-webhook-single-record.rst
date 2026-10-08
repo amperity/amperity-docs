@@ -87,7 +87,7 @@ Disabled by default, so that the customer's attributes are nested under the **pa
 
 **Custom headers**
 
-Optional. Extra headers sent with every request, as "Name: value" pairs separated by semicolons. For example: "X-Client-ID: CDP_AMPERITY; X-Env: dev". Header values cannot contain semicolons. Custom headers cannot set "Authorization" or "Content-Type"; use the credential and the **Content type** setting instead.
+Optional. Extra headers sent with every request, as "Name: value" pairs separated by semicolons. For example: "X-Client-ID: AMPERITY; X-Env: dev". Header values cannot contain semicolons. Custom headers cannot set "Authorization" or "Content-Type"; use the credential and the **Content type** setting instead.
 
 .. important:: Custom headers are not stored as secrets. Do not put API keys, tokens, or other credentials in this setting.
 
