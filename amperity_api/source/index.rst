@@ -126,4 +126,3 @@ Amperity has an `OpenAPI specification <https://docs.amperity.com/api/openapi.ht
    Learning Lab <https://amperity.com/learning-lab>
    System Status <https://status.amperity.com>
    Amperity.com <https://www.amperity.com>
-
