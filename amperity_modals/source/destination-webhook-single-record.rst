@@ -33,7 +33,7 @@ Required. The URL of the endpoint that receives each request. The **route-params
 
 **API key**
 
-Optional, for the API key credential type. When set, Amperity sends it in an "Authorization: Bearer <API key>" header. Leave this empty if your endpoint does not require authentication.
+Optional, for the API key credential type. When set, Amperity sends it in an "Authorization: Bearer <API key>" header.
 
 **Token URL**
 
