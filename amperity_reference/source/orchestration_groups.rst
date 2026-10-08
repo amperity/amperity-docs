@@ -119,7 +119,7 @@ Run on a schedule
 
 .. orchestration-groups-run-on-a-schedule-start
 
-An orchestration group may be configured to run on a schedule, using a cron schedule to define the specific time at which the run should begin, and a UTC timezone.
+An orchestration group may be configured to run on a schedule, using a cron schedule to define the specific time at which the run should begin, and a time zone. The time zone is UTC by default.
 
 .. note:: You will see the enabled or disabled status only for scheduled orchestration groups.
 
@@ -212,7 +212,7 @@ About timezones
 
 .. orchestration-groups-timezones-start
 
-An orchestration group schedule must be associated with a UTC timezone. The timezone determines the point at which an orchestration group's scheduled start time begins.
+An orchestration group schedule must be associated with a time zone, which is UTC by default. The timezone determines the point at which an orchestration group's scheduled start time begins.
 
 .. orchestration-groups-timezones-end
 
