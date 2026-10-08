@@ -264,7 +264,7 @@ A bridge may be configured to run as part of a scheduled workflow. Use the **Bri
 Activations
 ==================================================
 
-Activations are orchestrations, campaigns, and Profile API indexes that are configured to be run as part of a scheduled workflow.
+Activations are orchestrations, campaigns, and `Database Profile API <explorer-database-profile-api_>`__ indexes that are configured to be run as part of a scheduled workflow.
 
 
 .. _workflows-orchestrations:
@@ -279,7 +279,7 @@ Orchestrations
 
 .. _workflows-profile-api:
 
-Profile API indexes
+Database Profile API indexes
 --------------------------------------------------
 
 .. include:: ../../amperity_operator/source/api_profile.rst

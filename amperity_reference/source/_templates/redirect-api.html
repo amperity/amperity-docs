@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Amperity APIs</title>
+    <link rel="canonical" href="https://docs.amperity.com/api/explorer.html">
+    <script>
+      // This page was both the API overview and the API key how-to. Send links to
+      // its API key sections to the matching section of the authentication page,
+      // and everything else to the API explorer.
+      (function () {
+        var auth = "../api/authentication.html";
+        var explorer = "../api/explorer.html";
+        // Old anchors, as section ids ("add-api-keys") and as label ids
+        // ("api-keys-api-token-add"), matched by prefix. First match wins.
+        var routes = [
+          ["api-keys-api-token-add", auth + "#authentication-api-keys-add"],
+          ["add-api-key", auth + "#authentication-api-keys-add"],
+          ["api-keys-api-token-rotate", auth + "#authentication-api-keys-rotate"],
+          ["rotate-api-token", auth + "#authentication-api-keys-rotate"],
+          ["api-keys-api-token-delete", auth + "#authentication-access-token-revoke"],
+          ["delete-api-token", auth + "#authentication-access-token-revoke"],
+          ["api-keys-access-tokens-revoke", auth + "#authentication-access-token-revoke"],
+          ["api-keys-api-token-oauth", auth + "#authentication-access-token-oauth"],
+          ["api-keys-access-tokens-generate", auth + "#authentication-access-token-generate"],
+          ["api-keys-access-tokens-refresh", auth + "#authentication-access-token-generate"],
+          ["generate-access-token", auth + "#authentication-access-token-generate"],
+          ["refresh-access-token", auth + "#authentication-access-token-generate"],
+          ["api-keys-access-tokens", auth + "#authentication-access-tokens"],
+          ["access-tokens", auth + "#authentication-access-tokens"],
+          ["about-api-keys", auth + "#authentication-api-keys"],
+          ["api-keys", auth + "#authentication-api-keys"],
+          ["api-authenticate", auth],
+          ["api-realtime", explorer + "?urls.primaryName=Real-time%20API%20%282026-09-03%29"],
+          ["how-events-are-processed", explorer + "?urls.primaryName=Real-time%20API%20%282026-09-03%29"],
+          ["real-time-api", explorer + "?urls.primaryName=Real-time%20API%20%282026-09-03%29"],
+          ["api-profile", explorer + "?urls.primaryName=Database%20Profile%20API%20%282025-07-31%29"],
+          ["database-profile-api", explorer + "?urls.primaryName=Database%20Profile%20API%20%282025-07-31%29"],
+          ["api-amperity", explorer + "?urls.primaryName=Tenant%20API%20%282024-04-01%29"],
+          ["tenant-api", explorer + "?urls.primaryName=Tenant%20API%20%282024-04-01%29"]
+        ];
+        var fragment = window.location.hash.replace(/^#/, "");
+        var target = explorer;
+        for (var i = 0; i < routes.length; i++) {
+          if (fragment && fragment.indexOf(routes[i][0]) === 0) { target = routes[i][1]; break; }
+        }
+        window.location.replace(target);
+      })();
+    </script>
+    <meta http-equiv="Refresh" content="1; url='../api/explorer.html'">
+  </head>
+  <body>
+    <p>This page has moved to <a href="../api/explorer.html">Amperity APIs</a>. For API keys and access tokens, see <a href="../api/authentication.html">How to authenticate with Amperity APIs</a>.</p>
+  </body>
+</html>

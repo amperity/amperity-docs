@@ -66,6 +66,7 @@ html_copy_source = False
 html_show_sourcelink = False
 
 html_additional_pages = {
+    "api": "redirect-api.html",
     "quick_start": "quick_start.html",
     "start": "start.html",
     "updates": "updates.html",
@@ -137,19 +138,14 @@ html_theme_options = {
             "title": "APIs",
             "children": [
                 {
-                    "title": "Amperity API",
-                    "url": "../api/overview",
-                    "summary": "Programmatic access to your Amperity tenant."
+                    "title": "Amperity APIs",
+                    "url": "../api/explorer",
+                    "summary": "Browse and try every Amperity API."
                 },
                 {
-                    "title": "Profile API",
-                    "url": "../operator/api_profile",
-                    "summary": "Endpoints for unified customer profiles."
-                },
-                {
-                    "title": "Streaming API",
-                    "url": "../operator/api_streaming",
-                    "summary": "Stream from external systems in real-time."
+                    "title": "How to authenticate",
+                    "url": "../api/authentication",
+                    "summary": "API keys and access tokens for Amperity APIs."
                 },
             ]
         },
@@ -172,7 +168,7 @@ html_theme_options = {
                     "summary": "Send data to any downstream system."
                 },
                 {
-                    "title": "Events",
+                    "title": "Paid media conversion",
                     "url": "../operator/grid_events",
                     "summary": "Measure marketing efforts across channels."
                 },

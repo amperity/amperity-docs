@@ -17,7 +17,7 @@
 Profile API
 ==================================================
 
-.. important:: The Profile API documented on this page is deprecated in favor of new Profile API endpoints: `GET Profile <../api/endpoint_get_profile.html>`__ and `GET Profiles list <../api/endpoint_get_profiles_list.html>`__.
+.. important:: The Profile API documented on this page is deprecated in favor of new Profile API endpoints: `GET Profile <explorer-database-profile-api_>`__ and `GET Profiles list <explorer-database-profile-api_>`__.
 
 The Profile API is a RESTful API that supports building custom endpoints against unified customer profiles to enable any downstream workflow.
 
@@ -580,9 +580,34 @@ Build a query that has the attributes you need to enable your downstream workflo
 Add API key
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-keys-api-token-add-profile-start
-   :end-before: .. api-keys-api-token-add-profile-end
+An API key enables your downstream use cases to read data from the `Database Profile API <explorer-database-profile-api_>`__.
+
+**To add an API key for the Profile API**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - From the **Add API key** dialog, add the name for the API key, select the **Profile API Data Access** option, and then click **Save**.
+
+       .. image:: ../../images/api-keys-add-access-token-profile.png
+          :width: 500 px
+          :alt: Generate an API key.
+          :align: left
+          :class: no-scaled-link
 
 
 .. _profile-api-enable-generate-access-token:
@@ -590,9 +615,60 @@ Add API key
 Generate an access token
 --------------------------------------------------
 
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-keys-access-tokens-generate-start
-   :end-before: .. api-keys-access-tokens-generate-end
+Access tokens that enable authentication to Amperity APIs are managed directly from the **Settings** page in Amperity.
+
+**To generate access tokens**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
+
+       .. image:: ../../images/api-keys-generate-access-token.png
+          :width: 500 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
+
+       .. image:: ../../images/api-keys-set-token-expiration.png
+          :width: 240 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
+
+       Click **Generate token**. The token is generated, and then is automatically copied to your clipboard.
+
+       .. image:: ../../images/api-keys-token-saved-to-clipboard.png
+          :width: 240 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 
 .. _profile-api-enable-add-index:

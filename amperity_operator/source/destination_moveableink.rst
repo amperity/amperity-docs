@@ -26,11 +26,11 @@ Real-time datasets in Movable Ink Studio
 
 .. destination-moveableink-intro-start
 
-.. TODO: No inclusions. This is shared into the Profile API reference also.
+.. TODO: No inclusions. This is shared into the Database Profile API reference also.
 
-Use the Profile API to make real-time customer profile data available to Movable Ink Studio. Movable Ink Studio helps your brand scale 1:1 content personalization by automatically transforming data into personalized content unique to each customer at the moment of engagement.
+Use the `Database Profile API <explorer-database-profile-api_>`__ to make real-time customer profile data available to Movable Ink Studio. Movable Ink Studio helps your brand scale 1:1 content personalization by automatically transforming data into personalized content unique to each customer at the moment of engagement.
 
-Combine the Profile API with Movable Ink Studio to design campaigns and customer interactions that access the most current customer profile details and generate personalized content at scale.
+Combine the `Database Profile API <explorer-database-profile-api_>`__ with Movable Ink Studio to design campaigns and customer interactions that access the most current customer profile details and generate personalized content at scale.
 
 * Automatically transform data into unique composite images for each customer in real-time
 * Streamline steps in onboarding processes
@@ -48,7 +48,7 @@ Get details
 
 .. destination-moveableink-get-details-start
 
-Review the following details before configuring Profile API endpoints for use with |destination-name|. The Profile API endpoint must be available before the integration can be configured in |destination-name|.
+Review the following details before configuring `Database Profile API <explorer-database-profile-api_>`__ endpoints for use with |destination-name|. The `Database Profile API <explorer-database-profile-api_>`__ endpoint must be available before the integration can be configured in |destination-name|.
 
 .. destination-moveableink-get-details-end
 
@@ -63,12 +63,12 @@ Review the following details before configuring Profile API endpoints for use wi
           :alt: Detail 1.
           :align: center
           :class: no-scaled-link
-     - **To configure Profile API endpoints in Amperity**
+     - **To configure Database Profile API endpoints in Amperity**
 
        * :ref:`Build a query <destination-moveableink-configure-profile-api-query>`
        * :ref:`Add an API key for Movable Ink <destination-moveableink-configure-profile-api-key>`
        * :ref:`Generate an access token <destination-moveableink-configure-profile-api-token>`
-       * :ref:`Add the Profile API index <destination-moveableink-configure-profile-api-index>`
+       * :ref:`Add the Database Profile API index <destination-moveableink-configure-profile-api-index>`
        * :ref:`Copy the profile ID field <destination-moveableink-configure-profile-id-field>`
        * :ref:`Copy the index ID <destination-moveableink-configure-profile-api-index-id>`
        * :ref:`Generate the endpoint <destination-moveableink-configure-profile-api-generate>`
@@ -106,9 +106,34 @@ Use the **Query Editor** to build a query that returns customer profiles for use
 Add an API key
 ==================================================
 
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-keys-api-token-add-profile-start
-   :end-before: .. api-keys-api-token-add-profile-end
+An API key enables your downstream use cases to read data from the `Database Profile API <explorer-database-profile-api_>`__.
+
+**To add an API key for the Database Profile API**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab. Under **API keys** click **Add API key**.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - From the **Add API key** dialog, add the name for the API key, select the **Profile API Data Access** option, and then click **Save**.
+
+       .. image:: ../../images/api-keys-add-access-token-profile.png
+          :width: 500 px
+          :alt: Generate an API key.
+          :align: left
+          :class: no-scaled-link
 
 
 .. _destination-moveableink-configure-profile-api-token:
@@ -116,19 +141,70 @@ Add an API key
 Generate an access token
 ==================================================
 
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-keys-access-tokens-generate-start
-   :end-before: .. api-keys-access-tokens-generate-end
+Access tokens that enable authentication to Amperity APIs are managed directly from the **Settings** page in Amperity.
+
+**To generate access tokens**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 0
+
+   * - .. image:: ../../images/steps-01.png
+          :width: 60 px
+          :alt: Step one.
+          :align: center
+          :class: no-scaled-link
+     - Open the **Settings** page, and then select the **Security** tab.
+
+
+   * - .. image:: ../../images/steps-02.png
+          :width: 60 px
+          :alt: Step two.
+          :align: center
+          :class: no-scaled-link
+     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
+
+       .. image:: ../../images/api-keys-generate-access-token.png
+          :width: 500 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+
+   * - .. image:: ../../images/steps-03.png
+          :width: 60 px
+          :alt: Step three.
+          :align: center
+          :class: no-scaled-link
+     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
+
+       .. image:: ../../images/api-keys-set-token-expiration.png
+          :width: 240 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+       Use the **Rotate key secret** option to rotate an existing secret when generating an access token. This will force all previously provisioned tokens that are associated with the current API key to expire in 30 days.
+
+       Click **Generate token**. The token is generated, and then is automatically copied to your clipboard.
+
+       .. image:: ../../images/api-keys-token-saved-to-clipboard.png
+          :width: 240 px
+          :alt: Generate an access token.
+          :align: left
+          :class: no-scaled-link
+
+       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
 
 
 .. _destination-moveableink-configure-profile-api-index:
 
-Add the Profile API index
+Add the Database Profile API index
 ==================================================
 
 .. api-profile-add-index-start
 
-An index must be defined for each query that is used to generate an endpoint for the Profile API.
+An index must be defined for each query that is used to generate an endpoint for the `Database Profile API <explorer-database-profile-api_>`__.
 
 .. api-profile-add-index-end
 
@@ -148,9 +224,7 @@ Copy the profile ID field
 
 **Verify the list of filter fields**
 
-.. include:: ../../amperity_operator/source/api_profile.rst
-   :start-after: .. profile-api-howitworks-filter-fields-start
-   :end-before: .. profile-api-howitworks-filter-fields-end
+Filter fields are defined in the query that builds the index, and each filter field has the same name as its field in that query. For how requests filter on them, see the `Database Profile API reference <explorer-database-profile-api_>`__.
 
 
 .. _destination-moveableink-configure-profile-api-index-id:
@@ -190,7 +264,7 @@ Configure Movable Ink Studio
 
 .. destination-moveableink-configure-start
 
-After Amperity is configured with a query that makes results available from a Profile API endpoint you can configure Movable Ink to connect to that endpoint. The user who configures the integration must be assigned to the **Manager** role in Movable Ink Studio.
+After Amperity is configured with a query that makes results available from a `Database Profile API <explorer-database-profile-api_>`__ endpoint you can configure Movable Ink to connect to that endpoint. The user who configures the integration must be assigned to the **Manager** role in Movable Ink Studio.
 
 **To add the Amperity integration to Movable Ink Studio**
 
@@ -214,7 +288,7 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step two.
           :align: center
           :class: no-scaled-link
-     - The following settings are required to configure a connection between Movable Ink Studio and a Profile API endpoint:
+     - The following settings are required to configure a connection between Movable Ink Studio and a `Database Profile API <explorer-database-profile-api_>`__ endpoint:
 
        **Integration name**
 
@@ -222,7 +296,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Bearer token**
 
-          A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Movable Ink Studio access to Profile API endpoints.
+          A :ref:`bearer token <destination-moveableink-configure-profile-api-token>` allows Movable Ink Studio access to `Database Profile API <explorer-database-profile-api_>`__ endpoints.
 
        **Tenant subdomain**
 
@@ -234,11 +308,11 @@ After Amperity is configured with a query that makes results available from a Pr
 
        **Index ID**
 
-          The index ID is a unique ID for each Profile API endpoint to which Movable Ink Studio will make requests. For example: ``ix-2BmokYMVR``. This value can be copied from the Amperity user interface :ref:`after the Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
+          The index ID is a unique ID for each `Database Profile API <explorer-database-profile-api_>`__ endpoint to which Movable Ink Studio will make requests. For example: ``ix-2BmokYMVR``. This value can be copied from the Amperity user interface :ref:`after the Database Profile API endpoint has been created <destination-moveableink-configure-profile-api-index-id>`.
 
        **User ID**
 
-          The user ID is a field within the Profile API index that is configured as the :ref:`profile ID field <destination-moveableink-configure-profile-id-field>`.
+          The user ID is a field within the `Database Profile API <explorer-database-profile-api_>`__ index that is configured as the :ref:`profile ID field <destination-moveableink-configure-profile-id-field>`.
 
        **Tenant ID**
 
@@ -248,7 +322,7 @@ After Amperity is configured with a query that makes results available from a Pr
 
        .. image:: ../../images/moveable-ink-connection.png
           :width: 500 px
-          :alt: Configure Movable Ink to connect to an Amperity Profile API endpoint.
+          :alt: Configure Movable Ink to connect to an Database Profile API endpoint.
           :align: left
           :class: no-scaled-link
 
@@ -258,11 +332,11 @@ After Amperity is configured with a query that makes results available from a Pr
           :alt: Step three.
           :align: center
           :class: no-scaled-link
-     - Click **Next** and configure how the fields in the Profile API index should be shown within Movable Ink Studio.
+     - Click **Next** and configure how the fields in the `Database Profile API <explorer-database-profile-api_>`__ index should be shown within Movable Ink Studio.
 
        .. image:: ../../images/moveable-ink-datafields.png
           :width: 500 px
-          :alt: Configure how fields in an Amperity Profile API endpoint are shown to users in Moveabile Ink Studio.
+          :alt: Configure how fields in an Database Profile API endpoint are shown to users in Moveabile Ink Studio.
           :align: left
           :class: no-scaled-link
 

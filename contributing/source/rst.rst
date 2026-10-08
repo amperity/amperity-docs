@@ -2726,6 +2726,45 @@ Badges are colored block of solid or outlined text for use inline within paragra
 .. rst-inline-markup-badges-start
 
 
+.. _rst-inline-markup-badges-legacy:
+
+Legacy features
+--------------------------------------------------
+
+.. rst-inline-markup-badges-legacy-start
+
+A legacy feature still works but has been replaced. Mark its page in two ways: add the ``|legacy|`` badge to the page title, and put the shared legacy notice directly under the title.
+
+**Do this**
+
+.. code-block:: none
+
+   .. |legacy-feature| replace:: The Streaming API
+   .. |legacy-replacement| replace:: Real-time Profiles
+   .. |legacy-instead| replace:: For new integrations, use the Real-time API instead.
+
+   ==================================================
+   Streaming API |legacy|
+   ==================================================
+
+   .. include:: ../../shared/legacy.rst
+      :start-after: .. legacy-notice-start
+      :end-before: .. legacy-notice-end
+
+Define the three substitutions at the top of the page. Each one may include links.
+
+**For this**
+
+The badge renders as |legacy|, and the notice renders as:
+
+.. admonition:: Legacy
+   :class: warning
+
+   The Streaming API is a legacy feature. It has been replaced by Real-time Profiles. For new integrations, use the Real-time API instead.
+
+.. rst-inline-markup-badges-legacy-end
+
+
 .. _rst-inline-markup-badge-types:
 
 Badge types

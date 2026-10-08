@@ -725,7 +725,7 @@ Copy data template ID
 
 .. data-templates-copy-id-start
 
-You can copy a data template ID, and then use that ID within Amperity workflows, such as getting a list of campaigns associated with a specific data template when using the **Campaigns** endpoint in the Amperity API.
+You can copy a data template ID, and then use that ID within Amperity workflows, such as getting a list of campaigns associated with a specific data template when using the **Campaigns** endpoint in the Tenant API.
 
 .. data-templates-copy-id-end
 

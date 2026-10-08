@@ -228,14 +228,14 @@ Summer 2025
 
 **Profile API**
 
-   :bdg-light:`UPDATED` The Profile API is updated to support flexible, multi-criteria search that allows systems to look up profiles using any combination of available fields from a single endpoint.
+   :bdg-light:`UPDATED` The Database Profile API is updated to support flexible, multi-criteria search that allows systems to look up profiles using any combination of available fields from a single endpoint.
 
    :bdg-success:`NEW` The following endpoints are new:
 
-   * `GET /indexes <../api/endpoint_get_profile_index.html>`__ 
-   * `GET /indexes/{id} <../api/endpoint_get_profile_index_id.html>`__ 
-   * `GET /indexes/{id}/profiles <../api/endpoint_get_profiles_list.html>`__ 
-   * `GET /indexes/{id}/profiles/{id} <../api/endpoint_get_profile.html>`__.
+   * `GET /indexes <explorer-database-profile-api_>`__ 
+   * `GET /indexes/{id} <explorer-database-profile-api_>`__ 
+   * `GET /indexes/{id}/profiles <explorer-database-profile-api_>`__ 
+   * `GET /indexes/{id}/profiles/{id} <explorer-database-profile-api_>`__.
 
 .. updates-2025-summer-end
 
@@ -293,7 +293,7 @@ Spring 2025
 
 **Start workflows programmatically**
 
-   :bdg-success:`NEW` Start workflows programatically using the `POST /workflow/runs <../api/endpoint_post_workflows_start.html>`__ endpoint.
+   :bdg-success:`NEW` Start workflows programatically using the `POST /workflow/runs <explorer-tenant-api_>`__ endpoint.
 
 .. updates-2025-spring-end
 

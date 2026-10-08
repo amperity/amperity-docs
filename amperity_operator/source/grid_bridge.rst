@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure Amperity Bridge
+        Access data with Bridge
 
 ==================================================
-Configure Amperity Bridge
+Access data with Bridge
 ==================================================
 
 .. include:: ../../shared/terms.rst

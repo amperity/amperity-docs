@@ -276,3 +276,15 @@
   color: #0c0c0c !important;
   background-color: #dff200 !important;
 }
+/* Badges in page and section titles, such as :bdg-warning:`Legacy`: about a third of
+   the title's size, with fully rounded ends, centered on the title text. */
+h1 .sd-badge,
+h2 .sd-badge,
+h3 .sd-badge {
+  font-size: 0.34em;
+  border-radius: 999px !important;
+  padding: 0.35em 0.9em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.12em;
+}

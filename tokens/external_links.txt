@@ -52,7 +52,7 @@
 
 .. |ext_download_postman_api_profile| raw:: html
 
-   <a href="../downloads/postman/Amperity_Profile_API.postman_collection.json" target="_blank">Postman collection for the Profile API</a> <i class="fas fa-download"></i>
+   <a href="../downloads/postman/Amperity_Profile_API.postman_collection.json" target="_blank">Postman collection for the Database Profile API</a> <i class="fas fa-download"></i>
 
 
 .. TODO: This is a download.

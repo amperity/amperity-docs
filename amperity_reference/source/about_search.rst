@@ -144,7 +144,7 @@ Amperity documentation has the following topic collections:
 
   A series of topics about how to configure, analyze, and maintain your Amperity tenant. Topics include configuring connections, managing customer profiles, maintaining your tenant, enabling privacy rights workflows, enabling predictive models, configuring Stitch, and using sandboxes to safely make changes to your production tenant.
 
-* **Amperity API**
+* **Amperity APIs**
 
   A collection of endpoints that enable programmatic access to your Amperity tenant, including production and sandbox.
 

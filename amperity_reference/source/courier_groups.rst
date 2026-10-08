@@ -25,7 +25,7 @@ About courier groups
 
 A courier group, also known as a scheduled workflow, is configured to run automatically on a recurring schedule. All couriers within a courier group run as a unit. Couriers with required files must complete before any downstream processes, such as Stitch or database generation, can be started.
 
-For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and Profile API indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
+For each courier with required files, Amperity determines if those files have updates, and then pulls updated files to Amperity. Depending on the run type, Amperity may then run Stitch and generate or refresh a customer 360 database. Orchestrations, recurring campaigns, and `Database Profile API <explorer-database-profile-api_>`__ indexes may be configured to run as part of a courier group after the customer 360 database is refreshed.
 
 A bridge sync should be in a dedicated courier group.
 
@@ -47,7 +47,7 @@ What a courier group does:
 #. Polls each data source associated with a courier in the group to determine if data is ready to be pulled to Amperity.
 #. Pulls source data into Amperity.
 #. Runs Stitch and generates a customer 360 database.
-#. Runs downstream activations, which includes orchestrations, recurring campaigns, and refreshing Profile API endpoints.
+#. Runs downstream activations, which includes orchestrations, recurring campaigns, and refreshing `Database Profile API <explorer-database-profile-api_>`__ endpoints.
 
 What a courier group needs:
 
@@ -570,7 +570,7 @@ Review activations
 
 An activation represents a part of a workflow that is run after databases have been updated. Any number of activations may be assigned to a workflow, after which all activations are run automatically on the schedule that is defined by the workflow.
 
-Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>`, :ref:`Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
+Individual :ref:`queries <courier-groups-howto-add-query>` and :ref:`data exports <courier-groups-howto-add-data-export>`, :ref:`orchestration group <courier-groups-howto-add-orchestration-group>`, :ref:`Database Profile API endpoints <courier-groups-howto-add-profile-api-endpoint>`, and :ref:`recurring campaign <courier-groups-howto-add-recurring-campaign>` may all be assigned to a workflow as an activation.
 
 .. courier-groups-review-activations-end
 
@@ -836,12 +836,12 @@ An orchestration group may be configured to run as part of a courier group workf
 
 .. _courier-groups-howto-add-profile-api-endpoint:
 
-Add Profile API endpoint to courier group
+Add Database Profile API endpoint to courier group
 --------------------------------------------------
 
 .. courier-groups-howto-add-profile-api-endpoint-start
 
-A Profile API endpoint that is configured to run after a courier group may be configured to run as part of a courier group workflow.
+A `Database Profile API <explorer-database-profile-api_>`__ endpoint that is configured to run after a courier group may be configured to run as part of a courier group workflow.
 
 .. courier-groups-howto-add-profile-api-endpoint-end
 

@@ -5,7 +5,7 @@ import shibuya
 # for example source
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "example_code"))
 
-project = "Amperity API"
+project = "Amperity APIs"
 #copyright = "Copyright &copy; 2026, Amperity"
 #author = "Amperity"
 
@@ -57,7 +57,7 @@ html_css_files = [
     "custom.css",
     "shibuya.css",
 ]
-html_title = "Amperity API"
+html_title = "Amperity APIs"
 html_theme = "shibuya"
 #html_theme_path = ['../../_themes/']
 html_baseurl = "https://docs.amperity.com/api/"
@@ -70,6 +70,37 @@ html_additional_pages = {
     'openapi': 'openapi.html',
     'openapi-unstable': 'openapi-unstable.html',
     'openapi-profile-v2': 'openapi-profile-v2.html',
+    'endpoint_get_audit_events_list': 'redirect-endpoint.html',
+    'endpoint_get_campaign_drafts_list': 'redirect-endpoint.html',
+    'endpoint_get_campaigns_list': 'redirect-endpoint.html',
+    'endpoint_get_ingest_jobs': 'redirect-endpoint.html',
+    'endpoint_get_ingest_jobs_id': 'redirect-endpoint.html',
+    'endpoint_get_profile': 'redirect-endpoint.html',
+    'endpoint_get_profile_index': 'redirect-endpoint.html',
+    'endpoint_get_profile_index_id': 'redirect-endpoint.html',
+    'endpoint_get_profile_segments': 'redirect-endpoint.html',
+    'endpoint_get_profile_store_history': 'redirect-endpoint.html',
+    'endpoint_get_profile_store_lookup': 'redirect-endpoint.html',
+    'endpoint_get_profile_store_profile': 'redirect-endpoint.html',
+    'endpoint_get_profile_store_segment_profiles': 'redirect-endpoint.html',
+    'endpoint_get_profile_store_stats': 'redirect-endpoint.html',
+    'endpoint_get_profiles_list': 'redirect-endpoint.html',
+    'endpoint_get_segments_list': 'redirect-endpoint.html',
+    'endpoint_get_workflows_fetch': 'redirect-endpoint.html',
+    'endpoint_get_workflows_list': 'redirect-endpoint.html',
+    'endpoint_post_profile_store_events': 'redirect-endpoint.html',
+    'endpoint_post_profile_store_lookup': 'redirect-endpoint.html',
+    'endpoint_post_workflows_start': 'redirect-endpoint.html',
+    'endpoint_post_workflows_stop': 'redirect-endpoint.html',
+    'endpoints': 'redirect-endpoint.html',
+    'endpoints_profile_api': 'redirect-endpoint.html',
+    'endpoints_realtime': 'redirect-endpoint.html',
+    'base_url': 'redirect-endpoint.html',
+    'pagination': 'redirect-endpoint.html',
+    'rate_limits': 'redirect-endpoint.html',
+    'requests': 'redirect-endpoint.html',
+    'responses': 'redirect-endpoint.html',
+    'versioning': 'redirect-endpoint.html',
 }
 
 
@@ -138,19 +169,14 @@ html_theme_options = {
             "title": "APIs",
             "children": [
                 {
-                    "title": "Amperity API",
-                    "url": "../api/overview",
-                    "summary": "Programmatic access to your Amperity tenant."
+                    "title": "Amperity APIs",
+                    "url": "../api/explorer",
+                    "summary": "Browse and try every Amperity API."
                 },
                 {
-                    "title": "Profile API",
-                    "url": "../operator/api_profile",
-                    "summary": "Endpoints for unified customer profiles."
-                },
-                {
-                    "title": "Streaming API",
-                    "url": "../operator/api_streaming",
-                    "summary": "Stream from external systems in real-time."
+                    "title": "How to authenticate",
+                    "url": "../api/authentication",
+                    "summary": "API keys and access tokens for Amperity APIs."
                 },
             ]
         },
@@ -173,7 +199,7 @@ html_theme_options = {
                     "summary": "Send data to any downstream system."
                 },
                 {
-                    "title": "Events",
+                    "title": "Paid media conversion",
                     "url": "../operator/grid_events",
                     "summary": "Measure marketing efforts across channels."
                 },

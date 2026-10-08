@@ -298,7 +298,7 @@ Amps and storage (TB) consumption is tracked in 5 categories--**Sources**, **Sti
 
        Orchestration audience building
 
-       Profile API
+       `Database Profile API <explorer-database-profile-api_>`__
 
    * - **Analytics**
      - BI Connect
@@ -849,9 +849,9 @@ Profile API
 
 .. amps-consumption-feature-profile-api-start
 
-Amps consumption for the **Profile API** feature is determined by the number of individual Profile API indexes that are enabled in your tenant. Each index is made available from an endpoint that is always available to downstream workflows that make API requests to that endpoint.
+Amps consumption for the **Profile API** feature is determined by the number of individual `Database Profile API <explorer-database-profile-api_>`__ indexes that are enabled in your tenant. Each index is made available from an endpoint that is always available to downstream workflows that make API requests to that endpoint.
 
-Monitor Amps consumption for the **Profile API** feature by ensuring that your tenant generates Profile API indexes that are necessary to support your downstream workflows.
+Monitor Amps consumption for the **Profile API** feature by ensuring that your tenant generates `Database Profile API <explorer-database-profile-api_>`__ indexes that are necessary to support your downstream workflows.
 
 .. amps-consumption-feature-profile-api-end
 

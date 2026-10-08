@@ -1,0 +1,130 @@
+/* Amperity branding for the Swagger UI on the API explorer page (explorer.rst).
+   When you change this file, bump the ?v= number on its <link> in explorer.rst so browsers reload it. */
+
+/* Swagger UI has no dark theme, so keep it on a light panel in both site themes. */
+.amperity-swagger {
+  background: #ffffff;
+  color: #0c0c0c;
+  border: 1px solid #c8cfd2;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+/* Top bar: keep the definition selector, drop the Swagger logo. */
+.amperity-swagger .swagger-ui .topbar {
+  background: #f2f4f5;
+  border-bottom: 1px solid #c8cfd2;
+  padding: 12px 0;
+}
+.amperity-swagger .swagger-ui .topbar .link {
+  display: none;
+}
+.amperity-swagger .swagger-ui .topbar .download-url-wrapper .select-label {
+  color: #0c0c0c;
+  font-weight: 600;
+}
+.amperity-swagger .swagger-ui .topbar .download-url-wrapper select {
+  border-color: #09717f;
+}
+
+/* Fonts and accent color. */
+.amperity-swagger .swagger-ui,
+.amperity-swagger .swagger-ui .info .title,
+.amperity-swagger .swagger-ui .opblock-tag {
+  font-family: "Outfit", sans-serif;
+}
+.amperity-swagger .swagger-ui .btn.authorize {
+  color: #09717f;
+  border-color: #09717f;
+}
+.amperity-swagger .swagger-ui .btn.authorize svg {
+  fill: #09717f;
+}
+
+/* Method badges: the same colors as the previous API reference pages. */
+.amperity-swagger .swagger-ui .opblock .opblock-summary-method {
+  color: #0d0e0e;
+  text-shadow: none;
+}
+.amperity-swagger .swagger-ui .opblock.opblock-get .opblock-summary-method { background: #b4e2ea; }
+.amperity-swagger .swagger-ui .opblock.opblock-post .opblock-summary-method { background: #cbe5c3; }
+.amperity-swagger .swagger-ui .opblock.opblock-put .opblock-summary-method { background: #f5d9ba; }
+.amperity-swagger .swagger-ui .opblock.opblock-delete .opblock-summary-method { background: #eaed95; }
+.amperity-swagger .swagger-ui .opblock.opblock-patch .opblock-summary-method { background: #e7ecee; }
+
+/* Undo site prose styles that leak into the Swagger UI. */
+.amperity-swagger .swagger-ui table {
+  margin: 0;
+  display: table;
+}
+.amperity-swagger .swagger-ui pre {
+  margin: 0;
+}
+
+/* Rename Swagger's hard-coded "Select a definition" label. */
+.amperity-swagger .swagger-ui .topbar .download-url-wrapper .select-label > span {
+  font-size: 0;
+}
+.amperity-swagger .swagger-ui .topbar .download-url-wrapper .select-label > span::before {
+  content: "API Family";
+  font-size: 16px;
+}
+
+/* Header row: API name, version tags, and the spec download button on one line. */
+.amperity-swagger .swagger-ui .info hgroup.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+.amperity-swagger .swagger-ui .info hgroup.main {
+  border-bottom: 1px solid #c8cfd2;
+  padding-bottom: 10px;
+}
+.amperity-swagger .swagger-ui .info hgroup.main .title {
+  margin: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+/* Swagger raises the version tags as superscript; center them on the title instead. */
+.amperity-swagger .swagger-ui .info hgroup.main .title > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.amperity-swagger .swagger-ui .info hgroup.main .title small {
+  top: 0;
+  vertical-align: middle;
+  margin: 0;
+}
+.amperity-swagger .amperity-spec-download {
+  margin-left: auto;
+  padding: 6px 14px;
+  background: #ffffff;
+  color: #09717f;
+  border: 1px solid #09717f;
+  border-radius: 4px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.amperity-swagger .amperity-spec-download:hover {
+  background: #def2f7;
+}
+.amperity-swagger .swagger-ui .info hgroup.main .title small pre {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+/* Hide the spec's contact link ("the developer - Website"). */
+.amperity-swagger .swagger-ui .info .info__contact {
+  display: none;
+}

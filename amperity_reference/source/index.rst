@@ -110,8 +110,8 @@ Components
       :link: grid_dashboards
 
    .. grid-item-card:: |fa-circle-nodes| APIs
-      :link-type: doc
-      :link: api
+      :link-type: url
+      :link: ../api/explorer.html
 
    .. grid-item-card:: |fa-square-plus| Attribute types
       :link-type: doc
@@ -319,13 +319,13 @@ Components
    AI Assistant <ampai>
    Amperity Bridge <bridge>
    Amps & usage <grid_dashboards>
-   APIs <api>
    Attribute types <grid_attributes>
    Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
    Data exports <data_exports>
    Destinations <page_destinations>
+   Expressions for real-time <expressions>
    File formats <grid_formats>
    Home <home>
    Paid Media Measurement <paid_media_measurement>
