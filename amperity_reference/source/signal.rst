@@ -194,13 +194,11 @@ Investigating a card or a board
 
 .. signal-ampai-investigate-start
 
-.. TODO: verify with the Signal owner -- the per-card control was "Ask AmpAI"; no such string exists in /app, and Home's equivalent was renamed to "Ask the AI Assistant". Confirm the control's exact label in the UI.
-
-Each card carries an **Ask the AI Assistant** control. Selecting it re-grounds the docked chat in that card: its compiled SQL, the values currently on screen, the filters currently applied, and---if you have dragged across a run of buckets on the trend chart---the range you highlighted. It loads a question into the input box for you to edit or send. It does not send one for you.
+Each card carries an **Ask Signal Assistant** control. Selecting it re-grounds the docked chat in that card: its compiled SQL, the values currently on screen, the filters currently applied, and---if you have dragged across a run of buckets on the trend chart---the range you highlighted. It loads a question into the input box for you to edit or send. It does not send one for you.
 
 .. image:: ../../images/signal_ask_ampai.png
    :width: 225 px
-   :alt: The Ask the AI Assistant control on a Signal card.
+   :alt: The Ask Signal Assistant control on a Signal card.
    :align: left
    :class: no-scaled-link
 
