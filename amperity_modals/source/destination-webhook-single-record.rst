@@ -132,5 +132,3 @@ For example, with the default **payload-field** and **Send record as body** disa
        "amperity_collection_id": "..."
      }
    }
-
-Your endpoint must respond within 30 seconds with a success status code. A request that times out or returns an error status code fails, and Amperity does not retry it.
