@@ -359,7 +359,7 @@ These examples assume the courier group's time zone is UTC. If you select a diff
      - Weekly on Sunday at 22:00 UTC
 
    * - **30 15 * * 1,2,5**
-     - Monday, Tuesday, and Friday 15:30 PM UTC
+     - Monday, Tuesday, and Friday at 15:30 UTC
 
 .. courier-groups-schedules-examples-end
 
