@@ -133,4 +133,4 @@ For example, with the default **payload-field** and **Send record as body** disa
      }
    }
 
-Your endpoint must respond within 30 seconds with a success status code. A request that times out or returns an error status code fails, and Amperity does not retry it. With OAuth, the one exception is a 401 response, which Amperity retries once with a new access token.
+Your endpoint must respond within 30 seconds with a success status code. A request that times out or returns an error status code fails, and Amperity does not retry it.
