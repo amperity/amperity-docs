@@ -97,17 +97,13 @@ Components
       :link-type: doc
       :link: activations
 
-   .. grid-item-card:: |fa-sparkles| AI Assistants
+   .. grid-item-card:: |fa-sparkles| AI Assistant
       :link-type: doc
-      :link: assistant
+      :link: ampai
 
    .. grid-item-card:: |fa-direction-left-right| Amperity Bridge
       :link-type: doc
       :link: bridge
-
-   .. grid-item-card:: |fa-sparkles| AmpAI
-      :link-type: doc
-      :link: ampai
 
    .. grid-item-card:: |fa-chart-line| Amps & usage
       :link-type: doc
@@ -144,10 +140,6 @@ Components
    .. grid-item-card:: |fa-line-columns| Couriers
       :link-type: doc
       :link: couriers
-
-   .. grid-item-card:: |fa-sparkles| Customer Data Assistant
-      :link-type: doc
-      :link: customer_data_assistant
 
    .. grid-item-card:: |fa-expand| Data Explorer
       :link-type: doc
@@ -324,16 +316,14 @@ Components
    :hidden:
 
    Activation IDs <activation_ids>
-   AI Assistants <assistant>
+   AI Assistant <ampai>
    Amperity Bridge <bridge>
-   AmpAI <ampai>
    Amps & usage <grid_dashboards>
    APIs <api>
    Attribute types <grid_attributes>
    Audience monetization <monetize>
    Connected systems <connected_systems>
    Consumer privacy <grid_privacy>
-   Customer Data Assistant <customer_data_assistant>
    Data exports <data_exports>
    Destinations <page_destinations>
    File formats <grid_formats>

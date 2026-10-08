@@ -1,7 +1,5 @@
 .. https://docs.amperity.com/reference/
 
-:orphan:
-
 .. meta::
     :description lang=en:
         Frequently asked questions about AmpAI.
@@ -12,10 +10,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI Privacy FAQ
+        AI Assistant Privacy FAQ
 
 ==================================================
-AmpAI Privacy FAQ
+AI Assistant Privacy FAQ
 ==================================================
 
 .. ampai-privacy-start

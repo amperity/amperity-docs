@@ -3,19 +3,19 @@
 
 .. meta::
     :description lang=en:
-        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
+        Tool-specific AI Assistants bring conversational help into the segment, journey, query, and Amps consumption editors, where they help with detailed refinements in place.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        AmpAI assistants help author SQL queries and create customer segments from natural language commands.
+        Tool-specific AI Assistants bring conversational help into the segment, journey, query, and Amps consumption editors, where they help with detailed refinements in place.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        AmpAI assistants
+        Tool-specific AI Assistants
 
 
 ==================================================
-About AmpAI assistants
+Tool-specific AI Assistants
 ==================================================
 
 .. assistant-overview-start
@@ -92,60 +92,6 @@ When editing a custom SQL table, use **Format SQL** to reformat the SQL in the e
    Open **Learning Lab** to learn more about how `the Amperity AI Assistant <https://amperity.com/learning-lab/the-amperity-ai-assistant>`__ |ext_link| and the `Segments AI Assistant <https://amperity.com/learning-lab/ai-assisted-segment-creation>`__ |ext_link| can help you build better queries, segments, and journeys. Registration is required.
 
 .. assistant-learning-lab-end
-
-
-.. _assistant-regional-availability:
-
-Regional availability
-==================================================
-
-.. assistant-regional-availability-start
-
-The availability of each **AmpAI** assistant depends on the hosting region for your tenant. Tenant settings and user permissions may also affect access.
-
-For tenants hosted in Canada:
-
-.. list-table::
-   :widths: 35 30 35
-   :header-rows: 1
-
-   * - Assistant
-     - Availability
-     - Additional requirements
-   * - Amp Insights
-     - Available
-     - **AmpAI** enabled for the tenant and access to the **Amps** dashboard
-   * - Journeys AI Assistant
-     - Not available
-     - Not applicable
-   * - Queries AI Assistant
-     - Available
-     - **AmpAI** enabled for the tenant and access to the **Queries** page
-   * - Segments AI Assistant
-     - Not available
-     - Not applicable
-
-Canada currently deploys GPT-4.1 mini. When an available assistant requests a model that is not deployed in Canada, Amperity routes the request to GPT-4.1 mini.
-
-.. assistant-regional-availability-end
-
-
-.. _assistant-enable-disable:
-
-Enable or disable AmpAI assistants
-==================================================
-
-.. assistant-enable-disable-start
-
-AmpAI features, including **AmpAI** assistants, may be enabled (or disabled) by a user who is assigned the **DataGrid Operator** or **DataGrid Administrator** policy.
-
-.. assistant-enable-disable-end
-
-**To disable AmpAI assistants**
-
-.. include:: ../../amperity_reference/source/ampai_settings.rst
-   :start-after: .. settings-user-ampai-steps-start
-   :end-before: .. settings-user-ampai-steps-end
 
 
 .. _assistant-howitworks:

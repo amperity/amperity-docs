@@ -1,20 +1,20 @@
-.. https://docs.amperity.com/internal/
+.. https://docs.amperity.com/reference/
 
 
 .. meta::
     :description lang=en:
-        The Customer Data Assistant helps marketers quickly move from intent to action, creating segments and journeys through natural language conversation.
+        Working with the AI Assistant: access it, work on the canvas, review proposed changes, and get good results from natural language conversation.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The Customer Data Assistant helps marketers quickly move from intent to action, creating segments and journeys through natural language conversation.
+        Working with the AI Assistant: access it, work on the canvas, review proposed changes, and get good results from natural language conversation.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Customer Data Assistant
+        Working with the AI Assistant
 
 ==================================================
-Customer Data Assistant
+Working with the AI Assistant
 ==================================================
 
 .. customer-data-agent-overview-start
@@ -62,52 +62,6 @@ If the **Customer Data Assistant** is available for your tenant, access it by cl
 .. customer-data-agent-access-custom-prompt-tip-end
 
 
-.. _customer-data-agent-regional-availability:
-
-Regional availability
-==================================================
-
-.. customer-data-agent-regional-availability-start
-
-The experience available from the **AmpAI** button and the model used depend on the region and hosting platform for your Amperity tenant.
-
-.. list-table::
-   :widths: 20 20 35 25
-   :header-rows: 1
-
-   * - Region
-     - Hosting platform
-     - AmpAI experience
-     - Current model
-   * - United States
-     - Amazon AWS
-     - Customer Data Assistant
-     - GPT-5.4
-   * - United States
-     - Microsoft Azure
-     - Customer Data Assistant
-     - GPT-5.4
-   * - European Union
-     - Microsoft Azure
-     - Customer Data Assistant
-     - GPT-5.4
-   * - Canada
-     - Amazon AWS
-     - AmpGPT
-     - GPT-4.1 mini
-   * - Australia
-     - Amazon AWS
-     - AmpGPT
-     - GPT-4.1 mini
-
-The **Customer Data Assistant** requests GPT-5.4. If GPT-5.4 is not deployed in a region, Amperity routes the request to the first available model in its fallback sequence. Canada and Australia currently deploy GPT-4.1 mini only. Enabling the **Customer Data Assistant** in either region without an additional model deployment would therefore continue to use GPT-4.1 mini.
-
-The experiences also support different workflows. For example, consider the request: "Find high-value customers who have lapsed for 90 days, create a segment for them, and build a re-engagement journey."
-
-* The **Customer Data Assistant** can analyze the data, create and track a plan, produce a reviewable segment draft, save the segment after approval, and then draft the journey.
-* **AmpGPT** can analyze the data, generate and run SQL, retry SQL errors, and return a table or visualization. It cannot create, edit, search, or save segments; create journeys; or provide the plan, artifact, and approval workflow.
-
-.. customer-data-agent-regional-availability-end
 
 .. _customer-data-agent-canvas:
 
@@ -343,10 +297,38 @@ This example illustrates how iterative prompting and asking the agent to explore
 .. customer-data-agent-iterative-example-end
 
 
+
 .. _customer-data-agent-pro-tips:
 
-Pro tips
+.. _ampai-getting-good-results:
+
+Getting good results with the AI Assistant
 ==================================================
+
+
+.. ampai-getting-good-results-start
+
+To achieve optimal results when using **AmpAI**, follow these best practices for structuring your prompts:
+
+* **Understand the question's scope**
+
+  Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
+
+* **Avoid overloading**
+
+  Focus on one primary question or task per prompt to ensure clarity and to avoid confusing results.
+
+  For example, instead of asking how the demographics of omnichannel customers compare to single-channel customers, ask a question first about omnichannel customer demographics, and then ask a second question about single-channel customer demographics.
+
+* **Use consistent terminology**
+
+  Stick to terminology used in your schema and business logic to align with how **AmpAI** understands your data.
+
+* **Update the custom prompt often**
+
+  The custom prompt is a powerful tool. Update the custom prompt whenever you get a result that does not align with the way your business views the world.
+
+.. ampai-getting-good-results-end
 
 .. customer-data-agent-pro-tips-start
 
@@ -361,17 +343,57 @@ Pro tips
 
 .. _customer-data-agent-relationship-to-assistants:
 
-Relationship to AI Assistants
+.. _ampai-tools:
+
+Relationship to tool-specific AI Assistants
 ==================================================
 
 .. customer-data-agent-relationship-to-assistants-start
 
 The **Customer Data Assistant** has capabilities that overlap with the existing **AI Assistants** (Segments AI Assistant, Journeys AI Assistant, and SQL AI Assistant). However, they serve complementary purposes:
 
-.. include:: ../../amperity_reference/source/ampai.rst
-   :start-after: .. ampai-tools-overview-table-start
-   :end-before: .. ampai-tools-overview-table-end
-
-A typical workflow might start with the **Customer Data Assistant** to create a segment and journey, then use the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed refinements.
-
 .. customer-data-agent-relationship-to-assistants-end
+
+
+.. ampai-tools-start
+
+**AmpAI** encompasses many tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+
+A typical workflow might start with using the **Customer Data Assistant** to create a segment and journey, and then using the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
+
+.. note:: Custom prompts and company context set in **AmpAI** apply to all AmpAI tools, including the Customer Data Assistant and all other AI Assistants.
+
+.. ampai-tools-overview-table-start
+
+.. list-table::
+   :widths: 30 35 35
+   :header-rows: 1
+
+   * - Tool
+     - Best for
+     - Access point
+   * - Customer Data Assistant
+     - Starting from intent, creating segments and journeys from scratch, multi-step workflows
+     - AmpAI button in sidebar
+   * - Segments AI Assistant
+     - Fine-tuning existing segments, making precise adjustments within the segment editor
+     - Within the **Segments** page
+   * - Journeys AI Assistant
+     - Refining journey logic, adjusting channel configurations within the journey editor
+     - Within the **Journeys** page
+   * - Queries AI Assistant
+     - Writing and debugging SQL queries, data exploration
+     - Within the **Queries** page
+   * - Consumption AI Assistant
+     - Monitoring Amps consumption
+     - Within the **Amps** page
+
+.. ampai-tools-overview-table-end
+
+.. ampai-tools-links-start
+
+Learn more about :doc:`tool-specific AI Assistants <assistant>`.
+
+Availability varies by region and tool. Review :ref:`AI Assistant regional availability <customer-data-agent-regional-availability>` and :ref:`tool-specific AI Assistant regional availability <assistant-regional-availability>`.
+
+.. ampai-tools-links-end
