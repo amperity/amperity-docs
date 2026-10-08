@@ -89,7 +89,7 @@ Use the **Ask AmpAI** section to start a conversation with AmpAI without navigat
 
 .. image:: ../../images/home-ask-ampai.png
    :width: 540 px
-   :alt: Home widget for asking AmpAI questions
+   :alt: Home widget for asking AI Assistant questions
    :align: left
    :class: no-scaled-link
 

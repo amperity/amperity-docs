@@ -27,7 +27,7 @@ With a conversational **AmpAI** interface beside the dashboard, **Signal** helps
 
 .. image:: ../../images/signal_overview.png
    :width: 800 px
-   :alt: A Signal board, with the hero metric and its trend chart above the supporting metrics and breakdowns, and the AmpAI chat docked alongside.
+   :alt: A Signal board, with the hero metric and its trend chart above the supporting metrics and breakdowns, and the AI Assistant chat docked alongside.
    :align: left
    :class: no-scaled-link
 
@@ -115,7 +115,7 @@ For **Signal** to show anything, three things must be in place:
 
 .. image:: ../../images/signal_no_board_yet.png
    :width: 700 px
-   :alt: The Signal page on a tenant with no board yet, offering to build one with AmpAI.
+   :alt: The Signal page on a tenant with no board yet, offering to build one with the AI Assistant.
    :align: left
    :class: no-scaled-link
 

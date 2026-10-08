@@ -41,7 +41,7 @@ If the **Customer Data Assistant** is available for your tenant, access it by cl
 
 .. image:: ../../images/customer_data_agent_access_button.png
       :width: 200 px
-      :alt: Customer Data Assistant access button
+      :alt: AI Assistant access button
       :align: left
       :class: no-scaled-link
 
@@ -76,7 +76,7 @@ To access the **Canvas**, click into any draft that has a split-screen icon on t
 
 .. image:: ../../images/customer_data_agent_splitscreen_icon.png
       :width: 550 px
-      :alt: Customer Data Assistant draft with splitscreen icon
+      :alt: AI Assistant draft with splitscreen icon
       :align: left
       :class: no-scaled-link
 
@@ -103,7 +103,7 @@ The **Customer Data Assistant** operates in a drafting model for segments: when 
 
 .. image:: ../../images/customer_data_agent_segment_proposal_canvas.png
       :width: 750 px
-      :alt: Customer Data Assistant Canvas
+      :alt: AI Assistant Canvas
       :align: left
       :class: no-scaled-link
 
@@ -134,7 +134,7 @@ After editing a segment or journey through conversational prompting, the chat di
 
 .. image:: ../../images/customer_data_agent_proposed_segment_with_undo.png
       :width: 550 px
-      :alt: Customer Data Assistant draft with undo button
+      :alt: AI Assistant draft with undo button
       :align: left
       :class: no-scaled-link
 
@@ -154,7 +154,7 @@ When you ask the **Customer Data Assistant** to perform many related actions, it
 
 .. image:: ../../images/customer_data_agent_plan.png
       :width: 550 px
-      :alt: Customer Data Assistant plan
+      :alt: AI Assistant plan
       :align: left
       :class: no-scaled-link
 
@@ -241,34 +241,86 @@ The **Customer Data Assistant** is optimized for customer data operations. It ca
 
 .. customer-data-agent-limitations-end
 
-
 .. _customer-data-agent-prompting:
 
-Prompting philosophy
+.. _customer-data-agent-pro-tips:
+
+.. _ampai-getting-good-results:
+
+Getting good results with the AI Assistant
 ==================================================
 
-.. customer-data-agent-prompting-start
+.. customer-data-agent-getting-good-results-start
 
 Treat the **Customer Data Assistant** as a tool, not a magic answer machine. Like any tool, it performs best when you provide clear direction and iterate based on results.
 
-**Start with your vision.** Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who have not purchased in 90 days" is more effective than "Find me some customers to target."
+.. customer-data-agent-getting-good-results-end
 
-**Iterate and refine.** If the first result is not correct, coach the agent with specific feedback:
 
-* "The date range should be last year, not this year"
-* "Add a filter for customers in the Gold loyalty tier"
-* "Remove the first name filter"
+Write a clear prompt
+--------------------------------------------------
 
-**Ask the agent to explore.** When results are unexpected (like a segment returning zero customers), ask the agent to investigate:
+.. customer-data-agent-write-a-clear-prompt-start
 
-* "Can you look into my data to see when there is purchase data around Valentine's Day?"
-* "What date range has the most transaction data?"
+* **Start with your vision**
 
-The agent can query your data to find valid parameters, helping you build effective segments even when you are unsure of the exact values.
+  Before prompting, have a clear picture of what you want to accomplish. "I want a segment of high-value customers who have not purchased in 90 days" is more effective than "Find me some customers to target."
 
-**Reframe the question.** If you are not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
+* **Understand the question's scope**
 
-.. customer-data-agent-prompting-end
+  Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
+
+* **Avoid overloading with questions**
+
+  Focus on one primary question per prompt to ensure clarity and to avoid confusing results.
+
+  For example, instead of asking how the demographics of omnichannel customers compare to single-channel customers, ask a question first about omnichannel customer demographics, and then ask a second question about single-channel customer demographics.
+
+  This applies to questions, not to actions. A single prompt may ask for several related actions---create a segment, and then build a journey that uses it---and the agent plans and sequences that work for you. See :ref:`multi-step planning <customer-data-agent-planning>`.
+
+* **Use consistent terminology**
+
+  Stick to terminology used in your schema and business logic to align with how **AmpAI** understands your data.
+
+* **Describe the customer you want to reach**
+
+  Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you are trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
+
+.. customer-data-agent-write-a-clear-prompt-end
+
+
+Refine your results
+--------------------------------------------------
+
+.. customer-data-agent-refine-your-results-start
+
+* **Iterate and refine**
+
+  If the first result is not correct, coach the agent with specific feedback:
+
+  * "The date range should be last year, not this year"
+  * "Add a filter for customers in the Gold loyalty tier"
+  * "Remove the first name filter"
+
+* **Reframe the question**
+
+  If you are not getting the results you expect, try asking the same question in a different way. The framing of your question can affect the response.
+
+* **Ask the agent to explore**
+
+  When results are unexpected (like a segment returning zero customers), ask the agent to investigate:
+
+  * "Can you look into my data to see when there is purchase data around Valentine's Day?"
+  * "What date range has the most transaction data?"
+
+  The agent can query your data to find valid parameters, helping you build effective segments even when you are unsure of the exact values.
+
+* **Let the agent find existing segments**
+
+  When creating a journey, the agent may identify an existing segment that matches your needs. It will ask: "I found a segment called High Value Customers that looks like it could work. Would you like to use that, or should I create a new one?" This helps avoid duplicate segments and makes good use of work already done.
+
+.. customer-data-agent-refine-your-results-end
+
 
 
 .. _customer-data-agent-iterative-example:
@@ -297,48 +349,21 @@ This example illustrates how iterative prompting and asking the agent to explore
 .. customer-data-agent-iterative-example-end
 
 
+Use your custom prompt
+--------------------------------------------------
 
-.. _customer-data-agent-pro-tips:
-
-.. _ampai-getting-good-results:
-
-Getting good results with the AI Assistant
-==================================================
-
-
-.. ampai-getting-good-results-start
-
-To achieve optimal results when using **AmpAI**, follow these best practices for structuring your prompts:
-
-* **Understand the question's scope**
-
-  Define the scope of your question to avoid ambiguous results. For example, specify the timeframe, customer segments, or metrics you are analyzing.
-
-* **Avoid overloading**
-
-  Focus on one primary question or task per prompt to ensure clarity and to avoid confusing results.
-
-  For example, instead of asking how the demographics of omnichannel customers compare to single-channel customers, ask a question first about omnichannel customer demographics, and then ask a second question about single-channel customer demographics.
-
-* **Use consistent terminology**
-
-  Stick to terminology used in your schema and business logic to align with how **AmpAI** understands your data.
+.. customer-data-agent-use-your-custom-prompt-start
 
 * **Update the custom prompt often**
 
   The custom prompt is a powerful tool. Update the custom prompt whenever you get a result that does not align with the way your business views the world.
 
-.. ampai-getting-good-results-end
+* **Use your tenant-specific terminology**
 
-.. customer-data-agent-pro-tips-start
+  Set your custom prompt, and then use your tenant-specific terminology. The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you have laid out. For example, if you have defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
 
-.. tip:: **Build marketing personas.** Some Amperity users have found success using the **Customer Data Assistant** to build marketing personas for their segments. Describe the type of customer you are trying to reach, and the agent can construct a detailed persona profile based on your actual customer data. This helps bridge the gap between abstract marketing concepts and data-driven segment definitions.
+.. customer-data-agent-use-your-custom-prompt-end
 
-.. tip:: **Let the agent find existing segments.** When creating a journey, the agent may identify an existing segment that matches your needs. It will ask: "I found a segment called High Value Customers that looks like it could work. Would you like to use that, or should I create a new one?" This helps avoid duplicate segments and makes good use of work already done.
-
-.. tip:: **Set your custom prompt, and then use your tenant-specific terminology.** The agent understands common marketing and business concepts (like ROAS, loyalty tiers, and churn), but it performs best when you use terminology consistent with rules you have laid out. For example, if you have defined "high-value" in your custom prompt as "lifetime revenue > $1,500", you can use the term "high-value" for consistent results.
-
-.. customer-data-agent-pro-tips-end
 
 
 .. _customer-data-agent-relationship-to-assistants:
@@ -350,14 +375,14 @@ Relationship to tool-specific AI Assistants
 
 .. customer-data-agent-relationship-to-assistants-start
 
-The **Customer Data Assistant** has capabilities that overlap with the existing **AI Assistants** (Segments AI Assistant, Journeys AI Assistant, and SQL AI Assistant). However, they serve complementary purposes.
+The **Customer Data Assistant** has capabilities that overlap with the existing **AI Assistants** (Segments AI Assistant, Journeys AI Assistant, and Queries AI Assistant). However, they serve complementary purposes.
 
 .. customer-data-agent-relationship-to-assistants-end
 
 
 .. ampai-tools-start
 
-**AmpAI** encompasses many tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while the **Consumption AI Assistant** helps you understand how you are using Amps.
+**AmpAI** encompasses many tools, each designed for a different stage of your workflow. The **Customer Data Assistant** is a conversational starting point: describe what you want to accomplish and it generates segments or journeys from scratch. The **AI Assistants** are embedded in individual editors for segments, journeys, and queries, where they help with detailed refinements, while **Amp Insights** helps you understand how you are using Amps.
 
 A typical workflow might start with using the **Customer Data Assistant** to create a segment and journey, and then using the **Manual edit** option to open the specialized editors where the **AI Assistants** can help with detailed adjustments.
 
@@ -384,7 +409,7 @@ A typical workflow might start with using the **Customer Data Assistant** to cre
    * - Queries AI Assistant
      - Writing and debugging SQL queries, data exploration
      - Within the **Queries** page
-   * - Consumption AI Assistant
+   * - Amp Insights
      - Monitoring Amps consumption
      - Within the **Amps** page
 
@@ -397,3 +422,4 @@ Learn more about :doc:`tool-specific AI Assistants <assistant>`.
 Availability varies by region and tool. Review :ref:`AI Assistant regional availability <customer-data-agent-regional-availability>` and :ref:`tool-specific AI Assistant regional availability <assistant-regional-availability>`.
 
 .. ampai-tools-links-end
+
