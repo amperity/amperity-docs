@@ -327,7 +327,7 @@ Schedules
 
 .. courier-groups-schedules-start
 
-Amperity uses cron syntax to schedule the time at which a courier group is available for transferring files from a customer data source location to Amperity. A courier group that is scheduled runs automatically. Schedules are in UTC.
+Amperity uses cron syntax to schedule the time at which a courier group is available for transferring files from a customer data source location to Amperity. A courier group that is scheduled runs automatically. The schedule runs in the time zone selected for the courier group, which is UTC by default.
 
 .. courier-groups-schedules-end
 
@@ -923,7 +923,7 @@ Define schedule
 
 .. courier-groups-howto-define-schedule-start
 
-Amperity uses cron syntax to schedule the time at which a courier group is available for transferring files from a customer data source location to Amperity. A courier group that is scheduled runs automatically. Schedules are in UTC.
+Amperity uses cron syntax to schedule the time at which a courier group is available for transferring files from a customer data source location to Amperity. A courier group that is scheduled runs automatically. The schedule runs in the time zone selected for the courier group, which is UTC by default.
 
 .. note:: Scheduling a courier group is optional. When a courier group is not assigned a schedule, it may only be run manually on an ad hoc basis.
 
