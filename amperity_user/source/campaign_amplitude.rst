@@ -30,7 +30,7 @@ Send audiences to Amplitude
    :start-after: .. destination-amplitude-beta-start
    :end-before: .. destination-amplitude-beta-end
 
-A campaign sends an audience to |destination-name| as a Behavioral Cohort, so product teams can run funnel, retention, and feature-adoption analyses against an Amperity-resolved audience inside |destination-name|.
+A campaign sends an audience to |destination-name| as a behavioral cohort, so product teams can run funnel, retention, and feature-adoption analyses against an Amperity-resolved audience inside |destination-name|.
 
 .. include:: ../../amperity_operator/source/destination_amplitude.rst
    :start-after: .. destination-amplitude-api-note-start
@@ -151,7 +151,7 @@ Configure default attributes
      - Destination attribute
    * - **identity_value**
      - Yes
-     - The identifier for each member of the audience. It must be the identifier type set by the destination's **Cohort identifier type** setting — either |destination-name|'s own assigned identifier or the one your own systems assign. A member whose value is empty is dropped and reported as a failed row.
+     - The identifier for each member of the audience. It must match the identifier type chosen in the **Cohort identifier type** setting when this destination was configured — either |destination-name|'s own assigned identifier or the one your own systems assign. A member whose value is empty is dropped and reported as a failed row.
 
 .. important:: |destination-name| only matches identifiers it already knows. An identifier that has never reached |destination-name| through a user-properties or events orchestration is reported as invalid and is not added to the cohort.
 

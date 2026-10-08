@@ -2,7 +2,6 @@
 
 
 .. |destination-name| replace:: Amplitude
-.. |destination-api| replace:: Amplitude Analytics API
 .. |plugin-name| replace:: "Amplitude"
 .. |credential-type| replace:: "amplitude"
 .. |required-credentials| replace:: "API Key" and "Secret Key"
@@ -55,7 +54,7 @@ The query results must include a column named ``identity_value``. What else the 
 
 .. destination-amplitude-api-note-start
 
-.. note:: This destination uses the `Amplitude Analytics API <https://amplitude.com/docs/apis/analytics>`__ |ext_link| — the HTTP V2, Batch, Identify, and Group Identify endpoints for property and event writes, the Behavioral Cohorts API for audiences, and the User Privacy API for deletion requests.
+.. note:: This destination uses several of |destination-name|'s `REST APIs <https://amplitude.com/docs/apis>`__ |ext_link|: the `HTTP V2 <https://amplitude.com/docs/apis/analytics/http-v2>`__ |ext_link| and `Batch Event Upload <https://amplitude.com/docs/apis/analytics/batch-event-upload>`__ |ext_link| APIs for events, the `Identify <https://amplitude.com/docs/apis/analytics/identify>`__ |ext_link| and `Group Identify <https://amplitude.com/docs/apis/analytics/group-identify>`__ |ext_link| APIs for user and group properties, the `Behavioral Cohorts API <https://amplitude.com/docs/apis/analytics/behavioral-cohorts>`__ |ext_link| for audiences, and the `User Privacy API <https://amplitude.com/docs/apis/analytics/user-privacy>`__ |ext_link| for deletion requests.
 
 .. destination-amplitude-api-note-end
 
@@ -79,7 +78,7 @@ The query results must include a column named ``identity_value``. What else the 
 
 .. destination-amplitude-region-note-start
 
-.. note:: The **Amplitude region** setting must match the region your |destination-name| project is hosted in. Amperity sends to different |destination-name| hosts for **us** and **eu**, and a mismatch stops the run with a not-found error rather than writing to the wrong place.
+.. note:: The **Amplitude region** setting must match the region your |destination-name| project is hosted in. Amperity sends to different |destination-name| hosts for **us** and **eu**, and a mismatch sends every request to the wrong host, so the run fails.
 
 .. destination-amplitude-region-note-end
 
@@ -106,7 +105,7 @@ The **Write mode** setting selects what each row does. You choose the write mode
    * - **group-properties**
      - Writes each row as properties on an |destination-name| group, addressed by ``identity_value`` as the group's value. Requires the **Group type** setting. Every column other than ``identity_value`` becomes a group property, with the same ``$set`` and ``$setOnce`` behavior as user-properties mode. Syncs incrementally.
    * - **cohort-push**
-     - Sends one Amperity audience to |destination-name| as one Behavioral Cohort. Only ``identity_value`` is sent; other columns are ignored, because cohort membership carries no properties. Requires the **Cohort name**, **Cohort identifier type**, **Cohort owner email**, and **Amplitude app ID** settings. Syncs incrementally when **Cohort sync mode** is **append**.
+     - Sends one Amperity audience to |destination-name| as one behavioral cohort. Only ``identity_value`` is sent; other columns are ignored, because cohort membership carries no properties. Requires the **Cohort name**, **Cohort identifier type**, **Cohort owner email**, and **Amplitude app ID** settings. Syncs incrementally when **Cohort sync mode** is **append**.
    * - **user-deletion**
      - Submits a deletion request to |destination-name| for each row's identity, for honoring data-subject deletion requests. Only ``identity_value`` is sent; other columns are ignored. Requires the **Deletion identifier type** and **Deletion requester** settings. Processes every row on each run.
 
@@ -114,19 +113,21 @@ Property values are sent with the type your query returns them as — a number s
 
 In user-properties and group-properties modes, a column whose value is null for a given row clears that property in |destination-name| rather than leaving the previous value in place. Because these modes only resend a row when something about it changes, a cleared value that was dropped instead would leave |destination-name|'s copy stale indefinitely. A column named in **Set-once properties** is an exception: a null value in one of those columns is skipped, because a write-once property has nothing to undo.
 
-.. caution:: user-deletion mode asks |destination-name| to permanently delete each identity's data, and cannot be undone. Restrict these orchestrations to the identities you intend to delete, and see the **Delete from entire org** setting before enabling it.
+.. important:: Amperity does not send |destination-name| a deduplication key with an event, so an event that is sent twice is counted twice. Because events mode re-sends every row in the query results on each run, scope the query so that a run sends only events that have not been sent before.
+
+.. caution:: user-deletion mode asks |destination-name| to delete each identity's data. |destination-name| schedules the request and processes it within 30 days; it can be revoked in |destination-name| until three days before its scheduled run date, after which it cannot be stopped and Amperity cannot restore the data. A successful run means |destination-name| accepted the request, not that the data is already gone — Amperity does not track the request to completion. Restrict these orchestrations to the identities you intend to delete, and see the **Delete from entire org** setting before enabling it.
 
 .. destination-amplitude-write-modes-end
 
 
 .. _destination-amplitude-cohorts:
 
-Behavioral Cohorts
+Behavioral cohorts
 ====================================================
 
 .. destination-amplitude-cohort-behavior-start
 
-In cohort-push mode, one orchestration or campaign maintains one |destination-name| Behavioral Cohort, named by the **Cohort name** setting. Amperity creates the cohort on the first run and updates the same cohort on later runs of that name.
+In cohort-push mode, one orchestration or campaign maintains one |destination-name| behavioral cohort, named by the **Cohort name** setting. Amperity creates the cohort on the first run and updates the same cohort on later runs of that name.
 
 Every cohort's first run sends the full audience, in either **Cohort sync mode**, because |destination-name| assigns the cohort's identifier only on that first full send. From the second run onward, **replace** keeps re-sending the full audience and **append** sends only the members added and removed since the last run.
 
@@ -557,7 +558,7 @@ Data validation
 Amperity sends every row in the query results, except for rows it cannot build a valid request for. A row is skipped and reported as failed, and the run continues, when any of the following is true:
 
 * The ``identity_value`` column is empty for that row, in any write mode.
-* The write mode is **user-properties** or **events** and the row's ``identity_value`` is shorter than five characters, |destination-name|'s minimum length for a ``user_id``. This minimum does not apply to the other three modes.
+* The write mode is **user-properties** or **events** and the row's ``identity_value`` is shorter than five characters. Five characters is |destination-name|'s documented minimum id length for event ingest; Amperity applies it to user properties as well. This minimum does not apply to the other three modes.
 * The write mode is **events** and the **Event name column** is empty for that row.
 * The write mode is **cohort-push** and |destination-name| does not recognize the identity, because it has not been sent through user-properties or events mode first.
 * |destination-name| rejects the request that row belongs to.
@@ -569,7 +570,7 @@ How much a rejection costs depends on the write mode, because |destination-name|
 * In **user-properties** and **group-properties** modes, |destination-name| accepts or rejects a request as a whole and reports no per-row detail. One bad value fails every row in that request — up to 100 users, or up to 1,024 groups.
 * In **events** mode, |destination-name| names the specific events it rejected. Amperity reports those as failed, then resends the rest of the batch once so that valid events are not lost alongside an invalid neighbor.
 * In **cohort-push** mode, |destination-name| reports how many identifiers it matched, so only the unmatched ones are reported as failed. On an **append** run, an identifier that |destination-name| skips when removing a member is reported as a warning rather than a failure, because an identifier that is already not in the cohort is the intended end state.
-* In **user-deletion** mode, every identifier in a request must already exist in |destination-name| or the whole request fails — up to 100 identities. An identity that |destination-name| does not recognize on an otherwise valid request is reported as a note, not a failure, because a deletion for an identity |destination-name| has no record of is already satisfied.
+* In **user-deletion** mode, every identifier in a request must already exist in |destination-name| or the whole request fails — up to 100 identities. Keep these orchestrations scoped to identities |destination-name| has already seen.
 
 Some conditions stop the entire run instead of failing individual rows, and are caught before any data is sent:
 

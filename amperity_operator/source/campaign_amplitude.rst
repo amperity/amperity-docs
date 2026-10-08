@@ -2,7 +2,6 @@
 
 
 .. |destination-name| replace:: Amplitude
-.. |destination-api| replace:: Amplitude Analytics API
 .. |plugin-name| replace:: "Amplitude"
 .. |credential-type| replace:: "amplitude"
 .. |required-credentials| replace:: "API Key" and "Secret Key"
@@ -13,11 +12,11 @@
 
 .. meta::
     :description lang=en:
-        Configure Amperity to send campaigns to Amplitude as Behavioral Cohorts.
+        Configure Amperity to send campaigns to Amplitude as behavioral cohorts.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        Configure Amperity to send campaigns to Amplitude as Behavioral Cohorts.
+        Configure Amperity to send campaigns to Amplitude as behavioral cohorts.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
@@ -35,13 +34,13 @@ Configure campaigns for Amplitude
    :start-after: .. destination-amplitude-beta-start
    :end-before: .. destination-amplitude-beta-end
 
-A campaign sends an audience to |destination-name| as a Behavioral Cohort, so product teams can run funnel, retention, and feature-adoption analyses against an Amperity-resolved audience inside |destination-name|.
+A campaign sends an audience to |destination-name| as a behavioral cohort, so product teams can run funnel, retention, and feature-adoption analyses against an Amperity-resolved audience inside |destination-name|.
 
 .. include:: ../../amperity_operator/source/destination_amplitude.rst
    :start-after: .. destination-amplitude-api-note-start
    :end-before: .. destination-amplitude-api-note-end
 
-.. important:: A campaign uses the cohort-push write mode. Leave **Attribute updates only** cleared on a campaign — selecting it suppresses the audience the cohort is built from and the run fails with a message naming that setting.
+.. important:: Set **Write mode** to cohort-push on a campaign destination. It defaults to user-properties, which writes user properties instead of cohort membership, and only cohort-push sends an audience. Leave **Attribute updates only** cleared — selecting it suppresses the audience the cohort is built from, and the run fails with a message naming that setting.
 
 .. include:: ../../amperity_operator/source/destination_amplitude.rst
    :start-after: .. destination-amplitude-cohort-behavior-start
@@ -100,6 +99,14 @@ Get details
           :align: center
           :class: no-scaled-link
      - **Required configuration settings**
+
+       **Write mode**
+
+          |checkmark-required| **Required**
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amplitude-write-mode-campaign-start
+             :end-before: .. setting-amplitude-write-mode-campaign-end
 
        **Identity column**
 
@@ -312,6 +319,12 @@ Add destination
      - .. include:: ../../shared/destination_settings.rst
           :start-after: .. campaigns-steps-settings-start
           :end-before: .. campaigns-steps-settings-end
+
+       **Write mode** (Required at campaign)
+
+          .. include:: ../../shared/destination_settings.rst
+             :start-after: .. setting-amplitude-write-mode-campaign-start
+             :end-before: .. setting-amplitude-write-mode-campaign-end
 
        **Identity column**
 

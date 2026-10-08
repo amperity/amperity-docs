@@ -3049,6 +3049,6 @@ Required. The Secret Key for the same |destination-name| project as the API Key.
 
 .. credential-amplitude-find-keys-start
 
-Both values are on the same page in |destination-name|: open **Settings**, select **Projects**, select the project, and copy the **API Key** and **Secret Key** from its **General** tab.
+Both values are on the same page in |destination-name|: open **Settings**, select **Projects**, and select the project. On its **General** tab, select **Manage** next to **API Key** or **Secret Key** to view and copy each value.
 
 .. credential-amplitude-find-keys-end

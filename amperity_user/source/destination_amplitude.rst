@@ -106,7 +106,7 @@ The following example returns predicted-value attributes for a user-properties o
    FROM Customer_360
    WHERE amperity_id IS NOT NULL
 
-A row whose ``identity_value`` is empty is dropped and reported as a failed row. In user-properties and events modes, so is a row whose ``identity_value`` is shorter than five characters, which is |destination-name|'s minimum length for a ``user_id``.
+A row whose ``identity_value`` is empty is dropped and reported as a failed row. In user-properties and events modes, so is a row whose ``identity_value`` is shorter than five characters. Five characters is |destination-name|'s documented minimum id length for event ingest, and Amperity applies it to user properties as well.
 
 The following example returns purchases for an events orchestration whose **Event name column** is ``event_name`` and whose **Timestamp column** is ``event_time``. Every column other than those two and ``identity_value`` becomes an event property:
 
@@ -127,6 +127,8 @@ Return the event time as an ISO 8601 timestamp that carries a time zone, as a da
 .. caution:: A number in the timestamp column is sent to |destination-name| unchanged. A value in epoch seconds lands in 1970 and a value in epoch microseconds lands far in the future, in both cases with no error and no warning. Multiply seconds by 1000 in the query, or return an ISO 8601 string instead.
 
 A timestamp value that is empty, or that cannot be read as any of those three forms, does not fail the row — |destination-name| records that event at the time it was received instead of when it happened.
+
+.. important:: Amperity does not send |destination-name| a deduplication key with an event, so an event that is sent twice is counted twice. An events orchestration re-sends every row in the query results on each run, so scope the query — with a date filter, for example — so that a run returns only events that have not been sent before.
 
 .. sendto-amplitude-build-query-end
 
