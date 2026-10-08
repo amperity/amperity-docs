@@ -29,7 +29,7 @@ Choose how Amperity authenticates with your endpoint: an API key, or OAuth 2.0 c
 
 **Webhook URL**
 
-Required. The URL of the endpoint that receives each request. The **route-params** field on the Activate node can add a path to this URL.
+Required. The URL of the endpoint that receives each request. The **route-params** field on the journey's **Activate** node can add a path to this URL.
 
 **API key**
 
@@ -83,7 +83,7 @@ The value of the "Content-Type" header. May be "application/json" or "text/plain
 
 **Send record as body**
 
-Disabled by default, so that the customer's attributes are nested under the **payload-field** set on the Activate node, for example {"data": {...}}. Enable this option to send the customer's attributes as the whole request body. The **payload-field** is then ignored.
+Disabled by default, so that the customer's attributes are nested under the **payload-field** set on the journey's **Activate** node, for example {"data": {...}}. Enable this option to send the customer's attributes as the whole request body. The **payload-field** is then ignored.
 
 **Custom headers**
 
@@ -99,7 +99,7 @@ Optional. A header name, such as "X-Tracking-ID". When set, each request gets th
 Activate node settings
 ==================================================
 
-The rest of the configuration for this connector belongs to the journey that sends to it. Add this destination to an **Activate** node, then configure the following fields on that node. Two nodes may send to the same destination with different **payload-field** and **route-params** values.
+The rest of the configuration for this connector belongs to the journey that sends to it. Add this destination to an **Activate** node in the journey, then configure the following fields on that node. Two nodes may send to the same destination with different **payload-field** and **route-params** values.
 
 **payload-field**
 
@@ -115,8 +115,8 @@ Request body
 
 Each request carries one customer's attributes:
 
-* The attributes mapped to this destination on the Activate node, using the names they are mapped to. These may come from the customer's profile or from the event that triggered the journey.
-* Any custom attributes configured on the Activate node. A custom attribute with the same name as a mapped attribute replaces it.
+* The attributes mapped to this destination on the journey's **Activate** node, using the names they are mapped to. These may come from the customer's profile or from the event that triggered the journey.
+* Any custom attributes configured on the same node. A custom attribute with the same name as a mapped attribute replaces it.
 * "amperity_profile_id", the Amperity profile ID of the customer.
 * "amperity_collection_id", the ID of the profile collection the customer belongs to.
 
