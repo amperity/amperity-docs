@@ -49,8 +49,9 @@ Who can do what:
 * **Removing someone's access is deliberately easier than giving it.** Anyone who can edit users in
   Amperity can take a Pér grant away.
 
-.. PENDING NC-008: amperity-docs already publishes a "Use Customer Data Agent" row in the policies
-   reference, which may not match the two gates the product applies. PO and engineering.
+.. PENDING NC-008: amperity-docs publishes a "Use the AI Assistant" row in the policies
+   reference, renamed from "Use Customer Data Agent", which may not match the two gates the
+   product applies. PO and engineering.
 
 
 .. _per-managing-access-modes:

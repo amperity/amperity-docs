@@ -109,11 +109,11 @@ duplicating or contradicting it.
 Below your own company context, the page shows two things from Amperity, read-only:
 
 * **Company context documents** — the
-  `context documents <../reference/ampai.html#ampai-company-context>`__ configured in your
+  `context documents <../reference/ai_assistant_company_context.html>`__ configured in your
   Amperity tenant.
 * **The AI Assistant system prompt in Amperity** — the standing instructions your tenant gave the
   AI Assistant. Amperity's own documentation calls this the
-  `custom prompt <../reference/ampai.html#ampai-custom-prompt>`__.
+  `custom prompt <../reference/ai_assistant_custom_prompts.html>`__.
 
 Pér reads both alongside the company context you write here. This page does not replace them, and
 it cannot edit them — both are edited in Amperity.
@@ -123,12 +123,13 @@ it cannot edit them — both are edited in Amperity.
    The panel appears only when Pér can reach Amperity for your session. A tenant with no context
    documents, or no AI Assistant system prompt, is told so rather than shown an empty box.
 
-.. PENDING NC-032: one object, two names. Pér's settings page labels it the AmpAI system prompt;
-   Amperity's own UI and documentation call it the custom prompt. The article now says "AI
-   Assistant system prompt in Amperity", ahead of the product: at the pin the page still renders
-   the literal string "AmpAI system prompt" (amp-parity AmperityContextReadOnly.tsx:91,
-   AMPAI_SYSTEM_PROMPT_HEADING in trust-precedence.ts:13), pending the AmpAI → AI Assistant
-   rename. PO to settle the naming; re-check the UI string before publication.
+.. PENDING NC-032: one object, two names. Amperity's side of the rename has landed: its UI and
+   documentation call this the custom prompt, on a page of its own. Pér's settings page still
+   labels it the AmpAI system prompt — verified at the pin, where AmperityContextReadOnly.tsx:91
+   renders the literal string and AMPAI_SYSTEM_PROMPT_HEADING in trust-precedence.ts:12 still
+   defines it as "AmpAI system prompt". The article says "AI Assistant system prompt in
+   Amperity", ahead of the Pér UI. PO to settle the naming; re-check the UI string when Pér
+   takes up the rename.
 
 
 .. _per-company-context-uploading:
