@@ -350,7 +350,7 @@ Relationship to tool-specific AI Assistants
 
 .. customer-data-agent-relationship-to-assistants-start
 
-The **Customer Data Assistant** has capabilities that overlap with the existing **AI Assistants** (Segments AI Assistant, Journeys AI Assistant, and SQL AI Assistant). However, they serve complementary purposes:
+The **Customer Data Assistant** has capabilities that overlap with the existing **AI Assistants** (Segments AI Assistant, Journeys AI Assistant, and SQL AI Assistant). However, they serve complementary purposes.
 
 .. customer-data-agent-relationship-to-assistants-end
 
