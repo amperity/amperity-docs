@@ -51,6 +51,9 @@ jobs:
           name: Build Guided setup
           command: sphinx-build -b html --jobs auto -W amperity_guides/source ./site-test/guides
       - run:
+          name: Build Pér
+          command: sphinx-build -b html --jobs auto -W amperity_per/source ./site-test/per
+      - run:
           name: Build Contributing
           command: sphinx-build -b html --jobs auto -W contributing/source ./site-test/contributing
       - run:
