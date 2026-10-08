@@ -102,9 +102,9 @@ A tenant you expected to see but cannot find has simply not been enabled.
    as it is elsewhere in the platform. See
    :ref:`Open and managed access <per-managing-access-modes>`.
 
-.. PENDING NC-008: amperity-docs already publishes a "Use Customer Data Agent" row in the policies
-   reference, which may not match the two gates the product applies. PO and engineering. The same
-   marker sits in managing_access.rst.
+.. PENDING NC-008: amperity-docs publishes a "Use the AI Assistant" row in the policies
+   reference, renamed from "Use Customer Data Agent", which may not match the two gates the
+   product applies. PO and engineering. The same marker sits in managing_access.rst.
 
 **To switch tenants**
 
