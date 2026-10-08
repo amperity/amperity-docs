@@ -936,7 +936,7 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 #. From the **Sources** page, open the menu for a courier group, and then select **Edit**.
 #. On the **General** tab, use the **Schedule** field to configure a schedule using cron syntax.
 
-   Optional. Choose a time zone and indicate of the selected time zone should be used as the time from which the :ref:`number of days <courier-groups-source-courier-days>` to look back is determined.
+   Optional. Choose a time zone and indicate if the selected time zone should be used as the time from which the :ref:`number of days <courier-groups-source-courier-days>` to look back is determined.
 #. Click **Save**.
 
 .. courier-groups-howto-define-schedule-steps-end
