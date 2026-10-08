@@ -256,9 +256,6 @@ Notification fields
    * - **Stitch metrics**
      - Stitch
      - These metrics display the tenant, the time at which the job started, the ID for the Stitch report, the Stitch ID, the collapsed ID count, related pairs count, and filtered related pair count.
-   * - **Stitch report**
-     - Stitch
-     - A Stitch report displays cluster graphs for individuals associated with the Amperity ID.
    * - **Tables**
      - Databases, Orchestrations, Sources, Stitch
      - The tables that are processed in orchestration process.
@@ -277,9 +274,9 @@ Notification fields
    * - **View Campaign**
      - Databases
      - View details for a campaigns.
-   * - **View Workflows**
+   * - **Workflow job**
      - Databases, Orchestrations, Sources
-     - View workflow details for the campaigns, courier groups, couriers, data ingest, database refresh, orchestration groups, and orchestration tasks by clicking the **View Workflow** link.
+     - Opens the workflow for the campaigns, courier groups, couriers, data ingest, database refresh, orchestration groups, and orchestration tasks in the **Workflows** page.
 	   
 .. notifications-fields-end
 
@@ -314,7 +311,7 @@ Campaign error notifications are most often related to:
 #. Running a segment
 #. Sending a campaign downstream
 
-If you see a campaign error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a campaign error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-campaigns-errors-end
 
@@ -360,7 +357,7 @@ Database error notifications are most often related to:
 #. Error while publishing databases
 #. Query error found
 
-If you see a databases error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a databases error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-databases-errors-end
 
@@ -412,7 +409,7 @@ Journey error notifications are most often related to:
 #. Running a journey node
 #. Sending a journey activation to a destination
 
-If you see a journey error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a journey error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-journeys-errors-end
 
@@ -466,7 +463,7 @@ Orchestration error notifications are most often related to:
 #. Running a query
 #. Sending an orchestration downstream
 
-If you see an orchestration error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see an orchestration error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-orchestrations-errors-end
 
@@ -524,7 +521,7 @@ Query error notifications are most often related to:
      #. Review the query and look for ways to optimize the SQL so that it returns smaller results sets.
      #. Configure the query to run in performance mode. This wraps a **CREATE TABLE** operation around the **SELECT** statement in the query, writes the results to an Apache Parquet file, and then makes that file available to Amperity as a table. Queries that run in `performance mode can have limitations <https://docs.amperity.com/reference/queries.html#enable-performance-mode>`__. 
 
-If you see a query error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a query error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-queries-errors-end
 
@@ -569,7 +566,7 @@ Source error notifications are most often related to:
 #. Running a courier
 #. Data type mismatch with a feed
 
-If you see a source error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a source error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-sources-errors-end
 
@@ -629,7 +626,7 @@ Stitch reports
 
 Stitch report error notifications are most often related to issues with generating the Stitch report.
 
-If you see a Stitch report error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a Stitch report error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-stitch-reports-errors-end
 
@@ -680,7 +677,7 @@ Stitch run error notifications are most often related to:
 #. Mismatch between fields and data types in custom tables and tables already loaded to Stitch
 #. Issues with steps within the Stitch process
 
-If you see a Stitch error notification, click the **View Workflow** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
+If you see a Stitch error notification, click the **Workflow job** link in that notification to open the workflow in the **Workflows** page, and then review all of the available workflow actions to determine which steps will help you best resolve the error.
 
 .. notifications-stitch-runs-errors-end
 
@@ -751,7 +748,7 @@ You should resolve warnings and errors from the **Workflows** page.
 .. notifications-open-workflow-tab-steps-start
 
 #. On the recent activity pane, click **More** for a notification with a warning or an error.
-#. Click **View Workflow**. This opens the **Workflows** page to the workflow for this notification.
+#. Click **Workflow job**. This opens the **Workflows** page to the workflow for this notification.
 #. Find, and then open, the rows that contain warnings or errors, and then work to resolve them.
 
    .. tip:: Use the provided workflow actions to resolve an error.
@@ -774,7 +771,7 @@ You can resolve an error in a workflow on the **Workflows** page.
 
 .. notifications-resolve-workflow-errors-steps-start
 
-#. On the recent activity pane or the **Search Recent Notifications** window, in the desired notification, click on the **View Workflow** link.
+#. On the recent activity pane or the **Search Recent Notifications** window, in the desired notification, click on the **Workflow job** link.
 #. On the **Workflows** page, click **Show Resolutions**.
 #. On the **Resolve Error**, select the resolution option in the **Resolution** section.
 #. Click **Resolve**.

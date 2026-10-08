@@ -53,7 +53,7 @@ You may receive a notifications error for a configured |source-name| data source
 
 .. workflow-actions-common-table-section-one-b-start
 
-If you receive a notification error, review the details, and then click the **View Workflow** link to open this notification error in the **Workflows** page.
+If you receive a notification error, review the details, and then click the **Workflow job** link to open this notification error in the **Workflows** page.
 
 .. workflow-actions-common-table-section-one-b-end
 
