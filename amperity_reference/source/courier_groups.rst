@@ -335,6 +335,8 @@ Amperity uses cron syntax to schedule the time at which a courier group is avail
 
 **Example cron schedules**
 
+These examples assume the courier group's time zone is UTC. If you select a different time zone, the times are in that time zone.
+
 .. list-table::
    :widths: 30 70
    :header-rows: 1
