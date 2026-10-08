@@ -4041,3 +4041,155 @@ Required. The |destination-name| App ID for the app this destination writes into
 Required. Selects the |destination-name| alias that identifies each person. Only ``external_id`` is available. The query results must include a column with that name, and Amperity sends its value as the person's External ID. Every other column except ``email`` and ``phone`` is sent as a data tag.
 
 .. setting-onesignal-user-identifier-end
+
+.. setting-amplitude-identity-column-start
+
+Required. The column in the query results that carries each row's identity. This is always ``identity_value`` — your query must return a column with that exact name. What that value means depends on the write mode: the |destination-name| ``user_id`` in user-properties and events modes, the group's value in group-properties mode, the cohort member in cohort-push mode, or the identity to delete in user-deletion mode.
+
+.. setting-amplitude-identity-column-end
+
+.. setting-amplitude-region-start
+
+The |destination-name| data-residency region this destination connects to: **us** (the default) or **eu**. This selects the |destination-name| hosts Amperity sends to, so it must match the region your |destination-name| project is hosted in. A region that does not match the project's own region sends every request to the wrong |destination-name| host and the run fails.
+
+.. setting-amplitude-region-end
+
+.. setting-amplitude-write-mode-start
+
+What each orchestration sends to |destination-name|. A destination performs one write mode per orchestration; to send more than one, configure a separate orchestration, with its own query, for each mode:
+
+* **user-properties** (the default) writes each row as properties on an |destination-name| user, using ``$set`` — or ``$setOnce`` for columns named in **Set-once properties**.
+* **events** sends each row as a named |destination-name| event, taking the event name and event time from the columns named by **Event name column** and **Timestamp column**. Requires both settings.
+* **group-properties** writes each row as properties on an |destination-name| group, using the row's identity as the group's value. Requires the **Group type** setting.
+* **cohort-push** sends one Amperity audience to |destination-name| as one behavioral cohort. Requires the **Cohort name**, **Cohort identifier type**, **Cohort owner email**, and **Amplitude app ID** settings.
+* **user-deletion** submits deletion requests to |destination-name|'s User Privacy API, for honoring data-subject deletion requests. Requires the **Deletion identifier type** and **Deletion requester** settings.
+
+You choose the write mode when you configure the orchestration that sends to this destination.
+
+.. setting-amplitude-write-mode-end
+
+.. setting-amplitude-write-mode-campaign-start
+
+Required for a campaign. Select **cohort-push**, which sends the campaign's audience to |destination-name| as one behavioral cohort. No other write mode sends an audience.
+
+.. important:: **Write mode** defaults to **user-properties**. A campaign destination left at that default writes user properties instead of cohort membership, so set this explicitly.
+
+.. setting-amplitude-write-mode-campaign-end
+
+.. setting-amplitude-attribute-updates-only-start
+
+Required for every write mode except cohort-push. Select this checkbox on every user-properties, events, group-properties, and user-deletion orchestration. Leave it cleared only for cohort-push, which needs the audience that this setting suppresses.
+
+.. important:: Select the checkbox explicitly. A checkbox that was never touched is saved as unset, which is correct for cohort-push but fails every other write mode. An orchestration that is missing this setting fails before any data is sent, with the message "Plugin configuration: missing audience name". Setting it on a cohort-push orchestration fails that run instead, with a message naming this setting.
+
+.. setting-amplitude-attribute-updates-only-end
+
+.. setting-amplitude-set-once-properties-start
+
+Applies to user-properties and group-properties modes. A comma-separated list of column names to write with |destination-name|'s ``$setOnce`` semantics — written once and never overwritten — instead of the default ``$set``, which overwrites on every run. Leave it blank to write every non-identity column with ``$set``. A name that is not a column in the query results, or the identity column itself, fails the run before any data is sent.
+
+.. setting-amplitude-set-once-properties-end
+
+.. setting-amplitude-group-type-start
+
+Applies to group-properties mode only, and is required for it. The |destination-name| group type this orchestration writes — for example ``account``. It must match a group type already defined in your |destination-name| project's group taxonomy. One orchestration writes one group type.
+
+.. note:: |destination-name| accepts group writes on any plan, but analyzing group properties in |destination-name| — group-level reporting, group properties as chart dimensions — requires its paid Accounts add-on. Confirm your project has that add-on before building a group-properties orchestration, or the data lands without being usable.
+
+.. setting-amplitude-group-type-end
+
+.. setting-amplitude-event-name-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's |destination-name| event name. This column is used as the event name and is not also sent as an event property. A row whose value in this column is empty is skipped and reported as failed. If the named column is not in the query results, the run fails before any data is sent.
+
+.. setting-amplitude-event-name-column-end
+
+.. setting-amplitude-timestamp-column-start
+
+Applies to events mode only, and is required for it. The name of the column in the query results that supplies each row's event time, so events reflect when they actually happened rather than when they were sent. This column is used as the event time and is not also sent as an event property. If the named column is not in the query results, the run fails before any data is sent.
+
+Amperity accepts three forms in this column:
+
+* An ISO 8601 timestamp that carries a time zone or a ``Z`` suffix, for example ``2026-03-14T09:15:00Z``.
+* A date only, for example ``2026-03-14``, which is sent as midnight UTC on that date.
+* A number, which is sent to |destination-name| unchanged and must therefore already be in **epoch milliseconds**.
+
+.. caution:: A number is passed through without conversion or range checking. A value in epoch *seconds* lands in 1970 and a value in epoch *microseconds* lands thousands of years in the future, in both cases silently — the event is accepted and no warning is reported. Multiply seconds by 1000 in the query, or return an ISO 8601 string instead.
+
+A value that is empty, or that is present but matches none of the three accepted forms — such as ``2026-03-14 09:15:00``, which carries no time zone — does not fail the row. The event is still sent, and |destination-name| records it at ingest time instead of its true event time. A present-but-unconvertible value is reported as a warning in the run details; an empty one is not.
+
+.. setting-amplitude-timestamp-column-end
+
+.. setting-amplitude-sync-cadence-start
+
+Applies to events mode only. Selects which |destination-name| ingest endpoint the orchestration sends through:
+
+* **steady-state** (the default) sends small batches through |destination-name|'s HTTP V2 API, for regular incremental syncs.
+* **backfill** sends much larger batches through |destination-name|'s Batch Event Upload API, for high-volume historical loads.
+
+One cadence applies to the whole orchestration. Amperity does not switch endpoints partway through a run based on how much data the run turns out to carry.
+
+.. setting-amplitude-sync-cadence-end
+
+.. setting-amplitude-cohort-name-start
+
+Applies to cohort-push mode only, and is required for it. The display name of the |destination-name| behavioral cohort this orchestration maintains. Amperity also uses it to recognize the cohort across runs, so repeat runs of the same name update the same |destination-name| cohort instead of creating another one. Changing the name starts a new cohort on the next run and leaves the old one in place, unchanged.
+
+.. setting-amplitude-cohort-name-end
+
+.. setting-amplitude-cohort-sync-mode-start
+
+Applies to cohort-push mode only. How each run updates the cohort's membership:
+
+* **replace** (the default) sends the full current audience every run, overwriting the cohort's membership.
+* **append** sends only the members added and removed since the last run.
+
+A cohort's first run always sends the full audience, in either mode, because |destination-name| assigns the cohort's identifier only on that first full send. **append** takes effect from the second run onward.
+
+.. setting-amplitude-cohort-sync-mode-end
+
+.. setting-amplitude-cohort-id-type-start
+
+Applies to cohort-push mode only, and is required for it. Whether the values in the identity column are |destination-name|'s own assigned identifiers (**amplitude_id**) or the identifiers your own systems assign (**user_id**).
+
+.. caution:: |destination-name| looks up every value as the type you choose here. If the type is wrong, nothing matches — the rows are reported as failed and the cohort is left empty or unchanged. Confirm which identifier your query returns before the first run.
+
+.. setting-amplitude-cohort-id-type-end
+
+.. setting-amplitude-cohort-owner-email-start
+
+Applies to cohort-push mode only, and is required for it. The login email address of the |destination-name| account that owns the cohort. |destination-name| requires an owner on every cohort call. Use the email address of a real |destination-name| user in the project the cohort belongs to.
+
+.. setting-amplitude-cohort-owner-email-end
+
+.. setting-amplitude-cohort-published-start
+
+Applies to cohort-push mode only. Whether the cohort is discoverable by users in the |destination-name| UI. Cleared by default, which keeps the cohort hidden. Select it when the product teams who use the cohort need to find it themselves in |destination-name|.
+
+.. setting-amplitude-cohort-published-end
+
+.. setting-amplitude-app-id-start
+
+Applies to cohort-push mode only, and is required for it. The numeric |destination-name| project ID that the cohort is created in. This is a separate value from the API Key and Secret Key and cannot be derived from them — copy it from the project's settings page in |destination-name|.
+
+.. setting-amplitude-app-id-end
+
+.. setting-amplitude-deletion-id-type-start
+
+Applies to user-deletion mode only, and is required for it. Whether the values in the identity column are |destination-name|'s own assigned identifiers (**amplitude_id**) or the identifiers your own systems assign (**user_id**). |destination-name| rejects a request whose identifiers are not of the type declared here.
+
+.. setting-amplitude-deletion-id-type-end
+
+.. setting-amplitude-deletion-requester-start
+
+Applies to user-deletion mode only, and is required for it. Identifies who or what is requesting each deletion — for example ``amperity-gdpr-automation``. |destination-name| requires this on every deletion request and records it on its own audit trail.
+
+.. setting-amplitude-deletion-requester-end
+
+.. setting-amplitude-delete-from-org-start
+
+Applies to user-deletion mode only. Whether each deletion request applies to this |destination-name| project only (cleared, the default) or to your entire |destination-name| organization (selected).
+
+.. warning:: Selecting this deletes the identity's data from every project in your |destination-name| organization, not only the project this destination is configured for. Once |destination-name| runs the deletion it cannot be reversed, and Amperity cannot restore the data. Leave it cleared unless deleting organization-wide is the deliberate intent of this orchestration.
+
+.. setting-amplitude-delete-from-org-end

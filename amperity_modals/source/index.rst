@@ -26,6 +26,7 @@ Site Index
    destination-adobe-target
    destination-amazon-ads
    destination-amazon-capi
+   destination-amplitude
    destination-attentive
    destination-attentive-api
    destination-attentive-ecommerce

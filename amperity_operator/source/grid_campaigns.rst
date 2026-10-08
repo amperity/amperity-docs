@@ -78,6 +78,10 @@ Configure Amperity to send campaigns to any marketing workflow.
       :link-type: doc
       :link: campaign_amazon_s3
 
+   .. grid-item-card:: Amplitude
+      :link-type: doc
+      :link: campaign_amplitude
+
    .. grid-item-card:: Attentive API (Attributes)
       :link-type: doc
       :link: campaign_attentive_mobile_api
@@ -386,6 +390,7 @@ Configure Amperity to send campaigns to any marketing workflow.
    Airship Attributes <campaign_airship_attributes>
    Amazon Ads <campaign_amazon_ads>
    Amazon S3 <campaign_amazon_s3>
+   Amplitude <campaign_amplitude>
    Attentive API (Attributes) <campaign_attentive_mobile_api>
    Attentive (Audiences) <campaign_attentive_mobile>
    Azure Blob Storage <campaign_azure_blob_storage>

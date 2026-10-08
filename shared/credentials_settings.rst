@@ -3032,3 +3032,23 @@ Required. The App API Key that authorizes every request Amperity sends to |desti
 .. important:: An App API Key is scoped to a single |destination-name| app, so it must come from the same app as the **App ID** destination setting. A message saying the key is valid but does not grant access to the App ID means the two came from different apps — copy both values together from the same app's **Keys & IDs** page. A message saying |destination-name| rejected the key means the key itself is wrong.
 
 .. credential-onesignal-api-key-end
+
+.. credential-amplitude-api-key-start
+
+Required. The API Key for the |destination-name| project this destination writes into. Copy it from **Settings > Projects > [your project] > General** in |destination-name|, where it appears alongside the Secret Key.
+
+.. credential-amplitude-api-key-end
+
+.. credential-amplitude-secret-key-start
+
+Required. The Secret Key for the same |destination-name| project as the API Key. Amperity pairs the two keys to authenticate the Behavioral Cohorts and User Privacy APIs, which back the cohort-push and user-deletion write modes.
+
+.. important:: Both keys are always required, even when the destination only uses a write mode that does not need the Secret Key. The two values must come from the same |destination-name| project — a mismatched pair fails the connection test.
+
+.. credential-amplitude-secret-key-end
+
+.. credential-amplitude-find-keys-start
+
+Both values are on the same page in |destination-name|: open **Settings**, select **Projects**, and select the project. On its **General** tab, select **Manage** next to **API Key** or **Secret Key** to view and copy each value.
+
+.. credential-amplitude-find-keys-end

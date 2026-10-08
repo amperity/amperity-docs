@@ -129,6 +129,10 @@ Send query results to downstream workflows and to support all of your brand's ma
       :link-type: doc
       :link: destination_amazon_s3
 
+   .. grid-item-card:: Amplitude
+      :link-type: doc
+      :link: destination_amplitude
+
    .. grid-item-card:: Any analytics or BI tool
       :link-type: doc
       :link: sendto_analytics_bi
@@ -569,6 +573,7 @@ The following examples show using the visual **SQL Editor** to build audiences.
    Amazon Pinpoint <destination_amazon_pinpoint>
    Amazon Redshift <destination_amazon_redshift>
    Amazon S3 <destination_amazon_s3>
+   Amplitude <destination_amplitude>
    Attentive <destination_attentive_mobile>
    AWS Connect <destination_aws_connect>
    Azure Blob Storage <destination_azure_blob_storage>
