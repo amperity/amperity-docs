@@ -1,5 +1,9 @@
 .. https://docs.amperity.com/operator/
 
+.. |legacy-feature| replace:: Real-time tables
+.. |legacy-replacement| replace:: Real-time Profiles, which updates customer profiles, real-time segments, and real-time journeys as each event arrives instead of landing streamed data in tables to query
+.. |legacy-instead| replace:: For new real-time use cases, use the `Real-time API <explorer-real-time-api_>`__ instead.
+
 
 .. meta::
     :description lang=en:
@@ -14,8 +18,14 @@
         Real-time tables
 
 ==================================================
-Real-time tables
+Real-time tables |legacy|
 ==================================================
+
+.. include:: ../../shared/legacy.rst
+   :start-after: .. legacy-notice-start
+   :end-before: .. legacy-notice-end
+
+.. TODO: Link "Real-time Profiles" to reference/page_real_time.html once the real-time docs (PR #973) merge.
 
 .. real-time-about-start
 
@@ -100,7 +110,7 @@ Real-time tables have the following limitations:
 #. The Streaming Ingest API is the only supported data source for real-time tables.
 #. Data is loaded to real-time tables as an append. Data may not be deleted from a real-time table.
 #. Real-time table schemas cannot be updated. Create a new real-time table, and then connect that table to the stream that has the updated schema. (This may be the same Streaming Ingest API endpoint.)
-#. Real-time tables may be used with the Profile API, but data that is available from a Profile API endpoint is only as current as of the most recent refresh of the index for that Profile API endpoint.
+#. Real-time tables may be used with the `Database Profile API <explorer-database-profile-api_>`__, but data that is available from a `Database Profile API <explorer-database-profile-api_>`__ endpoint is only as current as of the most recent refresh of the index for that `Database Profile API <explorer-database-profile-api_>`__ endpoint.
 
 .. realtime-howitworks-limitations-end
 
@@ -451,7 +461,7 @@ Make data available to real-time use cases
 
 .. realtime-make-data-available-start
 
-Data from real-time tables can be made available to any type of workflow in Amperity, depending on the needs for your use cases. Use queries to orchestrate results from Amperity to downstream workflows. Use the Profile API to build narrow indexes that support real-time use cases.
+Data from real-time tables can be made available to any type of workflow in Amperity, depending on the needs for your use cases. Use queries to orchestrate results from Amperity to downstream workflows. Use the `Database Profile API <explorer-database-profile-api_>`__ to build narrow indexes that support real-time use cases.
 
 .. realtime-make-data-available-end
 

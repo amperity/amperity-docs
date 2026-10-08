@@ -3,7 +3,7 @@
 
 .. meta::
     :description lang=en:
-        Amperity lets you set up measurement ofevents events like in-store purchases or venue check-ins.
+        Amperity lets you set up measurement of events like in-store purchases or venue check-ins.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
@@ -11,10 +11,10 @@
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Configure events
+        Configure paid media conversion events
 
 ==================================================
-Configure events
+Configure paid media conversion events
 ==================================================
 
 .. events-about-start

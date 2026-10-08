@@ -24,7 +24,7 @@ Cloud infrastructure
 
 Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure.
 
-* :ref:`Amperity API base URLs <infrastructure-api-base-url>`
+* :ref:`Tenant API base URLs <infrastructure-api-base-url>`
 * :ref:`IP addresses for allowlists <infrastructure-allowlists>`
 * :ref:`Microsoft Azure-specific settings <infrastructure-microsoft-azure>`
 * :ref:`Regions for storage and cloud infrastructure <infrastructure-regions>`
@@ -36,18 +36,20 @@ Amperity runs on Amazon AWS or Microsoft Azure cloud infrastructure.
 
 .. _infrastructure-api-base-url:
 
-Base URLs for Amperity API
+Base URLs for Tenant API
 ==================================================
 
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. api-amperity-base-url-start
-   :end-before: .. api-amperity-base-url-end
+All requests made to Tenant API endpoints should be directed to the base URL.
 
 .. admonition:: Base URLs and sandboxes
 
-   .. include:: ../../amperity_api/source/base_url.rst
-      :start-after: .. api-amperity-base-url-sandboxes-start
-      :end-before: .. api-amperity-base-url-sandboxes-end
+   The base URL of a sandbox is the same as the base URL of production.
+
+   Use the tenant ID for the sandbox for all requests made to a sandbox. The tenant ID is unique to the sandbox. For example, if the tenant ID for a sandbox is **socktown-sb-12345** the base URL is the same as the base URL of production and the **amperity-tenant** header is:
+
+   .. code-block:: none
+
+      --header 'amperity-tenant: socktown-sb-12345'
 
 
 .. _infrastructure-api-base-url-aws:
@@ -55,13 +57,15 @@ Base URLs for Amperity API
 Amazon AWS
 --------------------------------------------------
 
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. base-url-aws-start
-   :end-before: .. base-url-aws-end
+Tenants hosted in Amazon AWS have the following base URL:
 
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. base-url-tenant-id-start
-   :end-before: .. base-url-tenant-id-end
+.. code-block:: none
+
+   https://app.amperity.com/api
+
+Use the **amperity-tenant** header to specify the tenant ID.
+
+You can find the tenant ID from the Amperity user interface. From the **Settings** page and select the **Security** tab. Under **API keys**, in the row for an API key, open the |fa-kebab| menu and select **Copy tenant ID**.
 
 
 .. _infrastructure-api-base-url-azure:
@@ -69,9 +73,27 @@ Amazon AWS
 Microsoft Azure
 --------------------------------------------------
 
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. base-url-azure-start
-   :end-before: .. base-url-azure-end
+Tenants hosted in Microsoft Azure have the following base URL:
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/api
+
+.. note:: The tenant ID must be in the base URL *and* in the **amperity-tenant** header.
+
+   You can find the tenant ID from the Amperity user interface. From the **Settings** page and select the **Security** tab. Under **API keys**, in the row for an API key, open the |fa-kebab| menu and select **Copy tenant ID**.
+
+   For example, if the tenant ID is **socktown** the base URL is:
+
+   .. code-block:: none
+
+      https://socktown.amperity.com/api
+
+   with
+
+   .. code-block:: none
+
+      --header 'amperity-tenant: socktown'
 
 
 .. _infrastructure-api-base-url-australia:
@@ -79,9 +101,17 @@ Microsoft Azure
 Amperity in Australia
 --------------------------------------------------
 
-.. include:: ../../amperity_api/source/base_url.rst
-   :start-after: .. base-url-aws-australia-start
-   :end-before: .. base-url-aws-australia-end
+Tenants hosted in Australia have the following default base URL:
+
+.. code-block:: none
+
+   https://app-aws-apse2.amperity.com/api
+
+Tenants hosted in Australia may also use:
+
+.. code-block:: none
+
+   https://{tenant-id}.amperity.com/api
 
 
 .. _infrastructure-allowlists:

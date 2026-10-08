@@ -61,7 +61,7 @@ The following capabilities continue to run on Amperity-managed compute:
 
 * Campaign and journey delivery (sending the computed audience to destinations) and workflow orchestration
 * Bridge and data ingest
-* Real-time profiles and the Profile API
+* Real-time profiles and the `Database Profile API <explorer-database-profile-api_>`__
 * Predictive models, AmpIQ, and the AI Assistant
 * Control-plane operations: the user interface, monitoring, and managed connectors
 

@@ -72,14 +72,9 @@ Type or enter "/" on your keyboard to search the docs site.
       Activate customers across channels using campaigns, journeys, and orchestrations.
 
 
-   .. grid-item-card:: |fa-circle-nodes| Real-time tables
-      :link: /operator/realtime.html
-
-      Customer profiles and preferences ready for real-time use cases.
-
 
    .. grid-item-card:: |fa-code| Amperity APIs
-      :link: /reference/api.html
+      :link: /api/explorer.html
 
       Build real-time use cases and support programmatic workflows.
 

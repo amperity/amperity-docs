@@ -24,37 +24,37 @@
 
 .. |api_keys| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html">API keys</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-api-keys">API keys</a>
 
 
 .. |api_keys_add| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html#add-api-keys">adding API keys</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-api-keys-add">adding API keys</a>
 
 
 .. |api_keys_delete| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html#delete-api-tokens">deleting API tokens</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-access-token-revoke">deleting API tokens</a>
 
 
 .. |api_keys_rotate| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html#rotate-api-tokens">rotating API tokens</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-api-keys-rotate">rotating API tokens</a>
 
 
 .. |api_keys_access_generate| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html#generate-access-tokens">generating access tokens</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-access-token-generate">generating access tokens</a>
 
 
 .. |api_keys_access_refresh| raw:: html
 
-   <a href="https://docs.amperity.com/reference/api.html#refresh-access-tokens">refreshing access tokens</a>
+   <a href="https://docs.amperity.com/api/authentication.html#authentication-access-token-generate">refreshing access tokens</a>
 
 
 .. |api_profile| raw:: html
 
-   <a href="https://docs.amperity.com/operator/api_profile.html">Profile API</a>
+   <a href="https://docs.amperity.com/api/explorer.html?urls.primaryName=Database%20Profile%20API%20%282025-07-31%29">Database Profile API</a>
 
 
 .. |api_streaming_ingest| raw:: html

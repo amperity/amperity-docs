@@ -5491,11 +5491,11 @@ A product recommendation predicts which products a given customer is most likely
 .. term-product-recommendation-end
 
 
-**Profile API**
+**Database Profile API**
 
 .. term-profile-api-start
 
-The Profile API enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
+The `Database Profile API <explorer-database-profile-api_>`__ enables your brand to access customer profiles using a collection of RESTful API endpoints to build and support real-time use cases:
 
 * Identify returning customers
 * Personalize welcome messages and emails
@@ -5508,7 +5508,7 @@ The Profile API enables your brand to access customer profiles using a collectio
 
 .. term-profile-api-administrator-policy-start
 
-The **Allow Profile API administration** policy option allows full access to the Profile API, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
+The **Allow Profile API administration** policy option allows full access to the `Database Profile API <explorer-database-profile-api_>`__, including the ability to manage a list of **Profile API** endpoints from the **Destinations** page.
 
 .. term-profile-api-administrator-policy-end
 

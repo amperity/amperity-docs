@@ -327,7 +327,7 @@ Your brand can configure |source-name| to send events to an :doc:`Amperity Strea
           :class: no-scaled-link
      - Log in to Amperity and configure a :doc:`Streaming API endpoint <api_streaming>` to send events data to Amperity using |source-name|.
 
-       You need to :ref:`add an API key <streaming-ingest-api-enable-add-api-key>` and :ref:`generate an access (bearer) token <streaming-ingest-api-enable-generate-access-token>` for |source-name|.
+       You need to `add an API key <https://docs.amperity.com/api/authentication.html#authentication-api-keys-add>`__ and `generate an access (bearer) token <https://docs.amperity.com/api/authentication.html>`__ for |source-name|.
 
        Configure a :ref:`dedicated streaming API endpoint <streaming-ingest-endpoints>` for |source-name|.
 

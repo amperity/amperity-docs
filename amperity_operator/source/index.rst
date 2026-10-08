@@ -30,11 +30,23 @@ Operators Guide
 
       Add customer and interactions data, run Stitch, review benchmarks, build customer profiles.
 
-   .. grid-item-card:: |fa-outlet| Configure connections
+   .. grid-item-card:: |fa-arrow-right-to-line| Connect data sources
       :link-type: doc
-      :link: grid_connections
+      :link: grid_connect
 
-      Configure upstream and downstream connections to support your brand's use cases.
+      Bring data into Amperity from sources, your data warehouse, and paid media platforms.
+
+   .. grid-item-card:: |fa-arrow-right-arrow-left| Access data with Bridge
+      :link-type: doc
+      :link: grid_bridge
+
+      Share tables between Amperity and Databricks, Google BigQuery, or Snowflake without copying data.
+
+   .. grid-item-card:: |fa-arrow-right-from-line| Activate your data
+      :link-type: doc
+      :link: grid_activate
+
+      Send audiences and profiles to campaigns, destinations, your data warehouse, and applications.
 
    .. grid-item-card:: |manage-users-icon| Manage customer profiles
       :link-type: doc
@@ -66,6 +78,12 @@ Operators Guide
 
       Configure how Amperity builds probabilistic or deterministic customer profiles.
 
+   .. grid-item-card:: |fa-box-archive| Legacy features
+      :link-type: doc
+      :link: grid_legacy
+
+      Maintain integrations built on features that have been replaced, such as real-time tables.
+
 .. user-guides-marketers-grid-end
 
 
@@ -76,12 +94,15 @@ Operators Guide
 
    About the Operators Guide <start_here>
    Build your tenant <grid_build>
-   Configure connections <grid_connections>
+   Connect data sources <grid_connect>
+   Access data with Bridge <grid_bridge>
+   Activate your data <grid_activate>
    Manage customer profiles <grid_datasets>
    Maintain your tenant <grid_maintain>
    Privacy rights <privacy_rights>
    Predictive models <grid_models>
    Configure Stitch <grid_stitch>
+   Legacy features <grid_legacy>
 
 
 .. toctree::

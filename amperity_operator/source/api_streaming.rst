@@ -1,5 +1,9 @@
 .. https://docs.amperity.com/operator/
 
+.. |legacy-feature| replace:: The Streaming API
+.. |legacy-replacement| replace:: Real-time Profiles, which receives events on event streams and updates customer profiles, real-time segments, and real-time journeys as each event arrives
+.. |legacy-instead| replace:: For new integrations, use the `Real-time API <explorer-real-time-api_>`__ instead.
+
 
 .. |source-name| replace:: Streaming Ingest
 .. |plugin-name| replace:: Streaming Ingest
@@ -23,8 +27,14 @@
         Streaming API
 
 ==================================================
-Streaming API
+Streaming API |legacy|
 ==================================================
+
+.. include:: ../../shared/legacy.rst
+   :start-after: .. legacy-notice-start
+   :end-before: .. legacy-notice-end
+
+.. TODO: Link "Real-time Profiles" to reference/page_real_time.html once the real-time docs (PR #973) merge.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-streaming-ingest-api-start
@@ -49,126 +59,21 @@ The Streaming API supports the following payload types:
 
 A stream may only be one payload type.
 
+For the endpoint's base URL, headers, payload formats, examples, limits, and response codes, and to send test requests, see the `Streaming API reference <explorer-streaming-api_>`__.
+
 .. streaming-ingest-rest-api-overview-end
-
-
-.. _streaming-ingest-rate-limits:
-
-Rate limits
-==================================================
-
-.. streaming-ingest-rate-limits-start
-
-The Streaming API has the following rate limits.
-
-.. note:: Rate limits are not shared between production and sandboxes. Each sandbox has its own rate limit.
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 0
-
-   * - **Requests per second**
-     - The number of requests may not exceed 1000 requests per second.
-
-       Requests to the Streaming API that exceed 1000 requests per second will return an error response with an HTTP 429 Too Many Requests status code.
-
-   * - **Payload size**
-     - The maximum payload size may not exceed 1 MB.
-
-       Attempts to post more than 1 MB fails with an HTTP 413 Payload Too Large status code.
-
-.. streaming-ingest-rate-limits-end
 
 
 .. _streaming-ingest-rest-api-keys-and-jwt:
 
-API Keys and JWTs
+API keys and access tokens
 ==================================================
 
 .. streaming-ingest-rest-api-keys-and-jwt-start
 
-Amperity uses a `JSON Web Token (JWT) <https://jwt.io/>`__ |ext_link| for authentication to the Streaming API. A single access token may be used to access any endpoint in your tenant's Streaming API.
-
-The access token is self-generated from the Amperity user interface and authorizes write access to the Streaming API for your tenant. A self-generated access token ensures that only your team has access to the token and supports organizational security policies like periodic access token rotation.
-
-The access token must be available to each request made to the Streaming API.
-
-.. note:: More information about Amperity |api_keys| is available, including sections about |api_keys_add|, |api_keys_delete|, |api_keys_rotate|, |api_keys_access_generate|, and |api_keys_access_refresh|.
+Requests to the Streaming API need an access token from an API key that has the **Streaming Ingest Write Access** option. To generate an access token and find your tenant ID, see `How to authenticate with Amperity APIs <https://docs.amperity.com/api/authentication.html>`__.
 
 .. streaming-ingest-rest-api-keys-and-jwt-end
-
-
-.. _streaming-ingest-api-enable-add-api-key:
-
-Add API key
---------------------------------------------------
-
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-keys-api-token-add-streaming-ingest-start
-   :end-before: .. api-keys-api-token-add-streaming-ingest-end
-
-
-.. _streaming-ingest-api-enable-generate-access-token:
-
-Generate an access token
---------------------------------------------------
-
-.. api-keys-access-tokens-generate-start
-
-Access tokens that enable authentication to the Amperity API are managed directly from the **Settings** page in Amperity.
-
-**To generate access tokens**
-
-.. list-table::
-   :widths: 10 90
-   :header-rows: 0
-
-   * - .. image:: ../../images/steps-01.png
-          :width: 60 px
-          :alt: Step one.
-          :align: center
-          :class: no-scaled-link
-     - Open the **Settings** page.
-
-
-   * - .. image:: ../../images/steps-02.png
-          :width: 60 px
-          :alt: Step two.
-          :align: center
-          :class: no-scaled-link
-     - Under **API keys** find the API key for which you want to generate an access token, and then from the **Actions** menu select **Get token**.
-
-       .. image:: ../../images/api-keys-generate-access-token-streaming.png
-          :width: 500 px
-          :alt: Generate an access token.
-          :align: left
-          :class: no-scaled-link
-
-
-   * - .. image:: ../../images/steps-03.png
-          :width: 60 px
-          :alt: Step three.
-          :align: center
-          :class: no-scaled-link
-     - Select the number of days this token allows access to the API, after which it will expire. For example, 3 days:
-
-       .. image:: ../../images/api-keys-set-token-expiration.png
-          :width: 240 px
-          :alt: Generate an access token.
-          :align: left
-          :class: no-scaled-link
-
-       The token is generated, and then automatically copied to your clipboard.
-
-       .. image:: ../../images/api-keys-token-saved-to-clipboard.png
-          :width: 240 px
-          :alt: Generate an access token.
-          :align: left
-          :class: no-scaled-link
-
-       .. important:: You are the only person who have access to the newly generated access key. Amperity does not save the access key anywhere and it will disappear when you close this dialog. Store the access key in a safe place.
-
-.. api-keys-access-tokens-generate-end
 
 
 .. _streaming-ingest-endpoints:
@@ -251,13 +156,9 @@ Send to data streams
 
 .. streaming-ingest-rest-api-streams-start
 
-Data can be sent to the Streaming API by issuing POST requests to the ``/stream/v0/data/<stream-id>`` endpoint with the value of **Host** set to the :ref:`base URL <streaming-ingest-rest-api-base-url>`.
+Send data to a stream with a POST request to ``/stream/v0/data/{stream-id}``, using the stream ID from the :ref:`stream's endpoint <streaming-ingest-endpoints>`. For the base URL, headers, payload formats, examples, limits, and response codes, see the `Streaming API reference <explorer-streaming-api_>`__.
 
-.. streaming-ingest-rest-api-stream-schema-important-start
-
-.. important:: Amperity does not enforce any particular data schema. Each data schema is a unique stream that depends on what is being sent. You cannot have many data schemas on a single stream, instead use many streams to support many schemas.
-
-.. streaming-ingest-rest-api-stream-schema-important-end
+.. streaming-ingest-rest-api-streams-end
 
 .. streaming-ingest-rest-api-configure-streams-postman-start
 
@@ -270,228 +171,6 @@ Data can be sent to the Streaming API by issuing POST requests to the ``/stream/
    Amperity provides complete details for using a |ext_download_postman_api_streaming| when your tenant is initialized. Use this template as the starting point for building out the API stream for your data source.
 
 .. streaming-ingest-rest-api-configure-streams-postman-end
-
-
-.. _streaming-ingest-rest-api-base-url:
-
-Base URL of Streaming API endpoints
---------------------------------------------------
-
-.. streaming-ingest-rest-api-base-url-start
-
-The hostname for the Streaming API is:
-
-.. code-block:: none
-
-   https://{tenant-id}.amperity.com/
-
-Streams are located at:
-
-.. code-block:: none
-
-   /stream/v0/data/<stream-id>
-
-and the base URL is:
-
-.. code-block:: none
-
-   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>
-
-.. streaming-ingest-rest-api-base-url-end
-
-
-.. _streaming-ingest-rest-api-send-json-using-curl:
-
-Send JSON using cURL
---------------------------------------------------
-
-.. streaming-ingest-rest-api-send-json-using-curl-start
-
-To send JSON data to a stream using cURL, submit a request similar to:
-
-.. code-block:: none
-
-   curl -XPOST \
-   -H "Content-Type: application/json" \
-   -H "X-Amperity-Tenant: {tenant-id}" \
-   -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
-   --data-binary \
-   ' {"field1": "value1",
-      "field2": "value2"}'
-
-.. streaming-ingest-rest-api-send-json-using-curl-end
-
-
-.. _streaming-ingest-rest-api-send-json-using-http:
-
-Send JSON using HTTP
---------------------------------------------------
-
-.. streaming-ingest-rest-api-send-json-using-http-start
-
-To send JSON data to a stream using HTTP, submit a request similar to:
-
-.. code-block:: none
-
-   POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://{tenant-id}.amperity.com
-   Content-Type: application/json
-   X-Amperity-Tenant: {tenant-id}
-   Authorization: Bearer <Streaming Ingest JWT token>
-   Content-Length: 32164
-
-   {"field1": "value1",
-    "field2": "value2"}
-
-.. streaming-ingest-rest-api-send-json-using-http-end
-
-
-.. _streaming-ingest-rest-api-send-json-using-python:
-
-Send JSON using Python
---------------------------------------------------
-
-.. streaming-ingest-rest-api-send-json-using-python-start 
-
-To send JSON data to a stream using Python, submit a request similar to:
-
-.. code-block:: python
-
-   import requests
-
-   url = "https://{tenant-id}.amperity.com/stream/v0/data/<stream-id>"
-
-   headers = {
-     "Content-Type": "application/json",
-     "X-Amperity-Tenant": "{tenant-id}",
-     "Authorization": "Bearer <Streaming Ingest JWT token>"
-   }
-
-   payload = {
-     "field1": "value1",
-     "field2": "value2"
-   }
-
-   response = requests.post(url, headers=headers, json=payload)
-
-   print(response.status_code)
-
-.. streaming-ingest-rest-api-send-json-using-python-end
-
-
-.. _streaming-ingest-rest-api-send-xml-using-curl:
-
-Send XML using cURL
---------------------------------------------------
-
-.. streaming-ingest-rest-api-send-xml-using-curl-start
-
-To send XML data to a stream using cURL, submit a request similar to:
-
-.. code-block:: none
-
-   curl -XPOST \
-   -H "Content-Type: application/xml" \
-   -H "X-Amperity-Tenant: {tenant-id}" \
-   -H "Authorization: Bearer <Streaming Ingest JWT token>" \
-   https://{tenant-id}.amperity.com/stream/v0/data/<stream-id> \
-   --data-binary \
-   '<records>
-    <record>
-    <field1>value1</field1>
-    </record>
-    <record>
-    <field1>value2</field1>
-    </record>
-    </records>
-   '
-
-.. streaming-ingest-rest-api-send-xml-using-curl-end
-
-
-.. _streaming-ingest-rest-api-send-xml-using-http:
-
-Send XML using HTTP
---------------------------------------------------
-
-.. streaming-ingest-rest-api-send-xml-using-http-start
-
-To send XML data to a stream using HTTP, submit a request similar to:
-
-.. code-block:: none
-
-   POST /stream/v0/data/<stream-id> HTTP/1.1
-   Host: https://{tenant-id}.amperity.com
-   Content-Type: application/xml
-   X-Amperity-Tenant: {tenant-id}
-   Authorization: Bearer <Streaming Ingest JWT token>
-   Content-Length: 32164
-
-    <records>
-    <record>
-    <field1>value1</field1>
-    ...
-    </record>
-    <record>
-    <field1>value2</field1>
-    ...
-    </record>
-    </records>
-
-.. streaming-ingest-rest-api-send-xml-using-http-end
-
-
-.. _streaming-ingest-rest-api-http-status-codes:
-
-HTTP response status codes
-==================================================
-
-.. streaming-ingest-rest-api-http-status-codes-start
-
-The Streaming API has the following HTTP status codes:
-
-.. list-table::
-   :widths: 180 380 50
-   :header-rows: 1
-
-   * - HTTP code
-     - Description
-     - Retry?
-   * - **202**
-     - Accepted.
-     - N/A
-   * - **400**
-     - Request malformed.
-
-       .. note:: XML payloads are not checked synchronously. A 202 response does not guarantee that XML payloads will be parsable downstream.
-     - No
-   * - **401**
-     - Unauthorized. JWT could not be verified or is expired.
-     - No
-   * - **413**
-     - Request is too large.
-
-       .. note:: The maximum payload size :ref:`may not exceed 5 MB <streaming-ingest-rate-limits>`.
-     - No
-   * - **429**
-     - Request throttled.
-
-       .. note:: The number of requests :ref:`may not exceed 1000 requests per second <streaming-ingest-rate-limits>`.
-     - Yes
-   * - **500**
-     - Internal error.
-     - Yes
-   * - **503**
-     - Service unavailable.
-     - Yes
-   * - **504**
-     - Gateway timeout.
-
-       .. note:: All retries have exponential back off.
-     - Yes
-
-.. streaming-ingest-rest-api-http-status-codes-end
 
 
 .. _streaming-ingest-rest-api-stream-define:

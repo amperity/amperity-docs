@@ -187,9 +187,7 @@ Some objects are not copied to a sandbox:
 
 #. **API keys**
 
-   .. include:: ../../amperity_reference/source/api.rst
-      :start-after: .. api-keys-sandboxes-start
-      :end-before: .. api-keys-sandboxes-end
+   API keys are tenant-specific and are not pulled to a sandbox *or* promoted from a sandbox to production. API keys must be created in a sandbox to use a Tenant API endpoint, stream data using the Streaming API, or access `Database Profile API <explorer-database-profile-api_>`__ indexes.
 
 #. **Versioned table histories**
 
@@ -367,7 +365,7 @@ A sandbox should be short-lived and should be used to make small, iterative chan
 
    * A new data source in sandbox A
    * A new destination in sandbox B
-   * Changes to a Profile API endpoint in sandbox C
+   * Changes to a `Database Profile API <explorer-database-profile-api_>`__ endpoint in sandbox C
    * A set of custom database tables in sandbox D
 
    After these changes are promoted to production, the sandbox should be deleted.

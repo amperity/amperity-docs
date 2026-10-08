@@ -488,7 +488,7 @@ Amperity can do a lot more:
 * Destinations for `paid media <https://docs.amperity.com/paid_media.html>`__, `marketing automation <https://docs.amperity.com/marketing_apps.html>`__, `events <https://docs.amperity.com/offline_events.html>`__
 * `Segments <https://docs.amperity.com/ampiq/segments_reference.html>`__ and `campaigns <https://docs.amperity.com/ampiq/campaigns_reference.html>`__
 * `Queries <https://docs.amperity.com/amp360/queries_reference.html>`__ and orchestrations
-* `Profile API <https://docs.amperity.com/operator/api_profile.html>`__
+* `Database Profile API <explorer-database-profile-api_>`__
 * `Real-time tables <https://docs.amperity.com/operator/realtime.html>`__
 
 .. start-conclusion-end

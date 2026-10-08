@@ -1382,6 +1382,14 @@ D
       :end-before: .. term-data-type-end
 
 
+.. _d-database-profile-api:
+
+**Database Profile API**
+   .. include:: ../../shared/terms.rst
+      :start-after: .. term-profile-api-start
+      :end-before: .. term-profile-api-end
+
+
 .. _d-databricks:
 
 **Databricks**
@@ -3729,9 +3737,7 @@ P
 .. _p-profile-api:
 
 **Profile API**
-   .. include:: ../../shared/terms.rst
-      :start-after: .. term-profile-api-start
-      :end-before: .. term-profile-api-end
+   See :ref:`Database Profile API <d-database-profile-api>` and `Real-time API <explorer-real-time-api_>`__.
 
 
 .. _p-pseudonymous-identifier:
@@ -3896,7 +3902,7 @@ R
 .. _r-real-time-profile-api:
 
 **Real-time Profile API**
-   See :ref:`Profile API <p-profile-api>`.
+   See `Real-time API <explorer-real-time-api_>`__.
 
 
 .. _r-recall:

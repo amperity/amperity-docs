@@ -3,15 +3,15 @@
 
 .. meta::
     :description lang=en:
-        The Amperity API changelog lists breaking and non-breaking changes that were made for each version of the Amperity API.
+        The Tenant API changelog lists breaking and non-breaking changes that were made for each version of the Tenant API.
 
 .. meta::
     :content class=swiftype name=body data-type=text:
-        The Amperity API changelog lists breaking and non-breaking changes that were made for each version of the Amperity API.
+        The Tenant API changelog lists breaking and non-breaking changes that were made for each version of the Tenant API.
 
 .. meta::
     :content class=swiftype name=title data-type=string:
-        Amperity API changelog
+        Tenant API changelog
 
 ==================================================
 Changelog
@@ -19,13 +19,13 @@ Changelog
 
 .. changelog-start
 
-The Amperity API changelog lists breaking and non-breaking changes that were made for :doc:`each version of the Amperity API <versioning>`.
+The Tenant API changelog lists breaking and non-breaking changes that were made for `each version of the Tenant API <explorer-tenant-api_>`__.
 
 .. changelog-end
 
 .. _changelog-current:
 
-Amperity API: 2024-04-01
+Tenant API: 2024-04-01
 ==================================================
 
 .. changelog-current-start
@@ -36,23 +36,23 @@ Amperity API: 2024-04-01
 
 **Non-breaking changes**
 
-* Add :doc:`endpoint_get_audit_events_list` endpoint.
-* Add :doc:`endpoint_get_campaign_drafts_list` endpoint.
-* Add :doc:`endpoint_get_campaigns_list` endpoint.
-* Add :doc:`endpoint_get_ingest_jobs` endpoint.
-* Add :doc:`endpoint_get_ingest_jobs_id` endpoint.
-* Add :doc:`endpoint_get_segments_list` endpoint.
-* Add :doc:`endpoint_get_workflows_list` endpoint.
-* Add :doc:`endpoint_get_workflows_fetch` endpoint.
-* Add :doc:`endpoint_post_workflows_start` endpoint.
-* Add :doc:`endpoint_post_workflows_stop` endpoint.
+* Add ``GET /audit-events`` endpoint.
+* Add ``GET /campaign-drafts`` endpoint.
+* Add ``GET /campaigns`` endpoint.
+* Add ``GET /ingest/jobs`` endpoint.
+* Add ``GET /ingest/jobs/{id}`` endpoint.
+* Add ``GET /segments`` endpoint.
+* Add ``GET /workflow/runs`` endpoint.
+* Add ``GET /workflow/runs/{id}`` endpoint.
+* Add ``POST /workflow/runs`` endpoint.
+* Add ``POST /workflow/runs/{id}/stop`` endpoint.
 
 .. changelog-current-end
 
 
 .. _changelog-profile-api-current:
 
-Profile API: 2025-07-31
+Database Profile API: 2025-07-31
 ==================================================
 
 .. changelog-profile-api-current-start
@@ -63,10 +63,10 @@ Profile API: 2025-07-31
 
 **Non-breaking changes**
 
-* Add :doc:`endpoint_get_profile_index` endpoint.
-* Add :doc:`endpoint_get_profile_index_id` endpoint.
-* Add :doc:`endpoint_get_profiles_list` endpoint.
-* Add :doc:`endpoint_get_profile` endpoint.
+* Add ``GET /indexes`` endpoint.
+* Add ``GET /indexes/{id}`` endpoint.
+* Add ``GET /indexes/{id}/profiles`` endpoint.
+* Add ``GET /indexes/{id}/profiles/{id}`` endpoint.
 
 .. changelog-profile-api-current-end
 
@@ -84,13 +84,13 @@ Real-time API: unstable
 
 **Non-breaking changes**
 
-* Add :doc:`endpoint_post_profile_store_events` endpoint.
-* Add :doc:`endpoint_get_profile_store_lookup` endpoint.
-* Add :doc:`endpoint_post_profile_store_lookup` endpoint.
-* Add :doc:`endpoint_get_profile_store_profile` endpoint.
-* Add :doc:`endpoint_get_profile_store_segment_profiles` endpoint.
-* Add :doc:`endpoint_get_profile_segments` endpoint.
-* Add :doc:`endpoint_get_profile_store_stats` endpoint.
-* Add :doc:`endpoint_get_profile_store_history` endpoint.
+* Add ``POST /events/{stream-id}`` endpoint.
+* Add ``GET /lookup/{collection-id}/keychain`` endpoint.
+* Add ``POST /lookup/{collection-id}/keychain`` endpoint.
+* Add ``GET /profiles/{collection-id}/{profile-id}`` endpoint.
+* Add ``GET /segments/{segment-id}/profiles`` endpoint.
+* Add ``GET /profiles/{collection-id}/{profile-id}/segments`` endpoint.
+* Add ``GET /collections/{collection-id}/stats`` endpoint.
+* Add ``GET /collections/{collection-id}/history`` endpoint.
 
 .. changelog-realtime-api-current-end

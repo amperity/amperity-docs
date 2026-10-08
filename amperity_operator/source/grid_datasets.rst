@@ -46,9 +46,6 @@ A dataset is a collection of data grouped together to support use cases required
       :link-type: doc
       :link: custom_domain_tables
 
-   .. grid-item-card:: Real-time tables
-      :link-type: doc
-      :link: realtime
 
    .. grid-item-card:: Filtered 360 databases
       :link-type: doc
@@ -70,6 +67,5 @@ A dataset is a collection of data grouped together to support use cases required
    Feeds <feeds>
    Semantics <semantics>
    Custom domain tables <custom_domain_tables>
-   Real-time tables <realtime>
    Filtered 360 databases <filtered_360_databases>
    Standard table output <grid_tables>

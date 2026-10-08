@@ -99,7 +99,7 @@ Built-in configuration workflows help your brand
 * Reduce risk by using sandbox environments that track all changes, provide data validations, and automated promotion
 * Automate and monitor workflows to ensure data is always available
 * Get visibility into every data transformation
-* Access the state of workflows, ingest activity, user activity, segments, and campaigns programmatically using the Amperity API.
+* Access the state of workflows, ingest activity, user activity, segments, and campaigns programmatically using the Tenant API.
 * Use rule-based controls to determine which users have access to customer data
 * Use built-in validation workflows and QA tooling to maintain accurate customer profiles
 

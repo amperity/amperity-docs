@@ -556,6 +556,13 @@
    <i class="fa-regular fa-square-poll-horizontal dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
+.. |fa-box-archive| raw:: html
+
+   <i class="fa-solid fa-box-archive light-only" style="--fa-primary-color: #0c0c0c;"></i>
+
+   <i class="fa-solid fa-box-archive dark-only" style="--fa-primary-color: #ffffff;"></i>
+
+
 .. |fa-rotate-right| raw:: html
 
    <i class="fa-solid fa-rotate-right light-only" style="--fa-primary-color: #0c0c0c;"></i>
@@ -913,3 +920,24 @@
    <i class="fa-solid fa-money-bills dark-only" style="--fa-primary-color: #ffffff;"></i>
 
 
+.. Lozenge for a legacy feature, for use in a page title or inline:
+..    Streaming API |legacy|
+
+.. Raw HTML rather than :bdg-warning:, because the tokens load in every section and
+.. not every section enables sphinx-design. The classes are sphinx-design's badge.
+
+.. |legacy| raw:: html
+
+   <span class="sd-sphinx-override sd-badge sd-bg-warning sd-bg-text-warning">Legacy</span>
+
+
+.. API explorer links, one per API family. They live here, not in internal_links.txt,
+.. because every section loads this file. Link with `Text <explorer-tenant-api_>`__.
+.. When an API publishes a new version, change it here; each name selects that
+.. version in the explorer's API Family list.
+
+.. _explorer-database-profile-api: /api/explorer.html?urls.primaryName=Database%20Profile%20API%20%282025-07-31%29
+.. _explorer-tenant-api: /api/explorer.html?urls.primaryName=Tenant%20API%20%282024-04-01%29
+.. _explorer-tenant-api-unstable: /api/explorer.html?urls.primaryName=Tenant%20API%20%28unstable%29
+.. _explorer-real-time-api: /api/explorer.html?urls.primaryName=Real-time%20API%20%282026-09-03%29
+.. _explorer-streaming-api: /api/explorer.html?urls.primaryName=Streaming%20API%20%28v0%29

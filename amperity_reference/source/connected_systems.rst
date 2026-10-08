@@ -609,7 +609,7 @@ Amperity can read data from and write data to a wide variety of systems. The fol
      - |system-yes|
      - Use the Streaming Ingest API to pull event and profile data to Amperity.
 
-       Use the Profile API to make customer profile data available to MetaRouter.
+       Use the `Database Profile API <explorer-database-profile-api_>`__ to make customer profile data available to MetaRouter.
 
    * - **Microsoft Advertising**
      - 

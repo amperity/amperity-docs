@@ -84,7 +84,7 @@ The Amperity MCP server does not:
 
 * Replace the Amperity REST API.
 
-  .. important:: Use the :doc:`Amperity API <overview>` for programmatic integrations that do not involve an AI agent.
+  .. important:: Use the :doc:`Tenant API <overview>` for programmatic integrations that do not involve an AI agent.
 
 .. mcp-what-mcp-not-enabled-end
 

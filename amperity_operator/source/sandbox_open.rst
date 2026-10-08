@@ -91,7 +91,7 @@ The following sections describe the steps you will follow when working in a sand
        * Testing out complex queries, and then optimizing those queries
        * Adding destinations or data templates to existing destinations
        * Validating end-to-end workflows
-       * Adding new Profile API endpoints or updating existing endpoints
+       * Adding new `Database Profile API <explorer-database-profile-api_>`__ endpoints or updating existing endpoints
 
 
    * - .. image:: ../../images/steps-03.png

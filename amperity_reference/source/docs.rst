@@ -68,7 +68,7 @@ The site navigation runs across the top of the site and links together five topi
 #. Click the Amperity Documentation logo to return to a collection of overview topics.
 #. Click **User Guides** for information about the **AI Assistant**, building segments that define high value audiences, and then sending those audiences to various marketing channels to support any type of marketing campaign.
 #. Click **Operators Guide** for information about configuring Amperity for your tenant.
-#. Click **API** for information about Amperity API endpoints. (You can learn more about the Profile API and Streaming Ingest API from the Operators Guide.)
+#. Click **API** for information about Tenant API endpoints. (You can learn more about the `Database Profile API <explorer-database-profile-api_>`__ and Streaming Ingest API from the Operators Guide.)
 #. Click **Amperity A-Z** to open a topic collection that describes every aspect of Amperity.
 #. Click the |gift| icon for information about the latest features and improvements to Amperity.
 

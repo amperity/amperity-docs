@@ -190,7 +190,7 @@ Can audit logs be exported to a SIEM?
 
 .. mcp-faq-log-export-start
 
-Yes, by pull. Use the :doc:`GET /audit-events <endpoint_get_audit_events_list>` endpoint to retrieve user activity for your tenant. Activity is also available in the Amperity user interface under **Settings**, and may be filtered and downloaded from there. See `About activity logs <https://docs.amperity.com/reference/activity_logs.html>`__.
+Yes, by pull. Use the `GET /audit-events <explorer-tenant-api_>`__ endpoint of the Tenant API to retrieve user activity for your tenant. Activity is also available in the Amperity user interface under **Settings**, and may be filtered and downloaded from there. See `About activity logs <https://docs.amperity.com/reference/activity_logs.html>`__.
 
 .. mcp-faq-log-export-end
 

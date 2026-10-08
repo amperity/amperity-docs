@@ -1,0 +1,47 @@
+{#- Redirects a retired hand-written API reference page to the API explorer, with its API selected. -#}
+{%- set family = {
+  "endpoint_get_audit_events_list": "Tenant API (2024-04-01)",
+  "endpoint_get_campaign_drafts_list": "Tenant API (unstable)",
+  "endpoint_get_campaigns_list": "Tenant API (2024-04-01)",
+  "endpoint_get_ingest_jobs": "Tenant API (2024-04-01)",
+  "endpoint_get_ingest_jobs_id": "Tenant API (2024-04-01)",
+  "endpoint_get_profile": "Database Profile API (2025-07-31)",
+  "endpoint_get_profile_index": "Database Profile API (2025-07-31)",
+  "endpoint_get_profile_index_id": "Database Profile API (2025-07-31)",
+  "endpoint_get_profile_segments": "Real-time API (2026-09-03)",
+  "endpoint_get_profile_store_history": "Real-time API (2026-09-03)",
+  "endpoint_get_profile_store_lookup": "Real-time API (2026-09-03)",
+  "endpoint_get_profile_store_profile": "Real-time API (2026-09-03)",
+  "endpoint_get_profile_store_segment_profiles": "Real-time API (2026-09-03)",
+  "endpoint_get_profile_store_stats": "Real-time API (2026-09-03)",
+  "endpoint_get_profiles_list": "Database Profile API (2025-07-31)",
+  "endpoint_get_segments_list": "Tenant API (2024-04-01)",
+  "endpoint_get_workflows_fetch": "Tenant API (2024-04-01)",
+  "endpoint_get_workflows_list": "Tenant API (2024-04-01)",
+  "endpoint_post_profile_store_events": "Real-time API (2026-09-03)",
+  "endpoint_post_profile_store_lookup": "Real-time API (2026-09-03)",
+  "endpoint_post_workflows_start": "Tenant API (2024-04-01)",
+  "endpoint_post_workflows_stop": "Tenant API (2024-04-01)",
+  "endpoints": "Tenant API (2024-04-01)",
+  "endpoints_profile_api": "Database Profile API (2025-07-31)",
+  "endpoints_realtime": "Real-time API (2026-09-03)",
+  "versioning": "Tenant API (2024-04-01)",
+  "base_url": "Tenant API (2024-04-01)",
+  "requests": "Tenant API (2024-04-01)",
+  "responses": "Tenant API (2024-04-01)",
+  "pagination": "Tenant API (2024-04-01)",
+  "rate_limits": "Tenant API (2024-04-01)"
+} -%}
+{%- set target = "explorer.html?urls.primaryName=" ~ (family[pagename] | urlencode) -%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Amperity APIs</title>
+    <link rel="canonical" href="https://docs.amperity.com/api/explorer.html">
+    <meta http-equiv="Refresh" content="0; url='{{ target }}'">
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ target }}">Amperity APIs</a>.</p>
+  </body>
+</html>
