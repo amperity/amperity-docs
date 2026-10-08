@@ -37,7 +37,7 @@ Optional, for the API key credential type. When set, Amperity sends it in an "Au
 
 **Token URL**
 
-Required for OAuth. The OAuth 2.0 token endpoint. Amperity requests an access token using the client credentials grant, sends it in an "Authorization: Bearer" header, and requests a new one five minutes before it expires. If the token response has no "expires_in" value, Amperity requests a new token before every request.
+Required for OAuth. The OAuth 2.0 token endpoint. Amperity gets an access token using the client credentials grant, and then sends it in an "Authorization: Bearer" header.
 
 **Client ID** and **Client secret**
 
