@@ -42,7 +42,7 @@ Every run sends the whole query result, not only the rows that changed since the
 
 .. destination-mixpanel-api-note-start
 
-.. note:: This destination uses |destination-name|'s `Ingestion API <https://docs.mixpanel.com/reference/ingestion-api>`__ |ext_link| — `Import Events <https://docs.mixpanel.com/reference/import-events>`__ |ext_link| for events, `User Profiles <https://docs.mixpanel.com/reference/profile-set>`__ |ext_link| and `Group Profiles <https://docs.mixpanel.com/reference/group-set-property>`__ |ext_link| for profile properties — and its `GDPR API <https://docs.mixpanel.com/reference/gdpr-api>`__ |ext_link| for deletion requests.
+.. note:: This destination uses |destination-name|'s `Ingestion API <https://docs.mixpanel.com/reference/ingestion-api>`__ |ext_link| — `Import Events <https://docs.mixpanel.com/reference/import-events>`__ |ext_link| for events, `User Profiles <https://docs.mixpanel.com/reference/profile-set>`__ |ext_link| and `Group Profiles <https://docs.mixpanel.com/reference/group-set-property>`__ |ext_link| for profile properties — and its `GDPR and CCPA API <https://docs.mixpanel.com/reference/gdpr-api>`__ |ext_link| for deletion requests.
 
 .. destination-mixpanel-api-note-end
 
@@ -71,6 +71,8 @@ Operations
 .. destination-mixpanel-operations-start
 
 The **Operation** setting selects what a destination writes, along with the columns its query results must contain. Column names are matched without regard to letter case, so ``DISTINCT_ID`` and ``distinct_id`` are the same column.
+
+.. important:: A query must produce these columns under exactly these names. When yours produces them under other names, alias them — for example ``SELECT customer_id AS distinct_id``. A run whose query results are missing a column its operation requires fails before any data is sent, with a message naming each missing column.
 
 .. list-table::
    :widths: 20 25 15 40
@@ -107,7 +109,7 @@ What each fixed column carries:
 
 .. caution:: The **deletions** operation cannot be undone. |destination-name| deletes every event and profile it holds for each identifier sent, and once it begins processing a request the deletion cannot be reversed. Restrict a deletions destination to the users you intend to delete, and review its query before every run.
 
-.. note:: A deletions run files the requests and records the request IDs that |destination-name| returns; those IDs appear in the run's output and are your audit trail. |destination-name| can take up to 30 days to complete a deletion request, and Amperity does not track a request to completion — a successful run means the requests were accepted, not that the data is already gone.
+.. note:: A deletions run files the requests and records the request IDs that |destination-name| returns; those IDs appear in the run's output and are your audit trail. |destination-name| can take up to 30 days to complete a deletion request, and Amperity does not track a request to completion — a successful run means the requests were accepted, not that the data is already gone. |destination-name| allows a request to be canceled until it begins processing, and those request IDs are what identify it there; Amperity cannot cancel a request it has filed.
 
 .. destination-mixpanel-operations-end
 
@@ -137,11 +139,11 @@ Every column that is not one of the fixed columns for the destination's operatio
 
 **Values keep the type the query returns.** A decimal column is sent as a number rather than as text, so that |destination-name| can use it in calculations. A value that does not parse as the type its column declares is sent as it came, rather than failing the row.
 
-**Date and time columns are converted; text columns are not.** Amperity converts a column that Amperity holds as a date or date-time value. A date held in a text column is sent as the text it is, and |destination-name| stores it as text rather than as a date property. Give a column a date or date-time type in Amperity when you want |destination-name| to treat it as one.
+**Date and time values are sent in UTC**, in the format |destination-name| documents for date properties. Amperity reformats a column it holds as a date-time value into that format; a column it holds as a date already matches it. A text column is sent exactly as it reads — |destination-name| decides whether a value is a date from the value's own format rather than from the column it came from, so a date kept as text arrives as a date only when the text already matches that format. Give a column a date or date-time type in Amperity when you want it to arrive as one reliably.
 
-**Empty cells are left out.** A column with no value for a row is omitted from that row's update rather than sent as an empty value. Sending an empty value would overwrite whatever |destination-name| already holds for that property, and an empty cell in Amperity is not a request to clear a value. To clear a property in |destination-name|, change it there.
+**Empty cells are left out.** A column with no value for a row, or one holding only whitespace, is omitted from that row's update rather than sent as an empty value. Sending an empty value would overwrite whatever |destination-name| already holds for that property, and an empty cell in Amperity is not a request to clear a value. To clear a property in |destination-name|, change it there.
 
-**Converted date and time values are sent in UTC**, in the format |destination-name| documents for date properties. |destination-name| displays date and time values in the project's own timezone, so a value sent as 10:00 UTC reads as 03:00 in a project set to US Pacific. The stored value is correct.
+**Dates are displayed in the project's own timezone.** |destination-name| shows a value sent as 10:00 UTC as 03:00 in a project set to US Pacific. The stored value is correct.
 
 **Identifiers are sent as text.** A numeric ``distinct_id`` or ``group_id`` is converted to its string form, because |destination-name| rejects a numeric identifier on the events endpoint.
 
@@ -174,7 +176,7 @@ Amperity batches each operation to |destination-name|'s own documented per-reque
    * - **deletions**
      - |destination-name| accepts up to 1,999 identifiers per deletion request and one deletion request per second, which places a ceiling of roughly seven million users an hour on a deletions run.
 
-|destination-name| applies a per-project event rate limit that your own apps and website share. Amperity paces its requests well below that limit so that a run does not crowd out your own traffic.
+|destination-name| applies a per-project ingestion rate limit that your own apps and website share, and a large run draws on that same limit. Amperity paces its requests and backs off when |destination-name| reports a rate limit, but schedule large sends outside the hours when your own traffic peaks.
 
 .. note:: An event must fall inside the project's data retention window, and |destination-name| rejects an event dated more than an hour in the future. Rows outside those bounds are reported as failed.
 
@@ -206,6 +208,8 @@ Get details
      - **Credential settings**
 
        |checkmark-required| **Required**
+
+       The service account username and secret are required. The **GDPR OAuth token** is required only when **Operation** is **deletions**.
 
        **Service account username**
 
@@ -324,6 +328,8 @@ Configure credentials
           :end-before: .. credential-steps-settings-intro-end
 
        |checkmark-required| **Required**
+
+       The service account username and secret are required. The **GDPR OAuth token** is required only for a destination whose **Operation** is **deletions**.
 
        **Service account username**
 
@@ -490,7 +496,7 @@ Data validation
 Amperity sends every row in the query results, except for rows it cannot build a valid request for. A row is skipped and reported as failed, and the run continues, when any of the following is true:
 
 * The row's identifier — ``distinct_id``, or ``group_id`` for the **group-profiles** operation — is empty.
-* The row's identifier is a placeholder value rather than a real identifier. |destination-name| treats values such as ``null``, ``undefined``, ``unknown``, ``anonymous``, ``none``, ``n/a``, ``0``, and ``-1`` as placeholders, matched without regard to letter case. Amperity drops these rows because the profile endpoints would otherwise accept them and gather every such row onto a single profile named after the placeholder.
+* The row's identifier is a placeholder rather than a real identifier. Amperity drops values such as ``null``, ``undefined``, ``unknown``, ``anonymous``, ``none``, ``n/a``, ``0``, ``-1``, ``true``, ``false``, and an all-zero UUID, matched without regard to letter case. |destination-name| rejects most of these on its events endpoint, but its profile endpoints accept them and gather every such row onto a single profile named after the placeholder — so Amperity drops them for every operation.
 * The operation is **events** and the row has no event name, or its ``time`` value cannot be read as a date and time, a date, or a Unix timestamp in seconds or milliseconds.
 * The row is larger than |destination-name|'s 1 MB limit for a single record.
 * |destination-name| rejects that individual row — for example an event outside the project's retention window, or one carrying more than 255 properties.

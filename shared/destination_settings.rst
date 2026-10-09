@@ -4044,7 +4044,7 @@ Required. Selects the |destination-name| alias that identifies each person. Only
 
 .. setting-mixpanel-project-id-start
 
-Required. The numeric ID of the |destination-name| project this destination writes to, found in |destination-name| under **Project Settings > Overview**. It must be digits only — for example ``1234567``.
+Required. The numeric ID of the |destination-name| project this destination writes to, shown on that project's settings **Overview** page in |destination-name|. It must be digits only — for example ``1234567``.
 
 The service account on the connected credential must have been added to this project. Amperity uses the project ID to look the project up at the start of every run, which is also how it determines the project's data residency.
 
@@ -4052,7 +4052,7 @@ The service account on the connected credential must have been added to this pro
 
 .. setting-mixpanel-project-token-start
 
-Required. The token for the same |destination-name| project, found under **Project Settings > Access Keys**. It must be letters and digits only. |destination-name| treats a project token as an identifier rather than a secret.
+Required. The token for the same |destination-name| project, shown in the **Access Keys** section of that same **Overview** page. It must be letters and digits only. |destination-name| treats a project token as an identifier rather than a secret.
 
 .. important:: A project token that belongs to a different |destination-name| project is accepted by the profile and group endpoints, which answer with success and then discard the data. Because a write can never detect a wrong token, Amperity checks the token against the **Project ID** when you test the connection. Test the connection after changing either value.
 
