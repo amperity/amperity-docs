@@ -63,7 +63,7 @@ How the pipeline fits together
 
 The program is built from the real-time objects in sequence:
 
-#. **Cart events on an event stream.** Send add-to-cart and purchase events to an :doc:`event stream <event_streams>`. Model the cart as an **array** field on the event type, so that a single event carries all of its line items.
+#. **Cart events on an event stream.** Send add-to-cart, remove-from-cart, view-cart, and purchase events to an :doc:`event stream <event_streams>`. Model the cart as an **array** field on the event type, so that a single event carries all of its line items.
 #. **A profile collection with the right attributes.** Route the events to a :doc:`profile collection <real_time_profiles>` and define two attributes on it:
 
    * **Event attributes** that capture the current cart and the time of the customer's latest activity. For the cart, use the most recent value of the cart array field, scoped to the stream so that add, remove, and view events all update it. A purchase event that sends an empty cart clears it.

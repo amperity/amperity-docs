@@ -69,7 +69,7 @@ Comparing and combining values
 
 .. realtime-expressions-operators-start
 
-Real-time segment expressions and aggregation conditions are boolean expressions. The following operators are available:
+Real-time segment expressions and event attribute conditions are boolean expressions. The following operators are available:
 
 * Comparison: ``=``, ``!=``, ``<``, ``<=``, ``>``, ``>=``
 * Membership: ``in``, ``not in``
@@ -102,7 +102,7 @@ Working with time windows
 
 .. realtime-expressions-time-start
 
-Time-windowed expressions--such as those used in real-time segments and aggregation attributes--take a ``unit`` argument. The valid values are ``SECONDS``, ``MINUTES``, and ``HOURS``.
+Time-windowed expressions--such as those used in real-time segments and event attributes--take a ``unit`` argument. The valid values are ``SECONDS``, ``MINUTES``, and ``HOURS``.
 
 .. realtime-expressions-time-end
 

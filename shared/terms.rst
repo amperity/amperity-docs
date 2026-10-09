@@ -5522,7 +5522,7 @@ A product recommendation predicts which products a given customer is most likely
 
 .. term-profile-api-start
 
-The `Database Profile API <explorer-database-profile-api_>`__ enables your brand to access customer profiles using a collection of REST API endpoints for site personalization and custom services using data from a Customer 360 database.
+The `Database Profile API <explorer-database-profile-api_>`__ enables your brand to access customer profiles using a collection of REST API endpoints for site personalization and custom services using data from a customer 360 database.
 
 .. term-profile-api-end
 
