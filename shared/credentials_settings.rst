@@ -3032,3 +3032,25 @@ Required. The App API Key that authorizes every request Amperity sends to |desti
 .. important:: An App API Key is scoped to a single |destination-name| app, so it must come from the same app as the **App ID** destination setting. A message saying the key is valid but does not grant access to the App ID means the two came from different apps — copy both values together from the same app's **Keys & IDs** page. A message saying |destination-name| rejected the key means the key itself is wrong.
 
 .. credential-onesignal-api-key-end
+
+.. credential-mixpanel-service-account-username-start
+
+Required. The username of a |destination-name| service account that has the Owner or Admin role on the project this destination writes to. Create the service account in |destination-name| under **Organization Settings > Service Accounts**, and add it to that project.
+
+A service account belongs to your |destination-name| organization rather than to a person, so it keeps working when individual team members come and go. A role lower than Owner or Admin can see the project but cannot send data to it; Amperity reports that case with a message naming the role it found.
+
+.. credential-mixpanel-service-account-username-end
+
+.. credential-mixpanel-service-account-secret-start
+
+Required. The secret for the same |destination-name| service account. |destination-name| shows the secret only once, at the moment the service account is created, so copy it then. A service account that is later deleted, or that reaches an expiration date set in |destination-name|, causes runs to fail until a new service account is created and this credential is updated.
+
+.. credential-mixpanel-service-account-secret-end
+
+.. credential-mixpanel-gdpr-oauth-token-start
+
+Required for the **deletions** operation, and unused by the other three. A project Owner or Admin generates the token in |destination-name| under **Profile & Preferences > Data & Privacy**.
+
+.. important:: Unlike the service account, a GDPR OAuth token belongs to the person who generated it and expires one year after it is created. When it expires, is revoked, or the person who generated it loses access to the project, every run of a deletions destination fails until a project Owner or Admin generates a new token and updates this credential. Set a reminder ahead of the expiration date.
+
+.. credential-mixpanel-gdpr-oauth-token-end

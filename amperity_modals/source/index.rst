@@ -87,6 +87,7 @@ Site Index
    destination-microsoft-ads
    destination-microsoft-ads-conversions-api
    destination-microsoft-ads-offline-events
+   destination-mixpanel
    destination-moengage
    destination-neustar
    destination-onesignal

@@ -7880,3 +7880,10 @@ PostHog is a product analytics platform. It captures product events and maintain
 OneSignal is a customer engagement platform for sending push notifications, email, SMS, and in-app messages. It keeps a user record for each person, carrying that person's subscriptions and a set of custom data tags that teams use to build segments and personalize messages.
 
 .. term-onesignal-end
+
+
+.. term-mixpanel-start
+
+Mixpanel is a product analytics platform. It records the events that a brand's apps and website send, and maintains user profiles and group profiles that teams use to analyze product usage, build reports, and segment their audiences.
+
+.. term-mixpanel-end

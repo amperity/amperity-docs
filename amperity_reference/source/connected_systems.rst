@@ -642,8 +642,10 @@ Amperity can read data from and write data to a wide variety of systems. The fol
 
    * - **Mixpanel**
      - |system-yes|
-     - 
+     - |system-yes|
      - Pull data to Amperity from Mixpanel using Fivetran.
+
+       Send user and group profile properties, events, and deletion requests to Mixpanel using a REST API.
 
    * - **MoEngage**
      - 
