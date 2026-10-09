@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 .. |legacy-feature| replace:: The Streaming API
-.. |legacy-replacement| replace:: Real-time Profiles, which receives events on event streams and updates customer profiles, real-time segments, and real-time journeys as each event arrives
+.. |legacy-replacement| replace:: `Real-time Profiles <../reference/page_real_time.html>`__, which receives events on event streams and updates customer profiles, real-time segments, and real-time journeys as each event arrives
 .. |legacy-instead| replace:: For new integrations, use the `Real-time API <explorer-real-time-api_>`__ instead.
 
 
@@ -34,7 +34,6 @@ Streaming API |legacy|
    :start-after: .. legacy-notice-start
    :end-before: .. legacy-notice-end
 
-.. TODO: Link "Real-time Profiles" to reference/page_real_time.html once the real-time docs (PR #973) merge.
 
 .. include:: ../../shared/terms.rst
    :start-after: .. term-streaming-ingest-api-start

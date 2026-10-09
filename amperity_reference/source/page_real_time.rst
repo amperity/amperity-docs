@@ -1,0 +1,95 @@
+.. https://docs.amperity.com/reference/
+
+
+.. meta::
+    :description lang=en:
+        Recognize customers and react to their behavior in real time with event streams, profile collections, real-time segments, and real-time journeys.
+
+.. meta::
+    :content class=swiftype name=body data-type=text:
+        Recognize customers and react to their behavior in real time with event streams, profile collections, real-time segments, and real-time journeys.
+
+.. meta::
+    :content class=swiftype name=title data-type=string:
+        Real-time
+
+==================================================
+Real-time
+==================================================
+
+.. real-time-page-start
+
+Recognize customers and react to their behavior as it happens. Amperity's real-time pipeline ingests customer events on event streams, updates profile collections, evaluates always-on real-time segments, and drives real-time journeys, so your brand can act on a customer's behavior the moment it occurs.
+
+.. real-time-page-end
+
+.. real-time-page-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: About real-time
+      :link-type: doc
+      :link: real_time
+
+   .. grid-item-card:: About event streams and event types
+      :link-type: doc
+      :link: event_streams
+
+   .. grid-item-card:: About profile collections and real-time profiles
+      :link-type: doc
+      :link: real_time_profiles
+
+   .. grid-item-card:: About real-time identity recognition
+      :link-type: doc
+      :link: real_time_identity
+
+   .. grid-item-card:: About real-time segments
+      :link-type: doc
+      :link: real_time_segments
+
+   .. grid-item-card:: About real-time journeys
+      :link-type: doc
+      :link: real_time_journeys
+
+.. real-time-page-grid-end
+
+
+.. _real-time-page-use-cases:
+
+Use cases
+==================================================
+
+.. real-time-page-use-cases-grid-start
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+   :padding: 0
+   :class-row: surface
+
+   .. grid-item-card:: Recognize and re-engage abandoning customers
+      :link-type: doc
+      :link: real_time_abandonment
+
+   .. grid-item-card:: Personalize experiences for recognized customers
+      :link-type: doc
+      :link: real_time_personalization
+
+.. real-time-page-use-cases-grid-end
+
+
+.. toctree::
+   :caption: Real-time page
+   :maxdepth: 2
+   :hidden:
+
+   About real-time <real_time>
+   About event streams and event types <event_streams>
+   About profile collections and real-time profiles <real_time_profiles>
+   About real-time identity recognition <real_time_identity>
+   About real-time segments <real_time_segments>
+   About real-time journeys <real_time_journeys>
+   Recognize and re-engage abandoning customers <real_time_abandonment>
+   Personalize experiences for recognized customers <real_time_personalization>

@@ -1,7 +1,7 @@
 .. https://docs.amperity.com/operator/
 
 .. |legacy-feature| replace:: Real-time tables
-.. |legacy-replacement| replace:: Real-time Profiles, which updates customer profiles, real-time segments, and real-time journeys as each event arrives instead of landing streamed data in tables to query
+.. |legacy-replacement| replace:: `Real-time Profiles <../reference/page_real_time.html>`__, which updates customer profiles, real-time segments, and real-time journeys as each event arrives instead of landing streamed data in tables to query
 .. |legacy-instead| replace:: For new real-time use cases, use the `Real-time API <explorer-real-time-api_>`__ instead.
 
 
@@ -25,7 +25,6 @@ Real-time tables |legacy|
    :start-after: .. legacy-notice-start
    :end-before: .. legacy-notice-end
 
-.. TODO: Link "Real-time Profiles" to reference/page_real_time.html once the real-time docs (PR #973) merge.
 
 .. real-time-about-start
 
