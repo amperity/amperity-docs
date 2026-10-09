@@ -69,6 +69,8 @@ Real-time features are inert by default in a :doc:`sandbox <sandboxes>`, so that
 The Real-time API
 ==================================================
 
-.. include:: ../../amperity_reference/source/api.rst
-   :start-after: .. api-realtime-start
-   :end-before: .. api-realtime-end
+.. real-time-api-start
+
+The Real-time API streams events into Amperity and reads back real-time profiles and segment membership, at the ``/prof`` base path. Use it for low-latency use cases such as recognizing a returning customer and personalizing their experience at request time. For every endpoint, its parameters, responses, and permissions, and to send test requests, see the `Real-time API reference <explorer-real-time-api_>`__. To get an access token, see `How to authenticate with Amperity APIs </api/authentication.html>`__.
+
+.. real-time-api-end

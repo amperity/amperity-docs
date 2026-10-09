@@ -124,6 +124,6 @@ A lookup behaves differently depending on whether the profile exists:
 * If the identifier does not resolve to a profile, the lookup returns nothing--the profile is absent.
 * If it resolves, the profile returns its full set of collection-defined attributes. Attributes that have not yet computed a value are filled with their defaults, so such an attribute reads as an empty or default value rather than being absent.
 
-A profile's :ref:`real-time segment <r-real-time-segment>` memberships, and a collection's stats and history, are available through their own reads. Look up profiles programmatically through the `Real-time API <../api/endpoints_realtime.html>`__ or Amperity's `MCP tools <../api/mcp_tool_reference.html>`__.
+A profile's :ref:`real-time segment <r-real-time-segment>` memberships, and a collection's stats and history, are available through their own reads. Look up profiles programmatically through the `Real-time API <explorer-real-time-api_>`__ or Amperity's `MCP tools <../api/mcp_tool_reference.html>`__.
 
 .. real-time-profiles-inspect-end

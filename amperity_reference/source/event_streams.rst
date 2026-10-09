@@ -39,7 +39,7 @@ An event stream defines how Amperity receives and interprets a flow of inbound e
 * A **routing expression**, a **timestamp expression**, and an **event-id expression**. These extract, respectively, the value used to route the event, the time of the event itself, and a unique identifier for the event.
 * A **mode**--**Active**, **Drop**, or **Reject**--that determines whether the stream accepts the events sent to it, silently drops them, or rejects them.
 
-Events reach a stream through the Real-time API endpoint ``POST /prof/events/{stream-id}``. The stream's mode governs the response the sender receives. For the exact status codes and the request constraints, see :ref:`How events are processed <api-realtime-async>` and the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
+Events reach a stream through the Real-time API endpoint ``POST /prof/events/{stream-id}``. The stream's mode governs the response the sender receives. For the exact status codes and the request constraints, see the `Real-time API reference <explorer-real-time-api_>`__.
 
 A :ref:`profile collection <p-profile-collection>` subscribes to one or more event streams; the events on a subscribed stream are what keep the collection's profiles current. A single stream can feed more than one collection.
 

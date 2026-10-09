@@ -50,7 +50,7 @@ How membership is maintained
 
 A real-time segment's predicate is written in :doc:`Amperity's expression language <expressions>` and evaluated against each profile in the bound collection. As events update a profile, Amperity re-evaluates the predicate for that profile: a profile that newly satisfies it **enters** the segment, and a profile that no longer satisfies it **exits**. These entries and exits are the signal that drives :doc:`real-time journeys <real_time_journeys>`--a customer entering a segment is what starts them on a journey.
 
-You can read a segment's current membership--the profiles that belong to it right now--through the Real-time API. See the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
+You can read a segment's current membership--the profiles that belong to it right now--through the Real-time API. See the `Real-time API endpoint reference <explorer-real-time-api_>`__.
 
 .. real-time-segments-membership-end
 

@@ -52,7 +52,7 @@ At request time, personalize from the customer's :doc:`real-time profile <real_t
 #. **Read segment membership.** Where personalization depends on an audience, read the customer's :doc:`real-time segment <real_time_segments>` memberships with ``GET /prof/profiles/{collection-id}/{profile-id}/segments``. The profile response does not include segment membership, so personalizing on both attributes and segments takes two calls.
 #. **Personalize the response.** Use the attributes and memberships to shape what the customer sees.
 
-For request and response details, and for the full set of endpoints, see the `Real-time API endpoint reference <../api/endpoints_realtime.html>`__.
+For request and response details, and for the full set of endpoints, see the `Real-time API endpoint reference <explorer-real-time-api_>`__.
 
 .. real-time-personalization-solution-end
 
