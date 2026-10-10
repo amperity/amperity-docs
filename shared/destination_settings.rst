@@ -3216,11 +3216,27 @@ The Eagle Eye behavioral state applied to the loyalty identity attached to each 
 
 .. setting-eagle-eye-default-identity-state-end
 
+.. setting-eagle-eye-additional-identity-types-start
+
+A comma-separated list of Eagle Eye identity type names to attach to each wallet in addition to the **Identity type**, for example ``CARD,EMAIL``. List each type once, in upper case, exactly as your Eagle Eye company unit names it, and do not repeat the **Identity type** itself.
+
+For each listed type, the **create** operation reads the identity value from a column named ``identity_value_<type>`` and an optional state from a column named ``identity_state_<type>``, with the type in lower case. For example, ``CARD`` reads ``identity_value_card`` and ``identity_state_card``. A blank value means the person has no identity of that type. Leave this setting unset to attach only the **Identity type**.
+
+.. setting-eagle-eye-additional-identity-types-end
+
+.. setting-eagle-eye-scheme-ids-start
+
+A comma-separated list of Eagle Eye loyalty scheme IDs that new wallets can be enrolled in, for example ``1234567,2345678``. Each ID may contain letters, digits, and underscores, and is listed once. Get your unit's scheme IDs from your Eagle Eye account manager.
+
+For each listed scheme, the **create** operation reads the scheme account state from a column named ``scheme_state_<id>``, for example ``scheme_state_1234567``. A state in that column enrolls the person in the scheme in that state. A blank value means the person is not enrolled in that scheme. Scheme account states are a third set of values, separate from wallet states and identity states, configured per Eagle Eye company unit, so use only a scheme-account state your Eagle Eye account manager has confirmed for your unit; a value your unit does not recognize is rejected. Leave this setting unset to create wallets without scheme accounts.
+
+.. setting-eagle-eye-scheme-ids-end
+
 .. setting-eagle-eye-operation-start
 
 The wallet operation performed for every row in the send. A send performs a single operation for the entire run:
 
-* **create** (the default) provisions a wallet for each person and attaches their loyalty identity, and sets the wallet's label from the ``friendly_name`` column when it is present. A person who already has a wallet is recovered rather than duplicated, so re-sending the same query results is safe.
+* **create** (the default) provisions a wallet for each person and attaches their loyalty identity, and sets the wallet's label from the ``friendly_name`` column when it is present. When **Additional identity types** or **Loyalty scheme IDs** is set, it also attaches the person's other identities and enrolls them in their loyalty schemes. A person who already has a wallet is recovered rather than duplicated, so re-sending the same query results is safe, and a re-send attaches anything the wallet is still missing.
 * **update** changes a wallet's friendly name, and requires the ``friendly_name`` column.
 * **state-change** changes a wallet's behavioral state, and requires the **Wallet state** setting below.
 * **suspend** temporarily halts a wallet's activity, and **activate** returns a suspended or inactive wallet to service.

@@ -87,6 +87,18 @@ Settings
    :start-after: .. setting-eagle-eye-default-identity-state-start
    :end-before: .. setting-eagle-eye-default-identity-state-end
 
+**Additional identity types**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-eagle-eye-additional-identity-types-start
+   :end-before: .. setting-eagle-eye-additional-identity-types-end
+
+**Loyalty scheme IDs**
+
+.. include:: ../../shared/destination_settings.rst
+   :start-after: .. setting-eagle-eye-scheme-ids-start
+   :end-before: .. setting-eagle-eye-scheme-ids-end
+
 **Wallet operation**
 
 .. include:: ../../shared/destination_settings.rst
